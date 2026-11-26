@@ -534,9 +534,13 @@ function kvRow(label: string, value: string, sub = ""): string {
 function periodText(period: AlertPeriod | string | null | undefined): string {
   if (!period) return "";
   if (typeof period === "string") return period;
-  const from = period.from ?? "";
-  const tail = period.to ? `~${period.to}` : period.reopen ? `재개 ${period.reopen}` : "";
-  return [from, tail].filter(Boolean).join(" ");
+  const { from, to, reopen } = period;
+  if (from && to) return `${from} ~ ${to}`;
+  if (from && reopen) return `${from} ~ 재개 ${reopen}`;
+  if (from) return `${from} ~`;
+  if (to) return `~ ${to}`;
+  if (reopen) return `재개 ${reopen}`;
+  return "";
 }
 
 function sections(d: CourseDetail, c: CourseIndexItem): string {
