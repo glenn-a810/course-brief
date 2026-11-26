@@ -4,9 +4,9 @@
 > **7개 영역**으로 정리한 골프장 실전 브리핑 서비스입니다.
 > 정적 웹(Cloudflare Pages, 0원)과 React Native 앱이 **같은 JSON 데이터**를 그대로 사용합니다.
 
-- 웹: 의존성 없는 정적 사이트 (`dist/`) — PC·모바일 반응형, 시스템 라이트/다크 자동
-- 데이터: `data/v29/` — 540곳 경량 인덱스 + 구장별 상세 540개 JSON
-- 검색: 브라우저 정적 검색(초성·부분일치·다중 필터) 기본, Elasticsearch(nori) 어댑터 선택 장착
+- 웹: **TypeScript** 소스 → esbuild 번들, 런타임 의존성 0의 정적 사이트 (`dist/`) — PC·모바일 반응형, 시스템 라이트/다크 자동
+- 데이터: `data/v29/` — 540곳 경량 인덱스 + 구장별 상세 540개 JSON (타입: `shared/types/`, 웹·RN 공용)
+- 검색: 브라우저 정적 검색(초성·부분일치·다중 필터) 기본, Elasticsearch(nori) 어댑터 선택 장착 (`SearchAdapter` 계약은 `shared/types/search.ts`, `web/assets/search.ts`)
 
 | 목록 (라이트) | 상세 | 목록 (다크) |
 | --- | --- | --- |
@@ -59,27 +59,46 @@ data/source/                통합 원본 v2.9 (재생성용)
 
 ### 소비 예시 (웹·RN 공통)
 
-```js
+```ts
+import type { CourseIndex, CourseDetail } from "./shared/types";
+
 const base = "https://<your-domain>/data/v29";
 
 // 목록: 한 번에 540곳
-const { courses, clusters } = await fetch(`${base}/index.json`).then(r => r.json());
+const index = (await fetch(`${base}/index.json`).then(r => r.json())) as CourseIndex;
+const { courses, clusters } = index;
 
 // 상세: 필요한 구장만
-const detail = await fetch(`${base}/courses/kr-golf-0498.json`).then(r => r.json());
+const detail = (await fetch(`${base}/courses/kr-golf-0498.json`).then(r => r.json())) as CourseDetail;
 detail.fee.weekend;          // 140000
-detail.ops.nocaddie.value;   // null이면 "미확인"
+detail.ops.nocaddie?.value;  // null이면 "미확인"
 ```
+
+타입은 `shared/types/` 한 곳에 모여 있습니다(`course.ts` 12키 스키마·인덱스, `cluster.ts`, `rental.ts`,
+`search.ts` 검색 어댑터 계약, `cloudflare.ts` Pages Functions). 웹과 React Native 가 같은 계약을 씁니다.
 
 ## 4. 로컬 실행
 
-요구 사항: **Node 20+** (빌드 도구 의존성 없음, `npm install` 불필요)
+요구 사항: **Node 20+**. 빌드 도구(TypeScript·esbuild)만 devDependencies 이고, 사이트 런타임 의존성은 0입니다.
 
 ```bash
-npm run build      # web/ + data/v29/ → dist/
+npm ci             # package-lock.json 기준 설치
+npm run typecheck  # tsc --noEmit (web + Cloudflare Pages Functions, strict)
+npm run build      # typecheck 통과 후 web/*.ts 번들 + data/v29 → dist/
 npm run preview    # http://localhost:4173
-npm run verify     # 산출물 검증(개수·무결성·개인정보·용량)
+npm run verify     # 산출물 검증(개수·무결성·개인정보·용량·TS 구조)
+npm run check      # build + verify
 ```
+
+```
+web/assets/app.ts     화면·라우터·렌더링
+web/assets/search.ts  SearchAdapter 구현(LocalSearchAdapter / EsSearchAdapter)
+web/assets/util.ts    포맷·초성·이스케이프
+shared/types/         웹·RN 공용 타입 (12키 상세·인덱스·클러스터·렌탈·검색 계약)
+functions/api/search.ts  Cloudflare Pages Function (ES 프록시, PagesFunction<SearchEnv>)
+```
+
+`web/` 아래 `.js` 소스는 없습니다(전부 `.ts`). 빌드 산출물 `dist/assets/app.js` 는 esbuild 번들입니다.
 
 데이터를 다시 만들려면(원본 `data/source/golf_courses_all_v29.json`):
 
@@ -100,13 +119,14 @@ npm run data:check   # 12키·개수·금지 문자열·인덱스 300KB 검증
 ## 6. 검색 구조
 
 ```
-web/assets/search.js
-  SearchAdapter (인터페이스)
+shared/types/search.ts   SearchAdapter (인터페이스)
+web/assets/search.ts
     ├─ LocalSearchAdapter : 정적 JSON 브라우저 검색 (기본, 0원)
     └─ EsSearchAdapter    : Elasticsearch 프록시 호출 (선택, 실패 시 자동 폴백)
+functions/api/search.ts  ES 프록시 (PagesFunction<SearchEnv>)
 ```
 
-ES 를 붙이려면 `elasticsearch/` 의 매핑·적재 스크립트와 `functions/api/search.js` 프록시를 사용합니다.
+ES 를 붙이려면 `elasticsearch/` 의 매핑·적재 스크립트와 `functions/api/search.ts` 프록시를 사용합니다.
 절차는 **[elasticsearch/README.md](elasticsearch/README.md)** 참고.
 
 ```js
@@ -117,7 +137,7 @@ window.COURSEBRIEF_CONFIG = { search: { mode: "es", endpoint: "/api/search" } };
 
 웹과 동일한 정적 JSON 을 그대로 쓰면 별도 서버가 필요 없습니다.
 
-- 목록: `index.json` 1회 로드(~200KB) → 메모리 검색·필터 (앱에서도 `LocalSearchAdapter` 로직 이식 가능)
+- 목록: `index.json` 1회 로드(~200KB) → 메모리 검색·필터 (`shared/types` 를 그대로 import, `LocalSearchAdapter` 로직 이식 가능)
 - 상세: `courses/{id}.json` (평균 12KB) — 필요할 때만 fetch, AsyncStorage/SQLite 캐시 권장
 - 이미지·지도는 좌표(`lat`,`lng`)만 있으면 되고, 외부 API 키는 앱에 넣지 않습니다
 - `data/v29/index.json` 의 `built_at`·`version` 으로 캐시 무효화 판단

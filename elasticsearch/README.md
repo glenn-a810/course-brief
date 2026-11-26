@@ -3,10 +3,10 @@
 CourseBrief 웹은 **의존성 없이 브라우저에서 도는 정적 검색**으로도 충분히 동작합니다.
 이 디렉터리는 검색 품질을 더 높이거나(형태소 분석·동의어·랭킹 튜닝) 서버 로그 기반 개선을 하려는 경우를 위한 **교체 가능한 검색 백엔드**입니다.
 
-핵심 원칙: 사이트는 `SearchAdapter` 인터페이스만 알면 되고, 검색 엔진은 갈아 끼울 수 있습니다.
+핵심 원칙: 사이트는 `SearchAdapter` 인터페이스(`shared/types/search.ts`)만 알면 되고, 검색 엔진은 갈아 끼울 수 있습니다.
 
 ```
-web/assets/search.js
+web/assets/search.ts
   ├─ LocalSearchAdapter   (기본) 브라우저 검색 — 초성·부분일치·다중 토큰
   ├─ EsSearchAdapter      (선택) ES 프록시 호출, 실패 시 자동으로 Local 로 폴백
   └─ createSearchAdapter(config, ctx)
@@ -20,7 +20,7 @@ web/assets/search.js
 | `docker-compose.yml` | 로컬 테스트용 단일 노드 ES 8.15 (security off, nori 내장) |
 | `ingest.mjs` | `data/v29/index.json` → `bulk.ndjson` 생성, `--push` 로 인덱스 생성·적재 |
 | `bulk.ndjson` | 생성된 적재 파일 (540 docs) |
-| `../functions/api/search.js` | Cloudflare Pages Function 프록시 (브라우저에 키를 노출하지 않음) |
+| `../functions/api/search.ts` | Cloudflare Pages Function 프록시 (브라우저에 키를 노출하지 않음) |
 
 ## 2. 로컬에서 5분 안에
 

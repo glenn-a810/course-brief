@@ -205,7 +205,7 @@ data/v29/
 
 ### 정적 검색 (기본, 0원)
 
-`web/assets/search.js` 의 `LocalSearchAdapter` 가 브라우저에서 인덱스를 검색합니다.
+`web/assets/search.ts` 의 `LocalSearchAdapter` 가 브라우저에서 인덱스를 검색합니다(타입 계약: `shared/types/search.ts`).
 
 - 한글 **초성 검색**(`ㅇㅅ` → 익산, 인서울…), 부분 일치, 공백 분리 다중 토큰 AND
 - 필드 가중치: 이름 일치 > 이름 접두 > 이름 포함 > 이명 > 초성 > 시군구 > 시도 > 이용형태 > ID
@@ -213,7 +213,7 @@ data/v29/
 
 ### Elasticsearch (선택)
 
-`elasticsearch/` 에 nori 한국어 분석기 기준 매핑, bulk NDJSON 생성·적재 스크립트, `docker-compose.yml`, ES 어댑터(`EsSearchAdapter`)가 있습니다. `SearchAdapter` 인터페이스만 같으면 교체할 수 있습니다.
+`elasticsearch/` 에 nori 한국어 분석기 기준 매핑, bulk NDJSON 생성·적재 스크립트, `docker-compose.yml`, ES 어댑터(`EsSearchAdapter`)가 있습니다. `shared/types/search.ts` 의 `SearchAdapter` 계약만 같으면 교체할 수 있습니다.
 
 ```js
 // 교체 방법 (index.html 앞에 설정 추가)
@@ -229,7 +229,8 @@ ES 가 응답하지 않으면 자동으로 정적 검색으로 되돌아갑니�
 ```bash
 npm run data:build   # data/source/golf_courses_all_v29.json → data/v29/* 재생성
 npm run data:check   # 12키 무결성·개수·금지 문자열·인덱스 300KB 이하 검증
-npm run build        # dist/ 생성 (웹 + 데이터)
+npm run typecheck    # TypeScript(웹·Pages Functions) 타입 검사
+npm run build        # typecheck 후 dist/ 생성 (웹 번들 + 데이터)
 npm run verify       # 빌드 산출물 검증
 ```
 

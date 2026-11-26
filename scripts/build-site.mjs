@@ -1,11 +1,15 @@
 #!/usr/bin/env node
 /**
- * 정적 사이트 빌드 (의존성 0).
- * web/ + data/v29/ → dist/  (Cloudflare Pages: build command `npm run build`, output `dist`)
+ * 정적 사이트 빌드 — web/ 의 TypeScript 를 esbuild 로 번들해 dist/ 를 만든다.
+ * 데이터는 손대지 않고 data/v29 를 그대로 복사한다.
+ *
+ * Cloudflare Pages: build command `npm run build`, output directory `dist`, root `/`
+ * (`npm run build` 가 먼저 `npm run typecheck` 를 통과해야 한다)
  */
-import { cp, mkdir, readFile, rm, stat, writeFile } from "node:fs/promises";
+import { cp, mkdir, readFile, rm, stat, writeFile, readdir } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import path from "node:path";
+import { build } from "esbuild";
 
 const root = path.resolve(import.meta.dirname, "..");
 const dist = path.join(root, "dist");
@@ -26,13 +30,38 @@ async function assertData() {
     process.exit(1);
   }
   const idx = JSON.parse(await readFile(path.join(root, "data/v29/index.json"), "utf8"));
-  const courses = idx.courses?.length ?? 0;
   const dir = path.join(root, "data/v29/courses");
   if (!existsSync(dir)) {
     console.error("data/v29/courses 가 없습니다.");
     process.exit(1);
   }
-  return { idx, courses };
+  return { idx };
+}
+
+/** web/ 에서 정적 자산만 복사한다(TypeScript 소스는 번들로만 나간다) */
+async function copyWeb() {
+  await cp(path.join(root, "web"), dist, {
+    recursive: true,
+    filter: (src) => !src.endsWith(".ts") && !src.endsWith(".map"),
+  });
+}
+
+/** web/assets/app.ts → dist/assets/app.js (ES 모듈 번들) */
+async function bundleWeb() {
+  const result = await build({
+    entryPoints: [path.join(root, "web/assets/app.ts")],
+    outfile: path.join(dist, "assets/app.js"),
+    bundle: true,
+    format: "esm",
+    target: ["es2020"],
+    platform: "browser",
+    charset: "utf8",
+    legalComments: "none",
+    logLevel: "warning",
+    metafile: true,
+  });
+  const bytes = Object.values(result.metafile.outputs)[0]?.bytes ?? 0;
+  return bytes;
 }
 
 async function main() {
@@ -42,11 +71,13 @@ async function main() {
   await rm(dist, { recursive: true, force: true });
   await mkdir(dist, { recursive: true });
 
-  // 1) 웹 자산
-  await cp(path.join(root, "web"), dist, { recursive: true });
-  // 2) 데이터
+  // 1) 웹 정적 자산 (index.html, assets/style.css)
+  await copyWeb();
+  // 2) 웹 TypeScript 번들
+  const bundleBytes = await bundleWeb();
+  // 3) 데이터
   await cp(path.join(root, "data/v29"), path.join(dist, "data/v29"), { recursive: true });
-  // 3) 정적 호스팅 설정
+  // 4) 정적 호스팅 설정
   await writeFile(
     path.join(dist, "_headers"),
     [
@@ -71,26 +102,30 @@ async function main() {
     "User-agent: *\nAllow: /\n",
   );
 
-  // 4) 검증 결과 요약
-  const assets = ["index.html", "assets/app.js", "assets/search.js", "assets/util.js", "assets/style.css"];
+  // 5) 산출물 확인
+  const assets = ["index.html", "assets/app.js", "assets/style.css"];
   for (const a of assets) {
     if (!existsSync(path.join(dist, a))) {
       console.error(`빌드 실패: ${a} 없음`);
       process.exit(1);
     }
   }
-  const courseFiles = (await import("node:fs")).readdirSync(path.join(dist, "data/v29/courses")).filter((f) => f.endsWith(".json"));
+  const strayTs = (await readdir(path.join(dist, "assets"))).filter((f) => f.endsWith(".ts"));
+  if (strayTs.length) {
+    console.error(`빌드 실패: dist/assets 에 TypeScript 소스가 남았습니다 — ${strayTs.join(", ")}`);
+    process.exit(1);
+  }
+  const courseFiles = (await readdir(path.join(dist, "data/v29/courses"))).filter((f) => f.endsWith(".json"));
   const indexSize = (await stat(path.join(dist, "data/v29/index.json"))).size;
-  const total = (await du(path.join(dist)));
+  const total = await du(dist);
 
   console.log("빌드 완료 → dist/");
   console.log(`  골프장 ${idx.courses.length}곳 · 구장 JSON ${courseFiles.length}개 · 클러스터 ${idx.clusters?.length ?? 0}개`);
-  console.log(`  index.json ${(indexSize / 1024).toFixed(1)}KB · dist 전체 ${(total / 1024 / 1024).toFixed(1)}MB`);
+  console.log(`  app.js ${(bundleBytes / 1024).toFixed(1)}KB (TypeScript 번들) · index.json ${(indexSize / 1024).toFixed(1)}KB · dist 전체 ${(total / 1024 / 1024).toFixed(1)}MB`);
   console.log(`  ${((Date.now() - t0) / 1000).toFixed(2)}s`);
 }
 
 async function du(dir) {
-  const { readdir } = await import("node:fs/promises");
   let total = 0;
   for (const e of await readdir(dir, { withFileTypes: true })) {
     const p = path.join(dir, e.name);

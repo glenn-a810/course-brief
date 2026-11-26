@@ -12,13 +12,54 @@ const errors = [];
 const notes = [];
 const ok = (cond, msg) => { if (!cond) errors.push(msg); else notes.push(msg); };
 const exists = async (p) => { try { await access(p); return true; } catch { return false; } };
+const listFiles = async (dir) => {
+  const out = [];
+  for (const e of await readdir(dir, { withFileTypes: true })) {
+    const p = path.join(dir, e.name);
+    if (e.isDirectory()) out.push(...(await listFiles(p)));
+    else out.push(p);
+  }
+  return out;
+};
+
+// 0) TypeScript 소스 구조 (웹·Functions 모두 .ts)
+const tsconfig = JSON.parse(await readFile(path.join(root, "tsconfig.json"), "utf8"));
+ok(tsconfig.compilerOptions?.strict === true, "tsconfig strict: true");
+ok(tsconfig.compilerOptions?.noImplicitAny === true, "tsconfig noImplicitAny: true");
+ok(tsconfig.compilerOptions?.skipLibCheck === true, "tsconfig skipLibCheck: true");
+ok(await exists(path.join(root, "shared/types/index.ts")), "shared/types/index.ts 존재");
+
+for (const f of ["web/assets/app.ts", "web/assets/search.ts", "web/assets/util.ts",
+                 "functions/api/search.ts", "functions/tsconfig.json", "package-lock.json"]) {
+  ok(await exists(path.join(root, f)), `${f} 존재`);
+}
+ok(!(await exists(path.join(root, "functions/api/search.js"))), "functions/api/search.js 없음 (TS 전환 완료)");
+
+const webSources = await listFiles(path.join(root, "web"));
+const webJs = webSources.filter((f) => f.endsWith(".js")).map((f) => path.relative(root, f));
+ok(webJs.length === 0, `web/ 에 .js 소스 없음${webJs.length ? " — " + webJs.slice(0, 5).join(", ") : ""}`);
+
+const pkg = JSON.parse(await readFile(path.join(root, "package.json"), "utf8"));
+ok(Boolean(pkg.devDependencies?.typescript), "devDependencies.typescript");
+ok(Boolean(pkg.devDependencies?.esbuild), "devDependencies.esbuild");
+ok(typeof pkg.scripts?.typecheck === "string", "scripts.typecheck");
+ok(typeof pkg.scripts?.build === "string" && pkg.scripts.build.includes("typecheck"), "scripts.build = typecheck 후 빌드");
 
 // 1) 정적 자산
-for (const f of ["index.html", "robots.txt", "_headers", "assets/app.js", "assets/search.js",
-                 "assets/util.js", "assets/style.css", "data/v29/index.json", "data/v29/schema.md",
+for (const f of ["index.html", "robots.txt", "_headers", "assets/app.js", "assets/style.css",
+                 "data/v29/index.json", "data/v29/schema.md",
                  "data/v29/clusters.json", "data/v29/sido.json", "data/v29/rental_providers.json"]) {
   ok(await exists(path.join(dist, f)), `dist/${f} 존재`);
 }
+
+// 1-1) 웹 번들 (TypeScript → esbuild)
+const bundlePath = path.join(dist, "assets/app.js");
+const bundle = (await exists(bundlePath)) ? await readFile(bundlePath, "utf8") : "";
+ok(bundle.length > 20 * 1024, `dist/assets/app.js 번들 ${(bundle.length / 1024).toFixed(1)}KB`);
+ok(bundle.includes("LocalSearchAdapter") && bundle.includes("EsSearchAdapter"), "app.js 에 검색 어댑터 포함");
+ok(!/\/workspace\/|memory\/clones|99239e1f|ehyunmin|glenn\.nullanswer|@glenn/.test(bundle), "app.js 에 내부 경로·개인정보 없음");
+const distAssets = await readdir(path.join(dist, "assets"));
+ok(!distAssets.some((f) => f.endsWith(".ts")), "dist/assets 에 .ts 없음");
 
 // 2) 인덱스
 const index = JSON.parse(await readFile(path.join(dist, "data/v29/index.json"), "utf8"));

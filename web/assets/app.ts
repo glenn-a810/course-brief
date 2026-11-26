@@ -1,110 +1,222 @@
-import {
-  STATUS, badge, chosung, debounce, esc, fmtDate, fmtNum, fmtPct, fmtWon, isMissing, textOf,
-} from "./util.js";
+import type {
+  AlertPeriod,
+  ClusterFile,
+  ClusterInfo,
+  CourseDetail,
+  CourseIndex,
+  CourseIndexItem,
+  CourseOps,
+  CourseStatus,
+  CoverageArea,
+  DatasetCounts,
+  FacilityKey,
+  FeeTableRow,
+  NearbyDeliveryProvider,
+  OpsKey,
+  RentalProvidersFile,
+  SearchAdapter,
+  SearchConfig,
+  SidoFile,
+  SidoInfo,
+  SiteConfig,
+} from "../../shared/types";
 import { createSearchAdapter } from "./search.js";
+import {
+  STATUS, badge, debounce, esc, fmtDate, fmtNum, fmtPct, fmtWon, isCourseStatus, isMissing, statusOf, textOf,
+} from "./util.js";
+import type { BadgeTone } from "./util.js";
 
-const CONFIG = {
-  dataBase: "data/v29/",
-  pageSize: 48,
-  ...(window.COURSEBRIEF_CONFIG || {}),
+declare global {
+  interface Window {
+    /** index.html 앞에서 주입할 수 있는 런타임 설정 */
+    COURSEBRIEF_CONFIG?: SiteConfig;
+  }
+}
+
+interface ResolvedConfig {
+  dataBase: string;
+  pageSize: number;
+  repoUrl: string;
+  search?: SearchConfig;
+}
+
+const DEFAULT_REPO_URL = "https://github.com/glenn-a810/course-brief";
+
+const CONFIG: ResolvedConfig = {
+  dataBase: window.COURSEBRIEF_CONFIG?.dataBase ?? "data/v29/",
+  pageSize: window.COURSEBRIEF_CONFIG?.pageSize ?? 48,
+  repoUrl: window.COURSEBRIEF_CONFIG?.repoUrl ?? DEFAULT_REPO_URL,
+  search: window.COURSEBRIEF_CONFIG?.search,
 };
-const REPO_URL = CONFIG.repoUrl || "https://github.com/glenn-a810/course-brief";
+const REPO_URL = CONFIG.repoUrl;
 
-const OPS = {
+const OPS: Record<OpsKey, string> = {
   nocaddie: "노캐디", two_player: "2인 플레이", three_player: "3인 플레이",
   five_player: "5인 플레이", marshal_caddie: "마샬 캐디", cart_type: "카트 종류",
   cart_entry: "카트 페어웨이 진입", bagdrop: "셀프 백드롭", mat: "매트 티샷",
   checkin: "체크인", locker: "락카", sauna: "사우나", dress: "복장 규정", pace: "진행 속도",
 };
-const FAC = {
-  practice: "연습그린·연습장", indoor_range: "실내 연습장", food: "식당·조식",
+const FAC: Record<FacilityKey, string> = {
+  practice: "연그린·연습장", indoor_range: "실내 연습장", food: "식당·조식",
   snack_bar: "그늘집·스낵", locker_sauna: "락카·사우나", lodging: "숙박",
   other: "기타 시설", night: "야간 라운드", closed_days: "휴장일", shuttle: "셔틀",
   ev_charge: "전기차 충전", proshop: "프로샵",
 };
-const GRASS = { tee: "티잉구역", fairway: "페어웨이", green: "그린" };
-const LEVEL = { info: "info", caution: "warn", closure: "danger" };
+const GRASS: Record<"tee" | "fairway" | "green", string> = { tee: "티잉구역", fairway: "페어웨이", green: "그린" };
+const LEVEL: Record<string, BadgeTone> = { info: "info", caution: "warn", closure: "danger" };
 
-const state = {
+const SORT_KEYS = ["name", "fee-asc", "fee-desc", "holes-desc"] as const;
+type SortKey = (typeof SORT_KEYS)[number];
+
+function isSortKey(v: string | null | undefined): v is SortKey {
+  return typeof v === "string" && (SORT_KEYS as readonly string[]).includes(v);
+}
+
+interface Filters {
+  sido: string;
+  type: string;
+  holes: string;
+  fee: string;
+  sort: SortKey;
+  status: Set<CourseStatus>;
+}
+
+interface CourseGroup {
+  key: string;
+  name: string;
+  cluster: ClusterInfo | null;
+  members: CourseIndexItem[];
+  holes: number;
+  fee: number | null;
+  sido: string;
+  sigungu: string;
+  statuses: CourseStatus[];
+}
+
+interface AppState {
+  index: CourseIndex | null;
+  clusters: Map<string, ClusterInfo>;
+  sido: SidoInfo[];
+  rental: RentalProvidersFile | null;
+  adapter: SearchAdapter | null;
+  q: string;
+  filters: Filters;
+  shown: number;
+  matches: Map<string, number> | null;
+  groups: CourseGroup[];
+  navToken: number;
+}
+
+function defaultFilters(): Filters {
+  return { sido: "", type: "", holes: "", fee: "", sort: "name", status: new Set<CourseStatus>(["operating"]) };
+}
+
+const state: AppState = {
   index: null,
-  clusters: new Map(),
+  clusters: new Map<string, ClusterInfo>(),
   sido: [],
   rental: null,
   adapter: null,
   q: "",
-  filters: { sido: "", type: "", holes: "", fee: "", sort: "name", status: new Set(["operating"]) },
+  filters: defaultFilters(),
   shown: CONFIG.pageSize,
-  matches: null, // Map<id, score> | null
+  matches: null,
   groups: [],
   navToken: 0,
 };
 
-const $ = (sel) => document.querySelector(sel);
-
-/* ---------------- 데이터 ---------------- */
-async function loadJSON(name) {
-  const res = await fetch(`${CONFIG.dataBase}${name}`, { cache: "no-cache" });
-  if (!res.ok) throw new Error(`${name} ${res.status}`);
-  return res.json();
+/** 마크업은 index.html 에 고정돼 있으므로, 없으면 조용히 넘어가지 않고 즉시 알린다. */
+function $<T extends Element = HTMLElement>(sel: string): T {
+  const node = document.querySelector<T>(sel);
+  if (!node) throw new Error(`요소를 찾을 수 없습니다: ${sel}`);
+  return node;
 }
 
-async function boot() {
+function getIndex(): CourseIndex {
+  const index = state.index;
+  if (!index) throw new Error("데이터가 아직 로드되지 않았습니다");
+  return index;
+}
+
+function getAdapter(): SearchAdapter {
+  const adapter = state.adapter;
+  if (!adapter) throw new Error("검색 어댑터가 아직 준비되지 않았습니다");
+  return adapter;
+}
+
+/* ---------------- 데이터 ---------------- */
+/**
+ * JSON 경계. 원격 데이터는 스키마(`data/v29/schema.md`)를 따르며,
+ * 여기서는 T 로 좁혀서 넘긴다(필드 단위 검증은 data:check 담당).
+ */
+async function loadJSON<T>(name: string): Promise<T> {
+  const res = await fetch(`${CONFIG.dataBase}${name}`, { cache: "no-cache" });
+  if (!res.ok) throw new Error(`${name} ${res.status}`);
+  return (await res.json()) as T;
+}
+
+async function boot(): Promise<void> {
   try {
     const [index, clusters, sido, rental] = await Promise.all([
-      loadJSON("index.json"),
-      loadJSON("clusters.json").catch(() => ({ clusters: [] })),
-      loadJSON("sido.json").catch(() => ({ sido: [] })),
-      loadJSON("rental_providers.json").catch(() => null),
+      loadJSON<CourseIndex>("index.json"),
+      loadJSON<ClusterFile>("clusters.json").catch((): ClusterFile => ({ clusters: [] })),
+      loadJSON<SidoFile>("sido.json").catch((): SidoFile => ({ sido: [] })),
+      loadJSON<RentalProvidersFile>("rental_providers.json").catch((): null => null),
     ]);
     state.index = index;
     state.rental = rental;
-    for (const c of index.clusters || clusters.clusters || []) state.clusters.set(c.id, c);
-    state.sido = sido.sido || index.sido || [];
+    for (const c of index.clusters ?? clusters.clusters ?? []) state.clusters.set(c.id, c);
+    state.sido = sido.sido ?? index.sido ?? [];
     state.adapter = await createSearchAdapter(CONFIG, { courses: index.courses });
     buildStaticUI();
     await route();
-    window.addEventListener("hashchange", () => { state.shown = CONFIG.pageSize; route(); });
+    window.addEventListener("hashchange", () => { state.shown = CONFIG.pageSize; void route(); });
   } catch (err) {
     console.error(err);
-    $("#results").innerHTML = `<div class="error-box">
+    const message = err instanceof Error ? err.message : String(err);
+    $<HTMLElement>("#results").innerHTML = `<div class="error-box">
       <strong>데이터를 불러오지 못했습니다.</strong>
-      <p>${esc(err.message)}</p>
+      <p>${esc(message)}</p>
       <p>정적 서버로 열어야 합니다. 리포지토리에서 <code>npm run preview</code> 또는 <code>npm run build</code> 후 <code>npx serve dist</code> 로 확인하세요.</p>
     </div>`;
   }
 }
 
-function buildStaticUI() {
-  const d = state.index.dataset;
-  $("#hero-count").textContent = String(d.counts.total);
-  $("#footer-meta").textContent =
+function statusCount(counts: DatasetCounts, status: CourseStatus): number {
+  return counts[status] ?? 0;
+}
+
+function buildStaticUI(): void {
+  const d = getIndex().dataset;
+  $<HTMLElement>("#hero-count").textContent = String(d.counts.total);
+  $<HTMLElement>("#footer-meta").textContent =
     `${d.version} · ${d.built_at?.slice(0, 10).replaceAll("-", ".") || ""} 기준 · ${d.counts.total}곳 (상세 ${d.counts.with_detail} / 요약 ${d.counts.master_only})`;
 
-  const sel = $("#f-sido");
+  const sel = $<HTMLSelectElement>("#f-sido");
   for (const s of state.sido) {
     const o = document.createElement("option");
     o.value = s.code;
     o.textContent = `${s.short || s.name} (${s.count})`;
     sel.appendChild(o);
   }
-  const chips = $("#status-chips");
-  for (const btn of chips.querySelectorAll(".chip")) {
+  const chips = $<HTMLElement>("#status-chips");
+  for (const btn of chips.querySelectorAll<HTMLButtonElement>(".chip")) {
     const st = btn.dataset.status;
-    const n = state.index.dataset.counts[st] ?? 0;
-    btn.innerHTML = `${esc(STATUS[st]?.label || st)}<span class="n">${n}</span>`;
+    if (!isCourseStatus(st)) continue;
+    btn.innerHTML = `${esc(STATUS[st].label)}<span class="n">${statusCount(d.counts, st)}</span>`;
     btn.setAttribute("aria-pressed", state.filters.status.has(st) ? "true" : "false");
   }
 }
 
 /* ---------------- 상태·URL ---------------- */
-function readHashQuery() {
+function readHashQuery(): URLSearchParams {
   const hash = location.hash.replace(/^#/, "");
   const qi = hash.indexOf("?");
   if (qi < 0) return new URLSearchParams();
   return new URLSearchParams(hash.slice(qi + 1));
 }
 
-function hashQueryFromState() {
+function hashQueryFromState(): string {
   const f = state.filters;
   const p = new URLSearchParams();
   if (state.q) p.set("q", state.q);
@@ -119,53 +231,58 @@ function hashQueryFromState() {
   return qs ? `#/?${qs}` : "#/";
 }
 
-function syncHash() {
+function syncHash(): void {
   history.replaceState(null, "", hashQueryFromState());
 }
 
-function applyHashQuery(params) {
+function applyHashQuery(params: URLSearchParams): void {
   if (!params) return;
-  state.q = params.get("q") || "";
-  $("#q").value = state.q;
-  $("#q-clear").hidden = !state.q;
+  state.q = params.get("q") ?? "";
+  $<HTMLInputElement>("#q").value = state.q;
+  $<HTMLButtonElement>("#q-clear").hidden = !state.q;
   const f = state.filters;
-  f.sido = params.get("sido") || "";
-  f.type = params.get("type") || "";
-  f.holes = params.get("holes") || "";
-  f.fee = params.get("fee") || "";
-  f.sort = params.get("sort") || "name";
+  f.sido = params.get("sido") ?? "";
+  f.type = params.get("type") ?? "";
+  f.holes = params.get("holes") ?? "";
+  f.fee = params.get("fee") ?? "";
+  const sort = params.get("sort") ?? "name";
+  f.sort = isSortKey(sort) ? sort : "name";
   const st = params.get("status");
-  f.status = new Set(st ? st.split(",").filter((s) => STATUS[s]) : ["operating"]);
-  $("#f-sido").value = f.sido;
-  $("#f-type").value = f.type;
-  $("#f-holes").value = f.holes;
-  $("#f-fee").value = f.fee;
-  $("#f-sort").value = f.sort;
-  for (const btn of $("#status-chips").querySelectorAll(".chip")) {
-    const on = f.status.has(btn.dataset.status);
+  f.status = new Set<CourseStatus>(st ? st.split(",").filter((s) => isCourseStatus(s)) : ["operating"]);
+  $<HTMLSelectElement>("#f-sido").value = f.sido;
+  $<HTMLSelectElement>("#f-type").value = f.type;
+  $<HTMLSelectElement>("#f-holes").value = f.holes;
+  $<HTMLSelectElement>("#f-fee").value = f.fee;
+  $<HTMLSelectElement>("#f-sort").value = f.sort;
+  for (const btn of $<HTMLElement>("#status-chips").querySelectorAll<HTMLButtonElement>(".chip")) {
+    const status = btn.dataset.status;
+    const on = isCourseStatus(status) && f.status.has(status);
     btn.classList.toggle("is-on", on);
     btn.setAttribute("aria-pressed", on ? "true" : "false");
   }
 }
 
 /* ---------------- 목록 ---------------- */
-function buildGroups(courses) {
-  const grouped = new Map();
+function buildGroups(courses: CourseIndexItem[]): CourseGroup[] {
+  const grouped = new Map<string, CourseIndexItem[]>();
   for (const c of courses) {
     const key = c.cluster && state.clusters.has(c.cluster) ? c.cluster : `id:${c.id}`;
-    if (!grouped.has(key)) grouped.set(key, []);
-    grouped.get(key).push(c);
+    const bucket = grouped.get(key);
+    if (bucket) bucket.push(c);
+    else grouped.set(key, [c]);
   }
-  const groups = [];
+  const groups: CourseGroup[] = [];
   for (const [key, members] of grouped) {
-    const cluster = key.startsWith("id:") ? null : state.clusters.get(key);
-    const holes = members.reduce((a, m) => a + (m.holes || 0), 0);
-    const fees = members.map((m) => m.green_fee?.weekend ?? m.green_fee?.weekday).filter((v) => v != null);
+    const cluster = key.startsWith("id:") ? null : state.clusters.get(key) ?? null;
+    const holes = members.reduce((a, m) => a + (m.holes ?? 0), 0);
+    const fees = members
+      .map((m) => m.green_fee?.weekend ?? m.green_fee?.weekday)
+      .filter((v): v is number => v != null);
     groups.push({
       key,
       name: cluster?.name || members[0].name,
       cluster,
-      members: members.sort((a, b) => (b.holes || 0) - (a.holes || 0)),
+      members: members.sort((a, b) => (b.holes ?? 0) - (a.holes ?? 0)),
       holes,
       fee: fees.length ? Math.min(...fees) : null,
       sido: members[0].sido,
@@ -176,13 +293,13 @@ function buildGroups(courses) {
   return groups;
 }
 
-function passesFilters(c) {
+function passesFilters(c: CourseIndexItem): boolean {
   const f = state.filters;
   if (f.status.size && !f.status.has(c.status)) return false;
   if (f.sido && c.sido_code !== f.sido) return false;
   if (f.type && c.type !== f.type) return false;
   if (f.holes) {
-    const h = c.holes || 0;
+    const h = c.holes ?? 0;
     if (f.holes === "36" ? h < 36 : h !== Number(f.holes)) return false;
   }
   if (f.fee) {
@@ -192,7 +309,7 @@ function passesFilters(c) {
   return true;
 }
 
-function sortGroups(groups) {
+function sortGroups(groups: CourseGroup[]): CourseGroup[] {
   const s = state.filters.sort;
   const arr = [...groups];
   if (s === "fee-asc") arr.sort((a, b) => (a.fee ?? Infinity) - (b.fee ?? Infinity) || a.name.localeCompare(b.name, "ko"));
@@ -202,49 +319,51 @@ function sortGroups(groups) {
   return arr;
 }
 
-async function renderList({ reset = false } = {}) {
-  const courses = state.index.courses;
-  let allowed = null;
+async function renderList({ reset = false }: { reset?: boolean } = {}): Promise<void> {
+  const index = getIndex();
+  const courses = index.courses;
+  let allowed: Map<string, number> | null = null;
   if (state.q) {
-    const res = await state.adapter.search(state.q, { limit: 0 });
-    allowed = new Map((res || []).map((r) => [r.id, r.score]));
-    $("#search-mode").hidden = false;
-    $("#search-mode").textContent = `${state.adapter.label} · ${allowed.size}건 일치`;
+    const res = await getAdapter().search({ text: state.q, limit: 0 });
+    allowed = new Map((res ?? []).map((r) => [r.id, r.score]));
+    $<HTMLElement>("#search-mode").hidden = false;
+    $<HTMLElement>("#search-mode").textContent = `${getAdapter().label} · ${allowed.size}건 일치`;
   } else {
-    $("#search-mode").hidden = true;
+    $<HTMLElement>("#search-mode").hidden = true;
   }
 
-  const filtered = courses.filter((c) => (allowed ? allowed.has(c.id) : true) && passesFilters(c));
-  let groups = sortGroups(buildGroups(filtered));
-  if (allowed) {
+  const matched = allowed;
+  const filtered = courses.filter((c) => (matched ? matched.has(c.id) : true) && passesFilters(c));
+  const groups = sortGroups(buildGroups(filtered));
+  if (matched) {
     // 검색 점수 순서를 유지(그룹은 최고 점수 기준)
     groups.sort((a, b) => {
-      const sa = Math.max(...a.members.map((m) => allowed.get(m.id) ?? 0));
-      const sb = Math.max(...b.members.map((m) => allowed.get(m.id) ?? 0));
+      const sa = Math.max(...a.members.map((m) => matched.get(m.id) ?? 0));
+      const sb = Math.max(...b.members.map((m) => matched.get(m.id) ?? 0));
       return sb - sa;
     });
   }
   state.groups = groups;
 
-  const totalCourses = state.index.courses.length;
+  const totalCourses = courses.length;
   const n = groups.length;
   const stLabel = state.filters.status.size
-    ? [...state.filters.status].map((s) => STATUS[s].label).join("·")
+    ? [...state.filters.status].map((s) => statusOf(s).label).join("·")
     : "전체";
-  $("#result-count").textContent =
+  $<HTMLElement>("#result-count").textContent =
     `${stLabel} · ${n.toLocaleString("ko-KR")}개 시설 / ${filtered.length.toLocaleString("ko-KR")}개 구장 (전체 ${totalCourses}곳)`;
 
   if (reset) state.shown = CONFIG.pageSize;
   const slice = groups.slice(0, state.shown);
-  $("#results").innerHTML = slice.map(cardHTML).join("");
-  $("#empty").hidden = n > 0;
-  $("#more").hidden = n <= state.shown;
-  $("#more").textContent = `더 보기 (${state.shown} / ${n})`;
+  $<HTMLElement>("#results").innerHTML = slice.map(cardHTML).join("");
+  $<HTMLElement>("#empty").hidden = n > 0;
+  $<HTMLElement>("#more").hidden = n <= state.shown;
+  $<HTMLElement>("#more").textContent = `더 보기 (${state.shown} / ${n})`;
 }
 
-function cardHTML(g) {
+function cardHTML(g: CourseGroup): string {
   const s = g.statuses.length === 1 ? g.statuses[0] : "operating";
-  const st = STATUS[s] || STATUS.operating;
+  const st = statusOf(s);
   const fee = g.fee;
   const feeLine = fee == null
     ? `<span>그린피 <b>미확인</b></span>`
@@ -256,7 +375,7 @@ function cardHTML(g) {
 
   const memberLinks = g.members.length > 1
     ? `<div class="card-members">${g.members.map((m) => {
-        const ms = STATUS[m.status] || STATUS.operating;
+        const ms = statusOf(m.status);
         return `<a href="#/c/${esc(m.id)}">${esc(m.name)}${m.holes ? ` · ${m.holes}홀` : ""}${
           m.status !== "operating" ? ` <span class="badge ${ms.tone}">${esc(ms.label)}</span>` : ""}</a>`;
       }).join("")}</div>`
@@ -295,7 +414,7 @@ function cardHTML(g) {
         <span class="tag">같은 부지 ${g.members.length}개 코스</span>
       </div>
       <div class="card-members">${g.members.map((m) => {
-        const ms = STATUS[m.status] || STATUS.operating;
+        const ms = statusOf(m.status);
         return `<a href="#/c/${esc(m.id)}">${esc(m.name)}${m.holes ? ` · ${m.holes}홀` : ""}${
           m.status !== "operating" ? ` <span class="badge ${ms.tone}">${esc(ms.label)}</span>` : ""}</a>`;
       }).join("")}</div>
@@ -304,29 +423,30 @@ function cardHTML(g) {
 }
 
 /* ---------------- 상세 ---------------- */
-async function renderDetail(id) {
-  const course = state.index.courses.find((c) => c.id === id);
+async function renderDetail(id: string): Promise<void> {
+  const index = getIndex();
+  const course = index.courses.find((c) => c.id === id);
   if (!course) {
-    $("#view-detail").innerHTML = `<div class="page"><div class="error-box">해당 골프장을 찾을 수 없습니다. <a href="#/">목록으로</a></div></div>`;
+    $<HTMLElement>("#view-detail").innerHTML = `<div class="page"><div class="error-box">해당 골프장을 찾을 수 없습니다. <a href="#/">목록으로</a></div></div>`;
     return;
   }
-  let detail = null;
+  let detail: CourseDetail | null = null;
   if (course.detail) {
     try {
-      detail = await loadJSON(`courses/${id}.json`);
+      detail = await loadJSON<CourseDetail>(`courses/${id}.json`);
     } catch (e) {
       console.warn(e);
     }
   }
-  const cluster = course.cluster ? state.clusters.get(course.cluster) : null;
-  const others = cluster
-    ? (cluster.members || []).filter((m) => m !== course.name).map((name) => {
-        const mc = state.index.courses.find((c) => c.name === name);
+  const cluster = course.cluster ? state.clusters.get(course.cluster) ?? null : null;
+  const others: Array<{ name: string; id?: string; holes?: number | null }> = cluster
+    ? (cluster.members ?? []).filter((m) => m !== course.name).map((name) => {
+        const mc = index.courses.find((c) => c.name === name);
         return mc ? { name, id: mc.id, holes: mc.holes } : { name };
       })
     : [];
 
-  const st = STATUS[course.status] || STATUS.operating;
+  const st = statusOf(course.status);
   const head = `
     <a class="back" href="#/">← 목록</a>
     <div class="detail-head">
@@ -347,7 +467,7 @@ async function renderDetail(id) {
         <div><dt>대표전화</dt><dd>${course.tel ? `<a href="tel:${esc(course.tel.replace(/[^\d+]/g, ""))}">${esc(course.tel)}</a>` : "—"}</dd></div>
         <div><dt>홈페이지</dt><dd>${course.homepage ? `<a href="${esc(course.homepage)}" target="_blank" rel="noopener noreferrer">${esc(shortUrl(course.homepage))}</a>` : "—"}</dd></div>
         <div><dt>그린피</dt><dd>${feeSummaryText(course)}</dd></div>
-        <div><dt>좌표</dt><dd>${course.lat != null ? `<a href="https://www.google.com/maps?q=${course.lat},${course.lng}" target="_blank" rel="noopener noreferrer">${course.lat.toFixed(5)}, ${course.lng.toFixed(5)}</a>` : "—"}</dd></div>
+        <div><dt>좌표</dt><dd>${course.lat != null && course.lng != null ? `<a href="https://www.google.com/maps?q=${course.lat},${course.lng}" target="_blank" rel="noopener noreferrer">${course.lat.toFixed(5)}, ${course.lng.toFixed(5)}</a>` : "—"}</dd></div>
       </dl>
     </div>`;
 
@@ -375,55 +495,65 @@ async function renderDetail(id) {
       <div class="section-body"><div class="callout">이 구장은 <strong>요약 데이터만</strong> 있습니다(건설중·폐업 등으로 상세 수집 전).
       마스터 정보(주소·좌표·홀수·상태)는 위에 표시된 값이 전부입니다.</div></div></section>`;
 
-  $("#view-detail").innerHTML = `<div class="detail">${head}${clusterBox}${nav}${body}</div>`;
+  $<HTMLElement>("#view-detail").innerHTML = `<div class="detail">${head}${clusterBox}${nav}${body}</div>`;
   window.scrollTo({ top: 0 });
 }
 
-function shortUrl(u) {
+function shortUrl(u: string): string {
   try { return new URL(u).hostname.replace(/^www\./, ""); } catch { return u; }
 }
 
-function feeSummaryText(c) {
+function feeSummaryText(c: CourseIndexItem): string {
   const f = c.green_fee;
   if (!f) return "미확인";
-  const parts = [];
+  const parts: string[] = [];
   if (f.weekday) parts.push(`주중 ${fmtWon(f.weekday)}`);
   if (f.weekend) parts.push(`주말 ${fmtWon(f.weekend)}`);
   if (!parts.length) return "미확인";
   return `${parts.join(" / ")} <span class="sub">${f.basis === "official" ? "공식 요금표" : "실거래 관측 최저가"}${f.as_of ? ` · ${fmtDate(f.as_of)}` : ""}</span>`;
 }
 
-function valCell(v) {
+function valCell(v: unknown): string | null {
   if (isMissing(v)) return null;
   const t = textOf(v);
   if (!t || t === "미확인") return null;
   return t;
 }
 
-function evidenceDetails(evidence, label = "근거") {
-  const arr = (Array.isArray(evidence) ? evidence : []).filter(Boolean).slice(0, 3);
+function evidenceDetails(evidence: unknown, label = "근거"): string {
+  const arr: unknown[] = Array.isArray(evidence) ? evidence.filter(Boolean).slice(0, 3) : [];
   if (!arr.length) return "";
   return `<details class="ev"><summary>${esc(label)} ${arr.length}건</summary><ul>${arr
     .map((e) => `<li>${esc(String(e).slice(0, 220))}</li>`).join("")}</ul></details>`;
 }
 
-function kvRow(label, value, sub = "") {
+function kvRow(label: string, value: string, sub = ""): string {
   return `<div class="kv"><dt>${esc(label)}</dt><dd>${value}${sub ? `<span class="sub">${sub}</span>` : ""}</dd></div>`;
 }
 
-function sections(d, c) {
-  const m = d.master || {};
-  const co = d.course || {};
-  const fee = d.fee || {};
-  const cancel = d.cancel || {};
-  const ops = d.ops || {};
-  const fac = d.facilities || {};
-  const br = d.briefing || {};
-  const rt = d.rental || {};
-  const cov = d.coverage || {};
+function periodText(period: AlertPeriod | string | null | undefined): string {
+  if (!period) return "";
+  if (typeof period === "string") return period;
+  const from = period.from ?? "";
+  const tail = period.to ? `~${period.to}` : period.reopen ? `재개 ${period.reopen}` : "";
+  return [from, tail].filter(Boolean).join(" ");
+}
+
+function sections(d: CourseDetail, c: CourseIndexItem): string {
+  const m = d.master ?? {};
+  const co = d.course ?? {};
+  const fee = d.fee ?? {};
+  const cancel = d.cancel ?? {};
+  const ops: CourseOps = d.ops ?? {};
+  const fac = d.facilities ?? {};
+  const br = d.briefing ?? {};
+  const rt = d.rental ?? {};
+  const cov = d.coverage ?? {};
 
   /* 01 기본·입지 */
-  const holes = m.holes || {};
+  const holes = m.holes ?? {};
+  const nameVariants = m.name_variants ?? [];
+  const mergedIds = m.merged_ids ?? [];
   const holeText = [
     holes.total ? `총 ${holes.total}홀` : null,
     holes.member ? `회원 ${holes.member}` : null,
@@ -438,50 +568,47 @@ function sections(d, c) {
       ${kvRow("홀 구성", esc(holeText || "미확인"), m.holes_note ? esc(m.holes_note) : "")}
       ${kvRow("이용형태", esc(m.type || c.type || "미확인"), m.type_note ? esc(m.type_note) : "")}
       ${kvRow("개장", esc(m.opened || "미확인"), m.opened_note ? esc(m.opened_note) : "")}
-      ${kvRow("면적", m.area_sqm ? `${fmtNum(m.area_sqm)}㎡ ${m.area_sqm ? `(${fmtNum(Math.round(m.area_sqm / 3.3058))}평)` : ""}` : "미확인")}
-      ${kvRow("운영사", esc((m.operators || []).join(", ") || "미확인"), m.operators_note ? esc(m.operators_note) : "")}
-      ${m.designer ? kvRow("설계", esc(m.designer)) : ""}
+      ${kvRow("면적", m.area_sqm ? `${fmtNum(m.area_sqm)}㎡ (${fmtNum(Math.round(m.area_sqm / 3.3058))}평)` : "미확인")}
+      ${kvRow("운영사", esc((m.operators ?? []).join(", ") || "미확인"), m.operators_note ? esc(m.operators_note) : "")}
+      ${m.designer ? kvRow("설계", esc(textOf(m.designer))) : ""}
       ${kvRow("주소", esc(m.address || "미확인"), m.address_note ? esc(m.address_note) : "")}
       ${m.nearest_ic ? kvRow("최단 IC", `${esc(m.nearest_ic.name)}${m.nearest_ic.distance_km ? ` · ${m.nearest_ic.distance_km}km` : ""}`, esc(m.nearest_ic.source || "")) : ""}
       ${m.nearest_ic_note ? kvRow("IC 비고", esc(m.nearest_ic_note)) : ""}
       ${m.expected_open ? kvRow("개장 예정", esc(m.expected_open), esc(m.project_stage || "")) : ""}
       ${m.access === "military_only" ? `<div class="callout warn"><strong>군 전용 체력단련장</strong>일반인 이용이 제한되는 시설입니다(현역·군인공제회 등).</div>` : ""}
-      ${(m.name_variants || []).length > 1 ? kvRow("이명·구 명칭", esc(m.name_variants.slice(0, 8).join(", "))) : ""}
-      ${(m.merged_ids || []).length ? kvRow("병합된 레코드", esc((m.merged_ids || []).join(", ")), "중복 등록이 확인되어 하나로 합친 구장입니다") : ""}
+      ${nameVariants.length > 1 ? kvRow("이명·구 명칭", esc(nameVariants.slice(0, 8).join(", "))) : ""}
+      ${mergedIds.length ? kvRow("병합된 레코드", esc(mergedIds.join(", ")), "중복 등록이 확인되어 하나로 합친 구장입니다") : ""}
     </div>
   </section>`;
 
   /* 02 코스 스펙 */
-  const grass = co.grass || {};
-  const grassRows = Object.entries(GRASS).map(([k, label]) => {
+  const grass = co.grass ?? {};
+  const grassRows = (Object.keys(GRASS) as Array<keyof typeof GRASS>).map((k) => {
     const g = grass[k];
     if (isMissing(g)) return null;
-    if (typeof g === "object" && g.value === undefined && g.evidence) return null;
+    if (typeof g === "object" && g !== null && g.value === undefined && g.evidence) return null;
     const t = valCell(g);
-    return t ? kvRow(`잔디 · ${label}`, esc(t)) : null;
-  }).filter(Boolean).join("");
+    return t ? kvRow(`잔디 · ${GRASS[k]}`, esc(t)) : null;
+  }).filter((row): row is string => row !== null).join("");
 
   let kgaHTML = "";
-  const kga = co.kga || m.kga;
-  if (kga && typeof kga === "object") {
-    const combos = kga.hole_combinations || [];
-    if (combos.length) {
-      const rows = [];
-      for (const cb of combos.slice(0, 4)) {
-        for (const t of (cb.tees || []).slice(0, 8)) {
-          rows.push(`<tr><td>${esc([cb.course_name_1, cb.course_name_2].filter(Boolean).join(" + "))}</td>
-            <td>${esc(t.tee || "")}</td><td>${esc(t.gender || "")}</td>
-            <td>${fmtNum(t.length_yds)}</td><td>${fmtNum(t.course_rating, 1)}</td><td>${fmtNum(t.slope_rating)}</td></tr>`);
-        }
+  const kga = co.kga ?? null;
+  if (kga) {
+    const combos = kga.hole_combinations ?? [];
+    const rows: string[] = [];
+    for (const cb of combos.slice(0, 4)) {
+      if (typeof cb === "string") continue;
+      for (const t of (cb.tees ?? []).slice(0, 8)) {
+        rows.push(`<tr><td>${esc([cb.course_name_1, cb.course_name_2].filter(Boolean).join(" + "))}</td>
+          <td>${esc(t.tee || "")}</td><td>${esc(t.gender || "")}</td>
+          <td>${fmtNum(t.length_yds)}</td><td>${fmtNum(t.course_rating, 1)}</td><td>${fmtNum(t.slope_rating)}</td></tr>`);
       }
-      if (rows.length) {
-        kgaHTML = `<div class="table-wrap"><table>
-          <thead><tr><th>조합</th><th>티</th><th>성별</th><th>길이(yd)</th><th>코스레이팅</th><th>슬로프</th></tr></thead>
-          <tbody>${rows.join("")}</tbody></table></div>
-          <p class="section-desc">출처: 대한골프협회(KGA) 코스레이팅™/슬로프레이팅™ · 18홀 조합 단위</p>`;
-      }
-    } else if (typeof kga === "string") {
-      kgaHTML = esc(kga);
+    }
+    if (rows.length) {
+      kgaHTML = `<div class="table-wrap"><table>
+        <thead><tr><th>조합</th><th>티</th><th>성별</th><th>길이(yd)</th><th>코스레이팅</th><th>슬로프</th></tr></thead>
+        <tbody>${rows.join("")}</tbody></table></div>
+        <p class="section-desc">출처: 대한골프협회(KGA) 코스레이팅™/슬로프레이팅™ · 18홀 조합 단위</p>`;
     }
   }
 
@@ -492,8 +619,8 @@ function sections(d, c) {
     <div class="section-body">
       ${kvRow("홀수 / 파", esc([co.holes ? `${co.holes}홀` : null, co.par ? `파 ${co.par}` : null].filter(Boolean).join(" / ") || "미확인"))}
       ${co.length_m ? kvRow("전장", `${fmtNum(co.length_m)}m (${fmtNum(Math.round(co.length_m * 1.0936))}yd)`) : ""}
-      ${(co.blocks || []).length ? kvRow("코스 구성", esc(co.blocks.join(", "))) : ""}
-      ${(m.course_blocks || []).length ? kvRow("세부 코스명", esc(m.course_blocks.join(", "))) : ""}
+      ${(co.blocks ?? []).length ? kvRow("코스 구성", esc((co.blocks ?? []).join(", "))) : ""}
+      ${(m.course_blocks ?? []).length ? kvRow("세부 코스명", esc((m.course_blocks ?? []).join(", "))) : ""}
       ${co.course_names ? kvRow("코스명", esc(textOf(co.course_names))) : ""}
       ${kvRow("야간 라운드", isMissing(co.night_light) ? "미확인" : esc(textOf(co.night_light)))}
       ${grassRows}
@@ -506,13 +633,12 @@ function sections(d, c) {
 
   /* 03 요금·예약·취소 */
   const unavailable = c.status === "closed" || c.status === "suspended";
-  const feeNote = (fee.basis ? `<span class="sub">${esc(fee.basis)}</span>` : "");
   const asOf = fee.as_of || fee.checked_at;
   const member = fee.member;
   const tableHTML = (() => {
-    const rows = (fee.official_table?.rows || []).filter((r) => r && (r.value || r.amounts?.length));
+    const rows = (fee.official_table?.rows ?? []).filter((r) => r && (r.value || r.amounts?.length));
     if (!rows.length) return "";
-    const groups = [];
+    const groups: Array<{ sec: string; rows: FeeTableRow[] }> = [];
     for (const r of rows) {
       const sec = (r.section || "요금").trim();
       let g = groups.find((x) => x.sec === sec);
@@ -520,7 +646,8 @@ function sections(d, c) {
       const key = `${r.label || ""}|${r.value || ""}`;
       if (!g.rows.some((x) => `${x.label || ""}|${x.value || ""}` === key)) g.rows.push(r);
     }
-    const groupHTML = (g) => `<tr class="group"><th colspan="2">${esc(g.sec === "구분" ? "요금" : g.sec)}</th></tr>` +
+    const groupHTML = (g: { sec: string; rows: FeeTableRow[] }): string =>
+      `<tr class="group"><th colspan="2">${esc(g.sec === "구분" ? "요금" : g.sec)}</th></tr>` +
       g.rows.map((r) => {
         const label = r.label && r.label !== g.sec ? r.label : "";
         return `<tr><td>${esc(label)}</td><td class="num">${esc(r.value || "")}</td></tr>`;
@@ -533,7 +660,7 @@ function sections(d, c) {
     }
     return table;
   })();
-  const od = fee.official_detail || {};
+  const od = fee.official_detail ?? {};
   const s3 = `
   <section class="section" id="s3">
     <h2><span class="num">03</span>요금·예약·취소</h2>
@@ -560,19 +687,19 @@ function sections(d, c) {
       ${evidenceDetails(cancel.evidence, "취소·위약 근거")}
       ${evidenceDetails(cancel.weather_evidence, "악천후 정산 근거")}
       ${fee.note ? kvRow("요금 비고", esc(fee.note)) : ""}
-      ${(fee.sources || []).length ? `<p class="section-desc">출처: ${fee.sources.slice(0, 4).map((s) => s.url ? `<a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.source || shortUrl(s.url))}</a>` : esc(s.source || "")).join(" · ")}</p>` : ""}
+      ${(fee.sources ?? []).length ? `<p class="section-desc">출처: ${(fee.sources ?? []).slice(0, 4).map((s) => s.url ? `<a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.source || shortUrl(s.url))}</a>` : esc(s.source || "")).join(" · ")}</p>` : ""}
     </div>
   </section>`;
 
   /* 04 현장 운영 */
-  const opsRows = [];
-  const opsUnknown = [];
-  for (const [k, label] of Object.entries(OPS)) {
+  const opsRows: string[] = [];
+  const opsUnknown: string[] = [];
+  for (const k of Object.keys(OPS) as OpsKey[]) {
     const v = ops[k];
-    if (!v) { opsUnknown.push(label); continue; }
+    if (!v) { opsUnknown.push(OPS[k]); continue; }
     const t = valCell(v.value);
-    if (t) opsRows.push(kvRow(label, esc(t), evidenceDetails(v.evidence)));
-    else opsUnknown.push(label);
+    if (t) opsRows.push(kvRow(OPS[k], esc(t), evidenceDetails(v.evidence)));
+    else opsUnknown.push(OPS[k]);
   }
   const s4 = `
   <section class="section" id="s4">
@@ -585,14 +712,14 @@ function sections(d, c) {
   </section>`;
 
   /* 05 부대시설 */
-  const facRows = [];
-  const facUnknown = [];
-  for (const [k, label] of Object.entries(FAC)) {
+  const facRows: string[] = [];
+  const facUnknown: string[] = [];
+  for (const k of Object.keys(FAC) as FacilityKey[]) {
     const v = fac[k];
-    if (!v) { facUnknown.push(label); continue; }
+    if (!v) { facUnknown.push(FAC[k]); continue; }
     const t = valCell(v.value);
-    if (t) facRows.push(kvRow(label, esc(t), evidenceDetails(v.evidence)));
-    else facUnknown.push(label);
+    if (t) facRows.push(kvRow(FAC[k], esc(t), evidenceDetails(v.evidence)));
+    else facUnknown.push(FAC[k]);
   }
   const s5 = `
   <section class="section" id="s5">
@@ -601,27 +728,30 @@ function sections(d, c) {
     <div class="section-body">
       ${facRows.join("") || `<div class="callout">확인된 부대시설 정보가 없습니다.</div>`}
       ${facUnknown.length ? `<p class="unconfirmed-line">미확인 ${facUnknown.length}개: ${esc(facUnknown.join(", "))}</p>` : ""}
-      ${(fac.gf_facilities || []).length ? `<p class="section-desc">참고: ${esc(fac.gf_facilities.slice(0, 3).join(" / "))}</p>` : ""}
+      ${(fac.gf_facilities ?? []).length ? `<p class="section-desc">참고: ${esc((fac.gf_facilities ?? []).slice(0, 3).join(" / "))}</p>` : ""}
     </div>
   </section>`;
 
   /* 06 브리핑·공지 */
   const alert = br.alert;
-  const notices = (br.notices?.items || []).slice(0, 10);
+  const noticeTags = br.notices?.tags;
+  const noticeUrl = br.notices?.url;
+  const notices = (br.notices?.items ?? []).slice(0, 10);
   const noticeHTML = notices.length ? `<ul class="notice-list">${notices.map((n) => {
-    const link = n.url && /^https?:/.test(n.url);
-    const title = link ? `<a href="${esc(n.url)}" target="_blank" rel="noopener noreferrer">${esc(n.title)}</a>` : esc(n.title);
+    const link = typeof n.url === "string" && /^https?:/.test(n.url);
+    const title = link && n.url ? `<a href="${esc(n.url)}" target="_blank" rel="noopener noreferrer">${esc(n.title ?? "")}</a>` : esc(n.title ?? "");
     return `<li><time>${esc(fmtDate(n.date))}</time><span>${title}</span></li>`;
   }).join("")}</ul>` : `<p class="section-desc">최근 공지를 확인하지 못했습니다. 공지 게시판이 없거나 이미지 본문만 있는 경우입니다.</p>`;
+  const period = alert ? periodText(alert.period) : "";
   const s6 = `
   <section class="section" id="s6">
     <h2><span class="num">06</span>브리핑·공지</h2>
     <p class="section-desc">휴장·에어레이션·요금 변경 같은 최근 공지와 라운더 평가. 예약 전에 가장 먼저 볼 영역입니다.</p>
     <div class="section-body">
-      ${alert ? `<div class="callout ${LEVEL[alert.level] || "info"}">
+      ${alert ? `<div class="callout ${(alert.level ? LEVEL[alert.level] : undefined) ?? "info"}">
         <strong>${esc(alert.summary || (alert.confirmed ? "확인된 공지" : "확인 필요"))}</strong>
         ${esc(alert.detail || "")}
-        ${alert.period ? `<div class="sub">기간: ${esc(alert.period)}</div>` : ""}
+        ${period ? `<div class="sub">기간: ${esc(period)}</div>` : ""}
         ${alert.source_url ? `<div class="sub"><a href="${esc(alert.source_url)}" target="_blank" rel="noopener noreferrer">근거 보기</a></div>` : ""}
       </div>` : ""}
       ${br.review ? kvRow("라운더 평가", `${fmtNum(br.review.score_10, 1)} / 10${br.review.count ? ` · ${fmtNum(br.review.count)}건` : ""}`, esc(br.review.note || br.review.source || "")) : ""}
@@ -631,27 +761,31 @@ function sections(d, c) {
         <h3 class="h3">최근 공지</h3>
         ${noticeHTML}
       </div>
-      ${(br.notices?.tags && Object.keys(br.notices.tags).length) ? `<div class="tags">${Object.entries(br.notices.tags).slice(0, 6).map(([tag, arr]) =>
+      ${noticeTags && Object.keys(noticeTags).length ? `<div class="tags">${Object.entries(noticeTags).slice(0, 6).map(([tag, arr]) =>
         `<span class="tag">${esc(tag)} ${Array.isArray(arr) ? arr.length : ""}</span>`).join("")}</div>` : ""}
-      ${(br.notices?.url) ? `<p class="section-desc">공지 게시판: ${/^https?:/.test(br.notices.url) ? `<a href="${esc(br.notices.url)}" target="_blank" rel="noopener noreferrer">${esc(shortUrl(br.notices.url))}</a>` : "수집 아카이브"}</p>` : ""}
-      ${(br.unconfirmed || []).length ? `<p class="unconfirmed-line">아직 확인되지 않은 항목 ${br.unconfirmed.length}개: ${esc(br.unconfirmed.slice(0, 14).join(", "))}</p>` : ""}
+      ${noticeUrl ? `<p class="section-desc">공지 게시판: ${/^https?:/.test(noticeUrl) ? `<a href="${esc(noticeUrl)}" target="_blank" rel="noopener noreferrer">${esc(shortUrl(noticeUrl))}</a>` : "수집 아카이브"}</p>` : ""}
+      ${(br.unconfirmed ?? []).length ? `<p class="unconfirmed-line">아직 확인되지 않은 항목 ${(br.unconfirmed ?? []).length}개: ${esc((br.unconfirmed ?? []).slice(0, 14).join(", "))}</p>` : ""}
       ${br.collected_at ? `<p class="section-desc">수집 ${fmtDate(br.collected_at)}</p>` : ""}
-      ${(br.sources || []).length ? `<p class="section-desc">출처: ${br.sources.slice(0, 5).map((u) => /^https?:/.test(u) ? `<a href="${esc(u)}" target="_blank" rel="noopener noreferrer">${esc(shortUrl(u))}</a>` : esc(u)).join(" · ")}</p>` : ""}
+      ${(br.sources ?? []).length ? `<p class="section-desc">출처: ${(br.sources ?? []).slice(0, 5).map((u) => /^https?:/.test(u) ? `<a href="${esc(u)}" target="_blank" rel="noopener noreferrer">${esc(shortUrl(u))}</a>` : esc(u)).join(" · ")}</p>` : ""}
     </div>
   </section>`;
 
   /* 07 클럽 렌탈 */
   const nd = rt.nearby_delivery;
-  const rtRows = [
+  const rentalRows: Array<[string, unknown]> = [
     ["대여 가능", rt.available], ["풀세트 요금", rt.full_set != null ? fmtWon(rt.full_set) : null],
     ["요금 안내", rt.fee_text], ["브랜드", rt.brand], ["좌타용", rt.left_handed],
     ["골프화", rt.shoes], ["9홀", rt.nine_hole], ["거리측정기", rt.range_finder],
     ["사전 예약", rt.reservation],
-  ].map(([label, v]) => {
-    const t = valCell(v);
-    return t ? kvRow(label, esc(t)) : null;
-  }).filter(Boolean).join("");
-  const providers = (nd?.providers || []).map((p) => `
+  ];
+  const rentalRowsHTML = rentalRows
+    .map(([label, v]) => {
+      const t = valCell(v);
+      return t ? kvRow(label, esc(t)) : null;
+    })
+    .filter((row): row is string => row !== null)
+    .join("");
+  const providers = (nd?.providers ?? []).map((p: NearbyDeliveryProvider) => `
     <div class="provider">
       <div class="provider-top">
         <span class="provider-name">${esc(p.name)}</span>
@@ -669,10 +803,10 @@ function sections(d, c) {
     <h2><span class="num">07</span>클럽 렌탈</h2>
     <p class="section-desc">골프장 자체 대여와, 이 권역에 배송·픽업이 가능한 렌탈 업체. 해외 골퍼·장비 없는 라운드에 필요합니다.</p>
     <div class="section-body">
-      ${rtRows || `<div class="callout">골프장 자체 클럽 대여 정보가 확인되지 않았습니다.</div>`}
+      ${rentalRowsHTML || `<div class="callout">골프장 자체 클럽 대여 정보가 확인되지 않았습니다.</div>`}
       ${evidenceDetails(rt.evidence, "대여 근거")}
       ${nd ? `<div>
-        <h3 class="h3">${esc(nd.region || "")} 권역 렌탈·딜리버리 ${providers ? `(${nd.provider_count || (nd.providers || []).length}곳)` : ""}</h3>
+        <h3 class="h3">${esc(nd.region || "")} 권역 렌탈·딜리버리 ${providers ? `(${nd.provider_count || (nd.providers ?? []).length}곳)` : ""}</h3>
         <div class="providers">${providers || `<p class="section-desc">이 권역에 확인된 배송 업체가 없습니다.</p>`}</div>
         <p class="section-desc">${esc(nd.note_code || "")}${nd.verified_at ? ` · 확인 ${esc(nd.verified_at)}` : ""}</p>
       </div>` : ""}
@@ -680,9 +814,12 @@ function sections(d, c) {
     </div>
   </section>`;
 
+  const COVERAGE_LABELS: Array<[CoverageArea, string]> = [
+    ["basic", "기본"], ["course", "코스"], ["fee", "요금"], ["ops", "운영"],
+    ["facility", "시설"], ["briefing", "브리핑"], ["rental", "렌탈"],
+  ];
   const covRow = Object.keys(cov).length ? `<div class="stat-grid" style="margin-top:14px">
-    ${[["basic", "기본"], ["course", "코스"], ["fee", "요금"], ["ops", "운영"], ["facility", "시설"], ["briefing", "브리핑"], ["rental", "렌탈"]]
-      .map(([k, l]) => `<div class="stat"><div class="n">${fmtPct(cov[k])}</div><div class="l">${l} 정보 충실도</div></div>`).join("")}
+    ${COVERAGE_LABELS.map(([k, l]) => `<div class="stat"><div class="n">${fmtPct(cov[k])}</div><div class="l">${l} 정보 충실도</div></div>`).join("")}
   </div>` : "";
 
   return `${s1}${s2}${s3}${s4}${s5}${s6}${s7}
@@ -694,19 +831,19 @@ function sections(d, c) {
 }
 
 /* ---------------- 렌탈 페이지 ---------------- */
-function renderRental() {
+function renderRental(): void {
   const r = state.rental;
   if (!r) {
-    $("#view-page").innerHTML = `<div class="page"><h1>클럽 렌탈·딜리버리</h1><p class="page-lead">렌탈 데이터를 불러오지 못했습니다.</p></div>`;
+    $<HTMLElement>("#view-page").innerHTML = `<div class="page"><h1>클럽 렌탈·딜리버리</h1><p class="page-lead">렌탈 데이터를 불러오지 못했습니다.</p></div>`;
     return;
   }
-  const providers = r.providers || [];
+  const providers = r.providers ?? [];
   const regions = ["수도권", "강원", "충청", "호남", "영남", "제주"];
   const cards = providers.map((p) => `
     <article class="rental-card">
       <div class="rental-head">
         <span class="rental-name">${esc(p.name)}</span>
-        <span class="tags">${(p.regions || []).map((rg) => `<span class="tag">${esc(rg)}</span>`).join("")}</span>
+        <span class="tags">${(p.regions ?? []).map((rg) => `<span class="tag">${esc(rg)}</span>`).join("")}</span>
       </div>
       <div class="rental-grid">
         ${p.price ? `<div><b>요금</b><span>${esc(p.price)}</span></div>` : ""}
@@ -719,7 +856,7 @@ function renderRental() {
       ${p.note ? `<p class="section-desc">${esc(p.note)}</p>` : ""}
     </article>`).join("");
 
-  $("#view-page").innerHTML = `<div class="page">
+  $<HTMLElement>("#view-page").innerHTML = `<div class="page">
     <h1>클럽 렌탈·딜리버리</h1>
     <p class="page-lead">해외에서 오셨거나 장비 없이 라운드하실 때 — 골프장 자체 대여와, 이 지역으로 배송·픽업이 가능한 업체를 한곳에 모았습니다.</p>
     <div class="callout info" style="margin-top:18px">
@@ -737,10 +874,10 @@ function renderRental() {
 }
 
 /* ---------------- 데이터 소개 ---------------- */
-function renderAbout() {
-  const d = state.index.dataset;
+function renderAbout(): void {
+  const d = getIndex().dataset;
   const c = d.counts;
-  $("#view-page").innerHTML = `<div class="page">
+  $<HTMLElement>("#view-page").innerHTML = `<div class="page">
     <h1>데이터</h1>
     <p class="page-lead">CourseBrief는 골프장 공식 홈페이지·공지·요금표를 직접 수집하고 공개 데이터와 대조해 7개 영역으로 정리합니다. 모든 값에는 출처와 확인 시점이 붙습니다.</p>
     <div class="stat-grid" style="margin-top:22px">
@@ -775,7 +912,7 @@ function renderAbout() {
 
     <h2 class="h2">구조</h2>
     <div class="stack">
-      <p><code>data/v29/index.json</code> — 목록·검색·필터용 경량 인덱스 ${Math.round(JSON.stringify(state.index).length / 1024)}KB, 전체 ${c.total}곳</p>
+      <p><code>data/v29/index.json</code> — 목록·검색·필터용 경량 인덱스 ${Math.round(JSON.stringify(getIndex()).length / 1024)}KB, 전체 ${c.total}곳</p>
       <p><code>data/v29/courses/{id}.json</code> — 구장별 상세 12키 JSON ${c.total}개</p>
       <p><code>data/v29/clusters.json</code> — 같은 부지 복수 코스 시설 클러스터</p>
       <p><code>elasticsearch/</code> — nori 한글 분석기 매핑·bulk 적재·docker-compose·ES 어댑터(선택)</p>
@@ -792,14 +929,16 @@ function renderAbout() {
 }
 
 /* ---------------- 라우터 ---------------- */
-function showView(name) {
-  $("#view-list").hidden = name !== "list";
-  $("#view-detail").hidden = name !== "detail";
-  $("#view-page").hidden = name !== "page";
-  for (const a of document.querySelectorAll("[data-nav]")) a.removeAttribute("aria-current");
+type ViewName = "list" | "detail" | "page";
+
+function showView(name: ViewName): void {
+  $<HTMLElement>("#view-list").hidden = name !== "list";
+  $<HTMLElement>("#view-detail").hidden = name !== "detail";
+  $<HTMLElement>("#view-page").hidden = name !== "page";
+  for (const a of document.querySelectorAll<HTMLElement>("[data-nav]")) a.removeAttribute("aria-current");
 }
 
-async function route() {
+async function route(): Promise<void> {
   const hash = location.hash || "#/";
   const path = hash.replace(/^#/, "").split("?")[0];
 
@@ -811,60 +950,77 @@ async function route() {
   }
   if (path === "/rental") {
     showView("page");
-    document.querySelector('[data-nav="rental"]')?.setAttribute("aria-current", "page");
+    document.querySelector<HTMLElement>('[data-nav="rental"]')?.setAttribute("aria-current", "page");
     renderRental();
     return;
   }
   if (path === "/about") {
     showView("page");
-    document.querySelector('[data-nav="about"]')?.setAttribute("aria-current", "page");
+    document.querySelector<HTMLElement>('[data-nav="about"]')?.setAttribute("aria-current", "page");
     renderAbout();
     return;
   }
   showView("list");
-  document.querySelector('[data-nav="list"]')?.setAttribute("aria-current", "page");
+  document.querySelector<HTMLElement>('[data-nav="list"]')?.setAttribute("aria-current", "page");
   applyHashQuery(readHashQuery());
   await renderList({ reset: true });
 }
 
 /* ---------------- 이벤트 ---------------- */
-function wire() {
-  const q = $("#q");
+function wire(): void {
+  const q = $<HTMLInputElement>("#q");
+  const qClear = $<HTMLButtonElement>("#q-clear");
   const onQuery = debounce(() => {
     state.q = q.value.trim();
     state.shown = CONFIG.pageSize;
     const onList = location.hash.replace(/^#/, "").split("?")[0] === "/";
     if (onList) {
       syncHash();
-      renderList({ reset: true });
+      void renderList({ reset: true });
     } else {
       location.hash = hashQueryFromState(); // 라우터가 목록으로 이동하며 검색어를 적용한다
     }
   }, 140);
   q.addEventListener("input", () => {
-    $("#q-clear").hidden = !q.value;
+    qClear.hidden = !q.value;
     onQuery();
   });
-  $("#q-clear").addEventListener("click", () => {
+  qClear.addEventListener("click", () => {
     q.value = "";
-    $("#q-clear").hidden = true;
+    qClear.hidden = true;
     state.q = "";
     syncHash();
-    renderList({ reset: true });
+    void renderList({ reset: true });
     q.focus();
   });
-  for (const [id, key] of [["#f-sido", "sido"], ["#f-type", "type"], ["#f-holes", "holes"], ["#f-fee", "fee"], ["#f-sort", "sort"]]) {
-    document.querySelector(id).addEventListener("change", (e) => {
-      state.filters[key] = e.target.value;
+  const selectFilters: Array<[string, "sido" | "type" | "holes" | "fee"]> = [
+    ["#f-sido", "sido"], ["#f-type", "type"], ["#f-holes", "holes"], ["#f-fee", "fee"],
+  ];
+  for (const [selector, key] of selectFilters) {
+    $<HTMLSelectElement>(selector).addEventListener("change", (ev) => {
+      const target = ev.target;
+      if (!(target instanceof HTMLSelectElement)) return;
+      state.filters[key] = target.value;
       state.shown = CONFIG.pageSize;
       syncHash();
-      renderList({ reset: true });
+      void renderList({ reset: true });
     });
   }
-  $("#status-chips").addEventListener("click", (e) => {
-    const btn = e.target.closest(".chip");
+  $<HTMLSelectElement>("#f-sort").addEventListener("change", (ev) => {
+    const target = ev.target;
+    if (!(target instanceof HTMLSelectElement)) return;
+    state.filters.sort = isSortKey(target.value) ? target.value : "name";
+    state.shown = CONFIG.pageSize;
+    syncHash();
+    void renderList({ reset: true });
+  });
+  $<HTMLElement>("#status-chips").addEventListener("click", (ev) => {
+    const target = ev.target;
+    if (!(target instanceof Element)) return;
+    const btn = target.closest<HTMLButtonElement>(".chip");
     if (!btn) return;
     const st = btn.dataset.status;
+    if (!isCourseStatus(st)) return;
     const on = state.filters.status.has(st);
     if (on) state.filters.status.delete(st);
     else state.filters.status.add(st);
@@ -872,37 +1028,38 @@ function wire() {
     btn.setAttribute("aria-pressed", on ? "false" : "true");
     state.shown = CONFIG.pageSize;
     syncHash();
-    renderList({ reset: true });
+    void renderList({ reset: true });
   });
-  $("#f-reset").addEventListener("click", resetFilters);
-  $("#more").addEventListener("click", () => {
+  $<HTMLButtonElement>("#f-reset").addEventListener("click", resetFilters);
+  $<HTMLButtonElement>("#more").addEventListener("click", () => {
     state.shown += CONFIG.pageSize;
-    renderList();
+    void renderList();
   });
-  document.addEventListener("click", (e) => {
-    if (e.target.id === "empty-reset") resetFilters();
+  document.addEventListener("click", (ev) => {
+    const target = ev.target;
+    if (target instanceof HTMLElement && target.id === "empty-reset") resetFilters();
   });
 }
 
-function resetFilters() {
-  state.filters = { sido: "", type: "", holes: "", fee: "", sort: "name", status: new Set(["operating"]) };
+function resetFilters(): void {
+  state.filters = defaultFilters();
   state.q = "";
-  $("#q").value = "";
-  $("#q-clear").hidden = true;
-  $("#f-sido").value = "";
-  $("#f-type").value = "";
-  $("#f-holes").value = "";
-  $("#f-fee").value = "";
-  $("#f-sort").value = "name";
-  for (const btn of $("#status-chips").querySelectorAll(".chip")) {
+  $<HTMLInputElement>("#q").value = "";
+  $<HTMLButtonElement>("#q-clear").hidden = true;
+  $<HTMLSelectElement>("#f-sido").value = "";
+  $<HTMLSelectElement>("#f-type").value = "";
+  $<HTMLSelectElement>("#f-holes").value = "";
+  $<HTMLSelectElement>("#f-fee").value = "";
+  $<HTMLSelectElement>("#f-sort").value = "name";
+  for (const btn of $<HTMLElement>("#status-chips").querySelectorAll<HTMLButtonElement>(".chip")) {
     const on = btn.dataset.status === "operating";
     btn.classList.toggle("is-on", on);
     btn.setAttribute("aria-pressed", on ? "true" : "false");
   }
   state.shown = CONFIG.pageSize;
   syncHash();
-  renderList({ reset: true });
+  void renderList({ reset: true });
 }
 
 wire();
-boot();
+void boot();
