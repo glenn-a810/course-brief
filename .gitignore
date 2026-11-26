@@ -5,3 +5,6 @@ dist/
 .env
 .env.*
 .wrangler/
+
+__pycache__/
+*.pyc
