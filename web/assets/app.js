@@ -686,7 +686,7 @@ function sections(d, c) {
   </div>` : "";
 
   return `${s1}${s2}${s3}${s4}${s5}${s6}${s7}
-  <section class="section"><h2><span class="num">·</span>데이터 정보</h2>
+  <section class="section"><h2>데이터 정보</h2>
     <p class="section-desc">7개 영역 채움률. 100%가 아니어도 비어 있는 값은 '미확인'이며 '없음'과 다릅니다.</p>
     ${covRow}
     <p class="section-desc" style="margin-top:14px">수집 ${esc(fmtDate(d.meta?.generated_at || d.meta?.normalized_at))} · 스키마 ${esc(d.meta?.schema || "")} · <a href="${REPO_URL}/blob/main/data/v29/schema.md" target="_blank" rel="noopener noreferrer">스키마 문서</a></p>
