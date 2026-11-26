@@ -5,7 +5,7 @@
   "type": "module",
   "description": "CourseBrief (코스브리프) — 전국 540개 골프장 상세 스펙·실전 브리핑·렌탈 가이드. 정적 웹(Cloudflare Pages) + 구장별 JSON 데이터",
   "scripts": {
-    "typecheck": "tsc -p tsconfig.json && tsc -p functions/tsconfig.json",
+    "typecheck": "tsc --noEmit -p tsconfig.json && tsc --noEmit -p functions/tsconfig.json",
     "build": "npm run typecheck && node scripts/build-site.mjs",
     "preview": "node scripts/serve.mjs",
     "verify": "node scripts/verify.mjs",
