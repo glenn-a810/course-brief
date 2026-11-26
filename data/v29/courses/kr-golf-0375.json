@@ -1,0 +1,388 @@
+{
+ "course_id": "kr-golf-0375",
+ "meta": {
+  "name": "의령친환경골프장",
+  "generated_at": "2026-11-26T10:33:21+09:00",
+  "schema": "stage2c/1.0",
+  "batch": "6_경남",
+  "includes": [
+   "master",
+   "ops",
+   "briefing"
+  ],
+  "source": "raw/received_gyeongnam_55.json (외부 데이터 수신, 2026-11-26)",
+  "review": {
+   "checked_at": "2026-11-26",
+   "status": "verified_official",
+   "checks": [
+    {
+     "field": "대표전화",
+     "received": "055-570-2888·2889 (팩스 055-570-2949)",
+     "verified": "전화 055-570-2888·2889, 팩스 055-570-2949 — 055-570-2943은 공식에 없음",
+     "result": "마스터 055-570-2943 정정",
+     "url": "https://xn--289a6cv80bnhpdlav75a4vlwrc.kr/"
+    },
+    {
+     "field": "정기 휴장",
+     "received": "매월 셋째 월요일",
+     "verified": "12월 예약 달력에 21일(셋째 월요일) 휴장 표기",
+     "result": "일치",
+     "url": "https://xn--289a6cv80bnhpdlav75a4vlwrc.kr/"
+    }
+   ]
+  },
+  "data_checks": [
+   "미확인 목록 누락 라벨 보완: 제세금"
+  ],
+  "schema_previous": "stage2b/1.0",
+  "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
+  "restructured_from_7key": false,
+  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
+  "has_detail": true,
+  "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+ },
+ "master": {
+  "course_id": "kr-golf-0375",
+  "name": "의령친환경골프장",
+  "name_variants": [
+   "의령친환경골프장"
+  ],
+  "former_names": null,
+  "name_note": null,
+  "type": "대중제",
+  "types": [
+   "대중제"
+  ],
+  "type_note": null,
+  "holes": {
+   "total": 9,
+   "member": 0,
+   "public": 9,
+   "non_member": 0
+  },
+  "holes_note": null,
+  "address": "경상남도 의령군 의령읍 남강로 417",
+  "addresses": [
+   "경상남도 의령군 의령읍 남강로 417"
+  ],
+  "address_note": null,
+  "region": {
+   "sido_code": "48",
+   "sido_name": "경상남도",
+   "sido_short": "경남",
+   "sigungu_code": "48720",
+   "sigungu_name": "의령군",
+   "legal_dong_code": "4872000000"
+  },
+  "lat": 35.29311,
+  "lng": 128.287768,
+  "nearest_ic": {
+   "name": "군북IC",
+   "distance_km": 3.6,
+   "source": "teepick(실측 표기)",
+   "straight_km_nearest": 3.6,
+   "straight_name": "군북IC"
+  },
+  "tel": "055-570-2888",
+  "tel_official": "055-570-2888·2889 (예약·이용문의, 팩스 055-570-2949)",
+  "tel_conflict": false,
+  "tel_source": "official(경남 검수)",
+  "tel_note": "원본 055-570-2943은 공식에 없는 번호. 공식 홈페이지 예약·이용문의 055-570-2888·2889(팩스 055-570-2949)",
+  "homepage": "http://의령친환경골프장.kr/",
+  "homepage_received": "https://xn--289a6cv80bnhpdlav75a4vlwrc.kr/",
+  "homepage_note": null,
+  "operators": [
+   "의령군수"
+  ],
+  "area_sqm": 235262,
+  "opened": "2008",
+  "course_blocks": [],
+  "facility_id": null,
+  "facility_members": null,
+  "merged_ids": null,
+  "status": "operating",
+  "status_note": null,
+  "provenance": {
+   "master": "courses_master.json v2.6 (문체부·KGA·KGBA·티픽·지도 + 경남권 검수 정정)",
+   "detail": "raw/received_gyeongnam_55.json (2026-11-26 수신, 검수 2026-11-26)",
+   "synced_to": "courses_master.json v2.7 (2026-11-26 단일 스키마 정규화)"
+  },
+  "holes_received": 9,
+  "holes_conflict": false,
+  "facility_cluster": null,
+  "factcheck_2026_11_26": null,
+  "tel_former": "055-570-2943",
+  "address_original": "의령군 의령읍 남강로 417"
+ },
+ "course": {
+  "holes": 9,
+  "holes_received": 9,
+  "course_names": "의병 9홀, 2,891m(C.T), 18홀은 같은 9홀 2회",
+  "membership_type": "대중제(친환경 무농약 관리)",
+  "night_light": null,
+  "blocks": [],
+  "grass": {
+   "tee": null,
+   "fairway": "미확인(화학농약·화학비료를 쓰지 않고 인력으로 잡초 관리)",
+   "green": null
+  },
+  "kga": null,
+  "kga_hole_est": null,
+  "extra_courses": null
+ },
+ "fee": {
+  "weekday": 55000,
+  "weekend": 70000,
+  "weekday_text": "55,000원 (18홀=9홀 2회, 9홀은 31,000원)",
+  "weekend_text": "70,000원 (18홀, 9홀은 38,000원)",
+  "basis": "1인·18홀(9홀 2회) 비회원(2026-10-09 공식 요금표). 기본요금(클럽하우스 사용료 5,000원)과 수동카트 사용료 포함",
+  "tax_included": null,
+  "cart": {
+   "value": 5000,
+   "text": "수동카트 포함. 전동카트 5,000원/대, 유도카트 10,000원/대(공식 이용요금)"
+  },
+  "caddie": {
+   "value": null,
+   "none": true,
+   "text": "없음(노캐디, 수동카트 직접 운반)"
+  },
+  "as_of": "2026-10-09(공식 요금표)",
+  "source_url": "https://xn--289a6cv80bnhpdlav75a4vlwrc.kr/",
+  "note": null,
+  "sources": [
+   {
+    "source": "수신 조사(공식·공개 예약정보)",
+    "url": "https://xn--289a6cv80bnhpdlav75a4vlwrc.kr/",
+    "checked_at": "2026-10-09(공식 요금표)"
+   }
+  ]
+ },
+ "cancel": {
+  "cancel_policy": "평일 3일 전·주말 4일 전 24:00까지 위약 없이 취소",
+  "open_cycle": "이용일 10일 전 10:00부터 인터넷 홈페이지 예약",
+  "notes": "정기 휴장은 매월 셋째 월요일(설·추석이 있는 달은 당일). 2인은 부족 인원 이용료 추가, 3인은 평일 가능·주말·공휴일은 1인 이용료 추가",
+  "evidence": [],
+  "weather_evidence": []
+ },
+ "ops": {
+  "nocaddie": {
+   "value": "노캐디(수동카트 직접 운반)",
+   "evidence": []
+  },
+  "two_player": {
+   "value": "부족 인원 이용료 추가",
+   "evidence": []
+  },
+  "three_player": {
+   "value": "평일 가능, 주말·공휴일은 1인 이용료 추가",
+   "evidence": []
+  },
+  "five_player": {
+   "value": null,
+   "evidence": []
+  },
+  "marshal_caddie": {
+   "value": null,
+   "evidence": []
+  },
+  "cart_type": {
+   "value": "수동카트 기본, 전동·유도카트 유료",
+   "evidence": []
+  },
+  "cart_entry": {
+   "value": null,
+   "evidence": []
+  },
+  "bagdrop": {
+   "value": null,
+   "evidence": []
+  },
+  "mat": {
+   "value": null,
+   "evidence": []
+  },
+  "checkin": {
+   "value": null,
+   "evidence": []
+  },
+  "locker": {
+   "value": "락커실(클럽하우스 사용료 5,000원 포함)",
+   "evidence": []
+  },
+  "sauna": {
+   "value": "락커실(클럽하우스 사용료 5,000원 포함)",
+   "evidence": []
+  },
+  "dress": {
+   "value": null,
+   "evidence": []
+  },
+  "pace": {
+   "value": null,
+   "evidence": []
+  }
+ },
+ "facilities": {
+  "practice": {
+   "value": null,
+   "evidence": []
+  },
+  "indoor_range": {
+   "value": null,
+   "evidence": []
+  },
+  "food": {
+   "value": "식당(클럽하우스)",
+   "evidence": []
+  },
+  "snack_bar": {
+   "value": null,
+   "evidence": []
+  },
+  "locker_sauna": {
+   "value": "락커실(클럽하우스 사용료 5,000원 포함)",
+   "evidence": []
+  },
+  "lodging": {
+   "value": null,
+   "evidence": []
+  },
+  "other": {
+   "value": null,
+   "evidence": []
+  },
+  "night": {
+   "value": null,
+   "evidence": []
+  },
+  "closed_days": {
+   "value": "매월 셋째 월요일(설·추석이 있는 달은 당일)",
+   "third_party": null,
+   "evidence": []
+  },
+  "shuttle": {
+   "value": null,
+   "evidence": []
+  }
+ },
+ "rental": {
+  "available": "가능",
+  "full_set": 20000,
+  "fee_text": "골프채(풀세트) 20,000원·18홀",
+  "brand": null,
+  "left_handed": null,
+  "shoes": null,
+  "nine_hole": null,
+  "range_finder": null,
+  "reservation": null,
+  "source_url": null,
+  "nearby_delivery": {
+   "region": "영남",
+   "sido": "경상남도",
+   "verified_at": "2026-11-26 (KST)",
+   "checked_at": "2026-11-26",
+   "providers": [
+    {
+     "id": "theb",
+     "name": "더비 (The B)",
+     "coverage": "O",
+     "basis": "부산점 24시간 무인픽업·반납(부산진구 양정동), 홈페이지에 '부산·경주·김해 부근' 표기. 그 외 경남·경북은 택배/퀵.",
+     "phone": "010-2530-4575",
+     "operating_status": "정상 영업",
+     "delivery": "O",
+     "price_headline": "12시간 기준 90,000원부터",
+     "bookable": true
+    },
+    {
+     "id": "gangnamclub",
+     "name": "강남골프클럽렌탈",
+     "coverage": "조건부",
+     "basis": "동일(전지역 배송·별도 상담).",
+     "phone": "010-7407-0753",
+     "operating_status": "정상 영업(자사 블로그 최신 게시 2026-04-28)",
+     "delivery": "미확인",
+     "price_headline": null,
+     "bookable": true
+    }
+   ],
+   "provider_count": 2,
+   "legend": {
+    "O": "공식 안내로 해당 권역 이용이 확인됨",
+    "X": "공식 안내상 해당 권역 서비스가 없음(예: '제주 전 지역' 전용으로만 안내)",
+    "조건부": "공식 안내상 가능하나 조건(수단·요금·현재 판매중지 등)이 붙어 있음. 조건은 basis/detail에 기재",
+    "미확인": "공식 공개 안내에서 해당 항목에 대한 언급을 찾지 못함(추정하지 않음)"
+   },
+   "not_verified": "전화·문자·카카오톡 상담으로만 확인 가능한 항목(재고, 개별 견적, 권역별 실제 배송 가능 여부)은 '미확인'으로 남김",
+   "source_file": "5-rental_8_coverage_verified.json",
+   "note_code": "해외 골퍼용 골프채 렌탈·딜리버리 업체. 같은 권역이라도 실제 배송 가능 여부·재고·견적은 전화 확인 필요."
+  }
+ },
+ "briefing": {
+  "notices": {
+   "url": "https://xn--289a6cv80bnhpdlav75a4vlwrc.kr/",
+   "items": [
+    {
+     "type": "예약",
+     "text": "12월 예약타임지 공개(2026-11-23), 매월 셋째 월요일 휴장",
+     "as_of": "2026-11-23",
+     "url": "https://xn--289a6cv80bnhpdlav75a4vlwrc.kr/"
+    }
+   ],
+   "tags": {}
+  },
+  "recent_notice_text": "2026-11-23 12월 예약타임지 안내, 2026-11-16 2027년도 연단체팀 선정 안내, 2026-10-28 11월 예약타임지, 2026-10-02 제5회 리치리치 페스티벌. 동계 휴장 공지는 11/26 기준 미확인",
+  "course_notes": "남강변 평지에 조성한 워킹 코스로 경사가 크지 않음. 9홀치고 코스가 긴 편. 화학농약·화학비료 없이 관리하는 친환경 골프장",
+  "review": null,
+  "fee_change": null,
+  "alert": null,
+  "unconfirmed": [
+   "야간 라이트",
+   "잔디(티)",
+   "잔디(페어웨이)",
+   "잔디(그린)",
+   "5인 플레이",
+   "마샬캐디",
+   "카트 페어웨이 진입",
+   "셀프 백드롭",
+   "매트 티샷",
+   "연습그린",
+   "인도어 연습장",
+   "그늘집",
+   "숙박",
+   "기타 시설",
+   "좌타용 클럽",
+   "골프화 대여",
+   "제세금"
+  ],
+  "unconfirmed_labels_added": [
+   "제세금"
+  ],
+  "sources": [
+   "https://xn--289a6cv80bnhpdlav75a4vlwrc.kr/",
+   "https://greenfeeguide.co.kr/course/gc-0399/",
+   "https://www.rankue.co.kr/golf/course/의령친환경골프장"
+  ],
+  "collected_at": "2026-11-26T10:33:21+09:00"
+ },
+ "collection": {
+  "official_site": "ok",
+  "official_reason": "운영 중(공식 홈페이지 정상, 월별 예약타임지·이용요금 공지)",
+  "pages_collected": 0,
+  "third_party": {
+   "received_report": true
+  },
+  "render_hint": "report",
+  "plan_strategy": "subagent_report(2026-11-26)"
+ },
+ "coverage": {
+  "basic": 1.0,
+  "course": 0.8,
+  "fee": 0.75,
+  "ops": 0.43,
+  "facility": 0.3,
+  "briefing": 0.75,
+  "rental": 1.0
+ }
+}

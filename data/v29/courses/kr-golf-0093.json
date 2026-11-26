@@ -1,0 +1,630 @@
+{
+ "course_id": "kr-golf-0093",
+ "meta": {
+  "name": "크리스탈밸리C.C",
+  "generated_at": "2026-11-26T09:51:50+09:00",
+  "schema": "stage2c/1.0",
+  "batch": "1_수도권",
+  "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
+  "schema_previous": "stage2b/1.0",
+  "restructured_from_7key": true,
+  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
+  "has_detail": true,
+  "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+ },
+ "master": {
+  "course_id": "kr-golf-0093",
+  "name": "크리스탈밸리C.C",
+  "name_variants": [
+   "크리스탈밸리C.C"
+  ],
+  "type": "회원제",
+  "holes": {
+   "total": 18,
+   "member": 18,
+   "public": 0,
+   "non_member": 0
+  },
+  "address": "경기도 가평군 상면 대보간선로 602-111",
+  "region": {
+   "sido_code": "41",
+   "sido_name": "경기도",
+   "sido_short": "경기",
+   "sigungu_code": "41820",
+   "sigungu_name": "가평군",
+   "legal_dong_code": "4182000000"
+  },
+  "lat": 37.79407,
+  "lng": 127.38734,
+  "nearest_ic": {
+   "name": "수동휴게소IC",
+   "distance_km": 11.0,
+   "source": "teepick(실측 표기)",
+   "straight_km_nearest": 13.9,
+   "straight_name": "내촌IC"
+  },
+  "tel": "031-589-5000",
+  "homepage": "https://www.crystalvalley.co.kr/",
+  "operators": [
+   "㈜한송"
+  ],
+  "area_sqm": 926085,
+  "opened": null,
+  "course_blocks": [],
+  "facility_id": null,
+  "provenance": {
+   "master": "courses_master.json v2.0 (문체부·KGA·KGBA·티픽·지도)",
+   "synced_to": "courses_master.json v2.7 (2026-11-26 단일 스키마 정규화)"
+  },
+  "par": null,
+  "holes_teepick": 27,
+  "course_spec": {
+   "holes": 18,
+   "par": null,
+   "blocks": [],
+   "length_m": null,
+   "kga": {
+    "kga_course_code": "198",
+    "kga_name": "크리스탈밸리",
+    "region_short": "경기",
+    "address": "경기도 가평군 상면 대보간선로 602-11",
+    "match_method": "exact",
+    "match_score": 105,
+    "match_confidence": "high",
+    "nine_hole_courses": [
+     "크리스탈",
+     "밸리"
+    ],
+    "hole_combinations": [
+     {
+      "course_name_1": "크리스탈",
+      "course_name_2": "밸리",
+      "tees": [
+       {
+        "tee": "Blue",
+        "gender": "남자",
+        "length_yds": 7130.0,
+        "std_par": 72.0,
+        "course_rating": 75.0,
+        "slope_rating": 139.0,
+        "front9": "38.0 / 141",
+        "back9": "37.0 / 137"
+       },
+       {
+        "tee": "White",
+        "gender": "남자",
+        "length_yds": 6647.0,
+        "std_par": 72.0,
+        "course_rating": 72.6,
+        "slope_rating": 136.0,
+        "front9": "36.7 / 139",
+        "back9": "35.9 / 132"
+       },
+       {
+        "tee": "Silver",
+        "gender": "남자",
+        "length_yds": 6043.0,
+        "std_par": 72.0,
+        "course_rating": 69.6,
+        "slope_rating": 130.0,
+        "front9": "34.7 / 127",
+        "back9": "34.9 / 133"
+       },
+       {
+        "tee": "Red",
+        "gender": "여자",
+        "length_yds": 5428.0,
+        "std_par": 72.0,
+        "course_rating": 71.9,
+        "slope_rating": 129.0,
+        "front9": "35.6 / 126",
+        "back9": "36.3 / 132"
+       }
+      ]
+     }
+    ]
+   },
+   "grass": {
+    "evidence": "클럽의 시설, 잔디, 비품 등을 훼손하는 행위 3.",
+    "source": "공식",
+    "url": "https://www.crystalvalley.co.kr/html/reserve/reserve07.asp"
+   },
+   "hole_by_hole": null
+  },
+  "addresses": [
+   "경기도 가평군 상면 대보간선로 602-111"
+  ],
+  "status": "operating",
+  "facility_cluster": null,
+  "factcheck_2026_11_26": null,
+  "holes_note": "등록(문체부) 18홀 · 수집 27홀 — 등록 기준과 수집처(티픽·조사) 표기 차이다. 등록 18홀을 정본으로 두고 집계에는 master.holes를 쓴다. 복합단지 합산 여부는 미확정."
+ },
+ "course": {
+  "holes": 18,
+  "holes_received": 27,
+  "course_names": null,
+  "membership_type": "회원제",
+  "night_light": null,
+  "blocks": [],
+  "grass": {
+   "tee": null,
+   "fairway": {
+    "evidence": "클럽의 시설, 잔디, 비품 등을 훼손하는 행위 3.",
+    "source": "공식",
+    "url": "https://www.crystalvalley.co.kr/html/reserve/reserve07.asp"
+   },
+   "green": null
+  },
+  "kga": {
+   "kga_course_code": "198",
+   "kga_name": "크리스탈밸리",
+   "region_short": "경기",
+   "address": "경기도 가평군 상면 대보간선로 602-11",
+   "match_method": "exact",
+   "match_score": 105,
+   "match_confidence": "high",
+   "nine_hole_courses": [
+    "크리스탈",
+    "밸리"
+   ],
+   "hole_combinations": [
+    {
+     "course_name_1": "크리스탈",
+     "course_name_2": "밸리",
+     "tees": [
+      {
+       "tee": "Blue",
+       "gender": "남자",
+       "length_yds": 7130.0,
+       "std_par": 72.0,
+       "course_rating": 75.0,
+       "slope_rating": 139.0,
+       "front9": "38.0 / 141",
+       "back9": "37.0 / 137"
+      },
+      {
+       "tee": "White",
+       "gender": "남자",
+       "length_yds": 6647.0,
+       "std_par": 72.0,
+       "course_rating": 72.6,
+       "slope_rating": 136.0,
+       "front9": "36.7 / 139",
+       "back9": "35.9 / 132"
+      },
+      {
+       "tee": "Silver",
+       "gender": "남자",
+       "length_yds": 6043.0,
+       "std_par": 72.0,
+       "course_rating": 69.6,
+       "slope_rating": 130.0,
+       "front9": "34.7 / 127",
+       "back9": "34.9 / 133"
+      },
+      {
+       "tee": "Red",
+       "gender": "여자",
+       "length_yds": 5428.0,
+       "std_par": 72.0,
+       "course_rating": 71.9,
+       "slope_rating": 129.0,
+       "front9": "35.6 / 126",
+       "back9": "36.3 / 132"
+      }
+     ]
+    }
+   ]
+  },
+  "kga_hole_est": null,
+  "extra_courses": null,
+  "hole_by_hole": null,
+  "length_m": null,
+  "par": null,
+  "holes_note": "등록(문체부) 18홀 · 수집 27홀 — 등록 기준과 수집처(티픽·조사) 표기 차이다. 등록 18홀을 정본으로 두고 집계에는 master.holes를 쓴다. 복합단지 합산 여부는 미확정."
+ },
+ "fee": {
+  "weekday": 230000,
+  "weekend": 290000,
+  "weekday_text": null,
+  "weekend_text": null,
+  "basis": null,
+  "tax_included": null,
+  "cart": {
+   "value": 120000,
+   "source": "그린피가이드",
+   "url": "https://greenfeeguide.co.kr/course/gc-0152/"
+  },
+  "caddie": {
+   "value": 160000,
+   "source": "그린피가이드",
+   "url": "https://greenfeeguide.co.kr/course/gc-0152/",
+   "none": false
+  },
+  "as_of": "2026-11-01",
+  "source_url": null,
+  "note": null,
+  "sources": [
+   {
+    "source": "그린피가이드(공식 요금표 확인)",
+    "url": "https://greenfeeguide.co.kr/course/gc-0152/",
+    "checked_at": "2026-11-01"
+   }
+  ],
+  "checked_at": "2026-11-01",
+  "market": {
+   "weekday_min": null,
+   "weekend_min": null,
+   "part1": null,
+   "part2": null,
+   "source": "티픽골프장(실거래 관측)",
+   "url": "https://teepickgolf.com/course/%ED%81%AC%EB%A6%AC%EC%8A%A4%ED%83%88%EB%B0%B8%EB%A6%AC",
+   "note": "공시가 아닌 최근 관측 실거래 최저가"
+  },
+  "official_green_evidence": [
+   "| 우천시 정산안내 공지사항 구분 그린피 카트료 캐디피 기상관계로 인한 경기 중단시 1H 티샷 후 ~ 1홀 아웃 9H 정산 60,000 20,000 2H ~ 9H 9H 정산 60,000 80,000 10H ~ 18H 홀별 정산 120,000 160,000 골프장사정으로 인한 휴장시 홀별 정산 1.",
+   "| 강제 퇴장 시 정산안내 공지사항 구분 그린피(인) 카트료(팀) 캐디피(팀) 1H ~ 9H 9H 정산 60,000 160,000 10H 18H 정산 120,000 11H ~ 18H ※ 강제퇴장 조건은 위약관리 기준에 퇴장 처리 기준 내용 참조 (ex : 도박성 내기, 성희롱, 욕설, 클럽 내 음식 반입, 흡연 등) ※ 우천으로 인한 요금적용은 티샷기준 적용입니다."
+  ],
+  "official_rental": null,
+  "official_table": {
+   "rows": [
+    {
+     "section": "120,000리무진카트200,000",
+     "label": "60,000 / 80,000 / | NO-SHOW 패널티",
+     "value": "- 주중 : 569,700원",
+     "amounts": [
+      569700
+     ],
+     "url": "https://www.crystalvalley.co.kr/html/guide/guide03.asp"
+    },
+    {
+     "section": "120,000리무진카트200,000",
+     "label": "",
+     "value": "- 주말 : 733,400원",
+     "amounts": [
+      733400
+     ],
+     "url": "https://www.crystalvalley.co.kr/html/guide/guide03.asp"
+    }
+   ],
+   "url": "https://www.crystalvalley.co.kr/html/guide/guide03.asp"
+  }
+ },
+ "cancel": {
+  "cancel_policy": null,
+  "open_cycle": null,
+  "notes": null,
+  "evidence": [
+   "크리스탈밸리 본문바로가기 HOME > 예약/이용안내 > 요금표 | 이용요금※ 2024년 1월 1일부터 시행 공지사항 구분 주중 주말 카트료 캐디피 정회원 105,000 120,000 120,000리무진카트200,000 160,000리무진160,000 주중회원 115,000 290,000 비회원 230,000 290,000 3인 플레이 4인 팀 요금 적용 9홀 추가 125,560 155,560 60,000 80,000 | NO-SHOW 패널티 - 주중 : 569,700원 - 주말 : 733,400원 * 내장인원 4인 필수입니다.",
+   "* 위약기간 및 점수는 위약관리기준을 참조 바랍니다.",
+   "* 천재지변(우천,폭설,한파등)으로 인한 예약취소건은 이용횟수에 차감되며, 다만 벌점은 없습니다."
+  ],
+  "weather_evidence": [
+   "* 천재지변(우천,폭설,한파등)으로 인한 예약취소건은 이용횟수에 차감되며, 다만 벌점은 없습니다.",
+   "| 우천시 정산안내 공지사항 구분 그린피 카트료 캐디피 기상관계로 인한 경기 중단시 1H 티샷 후 ~ 1홀 아웃 9H 정산 60,000 20,000 2H ~ 9H 9H 정산 60,000 80,000 10H ~ 18H 홀별 정산 120,000 160,000 골프장사정으로 인한 휴장시 홀별 정산 1."
+  ]
+ },
+ "ops": {
+  "nocaddie": {
+   "evidence": [],
+   "value": null
+  },
+  "two_player": {
+   "evidence": [
+    "크리스탈밸리 본문바로가기 HOME > 예약/이용안내 > 요금표 | 이용요금※ 2024년 1월 1일부터 시행 공지사항 구분 주중 주말 카트료 캐디피 정회원 105,000 120,000 120,000리무진카트200,000 160,000리무진160,000 주중회원 115,000 290,000 비회원 230,000 290,000 3인 플레이 4인 팀 요금 적용 9홀 추가 125,560 155,560 60,000 80,000 | NO-SHOW 패널티 - 주중 : 569,700원 - 주말 : 733,400원 * 내장인원 4인 필수입니다.",
+    "* 2인플레이는 불가합니다.",
+    "2인 플레이: 불가"
+   ],
+   "value": "2인 — 불가",
+   "third_party": {
+    "two": "불가",
+    "three": null,
+    "source": "그린피가이드",
+    "url": "https://greenfeeguide.co.kr/course/gc-0152/"
+   },
+   "source_url": "https://crystalvalley.co.kr/html/guide/guide03.asp",
+   "confidence": "high",
+   "checked_at": "2026-10-15",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/two-player-golf-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  },
+  "three_player": {
+   "value": "3인 — 4인 팀 요금",
+   "evidence": [
+    "3인 플레이: 4인 팀 요금"
+   ],
+   "source_url": "https://crystalvalley.co.kr/html/guide/guide03.asp",
+   "confidence": "high",
+   "checked_at": "2026-10-15",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/two-player-golf-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  },
+  "five_player": {
+   "value": null,
+   "evidence": []
+  },
+  "marshal_caddie": {
+   "value": null,
+   "evidence": []
+  },
+  "cart_type": {
+   "evidence": [
+    "크리스탈밸리 본문바로가기 HOME > 예약/이용안내 > 요금표 | 이용요금※ 2024년 1월 1일부터 시행 공지사항 구분 주중 주말 카트료 캐디피 정회원 105,000 120,000 120,000리무진카트200,000 160,000리무진160,000 주중회원 115,000 290,000 비회원 230,000 290,000 3인 플레이 4인 팀 요금 적용 9홀 추가 125,560 155,560 60,000 80,000 | NO-SHOW 패널티 - 주중 : 569,700원 - 주말 : 733,400원 * 내장인원 4인 필수입니다.",
+    "| 우천시 정산안내 공지사항 구분 그린피 카트료 캐디피 기상관계로 인한 경기 중단시 1H 티샷 후 ~ 1홀 아웃 9H 정산 60,000 20,000 2H ~ 9H 9H 정산 60,000 80,000 10H ~ 18H 홀별 정산 120,000 160,000 골프장사정으로 인한 휴장시 홀별 정산 1.",
+    "리무진카트 200,000"
+   ],
+   "value": "리무진카트",
+   "source_url": "https://crystalvalley.co.kr/html/guide/guide03.asp",
+   "confidence": "high",
+   "checked_at": "2026-10-22",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/golf-cart-limousine-fairway-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  },
+  "cart_entry": {
+   "evidence": [],
+   "value": null
+  },
+  "bagdrop": {
+   "evidence": [],
+   "value": null
+  },
+  "mat": {
+   "evidence": [],
+   "value": null
+  },
+  "checkin": {
+   "evidence": [
+    "30분 전 도착"
+   ],
+   "value": "30분 전 도착",
+   "third_party": {
+    "value": "30분 전",
+    "source": "그린피가이드",
+    "url": "https://greenfeeguide.co.kr/course/gc-0152/"
+   },
+   "source_url": "https://crystalvalley.co.kr/html/member/terms1.asp",
+   "confidence": "high",
+   "checked_at": "2026-10-17",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/golf-course-arrival-checkin-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  },
+  "locker": {
+   "evidence": [
+    "1 내장객은 골프코스, 클럽하우스, 연습장, 레스토랑, 락커룸 및 기타 부대시설을 이용할 수 있다."
+   ],
+   "value": "락커 운영",
+   "source_url": "https://crystalvalley.co.kr/html/member/terms1.asp",
+   "confidence": "medium",
+   "source_type": "official_site",
+   "page_label": "",
+   "value_from": "capital_supplement(official_site)"
+  },
+  "sauna": {
+   "evidence": [],
+   "value": null
+  },
+  "dress": {
+   "evidence": [
+    "기타 에티켓 위반 정도가 심한 경우(복장 및 용모불량, 쓰레기 및 담배꽁초 무단처리 등) 8.",
+    "슬리퍼·작업복·과도한 노출 복장은 제한될 수 있음"
+   ],
+   "value": "슬리퍼·작업복·과도한 노출 복장은 제한될 수 있음",
+   "value_previous": "문구 확인(원문 근거)",
+   "source_url": "https://crystalvalley.co.kr/html/member/terms1.asp",
+   "confidence": "high",
+   "checked_at": "2026-10-16",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/golf-course-dress-etiquette-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  },
+  "pace": {
+   "evidence": [],
+   "value": null
+  },
+  "grass": null,
+  "cart_limousine": {
+   "value": "리무진카트 200,000",
+   "evidence": [
+    "리무진카트 200,000"
+   ],
+   "source_url": "https://crystalvalley.co.kr/html/guide/guide03.asp",
+   "confidence": "high",
+   "checked_at": "2026-10-22",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/golf-cart-limousine-fairway-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  }
+ },
+ "facilities": {
+  "practice": {
+   "evidence": [
+    "1 내장객은 골프코스, 클럽하우스, 연습장, 레스토랑, 락커룸 및 기타 부대시설을 이용할 수 있다."
+   ],
+   "value": "연습장",
+   "source_url": "https://crystalvalley.co.kr/html/member/terms1.asp",
+   "confidence": "low",
+   "source_type": "official_site",
+   "page_label": "",
+   "value_from": "capital_supplement(official_site)"
+  },
+  "indoor_range": {
+   "value": null,
+   "evidence": []
+  },
+  "food": {
+   "evidence": [
+    "코스 공략법 티샷티샷시 약간의 훅이 나는 홀이므로 티샷 방향은 그늘집 오른쪽 정면을 항해서 공략하면 된다.",
+    "1 내장객은 골프코스, 클럽하우스, 연습장, 레스토랑, 락커룸 및 기타 부대시설을 이용할 수 있다."
+   ],
+   "value": "레스토랑",
+   "source_url": "https://crystalvalley.co.kr/html/member/terms1.asp",
+   "confidence": "low",
+   "source_type": "official_site",
+   "page_label": "",
+   "value_from": "capital_supplement(official_site)"
+  },
+  "snack_bar": {
+   "value": null,
+   "evidence": []
+  },
+  "locker_sauna": {
+   "value": null,
+   "evidence": []
+  },
+  "lodging": {
+   "value": "골든빌리지",
+   "evidence": [
+    "골든빌리지"
+   ],
+   "source_url": "https://crystalvalley.co.kr/html/village/village03.asp",
+   "confidence": "high",
+   "checked_at": "2026-10-09",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/golf-course-lodging-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  },
+  "other": {
+   "value": null,
+   "evidence": []
+  },
+  "night": {
+   "evidence": [],
+   "value": null
+  },
+  "closed_days": {
+   "evidence": [
+    "| 우천시 정산안내 공지사항 구분 그린피 카트료 캐디피 기상관계로 인한 경기 중단시 1H 티샷 후 ~ 1홀 아웃 9H 정산 60,000 20,000 2H ~ 9H 9H 정산 60,000 80,000 10H ~ 18H 홀별 정산 120,000 160,000 골프장사정으로 인한 휴장시 홀별 정산 1.",
+    "크리스탈밸리 본문바로가기 HOME > 예약/이용안내 > 위약관리기준 | 위약형태 및 벌점 부과 기준 공지사항 위약형태 주중 벌점 주말 벌점 (공휴일포함) No-Show(미내장) 30 30 1일전 취소 30 30 2일전 취소 25 27 3일전 취소 20 24 4일전 취소 15 21 5일전 취소 10 18 6일전 취소 5 15 7일전 취소 0 12 8일전 취소 0 9 9일전 취소 0 6 10일전 취소 0 3 | 벌점 제재 기준 공지사항 벌점 누적점수 예약금지기간(일) 주중 주말(공휴일포함) 30 ~ 39 60 80 40 ~ 49 70 "
+   ],
+   "third_party": null,
+   "value": null
+  },
+  "shuttle": {
+   "evidence": [],
+   "value": null
+  },
+  "ev_charge": {
+   "evidence": [],
+   "value": null
+  },
+  "gf_facilities": [],
+  "proshop": {
+   "evidence": [],
+   "value": null
+  }
+ },
+ "rental": {
+  "available": null,
+  "full_set": null,
+  "fee_text": null,
+  "brand": null,
+  "left_handed": null,
+  "shoes": null,
+  "nine_hole": null,
+  "range_finder": null,
+  "reservation": null,
+  "source_url": null,
+  "evidence": [],
+  "official": null,
+  "nearby_delivery": {
+   "region": "수도권",
+   "sido": "경기도",
+   "verified_at": "2026-11-26 (KST)",
+   "checked_at": "2026-11-26",
+   "providers": [
+    {
+     "id": "theb",
+     "name": "더비 (The B)",
+     "coverage": "O",
+     "basis": "동탄·김포·시흥·용인·이천 24시간 무인픽업 매장 5곳 + 다마스 퀵/택배 배송. 홈페이지에 '강남·동탄·판교·수지·광교·분당', '시흥·배곧·인천·안산·송도', '이천·여주' 권역 표기.",
+     "phone": "010-2530-4575",
+     "operating_status": "정상 영업",
+     "delivery": "O",
+     "price_headline": "12시간 기준 90,000원부터",
+     "bookable": true
+    },
+    {
+     "id": "gangnamclub",
+     "name": "강남골프클럽렌탈",
+     "coverage": "O",
+     "basis": "서울 서초구 거점 매장 주소 공개, 자사 블로그 '전지역 배송 가능' 안내.",
+     "phone": "010-7407-0753",
+     "operating_status": "정상 영업(자사 블로그 최신 게시 2026-04-28)",
+     "delivery": "미확인",
+     "price_headline": null,
+     "bookable": true
+    },
+    {
+     "id": "apioz",
+     "name": "아피오즈 (Apioz)",
+     "coverage": "조건부",
+     "basis": "서울 숙소 배송·공항 픽업 옵션 안내. 단 골프세트 Sold Out으로 현재 이용 불가.",
+     "phone": "02-6956-8115",
+     "operating_status": "예약 중단(Sold Out) — 골프채 세트 한정",
+     "delivery": "미확인",
+     "price_headline": null,
+     "caution": "골프채 세트 Sold Out — 현재 예약 불가",
+     "bookable": false,
+     "bookable_reason": "골프채 세트 Sold Out — 현재 예약 불가"
+    }
+   ],
+   "provider_count": 3,
+   "legend": {
+    "O": "공식 안내로 해당 권역 이용이 확인됨",
+    "X": "공식 안내상 해당 권역 서비스가 없음(예: '제주 전 지역' 전용으로만 안내)",
+    "조건부": "공식 안내상 가능하나 조건(수단·요금·현재 판매중지 등)이 붙어 있음. 조건은 basis/detail에 기재",
+    "미확인": "공식 공개 안내에서 해당 항목에 대한 언급을 찾지 못함(추정하지 않음)"
+   },
+   "not_verified": "전화·문자·카카오톡 상담으로만 확인 가능한 항목(재고, 개별 견적, 권역별 실제 배송 가능 여부)은 '미확인'으로 남김",
+   "source_file": "5-rental_8_coverage_verified.json",
+   "note_code": "해외 골퍼용 골프채 렌탈·딜리버리 업체. 같은 권역이라도 실제 배송 가능 여부·재고·견적은 전화 확인 필요."
+  }
+ },
+ "briefing": {
+  "notices": {
+   "url": null,
+   "items": [],
+   "tags": {}
+  },
+  "review": {
+   "score_10": 8.9,
+   "count": 27,
+   "source": "티픽골프장 라운더 후기 집계",
+   "url": "https://teepickgolf.com/course/%ED%81%AC%EB%A6%AC%EC%8A%A4%ED%83%88%EB%B0%B8%EB%A6%AC"
+  },
+  "fee_change": null,
+  "collected_at": "2026-11-26T09:51:50+09:00",
+  "recent_notice_text": null,
+  "course_notes": null,
+  "alert": null,
+  "unconfirmed": [],
+  "sources": []
+ },
+ "collection": {
+  "official_site": "ok",
+  "official_reason": null,
+  "pages_collected": 14,
+  "third_party": {
+   "teepick": true,
+   "greenfeeguide": true
+  },
+  "render_hint": "static",
+  "plan_strategy": "static(직접 파싱)",
+  "browser_batch": false
+ },
+ "coverage": {
+  "basic": 1.0,
+  "course": 0.8,
+  "fee": 1.0,
+  "ops": 0.43,
+  "facility": 0.3,
+  "briefing": 0.5,
+  "rental": 0.25
+ }
+}

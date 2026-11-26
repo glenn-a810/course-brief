@@ -1,0 +1,673 @@
+{
+ "course_id": "kr-golf-0142",
+ "meta": {
+  "name": "360도 컨트리클럽",
+  "generated_at": "2026-11-26T09:51:53+09:00",
+  "schema": "stage2c/1.0",
+  "batch": "1_수도권",
+  "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
+  "schema_previous": "stage2b/1.0",
+  "restructured_from_7key": true,
+  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
+  "has_detail": true,
+  "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+ },
+ "master": {
+  "course_id": "kr-golf-0142",
+  "name": "360도 컨트리클럽",
+  "name_variants": [
+   "360도 컨트리클럽"
+  ],
+  "type": "대중제",
+  "holes": {
+   "total": 18,
+   "member": 0,
+   "public": 18,
+   "non_member": 0
+  },
+  "address": "경기도 여주시 강천면 부평로 609",
+  "region": {
+   "sido_code": "41",
+   "sido_name": "경기도",
+   "sido_short": "경기",
+   "sigungu_code": "41670",
+   "sigungu_name": "여주시",
+   "legal_dong_code": "4167000000"
+  },
+  "lat": 37.302636,
+  "lng": 127.738848,
+  "nearest_ic": {
+   "name": "대둔IC",
+   "distance_km": 4.0,
+   "source": "teepick(실측 표기)",
+   "straight_km_nearest": 3.9,
+   "straight_name": "대둔IC"
+  },
+  "tel": "031-880-3600",
+  "homepage": "http://www.360cc.co.kr/",
+  "operators": [
+   "제이타우젠트㈜"
+  ],
+  "area_sqm": 818914,
+  "opened": "2012-05",
+  "course_blocks": [],
+  "facility_id": null,
+  "provenance": {
+   "master": "courses_master.json v2.0 (문체부·KGA·KGBA·티픽·지도)",
+   "synced_to": "courses_master.json v2.7 (2026-11-26 단일 스키마 정규화)"
+  },
+  "par": null,
+  "holes_teepick": 18,
+  "course_spec": {
+   "holes": 18,
+   "par": null,
+   "blocks": [],
+   "length_m": null,
+   "kga": {
+    "kga_course_code": "302",
+    "kga_name": "360도",
+    "region_short": "경기",
+    "address": "경기 여주시 강천면 부평리 690",
+    "match_method": "exact",
+    "match_score": 110,
+    "match_confidence": "high",
+    "nine_hole_courses": [
+     "아웃",
+     "인"
+    ],
+    "hole_combinations": [
+     {
+      "course_name_1": "아웃",
+      "course_name_2": "인",
+      "tees": [
+       {
+        "tee": "BLACK",
+        "gender": "남자",
+        "length_yds": 7026.0,
+        "std_par": 72.0,
+        "course_rating": 75.2,
+        "slope_rating": 146.0,
+        "front9": "37.3 / 146",
+        "back9": "37.9 / 146"
+       },
+       {
+        "tee": "BLUE",
+        "gender": "남자",
+        "length_yds": 6604.0,
+        "std_par": 72.0,
+        "course_rating": 73.1,
+        "slope_rating": 143.0,
+        "front9": "36.5 / 141",
+        "back9": "36.6 / 145"
+       },
+       {
+        "tee": "WHITE",
+        "gender": "남자",
+        "length_yds": 6295.0,
+        "std_par": 72.0,
+        "course_rating": 71.5,
+        "slope_rating": 142.0,
+        "front9": "35.7 / 143",
+        "back9": "35.8 / 141"
+       },
+       {
+        "tee": "GOLD",
+        "gender": "여자",
+        "length_yds": 5577.0,
+        "std_par": 72.0,
+        "course_rating": 72.3,
+        "slope_rating": 131.0,
+        "front9": "36.9 / 137",
+        "back9": "35.4 / 125"
+       },
+       {
+        "tee": "GOLD",
+        "gender": "남자",
+        "length_yds": 5577.0,
+        "std_par": 72.0,
+        "course_rating": 67.8,
+        "slope_rating": 131.0,
+        "front9": "34.3 / 137",
+        "back9": "33.5 / 124"
+       },
+       {
+        "tee": "RED",
+        "gender": "여자",
+        "length_yds": 4700.0,
+        "std_par": 72.0,
+        "course_rating": 67.3,
+        "slope_rating": 121.0,
+        "front9": "33.9 / 125",
+        "back9": "33.4 / 116"
+       }
+      ]
+     }
+    ]
+   },
+   "grass": {
+    "evidence": "360°컨트리클럽 MEMBERSHIP LOGIN INTRODUCTION 360˚ CC 소개 오시는길 날씨안내 COURSES OUT COURSE IN COURSE 잔디정보 CLUB HOUSE 레스토랑안내 SERVICE INFO 이용안내 요금안내 로컬룰 퇴장규정 위약기준 분실뮬규정 BOOKING 예약안내 예약하기 조인예약 단체문의 대기예약 예약확인 에바비치 예약신청 MEMBERSHIP 게시판 이벤트 조인하기 MEMBERSHIP 게시판 이벤트 조인하기 게시물제목 10 DOMODOMO Hawaii 그랜드 오픈 웹관리자 2025-11-16 ",
+    "source": "공식",
+    "url": "https://www.360cc.co.kr/mobile/board/boardList.do?groupcode=NOTICE&mainMenuCd=reservation&subMenuCd=%2Fboard%2FboardView.do"
+   },
+   "hole_by_hole": null
+  },
+  "addresses": [
+   "경기도 여주시 강천면 부평로 609"
+  ],
+  "status": "operating",
+  "facility_cluster": null,
+  "factcheck_2026_11_26": null
+ },
+ "course": {
+  "holes": 18,
+  "holes_received": 18,
+  "course_names": null,
+  "membership_type": "대중제",
+  "night_light": null,
+  "blocks": [],
+  "grass": {
+   "tee": null,
+   "fairway": {
+    "evidence": "360°컨트리클럽 MEMBERSHIP LOGIN INTRODUCTION 360˚ CC 소개 오시는길 날씨안내 COURSES OUT COURSE IN COURSE 잔디정보 CLUB HOUSE 레스토랑안내 SERVICE INFO 이용안내 요금안내 로컬룰 퇴장규정 위약기준 분실뮬규정 BOOKING 예약안내 예약하기 조인예약 단체문의 대기예약 예약확인 에바비치 예약신청 MEMBERSHIP 게시판 이벤트 조인하기 MEMBERSHIP 게시판 이벤트 조인하기 게시물제목 10 DOMODOMO Hawaii 그랜드 오픈 웹관리자 2025-11-16 ",
+    "source": "공식",
+    "url": "https://www.360cc.co.kr/mobile/board/boardList.do?groupcode=NOTICE&mainMenuCd=reservation&subMenuCd=%2Fboard%2FboardView.do"
+   },
+   "green": null
+  },
+  "kga": {
+   "kga_course_code": "302",
+   "kga_name": "360도",
+   "region_short": "경기",
+   "address": "경기 여주시 강천면 부평리 690",
+   "match_method": "exact",
+   "match_score": 110,
+   "match_confidence": "high",
+   "nine_hole_courses": [
+    "아웃",
+    "인"
+   ],
+   "hole_combinations": [
+    {
+     "course_name_1": "아웃",
+     "course_name_2": "인",
+     "tees": [
+      {
+       "tee": "BLACK",
+       "gender": "남자",
+       "length_yds": 7026.0,
+       "std_par": 72.0,
+       "course_rating": 75.2,
+       "slope_rating": 146.0,
+       "front9": "37.3 / 146",
+       "back9": "37.9 / 146"
+      },
+      {
+       "tee": "BLUE",
+       "gender": "남자",
+       "length_yds": 6604.0,
+       "std_par": 72.0,
+       "course_rating": 73.1,
+       "slope_rating": 143.0,
+       "front9": "36.5 / 141",
+       "back9": "36.6 / 145"
+      },
+      {
+       "tee": "WHITE",
+       "gender": "남자",
+       "length_yds": 6295.0,
+       "std_par": 72.0,
+       "course_rating": 71.5,
+       "slope_rating": 142.0,
+       "front9": "35.7 / 143",
+       "back9": "35.8 / 141"
+      },
+      {
+       "tee": "GOLD",
+       "gender": "여자",
+       "length_yds": 5577.0,
+       "std_par": 72.0,
+       "course_rating": 72.3,
+       "slope_rating": 131.0,
+       "front9": "36.9 / 137",
+       "back9": "35.4 / 125"
+      },
+      {
+       "tee": "GOLD",
+       "gender": "남자",
+       "length_yds": 5577.0,
+       "std_par": 72.0,
+       "course_rating": 67.8,
+       "slope_rating": 131.0,
+       "front9": "34.3 / 137",
+       "back9": "33.5 / 124"
+      },
+      {
+       "tee": "RED",
+       "gender": "여자",
+       "length_yds": 4700.0,
+       "std_par": 72.0,
+       "course_rating": 67.3,
+       "slope_rating": 121.0,
+       "front9": "33.9 / 125",
+       "back9": "33.4 / 116"
+      }
+     ]
+    }
+   ]
+  },
+  "kga_hole_est": null,
+  "extra_courses": null,
+  "hole_by_hole": null,
+  "length_m": null,
+  "par": null
+ },
+ "fee": {
+  "weekday": null,
+  "weekend": null,
+  "weekday_text": null,
+  "weekend_text": null,
+  "basis": null,
+  "tax_included": null,
+  "cart": {
+   "evidence": "프런트에서 락카 키를 수령하여 준비를 마친 후, tee-off 10분 전에 스타트하우스 앞 배정카트에서 대기하시면 됩니다.",
+   "url": "https://www.360cc.co.kr/mobile/subContents/use/guide_01.do",
+   "source": "공식"
+  },
+  "caddie": null,
+  "as_of": null,
+  "source_url": null,
+  "note": null,
+  "sources": [],
+  "checked_at": null,
+  "market": {
+   "weekday_min": 100000.0,
+   "weekend_min": 150000.0,
+   "part1": null,
+   "part2": null,
+   "source": "티픽골프장(실거래 관측)",
+   "url": "https://teepickgolf.com/course/360%EB%8F%84",
+   "note": "공시가 아닌 최근 관측 실거래 최저가"
+  },
+  "official_green_evidence": [],
+  "official_rental": null
+ },
+ "cancel": {
+  "cancel_policy": null,
+  "open_cycle": null,
+  "notes": null,
+  "evidence": [
+   "360°컨트리클럽 MEMBERSHIP LOGIN INTRODUCTION 360˚ CC 소개 오시는길 날씨안내 COURSES OUT COURSE IN COURSE 잔디정보 CLUB HOUSE 레스토랑안내 SERVICE INFO 이용안내 요금안내 로컬룰 퇴장규정 위약기준 분실뮬규정 BOOKING 예약안내 예약하기 조인예약 단체문의 대기예약 예약확인 에바비치 예약신청 MEMBERSHIP 게시판 이벤트 조인하기 MEMBERSHIP 게시판 이벤트 조인하기 게시물제목 10 DOMODOMO Hawaii 그랜드 오픈 웹관리자 2025-11-16 ",
+   "360°컨트리클럽 MEMBERSHIP LOGIN INTRODUCTION 360˚ CC 소개 오시는길 날씨안내 COURSES OUT COURSE IN COURSE 잔디정보 CLUB HOUSE 레스토랑안내 SERVICE INFO 이용안내 요금안내 로컬룰 퇴장규정 위약기준 분실뮬규정 BOOKING 예약안내 예약하기 조인예약 단체문의 대기예약 예약확인 에바비치 예약신청 MEMBERSHIP 게시판 이벤트 조인하기 SERVICE INFO 이용안내 요금안내 로컬룰 퇴장규정 위약기준 분실물규정 이용준수사항 360 컨트리클럽은 회원님들의 편리한 골",
+   "예약취소는 월 최대 3회 까지 가능하며 초과시 예약정지 처리 되오니 신중히 부탁드립니다."
+  ],
+  "weather_evidence": []
+ },
+ "ops": {
+  "nocaddie": {
+   "evidence": [
+    "노캐디: 캐디 필수"
+   ],
+   "value": "캐디 필수",
+   "source_url": "https://www.360cc.co.kr/mobile/reservation/guide/reservation01.do",
+   "confidence": "high",
+   "checked_at": "2026-10-13",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/no-caddie-golf-course-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  },
+  "two_player": {
+   "evidence": [
+    "360°컨트리클럽 MEMBERSHIP LOGIN INTRODUCTION 360˚ CC 소개 오시는길 날씨안내 COURSES OUT COURSE IN COURSE 잔디정보 CLUB HOUSE 레스토랑안내 SERVICE INFO 이용안내 요금안내 로컬룰 퇴장규정 위약기준 분실뮬규정 BOOKING 예약안내 예약하기 조인예약 단체문의 대기예약 예약확인 에바비치 예약신청 MEMBERSHIP 게시판 이벤트 조인하기 MEMBERSHIP 게시판 이벤트 조인하기 게시물제목 10 DOMODOMO Hawaii 그랜드 오픈 웹관리자 2025-11-16 ",
+    "360°컨트리클럽 MEMBERSHIP LOGIN INTRODUCTION 360˚ CC 소개 오시는길 날씨안내 COURSES OUT COURSE IN COURSE 잔디정보 CLUB HOUSE 레스토랑안내 SERVICE INFO 이용안내 요금안내 로컬룰 퇴장규정 위약기준 분실뮬규정 BOOKING 예약안내 예약하기 조인예약 단체문의 대기예약 예약확인 에바비치 예약신청 MEMBERSHIP 게시판 이벤트 조인하기 SERVICE INFO 이용안내 요금안내 로컬룰 퇴장규정 위약기준 분실물규정 이용준수사항 360 컨트리클럽은 회원님들의 편리한 골",
+    "360°컨트리클럽 MEMBERSHIP LOGIN INTRODUCTION 360˚ CC 소개 오시는길 날씨안내 COURSES OUT COURSE IN COURSE 잔디정보 CLUB HOUSE 레스토랑안내 SERVICE INFO 이용안내 요금안내 로컬룰 퇴장규정 위약기준 분실뮬규정 BOOKING 예약안내 예약하기 조인예약 단체문의 대기예약 예약확인 에바비치 예약신청 MEMBERSHIP 게시판 이벤트 조인하기 CLUB HOUSE 레스토랑안내 레스토랑 메뉴 스타트 하우스 메뉴 COPYRIGHT ⓒ 360 COUNTRY CLUB."
+   ],
+   "value": null
+  },
+  "three_player": {
+   "value": null,
+   "evidence": []
+  },
+  "five_player": {
+   "value": null,
+   "evidence": []
+  },
+  "marshal_caddie": {
+   "value": null,
+   "evidence": []
+  },
+  "cart_type": {
+   "evidence": [
+    "프런트에서 락카 키를 수령하여 준비를 마친 후, tee-off 10분 전에 스타트하우스 앞 배정카트에서 대기하시면 됩니다.",
+    "리무진 카트 220,000원"
+   ],
+   "value": "리무진카트",
+   "source_url": "https://www.360cc.co.kr/mobile/subContents/use/guide_02.do",
+   "confidence": "high",
+   "checked_at": "2026-10-22",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/golf-cart-limousine-fairway-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  },
+  "cart_entry": {
+   "evidence": [],
+   "value": null
+  },
+  "bagdrop": {
+   "evidence": [],
+   "value": null
+  },
+  "mat": {
+   "evidence": [],
+   "value": null
+  },
+  "checkin": {
+   "evidence": [
+    "웹관리자 2023-09-28 8 론드리백 (Laundry Bag) 제공 중단 안내 수퍼관리자 2020-08-07 7 그늘집 무인 자판기 운영안내 수퍼관리자 2021-01-19 6 외부음식물 반입금지 안내 수퍼관리자 2021-04-19 5 셀프체크인 안내 수퍼관리자 2022-05-13 4 전기차 충전 운영안내 수퍼관리자 2023-04-14 3 예약 및 내장규정사항 안내 수퍼관리자 2023-04-25 2 셀프 체크인 이용방법 웹관리자 2021-01-06 1 예치금 반환 탈퇴 신청서 관리자 2018-12-21 1 COPYRIGHT ⓒ 3",
+    "이용안내 예약시간 30분 전에 도착하여 여유 있는 플레이 준비 부탁 드립니다.",
+    "예약시간 30분 전에 도착하여 여유 있는 플레이 준비 부탁 드립니다."
+   ],
+   "value": "티오프 30분 전 도착",
+   "source_url": "https://www.360cc.co.kr/mobile/subContents/use/guide_01.do",
+   "confidence": "medium",
+   "source_type": "official_site",
+   "page_label": "이용안내",
+   "value_from": "capital_supplement(official_site)"
+  },
+  "locker": {
+   "evidence": [
+    "프런트에서 락카 키를 수령하여 준비를 마친 후, tee-off 10분 전에 스타트하우스 앞 배정카트에서 대기하시면 됩니다."
+   ],
+   "value": "락커 운영",
+   "value_previous": "문구 확인(원문 근거)",
+   "source_url": "https://www.360cc.co.kr/mobile/subContents/use/guide_01.do",
+   "confidence": "low",
+   "source_type": "official_site",
+   "page_label": "이용안내",
+   "value_from": "capital_supplement(official_site)"
+  },
+  "sauna": {
+   "evidence": [],
+   "value": null
+  },
+  "dress": {
+   "evidence": [
+    "청바지, 카라 없는 상의, 노출이 심한 복장으로 클럽입장은 불가능합니다."
+   ],
+   "value": "복장 규정 안내",
+   "value_previous": "문구 확인(원문 근거)",
+   "source_url": "https://www.360cc.co.kr/mobile/subContents/use/guide_01.do",
+   "confidence": "medium",
+   "source_type": "official_site",
+   "page_label": "이용안내",
+   "value_from": "capital_supplement(official_site)"
+  },
+  "pace": {
+   "evidence": [
+    "18홀 4시간 20분(휴식시간을 제외) · 티오프 간격 7~8분 간격"
+   ],
+   "value": "18홀 4시간 20분(휴식시간을 제외) · 티오프 7~8분 간격",
+   "source_url": "https://www.360cc.co.kr/mobile/subContents/use/guide_01.do",
+   "confidence": "high",
+   "checked_at": "2026-10-14",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/golf-round-time-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  },
+  "cart_limousine": {
+   "value": "리무진 카트 220,000원",
+   "evidence": [
+    "리무진 카트 220,000원"
+   ],
+   "source_url": "https://www.360cc.co.kr/mobile/subContents/use/guide_02.do",
+   "confidence": "high",
+   "checked_at": "2026-10-22",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/golf-cart-limousine-fairway-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  }
+ },
+ "facilities": {
+  "practice": {
+   "evidence": [],
+   "value": null
+  },
+  "indoor_range": {
+   "value": null,
+   "evidence": []
+  },
+  "food": {
+   "evidence": [
+    "360°컨트리클럽 로그인 회원가입 예약하기 예약확인 레스토랑안내 이용안내 코스소개 오시는길 통화하기 Hawaii - 360º EWA BEACH C.C\" 오늘은 그만보기 닫기 오늘은 그만보기 닫기",
+    "360°컨트리클럽 MEMBERSHIP LOGIN INTRODUCTION 360˚ CC 소개 오시는길 날씨안내 COURSES OUT COURSE IN COURSE 잔디정보 CLUB HOUSE 레스토랑안내 SERVICE INFO 이용안내 요금안내 로컬룰 퇴장규정 위약기준 분실뮬규정 BOOKING 예약안내 예약하기 조인예약 단체문의 대기예약 예약확인 에바비치 예약신청 MEMBERSHIP 게시판 이벤트 조인하기 MEMBERSHIP 게시판 이벤트 조인하기 게시물제목 10 DOMODOMO Hawaii 그랜드 오픈 웹관리자 2025-11-16 ",
+    "웹관리자 2023-09-28 8 론드리백 (Laundry Bag) 제공 중단 안내 수퍼관리자 2020-08-07 7 그늘집 무인 자판기 운영안내 수퍼관리자 2021-01-19 6 외부음식물 반입금지 안내 수퍼관리자 2021-04-19 5 셀프체크인 안내 수퍼관리자 2022-05-13 4 전기차 충전 운영안내 수퍼관리자 2023-04-14 3 예약 및 내장규정사항 안내 수퍼관리자 2023-04-25 2 셀프 체크인 이용방법 웹관리자 2021-01-06 1 예치금 반환 탈퇴 신청서 관리자 2018-12-21 1 COPYRIGHT ⓒ 3",
+    "그늘집 무인 자판기 운영안내"
+   ],
+   "value": "그늘집",
+   "source_url": "https://www.360cc.co.kr/mobile/board/boardList.do?groupcode=NOTICE&mainMenuCd=reservation&subMenuCd=%2Fboard%2FboardView.do",
+   "confidence": "low",
+   "source_type": "official_site",
+   "page_label": "",
+   "value_from": "capital_supplement(official_site)"
+  },
+  "snack_bar": {
+   "value": null,
+   "evidence": []
+  },
+  "locker_sauna": {
+   "value": null,
+   "evidence": []
+  },
+  "lodging": {
+   "value": null,
+   "evidence": []
+  },
+  "other": {
+   "value": null,
+   "evidence": []
+  },
+  "night": {
+   "evidence": [],
+   "value": null
+  },
+  "closed_days": {
+   "evidence": [],
+   "third_party": null,
+   "value": null
+  },
+  "shuttle": {
+   "evidence": [],
+   "value": null
+  },
+  "ev_charge": {
+   "evidence": [
+    "웹관리자 2023-09-28 8 론드리백 (Laundry Bag) 제공 중단 안내 수퍼관리자 2020-08-07 7 그늘집 무인 자판기 운영안내 수퍼관리자 2021-01-19 6 외부음식물 반입금지 안내 수퍼관리자 2021-04-19 5 셀프체크인 안내 수퍼관리자 2022-05-13 4 전기차 충전 운영안내 수퍼관리자 2023-04-14 3 예약 및 내장규정사항 안내 수퍼관리자 2023-04-25 2 셀프 체크인 이용방법 웹관리자 2021-01-06 1 예치금 반환 탈퇴 신청서 관리자 2018-12-21 1 COPYRIGHT ⓒ 3",
+    "전기차 충전 운영안내"
+   ],
+   "value": "전기차 충전소 운영",
+   "source_url": "https://www.360cc.co.kr/mobile/board/boardList.do?groupcode=NOTICE&mainMenuCd=reservation&subMenuCd=%2Fboard%2FboardView.do",
+   "confidence": "medium",
+   "source_type": "official_site",
+   "page_label": "",
+   "value_from": "capital_supplement(official_site)"
+  },
+  "gf_facilities": null,
+  "proshop": {
+   "evidence": [],
+   "value": null
+  }
+ },
+ "rental": {
+  "available": null,
+  "full_set": null,
+  "fee_text": null,
+  "brand": null,
+  "left_handed": null,
+  "shoes": null,
+  "nine_hole": null,
+  "range_finder": null,
+  "reservation": null,
+  "source_url": null,
+  "evidence": [],
+  "official": null,
+  "nearby_delivery": {
+   "region": "수도권",
+   "sido": "경기도",
+   "verified_at": "2026-11-26 (KST)",
+   "checked_at": "2026-11-26",
+   "providers": [
+    {
+     "id": "theb",
+     "name": "더비 (The B)",
+     "coverage": "O",
+     "basis": "동탄·김포·시흥·용인·이천 24시간 무인픽업 매장 5곳 + 다마스 퀵/택배 배송. 홈페이지에 '강남·동탄·판교·수지·광교·분당', '시흥·배곧·인천·안산·송도', '이천·여주' 권역 표기.",
+     "phone": "010-2530-4575",
+     "operating_status": "정상 영업",
+     "delivery": "O",
+     "price_headline": "12시간 기준 90,000원부터",
+     "bookable": true
+    },
+    {
+     "id": "gangnamclub",
+     "name": "강남골프클럽렌탈",
+     "coverage": "O",
+     "basis": "서울 서초구 거점 매장 주소 공개, 자사 블로그 '전지역 배송 가능' 안내.",
+     "phone": "010-7407-0753",
+     "operating_status": "정상 영업(자사 블로그 최신 게시 2026-04-28)",
+     "delivery": "미확인",
+     "price_headline": null,
+     "bookable": true
+    },
+    {
+     "id": "apioz",
+     "name": "아피오즈 (Apioz)",
+     "coverage": "조건부",
+     "basis": "서울 숙소 배송·공항 픽업 옵션 안내. 단 골프세트 Sold Out으로 현재 이용 불가.",
+     "phone": "02-6956-8115",
+     "operating_status": "예약 중단(Sold Out) — 골프채 세트 한정",
+     "delivery": "미확인",
+     "price_headline": null,
+     "caution": "골프채 세트 Sold Out — 현재 예약 불가",
+     "bookable": false,
+     "bookable_reason": "골프채 세트 Sold Out — 현재 예약 불가"
+    }
+   ],
+   "provider_count": 3,
+   "legend": {
+    "O": "공식 안내로 해당 권역 이용이 확인됨",
+    "X": "공식 안내상 해당 권역 서비스가 없음(예: '제주 전 지역' 전용으로만 안내)",
+    "조건부": "공식 안내상 가능하나 조건(수단·요금·현재 판매중지 등)이 붙어 있음. 조건은 basis/detail에 기재",
+    "미확인": "공식 공개 안내에서 해당 항목에 대한 언급을 찾지 못함(추정하지 않음)"
+   },
+   "not_verified": "전화·문자·카카오톡 상담으로만 확인 가능한 항목(재고, 개별 견적, 권역별 실제 배송 가능 여부)은 '미확인'으로 남김",
+   "source_file": "5-rental_8_coverage_verified.json",
+   "note_code": "해외 골퍼용 골프채 렌탈·딜리버리 업체. 같은 권역이라도 실제 배송 가능 여부·재고·견적은 전화 확인 필요."
+  }
+ },
+ "briefing": {
+  "notices": {
+   "url": "https://www.360cc.co.kr/mobile/board/boardList.do?groupcode=NOTICE&mainMenuCd=reservation&subMenuCd=%2Fboard%2FboardView.do",
+   "items": [
+    {
+     "title": "DOMODOMO Hawaii 그랜드 오픈",
+     "date": "2025-11-16",
+     "url": "https://www.360cc.co.kr/mobile/board/boardList.do?groupcode=NOTICE&mainMenuCd=reservation&subMenuCd=%2Fboard%2FboardView.do"
+    },
+    {
+     "title": "하와이 호놀룰루 360도 에바비치C.C에서 한국 유명 옥동식 돼지국밥 선보인다.",
+     "date": "2023-09-28",
+     "url": "https://www.360cc.co.kr/mobile/board/boardList.do?groupcode=NOTICE&mainMenuCd=reservation&subMenuCd=%2Fboard%2FboardView.do"
+    },
+    {
+     "title": "예약 및 내장규정사항 안내",
+     "date": "2023-04-25",
+     "url": "https://www.360cc.co.kr/mobile/board/boardList.do?groupcode=NOTICE&mainMenuCd=reservation&subMenuCd=%2Fboard%2FboardView.do"
+    },
+    {
+     "title": "전기차 충전 운영안내",
+     "date": "2023-04-14",
+     "url": "https://www.360cc.co.kr/mobile/board/boardList.do?groupcode=NOTICE&mainMenuCd=reservation&subMenuCd=%2Fboard%2FboardView.do"
+    },
+    {
+     "title": "셀프체크인 안내",
+     "date": "2022-05-13",
+     "url": "https://www.360cc.co.kr/mobile/board/boardList.do?groupcode=NOTICE&mainMenuCd=reservation&subMenuCd=%2Fboard%2FboardView.do"
+    },
+    {
+     "title": "외부음식물 반입금지 안내",
+     "date": "2021-04-19",
+     "url": "https://www.360cc.co.kr/mobile/board/boardList.do?groupcode=NOTICE&mainMenuCd=reservation&subMenuCd=%2Fboard%2FboardView.do"
+    },
+    {
+     "title": "그늘집 무인 자판기 운영안내",
+     "date": "2021-01-19",
+     "url": "https://www.360cc.co.kr/mobile/board/boardList.do?groupcode=NOTICE&mainMenuCd=reservation&subMenuCd=%2Fboard%2FboardView.do"
+    },
+    {
+     "title": "셀프 체크인 이용방법",
+     "date": "2021-01-06",
+     "url": "https://www.360cc.co.kr/mobile/board/boardList.do?groupcode=NOTICE&mainMenuCd=reservation&subMenuCd=%2Fboard%2FboardView.do"
+    },
+    {
+     "title": "론드리백 (Laundry Bag) 제공 중단 안내",
+     "date": "2020-08-07",
+     "url": "https://www.360cc.co.kr/mobile/board/boardList.do?groupcode=NOTICE&mainMenuCd=reservation&subMenuCd=%2Fboard%2FboardView.do"
+    },
+    {
+     "title": "예치금 반환 탈퇴 신청서",
+     "date": "2018-12-21",
+     "url": "https://www.360cc.co.kr/mobile/board/boardList.do?groupcode=NOTICE&mainMenuCd=reservation&subMenuCd=%2Fboard%2FboardView.do"
+    }
+   ],
+   "tags": {
+    "운영": [
+     {
+      "title": "전기차 충전 운영안내",
+      "date": "2023-04-14",
+      "url": "https://www.360cc.co.kr/mobile/board/boardList.do?groupcode=NOTICE&mainMenuCd=reservation&subMenuCd=%2Fboard%2FboardView.do"
+     },
+     {
+      "title": "그늘집 무인 자판기 운영안내",
+      "date": "2021-01-19",
+      "url": "https://www.360cc.co.kr/mobile/board/boardList.do?groupcode=NOTICE&mainMenuCd=reservation&subMenuCd=%2Fboard%2FboardView.do"
+     }
+    ]
+   }
+  },
+  "review": {
+   "score_10": 8.6,
+   "count": 83,
+   "source": "티픽골프장 라운더 후기 집계",
+   "url": "https://teepickgolf.com/course/360%EB%8F%84"
+  },
+  "fee_change": null,
+  "collected_at": "2026-11-26T09:51:53+09:00",
+  "recent_notice_text": null,
+  "course_notes": null,
+  "alert": null,
+  "unconfirmed": [],
+  "sources": []
+ },
+ "collection": {
+  "official_site": "ok",
+  "official_reason": null,
+  "pages_collected": 8,
+  "third_party": {
+   "teepick": true,
+   "greenfeeguide": false
+  },
+  "render_hint": "thin",
+  "plan_strategy": "thin(상세페이지 탐색)",
+  "browser_batch": false
+ },
+ "coverage": {
+  "basic": 1.0,
+  "course": 0.8,
+  "fee": 0.0,
+  "ops": 0.43,
+  "facility": 0.1,
+  "briefing": 0.5,
+  "rental": 0.25
+ }
+}

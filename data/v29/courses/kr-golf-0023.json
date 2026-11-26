@@ -1,0 +1,651 @@
+{
+ "course_id": "kr-golf-0023",
+ "meta": {
+  "name": "순천부영CC",
+  "generated_at": "2026-11-26T10:25:41+09:00",
+  "schema": "stage2c/1.0",
+  "batch": "4_호남",
+  "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
+  "schema_previous": "stage2b/1.0",
+  "restructured_from_7key": true,
+  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
+  "has_detail": true,
+  "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+ },
+ "master": {
+  "course_id": "kr-golf-0023",
+  "name": "순천부영CC",
+  "name_variants": [
+   "순천부영CC"
+  ],
+  "type": "대중제",
+  "holes": {
+   "total": 18,
+   "member": 0,
+   "public": 18,
+   "non_member": 0
+  },
+  "address": "전남광주통합특별시 순천시 해룡면 신대로 188",
+  "region": {
+   "sido_code": "12",
+   "sido_name": "전남광주통합특별시",
+   "sido_short": "전남",
+   "sigungu_code": "12150",
+   "sigungu_name": "순천시",
+   "legal_dong_code": "1215000000"
+  },
+  "lat": 34.940083,
+  "lng": 127.555349,
+  "nearest_ic": {
+   "name": "만흥IC",
+   "distance_km": 24.0,
+   "source": "최근접 IC 직선거리"
+  },
+  "tel": "061-816-5500",
+  "homepage": "https://www.scbooyoungcc.co.kr/index.asp",
+  "operators": [
+   "최양환"
+  ],
+  "area_sqm": 842238,
+  "opened": null,
+  "course_blocks": [],
+  "facility_id": null,
+  "provenance": {
+   "master": "courses_master.json v2.0 (문체부·KGA·KGBA·티픽·지도)",
+   "synced_to": "courses_master.json v2.7 (2026-11-26 단일 스키마 정규화)"
+  },
+  "course_spec": {
+   "holes": 18,
+   "par": null,
+   "blocks": [],
+   "length_m": null,
+   "kga": null,
+   "grass": {
+    "evidence": "순천부영컨트리클럽 클럽소개 클럽소개 인사말 CI소개 시설안내 오시는길 코스소개 코스소개 우정코스 사랑코스 코스갤러리 이용안내 골프장 호텔 골프연습장 인터넷예약 골프실시간예약 골프대기신청 호텔예약 골프단체예약 회원라운지 조인게시판 내장현황 위약현황 골프예약현황 호텔예약현황 회원정보변경 정보마당 공지사항 그린피 및 이벤트 자료실 포토갤러리 인재채용 날씨정보 입찰계약공고 오늘 허루 보지 않기 닫기 Login 아이디 비밀번호 아이디 저장 아이디/비밀번호 찾기 로그인 회원가입을 하시면더욱 다양한 혜택을 누리실 수 있습니다.",
+    "source": "공식",
+    "url": "https://www.scbooyoungcc.co.kr/index.asp"
+   },
+   "hole_by_hole": null
+  },
+  "addresses": [
+   "전남광주통합특별시 순천시 해룡면 신대로 188"
+  ],
+  "status": "operating",
+  "facility_cluster": null,
+  "factcheck_2026_11_26": null,
+  "address_original": "전남 순천시 해룡면 신대로 188"
+ },
+ "course": {
+  "holes": 18,
+  "holes_received": null,
+  "course_names": null,
+  "membership_type": "대중제",
+  "night_light": null,
+  "blocks": [],
+  "grass": {
+   "tee": null,
+   "fairway": {
+    "evidence": "순천부영컨트리클럽 클럽소개 클럽소개 인사말 CI소개 시설안내 오시는길 코스소개 코스소개 우정코스 사랑코스 코스갤러리 이용안내 골프장 호텔 골프연습장 인터넷예약 골프실시간예약 골프대기신청 호텔예약 골프단체예약 회원라운지 조인게시판 내장현황 위약현황 골프예약현황 호텔예약현황 회원정보변경 정보마당 공지사항 그린피 및 이벤트 자료실 포토갤러리 인재채용 날씨정보 입찰계약공고 오늘 허루 보지 않기 닫기 Login 아이디 비밀번호 아이디 저장 아이디/비밀번호 찾기 로그인 회원가입을 하시면더욱 다양한 혜택을 누리실 수 있습니다.",
+    "source": "공식",
+    "url": "https://www.scbooyoungcc.co.kr/index.asp"
+   },
+   "green": null
+  },
+  "kga": null,
+  "kga_hole_est": null,
+  "extra_courses": null,
+  "hole_by_hole": null,
+  "length_m": null,
+  "par": null
+ },
+ "fee": {
+  "weekday": 130000,
+  "weekend": 170000,
+  "weekday_text": null,
+  "weekend_text": null,
+  "basis": null,
+  "tax_included": null,
+  "cart": {
+   "value": 90000,
+   "source": "그린피가이드",
+   "url": "https://greenfeeguide.co.kr/course/gc-0451/"
+  },
+  "caddie": {
+   "value": 150000,
+   "source": "그린피가이드",
+   "url": "https://greenfeeguide.co.kr/course/gc-0451/",
+   "none": false
+  },
+  "as_of": "2026-11-01",
+  "source_url": null,
+  "note": null,
+  "sources": [
+   {
+    "source": "그린피가이드(지역 요금표)",
+    "url": "https://greenfeeguide.co.kr/region/jeonnam/"
+   },
+   {
+    "source": "그린피가이드(공식 요금표 확인)",
+    "url": "https://greenfeeguide.co.kr/course/gc-0451/",
+    "checked_at": "2026-11-01"
+   }
+  ],
+  "checked_at": "2026-11-01",
+  "official_green_evidence": [
+   "순천부영컨트리클럽 클럽소개 클럽소개 인사말 CI소개 시설안내 오시는길 코스소개 코스소개 우정코스 사랑코스 코스갤러리 이용안내 골프장 호텔 골프연습장 인터넷예약 골프실시간예약 골프대기신청 호텔예약 골프단체예약 회원라운지 조인게시판 내장현황 위약현황 골프예약현황 호텔예약현황 회원정보변경 정보마당 공지사항 그린피 및 이벤트 자료실 포토갤러리 인재채용 날씨정보 입찰계약공고 오늘 허루 보지 않기 닫기 Login 아이디 비밀번호 아이디 저장 아이디/비밀번호 찾기 로그인 회원가입을 하시면더욱 다양한 혜택을 누리실 수 있습니다.",
+   "순천부영컨트리클럽 클럽소개 클럽소개 인사말 CI소개 시설안내 오시는길 코스소개 코스소개 우정코스 사랑코스 코스갤러리 이용안내 골프장 호텔 골프연습장 인터넷예약 골프실시간예약 골프대기신청 호텔예약 골프단체예약 회원라운지 조인게시판 내장현황 위약현황 골프예약현황 호텔예약현황 회원정보변경 정보마당 공지사항 그린피 및 이벤트 자료실 포토갤러리 인재채용 날씨정보 입찰계약공고 정보마당 공지사항 그린피 및 이벤트 자료실 포토갤러리 인재채용 날씨정보 입찰계약공고 공지사항 > 정보마당 > 공지사항 게시글 읽기 2027년 연단체 모집 안내(마감) 관"
+  ],
+  "official_rental": null,
+  "region_table": {
+   "weekday": 130000,
+   "weekend": 170000,
+   "cart": 90000,
+   "caddie": 150000,
+   "holes": "18",
+   "type": "대중제",
+   "source": "그린피가이드(지역 요금표)",
+   "url": "https://greenfeeguide.co.kr/region/jeonnam/"
+  }
+ },
+ "cancel": {
+  "cancel_policy": null,
+  "open_cycle": null,
+  "notes": null,
+  "evidence": [
+   "순천부영컨트리클럽 클럽소개 클럽소개 인사말 CI소개 시설안내 오시는길 코스소개 코스소개 우정코스 사랑코스 코스갤러리 이용안내 골프장 호텔 골프연습장 인터넷예약 골프실시간예약 골프대기신청 호텔예약 골프단체예약 회원라운지 조인게시판 내장현황 위약현황 골프예약현황 호텔예약현황 회원정보변경 정보마당 공지사항 그린피 및 이벤트 자료실 포토갤러리 인재채용 날씨정보 입찰계약공고 오늘 허루 보지 않기 닫기 Login 아이디 비밀번호 아이디 저장 아이디/비밀번호 찾기 로그인 회원가입을 하시면더욱 다양한 혜택을 누리실 수 있습니다.",
+   "순천부영컨트리클럽 클럽소개 클럽소개 인사말 CI소개 시설안내 오시는길 코스소개 코스소개 우정코스 사랑코스 코스갤러리 이용안내 골프장 호텔 골프연습장 인터넷예약 골프실시간예약 골프대기신청 호텔예약 골프단체예약 회원라운지 조인게시판 내장현황 위약현황 골프예약현황 호텔예약현황 회원정보변경 정보마당 공지사항 그린피 및 이벤트 자료실 포토갤러리 인재채용 날씨정보 입찰계약공고 정보마당 공지사항 그린피 및 이벤트 자료실 포토갤러리 인재채용 날씨정보 입찰계약공고 공지사항 > 정보마당 > 공지사항 게시글 읽기 2027년 연단체 모집 안내(마감) 관",
+   "② 이용자가 개인 사정의 변경이나 단순 변심 등 정당한 사유없이 예약을 취소하는 경우에는 취소일을 기준으로 다음과 같이 손해를 배상한다."
+  ],
+  "weather_evidence": []
+ },
+ "ops": {
+  "nocaddie": {
+   "evidence": [],
+   "value": null
+  },
+  "two_player": {
+   "evidence": [
+    "순천부영컨트리클럽 클럽소개 클럽소개 인사말 CI소개 시설안내 오시는길 코스소개 코스소개 우정코스 사랑코스 코스갤러리 이용안내 골프장 호텔 골프연습장 인터넷예약 골프실시간예약 골프대기신청 호텔예약 골프단체예약 회원라운지 조인게시판 내장현황 위약현황 골프예약현황 호텔예약현황 회원정보변경 정보마당 공지사항 그린피 및 이벤트 자료실 포토갤러리 인재채용 날씨정보 입찰계약공고 오늘 허루 보지 않기 닫기 Login 아이디 비밀번호 아이디 저장 아이디/비밀번호 찾기 로그인 회원가입을 하시면더욱 다양한 혜택을 누리실 수 있습니다.",
+    "순천부영컨트리클럽 클럽소개 클럽소개 인사말 CI소개 시설안내 오시는길 코스소개 코스소개 우정코스 사랑코스 코스갤러리 이용안내 골프장 호텔 골프연습장 인터넷예약 골프실시간예약 골프대기신청 호텔예약 골프단체예약 회원라운지 조인게시판 내장현황 위약현황 골프예약현황 호텔예약현황 회원정보변경 정보마당 공지사항 그린피 및 이벤트 자료실 포토갤러리 인재채용 날씨정보 입찰계약공고 정보마당 공지사항 그린피 및 이벤트 자료실 포토갤러리 인재채용 날씨정보 입찰계약공고 공지사항 > 정보마당 > 공지사항 게시글 읽기 2027년 연단체 모집 안내(마감) 관"
+   ],
+   "value": null,
+   "third_party": {
+    "two": null,
+    "three": null,
+    "source": "그린피가이드",
+    "url": "https://greenfeeguide.co.kr/course/gc-0451/"
+   }
+  },
+  "three_player": {
+   "value": null,
+   "evidence": []
+  },
+  "five_player": {
+   "value": null,
+   "evidence": []
+  },
+  "marshal_caddie": {
+   "value": null,
+   "evidence": []
+  },
+  "cart_type": {
+   "evidence": [
+    "카트이용요금 등 기타 사업자가 정한 특별요금 ② 골프장 이용 시 기본적으로 발생되는 비용으로서 제1항 제2호의 클럽하우스 시설 이용에 부과되는 요금 및 제1항 제3호의 제세공과금을 기본요금이라 한다."
+   ],
+   "value": null
+  },
+  "cart_entry": {
+   "evidence": [],
+   "value": null
+  },
+  "bagdrop": {
+   "evidence": [],
+   "value": null
+  },
+  "mat": {
+   "evidence": [],
+   "value": null
+  },
+  "checkin": {
+   "evidence": [],
+   "value": null,
+   "third_party": {
+    "value": null,
+    "source": "그린피가이드",
+    "url": "https://greenfeeguide.co.kr/course/gc-0451/"
+   }
+  },
+  "locker": {
+   "evidence": [
+    "락커, 샤워실 등 클럽하우스 시설 이용에 부과되는 요금 3."
+   ],
+   "value": "문구 확인(원문 근거)"
+  },
+  "sauna": {
+   "evidence": [],
+   "value": null
+  },
+  "dress": {
+   "evidence": [],
+   "value": null
+  },
+  "pace": {
+   "evidence": [],
+   "value": null
+  },
+  "grass": null
+ },
+ "facilities": {
+  "practice": {
+   "evidence": [
+    "순천부영컨트리클럽 클럽소개 클럽소개 인사말 CI소개 시설안내 오시는길 코스소개 코스소개 우정코스 사랑코스 코스갤러리 이용안내 골프장 호텔 골프연습장 인터넷예약 골프실시간예약 골프대기신청 호텔예약 골프단체예약 회원라운지 조인게시판 내장현황 위약현황 골프예약현황 호텔예약현황 회원정보변경 정보마당 공지사항 그린피 및 이벤트 자료실 포토갤러리 인재채용 날씨정보 입찰계약공고 오늘 허루 보지 않기 닫기 Login 아이디 비밀번호 아이디 저장 아이디/비밀번호 찾기 로그인 회원가입을 하시면더욱 다양한 혜택을 누리실 수 있습니다.",
+    "인터넷 회원 우대 요금 관리자 884 2025/07/21 14 신년 맞이 감사 이벤트 인터넷 회원 우대 요금 관리자 771 2025/01/10 13 2025년 연단체 모집 마감 안내(마감) 관리자 541 2024/11/01 12 순천부영CC X 골프연습장만의 특별한 혜택!!!",
+    "순천부영컨트리클럽 클럽소개 클럽소개 인사말 CI소개 시설안내 오시는길 코스소개 코스소개 우정코스 사랑코스 코스갤러리 이용안내 골프장 호텔 골프연습장 인터넷예약 골프실시간예약 골프대기신청 호텔예약 골프단체예약 회원라운지 조인게시판 내장현황 위약현황 골프예약현황 호텔예약현황 회원정보변경 정보마당 공지사항 그린피 및 이벤트 자료실 포토갤러리 인재채용 날씨정보 입찰계약공고 정보마당 공지사항 그린피 및 이벤트 자료실 포토갤러리 인재채용 날씨정보 입찰계약공고 공지사항 > 정보마당 > 공지사항 게시글 읽기 2027년 연단체 모집 안내(마감) 관"
+   ],
+   "value": null
+  },
+  "indoor_range": {
+   "value": null,
+   "evidence": []
+  },
+  "food": {
+   "evidence": [],
+   "value": null
+  },
+  "snack_bar": {
+   "value": null,
+   "evidence": []
+  },
+  "locker_sauna": {
+   "value": null,
+   "evidence": []
+  },
+  "lodging": {
+   "value": null,
+   "evidence": []
+  },
+  "other": {
+   "value": null,
+   "evidence": []
+  },
+  "night": {
+   "evidence": [],
+   "value": null
+  },
+  "closed_days": {
+   "evidence": [
+    "이용자가 이용예정일 당일 예약을 취소하거나 아무런 통보 없이 이용예정일에 골프장을 이용하지 않을 경우 : 팀별 이용요금의 30% ③ 강설, 폭우, 안개 기타 천재지변 등의 불가항력적인 사유로, 사업자가 이용예정일에 골프장 이용이 불가능하다고 판단되어 임시휴장을 하는 경우에는 예약금을 환불하여야 한다.",
+    "② 이 골프장의 정기 휴장일은 다음과 같다."
+   ],
+   "third_party": "정기 휴장일 없음숙박호텔부대시설드라이빙",
+   "value": null
+  },
+  "shuttle": {
+   "evidence": [],
+   "value": null
+  },
+  "ev_charge": {
+   "evidence": [],
+   "value": null
+  },
+  "gf_facilities": [],
+  "proshop": {
+   "evidence": [],
+   "value": null
+  }
+ },
+ "rental": {
+  "available": null,
+  "full_set": null,
+  "fee_text": null,
+  "brand": null,
+  "left_handed": null,
+  "shoes": null,
+  "nine_hole": null,
+  "range_finder": null,
+  "reservation": null,
+  "source_url": null,
+  "evidence": [],
+  "official": null,
+  "nearby_delivery": {
+   "region": "호남",
+   "sido": "전남광주통합특별시",
+   "verified_at": "2026-11-26 (KST)",
+   "checked_at": "2026-11-26",
+   "providers": [
+    {
+     "id": "theb",
+     "name": "더비 (The B)",
+     "coverage": "조건부",
+     "basis": "매장·퀵 안내 없음. '전국 당일 배송' 표기 및 화물택배만 해당.",
+     "phone": "010-2530-4575",
+     "operating_status": "정상 영업",
+     "delivery": "O",
+     "price_headline": "12시간 기준 90,000원부터",
+     "bookable": true
+    },
+    {
+     "id": "gangnamclub",
+     "name": "강남골프클럽렌탈",
+     "coverage": "조건부",
+     "basis": "동일(전지역 배송·별도 상담).",
+     "phone": "010-7407-0753",
+     "operating_status": "정상 영업(자사 블로그 최신 게시 2026-04-28)",
+     "delivery": "미확인",
+     "price_headline": null,
+     "bookable": true
+    }
+   ],
+   "provider_count": 2,
+   "legend": {
+    "O": "공식 안내로 해당 권역 이용이 확인됨",
+    "X": "공식 안내상 해당 권역 서비스가 없음(예: '제주 전 지역' 전용으로만 안내)",
+    "조건부": "공식 안내상 가능하나 조건(수단·요금·현재 판매중지 등)이 붙어 있음. 조건은 basis/detail에 기재",
+    "미확인": "공식 공개 안내에서 해당 항목에 대한 언급을 찾지 못함(추정하지 않음)"
+   },
+   "not_verified": "전화·문자·카카오톡 상담으로만 확인 가능한 항목(재고, 개별 견적, 권역별 실제 배송 가능 여부)은 '미확인'으로 남김",
+   "source_file": "5-rental_8_coverage_verified.json",
+   "note_code": "해외 골퍼용 골프채 렌탈·딜리버리 업체. 같은 권역이라도 실제 배송 가능 여부·재고·견적은 전화 확인 필요."
+  }
+ },
+ "briefing": {
+  "notices": {
+   "url": "https://www.scbooyoungcc.co.kr/board/CG1_course_gallery/list.asp",
+   "items": [
+    {
+     "title": "2026년 12월 그린피 및 이벤트",
+     "date": "2026-11-13",
+     "url": "https://www.scbooyoungcc.co.kr/board/IE1_information_event/list.asp"
+    },
+    {
+     "title": "2026년 11월 그린피 및 이벤트",
+     "date": "2026-10-02",
+     "url": "https://www.scbooyoungcc.co.kr/board/IE1_information_event/list.asp"
+    },
+    {
+     "title": "2027년 연단체 모집 안내(마감)",
+     "date": "2026-09-28",
+     "url": "https://www.scbooyoungcc.co.kr/board/IN1_information_notice/list.asp"
+    },
+    {
+     "title": "관리자 | HIT : 140 |",
+     "date": "2026-09-28",
+     "url": "https://www.scbooyoungcc.co.kr/board/IN1_information_notice/view.asp?n_page=list.asp&page_num=1&page_size=12&mode=NULL&bbsno=168&seq=1&depth=1&search=&keyword="
+    },
+    {
+     "title": "2026년 10월 그린피 및 이벤트",
+     "date": "2026-09-04",
+     "url": "https://www.scbooyoungcc.co.kr/board/IE1_information_event/list.asp"
+    },
+    {
+     "title": "순천부영호텔 2026 여수세계섬박람회 개최기념",
+     "date": "2026-09-04",
+     "url": "https://www.scbooyoungcc.co.kr/board/IN1_information_notice/list.asp"
+    },
+    {
+     "title": "2026년 9월 그린피 및 이벤트",
+     "date": "2026-08-13",
+     "url": "https://www.scbooyoungcc.co.kr/board/IE1_information_event/list.asp"
+    },
+    {
+     "title": "3+1 특별 할인 이벤트(마감)",
+     "date": "2026-07-15",
+     "url": "https://www.scbooyoungcc.co.kr/board/IN1_information_notice/list.asp"
+    },
+    {
+     "title": "2026년 8월 그린피 및 이벤트",
+     "date": "2026-07-08",
+     "url": "https://www.scbooyoungcc.co.kr/board/IE1_information_event/list.asp"
+    },
+    {
+     "title": "2026년 7월 그린피 및 이벤트",
+     "date": "2026-06-05",
+     "url": "https://www.scbooyoungcc.co.kr/board/IE1_information_event/list.asp"
+    },
+    {
+     "title": "2026년 6월 그린피 및 이벤트",
+     "date": "2026-05-12",
+     "url": "https://www.scbooyoungcc.co.kr/board/IE1_information_event/list.asp"
+    },
+    {
+     "title": "2026년 5월 그린피 및 이벤트",
+     "date": "2026-04-17",
+     "url": "https://www.scbooyoungcc.co.kr/board/IE1_information_event/list.asp"
+    },
+    {
+     "title": "2026년 4월 그린피 및 이벤트",
+     "date": "2026-03-17",
+     "url": "https://www.scbooyoungcc.co.kr/board/IE1_information_event/list.asp"
+    },
+    {
+     "title": "2026년 3월 그린피 및 이벤트",
+     "date": "2026-02-26",
+     "url": "https://www.scbooyoungcc.co.kr/board/IE1_information_event/list.asp"
+    },
+    {
+     "title": "2026년 2월 그린피 및 이벤트",
+     "date": "2026-01-14",
+     "url": "https://www.scbooyoungcc.co.kr/board/IE1_information_event/list.asp"
+    },
+    {
+     "title": "2026년 연단체 모집 안내(마감)",
+     "date": "2025-09-29",
+     "url": "https://www.scbooyoungcc.co.kr/board/IN1_information_notice/list.asp"
+    },
+    {
+     "title": "무더운 여름! 시원한 혜택!! 인터넷 회원 우대 요금",
+     "date": "2025-07-21",
+     "url": "https://www.scbooyoungcc.co.kr/board/IN1_information_notice/list.asp"
+    },
+    {
+     "title": "신년 맞이 감사 이벤트 인터넷 회원 우대 요금",
+     "date": "2025-01-10",
+     "url": "https://www.scbooyoungcc.co.kr/board/IN1_information_notice/list.asp"
+    },
+    {
+     "title": "2025년 연단체 모집 마감 안내(마감)",
+     "date": "2024-11-01",
+     "url": "https://www.scbooyoungcc.co.kr/board/IN1_information_notice/list.asp"
+    },
+    {
+     "title": "순천부영CC X 골프연습장만의 특별한 혜택!!!",
+     "date": "2024-07-11",
+     "url": "https://www.scbooyoungcc.co.kr/board/IN1_information_notice/list.asp"
+    }
+   ],
+   "tags": {
+    "요금": [
+     {
+      "title": "2026년 12월 그린피 및 이벤트",
+      "date": "2026-11-13",
+      "url": "https://www.scbooyoungcc.co.kr/board/IE1_information_event/list.asp"
+     },
+     {
+      "title": "2026년 11월 그린피 및 이벤트",
+      "date": "2026-10-02",
+      "url": "https://www.scbooyoungcc.co.kr/board/IE1_information_event/list.asp"
+     },
+     {
+      "title": "2026년 10월 그린피 및 이벤트",
+      "date": "2026-09-04",
+      "url": "https://www.scbooyoungcc.co.kr/board/IE1_information_event/list.asp"
+     },
+     {
+      "title": "2026년 9월 그린피 및 이벤트",
+      "date": "2026-08-13",
+      "url": "https://www.scbooyoungcc.co.kr/board/IE1_information_event/list.asp"
+     },
+     {
+      "title": "2026년 8월 그린피 및 이벤트",
+      "date": "2026-07-08",
+      "url": "https://www.scbooyoungcc.co.kr/board/IE1_information_event/list.asp"
+     },
+     {
+      "title": "2026년 7월 그린피 및 이벤트",
+      "date": "2026-06-05",
+      "url": "https://www.scbooyoungcc.co.kr/board/IE1_information_event/list.asp"
+     },
+     {
+      "title": "2026년 6월 그린피 및 이벤트",
+      "date": "2026-05-12",
+      "url": "https://www.scbooyoungcc.co.kr/board/IE1_information_event/list.asp"
+     },
+     {
+      "title": "2026년 5월 그린피 및 이벤트",
+      "date": "2026-04-17",
+      "url": "https://www.scbooyoungcc.co.kr/board/IE1_information_event/list.asp"
+     },
+     {
+      "title": "2026년 4월 그린피 및 이벤트",
+      "date": "2026-03-17",
+      "url": "https://www.scbooyoungcc.co.kr/board/IE1_information_event/list.asp"
+     },
+     {
+      "title": "2026년 3월 그린피 및 이벤트",
+      "date": "2026-02-26",
+      "url": "https://www.scbooyoungcc.co.kr/board/IE1_information_event/list.asp"
+     },
+     {
+      "title": "2026년 2월 그린피 및 이벤트",
+      "date": "2026-01-14",
+      "url": "https://www.scbooyoungcc.co.kr/board/IE1_information_event/list.asp"
+     },
+     {
+      "title": "무더운 여름! 시원한 혜택!! 인터넷 회원 우대 요금",
+      "date": "2025-07-21",
+      "url": "https://www.scbooyoungcc.co.kr/board/IN1_information_notice/list.asp"
+     },
+     {
+      "title": "신년 맞이 감사 이벤트 인터넷 회원 우대 요금",
+      "date": "2025-01-10",
+      "url": "https://www.scbooyoungcc.co.kr/board/IN1_information_notice/list.asp"
+     }
+    ],
+    "이벤트": [
+     {
+      "title": "2026년 12월 그린피 및 이벤트",
+      "date": "2026-11-13",
+      "url": "https://www.scbooyoungcc.co.kr/board/IE1_information_event/list.asp"
+     },
+     {
+      "title": "2026년 11월 그린피 및 이벤트",
+      "date": "2026-10-02",
+      "url": "https://www.scbooyoungcc.co.kr/board/IE1_information_event/list.asp"
+     },
+     {
+      "title": "2026년 10월 그린피 및 이벤트",
+      "date": "2026-09-04",
+      "url": "https://www.scbooyoungcc.co.kr/board/IE1_information_event/list.asp"
+     },
+     {
+      "title": "2026년 9월 그린피 및 이벤트",
+      "date": "2026-08-13",
+      "url": "https://www.scbooyoungcc.co.kr/board/IE1_information_event/list.asp"
+     },
+     {
+      "title": "3+1 특별 할인 이벤트(마감)",
+      "date": "2026-07-15",
+      "url": "https://www.scbooyoungcc.co.kr/board/IN1_information_notice/list.asp"
+     },
+     {
+      "title": "2026년 8월 그린피 및 이벤트",
+      "date": "2026-07-08",
+      "url": "https://www.scbooyoungcc.co.kr/board/IE1_information_event/list.asp"
+     },
+     {
+      "title": "2026년 7월 그린피 및 이벤트",
+      "date": "2026-06-05",
+      "url": "https://www.scbooyoungcc.co.kr/board/IE1_information_event/list.asp"
+     },
+     {
+      "title": "2026년 6월 그린피 및 이벤트",
+      "date": "2026-05-12",
+      "url": "https://www.scbooyoungcc.co.kr/board/IE1_information_event/list.asp"
+     },
+     {
+      "title": "2026년 5월 그린피 및 이벤트",
+      "date": "2026-04-17",
+      "url": "https://www.scbooyoungcc.co.kr/board/IE1_information_event/list.asp"
+     },
+     {
+      "title": "2026년 4월 그린피 및 이벤트",
+      "date": "2026-03-17",
+      "url": "https://www.scbooyoungcc.co.kr/board/IE1_information_event/list.asp"
+     },
+     {
+      "title": "2026년 3월 그린피 및 이벤트",
+      "date": "2026-02-26",
+      "url": "https://www.scbooyoungcc.co.kr/board/IE1_information_event/list.asp"
+     },
+     {
+      "title": "2026년 2월 그린피 및 이벤트",
+      "date": "2026-01-14",
+      "url": "https://www.scbooyoungcc.co.kr/board/IE1_information_event/list.asp"
+     },
+     {
+      "title": "신년 맞이 감사 이벤트 인터넷 회원 우대 요금",
+      "date": "2025-01-10",
+      "url": "https://www.scbooyoungcc.co.kr/board/IN1_information_notice/list.asp"
+     }
+    ],
+    "모집": [
+     {
+      "title": "2027년 연단체 모집 안내(마감)",
+      "date": "2026-09-28",
+      "url": "https://www.scbooyoungcc.co.kr/board/IN1_information_notice/list.asp"
+     },
+     {
+      "title": "2026년 연단체 모집 안내(마감)",
+      "date": "2025-09-29",
+      "url": "https://www.scbooyoungcc.co.kr/board/IN1_information_notice/list.asp"
+     },
+     {
+      "title": "2025년 연단체 모집 마감 안내(마감)",
+      "date": "2024-11-01",
+      "url": "https://www.scbooyoungcc.co.kr/board/IN1_information_notice/list.asp"
+     }
+    ],
+    "하절기": [
+     {
+      "title": "무더운 여름! 시원한 혜택!! 인터넷 회원 우대 요금",
+      "date": "2025-07-21",
+      "url": "https://www.scbooyoungcc.co.kr/board/IN1_information_notice/list.asp"
+     }
+    ]
+   }
+  },
+  "review": null,
+  "fee_change": null,
+  "collected_at": "2026-11-26T10:25:41+09:00",
+  "recent_notice_text": null,
+  "course_notes": null,
+  "alert": null,
+  "unconfirmed": [],
+  "sources": []
+ },
+ "collection": {
+  "official_site": "ok",
+  "official_reason": null,
+  "pages_collected": 14,
+  "third_party": {
+   "teepick": false,
+   "greenfeeguide": true
+  },
+  "render_hint": "",
+  "plan_strategy": "unreachable(브라우저 재시도)",
+  "browser_batch": false,
+  "browser_pages": 0,
+  "browser_pdf": []
+ },
+ "coverage": {
+  "basic": 1.0,
+  "course": 0.6,
+  "fee": 1.0,
+  "ops": 0.07,
+  "facility": 0.0,
+  "briefing": 0.25,
+  "rental": 0.25
+ }
+}

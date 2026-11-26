@@ -1,0 +1,545 @@
+{
+ "course_id": "kr-golf-0125",
+ "meta": {
+  "name": "골프클럽Q",
+  "generated_at": "2026-11-26T09:51:52+09:00",
+  "schema": "stage2c/1.0",
+  "batch": "1_수도권",
+  "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
+  "schema_previous": "stage2b/1.0",
+  "restructured_from_7key": true,
+  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
+  "has_detail": true,
+  "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+ },
+ "master": {
+  "course_id": "kr-golf-0125",
+  "name": "골프클럽Q",
+  "name_variants": [
+   "골프클럽Q"
+  ],
+  "type": "대중제",
+  "holes": {
+   "total": 18,
+   "member": 0,
+   "public": 18,
+   "non_member": 0
+  },
+  "address": "경기도 안성시 죽산면 장계길 20-229",
+  "region": {
+   "sido_code": "41",
+   "sido_name": "경기도",
+   "sido_short": "경기",
+   "sigungu_code": "41550",
+   "sigungu_name": "안성시",
+   "legal_dong_code": "4155000000"
+  },
+  "lat": 37.046973,
+  "lng": 127.389507,
+  "nearest_ic": {
+   "name": "일죽IC",
+   "distance_km": 7.3,
+   "source": "teepick(실측 표기)",
+   "straight_km_nearest": 7.3,
+   "straight_name": "일죽IC"
+  },
+  "tel": "031-8046-7000",
+  "homepage": "https://www.golfclubq.com/",
+  "operators": [
+   "골프클럽큐레저산업 주식회사"
+  ],
+  "area_sqm": 1001876,
+  "opened": "2010-04",
+  "course_blocks": [],
+  "facility_id": null,
+  "provenance": {
+   "master": "courses_master.json v2.0 (문체부·KGA·KGBA·티픽·지도)",
+   "synced_to": "courses_master.json v2.7 (2026-11-26 단일 스키마 정규화)"
+  },
+  "par": null,
+  "holes_teepick": 18,
+  "course_spec": {
+   "holes": 18,
+   "par": null,
+   "blocks": [],
+   "length_m": null,
+   "kga": null,
+   "grass": {
+    "evidence": "골프클럽Q 로그인 회원가입 실시간예약 실시간예약 예약확인/취소 조인예약 클럽이용안내 이용 및 요금안내 예약안내 오시는길 시설안내 클럽하우스 그늘집 레스토랑 프로샵 코스소개 코스소개 코스공략도 클럽소식 공지사항 이벤트 포토갤러리 2021 클럽큐展 2022 클럽큐展 명예의전당 Myzone 예약확인/취소 스코어카드 쿠폰함 회원정보관리 실시간 예약 SUN MON TUE WEN THU FRI SAT 실시간예약하기 골프클럽큐 홍보영상보기 NEWS 2027년 연단체팀 모집 안내 2026.10.22 HOME > 이용안내 이용안내 이용안내 요금안내",
+    "source": "공식",
+    "url": "https://www.golfclubq.com/guide/guide.asp"
+   },
+   "hole_by_hole": null
+  },
+  "addresses": [
+   "경기도 안성시 죽산면 장계길 20-229"
+  ],
+  "status": "operating",
+  "facility_cluster": null,
+  "factcheck_2026_11_26": null
+ },
+ "course": {
+  "holes": 18,
+  "holes_received": 18,
+  "course_names": null,
+  "membership_type": "대중제",
+  "night_light": null,
+  "blocks": [],
+  "grass": {
+   "tee": null,
+   "fairway": {
+    "evidence": "골프클럽Q 로그인 회원가입 실시간예약 실시간예약 예약확인/취소 조인예약 클럽이용안내 이용 및 요금안내 예약안내 오시는길 시설안내 클럽하우스 그늘집 레스토랑 프로샵 코스소개 코스소개 코스공략도 클럽소식 공지사항 이벤트 포토갤러리 2021 클럽큐展 2022 클럽큐展 명예의전당 Myzone 예약확인/취소 스코어카드 쿠폰함 회원정보관리 실시간 예약 SUN MON TUE WEN THU FRI SAT 실시간예약하기 골프클럽큐 홍보영상보기 NEWS 2027년 연단체팀 모집 안내 2026.10.22 HOME > 이용안내 이용안내 이용안내 요금안내",
+    "source": "공식",
+    "url": "https://www.golfclubq.com/guide/guide.asp"
+   },
+   "green": null
+  },
+  "kga": null,
+  "kga_hole_est": null,
+  "extra_courses": null,
+  "hole_by_hole": null,
+  "length_m": null,
+  "par": null
+ },
+ "fee": {
+  "weekday": null,
+  "weekend": null,
+  "weekday_text": null,
+  "weekend_text": null,
+  "basis": null,
+  "tax_included": null,
+  "cart": {
+   "evidence": "접수 및 요금정산 프런트에 비치된 접수부에 내장하시는 고객명을 적어주시고 모든 이용요금(그린피, 카트피, 식음료, 프로샵)은 후불로 정산입니다.",
+   "url": "https://www.golfclubq.com/guide/guide.asp",
+   "source": "공식"
+  },
+  "caddie": {
+   "value": null,
+   "none": false,
+   "evidence": "캐디피는 경기 종료 후 캐디에게 직접 주시면 됩니다.",
+   "source": "공식",
+   "url": "https://www.golfclubq.com/guide/guide.asp"
+  },
+  "as_of": null,
+  "source_url": null,
+  "note": null,
+  "sources": [],
+  "checked_at": null,
+  "market": {
+   "weekday_min": 90000.0,
+   "weekend_min": 140000.0,
+   "part1": null,
+   "part2": null,
+   "source": "티픽골프장(실거래 관측)",
+   "url": "https://teepickgolf.com/course/%EA%B3%A8%ED%94%84%ED%81%B4%EB%9F%BDQ",
+   "note": "공시가 아닌 최근 관측 실거래 최저가"
+  },
+  "official_green_evidence": [
+   "접수 및 요금정산 프런트에 비치된 접수부에 내장하시는 고객명을 적어주시고 모든 이용요금(그린피, 카트피, 식음료, 프로샵)은 후불로 정산입니다.",
+   "※ 이용금액 = 예약 시 4인 그린피 기준 ※ 위약 적용자가 예약 정지 기간 內 내장 시 월별 이벤트 이용요금(정상가) 적용 ※ 타사(예약 대행사)를 통한 예약의 경우 예약대행사 위약규정이 우선 적용됩니다."
+  ],
+  "official_rental": null
+ },
+ "cancel": {
+  "cancel_policy": null,
+  "open_cycle": null,
+  "notes": null,
+  "evidence": [
+   "골프클럽Q 로그인 회원가입 실시간예약 실시간예약 예약확인/취소 조인예약 클럽이용안내 이용 및 요금안내 예약안내 오시는길 시설안내 클럽하우스 그늘집 레스토랑 프로샵 코스소개 코스소개 코스공략도 클럽소식 공지사항 이벤트 포토갤러리 2021 클럽큐展 2022 클럽큐展 명예의전당 Myzone 예약확인/취소 스코어카드 쿠폰함 회원정보관리 실시간 예약 SUN MON TUE WEN THU FRI SAT 실시간예약하기 골프클럽큐 홍보영상보기 NEWS 2027년 연단체팀 모집 안내 2026.10.22 HOME > 이용안내 이용안내 이용안내 요금안내",
+   "골프클럽Q 로그인 회원가입 실시간예약 실시간예약 예약확인/취소 조인예약 클럽이용안내 이용 및 요금안내 예약안내 오시는길 시설안내 클럽하우스 그늘집 레스토랑 프로샵 코스소개 코스소개 코스공략도 클럽소식 공지사항 이벤트 포토갤러리 2021 클럽큐展 2022 클럽큐展 명예의전당 Myzone 예약확인/취소 스코어카드 쿠폰함 회원정보관리 실시간 예약 SUN MON TUE WEN THU FRI SAT 실시간예약하기 골프클럽큐 홍보영상보기 NEWS 2027년 연단체팀 모집 안내 2026.10.22 HOME > 코스공략법 전체코스 코스공략법 코스",
+   "골프클럽Q 로그인 회원가입 실시간예약 실시간예약 예약확인/취소 조인예약 클럽이용안내 이용 및 요금안내 예약안내 오시는길 시설안내 클럽하우스 그늘집 레스토랑 프로샵 코스소개 코스소개 코스공략도 클럽소식 공지사항 이벤트 포토갤러리 2021 클럽큐展 2022 클럽큐展 명예의전당 Myzone 예약확인/취소 스코어카드 쿠폰함 회원정보관리 실시간 예약 SUN MON TUE WEN THU FRI SAT 실시간예약하기 골프클럽큐 홍보영상보기 NEWS 2027년 연단체팀 모집 안내 2026.10.22 HOME > 예약안내 예약안내 예약방법 1."
+  ],
+  "weather_evidence": []
+ },
+ "ops": {
+  "nocaddie": {
+   "evidence": [
+    "노캐디: 1,2부 / 1,2부"
+   ],
+   "value": "노캐디 운영 시간 1,2부",
+   "source_url": "https://www.golfclubq.com/",
+   "confidence": "high",
+   "checked_at": "2026-10-13",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/no-caddie-golf-course-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  },
+  "two_player": {
+   "evidence": [
+    "골프클럽Q 로그인 회원가입 실시간예약 실시간예약 예약확인/취소 조인예약 클럽이용안내 이용 및 요금안내 예약안내 오시는길 시설안내 클럽하우스 그늘집 레스토랑 프로샵 코스소개 코스소개 코스공략도 클럽소식 공지사항 이벤트 포토갤러리 2021 클럽큐展 2022 클럽큐展 명예의전당 Myzone 예약확인/취소 스코어카드 쿠폰함 회원정보관리 실시간 예약 SUN MON TUE WEN THU FRI SAT 실시간예약하기 골프클럽큐 홍보영상보기 NEWS 2027년 연단체팀 모집 안내 2026.10.22 HOME > 이용안내 이용안내 이용안내 요금안내",
+    "골프클럽Q 로그인 회원가입 실시간예약 실시간예약 예약확인/취소 조인예약 클럽이용안내 이용 및 요금안내 예약안내 오시는길 시설안내 클럽하우스 그늘집 레스토랑 프로샵 코스소개 코스소개 코스공략도 클럽소식 공지사항 이벤트 포토갤러리 2021 클럽큐展 2022 클럽큐展 명예의전당 Myzone 예약확인/취소 스코어카드 쿠폰함 회원정보관리 실시간 예약 SUN MON TUE WEN THU FRI SAT 실시간예약하기 골프클럽큐 홍보영상보기 NEWS 2027년 연단체팀 모집 안내 2026.10.22 HOME > 코스공략법 전체코스 코스공략법 코스",
+    "골프클럽Q 로그인 회원가입 실시간예약 실시간예약 예약확인/취소 조인예약 클럽이용안내 이용 및 요금안내 예약안내 오시는길 시설안내 클럽하우스 그늘집 레스토랑 프로샵 코스소개 코스소개 코스공략도 클럽소식 공지사항 이벤트 포토갤러리 2021 클럽큐展 2022 클럽큐展 명예의전당 Myzone 예약확인/취소 스코어카드 쿠폰함 회원정보관리 실시간 예약 SUN MON TUE WEN THU FRI SAT 실시간예약하기 골프클럽큐 홍보영상보기 NEWS 2027년 연단체팀 모집 안내 2026.10.22 HOME > 예약안내 예약안내 예약방법 1."
+   ],
+   "value": null
+  },
+  "three_player": {
+   "value": null,
+   "evidence": []
+  },
+  "five_player": {
+   "value": null,
+   "evidence": []
+  },
+  "marshal_caddie": {
+   "value": null,
+   "evidence": []
+  },
+  "cart_type": {
+   "evidence": [
+    "접수 및 요금정산 프런트에 비치된 접수부에 내장하시는 고객명을 적어주시고 모든 이용요금(그린피, 카트피, 식음료, 프로샵)은 후불로 정산입니다.",
+    "5인라운드 시 승용식 리무진 카트 배정"
+   ],
+   "value": "리무진카트",
+   "source_url": "https://www.golfclubq.com/members/golfterms.asp",
+   "confidence": "high",
+   "checked_at": "2026-10-22",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/golf-cart-limousine-fairway-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  },
+  "cart_entry": {
+   "evidence": [],
+   "value": null
+  },
+  "bagdrop": {
+   "evidence": [],
+   "value": null
+  },
+  "mat": {
+   "evidence": [],
+   "value": null
+  },
+  "checkin": {
+   "evidence": [
+    "골프클럽Q 로그인 회원가입 실시간예약 실시간예약 예약확인/취소 조인예약 클럽이용안내 이용 및 요금안내 예약안내 오시는길 시설안내 클럽하우스 그늘집 레스토랑 프로샵 코스소개 코스소개 코스공략도 클럽소식 공지사항 이벤트 포토갤러리 2021 클럽큐展 2022 클럽큐展 명예의전당 Myzone 예약확인/취소 스코어카드 쿠폰함 회원정보관리 실시간 예약 SUN MON TUE WEN THU FRI SAT 실시간예약하기 골프클럽큐 홍보영상보기 NEWS 2027년 연단체팀 모집 안내 2026.10.22 HOME > 이용안내 이용안내 이용안내 요금안내",
+    "현관 이용 현관에 도착하시면 현관 근무자가 백을 내려드립니다.",
+    "40분 전 도착"
+   ],
+   "value": "40분 전 도착",
+   "source_url": "https://www.golfclubq.com/guide/guide.asp",
+   "confidence": "high",
+   "checked_at": "2026-10-17",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/golf-course-arrival-checkin-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  },
+  "locker": {
+   "evidence": [
+    "락카/욕실/클럽하우스 욕실 내에서 사용하신 물건은 제자리에 위치하여 주시고 깨끗하게 사용하여 주실 것 을 당부 드리며 클럽하우스 내에서는 타인 게 방해가 되지 않도록 정숙하여 주시기 바랍니다.",
+    "2. 락커, 샤워실 등 클럽하우스 시설 이용에 부과되는 요금"
+   ],
+   "value": "락커 운영",
+   "value_previous": "문구 확인(원문 근거)",
+   "source_url": "https://www.golfclubq.com/members/golfterms.asp",
+   "confidence": "low",
+   "source_type": "official_site",
+   "page_label": "",
+   "value_from": "capital_supplement(official_site)"
+  },
+  "sauna": {
+   "evidence": [
+    "사우나 있음 · 프로샵·카페·라운지"
+   ],
+   "value": "사우나 운영",
+   "source_url": "https://www.golfclubq.com/facil/facil01.asp",
+   "confidence": "high",
+   "checked_at": "2026-10-20",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/golf-course-amenities-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  },
+  "dress": {
+   "evidence": [
+    "경기협조 & 클럽하우스 티오프 40분전 도착 가벼운 캐주얼 차림 또는 정장 등의 점잖은 복장을 착용 하여 주시고, 플레이 시 남성은 긴바지와 카라 있는 셔츠, 여름철은 반바지 라운드가 가능합니다.",
+    "여성은 노출이 심하 지 않은 복장을 착용해 주시기 바랍니다.",
+    "반바지 조건: 여름철 가능(남성)"
+   ],
+   "value": "반바지: 여름철 가능(남성)",
+   "value_previous": "문구 확인(원문 근거)",
+   "source_url": "https://www.golfclubq.com/guide/guide.asp",
+   "confidence": "medium",
+   "checked_at": "2026-10-16",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/golf-course-dress-etiquette-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  },
+  "pace": {
+   "evidence": [],
+   "value": null
+  },
+  "cart_limousine": {
+   "value": "5인라운드 시 승용식 리무진 카트 배정",
+   "evidence": [
+    "5인라운드 시 승용식 리무진 카트 배정"
+   ],
+   "source_url": "https://www.golfclubq.com/members/golfterms.asp",
+   "confidence": "high",
+   "checked_at": "2026-10-22",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/golf-cart-limousine-fairway-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  }
+ },
+ "facilities": {
+  "practice": {
+   "evidence": [],
+   "value": null
+  },
+  "indoor_range": {
+   "value": null,
+   "evidence": []
+  },
+  "food": {
+   "evidence": [
+    "골프클럽Q 로그인 회원가입 실시간예약 실시간예약 예약확인/취소 조인예약 클럽이용안내 이용 및 요금안내 예약안내 오시는길 시설안내 클럽하우스 그늘집 레스토랑 프로샵 코스소개 코스소개 코스공략도 클럽소식 공지사항 이벤트 포토갤러리 2021 클럽큐展 2022 클럽큐展 명예의전당 Myzone 예약확인/취소 스코어카드 쿠폰함 회원정보관리 실시간 예약 SUN MON TUE WEN THU FRI SAT 실시간예약하기 골프클럽큐 홍보영상보기 NEWS 2027년 연단체팀 모집 안내 2026.10.22 HOME > 이용안내 이용안내 이용안내 요금안내",
+    "골프클럽Q 로그인 회원가입 실시간예약 실시간예약 예약확인/취소 조인예약 클럽이용안내 이용 및 요금안내 예약안내 오시는길 시설안내 클럽하우스 그늘집 레스토랑 프로샵 코스소개 코스소개 코스공략도 클럽소식 공지사항 이벤트 포토갤러리 2021 클럽큐展 2022 클럽큐展 명예의전당 Myzone 예약확인/취소 스코어카드 쿠폰함 회원정보관리 실시간 예약 SUN MON TUE WEN THU FRI SAT 실시간예약하기 골프클럽큐 홍보영상보기 NEWS 2027년 연단체팀 모집 안내 2026.10.22 HOME > 코스공략법 전체코스 코스공략법 코스",
+    "골프클럽Q 로그인 회원가입 실시간예약 실시간예약 예약확인/취소 조인예약 클럽이용안내 이용 및 요금안내 예약안내 오시는길 시설안내 클럽하우스 그늘집 레스토랑 프로샵 코스소개 코스소개 코스공략도 클럽소식 공지사항 이벤트 포토갤러리 2021 클럽큐展 2022 클럽큐展 명예의전당 Myzone 예약확인/취소 스코어카드 쿠폰함 회원정보관리 실시간 예약 SUN MON TUE WEN THU FRI SAT 실시간예약하기 골프클럽큐 홍보영상보기 NEWS 2027년 연단체팀 모집 안내 2026.10.22 HOME > 예약안내 예약안내 예약방법 1.",
+    "• 시원하게 펼쳐진 클럽의 전경을 조망하면서 호텔급 최고의 맛과 서비스를 만날 수 있는 고품격 레스토랑"
+   ],
+   "value": "레스토랑",
+   "source_url": "https://www.golfclubq.com/facil/facil03.asp",
+   "confidence": "low",
+   "source_type": "official_site",
+   "page_label": "레스토랑",
+   "value_from": "capital_supplement(official_site)"
+  },
+  "snack_bar": {
+   "value": null,
+   "evidence": []
+  },
+  "locker_sauna": {
+   "value": null,
+   "evidence": []
+  },
+  "lodging": {
+   "value": null,
+   "evidence": []
+  },
+  "other": {
+   "value": "카페·라운지",
+   "evidence": [
+    "사우나 있음 · 프로샵·카페·라운지"
+   ],
+   "source_url": "https://www.golfclubq.com/facil/facil01.asp",
+   "confidence": "high",
+   "checked_at": "2026-10-20",
+   "source_type": "greenfee_guide",
+   "value_from": "capital_supplement(greenfee_guide)"
+  },
+  "night": {
+   "evidence": [
+    "1·2부 셀프라운드, 3부 야간라운드"
+   ],
+   "value": "야간 라운딩 운영(3부 야간 포함)",
+   "source_url": "https://www.golfclubq.com/",
+   "confidence": "high",
+   "checked_at": "2026-10-12",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/night-golf-course-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  },
+  "closed_days": {
+   "evidence": [
+    "정기 휴장일 없음"
+   ],
+   "third_party": null,
+   "value": "정기 휴장일 없음",
+   "source_url": "https://www.golfclubq.com/members/golfterms.asp",
+   "confidence": "high",
+   "checked_at": "2026-10-11",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/golf-course-closing-day-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  },
+  "shuttle": {
+   "evidence": [],
+   "value": null
+  },
+  "ev_charge": {
+   "evidence": [],
+   "value": null
+  },
+  "gf_facilities": null,
+  "proshop": {
+   "evidence": [
+    "사우나 있음 · 프로샵·카페·라운지"
+   ],
+   "value": "프로샵 운영",
+   "source_url": "https://www.golfclubq.com/facil/facil01.asp",
+   "confidence": "high",
+   "checked_at": "2026-10-20",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/golf-course-amenities-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  }
+ },
+ "rental": {
+  "available": null,
+  "full_set": null,
+  "fee_text": null,
+  "brand": null,
+  "left_handed": null,
+  "shoes": null,
+  "nine_hole": null,
+  "range_finder": null,
+  "reservation": null,
+  "source_url": null,
+  "evidence": [],
+  "official": null,
+  "nearby_delivery": {
+   "region": "수도권",
+   "sido": "경기도",
+   "verified_at": "2026-11-26 (KST)",
+   "checked_at": "2026-11-26",
+   "providers": [
+    {
+     "id": "theb",
+     "name": "더비 (The B)",
+     "coverage": "O",
+     "basis": "동탄·김포·시흥·용인·이천 24시간 무인픽업 매장 5곳 + 다마스 퀵/택배 배송. 홈페이지에 '강남·동탄·판교·수지·광교·분당', '시흥·배곧·인천·안산·송도', '이천·여주' 권역 표기.",
+     "phone": "010-2530-4575",
+     "operating_status": "정상 영업",
+     "delivery": "O",
+     "price_headline": "12시간 기준 90,000원부터",
+     "bookable": true
+    },
+    {
+     "id": "gangnamclub",
+     "name": "강남골프클럽렌탈",
+     "coverage": "O",
+     "basis": "서울 서초구 거점 매장 주소 공개, 자사 블로그 '전지역 배송 가능' 안내.",
+     "phone": "010-7407-0753",
+     "operating_status": "정상 영업(자사 블로그 최신 게시 2026-04-28)",
+     "delivery": "미확인",
+     "price_headline": null,
+     "bookable": true
+    },
+    {
+     "id": "apioz",
+     "name": "아피오즈 (Apioz)",
+     "coverage": "조건부",
+     "basis": "서울 숙소 배송·공항 픽업 옵션 안내. 단 골프세트 Sold Out으로 현재 이용 불가.",
+     "phone": "02-6956-8115",
+     "operating_status": "예약 중단(Sold Out) — 골프채 세트 한정",
+     "delivery": "미확인",
+     "price_headline": null,
+     "caution": "골프채 세트 Sold Out — 현재 예약 불가",
+     "bookable": false,
+     "bookable_reason": "골프채 세트 Sold Out — 현재 예약 불가"
+    }
+   ],
+   "provider_count": 3,
+   "legend": {
+    "O": "공식 안내로 해당 권역 이용이 확인됨",
+    "X": "공식 안내상 해당 권역 서비스가 없음(예: '제주 전 지역' 전용으로만 안내)",
+    "조건부": "공식 안내상 가능하나 조건(수단·요금·현재 판매중지 등)이 붙어 있음. 조건은 basis/detail에 기재",
+    "미확인": "공식 공개 안내에서 해당 항목에 대한 언급을 찾지 못함(추정하지 않음)"
+   },
+   "not_verified": "전화·문자·카카오톡 상담으로만 확인 가능한 항목(재고, 개별 견적, 권역별 실제 배송 가능 여부)은 '미확인'으로 남김",
+   "source_file": "5-rental_8_coverage_verified.json",
+   "note_code": "해외 골퍼용 골프채 렌탈·딜리버리 업체. 같은 권역이라도 실제 배송 가능 여부·재고·견적은 전화 확인 필요."
+  }
+ },
+ "briefing": {
+  "notices": {
+   "url": "https://www.golfclubq.com/board/honor.asp",
+   "items": [
+    {
+     "title": "2027년 연단체팀 모집 안내",
+     "date": "2026-10-22",
+     "url": "https://www.golfclubq.com/board/list.asp?type=1"
+    },
+    {
+     "title": "XXIO #6 IRON",
+     "date": "2024-11-05",
+     "url": "https://www.golfclubq.com/board/honor.asp"
+    },
+    {
+     "title": "MIZUNO #9 IRON",
+     "date": "2024-10-06",
+     "url": "https://www.golfclubq.com/board/honor.asp"
+    },
+    {
+     "title": "HONMA #7 IRON",
+     "date": "2024-08-07",
+     "url": "https://www.golfclubq.com/board/honor.asp"
+    },
+    {
+     "title": "Titleist #7 iron",
+     "date": "2024-07-15",
+     "url": "https://www.golfclubq.com/board/honor.asp"
+    },
+    {
+     "title": "xxio # P wedge",
+     "date": "2024-06-28",
+     "url": "https://www.golfclubq.com/board/honor.asp"
+    },
+    {
+     "title": "Titleist # 8 IRON",
+     "date": "2024-06-26",
+     "url": "https://www.golfclubq.com/board/honor.asp"
+    },
+    {
+     "title": "Nike #6 iron",
+     "date": "2024-06-03",
+     "url": "https://www.golfclubq.com/board/honor.asp"
+    },
+    {
+     "title": "RomaRo #9 iron",
+     "date": "2024-03-31",
+     "url": "https://www.golfclubq.com/board/honor.asp"
+    },
+    {
+     "title": "mizuno #7 iron",
+     "date": "2024-03-29",
+     "url": "https://www.golfclubq.com/board/honor.asp"
+    }
+   ],
+   "tags": {
+    "모집": [
+     {
+      "title": "2027년 연단체팀 모집 안내",
+      "date": "2026-10-22",
+      "url": "https://www.golfclubq.com/board/list.asp?type=1"
+     }
+    ]
+   }
+  },
+  "review": {
+   "score_10": 8.5,
+   "count": 114,
+   "source": "티픽골프장 라운더 후기 집계",
+   "url": "https://teepickgolf.com/course/%EA%B3%A8%ED%94%84%ED%81%B4%EB%9F%BDQ"
+  },
+  "fee_change": null,
+  "collected_at": "2026-11-26T09:51:52+09:00",
+  "recent_notice_text": null,
+  "course_notes": null,
+  "alert": null,
+  "unconfirmed": [],
+  "sources": []
+ },
+ "collection": {
+  "official_site": "ok",
+  "official_reason": null,
+  "pages_collected": 14,
+  "third_party": {
+   "teepick": true,
+   "greenfeeguide": false
+  },
+  "render_hint": "static",
+  "plan_strategy": "static(직접 파싱)",
+  "browser_batch": false
+ },
+ "coverage": {
+  "basic": 1.0,
+  "course": 0.6,
+  "fee": 0.0,
+  "ops": 0.43,
+  "facility": 0.4,
+  "briefing": 0.5,
+  "rental": 0.25
+ }
+}

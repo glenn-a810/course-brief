@@ -1,0 +1,614 @@
+{
+ "course_id": "kr-golf-0178",
+ "meta": {
+  "name": "양지파인골프클럽",
+  "generated_at": "2026-11-26T09:51:55+09:00",
+  "schema": "stage2c/1.0",
+  "batch": "1_수도권",
+  "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
+  "schema_previous": "stage2b/1.0",
+  "restructured_from_7key": true,
+  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
+  "has_detail": true,
+  "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+ },
+ "master": {
+  "course_id": "kr-golf-0178",
+  "name": "양지파인골프클럽",
+  "name_variants": [
+   "양지파인골프클럽"
+  ],
+  "type": "대중제",
+  "holes": {
+   "total": 27,
+   "member": 0,
+   "public": 27,
+   "non_member": 0
+  },
+  "address": "경기도 용인시 처인구 양지면 남평로 112",
+  "region": {
+   "sido_code": "41",
+   "sido_name": "경기도",
+   "sido_short": "경기",
+   "sigungu_code": "41461",
+   "sigungu_name": "용인시 처인구",
+   "legal_dong_code": "4146100000"
+  },
+  "lat": 37.217889,
+  "lng": 127.295143,
+  "nearest_ic": {
+   "name": "양지IC",
+   "distance_km": 2.4,
+   "source": "최근접 IC 직선거리"
+  },
+  "tel": null,
+  "homepage": "https://www.pineresort.com/",
+  "operators": [
+   "미래개발㈜"
+  ],
+  "area_sqm": 1012580,
+  "opened": "1970-06",
+  "course_blocks": [],
+  "facility_id": null,
+  "provenance": {
+   "master": "courses_master.json v2.0 (문체부·KGA·KGBA·티픽·지도)",
+   "synced_to": "courses_master.json v2.7 (2026-11-26 단일 스키마 정규화)"
+  },
+  "par": null,
+  "holes_teepick": 27,
+  "course_spec": {
+   "holes": 27,
+   "par": null,
+   "blocks": [],
+   "length_m": null,
+   "kga": null,
+   "grass": {
+    "evidence": "양지파인리조트 로그인 홈페이지가입 아이디/비밀번호 찾기 언어별선택 ENGLISH 中國語 日本語 통합예약골프예약콘도예약예약확인 및 취소골프골프장소개부대시설예약/이용요금이용안내콘도양지파인리조트설악파인리조트양지파인펫파크펫파크 소개주요시설부대시설부대업장단체행사시설안내단체행사 담당자고객센터FAQ고객의 말씀정보광장공지사항이벤트 통합예약골프예약콘도예약예약확인 및 취소골프골프장소개부대시설예약/이용요금이용안내콘도양지파인리조트설악파인리조트양지파인펫파크펫파크 소개주요시설부대시설부대업장단체행사시설안내단체행사 담당자고객센터FAQ고객의 말씀정보광장공지사항이",
+    "source": "공식",
+    "url": "https://www.pineresort.com/Golf/ChargeInfo.aspx"
+   },
+   "hole_by_hole": null
+  },
+  "addresses": [
+   "경기도 용인시 처인구 양지면 남평로 112"
+  ],
+  "status": "operating",
+  "facility_cluster": null,
+  "factcheck_2026_11_26": null
+ },
+ "course": {
+  "holes": 27,
+  "holes_received": 27,
+  "course_names": null,
+  "membership_type": "대중제",
+  "night_light": null,
+  "blocks": [],
+  "grass": {
+   "tee": null,
+   "fairway": {
+    "evidence": "양지파인리조트 로그인 홈페이지가입 아이디/비밀번호 찾기 언어별선택 ENGLISH 中國語 日本語 통합예약골프예약콘도예약예약확인 및 취소골프골프장소개부대시설예약/이용요금이용안내콘도양지파인리조트설악파인리조트양지파인펫파크펫파크 소개주요시설부대시설부대업장단체행사시설안내단체행사 담당자고객센터FAQ고객의 말씀정보광장공지사항이벤트 통합예약골프예약콘도예약예약확인 및 취소골프골프장소개부대시설예약/이용요금이용안내콘도양지파인리조트설악파인리조트양지파인펫파크펫파크 소개주요시설부대시설부대업장단체행사시설안내단체행사 담당자고객센터FAQ고객의 말씀정보광장공지사항이",
+    "source": "공식",
+    "url": "https://www.pineresort.com/Golf/ChargeInfo.aspx"
+   },
+   "green": null
+  },
+  "kga": null,
+  "kga_hole_est": null,
+  "extra_courses": null,
+  "hole_by_hole": null,
+  "length_m": null,
+  "par": null
+ },
+ "fee": {
+  "weekday": 110000,
+  "weekend": 180000,
+  "weekday_text": null,
+  "weekend_text": null,
+  "basis": null,
+  "tax_included": null,
+  "cart": {
+   "value": 100000,
+   "source": "그린피가이드",
+   "url": "https://greenfeeguide.co.kr/course/gc-0009/"
+  },
+  "caddie": {
+   "value": 150000,
+   "source": "그린피가이드",
+   "url": "https://greenfeeguide.co.kr/course/gc-0009/",
+   "none": false
+  },
+  "as_of": "2026-11-02",
+  "source_url": null,
+  "note": null,
+  "sources": [
+   {
+    "source": "그린피가이드(공식 요금표 확인)",
+    "url": "https://greenfeeguide.co.kr/course/gc-0009/",
+    "checked_at": "2026-11-02"
+   }
+  ],
+  "checked_at": "2026-11-02",
+  "market": {
+   "weekday_min": 90000.0,
+   "weekend_min": 160000.0,
+   "part1": null,
+   "part2": null,
+   "source": "티픽골프장(실거래 관측)",
+   "url": "https://teepickgolf.com/course/%EC%96%91%EC%A7%80%ED%8C%8C%EC%9D%B8cc",
+   "note": "공시가 아닌 최근 관측 실거래 최저가"
+  },
+  "official_green": {
+   "value": 50000,
+   "raw": "(1~3H) 50,000원",
+   "label": "캐디피 / 홀별정산 : 해당일 적용 그린피 X (이용홀수 ÷ 18) / (1~9H) 50%",
+   "url": "https://www.pineresort.com/Golf/ChargeInfo.aspx",
+   "source": "공식 요금표"
+  },
+  "official_green_evidence": [
+   "[예약실 TEL 031-329-9500~3] 골프장 이용요금 : 계절별 / 시간대별 탄력적용 (부가세 포함) 구분 그린피 카트비 캐디피 주중 11만원 ~ 23만원 팀당 100,000원 9홀 80,000원(1캐디 4bags) 18홀 150,000원(1캐디 4bags) ※10홀 이상 진행시는 15만원 적용 주말 18만원 ~ 27만원 ※ 골프대여물품(골프채, 골프화)없음."
+  ],
+  "official_rental": null,
+  "official_table": {
+   "rows": [
+    {
+     "section": "캐디피",
+     "label": "캐디피 / 주중 / 11만원 ~ 23만원",
+     "value": "팀당 100,000원",
+     "amounts": [
+      100000
+     ],
+     "url": "https://www.pineresort.com/Golf/ChargeInfo.aspx"
+    },
+    {
+     "section": "9홀 80,000원(1캐디 4bags)",
+     "label": "",
+     "value": "9홀 80,000원(1캐디 4bags)",
+     "amounts": [
+      80000
+     ],
+     "url": "https://www.pineresort.com/Golf/ChargeInfo.aspx"
+    },
+    {
+     "section": "18홀 150,000원(1캐디 4bags)",
+     "label": "",
+     "value": "18홀 150,000원(1캐디 4bags)",
+     "amounts": [
+      150000
+     ],
+     "url": "https://www.pineresort.com/Golf/ChargeInfo.aspx"
+    },
+    {
+     "section": "홀별정산 : 해당일 적용 그린피 X (이용홀수 ÷ 18)",
+     "label": "캐디피 / 홀별정산 : 해당일 적용 그린피 X (이용홀수 ÷ 18) / (1~9H) 50%",
+     "value": "(1~3H) 50,000원",
+     "amounts": [
+      50000
+     ],
+     "url": "https://www.pineresort.com/Golf/ChargeInfo.aspx"
+    },
+    {
+     "section": "홀별정산 : 해당일 적용 그린피 X (이용홀수 ÷ 18)",
+     "label": "",
+     "value": "(4~9H) 80,000원",
+     "amounts": [
+      80000
+     ],
+     "url": "https://www.pineresort.com/Golf/ChargeInfo.aspx"
+    },
+    {
+     "section": "홀별정산 : 해당일 적용 그린피 X (이용홀수 ÷ 18)",
+     "label": "(10~18H) 정상요금",
+     "value": "(10~18H) 150,000원",
+     "amounts": [
+      150000
+     ],
+     "url": "https://www.pineresort.com/Golf/ChargeInfo.aspx"
+    }
+   ],
+   "url": "https://www.pineresort.com/Golf/ChargeInfo.aspx"
+  }
+ },
+ "cancel": {
+  "cancel_policy": {
+   "value": "7일 전 17:00까지숙박양지파인리조트 · 콘도교통대중교통 용인터미널·양지사거리(서울 고속·남부터미널 버스)개장·설계1970",
+   "source": "그린피가이드(공식 인용)",
+   "url": "https://greenfeeguide.co.kr/course/gc-0009/"
+  },
+  "open_cycle": null,
+  "notes": null,
+  "evidence": [
+   "양지파인리조트 로그인 홈페이지가입 아이디/비밀번호 찾기 언어별선택 ENGLISH 中國語 日本語 통합예약골프예약콘도예약예약확인 및 취소골프골프장소개부대시설예약/이용요금이용안내콘도양지파인리조트설악파인리조트양지파인펫파크펫파크 소개주요시설부대시설부대업장단체행사시설안내단체행사 담당자고객센터FAQ고객의 말씀정보광장공지사항이벤트 통합예약골프예약콘도예약예약확인 및 취소골프골프장소개부대시설예약/이용요금이용안내콘도양지파인리조트설악파인리조트양지파인펫파크펫파크 소개주요시설부대시설부대업장단체행사시설안내단체행사 담당자고객센터FAQ고객의 말씀정보광장공지사항이",
+   "4일전 취소 2개월 예약정지 2개월 예약정지 3일전 취소 3개월 예약정지 3개월 예약정지 또는이용요금 10% 2일전 취소 4개월 예약정지 또는이용요금 10% 4개월 예약정지 또는이용요금 10% 1일전 취소 6개월 예약정지 또는이용요금 20% 6개월 예약정지 또는이용요금 20% 당일취소(미내장) 1년 예약정지 또는이용요금 30% 1년 예약정지이용요금 30% ※ 7일전(17시) 까지 정상취소 가능합니다.",
+   "양지파인리조트 로그인 홈페이지가입 아이디/비밀번호 찾기 언어별선택 ENGLISH 中國語 日本語 통합예약골프예약콘도예약예약확인 및 취소골프골프장소개부대시설예약/이용요금이용안내콘도양지파인리조트설악파인리조트양지파인펫파크펫파크 소개주요시설부대시설부대업장단체행사시설안내단체행사 담당자고객센터FAQ고객의 말씀정보광장공지사항이벤트 통합예약골프예약콘도예약예약확인 및 취소골프골프장소개부대시설예약/이용요금이용안내콘도양지파인리조트설악파인리조트양지파인펫파크펫파크 소개주요시설부대시설부대업장단체행사시설안내단체행사 담당자고객센터FAQ고객의 말씀정보광장공지사항이"
+  ],
+  "weather_evidence": [
+   "품목종류 보관일수 속옷 1주일 보관 후 미회수 시 폐기 의류, 신발, 클럽 3개월 보관 후 미회수 시 폐기 기타품목 3개월 보관 후 미회수 시 폐기 기 타 ※ 눈이나 우천 등으로 인하여 플레이에 심각한 지장을 줄 수 있을 경우에는 당일 전화로 예약 취소가 가능하며 위약 처리되지 않습니다."
+  ]
+ },
+ "ops": {
+  "nocaddie": {
+   "evidence": [
+    "시간 및 코스 선택 선택일자: 26년 11월 26일(목) 전체코스서코스남코스동코스 시간대07시대08시대10시대11시대12시대 경기진행 서비스 선택 ⓒ 경기보조(캐디) 서비스ⓓ 운전지원 서비스ⓢ 셀프 라운드ⓦ 워킹 라운드 (로봇 자율추종) 자세히 보기 코스 홀 시간 인원 일반가 경기진행 서비스 예약 현재 예약 가능한 시간이 없습니다.",
+    "서비스 선택 안내 서비스명 카트 운전 경기진행 지원 카트 종류 요금 ⓒ 경기보조(캐디) 서비스 ● ● 5인승 150,000원 ⓓ 운전지원 서비스 ● X 5인승 80,000원 ⓢ 셀프 라운드 ●고객직접 자동 운전 X 5인승 - ⓦ 워킹 라운드 X X 1·2인승(walk) (미정) 경기보조(캐디) 서비스 : 처음 방문하시거나 편안하고 여유로운 라운드를 원하시는 고객님께 권해드립니다.운전지원 서비스 : 카트 운전 부담 없이, 합리적인 비용으로 라운드를 즐기고 싶으신 분께 적합합니다.(카트 이동만 도와주는 서비스)셀프 라운드 : 나만의 페"
+   ],
+   "value": "노캐디 선택 가능(문구 확인)"
+  },
+  "two_player": {
+   "evidence": [
+    "서비스 선택 안내 서비스명 카트 운전 경기진행 지원 카트 종류 요금 ⓒ 경기보조(캐디) 서비스 ● ● 5인승 150,000원 ⓓ 운전지원 서비스 ● X 5인승 80,000원 ⓢ 셀프 라운드 ●고객직접 자동 운전 X 5인승 - ⓦ 워킹 라운드 X X 1·2인승(walk) (미정) 경기보조(캐디) 서비스 : 처음 방문하시거나 편안하고 여유로운 라운드를 원하시는 고객님께 권해드립니다.운전지원 서비스 : 카트 운전 부담 없이, 합리적인 비용으로 라운드를 즐기고 싶으신 분께 적합합니다.(카트 이동만 도와주는 서비스)셀프 라운드 : 나만의 페"
+   ],
+   "value": null,
+   "third_party": {
+    "two": null,
+    "three": null,
+    "source": "그린피가이드",
+    "url": "https://greenfeeguide.co.kr/course/gc-0009/"
+   }
+  },
+  "three_player": {
+   "value": null,
+   "evidence": []
+  },
+  "five_player": {
+   "value": null,
+   "evidence": []
+  },
+  "marshal_caddie": {
+   "value": null,
+   "evidence": []
+  },
+  "cart_type": {
+   "evidence": [
+    "[예약실 TEL 031-329-9500~3] 골프장 이용요금 : 계절별 / 시간대별 탄력적용 (부가세 포함) 구분 그린피 카트비 캐디피 주중 11만원 ~ 23만원 팀당 100,000원 9홀 80,000원(1캐디 4bags) 18홀 150,000원(1캐디 4bags) ※10홀 이상 진행시는 15만원 적용 주말 18만원 ~ 27만원 ※ 골프대여물품(골프채, 골프화)없음.",
+    "퇴장 규정 경고 후 퇴장처리 (최대 무기한 예약 및 내장정지) 퇴장 내용 고의적인 경기 지연 및 도박행위 경기능력이 현저히 부족하여 진행에 심대한 지장을 초래하는 경우 코스 내 수목, 시설물, 그린을 고의로 훼손하는 경우 근무자에 대한 폭행, 성희롱, 언어폭력 및 직원의 정당한 요구에 불응하는 경우 금연구역 위반행위(코스 내 흡연 절대금지, 정지된 카트 및 지정된 장소에서만 흡연가능) 음주 등으로 정상적인 이용이 곤란한 경우 분실물 규정 당 클럽에서 습득된 분실물은 아래와 같이 처리되오니 반드시 확인하여 주시기 바랍니다."
+   ],
+   "value": null
+  },
+  "cart_entry": {
+   "evidence": [],
+   "value": null
+  },
+  "bagdrop": {
+   "evidence": [],
+   "value": null
+  },
+  "mat": {
+   "evidence": [],
+   "value": null
+  },
+  "checkin": {
+   "evidence": [
+    "※ 문의전화 : 예약실(031-338-4000) 주중 09:30~17:00(점심시간 12:30~13:30), 토요일 09:30~12:00 Q (콘도) 객실의 체크인/체크아웃 시간은 어떻게 되나요?",
+    "A 체크인은 15:00시, 체크아웃은 익일 11:00시입니다.",
+    "TEE-OFF 30분 전까지 프런트에 내장등록 후 10분 전까지 스타트광장으로 이동하여 주시기 바랍니다."
+   ],
+   "value": "티오프 30분 전 도착",
+   "third_party": {
+    "value": null,
+    "source": "그린피가이드",
+    "url": "https://greenfeeguide.co.kr/course/gc-0009/"
+   },
+   "source_url": "https://www.pineresort.com/Golf/UseInfo.aspx",
+   "confidence": "medium",
+   "source_type": "official_site",
+   "page_label": "이용안내",
+   "value_from": "capital_supplement(official_site)"
+  },
+  "locker": {
+   "evidence": [
+    "이 밖에도 레스토랑, 연회실, 프로숍, 락커룸 등으로 이루어진 클럽하우스와 6개의 그늘집, 육각정 등의 부대 시설 등이 있습니다."
+   ],
+   "value": "락커 운영",
+   "value_previous": "문구 확인(원문 근거)",
+   "source_url": "https://www.pineresort.com/",
+   "confidence": "medium",
+   "source_type": "official_site",
+   "page_label": "home",
+   "value_from": "capital_supplement(official_site)"
+  },
+  "sauna": {
+   "evidence": [
+    "또한, 설악산 “울산바위”의 비경이 내다보이는 [설악파인리조트]는 설악산에서 동해로 이어지는 설악관광권 중심에 자리잡고 있어 주변관광지는 물론 속초시내의 다양한 편의시설을 쉽게 이용할 수 있으며, 설악온천지구 내에 위치해 있어 양질의 [온천수]를 이용 하실 수가 있습니다.",
+    "속초 바닷가의 다양한 먹거리와 리조트 내 7가지 테마의 노천온천, 피로회복과 건강관리를 위한 실내 수영장, 그리고 찜질방을 한꺼번에 즐길 수 있는 복합시설인 [가든스파]에서 사계절 설악의 절경을 감상하면서 휴식과 건강을 모두 채울 수 있습니다.",
+    "사우나 있음 · 프로샵·카페·라운지·편의점"
+   ],
+   "value": "사우나 운영",
+   "value_previous": "문구 확인(원문 근거)",
+   "source_url": "https://www.pineresort.com/Golf/Facilities.aspx",
+   "confidence": "high",
+   "checked_at": "2026-10-20",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/golf-course-amenities-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  },
+  "dress": {
+   "evidence": [
+    "A 콘도 지하1층에 CU 편의점이 있으며,영업시간은 주중/주말 07:00~익일 01:00입니다.※ 문의전화 : CU(031-329-9421) Q (부대시설) 설악 가든스파 이용 시 착용 가능 복장은 무엇인가요?",
+    "양지파인리조트 로그인 홈페이지가입 아이디/비밀번호 찾기 언어별선택 ENGLISH 中國語 日本語 통합예약골프예약콘도예약예약확인 및 취소골프골프장소개부대시설예약/이용요금이용안내콘도양지파인리조트설악파인리조트양지파인펫파크펫파크 소개주요시설부대시설부대업장단체행사시설안내단체행사 담당자고객센터FAQ고객의 말씀정보광장공지사항이벤트 통합예약골프예약콘도예약예약확인 및 취소골프골프장소개부대시설예약/이용요금이용안내콘도양지파인리조트설악파인리조트양지파인펫파크펫파크 소개주요시설부대시설부대업장단체행사시설안내단체행사 담당자고객센터FAQ고객의 말씀정보광장공지사항이",
+    "클럽 내장시 트레이닝복,슬리퍼,노출이 심한 복장은 삼가 하여 골퍼의 품위를 지켜주시기 바랍니다."
+   ],
+   "value": "복장 규정 안내",
+   "value_previous": "문구 확인(원문 근거)",
+   "source_url": "https://www.pineresort.com/Golf/UseInfo.aspx",
+   "confidence": "medium",
+   "source_type": "official_site",
+   "page_label": "이용안내",
+   "value_from": "capital_supplement(official_site)"
+  },
+  "pace": {
+   "evidence": [],
+   "value": null
+  },
+  "grass": null
+ },
+ "facilities": {
+  "practice": {
+   "evidence": [
+    "파3 골프코스 및 골프연습장 개장"
+   ],
+   "value": "연습장",
+   "source_url": "https://www.pineresort.com/Company/History.aspx",
+   "confidence": "low",
+   "source_type": "official_site",
+   "page_label": "",
+   "value_from": "capital_supplement(official_site)"
+  },
+  "indoor_range": {
+   "value": null,
+   "evidence": []
+  },
+  "food": {
+   "evidence": [
+    "이 밖에도 레스토랑, 연회실, 프로숍, 락커룸 등으로 이루어진 클럽하우스와 6개의 그늘집, 육각정 등의 부대 시설 등이 있습니다.",
+    "지하1층, 지상3층 클럽하우스내의 레스토랑, 연회실, 프로샵, 쾌적한 남녀 라커룸에서 골퍼 여러분을 정성을 다하여 모십니다."
+   ],
+   "value": "레스토랑",
+   "source_url": "https://www.pineresort.com/Golf/Facilities.aspx",
+   "confidence": "low",
+   "source_type": "official_site",
+   "page_label": "부대시설",
+   "value_from": "capital_supplement(official_site)"
+  },
+  "snack_bar": {
+   "value": null,
+   "evidence": []
+  },
+  "locker_sauna": {
+   "value": null,
+   "evidence": []
+  },
+  "lodging": {
+   "value": "양지파인리조트 · 콘도",
+   "evidence": [
+    "양지파인리조트 · 콘도"
+   ],
+   "source_url": "https://www.pineresort.com/Condo/YJpine/RoomInfo.aspx",
+   "confidence": "high",
+   "checked_at": "2026-10-09",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/golf-course-lodging-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  },
+  "other": {
+   "value": "카페·라운지 · 편의점",
+   "evidence": [
+    "사우나 있음 · 프로샵·카페·라운지·편의점"
+   ],
+   "source_url": "https://www.pineresort.com/Golf/Facilities.aspx",
+   "confidence": "high",
+   "checked_at": "2026-10-20",
+   "source_type": "greenfee_guide",
+   "value_from": "capital_supplement(greenfee_guide)"
+  },
+  "night": {
+   "evidence": [
+    "전 슬로프 야간조명 시설로 심야에서 밤샘(새벽)까지 보다 오랜시간 안전하게 스키/보드를 즐길 수 있으며, 매니아층을 위한 모굴스키등도 갖추어져 있습니다."
+   ],
+   "value": "전 홀 야간 조명 설치",
+   "source_url": "https://www.pineresort.com/",
+   "confidence": "medium",
+   "source_type": "official_site",
+   "page_label": "",
+   "value_from": "capital_supplement(official_site)"
+  },
+  "closed_days": {
+   "evidence": [],
+   "third_party": null,
+   "value": null
+  },
+  "shuttle": {
+   "evidence": [
+    "자가용 이용시 대중교통 이용시 출발지 종착지 첫차 막차 간격 소요시간 고속터미널이용 용인행 버스 이용 (지하철 3호선 고속버스터미널역 하차) 용인터미널하차 06:30 20:10 20~30분 50분 남부터미널이용 양지/진천행 버스 이용 (지하철 3호선 남부터미널역 하차) 양지사거리하차 06:10 20:30 10~30분 60분 - 터미널 하차 후 -> 택시 or 시내버스 이용 - 노선 및 시간안내등 기타사항은 각 출발지 터미널 안내센터를 통해 확인 바랍니다."
+   ],
+   "value": null
+  },
+  "ev_charge": {
+   "evidence": [],
+   "value": null
+  },
+  "gf_facilities": [
+   "프로샵 · 카페·라운지 · 편의점참고콘도 1층 카페, 콘도B1층 편의점근거골프장 공식 홈페이지 시설 안내 · 2026"
+  ],
+  "proshop": {
+   "evidence": [
+    "사우나 있음 · 프로샵·카페·라운지·편의점"
+   ],
+   "value": "프로샵 운영",
+   "source_url": "https://www.pineresort.com/Golf/Facilities.aspx",
+   "confidence": "high",
+   "checked_at": "2026-10-20",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/golf-course-amenities-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  }
+ },
+ "rental": {
+  "available": null,
+  "full_set": null,
+  "fee_text": null,
+  "brand": null,
+  "left_handed": null,
+  "shoes": null,
+  "nine_hole": null,
+  "range_finder": null,
+  "reservation": null,
+  "source_url": null,
+  "evidence": [],
+  "official": null,
+  "nearby_delivery": {
+   "region": "수도권",
+   "sido": "경기도",
+   "verified_at": "2026-11-26 (KST)",
+   "checked_at": "2026-11-26",
+   "providers": [
+    {
+     "id": "theb",
+     "name": "더비 (The B)",
+     "coverage": "O",
+     "basis": "동탄·김포·시흥·용인·이천 24시간 무인픽업 매장 5곳 + 다마스 퀵/택배 배송. 홈페이지에 '강남·동탄·판교·수지·광교·분당', '시흥·배곧·인천·안산·송도', '이천·여주' 권역 표기.",
+     "phone": "010-2530-4575",
+     "operating_status": "정상 영업",
+     "delivery": "O",
+     "price_headline": "12시간 기준 90,000원부터",
+     "bookable": true
+    },
+    {
+     "id": "gangnamclub",
+     "name": "강남골프클럽렌탈",
+     "coverage": "O",
+     "basis": "서울 서초구 거점 매장 주소 공개, 자사 블로그 '전지역 배송 가능' 안내.",
+     "phone": "010-7407-0753",
+     "operating_status": "정상 영업(자사 블로그 최신 게시 2026-04-28)",
+     "delivery": "미확인",
+     "price_headline": null,
+     "bookable": true
+    },
+    {
+     "id": "apioz",
+     "name": "아피오즈 (Apioz)",
+     "coverage": "조건부",
+     "basis": "서울 숙소 배송·공항 픽업 옵션 안내. 단 골프세트 Sold Out으로 현재 이용 불가.",
+     "phone": "02-6956-8115",
+     "operating_status": "예약 중단(Sold Out) — 골프채 세트 한정",
+     "delivery": "미확인",
+     "price_headline": null,
+     "caution": "골프채 세트 Sold Out — 현재 예약 불가",
+     "bookable": false,
+     "bookable_reason": "골프채 세트 Sold Out — 현재 예약 불가"
+    }
+   ],
+   "provider_count": 3,
+   "legend": {
+    "O": "공식 안내로 해당 권역 이용이 확인됨",
+    "X": "공식 안내상 해당 권역 서비스가 없음(예: '제주 전 지역' 전용으로만 안내)",
+    "조건부": "공식 안내상 가능하나 조건(수단·요금·현재 판매중지 등)이 붙어 있음. 조건은 basis/detail에 기재",
+    "미확인": "공식 공개 안내에서 해당 항목에 대한 언급을 찾지 못함(추정하지 않음)"
+   },
+   "not_verified": "전화·문자·카카오톡 상담으로만 확인 가능한 항목(재고, 개별 견적, 권역별 실제 배송 가능 여부)은 '미확인'으로 남김",
+   "source_file": "5-rental_8_coverage_verified.json",
+   "note_code": "해외 골퍼용 골프채 렌탈·딜리버리 업체. 같은 권역이라도 실제 배송 가능 여부·재고·견적은 전화 확인 필요."
+  }
+ },
+ "briefing": {
+  "notices": {
+   "url": "https://www.pineresort.com/Board/FAQList.aspx?cfgid=faq",
+   "items": [
+    {
+     "title": "등록일 :",
+     "date": "2026-11-02",
+     "url": "https://www.pineresort.com/Board/BoardView.aspx?cfgid=notice&post=10282"
+    },
+    {
+     "title": "양지CC 2027년 연단체 신청 안내",
+     "date": "2026-11-02",
+     "url": "https://www.pineresort.com/Board/BoardView.aspx?cfgid=notice&post=10282"
+    },
+    {
+     "title": "등록일 :",
+     "date": "2026-10-04",
+     "url": "https://www.pineresort.com/Board/BoardView.aspx?cfgid=notice&post=10281"
+    },
+    {
+     "title": "골프장 카트 드라이버 모집 안내",
+     "date": "2026-10-04",
+     "url": "https://www.pineresort.com/Board/BoardView.aspx?cfgid=notice&post=10279"
+    },
+    {
+     "title": "양지파인 펫파크 영업 종료 안내",
+     "date": "2026-08-31",
+     "url": "https://www.pineresort.com/Board/BoardView.aspx?cfgid=notice&post=10281"
+    },
+    {
+     "title": "등록일 :",
+     "date": "2026-08-31",
+     "url": "https://www.pineresort.com/Board/BoardView.aspx?cfgid=notice&post=10279"
+    },
+    {
+     "title": "카트 드라이버 시행 안내",
+     "date": "2026-08-19",
+     "url": "https://www.pineresort.com/Board/BoardView.aspx?cfgid=notice&post=10282"
+    },
+    {
+     "title": "골프장 카트 드라이버 모집 안내",
+     "date": "2026-06-05",
+     "url": "https://www.pineresort.com/Board/BoardView.aspx?cfgid=notice&post=10279"
+    }
+   ],
+   "tags": {
+    "모집": [
+     {
+      "title": "양지CC 2027년 연단체 신청 안내",
+      "date": "2026-11-02",
+      "url": "https://www.pineresort.com/Board/BoardView.aspx?cfgid=notice&post=10282"
+     },
+     {
+      "title": "골프장 카트 드라이버 모집 안내",
+      "date": "2026-10-04",
+      "url": "https://www.pineresort.com/Board/BoardView.aspx?cfgid=notice&post=10279"
+     },
+     {
+      "title": "골프장 카트 드라이버 모집 안내",
+      "date": "2026-06-05",
+      "url": "https://www.pineresort.com/Board/BoardView.aspx?cfgid=notice&post=10279"
+     }
+    ]
+   }
+  },
+  "review": {
+   "score_10": null,
+   "count": 135,
+   "source": "티픽골프장 라운더 후기 집계",
+   "url": "https://teepickgolf.com/course/%EC%96%91%EC%A7%80%ED%8C%8C%EC%9D%B8cc"
+  },
+  "fee_change": null,
+  "collected_at": "2026-11-26T09:51:55+09:00",
+  "recent_notice_text": null,
+  "course_notes": null,
+  "alert": null,
+  "unconfirmed": [],
+  "sources": []
+ },
+ "collection": {
+  "official_site": "ok",
+  "official_reason": null,
+  "pages_collected": 14,
+  "third_party": {
+   "teepick": true,
+   "greenfeeguide": true
+  },
+  "render_hint": "static",
+  "plan_strategy": "static(직접 파싱)",
+  "browser_batch": false
+ },
+ "coverage": {
+  "basic": 0.89,
+  "course": 0.6,
+  "fee": 1.0,
+  "ops": 0.36,
+  "facility": 0.5,
+  "briefing": 0.5,
+  "rental": 0.25
+ }
+}

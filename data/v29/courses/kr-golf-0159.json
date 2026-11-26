@@ -1,0 +1,835 @@
+{
+ "course_id": "kr-golf-0159",
+ "meta": {
+  "name": "캐슬파인골프클럽",
+  "generated_at": "2026-11-26T09:51:54+09:00",
+  "schema": "stage2c/1.0",
+  "batch": "1_수도권",
+  "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
+  "schema_previous": "stage2b/1.0",
+  "restructured_from_7key": true,
+  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
+  "has_detail": true,
+  "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+ },
+ "master": {
+  "course_id": "kr-golf-0159",
+  "name": "캐슬파인골프클럽",
+  "name_variants": [
+   "캐슬파인골프클럽"
+  ],
+  "type": "대중제",
+  "holes": {
+   "total": 18,
+   "member": 0,
+   "public": 18,
+   "non_member": 0
+  },
+  "address": "경기도 여주시 강천면 부평로 580",
+  "region": {
+   "sido_code": "41",
+   "sido_name": "경기도",
+   "sido_short": "경기",
+   "sigungu_code": "41670",
+   "sigungu_name": "여주시",
+   "legal_dong_code": "4167000000"
+  },
+  "lat": 37.302388,
+  "lng": 127.746232,
+  "nearest_ic": {
+   "name": "대둔IC",
+   "distance_km": 3.6,
+   "source": "teepick(실측 표기)",
+   "straight_km_nearest": 3.4,
+   "straight_name": "대둔IC"
+  },
+  "tel": "031-880-8656",
+  "homepage": "http://www.castlepine.co.kr/",
+  "operators": [
+   "캐슬파인리조트㈜"
+  ],
+  "area_sqm": 1057645,
+  "opened": "2004-03",
+  "course_blocks": [],
+  "facility_id": null,
+  "provenance": {
+   "master": "courses_master.json v2.0 (문체부·KGA·KGBA·티픽·지도)",
+   "synced_to": "courses_master.json v2.7 (2026-11-26 단일 스키마 정규화)"
+  },
+  "par": null,
+  "holes_teepick": 18,
+  "course_spec": {
+   "holes": 18,
+   "par": null,
+   "blocks": [],
+   "length_m": null,
+   "kga": null,
+   "grass": {
+    "evidence": "캐슬파인 골프클럽 GNB 바로가기 본문 바로가기 하단 바로가기 클럽소개 클럽소개 분실물 센터 오시는길 코스소개 코스소개 VALLEY LAKE 이용안내 이용안내 이용요금 예약안내 위약안내 마일리지제도 로컬룰 모바일웹 인터넷예약 실시간예약 대기예약 예약확인/취소 회원라운지 회원정보 My 마일리지 정보마당 공지사항/이벤트 자료실 포토갤러리 명예의전당 날씨정보 로그인 아이디 비밀번호 아이디 저장 회원가입 *원하시는 날짜를 누르시면 예약이 가능합니다.",
+    "source": "공식",
+    "url": "https://www.castlepine.co.kr/index.asp"
+   },
+   "hole_by_hole": null
+  },
+  "addresses": [
+   "경기도 여주시 강천면 부평로 580"
+  ],
+  "status": "operating",
+  "facility_cluster": null,
+  "factcheck_2026_11_26": null
+ },
+ "course": {
+  "holes": 18,
+  "holes_received": 18,
+  "course_names": null,
+  "membership_type": "대중제",
+  "night_light": null,
+  "blocks": [],
+  "grass": {
+   "tee": null,
+   "fairway": {
+    "evidence": "캐슬파인 골프클럽 GNB 바로가기 본문 바로가기 하단 바로가기 클럽소개 클럽소개 분실물 센터 오시는길 코스소개 코스소개 VALLEY LAKE 이용안내 이용안내 이용요금 예약안내 위약안내 마일리지제도 로컬룰 모바일웹 인터넷예약 실시간예약 대기예약 예약확인/취소 회원라운지 회원정보 My 마일리지 정보마당 공지사항/이벤트 자료실 포토갤러리 명예의전당 날씨정보 로그인 아이디 비밀번호 아이디 저장 회원가입 *원하시는 날짜를 누르시면 예약이 가능합니다.",
+    "source": "공식",
+    "url": "https://www.castlepine.co.kr/index.asp"
+   },
+   "green": null
+  },
+  "kga": null,
+  "kga_hole_est": null,
+  "extra_courses": null,
+  "hole_by_hole": null,
+  "length_m": null,
+  "par": null
+ },
+ "fee": {
+  "weekday": 80000,
+  "weekend": 90000,
+  "weekday_text": null,
+  "weekend_text": null,
+  "basis": null,
+  "tax_included": null,
+  "cart": {
+   "value": 100000,
+   "source": "그린피가이드",
+   "url": "https://greenfeeguide.co.kr/course/gc-0138/"
+  },
+  "caddie": {
+   "value": 150000,
+   "source": "그린피가이드",
+   "url": "https://greenfeeguide.co.kr/course/gc-0138/",
+   "none": false
+  },
+  "as_of": "2026-11-01",
+  "source_url": null,
+  "note": null,
+  "sources": [
+   {
+    "source": "그린피가이드(공식 요금표 확인)",
+    "url": "https://greenfeeguide.co.kr/course/gc-0138/",
+    "checked_at": "2026-11-01"
+   }
+  ],
+  "checked_at": "2026-11-01",
+  "market": {
+   "weekday_min": null,
+   "weekend_min": null,
+   "part1": null,
+   "part2": null,
+   "source": "티픽골프장(실거래 관측)",
+   "url": "https://teepickgolf.com/course/%EC%BA%90%EC%8A%AC%ED%8C%8C%EC%9D%B8cc",
+   "note": "공시가 아닌 최근 관측 실거래 최저가"
+  },
+  "official_green": {
+   "value": 140000,
+   "raw": "140,000원",
+   "label": "그린피 / 2(월) / 07:00 이전",
+   "url": "https://www.castlepine.co.kr/pagesite/use/charge.asp",
+   "source": "공식 요금표"
+  },
+  "official_green_evidence": [
+   "캐디피 및 카트사용료 구 분 캐디피 카트사용료 18 홀 150,000원 100,000원 9 홀 75,000원 50,000원 악천후 정산안내 ※ 9홀 추가시 9홀 요금 적용 상황별요금 구분 1홀 티샷 1홀 종료 2~9홀 10~18홀 그린피 무료 홀별정산 카트비 무료 홀별정산 캐디피 40,000원 50,000원 75,000원 150,000원 ※ 상황별 요금은 강설, 폭우, 기타 천재지변 등으로 경기를 마치지 못했을 경우에만 적용됩니다.",
+   "실시간 예약은 홈페이지 및 모바일 웹에 공지된 해당 월, 일, 시간대의 그린피가 적용됩니다.",
+   "캐슬파인 골프클럽 게스트 - - 2012년 8월 22일 (수요일) 코스 / 0홀 / 00:00 그린피 0 ※ 위임예약시 반드시 체크를 해주셔야 합니다."
+  ],
+  "official_rental": null,
+  "official_table": {
+   "rows": [
+    {
+     "section": "그린피",
+     "label": "그린피 / 2(월) / 07:00 이전",
+     "value": "140,000원",
+     "amounts": [
+      140000
+     ],
+     "url": "https://www.castlepine.co.kr/pagesite/use/charge.asp"
+    },
+    {
+     "section": "그린피",
+     "label": "07:01 ~ 08:00",
+     "value": "150,000원",
+     "amounts": [
+      150000
+     ],
+     "url": "https://www.castlepine.co.kr/pagesite/use/charge.asp"
+    },
+    {
+     "section": "그린피",
+     "label": "08:01 ~ 08:51 / 11:54 ~ 13:00",
+     "value": "160,000원",
+     "amounts": [
+      160000
+     ],
+     "url": "https://www.castlepine.co.kr/pagesite/use/charge.asp"
+    },
+    {
+     "section": "그린피",
+     "label": "13:01 ~ 14:14 / 3(화) ~ 5(목) / 07:00 이전",
+     "value": "140,000원",
+     "amounts": [
+      140000
+     ],
+     "url": "https://www.castlepine.co.kr/pagesite/use/charge.asp"
+    },
+    {
+     "section": "그린피",
+     "label": "07:01 ~ 08:00",
+     "value": "150,000원",
+     "amounts": [
+      150000
+     ],
+     "url": "https://www.castlepine.co.kr/pagesite/use/charge.asp"
+    },
+    {
+     "section": "그린피",
+     "label": "08:01 ~ 08:51 / 11:54 ~ 13:00",
+     "value": "160,000원",
+     "amounts": [
+      160000
+     ],
+     "url": "https://www.castlepine.co.kr/pagesite/use/charge.asp"
+    },
+    {
+     "section": "17:30 이후 (노캐디)",
+     "label": "13:01 ~ 14:14 / 17:30 이후 (노캐디)",
+     "value": "80,000원",
+     "amounts": [
+      80000
+     ],
+     "url": "https://www.castlepine.co.kr/pagesite/use/charge.asp"
+    },
+    {
+     "section": "17:30 이후 (노캐디)",
+     "label": "6(금) / 07:00 이전",
+     "value": "150,000원",
+     "amounts": [
+      150000
+     ],
+     "url": "https://www.castlepine.co.kr/pagesite/use/charge.asp"
+    },
+    {
+     "section": "17:30 이후 (노캐디)",
+     "label": "07:01 ~ 08:00",
+     "value": "160,000원",
+     "amounts": [
+      160000
+     ],
+     "url": "https://www.castlepine.co.kr/pagesite/use/charge.asp"
+    },
+    {
+     "section": "17:30 이후 (노캐디)",
+     "label": "08:01 ~ 08:51 / 11:54 ~ 13:00",
+     "value": "170,000원",
+     "amounts": [
+      170000
+     ],
+     "url": "https://www.castlepine.co.kr/pagesite/use/charge.asp"
+    },
+    {
+     "section": "17:30 이후 (노캐디)",
+     "label": "13:01 ~ 14:14 / 17:30 이후 (노캐디)",
+     "value": "100,000원",
+     "amounts": [
+      100000
+     ],
+     "url": "https://www.castlepine.co.kr/pagesite/use/charge.asp"
+    },
+    {
+     "section": "17:30 이후 (노캐디)",
+     "label": "9(월) ~ 12(목) / 07:00 이전",
+     "value": "120,000원",
+     "amounts": [
+      120000
+     ],
+     "url": "https://www.castlepine.co.kr/pagesite/use/charge.asp"
+    },
+    {
+     "section": "17:30 이후 (노캐디)",
+     "label": "07:01 ~ 07:30",
+     "value": "140,000원",
+     "amounts": [
+      140000
+     ],
+     "url": "https://www.castlepine.co.kr/pagesite/use/charge.asp"
+    },
+    {
+     "section": "17:30 이후 (노캐디)",
+     "label": "07:31 ~ 08:00",
+     "value": "150,000원",
+     "amounts": [
+      150000
+     ],
+     "url": "https://www.castlepine.co.kr/pagesite/use/charge.asp"
+    },
+    {
+     "section": "17:30 이후 (노캐디)",
+     "label": "08:01 ~ 08:51 / 11:54 ~ 13:00",
+     "value": "160,000원",
+     "amounts": [
+      160000
+     ],
+     "url": "https://www.castlepine.co.kr/pagesite/use/charge.asp"
+    },
+    {
+     "section": "17:30 이후 (노캐디)",
+     "label": "13:01 ~ 13:30 / 13:31 ~ 14:14",
+     "value": "140,000원",
+     "amounts": [
+      140000
+     ],
+     "url": "https://www.castlepine.co.kr/pagesite/use/charge.asp"
+    },
+    {
+     "section": "17:30 이후 (노캐디)",
+     "label": "13(금) / 07:00 이전",
+     "value": "120,000원",
+     "amounts": [
+      120000
+     ],
+     "url": "https://www.castlepine.co.kr/pagesite/use/charge.asp"
+    },
+    {
+     "section": "17:30 이후 (노캐디)",
+     "label": "07:01 ~ 07:30",
+     "value": "150,000원",
+     "amounts": [
+      150000
+     ],
+     "url": "https://www.castlepine.co.kr/pagesite/use/charge.asp"
+    },
+    {
+     "section": "17:30 이후 (노캐디)",
+     "label": "07:31 ~ 08:00",
+     "value": "160,000원",
+     "amounts": [
+      160000
+     ],
+     "url": "https://www.castlepine.co.kr/pagesite/use/charge.asp"
+    },
+    {
+     "section": "17:30 이후 (노캐디)",
+     "label": "08:01 ~ 08:51 / 11:54 ~ 13:00",
+     "value": "170,000원",
+     "amounts": [
+      170000
+     ],
+     "url": "https://www.castlepine.co.kr/pagesite/use/charge.asp"
+    },
+    {
+     "section": "17:30 이후 (노캐디)",
+     "label": "13:01 ~ 13:30 / 13:31 ~ 14:14",
+     "value": "150,000원",
+     "amounts": [
+      150000
+     ],
+     "url": "https://www.castlepine.co.kr/pagesite/use/charge.asp"
+    },
+    {
+     "section": "17:30 이후 (노캐디)",
+     "label": "16(월) ~ 19(목) / 07:00 이전",
+     "value": "100,000원",
+     "amounts": [
+      100000
+     ],
+     "url": "https://www.castlepine.co.kr/pagesite/use/charge.asp"
+    },
+    {
+     "section": "17:30 이후 (노캐디)",
+     "label": "07:01 ~ 07:30",
+     "value": "130,000원",
+     "amounts": [
+      130000
+     ],
+     "url": "https://www.castlepine.co.kr/pagesite/use/charge.asp"
+    },
+    {
+     "section": "17:30 이후 (노캐디)",
+     "label": "07:31 ~ 08:00 / 08:01 ~ 08:51",
+     "value": "140,000원",
+     "amounts": [
+      140000
+     ],
+     "url": "https://www.castlepine.co.kr/pagesite/use/charge.asp"
+    },
+    {
+     "section": "17:30 이후 (노캐디)",
+     "label": "11:54 ~ 13:00",
+     "value": "140,000원",
+     "amounts": [
+      140000
+     ],
+     "url": "https://www.castlepine.co.kr/pagesite/use/charge.asp"
+    },
+    {
+     "section": "17:30 이후 (노캐디)",
+     "label": "13:01 ~ 13:30",
+     "value": "130,000원",
+     "amounts": [
+      130000
+     ],
+     "url": "https://www.castlepine.co.kr/pagesite/use/charge.asp"
+    },
+    {
+     "section": "17:30 이후 (노캐디)",
+     "label": "13:31 ~ 14:14 / 20(금) / 07:00 이전",
+     "value": "100,000원",
+     "amounts": [
+      100000
+     ],
+     "url": "https://www.castlepine.co.kr/pagesite/use/charge.asp"
+    },
+    {
+     "section": "17:30 이후 (노캐디)",
+     "label": "07:01 ~ 07:30",
+     "value": "140,000원",
+     "amounts": [
+      140000
+     ],
+     "url": "https://www.castlepine.co.kr/pagesite/use/charge.asp"
+    },
+    {
+     "section": "17:30 이후 (노캐디)",
+     "label": "07:31 ~ 08:00 / 08:01 ~ 08:51",
+     "value": "150,000원",
+     "amounts": [
+      150000
+     ],
+     "url": "https://www.castlepine.co.kr/pagesite/use/charge.asp"
+    },
+    {
+     "section": "17:30 이후 (노캐디)",
+     "label": "11:54 ~ 13:00",
+     "value": "150,000원",
+     "amounts": [
+      150000
+     ],
+     "url": "https://www.castlepine.co.kr/pagesite/use/charge.asp"
+    }
+   ],
+   "url": "https://www.castlepine.co.kr/pagesite/use/charge.asp"
+  }
+ },
+ "cancel": {
+  "cancel_policy": {
+   "value": "3일 전 17:00까지(예약일 제외)캐디일부 시간·코스만 노캐디 — 17:00 이후캐디피 결제캐디에게 직접·현장 지급야간(3부) 라운드야간 라운",
+   "source": "그린피가이드(공식 인용)",
+   "url": "https://greenfeeguide.co.kr/course/gc-0138/"
+  },
+  "open_cycle": null,
+  "notes": null,
+  "evidence": [
+   "캐슬파인 골프클럽 GNB 바로가기 본문 바로가기 하단 바로가기 클럽소개 클럽소개 분실물 센터 오시는길 코스소개 코스소개 VALLEY LAKE 이용안내 이용안내 이용요금 예약안내 위약안내 마일리지제도 로컬룰 모바일웹 인터넷예약 실시간예약 대기예약 예약확인/취소 회원라운지 회원정보 My 마일리지 정보마당 공지사항/이벤트 자료실 포토갤러리 명예의전당 날씨정보 로그인 아이디 비밀번호 아이디 저장 회원가입 *원하시는 날짜를 누르시면 예약이 가능합니다.",
+   "캐슬파인 골프클럽 GNB 바로가기 본문 바로가기 하단 바로가기 클럽소개 클럽소개 분실물 센터 오시는길 코스소개 코스소개 VALLEY LAKE 이용안내 이용안내 이용요금 예약안내 위약안내 마일리지제도 로컬룰 모바일웹 인터넷예약 실시간예약 대기예약 예약확인/취소 회원라운지 회원정보 My 마일리지 정보마당 공지사항/이벤트 자료실 포토갤러리 명예의전당 날씨정보 코스소개 VALLEY LAKE > 코스소개 > VALLEY 1 HOLE 2 HOLE 3 HOLE 4 HOLE 5 HOLE 6 HOLE 7 HOLE 8 HOLE 9 HOLE 코스공략 ",
+   "캐슬파인 골프클럽 GNB 바로가기 본문 바로가기 하단 바로가기 클럽소개 클럽소개 분실물 센터 오시는길 코스소개 코스소개 VALLEY LAKE 이용안내 이용안내 이용요금 예약안내 위약안내 마일리지제도 로컬룰 모바일웹 인터넷예약 실시간예약 대기예약 예약확인/취소 회원라운지 회원정보 My 마일리지 정보마당 공지사항/이벤트 자료실 포토갤러리 명예의전당 날씨정보 코스소개 VALLEY LAKE > 코스소개 > LAKE 1 HOLE 2 HOLE 3 HOLE 4 HOLE 5 HOLE 6 HOLE 7 HOLE 8 HOLE 9 HOLE 코스공략 TI"
+  ],
+  "weather_evidence": [
+   "캐디피 및 카트사용료 구 분 캐디피 카트사용료 18 홀 150,000원 100,000원 9 홀 75,000원 50,000원 악천후 정산안내 ※ 9홀 추가시 9홀 요금 적용 상황별요금 구분 1홀 티샷 1홀 종료 2~9홀 10~18홀 그린피 무료 홀별정산 카트비 무료 홀별정산 캐디피 40,000원 50,000원 75,000원 150,000원 ※ 상황별 요금은 강설, 폭우, 기타 천재지변 등으로 경기를 마치지 못했을 경우에만 적용됩니다."
+  ]
+ },
+ "ops": {
+  "nocaddie": {
+   "evidence": [
+    "노캐디: 17:00 이후 / 17:00 이후"
+   ],
+   "value": "노캐디 운영 시간 17:00 이후",
+   "source_url": "https://www.castlepine.co.kr/pagesite/use/charge.asp",
+   "confidence": "high",
+   "checked_at": "2026-10-13",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/no-caddie-golf-course-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  },
+  "two_player": {
+   "evidence": [
+    "주중에 한하여 1팀 3인플레이 or 4인플레이 가능합니다.※주말·공휴일은 4인플레이 필수(3인내장 시 4인요금적용) ·",
+    "1팀 2인플레이 & 5인플레이는 허용되지 않습니다.",
+    "· 1팀 2인플레이 & 5인플레이는 허용되지 않습니다."
+   ],
+   "value": "2인 불가",
+   "third_party": {
+    "two": null,
+    "three": null,
+    "source": "그린피가이드",
+    "url": "https://greenfeeguide.co.kr/course/gc-0138/"
+   },
+   "source_url": "https://www.castlepine.co.kr/pagesite/use/reservation.asp",
+   "confidence": "medium",
+   "source_type": "official_site",
+   "page_label": "예약안내",
+   "value_from": "capital_supplement(official_site)"
+  },
+  "three_player": {
+   "value": "3인 가능(요금 추가)",
+   "evidence": [
+    "· 주중에 한하여 1팀 3인플레이 or 4인플레이 가능합니다.※주말·공휴일은 4인플레이 필수(3인내장 시 4인요금적용)"
+   ],
+   "source_url": "https://www.castlepine.co.kr/pagesite/use/reservation.asp",
+   "confidence": "medium",
+   "source_type": "official_site",
+   "page_label": "예약안내",
+   "value_from": "capital_supplement(official_site)"
+  },
+  "five_player": {
+   "value": "5인 불가",
+   "evidence": [
+    "· 1팀 2인플레이 & 5인플레이는 허용되지 않습니다."
+   ],
+   "source_url": "https://www.castlepine.co.kr/pagesite/use/reservation.asp",
+   "confidence": "medium",
+   "source_type": "official_site",
+   "page_label": "예약안내",
+   "value_from": "capital_supplement(official_site)"
+  },
+  "marshal_caddie": {
+   "value": null,
+   "evidence": []
+  },
+  "cart_type": {
+   "evidence": [
+    "캐디피 및 카트사용료 구 분 캐디피 카트사용료 18 홀 150,000원 100,000원 9 홀 75,000원 50,000원 악천후 정산안내 ※ 9홀 추가시 9홀 요금 적용 상황별요금 구분 1홀 티샷 1홀 종료 2~9홀 10~18홀 그린피 무료 홀별정산 카트비 무료 홀별정산 캐디피 40,000원 50,000원 75,000원 150,000원 ※ 상황별 요금은 강설, 폭우, 기타 천재지변 등으로 경기를 마치지 못했을 경우에만 적용됩니다.",
+    "캐슬파인 골프클럽 GNB 바로가기 본문 바로가기 하단 바로가기 클럽소개 클럽소개 분실물 센터 오시는길 코스소개 코스소개 VALLEY LAKE 이용안내 이용안내 이용요금 예약안내 위약안내 마일리지제도 로컬룰 모바일웹 인터넷예약 실시간예약 대기예약 예약확인/취소 회원라운지 회원정보 My 마일리지 정보마당 공지사항/이벤트 자료실 포토갤러리 명예의전당 날씨정보 코스소개 VALLEY LAKE > 코스소개 > VALLEY 1 HOLE 2 HOLE 3 HOLE 4 HOLE 5 HOLE 6 HOLE 7 HOLE 8 HOLE 9 HOLE 코스공략 "
+   ],
+   "value": null
+  },
+  "cart_entry": {
+   "evidence": [],
+   "value": null
+  },
+  "bagdrop": {
+   "evidence": [],
+   "value": null
+  },
+  "mat": {
+   "evidence": [],
+   "value": null
+  },
+  "checkin": {
+   "evidence": [
+    "· 티오프(Tee-off) 20분전 카트 대기선에 대기하셔야 합니다."
+   ],
+   "value": "티오프 20분 전 도착",
+   "third_party": {
+    "value": null,
+    "source": "그린피가이드",
+    "url": "https://greenfeeguide.co.kr/course/gc-0138/"
+   },
+   "source_url": "https://www.castlepine.co.kr/pagesite/use/guide.asp",
+   "confidence": "medium",
+   "source_type": "official_site",
+   "page_label": "이용안내",
+   "value_from": "capital_supplement(official_site)"
+  },
+  "locker": {
+   "evidence": [
+    "락커, 샤워실 등 클럽하우스 시설 이용에 부과되는 요금 3.",
+    "2. 락커, 샤워실 등 클럽하우스 시설 이용에 부과되는 요금"
+   ],
+   "value": "락커 운영",
+   "value_previous": "문구 확인(원문 근거)",
+   "source_url": "https://www.castlepine.co.kr/pagesite/clause/guide.asp",
+   "confidence": "low",
+   "source_type": "official_site",
+   "page_label": "",
+   "value_from": "capital_supplement(official_site)"
+  },
+  "sauna": {
+   "evidence": [
+    "사우나 있음"
+   ],
+   "value": "사우나 운영",
+   "source_url": "https://castlepine.co.kr/pagesite/use/penalty.asp",
+   "confidence": "high",
+   "checked_at": "2026-10-20",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/golf-course-amenities-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  },
+  "dress": {
+   "evidence": [
+    "통상적인 골프웨어가 아닌 카라가 없은 상의, 속이 훤히 보이는 상의, 찢어진 청바지, 긴 양말을 착용하지 않은 반바지, 트레이닝복, 슬리퍼등은 클럽 입장이 불가하오니 유의 하시기 바랍니다.",
+    "골퍼의 품격있는 경기를 위해 복장과 매너를 지켜주시기 바랍니다."
+   ],
+   "value": "문구 확인(원문 근거)"
+  },
+  "pace": {
+   "evidence": [],
+   "value": null
+  },
+  "grass": null
+ },
+ "facilities": {
+  "practice": {
+   "evidence": [
+    "수요일은 연습장정비로 인해 이용이 불가합니다.",
+    "· 타석: 5개 , 거리: 135yd"
+   ],
+   "value": "타석",
+   "source_url": "https://www.castlepine.co.kr/pagesite/use/charge.asp",
+   "confidence": "low",
+   "source_type": "official_site",
+   "page_label": "이용요금",
+   "value_from": "capital_supplement(official_site)"
+  },
+  "indoor_range": {
+   "value": null,
+   "evidence": []
+  },
+  "food": {
+   "evidence": [
+    "레스토랑 조식"
+   ],
+   "value": "레스토랑",
+   "source_url": "https://www.castlepine.co.kr/pagesite/use/charge.asp",
+   "confidence": "low",
+   "source_type": "official_site",
+   "page_label": "이용요금",
+   "value_from": "capital_supplement(official_site)"
+  },
+  "snack_bar": {
+   "value": null,
+   "evidence": []
+  },
+  "locker_sauna": {
+   "value": null,
+   "evidence": []
+  },
+  "lodging": {
+   "value": null,
+   "evidence": []
+  },
+  "other": {
+   "value": null,
+   "evidence": []
+  },
+  "night": {
+   "evidence": [
+    "야간 셀프라운드 운영(2026-03-17 공지)"
+   ],
+   "value": "야간 라운딩 운영",
+   "source_url": "https://www.castlepine.co.kr/multi_board/site/board/list.asp?groupcode=NOTICE",
+   "confidence": "high",
+   "checked_at": "2026-10-12",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/night-golf-course-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  },
+  "closed_days": {
+   "evidence": [
+    "이용자가 이용예정일 당일 예약을 취소하거나 아무런 통보 없이 이용예정일에 골프장을 이용하지 않을 경우 : 팀별 이용요금의 30% ③ 강설, 폭우, 안개 기타 천재지변 등의 불가항력적인 사유로, 사업자가 이용예정일에 골프장 이용이 불가능하다고 판단되어 임시휴장을 하는 경우에는 예약금을 환불하여야 한다.",
+    "② 이 골프장의 정기 휴장일은 없다.",
+    "정기 휴장일 없음"
+   ],
+   "third_party": "정기 휴장일 없음잔디페어웨이",
+   "value": "정기 휴장일 없음",
+   "source_url": "https://www.castlepine.co.kr/pagesite/clause/guide.asp",
+   "confidence": "high",
+   "checked_at": "2026-10-11",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/golf-course-closing-day-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  },
+  "shuttle": {
+   "evidence": [],
+   "value": null
+  },
+  "ev_charge": {
+   "evidence": [],
+   "value": null
+  },
+  "gf_facilities": [],
+  "proshop": {
+   "evidence": [],
+   "value": null
+  }
+ },
+ "rental": {
+  "available": null,
+  "full_set": 30000,
+  "fee_text": null,
+  "brand": null,
+  "left_handed": null,
+  "shoes": null,
+  "nine_hole": null,
+  "range_finder": null,
+  "reservation": null,
+  "source_url": null,
+  "evidence": [],
+  "official": null,
+  "nearby_delivery": {
+   "region": "수도권",
+   "sido": "경기도",
+   "verified_at": "2026-11-26 (KST)",
+   "checked_at": "2026-11-26",
+   "providers": [
+    {
+     "id": "theb",
+     "name": "더비 (The B)",
+     "coverage": "O",
+     "basis": "동탄·김포·시흥·용인·이천 24시간 무인픽업 매장 5곳 + 다마스 퀵/택배 배송. 홈페이지에 '강남·동탄·판교·수지·광교·분당', '시흥·배곧·인천·안산·송도', '이천·여주' 권역 표기.",
+     "phone": "010-2530-4575",
+     "operating_status": "정상 영업",
+     "delivery": "O",
+     "price_headline": "12시간 기준 90,000원부터",
+     "bookable": true
+    },
+    {
+     "id": "gangnamclub",
+     "name": "강남골프클럽렌탈",
+     "coverage": "O",
+     "basis": "서울 서초구 거점 매장 주소 공개, 자사 블로그 '전지역 배송 가능' 안내.",
+     "phone": "010-7407-0753",
+     "operating_status": "정상 영업(자사 블로그 최신 게시 2026-04-28)",
+     "delivery": "미확인",
+     "price_headline": null,
+     "bookable": true
+    },
+    {
+     "id": "apioz",
+     "name": "아피오즈 (Apioz)",
+     "coverage": "조건부",
+     "basis": "서울 숙소 배송·공항 픽업 옵션 안내. 단 골프세트 Sold Out으로 현재 이용 불가.",
+     "phone": "02-6956-8115",
+     "operating_status": "예약 중단(Sold Out) — 골프채 세트 한정",
+     "delivery": "미확인",
+     "price_headline": null,
+     "caution": "골프채 세트 Sold Out — 현재 예약 불가",
+     "bookable": false,
+     "bookable_reason": "골프채 세트 Sold Out — 현재 예약 불가"
+    }
+   ],
+   "provider_count": 3,
+   "legend": {
+    "O": "공식 안내로 해당 권역 이용이 확인됨",
+    "X": "공식 안내상 해당 권역 서비스가 없음(예: '제주 전 지역' 전용으로만 안내)",
+    "조건부": "공식 안내상 가능하나 조건(수단·요금·현재 판매중지 등)이 붙어 있음. 조건은 basis/detail에 기재",
+    "미확인": "공식 공개 안내에서 해당 항목에 대한 언급을 찾지 못함(추정하지 않음)"
+   },
+   "not_verified": "전화·문자·카카오톡 상담으로만 확인 가능한 항목(재고, 개별 견적, 권역별 실제 배송 가능 여부)은 '미확인'으로 남김",
+   "source_file": "5-rental_8_coverage_verified.json",
+   "note_code": "해외 골퍼용 골프채 렌탈·딜리버리 업체. 같은 권역이라도 실제 배송 가능 여부·재고·견적은 전화 확인 필요."
+  }
+ },
+ "briefing": {
+  "notices": {
+   "url": "https://www.castlepine.co.kr/multi_board/site/board/list.asp?groupcode=PGALLERY&open_state=1",
+   "items": [
+    {
+     "title": "2027년 연단체 모집 안내",
+     "date": "2026-10-13",
+     "url": "https://www.castlepine.co.kr/multi_board/site/board/list.asp?groupcode=NOTICE"
+    },
+    {
+     "title": "2027 연단체 신청서",
+     "date": "2026-10-13",
+     "url": "https://www.castlepine.co.kr/multi_board/site/board/list.asp?groupcode=DATA&open_state=1"
+    },
+    {
+     "title": "스타트하우스 메뉴",
+     "date": "2026-09-17",
+     "url": "https://www.castlepine.co.kr/multi_board/site/board/list.asp?groupcode=NOTICE"
+    },
+    {
+     "title": "레스토랑 메뉴",
+     "date": "2026-09-17",
+     "url": "https://www.castlepine.co.kr/multi_board/site/board/list.asp?groupcode=NOTICE"
+    },
+    {
+     "title": "그린피 마일리지 제도 운영",
+     "date": "2026-03-24",
+     "url": "https://www.castlepine.co.kr/multi_board/site/board/list.asp?groupcode=NOTICE"
+    },
+    {
+     "title": "그린피 마일리지제도 이용약관",
+     "date": "2026-03-19",
+     "url": "https://www.castlepine.co.kr/multi_board/site/board/list.asp?groupcode=DATA&open_state=1"
+    },
+    {
+     "title": "예약권 불법판매 금지",
+     "date": "2020-10-06",
+     "url": "https://www.castlepine.co.kr/multi_board/site/board/list.asp?groupcode=NOTICE"
+    }
+   ],
+   "tags": {
+    "모집": [
+     {
+      "title": "2027년 연단체 모집 안내",
+      "date": "2026-10-13",
+      "url": "https://www.castlepine.co.kr/multi_board/site/board/list.asp?groupcode=NOTICE"
+     },
+     {
+      "title": "2027 연단체 신청서",
+      "date": "2026-10-13",
+      "url": "https://www.castlepine.co.kr/multi_board/site/board/list.asp?groupcode=DATA&open_state=1"
+     }
+    ],
+    "요금": [
+     {
+      "title": "그린피 마일리지 제도 운영",
+      "date": "2026-03-24",
+      "url": "https://www.castlepine.co.kr/multi_board/site/board/list.asp?groupcode=NOTICE"
+     },
+     {
+      "title": "그린피 마일리지제도 이용약관",
+      "date": "2026-03-19",
+      "url": "https://www.castlepine.co.kr/multi_board/site/board/list.asp?groupcode=DATA&open_state=1"
+     }
+    ]
+   }
+  },
+  "review": {
+   "score_10": 8.4,
+   "count": 165,
+   "source": "티픽골프장 라운더 후기 집계",
+   "url": "https://teepickgolf.com/course/%EC%BA%90%EC%8A%AC%ED%8C%8C%EC%9D%B8cc"
+  },
+  "fee_change": null,
+  "collected_at": "2026-11-26T09:51:54+09:00",
+  "recent_notice_text": null,
+  "course_notes": null,
+  "alert": null,
+  "unconfirmed": [],
+  "sources": []
+ },
+ "collection": {
+  "official_site": "ok",
+  "official_reason": null,
+  "pages_collected": 14,
+  "third_party": {
+   "teepick": true,
+   "greenfeeguide": true
+  },
+  "render_hint": "",
+  "plan_strategy": "unreachable(브라우저 재시도)",
+  "browser_batch": false
+ },
+ "coverage": {
+  "basic": 1.0,
+  "course": 0.6,
+  "fee": 1.0,
+  "ops": 0.57,
+  "facility": 0.4,
+  "briefing": 0.5,
+  "rental": 0.5
+ }
+}

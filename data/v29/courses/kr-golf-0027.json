@@ -1,0 +1,836 @@
+{
+ "course_id": "kr-golf-0027",
+ "meta": {
+  "name": "세이지우드 여수경도",
+  "generated_at": "2026-11-26T10:25:41+09:00",
+  "schema": "stage2c/1.0",
+  "batch": "4_호남",
+  "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
+  "schema_previous": "stage2b/1.0",
+  "restructured_from_7key": true,
+  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
+  "has_detail": true,
+  "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+ },
+ "master": {
+  "course_id": "kr-golf-0027",
+  "name": "세이지우드 여수경도",
+  "name_variants": [
+   "세이지우드 여수경도"
+  ],
+  "type": "대중제",
+  "holes": {
+   "total": 27,
+   "member": 0,
+   "public": 27,
+   "non_member": 0
+  },
+  "address": "전남광주통합특별시 여수시 대경도길 111",
+  "region": {
+   "sido_code": "12",
+   "sido_name": "전남광주통합특별시",
+   "sido_short": "전남",
+   "sigungu_code": "12130",
+   "sigungu_name": "여수시",
+   "legal_dong_code": "1213000000"
+  },
+  "lat": 34.707884,
+  "lng": 127.730333,
+  "nearest_ic": {
+   "name": "만흥IC",
+   "distance_km": 7.1,
+   "source": "최근접 IC 직선거리"
+  },
+  "tel": "061-660-1000",
+  "homepage": "https://www.sagewood.co.kr/global/main",
+  "operators": [
+   "김승건"
+  ],
+  "area_sqm": 1640629,
+  "opened": "2013",
+  "course_blocks": [],
+  "facility_id": null,
+  "provenance": {
+   "master": "courses_master.json v2.0 (문체부·KGA·KGBA·티픽·지도)",
+   "synced_to": "courses_master.json v2.7 (2026-11-26 단일 스키마 정규화)"
+  },
+  "par": null,
+  "holes_teepick": 27,
+  "course_spec": {
+   "holes": 27,
+   "par": null,
+   "blocks": [],
+   "length_m": null,
+   "kga": {
+    "kga_course_code": "399",
+    "kga_name": "세이지우드 여수경도",
+    "region_short": "전남",
+    "address": "전남 여수시 대경도길 111",
+    "match_method": "exact",
+    "match_score": 105,
+    "match_confidence": "high",
+    "nine_hole_courses": [
+     "돌산도",
+     "거문도",
+     "오동도"
+    ],
+    "hole_combinations": [
+     {
+      "course_name_1": "돌산도",
+      "course_name_2": "거문도",
+      "tees": [
+       {
+        "tee": "Black",
+        "gender": "남자",
+        "length_yds": 7111.0,
+        "std_par": 72.0,
+        "course_rating": 74.8,
+        "slope_rating": 137.0,
+        "front9": "37.9 / 143",
+        "back9": "36.9 / 130"
+       },
+       {
+        "tee": "Blue",
+        "gender": "남자",
+        "length_yds": 6703.0,
+        "std_par": 72.0,
+        "course_rating": 72.7,
+        "slope_rating": 135.0,
+        "front9": "36.8 / 141",
+        "back9": "35.9 / 129"
+       },
+       {
+        "tee": "White",
+        "gender": "남자",
+        "length_yds": 6255.0,
+        "std_par": 72.0,
+        "course_rating": 70.5,
+        "slope_rating": 130.0,
+        "front9": "35.5 / 131",
+        "back9": "35.0 / 128"
+       },
+       {
+        "tee": "Yellow",
+        "gender": "남자",
+        "length_yds": 6022.0,
+        "std_par": 72.0,
+        "course_rating": 69.3,
+        "slope_rating": 126.0,
+        "front9": "34.7 / 126",
+        "back9": "34.6 / 125"
+       },
+       {
+        "tee": "Red",
+        "gender": "여자",
+        "length_yds": 5462.0,
+        "std_par": 72.0,
+        "course_rating": 70.8,
+        "slope_rating": 125.0,
+        "front9": "35.7 / 129",
+        "back9": "35.1 / 120"
+       }
+      ]
+     },
+     {
+      "course_name_1": "오동도",
+      "course_name_2": "돌산도",
+      "tees": [
+       {
+        "tee": "Black",
+        "gender": "남자",
+        "length_yds": 7049.0,
+        "std_par": 72.0,
+        "course_rating": 74.6,
+        "slope_rating": 145.0,
+        "front9": "36.7 / 147",
+        "back9": "37.9 / 143"
+       },
+       {
+        "tee": "Blue",
+        "gender": "남자",
+        "length_yds": 6650.0,
+        "std_par": 72.0,
+        "course_rating": 72.5,
+        "slope_rating": 143.0,
+        "front9": "35.7 / 145",
+        "back9": "36.8 / 141"
+       },
+       {
+        "tee": "White",
+        "gender": "남자",
+        "length_yds": 6172.0,
+        "std_par": 72.0,
+        "course_rating": 70.2,
+        "slope_rating": 134.0,
+        "front9": "34.7 / 136",
+        "back9": "35.5 / 131"
+       },
+       {
+        "tee": "Yellow",
+        "gender": "남자",
+        "length_yds": 5900.0,
+        "std_par": 72.0,
+        "course_rating": 68.7,
+        "slope_rating": 129.0,
+        "front9": "34.0 / 131",
+        "back9": "34.7 / 126"
+       },
+       {
+        "tee": "Red",
+        "gender": "여자",
+        "length_yds": 5366.0,
+        "std_par": 72.0,
+        "course_rating": 70.4,
+        "slope_rating": 124.0,
+        "front9": "34.7 / 119",
+        "back9": "35.7 / 129"
+       }
+      ]
+     },
+     {
+      "course_name_1": "거문도",
+      "course_name_2": "오동도",
+      "tees": [
+       {
+        "tee": "Black",
+        "gender": "남자",
+        "length_yds": 6838.0,
+        "std_par": 72.0,
+        "course_rating": 73.6,
+        "slope_rating": 139.0,
+        "front9": "36.9 / 130",
+        "back9": "36.7 / 147"
+       },
+       {
+        "tee": "Blue",
+        "gender": "남자",
+        "length_yds": 6477.0,
+        "std_par": 72.0,
+        "course_rating": 71.6,
+        "slope_rating": 137.0,
+        "front9": "35.9 / 129",
+        "back9": "35.7 / 145"
+       },
+       {
+        "tee": "White",
+        "gender": "남자",
+        "length_yds": 6087.0,
+        "std_par": 72.0,
+        "course_rating": 69.7,
+        "slope_rating": 132.0,
+        "front9": "35.0 / 128",
+        "back9": "34.7 / 136"
+       },
+       {
+        "tee": "Yellow",
+        "gender": "남자",
+        "length_yds": 5854.0,
+        "std_par": 72.0,
+        "course_rating": 68.6,
+        "slope_rating": 128.0,
+        "front9": "34.6 / 125",
+        "back9": "34.0 / 131"
+       },
+       {
+        "tee": "Red",
+        "gender": "여자",
+        "length_yds": 5284.0,
+        "std_par": 72.0,
+        "course_rating": 69.8,
+        "slope_rating": 120.0,
+        "front9": "35.1 / 120",
+        "back9": "34.7 / 119"
+       }
+      ]
+     }
+    ]
+   },
+   "grass": {
+    "evidence": "• 코스 내 잔디 보호를 위하여 스파이크(고무징)를 착용하여 주시기 바랍니다.",
+    "source": "공식",
+    "url": "https://www.sagewood.co.kr/global/member/mypage-golf"
+   },
+   "hole_by_hole": null
+  },
+  "addresses": [
+   "전남광주통합특별시 여수시 대경도길 111"
+  ],
+  "status": "operating",
+  "fee_note": "2026-11-01 공식 요금표: 주중 180,000·주말 240,000원(1인 18홀 비회원 정상가). 카트 120,000원/팀, 캐디 150,000원/팀. 여수·순천·광양 시민 20,000원 할인. 도선료 별도.",
+  "facility_cluster": null,
+  "factcheck_2026_11_26": null,
+  "address_original": "전남 여수시 대경도길 111"
+ },
+ "course": {
+  "holes": 27,
+  "holes_received": 27,
+  "course_names": null,
+  "membership_type": "대중제",
+  "night_light": null,
+  "blocks": [],
+  "grass": {
+   "tee": null,
+   "fairway": {
+    "evidence": "• 코스 내 잔디 보호를 위하여 스파이크(고무징)를 착용하여 주시기 바랍니다.",
+    "source": "공식",
+    "url": "https://www.sagewood.co.kr/global/member/mypage-golf"
+   },
+   "green": null
+  },
+  "kga": {
+   "kga_course_code": "399",
+   "kga_name": "세이지우드 여수경도",
+   "region_short": "전남",
+   "address": "전남 여수시 대경도길 111",
+   "match_method": "exact",
+   "match_score": 105,
+   "match_confidence": "high",
+   "nine_hole_courses": [
+    "돌산도",
+    "거문도",
+    "오동도"
+   ],
+   "hole_combinations": [
+    {
+     "course_name_1": "돌산도",
+     "course_name_2": "거문도",
+     "tees": [
+      {
+       "tee": "Black",
+       "gender": "남자",
+       "length_yds": 7111.0,
+       "std_par": 72.0,
+       "course_rating": 74.8,
+       "slope_rating": 137.0,
+       "front9": "37.9 / 143",
+       "back9": "36.9 / 130"
+      },
+      {
+       "tee": "Blue",
+       "gender": "남자",
+       "length_yds": 6703.0,
+       "std_par": 72.0,
+       "course_rating": 72.7,
+       "slope_rating": 135.0,
+       "front9": "36.8 / 141",
+       "back9": "35.9 / 129"
+      },
+      {
+       "tee": "White",
+       "gender": "남자",
+       "length_yds": 6255.0,
+       "std_par": 72.0,
+       "course_rating": 70.5,
+       "slope_rating": 130.0,
+       "front9": "35.5 / 131",
+       "back9": "35.0 / 128"
+      },
+      {
+       "tee": "Yellow",
+       "gender": "남자",
+       "length_yds": 6022.0,
+       "std_par": 72.0,
+       "course_rating": 69.3,
+       "slope_rating": 126.0,
+       "front9": "34.7 / 126",
+       "back9": "34.6 / 125"
+      },
+      {
+       "tee": "Red",
+       "gender": "여자",
+       "length_yds": 5462.0,
+       "std_par": 72.0,
+       "course_rating": 70.8,
+       "slope_rating": 125.0,
+       "front9": "35.7 / 129",
+       "back9": "35.1 / 120"
+      }
+     ]
+    },
+    {
+     "course_name_1": "오동도",
+     "course_name_2": "돌산도",
+     "tees": [
+      {
+       "tee": "Black",
+       "gender": "남자",
+       "length_yds": 7049.0,
+       "std_par": 72.0,
+       "course_rating": 74.6,
+       "slope_rating": 145.0,
+       "front9": "36.7 / 147",
+       "back9": "37.9 / 143"
+      },
+      {
+       "tee": "Blue",
+       "gender": "남자",
+       "length_yds": 6650.0,
+       "std_par": 72.0,
+       "course_rating": 72.5,
+       "slope_rating": 143.0,
+       "front9": "35.7 / 145",
+       "back9": "36.8 / 141"
+      },
+      {
+       "tee": "White",
+       "gender": "남자",
+       "length_yds": 6172.0,
+       "std_par": 72.0,
+       "course_rating": 70.2,
+       "slope_rating": 134.0,
+       "front9": "34.7 / 136",
+       "back9": "35.5 / 131"
+      },
+      {
+       "tee": "Yellow",
+       "gender": "남자",
+       "length_yds": 5900.0,
+       "std_par": 72.0,
+       "course_rating": 68.7,
+       "slope_rating": 129.0,
+       "front9": "34.0 / 131",
+       "back9": "34.7 / 126"
+      },
+      {
+       "tee": "Red",
+       "gender": "여자",
+       "length_yds": 5366.0,
+       "std_par": 72.0,
+       "course_rating": 70.4,
+       "slope_rating": 124.0,
+       "front9": "34.7 / 119",
+       "back9": "35.7 / 129"
+      }
+     ]
+    },
+    {
+     "course_name_1": "거문도",
+     "course_name_2": "오동도",
+     "tees": [
+      {
+       "tee": "Black",
+       "gender": "남자",
+       "length_yds": 6838.0,
+       "std_par": 72.0,
+       "course_rating": 73.6,
+       "slope_rating": 139.0,
+       "front9": "36.9 / 130",
+       "back9": "36.7 / 147"
+      },
+      {
+       "tee": "Blue",
+       "gender": "남자",
+       "length_yds": 6477.0,
+       "std_par": 72.0,
+       "course_rating": 71.6,
+       "slope_rating": 137.0,
+       "front9": "35.9 / 129",
+       "back9": "35.7 / 145"
+      },
+      {
+       "tee": "White",
+       "gender": "남자",
+       "length_yds": 6087.0,
+       "std_par": 72.0,
+       "course_rating": 69.7,
+       "slope_rating": 132.0,
+       "front9": "35.0 / 128",
+       "back9": "34.7 / 136"
+      },
+      {
+       "tee": "Yellow",
+       "gender": "남자",
+       "length_yds": 5854.0,
+       "std_par": 72.0,
+       "course_rating": 68.6,
+       "slope_rating": 128.0,
+       "front9": "34.6 / 125",
+       "back9": "34.0 / 131"
+      },
+      {
+       "tee": "Red",
+       "gender": "여자",
+       "length_yds": 5284.0,
+       "std_par": 72.0,
+       "course_rating": 69.8,
+       "slope_rating": 120.0,
+       "front9": "35.1 / 120",
+       "back9": "34.7 / 119"
+      }
+     ]
+    }
+   ]
+  },
+  "kga_hole_est": null,
+  "extra_courses": null,
+  "hole_by_hole": null,
+  "length_m": null,
+  "par": null
+ },
+ "fee": {
+  "weekday": 180000,
+  "weekend": 240000,
+  "weekday_text": "180,000원 (1부·2부 동일, 월~금)",
+  "weekend_text": "240,000원 (토·일, 공휴일은 토요일 요금 적용)",
+  "basis": "1인·18홀 비회원 정상가. 2026-11-01 공식 요금표. 여수·순천·광양 시민 20,000원 할인(12~3월은 1부, 9~11월은 07:00 이전·13:00 이후, 7~8월은 2부 적용, 신분증 확인). 도선료 별도.",
+  "tax_included": null,
+  "cart": {
+   "value": 120000,
+   "source": "그린피가이드",
+   "url": "https://greenfeeguide.co.kr/course/gc-0446/",
+   "text": "120,000원/팀(4인 1대)"
+  },
+  "caddie": {
+   "value": 150000,
+   "source": "그린피가이드",
+   "url": "https://greenfeeguide.co.kr/course/gc-0446/",
+   "text": "150,000원/팀(1팀 4인 1캐디)",
+   "none": false
+  },
+  "as_of": "2026-11-01(공식 요금표)",
+  "source_url": "https://www.sagewood.co.kr/yeosu/golf",
+  "note": "섬(경도) 안 27홀 링크스 코스로 차도선(도선료) 필요. 위약규정: 평일 3일 전·주말 4일 전까지 위약 없음, 이후 10~30%.",
+  "sources": [
+   {
+    "source": "그린피가이드(공식 요금표 확인)",
+    "url": "https://greenfeeguide.co.kr/course/gc-0446/",
+    "checked_at": "2026-11-01"
+   },
+   {
+    "source": "외부 데이터 검수(16곳 요금표)",
+    "url": "https://www.sagewood.co.kr/yeosu/golf",
+    "checked_at": "2026-11-26",
+    "note": "공식 요금표(이미지 포함) 판독 + 공개 요금 사이트 보조"
+   }
+  ],
+  "checked_at": "2026-11-01",
+  "market": {
+   "weekday_min": null,
+   "weekend_min": null,
+   "part1": null,
+   "part2": null,
+   "source": "티픽골프장(실거래 관측)",
+   "url": "https://teepickgolf.com/course/%EC%84%B8%EC%9D%B4%EC%A7%80%EC%9A%B0%EB%93%9C%20%EC%97%AC%EC%88%98%EA%B2%BD%EB%8F%84",
+   "note": "공시가 아닌 최근 관측 실거래 최저가"
+  },
+  "official_green_evidence": [
+   "요금안내 그린피 안내는 골프 화면의 예약 & 요금 안내에서 확인하실 수 있습니다."
+  ],
+  "official_rental": null,
+  "previous": {
+   "weekday": 180000,
+   "weekend": 240000,
+   "cart": {
+    "value": 120000,
+    "source": "그린피가이드",
+    "url": "https://greenfeeguide.co.kr/course/gc-0446/"
+   },
+   "caddie": {
+    "value": 150000,
+    "source": "그린피가이드",
+    "url": "https://greenfeeguide.co.kr/course/gc-0446/"
+   },
+   "as_of": "2026-11-01"
+  },
+  "research_2026_11_26": {
+   "no": 1,
+   "green_fee_weekday": "180,000원 (1부·2부 동일, 월~금)",
+   "green_fee_weekend": "240,000원 (토·일, 공휴일은 토요일 요금 적용)",
+   "green_fee_basis": "1인·18홀 비회원 정상가. 2026-11-01 공식 요금표. 여수·순천·광양 시민 20,000원 할인(12~3월은 1부, 9~11월은 07:00 이전·13:00 이후, 7~8월은 2부 적용, 신분증 확인). 도선료 별도.",
+   "green_fee_as_of": "2026-11-01(공식 요금표)",
+   "cart_fee": "120,000원/팀(4인 1대)",
+   "caddie_fee": "150,000원/팀(1팀 4인 1캐디)",
+   "winter_closure_or_notice": "2026-27 동계 휴장 공지는 11/26 기준 미확인. 공식 이용약관상 정기 휴장일 없음, 한국골프장경영협회 2025-26 동계 집계에서 '휴장 없이 운영' 60곳 명단에 포함. 예약은 주중 '라운드 2달 전 해당 요일', 주말 '2달 전 수요일'부터.",
+   "recent_notices": "예약·요금·이용안내 페이지가 2026-11 기준 최신 상태로 게시(11월 요금표). 2026-10~11월 동계휴장·통기작업 공지는 확인되지 않음.",
+   "notes": "섬(경도) 안 27홀 링크스 코스로 차도선(도선료) 필요. 위약규정: 평일 3일 전·주말 4일 전까지 위약 없음, 이후 10~30%.",
+   "unconfirmed": [
+    "동계 휴장 공지(2026-27)",
+    "야간 라이트",
+    "통기·보수 공지"
+   ],
+   "sources": [
+    "https://www.sagewood.co.kr/yeosu/golf",
+    "https://www.sagewood.co.kr/yeosu/facility-terms",
+    "https://greenfeeguide.co.kr/course/gc-0446/",
+    "https://www.yna.co.kr/view/AKR20251216103600007"
+   ],
+   "verified_at": "2026-11-26",
+   "source_file": "2-golf_16_courses_fees_notices.json"
+  },
+  "weekday_basis": "fixed",
+  "weekend_basis": "fixed"
+ },
+ "cancel": {
+  "cancel_policy": null,
+  "open_cycle": null,
+  "notes": null,
+  "evidence": [
+   "2.\"세이지우드 홈페이지\"는 이용자가 약관에 동의하기에 앞서 약관에 정하여져 있는 내용 중청약철회, 배송책임, 환불조건 등과 같은 중요한 내용을 이용자가 이해할 수 있도록 별도의 연결화면 또는 팝업화면 등을 제공하여 이용자의 확인을 구하여야 합니다.",
+   "지역세이지우드 여수경도 대기신청일26/01/13(화) 희망시간7시 코스금오도-오동도(18홀) 상태진행중 대기예약 취소 지역세이지우드 여수경도 대기신청일26/01/13(화) 희망시간7시 코스금오도-오동도(18홀) 상태진행중 대기예약 완료 지역세이지우드 여수경도 대기신청일26/01/13(화) 희망시간7시 코스금오도-오동도(18홀) 상태진행중 취소 첫 페이지 이전 페이지 1 2 다음 페이지 마지막 페이지 세이지우드 이용안내 유의사항 • 원활한 경기 진행을 위해 티 오프 10분 전 까지 카트에 탑승하여 주시기 바랍니다.",
+   "• 고의적인 경기 지연 및 도박행위 • 경기능력이 현저히 부족하여 진행에 막대한 지장을 초래하거나 방해하는 경우 • 근무자에 대한 폭행, 성희롱, 언어폭력 및 직원의 정당한 요구에 불응하는 경우 • 금연구역 위반행위 (코스 내 흡연 절대금지) • 음주, 약물 등으로 정상적인 라운드가 불가능한 경우 위약규정 [ 홍천 ] 예약 취소 시 아래의 기준일에 따라 위약금이 부과됩니다."
+  ],
+  "weather_evidence": [
+   "우천시 1~9홀(9홀정산), 10~18홀(18홀정산)입니다."
+  ]
+ },
+ "ops": {
+  "nocaddie": {
+   "evidence": [
+    "※ '셀프 라운드'는 세이지우드 방문 3회 이상인 고객님에게 권장 드리는 서비스입니다.",
+    "예약타입 골프 예약지역 예약자 이름 및 연락처* 본인인증 이메일(아이디)* 직접입력 직접입력 인원 4 명 라운드 정보 선택 셀프라운드(노캐디) 선택 안 함 셀프라운드(노캐디)에 관한 사항 내용보기 아래 이미지를 보이는 대로 입력해 주세요.",
+    "닫기 예약확인 셀프라운드(노캐디)에 관한 사항 ♠카트 안전 운행 수칙♠ 1."
+   ],
+   "value": "노캐디 선택 가능(문구 확인)"
+  },
+  "two_player": {
+   "evidence": [
+    "• 3인 이상 라운드 가능하며, 2인 라운드시 3인 비용이 청구됩니다.(여수 업장에만 해당됨) 퇴장규정 아래 의 경우 경기과와 캐디마스터의 판단에 의해 퇴장 조치됩니다.",
+    "(1팀 기준: 최소3인) 예약확정은 단체 예약 접수 2~3일 후, 유선으로 안내 드립니다."
+   ],
+   "value": null,
+   "third_party": {
+    "two": null,
+    "three": null,
+    "source": "그린피가이드",
+    "url": "https://greenfeeguide.co.kr/course/gc-0446/"
+   }
+  },
+  "three_player": {
+   "value": null,
+   "evidence": []
+  },
+  "five_player": {
+   "value": null,
+   "evidence": []
+  },
+  "marshal_caddie": {
+   "value": null,
+   "evidence": []
+  },
+  "cart_type": {
+   "evidence": [
+    "지역세이지우드 여수경도 대기신청일26/01/13(화) 희망시간7시 코스금오도-오동도(18홀) 상태진행중 대기예약 취소 지역세이지우드 여수경도 대기신청일26/01/13(화) 희망시간7시 코스금오도-오동도(18홀) 상태진행중 대기예약 완료 지역세이지우드 여수경도 대기신청일26/01/13(화) 희망시간7시 코스금오도-오동도(18홀) 상태진행중 취소 첫 페이지 이전 페이지 1 2 다음 페이지 마지막 페이지 세이지우드 이용안내 유의사항 • 원활한 경기 진행을 위해 티 오프 10분 전 까지 카트에 탑승하여 주시기 바랍니다.",
+    "로그인 회원가입 리워즈 안내 객실 골프 패키지 수정 지역 및 기간 수정 인원 4명 자세히보기 수정 라운드 정보 지역 선택 예약가능 마감 오픈전 2026.04 일 월 화 수 목 금 토 2026.05 일 월 화 수 목 금 토 ※ 카트피 120,000원."
+   ],
+   "value": null
+  },
+  "cart_entry": {
+   "evidence": [],
+   "value": null
+  },
+  "bagdrop": {
+   "evidence": [],
+   "value": null
+  },
+  "mat": {
+   "evidence": [],
+   "value": null
+  },
+  "checkin": {
+   "evidence": [
+    "앞 팀이 안전한 지점(거리)에 도착 후 안전을 확인하시고 샷을 합니다."
+   ],
+   "value": null,
+   "third_party": {
+    "value": "30분 전",
+    "source": "그린피가이드",
+    "url": "https://greenfeeguide.co.kr/course/gc-0446/"
+   }
+  },
+  "locker": {
+   "evidence": [],
+   "value": null
+  },
+  "sauna": {
+   "evidence": [],
+   "value": null
+  },
+  "dress": {
+   "evidence": [
+    "• 클럽의 품위를 위해 정해진 복장을 준수하여 주시기 바랍니다.",
+    "클럽의 품위를 위해 정해진 복장을 준수하여 주시기 바랍니다."
+   ],
+   "value": "문구 확인(원문 근거)"
+  },
+  "pace": {
+   "evidence": [],
+   "value": null
+  },
+  "grass": null
+ },
+ "facilities": {
+  "practice": {
+   "evidence": [],
+   "value": null
+  },
+  "indoor_range": {
+   "value": null,
+   "evidence": []
+  },
+  "food": {
+   "evidence": [
+    "| Sagewood 주요 메뉴 바로가기본문 컨텐츠 바로가기 global LOGO 예약조회 리워즈조회 로그인 예약조회 리워즈조회 로그아웃 SAGEWOOD HOTEL & RESORT COUNTRY CLUB VILLA (예정) SAGEWOOD SHOP SPECIAL OFFER 삶을 지혜롭게 만드는 것은 완벽한 휴식입니다 세이지우드는 생각합니다 고요한 산책길에서의 사색, 새로운 영감을 주는 대자연의 풍경과 함께완벽한 휴식으로 깊어지는 지혜로운 삶에 대해.",
+    "| Sagewood 본문 컨텐츠 바로가기 global LOGO 예약조회 리워즈조회 로그인 예약조회 리워즈조회 로그아웃 global logo room객실 golf골프 dining다이닝 event연회 wellness웰니스 special offer스페셜 오퍼 sagewood shop세이지우드 샵 sagewood story세이지우드 스토리 예약조회 리워즈조회 로그인 예약조회 리워즈조회 로그아웃 brand site notice contact us 유투브 인스타그램 카카오채널 페이스북 2026년 11월 26일 목요일글로벌 현재날씨 미세먼지 ㎍",
+    "| Sagewood 본문 컨텐츠 바로가기 global LOGO 예약조회 리워즈조회 로그인 예약조회 리워즈조회 로그아웃 global logo room객실 golf골프 dining다이닝 event연회 wellness웰니스 special offer스페셜 오퍼 sagewood shop세이지우드 샵 sagewood story세이지우드 스토리 예약조회 리워즈조회 로그인 예약조회 리워즈조회 로그아웃 brand site notice contact us 유투브 인스타그램 카카오채널 페이스북 2026년 11월 26일 목요일글로벌 현재날씨 미세먼지 ㎍"
+   ],
+   "value": null
+  },
+  "snack_bar": {
+   "value": null,
+   "evidence": []
+  },
+  "locker_sauna": {
+   "value": null,
+   "evidence": []
+  },
+  "lodging": {
+   "value": null,
+   "evidence": []
+  },
+  "other": {
+   "value": null,
+   "evidence": []
+  },
+  "night": {
+   "evidence": [],
+   "value": null
+  },
+  "closed_days": {
+   "evidence": [],
+   "third_party": "정기 휴장일 없음숙박콘도미니엄경기",
+   "value": null
+  },
+  "shuttle": {
+   "evidence": [],
+   "value": null
+  },
+  "ev_charge": {
+   "evidence": [],
+   "value": null
+  },
+  "gf_facilities": [],
+  "proshop": {
+   "evidence": [],
+   "value": null
+  }
+ },
+ "rental": {
+  "available": null,
+  "full_set": null,
+  "fee_text": null,
+  "brand": null,
+  "left_handed": null,
+  "shoes": null,
+  "nine_hole": null,
+  "range_finder": null,
+  "reservation": null,
+  "source_url": null,
+  "evidence": [],
+  "official": null,
+  "nearby_delivery": {
+   "region": "호남",
+   "sido": "전남광주통합특별시",
+   "verified_at": "2026-11-26 (KST)",
+   "checked_at": "2026-11-26",
+   "providers": [
+    {
+     "id": "theb",
+     "name": "더비 (The B)",
+     "coverage": "조건부",
+     "basis": "매장·퀵 안내 없음. '전국 당일 배송' 표기 및 화물택배만 해당.",
+     "phone": "010-2530-4575",
+     "operating_status": "정상 영업",
+     "delivery": "O",
+     "price_headline": "12시간 기준 90,000원부터",
+     "bookable": true
+    },
+    {
+     "id": "gangnamclub",
+     "name": "강남골프클럽렌탈",
+     "coverage": "조건부",
+     "basis": "동일(전지역 배송·별도 상담).",
+     "phone": "010-7407-0753",
+     "operating_status": "정상 영업(자사 블로그 최신 게시 2026-04-28)",
+     "delivery": "미확인",
+     "price_headline": null,
+     "bookable": true
+    }
+   ],
+   "provider_count": 2,
+   "legend": {
+    "O": "공식 안내로 해당 권역 이용이 확인됨",
+    "X": "공식 안내상 해당 권역 서비스가 없음(예: '제주 전 지역' 전용으로만 안내)",
+    "조건부": "공식 안내상 가능하나 조건(수단·요금·현재 판매중지 등)이 붙어 있음. 조건은 basis/detail에 기재",
+    "미확인": "공식 공개 안내에서 해당 항목에 대한 언급을 찾지 못함(추정하지 않음)"
+   },
+   "not_verified": "전화·문자·카카오톡 상담으로만 확인 가능한 항목(재고, 개별 견적, 권역별 실제 배송 가능 여부)은 '미확인'으로 남김",
+   "source_file": "5-rental_8_coverage_verified.json",
+   "note_code": "해외 골퍼용 골프채 렌탈·딜리버리 업체. 같은 권역이라도 실제 배송 가능 여부·재고·견적은 전화 확인 필요."
+  }
+ },
+ "briefing": {
+  "notices": {
+   "url": null,
+   "items": [],
+   "tags": {}
+  },
+  "review": {
+   "score_10": null,
+   "count": 7,
+   "source": "티픽골프장 라운더 후기 집계",
+   "url": "https://teepickgolf.com/course/%EC%84%B8%EC%9D%B4%EC%A7%80%EC%9A%B0%EB%93%9C%20%EC%97%AC%EC%88%98%EA%B2%BD%EB%8F%84"
+  },
+  "fee_change": null,
+  "collected_at": "2026-11-26T10:25:41+09:00",
+  "recent_notice_text": "예약·요금·이용안내 페이지가 2026-11 기준 최신 상태로 게시(11월 요금표). 2026-10~11월 동계휴장·통기작업 공지는 확인되지 않음.",
+  "course_notes": "섬(경도) 안 27홀 링크스 코스로 차도선(도선료) 필요. 위약규정: 평일 3일 전·주말 4일 전까지 위약 없음, 이후 10~30%.",
+  "alert": {
+   "type": "winter_operating",
+   "level": "info",
+   "summary": "겨울 정상 운영 추정(정기휴장 없음) — 2026-27 동계휴장 공지는 11/26 미확인",
+   "detail": "2026-27 동계 휴장 공지는 11/26 기준 미확인. 공식 이용약관상 정기 휴장일 없음, 한국골프장경영협회 2025-26 동계 집계에서 '휴장 없이 운영' 60곳 명단에 포함. 예약은 주중 '라운드 2달 전 해당 요일', 주말 '2달 전 수요일'부터.",
+   "period": null,
+   "confirmed": false,
+   "checked_at": "2026-11-26",
+   "source_url": "https://www.sagewood.co.kr/yeosu/golf",
+   "source_file": "2-golf_16_courses_fees_notices.json",
+   "confirmed_basis": "휴장 공지를 확인한 것이 아니라, 공식 이용약관상 정기 휴장일이 없고 KGBA 2025-26 \"휴장 없이 운영\" 60곳 명단에 포함된 점으로 운영을 추정한 것이다."
+  },
+  "unconfirmed": [
+   "동계 휴장 공지(2026-27)",
+   "야간 라이트",
+   "통기·보수 공지"
+  ],
+  "sources": [
+   "https://www.sagewood.co.kr/yeosu/golf",
+   "https://www.sagewood.co.kr/yeosu/facility-terms",
+   "https://greenfeeguide.co.kr/course/gc-0446/",
+   "https://www.yna.co.kr/view/AKR20251216103600007"
+  ]
+ },
+ "collection": {
+  "official_site": "ok",
+  "official_reason": null,
+  "pages_collected": 5,
+  "third_party": {
+   "teepick": true,
+   "greenfeeguide": true
+  },
+  "render_hint": "static",
+  "plan_strategy": "static(직접 파싱)",
+  "browser_batch": false,
+  "browser_pages": 0,
+  "browser_pdf": []
+ },
+ "coverage": {
+  "basic": 1.0,
+  "course": 0.8,
+  "fee": 1.0,
+  "ops": 0.14,
+  "facility": 0.0,
+  "briefing": 1.0,
+  "rental": 0.25
+ }
+}

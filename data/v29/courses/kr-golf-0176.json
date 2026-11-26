@@ -1,0 +1,725 @@
+{
+ "course_id": "kr-golf-0176",
+ "meta": {
+  "name": "써닝포인트 컨트리클럽",
+  "generated_at": "2026-11-26T09:51:55+09:00",
+  "schema": "stage2c/1.0",
+  "batch": "1_수도권",
+  "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
+  "schema_previous": "stage2b/1.0",
+  "restructured_from_7key": true,
+  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
+  "has_detail": true,
+  "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+ },
+ "master": {
+  "course_id": "kr-golf-0176",
+  "name": "써닝포인트 컨트리클럽",
+  "name_variants": [
+   "써닝포인트 컨트리클럽"
+  ],
+  "type": "대중제",
+  "holes": {
+   "total": 18,
+   "member": 0,
+   "public": 18,
+   "non_member": 0
+  },
+  "address": "경기도 용인시 처인구 백암면 고안로 51번길 205",
+  "region": {
+   "sido_code": "41",
+   "sido_name": "경기도",
+   "sido_short": "경기",
+   "sigungu_code": "41461",
+   "sigungu_name": "용인시 처인구",
+   "legal_dong_code": "4146100000"
+  },
+  "lat": 37.14585,
+  "lng": 127.419585,
+  "nearest_ic": {
+   "name": "남이천IC",
+   "distance_km": 4.9,
+   "source": "teepick(실측 표기)",
+   "straight_km_nearest": 6.6,
+   "straight_name": "일죽IC"
+  },
+  "tel": "031-329-0800",
+  "homepage": "https://sunningpoint.com/",
+  "operators": [
+   "㈜에스엘케이"
+  ],
+  "area_sqm": 1048965,
+  "opened": "2012-09",
+  "course_blocks": [],
+  "facility_id": null,
+  "provenance": {
+   "master": "courses_master.json v2.0 (문체부·KGA·KGBA·티픽·지도)",
+   "synced_to": "courses_master.json v2.7 (2026-11-26 단일 스키마 정규화)"
+  },
+  "par": null,
+  "holes_teepick": 18,
+  "course_spec": {
+   "holes": 18,
+   "par": null,
+   "blocks": [],
+   "length_m": null,
+   "kga": {
+    "kga_course_code": "402",
+    "kga_name": "써닝포인트",
+    "region_short": "경기",
+    "address": "경기 용인시 처인구 백암면 고안로51번길 205",
+    "match_method": "exact",
+    "match_score": 110,
+    "match_confidence": "high",
+    "nine_hole_courses": [
+     "썬",
+     "포인트"
+    ],
+    "hole_combinations": [
+     {
+      "course_name_1": "썬",
+      "course_name_2": "포인트",
+      "tees": [
+       {
+        "tee": "Black",
+        "gender": "남자",
+        "length_yds": 7212.0,
+        "std_par": 72.0,
+        "course_rating": 75.1,
+        "slope_rating": 140.0,
+        "front9": "37.5 / 140",
+        "back9": "37.6 / 140"
+       },
+       {
+        "tee": "Blue",
+        "gender": "남자",
+        "length_yds": 6915.0,
+        "std_par": 72.0,
+        "course_rating": 73.6,
+        "slope_rating": 138.0,
+        "front9": "36.8 / 137",
+        "back9": "36.8 / 138"
+       },
+       {
+        "tee": "White",
+        "gender": "남자",
+        "length_yds": 6545.0,
+        "std_par": 72.0,
+        "course_rating": 71.7,
+        "slope_rating": 134.0,
+        "front9": "35.9 / 136",
+        "back9": "35.8 / 131"
+       },
+       {
+        "tee": "Yellow",
+        "gender": "여자",
+        "length_yds": 6290.0,
+        "std_par": 72.0,
+        "course_rating": 76.1,
+        "slope_rating": 139.0,
+        "front9": "38.2 / 139",
+        "back9": "37.9 / 138"
+       },
+       {
+        "tee": "Yellow",
+        "gender": "남자",
+        "length_yds": 6290.0,
+        "std_par": 72.0,
+        "course_rating": 70.5,
+        "slope_rating": 129.0,
+        "front9": "35.3 / 130",
+        "back9": "35.2 / 127"
+       },
+       {
+        "tee": "Red",
+        "gender": "여자",
+        "length_yds": 5745.0,
+        "std_par": 72.0,
+        "course_rating": 72.4,
+        "slope_rating": 127.0,
+        "front9": "36.5 / 126",
+        "back9": "35.9 / 127"
+       }
+      ]
+     }
+    ]
+   },
+   "grass": {
+    "value": "페어웨이 한국잔디",
+    "source": "그린피가이드(공식 코스소개 인용)",
+    "url": "https://greenfeeguide.co.kr/course/gc-0034/"
+   },
+   "hole_by_hole": null
+  },
+  "addresses": [
+   "경기도 용인시 처인구 백암면 고안로 51번길 205"
+  ],
+  "status": "operating",
+  "facility_cluster": null,
+  "factcheck_2026_11_26": null
+ },
+ "course": {
+  "holes": 18,
+  "holes_received": 18,
+  "course_names": null,
+  "membership_type": "대중제",
+  "night_light": null,
+  "blocks": [],
+  "grass": {
+   "tee": null,
+   "fairway": {
+    "value": "페어웨이 한국잔디",
+    "source": "그린피가이드(공식 코스소개 인용)",
+    "url": "https://greenfeeguide.co.kr/course/gc-0034/"
+   },
+   "green": null
+  },
+  "kga": {
+   "kga_course_code": "402",
+   "kga_name": "써닝포인트",
+   "region_short": "경기",
+   "address": "경기 용인시 처인구 백암면 고안로51번길 205",
+   "match_method": "exact",
+   "match_score": 110,
+   "match_confidence": "high",
+   "nine_hole_courses": [
+    "썬",
+    "포인트"
+   ],
+   "hole_combinations": [
+    {
+     "course_name_1": "썬",
+     "course_name_2": "포인트",
+     "tees": [
+      {
+       "tee": "Black",
+       "gender": "남자",
+       "length_yds": 7212.0,
+       "std_par": 72.0,
+       "course_rating": 75.1,
+       "slope_rating": 140.0,
+       "front9": "37.5 / 140",
+       "back9": "37.6 / 140"
+      },
+      {
+       "tee": "Blue",
+       "gender": "남자",
+       "length_yds": 6915.0,
+       "std_par": 72.0,
+       "course_rating": 73.6,
+       "slope_rating": 138.0,
+       "front9": "36.8 / 137",
+       "back9": "36.8 / 138"
+      },
+      {
+       "tee": "White",
+       "gender": "남자",
+       "length_yds": 6545.0,
+       "std_par": 72.0,
+       "course_rating": 71.7,
+       "slope_rating": 134.0,
+       "front9": "35.9 / 136",
+       "back9": "35.8 / 131"
+      },
+      {
+       "tee": "Yellow",
+       "gender": "여자",
+       "length_yds": 6290.0,
+       "std_par": 72.0,
+       "course_rating": 76.1,
+       "slope_rating": 139.0,
+       "front9": "38.2 / 139",
+       "back9": "37.9 / 138"
+      },
+      {
+       "tee": "Yellow",
+       "gender": "남자",
+       "length_yds": 6290.0,
+       "std_par": 72.0,
+       "course_rating": 70.5,
+       "slope_rating": 129.0,
+       "front9": "35.3 / 130",
+       "back9": "35.2 / 127"
+      },
+      {
+       "tee": "Red",
+       "gender": "여자",
+       "length_yds": 5745.0,
+       "std_par": 72.0,
+       "course_rating": 72.4,
+       "slope_rating": 127.0,
+       "front9": "36.5 / 126",
+       "back9": "35.9 / 127"
+      }
+     ]
+    }
+   ]
+  },
+  "kga_hole_est": null,
+  "extra_courses": null,
+  "hole_by_hole": null,
+  "length_m": null,
+  "par": null
+ },
+ "fee": {
+  "weekday": 145000,
+  "weekend": 165000,
+  "weekday_text": null,
+  "weekend_text": null,
+  "basis": null,
+  "tax_included": null,
+  "cart": {
+   "value": 100000,
+   "source": "그린피가이드",
+   "url": "https://greenfeeguide.co.kr/course/gc-0034/"
+  },
+  "caddie": {
+   "value": 150000,
+   "source": "그린피가이드",
+   "url": "https://greenfeeguide.co.kr/course/gc-0034/",
+   "none": false
+  },
+  "as_of": "2026-11-03",
+  "source_url": null,
+  "note": null,
+  "sources": [
+   {
+    "source": "그린피가이드(공식 요금표 확인)",
+    "url": "https://greenfeeguide.co.kr/course/gc-0034/",
+    "checked_at": "2026-11-03"
+   }
+  ],
+  "checked_at": "2026-11-03",
+  "market": {
+   "weekday_min": 105000.0,
+   "weekend_min": 185000.0,
+   "part1": null,
+   "part2": null,
+   "source": "티픽골프장(실거래 관측)",
+   "url": "https://teepickgolf.com/course/%EC%8D%A8%EB%8B%9D%ED%8F%AC%EC%9D%B8%ED%8A%B8cc",
+   "note": "공시가 아닌 최근 관측 실거래 최저가"
+  },
+  "official_green_evidence": [
+   "이용요금 (2026년 12월) 구분 주중 주말 카트이용료 캐디피 토요일 일요일, 공휴일 일반 리무진 주간 야간 이용료(원) 이용료(원) 이용료(원) 1부(7시~9시대) 125,000~155,000 215,000~245,000 195,000~215,000 100,000 150,000 150,000 160,000 2부(11시~14시대) 125,000~155,000 215,000~245,000 195,000~215,000 유의사항 ※ 외국어 가능 캐디: 200,000원※ 이용 요금은 인터넷 회원가입 조건으로, 미가입 시 1만원 추가됩니다",
+   "※ 시설이용료(기본요금): 30,000원 ※ 이용요금: 그린피+카트비 써닝포인트C.C 예약실 문의시간 : AM 8시30분 ~ PM 5시 T.",
+   "- 고객님 사정으로 인한 경기 중단은 18홀 그린피가 적용 됩니다."
+  ],
+  "official_rental": null,
+  "official_table": {
+   "rows": [
+    {
+     "section": "캐디피",
+     "label": "",
+     "value": "※ 시설이용료(기본요금): 30,000원",
+     "amounts": [
+      30000
+     ],
+     "url": "https://sunningpoint.com/guide/guide.asp"
+    }
+   ],
+   "url": "https://sunningpoint.com/guide/guide.asp"
+  }
+ },
+ "cancel": {
+  "cancel_policy": null,
+  "open_cycle": null,
+  "notes": null,
+  "evidence": [
+   "당신이 꿈꾸는 낙원, Sunning Point Country Club 클럽소개 클럽소개 편의시설 안내 대회 안내 위치 안내 예약하기 예약하기 예약 내역 확인 모바일 예약안내 코스정보 코스안내 코스 MAP -SUN코스 -POINT코스 실시간영상 이용가이드 이용요금 준수사항 위약/퇴장 규정 주간날씨안내 고객센터 공지사항 이벤트 FAQ 1:1문의 연락처안내 회원가입 아이디/비밀번호 찾기 로그인 11월 26일 기온 1.0℃ / 16.0℃ 강수확률 0% / 0% 미세먼지 26㎍/㎥ 초미세먼지 17㎍/㎥ 실시간영상 바로가기 Online Mem",
+   "당신이 꿈꾸는 낙원, Sunning Point Country Club 클럽소개 클럽소개 편의시설 안내 대회 안내 위치 안내 예약하기 예약하기 예약 내역 확인 모바일 예약안내 코스정보 코스안내 코스 MAP -SUN코스 -POINT코스 실시간영상 이용가이드 이용요금 준수사항 위약/퇴장 규정 주간날씨안내 고객센터 공지사항 이벤트 FAQ 1:1문의 연락처안내 회원가입 아이디/비밀번호 찾기 로그인 이용요금 이용요금을 안내드립니다.",
+   "당신이 꿈꾸는 낙원, Sunning Point Country Club 클럽소개 클럽소개 편의시설 안내 대회 안내 위치 안내 예약하기 예약하기 예약 내역 확인 모바일 예약안내 코스정보 코스안내 코스 MAP -SUN코스 -POINT코스 실시간영상 이용가이드 이용요금 준수사항 위약/퇴장 규정 주간날씨안내 고객센터 공지사항 이벤트 FAQ 1:1문의 연락처안내 회원가입 아이디/비밀번호 찾기 로그인 코스정보 썬(SUN)코스와 포인트(POINT)코스를 소개합니다."
+  ],
+  "weather_evidence": [
+   "- 고객님 사정으로 인한 경기 중단은 18홀 그린피가 적용 됩니다."
+  ]
+ },
+ "ops": {
+  "nocaddie": {
+   "evidence": [],
+   "value": null
+  },
+  "two_player": {
+   "evidence": [],
+   "value": null,
+   "third_party": {
+    "two": null,
+    "three": null,
+    "source": "그린피가이드",
+    "url": "https://greenfeeguide.co.kr/course/gc-0034/"
+   }
+  },
+  "three_player": {
+   "value": null,
+   "evidence": []
+  },
+  "five_player": {
+   "value": null,
+   "evidence": []
+  },
+  "marshal_caddie": {
+   "value": null,
+   "evidence": []
+  },
+  "cart_type": {
+   "evidence": [
+    "이동 이벤트&공지사항 Event&Notice 2024-04-24~종료시까지 리무진 카트 운영 2023-09-27~종료시까지 생일기념 프리미엄 생일 카트 2021-08-01~종료시까지 도전 KG ZONE EVENT!",
+    "이용요금 (2026년 12월) 구분 주중 주말 카트이용료 캐디피 토요일 일요일, 공휴일 일반 리무진 주간 야간 이용료(원) 이용료(원) 이용료(원) 1부(7시~9시대) 125,000~155,000 215,000~245,000 195,000~215,000 100,000 150,000 150,000 160,000 2부(11시~14시대) 125,000~155,000 215,000~245,000 195,000~215,000 유의사항 ※ 외국어 가능 캐디: 200,000원※ 이용 요금은 인터넷 회원가입 조건으로, 미가입 시 1만원 추가됩니다",
+    "리무진 카트 운영"
+   ],
+   "value": "리무진카트",
+   "source_url": "https://sunningpoint.com",
+   "confidence": "high",
+   "checked_at": "2026-10-22",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/golf-cart-limousine-fairway-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  },
+  "cart_entry": {
+   "evidence": [],
+   "value": null
+  },
+  "bagdrop": {
+   "evidence": [],
+   "value": null
+  },
+  "mat": {
+   "evidence": [],
+   "value": null
+  },
+  "checkin": {
+   "evidence": [
+    "프런트 - TEE-OFF 40분전까지 도착하여 여유로운 PLAY 준비를 하시기 바랍니다.",
+    "60% 이상의 강수확률* 위 세 가지 취소 기준 모두 부합 시 정상 취소 가능 위약 안내 : 취소 기준에 부합되지 않는 강수예보로 미내장 및 취소 시 위약 적용 지연 도착 - 예약자 및 동반자가 TEE-OFF 시간 보다 지연 도착 시 홀 패스하셔야 합니다.",
+    "- TEE-OFF 40분전까지 도착하여 여유로운 PLAY 준비를 하시기 바랍니다."
+   ],
+   "value": "티오프 40분 전 도착",
+   "third_party": {
+    "value": null,
+    "source": "그린피가이드",
+    "url": "https://greenfeeguide.co.kr/course/gc-0034/"
+   },
+   "source_url": "https://sunningpoint.com/guide/obey.asp",
+   "confidence": "medium",
+   "source_type": "official_site",
+   "page_label": "준수사항",
+   "value_from": "capital_supplement(official_site)"
+  },
+  "locker": {
+   "evidence": [
+    "- 프런트에서 예약자와 예약 시간을 확인하신 후, 락카 번호를 받으시기 바랍니다.",
+    "락카 - 사용 전의 락카는 오픈 되어 있습니다.",
+    "- 락카룸의 비품은 사용 후, 지정된 위치에 놓아주시기 바랍니다."
+   ],
+   "value": "락커 운영",
+   "value_previous": "문구 확인(원문 근거)",
+   "source_url": "https://sunningpoint.com/guide/obey.asp",
+   "confidence": "medium",
+   "source_type": "official_site",
+   "page_label": "준수사항",
+   "value_from": "capital_supplement(official_site)"
+  },
+  "sauna": {
+   "evidence": [
+    "클럽하우스 레스토랑 메뉴 그늘집 메뉴 로비 락커룸 파우더룸 사우나 레스토랑 연회장 스타트하우스 프로샵 교육시설 써닝리더십센터 로비 Club House 사계절 변화하는 자연의 조화 속 행복의 공간에서골프를 통한 활력과 심신의 여유로움을 찾아 주는 쉼터,써닝포인트C.C 클럽하우스 입니다.",
+    "클럽하우스 레스토랑 메뉴 그늘집 메뉴 로비 락커룸 파우더룸 사우나 레스토랑 연회장 스타트하우스 프로샵 교육시설 써닝리더십센터 레스토랑 Club House 정갈하면서도 맛있는 음식과함께 언제나 최상의 서비스로늘 기분 좋음을 선사합니다.",
+    "사우나 있음 · 프로샵"
+   ],
+   "value": "사우나 운영",
+   "value_previous": "문구 확인(원문 근거)",
+   "source_url": "https://sunningpoint.com/club/facility_0104.asp",
+   "confidence": "high",
+   "checked_at": "2026-10-20",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/golf-course-amenities-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  },
+  "dress": {
+   "evidence": [],
+   "value": null
+  },
+  "pace": {
+   "evidence": [],
+   "value": null
+  },
+  "grass": "페어웨이 한국잔디",
+  "cart_limousine": {
+   "value": "리무진 카트 운영",
+   "evidence": [
+    "리무진 카트 운영"
+   ],
+   "source_url": "https://sunningpoint.com",
+   "confidence": "high",
+   "checked_at": "2026-10-22",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/golf-cart-limousine-fairway-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  }
+ },
+ "facilities": {
+  "practice": {
+   "evidence": [],
+   "value": null
+  },
+  "indoor_range": {
+   "value": null,
+   "evidence": []
+  },
+  "food": {
+   "evidence": [
+    "메뉴확인하기 예약문의 031-329-0800 월-일요일 08:30 AM ~ 05:00 PM 연락처안내오시는길 코스전경 VIEW POINT SUN POINT SUN & POINT COURSE View Point 1 사계절 변화하는 자연과 사람이 조화 되는 행복한 공간 너와 내가 열린 가슴으로 즐겁게 소통하는 사랑의 동산골프를 통한 활력과 심신의 여유로움을 찾아주는 써닝포인트C.C입니다.",
+    "레스토랑 정갈한 한식을 선보이는 품격 있는 음식을 제공하고 있습니다.",
+    "레스토랑 메뉴보기 연회장 세련된 서비스를 통해 안락한 휴식과 담소를 취할 수 있습니다.",
+    "그늘집은 라운딩 중 식 음료를 제공하는"
+   ],
+   "value": "그늘집",
+   "source_url": "https://sunningpoint.com/club/facility_0201.asp",
+   "confidence": "low",
+   "source_type": "official_site",
+   "page_label": "SUN코스",
+   "value_from": "capital_supplement(official_site)"
+  },
+  "snack_bar": {
+   "value": null,
+   "evidence": []
+  },
+  "locker_sauna": {
+   "value": null,
+   "evidence": []
+  },
+  "lodging": {
+   "value": null,
+   "evidence": []
+  },
+  "other": {
+   "value": null,
+   "evidence": []
+  },
+  "night": {
+   "evidence": [
+    "이용요금 (2026년 12월) 구분 주중 주말 카트이용료 캐디피 토요일 일요일, 공휴일 일반 리무진 주간 야간 이용료(원) 이용료(원) 이용료(원) 1부(7시~9시대) 125,000~155,000 215,000~245,000 195,000~215,000 100,000 150,000 150,000 160,000 2부(11시~14시대) 125,000~155,000 215,000~245,000 195,000~215,000 유의사항 ※ 외국어 가능 캐디: 200,000원※ 이용 요금은 인터넷 회원가입 조건으로, 미가입 시 1만원 추가됩니다",
+    "용인시 백암면의 40만평 부지위에, 18개의 홀(전홀 라이트설치)이 울창한 수목과화사한 화초의 아름다움과 어우려져각각의 개성을 뽐내며 남북으로 시원스럽게 펼쳐져 있습니다.",
+    "2026년 11월에도 운영 · 3부 16시 이후 · 야간 그린피 3부 주중 135,000~175,000원 · 토 165,000~185,000원 · 일·공휴일 155,000~175,000원 · 야간 캐디피 주간 150,000원 · 야간 160,000원 · 2026년 10·11월 요금표 기준, 인터넷 회원가입 조건 요금(미가입 시 1만원 추가)"
+   ],
+   "value": "야간 라운딩 운영(3부 야간 포함)",
+   "source_url": "https://sunningpoint.com/guide/guide.asp",
+   "confidence": "high",
+   "checked_at": "2026-10-12",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/night-golf-course-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  },
+  "closed_days": {
+   "evidence": [],
+   "third_party": null,
+   "value": null
+  },
+  "shuttle": {
+   "evidence": [],
+   "value": null
+  },
+  "ev_charge": {
+   "evidence": [
+    "파우더룸 모던한 분위기의 파우더 룸에서 마음의 여유를 찾고, 재충전을 할 수 있는 공간입니다."
+   ],
+   "value": null
+  },
+  "gf_facilities": [
+   "프로샵근거골프장 공식 홈페이지 시설 안내 · 2026"
+  ],
+  "proshop": {
+   "evidence": [
+    "사우나 있음 · 프로샵"
+   ],
+   "value": "프로샵 운영",
+   "source_url": "https://sunningpoint.com/club/facility_0104.asp",
+   "confidence": "high",
+   "checked_at": "2026-10-20",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/golf-course-amenities-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  }
+ },
+ "rental": {
+  "available": null,
+  "full_set": 50000,
+  "fee_text": null,
+  "brand": null,
+  "left_handed": null,
+  "shoes": null,
+  "nine_hole": null,
+  "range_finder": null,
+  "reservation": null,
+  "source_url": null,
+  "evidence": [],
+  "official": null,
+  "nearby_delivery": {
+   "region": "수도권",
+   "sido": "경기도",
+   "verified_at": "2026-11-26 (KST)",
+   "checked_at": "2026-11-26",
+   "providers": [
+    {
+     "id": "theb",
+     "name": "더비 (The B)",
+     "coverage": "O",
+     "basis": "동탄·김포·시흥·용인·이천 24시간 무인픽업 매장 5곳 + 다마스 퀵/택배 배송. 홈페이지에 '강남·동탄·판교·수지·광교·분당', '시흥·배곧·인천·안산·송도', '이천·여주' 권역 표기.",
+     "phone": "010-2530-4575",
+     "operating_status": "정상 영업",
+     "delivery": "O",
+     "price_headline": "12시간 기준 90,000원부터",
+     "bookable": true
+    },
+    {
+     "id": "gangnamclub",
+     "name": "강남골프클럽렌탈",
+     "coverage": "O",
+     "basis": "서울 서초구 거점 매장 주소 공개, 자사 블로그 '전지역 배송 가능' 안내.",
+     "phone": "010-7407-0753",
+     "operating_status": "정상 영업(자사 블로그 최신 게시 2026-04-28)",
+     "delivery": "미확인",
+     "price_headline": null,
+     "bookable": true
+    },
+    {
+     "id": "apioz",
+     "name": "아피오즈 (Apioz)",
+     "coverage": "조건부",
+     "basis": "서울 숙소 배송·공항 픽업 옵션 안내. 단 골프세트 Sold Out으로 현재 이용 불가.",
+     "phone": "02-6956-8115",
+     "operating_status": "예약 중단(Sold Out) — 골프채 세트 한정",
+     "delivery": "미확인",
+     "price_headline": null,
+     "caution": "골프채 세트 Sold Out — 현재 예약 불가",
+     "bookable": false,
+     "bookable_reason": "골프채 세트 Sold Out — 현재 예약 불가"
+    }
+   ],
+   "provider_count": 3,
+   "legend": {
+    "O": "공식 안내로 해당 권역 이용이 확인됨",
+    "X": "공식 안내상 해당 권역 서비스가 없음(예: '제주 전 지역' 전용으로만 안내)",
+    "조건부": "공식 안내상 가능하나 조건(수단·요금·현재 판매중지 등)이 붙어 있음. 조건은 basis/detail에 기재",
+    "미확인": "공식 공개 안내에서 해당 항목에 대한 언급을 찾지 못함(추정하지 않음)"
+   },
+   "not_verified": "전화·문자·카카오톡 상담으로만 확인 가능한 항목(재고, 개별 견적, 권역별 실제 배송 가능 여부)은 '미확인'으로 남김",
+   "source_file": "5-rental_8_coverage_verified.json",
+   "note_code": "해외 골퍼용 골프채 렌탈·딜리버리 업체. 같은 권역이라도 실제 배송 가능 여부·재고·견적은 전화 확인 필요."
+  }
+ },
+ "briefing": {
+  "notices": {
+   "url": "https://sunningpoint.com/customer/notice_list.asp",
+   "items": [
+    {
+     "title": "2027년 연단체 모집 안내",
+     "date": "2026-10-16",
+     "url": "https://sunningpoint.com/customer/notice_list.asp"
+    },
+    {
+     "title": "연단체 명부 등록 안내",
+     "date": "2026-06-26",
+     "url": "https://sunningpoint.com/customer/notice_list.asp"
+    },
+    {
+     "title": "일반단체팀 신청/접수 안내",
+     "date": "2026-04-29",
+     "url": "https://sunningpoint.com/customer/notice_list.asp"
+    },
+    {
+     "title": "및 중요한 사항을 알려 드립니다.",
+     "date": "2026-02-13",
+     "url": "https://sunningpoint.com/customer/notice_view.asp?idx=119&stx=&sfl="
+    },
+    {
+     "title": "인터넷 예약 오픈 일정",
+     "date": "2026-02-13",
+     "url": "https://sunningpoint.com/customer/notice_list.asp"
+    },
+    {
+     "title": "이용약관 변경 고지 안내",
+     "date": "2025-06-26",
+     "url": "https://sunningpoint.com/customer/notice_list.asp"
+    },
+    {
+     "title": "이용약관 및 개인정보 처리방침 변경 고지 안내",
+     "date": "2023-05-09",
+     "url": "https://sunningpoint.com/customer/notice_list.asp"
+    },
+    {
+     "title": "마일리지 이벤트 종료 및 적립기준 변경안내",
+     "date": "2021-12-30",
+     "url": "https://sunningpoint.com/customer/notice_list.asp"
+    },
+    {
+     "title": "2021년 예약 선점 이용제한 안내",
+     "date": "2020-11-12",
+     "url": "https://sunningpoint.com/customer/notice_list.asp"
+    }
+   ],
+   "tags": {
+    "모집": [
+     {
+      "title": "2027년 연단체 모집 안내",
+      "date": "2026-10-16",
+      "url": "https://sunningpoint.com/customer/notice_list.asp"
+     },
+     {
+      "title": "연단체 명부 등록 안내",
+      "date": "2026-06-26",
+      "url": "https://sunningpoint.com/customer/notice_list.asp"
+     }
+    ],
+    "운영": [
+     {
+      "title": "마일리지 이벤트 종료 및 적립기준 변경안내",
+      "date": "2021-12-30",
+      "url": "https://sunningpoint.com/customer/notice_list.asp"
+     }
+    ],
+    "이벤트": [
+     {
+      "title": "마일리지 이벤트 종료 및 적립기준 변경안내",
+      "date": "2021-12-30",
+      "url": "https://sunningpoint.com/customer/notice_list.asp"
+     }
+    ]
+   }
+  },
+  "review": {
+   "score_10": 8.7,
+   "count": 144,
+   "source": "티픽골프장 라운더 후기 집계",
+   "url": "https://teepickgolf.com/course/%EC%8D%A8%EB%8B%9D%ED%8F%AC%EC%9D%B8%ED%8A%B8cc"
+  },
+  "fee_change": null,
+  "collected_at": "2026-11-26T09:51:55+09:00",
+  "recent_notice_text": null,
+  "course_notes": null,
+  "alert": null,
+  "unconfirmed": [],
+  "sources": []
+ },
+ "collection": {
+  "official_site": "ok",
+  "official_reason": null,
+  "pages_collected": 14,
+  "third_party": {
+   "teepick": true,
+   "greenfeeguide": true
+  },
+  "render_hint": "",
+  "plan_strategy": "unreachable(브라우저 재시도)",
+  "browser_batch": false
+ },
+ "coverage": {
+  "basic": 1.0,
+  "course": 0.8,
+  "fee": 1.0,
+  "ops": 0.29,
+  "facility": 0.2,
+  "briefing": 0.5,
+  "rental": 0.5
+ }
+}

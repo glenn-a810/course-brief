@@ -1,0 +1,493 @@
+{
+ "course_id": "kr-golf-0279",
+ "meta": {
+  "name": "보령베이스CC",
+  "generated_at": "2026-11-26T10:24:30+09:00",
+  "schema": "stage2c/1.0",
+  "batch": "3_충청",
+  "includes": [
+   "master",
+   "ops",
+   "briefing"
+  ],
+  "source": "raw/received_chungcheong_77.json (외부 데이터 수신, 2026-11-26)",
+  "review": {
+   "checked_at": "2026-11-26",
+   "status": "partial_official",
+   "checks": [
+    {
+     "field": "대표전화",
+     "received": "041-939-3600 (대표 041-939-3800)",
+     "verified": "공식 사업자정보 대표전화 041-939-3800/3600, 예약문의 041-939-3601 — 마스터 041-939-3604 정정",
+     "result": "정정",
+     "url": "https://www.boryeongbase.co.kr/"
+    },
+    {
+     "field": "주소·계열",
+     "received": "충남 보령시 옥마벚길 10",
+     "verified": "공식 주소 동일. 패밀리사이트에 대영베이스·대영힐스·모카CC·알프스대영이 함께 안내(대영 계열)",
+     "result": "일치",
+     "url": "https://www.boryeongbase.co.kr/"
+    },
+    {
+     "field": "그린피",
+     "received": "월~목 89,000~109,000 / 토·공휴일 119,000~149,000",
+     "verified": "공지에 11월·12월 그린피 안내 게시(상세 금액은 공지 이미지)",
+     "result": "수신 유지",
+     "url": "https://www.boryeongbase.co.kr/"
+    }
+   ]
+  },
+  "data_checks": [
+   "대표전화 표기 차이: 마스터 041-939-3800 / 수신 041-939-3600",
+   "미확인 목록 누락 라벨 보완: 제세금"
+  ],
+  "schema_previous": "stage2b/1.0",
+  "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
+  "restructured_from_7key": false,
+  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
+  "has_detail": true,
+  "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+ },
+ "master": {
+  "course_id": "kr-golf-0279",
+  "name": "보령베이스CC",
+  "name_variants": [
+   "보령베이스CC"
+  ],
+  "former_names": null,
+  "name_note": null,
+  "type": "대중제",
+  "types": [
+   "대중제"
+  ],
+  "type_note": null,
+  "holes": {
+   "total": 9,
+   "member": 0,
+   "public": 9,
+   "non_member": 0
+  },
+  "holes_note": null,
+  "address": "충청남도 보령시 옥마벚길 10",
+  "addresses": [
+   "충청남도 보령시 옥마벚길 10"
+  ],
+  "address_note": null,
+  "region": {
+   "sido_code": "44",
+   "sido_name": "충청남도",
+   "sido_short": "충남",
+   "sigungu_code": "44180",
+   "sigungu_name": "보령시",
+   "legal_dong_code": "4418000000"
+  },
+  "lat": 36.329105,
+  "lng": 126.622333,
+  "nearest_ic": {
+   "name": "무창포IC",
+   "distance_km": 11.4,
+   "source": "최근접 IC 직선거리"
+  },
+  "nearest_ic_note": null,
+  "tel": "041-939-3800",
+  "tel_official": "041-939-3600 (대표 041-939-3800)",
+  "tel_conflict": true,
+  "tel_source": "official(충청 검수 정정)",
+  "tel_note": "공식 홈페이지 대표전화 041-939-3800(3600)/예약문의 041-939-3601. 마스터 041-939-3604는 오기.",
+  "homepage": "https://www.boryeongbase.co.kr/",
+  "homepage_master": "https://www.boryeongbase.co.kr/",
+  "operators": [
+   "㈜대천리조트"
+  ],
+  "operators_note": null,
+  "area_sqm": 350420,
+  "opened": null,
+  "course_blocks": [],
+  "facility_id": null,
+  "facility_members": null,
+  "status": "operating",
+  "status_note": null,
+  "expected_open": null,
+  "project_stage": null,
+  "access": "public",
+  "provenance": {
+   "master": "courses_master.json v2.5 (문체부·KGA·KGBA·티픽·지도 + 충청 검수 정정)",
+   "detail": "raw/received_chungcheong_77.json (kr-golf-0279 행, 2026-11-26 수신, 검수 2026-11-26)",
+   "synced_to": "courses_master.json v2.7 (2026-11-26 단일 스키마 정규화)"
+  },
+  "holes_received": 9,
+  "holes_conflict": false,
+  "fee_note": "12월 그린피 75,000~125,000원(시간대·요일별), 카트 100,000원/팀, 하우스캐디 150,000원/팀·셀프 120,000원. 12월·1월 그린피 연속 공지로 겨울 정상 운영 확인.",
+  "facility_cluster": null,
+  "factcheck_2026_11_26": null,
+  "tel_former": "041-939-3604",
+  "address_original": "보령시 옥마벚길 10"
+ },
+ "course": {
+  "holes": 9,
+  "holes_received": 9,
+  "course_names": "9홀 2그린 — 18홀 라운드",
+  "membership_type": "대중제",
+  "night_light": "야간(3부) 운영 — 3부 69,000~89,000원",
+  "blocks": [],
+  "grass": {
+   "tee": null,
+   "fairway": null,
+   "green": null
+  },
+  "kga": null,
+  "kga_hole_est": null,
+  "extra_courses": null
+ },
+ "fee": {
+  "weekday": 109000,
+  "weekend": 149000,
+  "weekday_text": "월~목 89,000~109,000원 / 금 99,000~129,000원 (11월 정상가, 1인·18홀, 시간대별)",
+  "weekend_text": "토·공휴일 119,000~149,000원 / 일 109,000~129,000원 (11월 정상가)",
+  "basis": "1인·18홀 11월 정상가(시간대 최고가 기준). 인터넷 회원가입 필수(미가입 10,000원 추가), 3인 플레이 주중 +10,000·주말 +15,000원. 12월 그린피는 2026-10-19 공식 공지로 별도(fee.december_2026).",
+  "tax_included": null,
+  "cart": {
+   "value": 100000,
+   "text": "100,000원/팀(4인 이하) / 130,000원(5인)"
+  },
+  "caddie": {
+   "value": 150000,
+   "text": "하우스캐디 150,000원/팀(1·2·3부 공통, 5인 220,000원) / 시니어캐디 100,000원 / 셀프(노캐디) 120,000원",
+   "none": false
+  },
+  "as_of": "2026-11(2026-11-26 조회 기준 적용 월 정상가)",
+  "source_url": "https://www.boryeongbase.co.kr/Board/View.aspx?cfgid=notice&page=1&postidx=3152",
+  "note": "대영베이스 계열(모카CC·대영힐스·알프스대영). 보령베이스 콘도 병설. 3인 주중 1만·주말 1만5천원 추가, 5인은 전화 문의.",
+  "sources": [
+   {
+    "source": "수신 조사(공식·공개 예약정보)",
+    "url": "https://www.boryeongbase.co.kr/",
+    "checked_at": "2026-11-26 (공식 요금·공개 안내 확인)"
+   },
+   {
+    "source": "외부 데이터 검수(16곳 요금표)",
+    "url": "https://www.boryeongbase.co.kr/Board/View.aspx?cfgid=notice&page=1&postidx=3152",
+    "checked_at": "2026-11-26",
+    "note": "공식 요금표(이미지 포함) 판독 + 공개 요금 사이트 보조"
+   }
+  ],
+  "previous": {
+   "weekday": 109000,
+   "weekend": 149000,
+   "weekday_text": "월~목 89,000~109,000원 / 금 99,000~129,000원 (1인, 시간대별 정상가)",
+   "weekend_text": "토·공휴일 119,000~149,000원 / 일 109,000~129,000원",
+   "cart": {
+    "value": 100000,
+    "text": "100,000원/팀"
+   },
+   "caddie": {
+    "value": 150000,
+    "text": "150,000원/팀"
+   },
+   "as_of": "2026-11-26 (공식 요금·공개 안내 확인)",
+   "basis": "18홀 라운드 기준 정상가. 인터넷 회원가입 필수(미가입 시 1만원 추가), 3부 69,000~89,000원",
+   "source_url": "https://www.boryeongbase.co.kr/",
+   "note": "11월 정상가 기준 89,000~109,000(월~목)·99,000~129,000(금)·119,000~149,000(토·공휴일)·109,000~129,000(일)원. 인터넷 회원가입 필수(미가입 1만원 추가)."
+  },
+  "value_check": [
+   {
+    "field": "weekday",
+    "kept": 109000,
+    "research_amounts": [
+     75000,
+     95000,
+     85000,
+     105000
+    ],
+    "research_text": "75,000~95,000원 (12월 월~목) / 85,000~105,000원 (12월 금)",
+    "note": "기준 월 차이다. 현재값은 11월 정상가(월~목 89,000~109,000·토·공휴일 119,000~149,000)이고, 조사 문장은 2026-10-19 공지된 12월 정상가다. 12월 값은 fee.december_2026에 따로 넣었다."
+   },
+   {
+    "field": "weekend",
+    "kept": 149000,
+    "research_amounts": [
+     105000,
+     125000,
+     95000,
+     115000
+    ],
+    "research_text": "105,000~125,000원 (12월 토·공휴일) / 95,000~115,000원 (12월 일)",
+    "note": "기준 월 차이다. 현재값은 11월 정상가(월~목 89,000~109,000·토·공휴일 119,000~149,000)이고, 조사 문장은 2026-10-19 공지된 12월 정상가다. 12월 값은 fee.december_2026에 따로 넣었다."
+   }
+  ],
+  "research_2026_11_26": {
+   "no": 4,
+   "green_fee_weekday": "75,000~95,000원 (12월 월~목) / 85,000~105,000원 (12월 금)",
+   "green_fee_weekend": "105,000~125,000원 (12월 토·공휴일) / 95,000~115,000원 (12월 일)",
+   "green_fee_basis": "1인·18홀 정상가(12월 그린피 공지, 2026-10-19). 12/1~13: 월~목 75,000(1부 07:30 이전)~95,000(2부 시작~14:00), 금 85,000~105,000, 토·공휴일 105,000~125,000, 일 95,000~115,000. 12/14~31 단부제(09:40~10:30 1부): 주중 75,000~85,000, 토 95,000~105,000, 일 85,000~95,000. 인터넷 회원가입 필수(미가입 10,000원 추가), 3인 플레이 주중 +10,000·주말 +15,000.",
+   "green_fee_as_of": "2026-10-19(공식 12월 그린피 공지)",
+   "cart_fee": "100,000원/팀(4인 이하) / 130,000원(5인)",
+   "caddie_fee": "하우스캐디 150,000원/팀(1·2·3부 공통, 5인 220,000원) / 시니어캐디 100,000원 / 셀프(노캐디) 120,000원",
+   "winter_closure_or_notice": "동계 휴장 공지 없음 — 12월 그린피(2026-10-19)와 1월 그린피(2026-11-20, 제목 '2026년 1월')를 연속 게시해 겨울 정상 운영 확인.",
+   "recent_notices": "2026-11-20 1월 그린피 안내, 2026-11-09 클럽하우스 프로샵 운영자 모집, 2026-10-19 12월 그린피 안내·스타트하우스 신메뉴.",
+   "notes": "대영베이스 계열(모카CC·대영힐스·알프스대영). 보령베이스 콘도 병설. 3인 주중 1만·주말 1만5천원 추가, 5인은 전화 문의.",
+   "unconfirmed": [
+    "동계 휴장 공지(2026-27)",
+    "9홀 단독 요금",
+    "야간(3부) 12월 요금"
+   ],
+   "sources": [
+    "https://www.boryeongbase.co.kr/Board/View.aspx?cfgid=notice&page=1&postidx=3152",
+    "https://www.boryeongbase.co.kr/Board/List.aspx?cfgid=notice",
+    "https://www.boryeongbase.co.kr/Golf/UseInfo.aspx",
+    "https://greenfeeguide.co.kr/course/gc-0302/"
+   ],
+   "verified_at": "2026-11-26",
+   "source_file": "2-golf_16_courses_fees_notices.json"
+  },
+  "december_2026": {
+   "weekday": 105000,
+   "weekend": 125000,
+   "weekday_text": "월~목 75,000~95,000원 / 금 85,000~105,000원",
+   "weekend_text": "토·공휴일 105,000~125,000원 / 일 95,000~115,000원",
+   "basis": "12/1~13: 월~목 75,000(1부 07:30 이전)~95,000, 금 85,000~105,000, 토·공휴일 105,000~125,000, 일 95,000~115,000. 12/14~31 단부제(09:40~10:30 1부): 주중 75,000~85,000, 토 95,000~105,000, 일 85,000~95,000.",
+   "as_of": "2026-10-19(공식 12월 그린피 공지)",
+   "source_url": "https://www.boryeongbase.co.kr/Board/View.aspx?cfgid=notice&page=1&postidx=3152"
+  },
+  "weekday_basis": "max",
+  "weekend_basis": "max"
+ },
+ "cancel": {
+  "cancel_policy": "예약일 제외 4일 전 17:00까지 인터넷·전화 취소 시 위약 없음. 3일 전부터 위약 규정 적용",
+  "open_cycle": "미확인(공식 예약 오픈 주기 미게시 — 홈페이지·예약처 실시간 예약)",
+  "notes": "캐디 1팀(4명) 1캐디. 5인 플레이는 전화 문의 필수. 3인 플레이 주중 1만원·주말 1만5천원 추가",
+  "evidence": [],
+  "weather_evidence": []
+ },
+ "ops": {
+  "nocaddie": {
+   "value": "일부 시간·코스만 노캐디(팀당 20,000원 추가)",
+   "evidence": []
+  },
+  "two_player": {
+   "value": null,
+   "evidence": []
+  },
+  "three_player": {
+   "value": "가능(주중 1만·주말 1.5만원 추가)",
+   "evidence": []
+  },
+  "five_player": {
+   "value": "가능(전화 문의)",
+   "evidence": []
+  },
+  "marshal_caddie": {
+   "value": null,
+   "evidence": []
+  },
+  "cart_type": {
+   "value": "5인승 카트",
+   "evidence": []
+  },
+  "cart_entry": {
+   "value": null,
+   "evidence": []
+  },
+  "bagdrop": {
+   "value": null,
+   "evidence": []
+  },
+  "mat": {
+   "value": null,
+   "evidence": []
+  },
+  "checkin": {
+   "value": null,
+   "evidence": []
+  },
+  "locker": {
+   "value": "사우나(남자 냉탕 보수공사 공지)",
+   "evidence": []
+  },
+  "sauna": {
+   "value": "사우나(남자 냉탕 보수공사 공지)",
+   "evidence": []
+  },
+  "dress": {
+   "value": null,
+   "evidence": []
+  },
+  "pace": {
+   "value": null,
+   "evidence": []
+  }
+ },
+ "facilities": {
+  "practice": {
+   "value": "퍼팅 연습 그린",
+   "evidence": []
+  },
+  "indoor_range": {
+   "value": null,
+   "evidence": []
+  },
+  "food": {
+   "value": null,
+   "evidence": []
+  },
+  "snack_bar": {
+   "value": null,
+   "evidence": []
+  },
+  "locker_sauna": {
+   "value": "사우나(남자 냉탕 보수공사 공지)",
+   "evidence": []
+  },
+  "lodging": {
+   "value": "보령베이스 콘도",
+   "evidence": []
+  },
+  "other": {
+   "value": "프로샵·편의점·수영장",
+   "evidence": []
+  },
+  "night": {
+   "value": "야간(3부) 운영 — 3부 69,000~89,000원",
+   "evidence": []
+  },
+  "closed_days": {
+   "value": null,
+   "third_party": null,
+   "evidence": []
+  },
+  "shuttle": {
+   "value": null,
+   "evidence": []
+  }
+ },
+ "rental": {
+  "available": null,
+  "full_set": null,
+  "fee_text": null,
+  "brand": null,
+  "left_handed": null,
+  "shoes": null,
+  "nine_hole": null,
+  "range_finder": null,
+  "reservation": null,
+  "source_url": null,
+  "nearby_delivery": {
+   "region": "충청",
+   "sido": "충청남도",
+   "verified_at": "2026-11-26 (KST)",
+   "checked_at": "2026-11-26",
+   "providers": [
+    {
+     "id": "theb",
+     "name": "더비 (The B)",
+     "coverage": "조건부",
+     "basis": "매장·퀵 안내 없음. '전국 당일 배송' 표기 및 화물택배만 해당.",
+     "phone": "010-2530-4575",
+     "operating_status": "정상 영업",
+     "delivery": "O",
+     "price_headline": "12시간 기준 90,000원부터",
+     "bookable": true
+    },
+    {
+     "id": "gangnamclub",
+     "name": "강남골프클럽렌탈",
+     "coverage": "조건부",
+     "basis": "동일(전지역 배송·별도 상담).",
+     "phone": "010-7407-0753",
+     "operating_status": "정상 영업(자사 블로그 최신 게시 2026-04-28)",
+     "delivery": "미확인",
+     "price_headline": null,
+     "bookable": true
+    }
+   ],
+   "provider_count": 2,
+   "legend": {
+    "O": "공식 안내로 해당 권역 이용이 확인됨",
+    "X": "공식 안내상 해당 권역 서비스가 없음(예: '제주 전 지역' 전용으로만 안내)",
+    "조건부": "공식 안내상 가능하나 조건(수단·요금·현재 판매중지 등)이 붙어 있음. 조건은 basis/detail에 기재",
+    "미확인": "공식 공개 안내에서 해당 항목에 대한 언급을 찾지 못함(추정하지 않음)"
+   },
+   "not_verified": "전화·문자·카카오톡 상담으로만 확인 가능한 항목(재고, 개별 견적, 권역별 실제 배송 가능 여부)은 '미확인'으로 남김",
+   "source_file": "5-rental_8_coverage_verified.json",
+   "note_code": "해외 골퍼용 골프채 렌탈·딜리버리 업체. 같은 권역이라도 실제 배송 가능 여부·재고·견적은 전화 확인 필요."
+  }
+ },
+ "briefing": {
+  "notices": {
+   "url": null,
+   "items": [],
+   "tags": {}
+  },
+  "recent_notice_text": "2026-11-20 클럽하우스 프로샵 운영자 모집, 2026-10-19 '2026년 12월 그린피 안내', 남자 사우나 냉탕 보수공사 안내 게시. 동계 휴장 공지는 미확인.",
+  "course_notes": "보령 옥마산 자락의 9홀 2그린 코스로 18홀 라운드(공식 패밀리 안내는 18홀로, 그린피가이드·인원은 9홀로 표기 — 9홀 시설 2그린 운영). 대영베이스 계열(모카CC·대영힐스·알프스대영과 같은 그룹).",
+  "review": null,
+  "fee_change": null,
+  "alert": {
+   "type": "winter_operating",
+   "level": "info",
+   "summary": "겨울 정상 운영 — 12월·1월 그린피 연속 게시",
+   "detail": "동계 휴장 공지 없음 — 12월 그린피(2026-10-19)와 1월 그린피(2026-11-20, 제목 '2026년 1월')를 연속 게시해 겨울 정상 운영 확인.",
+   "period": null,
+   "confirmed": true,
+   "checked_at": "2026-11-26",
+   "source_url": "https://www.boryeongbase.co.kr/Board/View.aspx?cfgid=notice&page=1&postidx=3152",
+   "source_file": "2-golf_16_courses_fees_notices.json"
+  },
+  "unconfirmed": [
+   "잔디(티)",
+   "잔디(페어웨이)",
+   "잔디(그린)",
+   "예약 오픈 주기",
+   "2인 플레이",
+   "마샬캐디",
+   "카트 페어웨이 진입",
+   "셀프 백드롭",
+   "매트 티샷",
+   "인도어 연습장",
+   "식당·조식",
+   "그늘집",
+   "클럽 렌탈 여부",
+   "클럽 렌탈 요금",
+   "좌타용 클럽",
+   "골프화 대여",
+   "제세금",
+   "동계 휴장 공지(2026-27)",
+   "9홀 단독 요금",
+   "야간(3부) 12월 요금"
+  ],
+  "unconfirmed_labels_added": [
+   "제세금"
+  ],
+  "sources": [
+   "https://www.boryeongbase.co.kr/",
+   "https://wondergolf.co.kr/courses/kr-kakao-1707298397",
+   "https://greenfeeguide.co.kr/course/gc-0302/",
+   "https://www.boryeongbase.co.kr/Board/View.aspx?cfgid=notice&page=1&postidx=3152",
+   "https://www.boryeongbase.co.kr/Board/List.aspx?cfgid=notice",
+   "https://www.boryeongbase.co.kr/Golf/UseInfo.aspx"
+  ],
+  "collected_at": "2026-11-26T10:24:30+09:00"
+ },
+ "collection": {
+  "official_site": "ok",
+  "official_reason": "운영 중(대영베이스 계열, 공식 홈페이지 정상)",
+  "pages_collected": 0,
+  "third_party": {
+   "received_report": true
+  },
+  "render_hint": "report",
+  "plan_strategy": "subagent_report(2026-11-26)"
+ },
+ "coverage": {
+  "basic": 1.0,
+  "course": 0.8,
+  "fee": 1.0,
+  "ops": 0.43,
+  "facility": 0.5,
+  "briefing": 0.75,
+  "rental": 0.25
+ }
+}

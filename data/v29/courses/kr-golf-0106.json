@@ -1,0 +1,997 @@
+{
+ "course_id": "kr-golf-0106",
+ "meta": {
+  "name": "뉴서울컨트리클럽",
+  "generated_at": "2026-11-26T09:51:51+09:00",
+  "schema": "stage2c/1.0",
+  "batch": "1_수도권",
+  "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
+  "schema_previous": "stage2b/1.0",
+  "restructured_from_7key": true,
+  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
+  "has_detail": true,
+  "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+ },
+ "master": {
+  "course_id": "kr-golf-0106",
+  "name": "뉴서울컨트리클럽",
+  "name_variants": [
+   "뉴서울컨트리클럽"
+  ],
+  "type": "회원제",
+  "holes": {
+   "total": 36,
+   "member": 36,
+   "public": 0,
+   "non_member": 0
+  },
+  "address": "경기도 광주시 삼지곡길 95(삼동)",
+  "region": {
+   "sido_code": "41",
+   "sido_name": "경기도",
+   "sido_short": "경기",
+   "sigungu_code": "41610",
+   "sigungu_name": "광주시",
+   "legal_dong_code": "4161000000"
+  },
+  "lat": 37.423744,
+  "lng": 127.209523,
+  "nearest_ic": {
+   "name": "직동IC",
+   "distance_km": 2.4,
+   "source": "teepick(실측 표기)",
+   "straight_km_nearest": 7.6,
+   "straight_name": "광남IC"
+  },
+  "tel": "031-760-8071",
+  "homepage": "https://www.newseoulgolf.co.kr/",
+  "operators": [
+   "한국문화예술위원회"
+  ],
+  "area_sqm": 2546525,
+  "opened": "1987",
+  "course_blocks": [],
+  "facility_id": null,
+  "provenance": {
+   "master": "courses_master.json v2.0 (문체부·KGA·KGBA·티픽·지도)",
+   "synced_to": "courses_master.json v2.7 (2026-11-26 단일 스키마 정규화)"
+  },
+  "designer": {
+   "value": "장정원, 임상하임상하(임골프)",
+   "source": "그린피가이드",
+   "url": "https://greenfeeguide.co.kr/course/gc-0073/"
+  },
+  "par": null,
+  "holes_teepick": 36,
+  "course_spec": {
+   "holes": 36,
+   "par": null,
+   "blocks": [],
+   "length_m": null,
+   "kga": {
+    "kga_course_code": "68",
+    "kga_name": "뉴서울",
+    "region_short": "경기",
+    "address": "경기 광주시 삼지곡길 95",
+    "match_method": "exact",
+    "match_score": 105,
+    "match_confidence": "high",
+    "nine_hole_courses": [
+     "아트",
+     "문화"
+    ],
+    "hole_combinations": [
+     {
+      "course_name_1": "아트 (Out)",
+      "course_name_2": "아트 (In)",
+      "tees": [
+       {
+        "tee": "BLUE",
+        "gender": "남자",
+        "length_yds": 6697.0,
+        "std_par": 72.0,
+        "course_rating": 72.8,
+        "slope_rating": 132.0,
+        "front9": "36.6 / 136",
+        "back9": "36.2 / 128"
+       },
+       {
+        "tee": "WHITE",
+        "gender": "남자",
+        "length_yds": 6189.0,
+        "std_par": 72.0,
+        "course_rating": 70.1,
+        "slope_rating": 129.0,
+        "front9": "35.1 / 131",
+        "back9": "35.0 / 126"
+       },
+       {
+        "tee": "RED",
+        "gender": "여자",
+        "length_yds": 5459.0,
+        "std_par": 72.0,
+        "course_rating": 71.6,
+        "slope_rating": 128.0,
+        "front9": "36.2 / 130",
+        "back9": "35.4 / 126"
+       }
+      ]
+     },
+     {
+      "course_name_1": "문화 (Out)",
+      "course_name_2": "문화 (In)",
+      "tees": [
+       {
+        "tee": "Back",
+        "gender": "남자",
+        "length_yds": 7049.0,
+        "std_par": 72.0,
+        "course_rating": 74.3,
+        "slope_rating": 135.0,
+        "front9": "37.2 / 138",
+        "back9": "37.1 / 132"
+       },
+       {
+        "tee": "Regular",
+        "gender": "남자",
+        "length_yds": 6590.0,
+        "std_par": 72.0,
+        "course_rating": 72.1,
+        "slope_rating": 131.0,
+        "front9": "36.1 / 130",
+        "back9": "36.0 / 132"
+       },
+       {
+        "tee": "Lady",
+        "gender": "여자",
+        "length_yds": 5469.0,
+        "std_par": 72.0,
+        "course_rating": 72.6,
+        "slope_rating": 133.0,
+        "front9": "36.2 / 136",
+        "back9": "36.4 / 130"
+       }
+      ]
+     }
+    ]
+   },
+   "grass": {
+    "value": "페어웨이 야지",
+    "source": "그린피가이드(공식 코스소개 인용)",
+    "url": "https://greenfeeguide.co.kr/course/gc-0073/"
+   },
+   "hole_by_hole": null
+  },
+  "addresses": [
+   "경기도 광주시 삼지곡길 95(삼동)"
+  ],
+  "status": "operating",
+  "facility_cluster": null,
+  "factcheck_2026_11_26": null
+ },
+ "course": {
+  "holes": 36,
+  "holes_received": 36,
+  "course_names": null,
+  "membership_type": "회원제",
+  "night_light": null,
+  "blocks": [],
+  "grass": {
+   "tee": null,
+   "fairway": {
+    "value": "페어웨이 야지",
+    "source": "그린피가이드(공식 코스소개 인용)",
+    "url": "https://greenfeeguide.co.kr/course/gc-0073/"
+   },
+   "green": null
+  },
+  "kga": {
+   "kga_course_code": "68",
+   "kga_name": "뉴서울",
+   "region_short": "경기",
+   "address": "경기 광주시 삼지곡길 95",
+   "match_method": "exact",
+   "match_score": 105,
+   "match_confidence": "high",
+   "nine_hole_courses": [
+    "아트",
+    "문화"
+   ],
+   "hole_combinations": [
+    {
+     "course_name_1": "아트 (Out)",
+     "course_name_2": "아트 (In)",
+     "tees": [
+      {
+       "tee": "BLUE",
+       "gender": "남자",
+       "length_yds": 6697.0,
+       "std_par": 72.0,
+       "course_rating": 72.8,
+       "slope_rating": 132.0,
+       "front9": "36.6 / 136",
+       "back9": "36.2 / 128"
+      },
+      {
+       "tee": "WHITE",
+       "gender": "남자",
+       "length_yds": 6189.0,
+       "std_par": 72.0,
+       "course_rating": 70.1,
+       "slope_rating": 129.0,
+       "front9": "35.1 / 131",
+       "back9": "35.0 / 126"
+      },
+      {
+       "tee": "RED",
+       "gender": "여자",
+       "length_yds": 5459.0,
+       "std_par": 72.0,
+       "course_rating": 71.6,
+       "slope_rating": 128.0,
+       "front9": "36.2 / 130",
+       "back9": "35.4 / 126"
+      }
+     ]
+    },
+    {
+     "course_name_1": "문화 (Out)",
+     "course_name_2": "문화 (In)",
+     "tees": [
+      {
+       "tee": "Back",
+       "gender": "남자",
+       "length_yds": 7049.0,
+       "std_par": 72.0,
+       "course_rating": 74.3,
+       "slope_rating": 135.0,
+       "front9": "37.2 / 138",
+       "back9": "37.1 / 132"
+      },
+      {
+       "tee": "Regular",
+       "gender": "남자",
+       "length_yds": 6590.0,
+       "std_par": 72.0,
+       "course_rating": 72.1,
+       "slope_rating": 131.0,
+       "front9": "36.1 / 130",
+       "back9": "36.0 / 132"
+      },
+      {
+       "tee": "Lady",
+       "gender": "여자",
+       "length_yds": 5469.0,
+       "std_par": 72.0,
+       "course_rating": 72.6,
+       "slope_rating": 133.0,
+       "front9": "36.2 / 136",
+       "back9": "36.4 / 130"
+      }
+     ]
+    }
+   ]
+  },
+  "kga_hole_est": null,
+  "extra_courses": null,
+  "hole_by_hole": null,
+  "length_m": null,
+  "par": null
+ },
+ "fee": {
+  "weekday": 220000,
+  "weekend": 300000,
+  "weekday_text": null,
+  "weekend_text": null,
+  "basis": null,
+  "tax_included": null,
+  "cart": {
+   "value": 120000,
+   "source": "그린피가이드",
+   "url": "https://greenfeeguide.co.kr/course/gc-0073/"
+  },
+  "caddie": {
+   "value": 150000,
+   "source": "그린피가이드",
+   "url": "https://greenfeeguide.co.kr/course/gc-0073/",
+   "none": false
+  },
+  "as_of": "2026-11-01",
+  "source_url": null,
+  "note": null,
+  "sources": [
+   {
+    "source": "그린피가이드(공식 요금표 확인)",
+    "url": "https://greenfeeguide.co.kr/course/gc-0073/",
+    "checked_at": "2026-11-01"
+   }
+  ],
+  "checked_at": "2026-11-01",
+  "market": {
+   "weekday_min": 160000.0,
+   "weekend_min": 240000.0,
+   "part1": null,
+   "part2": null,
+   "source": "티픽골프장(실거래 관측)",
+   "url": "https://teepickgolf.com/course/%EB%89%B4%EC%84%9C%EC%9A%B8",
+   "note": "공시가 아닌 최근 관측 실거래 최저가"
+  },
+  "official_green_evidence": [],
+  "official_rental": {
+   "value": 50000,
+   "raw": "50,000 원(Full Set)",
+   "label": "구분 / 대여료 / 골프채",
+   "url": "https://www.newseoulgolf.co.kr/guide/fee.asp",
+   "source": "공식 요금표"
+  },
+  "official_table": {
+   "rows": [
+    {
+     "section": "",
+     "label": "주말·공휴일 / 회원의 날 / 정회원",
+     "value": "70,000 원",
+     "amounts": [
+      70000
+     ],
+     "url": "https://www.newseoulgolf.co.kr/guide/fee.asp"
+    },
+    {
+     "section": "",
+     "label": "",
+     "value": "75,000 원",
+     "amounts": [
+      75000
+     ],
+     "url": "https://www.newseoulgolf.co.kr/guide/fee.asp"
+    },
+    {
+     "section": "",
+     "label": "",
+     "value": "75,000 원",
+     "amounts": [
+      75000
+     ],
+     "url": "https://www.newseoulgolf.co.kr/guide/fee.asp"
+    },
+    {
+     "section": "",
+     "label": "비회원",
+     "value": "220,000 원",
+     "amounts": [
+      220000
+     ],
+     "url": "https://www.newseoulgolf.co.kr/guide/fee.asp"
+    },
+    {
+     "section": "",
+     "label": "",
+     "value": "300,000 원",
+     "amounts": [
+      300000
+     ],
+     "url": "https://www.newseoulgolf.co.kr/guide/fee.asp"
+    },
+    {
+     "section": "",
+     "label": "",
+     "value": "300,000 원",
+     "amounts": [
+      300000
+     ],
+     "url": "https://www.newseoulgolf.co.kr/guide/fee.asp"
+    },
+    {
+     "section": "",
+     "label": "가족회원",
+     "value": "160,000 원",
+     "amounts": [
+      160000
+     ],
+     "url": "https://www.newseoulgolf.co.kr/guide/fee.asp"
+    },
+    {
+     "section": "",
+     "label": "",
+     "value": "300,000 원",
+     "amounts": [
+      300000
+     ],
+     "url": "https://www.newseoulgolf.co.kr/guide/fee.asp"
+    },
+    {
+     "section": "",
+     "label": "",
+     "value": "300,000 원",
+     "amounts": [
+      300000
+     ],
+     "url": "https://www.newseoulgolf.co.kr/guide/fee.asp"
+    },
+    {
+     "section": "150,000 원 / 전동카트 4 BAG(1팀)",
+     "label": "18 홀 / 9 홀 / 예술/문화 코스",
+     "value": "150,000 원 / 전동카트 4 BAG(1팀)",
+     "amounts": [
+      150000
+     ],
+     "url": "https://www.newseoulgolf.co.kr/guide/fee.asp"
+    },
+    {
+     "section": "100,000 원 / 전동카트 4 BAG(1팀)",
+     "label": "",
+     "value": "100,000 원 / 전동카트 4 BAG(1팀)",
+     "amounts": [
+      100000
+     ],
+     "url": "https://www.newseoulgolf.co.kr/guide/fee.asp"
+    },
+    {
+     "section": "대여료",
+     "label": "구분 / 대여료 / 골프채",
+     "value": "50,000 원(Full Set)",
+     "amounts": [
+      50000
+     ],
+     "url": "https://www.newseoulgolf.co.kr/guide/fee.asp"
+    },
+    {
+     "section": "대여료",
+     "label": "퍼터",
+     "value": "10,000 원",
+     "amounts": [
+      10000
+     ],
+     "url": "https://www.newseoulgolf.co.kr/guide/fee.asp"
+    },
+    {
+     "section": "대여료",
+     "label": "골프화",
+     "value": "4,000 원",
+     "amounts": [
+      4000
+     ],
+     "url": "https://www.newseoulgolf.co.kr/guide/fee.asp"
+    },
+    {
+     "section": "전동카트 이용료",
+     "label": "전동카트 이용료",
+     "value": "18 홀 120,000 원",
+     "amounts": [
+      120000
+     ],
+     "url": "https://www.newseoulgolf.co.kr/guide/fee.asp"
+    },
+    {
+     "section": "리무진카트 이용료(6인승)",
+     "label": "리무진카트 이용료(6인승)",
+     "value": "18 홀 220,000 원",
+     "amounts": [
+      220000
+     ],
+     "url": "https://www.newseoulgolf.co.kr/guide/fee.asp"
+    },
+    {
+     "section": "구분",
+     "label": "평일 / 주말·공휴일·회원의날 / 정회원",
+     "value": "35,000 원",
+     "amounts": [
+      35000
+     ],
+     "url": "https://www.newseoulgolf.co.kr/guide/fee.asp"
+    },
+    {
+     "section": "구분",
+     "label": "",
+     "value": "40,000 원",
+     "amounts": [
+      40000
+     ],
+     "url": "https://www.newseoulgolf.co.kr/guide/fee.asp"
+    },
+    {
+     "section": "구분",
+     "label": "비회원",
+     "value": "100,000 원",
+     "amounts": [
+      100000
+     ],
+     "url": "https://www.newseoulgolf.co.kr/guide/fee.asp"
+    },
+    {
+     "section": "구분",
+     "label": "",
+     "value": "120,000 원",
+     "amounts": [
+      120000
+     ],
+     "url": "https://www.newseoulgolf.co.kr/guide/fee.asp"
+    },
+    {
+     "section": "전동카트료/리무진카트료",
+     "label": "평일 / 주말,공휴일 / 1홀",
+     "value": "10,000 원",
+     "amounts": [
+      10000
+     ],
+     "url": "https://www.newseoulgolf.co.kr/guide/fee.asp"
+    },
+    {
+     "section": "전동카트료/리무진카트료",
+     "label": "",
+     "value": "10,000 원",
+     "amounts": [
+      10000
+     ],
+     "url": "https://www.newseoulgolf.co.kr/guide/fee.asp"
+    },
+    {
+     "section": "전동카트료/리무진카트료",
+     "label": "",
+     "value": "20,000 원",
+     "amounts": [
+      20000
+     ],
+     "url": "https://www.newseoulgolf.co.kr/guide/fee.asp"
+    },
+    {
+     "section": "전동카트료/리무진카트료",
+     "label": "",
+     "value": "20,000 원",
+     "amounts": [
+      20000
+     ],
+     "url": "https://www.newseoulgolf.co.kr/guide/fee.asp"
+    },
+    {
+     "section": "전동카트료/리무진카트료",
+     "label": "",
+     "value": "7,000 원 / 13,000 원",
+     "amounts": [
+      7000,
+      13000
+     ],
+     "url": "https://www.newseoulgolf.co.kr/guide/fee.asp"
+    },
+    {
+     "section": "전동카트료/리무진카트료",
+     "label": "2홀",
+     "value": "10,000 원",
+     "amounts": [
+      10000
+     ],
+     "url": "https://www.newseoulgolf.co.kr/guide/fee.asp"
+    },
+    {
+     "section": "전동카트료/리무진카트료",
+     "label": "",
+     "value": "10,000 원",
+     "amounts": [
+      10000
+     ],
+     "url": "https://www.newseoulgolf.co.kr/guide/fee.asp"
+    },
+    {
+     "section": "전동카트료/리무진카트료",
+     "label": "",
+     "value": "30,000 원",
+     "amounts": [
+      30000
+     ],
+     "url": "https://www.newseoulgolf.co.kr/guide/fee.asp"
+    },
+    {
+     "section": "전동카트료/리무진카트료",
+     "label": "",
+     "value": "40,000 원",
+     "amounts": [
+      40000
+     ],
+     "url": "https://www.newseoulgolf.co.kr/guide/fee.asp"
+    },
+    {
+     "section": "전동카트료/리무진카트료",
+     "label": "",
+     "value": "14,000 원 / 25,000 원",
+     "amounts": [
+      14000,
+      25000
+     ],
+     "url": "https://www.newseoulgolf.co.kr/guide/fee.asp"
+    }
+   ],
+   "url": "https://www.newseoulgolf.co.kr/guide/fee.asp"
+  }
+ },
+ "cancel": {
+  "cancel_policy": {
+   "value": "평일 3일 전 · 주말 4일 전까지(이용약관 기준)정기 휴장일매주 월요일카트리무진카트(6인승) 18홀 220,000원개장·설계1987년 개장 ·",
+   "source": "그린피가이드(공식 인용)",
+   "url": "https://greenfeeguide.co.kr/course/gc-0073/"
+  },
+  "open_cycle": null,
+  "notes": null,
+  "evidence": [
+   "취소 제출 민원접수/부패·공익신고 일반신고 부패·공익신고 닫기 성희롱/직장내괴롭힘 온라인 창구 한국문화진흥주식회사 에서는 익명 또는 기명으로 신고서를 접수하고 있습니다.",
+   "취소 제출 민원접수/부패·공익신고 일반신고 부패·공익신고 닫기 성희롱/직장내괴롭힘 온라인 창구 한국문화진흥주식회사 에서는 익명 또는 기명으로 신고서를 접수하고 있습니다.",
+   "취소 제출 민원접수/부패·공익신고 일반신고 부패·공익신고 닫기 성희롱/직장내괴롭힘 온라인 창구 한국문화진흥주식회사 에서는 익명 또는 기명으로 신고서를 접수하고 있습니다."
+  ],
+  "weather_evidence": []
+ },
+ "ops": {
+  "nocaddie": {
+   "evidence": [],
+   "value": null
+  },
+  "two_player": {
+   "evidence": [
+    "실시간 예약 현황 실시간예약현황 예약일자 예약시간 예약코스 홀 NoCount 예약변경 예약취소 잔여타임 예약 현황 잔여타임예약현황 예약일자 예약시간 예약코스 홀 예약변경 예약취소 9홀 예약 현황 9홀예약현황 예약일자 예약시간 예약코스 홀 예약변경 예약취소 회원의날 예약 현황 회원의날예약현황 예약일자 예약시간 예약코스 홀 예약변경 예약취소 조인 예약 현황 조인예약현황 예약일자 예약시간 예약코스 홀 예약취소 이 페이지에서 제공하는 정보에 대하여 어느 정도 만족하십니까?"
+   ],
+   "value": null,
+   "third_party": {
+    "two": null,
+    "three": null,
+    "source": "그린피가이드",
+    "url": "https://greenfeeguide.co.kr/course/gc-0073/"
+   }
+  },
+  "three_player": {
+   "value": null,
+   "evidence": []
+  },
+  "five_player": {
+   "value": null,
+   "evidence": []
+  },
+  "marshal_caddie": {
+   "value": null,
+   "evidence": []
+  },
+  "cart_type": {
+   "evidence": [
+    "리무진카트(6인승) 18홀 220,000원"
+   ],
+   "value": "리무진카트(6인승)",
+   "source_url": "https://www.newseoulgolf.co.kr/guide/fee.asp",
+   "confidence": "high",
+   "checked_at": "2026-10-22",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/golf-cart-limousine-fairway-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  },
+  "cart_entry": {
+   "evidence": [],
+   "value": null
+  },
+  "bagdrop": {
+   "evidence": [],
+   "value": null
+  },
+  "mat": {
+   "evidence": [],
+   "value": null
+  },
+  "checkin": {
+   "evidence": [],
+   "value": null,
+   "third_party": {
+    "value": null,
+    "source": "그린피가이드",
+    "url": "https://greenfeeguide.co.kr/course/gc-0073/"
+   }
+  },
+  "locker": {
+   "evidence": [
+    "2. 락카, 샤워실 등 클럽하우스 시설 이용에 부과되는 요금"
+   ],
+   "value": "락커 운영",
+   "source_url": "https://www.newseoulgolf.co.kr/guide/term.asp",
+   "confidence": "low",
+   "source_type": "official_site",
+   "page_label": "이용약관",
+   "value_from": "capital_supplement(official_site)"
+  },
+  "sauna": {
+   "evidence": [
+    "사우나 있음 · 퍼팅 연습 그린·어프로치 연습 · 주차 발렛 파킹 · 프로샵"
+   ],
+   "value": "사우나 운영",
+   "source_url": "https://www.newseoulgolf.co.kr/guide/facil/clubhouse.asp",
+   "confidence": "high",
+   "checked_at": "2026-10-20",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/golf-course-amenities-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  },
+  "dress": {
+   "evidence": [
+    "라운드시 삼가 하여야 하는 복장"
+   ],
+   "value": "복장 규정 안내",
+   "source_url": "https://www.newseoulgolf.co.kr/guide/guestInfo.asp",
+   "confidence": "medium",
+   "source_type": "official_site",
+   "page_label": "",
+   "value_from": "capital_supplement(official_site)"
+  },
+  "pace": {
+   "evidence": [],
+   "value": null
+  },
+  "grass": "페어웨이 야지",
+  "cart_limousine": {
+   "value": "리무진카트(6인승) 18홀 220,000원",
+   "evidence": [
+    "리무진카트(6인승) 18홀 220,000원"
+   ],
+   "source_url": "https://www.newseoulgolf.co.kr/guide/fee.asp",
+   "confidence": "high",
+   "checked_at": "2026-10-22",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/golf-cart-limousine-fairway-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  }
+ },
+ "facilities": {
+  "practice": {
+   "evidence": [
+    "퍼팅 연습 그린·어프로치 연습"
+   ],
+   "value": "퍼팅연습그린 · 어프로치연습",
+   "source_url": "https://www.newseoulgolf.co.kr/guide/facil/clubhouse.asp",
+   "confidence": "high",
+   "checked_at": "2026-10-20",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/golf-course-amenities-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  },
+  "indoor_range": {
+   "value": null,
+   "evidence": []
+  },
+  "food": {
+   "evidence": [
+    "해장국 메뉴 황태 순두부 해장국(26,000원)"
+   ],
+   "value": "해장국 메뉴 황태 순두부 해장국(26,000원)",
+   "source_url": "https://www.newseoulgolf.co.kr/guide/feeMenu.asp",
+   "confidence": "high",
+   "checked_at": "2026-10-21",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/golf-course-food-price-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  },
+  "snack_bar": {
+   "value": null,
+   "evidence": []
+  },
+  "locker_sauna": {
+   "value": null,
+   "evidence": []
+  },
+  "lodging": {
+   "value": null,
+   "evidence": []
+  },
+  "other": {
+   "value": null,
+   "evidence": []
+  },
+  "night": {
+   "evidence": [
+    "2008 라이트 시설 도입"
+   ],
+   "value": "야간 조명(라이트) 시설 운영",
+   "source_url": "https://www.newseoulgolf.co.kr/club/clubInfo.asp",
+   "confidence": "medium",
+   "source_type": "official_site",
+   "page_label": "",
+   "value_from": "capital_supplement(official_site)"
+  },
+  "closed_days": {
+   "evidence": [
+    "매주 월요일"
+   ],
+   "third_party": "매주 월요일카트리무진카트",
+   "value": "매주 월요일",
+   "source_url": "https://www.newseoulgolf.co.kr/guide/term.asp",
+   "confidence": "high",
+   "checked_at": "2026-10-11",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/golf-course-closing-day-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  },
+  "shuttle": {
+   "evidence": [],
+   "value": null
+  },
+  "ev_charge": {
+   "evidence": [],
+   "value": null
+  },
+  "gf_facilities": [
+   "프로샵근거골프장 공식 홈페이지 시설 안내 · 2026"
+  ],
+  "proshop": {
+   "evidence": [
+    "사우나 있음 · 퍼팅 연습 그린·어프로치 연습 · 주차 발렛 파킹 · 프로샵"
+   ],
+   "value": "프로샵 운영",
+   "source_url": "https://www.newseoulgolf.co.kr/guide/facil/clubhouse.asp",
+   "confidence": "high",
+   "checked_at": "2026-10-20",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/golf-course-amenities-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  },
+  "parking": {
+   "value": "선택제 주차서비스(자기주차,주차대행)",
+   "evidence": [
+    "선택제 주차서비스(자기주차,주차대행)"
+   ],
+   "source_url": "https://www.newseoulgolf.co.kr/guide/facil/clubhouse.asp",
+   "confidence": "high",
+   "checked_at": "2026-10-20",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/golf-course-amenities-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  }
+ },
+ "rental": {
+  "available": "가능",
+  "full_set": 50000,
+  "fee_text": "50,000 원(Full Set)",
+  "brand": null,
+  "left_handed": null,
+  "shoes": null,
+  "nine_hole": null,
+  "range_finder": null,
+  "reservation": null,
+  "source_url": "https://www.newseoulgolf.co.kr/guide/fee.asp",
+  "evidence": [],
+  "official": {
+   "value": 50000,
+   "raw": "50,000 원(Full Set)",
+   "label": "구분 / 대여료 / 골프채",
+   "url": "https://www.newseoulgolf.co.kr/guide/fee.asp",
+   "source": "공식 요금표"
+  },
+  "nearby_delivery": {
+   "region": "수도권",
+   "sido": "경기도",
+   "verified_at": "2026-11-26 (KST)",
+   "checked_at": "2026-11-26",
+   "providers": [
+    {
+     "id": "theb",
+     "name": "더비 (The B)",
+     "coverage": "O",
+     "basis": "동탄·김포·시흥·용인·이천 24시간 무인픽업 매장 5곳 + 다마스 퀵/택배 배송. 홈페이지에 '강남·동탄·판교·수지·광교·분당', '시흥·배곧·인천·안산·송도', '이천·여주' 권역 표기.",
+     "phone": "010-2530-4575",
+     "operating_status": "정상 영업",
+     "delivery": "O",
+     "price_headline": "12시간 기준 90,000원부터",
+     "bookable": true
+    },
+    {
+     "id": "gangnamclub",
+     "name": "강남골프클럽렌탈",
+     "coverage": "O",
+     "basis": "서울 서초구 거점 매장 주소 공개, 자사 블로그 '전지역 배송 가능' 안내.",
+     "phone": "010-7407-0753",
+     "operating_status": "정상 영업(자사 블로그 최신 게시 2026-04-28)",
+     "delivery": "미확인",
+     "price_headline": null,
+     "bookable": true
+    },
+    {
+     "id": "apioz",
+     "name": "아피오즈 (Apioz)",
+     "coverage": "조건부",
+     "basis": "서울 숙소 배송·공항 픽업 옵션 안내. 단 골프세트 Sold Out으로 현재 이용 불가.",
+     "phone": "02-6956-8115",
+     "operating_status": "예약 중단(Sold Out) — 골프채 세트 한정",
+     "delivery": "미확인",
+     "price_headline": null,
+     "caution": "골프채 세트 Sold Out — 현재 예약 불가",
+     "bookable": false,
+     "bookable_reason": "골프채 세트 Sold Out — 현재 예약 불가"
+    }
+   ],
+   "provider_count": 3,
+   "legend": {
+    "O": "공식 안내로 해당 권역 이용이 확인됨",
+    "X": "공식 안내상 해당 권역 서비스가 없음(예: '제주 전 지역' 전용으로만 안내)",
+    "조건부": "공식 안내상 가능하나 조건(수단·요금·현재 판매중지 등)이 붙어 있음. 조건은 basis/detail에 기재",
+    "미확인": "공식 공개 안내에서 해당 항목에 대한 언급을 찾지 못함(추정하지 않음)"
+   },
+   "not_verified": "전화·문자·카카오톡 상담으로만 확인 가능한 항목(재고, 개별 견적, 권역별 실제 배송 가능 여부)은 '미확인'으로 남김",
+   "source_file": "5-rental_8_coverage_verified.json",
+   "note_code": "해외 골퍼용 골프채 렌탈·딜리버리 업체. 같은 권역이라도 실제 배송 가능 여부·재고·견적은 전화 확인 필요."
+  },
+  "fee_source": {
+   "label": "구분 / 대여료 / 골프채",
+   "url": "https://www.newseoulgolf.co.kr/guide/fee.asp",
+   "source": "공식 요금표",
+   "raw": "50,000 원(Full Set)"
+  }
+ },
+ "briefing": {
+  "notices": {
+   "url": "https://www.newseoulgolf.co.kr/member/reser/reserCheck.asp",
+   "items": [
+    {
+     "title": "스타트 그늘집 미운영 안내",
+     "date": "2026-11-20",
+     "url": "https://www.newseoulgolf.co.kr/"
+    },
+    {
+     "title": "2026년 12월 월간단체 모집안내",
+     "date": "2026-11-03",
+     "url": "https://www.newseoulgolf.co.kr/"
+    },
+    {
+     "title": "2026년 12월 비회원 입장료 안내",
+     "date": "2026-10-29",
+     "url": "https://www.newseoulgolf.co.kr/"
+    },
+    {
+     "title": "2026년 12월 주말·공휴일 예약 일정(예약일 기준)",
+     "date": "2026-10-29",
+     "url": "https://www.newseoulgolf.co.kr/"
+    }
+   ],
+   "tags": {
+    "운영": [
+     {
+      "title": "스타트 그늘집 미운영 안내",
+      "date": "2026-11-20",
+      "url": "https://www.newseoulgolf.co.kr/"
+     }
+    ],
+    "모집": [
+     {
+      "title": "2026년 12월 월간단체 모집안내",
+      "date": "2026-11-03",
+      "url": "https://www.newseoulgolf.co.kr/"
+     }
+    ]
+   }
+  },
+  "review": {
+   "score_10": 8.9,
+   "count": 338,
+   "source": "티픽골프장 라운더 후기 집계",
+   "url": "https://teepickgolf.com/course/%EB%89%B4%EC%84%9C%EC%9A%B8"
+  },
+  "fee_change": null,
+  "collected_at": "2026-11-26T09:51:51+09:00",
+  "recent_notice_text": null,
+  "course_notes": null,
+  "alert": null,
+  "unconfirmed": [],
+  "sources": []
+ },
+ "collection": {
+  "official_site": "ok",
+  "official_reason": null,
+  "pages_collected": 14,
+  "third_party": {
+   "teepick": true,
+   "greenfeeguide": true
+  },
+  "render_hint": "static",
+  "plan_strategy": "static(직접 파싱)",
+  "browser_batch": false
+ },
+ "coverage": {
+  "basic": 1.0,
+  "course": 0.8,
+  "fee": 1.0,
+  "ops": 0.29,
+  "facility": 0.4,
+  "briefing": 0.5,
+  "rental": 1.0
+ }
+}

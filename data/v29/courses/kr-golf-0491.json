@@ -1,0 +1,485 @@
+{
+ "course_id": "kr-golf-0491",
+ "meta": {
+  "name": "무주덕유산CC",
+  "generated_at": "2026-11-26T10:25:43+09:00",
+  "schema": "stage2c/1.0",
+  "batch": "4_호남",
+  "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
+  "schema_previous": "stage2b/1.0",
+  "restructured_from_7key": true,
+  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
+  "has_detail": true,
+  "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+ },
+ "master": {
+  "course_id": "kr-golf-0491",
+  "name": "무주덕유산CC",
+  "name_variants": [
+   "무주덕유산CC"
+  ],
+  "type": "회원제",
+  "holes": {
+   "total": 18,
+   "member": 18,
+   "public": 0,
+   "non_member": 0
+  },
+  "address": "전북특별자치도 무주군 설천면 만선로 185",
+  "region": {
+   "sido_code": "52",
+   "sido_name": "전북특별자치도",
+   "sido_short": "전북",
+   "sigungu_code": "52730",
+   "sigungu_name": "무주군",
+   "legal_dong_code": "5273000000"
+  },
+  "lat": 35.886331,
+  "lng": 127.726099,
+  "nearest_ic": {
+   "name": "스키IC",
+   "distance_km": 3.0,
+   "source": "teepick(실측 표기)",
+   "straight_km_nearest": 8.7,
+   "straight_name": "덕유산IC"
+  },
+  "tel": "063-322-9000",
+  "homepage": "https://www.mdysresort.com/",
+  "operators": [
+   "㈜무주덕유산리조트(이중근 이종혁)"
+  ],
+  "area_sqm": 848000,
+  "opened": null,
+  "course_blocks": [],
+  "facility_id": null,
+  "provenance": {
+   "master": "courses_master.json v2.0 (문체부·KGA·KGBA·티픽·지도)",
+   "synced_to": "courses_master.json v2.7 (2026-11-26 단일 스키마 정규화)"
+  },
+  "par": null,
+  "holes_teepick": 18,
+  "course_spec": {
+   "holes": 18,
+   "par": null,
+   "blocks": [],
+   "length_m": null,
+   "kga": null,
+   "grass": null,
+   "hole_by_hole": null
+  },
+  "addresses": [
+   "전북특별자치도 무주군 설천면 만선로 185"
+  ],
+  "status": "operating",
+  "facility_cluster": null,
+  "factcheck_2026_11_26": null,
+  "opened_evidence": {
+   "evidence": "26/27 동계시즌 개장안내2026-11-25 확인 다음글다음글이 없습니다.",
+   "source": "공식",
+   "url": "https://www.mdysresort.com/guide/notice_con.asp?idx=2588"
+  }
+ },
+ "course": {
+  "holes": 18,
+  "holes_received": 18,
+  "course_names": null,
+  "membership_type": "회원제",
+  "night_light": null,
+  "blocks": [],
+  "grass": {
+   "tee": null,
+   "fairway": null,
+   "green": null
+  },
+  "kga": null,
+  "kga_hole_est": null,
+  "extra_courses": null,
+  "hole_by_hole": null,
+  "length_m": null,
+  "par": null
+ },
+ "fee": {
+  "weekday": 100000,
+  "weekend": 160000,
+  "weekday_text": null,
+  "weekend_text": null,
+  "basis": null,
+  "tax_included": null,
+  "cart": {
+   "value": 100000,
+   "source": "그린피가이드",
+   "url": "https://greenfeeguide.co.kr/course/gc-0435/"
+  },
+  "caddie": {
+   "value": 150000,
+   "source": "그린피가이드",
+   "url": "https://greenfeeguide.co.kr/course/gc-0435/",
+   "none": false
+  },
+  "as_of": "2026-11-01",
+  "source_url": null,
+  "note": null,
+  "sources": [
+   {
+    "source": "그린피가이드(지역 요금표)",
+    "url": "https://greenfeeguide.co.kr/region/jeonbuk/"
+   },
+   {
+    "source": "그린피가이드(공식 요금표 확인)",
+    "url": "https://greenfeeguide.co.kr/course/gc-0435/",
+    "checked_at": "2026-11-01"
+   }
+  ],
+  "checked_at": "2026-11-01",
+  "market": {
+   "weekday_min": null,
+   "weekend_min": 161000.0,
+   "part1": null,
+   "part2": null,
+   "source": "티픽골프장(실거래 관측)",
+   "url": "https://teepickgolf.com/course/%EB%AC%B4%EC%A3%BC%20%EB%8D%95%EC%9C%A0%EC%82%B0cc",
+   "note": "공시가 아닌 최근 관측 실거래 최저가"
+  },
+  "official_green_evidence": [],
+  "official_rental": null,
+  "region_table": {
+   "weekday": 100000,
+   "weekend": 160000,
+   "cart": 100000,
+   "caddie": 150000,
+   "holes": "18",
+   "type": "회원제",
+   "source": "그린피가이드(지역 요금표)",
+   "url": "https://greenfeeguide.co.kr/region/jeonbuk/"
+  }
+ },
+ "cancel": {
+  "cancel_policy": null,
+  "open_cycle": null,
+  "notes": null,
+  "evidence": [
+   "NO 내용 점수 비고 1 예약부도(NO-SHOW) 및 당일 취소 감점 30점 4주 예약 정지 2 회원 예약 후 비회원들만 내방한 경우 감점 30점 입장 불가 및 예약 부도 처리 3 회원 예약 후 비회원으로 변경 시 감점 15점 4 3일전 취소 감점 5점 2일전 취소 감점 10점 1일전 취소 감점 20점 5 주말 및 공휴일 라운드 감점 5점 6 주중 라운드 감점 2점 ※ 주중 위임 예약도 위약내용은 위 사항에 동일하게 적용 됩니다.",
+   "패널티 규정 내용 적용 비고 회원예약 후 미 동반 NO-SHOW 처리 및 4주 예약 정지 주말 예약 시벌점 30점 부과 NO-SHOW 4주 예약 정지 입장 불가 및 예약부도 처리 티오프 시간 이후 도착 NO-SHOW 처리 및 4주 예약 정지 골프장 내 비신사적 행위 퇴장 조치 및 4주 예약 정지(운영위원회 통보 후 게시판 공지) 지연 플레이 ·",
+   "2회 이상 위반 시 4주 예약 정지 제세공과금을 제회한나머지 금액 환불 내기 골프로 물의를 일으킨 때 공지 (게시판) 고의로 그린 및 기물 파손 시 변상 조치, 퇴장 및 2개월 예약 정지 공정위 환불규정 적용 골프 정회원 특별 혜택 ·"
+  ],
+  "weather_evidence": [
+   "중봉주면을 평평한 넓은 밭과 같다하여 덕유평전이라 부르는데 남한 지대에서는 찾아보기 힘든 아고산대(해발 1천5백~2천5백미터의 고산지대로 기상변화가 심하고 강우량이 많아 습한 지대) 특유의 영향으로 키가 자라지 않은 관목과 철쭉, 산죽 등 고산식물들이 강풍을 견디면서 군락을 이루어 서식하고 있는 모습이 장관이다."
+  ]
+ },
+ "ops": {
+  "nocaddie": {
+   "evidence": [],
+   "value": null
+  },
+  "two_player": {
+   "evidence": [
+    "정회원 또는 부회원으로만 구성된 라운드 시 주중 2인 플레이 가능 (주말(공휴일), 극성수기(7/17~8/17)제외) ·",
+    "정회원 또는 부회원으로만 구성된 라운드 시 주중 2인 플레이 가능 (주말(공휴일), 극성수기(7/17~8/17)제외) ·"
+   ],
+   "value": null,
+   "third_party": {
+    "two": null,
+    "three": null,
+    "source": "그린피가이드",
+    "url": "https://greenfeeguide.co.kr/course/gc-0435/"
+   }
+  },
+  "three_player": {
+   "value": null,
+   "evidence": []
+  },
+  "five_player": {
+   "value": null,
+   "evidence": []
+  },
+  "marshal_caddie": {
+   "value": null,
+   "evidence": []
+  },
+  "cart_type": {
+   "evidence": [
+    "회원동반 시 주중 5인 플레이 가능 - 카트 2대, 캐디 2명 동반 (예약제, 주말(공휴일), 극성수기(7/17~8/17)제외) ·",
+    "회원동반 시 주중 5인 플레이 가능 - 카트 2대, 캐디 2명 동반 (예약제, 주말(공휴일), 극성수기(7/17~8/17)제외) ·"
+   ],
+   "value": null
+  },
+  "cart_entry": {
+   "evidence": [],
+   "value": null
+  },
+  "bagdrop": {
+   "evidence": [],
+   "value": null
+  },
+  "mat": {
+   "evidence": [],
+   "value": null
+  },
+  "checkin": {
+   "evidence": [
+    "중봉에 도착하면 길이 두 갈래로 갈라지는데 오른쪽 길은 남덕유산으로 가는 종주산행로이고 왼쪽은 오수자굴을 거쳐 백련사로 내려가는 길이다.",
+    "약 50분 정도면 오수자굴에 도착하는데 고려시대 오수자 스님이 수도를 하며 득도를 했다는 유래가 있다."
+   ],
+   "value": null,
+   "third_party": {
+    "value": "30분 전",
+    "source": "그린피가이드",
+    "url": "https://greenfeeguide.co.kr/course/gc-0435/"
+   }
+  },
+  "locker": {
+   "evidence": [],
+   "value": null
+  },
+  "sauna": {
+   "evidence": [
+    "사우나는 건식/습식으로 분리되어 있으며 노천광천탕도 같이 즐기실 수 있습니다.",
+    "운영기간 2026년 7월 25일(토) ~ 2026년 8월 17일 (월) 운영시간 10:00 ~ 18:00(17:00 입장 마감, 17:30 야외탕 마감) 이용요금 (단위 : 원) 구분 일반 회원 대인 소인 대인 소인 사우나 18,000 14,000 13,000 10,000 수영복 대여 3,000 요금할인 30%할인 : 경로(65세이상), 장애인(1~3급,동반1인),국가유공자, 회원 군인, 경찰 소방관 및 가족 병역명문가, 보훈대상자 20%할인 : 객실투숙객(규정인원),관광곤도라 이용객(이용 티켓 제시 확인) 10%할인 : 제휴 신용"
+   ],
+   "value": "문구 확인(원문 근거)"
+  },
+  "dress": {
+   "evidence": [],
+   "value": null
+  },
+  "pace": {
+   "evidence": [],
+   "value": null
+  },
+  "grass": null
+ },
+ "facilities": {
+  "practice": {
+   "evidence": [
+    "구분 일반 회원 이용시간 문의전화 위치 대인 소인 대인 소인 물썰매 14,000 12,000 9,800 8,400 상세페이지참조 063)320-7336 어린이나라 유로번지 10,000 010-4696-3801 야구연습장 1회/1500원 연락처 문의 010-4659-7503 꼬마기차 단독탑승 5,000원/동반탑승 8,000원 회전목마 6,000 5,000 5,000 4,000 상세페이지참고 063)320-7339 만선정류장 앞 운영기간 및 이용시간은 상세페이지에서 확인해주시기 바랍니다."
+   ],
+   "value": null
+  },
+  "indoor_range": {
+   "value": null,
+   "evidence": []
+  },
+  "food": {
+   "evidence": [],
+   "value": null
+  },
+  "snack_bar": {
+   "value": null,
+   "evidence": []
+  },
+  "locker_sauna": {
+   "value": null,
+   "evidence": []
+  },
+  "lodging": {
+   "value": null,
+   "evidence": []
+  },
+  "other": {
+   "value": null,
+   "evidence": []
+  },
+  "night": {
+   "evidence": [],
+   "value": null
+  },
+  "closed_days": {
+   "evidence": [],
+   "third_party": null,
+   "value": null
+  },
+  "shuttle": {
+   "evidence": [],
+   "value": null
+  },
+  "ev_charge": {
+   "evidence": [],
+   "value": null
+  },
+  "gf_facilities": [
+   "편의점 · 수영장참고리조트 내 시설(야외 물놀이 수영장 하계 시즌 운영)근거골프장 공식 홈페이지 시설 안내 · 2026"
+  ],
+  "proshop": {
+   "evidence": [],
+   "value": null
+  }
+ },
+ "rental": {
+  "available": null,
+  "full_set": 50000,
+  "fee_text": null,
+  "brand": null,
+  "left_handed": null,
+  "shoes": null,
+  "nine_hole": null,
+  "range_finder": null,
+  "reservation": null,
+  "source_url": null,
+  "evidence": [],
+  "official": null,
+  "nearby_delivery": {
+   "region": "호남",
+   "sido": "전북특별자치도",
+   "verified_at": "2026-11-26 (KST)",
+   "checked_at": "2026-11-26",
+   "providers": [
+    {
+     "id": "theb",
+     "name": "더비 (The B)",
+     "coverage": "조건부",
+     "basis": "매장·퀵 안내 없음. '전국 당일 배송' 표기 및 화물택배만 해당.",
+     "phone": "010-2530-4575",
+     "operating_status": "정상 영업",
+     "delivery": "O",
+     "price_headline": "12시간 기준 90,000원부터",
+     "bookable": true
+    },
+    {
+     "id": "gangnamclub",
+     "name": "강남골프클럽렌탈",
+     "coverage": "조건부",
+     "basis": "동일(전지역 배송·별도 상담).",
+     "phone": "010-7407-0753",
+     "operating_status": "정상 영업(자사 블로그 최신 게시 2026-04-28)",
+     "delivery": "미확인",
+     "price_headline": null,
+     "bookable": true
+    }
+   ],
+   "provider_count": 2,
+   "legend": {
+    "O": "공식 안내로 해당 권역 이용이 확인됨",
+    "X": "공식 안내상 해당 권역 서비스가 없음(예: '제주 전 지역' 전용으로만 안내)",
+    "조건부": "공식 안내상 가능하나 조건(수단·요금·현재 판매중지 등)이 붙어 있음. 조건은 basis/detail에 기재",
+    "미확인": "공식 공개 안내에서 해당 항목에 대한 언급을 찾지 못함(추정하지 않음)"
+   },
+   "not_verified": "전화·문자·카카오톡 상담으로만 확인 가능한 항목(재고, 개별 견적, 권역별 실제 배송 가능 여부)은 '미확인'으로 남김",
+   "source_file": "5-rental_8_coverage_verified.json",
+   "note_code": "해외 골퍼용 골프채 렌탈·딜리버리 업체. 같은 권역이라도 실제 배송 가능 여부·재고·견적은 전화 확인 필요."
+  }
+ },
+ "briefing": {
+  "notices": {
+   "url": "https://www.mdysresort.com/guide/notice_con.asp?idx=2566",
+   "items": [
+    {
+     "title": "26/27 동계시즌 개장안내",
+     "date": "2026-11-25",
+     "url": "https://www.mdysresort.com/guide/notice_list.asp"
+    },
+    {
+     "title": "동계 첫 제설 안내",
+     "date": "2026-11-19",
+     "url": "https://www.mdysresort.com/guide/notice_list.asp"
+    },
+    {
+     "title": "시즌락커판매 실시",
+     "date": "2026-11-17",
+     "url": "https://www.mdysresort.com/guide/notice_list.asp"
+    },
+    {
+     "title": "동계 국민호텔 추가 예약안내",
+     "date": "2026-11-11",
+     "url": "https://www.mdysresort.com/guide/notice_list.asp"
+    },
+    {
+     "title": "동계 가족호텔 추가 예약안내",
+     "date": "2026-11-11",
+     "url": "https://www.mdysresort.com/guide/notice_list.asp"
+    },
+    {
+     "title": "골드 시즌권 상품판매 안내",
+     "date": "2026-10-20",
+     "url": "https://www.mdysresort.com/guide/notice_list.asp"
+    },
+    {
+     "title": "프리미엄 멤버쉽 상품 판매 안내",
+     "date": "2026-10-01",
+     "url": "https://www.mdysresort.com/guide/notice_list.asp"
+    },
+    {
+     "title": "실내 셀프바비큐 예약 안내",
+     "date": "2026-09-30",
+     "url": "https://www.mdysresort.com/guide/notice_list.asp"
+    },
+    {
+     "title": "관광곤도라 주말예약제 안내",
+     "date": "2026-09-29",
+     "url": "https://www.mdysresort.com/guide/notice_list.asp"
+    },
+    {
+     "title": "시즌패스 2차 특가판매 안내",
+     "date": "2026-09-29",
+     "url": "https://www.mdysresort.com/guide/notice_list.asp"
+    },
+    {
+     "title": "야외 공연 신청안내",
+     "date": "2026-08-13",
+     "url": "https://www.mdysresort.com/guide/notice_con.asp?idx=2566"
+    }
+   ],
+   "tags": {
+    "동절기": [
+     {
+      "title": "26/27 동계시즌 개장안내",
+      "date": "2026-11-25",
+      "url": "https://www.mdysresort.com/guide/notice_list.asp"
+     },
+     {
+      "title": "동계 첫 제설 안내",
+      "date": "2026-11-19",
+      "url": "https://www.mdysresort.com/guide/notice_list.asp"
+     },
+     {
+      "title": "동계 국민호텔 추가 예약안내",
+      "date": "2026-11-11",
+      "url": "https://www.mdysresort.com/guide/notice_list.asp"
+     },
+     {
+      "title": "동계 가족호텔 추가 예약안내",
+      "date": "2026-11-11",
+      "url": "https://www.mdysresort.com/guide/notice_list.asp"
+     }
+    ]
+   }
+  },
+  "review": {
+   "score_10": 8.6,
+   "count": 2,
+   "source": "티픽골프장 라운더 후기 집계",
+   "url": "https://teepickgolf.com/course/%EB%AC%B4%EC%A3%BC%20%EB%8D%95%EC%9C%A0%EC%82%B0cc"
+  },
+  "fee_change": null,
+  "collected_at": "2026-11-26T10:25:43+09:00",
+  "recent_notice_text": null,
+  "course_notes": null,
+  "alert": null,
+  "unconfirmed": [],
+  "sources": []
+ },
+ "collection": {
+  "official_site": "ok",
+  "official_reason": null,
+  "pages_collected": 14,
+  "third_party": {
+   "teepick": true,
+   "greenfeeguide": true
+  },
+  "render_hint": "thin",
+  "plan_strategy": "thin(상세페이지 탐색)",
+  "browser_batch": false,
+  "browser_pages": 0,
+  "browser_pdf": []
+ },
+ "coverage": {
+  "basic": 1.0,
+  "course": 0.6,
+  "fee": 1.0,
+  "ops": 0.07,
+  "facility": 0.0,
+  "briefing": 0.5,
+  "rental": 0.5
+ }
+}

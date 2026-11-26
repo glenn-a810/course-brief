@@ -1,0 +1,62 @@
+{
+  "settings": {
+    "number_of_shards": 1,
+    "number_of_replicas": 0,
+    "analysis": {
+      "normalizer": {
+        "lowercase_normalizer": { "type": "custom", "filter": ["lowercase", "trim"] }
+      },
+      "analyzer": {
+        "korean_index": {
+          "type": "custom",
+          "tokenizer": "nori_tokenizer",
+          "decompound_mode": "mixed",
+          "filter": ["nori_readingform", "lowercase", "nori_part_of_speech"]
+        },
+        "korean_search": {
+          "type": "custom",
+          "tokenizer": "nori_tokenizer",
+          "decompound_mode": "mixed",
+          "filter": ["nori_readingform", "lowercase"]
+        }
+      }
+    }
+  },
+  "mappings": {
+    "dynamic": "strict",
+    "properties": {
+      "id": { "type": "keyword" },
+      "name": {
+        "type": "text",
+        "analyzer": "korean_index",
+        "search_analyzer": "korean_search",
+        "fields": {
+          "keyword": { "type": "keyword", "ignore_above": 128 },
+          "lower": { "type": "keyword", "normalizer": "lowercase_normalizer", "ignore_above": 128 }
+        }
+      },
+      "aliases": {
+        "type": "text",
+        "analyzer": "korean_index",
+        "search_analyzer": "korean_search"
+      },
+      "name_chosung": { "type": "keyword" },
+      "sido": { "type": "keyword" },
+      "sido_code": { "type": "keyword" },
+      "sigungu": { "type": "keyword" },
+      "address": { "type": "text", "analyzer": "korean_index", "search_analyzer": "korean_search" },
+      "status": { "type": "keyword" },
+      "type": { "type": "keyword" },
+      "holes": { "type": "integer" },
+      "cluster": { "type": "keyword" },
+      "green_fee_weekday": { "type": "integer" },
+      "green_fee_weekend": { "type": "integer" },
+      "fee_basis": { "type": "keyword" },
+      "location": { "type": "geo_point" },
+      "tel": { "type": "keyword", "index": false },
+      "homepage": { "type": "keyword", "index": false },
+      "detail": { "type": "boolean" },
+      "updated_at": { "type": "date" }
+    }
+  }
+}

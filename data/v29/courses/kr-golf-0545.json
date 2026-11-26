@@ -1,0 +1,289 @@
+{
+ "course_id": "kr-golf-0545",
+ "meta": {
+  "name": "광주 체력단련장",
+  "schema": "stage2c/1.0",
+  "batch": null,
+  "structure": "master only (군 체력단련장 — 공개 상세정보 없음)",
+  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "has_detail": false,
+  "v29_patch": "v2.9 N-08 신규 수록"
+ },
+ "master": {
+  "course_id": "kr-golf-0545",
+  "name": "광주 체력단련장",
+  "name_variants": [
+   "광주 체력단련장",
+   "광주체력단련장",
+   "공항골프장",
+   "광주 공항골프장",
+   "광주공항골프장"
+  ],
+  "former_names": null,
+  "type": "미확인",
+  "types": [
+   "미확인"
+  ],
+  "type_note": "공군이 운영하는 군 체력단련장(9홀). 일반인 이용 불가로 이용형태(회원/대중) 공개 정보가 없다.",
+  "holes": {
+   "total": 9,
+   "member": 0,
+   "public": 0,
+   "non_member": 0
+  },
+  "holes_note": "9홀 규모(2026-11-09 보도). 회원/대중 구성 내역은 공개자료에 없어 0으로 두었다(master.holes.total만 유효).",
+  "address": "전남광주통합특별시 광산구 황룡동 1",
+  "addresses": [
+   "전남광주통합특별시 광산구 황룡동 1"
+  ],
+  "address_status": "현행(지번)",
+  "region": {
+   "sido_code": "12",
+   "sido_name": "전남광주통합특별시",
+   "sido_short": "광주",
+   "sigungu_code": "12330",
+   "sigungu_name": "광산구",
+   "legal_dong_code": "1233000000"
+  },
+  "lat": 35.114972,
+  "lng": 126.791154,
+  "geo_source": "Kakao Map",
+  "geo_confidence": "high",
+  "geo_place_name": "광주체력단련장",
+  "tel": "062-940-4972",
+  "tel_source": "Kakao Map",
+  "homepage": null,
+  "homepage_source": null,
+  "operators": [
+   "공군 제1전투비행단"
+  ],
+  "area_sqm": null,
+  "opened": null,
+  "course_blocks": [],
+  "facility_id": null,
+  "facility_members": null,
+  "status": "operating",
+  "status_note": "공군 체력단련장(공항골프장) 9홀. 국방부 결정으로 2027년 상반기 운영을 마감하고, 부지는 호남 반도체 산단 전력계통 공사 준비에 쓰일 예정(2026-11-09 보도).",
+  "expected_open": null,
+  "nearest_ic": null,
+  "facility_cluster": null,
+  "factcheck_2026_11_26": null,
+  "access": "military_only",
+  "added_in_v29": true,
+  "sources": {
+   "mcst_row_count": 0,
+   "mcst_names": [],
+   "addition_reason": "군 체력단련장 보충(공군 운영, 일반인 이용 불가, 2027 상반기 폐쇄 예정)",
+   "upcoming_sources": [
+    {
+     "label": "아주경제 2026-11-10 「광주 군공항 축구장 골프장 내년 초 문 닫는다」",
+     "url": "https://www.ajunews.com/view/20261110090253118"
+    }
+   ]
+  },
+  "provenance": {
+   "master": "v2.9 신규 보충(2026-11-26, 카카오맵·보도)",
+   "detail": "미생성(공개 상세정보 없음)"
+  }
+ },
+ "course": {
+  "holes": null,
+  "holes_received": null,
+  "course_names": null,
+  "membership_type": null,
+  "night_light": null,
+  "blocks": [],
+  "grass": {
+   "tee": null,
+   "fairway": null,
+   "green": null
+  },
+  "kga": null,
+  "kga_hole_est": null,
+  "extra_courses": null,
+  "par": null,
+  "length_m": null,
+  "hole_by_hole": null
+ },
+ "fee": {
+  "weekday": null,
+  "weekend": null,
+  "weekday_text": null,
+  "weekend_text": null,
+  "basis": null,
+  "tax_included": null,
+  "cart": null,
+  "caddie": null,
+  "as_of": null,
+  "source_url": null,
+  "note": null,
+  "sources": []
+ },
+ "cancel": {
+  "cancel_policy": null,
+  "open_cycle": null,
+  "notes": null,
+  "evidence": [],
+  "weather_evidence": []
+ },
+ "ops": {
+  "nocaddie": {
+   "value": null,
+   "evidence": []
+  },
+  "two_player": {
+   "value": null,
+   "evidence": []
+  },
+  "three_player": {
+   "value": null,
+   "evidence": []
+  },
+  "five_player": {
+   "value": null,
+   "evidence": []
+  },
+  "marshal_caddie": {
+   "value": null,
+   "evidence": []
+  },
+  "cart_type": {
+   "value": null,
+   "evidence": []
+  },
+  "cart_entry": {
+   "value": null,
+   "evidence": []
+  },
+  "bagdrop": {
+   "value": null,
+   "evidence": []
+  },
+  "mat": {
+   "value": null,
+   "evidence": []
+  },
+  "checkin": {
+   "value": null,
+   "evidence": []
+  },
+  "locker": {
+   "value": null,
+   "evidence": []
+  },
+  "sauna": {
+   "value": null,
+   "evidence": []
+  },
+  "dress": {
+   "value": null,
+   "evidence": []
+  },
+  "pace": {
+   "value": null,
+   "evidence": []
+  }
+ },
+ "facilities": {
+  "practice": {
+   "value": null,
+   "evidence": []
+  },
+  "indoor_range": {
+   "value": null,
+   "evidence": []
+  },
+  "food": {
+   "value": null,
+   "evidence": []
+  },
+  "snack_bar": {
+   "value": null,
+   "evidence": []
+  },
+  "locker_sauna": {
+   "value": null,
+   "evidence": []
+  },
+  "lodging": {
+   "value": null,
+   "evidence": []
+  },
+  "other": {
+   "value": null,
+   "evidence": []
+  },
+  "night": {
+   "value": null,
+   "evidence": []
+  },
+  "closed_days": {
+   "value": null,
+   "evidence": []
+  },
+  "shuttle": {
+   "value": null,
+   "evidence": []
+  }
+ },
+ "rental": {
+  "available": null,
+  "full_set": null,
+  "fee_text": null,
+  "brand": null,
+  "left_handed": null,
+  "shoes": null,
+  "nine_hole": null,
+  "range_finder": null,
+  "reservation": null,
+  "source_url": null
+ },
+ "briefing": {
+  "notices": {
+   "url": null,
+   "items": [],
+   "tags": {}
+  },
+  "recent_notice_text": null,
+  "course_notes": null,
+  "review": null,
+  "fee_change": null,
+  "alert": {
+   "type": "closure",
+   "level": "caution",
+   "summary": "공군 체력단련장(공항골프장) 9홀 — 국방부 결정으로 2027년 상반기 운영을 마감할 예정입니다.",
+   "detail": "광주 군공항 내 공군 체력단련장으로, 일반인은 이용할 수 없다. 국방부가 호남 반도체 산단 전력계통 공사 준비를 위해 조기 폐쇄를 결정해 2027년 상반기 운영을 마감한다(2026-11-09 보도).",
+   "period": {
+    "from": null,
+    "to": null,
+    "reopen": null
+   },
+   "confirmed": true,
+   "checked_at": "2026-11-26",
+   "source_url": "https://www.ajunews.com/view/20261110090253118",
+   "source_file": "아주경제 2026-11-10 / 남도일보 2026-11-09",
+   "raw": "군공항 부지의 토지 소유자인 국방부가 반도체 산단 조성을 위한 전력계통 공사 사전 준비 차원에서 조기 폐쇄 방침을 정했다.",
+   "currently_closed": false,
+   "planned_closure": "2027년 상반기"
+  },
+  "unconfirmed": [],
+  "sources": []
+ },
+ "collection": {
+  "official_site": null,
+  "official_reason": "구장 JSON 미생성(군 체력단련장 — 공개 상세정보 없음)",
+  "pages_collected": 0,
+  "third_party": {},
+  "render_hint": null,
+  "plan_strategy": null
+ },
+ "coverage": {
+  "basic": 0,
+  "course": 0,
+  "fee": 0,
+  "ops": 0,
+  "facility": 0,
+  "briefing": 0,
+  "rental": 0
+ }
+}

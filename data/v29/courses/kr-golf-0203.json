@@ -1,0 +1,671 @@
+{
+ "course_id": "kr-golf-0203",
+ "meta": {
+  "name": "서원밸리 골프장",
+  "generated_at": "2026-11-26T09:51:58+09:00",
+  "schema": "stage2c/1.0",
+  "batch": "1_수도권",
+  "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
+  "schema_previous": "stage2b/1.0",
+  "restructured_from_7key": true,
+  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
+  "has_detail": true,
+  "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+ },
+ "master": {
+  "course_id": "kr-golf-0203",
+  "name": "서원밸리 골프장",
+  "name_variants": [
+   "서원밸리 골프장"
+  ],
+  "type": "회원제",
+  "holes": {
+   "total": 18,
+   "member": 18,
+   "public": 0,
+   "non_member": 0
+  },
+  "address": "경기도 파주시 광탄면 서원길 333",
+  "region": {
+   "sido_code": "41",
+   "sido_name": "경기도",
+   "sido_short": "경기",
+   "sigungu_code": "41480",
+   "sigungu_name": "파주시",
+   "legal_dong_code": "4148000000"
+  },
+  "lat": 37.824702,
+  "lng": 126.893333,
+  "nearest_ic": {
+   "name": "송추IC",
+   "distance_km": 14.4,
+   "source": "최근접 IC 직선거리"
+  },
+  "tel": "031-940-9400",
+  "homepage": "https://www.seowongolf.co.kr/",
+  "operators": [
+   "서원레저㈜"
+  ],
+  "area_sqm": 840845,
+  "opened": null,
+  "course_blocks": [],
+  "facility_id": "F006",
+  "provenance": {
+   "master": "courses_master.json v2.0 (문체부·KGA·KGBA·티픽·지도)",
+   "synced_to": "courses_master.json v2.7 (2026-11-26 단일 스키마 정규화)"
+  },
+  "course_spec": {
+   "holes": 18,
+   "par": null,
+   "blocks": [],
+   "length_m": null,
+   "kga": {
+    "kga_course_code": "120",
+    "kga_name": "서원밸리",
+    "region_short": "경기",
+    "address": "경기도 파주시 광탄면 서원길 333",
+    "match_method": "exact",
+    "match_score": 110,
+    "match_confidence": "high",
+    "nine_hole_courses": [
+     "밸리",
+     "서원"
+    ],
+    "hole_combinations": [
+     {
+      "course_name_1": "밸리",
+      "course_name_2": "서원",
+      "tees": [
+       {
+        "tee": "Tournament 26(남)",
+        "gender": "남자",
+        "length_yds": 7115.0,
+        "std_par": 72.0,
+        "course_rating": 75.1,
+        "slope_rating": 142.0,
+        "front9": "37.8 / 142",
+        "back9": "37.3 / 141"
+       },
+       {
+        "tee": "Tournament 26(여)",
+        "gender": "여자",
+        "length_yds": 6534.0,
+        "std_par": 72.0,
+        "course_rating": 78.3,
+        "slope_rating": 148.0,
+        "front9": "39.4 / 148",
+        "back9": "38.9 / 148"
+       }
+      ]
+     },
+     {
+      "course_name_1": "서원",
+      "course_name_2": "밸리",
+      "tees": [
+       {
+        "tee": "Tournament 26(남)",
+        "gender": "남자",
+        "length_yds": 7115.0,
+        "std_par": 72.0,
+        "course_rating": 75.1,
+        "slope_rating": 142.0,
+        "front9": "37.3 / 141",
+        "back9": "37.8 / 142"
+       },
+       {
+        "tee": "Blue",
+        "gender": "남자",
+        "length_yds": 7010.0,
+        "std_par": 72.0,
+        "course_rating": 74.6,
+        "slope_rating": 141.0,
+        "front9": "37.1 / 140",
+        "back9": "37.5 / 141"
+       },
+       {
+        "tee": "Tournament 26(여)",
+        "gender": "여자",
+        "length_yds": 6534.0,
+        "std_par": 72.0,
+        "course_rating": 78.3,
+        "slope_rating": 148.0,
+        "front9": "38.9 / 148",
+        "back9": "39.4 / 148"
+       },
+       {
+        "tee": "White",
+        "gender": "여자",
+        "length_yds": 6468.0,
+        "std_par": 72.0,
+        "course_rating": 78.0,
+        "slope_rating": 148.0,
+        "front9": "38.7 / 147",
+        "back9": "39.3 / 148"
+       },
+       {
+        "tee": "White",
+        "gender": "남자",
+        "length_yds": 6468.0,
+        "std_par": 72.0,
+        "course_rating": 71.9,
+        "slope_rating": 139.0,
+        "front9": "35.6 / 136",
+        "back9": "36.3 / 141"
+       },
+       {
+        "tee": "Gold",
+        "gender": "남자",
+        "length_yds": 5840.0,
+        "std_par": 72.0,
+        "course_rating": 68.8,
+        "slope_rating": 129.0,
+        "front9": "34.2 / 126",
+        "back9": "34.6 / 132"
+       },
+       {
+        "tee": "Red",
+        "gender": "여자",
+        "length_yds": 5298.0,
+        "std_par": 72.0,
+        "course_rating": 71.3,
+        "slope_rating": 133.0,
+        "front9": "35.3 / 132",
+        "back9": "36.0 / 133"
+       }
+      ]
+     }
+    ]
+   },
+   "grass": {
+    "evidence": "서원밸리 닫기 로고 파주시 광탄면 reservation - 예약현황 건 - 대기예약 건 - 베스트 스코어 타 정보수정 닫기 About Seowon 스토리 토너먼트 ESG 서원에세이 클럽하우스 오시는길 Course 코스소개 서원코스 밸리코스 Reservation 실시간예약 이용안내 이용요금 Our Special 서원 인레인지(연습장) 서원 아트리움(웨딩,모임) 서원정/서원더뷰 Membership 공지사항 이벤트 Q&A 자료실 My Page 예약현황 쿠폰함 나의 활동 고객의 소리 회원정보수정 LOGIN 아이디 저장하기 로그인 유지 로그",
+    "source": "공식",
+    "url": "https://www.seowongolf.co.kr/valley/main"
+   },
+   "hole_by_hole": null
+  },
+  "addresses": [
+   "경기도 파주시 광탄면 서원길 333"
+  ],
+  "facility_members": [
+   "서원밸리 골프장",
+   "서원힐스 골프장"
+  ],
+  "status": "operating",
+  "facility_cluster": {
+   "facility_id": "F006",
+   "facility_name": "서원밸리 골프장",
+   "members": [
+    "서원밸리 골프장",
+    "서원힐스 골프장"
+   ],
+   "basis": "동일 소재지",
+   "relationship": null,
+   "note": null
+  },
+  "factcheck_2026_11_26": null
+ },
+ "course": {
+  "holes": 18,
+  "holes_received": null,
+  "course_names": null,
+  "membership_type": "회원제",
+  "night_light": null,
+  "blocks": [],
+  "grass": {
+   "tee": null,
+   "fairway": {
+    "evidence": "서원밸리 닫기 로고 파주시 광탄면 reservation - 예약현황 건 - 대기예약 건 - 베스트 스코어 타 정보수정 닫기 About Seowon 스토리 토너먼트 ESG 서원에세이 클럽하우스 오시는길 Course 코스소개 서원코스 밸리코스 Reservation 실시간예약 이용안내 이용요금 Our Special 서원 인레인지(연습장) 서원 아트리움(웨딩,모임) 서원정/서원더뷰 Membership 공지사항 이벤트 Q&A 자료실 My Page 예약현황 쿠폰함 나의 활동 고객의 소리 회원정보수정 LOGIN 아이디 저장하기 로그인 유지 로그",
+    "source": "공식",
+    "url": "https://www.seowongolf.co.kr/valley/main"
+   },
+   "green": null
+  },
+  "kga": {
+   "kga_course_code": "120",
+   "kga_name": "서원밸리",
+   "region_short": "경기",
+   "address": "경기도 파주시 광탄면 서원길 333",
+   "match_method": "exact",
+   "match_score": 110,
+   "match_confidence": "high",
+   "nine_hole_courses": [
+    "밸리",
+    "서원"
+   ],
+   "hole_combinations": [
+    {
+     "course_name_1": "밸리",
+     "course_name_2": "서원",
+     "tees": [
+      {
+       "tee": "Tournament 26(남)",
+       "gender": "남자",
+       "length_yds": 7115.0,
+       "std_par": 72.0,
+       "course_rating": 75.1,
+       "slope_rating": 142.0,
+       "front9": "37.8 / 142",
+       "back9": "37.3 / 141"
+      },
+      {
+       "tee": "Tournament 26(여)",
+       "gender": "여자",
+       "length_yds": 6534.0,
+       "std_par": 72.0,
+       "course_rating": 78.3,
+       "slope_rating": 148.0,
+       "front9": "39.4 / 148",
+       "back9": "38.9 / 148"
+      }
+     ]
+    },
+    {
+     "course_name_1": "서원",
+     "course_name_2": "밸리",
+     "tees": [
+      {
+       "tee": "Tournament 26(남)",
+       "gender": "남자",
+       "length_yds": 7115.0,
+       "std_par": 72.0,
+       "course_rating": 75.1,
+       "slope_rating": 142.0,
+       "front9": "37.3 / 141",
+       "back9": "37.8 / 142"
+      },
+      {
+       "tee": "Blue",
+       "gender": "남자",
+       "length_yds": 7010.0,
+       "std_par": 72.0,
+       "course_rating": 74.6,
+       "slope_rating": 141.0,
+       "front9": "37.1 / 140",
+       "back9": "37.5 / 141"
+      },
+      {
+       "tee": "Tournament 26(여)",
+       "gender": "여자",
+       "length_yds": 6534.0,
+       "std_par": 72.0,
+       "course_rating": 78.3,
+       "slope_rating": 148.0,
+       "front9": "38.9 / 148",
+       "back9": "39.4 / 148"
+      },
+      {
+       "tee": "White",
+       "gender": "여자",
+       "length_yds": 6468.0,
+       "std_par": 72.0,
+       "course_rating": 78.0,
+       "slope_rating": 148.0,
+       "front9": "38.7 / 147",
+       "back9": "39.3 / 148"
+      },
+      {
+       "tee": "White",
+       "gender": "남자",
+       "length_yds": 6468.0,
+       "std_par": 72.0,
+       "course_rating": 71.9,
+       "slope_rating": 139.0,
+       "front9": "35.6 / 136",
+       "back9": "36.3 / 141"
+      },
+      {
+       "tee": "Gold",
+       "gender": "남자",
+       "length_yds": 5840.0,
+       "std_par": 72.0,
+       "course_rating": 68.8,
+       "slope_rating": 129.0,
+       "front9": "34.2 / 126",
+       "back9": "34.6 / 132"
+      },
+      {
+       "tee": "Red",
+       "gender": "여자",
+       "length_yds": 5298.0,
+       "std_par": 72.0,
+       "course_rating": 71.3,
+       "slope_rating": 133.0,
+       "front9": "35.3 / 132",
+       "back9": "36.0 / 133"
+      }
+     ]
+    }
+   ]
+  },
+  "kga_hole_est": null,
+  "extra_courses": null,
+  "hole_by_hole": null,
+  "length_m": null,
+  "par": null
+ },
+ "fee": {
+  "weekday": 240000,
+  "weekend": 310000,
+  "weekday_text": null,
+  "weekend_text": null,
+  "basis": null,
+  "tax_included": null,
+  "cart": {
+   "value": 110000,
+   "source": "그린피가이드",
+   "url": "https://greenfeeguide.co.kr/course/gc-0057/"
+  },
+  "caddie": {
+   "value": 150000,
+   "source": "그린피가이드",
+   "url": "https://greenfeeguide.co.kr/course/gc-0057/",
+   "none": false
+  },
+  "as_of": "2026-11-03",
+  "source_url": null,
+  "note": null,
+  "sources": [
+   {
+    "source": "그린피가이드(공식 요금표 확인)",
+    "url": "https://greenfeeguide.co.kr/course/gc-0057/",
+    "checked_at": "2026-11-03"
+   }
+  ],
+  "checked_at": "2026-11-03",
+  "market": {
+   "weekday_min": null,
+   "weekend_min": null,
+   "part1": null,
+   "part2": null,
+   "source": "티픽골프장(실거래 관측)",
+   "url": "https://teepickgolf.com/course/%EC%84%9C%EC%9B%90%EB%B0%B8%EB%A6%AC",
+   "note": "공시가 아닌 최근 관측 실거래 최저가"
+  },
+  "official_green_evidence": [],
+  "official_rental": null
+ },
+ "cancel": {
+  "cancel_policy": null,
+  "open_cycle": null,
+  "notes": null,
+  "evidence": [],
+  "weather_evidence": [
+   "기상정보 출처: 기상청 홈페이지 ⓒ 서원레저(주) ALL RIGHT RESERVED",
+   "기상정보 출처: 기상청 홈페이지 ⓒ 서원레저(주) ALL RIGHT RESERVED"
+  ]
+ },
+ "ops": {
+  "nocaddie": {
+   "evidence": [],
+   "value": null
+  },
+  "two_player": {
+   "evidence": [],
+   "value": null,
+   "third_party": {
+    "two": null,
+    "three": null,
+    "source": "그린피가이드",
+    "url": "https://greenfeeguide.co.kr/course/gc-0057/"
+   }
+  },
+  "three_player": {
+   "value": null,
+   "evidence": []
+  },
+  "five_player": {
+   "value": null,
+   "evidence": []
+  },
+  "marshal_caddie": {
+   "value": null,
+   "evidence": []
+  },
+  "cart_type": {
+   "evidence": [
+    "5인승 전동카"
+   ],
+   "value": "5인승",
+   "source_url": "https://www.seowongolf.co.kr/valley/reservation/fee",
+   "confidence": "low",
+   "source_type": "official_site",
+   "page_label": "",
+   "value_from": "capital_supplement(official_site)"
+  },
+  "cart_entry": {
+   "evidence": [],
+   "value": null
+  },
+  "bagdrop": {
+   "evidence": [],
+   "value": null
+  },
+  "mat": {
+   "evidence": [],
+   "value": null
+  },
+  "checkin": {
+   "evidence": [],
+   "value": null,
+   "third_party": {
+    "value": null,
+    "source": "그린피가이드",
+    "url": "https://greenfeeguide.co.kr/course/gc-0057/"
+   }
+  },
+  "locker": {
+   "evidence": [],
+   "value": null
+  },
+  "sauna": {
+   "evidence": [
+    "사우나 있음 · 프로샵"
+   ],
+   "value": "사우나 운영",
+   "source_url": "https://www.seowongolf.co.kr/valley/about/clubhouse",
+   "confidence": "high",
+   "checked_at": "2026-10-20",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/golf-course-amenities-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  },
+  "dress": {
+   "evidence": [],
+   "value": null
+  },
+  "pace": {
+   "evidence": [],
+   "value": null
+  },
+  "grass": null
+ },
+ "facilities": {
+  "practice": {
+   "evidence": [
+    "서원밸리 닫기 로고 파주시 광탄면 reservation - 예약현황 건 - 대기예약 건 - 베스트 스코어 타 정보수정 닫기 About Seowon 스토리 토너먼트 ESG 서원에세이 클럽하우스 오시는길 Course 코스소개 서원코스 밸리코스 Reservation 실시간예약 이용안내 이용요금 Our Special 서원 인레인지(연습장) 서원 아트리움(웨딩,모임) 서원정/서원더뷰 Membership 공지사항 이벤트 Q&A 자료실 My Page 예약현황 쿠폰함 나의 활동 고객의 소리 회원정보수정 LOGIN 아이디 저장하기 로그인 유지 로그",
+    "VIEW ALL → 경기도 파주시 광탄면 서원길 333 031-940-9400(서원밸리 9401 / 서원힐스 9402 / 연습장 9550) VIEW ALL → 서원밸리 자선 그린 콘서트 매년 5월 마지막 주 토요일, 즐거움과 행복이 가득한 따듯한 나눔 이야기가 펼쳐집니다.",
+    "서원힐스 닫기 로고 파주시 광탄면 reservation KO EN - 예약현황 건 - 쿠폰현황 건 - 대기예약 건 - 베스트 스코어 타 정보수정 닫기 About Seowon 스토리 토너먼트 ESG 서원에세이 클럽하우스 오시는길 Course 코스소개 코스제원 웨스트 사우스 이스트 Reservation 실시간예약 일반단체 신청 이용안내 이용요금 Our Special 서원 인레인지(연습장) 서원 아트리움(웨딩,모임) 서원정/서원더뷰 CONTACT 공지사항 이벤트 Q&A My Page 예약현황 쿠폰함 나의활동 고객의 소리 회원정보 수정 L",
+    "서원 인레인지(연습장)"
+   ],
+   "value": "드라이빙레인지 · 연습장",
+   "source_url": "https://www.seowongolf.co.kr/valley/main",
+   "confidence": "medium",
+   "source_type": "official_site",
+   "page_label": "SEOWON VALLEY회원제",
+   "value_from": "capital_supplement(official_site)"
+  },
+  "indoor_range": {
+   "value": null,
+   "evidence": []
+  },
+  "food": {
+   "evidence": [
+    "특별한 기념일, 상견례 명소로 여유롭고 품격있는 연회장, 고급스럽게 준비한 음식으로 사랑하는 사람들과 더 특별한 시간을"
+   ],
+   "value": "연회장",
+   "source_url": "https://www.seowongolf.co.kr/valley/main",
+   "confidence": "low",
+   "source_type": "official_site",
+   "page_label": "SEOWON VALLEY회원제",
+   "value_from": "capital_supplement(official_site)"
+  },
+  "snack_bar": {
+   "value": null,
+   "evidence": []
+  },
+  "locker_sauna": {
+   "value": null,
+   "evidence": []
+  },
+  "lodging": {
+   "value": null,
+   "evidence": []
+  },
+  "other": {
+   "value": null,
+   "evidence": []
+  },
+  "night": {
+   "evidence": [],
+   "value": null
+  },
+  "closed_days": {
+   "evidence": [],
+   "third_party": null,
+   "value": null
+  },
+  "shuttle": {
+   "evidence": [],
+   "value": null
+  },
+  "ev_charge": {
+   "evidence": [],
+   "value": null
+  },
+  "gf_facilities": [
+   "프로샵근거골프장 공식 홈페이지 시설 안내 · 2026"
+  ],
+  "proshop": {
+   "evidence": [
+    "사우나 있음 · 프로샵"
+   ],
+   "value": "프로샵 운영",
+   "source_url": "https://www.seowongolf.co.kr/valley/about/clubhouse",
+   "confidence": "high",
+   "checked_at": "2026-10-20",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/golf-course-amenities-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  }
+ },
+ "rental": {
+  "available": null,
+  "full_set": 80000,
+  "fee_text": null,
+  "brand": null,
+  "left_handed": null,
+  "shoes": null,
+  "nine_hole": null,
+  "range_finder": null,
+  "reservation": null,
+  "source_url": null,
+  "evidence": [],
+  "official": null,
+  "nearby_delivery": {
+   "region": "수도권",
+   "sido": "경기도",
+   "verified_at": "2026-11-26 (KST)",
+   "checked_at": "2026-11-26",
+   "providers": [
+    {
+     "id": "theb",
+     "name": "더비 (The B)",
+     "coverage": "O",
+     "basis": "동탄·김포·시흥·용인·이천 24시간 무인픽업 매장 5곳 + 다마스 퀵/택배 배송. 홈페이지에 '강남·동탄·판교·수지·광교·분당', '시흥·배곧·인천·안산·송도', '이천·여주' 권역 표기.",
+     "phone": "010-2530-4575",
+     "operating_status": "정상 영업",
+     "delivery": "O",
+     "price_headline": "12시간 기준 90,000원부터",
+     "bookable": true
+    },
+    {
+     "id": "gangnamclub",
+     "name": "강남골프클럽렌탈",
+     "coverage": "O",
+     "basis": "서울 서초구 거점 매장 주소 공개, 자사 블로그 '전지역 배송 가능' 안내.",
+     "phone": "010-7407-0753",
+     "operating_status": "정상 영업(자사 블로그 최신 게시 2026-04-28)",
+     "delivery": "미확인",
+     "price_headline": null,
+     "bookable": true
+    },
+    {
+     "id": "apioz",
+     "name": "아피오즈 (Apioz)",
+     "coverage": "조건부",
+     "basis": "서울 숙소 배송·공항 픽업 옵션 안내. 단 골프세트 Sold Out으로 현재 이용 불가.",
+     "phone": "02-6956-8115",
+     "operating_status": "예약 중단(Sold Out) — 골프채 세트 한정",
+     "delivery": "미확인",
+     "price_headline": null,
+     "caution": "골프채 세트 Sold Out — 현재 예약 불가",
+     "bookable": false,
+     "bookable_reason": "골프채 세트 Sold Out — 현재 예약 불가"
+    }
+   ],
+   "provider_count": 3,
+   "legend": {
+    "O": "공식 안내로 해당 권역 이용이 확인됨",
+    "X": "공식 안내상 해당 권역 서비스가 없음(예: '제주 전 지역' 전용으로만 안내)",
+    "조건부": "공식 안내상 가능하나 조건(수단·요금·현재 판매중지 등)이 붙어 있음. 조건은 basis/detail에 기재",
+    "미확인": "공식 공개 안내에서 해당 항목에 대한 언급을 찾지 못함(추정하지 않음)"
+   },
+   "not_verified": "전화·문자·카카오톡 상담으로만 확인 가능한 항목(재고, 개별 견적, 권역별 실제 배송 가능 여부)은 '미확인'으로 남김",
+   "source_file": "5-rental_8_coverage_verified.json",
+   "note_code": "해외 골퍼용 골프채 렌탈·딜리버리 업체. 같은 권역이라도 실제 배송 가능 여부·재고·견적은 전화 확인 필요."
+  }
+ },
+ "briefing": {
+  "notices": {
+   "url": null,
+   "items": [],
+   "tags": {}
+  },
+  "review": {
+   "score_10": 9.4,
+   "count": 30,
+   "source": "티픽골프장 라운더 후기 집계",
+   "url": "https://teepickgolf.com/course/%EC%84%9C%EC%9B%90%EB%B0%B8%EB%A6%AC"
+  },
+  "fee_change": null,
+  "collected_at": "2026-11-26T09:51:58+09:00",
+  "recent_notice_text": null,
+  "course_notes": null,
+  "alert": null,
+  "unconfirmed": [],
+  "sources": []
+ },
+ "collection": {
+  "official_site": "ok",
+  "official_reason": null,
+  "pages_collected": 3,
+  "third_party": {
+   "teepick": true,
+   "greenfeeguide": true
+  },
+  "render_hint": "thin",
+  "plan_strategy": "thin(상세페이지 탐색)",
+  "browser_batch": false
+ },
+ "coverage": {
+  "basic": 1.0,
+  "course": 0.8,
+  "fee": 1.0,
+  "ops": 0.14,
+  "facility": 0.2,
+  "briefing": 0.5,
+  "rental": 0.5
+ }
+}

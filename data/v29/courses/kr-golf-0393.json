@@ -1,0 +1,403 @@
+{
+ "course_id": "kr-golf-0393",
+ "meta": {
+  "name": "샤인빌파크CC",
+  "generated_at": "2026-11-26T09:35:01+09:00",
+  "schema": "stage2c/1.0",
+  "batch": "7_제주",
+  "includes": [
+   "master",
+   "ops",
+   "briefing"
+  ],
+  "source": "raw/received_jeju_31.json (외부 데이터 수신, 2026-11-26)",
+  "review": {
+   "checked_at": null,
+   "status": "not_crosschecked",
+   "checks": []
+  },
+  "data_checks": [
+   "제주 권역은 고속도로 IC가 없어 마스터의 최근접 IC 값(도외 130~160km)이 유효하지 않음"
+  ],
+  "schema_previous": "stage2b/1.0",
+  "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
+  "restructured_from_7key": false,
+  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
+  "has_detail": true,
+  "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+ },
+ "master": {
+  "course_id": "kr-golf-0393",
+  "name": "샤인빌파크CC",
+  "name_variants": [
+   "샤인빌파크CC"
+  ],
+  "former_names": null,
+  "type": "대중제",
+  "types": [
+   "대중제"
+  ],
+  "holes": {
+   "total": 18,
+   "member": 0,
+   "public": 18,
+   "non_member": 0
+  },
+  "address": "제주특별자치도 서귀포시 표선면 가시로 384",
+  "addresses": [
+   "제주특별자치도 서귀포시 표선면 가시로 384"
+  ],
+  "region": {
+   "sido_code": "50",
+   "sido_name": "제주특별자치도",
+   "sido_short": "제주",
+   "sigungu_code": "50130",
+   "sigungu_name": "서귀포시",
+   "legal_dong_code": "5013000000"
+  },
+  "lat": 33.345408,
+  "lng": 126.788201,
+  "nearest_ic": null,
+  "nearest_ic_note": "제주 권역은 고속도로 IC가 없어 마스터의 최근접 IC 값(도외 130~160km)이 유효하지 않음",
+  "tel": "064-787-8700",
+  "tel_master": "064-787-8700",
+  "tel_official": "064-787-8700",
+  "tel_conflict": false,
+  "homepage": "http://shinevilleparkcc.com/",
+  "homepage_master": "http://shinevilleparkcc.com/",
+  "operators": [
+   "㈜록(박찬수)"
+  ],
+  "area_sqm": 632749,
+  "opened": "2005",
+  "course_blocks": [],
+  "facility_id": null,
+  "status": "operating",
+  "status_note": null,
+  "provenance": {
+   "master": "courses_master.json v2.2 (문체부·KGA·KGBA·티픽·지도)",
+   "detail": "raw/received_jeju_31.json (2026-11-26 수신, 검수 2026-11-26)",
+   "synced_to": "courses_master.json v2.7 (2026-11-26 단일 스키마 정규화)"
+  },
+  "holes_received": 18,
+  "holes_conflict": false,
+  "facility_cluster": null,
+  "factcheck_2026_11_26": null
+ },
+ "course": {
+  "holes": 18,
+  "holes_received": 18,
+  "course_names": "RIVER 9홀 / PALM 9홀 (Par 72)",
+  "membership_type": "대중제",
+  "night_light": null,
+  "blocks": [],
+  "grass": {
+   "tee": null,
+   "fairway": "버뮤다그라스 + 라이그라스 오버시딩",
+   "green": "벤트그라스"
+  },
+  "kga": {
+   "code": "277",
+   "name": "샤인빌파크",
+   "nine_hole_courses": [
+    "리버",
+    "팜"
+   ],
+   "hole_combinations": [
+    "리버+팜"
+   ]
+  },
+  "kga_hole_est": 18,
+  "extra_courses": null
+ },
+ "fee": {
+  "weekday": 140000,
+  "weekend": 170000,
+  "weekday_text": "140,000원",
+  "weekend_text": "170,000원",
+  "basis": "1인·18홀·비회원 공식 요금표(법정공휴일·대체공휴일·근로자의 날 주말요금)",
+  "tax_included": null,
+  "cart": {
+   "value": 100000,
+   "text": "100,000원/팀(5인승)"
+  },
+  "caddie": {
+   "value": 150000,
+   "text": "150,000원/팀(2인 140,000원)",
+   "none": false
+  },
+  "as_of": "2026-11-02 공식 요금표 확인",
+  "source_url": "http://shinevilleparkcc.com/",
+  "note": null,
+  "sources": [
+   {
+    "source": "수신 조사(공식·공개 예약정보)",
+    "url": "http://shinevilleparkcc.com/",
+    "checked_at": "2026-11-02 공식 요금표 확인"
+   }
+  ],
+  "resident": null
+ },
+ "cancel": {
+  "cancel_policy": "우천 취소 기준 시간당 3mm·풍속 10m/s 이상. 중단 시 홀별 정산(정상요금 기준)",
+  "open_cycle": "예약일 기준 60일 전 10:00, 홈페이지 회원 로그인 후 예약(프론트 전화 예약 미접수)",
+  "notes": null,
+  "evidence": [],
+  "weather_evidence": []
+ },
+ "ops": {
+  "nocaddie": {
+   "value": "불가(캐디 동반 필수)",
+   "evidence": []
+  },
+  "two_player": {
+   "value": "가능하나 1인 그린피 추가(총 3인 그린피)",
+   "evidence": []
+  },
+  "three_player": {
+   "value": "가능",
+   "evidence": []
+  },
+  "five_player": {
+   "value": null,
+   "evidence": []
+  },
+  "marshal_caddie": {
+   "value": null,
+   "evidence": []
+  },
+  "cart_type": {
+   "value": "5인승",
+   "evidence": []
+  },
+  "cart_entry": {
+   "value": null,
+   "evidence": []
+  },
+  "bagdrop": {
+   "value": null,
+   "evidence": []
+  },
+  "mat": {
+   "value": null,
+   "evidence": []
+  },
+  "checkin": {
+   "value": null,
+   "evidence": []
+  },
+  "locker": {
+   "value": "사우나",
+   "evidence": []
+  },
+  "sauna": {
+   "value": "사우나",
+   "evidence": []
+  },
+  "dress": {
+   "value": null,
+   "evidence": []
+  },
+  "pace": {
+   "value": null,
+   "evidence": []
+  }
+ },
+ "facilities": {
+  "practice": {
+   "value": null,
+   "evidence": []
+  },
+  "indoor_range": {
+   "value": null,
+   "evidence": []
+  },
+  "food": {
+   "value": null,
+   "evidence": []
+  },
+  "snack_bar": {
+   "value": null,
+   "evidence": []
+  },
+  "locker_sauna": {
+   "value": "사우나",
+   "evidence": []
+  },
+  "lodging": {
+   "value": null,
+   "evidence": []
+  },
+  "other": {
+   "value": "프로샵",
+   "evidence": []
+  },
+  "night": {
+   "value": null,
+   "evidence": []
+  },
+  "closed_days": {
+   "value": null,
+   "third_party": null,
+   "evidence": []
+  },
+  "shuttle": {
+   "value": null,
+   "evidence": []
+  }
+ },
+ "rental": {
+  "available": "가능",
+  "full_set": 50000,
+  "fee_text": "풀세트 50,000원 / 퍼터 5,000원",
+  "brand": null,
+  "left_handed": null,
+  "shoes": null,
+  "nine_hole": null,
+  "range_finder": null,
+  "reservation": null,
+  "source_url": null,
+  "nearby_delivery": {
+   "region": "제주",
+   "sido": "제주특별자치도",
+   "verified_at": "2026-11-26 (KST)",
+   "checked_at": "2026-11-26",
+   "providers": [
+    {
+     "id": "theb",
+     "name": "더비 (The B)",
+     "coverage": "O",
+     "basis": "제주점 24시간 무인픽업 + '제주 전 지역 딜리버리 가능, 2개 이상 무료배송'(렌트비에 딜리버리 포함).",
+     "phone": "010-2530-4575",
+     "operating_status": "정상 영업",
+     "delivery": "O",
+     "price_headline": "12시간 기준 90,000원부터",
+     "bookable": true
+    },
+    {
+     "id": "rentzone",
+     "name": "렌트존 (RENT ZONE)",
+     "coverage": "O",
+     "basis": "'제주 전 지역 배송·골프장 직접 배송·수거'를 홈페이지 첫 화면과 고객센터 FAQ에서 명시.",
+     "phone": "010-7527-7809",
+     "operating_status": "정상 영업",
+     "delivery": "O",
+     "price_headline": null,
+     "bookable": true
+    },
+    {
+     "id": "cygolf",
+     "name": "싸이골프 (Cygolf)",
+     "coverage": "O",
+     "basis": "렌탈서비스 이용안내: '제주도 내 골프장 29곳 중 선택해 예약, 티오프 30분 전까지 배송'.",
+     "phone": "064-743-4208",
+     "operating_status": "웹 정상 접속, 단 카탈로그·공지 갱신이 오래됨(공지 최신 2017년) — 예약 전 유선 확인 필요",
+     "delivery": "O",
+     "price_headline": null,
+     "caution": "카탈로그·공지 갱신 정체(공지 최신 2017년) — 예약 전 유선 확인 필요",
+     "bookable": true
+    },
+    {
+     "id": "skygolf",
+     "name": "스카이골프 (제주스카이골프 / SKY GOLF)",
+     "coverage": "O",
+     "basis": "'제주 전지역 골프장으로 무료 배송/수거' 명시(파3·연습장·퍼블릭·호텔 불가).",
+     "phone": "064-733-0724",
+     "operating_status": "정상 영업",
+     "delivery": "O",
+     "price_headline": null,
+     "bookable": true
+    },
+    {
+     "id": "easyjeju",
+     "name": "이지제주",
+     "coverage": "조건부",
+     "basis": "골프장 직접배송·배송무료 구조는 확인되나 전 상품 판매기간 마감으로 현재 예약 불가.",
+     "phone": "064-747-1235",
+     "operating_status": "예약 불가 — 전 상품 '판매대기/판매 기간 마감'",
+     "delivery": "조건부",
+     "price_headline": null,
+     "caution": "전 상품 판매기간 마감 — 현재 예약 불가",
+     "bookable": false,
+     "bookable_reason": "전 상품 판매기간 마감 — 현재 예약 불가"
+    },
+    {
+     "id": "jejugolfrental",
+     "name": "제주골프렌탈",
+     "coverage": "조건부",
+     "basis": "매장 직접 수령은 확인(제주시 연동). 배송 서비스 여부는 공개 안내 없음 → 제주 내 배송 이용 가능성 미확인.",
+     "phone": "064-746-3391",
+     "operating_status": "정상 영업(밴드 최근 활동 8시간 전)",
+     "delivery": "미확인",
+     "price_headline": null,
+     "bookable": true
+    }
+   ],
+   "provider_count": 6,
+   "legend": {
+    "O": "공식 안내로 해당 권역 이용이 확인됨",
+    "X": "공식 안내상 해당 권역 서비스가 없음(예: '제주 전 지역' 전용으로만 안내)",
+    "조건부": "공식 안내상 가능하나 조건(수단·요금·현재 판매중지 등)이 붙어 있음. 조건은 basis/detail에 기재",
+    "미확인": "공식 공개 안내에서 해당 항목에 대한 언급을 찾지 못함(추정하지 않음)"
+   },
+   "not_verified": "전화·문자·카카오톡 상담으로만 확인 가능한 항목(재고, 개별 견적, 권역별 실제 배송 가능 여부)은 '미확인'으로 남김",
+   "source_file": "5-rental_8_coverage_verified.json",
+   "note_code": "해외 골퍼용 골프채 렌탈·딜리버리 업체. 같은 권역이라도 실제 배송 가능 여부·재고·견적은 전화 확인 필요."
+  }
+ },
+ "briefing": {
+  "notices": {
+   "url": null,
+   "items": [],
+   "tags": {}
+  },
+  "recent_notice_text": "2005년 개장, 2011년 리버 9홀 추가로 18홀 완성. 2026년 10~11월 공지 미확인.",
+  "course_notes": "해발 80m 저지대 평지로 눈·안개·바람 영향이 적고 연중 영상 기온. 야자수가 많은 하와이풍 경관. 팜 코스(여성적)·리버 코스(도전적) 대비. 슬로프 135로 어려운 편(KGA).",
+  "review": null,
+  "fee_change": null,
+  "alert": null,
+  "unconfirmed": [
+   "야간 라이트",
+   "잔디(티)",
+   "5인 플레이",
+   "마샬캐디",
+   "카트 페어웨이 진입",
+   "셀프 백드롭",
+   "매트 티샷",
+   "연습그린",
+   "인도어 연습장",
+   "식당·조식",
+   "그늘집",
+   "숙박",
+   "좌타용 클럽",
+   "골프화 대여"
+  ],
+  "sources": [
+   "https://greenfeeguide.co.kr/course/gc-0509/",
+   "https://wondergolf.co.kr/courses/kr-kakao-7945573",
+   "https://jejukimpro.co.kr/ko/golf/shineville"
+  ],
+  "collected_at": "2026-11-26T09:35:01+09:00"
+ },
+ "collection": {
+  "official_site": "ok",
+  "official_reason": "운영 중(홈페이지 정상)",
+  "pages_collected": 0,
+  "third_party": {
+   "received_report": true
+  },
+  "render_hint": "report",
+  "plan_strategy": "subagent_report(2026-11-26)"
+ },
+ "coverage": {
+  "basic": 0.89,
+  "course": 1.0,
+  "fee": 1.0,
+  "ops": 0.43,
+  "facility": 0.2,
+  "briefing": 0.75,
+  "rental": 1.0
+ }
+}

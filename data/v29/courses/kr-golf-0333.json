@@ -1,0 +1,832 @@
+{
+ "course_id": "kr-golf-0333",
+ "meta": {
+  "name": "한맥C.C&노블리아",
+  "generated_at": "2026-11-26T10:28:34+09:00",
+  "schema": "stage2c/1.0",
+  "batch": "5_경북권",
+  "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
+  "schema_previous": "stage2b/1.0",
+  "restructured_from_7key": true,
+  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
+  "has_detail": true,
+  "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+ },
+ "master": {
+  "course_id": "kr-golf-0333",
+  "name": "한맥C.C&노블리아",
+  "name_variants": [
+   "한맥C.C&노블리아"
+  ],
+  "type": "대중제",
+  "holes": {
+   "total": 18,
+   "member": 0,
+   "public": 18,
+   "non_member": 0
+  },
+  "address": "경상북도 예천군 호명면 한맥골프장길 72",
+  "region": {
+   "sido_code": "47",
+   "sido_name": "경상북도",
+   "sido_short": "경북",
+   "sigungu_code": "47900",
+   "sigungu_name": "예천군",
+   "legal_dong_code": "4790000000"
+  },
+  "lat": 36.65816,
+  "lng": 128.521156,
+  "nearest_ic": {
+   "name": "예천IC",
+   "distance_km": 2.3,
+   "source": "teepick(실측 표기)",
+   "straight_km_nearest": 2.1,
+   "straight_name": "예천IC"
+  },
+  "tel": "054-650-7000",
+  "homepage": "https://www.hmcn.co.kr/",
+  "operators": [
+   "한맥개발㈜ 임기주"
+  ],
+  "area_sqm": 1000226,
+  "opened": null,
+  "course_blocks": [],
+  "facility_id": null,
+  "provenance": {
+   "master": "courses_master.json v2.0 (문체부·KGA·KGBA·티픽·지도)",
+   "synced_to": "courses_master.json v2.7 (2026-11-26 단일 스키마 정규화)"
+  },
+  "par": null,
+  "holes_teepick": 18,
+  "course_spec": {
+   "holes": 18,
+   "par": null,
+   "blocks": [],
+   "length_m": null,
+   "kga": {
+    "kga_course_code": "222",
+    "kga_name": "한맥",
+    "region_short": "경북",
+    "address": "경북 예천군 호명면 황지리 73-19번지",
+    "match_method": "alias",
+    "match_score": 104,
+    "match_confidence": "high",
+    "nine_hole_courses": [
+     "H",
+     "M"
+    ],
+    "hole_combinations": [
+     {
+      "course_name_1": "H",
+      "course_name_2": "M",
+      "tees": [
+       {
+        "tee": "Black",
+        "gender": "남자",
+        "length_yds": 7331.0,
+        "std_par": 72.0,
+        "course_rating": 75.6,
+        "slope_rating": 137.0,
+        "front9": "37.6 / 136",
+        "back9": "38.0 / 138"
+       },
+       {
+        "tee": "Blue",
+        "gender": "남자",
+        "length_yds": 6883.0,
+        "std_par": 72.0,
+        "course_rating": 73.4,
+        "slope_rating": 132.0,
+        "front9": "36.5 / 130",
+        "back9": "36.9 / 133"
+       },
+       {
+        "tee": "White",
+        "gender": "남자",
+        "length_yds": 6363.0,
+        "std_par": 72.0,
+        "course_rating": 70.9,
+        "slope_rating": 127.0,
+        "front9": "35.0 / 125",
+        "back9": "35.9 / 128"
+       },
+       {
+        "tee": "Red",
+        "gender": "여자",
+        "length_yds": 5726.0,
+        "std_par": 72.0,
+        "course_rating": 72.9,
+        "slope_rating": 130.0,
+        "front9": "35.8 / 125",
+        "back9": "37.1 / 134"
+       }
+      ]
+     }
+    ]
+   },
+   "grass": {
+    "evidence": "한맥컨트리클럽 11.26(목) 오늘 VR영상보기 로그인 회원가입 클럽소개 인사말 클럽소개 연혁 이미지갤러리 오시는길 코스소개 코스안내 코스공략 미호안 미호안소개 미호안예약 예약확인 및 취소 시설소개 클럽하우스 프론트/로비 레스토랑/연회장 락커/스파 클럽샵 골프예약 이용안내 요금안내 골프예약 예약확인 및 취소 조인게시판 고객라운지 패키지예약 패키지요금안내 패키지예약 예약확인 및 취소 커뮤니티 공지사항 한맥소식 자료실 날씨안내 FAQ 한맥컨트리클럽 SCROLL DOWN 미호안예약 골프예약 패키지예약 예약취소/확인 예약안내 코스안내 날씨",
+    "source": "공식",
+    "url": "https://www.hmcn.co.kr/"
+   },
+   "hole_by_hole": null
+  },
+  "addresses": [
+   "경상북도 예천군 호명면 한맥골프장길 72"
+  ],
+  "status": "operating",
+  "fee_note": "11월 공지: 주중 70,000~150,000원·주말 80,000~190,000원. 카트 100,000원/팀(셀프카트 120,000+세팅비 20,000), 캐디 150,000원/팀.",
+  "facility_cluster": null,
+  "factcheck_2026_11_26": null,
+  "opened_evidence": {
+   "evidence": "한맥컨트리클럽 11.26(목) 오늘 VR영상보기 로그인 회원가입 클럽소개 인사말 클럽소개 연혁 이미지갤러리 오시는길 코스소개 코스안내 코스공략 미호안 미호안소개 미호안예약 예약확인 및 취소 시설소개 클럽하우스 프론트/로비 레스토랑/연회장 락커/스파 클럽샵 골프예약 이용안내 요금안내 골프예약 예약확인 및 취소 조인게시판 고객라운지 패키지예약 패키지요금안내 패키지예약 예약확인 및 취소 커뮤니티 공지사항 한맥소식 자료실 날씨안내 FAQ 한맥컨트리클럽 SCROLL DOWN 미호안예약 골프예약 패키지예약 예약취소/확인 예약안내 코스안내 날씨",
+   "source": "공식",
+   "url": "https://www.hmcn.co.kr/"
+  }
+ },
+ "course": {
+  "holes": 18,
+  "holes_received": 18,
+  "course_names": null,
+  "membership_type": "대중제",
+  "night_light": null,
+  "blocks": [],
+  "grass": {
+   "tee": null,
+   "fairway": {
+    "evidence": "한맥컨트리클럽 11.26(목) 오늘 VR영상보기 로그인 회원가입 클럽소개 인사말 클럽소개 연혁 이미지갤러리 오시는길 코스소개 코스안내 코스공략 미호안 미호안소개 미호안예약 예약확인 및 취소 시설소개 클럽하우스 프론트/로비 레스토랑/연회장 락커/스파 클럽샵 골프예약 이용안내 요금안내 골프예약 예약확인 및 취소 조인게시판 고객라운지 패키지예약 패키지요금안내 패키지예약 예약확인 및 취소 커뮤니티 공지사항 한맥소식 자료실 날씨안내 FAQ 한맥컨트리클럽 SCROLL DOWN 미호안예약 골프예약 패키지예약 예약취소/확인 예약안내 코스안내 날씨",
+    "source": "공식",
+    "url": "https://www.hmcn.co.kr/"
+   },
+   "green": null
+  },
+  "kga": {
+   "kga_course_code": "222",
+   "kga_name": "한맥",
+   "region_short": "경북",
+   "address": "경북 예천군 호명면 황지리 73-19번지",
+   "match_method": "alias",
+   "match_score": 104,
+   "match_confidence": "high",
+   "nine_hole_courses": [
+    "H",
+    "M"
+   ],
+   "hole_combinations": [
+    {
+     "course_name_1": "H",
+     "course_name_2": "M",
+     "tees": [
+      {
+       "tee": "Black",
+       "gender": "남자",
+       "length_yds": 7331.0,
+       "std_par": 72.0,
+       "course_rating": 75.6,
+       "slope_rating": 137.0,
+       "front9": "37.6 / 136",
+       "back9": "38.0 / 138"
+      },
+      {
+       "tee": "Blue",
+       "gender": "남자",
+       "length_yds": 6883.0,
+       "std_par": 72.0,
+       "course_rating": 73.4,
+       "slope_rating": 132.0,
+       "front9": "36.5 / 130",
+       "back9": "36.9 / 133"
+      },
+      {
+       "tee": "White",
+       "gender": "남자",
+       "length_yds": 6363.0,
+       "std_par": 72.0,
+       "course_rating": 70.9,
+       "slope_rating": 127.0,
+       "front9": "35.0 / 125",
+       "back9": "35.9 / 128"
+      },
+      {
+       "tee": "Red",
+       "gender": "여자",
+       "length_yds": 5726.0,
+       "std_par": 72.0,
+       "course_rating": 72.9,
+       "slope_rating": 130.0,
+       "front9": "35.8 / 125",
+       "back9": "37.1 / 134"
+      }
+     ]
+    }
+   ]
+  },
+  "kga_hole_est": null,
+  "extra_courses": null,
+  "hole_by_hole": null,
+  "length_m": null,
+  "par": null
+ },
+ "fee": {
+  "weekday": 150000,
+  "weekend": 190000,
+  "weekday_text": "70,000~150,000원 (11월, 시간대별)",
+  "weekend_text": "80,000~190,000원 (11월 토·일·공휴일)",
+  "basis": "1인·18홀. 11월 공지: 주중 1부 90,000~110,000원, 2부 월~목 140,000원·금 150,000원, 3부 70,000~80,000원 / 주말·공휴일 1·2부 190,000원, 3부 토 90,000·일 80,000원. 표준요금표(이용안내)는 그린피 주중 150,000·주말 190,000원+기본요금 30,000원 구조. 3인 라운드 주중 +10,000·주말 +20,000원.",
+  "tax_included": null,
+  "cart": {
+   "value": 100000,
+   "raw": "기본(최저) 요금은 50,000원 입니다. (V.A.T 포함)",
+   "label": "2홀 – 18홀 / (이용요금 - 기본요금) x (기 이용한 홀수/전체 홀수) / 악천후 시 카트료",
+   "url": "https://www.hmcn.co.kr/Reservation/ReservInfo",
+   "source": "공식 요금표",
+   "text": "100,000원/팀 (셀프카트 120,000원+세팅비 20,000원)",
+   "unit": "팀",
+   "note": "v2.8 정정: 공식 표의 \"기본(최저) 요금 50,000원\"은 1인 표기이며 팀 카트비가 아니다. 조사 확인 카트비 100,000원/팀."
+  },
+  "caddie": {
+   "value": 150000,
+   "raw": "기본(최저) 요금은 30,000원 입니다. (락카 이용료 포함, V.A.T 포함)",
+   "label": "팀당 150,000 / 악천후 시 이용요금 / 악천후 시 이용요금",
+   "url": "https://www.hmcn.co.kr/Reservation/ReservInfo",
+   "source": "공식 요금표",
+   "text": "150,000원/팀",
+   "unit": "팀",
+   "note": "v2.8 정정: 공식 표의 \"기본(최저) 30,000원(락카 이용료 포함)\"은 팀 캐디피가 아니다. 조사 확인 캐디피 150,000원/팀.",
+   "none": false
+  },
+  "as_of": "2026-11-01(공식 11월 요금표)",
+  "source_url": "https://hmcn.co.kr/",
+  "note": "경북 북부 유일 양잔디 18홀(7,317yd). 2026년 11~12월 이벤트 다수(연단체·다자녀·호국보훈·교원·예천군민&여성).",
+  "sources": [
+   {
+    "source": "외부 데이터 검수(16곳 요금표)",
+    "url": "https://hmcn.co.kr/",
+    "checked_at": "2026-11-26",
+    "note": "공식 요금표(이미지 포함) 판독 + 공개 요금 사이트 보조"
+   }
+  ],
+  "checked_at": null,
+  "market": {
+   "weekday_min": null,
+   "weekend_min": null,
+   "part1": null,
+   "part2": null,
+   "source": "티픽골프장(실거래 관측)",
+   "url": "https://teepickgolf.com/course/%ED%95%9C%EB%A7%A5%20C.C%20%26%20%EB%85%B8%EB%B8%94%EB%A6%AC%EC%95%84",
+   "note": "공시가 아닌 최근 관측 실거래 최저가"
+  },
+  "official_green": {
+   "value": 150000,
+   "raw": "150,000",
+   "label": "주중 / 주말/공휴일 / 그린피(입장료)",
+   "url": "https://www.hmcn.co.kr/Reservation/ReservInfo",
+   "source": "공식 요금표"
+  },
+  "official_green_evidence": [
+   "한맥컨트리클럽 11.26(목) 오늘 VR영상보기 로그인 회원가입 클럽소개 인사말 클럽소개 연혁 이미지갤러리 오시는길 코스소개 코스안내 코스공략 미호안 미호안소개 미호안예약 예약확인 및 취소 시설소개 클럽하우스 프론트/로비 레스토랑/연회장 락커/스파 클럽샵 골프예약 이용안내 요금안내 골프예약 예약확인 및 취소 조인게시판 고객라운지 패키지예약 패키지요금안내 패키지예약 예약확인 및 취소 커뮤니티 공지사항 한맥소식 자료실 날씨안내 FAQ 요금 안내 11월 그린피 12월 그린피 예약접수 주중예약 (평일 : 월~금요일) 전전주 월요일 9시부터",
+   "(10시경) 입주민팀 3인 라운드 시 그린피1인 정상요금 적용 됩니다.",
+   "입주민팀 3인 라운드 시 그린피1인 정상요금 적용 됩니다."
+  ],
+  "official_rental": null,
+  "official_table": {
+   "rows": [
+    {
+     "section": "그린피(입장료)",
+     "label": "주중 / 주말/공휴일 / 그린피(입장료)",
+     "value": "150,000",
+     "amounts": [
+      150000
+     ],
+     "url": "https://www.hmcn.co.kr/Reservation/ReservInfo"
+    },
+    {
+     "section": "그린피(입장료)",
+     "label": "주말/공휴일 / 그린피(입장료) / 150,000",
+     "value": "190,000",
+     "amounts": [
+      190000
+     ],
+     "url": "https://www.hmcn.co.kr/Reservation/ReservInfo"
+    },
+    {
+     "section": "그린피(입장료)",
+     "label": "150,000 / 190,000 / 기본요금",
+     "value": "30,000",
+     "amounts": [
+      30000
+     ],
+     "url": "https://www.hmcn.co.kr/Reservation/ReservInfo"
+    },
+    {
+     "section": "그린피(입장료)",
+     "label": "190,000 / 기본요금 / 30,000",
+     "value": "30,000",
+     "amounts": [
+      30000
+     ],
+     "url": "https://www.hmcn.co.kr/Reservation/ReservInfo"
+    },
+    {
+     "section": "캐디피",
+     "label": "팀당 150,000 / 악천후 시 이용요금 / 악천후 시 이용요금",
+     "value": "기본(최저) 요금은 30,000원 입니다. (락카 이용료 포함, V.A.T 포함)",
+     "amounts": [
+      30000
+     ],
+     "url": "https://www.hmcn.co.kr/Reservation/ReservInfo"
+    },
+    {
+     "section": "악천후 시 카트료",
+     "label": "2홀 – 18홀 / (이용요금 - 기본요금) x (기 이용한 홀수/전체 홀수) / 악천후 시 카트료",
+     "value": "기본(최저) 요금은 50,000원 입니다. (V.A.T 포함)",
+     "amounts": [
+      50000
+     ],
+     "url": "https://www.hmcn.co.kr/Reservation/ReservInfo"
+    },
+    {
+     "section": "악천후 시 캐디피",
+     "label": "10홀 – 18홀 / 100,000 / 악천후 시 캐디피",
+     "value": "기본(최저) 요금은 40,000원 입니다.",
+     "amounts": [
+      40000
+     ],
+     "url": "https://www.hmcn.co.kr/Reservation/ReservInfo"
+    }
+   ],
+   "url": "https://www.hmcn.co.kr/Reservation/ReservInfo"
+  },
+  "previous": {
+   "weekday": {
+    "value": 150000,
+    "source": "공식 요금표",
+    "url": "https://www.hmcn.co.kr/Reservation/ReservInfo",
+    "raw": "150,000",
+    "label": "주중 / 주말/공휴일 / 그린피(입장료)",
+    "note": "요금표 첫 금액(시간대·요일별 세부값은 official_table 참조)"
+   },
+   "cart": {
+    "value": 50000,
+    "raw": "기본(최저) 요금은 50,000원 입니다. (V.A.T 포함)",
+    "label": "2홀 – 18홀 / (이용요금 - 기본요금) x (기 이용한 홀수/전체 홀수) / 악천후 시 카트료",
+    "url": "https://www.hmcn.co.kr/Reservation/ReservInfo",
+    "source": "공식 요금표"
+   },
+   "caddie": {
+    "value": 30000,
+    "raw": "기본(최저) 요금은 30,000원 입니다. (락카 이용료 포함, V.A.T 포함)",
+    "label": "팀당 150,000 / 악천후 시 이용요금 / 악천후 시 이용요금",
+    "url": "https://www.hmcn.co.kr/Reservation/ReservInfo",
+    "source": "공식 요금표"
+   }
+  },
+  "value_check": [
+   {
+    "field": "cart",
+    "kept": 50000,
+    "research_amounts": [
+     100000,
+     120000,
+     20000
+    ],
+    "research_text": "100,000원/팀 (셀프카트 120,000원+세팅비 20,000원)",
+    "note": "1인/팀 단위 차이다. 공식 요금표의 기본(최저) 금액을 팀 단위 카트·캐디피로 잘못 매핑했다. v2.8에서 카트 100,000원/팀·캐디 150,000원/팀으로 정정했다."
+   },
+   {
+    "field": "caddie",
+    "kept": 30000,
+    "research_amounts": [
+     150000
+    ],
+    "research_text": "150,000원/팀",
+    "note": "1인/팀 단위 차이다. 공식 요금표의 기본(최저) 금액을 팀 단위 카트·캐디피로 잘못 매핑했다. v2.8에서 카트 100,000원/팀·캐디 150,000원/팀으로 정정했다."
+   }
+  ],
+  "research_2026_11_26": {
+   "no": 10,
+   "green_fee_weekday": "70,000~150,000원 (11월, 시간대별)",
+   "green_fee_weekend": "80,000~190,000원 (11월 토·일·공휴일)",
+   "green_fee_basis": "1인·18홀. 11월 공지: 주중 1부 90,000~110,000원, 2부 월~목 140,000원·금 150,000원, 3부 70,000~80,000원 / 주말·공휴일 1·2부 190,000원, 3부 토 90,000·일 80,000원. 표준요금표(이용안내)는 그린피 주중 150,000·주말 190,000원+기본요금 30,000원 구조. 3인 라운드 주중 +10,000·주말 +20,000원.",
+   "green_fee_as_of": "2026-11-01(공식 11월 요금표)",
+   "cart_fee": "100,000원/팀 (셀프카트 120,000원+세팅비 20,000원)",
+   "caddie_fee": "150,000원/팀",
+   "winter_closure_or_notice": "동계 휴장 공지 없음. 사계절 양잔디 코스로 겨울 운영 — 2026-11-12 '미호안 겨울시즌 숙박 특별가(네이버 예약 오픈)', 2026-11-23 '[12월] 2인&5인 플레이 이벤트' 게시.",
+   "recent_notices": "2026-11-23 [12월] 2인&5인 플레이 이벤트, 2026-11-12 미호안 겨울시즌 숙박 특별가, 2026-10-06 캐디피 카드결제 오픈, 2026-02-23 노캐디 셀프라운드 안내.",
+   "notes": "경북 북부 유일 양잔디 18홀(7,317yd). 2026년 11~12월 이벤트 다수(연단체·다자녀·호국보훈·교원·예천군민&여성).",
+   "unconfirmed": [
+    "동계 휴장 공지(2026-27)",
+    "12월 그린피 본문 값(이미지)",
+    "노캐디 셀프라운드 현재 운영 조건"
+   ],
+   "sources": [
+    "https://hmcn.co.kr/",
+    "https://hmcn.co.kr/Board/BoardView?board_idx=1&bd_main_seq=1457",
+    "https://greenfeeguide.co.kr/course/gc-0373/",
+    "https://todaygolfgo.com/golf-courses/master/golf-course-moct-20241231-0314/"
+   ],
+   "verified_at": "2026-11-26",
+   "source_file": "2-golf_16_courses_fees_notices.json"
+  },
+  "weekday_official": {
+   "value": 150000,
+   "source": "공식 요금표",
+   "url": "https://www.hmcn.co.kr/Reservation/ReservInfo",
+   "raw": "150,000",
+   "label": "주중 / 주말/공휴일 / 그린피(입장료)",
+   "note": "요금표 첫 금액(시간대·요일별 세부값은 official_table 참조)"
+  },
+  "weekday_basis": "max",
+  "weekend_basis": "max"
+ },
+ "cancel": {
+  "cancel_policy": null,
+  "open_cycle": null,
+  "notes": null,
+  "evidence": [
+   "한맥컨트리클럽 11.26(목) 오늘 VR영상보기 로그인 회원가입 클럽소개 인사말 클럽소개 연혁 이미지갤러리 오시는길 코스소개 코스안내 코스공략 미호안 미호안소개 미호안예약 예약확인 및 취소 시설소개 클럽하우스 프론트/로비 레스토랑/연회장 락커/스파 클럽샵 골프예약 이용안내 요금안내 골프예약 예약확인 및 취소 조인게시판 고객라운지 패키지예약 패키지요금안내 패키지예약 예약확인 및 취소 커뮤니티 공지사항 한맥소식 자료실 날씨안내 FAQ 한맥컨트리클럽 SCROLL DOWN 미호안예약 골프예약 패키지예약 예약취소/확인 예약안내 코스안내 날씨",
+   "한맥컨트리클럽 11.26(목) 오늘 VR영상보기 로그인 회원가입 클럽소개 인사말 클럽소개 연혁 이미지갤러리 오시는길 코스소개 코스안내 코스공략 미호안 미호안소개 미호안예약 예약확인 및 취소 시설소개 클럽하우스 프론트/로비 레스토랑/연회장 락커/스파 클럽샵 골프예약 이용안내 요금안내 골프예약 예약확인 및 취소 조인게시판 고객라운지 패키지예약 패키지요금안내 패키지예약 예약확인 및 취소 커뮤니티 공지사항 한맥소식 자료실 날씨안내 FAQ 요금 안내 11월 그린피 12월 그린피 예약접수 주중예약 (평일 : 월~금요일) 전전주 월요일 9시부터",
+   "주말 예약 확인 및 취소는 전화로만 가능합니다."
+  ],
+  "weather_evidence": [
+   "우천시 전기그릴 대여 불가 합니다.",
+   "우천시 전기그릴 대여 불가 합니다."
+  ],
+  "browser_official": null
+ },
+ "ops": {
+  "nocaddie": {
+   "evidence": [],
+   "value": null
+  },
+  "two_player": {
+   "evidence": [
+    "한맥컨트리클럽 11.26(목) 오늘 VR영상보기 로그인 회원가입 클럽소개 인사말 클럽소개 연혁 이미지갤러리 오시는길 코스소개 코스안내 코스공략 미호안 미호안소개 미호안예약 예약확인 및 취소 시설소개 클럽하우스 프론트/로비 레스토랑/연회장 락커/스파 클럽샵 골프예약 이용안내 요금안내 골프예약 예약확인 및 취소 조인게시판 고객라운지 패키지예약 패키지요금안내 패키지예약 예약확인 및 취소 커뮤니티 공지사항 한맥소식 자료실 날씨안내 FAQ 한맥컨트리클럽 SCROLL DOWN 미호안예약 골프예약 패키지예약 예약취소/확인 예약안내 코스안내 날씨",
+    "한맥컨트리클럽 11.26(목) 오늘 VR영상보기 로그인 회원가입 클럽소개 인사말 클럽소개 연혁 이미지갤러리 오시는길 코스소개 코스안내 코스공략 미호안 미호안소개 미호안예약 예약확인 및 취소 시설소개 클럽하우스 프론트/로비 레스토랑/연회장 락커/스파 클럽샵 골프예약 이용안내 요금안내 골프예약 예약확인 및 취소 조인게시판 고객라운지 패키지예약 패키지요금안내 패키지예약 예약확인 및 취소 커뮤니티 공지사항 한맥소식 자료실 날씨안내 FAQ 요금 안내 11월 그린피 12월 그린피 예약접수 주중예약 (평일 : 월~금요일) 전전주 월요일 9시부터",
+    "(10시경) 입주민팀 3인 라운드 시 그린피1인 정상요금 적용 됩니다."
+   ],
+   "value": null
+  },
+  "three_player": {
+   "value": null,
+   "evidence": []
+  },
+  "five_player": {
+   "value": null,
+   "evidence": []
+  },
+  "marshal_caddie": {
+   "value": null,
+   "evidence": []
+  },
+  "cart_type": {
+   "evidence": [
+    "토요일, 일요일 ‘관공서의 공휴일에 관한 규정’에 의한 공휴일 ‘근로자의 날 제정에 관한 법률’에 의한 근로자의 날 (5월 1일) 기타 정부에서 수시 정하는 날(임시공휴일) 카트 대여료, 캐디피, 기타 대여료(VAT포함) 단위 : 원 VAT포함 구분 요금 비고 카트료 팀당 100,000 캐디피 팀당 150,000 악천후 시 이용요금 악천후 시 이용요금 기본(최저) 요금은 30,000원 입니다.",
+    "1번째 홀까지 경기를 마치지 못한 경우 : 요금 없음 2번째 홀 이후 : (이용요금 - 기본요금) x (기 이용한 홀수/전체 홀수) 단위 : 원 VAT포함 구분 주중 구분 주말 1홀 미만 - 1홀 미만 - 2홀 – 18홀 (이용요금 - 기본요금) x (기 이용한 홀수/전체 홀수) 2홀 – 18홀 (이용요금 - 기본요금) x (기 이용한 홀수/전체 홀수) 악천후 시 카트료 기본(최저) 요금은 50,000원 입니다."
+   ],
+   "value": null
+  },
+  "cart_entry": {
+   "evidence": [],
+   "value": null
+  },
+  "bagdrop": {
+   "evidence": [],
+   "value": null
+  },
+  "mat": {
+   "evidence": [],
+   "value": null
+  },
+  "checkin": {
+   "evidence": [],
+   "value": null
+  },
+  "locker": {
+   "evidence": [
+    "한맥컨트리클럽 11.26(목) 오늘 VR영상보기 로그인 회원가입 클럽소개 인사말 클럽소개 연혁 이미지갤러리 오시는길 코스소개 코스안내 코스공략 미호안 미호안소개 미호안예약 예약확인 및 취소 시설소개 클럽하우스 프론트/로비 레스토랑/연회장 락커/스파 클럽샵 골프예약 이용안내 요금안내 골프예약 예약확인 및 취소 조인게시판 고객라운지 패키지예약 패키지요금안내 패키지예약 예약확인 및 취소 커뮤니티 공지사항 한맥소식 자료실 날씨안내 FAQ 한맥컨트리클럽 SCROLL DOWN 미호안예약 골프예약 패키지예약 예약취소/확인 예약안내 코스안내 날씨",
+    "한맥컨트리클럽 11.26(목) 오늘 VR영상보기 로그인 회원가입 클럽소개 인사말 클럽소개 연혁 이미지갤러리 오시는길 코스소개 코스안내 코스공략 미호안 미호안소개 미호안예약 예약확인 및 취소 시설소개 클럽하우스 프론트/로비 레스토랑/연회장 락커/스파 클럽샵 골프예약 이용안내 요금안내 골프예약 예약확인 및 취소 조인게시판 고객라운지 패키지예약 패키지요금안내 패키지예약 예약확인 및 취소 커뮤니티 공지사항 한맥소식 자료실 날씨안내 FAQ 요금 안내 11월 그린피 12월 그린피 예약접수 주중예약 (평일 : 월~금요일) 전전주 월요일 9시부터"
+   ],
+   "value": "문구 확인(원문 근거)"
+  },
+  "sauna": {
+   "evidence": [
+    "V타입 객실 편의 시설 보기 객실 어메니티 - 가구류, 가전류, 기타 구조 방2개(퀸침대1개/싱글침대2개)+거실+주방+욕실2개 + 실내스크린룸+ 야외히노끼탕 가구류 침대/식탁/식탁의자/소파/화장대/화장대의자 가전류 TV/냉장고/에어컨/스타일러/드라이기/인덕션/전자레인지 식기류 전기밥솥/도마/쟁반/컵/냄비/후라이팬/식도/뒤지개/국자/수저/가위/접시/밥,국그릇등 기타 무선인터넷/이불/요/베게/수건/샴푸/린스/바디워시 참고사항 ·",
+    "12월~3월 히노끼탕 사용불가 합니다.(동파우려로 인하여) ·"
+   ],
+   "value": "문구 확인(원문 근거)"
+  },
+  "dress": {
+   "evidence": [],
+   "value": null
+  },
+  "pace": {
+   "evidence": [],
+   "value": null
+  }
+ },
+ "facilities": {
+  "practice": {
+   "evidence": [
+    "또한 마을 뒷편으로는 골프장 주변으로 국내 최초의 산책형 승마코스(12km)와 승마 테라피를 즐길 수 있는 승마클럽이 들어설 예정이고, PAR3 골프장과 실외 골프연습장, 국궁장(양궁장), 산악자전거 그리고 가족골프호텔과 주말농장 등이 조성되어 온 가족이 함께 다양한 레져 스포츠를 즐길 수 있도록 하였습니다."
+   ],
+   "value": null
+  },
+  "indoor_range": {
+   "value": null,
+   "evidence": []
+  },
+  "food": {
+   "evidence": [
+    "한맥컨트리클럽 11.26(목) 오늘 VR영상보기 로그인 회원가입 클럽소개 인사말 클럽소개 연혁 이미지갤러리 오시는길 코스소개 코스안내 코스공략 미호안 미호안소개 미호안예약 예약확인 및 취소 시설소개 클럽하우스 프론트/로비 레스토랑/연회장 락커/스파 클럽샵 골프예약 이용안내 요금안내 골프예약 예약확인 및 취소 조인게시판 고객라운지 패키지예약 패키지요금안내 패키지예약 예약확인 및 취소 커뮤니티 공지사항 한맥소식 자료실 날씨안내 FAQ 한맥컨트리클럽 SCROLL DOWN 미호안예약 골프예약 패키지예약 예약취소/확인 예약안내 코스안내 날씨",
+    "한맥컨트리클럽 11.26(목) 오늘 VR영상보기 로그인 회원가입 클럽소개 인사말 클럽소개 연혁 이미지갤러리 오시는길 코스소개 코스안내 코스공략 미호안 미호안소개 미호안예약 예약확인 및 취소 시설소개 클럽하우스 프론트/로비 레스토랑/연회장 락커/스파 클럽샵 골프예약 이용안내 요금안내 골프예약 예약확인 및 취소 조인게시판 고객라운지 패키지예약 패키지요금안내 패키지예약 예약확인 및 취소 커뮤니티 공지사항 한맥소식 자료실 날씨안내 FAQ 요금 안내 11월 그린피 12월 그린피 예약접수 주중예약 (평일 : 월~금요일) 전전주 월요일 9시부터",
+    "한맥컨트리클럽 11.26(목) 오늘 VR영상보기 로그인 회원가입 클럽소개 인사말 클럽소개 연혁 이미지갤러리 오시는길 코스소개 코스안내 코스공략 미호안 미호안소개 미호안예약 예약확인 및 취소 시설소개 클럽하우스 프론트/로비 레스토랑/연회장 락커/스파 클럽샵 골프예약 이용안내 요금안내 골프예약 예약확인 및 취소 조인게시판 고객라운지 패키지예약 패키지요금안내 패키지예약 예약확인 및 취소 커뮤니티 공지사항 한맥소식 자료실 날씨안내 FAQ 코스안내 Course Info 국제대회가 가능한 정규 18홀 규모로 전장길이가 7,317야드(6,691"
+   ],
+   "value": null
+  },
+  "snack_bar": {
+   "value": null,
+   "evidence": []
+  },
+  "locker_sauna": {
+   "value": null,
+   "evidence": []
+  },
+  "lodging": {
+   "value": null,
+   "evidence": []
+  },
+  "other": {
+   "value": null,
+   "evidence": []
+  },
+  "night": {
+   "evidence": [],
+   "value": null
+  },
+  "closed_days": {
+   "evidence": [],
+   "third_party": null,
+   "value": null
+  },
+  "shuttle": {
+   "evidence": [],
+   "value": null
+  },
+  "ev_charge": {
+   "evidence": [],
+   "value": null
+  },
+  "gf_facilities": null,
+  "proshop": {
+   "evidence": [],
+   "value": null
+  }
+ },
+ "rental": {
+  "available": null,
+  "full_set": null,
+  "fee_text": null,
+  "brand": null,
+  "left_handed": null,
+  "shoes": null,
+  "nine_hole": null,
+  "range_finder": null,
+  "reservation": null,
+  "source_url": null,
+  "evidence": [],
+  "official": null,
+  "nearby_delivery": {
+   "region": "영남",
+   "sido": "경상북도",
+   "verified_at": "2026-11-26 (KST)",
+   "checked_at": "2026-11-26",
+   "providers": [
+    {
+     "id": "theb",
+     "name": "더비 (The B)",
+     "coverage": "O",
+     "basis": "부산점 24시간 무인픽업·반납(부산진구 양정동), 홈페이지에 '부산·경주·김해 부근' 표기. 그 외 경남·경북은 택배/퀵.",
+     "phone": "010-2530-4575",
+     "operating_status": "정상 영업",
+     "delivery": "O",
+     "price_headline": "12시간 기준 90,000원부터",
+     "bookable": true
+    },
+    {
+     "id": "gangnamclub",
+     "name": "강남골프클럽렌탈",
+     "coverage": "조건부",
+     "basis": "동일(전지역 배송·별도 상담).",
+     "phone": "010-7407-0753",
+     "operating_status": "정상 영업(자사 블로그 최신 게시 2026-04-28)",
+     "delivery": "미확인",
+     "price_headline": null,
+     "bookable": true
+    }
+   ],
+   "provider_count": 2,
+   "legend": {
+    "O": "공식 안내로 해당 권역 이용이 확인됨",
+    "X": "공식 안내상 해당 권역 서비스가 없음(예: '제주 전 지역' 전용으로만 안내)",
+    "조건부": "공식 안내상 가능하나 조건(수단·요금·현재 판매중지 등)이 붙어 있음. 조건은 basis/detail에 기재",
+    "미확인": "공식 공개 안내에서 해당 항목에 대한 언급을 찾지 못함(추정하지 않음)"
+   },
+   "not_verified": "전화·문자·카카오톡 상담으로만 확인 가능한 항목(재고, 개별 견적, 권역별 실제 배송 가능 여부)은 '미확인'으로 남김",
+   "source_file": "5-rental_8_coverage_verified.json",
+   "note_code": "해외 골퍼용 골프채 렌탈·딜리버리 업체. 같은 권역이라도 실제 배송 가능 여부·재고·견적은 전화 확인 필요."
+  }
+ },
+ "briefing": {
+  "notices": {
+   "url": "https://www.hmcn.co.kr/Board/BoardList?board_idx=1",
+   "items": [
+    {
+     "title": "[미호안] 네이버 예약 오픈! 겨울시즌 숙박 특별가",
+     "date": "2026-11-23",
+     "url": "https://www.hmcn.co.kr/Board/BoardView?board_idx=1&bd_main_seq=1530"
+    },
+    {
+     "title": "[12월] 2인&5인 플레이 이벤트",
+     "date": "2026-11-23",
+     "url": "https://www.hmcn.co.kr/Board/BoardList?board_idx=1"
+    },
+    {
+     "title": "[미호안] 네이버 예약 오픈! 겨울시즌 숙박 특별가",
+     "date": "2026-11-12",
+     "url": "https://www.hmcn.co.kr/Board/BoardList?board_idx=1"
+    },
+    {
+     "title": "한맥CC × 그린재킷 캐디피 카드결제 OPEN!",
+     "date": "2026-10-06",
+     "url": "https://www.hmcn.co.kr/Board/BoardView?board_idx=1&bd_main_seq=1530"
+    },
+    {
+     "title": "2027년도 연단체 모집 안내",
+     "date": "2026-09-05",
+     "url": "https://www.hmcn.co.kr/Board/BoardList?board_idx=1"
+    },
+    {
+     "title": "[11~12월] 연단체 총무 이벤트",
+     "date": "2026-06-22",
+     "url": "https://www.hmcn.co.kr/Board/BoardList?board_idx=1"
+    },
+    {
+     "title": "[11~12월] 다자녀할인",
+     "date": "2026-04-21",
+     "url": "https://www.hmcn.co.kr/Board/BoardList?board_idx=1"
+    },
+    {
+     "title": "[11~12월] 호국보훈 이벤트",
+     "date": "2026-04-19",
+     "url": "https://www.hmcn.co.kr/Board/BoardList?board_idx=1"
+    },
+    {
+     "title": "한맥컨트리클럽 전원마을 잔여택지 특별분양",
+     "date": "2026-03-27",
+     "url": "https://www.hmcn.co.kr/Board/BoardList?board_idx=1"
+    },
+    {
+     "title": "[11~12월] 교원이벤트",
+     "date": "2026-03-01",
+     "url": "https://www.hmcn.co.kr/Board/BoardList?board_idx=1"
+    },
+    {
+     "title": "노캐디 셀프라운드 안내",
+     "date": "2026-02-23",
+     "url": "https://www.hmcn.co.kr/Board/BoardList?board_idx=1"
+    },
+    {
+     "title": "[11~12월] 그린피 안내",
+     "date": "2025-07-28",
+     "url": "https://www.hmcn.co.kr/Board/BoardView?board_idx=1&bd_main_seq=1457"
+    },
+    {
+     "title": "[11~12월] 예천군민&여성이벤트",
+     "date": "2025-03-31",
+     "url": "https://www.hmcn.co.kr/Board/BoardView?board_idx=1&bd_main_seq=1457"
+    }
+   ],
+   "tags": {
+    "동절기": [
+     {
+      "title": "[미호안] 네이버 예약 오픈! 겨울시즌 숙박 특별가",
+      "date": "2026-11-23",
+      "url": "https://www.hmcn.co.kr/Board/BoardView?board_idx=1&bd_main_seq=1530"
+     },
+     {
+      "title": "[미호안] 네이버 예약 오픈! 겨울시즌 숙박 특별가",
+      "date": "2026-11-12",
+      "url": "https://www.hmcn.co.kr/Board/BoardList?board_idx=1"
+     }
+    ],
+    "이벤트": [
+     {
+      "title": "[12월] 2인&5인 플레이 이벤트",
+      "date": "2026-11-23",
+      "url": "https://www.hmcn.co.kr/Board/BoardList?board_idx=1"
+     },
+     {
+      "title": "[11~12월] 연단체 총무 이벤트",
+      "date": "2026-06-22",
+      "url": "https://www.hmcn.co.kr/Board/BoardList?board_idx=1"
+     },
+     {
+      "title": "[11~12월] 다자녀할인",
+      "date": "2026-04-21",
+      "url": "https://www.hmcn.co.kr/Board/BoardList?board_idx=1"
+     },
+     {
+      "title": "[11~12월] 호국보훈 이벤트",
+      "date": "2026-04-19",
+      "url": "https://www.hmcn.co.kr/Board/BoardList?board_idx=1"
+     },
+     {
+      "title": "[11~12월] 교원이벤트",
+      "date": "2026-03-01",
+      "url": "https://www.hmcn.co.kr/Board/BoardList?board_idx=1"
+     },
+     {
+      "title": "[11~12월] 예천군민&여성이벤트",
+      "date": "2025-03-31",
+      "url": "https://www.hmcn.co.kr/Board/BoardView?board_idx=1&bd_main_seq=1457"
+     }
+    ],
+    "모집": [
+     {
+      "title": "2027년도 연단체 모집 안내",
+      "date": "2026-09-05",
+      "url": "https://www.hmcn.co.kr/Board/BoardList?board_idx=1"
+     },
+     {
+      "title": "[11~12월] 연단체 총무 이벤트",
+      "date": "2026-06-22",
+      "url": "https://www.hmcn.co.kr/Board/BoardList?board_idx=1"
+     }
+    ],
+    "요금": [
+     {
+      "title": "[11~12월] 그린피 안내",
+      "date": "2025-07-28",
+      "url": "https://www.hmcn.co.kr/Board/BoardView?board_idx=1&bd_main_seq=1457"
+     }
+    ]
+   }
+  },
+  "review": {
+   "score_10": 8.3,
+   "count": 6,
+   "source": "티픽골프장 라운더 후기 집계",
+   "url": "https://teepickgolf.com/course/%ED%95%9C%EB%A7%A5%20C.C%20%26%20%EB%85%B8%EB%B8%94%EB%A6%AC%EC%95%84"
+  },
+  "fee_change": null,
+  "collected_at": "2026-11-26T10:28:34+09:00",
+  "recent_notice_text": "2026-11-23 [12월] 2인&5인 플레이 이벤트, 2026-11-12 미호안 겨울시즌 숙박 특별가, 2026-10-06 캐디피 카드결제 오픈, 2026-02-23 노캐디 셀프라운드 안내.",
+  "course_notes": "경북 북부 유일 양잔디 18홀(7,317yd). 2026년 11~12월 이벤트 다수(연단체·다자녀·호국보훈·교원·예천군민&여성).",
+  "alert": {
+   "type": "winter_operating",
+   "level": "info",
+   "summary": "사계절 양잔디 — 12월 이벤트·겨울 숙박 특가 게시",
+   "detail": "동계 휴장 공지 없음. 사계절 양잔디 코스로 겨울 운영 — 2026-11-12 '미호안 겨울시즌 숙박 특별가(네이버 예약 오픈)', 2026-11-23 '[12월] 2인&5인 플레이 이벤트' 게시.",
+   "period": null,
+   "confirmed": true,
+   "checked_at": "2026-11-26",
+   "source_url": "https://hmcn.co.kr/",
+   "source_file": "2-golf_16_courses_fees_notices.json"
+  },
+  "unconfirmed": [
+   "동계 휴장 공지(2026-27)",
+   "12월 그린피 본문 값(이미지)",
+   "노캐디 셀프라운드 현재 운영 조건"
+  ],
+  "sources": [
+   "https://hmcn.co.kr/",
+   "https://hmcn.co.kr/Board/BoardView?board_idx=1&bd_main_seq=1457",
+   "https://greenfeeguide.co.kr/course/gc-0373/",
+   "https://todaygolfgo.com/golf-courses/master/golf-course-moct-20241231-0314/"
+  ]
+ },
+ "collection": {
+  "official_site": "ok",
+  "official_reason": null,
+  "pages_collected": 14,
+  "third_party": {
+   "teepick": true,
+   "greenfeeguide": false
+  },
+  "render_hint": "static",
+  "plan_strategy": "static(직접 파싱)",
+  "browser_batch": false
+ },
+ "coverage": {
+  "basic": 1.0,
+  "course": 0.8,
+  "fee": 1.0,
+  "ops": 0.14,
+  "facility": 0.0,
+  "briefing": 1.0,
+  "rental": 0.25
+ }
+}

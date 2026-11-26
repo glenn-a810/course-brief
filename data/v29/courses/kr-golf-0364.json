@@ -1,0 +1,379 @@
+{
+ "course_id": "kr-golf-0364",
+ "meta": {
+  "name": "골프존카운티 사천",
+  "generated_at": "2026-11-26T10:33:21+09:00",
+  "schema": "stage2c/1.0",
+  "batch": "6_경남",
+  "includes": [
+   "master",
+   "ops",
+   "briefing"
+  ],
+  "source": "raw/received_gyeongnam_55.json (외부 데이터 수신, 2026-11-26)",
+  "review": {
+   "checked_at": null,
+   "status": "not_crosschecked",
+   "checks": []
+  },
+  "data_checks": [
+   "미확인 목록 누락 라벨 보완: 제세금, 예약 비고"
+  ],
+  "schema_previous": "stage2b/1.0",
+  "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
+  "restructured_from_7key": false,
+  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
+  "has_detail": true,
+  "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+ },
+ "master": {
+  "course_id": "kr-golf-0364",
+  "name": "골프존카운티 사천",
+  "name_variants": [
+   "골프존카운티 사천"
+  ],
+  "former_names": null,
+  "name_note": null,
+  "type": "대중제",
+  "types": [
+   "대중제"
+  ],
+  "type_note": null,
+  "holes": {
+   "total": 27,
+   "member": 0,
+   "public": 27,
+   "non_member": 0
+  },
+  "holes_note": null,
+  "address": "경상남도 사천시 서포면 구송로 151",
+  "addresses": [
+   "경상남도 사천시 서포면 구송로 151"
+  ],
+  "address_note": null,
+  "region": {
+   "sido_code": "48",
+   "sido_name": "경상남도",
+   "sido_short": "경남",
+   "sigungu_code": "48240",
+   "sigungu_name": "사천시",
+   "legal_dong_code": "4824000000"
+  },
+  "lat": 35.015025,
+  "lng": 127.957485,
+  "nearest_ic": {
+   "name": "곤양IC",
+   "distance_km": 4.7,
+   "source": "최근접 IC 직선거리"
+  },
+  "tel": "055-851-5000",
+  "tel_official": "055-851-5000",
+  "tel_conflict": false,
+  "tel_source": "KGA",
+  "tel_note": null,
+  "homepage": "https://www.golfzoncounty.com/",
+  "homepage_received": "https://www.golfzoncounty.com/gcounty/info/main?cc_code=37",
+  "homepage_note": null,
+  "operators": [
+   "㈜지씨사천서상현"
+  ],
+  "area_sqm": 1510534,
+  "opened": "2009-12",
+  "course_blocks": [],
+  "facility_id": null,
+  "facility_members": null,
+  "merged_ids": null,
+  "status": "operating",
+  "status_note": null,
+  "provenance": {
+   "master": "courses_master.json v2.6 (문체부·KGA·KGBA·티픽·지도 + 경남권 검수 정정)",
+   "detail": "raw/received_gyeongnam_55.json (2026-11-26 수신, 검수 2026-11-26)",
+   "synced_to": "courses_master.json v2.7 (2026-11-26 단일 스키마 정규화)"
+  },
+  "holes_received": 27,
+  "holes_conflict": false,
+  "facility_cluster": null,
+  "factcheck_2026_11_26": null,
+  "address_original": "사천시 서포면 구송로 151"
+ },
+ "course": {
+  "holes": 27,
+  "holes_received": 27,
+  "course_names": "다솔·비룡·비토 각 9홀",
+  "membership_type": "대중제",
+  "night_light": null,
+  "blocks": [],
+  "grass": {
+   "tee": "켄터키블루그래스",
+   "fairway": "장성중지(한국잔디)",
+   "green": "Pen A-1(벤트 계열)"
+  },
+  "kga": {
+   "code": "369",
+   "name": "골프존카운티 사천",
+   "nine_hole_courses": [
+    "비토",
+    "다솔",
+    "드래곤"
+   ],
+   "hole_combinations": [
+    "비토+다솔",
+    "다솔+드래곤",
+    "드래곤+비토"
+   ]
+  },
+  "kga_hole_est": 27,
+  "extra_courses": null
+ },
+ "fee": {
+  "weekday": 146000,
+  "weekend": 181000,
+  "weekday_text": "111,000~146,000원 (비회원 18홀, 월~금)",
+  "weekend_text": "156,000~181,000원 (토·일·공휴일)",
+  "basis": "1인·18홀 비회원, 시간대·시즌별 최저~최고(2026-10-05 공식 요금표)",
+  "tax_included": null,
+  "cart": {
+   "value": 90000,
+   "text": "90,000원/팀(4인 1대)"
+  },
+  "caddie": {
+   "value": 150000,
+   "text": "150,000원/팀(4인 기준)",
+   "none": false
+  },
+  "as_of": "2026-10-05",
+  "source_url": "https://greenfeeguide.co.kr/course/gc-0383/",
+  "note": null,
+  "sources": [
+   {
+    "source": "수신 조사(공개 요금정보 3자)",
+    "url": "https://greenfeeguide.co.kr/course/gc-0383/",
+    "checked_at": "2026-10-05"
+   }
+  ]
+ },
+ "cancel": {
+  "cancel_policy": "취소 수수료표를 주중·주말/공휴일·단체팀(3팀 이상)·패키지로 구분해 공식 예약안내에 게시(구체 수수료는 예약 화면·예약실 확인)",
+  "open_cycle": "매주 월요일 09:00, 오픈 주를 포함해 4주 뒤 월~일요일분 오픈",
+  "notes": null,
+  "evidence": [],
+  "weather_evidence": []
+ },
+ "ops": {
+  "nocaddie": {
+   "value": null,
+   "evidence": []
+  },
+  "two_player": {
+   "value": "가능",
+   "evidence": []
+  },
+  "three_player": {
+   "value": "가능",
+   "evidence": []
+  },
+  "five_player": {
+   "value": null,
+   "evidence": []
+  },
+  "marshal_caddie": {
+   "value": null,
+   "evidence": []
+  },
+  "cart_type": {
+   "value": null,
+   "evidence": []
+  },
+  "cart_entry": {
+   "value": null,
+   "evidence": []
+  },
+  "bagdrop": {
+   "value": null,
+   "evidence": []
+  },
+  "mat": {
+   "value": null,
+   "evidence": []
+  },
+  "checkin": {
+   "value": null,
+   "evidence": []
+  },
+  "locker": {
+   "value": null,
+   "evidence": []
+  },
+  "sauna": {
+   "value": null,
+   "evidence": []
+  },
+  "dress": {
+   "value": null,
+   "evidence": []
+  },
+  "pace": {
+   "value": null,
+   "evidence": []
+  }
+ },
+ "facilities": {
+  "practice": {
+   "value": null,
+   "evidence": []
+  },
+  "indoor_range": {
+   "value": null,
+   "evidence": []
+  },
+  "food": {
+   "value": null,
+   "evidence": []
+  },
+  "snack_bar": {
+   "value": null,
+   "evidence": []
+  },
+  "locker_sauna": {
+   "value": null,
+   "evidence": []
+  },
+  "lodging": {
+   "value": null,
+   "evidence": []
+  },
+  "other": {
+   "value": null,
+   "evidence": []
+  },
+  "night": {
+   "value": null,
+   "evidence": []
+  },
+  "closed_days": {
+   "value": null,
+   "third_party": null,
+   "evidence": []
+  },
+  "shuttle": {
+   "value": null,
+   "evidence": []
+  }
+ },
+ "rental": {
+  "available": "가능",
+  "full_set": null,
+  "fee_text": "골프채 대여료 공식 예약안내 게시(금액 미확인)",
+  "brand": null,
+  "left_handed": null,
+  "shoes": null,
+  "nine_hole": null,
+  "range_finder": null,
+  "reservation": null,
+  "source_url": null,
+  "nearby_delivery": {
+   "region": "영남",
+   "sido": "경상남도",
+   "verified_at": "2026-11-26 (KST)",
+   "checked_at": "2026-11-26",
+   "providers": [
+    {
+     "id": "theb",
+     "name": "더비 (The B)",
+     "coverage": "O",
+     "basis": "부산점 24시간 무인픽업·반납(부산진구 양정동), 홈페이지에 '부산·경주·김해 부근' 표기. 그 외 경남·경북은 택배/퀵.",
+     "phone": "010-2530-4575",
+     "operating_status": "정상 영업",
+     "delivery": "O",
+     "price_headline": "12시간 기준 90,000원부터",
+     "bookable": true
+    },
+    {
+     "id": "gangnamclub",
+     "name": "강남골프클럽렌탈",
+     "coverage": "조건부",
+     "basis": "동일(전지역 배송·별도 상담).",
+     "phone": "010-7407-0753",
+     "operating_status": "정상 영업(자사 블로그 최신 게시 2026-04-28)",
+     "delivery": "미확인",
+     "price_headline": null,
+     "bookable": true
+    }
+   ],
+   "provider_count": 2,
+   "legend": {
+    "O": "공식 안내로 해당 권역 이용이 확인됨",
+    "X": "공식 안내상 해당 권역 서비스가 없음(예: '제주 전 지역' 전용으로만 안내)",
+    "조건부": "공식 안내상 가능하나 조건(수단·요금·현재 판매중지 등)이 붙어 있음. 조건은 basis/detail에 기재",
+    "미확인": "공식 공개 안내에서 해당 항목에 대한 언급을 찾지 못함(추정하지 않음)"
+   },
+   "not_verified": "전화·문자·카카오톡 상담으로만 확인 가능한 항목(재고, 개별 견적, 권역별 실제 배송 가능 여부)은 '미확인'으로 남김",
+   "source_file": "5-rental_8_coverage_verified.json",
+   "note_code": "해외 골퍼용 골프채 렌탈·딜리버리 업체. 같은 권역이라도 실제 배송 가능 여부·재고·견적은 전화 확인 필요."
+  }
+ },
+ "briefing": {
+  "notices": {
+   "url": null,
+   "items": [],
+   "tags": {}
+  },
+  "recent_notice_text": "2026-10~11 공지 미확인(2026-11-26)",
+  "course_notes": "티잉그라운드 켄터키블루그래스·페어웨이 장성중지·그린 Pen A-1로 조성. 27홀 3코스",
+  "review": null,
+  "fee_change": null,
+  "alert": null,
+  "unconfirmed": [
+   "야간 라이트",
+   "5인 플레이",
+   "노캐디",
+   "마샬캐디",
+   "카트 종류",
+   "카트 페어웨이 진입",
+   "셀프 백드롭",
+   "매트 티샷",
+   "연습그린",
+   "인도어 연습장",
+   "식당·조식",
+   "그늘집",
+   "락커·사우나",
+   "숙박",
+   "기타 시설",
+   "좌타용 클럽",
+   "골프화 대여",
+   "제세금",
+   "예약 비고"
+  ],
+  "unconfirmed_labels_added": [
+   "제세금",
+   "예약 비고"
+  ],
+  "sources": [
+   "https://www.golfzoncounty.com/gcounty/info/main?cc_code=37",
+   "https://greenfeeguide.co.kr/course/gc-0383/",
+   "https://www.rankue.co.kr/golf/course/골프존카운티-사천"
+  ],
+  "collected_at": "2026-11-26T10:33:21+09:00"
+ },
+ "collection": {
+  "official_site": "ok",
+  "official_reason": "운영 중(골프존카운티 통합 홈페이지·실시간 예약)",
+  "pages_collected": 0,
+  "third_party": {
+   "received_report": true
+  },
+  "render_hint": "report",
+  "plan_strategy": "subagent_report(2026-11-26)"
+ },
+ "coverage": {
+  "basic": 1.0,
+  "course": 1.0,
+  "fee": 1.0,
+  "ops": 0.14,
+  "facility": 0.0,
+  "briefing": 0.75,
+  "rental": 0.75
+ }
+}

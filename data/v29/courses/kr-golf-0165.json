@@ -1,0 +1,796 @@
+{
+ "course_id": "kr-golf-0165",
+ "meta": {
+  "name": "국가보훈부 88골프장",
+  "generated_at": "2026-11-26T09:51:55+09:00",
+  "schema": "stage2c/1.0",
+  "batch": "1_수도권",
+  "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
+  "schema_previous": "stage2b/1.0",
+  "restructured_from_7key": true,
+  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
+  "has_detail": true,
+  "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+ },
+ "master": {
+  "course_id": "kr-golf-0165",
+  "name": "국가보훈부 88골프장",
+  "name_variants": [
+   "88 컨트리클럽",
+   "88CC",
+   "국가보훈부 88골프장"
+  ],
+  "type": "회원제",
+  "holes": {
+   "total": 36,
+   "member": 36,
+   "public": 0,
+   "non_member": 0
+  },
+  "address": "경기도 용인시 기흥구 석성로 521번길 169",
+  "region": {
+   "sido_code": "41",
+   "sido_name": "경기도",
+   "sido_short": "경기",
+   "sigungu_code": "41463",
+   "sigungu_name": "용인시 기흥구",
+   "legal_dong_code": "4146300000"
+  },
+  "lat": 37.30276,
+  "lng": 127.166773,
+  "nearest_ic": {
+   "name": "마성IC",
+   "distance_km": 2.3,
+   "source": "최근접 IC 직선거리"
+  },
+  "tel": "031-287-8811",
+  "homepage": "http://www.88countryclub.co.kr/",
+  "operators": [
+   "88관광개발㈜"
+  ],
+  "area_sqm": 2810296,
+  "opened": null,
+  "course_blocks": [],
+  "facility_id": null,
+  "provenance": {
+   "master": "courses_master.json v2.0 (문체부·KGA·KGBA·티픽·지도)",
+   "synced_to": "courses_master.json v2.7 (2026-11-26 단일 스키마 정규화)"
+  },
+  "course_spec": {
+   "holes": 36,
+   "par": null,
+   "blocks": [],
+   "length_m": null,
+   "kga": {
+    "kga_course_code": "40",
+    "kga_name": "88",
+    "region_short": "경기",
+    "address": "경기 용인시 기흥구 석성로521번길 169",
+    "match_method": "alias",
+    "match_score": 99,
+    "match_confidence": "high",
+    "nine_hole_courses": [
+     "동",
+     "서"
+    ],
+    "hole_combinations": [
+     {
+      "course_name_1": "동 (Out)",
+      "course_name_2": "동 (In)",
+      "tees": [
+       {
+        "tee": "Blue",
+        "gender": "남자",
+        "length_yds": 7092.0,
+        "std_par": 72.0,
+        "course_rating": 74.7,
+        "slope_rating": 137.0,
+        "front9": "37.5 / 138",
+        "back9": "37.2 / 136"
+       },
+       {
+        "tee": "White",
+        "gender": "남자",
+        "length_yds": 6380.0,
+        "std_par": 72.0,
+        "course_rating": 70.6,
+        "slope_rating": 127.0,
+        "front9": "35.0 / 125",
+        "back9": "35.6 / 128"
+       },
+       {
+        "tee": "Red",
+        "gender": "여자",
+        "length_yds": 5254.0,
+        "std_par": 72.0,
+        "course_rating": 70.5,
+        "slope_rating": 126.0,
+        "front9": "34.6 / 125",
+        "back9": "35.9 / 127"
+       }
+      ]
+     },
+     {
+      "course_name_1": "서 (Out)",
+      "course_name_2": "서 (In)",
+      "tees": [
+       {
+        "tee": "Blue",
+        "gender": "남자",
+        "length_yds": 7030.0,
+        "std_par": 72.0,
+        "course_rating": 74.3,
+        "slope_rating": 133.0,
+        "front9": "37.0 / 130",
+        "back9": "37.3 / 135"
+       },
+       {
+        "tee": "White",
+        "gender": "남자",
+        "length_yds": 6455.0,
+        "std_par": 72.0,
+        "course_rating": 70.8,
+        "slope_rating": 127.0,
+        "front9": "35.4 / 126",
+        "back9": "35.4 / 128"
+       },
+       {
+        "tee": "Red",
+        "gender": "여자",
+        "length_yds": 5332.0,
+        "std_par": 72.0,
+        "course_rating": 70.9,
+        "slope_rating": 125.0,
+        "front9": "35.3 / 123",
+        "back9": "35.6 / 127"
+       }
+      ]
+     }
+    ]
+   },
+   "grass": null,
+   "hole_by_hole": null
+  },
+  "addresses": [
+   "경기도 용인시 기흥구 석성로 521번길 169"
+  ],
+  "status": "operating",
+  "facility_cluster": null,
+  "factcheck_2026_11_26": null,
+  "opened_evidence": {
+   "evidence": "티오프시간에 개장하여 단체팀을 위한 음식에서부터 계절별 토속음식까지 연중으로 제공되고 있습니다.",
+   "source": "공식",
+   "url": "https://88countryclub.co.kr/Course/Facility.aspx"
+  }
+ },
+ "course": {
+  "holes": 36,
+  "holes_received": null,
+  "course_names": null,
+  "membership_type": "회원제",
+  "night_light": null,
+  "blocks": [],
+  "grass": {
+   "tee": null,
+   "fairway": null,
+   "green": null
+  },
+  "kga": {
+   "kga_course_code": "40",
+   "kga_name": "88",
+   "region_short": "경기",
+   "address": "경기 용인시 기흥구 석성로521번길 169",
+   "match_method": "alias",
+   "match_score": 99,
+   "match_confidence": "high",
+   "nine_hole_courses": [
+    "동",
+    "서"
+   ],
+   "hole_combinations": [
+    {
+     "course_name_1": "동 (Out)",
+     "course_name_2": "동 (In)",
+     "tees": [
+      {
+       "tee": "Blue",
+       "gender": "남자",
+       "length_yds": 7092.0,
+       "std_par": 72.0,
+       "course_rating": 74.7,
+       "slope_rating": 137.0,
+       "front9": "37.5 / 138",
+       "back9": "37.2 / 136"
+      },
+      {
+       "tee": "White",
+       "gender": "남자",
+       "length_yds": 6380.0,
+       "std_par": 72.0,
+       "course_rating": 70.6,
+       "slope_rating": 127.0,
+       "front9": "35.0 / 125",
+       "back9": "35.6 / 128"
+      },
+      {
+       "tee": "Red",
+       "gender": "여자",
+       "length_yds": 5254.0,
+       "std_par": 72.0,
+       "course_rating": 70.5,
+       "slope_rating": 126.0,
+       "front9": "34.6 / 125",
+       "back9": "35.9 / 127"
+      }
+     ]
+    },
+    {
+     "course_name_1": "서 (Out)",
+     "course_name_2": "서 (In)",
+     "tees": [
+      {
+       "tee": "Blue",
+       "gender": "남자",
+       "length_yds": 7030.0,
+       "std_par": 72.0,
+       "course_rating": 74.3,
+       "slope_rating": 133.0,
+       "front9": "37.0 / 130",
+       "back9": "37.3 / 135"
+      },
+      {
+       "tee": "White",
+       "gender": "남자",
+       "length_yds": 6455.0,
+       "std_par": 72.0,
+       "course_rating": 70.8,
+       "slope_rating": 127.0,
+       "front9": "35.4 / 126",
+       "back9": "35.4 / 128"
+      },
+      {
+       "tee": "Red",
+       "gender": "여자",
+       "length_yds": 5332.0,
+       "std_par": 72.0,
+       "course_rating": 70.9,
+       "slope_rating": 125.0,
+       "front9": "35.3 / 123",
+       "back9": "35.6 / 127"
+      }
+     ]
+    }
+   ]
+  },
+  "kga_hole_est": null,
+  "extra_courses": null,
+  "hole_by_hole": null,
+  "length_m": null,
+  "par": null
+ },
+ "fee": {
+  "weekday": null,
+  "weekend": null,
+  "weekday_text": null,
+  "weekend_text": null,
+  "basis": null,
+  "tax_included": null,
+  "cart": {
+   "value": 100000,
+   "raw": "팀당 100,000원(18홀) / 50,000원(9홀)",
+   "label": "카트이용료",
+   "url": "https://88countryclub.co.kr/Guide/Fees.aspx",
+   "source": "공식 요금표"
+  },
+  "caddie": {
+   "value": 150000,
+   "raw": "팀당 150,000원(18홀)",
+   "label": "캐디피",
+   "url": "https://88countryclub.co.kr/Guide/Fees.aspx",
+   "source": "공식 요금표",
+   "none": false
+  },
+  "as_of": null,
+  "source_url": null,
+  "note": null,
+  "sources": [],
+  "checked_at": null,
+  "market": {
+   "weekday_min": null,
+   "weekend_min": null,
+   "part1": null,
+   "part2": null,
+   "source": "티픽골프장(실거래 관측)",
+   "url": "https://teepickgolf.com/course/88%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%ED%81%B4%EB%9F%BD",
+   "note": "공시가 아닌 최근 관측 실거래 최저가"
+  },
+  "official_green_evidence": [
+   "클럽소개 대표이사 인사말 회사연혁 역대 골프대회 조직구성 CEO와의 대화 오시는 길 고객헌장 예약안내 이용요금안내 모바일 예약 클럽가입안내 세금안내 평일예약 회원의날 예약 예약조회/취소 이용내역 조회 주말예약신청접수 주말예약신청확인 대기자등록 대기자조회/취소 대회접수 부대시설안내 코스안내 연습장 PAR3 연습장오시는길 윤리경영 회원친선대회 명예의 전당 공지사항 입찰공고 채용공고 건의 및 칭찬 이야기 마당 조인게시판 공지사항 입찰공고 채용공고 건의 및 칭찬 이야기 마당 조인게시판 12월 비회원 그린피 및 경기 시간 안내 작성자 : 관",
+   "그린피 및 식음료 요금은 프론트에서 정산하고있습니다."
+  ],
+  "official_rental": {
+   "value": 5000,
+   "raw": "5,000원",
+   "label": "대여요금 / 골프화",
+   "url": "https://88countryclub.co.kr/Guide/Fees.aspx",
+   "source": "공식 요금표"
+  },
+  "official_table": {
+   "rows": [
+    {
+     "section": "회원구분",
+     "label": "주중 / 주말/공휴일(근로자의 날) / 정회원",
+     "value": "68,000원",
+     "amounts": [
+      68000
+     ],
+     "url": "https://88countryclub.co.kr/Guide/Fees.aspx"
+    },
+    {
+     "section": "회원구분",
+     "label": "",
+     "value": "73,000원",
+     "amounts": [
+      73000
+     ],
+     "url": "https://88countryclub.co.kr/Guide/Fees.aspx"
+    },
+    {
+     "section": "회원구분",
+     "label": "가족회원",
+     "value": "95,000원",
+     "amounts": [
+      95000
+     ],
+     "url": "https://88countryclub.co.kr/Guide/Fees.aspx"
+    },
+    {
+     "section": "회원구분",
+     "label": "",
+     "value": "260,000원",
+     "amounts": [
+      260000
+     ],
+     "url": "https://88countryclub.co.kr/Guide/Fees.aspx"
+    },
+    {
+     "section": "회원구분",
+     "label": "비회원",
+     "value": "210,000원",
+     "amounts": [
+      210000
+     ],
+     "url": "https://88countryclub.co.kr/Guide/Fees.aspx"
+    },
+    {
+     "section": "회원구분",
+     "label": "",
+     "value": "260,000원",
+     "amounts": [
+      260000
+     ],
+     "url": "https://88countryclub.co.kr/Guide/Fees.aspx"
+    },
+    {
+     "section": "카트이용료",
+     "label": "카트이용료",
+     "value": "팀당 100,000원(18홀) / 50,000원(9홀)",
+     "amounts": [
+      100000,
+      50000
+     ],
+     "url": "https://88countryclub.co.kr/Guide/Fees.aspx"
+    },
+    {
+     "section": "캐디피",
+     "label": "캐디피",
+     "value": "팀당 150,000원(18홀)",
+     "amounts": [
+      150000
+     ],
+     "url": "https://88countryclub.co.kr/Guide/Fees.aspx"
+    },
+    {
+     "section": "대여요금",
+     "label": "대여요금 / 골프화",
+     "value": "5,000원",
+     "amounts": [
+      5000
+     ],
+     "url": "https://88countryclub.co.kr/Guide/Fees.aspx"
+    },
+    {
+     "section": "대여요금",
+     "label": "골프채(SET)",
+     "value": "30,000원",
+     "amounts": [
+      30000
+     ],
+     "url": "https://88countryclub.co.kr/Guide/Fees.aspx"
+    },
+    {
+     "section": "대여요금",
+     "label": "골프채(퍼터)",
+     "value": "5,000원",
+     "amounts": [
+      5000
+     ],
+     "url": "https://88countryclub.co.kr/Guide/Fees.aspx"
+    }
+   ],
+   "url": "https://88countryclub.co.kr/Guide/Fees.aspx"
+  }
+ },
+ "cancel": {
+  "cancel_policy": null,
+  "open_cycle": null,
+  "notes": null,
+  "evidence": [
+   "클럽소개 대표이사 인사말 회사연혁 역대 골프대회 조직구성 CEO와의 대화 오시는 길 고객헌장 예약안내 이용요금안내 모바일 예약 클럽가입안내 세금안내 평일예약 회원의날 예약 예약조회/취소 이용내역 조회 주말예약신청접수 주말예약신청확인 대기자등록 대기자조회/취소 대회접수 부대시설안내 코스안내 연습장 PAR3 연습장오시는길 윤리경영 회원친선대회 명예의 전당 공지사항 입찰공고 채용공고 건의 및 칭찬 이야기 마당 조인게시판 공지사항 입찰공고 채용공고 건의 및 칭찬 이야기 마당 조인게시판 12월 비회원 그린피 및 경기 시간 안내 작성자 : 관",
+   "클럽소개 대표이사 인사말 회사연혁 역대 골프대회 조직구성 CEO와의 대화 오시는 길 고객헌장 예약안내 이용요금안내 모바일 예약 클럽가입안내 세금안내 평일예약 회원의날 예약 예약조회/취소 이용내역 조회 주말예약신청접수 주말예약신청확인 대기자등록 대기자조회/취소 대회접수 부대시설안내 코스안내 연습장 PAR3 연습장오시는길 윤리경영 회원친선대회 명예의 전당 공지사항 입찰공고 채용공고 건의 및 칭찬 이야기 마당 조인게시판 공지사항 입찰공고 채용공고 건의 및 칭찬 이야기 마당 조인게시판 6인승 리무진 카트 예약 및 요금 안내 작성자 : 관리",
+   "클럽소개 대표이사 인사말 회사연혁 역대 골프대회 조직구성 CEO와의 대화 오시는 길 고객헌장 예약안내 이용요금안내 모바일 예약 클럽가입안내 세금안내 평일예약 회원의날 예약 예약조회/취소 이용내역 조회 주말예약신청접수 주말예약신청확인 대기자등록 대기자조회/취소 대회접수 부대시설안내 코스안내 연습장 PAR3 연습장오시는길 윤리경영 회원친선대회 명예의 전당 공지사항 입찰공고 채용공고 건의 및 칭찬 이야기 마당 조인게시판 공지사항 입찰공고 채용공고 건의 및 칭찬 이야기 마당 조인게시판 골프장 매크로방지 시스템 적용 안내 작성자 : 관리자 "
+  ],
+  "weather_evidence": [
+   "본인 내장후 기상 악화 등 운동불가 사유로 취소시는 예약정지 미적용 2."
+  ]
+ },
+ "ops": {
+  "nocaddie": {
+   "evidence": [
+    "노캐디(셀프) 시범 라운드 운영"
+   ],
+   "value": "노캐디 선택 가능",
+   "source_url": "https://88countryclub.co.kr/Board/BoardList.aspx?cfgid=notice",
+   "confidence": "medium",
+   "source_type": "official_site",
+   "page_label": "",
+   "value_from": "capital_supplement(official_site)"
+  },
+  "two_player": {
+   "evidence": [
+    "2인 또는 5인 플레이는 불가하며, 갤러리 입장 시 동일한 요금 적용됩니다.",
+    "클럽소개 대표이사 인사말 회사연혁 역대 골프대회 조직구성 CEO와의 대화 오시는 길 고객헌장 예약안내 이용요금안내 모바일 예약 클럽가입안내 세금안내 평일예약 회원의날 예약 예약조회/취소 이용내역 조회 주말예약신청접수 주말예약신청확인 대기자등록 대기자조회/취소 대회접수 부대시설안내 코스안내 연습장 PAR3 연습장오시는길 윤리경영 회원친선대회 명예의 전당 공지사항 입찰공고 채용공고 건의 및 칭찬 이야기 마당 조인게시판 공지사항 입찰공고 채용공고 건의 및 칭찬 이야기 마당 조인게시판 12월 비회원 그린피 및 경기 시간 안내 작성자 : 관",
+    "클럽소개 대표이사 인사말 회사연혁 역대 골프대회 조직구성 CEO와의 대화 오시는 길 고객헌장 예약안내 이용요금안내 모바일 예약 클럽가입안내 세금안내 평일예약 회원의날 예약 예약조회/취소 이용내역 조회 주말예약신청접수 주말예약신청확인 대기자등록 대기자조회/취소 대회접수 부대시설안내 코스안내 연습장 PAR3 연습장오시는길 윤리경영 회원친선대회 명예의 전당 공지사항 입찰공고 채용공고 건의 및 칭찬 이야기 마당 조인게시판 공지사항 입찰공고 채용공고 건의 및 칭찬 이야기 마당 조인게시판 6인승 리무진 카트 예약 및 요금 안내 작성자 : 관리"
+   ],
+   "value": "2인 불가",
+   "source_url": "https://88countryclub.co.kr/Guide/Fees.aspx",
+   "confidence": "medium",
+   "source_type": "official_site",
+   "page_label": "이용요금안내",
+   "value_from": "capital_supplement(official_site)"
+  },
+  "three_player": {
+   "value": null,
+   "evidence": []
+  },
+  "five_player": {
+   "value": "5인 불가",
+   "evidence": [
+    "2인 또는 5인 플레이는 불가하며, 갤러리 입장 시 동일한 요금 적용됩니다."
+   ],
+   "source_url": "https://88countryclub.co.kr/Guide/Fees.aspx",
+   "confidence": "medium",
+   "source_type": "official_site",
+   "page_label": "이용요금안내",
+   "value_from": "capital_supplement(official_site)"
+  },
+  "marshal_caddie": {
+   "value": null,
+   "evidence": []
+  },
+  "cart_type": {
+   "evidence": [
+    "클럽소개 대표이사 인사말 회사연혁 역대 골프대회 조직구성 CEO와의 대화 오시는 길 고객헌장 예약안내 이용요금안내 모바일 예약 클럽가입안내 세금안내 평일예약 회원의날 예약 예약조회/취소 이용내역 조회 주말예약신청접수 주말예약신청확인 대기자등록 대기자조회/취소 대회접수 부대시설안내 코스안내 연습장 PAR3 연습장오시는길 윤리경영 회원친선대회 명예의 전당 공지사항 입찰공고 채용공고 건의 및 칭찬 이야기 마당 조인게시판 공지사항 입찰공고 채용공고 건의 및 칭찬 이야기 마당 조인게시판 6인승 리무진 카트 예약 및 요금 안내 작성자 : 관리",
+    "6인승 리무진 카트"
+   ],
+   "value": "리무진카트(6인승)",
+   "source_url": "https://88countryclub.co.kr/Board/BoardView.aspx?post=38408&amp;cfgid=notice&amp;page=1",
+   "confidence": "high",
+   "checked_at": "2026-10-22",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/golf-cart-limousine-fairway-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  },
+  "cart_entry": {
+   "evidence": [],
+   "value": null
+  },
+  "bagdrop": {
+   "evidence": [],
+   "value": null
+  },
+  "mat": {
+   "evidence": [],
+   "value": null
+  },
+  "checkin": {
+   "evidence": [
+    "프론트내장하시는 고객께서는 프론트에서 티오프시간 30분전에 등록을"
+   ],
+   "value": "티오프 30분 전 도착",
+   "source_url": "https://88countryclub.co.kr/Course/Facility.aspx",
+   "confidence": "medium",
+   "source_type": "official_site",
+   "page_label": "코스소개",
+   "value_from": "capital_supplement(official_site)"
+  },
+  "locker": {
+   "evidence": [
+    "로비라운지 로비라운지에는 프론트, 용품샵, 휴게실, 락커룸이 있습니다.",
+    "락카룸 남성락카실은 1층에 위치, 넓고 쾌적하게 리모델링하여 여유롭게 이용하실 수 있으며, 여성락카실의 경우 2층에 위치하여 코스전경을 감상하며 즐기실 수 있는 욕실이 완비되어 있습니다.",
+    "로비라운지에는 프론트, 용품샵, 휴게실, 락커룸이 있습니다."
+   ],
+   "value": "락커 운영",
+   "value_previous": "문구 확인(원문 근거)",
+   "source_url": "https://88countryclub.co.kr/Course/Facility.aspx",
+   "confidence": "medium",
+   "source_type": "official_site",
+   "page_label": "코스소개",
+   "value_from": "capital_supplement(official_site)"
+  },
+  "sauna": {
+   "evidence": [],
+   "value": null
+  },
+  "dress": {
+   "evidence": [
+    "내장하시는 고객께서는 단정한 복장을 착용하여 타인에게 불쾌감을 주는 일이 없도록 하며 특히 로비라운지에서는 정숙하시어 클럽의 품위가 손상되지 않도록 배려바랍니다."
+   ],
+   "value": "문구 확인(원문 근거)"
+  },
+  "pace": {
+   "evidence": [],
+   "value": null
+  },
+  "cart_limousine": {
+   "value": "6인승 리무진 카트",
+   "evidence": [
+    "6인승 리무진 카트"
+   ],
+   "source_url": "https://88countryclub.co.kr/Board/BoardView.aspx?post=38408&amp;cfgid=notice&amp;page=1",
+   "confidence": "high",
+   "checked_at": "2026-10-22",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/golf-cart-limousine-fairway-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  }
+ },
+ "facilities": {
+  "practice": {
+   "evidence": [
+    "클럽소개 대표이사 인사말 회사연혁 역대 골프대회 조직구성 CEO와의 대화 오시는 길 고객헌장 예약안내 이용요금안내 모바일 예약 클럽가입안내 세금안내 평일예약 회원의날 예약 예약조회/취소 이용내역 조회 주말예약신청접수 주말예약신청확인 대기자등록 대기자조회/취소 대회접수 부대시설안내 코스안내 연습장 PAR3 연습장오시는길 윤리경영 회원친선대회 명예의 전당 공지사항 입찰공고 채용공고 건의 및 칭찬 이야기 마당 조인게시판 공지사항 입찰공고 채용공고 건의 및 칭찬 이야기 마당 조인게시판 12월 비회원 그린피 및 경기 시간 안내 작성자 : 관",
+    "클럽소개 대표이사 인사말 회사연혁 역대 골프대회 조직구성 CEO와의 대화 오시는 길 고객헌장 예약안내 이용요금안내 모바일 예약 클럽가입안내 세금안내 평일예약 회원의날 예약 예약조회/취소 이용내역 조회 주말예약신청접수 주말예약신청확인 대기자등록 대기자조회/취소 대회접수 부대시설안내 코스안내 연습장 PAR3 연습장오시는길 윤리경영 회원친선대회 명예의 전당 공지사항 입찰공고 채용공고 건의 및 칭찬 이야기 마당 조인게시판 공지사항 입찰공고 채용공고 건의 및 칭찬 이야기 마당 조인게시판 6인승 리무진 카트 예약 및 요금 안내 작성자 : 관리",
+    "클럽소개 대표이사 인사말 회사연혁 역대 골프대회 조직구성 CEO와의 대화 오시는 길 고객헌장 예약안내 이용요금안내 모바일 예약 클럽가입안내 세금안내 평일예약 회원의날 예약 예약조회/취소 이용내역 조회 주말예약신청접수 주말예약신청확인 대기자등록 대기자조회/취소 대회접수 부대시설안내 코스안내 연습장 PAR3 연습장오시는길 윤리경영 회원친선대회 명예의 전당 공지사항 입찰공고 채용공고 건의 및 칭찬 이야기 마당 조인게시판 공지사항 입찰공고 채용공고 건의 및 칭찬 이야기 마당 조인게시판 골프장 매크로방지 시스템 적용 안내 작성자 : 관리자 ",
+    "최장거리 300m의 넓은 시야로 마음껏 기량을 연마할 수 있는 88컨트리클럽 골프연습장에서 타석 연습과 편안한 힐링을 느껴보세요."
+   ],
+   "value": "연습장",
+   "source_url": "https://88countryclub.co.kr/Course/RangeInfo.aspx",
+   "confidence": "low",
+   "source_type": "official_site",
+   "page_label": "연습장",
+   "value_from": "capital_supplement(official_site)"
+  },
+  "indoor_range": {
+   "value": null,
+   "evidence": []
+  },
+  "food": {
+   "evidence": [
+    "대식당 클럽하우스 2층에 자리잡고 있는 300석 규모의 레스토랑에서는 연중 사계절의 다양한 음식이 제공됩니다.",
+    "휴게실 휴게실은 정다운 분들과 담소를 즐기실 수 있도록 1층 로비라운지와 2층 레스토랑 옆에 마련되어 있습니다.",
+    "해장국 메뉴 우거지해장국(25,000원)"
+   ],
+   "value": "해장국 메뉴 우거지해장국(25,000원)",
+   "source_url": "https://88countryclub.co.kr/",
+   "confidence": "high",
+   "checked_at": "2026-10-21",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/golf-course-food-price-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  },
+  "snack_bar": {
+   "value": null,
+   "evidence": []
+  },
+  "locker_sauna": {
+   "value": null,
+   "evidence": []
+  },
+  "lodging": {
+   "value": null,
+   "evidence": []
+  },
+  "other": {
+   "value": null,
+   "evidence": []
+  },
+  "night": {
+   "evidence": [],
+   "value": null
+  },
+  "closed_days": {
+   "evidence": [],
+   "third_party": null,
+   "value": null
+  },
+  "shuttle": {
+   "evidence": [],
+   "value": null
+  },
+  "ev_charge": {
+   "evidence": [
+    "전기차 충전시설"
+   ],
+   "value": "전기차 충전시설",
+   "source_url": "https://88countryclub.co.kr/Course/Facility.aspx",
+   "confidence": "high",
+   "checked_at": "2026-10-20",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/golf-course-amenities-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  },
+  "gf_facilities": null,
+  "proshop": {
+   "evidence": [
+    "전기차 충전 가능 · 프로샵"
+   ],
+   "value": "프로샵 운영",
+   "source_url": "https://88countryclub.co.kr/Course/Facility.aspx",
+   "confidence": "high",
+   "checked_at": "2026-10-20",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/golf-course-amenities-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  },
+  "practice_fee": {
+   "value": "주중 19,000원 / 주말·공휴일 21,000원",
+   "evidence": [
+    "주중 19,000원 / 주말·공휴일 21,000원"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/guides/golf-course-driving-range-fee-guide/",
+   "confidence": "high",
+   "checked_at": "2026-10-19",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/golf-course-driving-range-fee-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  }
+ },
+ "rental": {
+  "available": "가능",
+  "full_set": 5000,
+  "fee_text": "5,000원",
+  "brand": null,
+  "left_handed": null,
+  "shoes": null,
+  "nine_hole": null,
+  "range_finder": null,
+  "reservation": null,
+  "source_url": "https://88countryclub.co.kr/Guide/Fees.aspx",
+  "evidence": [],
+  "official": {
+   "value": 5000,
+   "raw": "5,000원",
+   "label": "대여요금 / 골프화",
+   "url": "https://88countryclub.co.kr/Guide/Fees.aspx",
+   "source": "공식 요금표"
+  },
+  "nearby_delivery": {
+   "region": "수도권",
+   "sido": "경기도",
+   "verified_at": "2026-11-26 (KST)",
+   "checked_at": "2026-11-26",
+   "providers": [
+    {
+     "id": "theb",
+     "name": "더비 (The B)",
+     "coverage": "O",
+     "basis": "동탄·김포·시흥·용인·이천 24시간 무인픽업 매장 5곳 + 다마스 퀵/택배 배송. 홈페이지에 '강남·동탄·판교·수지·광교·분당', '시흥·배곧·인천·안산·송도', '이천·여주' 권역 표기.",
+     "phone": "010-2530-4575",
+     "operating_status": "정상 영업",
+     "delivery": "O",
+     "price_headline": "12시간 기준 90,000원부터",
+     "bookable": true
+    },
+    {
+     "id": "gangnamclub",
+     "name": "강남골프클럽렌탈",
+     "coverage": "O",
+     "basis": "서울 서초구 거점 매장 주소 공개, 자사 블로그 '전지역 배송 가능' 안내.",
+     "phone": "010-7407-0753",
+     "operating_status": "정상 영업(자사 블로그 최신 게시 2026-04-28)",
+     "delivery": "미확인",
+     "price_headline": null,
+     "bookable": true
+    },
+    {
+     "id": "apioz",
+     "name": "아피오즈 (Apioz)",
+     "coverage": "조건부",
+     "basis": "서울 숙소 배송·공항 픽업 옵션 안내. 단 골프세트 Sold Out으로 현재 이용 불가.",
+     "phone": "02-6956-8115",
+     "operating_status": "예약 중단(Sold Out) — 골프채 세트 한정",
+     "delivery": "미확인",
+     "price_headline": null,
+     "caution": "골프채 세트 Sold Out — 현재 예약 불가",
+     "bookable": false,
+     "bookable_reason": "골프채 세트 Sold Out — 현재 예약 불가"
+    }
+   ],
+   "provider_count": 3,
+   "legend": {
+    "O": "공식 안내로 해당 권역 이용이 확인됨",
+    "X": "공식 안내상 해당 권역 서비스가 없음(예: '제주 전 지역' 전용으로만 안내)",
+    "조건부": "공식 안내상 가능하나 조건(수단·요금·현재 판매중지 등)이 붙어 있음. 조건은 basis/detail에 기재",
+    "미확인": "공식 공개 안내에서 해당 항목에 대한 언급을 찾지 못함(추정하지 않음)"
+   },
+   "not_verified": "전화·문자·카카오톡 상담으로만 확인 가능한 항목(재고, 개별 견적, 권역별 실제 배송 가능 여부)은 '미확인'으로 남김",
+   "source_file": "5-rental_8_coverage_verified.json",
+   "note_code": "해외 골퍼용 골프채 렌탈·딜리버리 업체. 같은 권역이라도 실제 배송 가능 여부·재고·견적은 전화 확인 필요."
+  },
+  "fee_source": {
+   "label": "대여요금 / 골프화",
+   "url": "https://88countryclub.co.kr/Guide/Fees.aspx",
+   "source": "공식 요금표",
+   "raw": "5,000원"
+  }
+ },
+ "briefing": {
+  "notices": {
+   "url": "https://www.88countryclub.co.kr/Board/BoardView.aspx?post=38542&cfgid=notice&page=1",
+   "items": [
+    {
+     "title": "작성일 :",
+     "date": "2026-11-11",
+     "url": "https://88countryclub.co.kr/Board/BoardView.aspx?post=38641&cfgid=notice&page=1"
+    },
+    {
+     "title": "작성일 :",
+     "date": "2026-10-01",
+     "url": "https://www.88countryclub.co.kr/Board/BoardView.aspx?post=38542&cfgid=notice&page=1"
+    },
+    {
+     "title": "작성일 :",
+     "date": "2026-08-21",
+     "url": "https://www.88countryclub.co.kr/Board/BoardView.aspx?post=38408&cfgid=notice&page=1"
+    }
+   ],
+   "tags": {}
+  },
+  "review": {
+   "score_10": 8.8,
+   "count": 661,
+   "source": "티픽골프장 라운더 후기 집계",
+   "url": "https://teepickgolf.com/course/88%20%EC%BB%A8%ED%8A%B8%EB%A6%AC%ED%81%B4%EB%9F%BD"
+  },
+  "fee_change": null,
+  "collected_at": "2026-11-26T09:51:55+09:00",
+  "recent_notice_text": null,
+  "course_notes": null,
+  "alert": null,
+  "unconfirmed": [],
+  "sources": []
+ },
+ "collection": {
+  "official_site": "ok",
+  "official_reason": null,
+  "pages_collected": 14,
+  "third_party": {
+   "teepick": true,
+   "greenfeeguide": false
+  },
+  "render_hint": "static",
+  "plan_strategy": "static(직접 파싱)",
+  "browser_batch": false
+ },
+ "coverage": {
+  "basic": 1.0,
+  "course": 0.8,
+  "fee": 0.5,
+  "ops": 0.5,
+  "facility": 0.2,
+  "briefing": 0.5,
+  "rental": 1.0
+ }
+}

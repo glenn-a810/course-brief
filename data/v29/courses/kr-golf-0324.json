@@ -1,0 +1,582 @@
+{
+ "course_id": "kr-golf-0324",
+ "meta": {
+  "name": "블루원상주골프리조트",
+  "generated_at": "2026-11-26T10:28:34+09:00",
+  "schema": "stage2c/1.0",
+  "batch": "5_경북권",
+  "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
+  "schema_previous": "stage2b/1.0",
+  "restructured_from_7key": true,
+  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
+  "has_detail": true,
+  "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+ },
+ "master": {
+  "course_id": "kr-golf-0324",
+  "name": "블루원상주골프리조트",
+  "name_variants": [
+   "블루원상주골프리조트"
+  ],
+  "type": "대중제",
+  "holes": {
+   "total": 18,
+   "member": 0,
+   "public": 18,
+   "non_member": 0
+  },
+  "address": "경상북도 상주시 모서면 화현3길 127",
+  "region": {
+   "sido_code": "47",
+   "sido_name": "경상북도",
+   "sido_short": "경북",
+   "sigungu_code": "47250",
+   "sigungu_name": "상주시",
+   "legal_dong_code": "4725000000"
+  },
+  "lat": 36.333877,
+  "lng": 127.945875,
+  "nearest_ic": {
+   "name": "화서IC",
+   "distance_km": 12.0,
+   "source": "teepick(실측 표기)",
+   "straight_km_nearest": 12.2,
+   "straight_name": "화서IC"
+  },
+  "tel": "1899-1888",
+  "homepage": "https://www.blueone.com/",
+  "operators": [
+   "㈜블루원 윤재연"
+  ],
+  "area_sqm": 1038679,
+  "opened": "2008-04",
+  "course_blocks": [],
+  "facility_id": null,
+  "provenance": {
+   "master": "courses_master.json v2.0 (문체부·KGA·KGBA·티픽·지도)",
+   "synced_to": "courses_master.json v2.7 (2026-11-26 단일 스키마 정규화)"
+  },
+  "par": null,
+  "holes_teepick": 18,
+  "course_spec": {
+   "holes": 18,
+   "par": null,
+   "blocks": [],
+   "length_m": null,
+   "kga": {
+    "kga_course_code": "161",
+    "kga_name": "블루원상주",
+    "region_short": "경북",
+    "address": "경북 상주시 모서면 화현3길 127번지",
+    "match_method": "exact",
+    "match_score": 110,
+    "match_confidence": "high",
+    "nine_hole_courses": [
+     "동",
+     "서"
+    ],
+    "hole_combinations": [
+     {
+      "course_name_1": "동",
+      "course_name_2": "서",
+      "tees": [
+       {
+        "tee": "Black",
+        "gender": "남자",
+        "length_yds": 7369.0,
+        "std_par": 72.0,
+        "course_rating": 76.3,
+        "slope_rating": 149.0,
+        "front9": "38.0 / 149",
+        "back9": "38.3 / 149"
+       },
+       {
+        "tee": "Blue",
+        "gender": "남자",
+        "length_yds": 6941.0,
+        "std_par": 72.0,
+        "course_rating": 74.1,
+        "slope_rating": 144.0,
+        "front9": "36.9 / 143",
+        "back9": "37.2 / 144"
+       },
+       {
+        "tee": "WHITE(W)",
+        "gender": "여자",
+        "length_yds": 6480.0,
+        "std_par": 72.0,
+        "course_rating": 77.8,
+        "slope_rating": 148.0,
+        "front9": "38.3 / 142",
+        "back9": "39.5 / 153"
+       },
+       {
+        "tee": "White",
+        "gender": "남자",
+        "length_yds": 6480.0,
+        "std_par": 72.0,
+        "course_rating": 71.8,
+        "slope_rating": 141.0,
+        "front9": "35.5 / 137",
+        "back9": "36.3 / 145"
+       },
+       {
+        "tee": "Yellow",
+        "gender": "남자",
+        "length_yds": 5873.0,
+        "std_par": 72.0,
+        "course_rating": 68.8,
+        "slope_rating": 133.0,
+        "front9": "33.9 / 128",
+        "back9": "34.9 / 137"
+       },
+       {
+        "tee": "Red",
+        "gender": "여자",
+        "length_yds": 5133.0,
+        "std_par": 72.0,
+        "course_rating": 70.1,
+        "slope_rating": 127.0,
+        "front9": "34.7 / 123",
+        "back9": "35.4 / 130"
+       }
+      ]
+     }
+    ]
+   },
+   "grass": null,
+   "hole_by_hole": null
+  },
+  "addresses": [
+   "경상북도 상주시 모서면 화현3길 127"
+  ],
+  "status": "operating",
+  "facility_cluster": null,
+  "factcheck_2026_11_26": null
+ },
+ "course": {
+  "holes": 18,
+  "holes_received": 18,
+  "course_names": null,
+  "membership_type": "대중제",
+  "night_light": null,
+  "blocks": [],
+  "grass": {
+   "tee": null,
+   "fairway": null,
+   "green": null
+  },
+  "kga": {
+   "kga_course_code": "161",
+   "kga_name": "블루원상주",
+   "region_short": "경북",
+   "address": "경북 상주시 모서면 화현3길 127번지",
+   "match_method": "exact",
+   "match_score": 110,
+   "match_confidence": "high",
+   "nine_hole_courses": [
+    "동",
+    "서"
+   ],
+   "hole_combinations": [
+    {
+     "course_name_1": "동",
+     "course_name_2": "서",
+     "tees": [
+      {
+       "tee": "Black",
+       "gender": "남자",
+       "length_yds": 7369.0,
+       "std_par": 72.0,
+       "course_rating": 76.3,
+       "slope_rating": 149.0,
+       "front9": "38.0 / 149",
+       "back9": "38.3 / 149"
+      },
+      {
+       "tee": "Blue",
+       "gender": "남자",
+       "length_yds": 6941.0,
+       "std_par": 72.0,
+       "course_rating": 74.1,
+       "slope_rating": 144.0,
+       "front9": "36.9 / 143",
+       "back9": "37.2 / 144"
+      },
+      {
+       "tee": "WHITE(W)",
+       "gender": "여자",
+       "length_yds": 6480.0,
+       "std_par": 72.0,
+       "course_rating": 77.8,
+       "slope_rating": 148.0,
+       "front9": "38.3 / 142",
+       "back9": "39.5 / 153"
+      },
+      {
+       "tee": "White",
+       "gender": "남자",
+       "length_yds": 6480.0,
+       "std_par": 72.0,
+       "course_rating": 71.8,
+       "slope_rating": 141.0,
+       "front9": "35.5 / 137",
+       "back9": "36.3 / 145"
+      },
+      {
+       "tee": "Yellow",
+       "gender": "남자",
+       "length_yds": 5873.0,
+       "std_par": 72.0,
+       "course_rating": 68.8,
+       "slope_rating": 133.0,
+       "front9": "33.9 / 128",
+       "back9": "34.9 / 137"
+      },
+      {
+       "tee": "Red",
+       "gender": "여자",
+       "length_yds": 5133.0,
+       "std_par": 72.0,
+       "course_rating": 70.1,
+       "slope_rating": 127.0,
+       "front9": "34.7 / 123",
+       "back9": "35.4 / 130"
+      }
+     ]
+    }
+   ]
+  },
+  "kga_hole_est": null,
+  "extra_courses": null,
+  "hole_by_hole": null,
+  "length_m": null,
+  "par": null
+ },
+ "fee": {
+  "weekday": 180000,
+  "weekend": 230000,
+  "weekday_text": null,
+  "weekend_text": null,
+  "basis": null,
+  "tax_included": null,
+  "cart": {
+   "value": 100000,
+   "source": "공식(브라우저 수집)",
+   "url": "https://sj.blueone.com/reservation/reservation?type=4&subType=0"
+  },
+  "caddie": {
+   "value": 150000,
+   "source": "공식(브라우저 수집)",
+   "url": "https://sj.blueone.com/reservation/reservation?type=4&subType=0",
+   "none": false
+  },
+  "as_of": "2026-11-26",
+  "source_url": null,
+  "note": null,
+  "sources": [
+   {
+    "source": "공식 홈페이지(브라우저 수집)",
+    "url": "https://sj.blueone.com/reservation/reservation?type=4&subType=0"
+   }
+  ],
+  "checked_at": "2026-11-26",
+  "market": {
+   "weekday_min": null,
+   "weekend_min": null,
+   "part1": null,
+   "part2": null,
+   "source": "티픽골프장(실거래 관측)",
+   "url": "https://teepickgolf.com/course/%EB%B8%94%EB%A3%A8%EC%9B%90%20%EC%83%81%EC%A3%BC%20%EA%B3%A8%ED%94%84%EB%A6%AC%EC%A1%B0%ED%8A%B8",
+   "note": "공시가 아닌 최근 관측 실거래 최저가"
+  },
+  "official_browser": {
+   "green": {
+    "weekday": 180000,
+    "weekend": 230000,
+    "note": "2025-02-01 적용 요금표. 5·6·9·10·11월: 월~목 18만·금 19만·토 23만·일 23만. 4·7·8월 17만·19만·22만·22만, 2·3·12월 16만·17만·21만·21만, 1월 16만·16만·21만·21만. 스마트예약은 시점·예약률·시즌·요일·시간대별 차등"
+   },
+   "cart": {
+    "standard_team": 100000,
+    "nine_team": 50000,
+    "note": "대당 요금"
+   },
+   "caddie": {
+    "team": 150000,
+    "nine_team": 80000,
+    "note": "A급(일반 캐디)"
+   },
+   "rental": {
+    "full_set": 50000,
+    "single_club": 20000,
+    "brand": "테일러메이드"
+   },
+   "driving_range": "코인 10,000원(약 60개)",
+   "settlement_rain": "팀 전원 1홀 미완료 시 기본요금 20,000원, 2~18홀 미완료 시 기본요금+{(그린피-기본요금)×기이용홀/전체홀}. 카트 홀별(1홀 6,000 … 10홀 56,000 … 18홀 100,000), 캐디 1홀 30,000·2~3홀 50,000·4~9홀 80,000·10~18홀 150,000"
+  },
+  "official_green_evidence": [],
+  "official_rental": null
+ },
+ "cancel": {
+  "cancel_policy": {
+   "value": "취소기한: 주중 3일 전 17시, 주말·공휴일 4일 전 17시. 위약(2023-06-01 시행): 주중 2일 전 10% 또는 45일 정지, 1일 전 20% 또는 60일, 당일·노쇼 30% 또는 75일 / 주말 3~2일 전 10% 또는 60일, 1일 전 20% 또는 75일, 당일·노쇼 30% 또는 90일. 팀별 이용요금=그린피(기본요금 20,000 제외)×인원+카트료",
+   "source": "공식(브라우저 수집)",
+   "url": "https://sj.blueone.com/reservation/reservation?type=4&subType=0"
+  },
+  "open_cycle": null,
+  "notes": null,
+  "evidence": [],
+  "weather_evidence": [],
+  "browser_official": {
+   "cancel": "취소기한: 주중 3일 전 17시, 주말·공휴일 4일 전 17시. 위약(2023-06-01 시행): 주중 2일 전 10% 또는 45일 정지, 1일 전 20% 또는 60일, 당일·노쇼 30% 또는 75일 / 주말 3~2일 전 10% 또는 60일, 1일 전 20% 또는 75일, 당일·노쇼 30% 또는 90일. 팀별 이용요금=그린피(기본요금 20,000 제외)×인원+카트료",
+   "group_penalty": "단체(3팀 이상)·패키지: 10일 전 17시까지 정상취소, 9~5일 전 10만원(패키지 30만원), 4~3일 전 20만(40만), 2~1일 전 30만(50만), 당일·노쇼 40만(60만)",
+   "weather_criteria": "폭우 시간당 3mm, 폭설 그린 적설 2cm, 안개 가시거리 20m, 황사 PM10 400(초교 휴교), 강풍 순간 5.2m/s, 폭염 35도 이상, 한파 영하 5도 이하, 낙뢰 2회 이상 발효, 골프장 판단 중단",
+   "refund": "입장 후 임의취소 이용요금 50%, 1~9홀 중단 기본요금+(이용요금-기본요금)×75%, 10~18홀 100%. 기본요금 20,000원(클럽하우스·제세공과금)",
+   "entrance_ban": "지각으로 진행 불가, 심한 음주, 이름 도용 시 입장 금지",
+   "play_rules": "고의 지연·내기 지연·비신사적 행위·경기능력 부족 시 경기 중단, 위반 시 2개월 예약금지"
+  }
+ },
+ "ops": {
+  "nocaddie": {
+   "evidence": [],
+   "value": null
+  },
+  "two_player": {
+   "evidence": [],
+   "value": null
+  },
+  "three_player": {
+   "value": null,
+   "evidence": []
+  },
+  "five_player": {
+   "value": null,
+   "evidence": []
+  },
+  "marshal_caddie": {
+   "value": null,
+   "evidence": []
+  },
+  "cart_type": {
+   "evidence": [],
+   "value": null
+  },
+  "cart_entry": {
+   "evidence": [],
+   "value": null
+  },
+  "bagdrop": {
+   "evidence": [],
+   "value": null
+  },
+  "mat": {
+   "evidence": [],
+   "value": null
+  },
+  "checkin": {
+   "evidence": [],
+   "value": null
+  },
+  "locker": {
+   "evidence": [],
+   "value": null
+  },
+  "sauna": {
+   "evidence": [],
+   "value": null
+  },
+  "dress": {
+   "evidence": [],
+   "value": null
+  },
+  "pace": {
+   "evidence": [],
+   "value": null
+  },
+  "browser_official": {
+   "cancel": "취소기한: 주중 3일 전 17시, 주말·공휴일 4일 전 17시. 위약(2023-06-01 시행): 주중 2일 전 10% 또는 45일 정지, 1일 전 20% 또는 60일, 당일·노쇼 30% 또는 75일 / 주말 3~2일 전 10% 또는 60일, 1일 전 20% 또는 75일, 당일·노쇼 30% 또는 90일. 팀별 이용요금=그린피(기본요금 20,000 제외)×인원+카트료",
+   "group_penalty": "단체(3팀 이상)·패키지: 10일 전 17시까지 정상취소, 9~5일 전 10만원(패키지 30만원), 4~3일 전 20만(40만), 2~1일 전 30만(50만), 당일·노쇼 40만(60만)",
+   "weather_criteria": "폭우 시간당 3mm, 폭설 그린 적설 2cm, 안개 가시거리 20m, 황사 PM10 400(초교 휴교), 강풍 순간 5.2m/s, 폭염 35도 이상, 한파 영하 5도 이하, 낙뢰 2회 이상 발효, 골프장 판단 중단",
+   "refund": "입장 후 임의취소 이용요금 50%, 1~9홀 중단 기본요금+(이용요금-기본요금)×75%, 10~18홀 100%. 기본요금 20,000원(클럽하우스·제세공과금)",
+   "entrance_ban": "지각으로 진행 불가, 심한 음주, 이름 도용 시 입장 금지",
+   "play_rules": "고의 지연·내기 지연·비신사적 행위·경기능력 부족 시 경기 중단, 위반 시 2개월 예약금지"
+  }
+ },
+ "facilities": {
+  "practice": {
+   "evidence": [
+    "Intro 블루원 골프앤리조트 용인 컨트리클럽 태영 SBS그룹 운영 30년 전통 대한민국 골프문화 산실 한국주니어골프선수권대회 개최 블루원 골프앤리조트 상주 컨트리클럽 아시아 100대 골프 코스 대한민국 10대 골프장 고교동창 골프 최강전 블루원 골프앤리조트 블루원 상주리조트 유럽형 프라이빗 빌라 & 골프텔 컨퍼런스홀 & 연회시설 골프연습장 & 피트니스"
+   ],
+   "value": null
+  },
+  "indoor_range": {
+   "value": null,
+   "evidence": []
+  },
+  "food": {
+   "evidence": [],
+   "value": null
+  },
+  "snack_bar": {
+   "value": null,
+   "evidence": []
+  },
+  "locker_sauna": {
+   "value": null,
+   "evidence": []
+  },
+  "lodging": {
+   "value": null,
+   "evidence": []
+  },
+  "other": {
+   "value": null,
+   "evidence": []
+  },
+  "night": {
+   "evidence": [],
+   "value": null
+  },
+  "closed_days": {
+   "evidence": [],
+   "third_party": null,
+   "value": null
+  },
+  "shuttle": {
+   "evidence": [],
+   "value": null
+  },
+  "ev_charge": {
+   "evidence": [],
+   "value": null
+  },
+  "gf_facilities": null,
+  "proshop": {
+   "evidence": [],
+   "value": null
+  }
+ },
+ "rental": {
+  "available": "가능",
+  "full_set": 50000,
+  "fee_text": null,
+  "brand": "테일러메이드",
+  "left_handed": null,
+  "shoes": null,
+  "nine_hole": null,
+  "range_finder": null,
+  "reservation": null,
+  "source_url": null,
+  "evidence": [],
+  "official": {
+   "full_set": 50000,
+   "single_club": 20000,
+   "brand": "테일러메이드"
+  },
+  "nearby_delivery": {
+   "region": "영남",
+   "sido": "경상북도",
+   "verified_at": "2026-11-26 (KST)",
+   "checked_at": "2026-11-26",
+   "providers": [
+    {
+     "id": "theb",
+     "name": "더비 (The B)",
+     "coverage": "O",
+     "basis": "부산점 24시간 무인픽업·반납(부산진구 양정동), 홈페이지에 '부산·경주·김해 부근' 표기. 그 외 경남·경북은 택배/퀵.",
+     "phone": "010-2530-4575",
+     "operating_status": "정상 영업",
+     "delivery": "O",
+     "price_headline": "12시간 기준 90,000원부터",
+     "bookable": true
+    },
+    {
+     "id": "gangnamclub",
+     "name": "강남골프클럽렌탈",
+     "coverage": "조건부",
+     "basis": "동일(전지역 배송·별도 상담).",
+     "phone": "010-7407-0753",
+     "operating_status": "정상 영업(자사 블로그 최신 게시 2026-04-28)",
+     "delivery": "미확인",
+     "price_headline": null,
+     "bookable": true
+    }
+   ],
+   "provider_count": 2,
+   "legend": {
+    "O": "공식 안내로 해당 권역 이용이 확인됨",
+    "X": "공식 안내상 해당 권역 서비스가 없음(예: '제주 전 지역' 전용으로만 안내)",
+    "조건부": "공식 안내상 가능하나 조건(수단·요금·현재 판매중지 등)이 붙어 있음. 조건은 basis/detail에 기재",
+    "미확인": "공식 공개 안내에서 해당 항목에 대한 언급을 찾지 못함(추정하지 않음)"
+   },
+   "not_verified": "전화·문자·카카오톡 상담으로만 확인 가능한 항목(재고, 개별 견적, 권역별 실제 배송 가능 여부)은 '미확인'으로 남김",
+   "source_file": "5-rental_8_coverage_verified.json",
+   "note_code": "해외 골퍼용 골프채 렌탈·딜리버리 업체. 같은 권역이라도 실제 배송 가능 여부·재고·견적은 전화 확인 필요."
+  },
+  "fee_source": {}
+ },
+ "briefing": {
+  "notices": {
+   "url": null,
+   "items": [
+    {
+     "title": "12월 당일 골프 패키지",
+     "date": "2026-11-21",
+     "url": "https://sj.blueone.com/reservation/reservation?type=4&subType=0"
+    },
+    {
+     "title": "\"총 3회수상\" 고객만족도 골프장 대중제 부문 BEST 10 선정",
+     "date": "2026-11-18",
+     "url": "https://sj.blueone.com/reservation/reservation?type=4&subType=0"
+    },
+    {
+     "title": "2027년 추가 연단체 모집 안내",
+     "date": "2026-11-18",
+     "url": "https://sj.blueone.com/reservation/reservation?type=4&subType=0"
+    },
+    {
+     "title": "[12월] 1박 2일 패키지",
+     "date": "2026-10-26",
+     "url": "https://sj.blueone.com/reservation/reservation?type=4&subType=0"
+    }
+   ],
+   "tags": {}
+  },
+  "review": {
+   "score_10": 9.1,
+   "count": 23,
+   "source": "티픽골프장 라운더 후기 집계",
+   "url": "https://teepickgolf.com/course/%EB%B8%94%EB%A3%A8%EC%9B%90%20%EC%83%81%EC%A3%BC%20%EA%B3%A8%ED%94%84%EB%A6%AC%EC%A1%B0%ED%8A%B8"
+  },
+  "fee_change": null,
+  "collected_at": "2026-11-26T10:28:34+09:00",
+  "recent_notice_text": null,
+  "course_notes": null,
+  "alert": null,
+  "unconfirmed": [],
+  "sources": []
+ },
+ "collection": {
+  "official_site": "ok",
+  "official_reason": null,
+  "pages_collected": 1,
+  "third_party": {
+   "teepick": true,
+   "greenfeeguide": false
+  },
+  "render_hint": "thin",
+  "plan_strategy": "thin(상세페이지 탐색)",
+  "browser_batch": true
+ },
+ "coverage": {
+  "basic": 1.0,
+  "course": 0.8,
+  "fee": 1.0,
+  "ops": 0.0,
+  "facility": 0.0,
+  "briefing": 0.5,
+  "rental": 0.75
+ }
+}

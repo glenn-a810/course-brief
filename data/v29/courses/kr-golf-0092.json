@@ -1,0 +1,582 @@
+{
+ "course_id": "kr-golf-0092",
+ "meta": {
+  "name": "아난티클럽서울",
+  "generated_at": "2026-11-26T09:51:50+09:00",
+  "schema": "stage2c/1.0",
+  "batch": "1_수도권",
+  "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
+  "schema_previous": "stage2b/1.0",
+  "restructured_from_7key": true,
+  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
+  "has_detail": true,
+  "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+ },
+ "master": {
+  "course_id": "kr-golf-0092",
+  "name": "아난티클럽서울",
+  "name_variants": [
+   "아난티클럽서울"
+  ],
+  "type": "회원제",
+  "holes": {
+   "total": 27,
+   "member": 27,
+   "public": 0,
+   "non_member": 0
+  },
+  "address": "경기도 가평군 설악면 유명로 961-34",
+  "region": {
+   "sido_code": "41",
+   "sido_name": "경기도",
+   "sido_short": "경기",
+   "sigungu_code": "41820",
+   "sigungu_name": "가평군",
+   "legal_dong_code": "4182000000"
+  },
+  "lat": 37.619759,
+  "lng": 127.482431,
+  "nearest_ic": {
+   "name": "설악IC",
+   "distance_km": 5.6,
+   "source": "최근접 IC 직선거리"
+  },
+  "tel": "031-589-3000",
+  "homepage": "https://ananti.kr/ko",
+  "operators": [
+   "아난티클럽서울㈜"
+  ],
+  "area_sqm": 1744453,
+  "opened": null,
+  "course_blocks": [],
+  "facility_id": null,
+  "provenance": {
+   "master": "courses_master.json v2.0 (문체부·KGA·KGBA·티픽·지도)",
+   "synced_to": "courses_master.json v2.7 (2026-11-26 단일 스키마 정규화)"
+  },
+  "course_spec": {
+   "holes": 27,
+   "par": null,
+   "blocks": [],
+   "length_m": null,
+   "kga": null,
+   "grass": {
+    "evidence": "보유•이용 기간 수집•이용 동의일로부터 회원탈퇴 시 까지 단, 회원에서 탈퇴 후 회원 재가입, 임의해지 등을 반복적으로 행하여 당사가 제공하는 할인쿠폰, 이벤트 혜택 등으로 경제상 이득을 취하거나 이 과정에서 명의를 무단으로 사용하는 편법과 불법행위를 하는 회원을 차단하고자 회원 탈퇴 후 6개월 동안 NICE 본인인증(CI,DI)를 보관 및 이용후 파기합니다.",
+    "source": "공식",
+    "url": "https://ananti.kr/ko"
+   },
+   "hole_by_hole": null
+  },
+  "addresses": [
+   "경기도 가평군 설악면 유명로 961-34"
+  ],
+  "status": "operating",
+  "facility_cluster": null,
+  "factcheck_2026_11_26": null,
+  "opened_evidence": {
+   "evidence": "회사가 정한 클럽 개장일과 이용 시간 이외에는 이용자는 클럽의 시설물을 이용할 수 없다.",
+   "source": "공식",
+   "url": "https://ananti.kr/ko"
+  }
+ },
+ "course": {
+  "holes": 27,
+  "holes_received": null,
+  "course_names": null,
+  "membership_type": "회원제",
+  "night_light": null,
+  "blocks": [],
+  "grass": {
+   "tee": null,
+   "fairway": {
+    "evidence": "보유•이용 기간 수집•이용 동의일로부터 회원탈퇴 시 까지 단, 회원에서 탈퇴 후 회원 재가입, 임의해지 등을 반복적으로 행하여 당사가 제공하는 할인쿠폰, 이벤트 혜택 등으로 경제상 이득을 취하거나 이 과정에서 명의를 무단으로 사용하는 편법과 불법행위를 하는 회원을 차단하고자 회원 탈퇴 후 6개월 동안 NICE 본인인증(CI,DI)를 보관 및 이용후 파기합니다.",
+    "source": "공식",
+    "url": "https://ananti.kr/ko"
+   },
+   "green": null
+  },
+  "kga": null,
+  "kga_hole_est": null,
+  "extra_courses": null,
+  "hole_by_hole": null,
+  "length_m": null,
+  "par": null
+ },
+ "fee": {
+  "weekday": null,
+  "weekend": null,
+  "weekday_text": null,
+  "weekend_text": null,
+  "basis": null,
+  "tax_included": null,
+  "cart": {
+   "evidence": "- 골프 코스 이용에 따른 요금(입장료 및 카트 이용요금) - 제세공과금(부가가치세, 개별소비세, 농어촌특별세, 교육세 포함) - 락커 및 샤워실 등 클럽하우스 시설이용 요금 - 기타 회사가 정한 특별요금 2.",
+   "url": "https://ananti.kr/ko",
+   "source": "공식"
+  },
+  "caddie": {
+   "value": null,
+   "none": false,
+   "evidence": "정회원이 예약하고 준회원에게도 위임 불가- 예약자 미 내장시 라운딩 불가 회원의 날 예약 예약 대상 및 기간 - 예약자 : 정회원, 준회원(준회원 단독 예약 불가, 정회원이 동반자로 준회원 등록 가능)- 예약신청 : 오픈 주차를 제외한 2주 전 수요일 9시부터 실시간 예약- 예약마감 : 내장일 3일전 13시- 마감된 이후에는 취소가 불가합니다.- 부득이 취소 하실 경우 그린피, 캐디피 및 카트비는 지불 하셔야 합니다.",
+   "source": "공식",
+   "url": "https://ananti.kr/ko/joongang/JOAN0105"
+  },
+  "as_of": null,
+  "source_url": null,
+  "note": null,
+  "sources": [],
+  "checked_at": null,
+  "official_green_evidence": [
+   "정회원이 예약하고 준회원에게도 위임 불가- 예약자 미 내장시 라운딩 불가 회원의 날 예약 예약 대상 및 기간 - 예약자 : 정회원, 준회원(준회원 단독 예약 불가, 정회원이 동반자로 준회원 등록 가능)- 예약신청 : 오픈 주차를 제외한 2주 전 수요일 9시부터 실시간 예약- 예약마감 : 내장일 3일전 13시- 마감된 이후에는 취소가 불가합니다.- 부득이 취소 하실 경우 그린피, 캐디피 및 카트비는 지불 하셔야 합니다."
+  ],
+  "official_rental": null,
+  "official_table": {
+   "rows": [
+    {
+     "section": "",
+     "label": "주소 : 충북 진천군 진천읍 백곡로 1504-12 진천종박물관 / 운영시간 : 오전 10시~오후 6시 / 매주 월요일 휴무",
+     "value": "입장료 5,000원",
+     "amounts": [
+      5000
+     ],
+     "url": "https://ananti.kr/ko/joongang/journey/location"
+    },
+    {
+     "section": "",
+     "label": "주소 : 충북 진천군 진천읍 백곡로 1504-10 생거판화미술관 / 운영시간 : 오전 10시~오후 6시 / 매주 월요일 휴무",
+     "value": "입장료 5,000원",
+     "amounts": [
+      5000
+     ],
+     "url": "https://ananti.kr/ko/joongang/journey/location"
+    }
+   ],
+   "url": "https://ananti.kr/ko/joongang/journey/location"
+  }
+ },
+ "cancel": {
+  "cancel_policy": null,
+  "open_cycle": null,
+  "notes": null,
+  "evidence": [
+   "확인 오늘 하루 보지 않기 RESERVATION 닫기 확인 닫기 취소 확인 닫기 취소 확인 닫기 Back Ok 닫기 확인 생일 축하합니다!지금 바로 쿠폰함에서 생일 선물을 확인해보세요.",
+   "신청된 RIM은 차감되며, 발급된 쿠폰은 취소 되지 않습니다.",
+   "닫기 취소 확인 멤버십 카드 닫기 플랫폼 선택 닫기 선택 아난티 코드 아난티 코브 아난티 남해 아난티 회원권 확인 관심 플랫폼&저니 설정 닫기 관심있는 아난티 플랫폼과 저니를 선택해 주세요 다음에 할게요 확인 닫기 라메르 or 라포레 or 다모임 닫기 우아한 바다, 라메르!"
+  ],
+  "weather_evidence": []
+ },
+ "ops": {
+  "nocaddie": {
+   "evidence": [],
+   "value": null
+  },
+  "two_player": {
+   "evidence": [
+    "팀별 적정인원(3인~4인)이 충족되지 않았을 때 - 다만, 부득이한 2인 플레이의 경우 당사의 규정(1인 비회원가 적용)에 따라 상호 협의하여 정한다.",
+    "Home Golf 마운틴 코스 레이크 코스 스카이 코스 운영 안내 예약 안내 회원권 자료실 조인 현황 공지사항 Dining 더 레스토랑 Discover A Market Journey Guide Experiences Event PACKAGE RIM CLUB PRODUCT AT.",
+    "542yd (496m) 518yd (473m) 498yd (456m) 466yd (426m) HOLE 18 PAR 4 HDCP 2 인 코스의 마지막 홀로 공략에 차별을 둡니다.",
+    "2인 플레이: 부득이한 경우 협의(1인 비회원가 적용)"
+   ],
+   "value": "2인 — 부득이한 경우 협의(1인 비회원가 적용)",
+   "source_url": "https://ananti.kr/ko/chord/golfclub/information",
+   "confidence": "high",
+   "checked_at": "2026-10-15",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/two-player-golf-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  },
+  "three_player": {
+   "value": "3인 — 가능(3~4인)",
+   "evidence": [
+    "3인 플레이: 가능(3~4인)"
+   ],
+   "source_url": "https://ananti.kr/ko/chord/golfclub/information",
+   "confidence": "high",
+   "checked_at": "2026-10-15",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/two-player-golf-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  },
+  "five_player": {
+   "value": null,
+   "evidence": []
+  },
+  "marshal_caddie": {
+   "value": null,
+   "evidence": []
+  },
+  "cart_type": {
+   "evidence": [
+    "- 골프 코스 이용에 따른 요금(입장료 및 카트 이용요금) - 제세공과금(부가가치세, 개별소비세, 농어촌특별세, 교육세 포함) - 락커 및 샤워실 등 클럽하우스 시설이용 요금 - 기타 회사가 정한 특별요금 2.",
+    "카트 운행은 회사가 전 항의 자격 등을 확인한 후 승낙한 경우에만 가능하다.",
+    "VIP 리무진 카트 220,000원(1대), 5인 전용 플레이"
+   ],
+   "value": "리무진카트",
+   "source_url": "https://ananti.kr/ko/chord/golfclub/information",
+   "confidence": "high",
+   "checked_at": "2026-10-22",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/golf-cart-limousine-fairway-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  },
+  "cart_entry": {
+   "evidence": [
+    "카트 운행은 회사가 전 항의 자격 등을 확인한 후 승낙한 경우에만 가능하다.",
+    "경기자는 카트 운행 시 좌석에 앉아야 하며 안전 손잡이를 반드시 잡아야 한다."
+   ],
+   "value": "문구 확인(원문 근거)"
+  },
+  "bagdrop": {
+   "evidence": [],
+   "value": null
+  },
+  "mat": {
+   "evidence": [],
+   "value": null
+  },
+  "checkin": {
+   "evidence": [
+    "모든 회원은 체크인 시 회원가 적용을 위해 내장해 본인임을 확인해야 하며, 내장하지 않았을 시 비회원가가 적용된다.",
+    "경기 능력 부족(1홀 이상 플레이 지연, 예약 시간보다 늦게 도착해 진행상 컴플레인 발생)이나 지나친 음주로 플레이 지연, 고성방가, 코스 내 방뇨 등의 행위가 포함된다.",
+    "40분 전 도착"
+   ],
+   "value": "40분 전 도착",
+   "source_url": "https://ananti.kr/ko/chord/golfclub/information",
+   "confidence": "high",
+   "checked_at": "2026-10-17",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/golf-course-arrival-checkin-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  },
+  "locker": {
+   "evidence": [
+    "- 골프 코스 이용에 따른 요금(입장료 및 카트 이용요금) - 제세공과금(부가가치세, 개별소비세, 농어촌특별세, 교육세 포함) - 락커 및 샤워실 등 클럽하우스 시설이용 요금 - 기타 회사가 정한 특별요금 2.",
+    "이용자는 지정된 락카를 본인 책임 하에 관리하여야 한다.",
+    "프론트에서 예약자 존함 및 예약 시간을 확인하시고 방명록에 서명하신 후 락커 배정표를 수령하시기 바랍니다."
+   ],
+   "value": "락커 운영",
+   "value_previous": "문구 확인(원문 근거)",
+   "source_url": "https://ananti.kr/ko/chord/golfclub/information",
+   "confidence": "low",
+   "source_type": "official_site",
+   "page_label": "이용 안내",
+   "value_from": "capital_supplement(official_site)"
+  },
+  "sauna": {
+   "evidence": [
+    "지난 해에는 바다 위의 온천, 워터하우스를 오픈 5년만에 과감히 부수고 리노베이션을 감행했습니다.",
+    "A SPIRIT OF JOURNEY CLUB A SPIRIT OF JOURNEY CLUB A SPIRIT OF JOURNEY CLUB 아난티 앳 부산 코브, 맥퀸즈 클럽사계절 내내 바다를 바라보며 운동하는 최고의 경험 피트니스, 맥퀸즈 풀, 사우나가 있는 아난티 앳 부산 코브의 맥퀸즈 클럽은 압도적인 야외 경관과 눈앞에 펼쳐진 이국적인 바다 풍경을 바라보며 온전한 휴식을 취할 수 있는 공간입니다.",
+    "피트니스, 맥퀸즈 풀, 사우나가 있는 아난티 앳 부산 코브의 맥퀸즈 클럽은 압도적인 야외 경관과 눈앞에 펼쳐진 이국적인 바다 풍경을 바라보며 온전한 휴식을 취할 수 있는 공간입니다."
+   ],
+   "value": "사우나 운영",
+   "value_previous": "문구 확인(원문 근거)",
+   "source_url": "https://ananti.kr/ko/board/membership/PA0301",
+   "confidence": "medium",
+   "source_type": "official_site",
+   "page_label": "오너십 가입 방법",
+   "value_from": "capital_supplement(official_site)"
+  },
+  "dress": {
+   "evidence": [
+    "기타 공중 질서와 선량한 풍속, 골프 에티켓에 반하는 이용자의 행위가 발생했을 때 - 시설 이용자 중 당사의 직원의 정당한 요구에 대한 불응, 복장 및 용모가 불량한 상태로 내장(바지, 슬리퍼 착용, 민소매 티셔츠, 노출이 심한 옷 등) 등 에티켓을 심하게 위반한 경우 예약자에게 페널티가 적용된다.",
+    "기타 공중 질서와 선량한 풍속, 골프 에티켓에 반하는 이용자의 행위가 발생했을 때 - 시설 이용자 중 당사의 직원의 정당한 요구에 대한 불응, 복장 및 용모가 불량한 상태로 내장(바지, 슬리퍼 착용, 민소매 티셔츠, 노출이 심한 옷 등) 등 에티켓을 심하게 위반한 경우 예약자에게 페널티가 적용된다.",
+    "반바지·슬리퍼·민소매·노출이 심한 옷 차림으로 내장하면 예약자 페널티, 소프트 스파이크(고무징) 착용"
+   ],
+   "value": "반바지·슬리퍼·민소매·노출이 심한 옷 차림으로 내장하면 예약자 페널티, 소프트 스파이크(고무징) 착용",
+   "value_previous": "문구 확인(원문 근거)",
+   "source_url": "https://ananti.kr/ko/chord/golfclub/information",
+   "confidence": "high",
+   "checked_at": "2026-10-16",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/golf-course-dress-etiquette-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  },
+  "pace": {
+   "evidence": [],
+   "value": null
+  },
+  "cart_limousine": {
+   "value": "VIP 리무진 카트 220,000원(1대), 5인 전용 플레이",
+   "evidence": [
+    "VIP 리무진 카트 220,000원(1대), 5인 전용 플레이"
+   ],
+   "source_url": "https://ananti.kr/ko/chord/golfclub/information",
+   "confidence": "high",
+   "checked_at": "2026-10-22",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/golf-cart-limousine-fairway-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  }
+ },
+ "facilities": {
+  "practice": {
+   "evidence": [],
+   "value": null
+  },
+  "indoor_range": {
+   "value": null,
+   "evidence": []
+  },
+  "food": {
+   "evidence": [
+    "동의함 확인 닫기 EN 제출하기 닫기 로그인 하러 가기 계속 진행하기 무라타하우스 닫기 메뉴접근 인증 비밀번호 메뉴 접근을 위한 비밀번호를 입력 해 주세요.",
+    "Stay Cabin F Cabin T Cabin U Cabin B Cabin S Cabin C Dining 쁘아쏭 쁘아쏭 조식 베케트 베케트 테라스 살롱 드 모비딕 살롱 드 아난티 라운지 겐지 꼴라쥬 Waters 실내 수영장 야외 수영장 Discover FITNESS SAUNA SPA Family & Group Journey Guide Experiences Event PACKAGE RIM CLUB PRODUCT AT.",
+    "Home Golf 마운틴 코스 레이크 코스 스카이 코스 운영 안내 예약 안내 회원권 자료실 조인 현황 공지사항 Dining 더 레스토랑 Discover A Market Journey Guide Experiences Event PACKAGE RIM CLUB PRODUCT AT.",
+    "맛과 여유가 머무는 곳,이터널저니 레스토랑&카페"
+   ],
+   "value": "레스토랑 · 카페",
+   "source_url": "https://ananti.kr/ko/atnamhae/NH0201",
+   "confidence": "medium",
+   "source_type": "official_site",
+   "page_label": "코스 안내",
+   "value_from": "capital_supplement(official_site)"
+  },
+  "snack_bar": {
+   "value": null,
+   "evidence": []
+  },
+  "locker_sauna": {
+   "value": null,
+   "evidence": []
+  },
+  "lodging": {
+   "value": "아난티 코드 · 펜트하우스",
+   "evidence": [
+    "아난티 코드 · 펜트하우스"
+   ],
+   "source_url": "https://ananti.kr/ko/event/103",
+   "confidence": "high",
+   "checked_at": "2026-10-09",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/golf-course-lodging-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  },
+  "other": {
+   "value": "카페·라운지 · 수영장",
+   "evidence": [
+    "카페·라운지·수영장 — 골프 코스 옆 숲속 카페"
+   ],
+   "source_url": "https://ananti.kr/ko/chord",
+   "confidence": "high",
+   "checked_at": "2026-10-20",
+   "source_type": "greenfee_guide",
+   "value_from": "capital_supplement(greenfee_guide)"
+  },
+  "night": {
+   "evidence": [],
+   "value": null
+  },
+  "closed_days": {
+   "evidence": [
+    "클럽은 사정에 따라 정기 또는 임시로 휴장 할 수 있다.",
+    "클럽은 사정에 따라 정기 또는 임시로 휴장 할 수 있다."
+   ],
+   "third_party": null,
+   "value": null
+  },
+  "shuttle": {
+   "evidence": [
+    "닫기 확인 취소 확인 아난티까지 편안하게,왕복 리무진 버스를 이용해보세요 부산역과 아난티를 연결하는 전용 리무진 버스입니다.",
+    "신규 등록 예약 번호를 선택해 주세요 리무진 버스와 연결할 숙박 예약을 선택해 주세요."
+   ],
+   "value": null
+  },
+  "ev_charge": {
+   "evidence": [
+    "아난티에서 제안하는 이 특별한 여정에서 우리는 진정한 충전과 휴식을 발견할 수 있을 것입니다.",
+    "아난티에서 제안하는 이 특별한 여정에서 우리는 진정한 충전과 휴식을 발견할 수 있을 것입니다."
+   ],
+   "value": null
+  },
+  "gf_facilities": null,
+  "proshop": {
+   "evidence": [],
+   "value": null
+  }
+ },
+ "rental": {
+  "available": null,
+  "full_set": null,
+  "fee_text": null,
+  "brand": null,
+  "left_handed": null,
+  "shoes": null,
+  "nine_hole": null,
+  "range_finder": null,
+  "reservation": null,
+  "source_url": null,
+  "evidence": [
+   "이용자가 고의 또는 과실로 골프장의 그린, 벙커, 건축물, 카트, 대여채, 대여화 등 각종 시설물과 비품을 훼손하거나 분실한 때에는 그 손해를 배상하여야 한다.",
+   "이용자가 고의 또는 과실로 골프장의 그린, 벙커, 건축물, 카트, 대여채, 대여화 등 각종 시설물과 비품을 훼손하거나 분실한 때에는 그 손해를 배상하여야 한다.",
+   "이용자가 고의 또는 과실로 골프장의 그린, 벙커, 건축물, 카트, 대여채, 대여화 등 각종 시설물과 비품을 훼손하거나 분실한 때에는 그 손해를 배상하여야 한다."
+  ],
+  "official": null,
+  "nearby_delivery": {
+   "region": "수도권",
+   "sido": "경기도",
+   "verified_at": "2026-11-26 (KST)",
+   "checked_at": "2026-11-26",
+   "providers": [
+    {
+     "id": "theb",
+     "name": "더비 (The B)",
+     "coverage": "O",
+     "basis": "동탄·김포·시흥·용인·이천 24시간 무인픽업 매장 5곳 + 다마스 퀵/택배 배송. 홈페이지에 '강남·동탄·판교·수지·광교·분당', '시흥·배곧·인천·안산·송도', '이천·여주' 권역 표기.",
+     "phone": "010-2530-4575",
+     "operating_status": "정상 영업",
+     "delivery": "O",
+     "price_headline": "12시간 기준 90,000원부터",
+     "bookable": true
+    },
+    {
+     "id": "gangnamclub",
+     "name": "강남골프클럽렌탈",
+     "coverage": "O",
+     "basis": "서울 서초구 거점 매장 주소 공개, 자사 블로그 '전지역 배송 가능' 안내.",
+     "phone": "010-7407-0753",
+     "operating_status": "정상 영업(자사 블로그 최신 게시 2026-04-28)",
+     "delivery": "미확인",
+     "price_headline": null,
+     "bookable": true
+    },
+    {
+     "id": "apioz",
+     "name": "아피오즈 (Apioz)",
+     "coverage": "조건부",
+     "basis": "서울 숙소 배송·공항 픽업 옵션 안내. 단 골프세트 Sold Out으로 현재 이용 불가.",
+     "phone": "02-6956-8115",
+     "operating_status": "예약 중단(Sold Out) — 골프채 세트 한정",
+     "delivery": "미확인",
+     "price_headline": null,
+     "caution": "골프채 세트 Sold Out — 현재 예약 불가",
+     "bookable": false,
+     "bookable_reason": "골프채 세트 Sold Out — 현재 예약 불가"
+    }
+   ],
+   "provider_count": 3,
+   "legend": {
+    "O": "공식 안내로 해당 권역 이용이 확인됨",
+    "X": "공식 안내상 해당 권역 서비스가 없음(예: '제주 전 지역' 전용으로만 안내)",
+    "조건부": "공식 안내상 가능하나 조건(수단·요금·현재 판매중지 등)이 붙어 있음. 조건은 basis/detail에 기재",
+    "미확인": "공식 공개 안내에서 해당 항목에 대한 언급을 찾지 못함(추정하지 않음)"
+   },
+   "not_verified": "전화·문자·카카오톡 상담으로만 확인 가능한 항목(재고, 개별 견적, 권역별 실제 배송 가능 여부)은 '미확인'으로 남김",
+   "source_file": "5-rental_8_coverage_verified.json",
+   "note_code": "해외 골퍼용 골프채 렌탈·딜리버리 업체. 같은 권역이라도 실제 배송 가능 여부·재고·견적은 전화 확인 필요."
+  }
+ },
+ "briefing": {
+  "notices": {
+   "url": "https://ananti.kr/ko/board/company/CO05/CO0501",
+   "items": [
+    {
+     "title": "2026년 주식회사 아난티 등기임원 현황",
+     "date": "2026-04-08",
+     "url": "https://ananti.kr/ko/board/company/CO05/CO0501"
+    },
+    {
+     "title": "제39기 정기주주총회 투표집계자료 (아난티)",
+     "date": "2026-03-26",
+     "url": "https://ananti.kr/ko/board/company/CO05/CO0501"
+    },
+    {
+     "title": "제 39기 정기주주총회 위임장",
+     "date": "2026-03-11",
+     "url": "https://ananti.kr/ko/board/company/CO05/CO0501"
+    },
+    {
+     "title": "제39기 감사보고서",
+     "date": "2026-03-10",
+     "url": "https://ananti.kr/ko/board/company/CO05/CO0501"
+    },
+    {
+     "title": "2025년 주식회사 아난티 등기임원 현황",
+     "date": "2025-03-31",
+     "url": "https://ananti.kr/ko/board/company/CO05/CO0501"
+    },
+    {
+     "title": "제38기 정기주주총회 투표집계자료 (아난티)",
+     "date": "2025-03-26",
+     "url": "https://ananti.kr/ko/board/company/CO05/CO0501"
+    },
+    {
+     "title": "제38기 결산공고(아난티)",
+     "date": "2025-03-18",
+     "url": "https://ananti.kr/ko/board/company/CO05/CO0501"
+    },
+    {
+     "title": "[유효기간]",
+     "date": "2024-11-20",
+     "url": "https://ananti.kr/ko/board/membership/PA0301"
+    },
+    {
+     "title": "2024년 (주)아난티 시설물유지보수 협력업체 신규 모집 공고",
+     "date": "2023-12-11",
+     "url": "https://ananti.kr/ko/board/company/CO07/CO0701"
+    },
+    {
+     "title": "2023년 (주)아난티 시설물유지보수 협력업체 신규 모집 공고",
+     "date": "2022-12-13",
+     "url": "https://ananti.kr/ko/board/company/CO07/CO0701"
+    }
+   ],
+   "tags": {
+    "공사": [
+     {
+      "title": "2024년 (주)아난티 시설물유지보수 협력업체 신규 모집 공고",
+      "date": "2023-12-11",
+      "url": "https://ananti.kr/ko/board/company/CO07/CO0701"
+     },
+     {
+      "title": "2023년 (주)아난티 시설물유지보수 협력업체 신규 모집 공고",
+      "date": "2022-12-13",
+      "url": "https://ananti.kr/ko/board/company/CO07/CO0701"
+     }
+    ],
+    "모집": [
+     {
+      "title": "2024년 (주)아난티 시설물유지보수 협력업체 신규 모집 공고",
+      "date": "2023-12-11",
+      "url": "https://ananti.kr/ko/board/company/CO07/CO0701"
+     },
+     {
+      "title": "2023년 (주)아난티 시설물유지보수 협력업체 신규 모집 공고",
+      "date": "2022-12-13",
+      "url": "https://ananti.kr/ko/board/company/CO07/CO0701"
+     }
+    ]
+   }
+  },
+  "review": null,
+  "fee_change": null,
+  "collected_at": "2026-11-26T09:51:50+09:00",
+  "recent_notice_text": null,
+  "course_notes": null,
+  "alert": null,
+  "unconfirmed": [],
+  "sources": []
+ },
+ "collection": {
+  "official_site": "ok",
+  "official_reason": null,
+  "pages_collected": 14,
+  "third_party": {
+   "teepick": false,
+   "greenfeeguide": false
+  },
+  "render_hint": "static",
+  "plan_strategy": "static(직접 파싱)",
+  "browser_batch": false
+ },
+ "coverage": {
+  "basic": 1.0,
+  "course": 0.6,
+  "fee": 0.0,
+  "ops": 0.57,
+  "facility": 0.3,
+  "briefing": 0.25,
+  "rental": 0.25
+ }
+}

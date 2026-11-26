@@ -1,0 +1,412 @@
+{
+ "course_id": "kr-golf-0430",
+ "meta": {
+  "name": "성문안 컨트리클럽",
+  "generated_at": "2026-11-26T09:55:47+09:00",
+  "schema": "stage2c/1.0",
+  "batch": "2_강원",
+  "includes": [
+   "master",
+   "ops",
+   "briefing"
+  ],
+  "source": "raw/received_gangwon_65.json (외부 데이터 수신, 2026-11-26)",
+  "review": {
+   "checked_at": "2026-11-26",
+   "status": "partial_official",
+   "checks": [
+    {
+     "field": "이용 형태",
+     "received": "회원제 표기(오늘골프)/대중형(인원)",
+     "verified": "공식 \"성문안 CC 18홀 프리미엄 퍼블릭 코스\"",
+     "result": "퍼블릭 확인",
+     "url": "http://www.oakvalley.co.kr/"
+    },
+    {
+     "field": "그린피",
+     "received": "220,000~270,000(비수기~성수기), 주말 280,000~340,000",
+     "verified": "시즌별 참고금액(3자). 2026-11 실거래 180,000~240,000",
+     "result": "3자 출처",
+     "url": "https://1n2d-golf.co.kr/seongmunan/price/"
+    }
+   ]
+  },
+  "data_checks": [
+   "대표전화 표기 차이: 마스터 033-769-7325 / 수신 1588-7676",
+   "미확인 목록 누락 라벨 보완: 코스 구성, 제세금"
+  ],
+  "schema_previous": "stage2b/1.0",
+  "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
+  "restructured_from_7key": false,
+  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
+  "has_detail": true,
+  "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+ },
+ "master": {
+  "course_id": "kr-golf-0430",
+  "name": "성문안 컨트리클럽",
+  "name_variants": [
+   "성문안 컨트리클럽"
+  ],
+  "former_names": null,
+  "name_note": null,
+  "type": "비회원제",
+  "types": [
+   "비회원제"
+  ],
+  "type_note": "문체부 등록은 비회원제. 공식(오크밸리)은 '성문안 CC 18홀 프리미엄 퍼블릭 코스'로 안내 — 비회원제와 같은 뜻으로 보되 표기는 퍼블릭.",
+  "holes": {
+   "total": 18,
+   "member": 0,
+   "public": 0,
+   "non_member": 18
+  },
+  "holes_note": null,
+  "address": "강원특별자치도 원주시 지정면 월송석화로 431",
+  "addresses": [
+   "강원특별자치도 원주시 지정면 월송석화로 431"
+  ],
+  "address_note": null,
+  "region": {
+   "sido_code": "51",
+   "sido_name": "강원특별자치도",
+   "sido_short": "강원",
+   "sigungu_code": "51130",
+   "sigungu_name": "원주시",
+   "legal_dong_code": "5113000000"
+  },
+  "lat": 37.394391,
+  "lng": 127.834925,
+  "nearest_ic": {
+   "name": "북원주IC",
+   "distance_km": 8.1,
+   "source": "최근접 IC 직선거리"
+  },
+  "tel": "033-769-7325",
+  "tel_official": "1588-7676 (골프 1번 → 성문안 1번)",
+  "tel_conflict": true,
+  "tel_source": "KGA",
+  "tel_note": null,
+  "homepage": "http://www.seongmunan.com/",
+  "homepage_master": "http://www.seongmunan.com/",
+  "operators": [
+   "에이치디씨리조트주식회사(조영환)"
+  ],
+  "area_sqm": 1364106,
+  "opened": "2022",
+  "course_blocks": [],
+  "facility_id": "F023",
+  "facility_members": [
+   "오크밸리회원제골프장",
+   "Oak Hills컨트리클럽",
+   "성문안 컨트리클럽",
+   "월송리 컨트리클럽"
+  ],
+  "status": "operating",
+  "status_note": null,
+  "provenance": {
+   "master": "courses_master.json v2.4 (문체부·KGA·KGBA·티픽·지도 + 강원 검수 정정)",
+   "detail": "raw/received_gangwon_65.json (2026-11-26 수신, 검수 2026-11-26)",
+   "synced_to": "courses_master.json v2.7 (2026-11-26 단일 스키마 정규화)"
+  },
+  "holes_received": 18,
+  "holes_conflict": false,
+  "facility_cluster": {
+   "facility_id": "F023",
+   "facility_name": "오크밸리(HDC리조트)",
+   "members": [
+    "오크밸리회원제골프장",
+    "Oak Hills컨트리클럽",
+    "성문안 컨트리클럽",
+    "월송리 컨트리클럽"
+   ],
+   "basis": "동일 리조트(HDC리조트·IPARK GOLF, 단일 시설 90홀)",
+   "relationship": null,
+   "note": null
+  },
+  "factcheck_2026_11_26": null,
+  "address_original": "원주시 지정면 월송석화로 431"
+ },
+ "course": {
+  "holes": 18,
+  "holes_received": 18,
+  "course_names": null,
+  "membership_type": "대중제(퍼블릭)",
+  "night_light": null,
+  "blocks": [],
+  "grass": {
+   "tee": null,
+   "fairway": "벤트그라스(페어웨이 전반)",
+   "green": "벤트그라스"
+  },
+  "kga": {
+   "code": "340",
+   "name": "성문안",
+   "nine_hole_courses": [
+    "OUT",
+    "IN"
+   ],
+   "hole_combinations": [
+    "OUT+IN"
+   ]
+  },
+  "kga_hole_est": 18,
+  "extra_courses": null
+ },
+ "fee": {
+  "weekday": 220000,
+  "weekend": 280000,
+  "weekday_text": "220,000원(비수기 3·11·12월) ~ 270,000원(성수기 4·5·6·9·10월), 금요일 230,000~280,000원",
+  "weekend_text": "280,000원(비수기) ~ 340,000원(성수기), 7~8월 320,000원",
+  "basis": "1인·18홀 2026년 시즌별 참고금액(외부 시즌별 그린피 자료·1박2일 패키지 가격표). 실제 결제가는 예약 화면 기준. 2026-11 실거래 180,000~240,000원",
+  "tax_included": null,
+  "cart": {
+   "value": 100000,
+   "text": "100,000원/팀(4인 1카트)"
+  },
+  "caddie": {
+   "value": 150000,
+   "text": "150,000원/팀(4인 1캐디) — 인원 안내는 160,000원 표기",
+   "none": false
+  },
+  "as_of": "2026-11(2026 시즌별 요금표·패키지 가격표 확인)",
+  "source_url": "https://1n2d-golf.co.kr/seongmunan/price/",
+  "note": "시즌별 참고금액(3자)과 실거래가 차이가 큼. 실제 결제가는 예약 화면 기준. 3~4인만 예약 가능(2인 불가).",
+  "sources": [
+   {
+    "source": "수신 조사(공식·공개 예약정보)",
+    "url": "https://1n2d-golf.co.kr/seongmunan/price/",
+    "checked_at": "2026-11(2026 시즌별 요금표·패키지 가격표 확인)"
+   }
+  ]
+ },
+ "cancel": {
+  "cancel_policy": null,
+  "open_cycle": "라운드 주를 제외한 4주 전 월요일 09:00, 1주일 단위 오픈. 인터넷 예약 마감 전날 17:00, 당일은 잔여 타임 전화 예약",
+  "notes": "3~4인만 예약 가능(2인 불가). 예약 전화 1588-7676",
+  "evidence": [],
+  "weather_evidence": []
+ },
+ "ops": {
+  "nocaddie": {
+   "value": null,
+   "evidence": []
+  },
+  "two_player": {
+   "value": "불가(3~4인 예약)",
+   "evidence": []
+  },
+  "three_player": {
+   "value": "가능",
+   "evidence": []
+  },
+  "five_player": {
+   "value": null,
+   "evidence": []
+  },
+  "marshal_caddie": {
+   "value": null,
+   "evidence": []
+  },
+  "cart_type": {
+   "value": null,
+   "evidence": []
+  },
+  "cart_entry": {
+   "value": null,
+   "evidence": []
+  },
+  "bagdrop": {
+   "value": null,
+   "evidence": []
+  },
+  "mat": {
+   "value": null,
+   "evidence": []
+  },
+  "checkin": {
+   "value": null,
+   "evidence": []
+  },
+  "locker": {
+   "value": null,
+   "evidence": []
+  },
+  "sauna": {
+   "value": null,
+   "evidence": []
+  },
+  "dress": {
+   "value": null,
+   "evidence": []
+  },
+  "pace": {
+   "value": null,
+   "evidence": []
+  }
+ },
+ "facilities": {
+  "practice": {
+   "value": null,
+   "evidence": []
+  },
+  "indoor_range": {
+   "value": null,
+   "evidence": []
+  },
+  "food": {
+   "value": null,
+   "evidence": []
+  },
+  "snack_bar": {
+   "value": null,
+   "evidence": []
+  },
+  "locker_sauna": {
+   "value": null,
+   "evidence": []
+  },
+  "lodging": {
+   "value": null,
+   "evidence": []
+  },
+  "other": {
+   "value": null,
+   "evidence": []
+  },
+  "night": {
+   "value": null,
+   "evidence": []
+  },
+  "closed_days": {
+   "value": null,
+   "third_party": null,
+   "evidence": []
+  },
+  "shuttle": {
+   "value": null,
+   "evidence": []
+  }
+ },
+ "rental": {
+  "available": null,
+  "full_set": null,
+  "fee_text": null,
+  "brand": null,
+  "left_handed": null,
+  "shoes": null,
+  "nine_hole": null,
+  "range_finder": null,
+  "reservation": null,
+  "source_url": null,
+  "nearby_delivery": {
+   "region": "강원",
+   "sido": "강원특별자치도",
+   "verified_at": "2026-11-26 (KST)",
+   "checked_at": "2026-11-26",
+   "providers": [
+    {
+     "id": "theb",
+     "name": "더비 (The B)",
+     "coverage": "조건부",
+     "basis": "매장·퀵 안내 없음. '전국 당일 배송' 표기와 화물택배(월~금, 2일 이상 무료)만 적용 가능. 권역별 확정 안내는 없음.",
+     "phone": "010-2530-4575",
+     "operating_status": "정상 영업",
+     "delivery": "O",
+     "price_headline": "12시간 기준 90,000원부터",
+     "bookable": true
+    },
+    {
+     "id": "gangnamclub",
+     "name": "강남골프클럽렌탈",
+     "coverage": "조건부",
+     "basis": "'전지역 배송 가능합니다(요금은 별도상담)' 문구만 있음. 권역별 확정 안내 없음.",
+     "phone": "010-7407-0753",
+     "operating_status": "정상 영업(자사 블로그 최신 게시 2026-04-28)",
+     "delivery": "미확인",
+     "price_headline": null,
+     "bookable": true
+    }
+   ],
+   "provider_count": 2,
+   "legend": {
+    "O": "공식 안내로 해당 권역 이용이 확인됨",
+    "X": "공식 안내상 해당 권역 서비스가 없음(예: '제주 전 지역' 전용으로만 안내)",
+    "조건부": "공식 안내상 가능하나 조건(수단·요금·현재 판매중지 등)이 붙어 있음. 조건은 basis/detail에 기재",
+    "미확인": "공식 공개 안내에서 해당 항목에 대한 언급을 찾지 못함(추정하지 않음)"
+   },
+   "not_verified": "전화·문자·카카오톡 상담으로만 확인 가능한 항목(재고, 개별 견적, 권역별 실제 배송 가능 여부)은 '미확인'으로 남김",
+   "source_file": "5-rental_8_coverage_verified.json",
+   "note_code": "해외 골퍼용 골프채 렌탈·딜리버리 업체. 같은 권역이라도 실제 배송 가능 여부·재고·견적은 전화 확인 필요."
+  }
+ },
+ "briefing": {
+  "notices": {
+   "url": null,
+   "items": [],
+   "tags": {}
+  },
+  "recent_notice_text": "2026년 10~11월 공지 미확인(2026-11-26 기준)",
+  "course_notes": "자연 암벽과 호수, 벤트그라스 코스로 알려진 18홀. 오크밸리 리조트(콘도)와 1박2일 36홀 패키지 운영",
+  "review": null,
+  "fee_change": null,
+  "alert": null,
+  "unconfirmed": [
+   "야간 라이트",
+   "잔디(티)",
+   "취소·위약 규정",
+   "5인 플레이",
+   "노캐디",
+   "마샬캐디",
+   "카트 종류",
+   "카트 페어웨이 진입",
+   "셀프 백드롭",
+   "매트 티샷",
+   "연습그린",
+   "인도어 연습장",
+   "식당·조식",
+   "그늘집",
+   "락커·사우나",
+   "숙박",
+   "기타 시설",
+   "클럽 렌탈 여부",
+   "클럽 렌탈 요금",
+   "좌타용 클럽",
+   "골프화 대여",
+   "코스 구성",
+   "제세금"
+  ],
+  "unconfirmed_labels_added": [
+   "코스 구성",
+   "제세금"
+  ],
+  "sources": [
+   "https://1n2d-golf.co.kr/seongmunan/price/",
+   "https://asset365.kr/성문안cc-그린피-가격-총정리｜2026-주중-주말-이용요금/",
+   "https://inwon.kr/c/k663",
+   "https://todaygolfgo.com/regions/gangwon/"
+  ],
+  "collected_at": "2026-11-26T09:55:47+09:00"
+ },
+ "collection": {
+  "official_site": "ok",
+  "official_reason": "운영 중(IPARK GOLF·오크밸리 앱 예약. 오크밸리 단지 90홀 중 퍼블릭 계열)",
+  "pages_collected": 0,
+  "third_party": {
+   "received_report": true
+  },
+  "render_hint": "report",
+  "plan_strategy": "subagent_report(2026-11-26)"
+ },
+ "coverage": {
+  "basic": 1.0,
+  "course": 0.8,
+  "fee": 1.0,
+  "ops": 0.14,
+  "facility": 0.0,
+  "briefing": 0.75,
+  "rental": 0.25
+ }
+}

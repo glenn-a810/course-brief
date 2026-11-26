@@ -1,0 +1,580 @@
+{
+ "course_id": "kr-golf-0218",
+ "meta": {
+  "name": "포천아도니스 대중골프장",
+  "generated_at": "2026-11-26T09:51:59+09:00",
+  "schema": "stage2c/1.0",
+  "batch": "1_수도권",
+  "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
+  "schema_previous": "stage2b/1.0",
+  "restructured_from_7key": true,
+  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
+  "has_detail": true,
+  "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+ },
+ "master": {
+  "course_id": "kr-golf-0218",
+  "name": "포천아도니스 대중골프장",
+  "name_variants": [
+   "포천아도니스 대중골프장"
+  ],
+  "type": "대중제",
+  "holes": {
+   "total": 9,
+   "member": 0,
+   "public": 9,
+   "non_member": 0
+  },
+  "address": "경기도 포천시 신북면 포천로 2499",
+  "region": {
+   "sido_code": "41",
+   "sido_name": "경기도",
+   "sido_short": "경기",
+   "sigungu_code": "41650",
+   "sigungu_name": "포천시",
+   "legal_dong_code": "4165000000"
+  },
+  "lat": 37.966015,
+  "lng": 127.178698,
+  "nearest_ic": {
+   "name": "신북IC",
+   "distance_km": 6.6,
+   "source": "최근접 IC 직선거리"
+  },
+  "tel": "031-530-9140",
+  "homepage": "https://www.adoniscc.co.kr/public",
+  "operators": [
+   "㈜아도니스"
+  ],
+  "area_sqm": 318701,
+  "opened": null,
+  "course_blocks": [],
+  "facility_id": "F008",
+  "provenance": {
+   "master": "courses_master.json v2.0 (문체부·KGA·KGBA·티픽·지도)",
+   "synced_to": "courses_master.json v2.7 (2026-11-26 단일 스키마 정규화)"
+  },
+  "course_spec": {
+   "holes": 9,
+   "par": null,
+   "blocks": [],
+   "length_m": null,
+   "kga": null,
+   "grass": {
+    "evidence": "더보기 2027년도 아도니스퍼블릭 연단체 모집 공지사항 2027년도 아도니스퍼블릭 연단체 모집 2026-11-23 26년 11월 스팟 그린피(11/26~12/04) 공지사항 26년 11월 스팟 그린피(11/26~12/04) 2026-11-16 26년 12월 그린피 안내 공지사항 26년 12월 그린피 안내 2026-11-12 26년 11월 이벤트 안내 공지사항 26년 11월 이벤트 안내 2026-10-28 10월24일(토) 시스템 정기 점검 안내 공지사항 10월24일(토) 시스템 정기 점검 안내 2026-10-22 course PUB",
+    "source": "공식",
+    "url": "https://www.adoniscc.co.kr/public"
+   },
+   "hole_by_hole": null
+  },
+  "addresses": [
+   "경기도 포천시 신북면 포천로 2499"
+  ],
+  "facility_members": [
+   "포천아도니스 C.C",
+   "포천아도니스 대중골프장"
+  ],
+  "status": "operating",
+  "facility_cluster": {
+   "facility_id": "F008",
+   "facility_name": "포천아도니스 C.C",
+   "members": [
+    "포천아도니스 C.C",
+    "포천아도니스 대중골프장"
+   ],
+   "basis": "동일 소재지",
+   "relationship": null,
+   "note": null
+  },
+  "factcheck_2026_11_26": null
+ },
+ "course": {
+  "holes": 9,
+  "holes_received": null,
+  "course_names": null,
+  "membership_type": "대중제",
+  "night_light": null,
+  "blocks": [],
+  "grass": {
+   "tee": null,
+   "fairway": {
+    "evidence": "더보기 2027년도 아도니스퍼블릭 연단체 모집 공지사항 2027년도 아도니스퍼블릭 연단체 모집 2026-11-23 26년 11월 스팟 그린피(11/26~12/04) 공지사항 26년 11월 스팟 그린피(11/26~12/04) 2026-11-16 26년 12월 그린피 안내 공지사항 26년 12월 그린피 안내 2026-11-12 26년 11월 이벤트 안내 공지사항 26년 11월 이벤트 안내 2026-10-28 10월24일(토) 시스템 정기 점검 안내 공지사항 10월24일(토) 시스템 정기 점검 안내 2026-10-22 course PUB",
+    "source": "공식",
+    "url": "https://www.adoniscc.co.kr/public"
+   },
+   "green": null
+  },
+  "kga": null,
+  "kga_hole_est": null,
+  "extra_courses": null,
+  "hole_by_hole": null,
+  "length_m": null,
+  "par": null
+ },
+ "fee": {
+  "weekday": null,
+  "weekend": null,
+  "weekday_text": null,
+  "weekend_text": null,
+  "basis": null,
+  "tax_included": null,
+  "cart": {
+   "value": 10000,
+   "raw": "10,000원 (1인, 9홀)",
+   "label": "카트요금 / 진행상 1인 1카트가 의무 사용입니다. / 모토카트",
+   "url": "https://www.adoniscc.co.kr/public/booking/cart-guide",
+   "source": "공식 요금표"
+  },
+  "caddie": null,
+  "as_of": null,
+  "source_url": null,
+  "note": null,
+  "sources": [],
+  "checked_at": null,
+  "official_green": {
+   "value": 0,
+   "raw": "[ 9시이전 1+1이벤트 정상가적용 (정상가 65.000원)]",
+   "label": "- 13시~14시 5만 ☆ / - 14시이후 4.5만 ☆ / ★ 11월 30일~12월 04일(주중,1인,9홀)",
+   "url": "https://www.adoniscc.co.kr/public/notice/11820",
+   "source": "공식 요금표"
+  },
+  "official_green_evidence": [
+   "더보기 2027년도 아도니스퍼블릭 연단체 모집 공지사항 2027년도 아도니스퍼블릭 연단체 모집 2026-11-23 26년 11월 스팟 그린피(11/26~12/04) 공지사항 26년 11월 스팟 그린피(11/26~12/04) 2026-11-16 26년 12월 그린피 안내 공지사항 26년 12월 그린피 안내 2026-11-12 26년 11월 이벤트 안내 공지사항 26년 11월 이벤트 안내 2026-10-28 10월24일(토) 시스템 정기 점검 안내 공지사항 10월24일(토) 시스템 정기 점검 안내 2026-10-22 course PUB",
+   "예약된 시간내에 경기 출발이 될 수 없을 경우 정당한 사유없이 경기를 지연시킬 경우 경기 능력이 현저히 부족하여 다른 이용자에게 방해가 될 경우 그린, 카트(수동 및 전자카트), 페어웨이, 시설, 비품 등을 심하게 훼손시킬 경우 근무자 희롱, 욕설, 폭행 또는 직원의 정당한 요구에 불응 하였을 경우 기타 당 골프장의 약관을 위반 하였을 경우 - 강설, 폭우등 천재지변 또는 그밖에 불가항력적인 사유로 라운드를 못하게 된 경우 그린피 + 카트비를 다음과 같이 환불합니다."
+  ],
+  "official_rental": null,
+  "official_table": {
+   "rows": [
+    {
+     "section": "모토카트",
+     "label": "카트요금 / 진행상 1인 1카트가 의무 사용입니다. / 모토카트",
+     "value": "10,000원 (1인, 9홀)",
+     "amounts": [
+      10000
+     ],
+     "url": "https://www.adoniscc.co.kr/public/booking/cart-guide"
+    },
+    {
+     "section": "승용카트",
+     "label": "승용카트",
+     "value": "1인당 12,000원 (1인, 9홀)",
+     "amounts": [
+      12000
+     ],
+     "url": "https://www.adoniscc.co.kr/public/booking/cart-guide"
+    },
+    {
+     "section": "26년 11월 스팟 그린피(11/26~12/04)",
+     "label": "- 13시~14시 5만 ☆ / - 14시이후 4.5만 ☆ / ★ 11월 30일~12월 04일(주중,1인,9홀)",
+     "value": "[ 9시이전 1+1이벤트 정상가적용 (정상가 65.000원)]",
+     "amounts": [
+      0
+     ],
+     "url": "https://www.adoniscc.co.kr/public/notice/11820"
+    },
+    {
+     "section": "26년 11월 스팟 그린피(11/26~12/04)",
+     "label": "★ 11월 28일~12월06일(토일,1인,9홀)",
+     "value": "[11월29일만 9시이전 1+1이벤트 정상가적용(정상가 85.000원)]",
+     "amounts": [
+      0
+     ],
+     "url": "https://www.adoniscc.co.kr/public/notice/11820"
+    }
+   ],
+   "url": "https://www.adoniscc.co.kr/public/booking/cart-guide"
+  }
+ },
+ "cancel": {
+  "cancel_policy": null,
+  "open_cycle": null,
+  "notes": null,
+  "evidence": [
+   "카트요금 - 아도니스 컨트리클럽 회원제 퍼블릭 호텔 퍼블릭 전화 031) 530-9140 로그인 회원가입 SITEMAP ADONIS RESORT FAMILY SITE  아도니스 호텔 A-ONE CC 드비치 GC 아도니스 퍼블릭 퍼블릭 소개 찾아오시는 길 코스소개 코스공략도 스코어카드 퍼블릭 예약 퍼블릭 예약 카트요금 예약안내 예약확인/취소 무인내장 안내 1:1문의 이용요금/이벤트 이용요금/이벤트 조인게시판 분실물안내 기상정보 실시간 영상(기상정보) 마이페이지 카트요금 진행상 1인 1카트가 의무 사용입니다.",
+   "예약안내 - 아도니스 컨트리클럽 회원제 퍼블릭 호텔 퍼블릭 전화 031) 530-9140 로그인 회원가입 SITEMAP ADONIS RESORT FAMILY SITE  아도니스 호텔 A-ONE CC 드비치 GC 아도니스 퍼블릭 퍼블릭 소개 찾아오시는 길 코스소개 코스공략도 스코어카드 퍼블릭 예약 퍼블릭 예약 카트요금 예약안내 예약확인/취소 무인내장 안내 1:1문의 이용요금/이벤트 이용요금/이벤트 조인게시판 분실물안내 기상정보 실시간 영상(기상정보) 마이페이지 예약안내 예약방법 취소 및 위약처리 규정 퍼블릭 준수사항 퇴장규정 환불규",
+   "예약 날짜 및 취소, 시간 변경은 3일 전까지 가능하며 인원 변경은 1일 전까지 가능합니다."
+  ],
+  "weather_evidence": [
+   "카트요금 - 아도니스 컨트리클럽 회원제 퍼블릭 호텔 퍼블릭 전화 031) 530-9140 로그인 회원가입 SITEMAP ADONIS RESORT FAMILY SITE  아도니스 호텔 A-ONE CC 드비치 GC 아도니스 퍼블릭 퍼블릭 소개 찾아오시는 길 코스소개 코스공략도 스코어카드 퍼블릭 예약 퍼블릭 예약 카트요금 예약안내 예약확인/취소 무인내장 안내 1:1문의 이용요금/이벤트 이용요금/이벤트 조인게시판 분실물안내 기상정보 실시간 영상(기상정보) 마이페이지 카트요금 진행상 1인 1카트가 의무 사용입니다.",
+   "예약안내 - 아도니스 컨트리클럽 회원제 퍼블릭 호텔 퍼블릭 전화 031) 530-9140 로그인 회원가입 SITEMAP ADONIS RESORT FAMILY SITE  아도니스 호텔 A-ONE CC 드비치 GC 아도니스 퍼블릭 퍼블릭 소개 찾아오시는 길 코스소개 코스공략도 스코어카드 퍼블릭 예약 퍼블릭 예약 카트요금 예약안내 예약확인/취소 무인내장 안내 1:1문의 이용요금/이벤트 이용요금/이벤트 조인게시판 분실물안내 기상정보 실시간 영상(기상정보) 마이페이지 예약안내 예약방법 취소 및 위약처리 규정 퍼블릭 준수사항 퇴장규정 환불규"
+  ]
+ },
+ "ops": {
+  "nocaddie": {
+   "evidence": [],
+   "value": null
+  },
+  "two_player": {
+   "evidence": [
+    "카트요금 - 아도니스 컨트리클럽 회원제 퍼블릭 호텔 퍼블릭 전화 031) 530-9140 로그인 회원가입 SITEMAP ADONIS RESORT FAMILY SITE  아도니스 호텔 A-ONE CC 드비치 GC 아도니스 퍼블릭 퍼블릭 소개 찾아오시는 길 코스소개 코스공략도 스코어카드 퍼블릭 예약 퍼블릭 예약 카트요금 예약안내 예약확인/취소 무인내장 안내 1:1문의 이용요금/이벤트 이용요금/이벤트 조인게시판 분실물안내 기상정보 실시간 영상(기상정보) 마이페이지 카트요금 진행상 1인 1카트가 의무 사용입니다.",
+    "예약안내 - 아도니스 컨트리클럽 회원제 퍼블릭 호텔 퍼블릭 전화 031) 530-9140 로그인 회원가입 SITEMAP ADONIS RESORT FAMILY SITE  아도니스 호텔 A-ONE CC 드비치 GC 아도니스 퍼블릭 퍼블릭 소개 찾아오시는 길 코스소개 코스공략도 스코어카드 퍼블릭 예약 퍼블릭 예약 카트요금 예약안내 예약확인/취소 무인내장 안내 1:1문의 이용요금/이벤트 이용요금/이벤트 조인게시판 분실물안내 기상정보 실시간 영상(기상정보) 마이페이지 예약안내 예약방법 취소 및 위약처리 규정 퍼블릭 준수사항 퇴장규정 환불규",
+    "(단, 온라인상으로 사전에 예약 조인이 안 될 경우 라운딩 당일날 전화 예약으로 오신 고객님 및 선착순(walk-in) 고객님들과 조인되므로 예약시간이 재조정될 수 있습니다.) 3인, 4인 18홀 예약은 3주 전 동일한 요일 자정 00시부터 하루 전 24:00분까지 실시간으로 예약 가능합니다.ex) 7월 01일 월요일에 예약할 경우 3주 전 6월 10일 월요일 00시부터 예약 가능."
+   ],
+   "value": null
+  },
+  "three_player": {
+   "value": null,
+   "evidence": []
+  },
+  "five_player": {
+   "value": null,
+   "evidence": []
+  },
+  "marshal_caddie": {
+   "value": null,
+   "evidence": []
+  },
+  "cart_type": {
+   "evidence": [
+    "카트요금 - 아도니스 컨트리클럽 회원제 퍼블릭 호텔 퍼블릭 전화 031) 530-9140 로그인 회원가입 SITEMAP ADONIS RESORT FAMILY SITE  아도니스 호텔 A-ONE CC 드비치 GC 아도니스 퍼블릭 퍼블릭 소개 찾아오시는 길 코스소개 코스공략도 스코어카드 퍼블릭 예약 퍼블릭 예약 카트요금 예약안내 예약확인/취소 무인내장 안내 1:1문의 이용요금/이벤트 이용요금/이벤트 조인게시판 분실물안내 기상정보 실시간 영상(기상정보) 마이페이지 카트요금 진행상 1인 1카트가 의무 사용입니다.",
+    "모토카트 10,000원 (1인, 9홀) 승용카트 1인당 12,000원 (1인, 9홀) ※ 승용카트는 사전예약제로 운영됩니다."
+   ],
+   "value": null
+  },
+  "cart_entry": {
+   "evidence": [],
+   "value": null
+  },
+  "bagdrop": {
+   "evidence": [],
+   "value": null
+  },
+  "mat": {
+   "evidence": [],
+   "value": null
+  },
+  "checkin": {
+   "evidence": [
+    "무인내장 안내 - 아도니스 컨트리클럽 회원제 퍼블릭 호텔 퍼블릭 전화 031) 530-9140 로그인 회원가입 SITEMAP ADONIS RESORT FAMILY SITE  아도니스 호텔 A-ONE CC 드비치 GC 아도니스 퍼블릭 퍼블릭 소개 찾아오시는 길 코스소개 코스공략도 스코어카드 퍼블릭 예약 퍼블릭 예약 카트요금 예약안내 예약확인/취소 무인내장 안내 1:1문의 이용요금/이벤트 이용요금/이벤트 조인게시판 분실물안내 기상정보 실시간 영상(기상정보) 마이페이지 무인내장 안내 APP QR코드로 내장하기(회원) 앱 회원 빠른 내장",
+    "예약번호로 내장하기(비회원) 비회원 내장 키오스크 화면에 있는 비회원 내장을 선택하여 주세요."
+   ],
+   "value": null
+  },
+  "locker": {
+   "evidence": [
+    "성별 및 내장인원 락카 및 카트 선택 후 다음을 클릭해 주세요.",
+    "락카, 카트 선택 락카사용, 락카성별, 카트선택 후 'QR CODE 생성' 클릭해주세요.",
+    "락카사용, 락카성별, 카트선택 후 'QR CODE 생성' 클릭해주세요."
+   ],
+   "value": "락커 운영",
+   "value_previous": "문구 확인(원문 근거)",
+   "source_url": "https://www.adoniscc.co.kr/public/booking/unmanned-entrance/guide",
+   "confidence": "low",
+   "source_type": "official_site",
+   "page_label": "무인내장 안내",
+   "value_from": "capital_supplement(official_site)"
+  },
+  "sauna": {
+   "evidence": [],
+   "value": null
+  },
+  "dress": {
+   "evidence": [
+    "청바지, 츄리닝, 슬리퍼, 노출이 심한 복장등으로는 입장하실 수 없습니다."
+   ],
+   "value": "문구 확인(원문 근거)"
+  },
+  "pace": {
+   "evidence": [],
+   "value": null
+  }
+ },
+ "facilities": {
+  "practice": {
+   "evidence": [],
+   "value": null
+  },
+  "indoor_range": {
+   "value": null,
+   "evidence": []
+  },
+  "food": {
+   "evidence": [],
+   "value": null
+  },
+  "snack_bar": {
+   "value": null,
+   "evidence": []
+  },
+  "locker_sauna": {
+   "value": null,
+   "evidence": []
+  },
+  "lodging": {
+   "value": "아도니스 호텔",
+   "evidence": [
+    "아도니스 호텔"
+   ],
+   "source_url": "https://www.adoniscc.co.kr/hotel",
+   "confidence": "high",
+   "checked_at": "2026-10-09",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/golf-course-lodging-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  },
+  "other": {
+   "value": null,
+   "evidence": []
+  },
+  "night": {
+   "evidence": [],
+   "value": null
+  },
+  "closed_days": {
+   "evidence": [
+    "겨울 휴장: 혹한기 동계휴장(일정은 홈페이지 공지)"
+   ],
+   "third_party": null,
+   "value": "겨울(동계) 휴장: 혹한기 동계휴장(일정은 홈페이지 공지)",
+   "source_url": "https://www.adoniscc.co.kr/standard-terms",
+   "confidence": "medium",
+   "checked_at": "2026-11-23",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/winter-golf-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  },
+  "shuttle": {
+   "evidence": [],
+   "value": null
+  },
+  "ev_charge": {
+   "evidence": [],
+   "value": null
+  },
+  "gf_facilities": null,
+  "proshop": {
+   "evidence": [],
+   "value": null
+  }
+ },
+ "rental": {
+  "available": null,
+  "full_set": null,
+  "fee_text": null,
+  "brand": null,
+  "left_handed": null,
+  "shoes": null,
+  "nine_hole": null,
+  "range_finder": null,
+  "reservation": null,
+  "source_url": null,
+  "evidence": [],
+  "official": null,
+  "nearby_delivery": {
+   "region": "수도권",
+   "sido": "경기도",
+   "verified_at": "2026-11-26 (KST)",
+   "checked_at": "2026-11-26",
+   "providers": [
+    {
+     "id": "theb",
+     "name": "더비 (The B)",
+     "coverage": "O",
+     "basis": "동탄·김포·시흥·용인·이천 24시간 무인픽업 매장 5곳 + 다마스 퀵/택배 배송. 홈페이지에 '강남·동탄·판교·수지·광교·분당', '시흥·배곧·인천·안산·송도', '이천·여주' 권역 표기.",
+     "phone": "010-2530-4575",
+     "operating_status": "정상 영업",
+     "delivery": "O",
+     "price_headline": "12시간 기준 90,000원부터",
+     "bookable": true
+    },
+    {
+     "id": "gangnamclub",
+     "name": "강남골프클럽렌탈",
+     "coverage": "O",
+     "basis": "서울 서초구 거점 매장 주소 공개, 자사 블로그 '전지역 배송 가능' 안내.",
+     "phone": "010-7407-0753",
+     "operating_status": "정상 영업(자사 블로그 최신 게시 2026-04-28)",
+     "delivery": "미확인",
+     "price_headline": null,
+     "bookable": true
+    },
+    {
+     "id": "apioz",
+     "name": "아피오즈 (Apioz)",
+     "coverage": "조건부",
+     "basis": "서울 숙소 배송·공항 픽업 옵션 안내. 단 골프세트 Sold Out으로 현재 이용 불가.",
+     "phone": "02-6956-8115",
+     "operating_status": "예약 중단(Sold Out) — 골프채 세트 한정",
+     "delivery": "미확인",
+     "price_headline": null,
+     "caution": "골프채 세트 Sold Out — 현재 예약 불가",
+     "bookable": false,
+     "bookable_reason": "골프채 세트 Sold Out — 현재 예약 불가"
+    }
+   ],
+   "provider_count": 3,
+   "legend": {
+    "O": "공식 안내로 해당 권역 이용이 확인됨",
+    "X": "공식 안내상 해당 권역 서비스가 없음(예: '제주 전 지역' 전용으로만 안내)",
+    "조건부": "공식 안내상 가능하나 조건(수단·요금·현재 판매중지 등)이 붙어 있음. 조건은 basis/detail에 기재",
+    "미확인": "공식 공개 안내에서 해당 항목에 대한 언급을 찾지 못함(추정하지 않음)"
+   },
+   "not_verified": "전화·문자·카카오톡 상담으로만 확인 가능한 항목(재고, 개별 견적, 권역별 실제 배송 가능 여부)은 '미확인'으로 남김",
+   "source_file": "5-rental_8_coverage_verified.json",
+   "note_code": "해외 골퍼용 골프채 렌탈·딜리버리 업체. 같은 권역이라도 실제 배송 가능 여부·재고·견적은 전화 확인 필요."
+  }
+ },
+ "briefing": {
+  "notices": {
+   "url": "https://www.adoniscc.co.kr/public/notice/11812",
+   "items": [
+    {
+     "title": "2027년도 아도니스퍼블릭 연단체 모집",
+     "date": "2026-11-23",
+     "url": "https://www.adoniscc.co.kr/public/notice"
+    },
+    {
+     "title": "26년 11월 스팟 그린피(11/26~12/04)",
+     "date": "2026-11-16",
+     "url": "https://www.adoniscc.co.kr/public/notice"
+    },
+    {
+     "title": "26년 12월 그린피 안내",
+     "date": "2026-11-12",
+     "url": "https://www.adoniscc.co.kr/public/notice"
+    },
+    {
+     "title": "셋째, 4인 18홀 예약시 1인당 1만원 할인",
+     "date": "2026-11-01",
+     "url": "https://www.adoniscc.co.kr/public/notice/11815"
+    },
+    {
+     "title": "26년 11월 이벤트 안내",
+     "date": "2026-10-28",
+     "url": "https://www.adoniscc.co.kr/public/notice"
+    },
+    {
+     "title": "10월24일(토) 시스템 정기 점검 안내",
+     "date": "2026-10-22",
+     "url": "https://www.adoniscc.co.kr/public/notice"
+    },
+    {
+     "title": "편의점 도시락 사전예약",
+     "date": "2026-10-21",
+     "url": "https://www.adoniscc.co.kr/public/notice"
+    },
+    {
+     "title": "2026년 10월 스팟이벤트(5일,6일,10일,11일)",
+     "date": "2026-10-02",
+     "url": "https://www.adoniscc.co.kr/public/notice"
+    },
+    {
+     "title": "아도니스 현재 코스 사진",
+     "date": "2026-09-28",
+     "url": "https://www.adoniscc.co.kr/public/notice"
+    },
+    {
+     "title": "아도니스 현재 코스 사진",
+     "date": "2026-09-23",
+     "url": "https://www.adoniscc.co.kr/public/notice"
+    },
+    {
+     "title": "9월15일(화) 그린 통기 작업 안내",
+     "date": "2026-09-10",
+     "url": "https://www.adoniscc.co.kr/public/notice"
+    },
+    {
+     "title": "아도니스 현재 코스 사진",
+     "date": "2026-08-31",
+     "url": "https://www.adoniscc.co.kr/public/notice"
+    },
+    {
+     "title": "편의점 도시락 사전예약",
+     "date": "2026-08-18",
+     "url": "https://www.adoniscc.co.kr/public/notice"
+    },
+    {
+     "title": "아도니스 현재 코스 사진",
+     "date": "2026-08-13",
+     "url": "https://www.adoniscc.co.kr/public/notice"
+    },
+    {
+     "title": "아도니스 현재 코스 사진",
+     "date": "2026-07-16",
+     "url": "https://www.adoniscc.co.kr/public/notice"
+    },
+    {
+     "title": "아도니스 현재 코스 사진",
+     "date": "2026-06-26",
+     "url": "https://www.adoniscc.co.kr/public/notice"
+    }
+   ],
+   "tags": {
+    "모집": [
+     {
+      "title": "2027년도 아도니스퍼블릭 연단체 모집",
+      "date": "2026-11-23",
+      "url": "https://www.adoniscc.co.kr/public/notice"
+     }
+    ],
+    "요금": [
+     {
+      "title": "26년 11월 스팟 그린피(11/26~12/04)",
+      "date": "2026-11-16",
+      "url": "https://www.adoniscc.co.kr/public/notice"
+     },
+     {
+      "title": "26년 12월 그린피 안내",
+      "date": "2026-11-12",
+      "url": "https://www.adoniscc.co.kr/public/notice"
+     }
+    ],
+    "이벤트": [
+     {
+      "title": "셋째, 4인 18홀 예약시 1인당 1만원 할인",
+      "date": "2026-11-01",
+      "url": "https://www.adoniscc.co.kr/public/notice/11815"
+     },
+     {
+      "title": "26년 11월 이벤트 안내",
+      "date": "2026-10-28",
+      "url": "https://www.adoniscc.co.kr/public/notice"
+     },
+     {
+      "title": "2026년 10월 스팟이벤트(5일,6일,10일,11일)",
+      "date": "2026-10-02",
+      "url": "https://www.adoniscc.co.kr/public/notice"
+     }
+    ],
+    "그린통기": [
+     {
+      "title": "9월15일(화) 그린 통기 작업 안내",
+      "date": "2026-09-10",
+      "url": "https://www.adoniscc.co.kr/public/notice"
+     }
+    ]
+   }
+  },
+  "review": null,
+  "fee_change": null,
+  "collected_at": "2026-11-26T09:51:59+09:00",
+  "recent_notice_text": null,
+  "course_notes": null,
+  "alert": null,
+  "unconfirmed": [],
+  "sources": []
+ },
+ "collection": {
+  "official_site": "ok",
+  "official_reason": null,
+  "pages_collected": 14,
+  "third_party": {
+   "teepick": false,
+   "greenfeeguide": false
+  },
+  "render_hint": "static",
+  "plan_strategy": "static(직접 파싱)",
+  "browser_batch": false
+ },
+ "coverage": {
+  "basic": 1.0,
+  "course": 0.6,
+  "fee": 0.25,
+  "ops": 0.14,
+  "facility": 0.2,
+  "briefing": 0.25,
+  "rental": 0.25
+ }
+}

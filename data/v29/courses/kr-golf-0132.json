@@ -1,0 +1,608 @@
+{
+ "course_id": "kr-golf-0132",
+ "meta": {
+  "name": "에덴블루 컨트리클럽",
+  "generated_at": "2026-11-26T09:51:52+09:00",
+  "schema": "stage2c/1.0",
+  "batch": "1_수도권",
+  "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
+  "schema_previous": "stage2b/1.0",
+  "restructured_from_7key": true,
+  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
+  "has_detail": true,
+  "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+ },
+ "master": {
+  "course_id": "kr-golf-0132",
+  "name": "에덴블루 컨트리클럽",
+  "name_variants": [
+   "에덴블루 컨트리클럽"
+  ],
+  "type": "대중제",
+  "holes": {
+   "total": 27,
+   "member": 0,
+   "public": 27,
+   "non_member": 0
+  },
+  "address": "경기도 안성시 죽산면 녹배길 175",
+  "region": {
+   "sido_code": "41",
+   "sido_name": "경기도",
+   "sido_short": "경기",
+   "sigungu_code": "41550",
+   "sigungu_name": "안성시",
+   "legal_dong_code": "4155000000"
+  },
+  "lat": 37.05679,
+  "lng": 127.384647,
+  "nearest_ic": {
+   "name": "일죽IC",
+   "distance_km": 7.0,
+   "source": "teepick(실측 표기)",
+   "straight_km_nearest": 7.0,
+   "straight_name": "일죽IC"
+  },
+  "tel": "031-678-7000",
+  "homepage": "http://www.edenblue.co.kr",
+  "operators": [
+   "죽산개발㈜"
+  ],
+  "area_sqm": 1238246,
+  "opened": "2010-06",
+  "course_blocks": [],
+  "facility_id": null,
+  "provenance": {
+   "master": "courses_master.json v2.0 (문체부·KGA·KGBA·티픽·지도)",
+   "synced_to": "courses_master.json v2.7 (2026-11-26 단일 스키마 정규화)"
+  },
+  "par": null,
+  "holes_teepick": 27,
+  "course_spec": {
+   "holes": 27,
+   "par": null,
+   "blocks": [],
+   "length_m": null,
+   "kga": null,
+   "grass": {
+    "evidence": "회원가입 [ 예약오픈안내 ] 주중: 2번째 화요일 09시 다음달 전 시간 오픈 주말: 3번째 화요일 09시 다음달 전 시간 오픈 * 예약오픈일 전화예약불가 선택한 날짜 마운틴 팀 밸리 팀 레이크 팀 2026년 12월 이용 요금 안내 2026년 11월 이용 요금 안내 에덴블루CC 연단체 모집 안내 내가 선택하는 나만의 “CUSTOM”사전 예약 라운드 이벤트 레스토랑 이벤트 키오스크 정산(check-out)시행 안내 전기차 충전구역 불법행위 안내 26년도 야간 운영 안내 예약하기 예약확인 예약안내 나의쿠폰함 오시는길 조인게시판 모바일 ",
+    "source": "공식",
+    "url": "https://www.edenblue.co.kr/index.asp"
+   },
+   "hole_by_hole": null
+  },
+  "addresses": [
+   "경기도 안성시 죽산면 녹배길 175"
+  ],
+  "status": "operating",
+  "facility_cluster": null,
+  "factcheck_2026_11_26": null
+ },
+ "course": {
+  "holes": 27,
+  "holes_received": 27,
+  "course_names": null,
+  "membership_type": "대중제",
+  "night_light": null,
+  "blocks": [],
+  "grass": {
+   "tee": null,
+   "fairway": {
+    "evidence": "회원가입 [ 예약오픈안내 ] 주중: 2번째 화요일 09시 다음달 전 시간 오픈 주말: 3번째 화요일 09시 다음달 전 시간 오픈 * 예약오픈일 전화예약불가 선택한 날짜 마운틴 팀 밸리 팀 레이크 팀 2026년 12월 이용 요금 안내 2026년 11월 이용 요금 안내 에덴블루CC 연단체 모집 안내 내가 선택하는 나만의 “CUSTOM”사전 예약 라운드 이벤트 레스토랑 이벤트 키오스크 정산(check-out)시행 안내 전기차 충전구역 불법행위 안내 26년도 야간 운영 안내 예약하기 예약확인 예약안내 나의쿠폰함 오시는길 조인게시판 모바일 ",
+    "source": "공식",
+    "url": "https://www.edenblue.co.kr/index.asp"
+   },
+   "green": null
+  },
+  "kga": null,
+  "kga_hole_est": null,
+  "extra_courses": null,
+  "hole_by_hole": null,
+  "length_m": null,
+  "par": null
+ },
+ "fee": {
+  "weekday": 130000,
+  "weekend": 130000,
+  "weekday_text": null,
+  "weekend_text": null,
+  "basis": null,
+  "tax_included": null,
+  "cart": {
+   "value": 100000,
+   "source": "그린피가이드",
+   "url": "https://greenfeeguide.co.kr/course/gc-0105/"
+  },
+  "caddie": {
+   "value": 150000,
+   "source": "그린피가이드",
+   "url": "https://greenfeeguide.co.kr/course/gc-0105/",
+   "none": false
+  },
+  "as_of": "2026-11-01",
+  "source_url": null,
+  "note": null,
+  "sources": [
+   {
+    "source": "그린피가이드(공식 요금표 확인)",
+    "url": "https://greenfeeguide.co.kr/course/gc-0105/",
+    "checked_at": "2026-11-01"
+   }
+  ],
+  "checked_at": "2026-11-01",
+  "market": {
+   "weekday_min": 60000.0,
+   "weekend_min": 97000.0,
+   "part1": null,
+   "part2": null,
+   "source": "티픽골프장(실거래 관측)",
+   "url": "https://teepickgolf.com/course/%EC%97%90%EB%8D%B4%EB%B8%94%EB%A3%A8cc",
+   "note": "공시가 아닌 최근 관측 실거래 최저가"
+  },
+  "official_green": {
+   "value": 30000,
+   "raw": "기본 요금 : 30,000원",
+   "label": "이용 요금 : 그린피 + 카트비",
+   "url": "https://www.edenblue.co.kr/pagesite/use/charge.asp",
+   "source": "공식 요금표"
+  },
+  "official_green_evidence": [],
+  "official_rental": null,
+  "official_table": {
+   "rows": [
+    {
+     "section": "캐디피",
+     "label": "요금 / 캐디피 / 1부,2부",
+     "value": "150,000원",
+     "amounts": [
+      150000
+     ],
+     "url": "https://www.edenblue.co.kr/pagesite/use/charge.asp"
+    },
+    {
+     "section": "캐디피",
+     "label": "야간 3부",
+     "value": "160,000원",
+     "amounts": [
+      160000
+     ],
+     "url": "https://www.edenblue.co.kr/pagesite/use/charge.asp"
+    },
+    {
+     "section": "카트비(1대당)",
+     "label": "카트비(1대당)",
+     "value": "100,000원",
+     "amounts": [
+      100000
+     ],
+     "url": "https://www.edenblue.co.kr/pagesite/use/charge.asp"
+    },
+    {
+     "section": "이용 요금 : 그린피 + 카트비",
+     "label": "이용 요금 : 그린피 + 카트비",
+     "value": "기본 요금 : 30,000원",
+     "amounts": [
+      30000
+     ],
+     "url": "https://www.edenblue.co.kr/pagesite/use/charge.asp"
+    },
+    {
+     "section": "카트비 안내- 100,000원",
+     "label": "10만원 / 13만원 / 16만원",
+     "value": "카트비 안내- 100,000원",
+     "amounts": [
+      100000
+     ],
+     "url": "https://www.edenblue.co.kr/pagesite/use/charge.asp"
+    }
+   ],
+   "url": "https://www.edenblue.co.kr/pagesite/use/charge.asp"
+  }
+ },
+ "cancel": {
+  "cancel_policy": {
+   "value": "평일 3일 전 · 주말 4일 전까지(이용약관 기준)야간(3부) 라운드야간 라운드 운영(공식 홈페이지 안내)정기 휴장일정기 휴장일 없음부대시설사우",
+   "source": "그린피가이드(공식 인용)",
+   "url": "https://greenfeeguide.co.kr/course/gc-0105/"
+  },
+  "open_cycle": null,
+  "notes": null,
+  "evidence": [
+   "카트이용요금 등 기타 사업자가 정한 특별요금(카트료 : 입장에 관한 절차를 마친 이용자 팀 전원이 라운드를 시작한 경우 9홀 이하까지 경기를 마친 경우 카트료의 50%(5만원)를 환불하고, 10홀 이상 라운딩을 마친 경우에는 정상요금( 10만원 )을 적용한다.",
+   "② 이용자가 개인 사정의 변경이나 단순 변심 등 정당한 사유없이 예약을 취소하는 경우에는 취소일을 기준으로 다음과 같이 손해를 배상한다.",
+   "이용자가 이용예정일 당일 예약을 취소하거나 아무런 통보 없이 이용예정일에 골프장을 이용하지 않을 경우 : 팀별 이용요금의 30% ③ 강설, 폭우, 안개 기타 천재지변 등의 불가항력적인 사유로, 사업자가 이용예정일에 골프장 이용이 불가능하다고 판단되어 임시휴장을 하는 경우에는 예약금을 환불하여야 한다."
+  ],
+  "weather_evidence": [
+   "기상악화 요금은 공정거래위원회 골프장이용 표준약관 기준으로 산정됩니다."
+  ]
+ },
+ "ops": {
+  "nocaddie": {
+   "evidence": [],
+   "value": null
+  },
+  "two_player": {
+   "evidence": [
+    "회원가입 [ 예약오픈안내 ] 주중: 2번째 화요일 09시 다음달 전 시간 오픈 주말: 3번째 화요일 09시 다음달 전 시간 오픈 * 예약오픈일 전화예약불가 선택한 날짜 마운틴 팀 밸리 팀 레이크 팀 2026년 12월 이용 요금 안내 2026년 11월 이용 요금 안내 에덴블루CC 연단체 모집 안내 내가 선택하는 나만의 “CUSTOM”사전 예약 라운드 이벤트 레스토랑 이벤트 키오스크 정산(check-out)시행 안내 전기차 충전구역 불법행위 안내 26년도 야간 운영 안내 예약하기 예약확인 예약안내 나의쿠폰함 오시는길 조인게시판 모바일 "
+   ],
+   "value": null,
+   "third_party": {
+    "two": null,
+    "three": null,
+    "source": "그린피가이드",
+    "url": "https://greenfeeguide.co.kr/course/gc-0105/"
+   }
+  },
+  "three_player": {
+   "value": null,
+   "evidence": []
+  },
+  "five_player": {
+   "value": null,
+   "evidence": []
+  },
+  "marshal_caddie": {
+   "value": null,
+   "evidence": []
+  },
+  "cart_type": {
+   "evidence": [
+    "카트이용요금 등 기타 사업자가 정한 특별요금(카트료 : 입장에 관한 절차를 마친 이용자 팀 전원이 라운드를 시작한 경우 9홀 이하까지 경기를 마친 경우 카트료의 50%(5만원)를 환불하고, 10홀 이상 라운딩을 마친 경우에는 정상요금( 10만원 )을 적용한다.",
+    "카트이용요금 등 기타 사업자가 정한 특별요금 ② 골프장 이용 시 기본적으로 발생되는 비용으로서 제1항 제2호의 클럽하우스 시설 이용에 부과되는 요금 및 제1항 제3호의 제세공과금을 기본요금이라 한다."
+   ],
+   "value": null
+  },
+  "cart_entry": {
+   "evidence": [],
+   "value": null
+  },
+  "bagdrop": {
+   "evidence": [],
+   "value": null
+  },
+  "mat": {
+   "evidence": [],
+   "value": null
+  },
+  "checkin": {
+   "evidence": [
+    "회원가입 [ 예약오픈안내 ] 주중: 2번째 화요일 09시 다음달 전 시간 오픈 주말: 3번째 화요일 09시 다음달 전 시간 오픈 * 예약오픈일 전화예약불가 선택한 날짜 마운틴 팀 밸리 팀 레이크 팀 2026년 12월 이용 요금 안내 2026년 11월 이용 요금 안내 에덴블루CC 연단체 모집 안내 내가 선택하는 나만의 “CUSTOM”사전 예약 라운드 이벤트 레스토랑 이벤트 키오스크 정산(check-out)시행 안내 전기차 충전구역 불법행위 안내 26년도 야간 운영 안내 예약하기 예약확인 예약안내 나의쿠폰함 오시는길 조인게시판 모바일 "
+   ],
+   "value": null,
+   "third_party": {
+    "value": null,
+    "source": "그린피가이드",
+    "url": "https://greenfeeguide.co.kr/course/gc-0105/"
+   }
+  },
+  "locker": {
+   "evidence": [
+    "락커, 샤워실 등 클럽하우스 시설 이용에 부과되는 요금 3.",
+    "락커, 샤워실 등 클럽하우스 시설 이용에 부과되는 요금 3.",
+    "2. 락커, 샤워실 등 클럽하우스 시설 이용에 부과되는 요금"
+   ],
+   "value": "락커 운영",
+   "value_previous": "문구 확인(원문 근거)",
+   "source_url": "https://www.edenblue.co.kr/pagesite/use/charge.asp",
+   "confidence": "low",
+   "source_type": "official_site",
+   "page_label": "이용안내",
+   "value_from": "capital_supplement(official_site)"
+  },
+  "sauna": {
+   "evidence": [
+    "사우나 있음 · 전기차 충전 가능 · 프로샵"
+   ],
+   "value": "사우나 운영",
+   "source_url": "https://www.edenblue.co.kr/pagesite/club/facilities/house.asp",
+   "confidence": "high",
+   "checked_at": "2026-10-20",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/golf-course-amenities-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  },
+  "dress": {
+   "evidence": [],
+   "value": null
+  },
+  "pace": {
+   "evidence": [],
+   "value": null
+  },
+  "grass": null
+ },
+ "facilities": {
+  "practice": {
+   "evidence": [],
+   "value": null
+  },
+  "indoor_range": {
+   "value": null,
+   "evidence": []
+  },
+  "food": {
+   "evidence": [
+    "회원가입 [ 예약오픈안내 ] 주중: 2번째 화요일 09시 다음달 전 시간 오픈 주말: 3번째 화요일 09시 다음달 전 시간 오픈 * 예약오픈일 전화예약불가 선택한 날짜 마운틴 팀 밸리 팀 레이크 팀 2026년 12월 이용 요금 안내 2026년 11월 이용 요금 안내 에덴블루CC 연단체 모집 안내 내가 선택하는 나만의 “CUSTOM”사전 예약 라운드 이벤트 레스토랑 이벤트 키오스크 정산(check-out)시행 안내 전기차 충전구역 불법행위 안내 26년도 야간 운영 안내 예약하기 예약확인 예약안내 나의쿠폰함 오시는길 조인게시판 모바일 ",
+    "연회장/ VIP룸"
+   ],
+   "value": "연회장",
+   "source_url": "https://www.edenblue.co.kr/pagesite/club/facilities/banquet.asp",
+   "confidence": "low",
+   "source_type": "official_site",
+   "page_label": "연회장/VIP룸",
+   "value_from": "capital_supplement(official_site)"
+  },
+  "snack_bar": {
+   "value": null,
+   "evidence": []
+  },
+  "locker_sauna": {
+   "value": null,
+   "evidence": []
+  },
+  "lodging": {
+   "value": null,
+   "evidence": []
+  },
+  "other": {
+   "value": null,
+   "evidence": []
+  },
+  "night": {
+   "evidence": [
+    "회원가입 [ 예약오픈안내 ] 주중: 2번째 화요일 09시 다음달 전 시간 오픈 주말: 3번째 화요일 09시 다음달 전 시간 오픈 * 예약오픈일 전화예약불가 선택한 날짜 마운틴 팀 밸리 팀 레이크 팀 2026년 12월 이용 요금 안내 2026년 11월 이용 요금 안내 에덴블루CC 연단체 모집 안내 내가 선택하는 나만의 “CUSTOM”사전 예약 라운드 이벤트 레스토랑 이벤트 키오스크 정산(check-out)시행 안내 전기차 충전구역 불법행위 안내 26년도 야간 운영 안내 예약하기 예약확인 예약안내 나의쿠폰함 오시는길 조인게시판 모바일 ",
+    "야간 캐디피 1·2부 150,000원 · 야간 3부 160,000원 · 2026년 야간 운영 안내(2026-03-12 공지)"
+   ],
+   "value": "야간 라운딩 운영(3부 야간 포함)",
+   "source_url": "https://www.edenblue.co.kr/pagesite/use/charge.asp",
+   "confidence": "high",
+   "checked_at": "2026-10-12",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/night-golf-course-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  },
+  "closed_days": {
+   "evidence": [
+    "이용자가 이용예정일 당일 예약을 취소하거나 아무런 통보 없이 이용예정일에 골프장을 이용하지 않을 경우 : 팀별 이용요금의 30% ③ 강설, 폭우, 안개 기타 천재지변 등의 불가항력적인 사유로, 사업자가 이용예정일에 골프장 이용이 불가능하다고 판단되어 임시휴장을 하는 경우에는 예약금을 환불하여야 한다.",
+    "② 이 골프장의 정기 휴장일은 다음과 같다.",
+    "정기 휴장일 없음"
+   ],
+   "third_party": "정기 휴장일 없음부대시설사우나",
+   "value": "정기 휴장일 없음",
+   "source_url": "https://m.edenblue.co.kr/pagesite/clause/guide.asp",
+   "confidence": "high",
+   "checked_at": "2026-10-11",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/golf-course-closing-day-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  },
+  "shuttle": {
+   "evidence": [],
+   "value": null
+  },
+  "ev_charge": {
+   "evidence": [
+    "회원가입 [ 예약오픈안내 ] 주중: 2번째 화요일 09시 다음달 전 시간 오픈 주말: 3번째 화요일 09시 다음달 전 시간 오픈 * 예약오픈일 전화예약불가 선택한 날짜 마운틴 팀 밸리 팀 레이크 팀 2026년 12월 이용 요금 안내 2026년 11월 이용 요금 안내 에덴블루CC 연단체 모집 안내 내가 선택하는 나만의 “CUSTOM”사전 예약 라운드 이벤트 레스토랑 이벤트 키오스크 정산(check-out)시행 안내 전기차 충전구역 불법행위 안내 26년도 야간 운영 안내 예약하기 예약확인 예약안내 나의쿠폰함 오시는길 조인게시판 모바일 ",
+    "전기차 충전구역"
+   ],
+   "value": "전기차 충전구역",
+   "source_url": "https://www.edenblue.co.kr/pagesite/club/facilities/house.asp",
+   "confidence": "high",
+   "checked_at": "2026-10-20",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/golf-course-amenities-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  },
+  "gf_facilities": [
+   "프로샵근거골프장 공식 홈페이지 시설 안내 · 2026"
+  ],
+  "proshop": {
+   "evidence": [
+    "사우나 있음 · 전기차 충전 가능 · 프로샵"
+   ],
+   "value": "프로샵 운영",
+   "source_url": "https://www.edenblue.co.kr/pagesite/club/facilities/house.asp",
+   "confidence": "high",
+   "checked_at": "2026-10-20",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/golf-course-amenities-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  }
+ },
+ "rental": {
+  "available": null,
+  "full_set": null,
+  "fee_text": null,
+  "brand": null,
+  "left_handed": null,
+  "shoes": null,
+  "nine_hole": null,
+  "range_finder": null,
+  "reservation": null,
+  "source_url": null,
+  "evidence": [],
+  "official": null,
+  "nearby_delivery": {
+   "region": "수도권",
+   "sido": "경기도",
+   "verified_at": "2026-11-26 (KST)",
+   "checked_at": "2026-11-26",
+   "providers": [
+    {
+     "id": "theb",
+     "name": "더비 (The B)",
+     "coverage": "O",
+     "basis": "동탄·김포·시흥·용인·이천 24시간 무인픽업 매장 5곳 + 다마스 퀵/택배 배송. 홈페이지에 '강남·동탄·판교·수지·광교·분당', '시흥·배곧·인천·안산·송도', '이천·여주' 권역 표기.",
+     "phone": "010-2530-4575",
+     "operating_status": "정상 영업",
+     "delivery": "O",
+     "price_headline": "12시간 기준 90,000원부터",
+     "bookable": true
+    },
+    {
+     "id": "gangnamclub",
+     "name": "강남골프클럽렌탈",
+     "coverage": "O",
+     "basis": "서울 서초구 거점 매장 주소 공개, 자사 블로그 '전지역 배송 가능' 안내.",
+     "phone": "010-7407-0753",
+     "operating_status": "정상 영업(자사 블로그 최신 게시 2026-04-28)",
+     "delivery": "미확인",
+     "price_headline": null,
+     "bookable": true
+    },
+    {
+     "id": "apioz",
+     "name": "아피오즈 (Apioz)",
+     "coverage": "조건부",
+     "basis": "서울 숙소 배송·공항 픽업 옵션 안내. 단 골프세트 Sold Out으로 현재 이용 불가.",
+     "phone": "02-6956-8115",
+     "operating_status": "예약 중단(Sold Out) — 골프채 세트 한정",
+     "delivery": "미확인",
+     "price_headline": null,
+     "caution": "골프채 세트 Sold Out — 현재 예약 불가",
+     "bookable": false,
+     "bookable_reason": "골프채 세트 Sold Out — 현재 예약 불가"
+    }
+   ],
+   "provider_count": 3,
+   "legend": {
+    "O": "공식 안내로 해당 권역 이용이 확인됨",
+    "X": "공식 안내상 해당 권역 서비스가 없음(예: '제주 전 지역' 전용으로만 안내)",
+    "조건부": "공식 안내상 가능하나 조건(수단·요금·현재 판매중지 등)이 붙어 있음. 조건은 basis/detail에 기재",
+    "미확인": "공식 공개 안내에서 해당 항목에 대한 언급을 찾지 못함(추정하지 않음)"
+   },
+   "not_verified": "전화·문자·카카오톡 상담으로만 확인 가능한 항목(재고, 개별 견적, 권역별 실제 배송 가능 여부)은 '미확인'으로 남김",
+   "source_file": "5-rental_8_coverage_verified.json",
+   "note_code": "해외 골퍼용 골프채 렌탈·딜리버리 업체. 같은 권역이라도 실제 배송 가능 여부·재고·견적은 전화 확인 필요."
+  }
+ },
+ "briefing": {
+  "notices": {
+   "url": "https://www.edenblue.co.kr/multi_board/site/board/list.asp?groupcode=NOTICE",
+   "items": [
+    {
+     "title": "2026년 12월 이용 요금 안내",
+     "date": "2026-11-06",
+     "url": "https://www.edenblue.co.kr/event_board/site/event/view.asp?groupcode=EVENT&kind=0&bbsno=318&seq=0&depth=0&open_state=2"
+    },
+    {
+     "title": "2026년 11월 이용 요금 안내",
+     "date": "2026-10-02",
+     "url": "https://www.edenblue.co.kr/event_board/site/event/view.asp?groupcode=EVENT&kind=0&bbsno=317&seq=0&depth=0&open_state=2"
+    },
+    {
+     "title": "내가 선택하는 나만의 “CUSTOM”사전 예약 라운드 이벤트",
+     "date": "2026-07-30",
+     "url": "https://www.edenblue.co.kr/event_board/site/event/view.asp?groupcode=EVENT&kind=0&bbsno=309&seq=0&depth=0&open_state=2"
+    },
+    {
+     "title": "자본감소(임의유상) 공고 및 주권제출공고",
+     "date": "2024-04-29",
+     "url": "https://www.edenblue.co.kr/multi_board/site/board/list.asp?groupcode=NOTICE"
+    },
+    {
+     "title": "주권제출 공고",
+     "date": "2023-11-27",
+     "url": "https://www.edenblue.co.kr/multi_board/site/board/list.asp?groupcode=NOTICE"
+    },
+    {
+     "title": "자본감소(임의유상) 공고 및 주권제출공고",
+     "date": "2023-11-23",
+     "url": "https://www.edenblue.co.kr/multi_board/site/board/list.asp?groupcode=NOTICE"
+    },
+    {
+     "title": "21년 가을 마운틴코스 전경",
+     "date": "2021-11-11",
+     "url": "https://www.edenblue.co.kr/multi_board/site/board/list.asp?groupcode=CGALLERY&open_state=1"
+    },
+    {
+     "title": "20년 9월 노을 하늘",
+     "date": "2020-09-19",
+     "url": "https://www.edenblue.co.kr/multi_board/site/board/list.asp?groupcode=CGALLERY&open_state=1"
+    },
+    {
+     "title": "20년 9월 가을 하늘",
+     "date": "2020-09-19",
+     "url": "https://www.edenblue.co.kr/multi_board/site/board/list.asp?groupcode=CGALLERY&open_state=1"
+    },
+    {
+     "title": "2020년 4월 야간 레이크",
+     "date": "2020-04-22",
+     "url": "https://www.edenblue.co.kr/multi_board/site/board/list.asp?groupcode=CGALLERY&open_state=1"
+    },
+    {
+     "title": "레이크코스",
+     "date": "2016-05-17",
+     "url": "https://www.edenblue.co.kr/multi_board/site/board/list.asp?groupcode=CGALLERY&open_state=1"
+    },
+    {
+     "title": "밸리코스",
+     "date": "2016-05-17",
+     "url": "https://www.edenblue.co.kr/multi_board/site/board/list.asp?groupcode=CGALLERY&open_state=1"
+    },
+    {
+     "title": "마운틴 코스",
+     "date": "2016-05-17",
+     "url": "https://www.edenblue.co.kr/multi_board/site/board/list.asp?groupcode=CGALLERY&open_state=1"
+    }
+   ],
+   "tags": {
+    "요금": [
+     {
+      "title": "2026년 12월 이용 요금 안내",
+      "date": "2026-11-06",
+      "url": "https://www.edenblue.co.kr/event_board/site/event/view.asp?groupcode=EVENT&kind=0&bbsno=318&seq=0&depth=0&open_state=2"
+     },
+     {
+      "title": "2026년 11월 이용 요금 안내",
+      "date": "2026-10-02",
+      "url": "https://www.edenblue.co.kr/event_board/site/event/view.asp?groupcode=EVENT&kind=0&bbsno=317&seq=0&depth=0&open_state=2"
+     }
+    ],
+    "이벤트": [
+     {
+      "title": "내가 선택하는 나만의 “CUSTOM”사전 예약 라운드 이벤트",
+      "date": "2026-07-30",
+      "url": "https://www.edenblue.co.kr/event_board/site/event/view.asp?groupcode=EVENT&kind=0&bbsno=309&seq=0&depth=0&open_state=2"
+     }
+    ]
+   }
+  },
+  "review": {
+   "score_10": 8.6,
+   "count": 64,
+   "source": "티픽골프장 라운더 후기 집계",
+   "url": "https://teepickgolf.com/course/%EC%97%90%EB%8D%B4%EB%B8%94%EB%A3%A8cc"
+  },
+  "fee_change": null,
+  "collected_at": "2026-11-26T09:51:52+09:00",
+  "recent_notice_text": null,
+  "course_notes": null,
+  "alert": null,
+  "unconfirmed": [],
+  "sources": []
+ },
+ "collection": {
+  "official_site": "ok",
+  "official_reason": null,
+  "pages_collected": 14,
+  "third_party": {
+   "teepick": true,
+   "greenfeeguide": true
+  },
+  "render_hint": "",
+  "plan_strategy": "unreachable(브라우저 재시도)",
+  "browser_batch": false
+ },
+ "coverage": {
+  "basic": 1.0,
+  "course": 0.6,
+  "fee": 1.0,
+  "ops": 0.14,
+  "facility": 0.3,
+  "briefing": 0.5,
+  "rental": 0.25
+ }
+}

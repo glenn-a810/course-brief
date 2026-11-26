@@ -1,0 +1,578 @@
+{
+ "course_id": "kr-golf-0221",
+ "meta": {
+  "name": "필로스 골프클럽",
+  "generated_at": "2026-11-26T09:51:59+09:00",
+  "schema": "stage2c/1.0",
+  "batch": "1_수도권",
+  "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
+  "schema_previous": "stage2b/1.0",
+  "restructured_from_7key": true,
+  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
+  "has_detail": true,
+  "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+ },
+ "master": {
+  "course_id": "kr-golf-0221",
+  "name": "필로스 골프클럽",
+  "name_variants": [
+   "필로스 골프클럽"
+  ],
+  "type": "대중제",
+  "holes": {
+   "total": 27,
+   "member": 0,
+   "public": 27,
+   "non_member": 0
+  },
+  "address": "경기도 포천시 일동면 운악청계로 1507",
+  "region": {
+   "sido_code": "41",
+   "sido_name": "경기도",
+   "sido_short": "경기",
+   "sigungu_code": "41650",
+   "sigungu_name": "포천시",
+   "legal_dong_code": "4165000000"
+  },
+  "lat": 37.934594,
+  "lng": 127.335955,
+  "nearest_ic": {
+   "name": "신북IC",
+   "distance_km": 10.7,
+   "source": "teepick(실측 표기)",
+   "straight_km_nearest": 10.7,
+   "straight_name": "신북IC"
+  },
+  "tel": "031-539-8900",
+  "homepage": "https://www.philosgc.com/",
+  "operators": [
+   "㈜선운"
+  ],
+  "area_sqm": 1519198,
+  "opened": "1992",
+  "course_blocks": [],
+  "facility_id": null,
+  "provenance": {
+   "master": "courses_master.json v2.0 (문체부·KGA·KGBA·티픽·지도)",
+   "synced_to": "courses_master.json v2.7 (2026-11-26 단일 스키마 정규화)"
+  },
+  "par": 72,
+  "holes_teepick": 27,
+  "course_spec": {
+   "holes": 27,
+   "par": 72,
+   "blocks": [
+    "EASTWESTSOUTH"
+   ],
+   "length_m": null,
+   "kga": null,
+   "grass": {
+    "evidence": "필로스CC 필로스 ☆ 즐겨찾기 회원가입로그인ID / PW 찾기 인터넷예약 실시간예약 예약확인 및 취소 예약 이용내역 예약 취소내역 실시간조인 클럽소개 필로스 소개 회사개요 오시는 길 코스갤러리 코스소개 동 코스 서 코스 남 코스 코스갤러리 클럽하우스 로비 레스토랑 레스토랑메뉴 프로샵 락카사우나 그늘집 단체실 이용안내 이용요금 예약안내 위약 처리규정 이용총칙 이용수칙 악천후 시 이용요금 공지&이벤트 공지사항 연단체 이벤트 요금공지 자주묻는 질문 고객의 소리 이용요금예약안내위약 처리규정이용총칙이용수칙악천후 시 이용요금 강설, 폭우, 기",
+    "source": "공식",
+    "url": "https://www.philosgc.com/Guide/Badweather.aspx"
+   },
+   "hole_by_hole": null
+  },
+  "addresses": [
+   "경기도 포천시 일동면 운악청계로 1507"
+  ],
+  "status": "operating",
+  "facility_cluster": null,
+  "factcheck_2026_11_26": null
+ },
+ "course": {
+  "holes": 27,
+  "holes_received": 27,
+  "course_names": null,
+  "membership_type": "대중제",
+  "night_light": null,
+  "blocks": [
+   "EASTWESTSOUTH"
+  ],
+  "grass": {
+   "tee": null,
+   "fairway": {
+    "evidence": "필로스CC 필로스 ☆ 즐겨찾기 회원가입로그인ID / PW 찾기 인터넷예약 실시간예약 예약확인 및 취소 예약 이용내역 예약 취소내역 실시간조인 클럽소개 필로스 소개 회사개요 오시는 길 코스갤러리 코스소개 동 코스 서 코스 남 코스 코스갤러리 클럽하우스 로비 레스토랑 레스토랑메뉴 프로샵 락카사우나 그늘집 단체실 이용안내 이용요금 예약안내 위약 처리규정 이용총칙 이용수칙 악천후 시 이용요금 공지&이벤트 공지사항 연단체 이벤트 요금공지 자주묻는 질문 고객의 소리 이용요금예약안내위약 처리규정이용총칙이용수칙악천후 시 이용요금 강설, 폭우, 기",
+    "source": "공식",
+    "url": "https://www.philosgc.com/Guide/Badweather.aspx"
+   },
+   "green": null
+  },
+  "kga": null,
+  "kga_hole_est": null,
+  "extra_courses": null,
+  "hole_by_hole": null,
+  "length_m": null,
+  "par": 72
+ },
+ "fee": {
+  "weekday": 210000,
+  "weekend": 280000,
+  "weekday_text": null,
+  "weekend_text": null,
+  "basis": null,
+  "tax_included": null,
+  "cart": {
+   "value": 100000,
+   "source": "그린피가이드",
+   "url": "https://greenfeeguide.co.kr/course/gc-0106/"
+  },
+  "caddie": {
+   "value": 150000,
+   "source": "그린피가이드",
+   "url": "https://greenfeeguide.co.kr/course/gc-0106/",
+   "none": false
+  },
+  "as_of": "2026-11-04",
+  "source_url": null,
+  "note": null,
+  "sources": [
+   {
+    "source": "그린피가이드(공식 요금표 확인)",
+    "url": "https://greenfeeguide.co.kr/course/gc-0106/",
+    "checked_at": "2026-11-04"
+   }
+  ],
+  "checked_at": "2026-11-04",
+  "market": {
+   "weekday_min": 110000.0,
+   "weekend_min": 130000.0,
+   "part1": null,
+   "part2": null,
+   "source": "티픽골프장(실거래 관측)",
+   "url": "https://teepickgolf.com/course/%ED%95%84%EB%A1%9C%EC%8A%A4cc",
+   "note": "공시가 아닌 최근 관측 실거래 최저가"
+  },
+  "official_green_evidence": [
+   "홀 별 정산 금액 : (해당일 이용요금 - 기본 요금) X 이용한 홀 수 / 18홀+기본요금 이용 요금 : 그린피 +카트비 기본 요금 : 2만원(락커,샤워실등 클럽하우스 시설이용에 부과되는 요금)- 필로스 방문 시 받으시는 모든 서비스 비용 및 제세공과금(락카 및 사우나 시설 이용, 백드롭, 식사 등) 기상악화 요금은 공정거래위원회 골프장이용 표준약관 기준으로 산정됩니다."
+  ],
+  "official_rental": null,
+  "official_table": {
+   "rows": [
+    {
+     "section": "캐디피",
+     "label": "카트비 / 캐디피 / 정상가",
+     "value": "210,000원",
+     "amounts": [
+      210000
+     ],
+     "url": "https://www.philosgc.com/Guide/Fees.aspx"
+    },
+    {
+     "section": "캐디피",
+     "label": "",
+     "value": "280,000원",
+     "amounts": [
+      280000
+     ],
+     "url": "https://www.philosgc.com/Guide/Fees.aspx"
+    },
+    {
+     "section": "캐디피",
+     "label": "",
+     "value": "100,000원",
+     "amounts": [
+      100000
+     ],
+     "url": "https://www.philosgc.com/Guide/Fees.aspx"
+    },
+    {
+     "section": "캐디피",
+     "label": "",
+     "value": "150,000원",
+     "amounts": [
+      150000
+     ],
+     "url": "https://www.philosgc.com/Guide/Fees.aspx"
+    },
+    {
+     "section": "구분",
+     "label": "금액 / 비고 / 클럽",
+     "value": "50,000원",
+     "amounts": [
+      50000
+     ],
+     "url": "https://www.philosgc.com/Guide/Fees.aspx"
+    },
+    {
+     "section": "캐디피",
+     "label": "캐디피 / 1홀 티샷 / 1/18",
+     "value": "30,000원",
+     "amounts": [
+      30000
+     ],
+     "url": "https://www.philosgc.com/Guide/Badweather.aspx"
+    },
+    {
+     "section": "캐디피",
+     "label": "2홀 티샷 / 2/18",
+     "value": "50,000원",
+     "amounts": [
+      50000
+     ],
+     "url": "https://www.philosgc.com/Guide/Badweather.aspx"
+    },
+    {
+     "section": "캐디피",
+     "label": "3/18 / 4홀 티샷 / 4/18",
+     "value": "80,000원",
+     "amounts": [
+      80000
+     ],
+     "url": "https://www.philosgc.com/Guide/Badweather.aspx"
+    },
+    {
+     "section": "캐디피",
+     "label": "9/18 / 10홀 티샷 / 10/18",
+     "value": "120,000원",
+     "amounts": [
+      120000
+     ],
+     "url": "https://www.philosgc.com/Guide/Badweather.aspx"
+    },
+    {
+     "section": "캐디피",
+     "label": "13/18 / 14홀티샷 / 14/18",
+     "value": "150,000원",
+     "amounts": [
+      150000
+     ],
+     "url": "https://www.philosgc.com/Guide/Badweather.aspx"
+    }
+   ],
+   "url": "https://www.philosgc.com/Guide/Fees.aspx"
+  }
+ },
+ "cancel": {
+  "cancel_policy": {
+   "value": "6일 전 17:00까지야간(3부) 라운드야간 라운드 운영(공식 홈페이지 안내)부대시설사우나014인 1팀 기준 예상 비용구분그린피(1인)1인 부담",
+   "source": "그린피가이드(공식 인용)",
+   "url": "https://greenfeeguide.co.kr/course/gc-0106/"
+  },
+  "open_cycle": null,
+  "notes": null,
+  "evidence": [
+   "필로스CC 필로스 ☆ 즐겨찾기 회원가입로그인ID / PW 찾기 인터넷예약 실시간예약 예약확인 및 취소 예약 이용내역 예약 취소내역 실시간조인 클럽소개 필로스 소개 회사개요 오시는 길 코스갤러리 코스소개 동 코스 서 코스 남 코스 코스갤러리 클럽하우스 로비 레스토랑 레스토랑메뉴 프로샵 락카사우나 그늘집 단체실 이용안내 이용요금 예약안내 위약 처리규정 이용총칙 이용수칙 악천후 시 이용요금 공지&이벤트 공지사항 연단체 이벤트 요금공지 자주묻는 질문 고객의 소리 이용요금예약안내위약 처리규정이용총칙이용수칙악천후 시 이용요금 강설, 폭우, 기",
+   "필로스CC 필로스 ☆ 즐겨찾기 회원가입로그인ID / PW 찾기 인터넷예약 실시간예약 예약확인 및 취소 예약 이용내역 예약 취소내역 실시간조인 클럽소개 필로스 소개 회사개요 오시는 길 코스갤러리 코스소개 동 코스 서 코스 남 코스 코스갤러리 클럽하우스 로비 레스토랑 레스토랑메뉴 프로샵 락카사우나 그늘집 단체실 이용안내 이용요금 예약안내 위약 처리규정 이용총칙 이용수칙 악천후 시 이용요금 공지&이벤트 공지사항 연단체 이벤트 요금공지 자주묻는 질문 고객의 소리 코스소개동 코스서 코스남 코스코스갤러리 원하시는 코스넘버를 클립하시면 해당코스",
+   "필로스CC 필로스 ☆ 즐겨찾기 회원가입로그인ID / PW 찾기 인터넷예약 실시간예약 예약확인 및 취소 예약 이용내역 예약 취소내역 실시간조인 클럽소개 필로스 소개 회사개요 오시는 길 코스갤러리 코스소개 동 코스 서 코스 남 코스 코스갤러리 클럽하우스 로비 레스토랑 레스토랑메뉴 프로샵 락카사우나 그늘집 단체실 이용안내 이용요금 예약안내 위약 처리규정 이용총칙 이용수칙 악천후 시 이용요금 공지&이벤트 공지사항 연단체 이벤트 요금공지 자주묻는 질문 고객의 소리 코스소개동 코스서 코스남 코스코스갤러리 필로스 동코스의 코스 공략법을 알려드립"
+  ],
+  "weather_evidence": [
+   "Powered by moonos I 날씨자료제공 : 기상청",
+   "필로스CC 필로스 ☆ 즐겨찾기 회원가입로그인ID / PW 찾기 인터넷예약 실시간예약 예약확인 및 취소 예약 이용내역 예약 취소내역 실시간조인 클럽소개 필로스 소개 회사개요 오시는 길 코스갤러리 코스소개 동 코스 서 코스 남 코스 코스갤러리 클럽하우스 로비 레스토랑 레스토랑메뉴 프로샵 락카사우나 그늘집 단체실 이용안내 이용요금 예약안내 위약 처리규정 이용총칙 이용수칙 악천후 시 이용요금 공지&이벤트 공지사항 연단체 이벤트 요금공지 자주묻는 질문 고객의 소리 이용요금예약안내위약 처리규정이용총칙이용수칙악천후 시 이용요금 강설, 폭우, 기"
+  ]
+ },
+ "ops": {
+  "nocaddie": {
+   "evidence": [],
+   "value": null
+  },
+  "two_player": {
+   "evidence": [
+    "필로스CC 필로스 ☆ 즐겨찾기 회원가입로그인ID / PW 찾기 인터넷예약 실시간예약 예약확인 및 취소 예약 이용내역 예약 취소내역 실시간조인 클럽소개 필로스 소개 회사개요 오시는 길 코스갤러리 코스소개 동 코스 서 코스 남 코스 코스갤러리 클럽하우스 로비 레스토랑 레스토랑메뉴 프로샵 락카사우나 그늘집 단체실 이용안내 이용요금 예약안내 위약 처리규정 이용총칙 이용수칙 악천후 시 이용요금 공지&이벤트 공지사항 연단체 이벤트 요금공지 자주묻는 질문 고객의 소리 이용요금예약안내위약 처리규정이용총칙이용수칙악천후 시 이용요금 강설, 폭우, 기",
+    "필로스CC 필로스 ☆ 즐겨찾기 회원가입로그인ID / PW 찾기 인터넷예약 실시간예약 예약확인 및 취소 예약 이용내역 예약 취소내역 실시간조인 클럽소개 필로스 소개 회사개요 오시는 길 코스갤러리 코스소개 동 코스 서 코스 남 코스 코스갤러리 클럽하우스 로비 레스토랑 레스토랑메뉴 프로샵 락카사우나 그늘집 단체실 이용안내 이용요금 예약안내 위약 처리규정 이용총칙 이용수칙 악천후 시 이용요금 공지&이벤트 공지사항 연단체 이벤트 요금공지 자주묻는 질문 고객의 소리 코스소개동 코스서 코스남 코스코스갤러리 원하시는 코스넘버를 클립하시면 해당코스",
+    "필로스CC 필로스 ☆ 즐겨찾기 회원가입로그인ID / PW 찾기 인터넷예약 실시간예약 예약확인 및 취소 예약 이용내역 예약 취소내역 실시간조인 클럽소개 필로스 소개 회사개요 오시는 길 코스갤러리 코스소개 동 코스 서 코스 남 코스 코스갤러리 클럽하우스 로비 레스토랑 레스토랑메뉴 프로샵 락카사우나 그늘집 단체실 이용안내 이용요금 예약안내 위약 처리규정 이용총칙 이용수칙 악천후 시 이용요금 공지&이벤트 공지사항 연단체 이벤트 요금공지 자주묻는 질문 고객의 소리 코스소개동 코스서 코스남 코스코스갤러리 필로스 동코스의 코스 공략법을 알려드립"
+   ],
+   "value": null,
+   "third_party": {
+    "two": null,
+    "three": null,
+    "source": "그린피가이드",
+    "url": "https://greenfeeguide.co.kr/course/gc-0106/"
+   }
+  },
+  "three_player": {
+   "value": null,
+   "evidence": []
+  },
+  "five_player": {
+   "value": null,
+   "evidence": []
+  },
+  "marshal_caddie": {
+   "value": null,
+   "evidence": []
+  },
+  "cart_type": {
+   "evidence": [
+    "홀 별 정산 금액 : (해당일 이용요금 - 기본 요금) X 이용한 홀 수 / 18홀+기본요금 이용 요금 : 그린피 +카트비 기본 요금 : 2만원(락커,샤워실등 클럽하우스 시설이용에 부과되는 요금)- 필로스 방문 시 받으시는 모든 서비스 비용 및 제세공과금(락카 및 사우나 시설 이용, 백드롭, 식사 등) 기상악화 요금은 공정거래위원회 골프장이용 표준약관 기준으로 산정됩니다."
+   ],
+   "value": null
+  },
+  "cart_entry": {
+   "evidence": [],
+   "value": null
+  },
+  "bagdrop": {
+   "evidence": [
+    "홀 별 정산 금액 : (해당일 이용요금 - 기본 요금) X 이용한 홀 수 / 18홀+기본요금 이용 요금 : 그린피 +카트비 기본 요금 : 2만원(락커,샤워실등 클럽하우스 시설이용에 부과되는 요금)- 필로스 방문 시 받으시는 모든 서비스 비용 및 제세공과금(락카 및 사우나 시설 이용, 백드롭, 식사 등) 기상악화 요금은 공정거래위원회 골프장이용 표준약관 기준으로 산정됩니다."
+   ],
+   "value": "문구 확인(원문 근거)"
+  },
+  "mat": {
+   "evidence": [],
+   "value": null
+  },
+  "checkin": {
+   "evidence": [
+    "원활한 체크인을 위해 조편성 접수 시 3팀 이상 단체는 전원 연락처와 성별 구분 필요 티오프 시간 지각으로 인한 불이익은 책임지지 않습니다.",
+    "30분 전 도착"
+   ],
+   "value": "30분 전 도착",
+   "third_party": {
+    "value": "30분 전",
+    "source": "그린피가이드",
+    "url": "https://greenfeeguide.co.kr/course/gc-0106/"
+   },
+   "source_url": "https://www.philosgc.com/Reservation/Reservation.aspx",
+   "confidence": "high",
+   "checked_at": "2026-10-17",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/golf-course-arrival-checkin-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  },
+  "locker": {
+   "evidence": [
+    "필로스CC 필로스 ☆ 즐겨찾기 회원가입로그인ID / PW 찾기 인터넷예약 실시간예약 예약확인 및 취소 예약 이용내역 예약 취소내역 실시간조인 클럽소개 필로스 소개 회사개요 오시는 길 코스갤러리 코스소개 동 코스 서 코스 남 코스 코스갤러리 클럽하우스 로비 레스토랑 레스토랑메뉴 프로샵 락카사우나 그늘집 단체실 이용안내 이용요금 예약안내 위약 처리규정 이용총칙 이용수칙 악천후 시 이용요금 공지&이벤트 공지사항 연단체 이벤트 요금공지 자주묻는 질문 고객의 소리 이용요금예약안내위약 처리규정이용총칙이용수칙악천후 시 이용요금 강설, 폭우, 기",
+    "홀 별 정산 금액 : (해당일 이용요금 - 기본 요금) X 이용한 홀 수 / 18홀+기본요금 이용 요금 : 그린피 +카트비 기본 요금 : 2만원(락커,샤워실등 클럽하우스 시설이용에 부과되는 요금)- 필로스 방문 시 받으시는 모든 서비스 비용 및 제세공과금(락카 및 사우나 시설 이용, 백드롭, 식사 등) 기상악화 요금은 공정거래위원회 골프장이용 표준약관 기준으로 산정됩니다."
+   ],
+   "value": "문구 확인(원문 근거)"
+  },
+  "sauna": {
+   "evidence": [
+    "필로스CC 필로스 ☆ 즐겨찾기 회원가입로그인ID / PW 찾기 인터넷예약 실시간예약 예약확인 및 취소 예약 이용내역 예약 취소내역 실시간조인 클럽소개 필로스 소개 회사개요 오시는 길 코스갤러리 코스소개 동 코스 서 코스 남 코스 코스갤러리 클럽하우스 로비 레스토랑 레스토랑메뉴 프로샵 락카사우나 그늘집 단체실 이용안내 이용요금 예약안내 위약 처리규정 이용총칙 이용수칙 악천후 시 이용요금 공지&이벤트 공지사항 연단체 이벤트 요금공지 자주묻는 질문 고객의 소리 이용요금예약안내위약 처리규정이용총칙이용수칙악천후 시 이용요금 강설, 폭우, 기",
+    "홀 별 정산 금액 : (해당일 이용요금 - 기본 요금) X 이용한 홀 수 / 18홀+기본요금 이용 요금 : 그린피 +카트비 기본 요금 : 2만원(락커,샤워실등 클럽하우스 시설이용에 부과되는 요금)- 필로스 방문 시 받으시는 모든 서비스 비용 및 제세공과금(락카 및 사우나 시설 이용, 백드롭, 식사 등) 기상악화 요금은 공정거래위원회 골프장이용 표준약관 기준으로 산정됩니다.",
+    "사우나 있음 · 프로샵"
+   ],
+   "value": "사우나 운영",
+   "value_previous": "문구 확인(원문 근거)",
+   "source_url": "https://www.philosgc.com/Facilities/ClubHouse.aspx",
+   "confidence": "high",
+   "checked_at": "2026-10-20",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/golf-course-amenities-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  },
+  "dress": {
+   "evidence": [],
+   "value": null
+  },
+  "pace": {
+   "evidence": [
+    "9홀 2시간 이내(첫팀 기준)"
+   ],
+   "value": "9홀 2시간 이내(첫팀 기준)",
+   "source_url": "https://www.philosgc.com/Guide/Panelty.aspx",
+   "confidence": "high",
+   "checked_at": "2026-10-14",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/golf-round-time-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  },
+  "grass": null
+ },
+ "facilities": {
+  "practice": {
+   "evidence": [],
+   "value": null
+  },
+  "indoor_range": {
+   "value": null,
+   "evidence": []
+  },
+  "food": {
+   "evidence": [
+    "필로스CC 필로스 ☆ 즐겨찾기 회원가입로그인ID / PW 찾기 인터넷예약 실시간예약 예약확인 및 취소 예약 이용내역 예약 취소내역 실시간조인 클럽소개 필로스 소개 회사개요 오시는 길 코스갤러리 코스소개 동 코스 서 코스 남 코스 코스갤러리 클럽하우스 로비 레스토랑 레스토랑메뉴 프로샵 락카사우나 그늘집 단체실 이용안내 이용요금 예약안내 위약 처리규정 이용총칙 이용수칙 악천후 시 이용요금 공지&이벤트 공지사항 연단체 이벤트 요금공지 자주묻는 질문 고객의 소리 이용요금예약안내위약 처리규정이용총칙이용수칙악천후 시 이용요금 강설, 폭우, 기",
+    "필로스CC 필로스 ☆ 즐겨찾기 회원가입로그인ID / PW 찾기 인터넷예약 실시간예약 예약확인 및 취소 예약 이용내역 예약 취소내역 실시간조인 클럽소개 필로스 소개 회사개요 오시는 길 코스갤러리 코스소개 동 코스 서 코스 남 코스 코스갤러리 클럽하우스 로비 레스토랑 레스토랑메뉴 프로샵 락카사우나 그늘집 단체실 이용안내 이용요금 예약안내 위약 처리규정 이용총칙 이용수칙 악천후 시 이용요금 공지&이벤트 공지사항 연단체 이벤트 요금공지 자주묻는 질문 고객의 소리 코스소개동 코스서 코스남 코스코스갤러리 원하시는 코스넘버를 클립하시면 해당코스",
+    "필로스CC 필로스 ☆ 즐겨찾기 회원가입로그인ID / PW 찾기 인터넷예약 실시간예약 예약확인 및 취소 예약 이용내역 예약 취소내역 실시간조인 클럽소개 필로스 소개 회사개요 오시는 길 코스갤러리 코스소개 동 코스 서 코스 남 코스 코스갤러리 클럽하우스 로비 레스토랑 레스토랑메뉴 프로샵 락카사우나 그늘집 단체실 이용안내 이용요금 예약안내 위약 처리규정 이용총칙 이용수칙 악천후 시 이용요금 공지&이벤트 공지사항 연단체 이벤트 요금공지 자주묻는 질문 고객의 소리 코스소개동 코스서 코스남 코스코스갤러리 필로스 동코스의 코스 공략법을 알려드립",
+    "로비레스토랑레스토랑메뉴프로샵락카사우나그늘집단체실"
+   ],
+   "value": "레스토랑 · 그늘집",
+   "source_url": "https://www.philosgc.com/Facilities/ClubHouse.aspx",
+   "confidence": "medium",
+   "source_type": "official_site",
+   "page_label": "클럽하우스",
+   "value_from": "capital_supplement(official_site)"
+  },
+  "snack_bar": {
+   "value": null,
+   "evidence": []
+  },
+  "locker_sauna": {
+   "value": null,
+   "evidence": []
+  },
+  "lodging": {
+   "value": null,
+   "evidence": []
+  },
+  "other": {
+   "value": null,
+   "evidence": []
+  },
+  "night": {
+   "evidence": [
+    "티샷 시 그린뒤 2번째 라이트 좌측으로 공략하는 것이 좋으며, 그린이 비교적 단단한 편이므로 그린오버하지 않도록 짧게 공략하세요.",
+    "2026년 야간 라운딩 개장(2026-02-27 공지)"
+   ],
+   "value": "야간 라운딩 운영",
+   "source_url": "https://www.philosgc.com/Board/BoardView.aspx?post=6465&amp;cfgid=notice",
+   "confidence": "high",
+   "checked_at": "2026-10-12",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/night-golf-course-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  },
+  "closed_days": {
+   "evidence": [],
+   "third_party": null,
+   "value": null
+  },
+  "shuttle": {
+   "evidence": [],
+   "value": null
+  },
+  "ev_charge": {
+   "evidence": [],
+   "value": null
+  },
+  "gf_facilities": [
+   "프로샵근거골프장 공식 홈페이지 시설 안내 · 2026"
+  ],
+  "proshop": {
+   "evidence": [
+    "사우나 있음 · 프로샵"
+   ],
+   "value": "프로샵 운영",
+   "source_url": "https://www.philosgc.com/Facilities/ClubHouse.aspx",
+   "confidence": "high",
+   "checked_at": "2026-10-20",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/golf-course-amenities-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  }
+ },
+ "rental": {
+  "available": null,
+  "full_set": 50000,
+  "fee_text": null,
+  "brand": null,
+  "left_handed": null,
+  "shoes": null,
+  "nine_hole": null,
+  "range_finder": null,
+  "reservation": null,
+  "source_url": null,
+  "evidence": [],
+  "official": null,
+  "nearby_delivery": {
+   "region": "수도권",
+   "sido": "경기도",
+   "verified_at": "2026-11-26 (KST)",
+   "checked_at": "2026-11-26",
+   "providers": [
+    {
+     "id": "theb",
+     "name": "더비 (The B)",
+     "coverage": "O",
+     "basis": "동탄·김포·시흥·용인·이천 24시간 무인픽업 매장 5곳 + 다마스 퀵/택배 배송. 홈페이지에 '강남·동탄·판교·수지·광교·분당', '시흥·배곧·인천·안산·송도', '이천·여주' 권역 표기.",
+     "phone": "010-2530-4575",
+     "operating_status": "정상 영업",
+     "delivery": "O",
+     "price_headline": "12시간 기준 90,000원부터",
+     "bookable": true
+    },
+    {
+     "id": "gangnamclub",
+     "name": "강남골프클럽렌탈",
+     "coverage": "O",
+     "basis": "서울 서초구 거점 매장 주소 공개, 자사 블로그 '전지역 배송 가능' 안내.",
+     "phone": "010-7407-0753",
+     "operating_status": "정상 영업(자사 블로그 최신 게시 2026-04-28)",
+     "delivery": "미확인",
+     "price_headline": null,
+     "bookable": true
+    },
+    {
+     "id": "apioz",
+     "name": "아피오즈 (Apioz)",
+     "coverage": "조건부",
+     "basis": "서울 숙소 배송·공항 픽업 옵션 안내. 단 골프세트 Sold Out으로 현재 이용 불가.",
+     "phone": "02-6956-8115",
+     "operating_status": "예약 중단(Sold Out) — 골프채 세트 한정",
+     "delivery": "미확인",
+     "price_headline": null,
+     "caution": "골프채 세트 Sold Out — 현재 예약 불가",
+     "bookable": false,
+     "bookable_reason": "골프채 세트 Sold Out — 현재 예약 불가"
+    }
+   ],
+   "provider_count": 3,
+   "legend": {
+    "O": "공식 안내로 해당 권역 이용이 확인됨",
+    "X": "공식 안내상 해당 권역 서비스가 없음(예: '제주 전 지역' 전용으로만 안내)",
+    "조건부": "공식 안내상 가능하나 조건(수단·요금·현재 판매중지 등)이 붙어 있음. 조건은 basis/detail에 기재",
+    "미확인": "공식 공개 안내에서 해당 항목에 대한 언급을 찾지 못함(추정하지 않음)"
+   },
+   "not_verified": "전화·문자·카카오톡 상담으로만 확인 가능한 항목(재고, 개별 견적, 권역별 실제 배송 가능 여부)은 '미확인'으로 남김",
+   "source_file": "5-rental_8_coverage_verified.json",
+   "note_code": "해외 골퍼용 골프채 렌탈·딜리버리 업체. 같은 권역이라도 실제 배송 가능 여부·재고·견적은 전화 확인 필요."
+  }
+ },
+ "briefing": {
+  "notices": {
+   "url": "https://www.philosgc.com/Board/GalleryList.aspx?cfgid=customergallery",
+   "items": [
+    {
+     "title": "2027년 연단체 모집 안내",
+     "date": "2026-10-12",
+     "url": "https://www.philosgc.com/Board/BoardView.aspx?post=9796&cfgid=notice&page=1"
+    }
+   ],
+   "tags": {
+    "모집": [
+     {
+      "title": "2027년 연단체 모집 안내",
+      "date": "2026-10-12",
+      "url": "https://www.philosgc.com/Board/BoardView.aspx?post=9796&cfgid=notice&page=1"
+     }
+    ]
+   }
+  },
+  "review": {
+   "score_10": null,
+   "count": 55,
+   "source": "티픽골프장 라운더 후기 집계",
+   "url": "https://teepickgolf.com/course/%ED%95%84%EB%A1%9C%EC%8A%A4cc"
+  },
+  "fee_change": null,
+  "collected_at": "2026-11-26T09:51:59+09:00",
+  "recent_notice_text": null,
+  "course_notes": null,
+  "alert": null,
+  "unconfirmed": [],
+  "sources": []
+ },
+ "collection": {
+  "official_site": "ok",
+  "official_reason": null,
+  "pages_collected": 14,
+  "third_party": {
+   "teepick": true,
+   "greenfeeguide": true
+  },
+  "render_hint": "static",
+  "plan_strategy": "static(직접 파싱)",
+  "browser_batch": false
+ },
+ "coverage": {
+  "basic": 1.0,
+  "course": 0.8,
+  "fee": 1.0,
+  "ops": 0.36,
+  "facility": 0.2,
+  "briefing": 0.5,
+  "rental": 0.5
+ }
+}

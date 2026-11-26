@@ -1,0 +1,142 @@
+# CourseBrief (코스브리프)
+
+> 전국 **540개 골프장**의 코스 스펙 · 그린피 · 예약 규칙 · 현장 운영 디테일 · 부대시설 · 최근 공지 · 클럽 렌탈을
+> **7개 영역**으로 정리한 골프장 실전 브리핑 서비스입니다.
+> 정적 웹(Cloudflare Pages, 0원)과 React Native 앱이 **같은 JSON 데이터**를 그대로 사용합니다.
+
+- 웹: 의존성 없는 정적 사이트 (`dist/`) — PC·모바일 반응형, 시스템 라이트/다크 자동
+- 데이터: `data/v29/` — 540곳 경량 인덱스 + 구장별 상세 540개 JSON
+- 검색: 브라우저 정적 검색(초성·부분일치·다중 필터) 기본, Elasticsearch(nori) 어댑터 선택 장착
+
+| 목록 (라이트) | 상세 | 목록 (다크) |
+| --- | --- | --- |
+| ![목록](docs/screenshot-list.png) | ![상세](docs/screenshot-detail.png) | ![다크](docs/screenshot-dark.png) |
+
+---
+
+## 1. 무엇을 보여주나 — 7개 영역
+
+| # | 영역 | 담는 것 | 대표 필드 |
+| --- | --- | --- | --- |
+| 01 | **기본·입지** | 소재·규모·개장·운영사·좌표·최단 IC | `master.address`, `area_sqm`, `opened`, `operators`, `nearest_ic` |
+| 02 | **코스 스펙** | 홀 구성·파·전장·잔디·KGA 코스레이팅/슬로프 | `course.holes/par/length_m`, `grass`, `kga.hole_combinations` |
+| 03 | **요금·예약·취소** | 주중/주말 그린피·카트·캐디·예약 오픈 주기·위약·악천후 정산 | `fee.*`, `cancel.*` |
+| 04 | **현장 운영** | 노캐디·2/3/5인·카트 종류와 진입·셀프 백드롭·매트·체크인·복장 | `ops.*` (14항목, `value`+`evidence`) |
+| 05 | **부대시설** | 연습장·식당·그늘집·락카·사우나·숙박·야간 조명·셔틀·전기차 | `facilities.*` |
+| 06 | **브리핑·공지** | 휴장·에어레이션·요금 변경 공지, 라운더 평가, 확인 필요 알림 | `briefing.notices`, `alert`, `review` |
+| 07 | **클럽 렌탈** | 골프장 자체 대여 + 해외 골퍼용 렌탈·딜리버리 업체 8곳 | `rental.*`, `rental_providers.json` |
+
+각 값에는 **출처와 확인 시점**이 붙고, 확인하지 못한 값은 `null` + 화면에서 **"미확인"** 으로 표시합니다.
+"정보 없음"을 "없음"으로 해석하지 않는 것이 이 데이터의 기본 규칙입니다.
+
+## 2. 주요 기능
+
+- **검색** — 이름·이명·지역, **한글 초성**(`ㅇㅅ` → 익산·인서울), 부분 일치, 공백 다중 토큰 AND
+- **필터** — 지역(17개 시도) · 이용형태 · 홀수 · 주말 그린피 상한 · 정렬(이름/그린피/홀수)
+- **상태 배지·필터** — 영업중 / **휴업(영업중단)** / 건설중 / 미착공 / 폐업
+- **시설 클러스터 묶음** — 같은 부지 복수 코스를 목록에서 한 항목으로(`익산컨트리클럽 (24홀)`), 상세에서는 코스·예약 창구 분리를 명시
+- **7개 영역 상세** — 영역별 앵커 내비게이션, 값별 근거 접기, 영역별 정보 충실도(coverage)
+- **렌탈 탭** — 권역별 배송 가능 업체, 요금·브랜드·언어·연락처
+- **접근성·디자인** — Apple HIG / Material 기본 중성 배경, `prefers-color-scheme` 자동, 키보드 포커스, 44px 터치 타깃
+
+## 3. 데이터
+
+```
+data/v29/
+├── index.json              540곳 경량 인덱스 (약 200KB)
+├── courses/{id}.json       구장별 상세 12키 JSON 540개 (상세 515 + 요약 25)
+├── clusters.json           시설 클러스터 28개
+├── sido.json               시도 코드·건수
+├── rental_providers.json   렌탈·딜리버리 업체 8곳
+├── rental_deliveries.md    렌탈 시장 조사 원문
+└── schema.md               상세 스키마·규칙 문서
+data/source/                통합 원본 v2.9 (재생성용)
+```
+
+- **상태 분포**: 영업중 512 · 휴업 1(아벨CC) · 폐업 2 · 건설중 5 · 미착공 20
+- **행정구역**: 경기 151, 강원 66, 경북 53, 전남광주 48, 충북 43, 경남 41, 충남 34, 제주 30, 전북 28, 인천 14, 부산 10, 대구 7, 울산 7, 대전 4, 광주 4, 세종 3, 서울 1
+- 스키마·값 표기 규칙·`F020` 클러스터·`suspended` 처리: **[data/v29/schema.md](data/v29/schema.md)**
+
+### 소비 예시 (웹·RN 공통)
+
+```js
+const base = "https://<your-domain>/data/v29";
+
+// 목록: 한 번에 540곳
+const { courses, clusters } = await fetch(`${base}/index.json`).then(r => r.json());
+
+// 상세: 필요한 구장만
+const detail = await fetch(`${base}/courses/kr-golf-0498.json`).then(r => r.json());
+detail.fee.weekend;          // 140000
+detail.ops.nocaddie.value;   // null이면 "미확인"
+```
+
+## 4. 로컬 실행
+
+요구 사항: **Node 20+** (빌드 도구 의존성 없음, `npm install` 불필요)
+
+```bash
+npm run build      # web/ + data/v29/ → dist/
+npm run preview    # http://localhost:4173
+npm run verify     # 산출물 검증(개수·무결성·개인정보·용량)
+```
+
+데이터를 다시 만들려면(원본 `data/source/golf_courses_all_v29.json`):
+
+```bash
+npm run data:build   # data/v29/* 재생성 (Python 3)
+npm run data:check   # 12키·개수·금지 문자열·인덱스 300KB 검증
+```
+
+## 5. 배포 — Cloudflare Pages (무료)
+
+1. Cloudflare Dashboard → Workers & Pages → **Create → Pages → Connect to Git** → 이 저장소 선택
+2. Build command `npm run build`, Build output directory `dist`, Root directory `/`
+3. 배포 후 `https://<project>.pages.dev` 에서 바로 서비스
+
+`dist/_headers` 에 보안·캐시 헤더가 포함되어 있습니다.
+커스텀 도메인은 Pages → Custom domains 에서 연결합니다.
+
+## 6. 검색 구조
+
+```
+web/assets/search.js
+  SearchAdapter (인터페이스)
+    ├─ LocalSearchAdapter : 정적 JSON 브라우저 검색 (기본, 0원)
+    └─ EsSearchAdapter    : Elasticsearch 프록시 호출 (선택, 실패 시 자동 폴백)
+```
+
+ES 를 붙이려면 `elasticsearch/` 의 매핑·적재 스크립트와 `functions/api/search.js` 프록시를 사용합니다.
+절차는 **[elasticsearch/README.md](elasticsearch/README.md)** 참고.
+
+```js
+window.COURSEBRIEF_CONFIG = { search: { mode: "es", endpoint: "/api/search" } };
+```
+
+## 7. React Native 앱 확장
+
+웹과 동일한 정적 JSON 을 그대로 쓰면 별도 서버가 필요 없습니다.
+
+- 목록: `index.json` 1회 로드(~200KB) → 메모리 검색·필터 (앱에서도 `LocalSearchAdapter` 로직 이식 가능)
+- 상세: `courses/{id}.json` (평균 12KB) — 필요할 때만 fetch, AsyncStorage/SQLite 캐시 권장
+- 이미지·지도는 좌표(`lat`,`lng`)만 있으면 되고, 외부 API 키는 앱에 넣지 않습니다
+- `data/v29/index.json` 의 `built_at`·`version` 으로 캐시 무효화 판단
+
+## 8. 출처·라이선스
+
+| 구분 | 내용 |
+| --- | --- |
+| 마스터 | 문화체육관광부 「전국 골프장 현황」(2024-12-31 기준, 공공데이터포털) — **이용허락범위 제한 없음** |
+| 코스 레이팅 | 대한골프협회(KGA) 코스레이팅™/슬로프레이팅™ 공개 조회 (2026-11-25) |
+| 상세 정보 | 각 골프장 **공식 홈페이지·공지사항·요금표** 공개 정보, 공개 예약 채널의 관측 가격 |
+| 렌탈 | 업체가 공개한 요금·연락처 (공개 웹 조사, 2026-11-26) |
+| 코드 | MIT (데이터는 위 출처의 조건을 따름) |
+
+수록된 전화번호는 **골프장·업체가 공개한 사업자 연락처**이며, 개인 계정 정보는 포함하지 않습니다.
+
+## 9. 주의
+
+- 요금·운영 정보는 **수집 시점의 공개 정보**입니다. 골프장 정책에 따라 수시로 바뀌므로 예약·결제 전 공식 채널에서 최종 확인하세요.
+- 이 서비스는 **예약·결제를 대행하지 않습니다.** 읽기 전용 정보 서비스입니다.
+- 공지 본문이 이미지인 골프장은 제목·날짜만 수록되어 있을 수 있습니다.
+- 정보 오류·누락 제보는 이슈로 남겨 주세요. 확인 후 데이터와 `schema.md` 를 함께 갱신합니다.

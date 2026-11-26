@@ -1,0 +1,544 @@
+{
+ "course_id": "kr-golf-0334",
+ "meta": {
+  "name": "울진마린CC",
+  "generated_at": "2026-11-26T10:28:35+09:00",
+  "schema": "stage2c/1.0",
+  "batch": "5_경북권",
+  "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
+  "schema_previous": "stage2b/1.0",
+  "restructured_from_7key": true,
+  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
+  "has_detail": true,
+  "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+ },
+ "master": {
+  "course_id": "kr-golf-0334",
+  "name": "울진마린CC",
+  "name_variants": [
+   "울진마린CC",
+   "울진 마린CC",
+   "마린CC"
+  ],
+  "type": "대중제",
+  "holes": {
+   "total": 18,
+   "member": 0,
+   "public": 18,
+   "non_member": 0
+  },
+  "address": "경상북도 울진군 매화면 매화로 115-99",
+  "region": {
+   "sido_code": "47",
+   "sido_name": "경상북도",
+   "sido_short": "경북",
+   "sigungu_code": "47930",
+   "sigungu_name": "울진군",
+   "legal_dong_code": "4793000000"
+  },
+  "lat": 36.890832,
+  "lng": 129.399643,
+  "nearest_ic": {
+   "name": "영덕IC",
+   "distance_km": 56.7,
+   "source": "최근접 IC 직선거리"
+  },
+  "tel": "054-781-0000",
+  "homepage": "https://www.marinecc.co.kr/",
+  "operators": [
+   "울진군수"
+  ],
+  "area_sqm": 1221145,
+  "opened": "2024-05",
+  "course_blocks": [],
+  "facility_id": null,
+  "provenance": {
+   "master": "courses_master.json v2.0 (문체부·KGA·KGBA·티픽·지도)",
+   "synced_to": "courses_master.json v2.7 (2026-11-26 단일 스키마 정규화)"
+  },
+  "par": null,
+  "holes_teepick": 18,
+  "course_spec": {
+   "holes": 18,
+   "par": null,
+   "blocks": [],
+   "length_m": null,
+   "kga": {
+    "kga_course_code": "438",
+    "kga_name": "울진마린",
+    "region_short": "경북",
+    "address": "경북 울진군 매화면 매화로 115-99",
+    "match_method": "address",
+    "match_score": 86,
+    "match_confidence": "medium",
+    "nine_hole_courses": [
+     "마린",
+     "힐링"
+    ],
+    "hole_combinations": [
+     {
+      "course_name_1": "마린",
+      "course_name_2": "힐링",
+      "tees": [
+       {
+        "tee": "Blue",
+        "gender": "남자",
+        "length_yds": 7106.0,
+        "std_par": 72.0,
+        "course_rating": 74.8,
+        "slope_rating": 148.0,
+        "front9": "37.5 / 151",
+        "back9": "37.3 / 144"
+       },
+       {
+        "tee": "White",
+        "gender": "남자",
+        "length_yds": 6595.0,
+        "std_par": 72.0,
+        "course_rating": 72.3,
+        "slope_rating": 140.0,
+        "front9": "36.4 / 143",
+        "back9": "35.9 / 137"
+       },
+       {
+        "tee": "Gold",
+        "gender": "남자",
+        "length_yds": 6168.0,
+        "std_par": 72.0,
+        "course_rating": 70.4,
+        "slope_rating": 132.0,
+        "front9": "35.2 / 135",
+        "back9": "35.2 / 128"
+       },
+       {
+        "tee": "Red",
+        "gender": "여자",
+        "length_yds": 5544.0,
+        "std_par": 72.0,
+        "course_rating": 72.2,
+        "slope_rating": 129.0,
+        "front9": "36.0 / 131",
+        "back9": "36.2 / 127"
+       }
+      ]
+     }
+    ]
+   },
+   "grass": {
+    "evidence": "울진마린컨트리클럽 예약확인 로그인 회원가입 예약확인 로그아웃 마이페이지 클럽소개 실시간예약 이용안내 코스소개 커뮤니티 클럽소개 부대시설 오시는길 골프예약 예약확인/취소 대기예약 예약·위약 규정안내 클럽 이용안내 객실 이용안내 코스개요 MARINE코스 HEALING코스 공지사항 이벤트 조인 게시판 명예의전당 로그인하세요 회원이 되시면 다양한 혜택을 누릴 수 있습니다.",
+    "source": "공식",
+    "url": "https://www.marinecc.co.kr/"
+   },
+   "hole_by_hole": null
+  },
+  "addresses": [
+   "경상북도 울진군 매화면 매화로 115-99"
+  ],
+  "status": "operating",
+  "facility_cluster": null,
+  "factcheck_2026_11_26": null,
+  "name_note": "공식 marinecc.co.kr·카카오맵 명칭 「울진마린CC」."
+ },
+ "course": {
+  "holes": 18,
+  "holes_received": 18,
+  "course_names": null,
+  "membership_type": "대중제",
+  "night_light": null,
+  "blocks": [],
+  "grass": {
+   "tee": null,
+   "fairway": {
+    "evidence": "울진마린컨트리클럽 예약확인 로그인 회원가입 예약확인 로그아웃 마이페이지 클럽소개 실시간예약 이용안내 코스소개 커뮤니티 클럽소개 부대시설 오시는길 골프예약 예약확인/취소 대기예약 예약·위약 규정안내 클럽 이용안내 객실 이용안내 코스개요 MARINE코스 HEALING코스 공지사항 이벤트 조인 게시판 명예의전당 로그인하세요 회원이 되시면 다양한 혜택을 누릴 수 있습니다.",
+    "source": "공식",
+    "url": "https://www.marinecc.co.kr/"
+   },
+   "green": null
+  },
+  "kga": {
+   "kga_course_code": "438",
+   "kga_name": "울진마린",
+   "region_short": "경북",
+   "address": "경북 울진군 매화면 매화로 115-99",
+   "match_method": "address",
+   "match_score": 86,
+   "match_confidence": "medium",
+   "nine_hole_courses": [
+    "마린",
+    "힐링"
+   ],
+   "hole_combinations": [
+    {
+     "course_name_1": "마린",
+     "course_name_2": "힐링",
+     "tees": [
+      {
+       "tee": "Blue",
+       "gender": "남자",
+       "length_yds": 7106.0,
+       "std_par": 72.0,
+       "course_rating": 74.8,
+       "slope_rating": 148.0,
+       "front9": "37.5 / 151",
+       "back9": "37.3 / 144"
+      },
+      {
+       "tee": "White",
+       "gender": "남자",
+       "length_yds": 6595.0,
+       "std_par": 72.0,
+       "course_rating": 72.3,
+       "slope_rating": 140.0,
+       "front9": "36.4 / 143",
+       "back9": "35.9 / 137"
+      },
+      {
+       "tee": "Gold",
+       "gender": "남자",
+       "length_yds": 6168.0,
+       "std_par": 72.0,
+       "course_rating": 70.4,
+       "slope_rating": 132.0,
+       "front9": "35.2 / 135",
+       "back9": "35.2 / 128"
+      },
+      {
+       "tee": "Red",
+       "gender": "여자",
+       "length_yds": 5544.0,
+       "std_par": 72.0,
+       "course_rating": 72.2,
+       "slope_rating": 129.0,
+       "front9": "36.0 / 131",
+       "back9": "36.2 / 127"
+      }
+     ]
+    }
+   ]
+  },
+  "kga_hole_est": null,
+  "extra_courses": null,
+  "hole_by_hole": null,
+  "length_m": null,
+  "par": null
+ },
+ "fee": {
+  "weekday": null,
+  "weekend": null,
+  "weekday_text": null,
+  "weekend_text": null,
+  "basis": null,
+  "tax_included": null,
+  "cart": {
+   "evidence": "TEE-OFF 30분전에 도착하여, 10분 전까지에는 카트에 탑승 부탁 드립니다.",
+   "url": "https://www.marinecc.co.kr/guide/club-info",
+   "source": "공식"
+  },
+  "caddie": {
+   "value": 150000,
+   "none": false,
+   "text": "10홀~18홀 150,000원 (1~2홀 40,000·3~9홀 80,000원)",
+   "raw": "캐디피 1홀~2홀 40,000원 3홀~9홀 80,000원 10홀~18홀 150,000원",
+   "source": "공식",
+   "url": "https://www.marinecc.co.kr/guide/club-info"
+  },
+  "as_of": null,
+  "source_url": null,
+  "note": null,
+  "sources": [],
+  "checked_at": null,
+  "market": {
+   "weekday_min": null,
+   "weekend_min": 260000.0,
+   "part1": null,
+   "part2": null,
+   "source": "티픽골프장(실거래 관측)",
+   "url": "https://teepickgolf.com/course/%EC%9A%B8%EC%A7%84%EB%A7%88%EB%A6%B0CC",
+   "note": "공시가 아닌 최근 관측 실거래 최저가"
+  },
+  "official_green_evidence": [
+   "고객 사정으로 인한 경기 중단은, 18홀 그린피가 적용됩니다.",
+   "악천후 시 이용요금 ▷ 그린피 구분 금액 1홀 미만 무료 1홀~18홀 해당일 그린피 × (이용홀 수 ÷ 18) ▷ 카트비 구분 금액 1홀 미만 무료 1홀~9홀 해당일 카트비의 50% 10홀~18홀 해당일 카트비의 100% ▷ 캐디피 구분 금액 1홀~2홀 40,000원 3홀~9홀 80,000원 10홀~18홀 150,000원 캐디피가 인상될 시 캐디피의 홀별 정산은 달리할 수 있다."
+  ],
+  "official_rental": null,
+  "official_table": {
+   "rows": [
+    {
+     "section": "구분",
+     "label": "구분 / 금액 / 1홀~2홀",
+     "value": "40,000원",
+     "amounts": [
+      40000
+     ],
+     "url": "https://www.marinecc.co.kr/guide/club-info"
+    },
+    {
+     "section": "구분",
+     "label": "3홀~9홀",
+     "value": "80,000원",
+     "amounts": [
+      80000
+     ],
+     "url": "https://www.marinecc.co.kr/guide/club-info"
+    },
+    {
+     "section": "구분",
+     "label": "10홀~18홀",
+     "value": "150,000원",
+     "amounts": [
+      150000
+     ],
+     "url": "https://www.marinecc.co.kr/guide/club-info"
+    }
+   ],
+   "url": "https://www.marinecc.co.kr/guide/club-info"
+  }
+ },
+ "cancel": {
+  "cancel_policy": {
+   "value": "주중(월~목): 2일 전~3일 전 1개월 정지 또는 팀별 이용요금 10%, 1일 전 2개월 또는 20%, 당일·노쇼 3개월 또는 30%. 주말(금~일·공휴일): 3일 전~2일 전 2개월 또는 10%, 1일 전 4개월 또는 20%, 당일·노쇼 6개월 또는 30%",
+   "source": "공식(브라우저 수집)",
+   "url": null
+  },
+  "open_cycle": null,
+  "notes": null,
+  "evidence": [
+   "울진마린컨트리클럽 예약확인 로그인 회원가입 예약확인 로그아웃 마이페이지 클럽소개 실시간예약 이용안내 코스소개 커뮤니티 클럽소개 부대시설 오시는길 골프예약 예약확인/취소 대기예약 예약·위약 규정안내 클럽 이용안내 객실 이용안내 코스개요 MARINE코스 HEALING코스 공지사항 이벤트 조인 게시판 명예의전당 로그인하세요 회원이 되시면 다양한 혜택을 누릴 수 있습니다.",
+   "울진마린컨트리클럽 예약확인 로그인 회원가입 예약확인 로그아웃 마이페이지 클럽소개 실시간예약 이용안내 코스소개 커뮤니티 클럽소개 부대시설 오시는길 골프예약 예약확인/취소 대기예약 예약·위약 규정안내 클럽 이용안내 객실 이용안내 코스개요 MARINE코스 HEALING코스 공지사항 이벤트 조인 게시판 명예의전당 로그인하세요 회원이 되시면 다양한 혜택을 누릴 수 있습니다.",
+   "로그아웃 회원정보관리 클럽소개 클럽소개 부대시설 오시는길 실시간예약 골프예약 예약확인/취소 대기예약 이용안내 예약·위약 규정안내 클럽 이용안내 객실 이용안내 코스소개 코스개요 MARINE코스 HEALING코스 커뮤니티 공지사항이벤트조인 게시판명예의전당 COURSE GUIDE 코스안내 • 코스안내 • 코스개요 코스개요 MARINE 코스 HEALING 코스 전체 코스 마린 코스 MARINE 동해 바다를 품은 마린코스는 9개 홀 내내 탁 트인 해양 전망과 시원한 해풍이 어우러져 특별한 라운딩 경험을 선사한다."
+  ],
+  "weather_evidence": [
+   "기상악화 및 천재지변으로 경기가 중단될 경우에는, 당사 운영규칙에 정한 이용료를 적용합니다.",
+   "고객 사정으로 인한 경기 중단은, 18홀 그린피가 적용됩니다."
+  ],
+  "browser_official": {
+   "cancel": "주중(월~목): 2일 전~3일 전 1개월 정지 또는 팀별 이용요금 10%, 1일 전 2개월 또는 20%, 당일·노쇼 3개월 또는 30%. 주말(금~일·공휴일): 3일 전~2일 전 2개월 또는 10%, 1일 전 4개월 또는 20%, 당일·노쇼 6개월 또는 30%",
+   "penalty_note": "위약 발생 시 예약 불가 등 제약·민사 책임 가능, 위약금 납부 후 예약정지로 변경되며 단순변심 환불 불가"
+  }
+ },
+ "ops": {
+  "nocaddie": {
+   "evidence": [],
+   "value": null
+  },
+  "two_player": {
+   "evidence": [
+    "울진마린컨트리클럽 예약확인 로그인 회원가입 예약확인 로그아웃 마이페이지 클럽소개 실시간예약 이용안내 코스소개 커뮤니티 클럽소개 부대시설 오시는길 골프예약 예약확인/취소 대기예약 예약·위약 규정안내 클럽 이용안내 객실 이용안내 코스개요 MARINE코스 HEALING코스 공지사항 이벤트 조인 게시판 명예의전당 로그인하세요 회원이 되시면 다양한 혜택을 누릴 수 있습니다.",
+    "울진마린컨트리클럽 예약확인 로그인 회원가입 예약확인 로그아웃 마이페이지 클럽소개 실시간예약 이용안내 코스소개 커뮤니티 클럽소개 부대시설 오시는길 골프예약 예약확인/취소 대기예약 예약·위약 규정안내 클럽 이용안내 객실 이용안내 코스개요 MARINE코스 HEALING코스 공지사항 이벤트 조인 게시판 명예의전당 로그인하세요 회원이 되시면 다양한 혜택을 누릴 수 있습니다.",
+    "로그아웃 회원정보관리 클럽소개 클럽소개 부대시설 오시는길 실시간예약 골프예약 예약확인/취소 대기예약 이용안내 예약·위약 규정안내 클럽 이용안내 객실 이용안내 코스소개 코스개요 MARINE코스 HEALING코스 커뮤니티 공지사항이벤트조인 게시판명예의전당 COURSE GUIDE 코스안내 • 코스안내 • 코스개요 코스개요 MARINE 코스 HEALING 코스 전체 코스 마린 코스 MARINE 동해 바다를 품은 마린코스는 9개 홀 내내 탁 트인 해양 전망과 시원한 해풍이 어우러져 특별한 라운딩 경험을 선사한다."
+   ],
+   "value": null
+  },
+  "three_player": {
+   "value": null,
+   "evidence": []
+  },
+  "five_player": {
+   "value": null,
+   "evidence": []
+  },
+  "marshal_caddie": {
+   "value": null,
+   "evidence": []
+  },
+  "cart_type": {
+   "evidence": [
+    "TEE-OFF 30분전에 도착하여, 10분 전까지에는 카트에 탑승 부탁 드립니다.",
+    "악천후 시 이용요금 ▷ 그린피 구분 금액 1홀 미만 무료 1홀~18홀 해당일 그린피 × (이용홀 수 ÷ 18) ▷ 카트비 구분 금액 1홀 미만 무료 1홀~9홀 해당일 카트비의 50% 10홀~18홀 해당일 카트비의 100% ▷ 캐디피 구분 금액 1홀~2홀 40,000원 3홀~9홀 80,000원 10홀~18홀 150,000원 캐디피가 인상될 시 캐디피의 홀별 정산은 달리할 수 있다."
+   ],
+   "value": null
+  },
+  "cart_entry": {
+   "evidence": [],
+   "value": null
+  },
+  "bagdrop": {
+   "evidence": [],
+   "value": null
+  },
+  "mat": {
+   "evidence": [],
+   "value": null
+  },
+  "checkin": {
+   "evidence": [
+    "TEE-OFF 30분전에 도착하여, 10분 전까지에는 카트에 탑승 부탁 드립니다.",
+    "프런트에서 예약자 명과 예약 시간을 확인 하신 후 체크인 하시길 바랍니다."
+   ],
+   "value": null
+  },
+  "locker": {
+   "evidence": [],
+   "value": null
+  },
+  "sauna": {
+   "evidence": [
+    "로그아웃 회원정보관리 클럽소개 클럽소개 부대시설 오시는길 실시간예약 골프예약 예약확인/취소 대기예약 이용안내 예약·위약 규정안내 클럽 이용안내 객실 이용안내 코스소개 코스개요 MARINE코스 HEALING코스 커뮤니티 공지사항이벤트조인 게시판명예의전당 CLUB INFOMATION 클럽소개 • 클럽소개 • 클럽소개 클럽소개 부대시설 오시는길 청정바다와 금강송, 온천이 어우러진 자연이 살아 숨 쉬는 골프장 복잡한 도심 속에서 자연의 세계와 가까워지는 방법."
+   ],
+   "value": "문구 확인(원문 근거)"
+  },
+  "dress": {
+   "evidence": [],
+   "value": null
+  },
+  "pace": {
+   "evidence": [],
+   "value": null
+  },
+  "browser_official": {
+   "cancel": "주중(월~목): 2일 전~3일 전 1개월 정지 또는 팀별 이용요금 10%, 1일 전 2개월 또는 20%, 당일·노쇼 3개월 또는 30%. 주말(금~일·공휴일): 3일 전~2일 전 2개월 또는 10%, 1일 전 4개월 또는 20%, 당일·노쇼 6개월 또는 30%",
+   "penalty_note": "위약 발생 시 예약 불가 등 제약·민사 책임 가능, 위약금 납부 후 예약정지로 변경되며 단순변심 환불 불가",
+   "settlement_rain": "고객 사정에 의한 경기 중단은 18홀 그린피 전액 적용. 악천후: 1홀 미만 그린피 무료·1~18홀 해당일 그린피×(이용홀수÷18), 카트 1홀 미만 무료·1~9홀 카트비 50%·10~18홀 100%, 캐디 1~2홀 40,000·3~9홀 80,000",
+   "lost_item": "분실물 3개월 보관 후 폐기, 원소유주만 반환(대리인은 위임장)"
+  }
+ },
+ "facilities": {
+  "practice": {
+   "evidence": [],
+   "value": null
+  },
+  "indoor_range": {
+   "value": null,
+   "evidence": []
+  },
+  "food": {
+   "evidence": [],
+   "value": null
+  },
+  "snack_bar": {
+   "value": null,
+   "evidence": []
+  },
+  "locker_sauna": {
+   "value": null,
+   "evidence": []
+  },
+  "lodging": {
+   "value": null,
+   "evidence": []
+  },
+  "other": {
+   "value": null,
+   "evidence": []
+  },
+  "night": {
+   "evidence": [],
+   "value": null
+  },
+  "closed_days": {
+   "evidence": [],
+   "third_party": null,
+   "value": null
+  },
+  "shuttle": {
+   "evidence": [],
+   "value": null
+  },
+  "ev_charge": {
+   "evidence": [],
+   "value": null
+  },
+  "gf_facilities": null,
+  "proshop": {
+   "evidence": [],
+   "value": null
+  }
+ },
+ "rental": {
+  "available": null,
+  "full_set": null,
+  "fee_text": null,
+  "brand": null,
+  "left_handed": null,
+  "shoes": null,
+  "nine_hole": null,
+  "range_finder": null,
+  "reservation": null,
+  "source_url": null,
+  "evidence": [],
+  "official": null,
+  "nearby_delivery": {
+   "region": "영남",
+   "sido": "경상북도",
+   "verified_at": "2026-11-26 (KST)",
+   "checked_at": "2026-11-26",
+   "providers": [
+    {
+     "id": "theb",
+     "name": "더비 (The B)",
+     "coverage": "O",
+     "basis": "부산점 24시간 무인픽업·반납(부산진구 양정동), 홈페이지에 '부산·경주·김해 부근' 표기. 그 외 경남·경북은 택배/퀵.",
+     "phone": "010-2530-4575",
+     "operating_status": "정상 영업",
+     "delivery": "O",
+     "price_headline": "12시간 기준 90,000원부터",
+     "bookable": true
+    },
+    {
+     "id": "gangnamclub",
+     "name": "강남골프클럽렌탈",
+     "coverage": "조건부",
+     "basis": "동일(전지역 배송·별도 상담).",
+     "phone": "010-7407-0753",
+     "operating_status": "정상 영업(자사 블로그 최신 게시 2026-04-28)",
+     "delivery": "미확인",
+     "price_headline": null,
+     "bookable": true
+    }
+   ],
+   "provider_count": 2,
+   "legend": {
+    "O": "공식 안내로 해당 권역 이용이 확인됨",
+    "X": "공식 안내상 해당 권역 서비스가 없음(예: '제주 전 지역' 전용으로만 안내)",
+    "조건부": "공식 안내상 가능하나 조건(수단·요금·현재 판매중지 등)이 붙어 있음. 조건은 basis/detail에 기재",
+    "미확인": "공식 공개 안내에서 해당 항목에 대한 언급을 찾지 못함(추정하지 않음)"
+   },
+   "not_verified": "전화·문자·카카오톡 상담으로만 확인 가능한 항목(재고, 개별 견적, 권역별 실제 배송 가능 여부)은 '미확인'으로 남김",
+   "source_file": "5-rental_8_coverage_verified.json",
+   "note_code": "해외 골퍼용 골프채 렌탈·딜리버리 업체. 같은 권역이라도 실제 배송 가능 여부·재고·견적은 전화 확인 필요."
+  }
+ },
+ "briefing": {
+  "notices": {
+   "url": null,
+   "items": [],
+   "tags": {}
+  },
+  "review": {
+   "score_10": 7.7,
+   "count": 10,
+   "source": "티픽골프장 라운더 후기 집계",
+   "url": "https://teepickgolf.com/course/%EC%9A%B8%EC%A7%84%EB%A7%88%EB%A6%B0CC"
+  },
+  "fee_change": null,
+  "collected_at": "2026-11-26T10:28:35+09:00",
+  "recent_notice_text": null,
+  "course_notes": null,
+  "alert": null,
+  "unconfirmed": [],
+  "sources": []
+ },
+ "collection": {
+  "official_site": "ok",
+  "official_reason": null,
+  "pages_collected": 14,
+  "third_party": {
+   "teepick": true,
+   "greenfeeguide": false
+  },
+  "render_hint": "static",
+  "plan_strategy": "static(직접 파싱)",
+  "browser_batch": true
+ },
+ "coverage": {
+  "basic": 1.0,
+  "course": 0.8,
+  "fee": 0.25,
+  "ops": 0.07,
+  "facility": 0.0,
+  "briefing": 0.5,
+  "rental": 0.25
+ }
+}

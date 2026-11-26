@@ -1,0 +1,365 @@
+{
+ "course_id": "kr-golf-0418",
+ "meta": {
+  "name": "설악썬밸리컨트리클럽",
+  "generated_at": "2026-11-26T09:55:47+09:00",
+  "schema": "stage2c/1.0",
+  "batch": "2_강원",
+  "includes": [
+   "master",
+   "ops",
+   "briefing"
+  ],
+  "source": "raw/received_gangwon_65.json (외부 데이터 수신, 2026-11-26)",
+  "review": {
+   "checked_at": null,
+   "status": "not_crosschecked",
+   "checks": []
+  },
+  "data_checks": [
+   "대표전화 표기 차이: 마스터 02-3660-3009 / 수신 033-638-5362",
+   "요금 출처 표기 불일치: as_of에 \"공식\"이나 URL은 3자(https://greenfeeguide.co.kr/course/gc-0250/)"
+  ],
+  "schema_previous": "stage2b/1.0",
+  "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
+  "restructured_from_7key": false,
+  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
+  "has_detail": true,
+  "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+ },
+ "master": {
+  "course_id": "kr-golf-0418",
+  "name": "설악썬밸리컨트리클럽",
+  "name_variants": [
+   "설악썬밸리컨트리클럽"
+  ],
+  "former_names": null,
+  "name_note": null,
+  "type": "대중제",
+  "types": [
+   "대중제"
+  ],
+  "type_note": null,
+  "holes": {
+   "total": 27,
+   "member": 0,
+   "public": 27,
+   "non_member": 0
+  },
+  "holes_note": null,
+  "address": "강원특별자치도 고성군 죽왕면 순포로 188",
+  "addresses": [
+   "강원특별자치도 고성군 죽왕면 순포로 188"
+  ],
+  "address_note": null,
+  "region": {
+   "sido_code": "51",
+   "sido_name": "강원특별자치도",
+   "sido_short": "강원",
+   "sigungu_code": "51820",
+   "sigungu_name": "고성군",
+   "legal_dong_code": "5182000000"
+  },
+  "lat": 38.313383,
+  "lng": 128.502205,
+  "nearest_ic": {
+   "name": "속초IC",
+   "distance_km": 12.4,
+   "source": "teepick(실측 표기)",
+   "straight_km_nearest": 12.2,
+   "straight_name": "속초IC"
+  },
+  "tel": "033-638-5362",
+  "tel_official": "033-638-5362 (통합예약 02-3660-3003)",
+  "tel_conflict": true,
+  "tel_source": "공식·문체부·카카오맵 대조(2026-11-26)",
+  "tel_note": "02-3660-3009는 여주 본사(통합예약) 대표번호. 설악썬밸리 공식 대표전화 033-638-5362(통합예약 02-3660-3003).",
+  "homepage": "https://www.sunvalley.co.kr/seorak/golf/intro",
+  "homepage_master": null,
+  "operators": [
+   "㈜동광개발(구자성)"
+  ],
+  "area_sqm": 1097999,
+  "opened": null,
+  "course_blocks": [],
+  "facility_id": null,
+  "facility_members": null,
+  "status": "operating",
+  "status_note": null,
+  "provenance": {
+   "master": "courses_master.json v2.4 (문체부·KGA·KGBA·티픽·지도 + 강원 검수 정정)",
+   "detail": "raw/received_gangwon_65.json (2026-11-26 수신, 검수 2026-11-26)",
+   "synced_to": "courses_master.json v2.7 (2026-11-26 단일 스키마 정규화)"
+  },
+  "holes_received": 27,
+  "holes_conflict": false,
+  "facility_cluster": null,
+  "factcheck_2026_11_26": null,
+  "tel_former": "02-3660-3009",
+  "address_original": "고성군 죽왕면 순포로 188"
+ },
+ "course": {
+  "holes": 27,
+  "holes_received": 27,
+  "course_names": "설악(SORAK)·썬(SUN)·밸리(VALLEY) 각 9홀, 파108, 9,840m",
+  "membership_type": "대중제(리조트형, 회원권 병행)",
+  "night_light": null,
+  "blocks": [],
+  "grass": {
+   "tee": null,
+   "fairway": null,
+   "green": null
+  },
+  "kga": null,
+  "kga_hole_est": null,
+  "extra_courses": null
+ },
+ "fee": {
+  "weekday": 197000,
+  "weekend": 240000,
+  "weekday_text": "190,000~197,000원 (월~금 1부 190,000원, 금 2부 197,000원)",
+  "weekend_text": "210,000~240,000원 (토·일 1부 240,000원, 일 2부 210,000원)",
+  "basis": "1인·18홀 비회원, 부가세 포함(2024-05-01 시행 요금표, 2026-11-01 재확인). 오늘골프는 주중 180,000원·주말 230,000원으로 다르게 표기(출처 차이)",
+  "tax_included": "포함(VAT)",
+  "cart": {
+   "value": 100000,
+   "text": "100,000원/팀(1대당)"
+  },
+  "caddie": {
+   "value": 150000,
+   "text": "150,000원/팀(4인 기준)",
+   "none": false
+  },
+  "as_of": "2026-11-01(공식 요금표 재확인)",
+  "source_url": "https://greenfeeguide.co.kr/course/gc-0250/",
+  "note": null,
+  "sources": [
+   {
+    "source": "수신 조사(공식·공개 예약정보)",
+    "url": "https://greenfeeguide.co.kr/course/gc-0250/",
+    "checked_at": "2026-11-01(공식 요금표 재확인)"
+   }
+  ]
+ },
+ "cancel": {
+  "cancel_policy": "인터넷·모바일 실시간 취소, 전화 취소는 근무일 09:00~17:00(02-3660-3003). 예약 후 위임 불가, 미내장 시 위약(NO-SHOW) 처리",
+  "open_cycle": "2주 전 월요일 09:00부터 인터넷·모바일 실시간 예약(통합예약 콜센터 02-3660-3003, 월 11:00~17:00·화~금 09:00~17:00·토 09:00~13:00)",
+  "notes": "3개 코스 모두 클럽하우스에서 출발·복귀, IN/OUT 동시 출발 및 조합 운영",
+  "evidence": [],
+  "weather_evidence": []
+ },
+ "ops": {
+  "nocaddie": {
+   "value": null,
+   "evidence": []
+  },
+  "two_player": {
+   "value": null,
+   "evidence": []
+  },
+  "three_player": {
+   "value": null,
+   "evidence": []
+  },
+  "five_player": {
+   "value": null,
+   "evidence": []
+  },
+  "marshal_caddie": {
+   "value": null,
+   "evidence": []
+  },
+  "cart_type": {
+   "value": null,
+   "evidence": []
+  },
+  "cart_entry": {
+   "value": null,
+   "evidence": []
+  },
+  "bagdrop": {
+   "value": null,
+   "evidence": []
+  },
+  "mat": {
+   "value": null,
+   "evidence": []
+  },
+  "checkin": {
+   "value": null,
+   "evidence": []
+  },
+  "locker": {
+   "value": "사우나·락커룸",
+   "evidence": []
+  },
+  "sauna": {
+   "value": "사우나·락커룸",
+   "evidence": []
+  },
+  "dress": {
+   "value": null,
+   "evidence": []
+  },
+  "pace": {
+   "value": null,
+   "evidence": []
+  }
+ },
+ "facilities": {
+  "practice": {
+   "value": null,
+   "evidence": []
+  },
+  "indoor_range": {
+   "value": null,
+   "evidence": []
+  },
+  "food": {
+   "value": null,
+   "evidence": []
+  },
+  "snack_bar": {
+   "value": null,
+   "evidence": []
+  },
+  "locker_sauna": {
+   "value": "사우나·락커룸",
+   "evidence": []
+  },
+  "lodging": {
+   "value": "설악썬밸리리조트(콘도)",
+   "evidence": []
+  },
+  "other": {
+   "value": "프로샵·카페·라운지·편의점·키즈 시설, 전기차 충전기 5대",
+   "evidence": []
+  },
+  "night": {
+   "value": null,
+   "evidence": []
+  },
+  "closed_days": {
+   "value": null,
+   "third_party": null,
+   "evidence": []
+  },
+  "shuttle": {
+   "value": null,
+   "evidence": []
+  }
+ },
+ "rental": {
+  "available": "가능",
+  "full_set": 50000,
+  "fee_text": "골프채(풀세트) 50,000원·18홀",
+  "brand": null,
+  "left_handed": null,
+  "shoes": null,
+  "nine_hole": null,
+  "range_finder": null,
+  "reservation": null,
+  "source_url": null,
+  "nearby_delivery": {
+   "region": "강원",
+   "sido": "강원특별자치도",
+   "verified_at": "2026-11-26 (KST)",
+   "checked_at": "2026-11-26",
+   "providers": [
+    {
+     "id": "theb",
+     "name": "더비 (The B)",
+     "coverage": "조건부",
+     "basis": "매장·퀵 안내 없음. '전국 당일 배송' 표기와 화물택배(월~금, 2일 이상 무료)만 적용 가능. 권역별 확정 안내는 없음.",
+     "phone": "010-2530-4575",
+     "operating_status": "정상 영업",
+     "delivery": "O",
+     "price_headline": "12시간 기준 90,000원부터",
+     "bookable": true
+    },
+    {
+     "id": "gangnamclub",
+     "name": "강남골프클럽렌탈",
+     "coverage": "조건부",
+     "basis": "'전지역 배송 가능합니다(요금은 별도상담)' 문구만 있음. 권역별 확정 안내 없음.",
+     "phone": "010-7407-0753",
+     "operating_status": "정상 영업(자사 블로그 최신 게시 2026-04-28)",
+     "delivery": "미확인",
+     "price_headline": null,
+     "bookable": true
+    }
+   ],
+   "provider_count": 2,
+   "legend": {
+    "O": "공식 안내로 해당 권역 이용이 확인됨",
+    "X": "공식 안내상 해당 권역 서비스가 없음(예: '제주 전 지역' 전용으로만 안내)",
+    "조건부": "공식 안내상 가능하나 조건(수단·요금·현재 판매중지 등)이 붙어 있음. 조건은 basis/detail에 기재",
+    "미확인": "공식 공개 안내에서 해당 항목에 대한 언급을 찾지 못함(추정하지 않음)"
+   },
+   "not_verified": "전화·문자·카카오톡 상담으로만 확인 가능한 항목(재고, 개별 견적, 권역별 실제 배송 가능 여부)은 '미확인'으로 남김",
+   "source_file": "5-rental_8_coverage_verified.json",
+   "note_code": "해외 골퍼용 골프채 렌탈·딜리버리 업체. 같은 권역이라도 실제 배송 가능 여부·재고·견적은 전화 확인 필요."
+  }
+ },
+ "briefing": {
+  "notices": {
+   "url": null,
+   "items": [],
+   "tags": {}
+  },
+  "recent_notice_text": "2026년 10~11월 공지 미확인(2026-11-26 기준). 지난 시즌 동계 휴장 공지 없음",
+  "course_notes": "설악산 울산바위와 동해(삼포·순포 해변) 조망. 지연 도착 3회 시 1개월 예약정지·할인정지 규정",
+  "review": null,
+  "fee_change": null,
+  "alert": null,
+  "unconfirmed": [
+   "야간 라이트",
+   "잔디(티)",
+   "잔디(페어웨이)",
+   "잔디(그린)",
+   "2인 플레이",
+   "3인 플레이",
+   "5인 플레이",
+   "노캐디",
+   "마샬캐디",
+   "카트 종류",
+   "카트 페어웨이 진입",
+   "셀프 백드롭",
+   "매트 티샷",
+   "연습그린",
+   "인도어 연습장",
+   "식당·조식",
+   "그늘집",
+   "좌타용 클럽",
+   "골프화 대여"
+  ],
+  "unconfirmed_labels_added": [],
+  "sources": [
+   "https://greenfeeguide.co.kr/course/gc-0250/",
+   "https://parkgolfinfo.co.kr/설악썬밸리cc-골프장-완전정리-설악·썬·밸리-27홀-코/",
+   "https://todaygolfgo.com/regions/gangwon/"
+  ],
+  "collected_at": "2026-11-26T09:55:47+09:00"
+ },
+ "collection": {
+  "official_site": "ok",
+  "official_reason": "운영 중(썬밸리 통합예약 사이트에서 예약)",
+  "pages_collected": 0,
+  "third_party": {
+   "received_report": true
+  },
+  "render_hint": "report",
+  "plan_strategy": "subagent_report(2026-11-26)"
+ },
+ "coverage": {
+  "basic": 1.0,
+  "course": 0.8,
+  "fee": 1.0,
+  "ops": 0.14,
+  "facility": 0.3,
+  "briefing": 0.75,
+  "rental": 1.0
+ }
+}

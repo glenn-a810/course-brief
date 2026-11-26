@@ -1,0 +1,897 @@
+{
+ "course_id": "kr-golf-0131",
+ "meta": {
+  "name": "안성컨트리클럽",
+  "generated_at": "2026-11-26T09:51:52+09:00",
+  "schema": "stage2c/1.0",
+  "batch": "1_수도권",
+  "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
+  "schema_previous": "stage2b/1.0",
+  "restructured_from_7key": true,
+  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
+  "has_detail": true,
+  "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+ },
+ "master": {
+  "course_id": "kr-golf-0131",
+  "name": "안성컨트리클럽",
+  "name_variants": [
+   "안성컨트리클럽"
+  ],
+  "type": "회원제",
+  "holes": {
+   "total": 18,
+   "member": 18,
+   "public": 0,
+   "non_member": 0
+  },
+  "address": "경기도 안성시 죽산면 걸미로 487",
+  "region": {
+   "sido_code": "41",
+   "sido_name": "경기도",
+   "sido_short": "경기",
+   "sigungu_code": "41550",
+   "sigungu_name": "안성시",
+   "legal_dong_code": "4155000000"
+  },
+  "lat": 37.036311,
+  "lng": 127.407503,
+  "nearest_ic": {
+   "name": "남용인IC",
+   "distance_km": 1.9,
+   "source": "teepick(실측 표기)",
+   "straight_km_nearest": 7.2,
+   "straight_name": "일죽IC"
+  },
+  "tel": "031-674-9111",
+  "homepage": "https://www.ansungcc.co.kr/",
+  "operators": [
+   "㈜한일"
+  ],
+  "area_sqm": 1088870,
+  "opened": "1992",
+  "course_blocks": [],
+  "facility_id": null,
+  "provenance": {
+   "master": "courses_master.json v2.0 (문체부·KGA·KGBA·티픽·지도)",
+   "synced_to": "courses_master.json v2.7 (2026-11-26 단일 스키마 정규화)"
+  },
+  "course_spec": {
+   "holes": 18,
+   "par": null,
+   "blocks": [],
+   "length_m": null,
+   "kga": {
+    "kga_course_code": "143",
+    "kga_name": "안성",
+    "region_short": "경기",
+    "address": "경기안성시죽산면장계리736-4",
+    "match_method": "exact",
+    "match_score": 100,
+    "match_confidence": "high",
+    "nine_hole_courses": [
+     "Out",
+     "In"
+    ],
+    "hole_combinations": [
+     {
+      "course_name_1": "Out",
+      "course_name_2": "In",
+      "tees": [
+       {
+        "tee": "White",
+        "gender": "남자",
+        "length_yds": 6597.0,
+        "std_par": 72.0,
+        "course_rating": 71.5,
+        "slope_rating": 123.0,
+        "front9": "35.3 / 122",
+        "back9": "36.2 / 124"
+       },
+       {
+        "tee": "Red",
+        "gender": "여자",
+        "length_yds": 5538.0,
+        "std_par": 72.0,
+        "course_rating": 71.1,
+        "slope_rating": 121.0,
+        "front9": "35.2 / 120",
+        "back9": "35.9 / 121"
+       }
+      ]
+     }
+    ]
+   },
+   "grass": {
+    "value": "페어웨이 야지",
+    "source": "그린피가이드(공식 코스소개 인용)",
+    "url": "https://greenfeeguide.co.kr/course/gc-0096/"
+   },
+   "hole_by_hole": null
+  },
+  "addresses": [
+   "경기도 안성시 죽산면 걸미로 487"
+  ],
+  "status": "operating",
+  "facility_cluster": null,
+  "factcheck_2026_11_26": null,
+  "opened_evidence": {
+   "evidence": "1992년",
+   "source": "그린피가이드",
+   "url": "https://greenfeeguide.co.kr/course/gc-0096/"
+  }
+ },
+ "course": {
+  "holes": 18,
+  "holes_received": null,
+  "course_names": null,
+  "membership_type": "회원제",
+  "night_light": null,
+  "blocks": [],
+  "grass": {
+   "tee": null,
+   "fairway": {
+    "value": "페어웨이 야지",
+    "source": "그린피가이드(공식 코스소개 인용)",
+    "url": "https://greenfeeguide.co.kr/course/gc-0096/"
+   },
+   "green": null
+  },
+  "kga": {
+   "kga_course_code": "143",
+   "kga_name": "안성",
+   "region_short": "경기",
+   "address": "경기안성시죽산면장계리736-4",
+   "match_method": "exact",
+   "match_score": 100,
+   "match_confidence": "high",
+   "nine_hole_courses": [
+    "Out",
+    "In"
+   ],
+   "hole_combinations": [
+    {
+     "course_name_1": "Out",
+     "course_name_2": "In",
+     "tees": [
+      {
+       "tee": "White",
+       "gender": "남자",
+       "length_yds": 6597.0,
+       "std_par": 72.0,
+       "course_rating": 71.5,
+       "slope_rating": 123.0,
+       "front9": "35.3 / 122",
+       "back9": "36.2 / 124"
+      },
+      {
+       "tee": "Red",
+       "gender": "여자",
+       "length_yds": 5538.0,
+       "std_par": 72.0,
+       "course_rating": 71.1,
+       "slope_rating": 121.0,
+       "front9": "35.2 / 120",
+       "back9": "35.9 / 121"
+      }
+     ]
+    }
+   ]
+  },
+  "kga_hole_est": null,
+  "extra_courses": null,
+  "hole_by_hole": null,
+  "length_m": null,
+  "par": null
+ },
+ "fee": {
+  "weekday": 220000,
+  "weekend": 280000,
+  "weekday_text": null,
+  "weekend_text": null,
+  "basis": null,
+  "tax_included": null,
+  "cart": {
+   "value": 100000,
+   "source": "그린피가이드",
+   "url": "https://greenfeeguide.co.kr/course/gc-0096/"
+  },
+  "caddie": {
+   "value": 150000,
+   "source": "그린피가이드",
+   "url": "https://greenfeeguide.co.kr/course/gc-0096/",
+   "none": false
+  },
+  "as_of": "2026-10-06",
+  "source_url": null,
+  "note": null,
+  "sources": [
+   {
+    "source": "그린피가이드(공식 요금표 확인)",
+    "url": "https://greenfeeguide.co.kr/course/gc-0096/",
+    "checked_at": "2026-10-06"
+   }
+  ],
+  "checked_at": "2026-10-06",
+  "official_green": {
+   "value": 50000,
+   "raw": "1~5홀 50,000원6~9홀 80,000원10~14홀 120,000원15~18홀 150,000원",
+   "label": "카트비(팀당) / 당클럽에서 휴장을 결정할 경우 / 프로모션 그린피의홀별정산(세금포함)",
+   "url": "https://www.ansungcc.co.kr/Guide/Fees.aspx",
+   "source": "공식 요금표"
+  },
+  "official_green_evidence": [],
+  "official_rental": null,
+  "official_table": {
+   "rows": [
+    {
+     "section": "카트사용료 : 100,000원, 캐디피 : 150,000원",
+     "label": "85,000 / 주말 및 공휴일 / 280,000",
+     "value": "카트사용료 : 100,000원, 캐디피 : 150,000원",
+     "amounts": [
+      100000,
+      150000
+     ],
+     "url": "https://www.ansungcc.co.kr/Guide/Fees.aspx"
+    },
+    {
+     "section": "프로모션 그린피의홀별정산(세금포함)",
+     "label": "카트비(팀당) / 당클럽에서 휴장을 결정할 경우 / 프로모션 그린피의홀별정산(세금포함)",
+     "value": "1~5홀 50,000원6~9홀 80,000원10~14홀 120,000원15~18홀 150,000원",
+     "amounts": [
+      50000,
+      80000,
+      120000,
+      150000
+     ],
+     "url": "https://www.ansungcc.co.kr/Guide/Fees.aspx"
+    },
+    {
+     "section": "프로모션 그린피의홀별정산(세금포함)",
+     "label": "",
+     "value": "1~9홀 50,000원10~18홀 100,000원",
+     "amounts": [
+      50000,
+      100000
+     ],
+     "url": "https://www.ansungcc.co.kr/Guide/Fees.aspx"
+    },
+    {
+     "section": "구분",
+     "label": "주말 및 공휴일 / 회원 / 입장요금",
+     "value": "75,000원",
+     "amounts": [
+      75000
+     ],
+     "url": "https://www.ansungcc.co.kr/Reservation/Guide.aspx"
+    },
+    {
+     "section": "구분",
+     "label": "",
+     "value": "85,000원",
+     "amounts": [
+      85000
+     ],
+     "url": "https://www.ansungcc.co.kr/Reservation/Guide.aspx"
+    },
+    {
+     "section": "카트사용료",
+     "label": "카트사용료",
+     "value": "팀당 : 100,000원 (2025.01.01 부터)",
+     "amounts": [
+      100000
+     ],
+     "url": "https://www.ansungcc.co.kr/Reservation/Guide.aspx"
+    },
+    {
+     "section": "캐디봉사료",
+     "label": "캐디봉사료",
+     "value": "팀당 : 150,000원",
+     "amounts": [
+      150000
+     ],
+     "url": "https://www.ansungcc.co.kr/Reservation/Guide.aspx"
+    },
+    {
+     "section": "캐디봉사료",
+     "label": "청조건 : 당 클럽 연단체 운영규정에 동의하는 팀 / 연부킹 우대요금 및 총무혜택 / 1)계약팀수 전원(4인/1팀) 내장시 총무 회원대우(1인)",
+     "value": "2)계약팀수 전원(4인/1팀)내장과 식음객단가 1인 65,000원 이상 충족시 추가(1인)회원대우",
+     "amounts": [
+      65000
+     ],
+     "url": "https://www.ansungcc.co.kr/Reservation/Guide.aspx"
+    },
+    {
+     "section": "연단체그린피(예시)",
+     "label": "연단체그린피(예시) / 비고 / 6시대",
+     "value": "110,000원",
+     "amounts": [
+      110000
+     ],
+     "url": "https://www.ansungcc.co.kr/Reservation/Guide.aspx"
+    },
+    {
+     "section": "연단체그린피(예시)",
+     "label": "",
+     "value": "80,000원",
+     "amounts": [
+      80000
+     ],
+     "url": "https://www.ansungcc.co.kr/Reservation/Guide.aspx"
+    },
+    {
+     "section": "연단체그린피(예시)",
+     "label": "",
+     "value": "공지금액에서 30,000원/인 할인적용",
+     "amounts": [
+      30000
+     ],
+     "url": "https://www.ansungcc.co.kr/Reservation/Guide.aspx"
+    },
+    {
+     "section": "연단체그린피(예시)",
+     "label": "7시30분 이전",
+     "value": "120,000원",
+     "amounts": [
+      120000
+     ],
+     "url": "https://www.ansungcc.co.kr/Reservation/Guide.aspx"
+    },
+    {
+     "section": "연단체그린피(예시)",
+     "label": "",
+     "value": "95,000원",
+     "amounts": [
+      95000
+     ],
+     "url": "https://www.ansungcc.co.kr/Reservation/Guide.aspx"
+    },
+    {
+     "section": "연단체그린피(예시)",
+     "label": "",
+     "value": "공지금액에서 25,000원/인 할인적용",
+     "amounts": [
+      25000
+     ],
+     "url": "https://www.ansungcc.co.kr/Reservation/Guide.aspx"
+    },
+    {
+     "section": "연단체그린피(예시)",
+     "label": "7시30분 이후",
+     "value": "130,000원",
+     "amounts": [
+      130000
+     ],
+     "url": "https://www.ansungcc.co.kr/Reservation/Guide.aspx"
+    },
+    {
+     "section": "연단체그린피(예시)",
+     "label": "",
+     "value": "110,000원",
+     "amounts": [
+      110000
+     ],
+     "url": "https://www.ansungcc.co.kr/Reservation/Guide.aspx"
+    },
+    {
+     "section": "연단체그린피(예시)",
+     "label": "",
+     "value": "공지금액에서 20,000원/인 할인적용",
+     "amounts": [
+      20000
+     ],
+     "url": "https://www.ansungcc.co.kr/Reservation/Guide.aspx"
+    },
+    {
+     "section": "연단체그린피(예시)",
+     "label": "12시 이후",
+     "value": "150,000원",
+     "amounts": [
+      150000
+     ],
+     "url": "https://www.ansungcc.co.kr/Reservation/Guide.aspx"
+    },
+    {
+     "section": "연단체그린피(예시)",
+     "label": "",
+     "value": "130,000원",
+     "amounts": [
+      130000
+     ],
+     "url": "https://www.ansungcc.co.kr/Reservation/Guide.aspx"
+    }
+   ],
+   "url": "https://www.ansungcc.co.kr/Guide/Fees.aspx"
+  }
+ },
+ "cancel": {
+  "cancel_policy": {
+   "value": "비회원 7일 전 17:00까지개장·설계1992년 4월 7일 개장잔디페어웨이 야지, 중지(한국잔디) · 그린 Bentglass(Pen A-1, P",
+   "source": "그린피가이드(공식 인용)",
+   "url": "https://greenfeeguide.co.kr/course/gc-0096/"
+  },
+  "open_cycle": null,
+  "notes": null,
+  "evidence": [
+   "클럽소개 클럽안내 주요연락처 연혁 오시는 길 안성CC 사계 인터넷예약 예약안내 인터넷예약 예약확인취소 코스소개 코스소개 코스공략도 코스갤러리 스코어카드 시설안내 락커 및 파우더룸 호반식당 프로샵 스타트하우스 그늘집 이용안내 이용안내 이용요금안내 위약규정 로컬룰 고객센터 공지사항 명예의전당 고객의말씀 조인게시판 포토갤러리 분실물센터 자주묻는질문 코스소개 코스공략도 코스갤러리 스코어카드 Home 코스소개 코스소개 코스안내 시간은 변하고 안성 컨트리클럽도 영원한 클래식으로 변하다… 안성 컨트리클럽은 기술력이 매우 뛰어난 골퍼들에게는 더 ",
+   "클럽소개 클럽안내 주요연락처 연혁 오시는 길 안성CC 사계 인터넷예약 예약안내 인터넷예약 예약확인취소 코스소개 코스소개 코스공략도 코스갤러리 스코어카드 시설안내 락커 및 파우더룸 호반식당 프로샵 스타트하우스 그늘집 이용안내 이용안내 이용요금안내 위약규정 로컬룰 고객센터 공지사항 명예의전당 고객의말씀 조인게시판 포토갤러리 분실물센터 자주묻는질문 예약안내 인터넷예약 예약확인취소 Home 인터넷예약 예약안내 예약안내 전반적인 운영에 대하여 당 클럽 운영목표를 첫째 공정한 예약관리, 둘째 아늑한 코-스 조성, 셋째 접객예절의 확립으로 정하",
+   "예약 취소는 경기당일 4일전 11시까지 하셔야 합니다."
+  ],
+  "weather_evidence": []
+ },
+ "ops": {
+  "nocaddie": {
+   "evidence": [],
+   "value": null
+  },
+  "two_player": {
+   "evidence": [
+    "클럽소개 클럽안내 주요연락처 연혁 오시는 길 안성CC 사계 인터넷예약 예약안내 인터넷예약 예약확인취소 코스소개 코스소개 코스공략도 코스갤러리 스코어카드 시설안내 락커 및 파우더룸 호반식당 프로샵 스타트하우스 그늘집 이용안내 이용안내 이용요금안내 위약규정 로컬룰 고객센터 공지사항 명예의전당 고객의말씀 조인게시판 포토갤러리 분실물센터 자주묻는질문 코스소개 코스공략도 코스갤러리 스코어카드 Home 코스소개 코스소개 코스안내 시간은 변하고 안성 컨트리클럽도 영원한 클래식으로 변하다… 안성 컨트리클럽은 기술력이 매우 뛰어난 골퍼들에게는 더 ",
+    "클럽소개 클럽안내 주요연락처 연혁 오시는 길 안성CC 사계 인터넷예약 예약안내 인터넷예약 예약확인취소 코스소개 코스소개 코스공략도 코스갤러리 스코어카드 시설안내 락커 및 파우더룸 호반식당 프로샵 스타트하우스 그늘집 이용안내 이용안내 이용요금안내 위약규정 로컬룰 고객센터 공지사항 명예의전당 고객의말씀 조인게시판 포토갤러리 분실물센터 자주묻는질문 예약안내 인터넷예약 예약확인취소 Home 인터넷예약 예약안내 예약안내 전반적인 운영에 대하여 당 클럽 운영목표를 첫째 공정한 예약관리, 둘째 아늑한 코-스 조성, 셋째 접객예절의 확립으로 정하",
+    "클럽소개 클럽안내 주요연락처 연혁 오시는 길 안성CC 사계 인터넷예약 예약안내 인터넷예약 예약확인취소 코스소개 코스소개 코스공략도 코스갤러리 스코어카드 시설안내 락커 및 파우더룸 호반식당 프로샵 스타트하우스 그늘집 이용안내 이용안내 이용요금안내 위약규정 로컬룰 고객센터 공지사항 명예의전당 고객의말씀 조인게시판 포토갤러리 분실물센터 자주묻는질문 이용안내 이용요금안내 위약규정 로컬룰 Home 이용안내 이용안내 이용안내 내장 및 복장 Tee Off시간 40분 전까지 내장하여 프론트에서 내장 등록을 해주시고 15분 전까지 카트탑승준비완료를"
+   ],
+   "value": null,
+   "third_party": {
+    "two": null,
+    "three": null,
+    "source": "그린피가이드",
+    "url": "https://greenfeeguide.co.kr/course/gc-0096/"
+   }
+  },
+  "three_player": {
+   "value": null,
+   "evidence": []
+  },
+  "five_player": {
+   "value": null,
+   "evidence": []
+  },
+  "marshal_caddie": {
+   "value": null,
+   "evidence": []
+  },
+  "cart_type": {
+   "evidence": [
+    "구분 평일 주말 및 공휴일 회원 입장요금 75,000원 85,000원 카트사용료 팀당 : 100,000원 (2025.01.01 부터) 캐디봉사료 팀당 : 150,000원 2027년 단체팀 예약안내 2027년도 연단체팀 이용안내 운영기간 : 2027년(3월~12월/10회) 예약팀수 : 3팀 이상(1팀 4인 PLAY 기준) 신청조건 : 당 클럽 연단체 운영규정에 동의하는 팀 연부킹 우대요금 및 총무혜택 1)계약팀수 전원(4인/1팀) 내장시 총무 회원대우(1인) 2)계약팀수 전원(4인/1팀)내장과 식음객단가 1인 65,000원 이상 충족",
+    "클럽소개 클럽안내 주요연락처 연혁 오시는 길 안성CC 사계 인터넷예약 예약안내 인터넷예약 예약확인취소 코스소개 코스소개 코스공략도 코스갤러리 스코어카드 시설안내 락커 및 파우더룸 호반식당 프로샵 스타트하우스 그늘집 이용안내 이용안내 이용요금안내 위약규정 로컬룰 고객센터 공지사항 명예의전당 고객의말씀 조인게시판 포토갤러리 분실물센터 자주묻는질문 이용안내 이용요금안내 위약규정 로컬룰 Home 이용안내 이용안내 이용안내 내장 및 복장 Tee Off시간 40분 전까지 내장하여 프론트에서 내장 등록을 해주시고 15분 전까지 카트탑승준비완료를",
+    "5인승 전동카트"
+   ],
+   "value": "전동카트 · 5인승",
+   "source_url": "https://www.ansungcc.co.kr/About/Info.aspx",
+   "confidence": "medium",
+   "source_type": "official_site",
+   "page_label": "",
+   "value_from": "capital_supplement(official_site)"
+  },
+  "cart_entry": {
+   "evidence": [],
+   "value": null
+  },
+  "bagdrop": {
+   "evidence": [],
+   "value": null
+  },
+  "mat": {
+   "evidence": [],
+   "value": null
+  },
+  "checkin": {
+   "evidence": [
+    "Tee Off시간 40분 전까지 내장하여 프론트에서 내장 등록을 해주시고 15분 전까지 카트탑승준비완료를 해주시기 바랍니다."
+   ],
+   "value": "티오프 40분 전 도착",
+   "third_party": {
+    "value": null,
+    "source": "그린피가이드",
+    "url": "https://greenfeeguide.co.kr/course/gc-0096/"
+   },
+   "source_url": "https://www.ansungcc.co.kr/Guide/Guide.aspx",
+   "confidence": "medium",
+   "source_type": "official_site",
+   "page_label": "이용안내",
+   "value_from": "capital_supplement(official_site)"
+  },
+  "locker": {
+   "evidence": [
+    "클럽소개 클럽안내 주요연락처 연혁 오시는 길 안성CC 사계 인터넷예약 예약안내 인터넷예약 예약확인취소 코스소개 코스소개 코스공략도 코스갤러리 스코어카드 시설안내 락커 및 파우더룸 호반식당 프로샵 스타트하우스 그늘집 이용안내 이용안내 이용요금안내 위약규정 로컬룰 고객센터 공지사항 명예의전당 고객의말씀 조인게시판 포토갤러리 분실물센터 자주묻는질문 코스소개 코스공략도 코스갤러리 스코어카드 Home 코스소개 코스소개 코스안내 시간은 변하고 안성 컨트리클럽도 영원한 클래식으로 변하다… 안성 컨트리클럽은 기술력이 매우 뛰어난 골퍼들에게는 더 ",
+    "클럽소개 클럽안내 주요연락처 연혁 오시는 길 안성CC 사계 인터넷예약 예약안내 인터넷예약 예약확인취소 코스소개 코스소개 코스공략도 코스갤러리 스코어카드 시설안내 락커 및 파우더룸 호반식당 프로샵 스타트하우스 그늘집 이용안내 이용안내 이용요금안내 위약규정 로컬룰 고객센터 공지사항 명예의전당 고객의말씀 조인게시판 포토갤러리 분실물센터 자주묻는질문 예약안내 인터넷예약 예약확인취소 Home 인터넷예약 예약안내 예약안내 전반적인 운영에 대하여 당 클럽 운영목표를 첫째 공정한 예약관리, 둘째 아늑한 코-스 조성, 셋째 접객예절의 확립으로 정하",
+    "락카 이용"
+   ],
+   "value": "락커 운영",
+   "value_previous": "문구 확인(원문 근거)",
+   "source_url": "https://www.ansungcc.co.kr/Guide/Guide.aspx",
+   "confidence": "medium",
+   "source_type": "official_site",
+   "page_label": "이용안내",
+   "value_from": "capital_supplement(official_site)"
+  },
+  "sauna": {
+   "evidence": [
+    "사우나 있음 · 전기차 충전 가능 · 프로샵"
+   ],
+   "value": "사우나 운영",
+   "source_url": "https://www.ansungcc.co.kr/Facilities/Sauna.aspx",
+   "confidence": "high",
+   "checked_at": "2026-10-20",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/golf-course-amenities-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  },
+  "dress": {
+   "evidence": [
+    "클럽소개 클럽안내 주요연락처 연혁 오시는 길 안성CC 사계 인터넷예약 예약안내 인터넷예약 예약확인취소 코스소개 코스소개 코스공략도 코스갤러리 스코어카드 시설안내 락커 및 파우더룸 호반식당 프로샵 스타트하우스 그늘집 이용안내 이용안내 이용요금안내 위약규정 로컬룰 고객센터 공지사항 명예의전당 고객의말씀 조인게시판 포토갤러리 분실물센터 자주묻는질문 이용안내 이용요금안내 위약규정 로컬룰 Home 이용안내 이용안내 이용안내 내장 및 복장 Tee Off시간 40분 전까지 내장하여 프론트에서 내장 등록을 해주시고 15분 전까지 카트탑승준비완료를",
+    "(보관하지 않은 물품 분실 시 당 클럽에서는 일절 책임지지 않습니다.) 복장은 타인에게 혐오감을 주지 않는 복장으로 착용하여 주시기 바랍니다."
+   ],
+   "value": "문구 확인(원문 근거)"
+  },
+  "pace": {
+   "evidence": [],
+   "value": null
+  },
+  "grass": "페어웨이 야지"
+ },
+ "facilities": {
+  "practice": {
+   "evidence": [
+    "클럽하우스, 스타트하우스, 그늘집, 퍼팅연습장 등"
+   ],
+   "value": "연습장 · 퍼팅연습그린",
+   "source_url": "https://www.ansungcc.co.kr/About/Info.aspx",
+   "confidence": "medium",
+   "source_type": "official_site",
+   "page_label": "",
+   "value_from": "capital_supplement(official_site)"
+  },
+  "indoor_range": {
+   "value": null,
+   "evidence": []
+  },
+  "food": {
+   "evidence": [
+    "클럽소개 클럽안내 주요연락처 연혁 오시는 길 안성CC 사계 인터넷예약 예약안내 인터넷예약 예약확인취소 코스소개 코스소개 코스공략도 코스갤러리 스코어카드 시설안내 락커 및 파우더룸 호반식당 프로샵 스타트하우스 그늘집 이용안내 이용안내 이용요금안내 위약규정 로컬룰 고객센터 공지사항 명예의전당 고객의말씀 조인게시판 포토갤러리 분실물센터 자주묻는질문 코스소개 코스공략도 코스갤러리 스코어카드 Home 코스소개 코스소개 코스안내 시간은 변하고 안성 컨트리클럽도 영원한 클래식으로 변하다… 안성 컨트리클럽은 기술력이 매우 뛰어난 골퍼들에게는 더 ",
+    "클럽소개 클럽안내 주요연락처 연혁 오시는 길 안성CC 사계 인터넷예약 예약안내 인터넷예약 예약확인취소 코스소개 코스소개 코스공략도 코스갤러리 스코어카드 시설안내 락커 및 파우더룸 호반식당 프로샵 스타트하우스 그늘집 이용안내 이용안내 이용요금안내 위약규정 로컬룰 고객센터 공지사항 명예의전당 고객의말씀 조인게시판 포토갤러리 분실물센터 자주묻는질문 예약안내 인터넷예약 예약확인취소 Home 인터넷예약 예약안내 예약안내 전반적인 운영에 대하여 당 클럽 운영목표를 첫째 공정한 예약관리, 둘째 아늑한 코-스 조성, 셋째 접객예절의 확립으로 정하",
+    "클럽소개 클럽안내 주요연락처 연혁 오시는 길 안성CC 사계 인터넷예약 예약안내 인터넷예약 예약확인취소 코스소개 코스소개 코스공략도 코스갤러리 스코어카드 시설안내 락커 및 파우더룸 호반식당 프로샵 스타트하우스 그늘집 이용안내 이용안내 이용요금안내 위약규정 로컬룰 고객센터 공지사항 명예의전당 고객의말씀 조인게시판 포토갤러리 분실물센터 자주묻는질문 이용안내 이용요금안내 위약규정 로컬룰 Home 이용안내 이용안내 이용안내 내장 및 복장 Tee Off시간 40분 전까지 내장하여 프론트에서 내장 등록을 해주시고 15분 전까지 카트탑승준비완료를",
+    "2층에 위치한 레스토랑 호반식당은 모던한 분위기가 물씬 풍기는 정갈한 곳으로 특화된 고품격 메뉴로 회원님의 성공적인 비즈니스 공간이 되도록 최선의 노력을 하고 있습니다."
+   ],
+   "value": "레스토랑 · 식당",
+   "source_url": "https://www.ansungcc.co.kr/",
+   "confidence": "medium",
+   "source_type": "official_site",
+   "page_label": "home",
+   "value_from": "capital_supplement(official_site)"
+  },
+  "snack_bar": {
+   "value": null,
+   "evidence": []
+  },
+  "locker_sauna": {
+   "value": null,
+   "evidence": []
+  },
+  "lodging": {
+   "value": null,
+   "evidence": []
+  },
+  "other": {
+   "value": null,
+   "evidence": []
+  },
+  "night": {
+   "evidence": [],
+   "value": null
+  },
+  "closed_days": {
+   "evidence": [],
+   "third_party": null,
+   "value": null
+  },
+  "shuttle": {
+   "evidence": [],
+   "value": null
+  },
+  "ev_charge": {
+   "evidence": [
+    "전기차 충전시설 설치"
+   ],
+   "value": "전기차 충전시설 설치",
+   "source_url": "https://www.ansungcc.co.kr/Facilities/Sauna.aspx",
+   "confidence": "high",
+   "checked_at": "2026-10-20",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/golf-course-amenities-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  },
+  "gf_facilities": [
+   "프로샵근거골프장 공식 홈페이지 시설 안내 · 2026"
+  ],
+  "proshop": {
+   "evidence": [
+    "사우나 있음 · 전기차 충전 가능 · 프로샵"
+   ],
+   "value": "프로샵 운영",
+   "source_url": "https://www.ansungcc.co.kr/Facilities/Sauna.aspx",
+   "confidence": "high",
+   "checked_at": "2026-10-20",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/golf-course-amenities-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  }
+ },
+ "rental": {
+  "available": null,
+  "full_set": null,
+  "fee_text": null,
+  "brand": null,
+  "left_handed": null,
+  "shoes": null,
+  "nine_hole": null,
+  "range_finder": null,
+  "reservation": null,
+  "source_url": null,
+  "evidence": [
+   "예약시 골프채 대여 요청을 하지 못한 분은 프론트 내장 등록 시 요청하여 주십시오."
+  ],
+  "official": null,
+  "nearby_delivery": {
+   "region": "수도권",
+   "sido": "경기도",
+   "verified_at": "2026-11-26 (KST)",
+   "checked_at": "2026-11-26",
+   "providers": [
+    {
+     "id": "theb",
+     "name": "더비 (The B)",
+     "coverage": "O",
+     "basis": "동탄·김포·시흥·용인·이천 24시간 무인픽업 매장 5곳 + 다마스 퀵/택배 배송. 홈페이지에 '강남·동탄·판교·수지·광교·분당', '시흥·배곧·인천·안산·송도', '이천·여주' 권역 표기.",
+     "phone": "010-2530-4575",
+     "operating_status": "정상 영업",
+     "delivery": "O",
+     "price_headline": "12시간 기준 90,000원부터",
+     "bookable": true
+    },
+    {
+     "id": "gangnamclub",
+     "name": "강남골프클럽렌탈",
+     "coverage": "O",
+     "basis": "서울 서초구 거점 매장 주소 공개, 자사 블로그 '전지역 배송 가능' 안내.",
+     "phone": "010-7407-0753",
+     "operating_status": "정상 영업(자사 블로그 최신 게시 2026-04-28)",
+     "delivery": "미확인",
+     "price_headline": null,
+     "bookable": true
+    },
+    {
+     "id": "apioz",
+     "name": "아피오즈 (Apioz)",
+     "coverage": "조건부",
+     "basis": "서울 숙소 배송·공항 픽업 옵션 안내. 단 골프세트 Sold Out으로 현재 이용 불가.",
+     "phone": "02-6956-8115",
+     "operating_status": "예약 중단(Sold Out) — 골프채 세트 한정",
+     "delivery": "미확인",
+     "price_headline": null,
+     "caution": "골프채 세트 Sold Out — 현재 예약 불가",
+     "bookable": false,
+     "bookable_reason": "골프채 세트 Sold Out — 현재 예약 불가"
+    }
+   ],
+   "provider_count": 3,
+   "legend": {
+    "O": "공식 안내로 해당 권역 이용이 확인됨",
+    "X": "공식 안내상 해당 권역 서비스가 없음(예: '제주 전 지역' 전용으로만 안내)",
+    "조건부": "공식 안내상 가능하나 조건(수단·요금·현재 판매중지 등)이 붙어 있음. 조건은 basis/detail에 기재",
+    "미확인": "공식 공개 안내에서 해당 항목에 대한 언급을 찾지 못함(추정하지 않음)"
+   },
+   "not_verified": "전화·문자·카카오톡 상담으로만 확인 가능한 항목(재고, 개별 견적, 권역별 실제 배송 가능 여부)은 '미확인'으로 남김",
+   "source_file": "5-rental_8_coverage_verified.json",
+   "note_code": "해외 골퍼용 골프채 렌탈·딜리버리 업체. 같은 권역이라도 실제 배송 가능 여부·재고·견적은 전화 확인 필요."
+  }
+ },
+ "briefing": {
+  "notices": {
+   "url": "https://www.ansungcc.co.kr/Board/HonorList.aspx?cfgid=honor",
+   "items": [
+    {
+     "title": "2인, 5인 플레이",
+     "date": "2026-11-24",
+     "url": "https://www.ansungcc.co.kr/Board/BoardList.aspx?cfgid=notice"
+    },
+    {
+     "title": "11월 30일(월) 특별할인 그린피 안내 | 이벤트",
+     "date": "2026-11-23",
+     "url": "https://www.ansungcc.co.kr/Board/BoardView.aspx?post=1772&cfgid=notice"
+    },
+    {
+     "title": "11월 30일(월) 특별할인 그린피 안내",
+     "date": "2026-11-23",
+     "url": "https://www.ansungcc.co.kr/Board/BoardList.aspx?cfgid=notice"
+    },
+    {
+     "title": "12월 그린피 특별할인 이벤트 | 이벤트",
+     "date": "2026-11-16",
+     "url": "https://www.ansungcc.co.kr/Board/BoardView.aspx?post=1765&cfgid=notice"
+    },
+    {
+     "title": "12월 그린피 특별할인 이벤트",
+     "date": "2026-11-16",
+     "url": "https://www.ansungcc.co.kr/Board/BoardList.aspx?cfgid=notice"
+    },
+    {
+     "title": "사용클럽/볼",
+     "date": "2026-11-03",
+     "url": "https://www.ansungcc.co.kr/Board/HonorList.aspx?cfgid=honor"
+    },
+    {
+     "title": "코스 내 흡연금지 안내",
+     "date": "2026-11-02",
+     "url": "https://www.ansungcc.co.kr/Board/BoardList.aspx?cfgid=notice"
+    },
+    {
+     "title": "김선희 김은숙 이성예",
+     "date": "2026-10-20",
+     "url": "https://www.ansungcc.co.kr/Board/HonorList.aspx?cfgid=honor"
+    },
+    {
+     "title": "11월 그린피 특별할인 이벤트",
+     "date": "2026-10-15",
+     "url": "https://www.ansungcc.co.kr/Board/BoardList.aspx?cfgid=notice"
+    },
+    {
+     "title": "2027년 연단체 모집공고",
+     "date": "2026-10-14",
+     "url": "https://www.ansungcc.co.kr/Board/BoardList.aspx?cfgid=notice"
+    },
+    {
+     "title": "권한진 장병기 이다원",
+     "date": "2026-10-10",
+     "url": "https://www.ansungcc.co.kr/Board/HonorList.aspx?cfgid=honor"
+    },
+    {
+     "title": "로마로 7아이언 / 세인트나인 0번",
+     "date": "2026-10-04",
+     "url": "https://www.ansungcc.co.kr/Board/HonorList.aspx?cfgid=honor"
+    },
+    {
+     "title": "나철호 권오진 김선우",
+     "date": "2026-10-03",
+     "url": "https://www.ansungcc.co.kr/Board/HonorList.aspx?cfgid=honor"
+    },
+    {
+     "title": "오용석 오준석 오주련",
+     "date": "2026-09-12",
+     "url": "https://www.ansungcc.co.kr/Board/HonorList.aspx?cfgid=honor"
+    },
+    {
+     "title": "최정환 변영봉 정호준",
+     "date": "2026-08-29",
+     "url": "https://www.ansungcc.co.kr/Board/HonorList.aspx?cfgid=honor"
+    },
+    {
+     "title": "김태수 한성진 박현영",
+     "date": "2026-08-29",
+     "url": "https://www.ansungcc.co.kr/Board/HonorList.aspx?cfgid=honor"
+    },
+    {
+     "title": "박형순 김해원 최원준",
+     "date": "2026-08-25",
+     "url": "https://www.ansungcc.co.kr/Board/HonorList.aspx?cfgid=honor"
+    },
+    {
+     "title": "백낙인 이수환 황은성",
+     "date": "2026-08-17",
+     "url": "https://www.ansungcc.co.kr/Board/HonorList.aspx?cfgid=honor"
+    },
+    {
+     "title": "회원 주말 예약일 변경 안내",
+     "date": "2026-04-17",
+     "url": "https://www.ansungcc.co.kr/Board/BoardList.aspx?cfgid=notice"
+    },
+    {
+     "title": "안성CC 골프, 그 이상의 가치",
+     "date": "2026-04-08",
+     "url": "https://www.ansungcc.co.kr/Board/BoardList.aspx?cfgid=notice"
+    }
+   ],
+   "tags": {
+    "요금": [
+     {
+      "title": "11월 30일(월) 특별할인 그린피 안내 | 이벤트",
+      "date": "2026-11-23",
+      "url": "https://www.ansungcc.co.kr/Board/BoardView.aspx?post=1772&cfgid=notice"
+     },
+     {
+      "title": "11월 30일(월) 특별할인 그린피 안내",
+      "date": "2026-11-23",
+      "url": "https://www.ansungcc.co.kr/Board/BoardList.aspx?cfgid=notice"
+     },
+     {
+      "title": "12월 그린피 특별할인 이벤트 | 이벤트",
+      "date": "2026-11-16",
+      "url": "https://www.ansungcc.co.kr/Board/BoardView.aspx?post=1765&cfgid=notice"
+     },
+     {
+      "title": "12월 그린피 특별할인 이벤트",
+      "date": "2026-11-16",
+      "url": "https://www.ansungcc.co.kr/Board/BoardList.aspx?cfgid=notice"
+     },
+     {
+      "title": "11월 그린피 특별할인 이벤트",
+      "date": "2026-10-15",
+      "url": "https://www.ansungcc.co.kr/Board/BoardList.aspx?cfgid=notice"
+     }
+    ],
+    "이벤트": [
+     {
+      "title": "11월 30일(월) 특별할인 그린피 안내 | 이벤트",
+      "date": "2026-11-23",
+      "url": "https://www.ansungcc.co.kr/Board/BoardView.aspx?post=1772&cfgid=notice"
+     },
+     {
+      "title": "11월 30일(월) 특별할인 그린피 안내",
+      "date": "2026-11-23",
+      "url": "https://www.ansungcc.co.kr/Board/BoardList.aspx?cfgid=notice"
+     },
+     {
+      "title": "12월 그린피 특별할인 이벤트 | 이벤트",
+      "date": "2026-11-16",
+      "url": "https://www.ansungcc.co.kr/Board/BoardView.aspx?post=1765&cfgid=notice"
+     },
+     {
+      "title": "12월 그린피 특별할인 이벤트",
+      "date": "2026-11-16",
+      "url": "https://www.ansungcc.co.kr/Board/BoardList.aspx?cfgid=notice"
+     },
+     {
+      "title": "11월 그린피 특별할인 이벤트",
+      "date": "2026-10-15",
+      "url": "https://www.ansungcc.co.kr/Board/BoardList.aspx?cfgid=notice"
+     }
+    ],
+    "모집": [
+     {
+      "title": "2027년 연단체 모집공고",
+      "date": "2026-10-14",
+      "url": "https://www.ansungcc.co.kr/Board/BoardList.aspx?cfgid=notice"
+     }
+    ],
+    "운영": [
+     {
+      "title": "회원 주말 예약일 변경 안내",
+      "date": "2026-04-17",
+      "url": "https://www.ansungcc.co.kr/Board/BoardList.aspx?cfgid=notice"
+     }
+    ]
+   }
+  },
+  "review": null,
+  "fee_change": null,
+  "collected_at": "2026-11-26T09:51:52+09:00",
+  "recent_notice_text": null,
+  "course_notes": null,
+  "alert": null,
+  "unconfirmed": [],
+  "sources": []
+ },
+ "collection": {
+  "official_site": "ok",
+  "official_reason": null,
+  "pages_collected": 14,
+  "third_party": {
+   "teepick": false,
+   "greenfeeguide": true
+  },
+  "render_hint": "static",
+  "plan_strategy": "static(직접 파싱)",
+  "browser_batch": false
+ },
+ "coverage": {
+  "basic": 1.0,
+  "course": 0.8,
+  "fee": 1.0,
+  "ops": 0.36,
+  "facility": 0.2,
+  "briefing": 0.25,
+  "rental": 0.25
+ }
+}

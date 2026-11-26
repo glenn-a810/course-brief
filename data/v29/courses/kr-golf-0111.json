@@ -1,0 +1,761 @@
+{
+ "course_id": "kr-golf-0111",
+ "meta": {
+  "name": "김포SEASIDE 컨트리클럽",
+  "generated_at": "2026-11-26T09:51:51+09:00",
+  "schema": "stage2c/1.0",
+  "batch": "1_수도권",
+  "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
+  "schema_previous": "stage2b/1.0",
+  "restructured_from_7key": true,
+  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
+  "has_detail": true,
+  "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+ },
+ "master": {
+  "course_id": "kr-golf-0111",
+  "name": "김포SEASIDE 컨트리클럽",
+  "name_variants": [
+   "김포SEASIDE 컨트리클럽"
+  ],
+  "type": "회원제",
+  "holes": {
+   "total": 18,
+   "member": 18,
+   "public": 0,
+   "non_member": 0
+  },
+  "address": "경기도 김포시 월곶면 김포대로2801번길 219",
+  "region": {
+   "sido_code": "41",
+   "sido_name": "경기도",
+   "sido_short": "경기",
+   "sigungu_code": "41570",
+   "sigungu_name": "김포시",
+   "legal_dong_code": "4157000000"
+  },
+  "lat": 37.710268,
+  "lng": 126.533774,
+  "nearest_ic": {
+   "name": "고양IC",
+   "distance_km": 25.8,
+   "source": "최근접 IC 직선거리"
+  },
+  "tel": "031-987-9992",
+  "homepage": "http://www.gimpocc.co.kr/",
+  "operators": [
+   "해강개발㈜"
+  ],
+  "area_sqm": 932683,
+  "opened": "1995",
+  "course_blocks": [],
+  "facility_id": null,
+  "provenance": {
+   "master": "courses_master.json v2.0 (문체부·KGA·KGBA·티픽·지도)",
+   "synced_to": "courses_master.json v2.7 (2026-11-26 단일 스키마 정규화)"
+  },
+  "course_spec": {
+   "holes": 18,
+   "par": null,
+   "blocks": [],
+   "length_m": null,
+   "kga": {
+    "kga_course_code": "57",
+    "kga_name": "김포SEASIDE",
+    "region_short": "경기",
+    "address": "경기도 김포시 월곶면 김포대로2801번길 219",
+    "match_method": "exact",
+    "match_score": 110,
+    "match_confidence": "high",
+    "nine_hole_courses": [
+     "서",
+     "남"
+    ],
+    "hole_combinations": [
+     {
+      "course_name_1": "서",
+      "course_name_2": "남",
+      "tees": [
+       {
+        "tee": "BACK",
+        "gender": "남자",
+        "length_yds": 6953.0,
+        "std_par": 72.0,
+        "course_rating": 73.2,
+        "slope_rating": 135.0,
+        "front9": "36.1 / 137",
+        "back9": "37.1 / 132"
+       },
+       {
+        "tee": "REGULAR",
+        "gender": "남자",
+        "length_yds": 6367.0,
+        "std_par": 72.0,
+        "course_rating": 70.8,
+        "slope_rating": 135.0,
+        "front9": "34.8 / 131",
+        "back9": "36.0 / 138"
+       },
+       {
+        "tee": "LADY",
+        "gender": "여자",
+        "length_yds": 5941.0,
+        "std_par": 72.0,
+        "course_rating": 75.2,
+        "slope_rating": 139.0,
+        "front9": "37.3 / 141",
+        "back9": "37.9 / 137"
+       }
+      ]
+     }
+    ]
+   },
+   "grass": null,
+   "hole_by_hole": null
+  },
+  "addresses": [
+   "경기도 김포시 월곶면 김포대로2801번길 219"
+  ],
+  "status": "operating",
+  "facility_cluster": null,
+  "factcheck_2026_11_26": null,
+  "opened_evidence": {
+   "evidence": "1995년",
+   "source": "그린피가이드",
+   "url": "https://greenfeeguide.co.kr/course/gc-0065/"
+  },
+  "address_original": "경기도 김포시 월곶면 김포대로 2081번길 219",
+  "address_note": "도로명 번호 2081→2801 정정(공식 gimpocc.co.kr·김포시 관광·카카오맵·KGA 등재 주소 모두 2801번길)."
+ },
+ "course": {
+  "holes": 18,
+  "holes_received": null,
+  "course_names": null,
+  "membership_type": "회원제",
+  "night_light": null,
+  "blocks": [],
+  "grass": {
+   "tee": null,
+   "fairway": null,
+   "green": null
+  },
+  "kga": {
+   "kga_course_code": "57",
+   "kga_name": "김포SEASIDE",
+   "region_short": "경기",
+   "address": "경기도 김포시 월곶면 김포대로2801번길 219",
+   "match_method": "exact",
+   "match_score": 110,
+   "match_confidence": "high",
+   "nine_hole_courses": [
+    "서",
+    "남"
+   ],
+   "hole_combinations": [
+    {
+     "course_name_1": "서",
+     "course_name_2": "남",
+     "tees": [
+      {
+       "tee": "BACK",
+       "gender": "남자",
+       "length_yds": 6953.0,
+       "std_par": 72.0,
+       "course_rating": 73.2,
+       "slope_rating": 135.0,
+       "front9": "36.1 / 137",
+       "back9": "37.1 / 132"
+      },
+      {
+       "tee": "REGULAR",
+       "gender": "남자",
+       "length_yds": 6367.0,
+       "std_par": 72.0,
+       "course_rating": 70.8,
+       "slope_rating": 135.0,
+       "front9": "34.8 / 131",
+       "back9": "36.0 / 138"
+      },
+      {
+       "tee": "LADY",
+       "gender": "여자",
+       "length_yds": 5941.0,
+       "std_par": 72.0,
+       "course_rating": 75.2,
+       "slope_rating": 139.0,
+       "front9": "37.3 / 141",
+       "back9": "37.9 / 137"
+      }
+     ]
+    }
+   ]
+  },
+  "kga_hole_est": null,
+  "extra_courses": null,
+  "hole_by_hole": null,
+  "length_m": null,
+  "par": null
+ },
+ "fee": {
+  "weekday": 220000,
+  "weekend": 270000,
+  "weekday_text": null,
+  "weekend_text": null,
+  "basis": null,
+  "tax_included": null,
+  "cart": {
+   "value": 100000,
+   "source": "그린피가이드",
+   "url": "https://greenfeeguide.co.kr/course/gc-0065/"
+  },
+  "caddie": {
+   "value": 150000,
+   "source": "그린피가이드",
+   "url": "https://greenfeeguide.co.kr/course/gc-0065/",
+   "none": false
+  },
+  "as_of": "2026-10-05",
+  "source_url": null,
+  "note": null,
+  "sources": [
+   {
+    "source": "그린피가이드(공식 요금표 확인)",
+    "url": "https://greenfeeguide.co.kr/course/gc-0065/",
+    "checked_at": "2026-10-05"
+   }
+  ],
+  "checked_at": "2026-10-05",
+  "market": {
+   "weekday_min": null,
+   "weekend_min": null,
+   "part1": null,
+   "part2": null,
+   "source": "티픽골프장(실거래 관측)",
+   "url": "https://teepickgolf.com/course/%EA%B9%80%ED%8F%AC%EC%8B%9C%EC%82%AC%EC%9D%B4%EB%93%9C",
+   "note": "공시가 아닌 최근 관측 실거래 최저가"
+  },
+  "official_green_evidence": [
+   "그린피(18홀기준) 구분 정회원 주중회원 가족회원 비회원 주중 95,000원 130,000원 165,000원 220,000원 주말 105,000원 270,000원 270,000원 270,000원 당 클럽은 골프규칙 4.1b (2) 클럽의 공동 사용 금지에 의거 1인 1BAG을 원칙으로 합니다."
+  ],
+  "official_rental": null,
+  "official_table": {
+   "rows": [
+    {
+     "section": "구분",
+     "label": "가족회원 / 비회원 / 주중",
+     "value": "95,000원",
+     "amounts": [
+      95000
+     ],
+     "url": "https://www.gimpocc.co.kr/guide/fee"
+    },
+    {
+     "section": "구분",
+     "label": "",
+     "value": "130,000원",
+     "amounts": [
+      130000
+     ],
+     "url": "https://www.gimpocc.co.kr/guide/fee"
+    },
+    {
+     "section": "구분",
+     "label": "",
+     "value": "165,000원",
+     "amounts": [
+      165000
+     ],
+     "url": "https://www.gimpocc.co.kr/guide/fee"
+    },
+    {
+     "section": "구분",
+     "label": "",
+     "value": "220,000원",
+     "amounts": [
+      220000
+     ],
+     "url": "https://www.gimpocc.co.kr/guide/fee"
+    },
+    {
+     "section": "구분",
+     "label": "주말",
+     "value": "105,000원",
+     "amounts": [
+      105000
+     ],
+     "url": "https://www.gimpocc.co.kr/guide/fee"
+    },
+    {
+     "section": "구분",
+     "label": "",
+     "value": "270,000원",
+     "amounts": [
+      270000
+     ],
+     "url": "https://www.gimpocc.co.kr/guide/fee"
+    },
+    {
+     "section": "구분",
+     "label": "",
+     "value": "270,000원",
+     "amounts": [
+      270000
+     ],
+     "url": "https://www.gimpocc.co.kr/guide/fee"
+    },
+    {
+     "section": "구분",
+     "label": "",
+     "value": "270,000원",
+     "amounts": [
+      270000
+     ],
+     "url": "https://www.gimpocc.co.kr/guide/fee"
+    },
+    {
+     "section": "구분",
+     "label": "18 HOLE / 9 HOLE / 4BAG",
+     "value": "150,000원",
+     "amounts": [
+      150000
+     ],
+     "url": "https://www.gimpocc.co.kr/guide/fee"
+    },
+    {
+     "section": "구분",
+     "label": "",
+     "value": "80,000원",
+     "amounts": [
+      80000
+     ],
+     "url": "https://www.gimpocc.co.kr/guide/fee"
+    },
+    {
+     "section": "외국어 가능 캐디 : 180,000원 (사전 경기과 문의)",
+     "label": "",
+     "value": "외국어 가능 캐디 : 180,000원 (사전 경기과 문의)",
+     "amounts": [
+      180000
+     ],
+     "url": "https://www.gimpocc.co.kr/guide/fee"
+    },
+    {
+     "section": "구분",
+     "label": "Golf club 테일러메이드(신형) / 5인승 승용 골프카 / 18 HOLE",
+     "value": "66,000원",
+     "amounts": [
+      66000
+     ],
+     "url": "https://www.gimpocc.co.kr/guide/fee"
+    },
+    {
+     "section": "구분",
+     "label": "",
+     "value": "100,000원",
+     "amounts": [
+      100000
+     ],
+     "url": "https://www.gimpocc.co.kr/guide/fee"
+    },
+    {
+     "section": "구분",
+     "label": "9 HOLE",
+     "value": "50,000원",
+     "amounts": [
+      50000
+     ],
+     "url": "https://www.gimpocc.co.kr/guide/fee"
+    },
+    {
+     "section": "캐디피",
+     "label": "캐디피 / 1홀~3홀 / 홀별정산",
+     "value": "50,000원",
+     "amounts": [
+      50000
+     ],
+     "url": "https://www.gimpocc.co.kr/guide/fee"
+    },
+    {
+     "section": "캐디피",
+     "label": "",
+     "value": "30,000원",
+     "amounts": [
+      30000
+     ],
+     "url": "https://www.gimpocc.co.kr/guide/fee"
+    },
+    {
+     "section": "캐디피",
+     "label": "4홀~6홀",
+     "value": "50,000원",
+     "amounts": [
+      50000
+     ],
+     "url": "https://www.gimpocc.co.kr/guide/fee"
+    },
+    {
+     "section": "캐디피",
+     "label": "7홀~9홀",
+     "value": "80,000원",
+     "amounts": [
+      80000
+     ],
+     "url": "https://www.gimpocc.co.kr/guide/fee"
+    },
+    {
+     "section": "캐디피",
+     "label": "10홀~18홀",
+     "value": "100,000원",
+     "amounts": [
+      100000
+     ],
+     "url": "https://www.gimpocc.co.kr/guide/fee"
+    },
+    {
+     "section": "캐디피",
+     "label": "",
+     "value": "150,000원",
+     "amounts": [
+      150000
+     ],
+     "url": "https://www.gimpocc.co.kr/guide/fee"
+    },
+    {
+     "section": "구분",
+     "label": "가족회원 / 법인(정, 지명)회원1인 기준 / 상호명변경",
+     "value": "550,000원",
+     "amounts": [
+      550000
+     ],
+     "url": "https://www.gimpocc.co.kr/guide/library"
+    },
+    {
+     "section": "구분",
+     "label": "",
+     "value": "550,000원",
+     "amounts": [
+      550000
+     ],
+     "url": "https://www.gimpocc.co.kr/guide/library"
+    },
+    {
+     "section": "구분",
+     "label": "",
+     "value": "550,000원",
+     "amounts": [
+      550000
+     ],
+     "url": "https://www.gimpocc.co.kr/guide/library"
+    },
+    {
+     "section": "구분",
+     "label": "",
+     "value": "550,000원",
+     "amounts": [
+      550000
+     ],
+     "url": "https://www.gimpocc.co.kr/guide/library"
+    }
+   ],
+   "url": "https://www.gimpocc.co.kr/guide/fee"
+  }
+ },
+ "cancel": {
+  "cancel_policy": null,
+  "open_cycle": null,
+  "notes": null,
+  "evidence": [
+   "* 사용 TEE MARK : 백색 TEE 영산홍 군락지, 화단, 배수로, 포장도로, 카트도로, 맨홀, 지주목, 방공시설물, 철망, 라이트전주, 교량, 거리표시목, 스프링클러헤드(단, 남 코스 5번홀은 적색 패널티구역 처리합니다.) 등은 인공장애물입니다.",
+   "TEE OFF시간 지각 시에는 (기상악화로 인한 전체회원들의 늦은 도착은 제외) 라운드를 거절할 수 있으며, 거절 시에는 당일 취소로 간주되어 패널티를 적용받게 됩니다.",
+   "* 문자 전송 오류가 발생할 수 있으니 반드시 최종 예약 확정은 홈페이지 예약확인/취소 메뉴에서 확인해주시기 바랍니다."
+  ],
+  "weather_evidence": [
+   "악천후(강우, 강설, 낙뢰 등) 및 천재지변 시 당 클럽에서 경기진행이 어렵다고 판단될시 적용됩니다.(안개 제외) 본인 과실로인한 사고 또는 개인사정으로 인한 홀아웃은 홀별정산이 불가 합니다.",
+   "TEE OFF시간 지각 시에는 (기상악화로 인한 전체회원들의 늦은 도착은 제외) 라운드를 거절할 수 있으며, 거절 시에는 당일 취소로 간주되어 패널티를 적용받게 됩니다."
+  ]
+ },
+ "ops": {
+  "nocaddie": {
+   "evidence": [],
+   "value": null
+  },
+  "two_player": {
+   "evidence": [
+    "3인 플레이시 동반자 지연도착의 경우 3홀까지만 라운드가 인정되며, 이후 미 도착시에는 경기 강제 종료됩니다.",
+    "2인 플레이: 입장 불가"
+   ],
+   "value": "2인 — 입장 불가",
+   "third_party": {
+    "two": null,
+    "three": "가능",
+    "source": "그린피가이드",
+    "url": "https://greenfeeguide.co.kr/course/gc-0065/"
+   },
+   "source_url": "https://www.gimpocc.co.kr/Guide/ReservationGuide.aspx",
+   "confidence": "high",
+   "checked_at": "2026-10-15",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/two-player-golf-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  },
+  "three_player": {
+   "value": "3인 — 가능(3인 이상)",
+   "evidence": [
+    "3인 플레이: 가능(3인 이상)"
+   ],
+   "source_url": "https://www.gimpocc.co.kr/Guide/ReservationGuide.aspx",
+   "confidence": "high",
+   "checked_at": "2026-10-15",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/two-player-golf-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  },
+  "five_player": {
+   "value": null,
+   "evidence": []
+  },
+  "marshal_caddie": {
+   "value": null,
+   "evidence": []
+  },
+  "cart_type": {
+   "evidence": [
+    "* 사용 TEE MARK : 백색 TEE 영산홍 군락지, 화단, 배수로, 포장도로, 카트도로, 맨홀, 지주목, 방공시설물, 철망, 라이트전주, 교량, 거리표시목, 스프링클러헤드(단, 남 코스 5번홀은 적색 패널티구역 처리합니다.) 등은 인공장애물입니다."
+   ],
+   "value": null
+  },
+  "cart_entry": {
+   "evidence": [],
+   "value": null
+  },
+  "bagdrop": {
+   "evidence": [],
+   "value": null
+  },
+  "mat": {
+   "evidence": [],
+   "value": null
+  },
+  "checkin": {
+   "evidence": [
+    "TEE OFF시간 지각 시에는 (기상악화로 인한 전체회원들의 늦은 도착은 제외) 라운드를 거절할 수 있으며, 거절 시에는 당일 취소로 간주되어 패널티를 적용받게 됩니다.",
+    "3인 플레이시 동반자 지연도착의 경우 3홀까지만 라운드가 인정되며, 이후 미 도착시에는 경기 강제 종료됩니다.",
+    "1시간 전 프런트 접수 / 스타트·카트 10분 전"
+   ],
+   "value": "1시간 전 프런트 접수 / 스타트·카트 10분 전",
+   "third_party": {
+    "value": null,
+    "source": "그린피가이드",
+    "url": "https://greenfeeguide.co.kr/course/gc-0065/"
+   },
+   "source_url": "https://www.gimpocc.co.kr/Guide/ReservationGuide.aspx",
+   "confidence": "high",
+   "checked_at": "2026-10-17",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/golf-course-arrival-checkin-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  },
+  "locker": {
+   "evidence": [
+    "lockroom 락커룸 편안한 공간으로 연출하여 라운드전의 마음가짐을 잘 하실 수 있도록 락카룸 분위기를 차분하게 만들었습니다."
+   ],
+   "value": "문구 확인(원문 근거)"
+  },
+  "sauna": {
+   "evidence": [],
+   "value": null
+  },
+  "dress": {
+   "evidence": [
+    "복장준수 정장 자켓은 기본 에티켓입니다.",
+    "청바지나 슬리퍼 착용을 금지하고 있습니다."
+   ],
+   "value": "문구 확인(원문 근거)"
+  },
+  "pace": {
+   "evidence": [],
+   "value": null
+  },
+  "grass": null
+ },
+ "facilities": {
+  "practice": {
+   "evidence": [],
+   "value": null
+  },
+  "indoor_range": {
+   "value": null,
+   "evidence": []
+  },
+  "food": {
+   "evidence": [
+    "* 문자 전송 오류가 발생할 수 있으니 반드시 최종 예약 확정은 홈페이지 예약확인/취소 메뉴에서 확인해주시기 바랍니다."
+   ],
+   "value": null
+  },
+  "snack_bar": {
+   "value": null,
+   "evidence": []
+  },
+  "locker_sauna": {
+   "value": null,
+   "evidence": []
+  },
+  "lodging": {
+   "value": null,
+   "evidence": []
+  },
+  "other": {
+   "value": null,
+   "evidence": []
+  },
+  "night": {
+   "evidence": [
+    "* 사용 TEE MARK : 백색 TEE 영산홍 군락지, 화단, 배수로, 포장도로, 카트도로, 맨홀, 지주목, 방공시설물, 철망, 라이트전주, 교량, 거리표시목, 스프링클러헤드(단, 남 코스 5번홀은 적색 패널티구역 처리합니다.) 등은 인공장애물입니다."
+   ],
+   "value": null
+  },
+  "closed_days": {
+   "evidence": [
+    "휴장 및 경기 종료 당 클럽은 천재지변 및 기타 사유로 인해 골프장을 휴장 할 수 있습니다."
+   ],
+   "third_party": null,
+   "value": null
+  },
+  "shuttle": {
+   "evidence": [],
+   "value": null
+  },
+  "ev_charge": {
+   "evidence": [],
+   "value": null
+  },
+  "gf_facilities": [
+   "프로샵근거골프장 공식 홈페이지 시설 안내 · 2026"
+  ],
+  "proshop": {
+   "evidence": [
+    "프로샵"
+   ],
+   "value": "프로샵 운영",
+   "source_url": "https://www.gimpocc.co.kr/facil/facil",
+   "confidence": "high",
+   "checked_at": "2026-10-20",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/golf-course-amenities-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  }
+ },
+ "rental": {
+  "available": null,
+  "full_set": 66000,
+  "fee_text": null,
+  "brand": null,
+  "left_handed": null,
+  "shoes": null,
+  "nine_hole": null,
+  "range_finder": null,
+  "reservation": null,
+  "source_url": null,
+  "evidence": [
+   "*렌탈피 참조) 갤러리 동반 라운드는 불가합니다."
+  ],
+  "official": null,
+  "nearby_delivery": {
+   "region": "수도권",
+   "sido": "경기도",
+   "verified_at": "2026-11-26 (KST)",
+   "checked_at": "2026-11-26",
+   "providers": [
+    {
+     "id": "theb",
+     "name": "더비 (The B)",
+     "coverage": "O",
+     "basis": "동탄·김포·시흥·용인·이천 24시간 무인픽업 매장 5곳 + 다마스 퀵/택배 배송. 홈페이지에 '강남·동탄·판교·수지·광교·분당', '시흥·배곧·인천·안산·송도', '이천·여주' 권역 표기.",
+     "phone": "010-2530-4575",
+     "operating_status": "정상 영업",
+     "delivery": "O",
+     "price_headline": "12시간 기준 90,000원부터",
+     "bookable": true
+    },
+    {
+     "id": "gangnamclub",
+     "name": "강남골프클럽렌탈",
+     "coverage": "O",
+     "basis": "서울 서초구 거점 매장 주소 공개, 자사 블로그 '전지역 배송 가능' 안내.",
+     "phone": "010-7407-0753",
+     "operating_status": "정상 영업(자사 블로그 최신 게시 2026-04-28)",
+     "delivery": "미확인",
+     "price_headline": null,
+     "bookable": true
+    },
+    {
+     "id": "apioz",
+     "name": "아피오즈 (Apioz)",
+     "coverage": "조건부",
+     "basis": "서울 숙소 배송·공항 픽업 옵션 안내. 단 골프세트 Sold Out으로 현재 이용 불가.",
+     "phone": "02-6956-8115",
+     "operating_status": "예약 중단(Sold Out) — 골프채 세트 한정",
+     "delivery": "미확인",
+     "price_headline": null,
+     "caution": "골프채 세트 Sold Out — 현재 예약 불가",
+     "bookable": false,
+     "bookable_reason": "골프채 세트 Sold Out — 현재 예약 불가"
+    }
+   ],
+   "provider_count": 3,
+   "legend": {
+    "O": "공식 안내로 해당 권역 이용이 확인됨",
+    "X": "공식 안내상 해당 권역 서비스가 없음(예: '제주 전 지역' 전용으로만 안내)",
+    "조건부": "공식 안내상 가능하나 조건(수단·요금·현재 판매중지 등)이 붙어 있음. 조건은 basis/detail에 기재",
+    "미확인": "공식 공개 안내에서 해당 항목에 대한 언급을 찾지 못함(추정하지 않음)"
+   },
+   "not_verified": "전화·문자·카카오톡 상담으로만 확인 가능한 항목(재고, 개별 견적, 권역별 실제 배송 가능 여부)은 '미확인'으로 남김",
+   "source_file": "5-rental_8_coverage_verified.json",
+   "note_code": "해외 골퍼용 골프채 렌탈·딜리버리 업체. 같은 권역이라도 실제 배송 가능 여부·재고·견적은 전화 확인 필요."
+  }
+ },
+ "briefing": {
+  "notices": {
+   "url": null,
+   "items": [],
+   "tags": {}
+  },
+  "review": {
+   "score_10": null,
+   "count": null,
+   "source": "티픽골프장 라운더 후기 집계",
+   "url": "https://teepickgolf.com/course/%EA%B9%80%ED%8F%AC%EC%8B%9C%EC%82%AC%EC%9D%B4%EB%93%9C"
+  },
+  "fee_change": null,
+  "collected_at": "2026-11-26T09:51:51+09:00",
+  "recent_notice_text": null,
+  "course_notes": null,
+  "alert": null,
+  "unconfirmed": [],
+  "sources": []
+ },
+ "collection": {
+  "official_site": "ok",
+  "official_reason": null,
+  "pages_collected": 14,
+  "third_party": {
+   "teepick": true,
+   "greenfeeguide": true
+  },
+  "render_hint": "static",
+  "plan_strategy": "static(직접 파싱)",
+  "browser_batch": false
+ },
+ "coverage": {
+  "basic": 1.0,
+  "course": 0.8,
+  "fee": 1.0,
+  "ops": 0.36,
+  "facility": 0.0,
+  "briefing": 0.5,
+  "rental": 0.5
+ }
+}

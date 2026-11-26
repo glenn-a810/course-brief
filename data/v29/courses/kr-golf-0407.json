@@ -1,0 +1,434 @@
+{
+ "course_id": "kr-golf-0407",
+ "meta": {
+  "name": "아난티클럽제주",
+  "generated_at": "2026-11-26T09:35:01+09:00",
+  "schema": "stage2c/1.0",
+  "batch": "7_제주",
+  "includes": [
+   "master",
+   "ops",
+   "briefing"
+  ],
+  "source": "raw/received_jeju_31.json (외부 데이터 수신, 2026-11-26)",
+  "review": {
+   "checked_at": "2026-11-26",
+   "status": "verified_official",
+   "checks": [
+    {
+     "field": "그린피",
+     "received": "김녕 170,000/210,000, 한라 231,000/271,000",
+     "verified": "동일 (2026-08-18 시행)",
+     "result": "일치",
+     "url": "https://ananti.kr/ko/jeju/golfclub/information"
+    },
+    {
+     "field": "카트·캐디·렌탈",
+     "received": "100,000 / 150,000 / 50,000",
+     "verified": "18홀 100,000·9홀 50,000 / 18홀 150,000·9홀 80,000 / 풀세트 50,000, 1EA 10,000, 대여화 10,000",
+     "result": "일치",
+     "url": "https://ananti.kr/ko/jeju/golfclub/information"
+    },
+    {
+     "field": "홀수",
+     "received": "27홀",
+     "verified": "36홀(김녕 18 + 한라 18, 한라 OUT 9 대중제·IN 9 회원제)",
+     "result": "불일치(수신본 과소)",
+     "url": "https://ananti.kr/ko/jeju/JJ0105"
+    }
+   ]
+  },
+  "data_checks": [
+   "홀수 불일치: 마스터 36 / 수신 27",
+   "제주 권역은 고속도로 IC가 없어 마스터의 최근접 IC 값(도외 130~160km)이 유효하지 않음"
+  ],
+  "schema_previous": "stage2b/1.0",
+  "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
+  "restructured_from_7key": false,
+  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
+  "has_detail": true,
+  "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+ },
+ "master": {
+  "course_id": "kr-golf-0407",
+  "name": "아난티클럽제주",
+  "name_variants": [
+   "아난티클럽제주"
+  ],
+  "former_names": null,
+  "type": "회원제",
+  "types": [
+   "회원제",
+   "대중제"
+  ],
+  "holes": {
+   "total": 36,
+   "member": 9,
+   "public": 27,
+   "non_member": 0
+  },
+  "address": "제주특별자치도 제주시 선유로 445-55",
+  "addresses": [
+   "제주특별자치도 제주시 선유로 445-55"
+  ],
+  "region": {
+   "sido_code": "50",
+   "sido_name": "제주특별자치도",
+   "sido_short": "제주",
+   "sigungu_code": "50110",
+   "sigungu_name": "제주시",
+   "legal_dong_code": "5011000000"
+  },
+  "lat": 33.520764,
+  "lng": 126.73666,
+  "nearest_ic": null,
+  "nearest_ic_note": "제주 권역은 고속도로 IC가 없어 마스터의 최근접 IC 값(도외 130~160km)이 유효하지 않음",
+  "tel": "064-786-3800",
+  "tel_master": "064-786-3800",
+  "tel_official": "064-786-3800 (예약 1877-8448)",
+  "tel_conflict": false,
+  "homepage": "https://ananti.kr/ko/jeju",
+  "homepage_master": "https://ananti.kr/ko/jeju",
+  "operators": [
+   "㈜아난티한라(이만규)"
+  ],
+  "area_sqm": 1360322,
+  "opened": null,
+  "course_blocks": [],
+  "facility_id": null,
+  "status": "operating",
+  "status_note": null,
+  "provenance": {
+   "master": "courses_master.json v2.2 (문체부·KGA·KGBA·티픽·지도)",
+   "detail": "raw/received_jeju_31.json (2026-11-26 수신, 검수 2026-11-26)",
+   "synced_to": "courses_master.json v2.7 (2026-11-26 단일 스키마 정규화)"
+  },
+  "holes_received": 27,
+  "holes_conflict": true,
+  "facility_cluster": null,
+  "factcheck_2026_11_26": null,
+  "holes_note": "등록(문체부) 36홀 · 수집 27홀 — 등록 기준과 수집처(티픽·조사) 표기 차이다. 등록 36홀을 정본으로 두고 집계에는 master.holes를 쓴다. 복합단지 합산 여부는 미확정."
+ },
+ "course": {
+  "holes": 36,
+  "holes_received": 27,
+  "course_names": "김녕코스·한라코스(총 27홀). 18홀 요금표는 김녕코스(대중제↔대중제)·한라코스(대중제↔회원제), 9홀은 한라OUT(대중제)·한라IN(회원제)으로 구분",
+  "membership_type": "회원제+대중제",
+  "night_light": null,
+  "blocks": [],
+  "grass": {
+   "tee": null,
+   "fairway": "한라 양잔디 / 김녕 한국잔디",
+   "green": "벤트그라스"
+  },
+  "kga": {
+   "code": "403",
+   "name": "아난티 클럽 제주",
+   "nine_hole_courses": [
+    "김녕",
+    "한라"
+   ],
+   "hole_combinations": [
+    "김녕 (Out)+김녕 (In)",
+    "한라 (Out)+한라 (In)"
+   ]
+  },
+  "kga_hole_est": 18,
+  "extra_courses": null,
+  "holes_note": "등록(문체부) 36홀 · 수집 27홀 — 등록 기준과 수집처(티픽·조사) 표기 차이다. 등록 36홀을 정본으로 두고 집계에는 master.holes를 쓴다. 복합단지 합산 여부는 미확정."
+ },
+ "fee": {
+  "weekday": 170000,
+  "weekend": 210000,
+  "weekday_text": "김녕 170,000원 / 한라 231,000원",
+  "weekend_text": "김녕 210,000원 / 한라 271,000원",
+  "basis": "1인·18홀·비회원(2026-08-18 시행). 18홀 김녕코스 170,000원/210,000원, 한라코스 231,000원/271,000원. 9홀 한라OUT 95,000원/115,000원, 한라IN 136,000원/156,000원. 회원제 코스 요금은 제세 포함",
+  "tax_included": "회원제 코스 포함",
+  "cart": {
+   "value": 100000,
+   "text": "100,000원/팀(9홀 50,000원)"
+  },
+  "caddie": {
+   "value": 150000,
+   "text": "150,000원(9홀 80,000원)",
+   "none": false
+  },
+  "as_of": "2026-08-18 시행 공식 요금표",
+  "source_url": "https://ananti.kr/ko/jeju/golfclub/information",
+  "note": "김녕 18홀은 대중제↔대중제, 한라 18홀은 OUT 9홀 대중제·IN 9홀 회원제 조합. 표시 그린피는 18홀 기준.",
+  "sources": [
+   {
+    "source": "수신 조사(공식·공개 예약정보)",
+    "url": "https://ananti.kr/ko/jeju/golfclub/information",
+    "checked_at": "2026-08-18 시행 공식 요금표"
+   }
+  ],
+  "resident": null
+ },
+ "cancel": {
+  "cancel_policy": "주말·휴일 3일 전 10%, 2일 전 10%, 1일 전 20%, 당일·노쇼 30%. 월 4회 이상 취소 시 1개월 예약정지",
+  "open_cycle": "아난티 웹·앱 로그인 후 예약(온라인 회원은 카드 등록 후 결제)",
+  "notes": "결제는 플레이 후 정산(개별 정산 가능)",
+  "evidence": [],
+  "weather_evidence": []
+ },
+ "ops": {
+  "nocaddie": {
+   "value": null,
+   "evidence": []
+  },
+  "two_player": {
+   "value": null,
+   "evidence": []
+  },
+  "three_player": {
+   "value": null,
+   "evidence": []
+  },
+  "five_player": {
+   "value": null,
+   "evidence": []
+  },
+  "marshal_caddie": {
+   "value": null,
+   "evidence": []
+  },
+  "cart_type": {
+   "value": "리모컨 카트(자동차 운전면허 소지자만 운전, 캐디는 2개월 이상 교육 수료자)",
+   "evidence": []
+  },
+  "cart_entry": {
+   "value": null,
+   "evidence": []
+  },
+  "bagdrop": {
+   "value": null,
+   "evidence": []
+  },
+  "mat": {
+   "value": null,
+   "evidence": []
+  },
+  "checkin": {
+   "value": null,
+   "evidence": []
+  },
+  "locker": {
+   "value": null,
+   "evidence": []
+  },
+  "sauna": {
+   "value": null,
+   "evidence": []
+  },
+  "dress": {
+   "value": null,
+   "evidence": []
+  },
+  "pace": {
+   "value": null,
+   "evidence": []
+  }
+ },
+ "facilities": {
+  "practice": {
+   "value": null,
+   "evidence": []
+  },
+  "indoor_range": {
+   "value": null,
+   "evidence": []
+  },
+  "food": {
+   "value": null,
+   "evidence": []
+  },
+  "snack_bar": {
+   "value": null,
+   "evidence": []
+  },
+  "locker_sauna": {
+   "value": null,
+   "evidence": []
+  },
+  "lodging": {
+   "value": "아난티 제주(빌라)",
+   "evidence": []
+  },
+  "other": {
+   "value": "프로샵",
+   "evidence": []
+  },
+  "night": {
+   "value": null,
+   "evidence": []
+  },
+  "closed_days": {
+   "value": null,
+   "third_party": null,
+   "evidence": []
+  },
+  "shuttle": {
+   "value": null,
+   "evidence": []
+  }
+ },
+ "rental": {
+  "available": "가능",
+  "full_set": 50000,
+  "fee_text": "풀세트 50,000원 / 1EA 10,000원",
+  "brand": null,
+  "left_handed": null,
+  "shoes": "10,000원",
+  "nine_hole": null,
+  "range_finder": null,
+  "reservation": null,
+  "source_url": null,
+  "nearby_delivery": {
+   "region": "제주",
+   "sido": "제주특별자치도",
+   "verified_at": "2026-11-26 (KST)",
+   "checked_at": "2026-11-26",
+   "providers": [
+    {
+     "id": "theb",
+     "name": "더비 (The B)",
+     "coverage": "O",
+     "basis": "제주점 24시간 무인픽업 + '제주 전 지역 딜리버리 가능, 2개 이상 무료배송'(렌트비에 딜리버리 포함).",
+     "phone": "010-2530-4575",
+     "operating_status": "정상 영업",
+     "delivery": "O",
+     "price_headline": "12시간 기준 90,000원부터",
+     "bookable": true
+    },
+    {
+     "id": "rentzone",
+     "name": "렌트존 (RENT ZONE)",
+     "coverage": "O",
+     "basis": "'제주 전 지역 배송·골프장 직접 배송·수거'를 홈페이지 첫 화면과 고객센터 FAQ에서 명시.",
+     "phone": "010-7527-7809",
+     "operating_status": "정상 영업",
+     "delivery": "O",
+     "price_headline": null,
+     "bookable": true
+    },
+    {
+     "id": "cygolf",
+     "name": "싸이골프 (Cygolf)",
+     "coverage": "O",
+     "basis": "렌탈서비스 이용안내: '제주도 내 골프장 29곳 중 선택해 예약, 티오프 30분 전까지 배송'.",
+     "phone": "064-743-4208",
+     "operating_status": "웹 정상 접속, 단 카탈로그·공지 갱신이 오래됨(공지 최신 2017년) — 예약 전 유선 확인 필요",
+     "delivery": "O",
+     "price_headline": null,
+     "caution": "카탈로그·공지 갱신 정체(공지 최신 2017년) — 예약 전 유선 확인 필요",
+     "bookable": true
+    },
+    {
+     "id": "skygolf",
+     "name": "스카이골프 (제주스카이골프 / SKY GOLF)",
+     "coverage": "O",
+     "basis": "'제주 전지역 골프장으로 무료 배송/수거' 명시(파3·연습장·퍼블릭·호텔 불가).",
+     "phone": "064-733-0724",
+     "operating_status": "정상 영업",
+     "delivery": "O",
+     "price_headline": null,
+     "bookable": true
+    },
+    {
+     "id": "easyjeju",
+     "name": "이지제주",
+     "coverage": "조건부",
+     "basis": "골프장 직접배송·배송무료 구조는 확인되나 전 상품 판매기간 마감으로 현재 예약 불가.",
+     "phone": "064-747-1235",
+     "operating_status": "예약 불가 — 전 상품 '판매대기/판매 기간 마감'",
+     "delivery": "조건부",
+     "price_headline": null,
+     "caution": "전 상품 판매기간 마감 — 현재 예약 불가",
+     "bookable": false,
+     "bookable_reason": "전 상품 판매기간 마감 — 현재 예약 불가"
+    },
+    {
+     "id": "jejugolfrental",
+     "name": "제주골프렌탈",
+     "coverage": "조건부",
+     "basis": "매장 직접 수령은 확인(제주시 연동). 배송 서비스 여부는 공개 안내 없음 → 제주 내 배송 이용 가능성 미확인.",
+     "phone": "064-746-3391",
+     "operating_status": "정상 영업(밴드 최근 활동 8시간 전)",
+     "delivery": "미확인",
+     "price_headline": null,
+     "bookable": true
+    }
+   ],
+   "provider_count": 6,
+   "legend": {
+    "O": "공식 안내로 해당 권역 이용이 확인됨",
+    "X": "공식 안내상 해당 권역 서비스가 없음(예: '제주 전 지역' 전용으로만 안내)",
+    "조건부": "공식 안내상 가능하나 조건(수단·요금·현재 판매중지 등)이 붙어 있음. 조건은 basis/detail에 기재",
+    "미확인": "공식 공개 안내에서 해당 항목에 대한 언급을 찾지 못함(추정하지 않음)"
+   },
+   "not_verified": "전화·문자·카카오톡 상담으로만 확인 가능한 항목(재고, 개별 견적, 권역별 실제 배송 가능 여부)은 '미확인'으로 남김",
+   "source_file": "5-rental_8_coverage_verified.json",
+   "note_code": "해외 골퍼용 골프채 렌탈·딜리버리 업체. 같은 권역이라도 실제 배송 가능 여부·재고·견적은 전화 확인 필요."
+  }
+ },
+ "briefing": {
+  "notices": {
+   "url": null,
+   "items": [],
+   "tags": {}
+  },
+  "recent_notice_text": "2026-03~04 그린 갱신 공사(코스 교대 휴장) 안내. 2025-26 시즌 연중무휴(KGBA). 2026년 10~11월 공지 미확인.",
+  "course_notes": "제주 동부 해안(김녕). 2026-03-30~04-08 한라코스, 04-09~04-18 김녕코스 그린 갱신 휴장(코스별 교대, 나머지 코스 정상 운영). 해발 50~160m 저지대의 사계절 천연상록수림대, 연평균 15.5℃. 눈·바람·안개 영향이 거의 없음.",
+  "review": null,
+  "fee_change": null,
+  "alert": null,
+  "unconfirmed": [
+   "야간 라이트",
+   "잔디(티)",
+   "2인 플레이",
+   "3인 플레이",
+   "5인 플레이",
+   "노캐디",
+   "마샬캐디",
+   "카트 페어웨이 진입",
+   "셀프 백드롭",
+   "매트 티샷",
+   "연습그린",
+   "인도어 연습장",
+   "식당·조식",
+   "그늘집",
+   "락커·사우나",
+   "좌타용 클럽"
+  ],
+  "sources": [
+   "https://ananti.kr/ko/jeju/golfclub/information",
+   "https://ananti.kr/ko/jeju/specialOffer/D070101",
+   "https://parkgolfinfo.co.kr/",
+   "https://greenfeeguide.co.kr/course/gc-0511/",
+   "https://jejukimpro.co.kr/ko/golf/ananti"
+  ],
+  "collected_at": "2026-11-26T09:35:01+09:00"
+ },
+ "collection": {
+  "official_site": "ok",
+  "official_reason": "운영 중(홈페이지 정상)",
+  "pages_collected": 0,
+  "third_party": {
+   "received_report": true
+  },
+  "render_hint": "report",
+  "plan_strategy": "subagent_report(2026-11-26)"
+ },
+ "coverage": {
+  "basic": 0.89,
+  "course": 1.0,
+  "fee": 1.0,
+  "ops": 0.07,
+  "facility": 0.2,
+  "briefing": 0.75,
+  "rental": 1.0
+ }
+}

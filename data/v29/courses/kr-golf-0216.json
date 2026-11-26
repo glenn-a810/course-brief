@@ -1,0 +1,823 @@
+{
+ "course_id": "kr-golf-0216",
+ "meta": {
+  "name": "포레스트힐 컨트리클럽",
+  "generated_at": "2026-11-26T09:51:59+09:00",
+  "schema": "stage2c/1.0",
+  "batch": "1_수도권",
+  "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
+  "schema_previous": "stage2b/1.0",
+  "restructured_from_7key": true,
+  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
+  "has_detail": true,
+  "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+ },
+ "master": {
+  "course_id": "kr-golf-0216",
+  "name": "포레스트힐 컨트리클럽",
+  "name_variants": [
+   "포레스트힐 컨트리클럽"
+  ],
+  "type": "대중제",
+  "holes": {
+   "total": 24,
+   "member": 0,
+   "public": 24,
+   "non_member": 0
+  },
+  "address": "경기도 포천시 화현면 봉화로 253",
+  "region": {
+   "sido_code": "41",
+   "sido_name": "경기도",
+   "sido_short": "경기",
+   "sigungu_code": "41650",
+   "sigungu_name": "포천시",
+   "legal_dong_code": "4165000000"
+  },
+  "lat": 37.873747,
+  "lng": 127.27358,
+  "nearest_ic": {
+   "name": "포천IC",
+   "distance_km": 4.8,
+   "source": "teepick(실측 표기)",
+   "straight_km_nearest": 4.9,
+   "straight_name": "포천IC"
+  },
+  "tel": "031-530-8000",
+  "homepage": "https://www.foresthill.kr/",
+  "operators": [
+   "화현개발㈜"
+  ],
+  "area_sqm": 1469871,
+  "opened": "2010-04",
+  "course_blocks": [],
+  "facility_id": null,
+  "provenance": {
+   "master": "courses_master.json v2.0 (문체부·KGA·KGBA·티픽·지도)",
+   "synced_to": "courses_master.json v2.7 (2026-11-26 단일 스키마 정규화)"
+  },
+  "par": null,
+  "holes_teepick": 24,
+  "course_spec": {
+   "holes": 24,
+   "par": null,
+   "blocks": [],
+   "length_m": null,
+   "kga": null,
+   "grass": {
+    "evidence": "※ 시간대별 인원 제한 운영 ※ 지역할인(포천/남양주)은 주중에만 적용/2인플레이 적용제외/신분증제시필수 ※ 우대혜택은 타 할인 이벤트와 중복할인 불가 ※ 월별 그린피 참조 기상악화 요금 안내 강설, 폭우, 기타 천재지변 등으로 경기를 정상적으로 마치지 못하시는 경우 기상악화 요금이 적용됩니다.",
+    "source": "공식",
+    "url": "https://www.foresthill.kr/html/guide02.asp"
+   },
+   "hole_by_hole": null
+  },
+  "addresses": [
+   "경기도 포천시 화현면 봉화로 253"
+  ],
+  "status": "operating",
+  "facility_cluster": null,
+  "factcheck_2026_11_26": null
+ },
+ "course": {
+  "holes": 24,
+  "holes_received": 24,
+  "course_names": null,
+  "membership_type": "대중제",
+  "night_light": null,
+  "blocks": [],
+  "grass": {
+   "tee": null,
+   "fairway": {
+    "evidence": "※ 시간대별 인원 제한 운영 ※ 지역할인(포천/남양주)은 주중에만 적용/2인플레이 적용제외/신분증제시필수 ※ 우대혜택은 타 할인 이벤트와 중복할인 불가 ※ 월별 그린피 참조 기상악화 요금 안내 강설, 폭우, 기타 천재지변 등으로 경기를 정상적으로 마치지 못하시는 경우 기상악화 요금이 적용됩니다.",
+    "source": "공식",
+    "url": "https://www.foresthill.kr/html/guide02.asp"
+   },
+   "green": null
+  },
+  "kga": null,
+  "kga_hole_est": null,
+  "extra_courses": null,
+  "hole_by_hole": null,
+  "length_m": null,
+  "par": null
+ },
+ "fee": {
+  "weekday": 100000,
+  "weekend": 110000,
+  "weekday_text": null,
+  "weekend_text": null,
+  "basis": null,
+  "tax_included": null,
+  "cart": {
+   "value": 100000,
+   "source": "그린피가이드",
+   "url": "https://greenfeeguide.co.kr/course/gc-0116/"
+  },
+  "caddie": {
+   "value": 150000,
+   "source": "그린피가이드",
+   "url": "https://greenfeeguide.co.kr/course/gc-0116/",
+   "none": false
+  },
+  "as_of": "2026-11-05",
+  "source_url": null,
+  "note": null,
+  "sources": [
+   {
+    "source": "그린피가이드(공식 요금표 확인)",
+    "url": "https://greenfeeguide.co.kr/course/gc-0116/",
+    "checked_at": "2026-11-05"
+   }
+  ],
+  "checked_at": "2026-11-05",
+  "market": {
+   "weekday_min": 160000.0,
+   "weekend_min": 160000.0,
+   "part1": null,
+   "part2": null,
+   "source": "티픽골프장(실거래 관측)",
+   "url": "https://teepickgolf.com/course/%ED%8F%AC%EB%A0%88%EC%8A%A4%ED%8A%B8%ED%9E%90cc",
+   "note": "공시가 아닌 최근 관측 실거래 최저가"
+  },
+  "official_green": {
+   "value": 30000,
+   "raw": "이용 요금 : 그린피 + 카트비 기본 요금 : 30,000원",
+   "label": "",
+   "url": "https://www.foresthill.kr/html/guide02.asp",
+   "source": "공식 요금표"
+  },
+  "official_green_evidence": [
+   "※ 시간대별 인원 제한 운영 ※ 지역할인(포천/남양주)은 주중에만 적용/2인플레이 적용제외/신분증제시필수 ※ 우대혜택은 타 할인 이벤트와 중복할인 불가 ※ 월별 그린피 참조 기상악화 요금 안내 강설, 폭우, 기타 천재지변 등으로 경기를 정상적으로 마치지 못하시는 경우 기상악화 요금이 적용됩니다."
+  ],
+  "official_rental": null,
+  "official_table": {
+   "rows": [
+    {
+     "section": "카트비(팀)",
+     "label": "주말 / 일반 / 카트비(팀)",
+     "value": "100,000원",
+     "amounts": [
+      100000
+     ],
+     "url": "https://www.foresthill.kr/html/guide02.asp"
+    },
+    {
+     "section": "캐디피(팀)",
+     "label": "캐디피(팀)",
+     "value": "150,000원",
+     "amounts": [
+      150000
+     ],
+     "url": "https://www.foresthill.kr/html/guide02.asp"
+    },
+    {
+     "section": "카트비(팀)",
+     "label": "주말 / 리무진(4인시) / 카트비(팀)",
+     "value": "160,000원",
+     "amounts": [
+      160000
+     ],
+     "url": "https://www.foresthill.kr/html/guide02.asp"
+    },
+    {
+     "section": "캐디피(팀)",
+     "label": "캐디피(팀)",
+     "value": "150,000원",
+     "amounts": [
+      150000
+     ],
+     "url": "https://www.foresthill.kr/html/guide02.asp"
+    },
+    {
+     "section": "카트비(팀)",
+     "label": "리무진(5인시) / 카트비(팀)",
+     "value": "160,000원",
+     "amounts": [
+      160000
+     ],
+     "url": "https://www.foresthill.kr/html/guide02.asp"
+    },
+    {
+     "section": "캐디피(팀)",
+     "label": "캐디피(팀)",
+     "value": "200,000원",
+     "amounts": [
+      200000
+     ],
+     "url": "https://www.foresthill.kr/html/guide02.asp"
+    },
+    {
+     "section": "구분",
+     "label": "4~9홀 / 10홀~18홀 / 4인 플레이",
+     "value": "50,000원",
+     "amounts": [
+      50000
+     ],
+     "url": "https://www.foresthill.kr/html/guide02.asp"
+    },
+    {
+     "section": "구분",
+     "label": "",
+     "value": "75,000원",
+     "amounts": [
+      75000
+     ],
+     "url": "https://www.foresthill.kr/html/guide02.asp"
+    },
+    {
+     "section": "구분",
+     "label": "",
+     "value": "150,000원",
+     "amounts": [
+      150000
+     ],
+     "url": "https://www.foresthill.kr/html/guide02.asp"
+    },
+    {
+     "section": "구분",
+     "label": "5인 플레이",
+     "value": "75,000원",
+     "amounts": [
+      75000
+     ],
+     "url": "https://www.foresthill.kr/html/guide02.asp"
+    },
+    {
+     "section": "구분",
+     "label": "",
+     "value": "100,000원",
+     "amounts": [
+      100000
+     ],
+     "url": "https://www.foresthill.kr/html/guide02.asp"
+    },
+    {
+     "section": "구분",
+     "label": "",
+     "value": "200,000원",
+     "amounts": [
+      200000
+     ],
+     "url": "https://www.foresthill.kr/html/guide02.asp"
+    },
+    {
+     "section": "구분",
+     "label": "주중 / 주말 / 4인",
+     "value": "90,000원",
+     "amounts": [
+      90000
+     ],
+     "url": "https://www.foresthill.kr/html/guide02.asp"
+    },
+    {
+     "section": "구분",
+     "label": "",
+     "value": "130,000원",
+     "amounts": [
+      130000
+     ],
+     "url": "https://www.foresthill.kr/html/guide02.asp"
+    },
+    {
+     "section": "구분",
+     "label": "6홀 추가는 현장 상황에 따라 운영 / 3인",
+     "value": "100,000원",
+     "amounts": [
+      100000
+     ],
+     "url": "https://www.foresthill.kr/html/guide02.asp"
+    },
+    {
+     "section": "구분",
+     "label": "",
+     "value": "140,000원",
+     "amounts": [
+      140000
+     ],
+     "url": "https://www.foresthill.kr/html/guide02.asp"
+    },
+    {
+     "section": "구분",
+     "label": "2인",
+     "value": "110,000원",
+     "amounts": [
+      110000
+     ],
+     "url": "https://www.foresthill.kr/html/guide02.asp"
+    },
+    {
+     "section": "구분",
+     "label": "",
+     "value": "150,000원",
+     "amounts": [
+      150000
+     ],
+     "url": "https://www.foresthill.kr/html/guide02.asp"
+    },
+    {
+     "section": "카트비(팀)",
+     "label": "카트비(팀)",
+     "value": "60,000원",
+     "amounts": [
+      60000
+     ],
+     "url": "https://www.foresthill.kr/html/guide02.asp"
+    },
+    {
+     "section": "카트비(팀)",
+     "label": "",
+     "value": "60,000원",
+     "amounts": [
+      60000
+     ],
+     "url": "https://www.foresthill.kr/html/guide02.asp"
+    },
+    {
+     "section": "이용 요금 : 그린피 + 카트비 기본 요금 : 30,000원",
+     "label": "",
+     "value": "이용 요금 : 그린피 + 카트비 기본 요금 : 30,000원",
+     "amounts": [
+      30000
+     ],
+     "url": "https://www.foresthill.kr/html/guide02.asp"
+    }
+   ],
+   "url": "https://www.foresthill.kr/html/guide02.asp"
+  }
+ },
+ "cancel": {
+  "cancel_policy": null,
+  "open_cycle": null,
+  "notes": null,
+  "evidence": [
+   "② 이용자가 개인 사정의 변경이나 단순 변심 등 정당한 사유없이 예약을 취소하는 경우에는 취소일을 기준으로 다음과 같이 손해를 배상한다.",
+   "이용자가 이용예정일 당일 예약을 취소하거나 아무런 통보 없이 이용예정일에 골프장을 이용하지 않을 경우 : 팀별 이용요금의 30% ③ 강설, 폭우, 안개 기타 천재지변 등의 불가항력적인 사유로, 사업자가 이용예정일에 골프장 이용이 불가능하다고 판단되어 임시휴장을 하는 경우에는 예약금을 환불하여야 한다.",
+   "④ 사업자의 책임 있는 사유로 이용자의 예약을 취소하는 경우에는 취소일을 기준으로 다음과 같이 손해를 배상한다."
+  ],
+  "weather_evidence": [
+   "※ 시간대별 인원 제한 운영 ※ 지역할인(포천/남양주)은 주중에만 적용/2인플레이 적용제외/신분증제시필수 ※ 우대혜택은 타 할인 이벤트와 중복할인 불가 ※ 월별 그린피 참조 기상악화 요금 안내 강설, 폭우, 기타 천재지변 등으로 경기를 정상적으로 마치지 못하시는 경우 기상악화 요금이 적용됩니다.",
+   "기상악화 요금은 공정거래위원회 골프장이용 표준약관 기준으로 산정됩니다."
+  ]
+ },
+ "ops": {
+  "nocaddie": {
+   "evidence": [
+    "노캐디: FOREST 코스 6홀 / FOREST 코스 6홀"
+   ],
+   "value": "노캐디 FOREST 코스 6홀",
+   "source_url": "https://www.foresthill.kr/html/guide02.asp",
+   "confidence": "high",
+   "checked_at": "2026-10-13",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/no-caddie-golf-course-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  },
+  "two_player": {
+   "evidence": [
+    "※ 시간대별 인원 제한 운영 ※ 지역할인(포천/남양주)은 주중에만 적용/2인플레이 적용제외/신분증제시필수 ※ 우대혜택은 타 할인 이벤트와 중복할인 불가 ※ 월별 그린피 참조 기상악화 요금 안내 강설, 폭우, 기타 천재지변 등으로 경기를 정상적으로 마치지 못하시는 경우 기상악화 요금이 적용됩니다.",
+    "2인 플레이: 2인 요금 별도, 시간대별 인원 제한"
+   ],
+   "value": "2인 요금 별도, 시간대별 인원 제한",
+   "third_party": {
+    "two": null,
+    "three": null,
+    "source": "그린피가이드",
+    "url": "https://greenfeeguide.co.kr/course/gc-0116/"
+   },
+   "source_url": "https://www.foresthill.kr/html/guide02.asp",
+   "confidence": "high",
+   "checked_at": "2026-10-15",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/two-player-golf-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  },
+  "three_player": {
+   "value": "3인 요금 별도",
+   "evidence": [
+    "3인 플레이: 3인 요금 별도"
+   ],
+   "source_url": "https://www.foresthill.kr/html/guide02.asp",
+   "confidence": "high",
+   "checked_at": "2026-10-15",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/two-player-golf-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  },
+  "five_player": {
+   "value": "5인 불가",
+   "evidence": [
+    "셀프라운딩 예약시 5인플레이 및 갤러리입장 불가합니다."
+   ],
+   "source_url": "https://www.foresthill.kr/html/guide04.asp",
+   "confidence": "medium",
+   "source_type": "official_site",
+   "page_label": "이용에티켓",
+   "value_from": "capital_supplement(official_site)"
+  },
+  "marshal_caddie": {
+   "value": null,
+   "evidence": []
+  },
+  "cart_type": {
+   "evidence": [
+    "카트이용요금 등 기타 사업자가 정한 특별요금 ② 골프장 이용 시 기본적으로 발생되는 비용으로서 제1항 제2호의 클럽하우스 시설 이용에 부과되는 요금 및 제1항 제3호의 제세공과금을 기본요금이라 한다.",
+    "카트이용안내 안전운행을 위하여 안전수칙을 준수하여 주시기 바랍니다.",
+    "리무진 카트 운영안내"
+   ],
+   "value": "리무진카트",
+   "source_url": "https://www.foresthill.kr/html/board/notice.asp?GotoPage=2&amp;strSearchWord=&amp;strSearchString=",
+   "confidence": "low",
+   "source_type": "official_site",
+   "page_label": "",
+   "value_from": "capital_supplement(official_site)"
+  },
+  "cart_entry": {
+   "evidence": [
+    "Forest코스: 코스 내 주행 시 카트도로 이탈 금지(역주행·추월 금지)"
+   ],
+   "value": "진입 불가",
+   "source_url": "https://www.foresthill.kr/html/guide04.asp",
+   "confidence": "high",
+   "checked_at": "2026-10-22",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/golf-cart-limousine-fairway-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  },
+  "bagdrop": {
+   "evidence": [],
+   "value": null
+  },
+  "mat": {
+   "evidence": [],
+   "value": null
+  },
+  "checkin": {
+   "evidence": [
+    "여유있는 라운딩을 위하여 예약시간 30분 전에는 도착하여 10분전에는 출발지점에 대기하여 주시기 바랍니다."
+   ],
+   "value": "티오프 30분 전 도착",
+   "third_party": {
+    "value": null,
+    "source": "그린피가이드",
+    "url": "https://greenfeeguide.co.kr/course/gc-0116/"
+   },
+   "source_url": "https://www.foresthill.kr/html/guide01.asp",
+   "confidence": "medium",
+   "source_type": "official_site",
+   "page_label": "이용안내",
+   "value_from": "capital_supplement(official_site)"
+  },
+  "locker": {
+   "evidence": [
+    "락커, 샤워실 등 클럽하우스 시설 이용에 부과되는 요금 3.",
+    "락카이용-과도한 문신이 있는분들의 입욕을 삼가해 주시기 바랍니다."
+   ],
+   "value": "락커 운영",
+   "value_previous": "문구 확인(원문 근거)",
+   "source_url": "https://www.foresthill.kr/html/guide01.asp",
+   "confidence": "medium",
+   "source_type": "official_site",
+   "page_label": "이용안내",
+   "value_from": "capital_supplement(official_site)"
+  },
+  "sauna": {
+   "evidence": [
+    "사우나 있음 · 프로샵"
+   ],
+   "value": "사우나 운영",
+   "source_url": "https://www.foresthill.kr/html/company02.asp",
+   "confidence": "high",
+   "checked_at": "2026-10-20",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/golf-course-amenities-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  },
+  "dress": {
+   "evidence": [
+    "클럽의 품위를 위해 정해진 복장을 준수하여 주시기 바랍니다.",
+    "기타 복장-클럽의 품위를 위해 정해진 복장을 준수하여 주시기 바랍니다.",
+    "복장규정 위반, 음식물 반입, 매너불량등 클럽이용수칙을 위반하는 행동을 삼가하여 주시기 바랍니다."
+   ],
+   "value": "복장 규정 안내",
+   "value_previous": "문구 확인(원문 근거)",
+   "source_url": "https://www.foresthill.kr/html/guide04.asp",
+   "confidence": "medium",
+   "source_type": "official_site",
+   "page_label": "이용에티켓",
+   "value_from": "capital_supplement(official_site)"
+  },
+  "pace": {
+   "evidence": [],
+   "value": null
+  },
+  "grass": null
+ },
+ "facilities": {
+  "practice": {
+   "evidence": [],
+   "value": null
+  },
+  "indoor_range": {
+   "value": null,
+   "evidence": []
+  },
+  "food": {
+   "evidence": [
+    "해장국 메뉴 우거지 갈비 해장국(18,000원)"
+   ],
+   "value": "해장국 메뉴 우거지 갈비 해장국(18,000원)",
+   "source_url": "https://www.foresthill.kr/html/food_menu.asp",
+   "confidence": "high",
+   "checked_at": "2026-10-21",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/golf-course-food-price-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  },
+  "snack_bar": {
+   "value": null,
+   "evidence": []
+  },
+  "locker_sauna": {
+   "value": null,
+   "evidence": []
+  },
+  "lodging": {
+   "value": null,
+   "evidence": []
+  },
+  "other": {
+   "value": null,
+   "evidence": []
+  },
+  "night": {
+   "evidence": [
+    "야간 3부는 입장할 때 예약한 홀 수만큼 이용요금을 먼저 냄(선불 정산)"
+   ],
+   "value": "야간 라운딩 운영(3부 야간 포함)",
+   "source_url": "https://www.foresthill.kr/html/guide03_2.asp",
+   "confidence": "high",
+   "checked_at": "2026-10-12",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/night-golf-course-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  },
+  "closed_days": {
+   "evidence": [
+    "이용자가 이용예정일 당일 예약을 취소하거나 아무런 통보 없이 이용예정일에 골프장을 이용하지 않을 경우 : 팀별 이용요금의 30% ③ 강설, 폭우, 안개 기타 천재지변 등의 불가항력적인 사유로, 사업자가 이용예정일에 골프장 이용이 불가능하다고 판단되어 임시휴장을 하는 경우에는 예약금을 환불하여야 한다.",
+    "② 이 골프장의 정기 휴장일은 다음과 같다.",
+    "정기 휴장일 없음"
+   ],
+   "third_party": "정기 휴장일 없음카트페어웨이",
+   "value": "정기 휴장일 없음",
+   "source_url": "https://www.foresthill.kr/html/guide03.asp",
+   "confidence": "high",
+   "checked_at": "2026-10-11",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/golf-course-closing-day-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  },
+  "shuttle": {
+   "evidence": [],
+   "value": null
+  },
+  "ev_charge": {
+   "evidence": [],
+   "value": null
+  },
+  "gf_facilities": [
+   "프로샵근거골프장 공식 홈페이지 시설 안내 · 2026"
+  ],
+  "proshop": {
+   "evidence": [
+    "사우나 있음 · 프로샵"
+   ],
+   "value": "프로샵 운영",
+   "source_url": "https://www.foresthill.kr/html/company02.asp",
+   "confidence": "high",
+   "checked_at": "2026-10-20",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/golf-course-amenities-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  }
+ },
+ "rental": {
+  "available": null,
+  "full_set": null,
+  "fee_text": null,
+  "brand": null,
+  "left_handed": null,
+  "shoes": null,
+  "nine_hole": null,
+  "range_finder": null,
+  "reservation": null,
+  "source_url": null,
+  "evidence": [],
+  "official": null,
+  "nearby_delivery": {
+   "region": "수도권",
+   "sido": "경기도",
+   "verified_at": "2026-11-26 (KST)",
+   "checked_at": "2026-11-26",
+   "providers": [
+    {
+     "id": "theb",
+     "name": "더비 (The B)",
+     "coverage": "O",
+     "basis": "동탄·김포·시흥·용인·이천 24시간 무인픽업 매장 5곳 + 다마스 퀵/택배 배송. 홈페이지에 '강남·동탄·판교·수지·광교·분당', '시흥·배곧·인천·안산·송도', '이천·여주' 권역 표기.",
+     "phone": "010-2530-4575",
+     "operating_status": "정상 영업",
+     "delivery": "O",
+     "price_headline": "12시간 기준 90,000원부터",
+     "bookable": true
+    },
+    {
+     "id": "gangnamclub",
+     "name": "강남골프클럽렌탈",
+     "coverage": "O",
+     "basis": "서울 서초구 거점 매장 주소 공개, 자사 블로그 '전지역 배송 가능' 안내.",
+     "phone": "010-7407-0753",
+     "operating_status": "정상 영업(자사 블로그 최신 게시 2026-04-28)",
+     "delivery": "미확인",
+     "price_headline": null,
+     "bookable": true
+    },
+    {
+     "id": "apioz",
+     "name": "아피오즈 (Apioz)",
+     "coverage": "조건부",
+     "basis": "서울 숙소 배송·공항 픽업 옵션 안내. 단 골프세트 Sold Out으로 현재 이용 불가.",
+     "phone": "02-6956-8115",
+     "operating_status": "예약 중단(Sold Out) — 골프채 세트 한정",
+     "delivery": "미확인",
+     "price_headline": null,
+     "caution": "골프채 세트 Sold Out — 현재 예약 불가",
+     "bookable": false,
+     "bookable_reason": "골프채 세트 Sold Out — 현재 예약 불가"
+    }
+   ],
+   "provider_count": 3,
+   "legend": {
+    "O": "공식 안내로 해당 권역 이용이 확인됨",
+    "X": "공식 안내상 해당 권역 서비스가 없음(예: '제주 전 지역' 전용으로만 안내)",
+    "조건부": "공식 안내상 가능하나 조건(수단·요금·현재 판매중지 등)이 붙어 있음. 조건은 basis/detail에 기재",
+    "미확인": "공식 공개 안내에서 해당 항목에 대한 언급을 찾지 못함(추정하지 않음)"
+   },
+   "not_verified": "전화·문자·카카오톡 상담으로만 확인 가능한 항목(재고, 개별 견적, 권역별 실제 배송 가능 여부)은 '미확인'으로 남김",
+   "source_file": "5-rental_8_coverage_verified.json",
+   "note_code": "해외 골퍼용 골프채 렌탈·딜리버리 업체. 같은 권역이라도 실제 배송 가능 여부·재고·견적은 전화 확인 필요."
+  }
+ },
+ "briefing": {
+  "notices": {
+   "url": "https://www.foresthill.kr/html/board/notice_view.asp?b_idx=78",
+   "items": [
+    {
+     "title": "12월 요금공지",
+     "date": "2026-11-19",
+     "url": "https://www.foresthill.kr/html/board/notice.asp"
+    },
+    {
+     "title": "2027년 연단체 추가모집",
+     "date": "2026-11-17",
+     "url": "https://www.foresthill.kr/html/board/notice.asp"
+    },
+    {
+     "title": "2027년 추첨예약 일정 변경 안내",
+     "date": "2026-11-10",
+     "url": "https://www.foresthill.kr/html/board/notice.asp"
+    },
+    {
+     "title": "26년 11월 요금공지",
+     "date": "2026-10-30",
+     "url": "https://www.foresthill.kr/html/board/notice.asp"
+    },
+    {
+     "title": "[종료]★N골프 최대 1억원 홀인원 챌린지(26.",
+     "date": "2026-10-21",
+     "url": "https://www.foresthill.kr/html/board/notice.asp"
+    },
+    {
+     "title": "[접수마감] 2027년 연단체 모집공고",
+     "date": "2026-10-09",
+     "url": "https://www.foresthill.kr/html/board/notice.asp"
+    },
+    {
+     "title": "생일카트 이벤트",
+     "date": "2026-10-06",
+     "url": "https://www.foresthill.kr/html/board/notice.asp"
+    },
+    {
+     "title": "(이벤트종료)26.9월 인스타그램 팔로우 이벤트",
+     "date": "2026-09-01",
+     "url": "https://www.foresthill.kr/html/board/notice.asp"
+    },
+    {
+     "title": "포레스트힐 시그니처 이벤트",
+     "date": "2026-09-01",
+     "url": "https://www.foresthill.kr/html/board/notice.asp"
+    },
+    {
+     "title": "(이벤트종료)★N골프 최대 1억원 홀인원 챌린지(",
+     "date": "2026-08-23",
+     "url": "https://www.foresthill.kr/html/board/notice.asp"
+    }
+   ],
+   "tags": {
+    "요금": [
+     {
+      "title": "12월 요금공지",
+      "date": "2026-11-19",
+      "url": "https://www.foresthill.kr/html/board/notice.asp"
+     },
+     {
+      "title": "26년 11월 요금공지",
+      "date": "2026-10-30",
+      "url": "https://www.foresthill.kr/html/board/notice.asp"
+     }
+    ],
+    "모집": [
+     {
+      "title": "2027년 연단체 추가모집",
+      "date": "2026-11-17",
+      "url": "https://www.foresthill.kr/html/board/notice.asp"
+     },
+     {
+      "title": "[접수마감] 2027년 연단체 모집공고",
+      "date": "2026-10-09",
+      "url": "https://www.foresthill.kr/html/board/notice.asp"
+     }
+    ],
+    "운영": [
+     {
+      "title": "2027년 추첨예약 일정 변경 안내",
+      "date": "2026-11-10",
+      "url": "https://www.foresthill.kr/html/board/notice.asp"
+     }
+    ],
+    "이벤트": [
+     {
+      "title": "[종료]★N골프 최대 1억원 홀인원 챌린지(26.",
+      "date": "2026-10-21",
+      "url": "https://www.foresthill.kr/html/board/notice.asp"
+     },
+     {
+      "title": "생일카트 이벤트",
+      "date": "2026-10-06",
+      "url": "https://www.foresthill.kr/html/board/notice.asp"
+     },
+     {
+      "title": "(이벤트종료)26.9월 인스타그램 팔로우 이벤트",
+      "date": "2026-09-01",
+      "url": "https://www.foresthill.kr/html/board/notice.asp"
+     },
+     {
+      "title": "포레스트힐 시그니처 이벤트",
+      "date": "2026-09-01",
+      "url": "https://www.foresthill.kr/html/board/notice.asp"
+     },
+     {
+      "title": "(이벤트종료)★N골프 최대 1억원 홀인원 챌린지(",
+      "date": "2026-08-23",
+      "url": "https://www.foresthill.kr/html/board/notice.asp"
+     }
+    ]
+   }
+  },
+  "review": {
+   "score_10": 8.3,
+   "count": 228,
+   "source": "티픽골프장 라운더 후기 집계",
+   "url": "https://teepickgolf.com/course/%ED%8F%AC%EB%A0%88%EC%8A%A4%ED%8A%B8%ED%9E%90cc"
+  },
+  "fee_change": null,
+  "collected_at": "2026-11-26T09:51:59+09:00",
+  "recent_notice_text": null,
+  "course_notes": null,
+  "alert": null,
+  "unconfirmed": [],
+  "sources": []
+ },
+ "collection": {
+  "official_site": "ok",
+  "official_reason": null,
+  "pages_collected": 14,
+  "third_party": {
+   "teepick": true,
+   "greenfeeguide": true
+  },
+  "render_hint": "static",
+  "plan_strategy": "static(직접 파싱)",
+  "browser_batch": false
+ },
+ "coverage": {
+  "basic": 1.0,
+  "course": 0.6,
+  "fee": 1.0,
+  "ops": 0.71,
+  "facility": 0.3,
+  "briefing": 0.5,
+  "rental": 0.25
+ }
+}

@@ -1,0 +1,375 @@
+{
+ "course_id": "kr-golf-0252",
+ "meta": {
+  "name": "이븐데일cc",
+  "generated_at": "2026-11-26T10:24:29+09:00",
+  "schema": "stage2c/1.0",
+  "batch": "3_충청",
+  "includes": [
+   "master",
+   "ops",
+   "briefing"
+  ],
+  "source": "raw/received_chungcheong_77.json (외부 데이터 수신, 2026-11-26)",
+  "review": {
+   "checked_at": null,
+   "status": "not_crosschecked",
+   "checks": []
+  },
+  "data_checks": [
+   "미확인 목록 누락 라벨 보완: 제세금"
+  ],
+  "schema_previous": "stage2b/1.0",
+  "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
+  "restructured_from_7key": false,
+  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
+  "has_detail": true,
+  "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+ },
+ "master": {
+  "course_id": "kr-golf-0252",
+  "name": "이븐데일cc",
+  "name_variants": [
+   "이븐데일cc"
+  ],
+  "former_names": null,
+  "name_note": null,
+  "type": "대중제",
+  "types": [
+   "대중제"
+  ],
+  "type_note": null,
+  "holes": {
+   "total": 18,
+   "member": 0,
+   "public": 18,
+   "non_member": 0
+  },
+  "holes_note": null,
+  "address": "충청북도 청주시 상당구 미원면 대신2길 31",
+  "addresses": [
+   "충청북도 청주시 상당구 미원면 대신2길 31"
+  ],
+  "address_note": null,
+  "region": {
+   "sido_code": "43",
+   "sido_name": "충청북도",
+   "sido_short": "충북",
+   "sigungu_code": "43111",
+   "sigungu_name": "청주시 상당구",
+   "legal_dong_code": "4311100000"
+  },
+  "lat": 36.682798,
+  "lng": 127.603691,
+  "nearest_ic": {
+   "name": "서오창IC",
+   "distance_km": 17.7,
+   "source": "최근접 IC 직선거리"
+  },
+  "nearest_ic_note": null,
+  "tel": "043-288-1000",
+  "tel_official": "043-288-1000",
+  "tel_conflict": false,
+  "tel_source": "KGA",
+  "tel_note": null,
+  "homepage": "http://www.evendale.co.kr/",
+  "homepage_master": "http://www.evendale.co.kr/",
+  "operators": [
+   "홍승우"
+  ],
+  "operators_note": null,
+  "area_sqm": 982711,
+  "opened": "2010",
+  "course_blocks": [],
+  "facility_id": null,
+  "facility_members": null,
+  "status": "operating",
+  "status_note": null,
+  "expected_open": null,
+  "project_stage": null,
+  "access": "public",
+  "provenance": {
+   "master": "courses_master.json v2.5 (문체부·KGA·KGBA·티픽·지도 + 충청 검수 정정)",
+   "detail": "raw/received_chungcheong_77.json (kr-golf-0252 행, 2026-11-26 수신, 검수 2026-11-26)",
+   "synced_to": "courses_master.json v2.7 (2026-11-26 단일 스키마 정규화)"
+  },
+  "holes_received": 18,
+  "holes_conflict": false,
+  "facility_cluster": null,
+  "factcheck_2026_11_26": null,
+  "address_original": "청주시 상당구 미원면 대신2길 31"
+ },
+ "course": {
+  "holes": 18,
+  "holes_received": 18,
+  "course_names": "18홀(파72)",
+  "membership_type": "대중제",
+  "night_light": "야간 라운드 운영(공식 홈페이지 안내)",
+  "blocks": [],
+  "grass": {
+   "tee": "양잔디",
+   "fairway": "양잔디",
+   "green": "양잔디"
+  },
+  "kga": {
+   "code": "433",
+   "name": "이븐데일",
+   "nine_hole_courses": [
+    "이븐",
+    "데일"
+   ],
+   "hole_combinations": [
+    "이븐+데일"
+   ]
+  },
+  "kga_hole_est": 18,
+  "extra_courses": null
+ },
+ "fee": {
+  "weekday": 188000,
+  "weekend": 247000,
+  "weekday_text": "188,000원 (3~6·9~11월 주중 정상가), 월별 160,000~188,000원",
+  "weekend_text": "247,000원 (주말·공휴일 정상가), 월별 210,000~247,000원",
+  "basis": "월별 정상 그린피 범위(3~6·9~11월 주중 188,000원·주말 247,000원, 적용 연도 미표기). 2026-11-01 공식 요금표도 188,000/247,000원",
+  "tax_included": null,
+  "cart": {
+   "value": 100000,
+   "text": "100,000원/팀"
+  },
+  "caddie": {
+   "value": 150000,
+   "text": "150,000원/팀",
+   "none": false
+  },
+  "as_of": "2026-11-01 (공식 요금표)",
+  "source_url": "http://www.evendale.co.kr/",
+  "note": null,
+  "sources": [
+   {
+    "source": "수신 조사(공식·공개 예약정보)",
+    "url": "http://www.evendale.co.kr/",
+    "checked_at": "2026-11-01 (공식 요금표)"
+   }
+  ]
+ },
+ "cancel": {
+  "cancel_policy": "평일 3일 전·주말 4일 전 17:00까지(예약일 제외)",
+  "open_cycle": "인터넷 오픈일 4주 전 월요일 AM 09:00, 예약 마감은 해당일 전날 23:00",
+  "notes": "3인 내장 시 4인 기준 요금(예약은 4인 필수 안내). 연중무휴",
+  "evidence": [],
+  "weather_evidence": []
+ },
+ "ops": {
+  "nocaddie": {
+   "value": null,
+   "evidence": []
+  },
+  "two_player": {
+   "value": null,
+   "evidence": []
+  },
+  "three_player": {
+   "value": "가능(4인 요금)",
+   "evidence": []
+  },
+  "five_player": {
+   "value": null,
+   "evidence": []
+  },
+  "marshal_caddie": {
+   "value": null,
+   "evidence": []
+  },
+  "cart_type": {
+   "value": null,
+   "evidence": []
+  },
+  "cart_entry": {
+   "value": null,
+   "evidence": []
+  },
+  "bagdrop": {
+   "value": null,
+   "evidence": []
+  },
+  "mat": {
+   "value": null,
+   "evidence": []
+  },
+  "checkin": {
+   "value": null,
+   "evidence": []
+  },
+  "locker": {
+   "value": null,
+   "evidence": []
+  },
+  "sauna": {
+   "value": null,
+   "evidence": []
+  },
+  "dress": {
+   "value": null,
+   "evidence": []
+  },
+  "pace": {
+   "value": null,
+   "evidence": []
+  }
+ },
+ "facilities": {
+  "practice": {
+   "value": null,
+   "evidence": []
+  },
+  "indoor_range": {
+   "value": null,
+   "evidence": []
+  },
+  "food": {
+   "value": null,
+   "evidence": []
+  },
+  "snack_bar": {
+   "value": "카페·라운지",
+   "evidence": []
+  },
+  "locker_sauna": {
+   "value": null,
+   "evidence": []
+  },
+  "lodging": {
+   "value": null,
+   "evidence": []
+  },
+  "other": {
+   "value": "프로샵",
+   "evidence": []
+  },
+  "night": {
+   "value": "야간 라운드 운영(공식 홈페이지 안내)",
+   "evidence": []
+  },
+  "closed_days": {
+   "value": null,
+   "third_party": null,
+   "evidence": []
+  },
+  "shuttle": {
+   "value": null,
+   "evidence": []
+  }
+ },
+ "rental": {
+  "available": "가능",
+  "full_set": 50000,
+  "fee_text": "18홀 50,000원",
+  "brand": null,
+  "left_handed": null,
+  "shoes": null,
+  "nine_hole": null,
+  "range_finder": null,
+  "reservation": null,
+  "source_url": null,
+  "nearby_delivery": {
+   "region": "충청",
+   "sido": "충청북도",
+   "verified_at": "2026-11-26 (KST)",
+   "checked_at": "2026-11-26",
+   "providers": [
+    {
+     "id": "theb",
+     "name": "더비 (The B)",
+     "coverage": "조건부",
+     "basis": "매장·퀵 안내 없음. '전국 당일 배송' 표기 및 화물택배만 해당.",
+     "phone": "010-2530-4575",
+     "operating_status": "정상 영업",
+     "delivery": "O",
+     "price_headline": "12시간 기준 90,000원부터",
+     "bookable": true
+    },
+    {
+     "id": "gangnamclub",
+     "name": "강남골프클럽렌탈",
+     "coverage": "조건부",
+     "basis": "동일(전지역 배송·별도 상담).",
+     "phone": "010-7407-0753",
+     "operating_status": "정상 영업(자사 블로그 최신 게시 2026-04-28)",
+     "delivery": "미확인",
+     "price_headline": null,
+     "bookable": true
+    }
+   ],
+   "provider_count": 2,
+   "legend": {
+    "O": "공식 안내로 해당 권역 이용이 확인됨",
+    "X": "공식 안내상 해당 권역 서비스가 없음(예: '제주 전 지역' 전용으로만 안내)",
+    "조건부": "공식 안내상 가능하나 조건(수단·요금·현재 판매중지 등)이 붙어 있음. 조건은 basis/detail에 기재",
+    "미확인": "공식 공개 안내에서 해당 항목에 대한 언급을 찾지 못함(추정하지 않음)"
+   },
+   "not_verified": "전화·문자·카카오톡 상담으로만 확인 가능한 항목(재고, 개별 견적, 권역별 실제 배송 가능 여부)은 '미확인'으로 남김",
+   "source_file": "5-rental_8_coverage_verified.json",
+   "note_code": "해외 골퍼용 골프채 렌탈·딜리버리 업체. 같은 권역이라도 실제 배송 가능 여부·재고·견적은 전화 확인 필요."
+  }
+ },
+ "briefing": {
+  "notices": {
+   "url": null,
+   "items": [],
+   "tags": {}
+  },
+  "recent_notice_text": "2026년 10~11월 공지 미확인.",
+  "course_notes": "청주 미원면 18홀. 페어웨이·그린·티·러프 모두 양잔디로 안내. 연중무휴, 야간 라운드 운영.",
+  "review": null,
+  "fee_change": null,
+  "alert": null,
+  "unconfirmed": [
+   "2인 플레이",
+   "5인 플레이",
+   "노캐디",
+   "마샬캐디",
+   "카트 종류",
+   "카트 페어웨이 진입",
+   "셀프 백드롭",
+   "매트 티샷",
+   "연습그린",
+   "인도어 연습장",
+   "식당·조식",
+   "락커·사우나",
+   "숙박",
+   "좌타용 클럽",
+   "골프화 대여",
+   "제세금"
+  ],
+  "unconfirmed_labels_added": [
+   "제세금"
+  ],
+  "sources": [
+   "http://www.evendale.co.kr/",
+   "https://greenfeeguide.co.kr/course/gc-0276/",
+   "https://wondergolf.co.kr/courses/kr-kakao-11518300"
+  ],
+  "collected_at": "2026-11-26T10:24:29+09:00"
+ },
+ "collection": {
+  "official_site": "ok",
+  "official_reason": "운영 중(공식 홈페이지 정상)",
+  "pages_collected": 0,
+  "third_party": {
+   "received_report": true
+  },
+  "render_hint": "report",
+  "plan_strategy": "subagent_report(2026-11-26)"
+ },
+ "coverage": {
+  "basic": 1.0,
+  "course": 1.0,
+  "fee": 1.0,
+  "ops": 0.07,
+  "facility": 0.3,
+  "briefing": 0.75,
+  "rental": 1.0
+ }
+}

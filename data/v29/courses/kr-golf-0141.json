@@ -1,0 +1,842 @@
+{
+ "course_id": "kr-golf-0141",
+ "meta": {
+  "name": "양평TPC GC",
+  "generated_at": "2026-11-26T09:51:53+09:00",
+  "schema": "stage2c/1.0",
+  "batch": "1_수도권",
+  "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
+  "schema_previous": "stage2b/1.0",
+  "restructured_from_7key": true,
+  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
+  "has_detail": true,
+  "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+ },
+ "master": {
+  "course_id": "kr-golf-0141",
+  "name": "양평TPC GC",
+  "name_variants": [
+   "양평TPC GC"
+  ],
+  "type": "대중제",
+  "holes": {
+   "total": 27,
+   "member": 0,
+   "public": 27,
+   "non_member": 0
+  },
+  "address": "경기도 양평군 지평면 대평평장길 113-8",
+  "region": {
+   "sido_code": "41",
+   "sido_name": "경기도",
+   "sido_short": "경기",
+   "sigungu_code": "41830",
+   "sigungu_name": "양평군",
+   "legal_dong_code": "4183000000"
+  },
+  "lat": 37.418707,
+  "lng": 127.65034,
+  "nearest_ic": {
+   "name": "동여주IC",
+   "distance_km": 2.9,
+   "source": "teepick(실측 표기)",
+   "straight_km_nearest": 14.0,
+   "straight_name": "서여주IC"
+  },
+  "tel": "031-772-3000",
+  "homepage": "http://www.tpcgolf.co.kr/",
+  "operators": [
+   "대지개발㈜"
+  ],
+  "area_sqm": 1901420,
+  "opened": "2004",
+  "course_blocks": [],
+  "facility_id": null,
+  "provenance": {
+   "master": "courses_master.json v2.0 (문체부·KGA·KGBA·티픽·지도)",
+   "synced_to": "courses_master.json v2.7 (2026-11-26 단일 스키마 정규화)"
+  },
+  "par": 72,
+  "holes_teepick": 27,
+  "course_spec": {
+   "holes": 27,
+   "par": 72,
+   "blocks": [
+    "SOLARLUNARSTELLA"
+   ],
+   "length_m": null,
+   "kga": {
+    "kga_course_code": "151",
+    "kga_name": "양평TPC",
+    "region_short": "경기",
+    "address": "경기도 양평군 지평면 대평리 산 112번지",
+    "match_method": "exact",
+    "match_score": 110,
+    "match_confidence": "high",
+    "nine_hole_courses": [
+     "스텔라",
+     "루나",
+     "솔라"
+    ],
+    "hole_combinations": [
+     {
+      "course_name_1": "스텔라",
+      "course_name_2": "루나",
+      "tees": [
+       {
+        "tee": "T1",
+        "gender": "남자",
+        "length_yds": 7038.0,
+        "std_par": 72.0,
+        "course_rating": 74.8,
+        "slope_rating": 138.0,
+        "front9": "37.0 / 133",
+        "back9": "37.8 / 143"
+       },
+       {
+        "tee": "T2",
+        "gender": "남자",
+        "length_yds": 6625.0,
+        "std_par": 72.0,
+        "course_rating": 72.6,
+        "slope_rating": 134.0,
+        "front9": "36.0 / 129",
+        "back9": "36.6 / 139"
+       },
+       {
+        "tee": "T3",
+        "gender": "남자",
+        "length_yds": 6127.0,
+        "std_par": 72.0,
+        "course_rating": 70.1,
+        "slope_rating": 129.0,
+        "front9": "34.7 / 125",
+        "back9": "35.4 / 133"
+       },
+       {
+        "tee": "T4",
+        "gender": "남자",
+        "length_yds": 5684.0,
+        "std_par": 72.0,
+        "course_rating": 68.1,
+        "slope_rating": 125.0,
+        "front9": "33.7 / 121",
+        "back9": "34.4 / 129"
+       },
+       {
+        "tee": "T5",
+        "gender": "여자",
+        "length_yds": 5212.0,
+        "std_par": 72.0,
+        "course_rating": 71.4,
+        "slope_rating": 122.0,
+        "front9": "35.4 / 117",
+        "back9": "36.0 / 127"
+       }
+      ]
+     },
+     {
+      "course_name_1": "루나",
+      "course_name_2": "솔라",
+      "tees": [
+       {
+        "tee": "T1",
+        "gender": "남자",
+        "length_yds": 7150.0,
+        "std_par": 72.0,
+        "course_rating": 75.2,
+        "slope_rating": 140.0,
+        "front9": "37.8 / 143",
+        "back9": "37.4 / 137"
+       },
+       {
+        "tee": "T2",
+        "gender": "남자",
+        "length_yds": 6751.0,
+        "std_par": 72.0,
+        "course_rating": 73.1,
+        "slope_rating": 137.0,
+        "front9": "36.6 / 139",
+        "back9": "36.5 / 135"
+       },
+       {
+        "tee": "T3",
+        "gender": "남자",
+        "length_yds": 6317.0,
+        "std_par": 72.0,
+        "course_rating": 70.9,
+        "slope_rating": 132.0,
+        "front9": "35.4 / 133",
+        "back9": "35.5 / 130"
+       },
+       {
+        "tee": "T4",
+        "gender": "남자",
+        "length_yds": 5920.0,
+        "std_par": 72.0,
+        "course_rating": 69.1,
+        "slope_rating": 128.0,
+        "front9": "34.4 / 129",
+        "back9": "34.7 / 127"
+       },
+       {
+        "tee": "T5",
+        "gender": "여자",
+        "length_yds": 5359.0,
+        "std_par": 72.0,
+        "course_rating": 71.6,
+        "slope_rating": 125.0,
+        "front9": "36.0 / 127",
+        "back9": "35.6 / 123"
+       }
+      ]
+     },
+     {
+      "course_name_1": "솔라",
+      "course_name_2": "스텔라",
+      "tees": [
+       {
+        "tee": "T1",
+        "gender": "남자",
+        "length_yds": 6978.0,
+        "std_par": 72.0,
+        "course_rating": 74.4,
+        "slope_rating": 135.0,
+        "front9": "37.4 / 137",
+        "back9": "37.0 / 133"
+       },
+       {
+        "tee": "T2",
+        "gender": "남자",
+        "length_yds": 6606.0,
+        "std_par": 72.0,
+        "course_rating": 72.5,
+        "slope_rating": 132.0,
+        "front9": "36.5 / 135",
+        "back9": "36.0 / 129"
+       },
+       {
+        "tee": "T3",
+        "gender": "남자",
+        "length_yds": 6164.0,
+        "std_par": 72.0,
+        "course_rating": 70.2,
+        "slope_rating": 128.0,
+        "front9": "35.5 / 130",
+        "back9": "34.7 / 125"
+       },
+       {
+        "tee": "T4",
+        "gender": "남자",
+        "length_yds": 5762.0,
+        "std_par": 72.0,
+        "course_rating": 68.4,
+        "slope_rating": 124.0,
+        "front9": "34.7 / 127",
+        "back9": "33.7 / 121"
+       },
+       {
+        "tee": "T5",
+        "gender": "여자",
+        "length_yds": 5277.0,
+        "std_par": 72.0,
+        "course_rating": 71.0,
+        "slope_rating": 120.0,
+        "front9": "35.6 / 123",
+        "back9": "35.4 / 117"
+       }
+      ]
+     }
+    ]
+   },
+   "grass": {
+    "evidence": "CLUB LONGE 통합예약 티타임 예약 예약 조회/수정 CLUB LONGE RAMID STORY 양평TPC 클럽안내 이용안내 코스안내 시설안내 공지/이벤트 남양주CC 클럽안내 이용안내 코스안내 시설안내 공지/이벤트 플라밍고CC 클럽안내 이용안내 코스안내 시설안내 공지/이벤트 엠스클럽의성 클럽안내 이용안내 코스안내 시설안내 공지/이벤트 속리산CC 클럽안내 이용안내 코스안내 시설안내 공지/이벤트 공지 및 이벤트 공지사항 이벤트 CLUB LONGE RAMID STORY 양평TPC 남양주CC 플라밍고CC 엠스클럽의성 속리산CC 예약하기 ",
+    "source": "공식",
+    "url": "https://www.clublonge.com/"
+   },
+   "hole_by_hole": null
+  },
+  "addresses": [
+   "경기도 양평군 지평면 대평평장길 113-8"
+  ],
+  "status": "operating",
+  "facility_cluster": null,
+  "factcheck_2026_11_26": null
+ },
+ "course": {
+  "holes": 27,
+  "holes_received": 27,
+  "course_names": null,
+  "membership_type": "대중제",
+  "night_light": null,
+  "blocks": [
+   "SOLARLUNARSTELLA"
+  ],
+  "grass": {
+   "tee": null,
+   "fairway": {
+    "evidence": "CLUB LONGE 통합예약 티타임 예약 예약 조회/수정 CLUB LONGE RAMID STORY 양평TPC 클럽안내 이용안내 코스안내 시설안내 공지/이벤트 남양주CC 클럽안내 이용안내 코스안내 시설안내 공지/이벤트 플라밍고CC 클럽안내 이용안내 코스안내 시설안내 공지/이벤트 엠스클럽의성 클럽안내 이용안내 코스안내 시설안내 공지/이벤트 속리산CC 클럽안내 이용안내 코스안내 시설안내 공지/이벤트 공지 및 이벤트 공지사항 이벤트 CLUB LONGE RAMID STORY 양평TPC 남양주CC 플라밍고CC 엠스클럽의성 속리산CC 예약하기 ",
+    "source": "공식",
+    "url": "https://www.clublonge.com/"
+   },
+   "green": null
+  },
+  "kga": {
+   "kga_course_code": "151",
+   "kga_name": "양평TPC",
+   "region_short": "경기",
+   "address": "경기도 양평군 지평면 대평리 산 112번지",
+   "match_method": "exact",
+   "match_score": 110,
+   "match_confidence": "high",
+   "nine_hole_courses": [
+    "스텔라",
+    "루나",
+    "솔라"
+   ],
+   "hole_combinations": [
+    {
+     "course_name_1": "스텔라",
+     "course_name_2": "루나",
+     "tees": [
+      {
+       "tee": "T1",
+       "gender": "남자",
+       "length_yds": 7038.0,
+       "std_par": 72.0,
+       "course_rating": 74.8,
+       "slope_rating": 138.0,
+       "front9": "37.0 / 133",
+       "back9": "37.8 / 143"
+      },
+      {
+       "tee": "T2",
+       "gender": "남자",
+       "length_yds": 6625.0,
+       "std_par": 72.0,
+       "course_rating": 72.6,
+       "slope_rating": 134.0,
+       "front9": "36.0 / 129",
+       "back9": "36.6 / 139"
+      },
+      {
+       "tee": "T3",
+       "gender": "남자",
+       "length_yds": 6127.0,
+       "std_par": 72.0,
+       "course_rating": 70.1,
+       "slope_rating": 129.0,
+       "front9": "34.7 / 125",
+       "back9": "35.4 / 133"
+      },
+      {
+       "tee": "T4",
+       "gender": "남자",
+       "length_yds": 5684.0,
+       "std_par": 72.0,
+       "course_rating": 68.1,
+       "slope_rating": 125.0,
+       "front9": "33.7 / 121",
+       "back9": "34.4 / 129"
+      },
+      {
+       "tee": "T5",
+       "gender": "여자",
+       "length_yds": 5212.0,
+       "std_par": 72.0,
+       "course_rating": 71.4,
+       "slope_rating": 122.0,
+       "front9": "35.4 / 117",
+       "back9": "36.0 / 127"
+      }
+     ]
+    },
+    {
+     "course_name_1": "루나",
+     "course_name_2": "솔라",
+     "tees": [
+      {
+       "tee": "T1",
+       "gender": "남자",
+       "length_yds": 7150.0,
+       "std_par": 72.0,
+       "course_rating": 75.2,
+       "slope_rating": 140.0,
+       "front9": "37.8 / 143",
+       "back9": "37.4 / 137"
+      },
+      {
+       "tee": "T2",
+       "gender": "남자",
+       "length_yds": 6751.0,
+       "std_par": 72.0,
+       "course_rating": 73.1,
+       "slope_rating": 137.0,
+       "front9": "36.6 / 139",
+       "back9": "36.5 / 135"
+      },
+      {
+       "tee": "T3",
+       "gender": "남자",
+       "length_yds": 6317.0,
+       "std_par": 72.0,
+       "course_rating": 70.9,
+       "slope_rating": 132.0,
+       "front9": "35.4 / 133",
+       "back9": "35.5 / 130"
+      },
+      {
+       "tee": "T4",
+       "gender": "남자",
+       "length_yds": 5920.0,
+       "std_par": 72.0,
+       "course_rating": 69.1,
+       "slope_rating": 128.0,
+       "front9": "34.4 / 129",
+       "back9": "34.7 / 127"
+      },
+      {
+       "tee": "T5",
+       "gender": "여자",
+       "length_yds": 5359.0,
+       "std_par": 72.0,
+       "course_rating": 71.6,
+       "slope_rating": 125.0,
+       "front9": "36.0 / 127",
+       "back9": "35.6 / 123"
+      }
+     ]
+    },
+    {
+     "course_name_1": "솔라",
+     "course_name_2": "스텔라",
+     "tees": [
+      {
+       "tee": "T1",
+       "gender": "남자",
+       "length_yds": 6978.0,
+       "std_par": 72.0,
+       "course_rating": 74.4,
+       "slope_rating": 135.0,
+       "front9": "37.4 / 137",
+       "back9": "37.0 / 133"
+      },
+      {
+       "tee": "T2",
+       "gender": "남자",
+       "length_yds": 6606.0,
+       "std_par": 72.0,
+       "course_rating": 72.5,
+       "slope_rating": 132.0,
+       "front9": "36.5 / 135",
+       "back9": "36.0 / 129"
+      },
+      {
+       "tee": "T3",
+       "gender": "남자",
+       "length_yds": 6164.0,
+       "std_par": 72.0,
+       "course_rating": 70.2,
+       "slope_rating": 128.0,
+       "front9": "35.5 / 130",
+       "back9": "34.7 / 125"
+      },
+      {
+       "tee": "T4",
+       "gender": "남자",
+       "length_yds": 5762.0,
+       "std_par": 72.0,
+       "course_rating": 68.4,
+       "slope_rating": 124.0,
+       "front9": "34.7 / 127",
+       "back9": "33.7 / 121"
+      },
+      {
+       "tee": "T5",
+       "gender": "여자",
+       "length_yds": 5277.0,
+       "std_par": 72.0,
+       "course_rating": 71.0,
+       "slope_rating": 120.0,
+       "front9": "35.6 / 123",
+       "back9": "35.4 / 117"
+      }
+     ]
+    }
+   ]
+  },
+  "kga_hole_est": null,
+  "extra_courses": null,
+  "hole_by_hole": null,
+  "length_m": null,
+  "par": 72
+ },
+ "fee": {
+  "weekday": null,
+  "weekend": null,
+  "weekday_text": null,
+  "weekend_text": null,
+  "basis": null,
+  "tax_included": null,
+  "cart": null,
+  "caddie": {
+   "value": null,
+   "none": false,
+   "evidence": "고객 편의를 위해 그린피, 식음료, 캐디피 등 모든 비용은 퇴장 시 한 번에 결제하는 후불제로 운영됩니다.",
+   "source": "공식",
+   "url": "https://www.clublonge.com/Club/namyangju/ClubHouse"
+  },
+  "as_of": null,
+  "source_url": null,
+  "note": null,
+  "sources": [],
+  "checked_at": null,
+  "market": {
+   "weekday_min": 100000.0,
+   "weekend_min": 150000.0,
+   "part1": null,
+   "part2": null,
+   "source": "티픽골프장(실거래 관측)",
+   "url": "https://teepickgolf.com/course/%EC%96%91%ED%8F%89TPCcc",
+   "note": "공시가 아닌 최근 관측 실거래 최저가"
+  },
+  "official_green_evidence": [
+   "FRONT 품위 있는 고객서비스 프론트는 고객내장시 체크인, 체크아웃 뿐만 아니라 클럽 이용시 각종 문의사항을 안내하는 역할을 담당하고 있습니다.품위있는 고객서비스를 위하여 그린피, 식음료등 모든 요금은 후불제로 운영하고 있습니다.도우미 피도 고객의 편의를 도모코자 현장에서 지불하지 않고 프론트에서 나가실때 정산하도록 운영하고 있습니다.",
+   "고객 편의를 위해 그린피, 식음료, 캐디피 등 모든 비용은 퇴장 시 한 번에 결제하는 후불제로 운영됩니다."
+  ],
+  "official_rental": null
+ },
+ "cancel": {
+  "cancel_policy": null,
+  "open_cycle": null,
+  "notes": null,
+  "evidence": [
+   "알림 확인 확인 취소 확인 하루동안 보지 않기 닫기",
+   "알림 확인 확인 취소 확인",
+   "알림 확인 확인 취소 확인"
+  ],
+  "weather_evidence": []
+ },
+ "ops": {
+  "nocaddie": {
+   "evidence": [],
+   "value": null
+  },
+  "two_player": {
+   "evidence": [],
+   "value": null
+  },
+  "three_player": {
+   "value": "3인 가능",
+   "evidence": [
+    "당 클럽은 1팀 3인이상 플레이 가능 (주중,주말 1팀 4인 필수)"
+   ],
+   "source_url": "https://www.clublonge.com/Club/yangpyeong/Information",
+   "confidence": "medium",
+   "source_type": "official_site",
+   "page_label": "이용안내",
+   "value_from": "capital_supplement(official_site)"
+  },
+  "five_player": {
+   "value": null,
+   "evidence": []
+  },
+  "marshal_caddie": {
+   "value": null,
+   "evidence": []
+  },
+  "cart_type": {
+   "evidence": [
+    "전동카(5인승) 시스템 도입"
+   ],
+   "value": "5인승",
+   "source_url": "https://www.clublonge.com/Club/namyangju/Information",
+   "confidence": "low",
+   "source_type": "official_site",
+   "page_label": "이용안내",
+   "value_from": "capital_supplement(official_site)"
+  },
+  "cart_entry": {
+   "evidence": [],
+   "value": null
+  },
+  "bagdrop": {
+   "evidence": [],
+   "value": null
+  },
+  "mat": {
+   "evidence": [
+    "양평TPC 국내 유일 TPC, 대회 공식 코스의 품격 남양주CC 서울 30분, 서울 스카이라인이 보이는 도심 속 파노라마 코스 플라밍고CC 매트 없는 천연잔디 36홀, 서해 링크스에서 즐기는 진짜 필드 엠스클럽의성 2,000년 고도의 청정 자연이 품은 명문 코스 속리산CC 왕의 쉼터가 된 비경, 문장대의 전설을 잇는 풍류의 필드 NOTICE & EVENTS CLUB LONGE의 모든 소식이 여기에 담겨 있습니다."
+   ],
+   "value": "문구 확인(원문 근거)"
+  },
+  "checkin": {
+   "evidence": [
+    "① 관계 골프장·호텔 사전 체크인 서비스 ② 관계 골프장·호텔 1km 이내 진입 시 안내 알림 서비스 회사는 제1항의 서비스를 위하여 회원의 모바일 앱 GPS 위치정보를 수집하며, 위치정보의 수집·이용·제공사실 확인자료는 6개월 이상 보관합니다.",
+    "FRONT 품위 있는 고객서비스 프론트는 고객내장시 체크인, 체크아웃 뿐만 아니라 클럽 이용시 각종 문의사항을 안내하는 역할을 담당하고 있습니다.품위있는 고객서비스를 위하여 그린피, 식음료등 모든 요금은 후불제로 운영하고 있습니다.도우미 피도 고객의 편의를 도모코자 현장에서 지불하지 않고 프론트에서 나가실때 정산하도록 운영하고 있습니다.",
+    "예약시간 40분전에 도착하여 여유 있는 준비 부탁 드립니다."
+   ],
+   "value": "티오프 40분 전 도착",
+   "source_url": "https://www.clublonge.com/Club/yangpyeong/Information",
+   "confidence": "medium",
+   "source_type": "official_site",
+   "page_label": "이용안내",
+   "value_from": "capital_supplement(official_site)"
+  },
+  "locker": {
+   "evidence": [
+    "시설안내 클럽안내 예약하기 이용안내 코스안내 시설안내 공지 및 이벤트 클럽하우스 클럽하우스 식음(F&B) 골프박물관 클럽하우스 F&B 골프박물관 특별한 당신을 위한 양평TPC 클럽하우스 프론트 락카룸/사우나 프로샵 단체실 CLUB HOUSE 건축은 인간 삶의 투영입니다 특히, 클럽하우스는 시대의 진보를 반영한다고 할 수 있습니다.",
+    "시설안내 클럽안내 예약하기 이용안내 코스안내 시설안내 공지 및 이벤트 클럽하우스 클럽하우스 식음(F&B) 클럽하우스 F&B 고급스러운 인테리어와 편안한 휴식 공간에서 라운딩 전후의 여유를 만끽하세요 클럽하우스 프론트 락커룸/사우나 CLUB HOUSE 도심 속의 오아시스를 느낄 수 있는 클럽하우스 자연과 유기적인 공간감을 바탕으로 외부와 내부가 서로 조화를 이루며 또 하나의 새로운 공간을 만들어 냅니다.",
+    "품격 있는 락커룸과 프라이빗한 휴식 공간에서 잊지 못할 힐링의 순간을 경험해 보세요."
+   ],
+   "value": "락커 운영",
+   "value_previous": "문구 확인(원문 근거)",
+   "source_url": "https://www.clublonge.com/Club/namyangju/ClubHouse",
+   "confidence": "medium",
+   "source_type": "official_site",
+   "page_label": "시설안내",
+   "value_from": "capital_supplement(official_site)"
+  },
+  "sauna": {
+   "evidence": [
+    "시설안내 클럽안내 예약하기 이용안내 코스안내 시설안내 공지 및 이벤트 클럽하우스 클럽하우스 식음(F&B) 골프박물관 클럽하우스 F&B 골프박물관 특별한 당신을 위한 양평TPC 클럽하우스 프론트 락카룸/사우나 프로샵 단체실 CLUB HOUSE 건축은 인간 삶의 투영입니다 특히, 클럽하우스는 시대의 진보를 반영한다고 할 수 있습니다.",
+    "LOCKER ROOMSAUNA 라운딩 후 맞이하는 달콤한 휴식 자연과 함께 하는 사우나...",
+    "편안한 휴식과 하루의 피로를 풀어줄 사우나에서 몸의 피로는 덜어내고 마음의 여유를 더해 보십시오."
+   ],
+   "value": "사우나 운영",
+   "value_previous": "문구 확인(원문 근거)",
+   "source_url": "https://www.clublonge.com/Club/flamingo/ClubHouse",
+   "confidence": "medium",
+   "source_type": "official_site",
+   "page_label": "시설안내",
+   "value_from": "capital_supplement(official_site)"
+  },
+  "dress": {
+   "evidence": [],
+   "value": null
+  },
+  "pace": {
+   "evidence": [],
+   "value": null
+  }
+ },
+ "facilities": {
+  "practice": {
+   "evidence": [],
+   "value": null
+  },
+  "indoor_range": {
+   "value": null,
+   "evidence": []
+  },
+  "food": {
+   "evidence": [
+    "식음(F&B) 서비스(레스토랑·연회 등 식음료 이용 안내 및 예약) 다.",
+    "코스 내 그늘집 미운영으로 레스토랑 이용 시 음료 구매"
+   ],
+   "value": "레스토랑 · 그늘집",
+   "source_url": "https://www.clublonge.com/Club/flamingo/Information",
+   "confidence": "medium",
+   "source_type": "official_site",
+   "page_label": "이용안내",
+   "value_from": "capital_supplement(official_site)"
+  },
+  "snack_bar": {
+   "value": null,
+   "evidence": []
+  },
+  "locker_sauna": {
+   "value": null,
+   "evidence": []
+  },
+  "lodging": {
+   "value": "숙박 가능(객실 운영)",
+   "evidence": [
+    "가. 객실 예약 서비스(디럭스·온돌·스위트 등 객실 예약 및 객실 패키지)"
+   ],
+   "source_url": "https://www.clublonge.com/TermsOfUse",
+   "confidence": "medium",
+   "source_type": "official_site",
+   "page_label": "이용약관",
+   "value_from": "capital_supplement(official_site)"
+  },
+  "other": {
+   "value": null,
+   "evidence": []
+  },
+  "night": {
+   "evidence": [
+    "코스안내 클럽안내 예약하기 이용안내 코스안내 시설안내 공지 및 이벤트 코스소개 코스소개 홀별공략법 코스소개 홀별공략법 세계적인 골프조명 '머스코'에 의한 조명설계 완비 남양주 CC, 야간 라운딩시 볼이 공중에서 사라지는 문제 해결 남양주 C.C COURSE TOTAL AREA 총 849.000 ㎡ COURSE SCALE 퍼블릭 9홀 (36파) COURSE DESIGN 휴먼골프 LANDSCAPING (주)건우 남양주CC는 자연을 정복의 대상이 아닌 공존의 공간으로 설계하였습니다.",
+    "POINT 야간 라운딩의 상식을 바꾸다 볼이 사라지는 문제, 남양주CC는 해결했습니다 야간 라운딩 시 공중에서 볼이 일시적으로 사라지는 현상은 골퍼들에게 큰 스트레스였습니다.",
+    "남산·롯데타워·도봉산을 조망하며 즐기는 자연 암반의 변별력 있는 코스,머스코(Musco) 야간 조명으로 주야간 라운드를 모두 즐길 수 있습니다."
+   ],
+   "value": "야간 라운딩 운영",
+   "source_url": "https://www.clublonge.com/Club/namyangju/Course",
+   "confidence": "medium",
+   "source_type": "official_site",
+   "page_label": "코스안내",
+   "value_from": "capital_supplement(official_site)"
+  },
+  "closed_days": {
+   "evidence": [
+    "2 이 골프장의 정기 휴장일은 다음과 같다. (연중무휴)"
+   ],
+   "third_party": null,
+   "value": "정기 휴장일 없음",
+   "source_url": "https://www.clublonge.com/Club/yangpyeong/Information",
+   "confidence": "medium",
+   "source_type": "official_site",
+   "page_label": "이용안내",
+   "value_from": "capital_supplement(official_site)"
+  },
+  "shuttle": {
+   "evidence": [],
+   "value": null
+  },
+  "ev_charge": {
+   "evidence": [],
+   "value": null
+  },
+  "gf_facilities": null,
+  "proshop": {
+   "evidence": [
+    "품격과 안목을 고려한 프로샵선택만으로 최고의 멋진 골퍼로 연출시켜 드립니다."
+   ],
+   "value": "프로샵 운영",
+   "source_url": "https://www.clublonge.com/Club/yangpyeong/ClubHouse",
+   "confidence": "medium",
+   "source_type": "official_site",
+   "page_label": "시설안내",
+   "value_from": "capital_supplement(official_site)"
+  }
+ },
+ "rental": {
+  "available": null,
+  "full_set": null,
+  "fee_text": null,
+  "brand": null,
+  "left_handed": null,
+  "shoes": null,
+  "nine_hole": null,
+  "range_finder": null,
+  "reservation": null,
+  "source_url": null,
+  "evidence": [],
+  "official": null,
+  "nearby_delivery": {
+   "region": "수도권",
+   "sido": "경기도",
+   "verified_at": "2026-11-26 (KST)",
+   "checked_at": "2026-11-26",
+   "providers": [
+    {
+     "id": "theb",
+     "name": "더비 (The B)",
+     "coverage": "O",
+     "basis": "동탄·김포·시흥·용인·이천 24시간 무인픽업 매장 5곳 + 다마스 퀵/택배 배송. 홈페이지에 '강남·동탄·판교·수지·광교·분당', '시흥·배곧·인천·안산·송도', '이천·여주' 권역 표기.",
+     "phone": "010-2530-4575",
+     "operating_status": "정상 영업",
+     "delivery": "O",
+     "price_headline": "12시간 기준 90,000원부터",
+     "bookable": true
+    },
+    {
+     "id": "gangnamclub",
+     "name": "강남골프클럽렌탈",
+     "coverage": "O",
+     "basis": "서울 서초구 거점 매장 주소 공개, 자사 블로그 '전지역 배송 가능' 안내.",
+     "phone": "010-7407-0753",
+     "operating_status": "정상 영업(자사 블로그 최신 게시 2026-04-28)",
+     "delivery": "미확인",
+     "price_headline": null,
+     "bookable": true
+    },
+    {
+     "id": "apioz",
+     "name": "아피오즈 (Apioz)",
+     "coverage": "조건부",
+     "basis": "서울 숙소 배송·공항 픽업 옵션 안내. 단 골프세트 Sold Out으로 현재 이용 불가.",
+     "phone": "02-6956-8115",
+     "operating_status": "예약 중단(Sold Out) — 골프채 세트 한정",
+     "delivery": "미확인",
+     "price_headline": null,
+     "caution": "골프채 세트 Sold Out — 현재 예약 불가",
+     "bookable": false,
+     "bookable_reason": "골프채 세트 Sold Out — 현재 예약 불가"
+    }
+   ],
+   "provider_count": 3,
+   "legend": {
+    "O": "공식 안내로 해당 권역 이용이 확인됨",
+    "X": "공식 안내상 해당 권역 서비스가 없음(예: '제주 전 지역' 전용으로만 안내)",
+    "조건부": "공식 안내상 가능하나 조건(수단·요금·현재 판매중지 등)이 붙어 있음. 조건은 basis/detail에 기재",
+    "미확인": "공식 공개 안내에서 해당 항목에 대한 언급을 찾지 못함(추정하지 않음)"
+   },
+   "not_verified": "전화·문자·카카오톡 상담으로만 확인 가능한 항목(재고, 개별 견적, 권역별 실제 배송 가능 여부)은 '미확인'으로 남김",
+   "source_file": "5-rental_8_coverage_verified.json",
+   "note_code": "해외 골퍼용 골프채 렌탈·딜리버리 업체. 같은 권역이라도 실제 배송 가능 여부·재고·견적은 전화 확인 필요."
+  }
+ },
+ "briefing": {
+  "notices": {
+   "url": "https://www.clublonge.com/Board?categoryCode=notice&unit=120",
+   "items": [
+    {
+     "title": "[양평TPC] 양평 TPC 연예인 자선 골프대회 영상",
+     "date": "2026-10-06",
+     "url": "https://www.clublonge.com/Board?categoryCode=notice&unit=100"
+    },
+    {
+     "title": "[양평TPC] [보도자료] 한국에 딱 하나뿐인 ‘TPC’…태양·달·별 품은 27홀, ‘양평TPC’의 품격",
+     "date": "2026-09-23",
+     "url": "https://www.clublonge.com/Board?categoryCode=notice&unit=100"
+    }
+   ],
+   "tags": {
+    "이벤트": [
+     {
+      "title": "[양평TPC] 양평 TPC 연예인 자선 골프대회 영상",
+      "date": "2026-10-06",
+      "url": "https://www.clublonge.com/Board?categoryCode=notice&unit=100"
+     }
+    ]
+   }
+  },
+  "review": {
+   "score_10": 8.5,
+   "count": 232,
+   "source": "티픽골프장 라운더 후기 집계",
+   "url": "https://teepickgolf.com/course/%EC%96%91%ED%8F%89TPCcc"
+  },
+  "fee_change": null,
+  "collected_at": "2026-11-26T09:51:53+09:00",
+  "recent_notice_text": null,
+  "course_notes": null,
+  "alert": null,
+  "unconfirmed": [],
+  "sources": []
+ },
+ "collection": {
+  "official_site": "ok",
+  "official_reason": null,
+  "pages_collected": 14,
+  "third_party": {
+   "teepick": true,
+   "greenfeeguide": false
+  },
+  "render_hint": "static",
+  "plan_strategy": "static(직접 파싱)",
+  "browser_batch": false
+ },
+ "coverage": {
+  "basic": 1.0,
+  "course": 1.0,
+  "fee": 0.0,
+  "ops": 0.43,
+  "facility": 0.4,
+  "briefing": 0.5,
+  "rental": 0.25
+ }
+}

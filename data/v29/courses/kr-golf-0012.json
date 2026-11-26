@@ -1,0 +1,530 @@
+{
+ "course_id": "kr-golf-0012",
+ "meta": {
+  "name": "해피니스CC",
+  "generated_at": "2026-11-26T10:25:40+09:00",
+  "schema": "stage2c/1.0",
+  "batch": "4_호남",
+  "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
+  "schema_previous": "stage2b/1.0",
+  "restructured_from_7key": true,
+  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
+  "has_detail": true,
+  "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+ },
+ "master": {
+  "course_id": "kr-golf-0012",
+  "name": "해피니스CC",
+  "name_variants": [
+   "해피니스CC"
+  ],
+  "type": "회원제",
+  "holes": {
+   "total": 36,
+   "member": 18,
+   "public": 18,
+   "non_member": 0
+  },
+  "address": "전남광주통합특별시 나주시 다도면 다도로 171-60",
+  "region": {
+   "sido_code": "12",
+   "sido_name": "전남광주통합특별시",
+   "sido_short": "전남",
+   "sigungu_code": "12170",
+   "sigungu_name": "나주시",
+   "legal_dong_code": "1217000000"
+  },
+  "lat": 34.995929,
+  "lng": 126.832694,
+  "nearest_ic": {
+   "name": "본덕IC",
+   "distance_km": 11.3,
+   "source": "teepick(실측 표기)",
+   "straight_km_nearest": 11.5,
+   "straight_name": "능주IC"
+  },
+  "tel": "061-330-5000",
+  "homepage": "https://www.happinesscc.com/",
+  "operators": [
+   "차재진"
+  ],
+  "area_sqm": 1381092,
+  "opened": null,
+  "course_blocks": [],
+  "facility_id": null,
+  "provenance": {
+   "master": "courses_master.json v2.0 (문체부·KGA·KGBA·티픽·지도)",
+   "synced_to": "courses_master.json v2.7 (2026-11-26 단일 스키마 정규화)"
+  },
+  "par": 72,
+  "holes_teepick": 18,
+  "course_spec": {
+   "holes": 36,
+   "par": 72,
+   "blocks": [
+    "HIDDENHEALING"
+   ],
+   "length_m": null,
+   "kga": {
+    "kga_course_code": "289",
+    "kga_name": "해피니스",
+    "region_short": "전남",
+    "address": "전남 나주시 다도면 송학리 1219",
+    "match_method": "exact",
+    "match_score": 110,
+    "match_confidence": "high",
+    "nine_hole_courses": [
+     "휴먼",
+     "해피"
+    ],
+    "hole_combinations": [
+     {
+      "course_name_1": "휴먼",
+      "course_name_2": "해피",
+      "tees": [
+       {
+        "tee": "BACK",
+        "gender": "남자",
+        "length_yds": 7125.0,
+        "std_par": 72.0,
+        "course_rating": 74.8,
+        "slope_rating": 140.0,
+        "front9": "36.6 / 139",
+        "back9": "38.2 / 140"
+       },
+       {
+        "tee": "REGULAR",
+        "gender": "남자",
+        "length_yds": 6605.0,
+        "std_par": 72.0,
+        "course_rating": 72.2,
+        "slope_rating": 134.0,
+        "front9": "35.5 / 132",
+        "back9": "36.7 / 135"
+       },
+       {
+        "tee": "LADY",
+        "gender": "여자",
+        "length_yds": 5280.0,
+        "std_par": 72.0,
+        "course_rating": 70.7,
+        "slope_rating": 129.0,
+        "front9": "34.8 / 126",
+        "back9": "35.9 / 132"
+       }
+      ]
+     }
+    ]
+   },
+   "grass": null,
+   "hole_by_hole": null
+  },
+  "addresses": [
+   "전남광주통합특별시 나주시 다도면 다도로 171-60"
+  ],
+  "status": "operating",
+  "facility_cluster": null,
+  "factcheck_2026_11_26": null,
+  "opened_evidence": {
+   "evidence": "로그인 회원가입 클럽소개 인사말 클럽소개 부대시설 오시는길 인터넷예약 골프예약 골프호텔예약 예약조회/취소 예약규정 조인게시판 대기예약 코스안내 코스소개 코스공략 골프호텔 골프호텔소개 이용안내 객실안내 요금안내 이용안내 이용요금 위약안내 분양안내 로컬룰 정보마당 공지사항 자료실 명예의전당 포토갤러리 해피니스 뉴스 오픈채팅방 1부,2부 조인방 3부(야간) 조인방 패키지 조인방 골프대회 아마추어 대회 KLPGA 대회 자연과 하나 되는 45홀 골프 천국 울창한 숲과 호수로 이루어진 45홀에서 골프의 진정한 품격을 경험하세요.",
+   "source": "공식",
+   "url": "https://www.happinesscc.com/"
+  },
+  "address_original": "전남 나주시 다도면 다도로 171-60",
+  "holes_note": "등록(문체부) 36홀 · 수집 18홀 — 등록 기준과 수집처(티픽·조사) 표기 차이다. 등록 36홀을 정본으로 두고 집계에는 master.holes를 쓴다. 복합단지 합산 여부는 미확정."
+ },
+ "course": {
+  "holes": 36,
+  "holes_received": 18,
+  "course_names": null,
+  "membership_type": "회원제",
+  "night_light": null,
+  "blocks": [
+   "HIDDENHEALING"
+  ],
+  "grass": {
+   "tee": null,
+   "fairway": null,
+   "green": null
+  },
+  "kga": {
+   "kga_course_code": "289",
+   "kga_name": "해피니스",
+   "region_short": "전남",
+   "address": "전남 나주시 다도면 송학리 1219",
+   "match_method": "exact",
+   "match_score": 110,
+   "match_confidence": "high",
+   "nine_hole_courses": [
+    "휴먼",
+    "해피"
+   ],
+   "hole_combinations": [
+    {
+     "course_name_1": "휴먼",
+     "course_name_2": "해피",
+     "tees": [
+      {
+       "tee": "BACK",
+       "gender": "남자",
+       "length_yds": 7125.0,
+       "std_par": 72.0,
+       "course_rating": 74.8,
+       "slope_rating": 140.0,
+       "front9": "36.6 / 139",
+       "back9": "38.2 / 140"
+      },
+      {
+       "tee": "REGULAR",
+       "gender": "남자",
+       "length_yds": 6605.0,
+       "std_par": 72.0,
+       "course_rating": 72.2,
+       "slope_rating": 134.0,
+       "front9": "35.5 / 132",
+       "back9": "36.7 / 135"
+      },
+      {
+       "tee": "LADY",
+       "gender": "여자",
+       "length_yds": 5280.0,
+       "std_par": 72.0,
+       "course_rating": 70.7,
+       "slope_rating": 129.0,
+       "front9": "34.8 / 126",
+       "back9": "35.9 / 132"
+      }
+     ]
+    }
+   ]
+  },
+  "kga_hole_est": null,
+  "extra_courses": null,
+  "hole_by_hole": null,
+  "length_m": null,
+  "par": 72,
+  "holes_note": "등록(문체부) 36홀 · 수집 18홀 — 등록 기준과 수집처(티픽·조사) 표기 차이다. 등록 36홀을 정본으로 두고 집계에는 master.holes를 쓴다. 복합단지 합산 여부는 미확정."
+ },
+ "fee": {
+  "weekday": 140000,
+  "weekend": 180000,
+  "weekday_text": null,
+  "weekend_text": null,
+  "basis": null,
+  "tax_included": null,
+  "cart": {
+   "value": 70000,
+   "source": "그린피가이드",
+   "url": "https://greenfeeguide.co.kr/course/gc-0454/"
+  },
+  "caddie": {
+   "value": 150000,
+   "source": "그린피가이드",
+   "url": "https://greenfeeguide.co.kr/course/gc-0454/",
+   "none": false
+  },
+  "as_of": "2026-11-01",
+  "source_url": null,
+  "note": null,
+  "sources": [
+   {
+    "source": "그린피가이드(공식 요금표 확인)",
+    "url": "https://greenfeeguide.co.kr/course/gc-0454/",
+    "checked_at": "2026-11-01"
+   }
+  ],
+  "checked_at": "2026-11-01",
+  "market": {
+   "weekday_min": 105000.0,
+   "weekend_min": 150000.0,
+   "part1": null,
+   "part2": null,
+   "source": "티픽골프장(실거래 관측)",
+   "url": "https://teepickgolf.com/course/%ED%95%B4%ED%94%BC%EB%8B%88%EC%8A%A4",
+   "note": "공시가 아닌 최근 관측 실거래 최저가"
+  },
+  "official_green_evidence": [],
+  "official_rental": null
+ },
+ "cancel": {
+  "cancel_policy": null,
+  "open_cycle": null,
+  "notes": null,
+  "evidence": [
+   "로그인 회원가입 클럽소개 인사말 클럽소개 부대시설 오시는길 인터넷예약 골프예약 골프호텔예약 예약조회/취소 예약규정 조인게시판 대기예약 코스안내 코스소개 코스공략 골프호텔 골프호텔소개 이용안내 객실안내 요금안내 이용안내 이용요금 위약안내 분양안내 로컬룰 정보마당 공지사항 자료실 명예의전당 포토갤러리 해피니스 뉴스 오픈채팅방 1부,2부 조인방 3부(야간) 조인방 패키지 조인방 골프대회 아마추어 대회 KLPGA 대회 자연과 하나 되는 45홀 골프 천국 울창한 숲과 호수로 이루어진 45홀에서 골프의 진정한 품격을 경험하세요.",
+   "11:00 이후 퇴실시 추가요금 부과 (시간당 1만원) (퇴실 연장시 프런트에 문의/최대 4시간까지만 가능) 위약안내 위약안내 구분 환불기준 7일전 취소 전액환불 6일전 취소 90% 환불 5일전 취소 80% 환불 4일전 취소 70% 환불 3일전 취소 50% 환불 2일전 취소 30% 환불 1일전 취소 / 당일취소 환불불가 취소는 5일전까지 가능하오니, 취소기간을 준수하여 주시기 바랍니다.",
+   "로그인 회원가입 클럽소개 인사말 클럽소개 부대시설 오시는길 인터넷예약 골프예약 골프호텔예약 예약조회/취소 예약규정 조인게시판 대기예약 코스안내 코스소개 코스공략 골프호텔 골프호텔소개 이용안내 객실안내 요금안내 이용안내 이용요금 위약안내 분양안내 로컬룰 정보마당 공지사항 자료실 명예의전당 포토갤러리 해피니스 뉴스 오픈채팅방 1부,2부 조인방 3부(야간) 조인방 패키지 조인방 골프대회 아마추어 대회 KLPGA 대회 community 정보마당 인터넷예약 클럽소개 코스안내 골프호텔 이용안내 정보마당 공지사항 자료실 명예의전당 포토갤러리 해"
+  ],
+  "weather_evidence": [
+   "기상악화(악천후 등)으로 인한 홀 정산 요금은 기본 요금을 제외한 1홀~18홀 홀별 정산."
+  ]
+ },
+ "ops": {
+  "nocaddie": {
+   "evidence": [],
+   "value": null
+  },
+  "two_player": {
+   "evidence": [
+    "로그인 회원가입 클럽소개 인사말 클럽소개 부대시설 오시는길 인터넷예약 골프예약 골프호텔예약 예약조회/취소 예약규정 조인게시판 대기예약 코스안내 코스소개 코스공략 골프호텔 골프호텔소개 이용안내 객실안내 요금안내 이용안내 이용요금 위약안내 분양안내 로컬룰 정보마당 공지사항 자료실 명예의전당 포토갤러리 해피니스 뉴스 오픈채팅방 1부,2부 조인방 3부(야간) 조인방 패키지 조인방 골프대회 아마추어 대회 KLPGA 대회 자연과 하나 되는 45홀 골프 천국 울창한 숲과 호수로 이루어진 45홀에서 골프의 진정한 품격을 경험하세요.",
+    "로그인 회원가입 클럽소개 인사말 클럽소개 부대시설 오시는길 인터넷예약 골프예약 골프호텔예약 예약조회/취소 예약규정 조인게시판 대기예약 코스안내 코스소개 코스공략 골프호텔 골프호텔소개 이용안내 객실안내 요금안내 이용안내 이용요금 위약안내 분양안내 로컬룰 정보마당 공지사항 자료실 명예의전당 포토갤러리 해피니스 뉴스 오픈채팅방 1부,2부 조인방 3부(야간) 조인방 패키지 조인방 골프대회 아마추어 대회 KLPGA 대회 community 정보마당 인터넷예약 클럽소개 코스안내 골프호텔 이용안내 정보마당 공지사항 자료실 명예의전당 포토갤러리 해",
+    "로그인 회원가입 클럽소개 인사말 클럽소개 부대시설 오시는길 인터넷예약 골프예약 골프호텔예약 예약조회/취소 예약규정 조인게시판 대기예약 코스안내 코스소개 코스공략 골프호텔 골프호텔소개 이용안내 객실안내 요금안내 이용안내 이용요금 위약안내 분양안내 로컬룰 정보마당 공지사항 자료실 명예의전당 포토갤러리 해피니스 뉴스 오픈채팅방 1부,2부 조인방 3부(야간) 조인방 패키지 조인방 골프대회 아마추어 대회 KLPGA 대회 course 코스안내 인터넷예약 클럽소개 코스안내 골프호텔 이용안내 정보마당 코스소개 코스공략 heart course홀 번"
+   ],
+   "value": null,
+   "third_party": {
+    "two": null,
+    "three": null,
+    "source": "그린피가이드",
+    "url": "https://greenfeeguide.co.kr/course/gc-0454/"
+   }
+  },
+  "three_player": {
+   "value": null,
+   "evidence": []
+  },
+  "five_player": {
+   "value": null,
+   "evidence": []
+  },
+  "marshal_caddie": {
+   "value": null,
+   "evidence": []
+  },
+  "cart_type": {
+   "evidence": [
+    "카트비 구분 18홀 9홀 4인승 카트비 70,000 35,000 VIP 및 5인플레이 전용 리무진 카트 150,000 75,000 리무진카트 예약완료시 5인플레이 종전대로 2카트로 운영됩니다."
+   ],
+   "value": null
+  },
+  "cart_entry": {
+   "evidence": [],
+   "value": null
+  },
+  "bagdrop": {
+   "evidence": [],
+   "value": null
+  },
+  "mat": {
+   "evidence": [],
+   "value": null
+  },
+  "checkin": {
+   "evidence": [],
+   "value": null,
+   "third_party": {
+    "value": null,
+    "source": "그린피가이드",
+    "url": "https://greenfeeguide.co.kr/course/gc-0454/"
+   }
+  },
+  "locker": {
+   "evidence": [
+    "\"기본 요금\"이란 락커,샤워실,주차장,골프클럽 상하차 서비스 등 골프장 내장시 제공 받는 물적,인적 서비스에 대한 기본요금.",
+    "로그인 회원가입 클럽소개 인사말 클럽소개 부대시설 오시는길 인터넷예약 골프예약 골프호텔예약 예약조회/취소 예약규정 조인게시판 대기예약 코스안내 코스소개 코스공략 골프호텔 골프호텔소개 이용안내 객실안내 요금안내 이용안내 이용요금 위약안내 분양안내 로컬룰 정보마당 공지사항 자료실 명예의전당 포토갤러리 해피니스 뉴스 오픈채팅방 1부,2부 조인방 3부(야간) 조인방 패키지 조인방 골프대회 아마추어 대회 KLPGA 대회 happiness 클럽소개 인터넷예약 클럽소개 코스안내 골프호텔 이용안내 정보마당 인사말 클럽소개 부대시설 오시는길 클럽하"
+   ],
+   "value": "문구 확인(원문 근거)"
+  },
+  "sauna": {
+   "evidence": [
+    "유러피안 스타일의 클럽하우스에는 VIP실, 라운지, 사우나, 식당, 골프호텔 등 다양한 부대시설이 갖춰져 있어 편안하게 이용하실 수 있습니다."
+   ],
+   "value": "문구 확인(원문 근거)"
+  },
+  "dress": {
+   "evidence": [],
+   "value": null
+  },
+  "pace": {
+   "evidence": [],
+   "value": null
+  },
+  "grass": null
+ },
+ "facilities": {
+  "practice": {
+   "evidence": [],
+   "value": null
+  },
+  "indoor_range": {
+   "value": null,
+   "evidence": []
+  },
+  "food": {
+   "evidence": [
+    "(특히 레귤러 티에서는 우드를 사용하고, 백티를 사용시에는 그늘집 앞에 있는 벙커를 보고 공략해야 안전한 페어웨이 안착이 가능하다.) Green Analysis Human 코스HOLE 5PAR 3 HDCP 4 Pro Tip 짧은 거리의 첫 파3홀로서 다소 편안한 홀이다.",
+    "로그인 회원가입 클럽소개 인사말 클럽소개 부대시설 오시는길 인터넷예약 골프예약 골프호텔예약 예약조회/취소 예약규정 조인게시판 대기예약 코스안내 코스소개 코스공략 골프호텔 골프호텔소개 이용안내 객실안내 요금안내 이용안내 이용요금 위약안내 분양안내 로컬룰 정보마당 공지사항 자료실 명예의전당 포토갤러리 해피니스 뉴스 오픈채팅방 1부,2부 조인방 3부(야간) 조인방 패키지 조인방 골프대회 아마추어 대회 KLPGA 대회 happiness 클럽소개 인터넷예약 클럽소개 코스안내 골프호텔 이용안내 정보마당 인사말 클럽소개 부대시설 오시는길 클럽하",
+    "유러피안 스타일의 클럽하우스에는 VIP실, 라운지, 사우나, 식당, 골프호텔 등 다양한 부대시설이 갖춰져 있어 편안하게 이용하실 수 있습니다."
+   ],
+   "value": null
+  },
+  "snack_bar": {
+   "value": null,
+   "evidence": []
+  },
+  "locker_sauna": {
+   "value": null,
+   "evidence": []
+  },
+  "lodging": {
+   "value": null,
+   "evidence": []
+  },
+  "other": {
+   "value": null,
+   "evidence": []
+  },
+  "night": {
+   "evidence": [
+    "로그인 회원가입 클럽소개 인사말 클럽소개 부대시설 오시는길 인터넷예약 골프예약 골프호텔예약 예약조회/취소 예약규정 조인게시판 대기예약 코스안내 코스소개 코스공략 골프호텔 골프호텔소개 이용안내 객실안내 요금안내 이용안내 이용요금 위약안내 분양안내 로컬룰 정보마당 공지사항 자료실 명예의전당 포토갤러리 해피니스 뉴스 오픈채팅방 1부,2부 조인방 3부(야간) 조인방 패키지 조인방 골프대회 아마추어 대회 KLPGA 대회 자연과 하나 되는 45홀 골프 천국 울창한 숲과 호수로 이루어진 45홀에서 골프의 진정한 품격을 경험하세요.",
+    "로그인 회원가입 클럽소개 인사말 클럽소개 부대시설 오시는길 인터넷예약 골프예약 골프호텔예약 예약조회/취소 예약규정 조인게시판 대기예약 코스안내 코스소개 코스공략 골프호텔 골프호텔소개 이용안내 객실안내 요금안내 이용안내 이용요금 위약안내 분양안내 로컬룰 정보마당 공지사항 자료실 명예의전당 포토갤러리 해피니스 뉴스 오픈채팅방 1부,2부 조인방 3부(야간) 조인방 패키지 조인방 골프대회 아마추어 대회 KLPGA 대회 community 정보마당 인터넷예약 클럽소개 코스안내 골프호텔 이용안내 정보마당 공지사항 자료실 명예의전당 포토갤러리 해"
+   ],
+   "value": null
+  },
+  "closed_days": {
+   "evidence": [],
+   "third_party": null,
+   "value": null
+  },
+  "shuttle": {
+   "evidence": [],
+   "value": null
+  },
+  "ev_charge": {
+   "evidence": [
+    "휴대폰 충전기는 개인적으로 소지하여 주시기 바랍니다.",
+    "대자연의 품에서 차 한잔의 여유와 동행인과의 담소를 나누며 일상에서 누릴 수 없던 고요함과 편안한 분위기에서 다음 라운딩을 위해 재충전의 시간을 보내며 오감만족의 휴식을 즐겨 보십시오."
+   ],
+   "value": null
+  },
+  "gf_facilities": [
+   "카페·라운지근거골프장 공식 홈페이지 시설 안내 · 2026"
+  ],
+  "proshop": {
+   "evidence": [],
+   "value": null
+  }
+ },
+ "rental": {
+  "available": null,
+  "full_set": null,
+  "fee_text": null,
+  "brand": null,
+  "left_handed": null,
+  "shoes": null,
+  "nine_hole": null,
+  "range_finder": null,
+  "reservation": null,
+  "source_url": null,
+  "evidence": [],
+  "official": null,
+  "nearby_delivery": {
+   "region": "호남",
+   "sido": "전남광주통합특별시",
+   "verified_at": "2026-11-26 (KST)",
+   "checked_at": "2026-11-26",
+   "providers": [
+    {
+     "id": "theb",
+     "name": "더비 (The B)",
+     "coverage": "조건부",
+     "basis": "매장·퀵 안내 없음. '전국 당일 배송' 표기 및 화물택배만 해당.",
+     "phone": "010-2530-4575",
+     "operating_status": "정상 영업",
+     "delivery": "O",
+     "price_headline": "12시간 기준 90,000원부터",
+     "bookable": true
+    },
+    {
+     "id": "gangnamclub",
+     "name": "강남골프클럽렌탈",
+     "coverage": "조건부",
+     "basis": "동일(전지역 배송·별도 상담).",
+     "phone": "010-7407-0753",
+     "operating_status": "정상 영업(자사 블로그 최신 게시 2026-04-28)",
+     "delivery": "미확인",
+     "price_headline": null,
+     "bookable": true
+    }
+   ],
+   "provider_count": 2,
+   "legend": {
+    "O": "공식 안내로 해당 권역 이용이 확인됨",
+    "X": "공식 안내상 해당 권역 서비스가 없음(예: '제주 전 지역' 전용으로만 안내)",
+    "조건부": "공식 안내상 가능하나 조건(수단·요금·현재 판매중지 등)이 붙어 있음. 조건은 basis/detail에 기재",
+    "미확인": "공식 공개 안내에서 해당 항목에 대한 언급을 찾지 못함(추정하지 않음)"
+   },
+   "not_verified": "전화·문자·카카오톡 상담으로만 확인 가능한 항목(재고, 개별 견적, 권역별 실제 배송 가능 여부)은 '미확인'으로 남김",
+   "source_file": "5-rental_8_coverage_verified.json",
+   "note_code": "해외 골퍼용 골프채 렌탈·딜리버리 업체. 같은 권역이라도 실제 배송 가능 여부·재고·견적은 전화 확인 필요."
+  }
+ },
+ "briefing": {
+  "notices": {
+   "url": "https://www.happinesscc.com/html/board/waiting_book.asp",
+   "items": [
+    {
+     "title": "12월 패키지 요금 안내",
+     "date": "2026-11-06",
+     "url": "https://www.happinesscc.com/html/board/notice_view.asp?b_idx=582&GotoPage="
+    },
+    {
+     "title": "10월,11월 패키지 요금 안내",
+     "date": "2026-09-07",
+     "url": "https://www.happinesscc.com/html/board/notice_view.asp?b_idx=580&GotoPage="
+    }
+   ],
+   "tags": {
+    "요금": [
+     {
+      "title": "12월 패키지 요금 안내",
+      "date": "2026-11-06",
+      "url": "https://www.happinesscc.com/html/board/notice_view.asp?b_idx=582&GotoPage="
+     },
+     {
+      "title": "10월,11월 패키지 요금 안내",
+      "date": "2026-09-07",
+      "url": "https://www.happinesscc.com/html/board/notice_view.asp?b_idx=580&GotoPage="
+     }
+    ]
+   }
+  },
+  "review": {
+   "score_10": 8.8,
+   "count": 8,
+   "source": "티픽골프장 라운더 후기 집계",
+   "url": "https://teepickgolf.com/course/%ED%95%B4%ED%94%BC%EB%8B%88%EC%8A%A4"
+  },
+  "fee_change": null,
+  "collected_at": "2026-11-26T10:25:40+09:00",
+  "recent_notice_text": null,
+  "course_notes": null,
+  "alert": null,
+  "unconfirmed": [],
+  "sources": []
+ },
+ "collection": {
+  "official_site": "ok",
+  "official_reason": null,
+  "pages_collected": 14,
+  "third_party": {
+   "teepick": true,
+   "greenfeeguide": true
+  },
+  "render_hint": "static",
+  "plan_strategy": "static(직접 파싱)",
+  "browser_batch": false,
+  "browser_pages": 0,
+  "browser_pdf": []
+ },
+ "coverage": {
+  "basic": 1.0,
+  "course": 1.0,
+  "fee": 1.0,
+  "ops": 0.14,
+  "facility": 0.0,
+  "briefing": 0.5,
+  "rental": 0.25
+ }
+}

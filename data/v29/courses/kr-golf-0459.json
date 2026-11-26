@@ -1,0 +1,465 @@
+{
+ "course_id": "kr-golf-0459",
+ "meta": {
+  "name": "용평리조트대중골프장",
+  "generated_at": "2026-11-26T09:55:48+09:00",
+  "schema": "stage2c/1.0",
+  "batch": "2_강원",
+  "includes": [
+   "master",
+   "ops",
+   "briefing"
+  ],
+  "source": "raw/received_gangwon_65.json (외부 데이터 수신, 2026-11-26)",
+  "review": {
+   "checked_at": "2026-11-26",
+   "status": "verified_official",
+   "checks": [
+    {
+     "field": "코스 규모·잔디",
+     "received": "9홀 파36, 켄터키블루·벤트(투그린)",
+     "verified": "5,146야드 9홀 파36, 켄터기블루·벤트그라스",
+     "result": "일치",
+     "url": "https://www.yongpyong.co.kr/kor/golf/clubGuide/yongpyong9Intro.do"
+    },
+    {
+     "field": "그린피",
+     "received": "60,000 / 80,000 (9홀 1회)",
+     "verified": "60,000 / 80,000 (여름성수기 80,000)",
+     "result": "일치",
+     "url": "https://www.yongpyong.co.kr/kor/golf/appointment/priceInfo.do"
+    },
+    {
+     "field": "카트·캐디",
+     "received": "모노카트 8,000/인, 캐디 75,000/팀",
+     "verified": "동일(셀프카트 8,000/인·모노카트 8,000/인, 캐디 75,000)",
+     "result": "일치",
+     "url": "https://www.yongpyong.co.kr/kor/golf/appointment/priceInfo.do"
+    },
+    {
+     "field": "예약 오픈",
+     "received": "매월 첫 번째 목요일 09:00(1개월 단위)",
+     "verified": "동일",
+     "result": "일치",
+     "url": "https://www.yongpyong.co.kr/kor/golf/appointment/appointmentInfo.do"
+    },
+    {
+     "field": "취소 규정",
+     "received": "7일 전까지(예약일 제외)",
+     "verified": "취소는 이용일 14일 전까지, 변경은 7일 전까지",
+     "result": "불일치(정정)",
+     "url": "https://www.yongpyong.co.kr/kor/golf/appointment/appointmentInfo.do"
+    },
+    {
+     "field": "영업기간·동계휴장",
+     "received": "미확인(리조트 공지 참조)",
+     "verified": "2026 영업 4/1~11/15(공지상 11/8 → 연장 운영) / 동계휴장 2026-11-16~2027-03-31",
+     "result": "누락 보완",
+     "url": "https://www.yongpyong.co.kr/kor/guide/notice/read.do?moveYn=Y&noticeId=1711"
+    }
+   ]
+  },
+  "data_checks": [
+   "대표전화 표기 차이: 마스터 033-330-7471 / 수신 1522-3111 — 마스터 033-330-7471은 용평9 프런트(공식 예약안내 게재). 골프예약 1522-3111.",
+   "미확인 목록 누락 라벨 보완: 제세금"
+  ],
+  "schema_previous": "stage2b/1.0",
+  "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
+  "restructured_from_7key": false,
+  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
+  "has_detail": true,
+  "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+ },
+ "master": {
+  "course_id": "kr-golf-0459",
+  "name": "용평리조트대중골프장",
+  "name_variants": [
+   "용평리조트대중골프장",
+   "용평9",
+   "용평9 골프코스",
+   "모나용평 용평9"
+  ],
+  "former_names": null,
+  "name_note": "공식 홈페이지 코스 명칭은 용평9(9H).",
+  "type": "대중제",
+  "types": [
+   "대중제"
+  ],
+  "type_note": null,
+  "holes": {
+   "total": 9,
+   "member": 0,
+   "public": 9,
+   "non_member": 0
+  },
+  "holes_note": null,
+  "address": "강원특별자치도 평창군 대관령면 올림픽로 715",
+  "addresses": [
+   "강원특별자치도 평창군 대관령면 올림픽로 715"
+  ],
+  "address_note": null,
+  "region": {
+   "sido_code": "51",
+   "sido_name": "강원특별자치도",
+   "sido_short": "강원",
+   "sigungu_code": "51760",
+   "sigungu_name": "평창군",
+   "legal_dong_code": "5176000000"
+  },
+  "lat": 37.646028,
+  "lng": 128.685225,
+  "nearest_ic": {
+   "name": "대관령IC",
+   "distance_km": 7.4,
+   "source": "최근접 IC 직선거리"
+  },
+  "tel": "033-330-7471",
+  "tel_official": "1522-3111",
+  "tel_conflict": true,
+  "tel_source": "KGA",
+  "tel_note": "마스터 033-330-7471은 용평9 프런트(공식 예약안내 게재). 골프예약 1522-3111.",
+  "homepage": "https://www.yongpyong.co.kr/kor/golf/clubGuide/yongpyong9Intro.do",
+  "homepage_master": "https://www.yongpyong.co.kr/kor/golf/clubGuide/yongpyong9Intro.do",
+  "operators": [
+   "모나용평㈜(신달순 임학운)"
+  ],
+  "area_sqm": 268581,
+  "opened": null,
+  "course_blocks": [
+   "용평9(9홀)"
+  ],
+  "facility_id": "F017",
+  "facility_members": [
+   "용평리조트골프클럽",
+   "용평리조트대중골프장",
+   "용평버치힐골프클럽"
+  ],
+  "status": "operating",
+  "status_note": "2026 시즌 영업 4/1~11/15(공지상 11/8 → 연장 운영). 동계 휴장 2026-11-16~2027-03-31. 정기 휴장 월 2회 수요일.",
+  "provenance": {
+   "master": "courses_master.json v2.4 (문체부·KGA·KGBA·티픽·지도 + 강원 검수 정정)",
+   "detail": "raw/received_gangwon_65.json (2026-11-26 수신, 검수 2026-11-26)",
+   "synced_to": "courses_master.json v2.7 (2026-11-26 단일 스키마 정규화)"
+  },
+  "holes_received": 9,
+  "holes_conflict": false,
+  "facility_cluster": {
+   "facility_id": "F017",
+   "facility_name": "용평리조트골프클럽",
+   "members": [
+    "용평리조트골프클럽",
+    "용평리조트대중골프장",
+    "용평버치힐골프클럽"
+   ],
+   "basis": "동일 소재지",
+   "relationship": null,
+   "note": null
+  },
+  "factcheck_2026_11_26": null,
+  "address_original": "평창군 대관령면 올림픽로 715"
+ },
+ "course": {
+  "holes": 9,
+  "holes_received": 9,
+  "course_names": "9홀 파36 (1985년 8월 개장, Ronald Fream 설계, 투그린)",
+  "membership_type": "대중제",
+  "night_light": null,
+  "blocks": [
+   "용평9(9홀)"
+  ],
+  "grass": {
+   "tee": null,
+   "fairway": "양잔디(켄터키블루)",
+   "green": "벤트그라스(투그린)"
+  },
+  "kga": {
+   "code": "430",
+   "name": "용평9 골프코스",
+   "nine_hole_courses": [
+    "우그린",
+    "좌그린"
+   ],
+   "hole_combinations": [
+    "우그린+좌그린"
+   ]
+  },
+  "kga_hole_est": 18,
+  "extra_courses": null
+ },
+ "fee": {
+  "weekday": 60000,
+  "weekend": 80000,
+  "weekday_text": "60,000원 (9홀 1회)",
+  "weekend_text": "80,000원 (9홀 1회)",
+  "basis": "1인·9홀 1회 기준(2026-10-09 공식 요금표). 평창군민 주중 42,000원·주말 56,000원",
+  "tax_included": "제세공과금 포함(공식 요금표)",
+  "cart": {
+   "value": 8000,
+   "text": "모노카트(셀프) 1인 8,000원"
+  },
+  "caddie": {
+   "value": 75000,
+   "text": "75,000원/팀(9홀 1회 기준)",
+   "none": false
+  },
+  "as_of": "2026-11-26 공식 요금안내 확인(2026 시즌)",
+  "source_url": "https://www.yongpyong.co.kr/kor/golf/appointment/priceInfo.do",
+  "note": null,
+  "sources": [
+   {
+    "source": "수신 조사(공식·공개 예약정보)",
+    "url": "https://greenfeeguide.co.kr/course/gc-0242/",
+    "checked_at": "2026-10-09(공식 요금표 확인)"
+   }
+  ]
+ },
+ "cancel": {
+  "cancel_policy": "취소는 이용일 14일 전까지, 예약 변경은 7일 전까지(예약일 제외)",
+  "open_cycle": "매월 첫 번째 목요일 09:00 온라인 예약 오픈(1개월 단위)",
+  "notes": "9홀 단위 예약. 모노카트 셀프 운영",
+  "evidence": [],
+  "weather_evidence": []
+ },
+ "ops": {
+  "nocaddie": {
+   "value": null,
+   "evidence": []
+  },
+  "two_player": {
+   "value": null,
+   "evidence": []
+  },
+  "three_player": {
+   "value": null,
+   "evidence": []
+  },
+  "five_player": {
+   "value": null,
+   "evidence": []
+  },
+  "marshal_caddie": {
+   "value": null,
+   "evidence": []
+  },
+  "cart_type": {
+   "value": null,
+   "evidence": []
+  },
+  "cart_entry": {
+   "value": null,
+   "evidence": []
+  },
+  "bagdrop": {
+   "value": null,
+   "evidence": []
+  },
+  "mat": {
+   "value": null,
+   "evidence": []
+  },
+  "checkin": {
+   "value": null,
+   "evidence": []
+  },
+  "locker": {
+   "value": null,
+   "evidence": []
+  },
+  "sauna": {
+   "value": null,
+   "evidence": []
+  },
+  "dress": {
+   "value": null,
+   "evidence": []
+  },
+  "pace": {
+   "value": null,
+   "evidence": []
+  }
+ },
+ "facilities": {
+  "practice": {
+   "value": null,
+   "evidence": []
+  },
+  "indoor_range": {
+   "value": null,
+   "evidence": []
+  },
+  "food": {
+   "value": null,
+   "evidence": []
+  },
+  "snack_bar": {
+   "value": null,
+   "evidence": []
+  },
+  "locker_sauna": {
+   "value": null,
+   "evidence": []
+  },
+  "lodging": {
+   "value": "용평리조트(모나용평)",
+   "evidence": []
+  },
+  "other": {
+   "value": "카페·라운지·편의점·수영장·스파·피트니스",
+   "evidence": []
+  },
+  "night": {
+   "value": null,
+   "evidence": []
+  },
+  "closed_days": {
+   "value": "월 2회 수요일(법정공휴일·하계시즌 제외)",
+   "third_party": null,
+   "evidence": []
+  },
+  "shuttle": {
+   "value": null,
+   "evidence": []
+  }
+ },
+ "rental": {
+  "available": null,
+  "full_set": null,
+  "fee_text": null,
+  "brand": null,
+  "left_handed": null,
+  "shoes": null,
+  "nine_hole": null,
+  "range_finder": null,
+  "reservation": null,
+  "source_url": null,
+  "nearby_delivery": {
+   "region": "강원",
+   "sido": "강원특별자치도",
+   "verified_at": "2026-11-26 (KST)",
+   "checked_at": "2026-11-26",
+   "providers": [
+    {
+     "id": "theb",
+     "name": "더비 (The B)",
+     "coverage": "조건부",
+     "basis": "매장·퀵 안내 없음. '전국 당일 배송' 표기와 화물택배(월~금, 2일 이상 무료)만 적용 가능. 권역별 확정 안내는 없음.",
+     "phone": "010-2530-4575",
+     "operating_status": "정상 영업",
+     "delivery": "O",
+     "price_headline": "12시간 기준 90,000원부터",
+     "bookable": true
+    },
+    {
+     "id": "gangnamclub",
+     "name": "강남골프클럽렌탈",
+     "coverage": "조건부",
+     "basis": "'전지역 배송 가능합니다(요금은 별도상담)' 문구만 있음. 권역별 확정 안내 없음.",
+     "phone": "010-7407-0753",
+     "operating_status": "정상 영업(자사 블로그 최신 게시 2026-04-28)",
+     "delivery": "미확인",
+     "price_headline": null,
+     "bookable": true
+    }
+   ],
+   "provider_count": 2,
+   "legend": {
+    "O": "공식 안내로 해당 권역 이용이 확인됨",
+    "X": "공식 안내상 해당 권역 서비스가 없음(예: '제주 전 지역' 전용으로만 안내)",
+    "조건부": "공식 안내상 가능하나 조건(수단·요금·현재 판매중지 등)이 붙어 있음. 조건은 basis/detail에 기재",
+    "미확인": "공식 공개 안내에서 해당 항목에 대한 언급을 찾지 못함(추정하지 않음)"
+   },
+   "not_verified": "전화·문자·카카오톡 상담으로만 확인 가능한 항목(재고, 개별 견적, 권역별 실제 배송 가능 여부)은 '미확인'으로 남김",
+   "source_file": "5-rental_8_coverage_verified.json",
+   "note_code": "해외 골퍼용 골프채 렌탈·딜리버리 업체. 같은 권역이라도 실제 배송 가능 여부·재고·견적은 전화 확인 필요."
+  }
+ },
+ "briefing": {
+  "notices": {
+   "url": "https://www.yongpyong.co.kr/kor/guide/notice/read.do?moveYn=Y&noticeId=1711",
+   "items": [
+    {
+     "type": "동계휴장",
+     "text": "용평9 동계휴장 2026-11-16 ~ 2027-03-31",
+     "as_of": "2026-11-24",
+     "url": "https://www.yongpyong.co.kr/kor/guide/notice/read.do?moveYn=Y&noticeId=1711"
+    }
+   ],
+   "tags": {
+    "동계휴장": "confirmed"
+   }
+  },
+  "recent_notice_text": "2026년 10~11월 공지 미확인(2026-11-26 기준). 리조트 동계 운영 일정은 모나용평 공지 참조",
+  "course_notes": "리조트 내 9홀 대중 코스. 투그린. 초보·가족 라운드 수요가 많음",
+  "review": null,
+  "fee_change": null,
+  "alert": {
+   "type": "winter_closure",
+   "level": "closure",
+   "summary": "★ 2026 시즌 종료. 동계 휴장 2026-11-16~2027-03-31로 현재 라운드 불가.",
+   "detail": "2026 시즌 종료. 동계 휴장 2026-11-16~2027-03-31로 현재 라운드 불가. 공식/수집 원문에 근거해 v2.8에서 info → closure로 등급을 올리고 기간을 구조화했다.",
+   "period": {
+    "from": "2026-11-16",
+    "to": "2027-03-31",
+    "reopen": null
+   },
+   "confirmed": true,
+   "checked_at": "2026-11-26",
+   "source_url": null,
+   "source_file": "기존 수집값(원문 문장)",
+   "raw": "2026 시즌은 종료. 동계 휴장 2026-11-16~2027-03-31로 현재 라운드 불가.",
+   "currently_closed": true
+  },
+  "unconfirmed": [
+   "야간 라이트",
+   "잔디(티)",
+   "2인 플레이",
+   "3인 플레이",
+   "5인 플레이",
+   "노캐디",
+   "마샬캐디",
+   "카트 종류",
+   "카트 페어웨이 진입",
+   "셀프 백드롭",
+   "매트 티샷",
+   "연습그린",
+   "인도어 연습장",
+   "식당·조식",
+   "그늘집",
+   "락커·사우나",
+   "클럽 렌탈 여부",
+   "클럽 렌탈 요금",
+   "좌타용 클럽",
+   "골프화 대여",
+   "제세금"
+  ],
+  "unconfirmed_labels_added": [
+   "제세금"
+  ],
+  "sources": [
+   "https://greenfeeguide.co.kr/course/gc-0242/",
+   "https://todaygolfgo.com/regions/gangwon/"
+  ],
+  "collected_at": "2026-11-26T09:55:48+09:00"
+ },
+ "collection": {
+  "official_site": "ok",
+  "official_reason": "운영 중(리조트 부속 9홀 대중 골프장)",
+  "pages_collected": 0,
+  "third_party": {
+   "received_report": true
+  },
+  "render_hint": "report",
+  "plan_strategy": "subagent_report(2026-11-26)"
+ },
+ "coverage": {
+  "basic": 1.0,
+  "course": 1.0,
+  "fee": 1.0,
+  "ops": 0.0,
+  "facility": 0.3,
+  "briefing": 0.75,
+  "rental": 0.25
+ }
+}

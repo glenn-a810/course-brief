@@ -1,0 +1,535 @@
+{
+ "course_id": "kr-golf-0194",
+ "meta": {
+  "name": "비에이비스타골프장",
+  "generated_at": "2026-11-26T09:51:57+09:00",
+  "schema": "stage2c/1.0",
+  "batch": "1_수도권",
+  "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
+  "schema_previous": "stage2b/1.0",
+  "restructured_from_7key": true,
+  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
+  "has_detail": true,
+  "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+ },
+ "master": {
+  "course_id": "kr-golf-0194",
+  "name": "비에이비스타골프장",
+  "name_variants": [
+   "비에이비스타골프장",
+   "비에이비스타골프장(회원)"
+  ],
+  "type": "회원제",
+  "holes": {
+   "total": 41,
+   "member": 41,
+   "public": 0,
+   "non_member": 0
+  },
+  "address": "경기도 이천시 모가면 어농로 272",
+  "region": {
+   "sido_code": "41",
+   "sido_name": "경기도",
+   "sido_short": "경기",
+   "sigungu_code": "41500",
+   "sigungu_name": "이천시",
+   "legal_dong_code": "4150000000"
+  },
+  "lat": 37.180365,
+  "lng": 127.416668,
+  "nearest_ic": {
+   "name": "남이천IC",
+   "distance_km": 2.3,
+   "source": "teepick(실측 표기)",
+   "straight_km_nearest": 10.1,
+   "straight_name": "이천IC"
+  },
+  "tel": "031-636-3577",
+  "homepage": "https://www.bavista.co.kr/",
+  "operators": [
+   "삼풍관광㈜"
+  ],
+  "area_sqm": 1479976,
+  "opened": null,
+  "course_blocks": [],
+  "facility_id": "F005",
+  "provenance": {
+   "master": "courses_master.json v2.0 (문체부·KGA·KGBA·티픽·지도)",
+   "synced_to": "courses_master.json v2.7 (2026-11-26 단일 스키마 정규화)"
+  },
+  "par": 72,
+  "holes_teepick": 54,
+  "course_spec": {
+   "holes": 41,
+   "par": 72,
+   "blocks": [
+    "비스타라고보나호박몬티벨라"
+   ],
+   "length_m": null,
+   "kga": {
+    "kga_course_code": "101",
+    "kga_name": "비에이비스타",
+    "region_short": "경기",
+    "address": "경기이천시모가면어농리산86",
+    "match_method": "exact",
+    "match_score": 100,
+    "match_confidence": "high",
+    "nine_hole_courses": [
+     "비스타",
+     "라고"
+    ],
+    "hole_combinations": [
+     {
+      "course_name_1": "비스타",
+      "course_name_2": "라고",
+      "tees": [
+       {
+        "tee": "White",
+        "gender": "남자",
+        "length_yds": 6131.0,
+        "std_par": 72.0,
+        "course_rating": 70.4,
+        "slope_rating": 130.0,
+        "front9": "35.9 / 138",
+        "back9": "34.5 / 122"
+       },
+       {
+        "tee": "White",
+        "gender": "여자",
+        "length_yds": 5191.0,
+        "std_par": 72.0,
+        "course_rating": 71.0,
+        "slope_rating": 121.0,
+        "front9": "36.1 / 122",
+        "back9": "34.9 / 120"
+       }
+      ]
+     }
+    ]
+   },
+   "grass": null,
+   "hole_by_hole": null
+  },
+  "addresses": [
+   "경기도 이천시 모가면 어농로 272"
+  ],
+  "facility_members": [
+   "비에이비스타골프장",
+   "비에이비스타컨트리클럽"
+  ],
+  "status": "operating",
+  "facility_cluster": {
+   "facility_id": "F005",
+   "facility_name": "비에이비스타골프장",
+   "members": [
+    "비에이비스타골프장",
+    "비에이비스타컨트리클럽"
+   ],
+   "basis": "동일 소재지",
+   "relationship": null,
+   "note": null
+  },
+  "factcheck_2026_11_26": null,
+  "holes_note": "등록(문체부) 41홀 · 수집 54홀 — 등록 기준과 수집처(티픽·조사) 표기 차이다. 등록 41홀을 정본으로 두고 집계에는 master.holes를 쓴다. 복합단지 합산 여부는 미확정."
+ },
+ "course": {
+  "holes": 41,
+  "holes_received": 54,
+  "course_names": null,
+  "membership_type": "회원제",
+  "night_light": null,
+  "blocks": [
+   "비스타라고보나호박몬티벨라"
+  ],
+  "grass": {
+   "tee": null,
+   "fairway": null,
+   "green": null
+  },
+  "kga": {
+   "kga_course_code": "101",
+   "kga_name": "비에이비스타",
+   "region_short": "경기",
+   "address": "경기이천시모가면어농리산86",
+   "match_method": "exact",
+   "match_score": 100,
+   "match_confidence": "high",
+   "nine_hole_courses": [
+    "비스타",
+    "라고"
+   ],
+   "hole_combinations": [
+    {
+     "course_name_1": "비스타",
+     "course_name_2": "라고",
+     "tees": [
+      {
+       "tee": "White",
+       "gender": "남자",
+       "length_yds": 6131.0,
+       "std_par": 72.0,
+       "course_rating": 70.4,
+       "slope_rating": 130.0,
+       "front9": "35.9 / 138",
+       "back9": "34.5 / 122"
+      },
+      {
+       "tee": "White",
+       "gender": "여자",
+       "length_yds": 5191.0,
+       "std_par": 72.0,
+       "course_rating": 71.0,
+       "slope_rating": 121.0,
+       "front9": "36.1 / 122",
+       "back9": "34.9 / 120"
+      }
+     ]
+    }
+   ]
+  },
+  "kga_hole_est": null,
+  "extra_courses": null,
+  "hole_by_hole": null,
+  "length_m": null,
+  "par": 72,
+  "holes_note": "등록(문체부) 41홀 · 수집 54홀 — 등록 기준과 수집처(티픽·조사) 표기 차이다. 등록 41홀을 정본으로 두고 집계에는 master.holes를 쓴다. 복합단지 합산 여부는 미확정."
+ },
+ "fee": {
+  "weekday": null,
+  "weekend": null,
+  "weekday_text": null,
+  "weekend_text": null,
+  "basis": null,
+  "tax_included": null,
+  "cart": null,
+  "caddie": null,
+  "as_of": null,
+  "source_url": null,
+  "note": null,
+  "sources": [],
+  "checked_at": null,
+  "market": {
+   "weekday_min": 80000.0,
+   "weekend_min": 100000.0,
+   "part1": null,
+   "part2": null,
+   "source": "티픽골프장(실거래 관측)",
+   "url": "https://teepickgolf.com/course/%EB%B9%84%EC%97%90%EC%9D%B4%EB%B9%84%EC%8A%A4%ED%83%80cc",
+   "note": "공시가 아닌 최근 관측 실거래 최저가"
+  },
+  "official_green_evidence": [],
+  "official_rental": null
+ },
+ "cancel": {
+  "cancel_policy": null,
+  "open_cycle": null,
+  "notes": null,
+  "evidence": [],
+  "weather_evidence": []
+ },
+ "ops": {
+  "nocaddie": {
+   "evidence": [],
+   "value": null
+  },
+  "two_player": {
+   "evidence": [],
+   "value": null
+  },
+  "three_player": {
+   "value": null,
+   "evidence": []
+  },
+  "five_player": {
+   "value": null,
+   "evidence": []
+  },
+  "marshal_caddie": {
+   "value": null,
+   "evidence": []
+  },
+  "cart_type": {
+   "evidence": [
+    "- 싱글은 혼자 타고 페어웨이에 진입해 라운딩하는 1인승 카트입니다."
+   ],
+   "value": "1인승",
+   "source_url": "https://www.bavista.co.kr/Public/Guide/Charge",
+   "confidence": "low",
+   "source_type": "official_site",
+   "page_label": "",
+   "value_from": "capital_supplement(official_site)"
+  },
+  "cart_entry": {
+   "evidence": [
+    "- 싱글은 혼자 타고 페어웨이에 진입해 라운딩하는 1인승 카트입니다."
+   ],
+   "value": "카트 페어웨이 진입 가능",
+   "source_url": "https://www.bavista.co.kr/Public/Guide/Charge",
+   "confidence": "medium",
+   "source_type": "official_site",
+   "page_label": "",
+   "value_from": "capital_supplement(official_site)"
+  },
+  "bagdrop": {
+   "evidence": [],
+   "value": null
+  },
+  "mat": {
+   "evidence": [],
+   "value": null
+  },
+  "checkin": {
+   "evidence": [
+    "TEE-OFF시간 30분 전까지는 도착하시어 여유있게 플레이 준비를 하여 주시기 바랍니다."
+   ],
+   "value": "티오프 30분 전 도착",
+   "source_url": "https://www.starcc.net/Mobile/View?ID=guide01",
+   "confidence": "medium",
+   "source_type": "official_site",
+   "page_label": "",
+   "value_from": "capital_supplement(official_site)"
+  },
+  "locker": {
+   "evidence": [
+    "07 락커이용"
+   ],
+   "value": "락커 운영",
+   "source_url": "https://www.starcc.net/Mobile/View?ID=guide01",
+   "confidence": "medium",
+   "source_type": "official_site",
+   "page_label": "",
+   "value_from": "capital_supplement(official_site)"
+  },
+  "sauna": {
+   "evidence": [
+    "사우나 있음 · 주차 발렛 파킹 · 프로샵"
+   ],
+   "value": "사우나 운영",
+   "source_url": "https://www.bavista.co.kr/Public/Facilities/ClubHouse",
+   "confidence": "high",
+   "checked_at": "2026-10-20",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/golf-course-amenities-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  },
+  "dress": {
+   "evidence": [
+    "슬리퍼·깃 없는 상의·노출이 심한 옷 금지, 클럽하우스·라운드 중 슬리퍼 금지"
+   ],
+   "value": "슬리퍼·깃 없는 상의·노출이 심한 옷 금지, 클럽하우스·라운드 중 슬리퍼 금지",
+   "source_url": "https://www.bavista.co.kr/Public/Guide/Term",
+   "confidence": "high",
+   "checked_at": "2026-10-16",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/golf-course-dress-etiquette-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  },
+  "pace": {
+   "evidence": [
+    "18홀 라운드 소요시간의 기준은 4시간 30분 이내 입니다. 기준시간을 초과하지 않도록 당부드립니다."
+   ],
+   "value": "라운드 소요 4시간 30분",
+   "source_url": "https://www.starcc.net/Mobile/View?ID=guide01",
+   "confidence": "medium",
+   "source_type": "official_site",
+   "page_label": "",
+   "value_from": "capital_supplement(official_site)"
+  }
+ },
+ "facilities": {
+  "practice": {
+   "evidence": [
+    "퍼팅 연습은 지정된 연습그린에서 하고 어프러치 연습은 절대 금합니다."
+   ],
+   "value": "퍼팅연습그린",
+   "source_url": "https://www.starcc.net/Mobile/View?ID=guide01",
+   "confidence": "low",
+   "source_type": "official_site",
+   "page_label": "",
+   "value_from": "capital_supplement(official_site)"
+  },
+  "indoor_range": {
+   "value": null,
+   "evidence": []
+  },
+  "food": {
+   "evidence": [
+    "그린피, 레스토랑, 그늘집 이용 비용은 Check-Out시 프론트에서 정산하시면 됩니다."
+   ],
+   "value": "레스토랑 · 그늘집",
+   "source_url": "https://www.starcc.net/Mobile/View?ID=guide01",
+   "confidence": "medium",
+   "source_type": "official_site",
+   "page_label": "",
+   "value_from": "capital_supplement(official_site)"
+  },
+  "snack_bar": {
+   "value": null,
+   "evidence": []
+  },
+  "locker_sauna": {
+   "value": null,
+   "evidence": []
+  },
+  "lodging": {
+   "value": null,
+   "evidence": []
+  },
+  "other": {
+   "value": null,
+   "evidence": []
+  },
+  "night": {
+   "evidence": [],
+   "value": null
+  },
+  "closed_days": {
+   "evidence": [],
+   "third_party": null,
+   "value": null
+  },
+  "shuttle": {
+   "evidence": [],
+   "value": null
+  },
+  "ev_charge": {
+   "evidence": [],
+   "value": null
+  },
+  "gf_facilities": null,
+  "proshop": {
+   "evidence": [
+    "사우나 있음 · 주차 발렛 파킹 · 프로샵"
+   ],
+   "value": "프로샵 운영",
+   "source_url": "https://www.bavista.co.kr/Public/Facilities/ClubHouse",
+   "confidence": "high",
+   "checked_at": "2026-10-20",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/golf-course-amenities-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  },
+  "parking": {
+   "value": "발렛 주차장",
+   "evidence": [
+    "발렛 주차장"
+   ],
+   "source_url": "https://www.bavista.co.kr/Public/Facilities/ClubHouse",
+   "confidence": "high",
+   "checked_at": "2026-10-20",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/golf-course-amenities-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  }
+ },
+ "rental": {
+  "available": null,
+  "full_set": null,
+  "fee_text": null,
+  "brand": null,
+  "left_handed": null,
+  "shoes": null,
+  "nine_hole": null,
+  "range_finder": null,
+  "reservation": null,
+  "source_url": null,
+  "evidence": [],
+  "official": null,
+  "nearby_delivery": {
+   "region": "수도권",
+   "sido": "경기도",
+   "verified_at": "2026-11-26 (KST)",
+   "checked_at": "2026-11-26",
+   "providers": [
+    {
+     "id": "theb",
+     "name": "더비 (The B)",
+     "coverage": "O",
+     "basis": "동탄·김포·시흥·용인·이천 24시간 무인픽업 매장 5곳 + 다마스 퀵/택배 배송. 홈페이지에 '강남·동탄·판교·수지·광교·분당', '시흥·배곧·인천·안산·송도', '이천·여주' 권역 표기.",
+     "phone": "010-2530-4575",
+     "operating_status": "정상 영업",
+     "delivery": "O",
+     "price_headline": "12시간 기준 90,000원부터",
+     "bookable": true
+    },
+    {
+     "id": "gangnamclub",
+     "name": "강남골프클럽렌탈",
+     "coverage": "O",
+     "basis": "서울 서초구 거점 매장 주소 공개, 자사 블로그 '전지역 배송 가능' 안내.",
+     "phone": "010-7407-0753",
+     "operating_status": "정상 영업(자사 블로그 최신 게시 2026-04-28)",
+     "delivery": "미확인",
+     "price_headline": null,
+     "bookable": true
+    },
+    {
+     "id": "apioz",
+     "name": "아피오즈 (Apioz)",
+     "coverage": "조건부",
+     "basis": "서울 숙소 배송·공항 픽업 옵션 안내. 단 골프세트 Sold Out으로 현재 이용 불가.",
+     "phone": "02-6956-8115",
+     "operating_status": "예약 중단(Sold Out) — 골프채 세트 한정",
+     "delivery": "미확인",
+     "price_headline": null,
+     "caution": "골프채 세트 Sold Out — 현재 예약 불가",
+     "bookable": false,
+     "bookable_reason": "골프채 세트 Sold Out — 현재 예약 불가"
+    }
+   ],
+   "provider_count": 3,
+   "legend": {
+    "O": "공식 안내로 해당 권역 이용이 확인됨",
+    "X": "공식 안내상 해당 권역 서비스가 없음(예: '제주 전 지역' 전용으로만 안내)",
+    "조건부": "공식 안내상 가능하나 조건(수단·요금·현재 판매중지 등)이 붙어 있음. 조건은 basis/detail에 기재",
+    "미확인": "공식 공개 안내에서 해당 항목에 대한 언급을 찾지 못함(추정하지 않음)"
+   },
+   "not_verified": "전화·문자·카카오톡 상담으로만 확인 가능한 항목(재고, 개별 견적, 권역별 실제 배송 가능 여부)은 '미확인'으로 남김",
+   "source_file": "5-rental_8_coverage_verified.json",
+   "note_code": "해외 골퍼용 골프채 렌탈·딜리버리 업체. 같은 권역이라도 실제 배송 가능 여부·재고·견적은 전화 확인 필요."
+  }
+ },
+ "briefing": {
+  "notices": {
+   "url": null,
+   "items": [],
+   "tags": {}
+  },
+  "review": {
+   "score_10": 7.7,
+   "count": 15,
+   "source": "티픽골프장 라운더 후기 집계",
+   "url": "https://teepickgolf.com/course/%EB%B9%84%EC%97%90%EC%9D%B4%EB%B9%84%EC%8A%A4%ED%83%80cc"
+  },
+  "fee_change": null,
+  "collected_at": "2026-11-26T09:51:57+09:00",
+  "recent_notice_text": null,
+  "course_notes": null,
+  "alert": null,
+  "unconfirmed": [],
+  "sources": []
+ },
+ "collection": {
+  "official_site": "ok",
+  "official_reason": null,
+  "pages_collected": 2,
+  "third_party": {
+   "teepick": true,
+   "greenfeeguide": false
+  },
+  "render_hint": "thin",
+  "plan_strategy": "thin(상세페이지 탐색)",
+  "browser_batch": false
+ },
+ "coverage": {
+  "basic": 1.0,
+  "course": 1.0,
+  "fee": 0.0,
+  "ops": 0.5,
+  "facility": 0.2,
+  "briefing": 0.5,
+  "rental": 0.25
+ }
+}

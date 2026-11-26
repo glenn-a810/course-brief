@@ -1,0 +1,241 @@
+{
+ "course_id": "kr-golf-0544",
+ "meta": {
+  "name": "성주 선남 골프장",
+  "schema": "stage2c/1.0",
+  "batch": null,
+  "structure": "master only (구장 JSON 미생성 — 건설중·미착공)",
+  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "has_detail": false
+ },
+ "master": {
+  "course_id": "kr-golf-0544",
+  "name": "성주 선남 골프장",
+  "name_variants": [
+   "선남골프장",
+   "대방건설 성주 골프장"
+  ],
+  "former_names": null,
+  "type": "미확인",
+  "holes": {
+   "total": 9,
+   "member": 0,
+   "public": 0,
+   "non_member": 0
+  },
+  "address": "경상북도 성주군 선남면 일원",
+  "addresses": [
+   "경상북도 성주군 선남면 일원"
+  ],
+  "region": {
+   "sido_code": "47",
+   "sido_name": "경상북도",
+   "sido_short": "경북",
+   "sigungu_code": "47840",
+   "sigungu_name": "성주군",
+   "legal_dong_code": "4784000000"
+  },
+  "lat": 35.900845,
+  "lng": 128.351764,
+  "tel": null,
+  "homepage": null,
+  "operators": [
+   "대방건설(우선협상대상자)"
+  ],
+  "area_sqm": null,
+  "opened": null,
+  "course_blocks": [],
+  "facility_id": null,
+  "facility_members": null,
+  "status": "planned",
+  "expected_open": "미정",
+  "nearest_ic": null,
+  "facility_cluster": null,
+  "factcheck_2026_11_26": null,
+  "holes_note": "계획 홀수 9홀. 회원제/대중제 구성(내역)은 확정되지 않아 member/public/non_member를 0으로 두었다(master.holes.total만 유효).",
+  "provenance": {}
+ },
+ "course": {
+  "holes": null,
+  "holes_received": null,
+  "course_names": null,
+  "membership_type": null,
+  "night_light": null,
+  "blocks": [],
+  "grass": {
+   "tee": null,
+   "fairway": null,
+   "green": null
+  },
+  "kga": null,
+  "kga_hole_est": null,
+  "extra_courses": null,
+  "par": null,
+  "length_m": null,
+  "hole_by_hole": null
+ },
+ "fee": {
+  "weekday": null,
+  "weekend": null,
+  "weekday_text": null,
+  "weekend_text": null,
+  "basis": null,
+  "tax_included": null,
+  "cart": null,
+  "caddie": null,
+  "as_of": null,
+  "source_url": null,
+  "note": null,
+  "sources": []
+ },
+ "cancel": {
+  "cancel_policy": null,
+  "open_cycle": null,
+  "notes": null,
+  "evidence": [],
+  "weather_evidence": []
+ },
+ "ops": {
+  "nocaddie": {
+   "value": null,
+   "evidence": []
+  },
+  "two_player": {
+   "value": null,
+   "evidence": []
+  },
+  "three_player": {
+   "value": null,
+   "evidence": []
+  },
+  "five_player": {
+   "value": null,
+   "evidence": []
+  },
+  "marshal_caddie": {
+   "value": null,
+   "evidence": []
+  },
+  "cart_type": {
+   "value": null,
+   "evidence": []
+  },
+  "cart_entry": {
+   "value": null,
+   "evidence": []
+  },
+  "bagdrop": {
+   "value": null,
+   "evidence": []
+  },
+  "mat": {
+   "value": null,
+   "evidence": []
+  },
+  "checkin": {
+   "value": null,
+   "evidence": []
+  },
+  "locker": {
+   "value": null,
+   "evidence": []
+  },
+  "sauna": {
+   "value": null,
+   "evidence": []
+  },
+  "dress": {
+   "value": null,
+   "evidence": []
+  },
+  "pace": {
+   "value": null,
+   "evidence": []
+  }
+ },
+ "facilities": {
+  "practice": {
+   "value": null,
+   "evidence": []
+  },
+  "indoor_range": {
+   "value": null,
+   "evidence": []
+  },
+  "food": {
+   "value": null,
+   "evidence": []
+  },
+  "snack_bar": {
+   "value": null,
+   "evidence": []
+  },
+  "locker_sauna": {
+   "value": null,
+   "evidence": []
+  },
+  "lodging": {
+   "value": null,
+   "evidence": []
+  },
+  "other": {
+   "value": null,
+   "evidence": []
+  },
+  "night": {
+   "value": null,
+   "evidence": []
+  },
+  "closed_days": {
+   "value": null,
+   "evidence": []
+  },
+  "shuttle": {
+   "value": null,
+   "evidence": []
+  }
+ },
+ "rental": {
+  "available": null,
+  "full_set": null,
+  "fee_text": null,
+  "brand": null,
+  "left_handed": null,
+  "shoes": null,
+  "nine_hole": null,
+  "range_finder": null,
+  "reservation": null,
+  "source_url": null
+ },
+ "briefing": {
+  "notices": {
+   "url": null,
+   "items": [],
+   "tags": {}
+  },
+  "recent_notice_text": null,
+  "course_notes": null,
+  "review": null,
+  "fee_change": null,
+  "alert": null,
+  "unconfirmed": [],
+  "sources": []
+ },
+ "collection": {
+  "official_site": null,
+  "official_reason": "구장 JSON 미생성(건설중·미착공)",
+  "pages_collected": 0,
+  "third_party": {},
+  "render_hint": null,
+  "plan_strategy": null
+ },
+ "coverage": {
+  "basic": 0,
+  "course": 0,
+  "fee": 0,
+  "ops": 0,
+  "facility": 0,
+  "briefing": 0,
+  "rental": 0
+ }
+}

@@ -1,0 +1,767 @@
+{
+ "course_id": "kr-golf-0504",
+ "meta": {
+  "name": "태인CC",
+  "generated_at": "2026-11-26T10:25:44+09:00",
+  "schema": "stage2c/1.0",
+  "batch": "4_호남",
+  "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
+  "schema_previous": "stage2b/1.0",
+  "restructured_from_7key": true,
+  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
+  "has_detail": true,
+  "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+ },
+ "master": {
+  "course_id": "kr-golf-0504",
+  "name": "태인CC",
+  "name_variants": [
+   "태인CC"
+  ],
+  "type": "대중제",
+  "holes": {
+   "total": 27,
+   "member": 0,
+   "public": 27,
+   "non_member": 0
+  },
+  "address": "전북특별자치도 정읍시 태인면 상증길 28",
+  "region": {
+   "sido_code": "52",
+   "sido_name": "전북특별자치도",
+   "sido_short": "전북",
+   "sigungu_code": "52180",
+   "sigungu_name": "정읍시",
+   "legal_dong_code": "5218000000"
+  },
+  "lat": 35.673958,
+  "lng": 126.957773,
+  "nearest_ic": {
+   "name": "태인IC",
+   "distance_km": 4.6,
+   "source": "teepick(실측 표기)",
+   "straight_km_nearest": 3.1,
+   "straight_name": "태인IC"
+  },
+  "tel": "063-534-0600",
+  "homepage": "https://www.taeincc.co.kr/Public/Public_Location.aspx",
+  "operators": [
+   "우진관광개발㈜(고환승)"
+  ],
+  "area_sqm": 850000,
+  "opened": "1997",
+  "course_blocks": [],
+  "facility_id": null,
+  "provenance": {
+   "master": "courses_master.json v2.0 (문체부·KGA·KGBA·티픽·지도)",
+   "synced_to": "courses_master.json v2.7 (2026-11-26 단일 스키마 정규화)"
+  },
+  "par": null,
+  "holes_teepick": 18,
+  "course_spec": {
+   "holes": 27,
+   "par": null,
+   "blocks": [],
+   "length_m": null,
+   "kga": {
+    "kga_course_code": "205",
+    "kga_name": "태인",
+    "region_short": "전북",
+    "address": "전북정읍시태인면증산리산3",
+    "match_method": "exact",
+    "match_score": 100,
+    "match_confidence": "high",
+    "nine_hole_courses": [
+     "레이크",
+     "마운틴"
+    ],
+    "hole_combinations": [
+     {
+      "course_name_1": "레이크",
+      "course_name_2": "마운틴",
+      "tees": [
+       {
+        "tee": "BACK",
+        "gender": "남자",
+        "length_yds": 6775.0,
+        "std_par": 72.0,
+        "course_rating": 73.4,
+        "slope_rating": 136.0,
+        "front9": "36.8 / 139",
+        "back9": "36.6 / 133"
+       },
+       {
+        "tee": "REGULAR(W)",
+        "gender": "여자",
+        "length_yds": 6481.0,
+        "std_par": 72.0,
+        "course_rating": 77.3,
+        "slope_rating": 141.0,
+        "front9": "38.9 / 140",
+        "back9": "38.4 / 141"
+       },
+       {
+        "tee": "REGULAR",
+        "gender": "남자",
+        "length_yds": 6481.0,
+        "std_par": 72.0,
+        "course_rating": 71.8,
+        "slope_rating": 135.0,
+        "front9": "36.0 / 138",
+        "back9": "35.8 / 131"
+       },
+       {
+        "tee": "LADY",
+        "gender": "여자",
+        "length_yds": 5486.0,
+        "std_par": 72.0,
+        "course_rating": 71.7,
+        "slope_rating": 127.0,
+        "front9": "36.4 / 125",
+        "back9": "35.3 / 128"
+       }
+      ]
+     }
+    ]
+   },
+   "grass": {
+    "evidence": "투볼 플레이를 하는 경우(OB 및 페널티구역시 특설티 이용) 한 홀 이상을 비우는 경우 클럽의 잔디, 시설, 비품 등을 훼손하는 행위 금연구역 위반행위(코스 내 금연) 도박에 가까운 규모의 내기, 음주, 고성방가, 방뇨 등의 행위 지나친 경기지연(현저한 경기능력부족 등)과 진행에 협조를 하지 않는 경우 근무자 희롱, 욕설, 폭행 또는 직원의 정당한 요구를 거부하는 경우 골프 에티켓 범주를 벗어나거나 기타 비윤리적 행위 등의 경우 라운드 안전수칙 태인컨트리클럽 9홀코스는 캐디없이 셀프로 경기진행을 합니다.",
+    "source": "공식",
+    "url": "https://www.taeincc.co.kr/Public/Public_Fees.aspx"
+   },
+   "hole_by_hole": null
+  },
+  "addresses": [
+   "전북특별자치도 정읍시 태인면 상증길 28"
+  ],
+  "status": "operating",
+  "facility_cluster": null,
+  "factcheck_2026_11_26": null,
+  "holes_note": "등록(문체부) 27홀 · 수집 18홀 — 등록 기준과 수집처(티픽·조사) 표기 차이다. 등록 27홀을 정본으로 두고 집계에는 master.holes를 쓴다. 복합단지 합산 여부는 미확정."
+ },
+ "course": {
+  "holes": 27,
+  "holes_received": 18,
+  "course_names": null,
+  "membership_type": "대중제",
+  "night_light": null,
+  "blocks": [],
+  "grass": {
+   "tee": null,
+   "fairway": {
+    "evidence": "투볼 플레이를 하는 경우(OB 및 페널티구역시 특설티 이용) 한 홀 이상을 비우는 경우 클럽의 잔디, 시설, 비품 등을 훼손하는 행위 금연구역 위반행위(코스 내 금연) 도박에 가까운 규모의 내기, 음주, 고성방가, 방뇨 등의 행위 지나친 경기지연(현저한 경기능력부족 등)과 진행에 협조를 하지 않는 경우 근무자 희롱, 욕설, 폭행 또는 직원의 정당한 요구를 거부하는 경우 골프 에티켓 범주를 벗어나거나 기타 비윤리적 행위 등의 경우 라운드 안전수칙 태인컨트리클럽 9홀코스는 캐디없이 셀프로 경기진행을 합니다.",
+    "source": "공식",
+    "url": "https://www.taeincc.co.kr/Public/Public_Fees.aspx"
+   },
+   "green": null
+  },
+  "kga": {
+   "kga_course_code": "205",
+   "kga_name": "태인",
+   "region_short": "전북",
+   "address": "전북정읍시태인면증산리산3",
+   "match_method": "exact",
+   "match_score": 100,
+   "match_confidence": "high",
+   "nine_hole_courses": [
+    "레이크",
+    "마운틴"
+   ],
+   "hole_combinations": [
+    {
+     "course_name_1": "레이크",
+     "course_name_2": "마운틴",
+     "tees": [
+      {
+       "tee": "BACK",
+       "gender": "남자",
+       "length_yds": 6775.0,
+       "std_par": 72.0,
+       "course_rating": 73.4,
+       "slope_rating": 136.0,
+       "front9": "36.8 / 139",
+       "back9": "36.6 / 133"
+      },
+      {
+       "tee": "REGULAR(W)",
+       "gender": "여자",
+       "length_yds": 6481.0,
+       "std_par": 72.0,
+       "course_rating": 77.3,
+       "slope_rating": 141.0,
+       "front9": "38.9 / 140",
+       "back9": "38.4 / 141"
+      },
+      {
+       "tee": "REGULAR",
+       "gender": "남자",
+       "length_yds": 6481.0,
+       "std_par": 72.0,
+       "course_rating": 71.8,
+       "slope_rating": 135.0,
+       "front9": "36.0 / 138",
+       "back9": "35.8 / 131"
+      },
+      {
+       "tee": "LADY",
+       "gender": "여자",
+       "length_yds": 5486.0,
+       "std_par": 72.0,
+       "course_rating": 71.7,
+       "slope_rating": 127.0,
+       "front9": "36.4 / 125",
+       "back9": "35.3 / 128"
+      }
+     ]
+    }
+   ]
+  },
+  "kga_hole_est": null,
+  "extra_courses": null,
+  "hole_by_hole": null,
+  "length_m": null,
+  "par": null,
+  "holes_note": "등록(문체부) 27홀 · 수집 18홀 — 등록 기준과 수집처(티픽·조사) 표기 차이다. 등록 27홀을 정본으로 두고 집계에는 master.holes를 쓴다. 복합단지 합산 여부는 미확정."
+ },
+ "fee": {
+  "weekday": 160000,
+  "weekend": 200000,
+  "weekday_text": null,
+  "weekend_text": null,
+  "basis": null,
+  "tax_included": null,
+  "cart": {
+   "value": 80000,
+   "source": "그린피가이드",
+   "url": "https://greenfeeguide.co.kr/course/gc-0422/"
+  },
+  "caddie": {
+   "value": 150000,
+   "source": "그린피가이드",
+   "url": "https://greenfeeguide.co.kr/course/gc-0422/",
+   "none": false
+  },
+  "as_of": "2026-11-01",
+  "source_url": null,
+  "note": null,
+  "sources": [
+   {
+    "source": "그린피가이드(공식 요금표 확인)",
+    "url": "https://greenfeeguide.co.kr/course/gc-0422/",
+    "checked_at": "2026-11-01"
+   }
+  ],
+  "checked_at": "2026-11-01",
+  "market": {
+   "weekday_min": 110000.0,
+   "weekend_min": null,
+   "part1": null,
+   "part2": null,
+   "source": "티픽골프장(실거래 관측)",
+   "url": "https://teepickgolf.com/course/%ED%83%9C%EC%9D%B8",
+   "note": "공시가 아닌 최근 관측 실거래 최저가"
+  },
+  "official_green_evidence": [
+   "그린피와 카트이용료는 선불정산, 기타부대시설 이용요금은 후불정산 입니다."
+  ],
+  "official_rental": {
+   "value": 50000,
+   "raw": "50,000원",
+   "label": "골프채(그라파이트) / 퍼터 / 골프화",
+   "url": "https://www.taeincc.co.kr/Guide/Fees.aspx",
+   "source": "공식 요금표"
+  },
+  "official_table": {
+   "rows": [
+    {
+     "section": "",
+     "label": "정상요금 / 평일 / 주말/공휴일",
+     "value": "160,000원",
+     "amounts": [
+      160000
+     ],
+     "url": "https://www.taeincc.co.kr/Guide/Fees.aspx"
+    },
+    {
+     "section": "",
+     "label": "",
+     "value": "200,000원",
+     "amounts": [
+      200000
+     ],
+     "url": "https://www.taeincc.co.kr/Guide/Fees.aspx"
+    },
+    {
+     "section": "캐디피",
+     "label": "전동 카트비 / 캐디피 / 9홀 추가",
+     "value": "팀당 80,000원",
+     "amounts": [
+      80000
+     ],
+     "url": "https://www.taeincc.co.kr/Guide/Fees.aspx"
+    },
+    {
+     "section": "캐디피",
+     "label": "",
+     "value": "팀당 150,000원",
+     "amounts": [
+      150000
+     ],
+     "url": "https://www.taeincc.co.kr/Guide/Fees.aspx"
+    },
+    {
+     "section": "대여료",
+     "label": "골프채(그라파이트) / 퍼터 / 골프화",
+     "value": "50,000원",
+     "amounts": [
+      50000
+     ],
+     "url": "https://www.taeincc.co.kr/Guide/Fees.aspx"
+    },
+    {
+     "section": "대여료",
+     "label": "",
+     "value": "10,000원",
+     "amounts": [
+      10000
+     ],
+     "url": "https://www.taeincc.co.kr/Guide/Fees.aspx"
+    },
+    {
+     "section": "대여료",
+     "label": "",
+     "value": "10,000원",
+     "amounts": [
+      10000
+     ],
+     "url": "https://www.taeincc.co.kr/Guide/Fees.aspx"
+    },
+    {
+     "section": "캐디피",
+     "label": "3홀 이하 / 4 ~ 9홀 / 10 ~ 18홀",
+     "value": "40,000원",
+     "amounts": [
+      40000
+     ],
+     "url": "https://www.taeincc.co.kr/Guide/Fees.aspx"
+    },
+    {
+     "section": "캐디피",
+     "label": "",
+     "value": "80,000원",
+     "amounts": [
+      80000
+     ],
+     "url": "https://www.taeincc.co.kr/Guide/Fees.aspx"
+    },
+    {
+     "section": "캐디피",
+     "label": "",
+     "value": "150,000원",
+     "amounts": [
+      150000
+     ],
+     "url": "https://www.taeincc.co.kr/Guide/Fees.aspx"
+    },
+    {
+     "section": "카트이용료(팀당)",
+     "label": "18홀 / 90,000 / 120,000",
+     "value": "80,000원",
+     "amounts": [
+      80000
+     ],
+     "url": "https://www.taeincc.co.kr/Public/Public_Fees.aspx"
+    },
+    {
+     "section": "골프카트 밖으로 신체의 일부가 나오지 않도록 주의하여 주십시오.",
+     "label": "",
+     "value": "스마트스코어 태블릿PC는 카트 거치대에서만 사용가능 합니다. (개인 부주의 파손 시 300,000원 배상 책임)",
+     "amounts": [
+      300000
+     ],
+     "url": "https://www.taeincc.co.kr/Public/Public_Fees.aspx"
+    }
+   ],
+   "url": "https://www.taeincc.co.kr/Guide/Fees.aspx"
+  }
+ },
+ "cancel": {
+  "cancel_policy": {
+   "value": "평일 3일 전 · 주말 4일 전까지개장·설계1997년 개장부대시설사우나요금표에서 읽히는 점팀당 카트비·캐디피 합계는 230,000원으로, 전국",
+   "source": "그린피가이드(공식 인용)",
+   "url": "https://greenfeeguide.co.kr/course/gc-0422/"
+  },
+  "open_cycle": null,
+  "notes": null,
+  "evidence": [
+   "위약규정(페널티) 위약규정 구분 페널티 취소일 기준 주말 / 공휴일(4일전 취소가능) 평일 (3일전 취소가능) 3일전 4주 예약정지 또는 팀당 4인 이용요금의 10% 해당없음 2일전 8주 예약정지 또는 팀당 4인 이용요금의 10% 1일전 12주 예약정지 또는 팀당 4인 이용요금의 20% 무통보 결장(NO SHOW) 1년 예약정지 또는 팀당 4인 이용요금의 30%NO SHOW 발생일 이후 예약된 예약일 자동취소 예약취소 횟수제한 월 6회초과시 60일 예약정지 퇴장규정 고객분들의 편의를 위하여 다음과 같은 행위를 하는 플레이어에게는 퇴",
+   "태인 컨트리클럽 ID/PW찾기 회원가입 로그인 날씨 2026년 11월 26일 목요일 10℃ 구름 많음 클럽소개이용안내실시간예약코스소개시설안내9홀코스소개커뮤니티마이페이지 클럽소개 CEO인사말 오시는 길 이용안내 요금안내 예약안내 위약규정 18홀코스 예약 9홀코스 예약 확인 및 취소 단체팀신청 코스안내 Lake Mountain 클럽하우스 내부시설 포토갤러리 9홀코스소개 요금및안내 오시는 길 공지사항 명예의 전당 조인공간 나의스코어 정보변경 회원탈퇴 코스안내 Lake Mountain COURSE INFO 코스안내 LAKE COURSE 코",
+   "태인 컨트리클럽 ID/PW찾기 회원가입 로그인 날씨 2026년 11월 26일 목요일 10℃ 구름 많음 클럽소개이용안내실시간예약코스소개시설안내9홀코스소개커뮤니티마이페이지 클럽소개 CEO인사말 오시는 길 이용안내 요금안내 예약안내 위약규정 18홀코스 예약 9홀코스 예약 확인 및 취소 단체팀신청 코스안내 Lake Mountain 클럽하우스 내부시설 포토갤러리 9홀코스소개 요금및안내 오시는 길 공지사항 명예의 전당 조인공간 나의스코어 정보변경 회원탈퇴 9홀코스소개 요금및안내 오시는 길 ABOUT 9HOLE 9홀 소개 1996년 2월에 오픈"
+  ],
+  "weather_evidence": []
+ },
+ "ops": {
+  "nocaddie": {
+   "evidence": [],
+   "value": null
+  },
+  "two_player": {
+   "evidence": [
+    "태인 컨트리클럽 ID/PW찾기 회원가입 로그인 날씨 2026년 11월 26일 목요일 10℃ 구름 많음 클럽소개이용안내실시간예약코스소개시설안내9홀코스소개커뮤니티마이페이지 클럽소개 CEO인사말 오시는 길 이용안내 요금안내 예약안내 위약규정 18홀코스 예약 9홀코스 예약 확인 및 취소 단체팀신청 코스안내 Lake Mountain 클럽하우스 내부시설 포토갤러리 9홀코스소개 요금및안내 오시는 길 공지사항 명예의 전당 조인공간 나의스코어 정보변경 회원탈퇴 코스안내 Lake Mountain COURSE INFO 코스안내 LAKE COURSE 코",
+    "태인 컨트리클럽 ID/PW찾기 회원가입 로그인 날씨 2026년 11월 26일 목요일 10℃ 구름 많음 클럽소개이용안내실시간예약코스소개시설안내9홀코스소개커뮤니티마이페이지 클럽소개 CEO인사말 오시는 길 이용안내 요금안내 예약안내 위약규정 18홀코스 예약 9홀코스 예약 확인 및 취소 단체팀신청 코스안내 Lake Mountain 클럽하우스 내부시설 포토갤러리 9홀코스소개 요금및안내 오시는 길 공지사항 명예의 전당 조인공간 나의스코어 정보변경 회원탈퇴 9홀코스소개 요금및안내 오시는 길 ABOUT 9HOLE 9홀 소개 1996년 2월에 오픈",
+    "태인 컨트리클럽 ID/PW찾기 회원가입 로그인 날씨 2026년 11월 26일 목요일 10℃ 구름 많음 클럽소개이용안내실시간예약코스소개시설안내9홀코스소개커뮤니티마이페이지 클럽소개 CEO인사말 오시는 길 이용안내 요금안내 예약안내 위약규정 18홀코스 예약 9홀코스 예약 확인 및 취소 단체팀신청 코스안내 Lake Mountain 클럽하우스 내부시설 포토갤러리 9홀코스소개 요금및안내 오시는 길 공지사항 명예의 전당 조인공간 나의스코어 정보변경 회원탈퇴 이용안내 요금안내 예약안내 위약규정 BOOKING GUIDE 예약안내 18홀코스는 전화와"
+   ],
+   "value": null,
+   "third_party": {
+    "two": null,
+    "three": null,
+    "source": "그린피가이드",
+    "url": "https://greenfeeguide.co.kr/course/gc-0422/"
+   }
+  },
+  "three_player": {
+   "value": null,
+   "evidence": []
+  },
+  "five_player": {
+   "value": null,
+   "evidence": []
+  },
+  "marshal_caddie": {
+   "value": null,
+   "evidence": []
+  },
+  "cart_type": {
+   "evidence": [
+    "(앞, 뒷팀과의 타구사고 포함) 골프카트는 자동 유도로 운행을 합니다.",
+    "(퇴장 시 홀별 정산) 리모컨 작동으로 카트가 움직이지 않는 구간은 핸들 좌측에 있는 발진 버튼을 눌러주시면 이동합니다."
+   ],
+   "value": null
+  },
+  "cart_entry": {
+   "evidence": [],
+   "value": null
+  },
+  "bagdrop": {
+   "evidence": [],
+   "value": null
+  },
+  "mat": {
+   "evidence": [
+    "화단, 배수구, 카트도로, 스프링클러, 고무매트, 방공시설물 등의 인공물과 과수지주물, 잔디 채취지에 떨어진 공은 1클럽길이 이내에서 드롭할 수 있습니다."
+   ],
+   "value": "문구 확인(원문 근거)"
+  },
+  "checkin": {
+   "evidence": [
+    "태인 컨트리클럽 ID/PW찾기 회원가입 로그인 날씨 2026년 11월 26일 목요일 10℃ 구름 많음 클럽소개이용안내실시간예약코스소개시설안내9홀코스소개커뮤니티마이페이지 클럽소개 CEO인사말 오시는 길 이용안내 요금안내 예약안내 위약규정 18홀코스 예약 9홀코스 예약 확인 및 취소 단체팀신청 코스안내 Lake Mountain 클럽하우스 내부시설 포토갤러리 9홀코스소개 요금및안내 오시는 길 공지사항 명예의 전당 조인공간 나의스코어 정보변경 회원탈퇴 이용안내 요금안내 예약안내 위약규정 RULES 이용규정 프론트 예약시간 30분 전 도착하",
+    "호남고속도로와 서해안고속도로에서의 빠르고 안전한 진입, 전주에서 30분 이내 도착하는 입지조건, 원칙에 입각한 상식이 통하는 코스 운영과 적절하고 편안한 서비스를 약속하는 태인컨트리클럽입니다."
+   ],
+   "value": null,
+   "third_party": {
+    "value": null,
+    "source": "그린피가이드",
+    "url": "https://greenfeeguide.co.kr/course/gc-0422/"
+   }
+  },
+  "locker": {
+   "evidence": [
+    "부대시설로는 레스토랑, 락카룸(샤워시설구비)이 있습니다.",
+    "LOCKER ROOM 락카룸 쾌적하고 고급스러운 분위기의 락커룸 편안한 휴식을 제공합니다."
+   ],
+   "value": "문구 확인(원문 근거)"
+  },
+  "sauna": {
+   "evidence": [
+    "욕탕 내에서는 정숙하여 주시기 바랍니다."
+   ],
+   "value": "문구 확인(원문 근거)"
+  },
+  "dress": {
+   "evidence": [
+    "청바지, 반바지(남), 노출이 심한 복장은 입장이 불가합니다."
+   ],
+   "value": "문구 확인(원문 근거)"
+  },
+  "pace": {
+   "evidence": [],
+   "value": null
+  },
+  "grass": null
+ },
+ "facilities": {
+  "practice": {
+   "evidence": [],
+   "value": null
+  },
+  "indoor_range": {
+   "value": null,
+   "evidence": []
+  },
+  "food": {
+   "evidence": [
+    "부대시설로는 레스토랑, 락카룸(샤워시설구비)이 있습니다.",
+    "태인 컨트리클럽 ID/PW찾기 회원가입 로그인 날씨 2026년 11월 26일 목요일 10℃ 구름 많음 클럽소개이용안내실시간예약코스소개시설안내9홀코스소개커뮤니티마이페이지 클럽소개 CEO인사말 오시는 길 이용안내 요금안내 예약안내 위약규정 18홀코스 예약 9홀코스 예약 확인 및 취소 단체팀신청 코스안내 Lake Mountain 클럽하우스 내부시설 포토갤러리 9홀코스소개 요금및안내 오시는 길 공지사항 명예의 전당 조인공간 나의스코어 정보변경 회원탈퇴 클럽하우스 내부시설 포토갤러리 RESTAURANT 레스토랑 전라도의 맛과 멋을 추구하며 "
+   ],
+   "value": null
+  },
+  "snack_bar": {
+   "value": null,
+   "evidence": []
+  },
+  "locker_sauna": {
+   "value": null,
+   "evidence": []
+  },
+  "lodging": {
+   "value": null,
+   "evidence": []
+  },
+  "other": {
+   "value": null,
+   "evidence": []
+  },
+  "night": {
+   "evidence": [],
+   "value": null
+  },
+  "closed_days": {
+   "evidence": [],
+   "third_party": null,
+   "value": null
+  },
+  "shuttle": {
+   "evidence": [],
+   "value": null
+  },
+  "ev_charge": {
+   "evidence": [],
+   "value": null
+  },
+  "gf_facilities": [],
+  "proshop": {
+   "evidence": [],
+   "value": null
+  }
+ },
+ "rental": {
+  "available": "가능",
+  "full_set": 50000,
+  "fee_text": "50,000원",
+  "brand": null,
+  "left_handed": null,
+  "shoes": null,
+  "nine_hole": null,
+  "range_finder": null,
+  "reservation": null,
+  "source_url": "https://www.taeincc.co.kr/Guide/Fees.aspx",
+  "evidence": [],
+  "official": {
+   "value": 50000,
+   "raw": "50,000원",
+   "label": "골프채(그라파이트) / 퍼터 / 골프화",
+   "url": "https://www.taeincc.co.kr/Guide/Fees.aspx",
+   "source": "공식 요금표"
+  },
+  "nearby_delivery": {
+   "region": "호남",
+   "sido": "전북특별자치도",
+   "verified_at": "2026-11-26 (KST)",
+   "checked_at": "2026-11-26",
+   "providers": [
+    {
+     "id": "theb",
+     "name": "더비 (The B)",
+     "coverage": "조건부",
+     "basis": "매장·퀵 안내 없음. '전국 당일 배송' 표기 및 화물택배만 해당.",
+     "phone": "010-2530-4575",
+     "operating_status": "정상 영업",
+     "delivery": "O",
+     "price_headline": "12시간 기준 90,000원부터",
+     "bookable": true
+    },
+    {
+     "id": "gangnamclub",
+     "name": "강남골프클럽렌탈",
+     "coverage": "조건부",
+     "basis": "동일(전지역 배송·별도 상담).",
+     "phone": "010-7407-0753",
+     "operating_status": "정상 영업(자사 블로그 최신 게시 2026-04-28)",
+     "delivery": "미확인",
+     "price_headline": null,
+     "bookable": true
+    }
+   ],
+   "provider_count": 2,
+   "legend": {
+    "O": "공식 안내로 해당 권역 이용이 확인됨",
+    "X": "공식 안내상 해당 권역 서비스가 없음(예: '제주 전 지역' 전용으로만 안내)",
+    "조건부": "공식 안내상 가능하나 조건(수단·요금·현재 판매중지 등)이 붙어 있음. 조건은 basis/detail에 기재",
+    "미확인": "공식 공개 안내에서 해당 항목에 대한 언급을 찾지 못함(추정하지 않음)"
+   },
+   "not_verified": "전화·문자·카카오톡 상담으로만 확인 가능한 항목(재고, 개별 견적, 권역별 실제 배송 가능 여부)은 '미확인'으로 남김",
+   "source_file": "5-rental_8_coverage_verified.json",
+   "note_code": "해외 골퍼용 골프채 렌탈·딜리버리 업체. 같은 권역이라도 실제 배송 가능 여부·재고·견적은 전화 확인 필요."
+  },
+  "fee_source": {
+   "label": "골프채(그라파이트) / 퍼터 / 골프화",
+   "url": "https://www.taeincc.co.kr/Guide/Fees.aspx",
+   "source": "공식 요금표",
+   "raw": "50,000원"
+  }
+ },
+ "briefing": {
+  "notices": {
+   "url": "https://www.taeincc.co.kr/Board/HonorList.aspx",
+   "items": [
+    {
+     "title": "관리자 (taei***)",
+     "date": "2026-11-24",
+     "url": "https://www.taeincc.co.kr/Board/BoardList.aspx?cfgid=notice"
+    },
+    {
+     "title": "2027년 연단체 모집안내",
+     "date": "2026-10-21",
+     "url": "https://www.taeincc.co.kr/Board/BoardList.aspx?cfgid=notice"
+    },
+    {
+     "title": "관리자 (taei***)",
+     "date": "2026-10-15",
+     "url": "https://www.taeincc.co.kr/Board/BoardList.aspx?cfgid=notice"
+    },
+    {
+     "title": "사용클럽/볼",
+     "date": "2026-10-03",
+     "url": "https://www.taeincc.co.kr/Board/HonorList.aspx"
+    },
+    {
+     "title": "관리자 (taei***)",
+     "date": "2026-10-02",
+     "url": "https://www.taeincc.co.kr/Board/BoardList.aspx?cfgid=notice"
+    },
+    {
+     "title": "볼빅 S3/5번 아이언",
+     "date": "2026-09-29",
+     "url": "https://www.taeincc.co.kr/Board/HonorList.aspx"
+    },
+    {
+     "title": "투어스테이지 8번/타이틀리스트 1번",
+     "date": "2026-09-16",
+     "url": "https://www.taeincc.co.kr/Board/HonorList.aspx"
+    },
+    {
+     "title": "마제스티 10번 아이언/타이틀리스트 4번",
+     "date": "2026-09-11",
+     "url": "https://www.taeincc.co.kr/Board/HonorList.aspx"
+    },
+    {
+     "title": "관리자 (taei***)",
+     "date": "2026-08-28",
+     "url": "https://www.taeincc.co.kr/Board/BoardList.aspx?cfgid=notice"
+    },
+    {
+     "title": "테일러메이드 p790/볼빅 1번",
+     "date": "2026-08-23",
+     "url": "https://www.taeincc.co.kr/Board/HonorList.aspx"
+    },
+    {
+     "title": "브릿지스톤 9번/테일러메이드 0번",
+     "date": "2026-08-23",
+     "url": "https://www.taeincc.co.kr/Board/HonorList.aspx"
+    },
+    {
+     "title": "미우라 7번 아이언/타이틀리스트",
+     "date": "2026-08-22",
+     "url": "https://www.taeincc.co.kr/Board/HonorList.aspx"
+    },
+    {
+     "title": "혼마 7번 아이언/커클랜드 1번",
+     "date": "2026-08-13",
+     "url": "https://www.taeincc.co.kr/Board/HonorList.aspx"
+    },
+    {
+     "title": "관리자 (taei***)",
+     "date": "2026-07-13",
+     "url": "https://www.taeincc.co.kr/Board/BoardList.aspx?cfgid=notice"
+    },
+    {
+     "title": "혼마 유틸 27/캘러웨이 1",
+     "date": "2026-07-03",
+     "url": "https://www.taeincc.co.kr/Board/HonorList.aspx"
+    },
+    {
+     "title": "관리자 (taei***)",
+     "date": "2026-07-02",
+     "url": "https://www.taeincc.co.kr/Board/BoardList.aspx?cfgid=notice"
+    },
+    {
+     "title": "지브이투어 7번 아이언/엑스페론 2번",
+     "date": "2026-07-02",
+     "url": "https://www.taeincc.co.kr/Board/HonorList.aspx"
+    },
+    {
+     "title": "관리자 (taei***)",
+     "date": "2026-05-08",
+     "url": "https://www.taeincc.co.kr/Board/BoardList.aspx?cfgid=notice"
+    },
+    {
+     "title": "관리자 (taei***)",
+     "date": "2026-04-24",
+     "url": "https://www.taeincc.co.kr/Board/BoardList.aspx?cfgid=notice"
+    },
+    {
+     "title": "관리자 (taei***)",
+     "date": "2026-03-30",
+     "url": "https://www.taeincc.co.kr/Board/BoardList.aspx?cfgid=notice"
+    }
+   ],
+   "tags": {
+    "모집": [
+     {
+      "title": "2027년 연단체 모집안내",
+      "date": "2026-10-21",
+      "url": "https://www.taeincc.co.kr/Board/BoardList.aspx?cfgid=notice"
+     }
+    ]
+   }
+  },
+  "review": {
+   "score_10": null,
+   "count": null,
+   "source": "티픽골프장 라운더 후기 집계",
+   "url": "https://teepickgolf.com/course/%ED%83%9C%EC%9D%B8"
+  },
+  "fee_change": null,
+  "collected_at": "2026-11-26T10:25:44+09:00",
+  "recent_notice_text": null,
+  "course_notes": null,
+  "alert": null,
+  "unconfirmed": [],
+  "sources": []
+ },
+ "collection": {
+  "official_site": "ok",
+  "official_reason": null,
+  "pages_collected": 14,
+  "third_party": {
+   "teepick": true,
+   "greenfeeguide": true
+  },
+  "render_hint": "static",
+  "plan_strategy": "static(직접 파싱)",
+  "browser_batch": false,
+  "browser_pages": 0,
+  "browser_pdf": []
+ },
+ "coverage": {
+  "basic": 1.0,
+  "course": 0.8,
+  "fee": 1.0,
+  "ops": 0.29,
+  "facility": 0.0,
+  "briefing": 0.5,
+  "rental": 1.0
+ }
+}

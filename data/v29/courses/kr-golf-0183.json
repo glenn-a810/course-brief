@@ -1,0 +1,709 @@
+{
+ "course_id": "kr-golf-0183",
+ "meta": {
+  "name": "코리아컨트리클럽",
+  "generated_at": "2026-11-26T09:51:57+09:00",
+  "schema": "stage2c/1.0",
+  "batch": "1_수도권",
+  "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
+  "schema_previous": "stage2b/1.0",
+  "restructured_from_7key": true,
+  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
+  "has_detail": true,
+  "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+ },
+ "master": {
+  "course_id": "kr-golf-0183",
+  "name": "코리아컨트리클럽",
+  "name_variants": [
+   "코리아컨트리클럽"
+  ],
+  "type": "회원제",
+  "holes": {
+   "total": 27,
+   "member": 27,
+   "public": 0,
+   "non_member": 0
+  },
+  "address": "경기도 용인시 처인구 이동읍 기흥단지로 579",
+  "region": {
+   "sido_code": "41",
+   "sido_name": "경기도",
+   "sido_short": "경기",
+   "sigungu_code": "41461",
+   "sigungu_name": "용인시 처인구",
+   "legal_dong_code": "4146100000"
+  },
+  "lat": 37.219239,
+  "lng": 127.151337,
+  "nearest_ic": {
+   "name": "동탄IC",
+   "distance_km": 2.2,
+   "source": "teepick(실측 표기)",
+   "straight_km_nearest": 2.8,
+   "straight_name": "중리IC"
+  },
+  "tel": "031-334-7111",
+  "homepage": "https://www.gakorea.com/",
+  "operators": [
+   "뉴경기관광㈜"
+  ],
+  "area_sqm": 1351017,
+  "opened": "1994-06",
+  "course_blocks": [],
+  "facility_id": null,
+  "provenance": {
+   "master": "courses_master.json v2.0 (문체부·KGA·KGBA·티픽·지도)",
+   "synced_to": "courses_master.json v2.7 (2026-11-26 단일 스키마 정규화)"
+  },
+  "designer": {
+   "value": "가또오, 임상하임상하(임골프)",
+   "source": "그린피가이드",
+   "url": "https://greenfeeguide.co.kr/course/gc-0025/"
+  },
+  "par": null,
+  "holes_teepick": 27,
+  "course_spec": {
+   "holes": 27,
+   "par": null,
+   "blocks": [],
+   "length_m": null,
+   "kga": {
+    "kga_course_code": "196",
+    "kga_name": "코리아",
+    "region_short": "경기",
+    "address": "경기도 용인시 처인구 이동면 서리 784-7",
+    "match_method": "exact",
+    "match_score": 105,
+    "match_confidence": "high",
+    "nine_hole_courses": [
+     "레이크",
+     "챌린지",
+     "크리크"
+    ],
+    "hole_combinations": [
+     {
+      "course_name_1": "레이크",
+      "course_name_2": "챌린지",
+      "tees": [
+       {
+        "tee": "Blue",
+        "gender": "남자",
+        "length_yds": 6990.0,
+        "std_par": 72.0,
+        "course_rating": 74.6,
+        "slope_rating": 137.0,
+        "front9": "36.8 / 138",
+        "back9": "37.8 / 136"
+       },
+       {
+        "tee": "White",
+        "gender": "남자",
+        "length_yds": 6580.0,
+        "std_par": 72.0,
+        "course_rating": 71.2,
+        "slope_rating": 128.0,
+        "front9": "35.2 / 127",
+        "back9": "36.0 / 129"
+       },
+       {
+        "tee": "Red",
+        "gender": "여자",
+        "length_yds": 5818.0,
+        "std_par": 72.0,
+        "course_rating": 73.8,
+        "slope_rating": 131.0,
+        "front9": "36.6 / 130",
+        "back9": "37.2 / 131"
+       }
+      ]
+     },
+     {
+      "course_name_1": "챌린지",
+      "course_name_2": "크리크",
+      "tees": [
+       {
+        "tee": "Blue",
+        "gender": "남자",
+        "length_yds": 6938.0,
+        "std_par": 72.0,
+        "course_rating": 74.6,
+        "slope_rating": 138.0,
+        "front9": "37.8 / 136",
+        "back9": "36.8 / 139"
+       },
+       {
+        "tee": "White",
+        "gender": "남자",
+        "length_yds": 6505.0,
+        "std_par": 72.0,
+        "course_rating": 71.4,
+        "slope_rating": 133.0,
+        "front9": "36.0 / 129",
+        "back9": "35.4 / 136"
+       },
+       {
+        "tee": "Red",
+        "gender": "여자",
+        "length_yds": 5600.0,
+        "std_par": 72.0,
+        "course_rating": 73.4,
+        "slope_rating": 132.0,
+        "front9": "37.2 / 131",
+        "back9": "36.2 / 132"
+       }
+      ]
+     },
+     {
+      "course_name_1": "크리크",
+      "course_name_2": "레이크",
+      "tees": [
+       {
+        "tee": "Blue",
+        "gender": "남자",
+        "length_yds": 6784.0,
+        "std_par": 72.0,
+        "course_rating": 73.6,
+        "slope_rating": 139.0,
+        "front9": "36.8 / 139",
+        "back9": "36.8 / 138"
+       },
+       {
+        "tee": "White",
+        "gender": "남자",
+        "length_yds": 6355.0,
+        "std_par": 72.0,
+        "course_rating": 70.6,
+        "slope_rating": 132.0,
+        "front9": "35.4 / 136",
+        "back9": "35.2 / 127"
+       },
+       {
+        "tee": "Red",
+        "gender": "여자",
+        "length_yds": 5522.0,
+        "std_par": 72.0,
+        "course_rating": 72.8,
+        "slope_rating": 131.0,
+        "front9": "36.2 / 132",
+        "back9": "36.6 / 130"
+       }
+      ]
+     }
+    ]
+   },
+   "grass": {
+    "value": "야지, 벤트그라스",
+    "source": "그린피가이드(공식 코스소개 인용)",
+    "url": "https://greenfeeguide.co.kr/course/gc-0025/"
+   },
+   "hole_by_hole": null
+  },
+  "addresses": [
+   "경기도 용인시 처인구 이동읍 기흥단지로 579"
+  ],
+  "status": "operating",
+  "facility_cluster": null,
+  "factcheck_2026_11_26": null,
+  "tel_note": "대표번호 범위 031-334-7111~4 (끝번호 6·4·9 등은 내선/추가 회선)."
+ },
+ "course": {
+  "holes": 27,
+  "holes_received": 27,
+  "course_names": null,
+  "membership_type": "회원제",
+  "night_light": null,
+  "blocks": [],
+  "grass": {
+   "tee": null,
+   "fairway": {
+    "value": "야지, 벤트그라스",
+    "source": "그린피가이드(공식 코스소개 인용)",
+    "url": "https://greenfeeguide.co.kr/course/gc-0025/"
+   },
+   "green": null
+  },
+  "kga": {
+   "kga_course_code": "196",
+   "kga_name": "코리아",
+   "region_short": "경기",
+   "address": "경기도 용인시 처인구 이동면 서리 784-7",
+   "match_method": "exact",
+   "match_score": 105,
+   "match_confidence": "high",
+   "nine_hole_courses": [
+    "레이크",
+    "챌린지",
+    "크리크"
+   ],
+   "hole_combinations": [
+    {
+     "course_name_1": "레이크",
+     "course_name_2": "챌린지",
+     "tees": [
+      {
+       "tee": "Blue",
+       "gender": "남자",
+       "length_yds": 6990.0,
+       "std_par": 72.0,
+       "course_rating": 74.6,
+       "slope_rating": 137.0,
+       "front9": "36.8 / 138",
+       "back9": "37.8 / 136"
+      },
+      {
+       "tee": "White",
+       "gender": "남자",
+       "length_yds": 6580.0,
+       "std_par": 72.0,
+       "course_rating": 71.2,
+       "slope_rating": 128.0,
+       "front9": "35.2 / 127",
+       "back9": "36.0 / 129"
+      },
+      {
+       "tee": "Red",
+       "gender": "여자",
+       "length_yds": 5818.0,
+       "std_par": 72.0,
+       "course_rating": 73.8,
+       "slope_rating": 131.0,
+       "front9": "36.6 / 130",
+       "back9": "37.2 / 131"
+      }
+     ]
+    },
+    {
+     "course_name_1": "챌린지",
+     "course_name_2": "크리크",
+     "tees": [
+      {
+       "tee": "Blue",
+       "gender": "남자",
+       "length_yds": 6938.0,
+       "std_par": 72.0,
+       "course_rating": 74.6,
+       "slope_rating": 138.0,
+       "front9": "37.8 / 136",
+       "back9": "36.8 / 139"
+      },
+      {
+       "tee": "White",
+       "gender": "남자",
+       "length_yds": 6505.0,
+       "std_par": 72.0,
+       "course_rating": 71.4,
+       "slope_rating": 133.0,
+       "front9": "36.0 / 129",
+       "back9": "35.4 / 136"
+      },
+      {
+       "tee": "Red",
+       "gender": "여자",
+       "length_yds": 5600.0,
+       "std_par": 72.0,
+       "course_rating": 73.4,
+       "slope_rating": 132.0,
+       "front9": "37.2 / 131",
+       "back9": "36.2 / 132"
+      }
+     ]
+    },
+    {
+     "course_name_1": "크리크",
+     "course_name_2": "레이크",
+     "tees": [
+      {
+       "tee": "Blue",
+       "gender": "남자",
+       "length_yds": 6784.0,
+       "std_par": 72.0,
+       "course_rating": 73.6,
+       "slope_rating": 139.0,
+       "front9": "36.8 / 139",
+       "back9": "36.8 / 138"
+      },
+      {
+       "tee": "White",
+       "gender": "남자",
+       "length_yds": 6355.0,
+       "std_par": 72.0,
+       "course_rating": 70.6,
+       "slope_rating": 132.0,
+       "front9": "35.4 / 136",
+       "back9": "35.2 / 127"
+      },
+      {
+       "tee": "Red",
+       "gender": "여자",
+       "length_yds": 5522.0,
+       "std_par": 72.0,
+       "course_rating": 72.8,
+       "slope_rating": 131.0,
+       "front9": "36.2 / 132",
+       "back9": "36.6 / 130"
+      }
+     ]
+    }
+   ]
+  },
+  "kga_hole_est": null,
+  "extra_courses": null,
+  "hole_by_hole": null,
+  "length_m": null,
+  "par": null
+ },
+ "fee": {
+  "weekday": 230000,
+  "weekend": 300000,
+  "weekday_text": null,
+  "weekend_text": null,
+  "basis": null,
+  "tax_included": null,
+  "cart": {
+   "value": 100000,
+   "source": "그린피가이드",
+   "url": "https://greenfeeguide.co.kr/course/gc-0025/"
+  },
+  "caddie": {
+   "value": 150000,
+   "source": "그린피가이드",
+   "url": "https://greenfeeguide.co.kr/course/gc-0025/",
+   "none": false
+  },
+  "as_of": "2026-11-02",
+  "source_url": null,
+  "note": null,
+  "sources": [
+   {
+    "source": "그린피가이드(공식 요금표 확인)",
+    "url": "https://greenfeeguide.co.kr/course/gc-0025/",
+    "checked_at": "2026-11-02"
+   }
+  ],
+  "checked_at": "2026-11-02",
+  "market": {
+   "weekday_min": 209000.0,
+   "weekend_min": 209000.0,
+   "part1": null,
+   "part2": null,
+   "source": "티픽골프장(실거래 관측)",
+   "url": "https://teepickgolf.com/course/%EC%BD%94%EB%A6%AC%EC%95%84cc",
+   "note": "공시가 아닌 최근 관측 실거래 최저가"
+  },
+  "official_green_evidence": [],
+  "official_rental": null
+ },
+ "cancel": {
+  "cancel_policy": null,
+  "open_cycle": null,
+  "notes": null,
+  "evidence": [],
+  "weather_evidence": []
+ },
+ "ops": {
+  "nocaddie": {
+   "evidence": [],
+   "value": null
+  },
+  "two_player": {
+   "evidence": [],
+   "value": null,
+   "third_party": {
+    "two": null,
+    "three": null,
+    "source": "그린피가이드",
+    "url": "https://greenfeeguide.co.kr/course/gc-0025/"
+   }
+  },
+  "three_player": {
+   "value": null,
+   "evidence": []
+  },
+  "five_player": {
+   "value": "5인 가능",
+   "evidence": [
+    "5. 회원의 날 예약 또는 조인 이용시 5인 플레이 가능."
+   ],
+   "source_url": "https://www.gakorea.com/gold/guide/resGuide.asp",
+   "confidence": "medium",
+   "source_type": "official_site",
+   "page_label": "이용안내",
+   "value_from": "capital_supplement(official_site)"
+  },
+  "marshal_caddie": {
+   "value": null,
+   "evidence": []
+  },
+  "cart_type": {
+   "evidence": [
+    "VIP카트 120,000원, 리무진카트 200,000원"
+   ],
+   "value": "리무진카트",
+   "source_url": "https://www.gakorea.com/korea/guide/fee.asp",
+   "confidence": "high",
+   "checked_at": "2026-10-22",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/golf-cart-limousine-fairway-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  },
+  "cart_entry": {
+   "evidence": [],
+   "value": null
+  },
+  "bagdrop": {
+   "evidence": [],
+   "value": null
+  },
+  "mat": {
+   "evidence": [],
+   "value": null
+  },
+  "checkin": {
+   "evidence": [
+    "1. 정상적인 클럽 이용을 위해 예약시간 최소 40분 전까지는 도착해 주시기 바랍니다."
+   ],
+   "value": "티오프 40분 전 도착",
+   "third_party": {
+    "value": null,
+    "source": "그린피가이드",
+    "url": "https://greenfeeguide.co.kr/course/gc-0025/"
+   },
+   "source_url": "https://www.gakorea.com/gold/guide/perGuide.asp",
+   "confidence": "medium",
+   "source_type": "official_site",
+   "page_label": "준수사항",
+   "value_from": "capital_supplement(official_site)"
+  },
+  "locker": {
+   "evidence": [
+    "4. 락커룸이나 욕실의 비품은 사용 후 정 위치에 놓아 주시기 바랍니다."
+   ],
+   "value": "락커 운영",
+   "source_url": "https://www.gakorea.com/gold/guide/perGuide.asp",
+   "confidence": "medium",
+   "source_type": "official_site",
+   "page_label": "준수사항",
+   "value_from": "capital_supplement(official_site)"
+  },
+  "sauna": {
+   "evidence": [],
+   "value": null
+  },
+  "dress": {
+   "evidence": [
+    "1. 클럽입장시나 라운드시에 품위있는 복장을 권장하며, 청바지, 민소매, 반바지(남성)차림 등을 삼가하여 주시기 바랍니다."
+   ],
+   "value": "복장 규정 안내",
+   "source_url": "https://www.gakorea.com/gold/guide/perGuide.asp",
+   "confidence": "medium",
+   "source_type": "official_site",
+   "page_label": "준수사항",
+   "value_from": "capital_supplement(official_site)"
+  },
+  "pace": {
+   "evidence": [],
+   "value": null
+  },
+  "grass": "야지, 벤트그라스",
+  "cart_limousine": {
+   "value": "VIP카트 120,000원, 리무진카트 200,000원",
+   "evidence": [
+    "VIP카트 120,000원, 리무진카트 200,000원"
+   ],
+   "source_url": "https://www.gakorea.com/korea/guide/fee.asp",
+   "confidence": "high",
+   "checked_at": "2026-10-22",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/golf-cart-limousine-fairway-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  }
+ },
+ "facilities": {
+  "practice": {
+   "evidence": [],
+   "value": null
+  },
+  "indoor_range": {
+   "value": null,
+   "evidence": []
+  },
+  "food": {
+   "evidence": [
+    "2. 부대시설(대식당,그늘집,프로샵) 이용 권장"
+   ],
+   "value": "식당 · 그늘집",
+   "source_url": "https://www.gakorea.com/gold/guide/resGuide.asp",
+   "confidence": "medium",
+   "source_type": "official_site",
+   "page_label": "이용안내",
+   "value_from": "capital_supplement(official_site)"
+  },
+  "snack_bar": {
+   "value": null,
+   "evidence": []
+  },
+  "locker_sauna": {
+   "value": null,
+   "evidence": []
+  },
+  "lodging": {
+   "value": null,
+   "evidence": []
+  },
+  "other": {
+   "value": null,
+   "evidence": []
+  },
+  "night": {
+   "evidence": [
+    "야간 캐디피 10~18홀 주간 150,000원 · 야간 160,000원"
+   ],
+   "value": "야간 라운딩 운영",
+   "source_url": "https://www.gakorea.com/korea/guide/fee.asp",
+   "confidence": "high",
+   "checked_at": "2026-10-12",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/night-golf-course-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  },
+  "closed_days": {
+   "evidence": [],
+   "third_party": null,
+   "value": null
+  },
+  "shuttle": {
+   "evidence": [],
+   "value": null
+  },
+  "ev_charge": {
+   "evidence": [],
+   "value": null
+  },
+  "gf_facilities": [
+   "프로샵근거골프장 공식 홈페이지 시설 안내 · 2026"
+  ],
+  "proshop": {
+   "evidence": [
+    "프로샵"
+   ],
+   "value": "프로샵 운영",
+   "source_url": "https://www.gakorea.com/korea/club/facil01.asp",
+   "confidence": "high",
+   "checked_at": "2026-10-20",
+   "source_type": "greenfee_guide",
+   "reference": "https://greenfeeguide.co.kr/guides/golf-course-amenities-guide/",
+   "value_from": "capital_supplement(greenfee_guide)"
+  }
+ },
+ "rental": {
+  "available": null,
+  "full_set": null,
+  "fee_text": null,
+  "brand": null,
+  "left_handed": null,
+  "shoes": null,
+  "nine_hole": null,
+  "range_finder": null,
+  "reservation": null,
+  "source_url": null,
+  "evidence": [],
+  "official": null,
+  "nearby_delivery": {
+   "region": "수도권",
+   "sido": "경기도",
+   "verified_at": "2026-11-26 (KST)",
+   "checked_at": "2026-11-26",
+   "providers": [
+    {
+     "id": "theb",
+     "name": "더비 (The B)",
+     "coverage": "O",
+     "basis": "동탄·김포·시흥·용인·이천 24시간 무인픽업 매장 5곳 + 다마스 퀵/택배 배송. 홈페이지에 '강남·동탄·판교·수지·광교·분당', '시흥·배곧·인천·안산·송도', '이천·여주' 권역 표기.",
+     "phone": "010-2530-4575",
+     "operating_status": "정상 영업",
+     "delivery": "O",
+     "price_headline": "12시간 기준 90,000원부터",
+     "bookable": true
+    },
+    {
+     "id": "gangnamclub",
+     "name": "강남골프클럽렌탈",
+     "coverage": "O",
+     "basis": "서울 서초구 거점 매장 주소 공개, 자사 블로그 '전지역 배송 가능' 안내.",
+     "phone": "010-7407-0753",
+     "operating_status": "정상 영업(자사 블로그 최신 게시 2026-04-28)",
+     "delivery": "미확인",
+     "price_headline": null,
+     "bookable": true
+    },
+    {
+     "id": "apioz",
+     "name": "아피오즈 (Apioz)",
+     "coverage": "조건부",
+     "basis": "서울 숙소 배송·공항 픽업 옵션 안내. 단 골프세트 Sold Out으로 현재 이용 불가.",
+     "phone": "02-6956-8115",
+     "operating_status": "예약 중단(Sold Out) — 골프채 세트 한정",
+     "delivery": "미확인",
+     "price_headline": null,
+     "caution": "골프채 세트 Sold Out — 현재 예약 불가",
+     "bookable": false,
+     "bookable_reason": "골프채 세트 Sold Out — 현재 예약 불가"
+    }
+   ],
+   "provider_count": 3,
+   "legend": {
+    "O": "공식 안내로 해당 권역 이용이 확인됨",
+    "X": "공식 안내상 해당 권역 서비스가 없음(예: '제주 전 지역' 전용으로만 안내)",
+    "조건부": "공식 안내상 가능하나 조건(수단·요금·현재 판매중지 등)이 붙어 있음. 조건은 basis/detail에 기재",
+    "미확인": "공식 공개 안내에서 해당 항목에 대한 언급을 찾지 못함(추정하지 않음)"
+   },
+   "not_verified": "전화·문자·카카오톡 상담으로만 확인 가능한 항목(재고, 개별 견적, 권역별 실제 배송 가능 여부)은 '미확인'으로 남김",
+   "source_file": "5-rental_8_coverage_verified.json",
+   "note_code": "해외 골퍼용 골프채 렌탈·딜리버리 업체. 같은 권역이라도 실제 배송 가능 여부·재고·견적은 전화 확인 필요."
+  }
+ },
+ "briefing": {
+  "notices": {
+   "url": null,
+   "items": [],
+   "tags": {}
+  },
+  "review": {
+   "score_10": 8.5,
+   "count": 65,
+   "source": "티픽골프장 라운더 후기 집계",
+   "url": "https://teepickgolf.com/course/%EC%BD%94%EB%A6%AC%EC%95%84cc"
+  },
+  "fee_change": null,
+  "collected_at": "2026-11-26T09:51:57+09:00",
+  "recent_notice_text": null,
+  "course_notes": null,
+  "alert": null,
+  "unconfirmed": [],
+  "sources": []
+ },
+ "collection": {
+  "official_site": "ok",
+  "official_reason": null,
+  "pages_collected": 1,
+  "third_party": {
+   "teepick": true,
+   "greenfeeguide": true
+  },
+  "render_hint": "static",
+  "plan_strategy": "static(직접 파싱)",
+  "browser_batch": false
+ },
+ "coverage": {
+  "basic": 1.0,
+  "course": 0.8,
+  "fee": 1.0,
+  "ops": 0.36,
+  "facility": 0.2,
+  "briefing": 0.5,
+  "rental": 0.25
+ }
+}
