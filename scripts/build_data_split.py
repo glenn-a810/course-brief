@@ -26,9 +26,10 @@ KST = timezone(timedelta(hours=9))
 # 공개 저장소에 남기면 안 되는 문자열 치환 (내부 워크스페이스 경로·협업자 이름)
 SANITIZE_PATTERNS = [
     (re.compile(r"memory/clones/[0-9a-f]{8}-[a-z0-9]+/pickle/[0-9-]+/received/"), ""),
-    (re.compile(r"심이슬 님 비서 조사"), "외부 데이터 검수"),
-    (re.compile(r"심이슬 님 비서 수신"), "외부 데이터 수신"),
-    (re.compile(r"심이슬 님 비서"), "외부 데이터 검수"),
+    # 협업자 실명이 들어간 출처 표기 → 중립 표기 (이름을 코드에 남기지 않도록 일반 패턴으로 처리)
+    (re.compile(r"[가-힣]{2,4}\s*님\s*비서\s*조사"), "외부 데이터 검수"),
+    (re.compile(r"[가-힣]{2,4}\s*님\s*비서\s*수신"), "외부 데이터 수신"),
+    (re.compile(r"[가-힣]{2,4}\s*님\s*비서"), "외부 데이터 검수"),
     (re.compile(r"/workspace/"), ""),
 ]
 
@@ -345,7 +346,7 @@ def check(out_root: str) -> int:
         errors.append("counts.total 불일치")
 
     # 개인정보·내부경로 잔존 검사
-    bad = re.compile(r"심이슬|memory/clones|/workspace/|99239e1f")
+    bad = re.compile(r"[가-힣]{2,4}\s*님\s*비서|memory/clones|/workspace/|99239e1f")
     for root, _dirs, fs in os.walk(v29):
         for fn in fs:
             p = os.path.join(root, fn)

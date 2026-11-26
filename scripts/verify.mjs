@@ -48,7 +48,7 @@ for (const f of files) {
 ok(keyIssues === 0, `12키 구조·파일명 일치 (문제 ${keyIssues}건)`);
 
 // 4) 금지 문자열 (개인정보·내부 경로)
-const banned = /심이슬|memory\/clones|99239e1f|\/workspace\/|@glenn|ehyunmin|glenn\.nullanswer/;
+const banned = /[가-힣]{2,4}\s*님\s*비서|memory\/clones|99239e1f|\/workspace\/|@glenn|ehyunmin|glenn\.nullanswer/;
 let leaked = [];
 for (const f of files) {
   const txt = await readFile(path.join(dir, f), "utf8");
