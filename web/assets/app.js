@@ -509,11 +509,30 @@ function sections(d, c) {
   const feeNote = (fee.basis ? `<span class="sub">${esc(fee.basis)}</span>` : "");
   const asOf = fee.as_of || fee.checked_at;
   const member = fee.member;
-  const tableRows = (fee.official_table?.rows || []).slice(0, 24);
-  const tableHTML = tableRows.length ? `<div class="table-wrap"><table>
-      <thead><tr><th>구분</th><th>항목</th><th>금액</th></tr></thead><tbody>
-      ${tableRows.map((r) => `<tr><td>${esc(r.section || "")}</td><td>${esc(r.label || "")}</td><td>${esc(r.value || "")}</td></tr>`).join("")}
-      </tbody></table></div>` : "";
+  const tableHTML = (() => {
+    const rows = (fee.official_table?.rows || []).filter((r) => r && (r.value || r.amounts?.length));
+    if (!rows.length) return "";
+    const groups = [];
+    for (const r of rows) {
+      const sec = (r.section || "요금").trim();
+      let g = groups.find((x) => x.sec === sec);
+      if (!g) { g = { sec, rows: [] }; groups.push(g); }
+      const key = `${r.label || ""}|${r.value || ""}`;
+      if (!g.rows.some((x) => `${x.label || ""}|${x.value || ""}` === key)) g.rows.push(r);
+    }
+    const groupHTML = (g) => `<tr class="group"><th colspan="2">${esc(g.sec === "구분" ? "요금" : g.sec)}</th></tr>` +
+      g.rows.map((r) => {
+        const label = r.label && r.label !== g.sec ? r.label : "";
+        return `<tr><td>${esc(label)}</td><td class="num">${esc(r.value || "")}</td></tr>`;
+      }).join("");
+    const body = groups.map(groupHTML).join("");
+    const table = `<div class="table-wrap"><table class="fee-table"><tbody>${body}</tbody></table></div>`;
+    // 행이 많으면 기본은 접어 둔다(요금 섹션이 표에 잠식되지 않게)
+    if (groups.length > 2 || rows.length > 8) {
+      return `<details class="ev"><summary>공식 요금표 ${rows.length}개 항목 펼치기</summary>${table}</details>`;
+    }
+    return table;
+  })();
   const od = fee.official_detail || {};
   const s3 = `
   <section class="section" id="s3">
