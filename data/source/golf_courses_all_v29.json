@@ -67272,6 +67272,11 @@
       "source": "공식 공지사항(브라우저 확인)",
       "url": "http://www.kwangneungcc.co.kr/",
       "checked_at": "2026-11-27"
+     },
+     {
+      "source": "카카오골프예약 골프장에서 알립니다",
+      "url": "https://www.kakao.golf/golf/52",
+      "checked_at": "2026-11-27"
      }
     ]
    },
@@ -67284,7 +67289,7 @@
      "greenfeeguide": true
     },
     "render_hint": "browser",
-    "plan_strategy": "browser_check(2026-11-27)",
+    "plan_strategy": "browser_check+kakao(2026-11-27)",
     "browser_batch": true
    },
    "coverage": {
