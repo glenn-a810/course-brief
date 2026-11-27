@@ -465,6 +465,7 @@ async function renderDetail(id: string): Promise<void> {
   const index = getIndex();
   const course = index.courses.find((c) => c.id === id);
   if (!course) {
+    renderedDetailId = null; // 없는 id 뒤에 이전 구장 주소로 돌아오면 다시 그려야 한다
     $<HTMLElement>("#view-detail").innerHTML = `<div class="page"><div class="error-box">해당 골프장을 찾을 수 없습니다. <a href="#/">목록으로</a></div></div>`;
     return;
   }
