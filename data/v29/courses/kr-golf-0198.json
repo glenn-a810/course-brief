@@ -46,7 +46,7 @@
    "source": "최근접 IC 직선거리"
   },
   "tel": "031-645-1800",
-  "homepage": null,
+  "homepage": "https://www.wellingtoncountryclub.com",
   "operators": [
    "효성중공업㈜"
   ],
@@ -831,7 +831,7 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
+   "url": "https://www.wellingtoncountryclub.com",
    "items": [],
    "tags": {}
   },
@@ -842,8 +842,8 @@
    "url": "https://teepickgolf.com/course/%EC%9B%B0%EB%A7%81%ED%84%B4"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T09:51:58+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T23:40:00+09:00",
+  "recent_notice_text": "웰링턴CC는 효성중공업(주) 운영으로 공식 홈페이지가 wellingtoncountryclub.com으로 이전했다(2026-10-01 개인정보처리방침 시행). 문의 031-645-1800.",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [
@@ -865,7 +865,7 @@
  },
  "collection": {
   "official_site": "unavailable",
-  "official_reason": "no_homepage",
+  "official_reason": "공식 홈페이지 이전 확인(wellingtoncc.co.kr → wellingtoncountryclub.com, 2026-11-27) — 공지 목록은 추가 확인 필요",
   "pages_collected": 0,
   "third_party": {
    "teepick": true,
@@ -876,12 +876,12 @@
   "browser_batch": false
  },
  "coverage": {
-  "basic": 0.78,
+  "basic": 0.89,
   "course": 0.8,
   "fee": 0.0,
   "ops": 0.14,
   "facility": 0.2,
-  "briefing": 0.0,
+  "briefing": 0.25,
   "rental": 0.25
  }
 }

@@ -391,8 +391,19 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
-   "items": [],
+   "url": "https://www.sunvalley.co.kr/board/notice",
+   "items": [
+    {
+     "title": "설악썬밸리 2027년 연단체 모집 안내",
+     "date": "2026-11-24",
+     "url": "https://www.sunvalley.co.kr/board/notice"
+    },
+    {
+     "title": "동원썬밸리 2026년 12월 그린피 안내",
+     "date": "2026-11-09",
+     "url": "https://www.sunvalley.co.kr/board/notice"
+    }
+   ],
    "tags": {}
   },
   "review": {
@@ -402,8 +413,8 @@
    "url": "https://teepickgolf.com/course/%EC%97%AC%EC%A3%BC%EC%8D%AC%EB%B0%B8%EB%A6%AC"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T09:51:54+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T23:40:00+09:00",
+  "recent_notice_text": "썬밸리 통합 공지사항에는 지점별 공지가 올라오며, 최신은 2026-11-24 설악썬밸리 2027년 연단체 모집 안내·2026-11-09 동원썬밸리 12월 그린피 안내다. 여주썬밸리 명의의 최근 공지는 통합 게시판에 없어, 여주 지점 공지는 지점 안내로 확인해야 한다.",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [],
@@ -417,19 +428,24 @@
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
     "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공식 공지사항(브라우저 확인)",
+    "url": "https://www.sunvalley.co.kr/board/notice",
+    "checked_at": "2026-11-27"
    }
   ]
  },
  "collection": {
-  "official_site": "unavailable",
-  "official_reason": "no_homepage",
-  "pages_collected": 0,
+  "official_site": "ok",
+  "official_reason": "공식 통합 홈페이지(sunvalley.co.kr/board/notice) 확인(2026-11-27, 브라우저 직접 접속) — 여주 전용 공지 최근 글 없음",
+  "pages_collected": 2,
   "third_party": {
    "teepick": true,
    "greenfeeguide": true
   },
-  "render_hint": "",
-  "plan_strategy": "no_homepage(지도·예약앱 대체)",
+  "render_hint": "browser",
+  "plan_strategy": "browser_check(2026-11-27)",
   "browser_batch": false
  },
  "coverage": {
@@ -438,7 +454,7 @@
   "fee": 1.0,
   "ops": 0.36,
   "facility": 0.2,
-  "briefing": 0.25,
+  "briefing": 0.75,
   "rental": 0.25
  }
 }

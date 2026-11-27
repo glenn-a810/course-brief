@@ -332,8 +332,14 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
-   "items": [],
+   "url": "https://www.kvalleycc.co.kr/",
+   "items": [
+    {
+     "title": "동시티업 안내",
+     "date": null,
+     "url": "https://www.kvalleycc.co.kr/"
+    }
+   ],
    "tags": {}
   },
   "review": {
@@ -343,8 +349,8 @@
    "url": "https://teepickgolf.com/course/%EC%BC%80%EC%9D%B4%EB%B0%B8%EB%A6%ACCC"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T10:25:43+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T23:40:00+09:00",
+  "recent_notice_text": "케이밸리CC 홈페이지 공지사항은 이미지 공지 중심으로, 2026-11-27 현재 '동시티업' 안내 이미지가 최신 게시물이다. 텍스트 공지는 확인되지 않는다.",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [
@@ -359,19 +365,24 @@
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
     "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공식 공지사항(브라우저 확인)",
+    "url": "https://www.kvalleycc.co.kr/",
+    "checked_at": "2026-11-27"
    }
   ]
  },
  "collection": {
-  "official_site": "unavailable",
-  "official_reason": "no_homepage",
-  "pages_collected": 0,
+  "official_site": "ok",
+  "official_reason": "공식 홈페이지(kvalleycc.co.kr) 확인(2026-11-27, 브라우저 직접 접속) — 공지가 이미지 전용",
+  "pages_collected": 2,
   "third_party": {
    "teepick": true,
    "greenfeeguide": true
   },
-  "render_hint": "",
-  "plan_strategy": "no_homepage(지도·예약앱 대체)",
+  "render_hint": "browser",
+  "plan_strategy": "browser_check(2026-11-27)",
   "browser_batch": false,
   "browser_pages": 0,
   "browser_pdf": []
@@ -382,7 +393,7 @@
   "fee": 0.75,
   "ops": 0.21,
   "facility": 0.2,
-  "briefing": 0.0,
+  "briefing": 0.5,
   "rental": 0.25
  }
 }

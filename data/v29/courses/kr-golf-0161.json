@@ -464,8 +464,14 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
-   "items": [],
+   "url": "https://www.haesley.com/global/login.asp",
+   "items": [
+    {
+     "title": "26년 동계휴장 안내",
+     "date": null,
+     "url": "https://www.haesley.com/global/login.asp"
+    }
+   ],
    "tags": {}
   },
   "review": {
@@ -475,8 +481,8 @@
    "url": "https://teepickgolf.com/course/%ED%95%B4%EC%8A%AC%EB%A6%AC%EB%82%98%EC%9D%B8%EB%B8%8C%EB%A6%BF%EC%A7%80"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T09:51:54+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T23:40:00+09:00",
+  "recent_notice_text": "해슬리나인브릿지 홈페이지는 로그인 후 열람 구조이고, 메인 팝업으로 '26년 동계휴장' 안내를 게시 중이다(2026-11-27 확인). 공지 본문은 회원 로그인 없이 열리지 않는다.",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [
@@ -498,7 +504,7 @@
  },
  "collection": {
   "official_site": "unavailable",
-  "official_reason": "robots_disallow",
+  "official_reason": "공식 홈페이지(haesley.com) 확인(2026-11-27, 브라우저 직접 접속) — 회원 로그인 전용, 동계휴장 팝업만 확인",
   "pages_collected": 0,
   "third_party": {
    "teepick": true,
@@ -514,7 +520,7 @@
   "fee": 0.0,
   "ops": 0.0,
   "facility": 0.0,
-  "briefing": 0.0,
+  "briefing": 0.5,
   "rental": 0.25
  }
 }

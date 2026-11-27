@@ -442,37 +442,22 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
+   "url": "https://www.solmoro.com/",
    "items": [
     {
      "title": "12월 그린피 안내",
      "date": "2026-11-18",
-     "url": "https://www.solmoro.com/Guide/UsageFee"
+     "url": "https://www.solmoro.com/"
     },
     {
      "title": "동절기 경기운영 안내",
      "date": "2026-11-01",
-     "url": "https://www.solmoro.com/Guide/UsageFee"
+     "url": "https://www.solmoro.com/"
     },
     {
      "title": "개인정보 유출 통지",
      "date": "2026-08-09",
-     "url": "https://www.solmoro.com/Guide/UsageFee"
-    },
-    {
-     "title": "셀프라운드 변경 안내",
-     "date": "2024-05-31",
-     "url": "https://www.solmoro.com/Guide/UsageFee"
-    },
-    {
-     "title": "매크로 사용금지 안내",
-     "date": "2023-10-06",
-     "url": "https://www.solmoro.com/Guide/UsageFee"
-    },
-    {
-     "title": "3인 플레이 추가요금 안내",
-     "date": "2023-08-28",
-     "url": "https://www.solmoro.com/Guide/UsageFee"
+     "url": "https://www.solmoro.com/"
     }
    ],
    "tags": {}
@@ -484,8 +469,8 @@
    "url": "https://teepickgolf.com/course/%EC%86%94%EB%AA%A8%EB%A1%9CCC"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T09:51:54+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T23:40:00+09:00",
+  "recent_notice_text": "2026-11-18 12월 그린피 안내, 2026-11-01 동절기 경기운영 안내, 2026-08-09 개인정보 유출 통지. 홈페이지 NOTICE 섹션 기준이며, 게시판 최신글도 11월 18일자다.",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [
@@ -505,19 +490,24 @@
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
     "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공식 공지사항(브라우저 확인)",
+    "url": "https://www.solmoro.com/",
+    "checked_at": "2026-11-27"
    }
   ]
  },
  "collection": {
-  "official_site": "unavailable",
-  "official_reason": "HTTP0",
-  "pages_collected": 0,
+  "official_site": "ok",
+  "official_reason": "공식 홈페이지(solmoro.com) NOTICE 섹션 확인(2026-11-27, 브라우저 직접 접속)",
+  "pages_collected": 2,
   "third_party": {
    "teepick": true,
    "greenfeeguide": true
   },
-  "render_hint": "thin",
-  "plan_strategy": "unreachable(브라우저 재시도)",
+  "render_hint": "browser",
+  "plan_strategy": "browser_check(2026-11-27)",
   "browser_batch": true
  },
  "coverage": {
@@ -526,7 +516,7 @@
   "fee": 1.0,
   "ops": 0.14,
   "facility": 0.1,
-  "briefing": 0.5,
+  "briefing": 0.75,
   "rental": 1.0
  }
 }

@@ -131,7 +131,7 @@
    "straight_name": "청도IC"
   },
   "tel": "053-768-5511",
-  "homepage": "http://www.nc-golf.co.kr/",
+  "homepage": "https://www.nc-golf.com/",
   "operators": [
    "냉천개발㈜ (윤상락)"
   ],
@@ -478,37 +478,32 @@
  },
  "briefing": {
   "notices": {
-   "url": "https://www.nc-golf.com/Board/View.aspx?cfgid=notice&page=1&post=6469",
+   "url": "https://www.nc-golf.com/",
    "items": [
     {
      "title": "12월 골프요금 안내",
-     "date": "2026-11-25",
-     "url": "https://www.nc-golf.com/Board/View.aspx?cfgid=notice&page=1&post=6469"
+     "date": null,
+     "url": "https://www.nc-golf.com/"
     },
     {
      "title": "11월 골프요금 안내",
-     "date": "2026-10-19",
-     "url": "https://www.nc-golf.com/Board/View.aspx?cfgid=notice&page=1&post=6469"
+     "date": null,
+     "url": "https://www.nc-golf.com/"
     },
     {
      "title": "10월 골프요금 안내",
-     "date": "2026-09-21",
-     "url": "https://www.nc-golf.com/Board/View.aspx?cfgid=notice&page=1&post=6469"
+     "date": null,
+     "url": "https://www.nc-golf.com/"
     },
     {
      "title": "9월 골프요금 안내",
-     "date": "2026-08-21",
-     "url": "https://www.nc-golf.com/Board/View.aspx?cfgid=notice&page=1&post=6469"
+     "date": null,
+     "url": "https://www.nc-golf.com/"
     },
     {
      "title": "8월 골프요금 안내",
-     "date": "2026-07-31",
-     "url": "https://www.nc-golf.com/Board/View.aspx?cfgid=notice&page=1&post=6469"
-    },
-    {
-     "title": "7월 골프요금 안내",
-     "date": "2026-06-19",
-     "url": "https://www.nc-golf.com/Board/View.aspx?cfgid=notice&page=1&post=6469"
+     "date": null,
+     "url": "https://www.nc-golf.com/"
     }
    ],
    "tags": {}
@@ -520,8 +515,8 @@
    "url": "https://teepickgolf.com/course/%EB%83%89%EC%B2%9CCC"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T10:28:35+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T23:40:00+09:00",
+  "recent_notice_text": "홈페이지 NOTICE에 12월·11월·10월·9월·8월 골프요금 안내가 차례로 올라와 있고, 최신글은 12월 골프요금 안내다(2026-11-27 확인). 위젯은 제목만 노출한다.",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [],
@@ -530,19 +525,24 @@
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
     "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공식 공지사항(브라우저 확인)",
+    "url": "https://www.nc-golf.com/",
+    "checked_at": "2026-11-27"
    }
   ]
  },
  "collection": {
-  "official_site": "unavailable",
-  "official_reason": "HTTP0",
-  "pages_collected": 0,
+  "official_site": "ok",
+  "official_reason": "공식 홈페이지(nc-golf.com) NOTICE 섹션 확인(2026-11-27, 브라우저 직접 접속) — nc-golf.co.kr 은 응답 없음, nc-golf.com 으로 접속",
+  "pages_collected": 2,
   "third_party": {
    "teepick": true,
    "greenfeeguide": true
   },
-  "render_hint": "thin",
-  "plan_strategy": "unreachable(브라우저 재시도)",
+  "render_hint": "browser",
+  "plan_strategy": "browser_check(2026-11-27)",
   "browser_batch": true
  },
  "coverage": {
@@ -551,7 +551,7 @@
   "fee": 0.75,
   "ops": 0.29,
   "facility": 0.3,
-  "briefing": 0.25,
+  "briefing": 0.5,
   "rental": 0.25
  }
 }

@@ -387,7 +387,7 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
+   "url": "http://namandongcc.com/",
    "items": [
     {
      "title": "남안동CC 12월 그린피 안내",
@@ -414,8 +414,8 @@
    "url": "https://teepickgolf.com/course/%EB%82%A8%EC%95%88%EB%8F%99cc"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T10:28:34+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T23:40:00+09:00",
+  "recent_notice_text": "카카오골프예약 '골프장에서 알립니다'(2026-11-27): ■ 야간 라운드 운영 안내 / - 기간: 2025년 6월 5일(목) ~ / - 이용안내: 셀프라운드(캐디 미동반) / - 카트비: 팀당 9만원 / 카트새팅비 팀당 2만원 별도 / - 유의사항 ※ 매주 월요일 3부 휴장 ※ 카트 리모컨 미지급",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [],
@@ -425,19 +425,24 @@
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
     "checked_at": "2026-11-27"
+   },
+   {
+    "source": "카카오골프예약 골프장에서 알립니다",
+    "url": "https://www.kakao.golf/golf/265",
+    "checked_at": "2026-11-27"
    }
   ]
  },
  "collection": {
   "official_site": "unavailable",
-  "official_reason": "HTTP403",
+  "official_reason": "남안동CC 공식 홈페이지(namandongcc.com)는 2026-11-27 자동수집에서 403으로 차단됐다. 운영·요금 안내는 카카오골프예약 '골프장에서 알립니다'로 보완.",
   "pages_collected": 0,
   "third_party": {
    "teepick": true,
    "greenfeeguide": true
   },
   "render_hint": "thin",
-  "plan_strategy": "blocked(헤드리스·UA 우회)",
+  "plan_strategy": "browser_check+kakao(2026-11-27)",
   "browser_batch": true
  },
  "coverage": {
@@ -446,7 +451,7 @@
   "fee": 1.0,
   "ops": 0.0,
   "facility": 0.2,
-  "briefing": 0.25,
+  "briefing": 0.5,
   "rental": 0.25
  }
 }

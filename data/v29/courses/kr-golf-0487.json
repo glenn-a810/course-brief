@@ -295,7 +295,7 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
+   "url": "https://esperan.modoo.at/",
    "items": [],
    "tags": {}
   },
@@ -306,8 +306,8 @@
    "url": "https://teepickgolf.com/course/%EC%97%90%EC%8A%A4%ED%8E%98%EB%9E%80%EC%82%ACGC"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T10:25:42+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T23:40:00+09:00",
+  "recent_notice_text": "에스페란사GC의 옛 홈페이지(네이버 모두 esperan.modoo.at)는 2025-06-26 모두 서비스 종료로 껍데기 페이지만 응답한다. 현재 운영 공지 채널은 확인되지 않는다.",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [
@@ -327,7 +327,7 @@
  },
  "collection": {
   "official_site": "unavailable",
-  "official_reason": "homepage_service_ended(naver modoo 2025-06-26 종료, 껍데기 페이지만 응답)",
+  "official_reason": "homepage_service_ended(naver modoo 2025-06-26 종료) — 대체 공식 채널 미확인",
   "pages_collected": 1,
   "third_party": {
    "teepick": true,
@@ -345,7 +345,7 @@
   "fee": 0.0,
   "ops": 0.0,
   "facility": 0.0,
-  "briefing": 0.0,
+  "briefing": 0.25,
   "rental": 0.25
  }
 }

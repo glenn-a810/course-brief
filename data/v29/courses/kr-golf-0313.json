@@ -95,7 +95,7 @@
    "source": "최근접 IC 직선거리"
   },
   "tel": null,
-  "homepage": null,
+  "homepage": "https://www.ophelgc.com/",
   "operators": [
    "두강건설㈜ 이정익"
   ],
@@ -379,7 +379,7 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
+   "url": "https://www.ophelgc.com/",
    "items": [],
    "tags": {}
   },
@@ -390,8 +390,8 @@
    "url": "https://teepickgolf.com/course/%EA%B3%A0%EB%A0%B9%EC%98%A4%ED%8E%A0GC"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T10:28:33+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T23:40:00+09:00",
+  "recent_notice_text": "다산 샤인힐CC는 문체부 등록명이고 같은 소재지의 카카오맵·운영 표기는 '고령오펠GC'다. 공식 홈페이지는 오펠GC 통합 사이트(ophelgc.com)이며, 고령 지점 공지·예약은 통합 사이트에서 운영한다.",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [],
@@ -399,7 +399,7 @@
  },
  "collection": {
   "official_site": "unavailable",
-  "official_reason": "no_homepage",
+  "official_reason": "공식 채널 통합(고령오펠GC = 다산 샤인힐CC, ophelgc.com) 확인(2026-11-27)",
   "pages_collected": 0,
   "third_party": {
    "teepick": true,
@@ -410,12 +410,12 @@
   "browser_batch": false
  },
  "coverage": {
-  "basic": 0.67,
+  "basic": 0.78,
   "course": 0.2,
   "fee": 1.0,
   "ops": 0.0,
   "facility": 0.0,
-  "briefing": 0.0,
+  "briefing": 0.25,
   "rental": 0.25
  }
 }

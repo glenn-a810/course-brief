@@ -49,7 +49,7 @@
    "source": "최근접 IC 직선거리"
   },
   "tel": "031-887-8420",
-  "homepage": null,
+  "homepage": "https://www.welfare.mil.kr/health/content/content.do?m_code=253",
   "operators": [],
   "area_sqm": null,
   "opened": null,
@@ -323,8 +323,14 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
-   "items": [],
+   "url": "https://www.welfare.mil.kr/health/content/content.do?m_code=253",
+   "items": [
+    {
+     "title": "동여주 체력단련장 시설·예약 안내(현역의 날 3주차 일요일, 원로의 날 매주 수요일, 정기휴장 신정·설날·현충일·추석·창설기념일(3/18))",
+     "date": "2026-11-27",
+     "url": "https://www.welfare.mil.kr/health/content/content.do?m_code=253"
+    }
+   ],
    "tags": {}
   },
   "review": {
@@ -334,8 +340,8 @@
    "url": "https://teepickgolf.com/course/%EB%8F%99%EC%97%AC%EC%A3%BC"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T09:51:54+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T23:40:00+09:00",
+  "recent_notice_text": "동여주 체력단련장은 국군복지포털(welfare.mil.kr)에서 운영·예약을 안내하는 군 체력단련장(18홀)이다. 예약은 경기일 18~13일 전 인터넷 접수, 현역의 날은 3주차 일요일, 원로의 날은 매주 수요일이며 정기휴장은 신정·설날·현충일·추석·창설기념일(3월 18일)이다. 문의 031-887-8444.",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [
@@ -347,28 +353,33 @@
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
     "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공식 포털(국군복지포털) 확인",
+    "url": "https://www.welfare.mil.kr/health/content/content.do?m_code=253",
+    "checked_at": "2026-11-27"
    }
   ]
  },
  "collection": {
-  "official_site": "unavailable",
-  "official_reason": "no_homepage",
-  "pages_collected": 0,
+  "official_site": "ok",
+  "official_reason": "공식 채널(국군복지포털 welfare.mil.kr) 확인(2026-11-27) — 군 시설로 자체 홈페이지 없음",
+  "pages_collected": 2,
   "third_party": {
    "teepick": true,
    "greenfeeguide": false
   },
-  "render_hint": "",
-  "plan_strategy": "no_homepage(지도·예약앱 대체)",
+  "render_hint": "browser",
+  "plan_strategy": "browser_check(2026-11-27)",
   "browser_batch": false
  },
  "coverage": {
-  "basic": 0.78,
+  "basic": 0.89,
   "course": 0.4,
   "fee": 0.25,
   "ops": 0.07,
   "facility": 0.0,
-  "briefing": 0.0,
+  "briefing": 0.5,
   "rental": 0.25
  }
 }

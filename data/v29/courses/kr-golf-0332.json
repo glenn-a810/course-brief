@@ -541,8 +541,24 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
-   "items": [],
+   "url": "https://golfzoncounty.com/golfclub/notice?golfclubSeq=58",
+   "items": [
+    {
+     "title": "12월 그린피 안내",
+     "date": "2026-11-05",
+     "url": "https://golfzoncounty.com/golfclub/notice?golfclubSeq=58"
+    },
+    {
+     "title": "2027년 연단체 모집 안내",
+     "date": "2026-10-26",
+     "url": "https://golfzoncounty.com/golfclub/notice?golfclubSeq=58"
+    },
+    {
+     "title": "11월 그린피 안내",
+     "date": "2026-10-02",
+     "url": "https://golfzoncounty.com/golfclub/notice?golfclubSeq=58"
+    }
+   ],
    "tags": {}
   },
   "review": {
@@ -552,25 +568,30 @@
    "url": "https://teepickgolf.com/course/%EA%B3%A8%ED%94%84%EC%A1%B4%20%EC%B2%AD%ED%86%B5cc"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T10:28:34+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T23:40:00+09:00",
+  "recent_notice_text": "2026-11-05 12월 그린피 안내, 2026-10-26 2027년 연단체 모집 안내, 2026-10-02 11월 그린피 안내.",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [],
   "sources": [
-   "https://greenfeeguide.co.kr/course/gc-0349/"
+   "https://greenfeeguide.co.kr/course/gc-0349/",
+   {
+    "source": "공식 공지사항(브라우저 확인)",
+    "url": "https://golfzoncounty.com/golfclub/notice?golfclubSeq=58",
+    "checked_at": "2026-11-27"
+   }
   ]
  },
  "collection": {
-  "official_site": "unavailable",
-  "official_reason": "no_homepage",
-  "pages_collected": 0,
+  "official_site": "ok",
+  "official_reason": "골프존카운티 통합 공지사항(golfclubSeq=58) 확인(2026-11-27, 브라우저 직접 접속)",
+  "pages_collected": 2,
   "third_party": {
    "teepick": true,
    "greenfeeguide": true
   },
-  "render_hint": "",
-  "plan_strategy": "no_homepage(지도·예약앱 대체)",
+  "render_hint": "browser",
+  "plan_strategy": "browser_check(2026-11-27)",
   "browser_batch": false
  },
  "coverage": {
@@ -579,7 +600,7 @@
   "fee": 1.0,
   "ops": 0.07,
   "facility": 0.3,
-  "briefing": 0.0,
+  "briefing": 0.5,
   "rental": 0.25
  }
 }

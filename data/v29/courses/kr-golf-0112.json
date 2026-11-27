@@ -442,27 +442,12 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
+   "url": "http://www.kwangneungcc.co.kr/",
    "items": [
     {
-     "title": "동계기간 운영안내 (12월~2월)",
-     "date": "2026-11-12",
-     "url": "https://www.kwangneungcc.co.kr/html/guide/guide03.asp"
-    },
-    {
-     "title": "주중회원 입회기간 만료안내",
-     "date": "2026-11-09",
-     "url": "https://www.kwangneungcc.co.kr/html/guide/guide03.asp"
-    },
-    {
-     "title": "2027년 연단체 모집안내",
-     "date": "2026-10-13",
-     "url": "https://www.kwangneungcc.co.kr/html/guide/guide03.asp"
-    },
-    {
-     "title": "회원정보 확인안내",
-     "date": "2026-10-06",
-     "url": "https://www.kwangneungcc.co.kr/html/guide/guide03.asp"
+     "title": "주중반환안내",
+     "date": null,
+     "url": "http://www.kwangneungcc.co.kr/"
     }
    ],
    "tags": {}
@@ -474,8 +459,8 @@
    "url": "https://teepickgolf.com/course/%ED%95%9C%EB%A6%BC%EA%B4%91%EB%A6%89"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T09:51:51+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T23:40:00+09:00",
+  "recent_notice_text": "광릉CC 홈페이지는 팝업 공지('주중반환안내') 중심으로 운영되어 2026-11-27 현재 텍스트 공지를 확보하지 못했다. 예약·운영 안내는 카카오골프예약 '골프장에서 알립니다'로 보완.",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [
@@ -494,19 +479,24 @@
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
     "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공식 공지사항(브라우저 확인)",
+    "url": "http://www.kwangneungcc.co.kr/",
+    "checked_at": "2026-11-27"
    }
   ]
  },
  "collection": {
-  "official_site": "unavailable",
-  "official_reason": "HTTP403",
-  "pages_collected": 0,
+  "official_site": "ok",
+  "official_reason": "공식 홈페이지(kwangneungcc.co.kr) 접속 확인(2026-11-27, 브라우저 직접 접속) — 공지가 팝업 이미지",
+  "pages_collected": 2,
   "third_party": {
    "teepick": true,
    "greenfeeguide": true
   },
-  "render_hint": "thin",
-  "plan_strategy": "blocked(헤드리스·UA 우회)",
+  "render_hint": "browser",
+  "plan_strategy": "browser_check(2026-11-27)",
   "browser_batch": true
  },
  "coverage": {
@@ -515,7 +505,7 @@
   "fee": 1.0,
   "ops": 0.29,
   "facility": 0.2,
-  "briefing": 0.5,
+  "briefing": 0.75,
   "rental": 0.25
  }
 }

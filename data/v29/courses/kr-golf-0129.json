@@ -592,57 +592,17 @@
  },
  "briefing": {
   "notices": {
-   "url": "https://www.benestgolf.com/reve/pc/board/notice.do",
+   "url": "https://www.benestgolf.com/reve/pc/main.do",
    "items": [
-    {
-     "title": "동래베네스트 겨울철 페어웨이 관리 안내",
-     "date": "2026-10-30",
-     "url": "https://www.benestgolf.com/reve/pc/board/notice.do"
-    },
-    {
-     "title": "글렌로스 2026년 11월 이용요금 안내",
-     "date": "2026-10-02",
-     "url": "https://www.benestgolf.com/reve/pc/board/notice.do"
-    },
     {
      "title": "안성베네스트 (챌린지코스) 2026년 11월 이용요금 안내",
      "date": "2026-10-02",
-     "url": "https://www.benestgolf.com/reve/pc/board/notice.do"
+     "url": "https://www.benestgolf.com/reve/pc/main.do"
     },
     {
-     "title": "Npay 제휴 안내",
-     "date": "2026-09-20",
-     "url": "https://www.benestgolf.com/reve/pc/board/notice.do"
-    },
-    {
-     "title": "노쇼 등에 대한 위약금 제도 시행 안내",
-     "date": "2026-09-01",
-     "url": "https://www.benestgolf.com/reve/pc/board/notice.do"
-    },
-    {
-     "title": "안성베네스트 (챌린지코스) 2026년 10월 이용요금 안내",
-     "date": "2026-08-31",
-     "url": "https://www.benestgolf.com/reve/pc/board/notice.do"
-    },
-    {
-     "title": "글렌로스 2026년 10월 이용요금 안내",
-     "date": "2026-08-31",
-     "url": "https://www.benestgolf.com/reve/pc/board/notice.do"
-    },
-    {
-     "title": "★한결 더 가까워지는 안성베네스트★ 신설도로 개통",
-     "date": "2026-08-12",
-     "url": "https://www.benestgolf.com/reve/pc/board/notice.do"
-    },
-    {
-     "title": "가평베네스트 캐디피 변경 안내",
-     "date": "2026-06-22",
-     "url": "https://www.benestgolf.com/reve/pc/board/notice.do"
-    },
-    {
-     "title": "베네스트골프 개인정보처리방침 개정안내",
-     "date": "2026-06-03",
-     "url": "https://www.benestgolf.com/reve/pc/board/notice.do"
+     "title": "2027년 베네스트골프 연단체 모집 안내",
+     "date": null,
+     "url": "https://www.benestgolf.com/reve/pc/main.do"
     }
    ],
    "tags": {}
@@ -654,8 +614,8 @@
    "url": "https://teepickgolf.com/course/%EC%95%88%EC%84%B1%EB%B2%A0%EB%84%A4%EC%8A%A4%ED%8A%B8"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T09:51:52+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T23:40:00+09:00",
+  "recent_notice_text": "2026-10-02 안성베네스트(챌린지코스) 2026년 11월 이용요금 안내가 통합 공지 최신 안성 관련 글이고, 2027년 연단체 모집 안내가 이벤트로 게시 중이다. 12월 이용요금 공지는 2026-11-27 현재 아직 없다.",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [
@@ -675,19 +635,24 @@
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
     "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공식 공지사항(브라우저 확인)",
+    "url": "https://www.benestgolf.com/reve/pc/main.do",
+    "checked_at": "2026-11-27"
    }
   ]
  },
  "collection": {
-  "official_site": "unavailable",
-  "official_reason": "HTTP403",
-  "pages_collected": 0,
+  "official_site": "ok",
+  "official_reason": "공식 통합 홈페이지(benestgolf.com) 공지사항 확인(2026-11-27, 브라우저 직접 접속)",
+  "pages_collected": 2,
   "third_party": {
    "teepick": true,
    "greenfeeguide": true
   },
-  "render_hint": "thin",
-  "plan_strategy": "redirect(최종 URL 재확인)",
+  "render_hint": "browser",
+  "plan_strategy": "browser_check(2026-11-27)",
   "browser_batch": true
  },
  "coverage": {
@@ -696,7 +661,7 @@
   "fee": 1.0,
   "ops": 0.14,
   "facility": 0.1,
-  "briefing": 0.5,
+  "briefing": 0.75,
   "rental": 0.25
  }
 }

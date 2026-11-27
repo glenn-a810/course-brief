@@ -390,7 +390,7 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
+   "url": "https://www.ophelgc.com/",
    "items": [
     {
      "title": "27년 영천오펠GC 연부킹 써클팀 신청 안내",
@@ -427,23 +427,29 @@
    "url": "https://teepickgolf.com/course/%EC%98%81%EC%B2%9C%EC%98%A4%ED%8E%A0GC"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T10:28:34+09:00",
+  "collected_at": "2026-11-27T23:40:00+09:00",
   "recent_notice_text": null,
   "course_notes": null,
   "alert": null,
   "unconfirmed": [],
-  "sources": []
+  "sources": [
+   {
+    "source": "카카오골프예약 골프장에서 알립니다",
+    "url": "https://www.kakao.golf/golf/278",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "unavailable",
-  "official_reason": "HTTP0",
+  "official_reason": "오펠GC는 오펠 통합 홈페이지(ophelgc.com)에서 영천·군위·고령 지점을 함께 운영하며, 2026-11-27 현재 자동수집이 응답하지 않는다. 운영·요금 안내는 카카오골프예약 '골프장에서 알립니다'로 보완.",
   "pages_collected": 0,
   "third_party": {
    "teepick": true,
    "greenfeeguide": true
   },
   "render_hint": "thin",
-  "plan_strategy": "unreachable(브라우저 재시도)",
+  "plan_strategy": "browser_check+kakao(2026-11-27)",
   "browser_batch": true
  },
  "coverage": {

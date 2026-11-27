@@ -49,7 +49,7 @@
    "straight_name": "신북IC"
   },
   "tel": "031-539-5700",
-  "homepage": "http://www.bearcreek.co.kr/",
+  "homepage": "https://www.bearcreek.co.kr/",
   "operators": [
    "㈜삼보개발"
   ],
@@ -655,8 +655,24 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
-   "items": [],
+   "url": "https://www.bearcreek.co.kr/",
+   "items": [
+    {
+     "title": "[포천] 크리크코스 리뉴얼 공사로 2026-11-16부터 운영 중단, 2027년 6월 오픈 예정",
+     "date": null,
+     "url": "https://www.bearcreek.co.kr/"
+    },
+    {
+     "title": "동계 라운드 안전 및 화재 예방 안내",
+     "date": null,
+     "url": "https://www.bearcreek.co.kr/"
+    },
+    {
+     "title": "2023년도 적립분 마일리지 2026-12-31 소멸 안내",
+     "date": null,
+     "url": "https://www.bearcreek.co.kr/"
+    }
+   ],
    "tags": {}
   },
   "review": {
@@ -666,8 +682,8 @@
    "url": "https://teepickgolf.com/course/%EB%B2%A0%EC%96%B4%ED%81%AC%EB%A6%AC%ED%81%AC"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T09:51:58+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T23:40:00+09:00",
+  "recent_notice_text": "홈페이지 공지로 포천 크리크코스가 리뉴얼 공사로 2026-11-16부터 운영을 중단하고 2027년 6월 오픈 예정이라고 안내한다. 동계 라운드 안전·화재 예방 안내와 2023년도 적립분 마일리지가 2026-12-31 소멸한다는 안내도 함께 게시 중이다.",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [
@@ -684,19 +700,24 @@
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
     "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공식 공지사항(브라우저 확인)",
+    "url": "https://www.bearcreek.co.kr/",
+    "checked_at": "2026-11-27"
    }
   ]
  },
  "collection": {
-  "official_site": "unavailable",
-  "official_reason": "robots_disallow",
-  "pages_collected": 0,
+  "official_site": "ok",
+  "official_reason": "공식 홈페이지(bearcreek.co.kr) 공지 확인(2026-11-27, 브라우저 직접 접속) — robots 제한으로 자동수집은 불가, 브라우저로 직접 확인",
+  "pages_collected": 2,
   "third_party": {
    "teepick": true,
    "greenfeeguide": true
   },
-  "render_hint": "thin",
-  "plan_strategy": "blocked(헤드리스·UA 우회)",
+  "render_hint": "browser",
+  "plan_strategy": "browser_check(2026-11-27)",
   "browser_batch": false
  },
  "coverage": {
@@ -705,7 +726,7 @@
   "fee": 0.25,
   "ops": 0.21,
   "facility": 0.0,
-  "briefing": 0.0,
+  "briefing": 0.5,
   "rental": 0.25
  }
 }

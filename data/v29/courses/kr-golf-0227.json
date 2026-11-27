@@ -49,7 +49,7 @@
    "straight_name": "마도IC"
   },
   "tel": "031-831-0900",
-  "homepage": "http://www.linknine.co.kr/",
+  "homepage": "https://www.linknine.co.kr/",
   "operators": [
    "㈜금당개발"
   ],
@@ -459,8 +459,34 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
-   "items": [],
+   "url": "https://www.linknine.co.kr/",
+   "items": [
+    {
+     "title": "제11회 2026 링크나인 자선 골프행사",
+     "date": "2026-11-20",
+     "url": "https://www.linknine.co.kr/"
+    },
+    {
+     "title": "2026년 12월 그린피 안내",
+     "date": "2026-11-20",
+     "url": "https://www.linknine.co.kr/"
+    },
+    {
+     "title": "2026년 11월 고객감사 이벤트",
+     "date": "2026-10-20",
+     "url": "https://www.linknine.co.kr/"
+    },
+    {
+     "title": "2026년 11월 그린피 안내",
+     "date": "2026-10-20",
+     "url": "https://www.linknine.co.kr/"
+    },
+    {
+     "title": "2026년 10월 고객 감사 이벤트",
+     "date": "2026-09-20",
+     "url": "https://www.linknine.co.kr/"
+    }
+   ],
    "tags": {}
   },
   "review": {
@@ -470,8 +496,8 @@
    "url": "https://teepickgolf.com/course/%EB%A7%81%ED%81%AC%EB%82%98%EC%9D%B8"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T09:51:59+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T23:40:00+09:00",
+  "recent_notice_text": "2026-11-20 제11회 2026 링크나인 자선 골프행사·2026년 12월 그린피 안내, 2026-10-20 11월 고객감사 이벤트·11월 그린피 안내, 2026-09-20 10월 고객 감사 이벤트. 매달 그린피와 고객감사 이벤트를 함께 공지한다.",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [
@@ -487,19 +513,24 @@
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
     "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공식 공지사항(브라우저 확인)",
+    "url": "https://www.linknine.co.kr/",
+    "checked_at": "2026-11-27"
    }
   ]
  },
  "collection": {
-  "official_site": "unavailable",
-  "official_reason": "no_homepage",
-  "pages_collected": 0,
+  "official_site": "ok",
+  "official_reason": "공식 홈페이지(linknine.co.kr) 공지목록 확인(2026-11-27, 브라우저 직접 접속)",
+  "pages_collected": 2,
   "third_party": {
    "teepick": true,
    "greenfeeguide": true
   },
-  "render_hint": "",
-  "plan_strategy": "no_homepage(지도·예약앱 대체)",
+  "render_hint": "browser",
+  "plan_strategy": "browser_check(2026-11-27)",
   "browser_batch": false
  },
  "coverage": {
@@ -508,7 +539,7 @@
   "fee": 1.0,
   "ops": 0.79,
   "facility": 0.4,
-  "briefing": 0.25,
+  "briefing": 0.75,
   "rental": 0.25
  }
 }

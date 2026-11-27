@@ -501,27 +501,12 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
+   "url": "https://shambhalacc.co.kr/",
    "items": [
     {
-     "title": "12월 그린피 안내",
+     "title": "12월 그린피",
      "date": "2026-11-10",
-     "url": "https://shambhalacc.co.kr/guide/charge.asp"
-    },
-    {
-     "title": "2027년 연단체 모집",
-     "date": "2026-11-06",
-     "url": "https://shambhalacc.co.kr/guide/charge.asp"
-    },
-    {
-     "title": "11월 이벤트",
-     "date": "2026-11-03",
-     "url": "https://shambhalacc.co.kr/guide/charge.asp"
-    },
-    {
-     "title": "2인 플레이 안내",
-     "date": "2026-10-20",
-     "url": "https://shambhalacc.co.kr/guide/charge.asp"
+     "url": "https://shambhalacc.co.kr/"
     }
    ],
    "tags": {}
@@ -533,8 +518,8 @@
    "url": "https://teepickgolf.com/course/%EC%83%B4%EB%B0%9C%EB%9D%BCcc"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T09:51:58+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T23:40:00+09:00",
+  "recent_notice_text": "2026-11-10 12월 그린피 공지. 홈페이지 NEW & NOTICE 최신글 기준이며, 팝업으로 27년도 연단체 모집·2인플레이·11월 이벤트·분양안내를 함께 게시 중이다.",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [],
@@ -543,19 +528,24 @@
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
     "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공식 공지사항(브라우저 확인)",
+    "url": "https://shambhalacc.co.kr/",
+    "checked_at": "2026-11-27"
    }
   ]
  },
  "collection": {
-  "official_site": "unavailable",
-  "official_reason": "HTTP0",
-  "pages_collected": 0,
+  "official_site": "ok",
+  "official_reason": "공식 홈페이지(shambhalacc.co.kr) NEW & NOTICE 섹션 확인(2026-11-27, 브라우저 직접 접속)",
+  "pages_collected": 2,
   "third_party": {
    "teepick": true,
    "greenfeeguide": true
   },
-  "render_hint": "thin",
-  "plan_strategy": "unreachable(브라우저 재시도)",
+  "render_hint": "browser",
+  "plan_strategy": "browser_check(2026-11-27)",
   "browser_batch": true
  },
  "coverage": {
@@ -564,7 +554,7 @@
   "fee": 1.0,
   "ops": 0.14,
   "facility": 0.0,
-  "briefing": 0.5,
+  "briefing": 0.75,
   "rental": 0.25
  }
 }

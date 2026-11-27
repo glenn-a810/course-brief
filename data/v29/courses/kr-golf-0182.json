@@ -407,13 +407,13 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
+   "url": "https://www.jisanresort.co.kr/",
    "items": [],
    "tags": {}
   },
   "review": null,
   "fee_change": null,
-  "collected_at": "2026-11-26T09:51:57+09:00",
+  "collected_at": "2026-11-27T23:40:00+09:00",
   "recent_notice_text": null,
   "course_notes": null,
   "alert": null,
@@ -428,7 +428,7 @@
  },
  "collection": {
   "official_site": "unavailable",
-  "official_reason": "no_homepage",
+  "official_reason": "공식 홈페이지(지산리조트 퍼블릭) 접속·코스 안내 확인(2026-11-27, 브라우저 직접 접속). 공지·이벤트는 별도 게시판에서 운영하며 2026-11-27 현재 확인된 텍스트 공지가 없다.",
   "pages_collected": 0,
   "third_party": {
    "teepick": false,

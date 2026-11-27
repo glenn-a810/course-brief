@@ -468,37 +468,37 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
+   "url": "https://www.palgong-cc.co.kr/",
    "items": [
+    {
+     "title": "12월 공휴일 예약안내",
+     "date": "2026-11-27",
+     "url": "https://www.palgong-cc.co.kr/"
+    },
     {
      "title": "12월 입장요금 안내 (12월 14일 ~ 31일)",
      "date": "2026-11-23",
-     "url": "https://www.palgong-cc.co.kr/html/guide01.asp"
+     "url": "https://www.palgong-cc.co.kr/"
     },
     {
      "title": "12월 입장요금 안내 (12월 1일 ~ 13일)",
      "date": "2026-11-23",
-     "url": "https://www.palgong-cc.co.kr/html/guide01.asp"
+     "url": "https://www.palgong-cc.co.kr/"
     },
     {
      "title": "2027년 연간단체팀 신청 안내",
      "date": "2026-11-16",
-     "url": "https://www.palgong-cc.co.kr/html/guide01.asp"
+     "url": "https://www.palgong-cc.co.kr/"
     },
     {
      "title": "11월 입장요금 안내",
      "date": "2026-10-21",
-     "url": "https://www.palgong-cc.co.kr/html/guide01.asp"
+     "url": "https://www.palgong-cc.co.kr/"
     },
     {
      "title": "캐디피 조정 안내",
      "date": "2026-09-22",
-     "url": "https://www.palgong-cc.co.kr/html/guide01.asp"
-    },
-    {
-     "title": "10월 입장요금 안내",
-     "date": "2026-09-18",
-     "url": "https://www.palgong-cc.co.kr/html/guide01.asp"
+     "url": "https://www.palgong-cc.co.kr/"
     }
    ],
    "tags": {}
@@ -510,8 +510,8 @@
    "url": "https://teepickgolf.com/course/%ED%8C%94%EA%B3%B5"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T10:28:35+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T23:40:00+09:00",
+  "recent_notice_text": "2026-11-27 12월 공휴일 예약안내, 2026-11-23 12월 입장요금 안내(12/1~13, 12/14~31 두 편), 2026-11-16 2027년 연간단체팀 신청 안내, 2026-10-21 11월 입장요금 안내, 2026-09-22 캐디피 조정 안내.",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [],
@@ -522,19 +522,24 @@
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
     "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공식 공지사항(브라우저 확인)",
+    "url": "https://www.palgong-cc.co.kr/",
+    "checked_at": "2026-11-27"
    }
   ]
  },
  "collection": {
-  "official_site": "unavailable",
-  "official_reason": "HTTP403",
-  "pages_collected": 0,
+  "official_site": "ok",
+  "official_reason": "공식 홈페이지(palgong-cc.co.kr) 공지사항 확인(2026-11-27, 브라우저 직접 접속)",
+  "pages_collected": 2,
   "third_party": {
    "teepick": true,
    "greenfeeguide": true
   },
-  "render_hint": "thin",
-  "plan_strategy": "blocked(헤드리스·UA 우회)",
+  "render_hint": "browser",
+  "plan_strategy": "browser_check(2026-11-27)",
   "browser_batch": true
  },
  "coverage": {
@@ -543,7 +548,7 @@
   "fee": 1.0,
   "ops": 0.21,
   "facility": 0.0,
-  "briefing": 0.25,
+  "briefing": 0.5,
   "rental": 0.75
  }
 }

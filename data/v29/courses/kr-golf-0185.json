@@ -353,7 +353,7 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
+   "url": "https://yongin.hanlimgolf.co.kr/index.asp",
    "items": [
     {
      "title": "[한림용인] 2027년 연단체 추가모집",
@@ -385,8 +385,8 @@
    "url": "https://teepickgolf.com/course/%ED%95%9C%EB%A6%BC%EC%9A%A9%EC%9D%B8cc"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T09:51:57+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T23:40:00+09:00",
+  "recent_notice_text": "카카오골프예약 '골프장에서 알립니다'(2026-11-27): ■ 골프장이용안내 -4인필수 (3인내장시, 4인 (그린피)요금결제)",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [
@@ -402,19 +402,24 @@
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
     "checked_at": "2026-11-27"
+   },
+   {
+    "source": "카카오골프예약 골프장에서 알립니다",
+    "url": "https://www.kakao.golf/golf/665",
+    "checked_at": "2026-11-27"
    }
   ]
  },
  "collection": {
   "official_site": "unavailable",
-  "official_reason": "HTTP0",
+  "official_reason": "한림용인CC 공식 홈페이지(yongin.hanlimgolf.co.kr)는 2026-11-27 자동수집에서 403으로 차단됐다. 예약·운영 안내는 카카오골프예약 '골프장에서 알립니다'로 보완.",
   "pages_collected": 0,
   "third_party": {
    "teepick": true,
    "greenfeeguide": true
   },
   "render_hint": "thin",
-  "plan_strategy": "blocked(헤드리스·UA 우회)",
+  "plan_strategy": "browser_check+kakao(2026-11-27)",
   "browser_batch": true
  },
  "coverage": {
@@ -423,7 +428,7 @@
   "fee": 0.75,
   "ops": 0.21,
   "facility": 0.1,
-  "briefing": 0.5,
+  "briefing": 0.75,
   "rental": 0.25
  }
 }

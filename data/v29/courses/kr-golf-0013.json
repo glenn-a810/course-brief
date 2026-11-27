@@ -356,8 +356,34 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
-   "items": [],
+   "url": "https://bitgoeulcc.co.kr/web/community/notice.do",
+   "items": [
+    {
+     "title": "빛고을골프장 노인대상 예약제 티업시간 및 라운딩 신청안내(2026.12.16~2027.02.28)",
+     "date": "2026-10-28",
+     "url": "https://bitgoeulcc.co.kr/web/community/notice.do"
+    },
+    {
+     "title": "빛고을골프장 동절기 라운딩 운영 안내(2026.12.16~2027.2.28)",
+     "date": "2026-10-28",
+     "url": "https://bitgoeulcc.co.kr/web/community/notice.do"
+    },
+    {
+     "title": "빛고을골프장 주말 및 공휴일 입장료 할인 행사 안내",
+     "date": "2026-09-15",
+     "url": "https://bitgoeulcc.co.kr/web/community/notice.do"
+    },
+    {
+     "title": "빛고을골프장 연습그린 운영 안내",
+     "date": "2026-07-27",
+     "url": "https://bitgoeulcc.co.kr/web/community/notice.do"
+    },
+    {
+     "title": "빛고을골프장 주중 18홀 시니어 입장료 할인 행사 안내",
+     "date": "2026-06-16",
+     "url": "https://bitgoeulcc.co.kr/web/community/notice.do"
+    }
+   ],
    "tags": {}
   },
   "review": {
@@ -367,8 +393,8 @@
    "url": "https://teepickgolf.com/course/%EB%B9%9B%EA%B3%A0%EC%9D%84CC"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T10:25:40+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T23:40:00+09:00",
+  "recent_notice_text": "2026-10-28 동절기 라운딩 운영 안내(2026.12.16~2027.2.28)와 노인대상 예약제 티업시간·라운딩 신청안내(2026.12.16~2027.02.28), 2026-09-15 주말·공휴일 입장료 할인 행사, 2026-07-27 연습그린 운영 안내, 2026-06-16 주중 18홀 시니어 입장료 할인. 12월 16일부터 동절기 운영으로 전환한다.",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [
@@ -381,19 +407,24 @@
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
     "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공식 공지사항(브라우저 확인)",
+    "url": "https://bitgoeulcc.co.kr/web/community/notice.do",
+    "checked_at": "2026-11-27"
    }
   ]
  },
  "collection": {
-  "official_site": "unavailable",
-  "official_reason": "no_homepage",
-  "pages_collected": 0,
+  "official_site": "ok",
+  "official_reason": "공식 홈페이지(광주광역시도시공사 빛고을CC, bitgoeulcc.co.kr/web/community/notice.do) 확인(2026-11-27, 브라우저 직접 접속)",
+  "pages_collected": 2,
   "third_party": {
    "teepick": true,
    "greenfeeguide": true
   },
-  "render_hint": "",
-  "plan_strategy": "no_homepage(지도·예약앱 대체)",
+  "render_hint": "browser",
+  "plan_strategy": "browser_check(2026-11-27)",
   "browser_batch": false,
   "browser_pages": 0,
   "browser_pdf": []
@@ -404,7 +435,7 @@
   "fee": 0.5,
   "ops": 0.21,
   "facility": 0.6,
-  "briefing": 0.0,
+  "briefing": 0.5,
   "rental": 0.25
  }
 }

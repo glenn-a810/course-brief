@@ -571,8 +571,29 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
-   "items": [],
+   "url": "https://www.mgle.co.kr/",
+   "items": [
+    {
+     "title": "12월 골프 예약 안내 (2026.12.1~12.31)",
+     "date": null,
+     "url": "https://www.mgle.co.kr/"
+    },
+    {
+     "title": "단체행사 신청 안내 (2026.12.1~2027.2.28)",
+     "date": null,
+     "url": "https://www.mgle.co.kr/"
+    },
+    {
+     "title": "두끼·세끼 패키지 안내 (2026.3.1~)",
+     "date": null,
+     "url": "https://www.mgle.co.kr/"
+    },
+    {
+     "title": "우대적용 변경 안내 (2026.1.1~)",
+     "date": null,
+     "url": "https://www.mgle.co.kr/"
+    }
+   ],
    "tags": {}
   },
   "review": {
@@ -582,8 +603,8 @@
    "url": "https://teepickgolf.com/course/%EB%AC%B8%EA%B2%BD"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T10:28:34+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T23:40:00+09:00",
+  "recent_notice_text": "2026-11-27 확인 시 홈페이지 카드뉴스에 12월 골프 예약 안내(12/1~12/31), 단체행사 신청(12/1~2027.2.28), 두끼·세끼 패키지, 우대적용 변경 안내가 게시 중이다. 카드뉴스 형식이라 게시 날짜는 표기되지 않는다.",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [],
@@ -592,19 +613,24 @@
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
     "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공식 공지사항(브라우저 확인)",
+    "url": "https://www.mgle.co.kr/",
+    "checked_at": "2026-11-27"
    }
   ]
  },
  "collection": {
-  "official_site": "unavailable",
-  "official_reason": "no_homepage",
-  "pages_collected": 0,
+  "official_site": "ok",
+  "official_reason": "공식 홈페이지(문경GC, mgle.co.kr) 카드뉴스 확인(2026-11-27, 브라우저 직접 접속)",
+  "pages_collected": 2,
   "third_party": {
    "teepick": true,
    "greenfeeguide": true
   },
-  "render_hint": "",
-  "plan_strategy": "no_homepage(지도·예약앱 대체)",
+  "render_hint": "browser",
+  "plan_strategy": "browser_check(2026-11-27)",
   "browser_batch": false
  },
  "coverage": {
@@ -613,7 +639,7 @@
   "fee": 1.0,
   "ops": 0.0,
   "facility": 0.1,
-  "briefing": 0.25,
+  "briefing": 0.75,
   "rental": 0.25
  }
 }

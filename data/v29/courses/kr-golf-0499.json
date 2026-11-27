@@ -492,7 +492,7 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
+   "url": "https://www.fourseven.co.kr/",
    "items": [],
    "tags": {}
   },
@@ -503,7 +503,7 @@
    "url": "https://teepickgolf.com/course/%ED%8F%AC%EC%84%B8%EB%B8%90%EA%B8%88%EA%B0%95"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T10:25:43+09:00",
+  "collected_at": "2026-11-27T23:40:00+09:00",
   "recent_notice_text": null,
   "course_notes": null,
   "alert": null,
@@ -519,19 +519,24 @@
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
     "checked_at": "2026-11-27"
+   },
+   {
+    "source": "카카오골프예약 골프장에서 알립니다",
+    "url": "https://www.kakao.golf/golf/451",
+    "checked_at": "2026-11-27"
    }
   ]
  },
  "collection": {
   "official_site": "unavailable",
-  "official_reason": "no_homepage",
+  "official_reason": "공식 홈페이지(fourseven.co.kr)는 접속되지만 첫 화면이 팝업 공지로만 구성되어 2026-11-27 현재 텍스트 공지를 확보하지 못했다. 예약·요금 안내는 카카오골프예약 '골프장에서 알립니다'로 보완.",
   "pages_collected": 0,
   "third_party": {
    "teepick": true,
    "greenfeeguide": true
   },
   "render_hint": "",
-  "plan_strategy": "no_homepage(지도·예약앱 대체)",
+  "plan_strategy": "browser_check+kakao(2026-11-27)",
   "browser_batch": false,
   "browser_pages": 0,
   "browser_pdf": []

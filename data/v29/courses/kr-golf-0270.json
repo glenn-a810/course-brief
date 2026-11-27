@@ -315,7 +315,7 @@
    "items": [],
    "tags": {}
   },
-  "recent_notice_text": "2026년 10~11월 공지 미확인.",
+  "recent_notice_text": "계룡산골프장은 충남 공주시 계룡면 왕흥장악로 583의 파3 9홀(롱홀 포함) 대중제 코스로, 예약 없이 현장 접수·전화 문의로 운영한다. 공식 홈페이지는 운영하지 않는다. 대표 041-858-9667.",
   "course_notes": "공주 계룡산 자락의 파3 9홀 연습형 코스. 1홀 70m~5홀 300m로 길이가 다양해 드라이버 연습이 가능하고 그린 상태가 좋다는 후기가 많음. 주말 대기 발생.",
   "review": null,
   "fee_change": null,
@@ -355,11 +355,11 @@
     "checked_at": "2026-11-27"
    }
   ],
-  "collected_at": "2026-11-26T10:24:29+09:00"
+  "collected_at": "2026-11-27T23:40:00+09:00"
  },
  "collection": {
   "official_site": "unavailable",
-  "official_reason": "운영 중(파3 골프장, 자체 홈페이지 미확인)",
+  "official_reason": "운영 중인 파3 골프장 — 자체 홈페이지 미확인(2026-11-27 검색·지도 확인)",
   "pages_collected": 0,
   "third_party": {
    "received_report": true,

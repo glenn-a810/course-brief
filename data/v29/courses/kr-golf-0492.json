@@ -307,8 +307,8 @@
    "url": "https://teepickgolf.com/course/%EA%B8%88%EA%B3%BC%EA%B3%A8%ED%94%84%EC%9E%A5"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T10:25:43+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T23:40:00+09:00",
+  "recent_notice_text": "금과골프장은 순창군 금과면 담순로 716의 파3·간이 9홀(문체부 등록 6홀) 대중제 코스로, 예약 없이 현장 선착순으로 운영한다. 공식 홈페이지는 확인되지 않는다. 대표 063-653-9100.",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [
@@ -328,7 +328,7 @@
  },
  "collection": {
   "official_site": "unavailable",
-  "official_reason": "no_homepage",
+  "official_reason": "파3·간이 골프장(현장 선착순) — 공식 홈페이지 없음(2026-11-27 검색·지도 확인)",
   "pages_collected": 0,
   "third_party": {
    "teepick": true,
@@ -346,7 +346,7 @@
   "fee": 0.0,
   "ops": 0.0,
   "facility": 0.0,
-  "briefing": 0.0,
+  "briefing": 0.25,
   "rental": 0.25
  }
 }

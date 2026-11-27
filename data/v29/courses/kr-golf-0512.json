@@ -81,7 +81,7 @@
   "tel_conflict": false,
   "tel_source": "KGA",
   "tel_note": "미개장 — 공식 대표전화 041-585-1515는 분양·사업 문의 회선.",
-  "homepage": null,
+  "homepage": "https://www.ramid.co.kr",
   "homepage_master": null,
   "operators": [
    "㈜버드우드(라미드그룹)"
@@ -301,11 +301,17 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
-   "items": [],
+   "url": "https://www.ramid.co.kr",
+   "items": [
+    {
+     "title": "18홀 코스 공사 완료, 클럽하우스 사용승인 후 체육시설업 조건부 등록 신청 예정(2026-08 보도)",
+     "date": null,
+     "url": "https://www.ramid.co.kr"
+    }
+   ],
    "tags": {}
   },
-  "recent_notice_text": "2026-07-27 충남도·언론 보도(코스 공사 완료, 클럽하우스 사용승인 진행), 2026-09-23 개장 마지막 행정절차 공지, 2026-10-18 골프월간 '내년 상반기 개장 준비'. 정식 개장·요금 공지는 11/26 기준 미게시.",
+  "recent_notice_text": "천안 골드힐CC는 라미드그룹 계열 ㈜버드우드가 조성한 18홀 골프장으로 코스 공사는 끝났고, 클럽하우스 사용승인 절차 뒤 체육시설업 조건부 등록을 신청해 정식 개장할 예정이다(2026-08-06 골프산업신문 보도, 2026-10-18 라미드그룹 인터뷰). 2026-11-27 현재 정식 개장 전이다.",
   "course_notes": "라미드그룹(시행사 ㈜버드우드)이 천안 입장면에 조성 중인 18홀. 구병산 조망, 원지형을 살린 설계, 직산 금광·입장 포도 테마. 남안성IC·북천안IC에서 10분 이내. 2026-07 코스 공사 완료, 2026-09 클럽하우스 사용승인 절차, 2026-10 '내년 상반기 개장 준비' 보도.",
   "review": null,
   "fee_change": null,
@@ -364,11 +370,11 @@
    "https://www.chungnam.go.kr/cnportal/province/province/view.do?cl1CdValue=&edate=2026-08-28&menuNo=500487&nttId=2182276&pageIndex=1&sdate=2025-08-28",
    "https://www.jbnews.com/news/articleView.html?idxno=1508357"
   ],
-  "collected_at": "2026-11-27"
+  "collected_at": "2026-11-27T23:40:00+09:00"
  },
  "collection": {
   "official_site": "unavailable",
-  "official_reason": "미개장 — 18홀 코스 공사 완료, 클럽하우스 사용승인·체육시설업 조건부 등록 절차 진행 중(2026-11-26 기준 정식 개장 전)",
+  "official_reason": "미개장 — 시행사(라미드그룹) 공지·보도로 개장 준비 상황만 확인, 골프장 공지 없음",
   "pages_collected": 0,
   "third_party": {
    "received_report": true
@@ -377,12 +383,12 @@
   "plan_strategy": "subagent_report(2026-11-26)"
  },
  "coverage": {
-  "basic": 0.78,
+  "basic": 0.89,
   "course": 0.4,
   "fee": 0.0,
   "ops": 0.0,
   "facility": 0.2,
-  "briefing": 0.5,
+  "briefing": 0.75,
   "rental": 0.25
  }
 }

@@ -437,7 +437,7 @@
  },
  "briefing": {
   "notices": {
-   "url": "https://www.pentaview.co.kr/blt/notice",
+   "url": "http://www.pentaview.co.kr/",
    "items": [
     {
      "title": "12월 그린피 안내",
@@ -489,8 +489,8 @@
    "url": "https://teepickgolf.com/course/%ED%8E%9C%ED%83%80%EB%B7%B0GC"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T10:28:35+09:00",
-  "recent_notice_text": "2026-11월 특별할인(비수기 착한 그린피) 진행, 1~2월 비수기 35,000원대 그린피 안내. 동계휴장·통기 공지는 확인되지 않음.",
+  "collected_at": "2026-11-27T23:40:00+09:00",
+  "recent_notice_text": "카카오골프예약 '골프장에서 알립니다'(2026-11-27): ■예약 안내 / - 2인, 5인 또는 노캐디(셀프라운드) 드라이빙 캐디 예약을 원하시는 고객님께서는 골프장 예약실로 문의부탁드립니다. 대표번호 ( ☎️ 1644-8053 ) / - 기타 쿠폰 및 할인 이벤트 적용 불가 / - 선결제 4인필수 상품으로 예약 시, 3인내장 하셔도 4인요금을 지불하여야 합니다.",
   "course_notes": "노캐디는 3회 이상 이용 회원이 1팀 1인 이상 조건으로 신청 가능(사전 서약·카트 안전교육, 40분 전 도착). 3인 플레이 가능(카트비 팀당).",
   "alert": {
    "type": "winter_operating",
@@ -517,19 +517,24 @@
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
     "checked_at": "2026-11-27"
+   },
+   {
+    "source": "카카오골프예약 골프장에서 알립니다",
+    "url": "https://www.kakao.golf/golf/472",
+    "checked_at": "2026-11-27"
    }
   ]
  },
  "collection": {
   "official_site": "unavailable",
-  "official_reason": "HTTP403",
+  "official_reason": "펜타뷰골프클럽 공식 홈페이지(pentaview.co.kr/blt/notice)는 2026-11-27 자동수집에서 403으로 차단됐다. 운영·요금 안내는 카카오골프예약 '골프장에서 알립니다'로 보완.",
   "pages_collected": 0,
   "third_party": {
    "teepick": true,
    "greenfeeguide": true
   },
   "render_hint": "thin",
-  "plan_strategy": "blocked(헤드리스·UA 우회)",
+  "plan_strategy": "browser_check+kakao(2026-11-27)",
   "browser_batch": true
  },
  "coverage": {

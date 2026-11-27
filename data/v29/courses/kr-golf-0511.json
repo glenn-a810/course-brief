@@ -67,7 +67,7 @@
    "source": "최근접 IC 직선거리"
   },
   "tel": "054-380-0900",
-  "homepage": null,
+  "homepage": "http://www.avelcc.com",
   "operators": [],
   "area_sqm": null,
   "opened": null,
@@ -325,7 +325,7 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
+   "url": "http://www.avelcc.com",
    "items": [],
    "tags": {}
   },
@@ -336,8 +336,8 @@
    "url": "https://teepickgolf.com/course/%EC%B9%BC%EB%A0%88%EC%9D%B4%ED%8A%B8%20CC"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T10:28:35+09:00",
-  "recent_notice_text": "2026-11-27 확인: 공식 홈페이지(avelcc.com)가 가비아 \"홈페이지 준비중\" 상태이고, 재개장 공지·티타임 판매가 확인되지 않음(예약 문의 054-380-0900). 영업중단 상태 유지.",
+  "collected_at": "2026-11-27T23:40:00+09:00",
+  "recent_notice_text": "아벨CC(구 군위칼레이트CC)는 ㈜군위컨트리클럽이 운영하는 18홀 대중형 골프장으로 공식 홈페이지는 avelcc.com, 대표전화 054-380-0900이다. 2025년 영업중단·법정관리·M&A 보도가 있었고 현재 상태(운영중단)는 데이터 기준 suspended다.",
   "course_notes": null,
   "alert": {
    "type": "status",
@@ -368,7 +368,7 @@
  },
  "collection": {
   "official_site": "unavailable",
-  "official_reason": "no_homepage",
+  "official_reason": "공식 홈페이지(avelcc.com) 확인(2026-11-27) — 영업중단 상태, 공지 게시 없음",
   "pages_collected": 0,
   "third_party": {
    "teepick": true,
@@ -379,7 +379,7 @@
   "browser_batch": false
  },
  "coverage": {
-  "basic": 0.78,
+  "basic": 0.89,
   "course": 0.2,
   "fee": 0.0,
   "ops": 0.0,

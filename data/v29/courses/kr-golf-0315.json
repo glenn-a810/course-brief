@@ -612,22 +612,32 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
+   "url": "https://www.masterpiecegc.com/",
    "items": [
     {
-     "title": "1박 2일 패키지 상품 안내 (26년 12월 1일 이후~)",
+     "title": "1박 2일 패키지 상품 안내 (26년 12월 1일 이후 ~)",
      "date": null,
-     "url": "https://www.masterpiecegc.com/Info/PayInfo.aspx"
+     "url": "https://www.masterpiecegc.com/"
     },
     {
-     "title": "2027년 연단체 이용조건 및 혜택사항",
+     "title": "2027年 연단체 이용조건 및 혜택사항",
      "date": null,
-     "url": "https://www.masterpiecegc.com/Info/PayInfo.aspx"
+     "url": "https://www.masterpiecegc.com/"
     },
     {
      "title": "제7회 마스터피스CC 챔피언대회 8차 예선전",
      "date": null,
-     "url": "https://www.masterpiecegc.com/Info/PayInfo.aspx"
+     "url": "https://www.masterpiecegc.com/"
+    },
+    {
+     "title": "12월 할인 그린피 안내(12월1일~12월31일)",
+     "date": null,
+     "url": "https://www.masterpiecegc.com/"
+    },
+    {
+     "title": "11월 할인 그린피 안내(11월1일~11월30일)",
+     "date": null,
+     "url": "https://www.masterpiecegc.com/"
     }
    ],
    "tags": {}
@@ -639,8 +649,8 @@
    "url": "https://teepickgolf.com/course/%EB%A7%88%EC%8A%A4%ED%84%B0%ED%94%BC%EC%8A%A4%20CC"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T10:28:34+09:00",
-  "recent_notice_text": "2026-11월 할인 그린피 공지(공식), 12월 요금 공지는 확인 불가. 2026-10월 정상요금 개정.",
+  "collected_at": "2026-11-27T23:40:00+09:00",
+  "recent_notice_text": "홈페이지 NOTICE에 1박2일 패키지 상품 안내(26년 12월 1일 이후), 2027년 연단체 이용조건·혜택, 제7회 챔피언대회 8차 예선전이 올라와 있고, 배너로 12월·11월 할인 그린피(월 단위)를 게시 중이다. 게시 날짜는 위젯에 표기되지 않는다(2026-11-27 확인).",
   "course_notes": "해인사IC·고령IC 인접 산악형 18홀. 예약은 회원·인터넷회원 3주 전 09:00 오픈, 비회원은 전화 예약 중심. 취소 주중 3일 전·주말 4일 전 17:00.",
   "alert": {
    "type": "winter_unverified",
@@ -668,19 +678,24 @@
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
     "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공식 공지사항(브라우저 확인)",
+    "url": "https://www.masterpiecegc.com/",
+    "checked_at": "2026-11-27"
    }
   ]
  },
  "collection": {
-  "official_site": "unavailable",
-  "official_reason": "HTTP0",
-  "pages_collected": 0,
+  "official_site": "ok",
+  "official_reason": "공식 홈페이지(masterpiecegc.com) NOTICE 섹션 확인(2026-11-27, 브라우저 직접 접속) — 날짜 미표기",
+  "pages_collected": 2,
   "third_party": {
    "teepick": true,
    "greenfeeguide": true
   },
-  "render_hint": "thin",
-  "plan_strategy": "unreachable(브라우저 재시도)",
+  "render_hint": "browser",
+  "plan_strategy": "browser_check(2026-11-27)",
   "browser_batch": true
  },
  "coverage": {

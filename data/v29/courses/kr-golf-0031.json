@@ -47,7 +47,7 @@
    "source": "최근접 IC 직선거리"
   },
   "tel": "061-818-4000",
-  "homepage": "http://www.cosmoslinks.kr/",
+  "homepage": "https://www.cosmoslinks.kr/",
   "operators": [
    "㈜파크카운티"
   ],
@@ -303,7 +303,7 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
+   "url": "https://www.cosmoslinks.kr/",
    "items": [],
    "tags": {}
   },
@@ -316,7 +316,7 @@
    "note": "종전 수집 URL이 골프존영암45(카일) 페이지로 연결돼 있어 이 구장 후기로 볼 수 없어 해제했다. 공개 예약 채널에 코스모스링스CC 페이지가 확인되지 않는다."
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T10:25:41+09:00",
+  "collected_at": "2026-11-27T23:40:00+09:00",
   "recent_notice_text": "영업종료(2025-08-31)로 공지사항이 없다. 2026-11-01 보도까지 재개장 계획 없이 부지의 태양광 발전 등 에너지 사업 활용을 검토 중이며, 인수 후에도 골프장 영업은 재개되지 않았다.",
   "course_notes": null,
   "alert": {
@@ -347,7 +347,7 @@
  },
  "collection": {
   "official_site": "unavailable",
-  "official_reason": "HTTP0(영업종료·도메인 응답 없음, 2026-11-27 재확인)",
+  "official_reason": "코스모스링스CC는 영업종료 구장으로 도메인(cosmoslinks.kr)이 응답하지 않는다(2026-11-27 재확인).",
   "pages_collected": 0,
   "third_party": {
    "teepick": true,
