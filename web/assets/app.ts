@@ -103,6 +103,9 @@ const TAG_LABEL: Record<string, string> = {
 };
 const TAG_ORDER = ["n", "2", "y", "s", "l", "h", "p", "f"];
 
+/** 데이터 원문이 값 대신 남긴 '미확인' 표기 — 일반 화면에서는 확인된 값이 아니다 */
+const UNKNOWN_TEXT = /미확인|확인\s*안\s*됨|확인하지\s*못한/;
+
 const COVERAGE_LABELS: Array<[CoverageArea, string, string]> = [
   ["basic", "기본·입지", "소재·규모·개장·운영사·최단 IC"],
   ["course", "코스 스펙", "홀·파·전장·잔디·KGA 레이팅"],
@@ -516,7 +519,7 @@ async function renderList({ reset = false }: { reset?: boolean } = {}): Promise<
 
   if (reset) state.shown = CONFIG.pageSize;
   const slice = groups.slice(0, state.shown);
-  resultsEl.innerHTML = softenUnknown(slice.map(cardHTML).join(""));
+  resultsEl.innerHTML = slice.map(cardHTML).join("");
   resultsEl.setAttribute("aria-busy", "false");
   $<HTMLElement>("#empty").hidden = n > 0;
   if (n === 0) $<HTMLElement>("#empty-desc").textContent = emptyDescription();
@@ -579,8 +582,9 @@ function cardHTML(g: CourseGroup): string {
   const tags = (single?.tags ?? "").split("").filter((t) => TAG_LABEL[t]).slice(0, 3);
   const rating = single?.rating;
 
+  // 값이 없으면 가격 영역을 비운다 — 자리표시자 대신 하단 '상세 보기'만 남긴다
   const feeBlock = fee == null
-    ? `<span class="card-fee is-empty"><span class="fee-label">그린피</span><span class="fee-value">확인 안 됨</span></span>`
+    ? ""
     : `<span class="card-fee${stale ? " is-stale" : ""}">
         <span class="fee-label">${stale ? "마지막 확인" : feeLabel}</span>
         <span class="fee-value">${won(fee)}</span><span class="fee-tilde">~</span>
@@ -590,15 +594,18 @@ function cardHTML(g: CourseGroup): string {
     ? [single.sido, single.sigungu].filter(Boolean).join(" ")
     : g.members.map((m) => `${m.name}${m.holes ? ` ${m.holes}홀` : ""}`).join(" · ");
 
+  // 확인된 값만 남긴다 — 값이 없는 줄은 자리표시자 없이 생략한다
+  const type = single?.type && !UNKNOWN_TEXT.test(single.type) ? single.type : "";
   const stats = [
     g.holes ? `<span class="stat-pill"><b>${g.holes}</b>홀</span>` : "",
-    single?.type ? `<span class="stat-pill">${esc(single.type)}</span>` : "",
+    type ? `<span class="stat-pill">${esc(type)}</span>` : "",
     rating !== undefined ? `<span class="stat-pill"><span class="pill-star" aria-hidden="true">★</span>${rating.toFixed(1)}</span>` : "",
   ].filter(Boolean).join("");
 
+  const statsHTML = stats ? `<div class="card-stats">${stats}</div>` : "";
   const tagHTML = tags.length
     ? `<div class="card-tags">${tags.map((t) => `<span class="tag">${esc(TAG_LABEL[t])}</span>`).join("")}</div>`
-    : `<div class="card-tags is-empty"><span class="tag tag-muted">운영 정보 확인 안 됨</span></div>`;
+    : "";
 
   const noticeBadge = single?.notice
     ? `<span class="notice-dot" title="최근 공지 ${fmtDate(single.notice)}"><span aria-hidden="true">●</span>공지</span>`
@@ -611,9 +618,9 @@ function cardHTML(g: CourseGroup): string {
       </div>
       <span class="badge ${st.tone}">${esc(st.label)}</span>
     </div>
-    <div class="card-stats">${stats || `<span class="stat-pill is-muted">스펙 확인 안 됨</span>`}</div>
+    ${statsHTML}
     ${tagHTML}
-    <div class="card-foot">${feeBlock}<span class="card-cta">상세 보기${icon("chevron")}</span>${noticeBadge}</div>`;
+    <div class="card-foot">${feeBlock}<span class="card-foot-right"><span class="card-cta">상세 보기${icon("chevron")}</span>${noticeBadge}</span></div>`;
 
   if (single) {
     return `<a class="card" href="#/c/${esc(single.id)}" data-card="${esc(single.id)}">${head}</a>`;
@@ -626,13 +633,13 @@ function cardHTML(g: CourseGroup): string {
         </div>
         <span class="badge ${st.tone}">${esc(st.label)}</span>
       </div>
-      <div class="card-stats"><span class="stat-pill"><b>${g.holes}</b>홀 합산</span><span class="stat-pill">시설 1곳</span></div>
+      ${g.holes ? `<div class="card-stats"><span class="stat-pill"><b>${g.holes}</b>홀 합산</span></div>` : ""}
       <div class="card-members">${g.members.map((m) => {
         const ms = statusOf(m.status);
         return `<a class="member-link" href="#/c/${esc(m.id)}">${esc(m.name)}${m.holes ? ` · ${m.holes}홀` : ""}${
           m.status !== "operating" ? ` <span class="badge ${ms.tone}">${esc(ms.label)}</span>` : ""}</a>`;
       }).join("")}</div>
-      <div class="card-foot">${feeBlock}<span class="card-cta">코스 선택${icon("chevron")}</span></div>
+      <div class="card-foot">${feeBlock}<span class="card-foot-right"><span class="card-cta">코스 선택${icon("chevron")}</span></span></div>
     </div>`;
 }
 
@@ -729,10 +736,23 @@ async function renderDetail(id: string): Promise<void> {
     : [];
 
   const st = statusOf(course.status);
+  // 데이터 원본의 '미확인'은 이용형태 값이 아니다 — 배지·지표에서 뺀다
+  const typeLabel = course.type && !UNKNOWN_TEXT.test(course.type) ? course.type : "";
   const fees = feeView(detail?.fee, course);
   const feeLine = [fees.weekday.value, fees.weekend.value].filter((v): v is number => v != null);
   const feeCheapest = feeLine.length ? Math.min(...feeLine) : null;
   const feeKindLabel = fees.weekend.value != null && feeCheapest === fees.weekend.value ? "주말" : "주중";
+
+  // 요금은 값이 있는 항목만 보인다 — 하나도 없으면 한 줄 안내로 끝낸다
+  const feePairs = [
+    fees.weekday.value != null ? { label: "주중", slot: fees.weekday } : null,
+    fees.weekend.value != null ? { label: "주말·공휴일", slot: fees.weekend } : null,
+  ].filter((x): x is { label: string; slot: FeeSlot } => x !== null);
+  const feeExtras: string[] = [];
+  if (fees.cart != null) feeExtras.push(`카트 ${won(fees.cart)}`);
+  if (fees.caddieNone) feeExtras.push("노캐디");
+  else if (fees.caddie != null) feeExtras.push(`캐디 ${won(fees.caddie)}`);
+  const hasAnyFee = feeCheapest != null || feeExtras.length > 0;
 
   const hero = `
     <div class="detail-crumbs">
@@ -746,7 +766,7 @@ async function renderDetail(id: string): Promise<void> {
         <div class="detail-badges">
           ${badge(st.tone, st.label)}
           ${course.holes ? badge("neutral", `${course.holes}홀`) : ""}
-          ${course.type ? badge("neutral", course.type) : ""}
+          ${typeLabel ? badge("neutral", typeLabel) : ""}
           ${course.detail ? "" : badge("neutral", "요약 데이터")}
         </div>
         <h1 class="detail-title" id="detail-title" tabindex="-1">${esc(course.name)}</h1>
@@ -766,7 +786,7 @@ async function renderDetail(id: string): Promise<void> {
           ${course.holes ? `<div class="kpi"><dt>홀수</dt><dd><b>${course.holes}</b><span>홀</span></dd></div>` : ""}
           ${course.par ? `<div class="kpi"><dt>파</dt><dd><b>${course.par}</b></dd></div>` : ""}
           ${course.length ? `<div class="kpi"><dt>전장</dt><dd><b>${fmtNum(course.length)}</b><span>m</span></dd></div>` : ""}
-          ${course.type ? `<div class="kpi"><dt>이용형태</dt><dd class="kpi-text">${esc(course.type)}</dd></div>` : ""}
+          ${typeLabel ? `<div class="kpi"><dt>이용형태</dt><dd class="kpi-text">${esc(typeLabel)}</dd></div>` : ""}
           ${course.rating !== undefined ? `<div class="kpi kpi-rating"><dt>라운더 평가</dt><dd>${ratingBar(course.rating, course.reviews)}</dd></div>` : ""}
         </dl>
 
@@ -779,17 +799,18 @@ async function renderDetail(id: string): Promise<void> {
         </div>
       </div>
 
-      <aside class="fee-hero${feeCheapest == null ? " is-empty" : ""}" aria-label="그린피 요약">
+      <aside class="fee-hero${hasAnyFee ? "" : " is-empty"}" aria-label="그린피 요약">
         <p class="fee-hero-title">그린피 <span>1인 · 18홀 · 비회원</span></p>
-        ${feeCheapest == null
-          ? `<p class="fee-hero-none">확인 안 됨</p><p class="fee-hero-note">공식 요금표에서 확인하지 못했습니다. 전화로 확인하세요.</p>`
-          : `<p class="fee-hero-value"><span class="fee-hero-from">${feeKindLabel} 최저</span>${won(feeCheapest)}</p>
-            <div class="fee-hero-pair">
-              <div><span class="pair-label">주중</span><span class="pair-value">${fees.weekday.value != null ? won(fees.weekday.value) : "확인 안 됨"}</span>${sourceTag(fees.weekday.source)}</div>
-              <div><span class="pair-label">주말·공휴일</span><span class="pair-value">${fees.weekend.value != null ? won(fees.weekend.value) : "확인 안 됨"}</span>${sourceTag(fees.weekend.source)}</div>
-            </div>
-            <p class="fee-hero-note">${fees.cart != null ? `카트 ${won(fees.cart)}` : "카트 확인 안 됨"} · ${fees.caddieNone ? "노캐디" : fees.caddie != null ? `캐디 ${won(fees.caddie)}` : "캐디 확인 안 됨"} <span class="muted">(팀 기준)</span></p>
-            <p class="fee-hero-asof">업데이트 ${esc(courseUpdatedAt(detail) || "—")}</p>`}
+        ${hasAnyFee
+          ? `${feeCheapest != null
+              ? `<p class="fee-hero-value"><span class="fee-hero-from">${feeKindLabel} 최저</span>${won(feeCheapest)}</p>
+            <div class="fee-hero-pair${feePairs.length === 1 ? " is-single" : ""}">
+              ${feePairs.map(({ label, slot }) => `<div><span class="pair-label">${esc(label)}</span><span class="pair-value">${won(slot.value)}</span>${sourceTag(slot.source)}</div>`).join("")}
+            </div>`
+              : `<p class="fee-hero-none">요금 안내 준비 중</p>`}
+            ${feeExtras.length ? `<p class="fee-hero-note">${esc(feeExtras.join(" · "))} <span class="muted">(팀 기준)</span></p>` : ""}
+            <p class="fee-hero-asof">업데이트 ${esc(courseUpdatedAt(detail) || "—")}</p>`
+          : `<p class="fee-hero-none">요금 안내 준비 중 · 전화 문의</p>`}
       </aside>
     </section>
 
@@ -811,9 +832,9 @@ async function renderDetail(id: string): Promise<void> {
       </div>
     </section>` : ""}`;
 
-  const sectionsHTML = detail && !detailError ? sections(detail, course, others) : "";
-  const nav = detail && !detailError ? sectionNav(course, others.length > 0) : "";
-  view.innerHTML = softenUnknown(`<div class="detail">${hero}${nav}${sectionsHTML}</div>`);
+  const built = detail && !detailError ? sections(detail, course, others) : null;
+  const nav = built ? sectionNav(course, built.visible) : "";
+  view.innerHTML = `<div class="detail">${hero}${nav}${built?.html ?? ""}</div>`;
   renderedDetailId = id;
   setTitle(`${course.name} — CourseBrief`);
 
@@ -849,7 +870,10 @@ function factsHTML(c: CourseIndexItem, d: CourseDetail | null): string {
   if (address) rows.push(["주소", esc(address)]);
   if (m?.opened) rows.push(["개장", esc(m.opened)]);
   if (m?.area_sqm) rows.push(["면적", `${fmtNum(m.area_sqm)}㎡ (${fmtNum(Math.round(m.area_sqm / 3.3058))}평)`]);
-  if (m?.operators?.length) rows.push(["운영사", esc(m.operators.join(", "))]);
+  if (m?.operators?.length) {
+    const operators = m.operators.filter((o) => !UNKNOWN_TEXT.test(textOf(o)));
+    if (operators.length) rows.push(["운영사", esc(operators.join(", "))]);
+  }
   if (m?.designer) rows.push(["설계", esc(textOf(m.designer))]);
   if (m?.nearest_ic?.name) {
     rows.push(["최단 IC", `${esc(m.nearest_ic.name)}${m.nearest_ic.distance_km ? ` · ${m.nearest_ic.distance_km}km` : ""}`]);
@@ -865,15 +889,19 @@ function factsHTML(c: CourseIndexItem, d: CourseDetail | null): string {
   return `<dl class="facts">${rows.map(([k, v]) => `<div class="fact"><dt>${esc(k)}</dt><dd>${v}</dd></div>`).join("")}</dl>`;
 }
 
-function sectionNav(c: CourseIndexItem, hasCluster: boolean): string {
-  const items: Array<[string, string]> = [
-    ["s1", "요금·예약"], ["s2", "코스 스펙"], ["s3", "현장 운영"], ["s4", "부대시설"],
-    ["s5", "공지·브리핑"], ...(hasCluster ? [["s6", "동일 부지"] as [string, string]] : []),
-    ["s7", "클럽 렌탈"], ["s8", "데이터"],
+function sectionNav(c: CourseIndexItem, visible: { s3: boolean; s4: boolean; s6: boolean }): string {
+  // 숨긴 섹션은 pill 에도 넣지 않는다. 번호는 각 섹션 제목의 번호와 맞춘다.
+  const items: Array<[string, string, string]> = [
+    ["s1", "01", "요금·예약"], ["s2", "02", "코스 스펙"],
+    ...(visible.s3 ? [["s3", "03", "현장 운영"]] as Array<[string, string, string]> : []),
+    ...(visible.s4 ? [["s4", "04", "부대시설"]] as Array<[string, string, string]> : []),
+    ["s5", "05", "공지·브리핑"],
+    ...(visible.s6 ? [["s6", "06", "동일 부지"]] as Array<[string, string, string]> : []),
+    ["s7", "07", "클럽 렌탈"], ["s8", "08", "데이터"],
   ];
   return `<nav class="section-nav" aria-label="상세 영역">
     <div class="section-nav-inner">
-      ${items.map(([id, label], i) => `<a href="#/c/${esc(c.id)}#${id}" data-sec="${id}"><span class="sec-i">${String(i + 1).padStart(2, "0")}</span>${label}</a>`).join("")}
+      ${items.map(([id, num, label]) => `<a href="#/c/${esc(c.id)}#${id}" data-sec="${id}"><span class="sec-i">${num}</span>${label}</a>`).join("")}
     </div>
     <span class="section-nav-fade" aria-hidden="true"></span>
   </nav>`;
@@ -921,11 +949,44 @@ function shortUrl(u: string): string {
   try { return new URL(u).hostname.replace(/^www\./, ""); } catch { return u; }
 }
 
+/**
+ * 값 하나를 화면에 낼 수 있는지 판단한다.
+ * - null·빈 값: 없음
+ * - '미확인'이 섞인 원문: 일반 화면에서는 버리고, 관리자에게는 근거로 남긴다
+ */
 function valCell(v: unknown): string | null {
   if (isMissing(v)) return null;
-  const t = textOf(v);
+  // 참·거짓은 그 자체가 확인된 값이다(예: 클럽 대여 가능 여부)
+  if (typeof v === "boolean") return v ? "가능" : "불가";
+  const t = textOf(v).trim();
   if (!t || t === "미확인") return null;
+  if (!isAdmin() && UNKNOWN_TEXT.test(t)) return null;
   return isAdmin() ? t : publicNote(t);
+}
+
+/**
+ * '미확인'이 섞인 문장에서 확인된 조각만 남긴다.
+ * - 괄호 안이 미확인이면 괄호째 빼고("Mountain 코스 등(코스명 일부 미확인)" → "Mountain 코스 등")
+ * - 긴 문장은 구분자( — · , → )로 나눠 미확인이 섞인 조각만 버린다
+ */
+function confirmedSegments(text: string): string {
+  const withoutParen = text.replace(/\s*\(([^()]*)\)/g, (m: string, inner: string) => (UNKNOWN_TEXT.test(inner) ? "" : m));
+  if (!UNKNOWN_TEXT.test(withoutParen)) return withoutParen.trim();
+  return withoutParen
+    .split(/\s*[—–→]\s*|\s*·\s*|,\s+/)
+    .map((s) => s.trim())
+    .filter((s) => s && !UNKNOWN_TEXT.test(s))
+    .join(" · ");
+}
+
+/** 문장형 값(공지 요약·메모 등) — 일반 화면에서는 '미확인'이 섞인 문장을 통째로 버린다 */
+function visibleText(text: string | null | undefined): string {
+  if (!text || !text.trim()) return "";
+  if (!isAdmin()) {
+    const kept = UNKNOWN_TEXT.test(text) ? confirmedSegments(text) : text.trim();
+    return kept ? publicNote(kept) : "";
+  }
+  return text;
 }
 
 const SOURCE_NAMES: Array<[RegExp, string]> = [
@@ -946,11 +1007,6 @@ function evidenceDetails(evidence: unknown, label = "근거"): string {
   if (!arr.length) return "";
   return `<details class="ev"><summary>${esc(label)} ${arr.length}건</summary><ul>${arr
     .map((e) => `<li>${esc(String(e).slice(0, 220))}</li>`).join("")}</ul></details>`;
-}
-
-/** 일반 화면에서는 데이터 원문의 '미확인'을 '확인 안 됨'으로 바꿔 쓴다(의미는 그대로). */
-function softenUnknown(html: string): string {
-  return isAdmin() ? html : html.split("미확인").join("확인 안 됨");
 }
 
 function periodText(period: AlertPeriod | string | null | undefined): string {
@@ -1037,7 +1093,7 @@ function cancelTimeline(text: string): string {
   </div>`;
 }
 
-function sections(d: CourseDetail, c: CourseIndexItem, others: Array<{ name: string; id?: string; holes?: number | null; item?: CourseIndexItem }>): string {
+function sections(d: CourseDetail, c: CourseIndexItem, others: Array<{ name: string; id?: string; holes?: number | null; item?: CourseIndexItem }>): { html: string; visible: { s3: boolean; s4: boolean; s6: boolean } } {
   const m = d.master ?? {};
   const co: CourseSpec = d.course ?? {};
   const fee = d.fee ?? {};
@@ -1049,37 +1105,40 @@ function sections(d: CourseDetail, c: CourseIndexItem, others: Array<{ name: str
   const cov = d.coverage ?? {};
   const fees = feeView(fee, c);
 
-  /* 01 요금 & 예약 */
+  /* 01 요금 & 예약 — 값이 있는 요금 항목만 카드로 만든다 */
   const unavailable = c.status === "closed" || c.status === "suspended";
   const asOf = fee.as_of || fee.checked_at;
   const cancelPolicy = cancel.cancel_policy;
-  const cancelText = typeof cancelPolicy === "string" ? cancelPolicy : cancelPolicy ? textOf(cancelPolicy) : "";
+  const cancelText = visibleText(typeof cancelPolicy === "string" ? cancelPolicy : cancelPolicy ? textOf(cancelPolicy) : "");
   const timeline = cancelText ? cancelTimeline(cancelText) : "";
 
   const feeCard = (label: string, slot: FeeSlot, note: string): string => {
-    if (slot.value == null) {
-      return `<div class="fee-card is-empty">
-        <div class="fee-card-top"><span class="fee-card-label">${esc(label)}</span></div>
-        <div class="fee-card-value">확인 안 됨</div>
-        <div class="fee-card-note">${esc(note)}</div>
-      </div>`;
-    }
+    if (slot.value == null) return "";
     return `<div class="fee-card">
       <div class="fee-card-top"><span class="fee-card-label">${esc(label)}</span>${sourceTag(slot.source)}</div>
       <div class="fee-card-value">${won(slot.value)}</div>
       <div class="fee-card-note">${esc(note)}</div>
     </div>`;
   };
-  const cartCard = `<div class="fee-card${fees.cart == null ? " is-empty" : ""}">
+  const cartCard = fees.cart == null ? "" : `<div class="fee-card">
       <div class="fee-card-top"><span class="fee-card-label">카트</span><span class="src-tag src-neutral">팀 기준</span></div>
-      <div class="fee-card-value">${fees.cart != null ? won(fees.cart) : "확인 안 됨"}</div>
-      <div class="fee-card-note">${esc(fee.cart?.note || "4인 1팀 기준")}</div>
+      <div class="fee-card-value">${won(fees.cart)}</div>
+      <div class="fee-card-note">${esc(visibleText(fee.cart?.note) || "4인 1팀 기준")}</div>
     </div>`;
-  const caddieCard = `<div class="fee-card${fees.caddie == null && !fees.caddieNone ? " is-empty" : ""}">
+  const caddieCard = fees.caddie == null && !fees.caddieNone ? "" : `<div class="fee-card">
       <div class="fee-card-top"><span class="fee-card-label">캐디피</span><span class="src-tag src-neutral">팀 기준</span></div>
-      <div class="fee-card-value">${fees.caddieNone ? "노캐디" : fees.caddie != null ? won(fees.caddie) : "확인 안 됨"}</div>
-      <div class="fee-card-note">${esc(fee.caddie?.note || "4인 1팀 기준 · 캐디에게 직접 지급")}</div>
+      <div class="fee-card-value">${fees.caddieNone ? "노캐디" : won(fees.caddie)}</div>
+      <div class="fee-card-note">${esc(visibleText(fee.caddie?.note) || "4인 1팀 기준 · 캐디에게 직접 지급")}</div>
     </div>`;
+  const feeCardList = [
+    feeCard("주중", fees.weekday, "월~금 · 1인 18홀"),
+    feeCard("주말·공휴일", fees.weekend, "토·일·공휴일 · 1인 18홀"),
+    cartCard,
+    caddieCard,
+  ].filter(Boolean);
+  const feeCardsHTML = feeCardList.length
+    ? `<div class="fee-cards${feeCardList.length === 1 ? " is-single" : ""}">${feeCardList.join("")}</div>`
+    : `<div class="callout">요금 안내 준비 중 · 전화 문의</div>`;
 
   const tableHTML = (() => {
     const rows = (fee.official_table?.rows ?? []).filter((r) => r && (r.value || r.amounts?.length));
@@ -1094,7 +1153,7 @@ function sections(d: CourseDetail, c: CourseIndexItem, others: Array<{ name: str
     }
     const body = groups.map((g) =>
       `<tr class="group"><th scope="colgroup" colspan="2">${esc(g.sec === "구분" ? "요금" : g.sec)}</th></tr>` +
-      g.rows.map((r) => `<tr><td>${esc(r.label && r.label !== g.sec ? r.label : "")}</td><td class="num">${esc(r.value || "확인 안 됨")}</td></tr>`).join("")).join("");
+      g.rows.map((r) => `<tr><td>${esc(r.label && r.label !== g.sec ? r.label : "")}</td><td class="num">${esc(r.value || (r.amounts?.length ? r.amounts.map((a) => won(a)).join(" · ") : "—"))}</td></tr>`).join("")).join("");
     const table = `<div class="table-wrap"><table class="fee-table"><thead class="sr-only"><tr><th scope="col">구분</th><th scope="col">요금</th></tr></thead><tbody>${body}</tbody></table></div>`;
     if (groups.length > 2 || rows.length > 8) {
       return `<details class="more-box"><summary>공식 요금표 ${rows.length}개 항목 펼치기</summary>${table}</details>`;
@@ -1103,12 +1162,16 @@ function sections(d: CourseDetail, c: CourseIndexItem, others: Array<{ name: str
   })();
 
   const od = fee.official_detail ?? {};
+  const detailRow = (label: string, v: unknown): [string, string] | null => {
+    const t = valCell(v);
+    return t ? [label, esc(t)] : null;
+  };
   const detailRows = [
-    od.green_detail ? ["공식 요금 상세", esc(od.green_detail)] : null,
-    od.cart_detail ? ["카트 상세", esc(od.cart_detail)] : null,
-    od.caddie_detail ? ["캐디 상세", esc(od.caddie_detail)] : null,
-    od.facility_fee ? ["시설 이용료", esc(textOf(od.facility_fee))] : null,
-    od.rental ? ["클럽 대여", esc(textOf(od.rental))] : null,
+    detailRow("공식 요금 상세", od.green_detail),
+    detailRow("카트 상세", od.cart_detail),
+    detailRow("캐디 상세", od.caddie_detail),
+    detailRow("시설 이용료", od.facility_fee),
+    detailRow("클럽 대여", od.rental),
   ].filter((x): x is [string, string] => x !== null);
 
   const member = fee.member;
@@ -1121,12 +1184,7 @@ function sections(d: CourseDetail, c: CourseIndexItem, others: Array<{ name: str
     </div>
     <div class="section-body">
       ${unavailable ? `<div class="callout warn"><strong>현재 이용 불가 구장입니다</strong>아래 요금은 마지막으로 확인된 값이며 예약·결제할 수 없습니다.</div>` : ""}
-      <div class="fee-cards">
-        ${feeCard("주중", fees.weekday, "월~금 · 1인 18홀")}
-        ${feeCard("주말·공휴일", fees.weekend, "토·일·공휴일 · 1인 18홀")}
-        ${cartCard}
-        ${caddieCard}
-      </div>
+      ${feeCardsHTML}
       ${asOf ? `<p class="source-line">${isAdmin() ? `요금 기준 ${esc(fee.basis || "")} · 확인 ${fmtDate(asOf)}` : `요금 업데이트 ${esc(fmtDate(asOf))}`}</p>` : ""}
       ${market && (market.weekday_min || market.weekend_min) ? `<div class="inline-fact">
         <span class="inline-fact-label">관측 최저가</span>
@@ -1145,20 +1203,20 @@ function sections(d: CourseDetail, c: CourseIndexItem, others: Array<{ name: str
           <h3 class="card-title">${icon("calendar")}예약 오픈</h3>
           ${cancel.open_cycle
             ? `<p class="policy-text">${esc(cancel.open_cycle)}</p>`
-            : `<p class="policy-text muted">예약 오픈 주기를 확인하지 못했습니다. 전화로 확인하세요.</p>`}
+            : `<p class="policy-text muted">예약 오픈 일정은 골프장에 전화로 확인하세요.</p>`}
         </div>
         <div class="policy-card">
           <h3 class="card-title">${icon("clock")}취소 · 위약</h3>
           ${timeline}
           ${cancelText
             ? `<p class="policy-text">${esc(cancelText)}</p>`
-            : `<p class="policy-text muted">취소 규정을 확인하지 못했습니다. 예약 전 전화로 확인하세요.</p>`}
-          ${cancel.notes ? `<p class="policy-text muted">${esc(cancel.notes)}</p>` : ""}
+            : `<p class="policy-text muted">취소 규정은 예약 전 전화로 확인하세요.</p>`}
+          ${visibleText(cancel.notes) ? `<p class="policy-text muted">${esc(visibleText(cancel.notes))}</p>` : ""}
           ${evidenceDetails(cancel.evidence, "취소·위약 근거")}
           ${evidenceDetails(cancel.weather_evidence, "악천후 정산 근거")}
         </div>
       </div>
-      ${fee.note ? `<p class="source-line">${esc(fee.note)}</p>` : ""}
+      ${fee.note && visibleText(fee.note) ? `<p class="source-line">${esc(visibleText(fee.note))}</p>` : ""}
       ${isAdmin() && (fee.sources ?? []).length ? `<p class="source-line">출처: ${(fee.sources ?? []).slice(0, 4).map((s) => s.url ? `<a class="link" href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.source || shortUrl(s.url))}</a>` : esc(s.source || "")).join(" · ")}</p>` : ""}
     </div>
   </section>`;
@@ -1166,15 +1224,15 @@ function sections(d: CourseDetail, c: CourseIndexItem, others: Array<{ name: str
   /* 02 코스 스펙 */
   const grass = co.grass ?? {};
   const grassCards = (Object.keys(GRASS) as Array<keyof typeof GRASS>).map((k) => {
-    const g = grass[k];
-    const t = valCell(g);
+    const t = valCell(grass[k]);
+    if (!t) return "";
     const dot = k === "tee" ? "is-tee" : k === "fairway" ? "is-fairway" : "is-green";
-    return `<div class="grass-card${t ? "" : " is-empty"}">
+    return `<div class="grass-card">
       <span class="grass-dot ${dot}" aria-hidden="true"></span>
       <span class="grass-label">${GRASS[k]}</span>
-      <span class="grass-value">${t ? esc(t) : "확인 안 됨"}</span>
+      <span class="grass-value">${esc(t)}</span>
     </div>`;
-  }).join("");
+  }).filter(Boolean).join("");
 
   let kgaHTML = "";
   const kga = co.kga ?? null;
@@ -1207,6 +1265,10 @@ function sections(d: CourseDetail, c: CourseIndexItem, others: Array<{ name: str
     holes.non_member ? `비회원 ${holes.non_member}` : null,
   ].filter(Boolean).join(" · ");
   const yard = co.length_m ? Math.round(co.length_m * 1.0936) : null;
+  const courseNames = co.course_names ? visibleText(textOf(co.course_names)) : "";
+  // 데이터에 참·거짓으로 들어온 야간 운영 값은 '운영'으로 편다
+  const rawNight: unknown = co.night_light;
+  const nightLight = rawNight === true ? "운영" : valCell(rawNight);
 
   const s2 = `<section class="section" id="s2" aria-labelledby="s2-h">
     <div class="section-head">
@@ -1231,10 +1293,10 @@ function sections(d: CourseDetail, c: CourseIndexItem, others: Array<{ name: str
         ${co.par ? `<div><dt>파</dt><dd>${co.par}</dd></div>` : ""}
         ${(co.blocks ?? []).length ? `<div><dt>코스 구성</dt><dd>${esc((co.blocks ?? []).join(" · "))}</dd></div>` : ""}
         ${(m.course_blocks ?? []).length ? `<div><dt>세부 코스명</dt><dd>${esc((m.course_blocks ?? []).join(" · "))}</dd></div>` : ""}
-        ${co.course_names ? `<div><dt>코스명</dt><dd>${esc(textOf(co.course_names))}</dd></div>` : ""}
-        ${co.night_light ? `<div><dt>야간 라운드</dt><dd>${esc(textOf(co.night_light))}</dd></div>` : ""}
+        ${courseNames ? `<div><dt>코스명</dt><dd>${esc(courseNames)}</dd></div>` : ""}
+        ${nightLight ? `<div><dt>야간 라운드</dt><dd>${esc(nightLight)}</dd></div>` : ""}
       </dl>
-      <div class="grass-cards">${grassCards}</div>
+      ${grassCards ? `<div class="grass-cards">${grassCards}</div>` : ""}
       ${(co.extra_courses ?? []).length ? `<div class="extra-courses"><h3 class="card-title">추가 코스</h3>${extraCoursesHTML(co.extra_courses ?? [])}</div>` : ""}
       ${kgaHTML}
       ${co.hole_by_hole ? `<details class="more-box"><summary>홀별 파·거리 원본 보기</summary><pre class="pre">${esc(JSON.stringify(co.hole_by_hole, null, 1))}</pre></details>` : ""}
@@ -1253,7 +1315,7 @@ function sections(d: CourseDetail, c: CourseIndexItem, others: Array<{ name: str
       opsTiles.push(tile(OPS_ICON[k], OPS[k], t, { tone: tone.tone, badgeText: tone.label }));
     } else opsUnknown.push(OPS[k]);
   }
-  const s3 = `<section class="section" id="s3" aria-labelledby="s3-h">
+  const s3 = (isAdmin() || opsTiles.length) ? `<section class="section" id="s3" aria-labelledby="s3-h">
     <div class="section-head">
       <h2 id="s3-h"><span class="sec-num">03</span>현장 운영</h2>
       <p class="section-desc">노캐디·인원·카트·체크인처럼 예약 전에 알아야 하는 실제 플레이 조건.</p>
@@ -1266,7 +1328,7 @@ function sections(d: CourseDetail, c: CourseIndexItem, others: Array<{ name: str
         ? `<details class="more-box"><summary>수집 원문 보기</summary><pre class="pre">${esc(JSON.stringify(ops.browser_official, null, 1))}</pre></details>`
         : ""}
     </div>
-  </section>`;
+  </section>` : "";
 
   /* 04 부대시설 */
   const facTiles: string[] = [];
@@ -1280,7 +1342,7 @@ function sections(d: CourseDetail, c: CourseIndexItem, others: Array<{ name: str
       facTiles.push(tile(FAC_ICON[k], FAC[k], t, { tone: tone.tone, badgeText: tone.label }));
     } else facUnknown.push(FAC[k]);
   }
-  const s4 = `<section class="section" id="s4" aria-labelledby="s4-h">
+  const s4 = (isAdmin() || facTiles.length) ? `<section class="section" id="s4" aria-labelledby="s4-h">
     <div class="section-head">
       <h2 id="s4-h"><span class="sec-num">04</span>부대시설</h2>
       <p class="section-desc">연습·식음·락카·숙박·야간 조명처럼 라운드 환경을 좌우하는 시설.</p>
@@ -1290,7 +1352,7 @@ function sections(d: CourseDetail, c: CourseIndexItem, others: Array<{ name: str
       ${unconfirmedBox("시설 정보", facUnknown)}
       ${isAdmin() && (fac.gf_facilities ?? []).length ? `<p class="source-line">참고(공식 시설 목록): ${esc((fac.gf_facilities ?? []).slice(0, 3).join(" / "))}</p>` : ""}
     </div>
-  </section>`;
+  </section>` : "";
 
   /* 05 브리핑·공지 */
   const alert: BriefingAlert | null | undefined = br.alert;
@@ -1303,8 +1365,10 @@ function sections(d: CourseDetail, c: CourseIndexItem, others: Array<{ name: str
           ? `<a class="link" href="${esc(n.url)}" target="_blank" rel="noopener noreferrer">${esc(n.title)}</a>`
           : esc(n.title)}</span>
       </li>`).join("")}</ul>`
-    : `<p class="section-desc">운영 공지를 확인하지 못했습니다. 공지 게시판이 없거나 이미지 본문만 있는 경우입니다.</p>`;
+    : `<p class="section-desc">표시할 최근 운영 공지가 없습니다.</p>`;
   const period = alert ? periodText(alert.period) : "";
+  const alertSummary = alert ? visibleText(alert.summary) : "";
+  const alertDetail = alert ? visibleText(alert.detail) : "";
   const review = br.review;
   const s5 = `<section class="section" id="s5" aria-labelledby="s5-h">
     <div class="section-head">
@@ -1313,18 +1377,18 @@ function sections(d: CourseDetail, c: CourseIndexItem, others: Array<{ name: str
     </div>
     <div class="section-body">
       ${alert ? `<div class="callout ${(alert.level ? LEVEL[alert.level] : undefined) ?? "info"}">
-        <strong>${esc(alert.summary || (alert.confirmed ? "확인된 공지" : "확인 필요"))}</strong>
-        ${esc(alert.detail || "")}
+        <strong>${esc(alertSummary || (alert.confirmed ? "확인된 공지" : "안내"))}</strong>
+        ${esc(alertDetail || "")}
         ${period ? `<div class="sub">기간: ${esc(period)}</div>` : ""}
         ${isAdmin() && alert.source_url ? `<div class="sub"><a class="link" href="${esc(alert.source_url)}" target="_blank" rel="noopener noreferrer">근거 보기</a></div>` : ""}
       </div>` : ""}
       ${review && review.score_10 != null ? `<div class="review-card">
         <div class="review-head"><h3 class="card-title">${icon("star")}라운더 평가</h3>${review.count ? `<span class="muted">${fmtNum(review.count)}건 집계</span>` : ""}</div>
         ${ratingBar(review.score_10)}
-        ${review.note ? `<p class="source-line">${esc(review.note)}</p>` : ""}
+        ${review.note && visibleText(review.note) ? `<p class="source-line">${esc(visibleText(review.note))}</p>` : ""}
       </div>` : ""}
-      ${br.recent_notice_text ? `<div class="inline-fact"><span class="inline-fact-label">공지 요약</span><span>${esc(br.recent_notice_text)}</span></div>` : ""}
-      ${br.course_notes ? `<div class="inline-fact"><span class="inline-fact-label">코스 메모</span><span>${esc(isAdmin() ? br.course_notes : publicNote(br.course_notes))}</span></div>` : ""}
+      ${br.recent_notice_text && visibleText(br.recent_notice_text) ? `<div class="inline-fact"><span class="inline-fact-label">공지 요약</span><span>${esc(visibleText(br.recent_notice_text))}</span></div>` : ""}
+      ${br.course_notes && visibleText(br.course_notes) ? `<div class="inline-fact"><span class="inline-fact-label">코스 메모</span><span>${esc(visibleText(br.course_notes))}</span></div>` : ""}
       <div class="notice-block">
         <h3 class="card-title">최근 공지</h3>
         ${noticeHTML}
@@ -1340,22 +1404,26 @@ function sections(d: CourseDetail, c: CourseIndexItem, others: Array<{ name: str
 
   /* 06 동일 부지 클러스터 */
   const cluster = c.cluster ? state.clusters.get(c.cluster) ?? null : null;
-  const s6 = cluster ? `<section class="section" id="s6" aria-labelledby="s6-h">
+  const s6 = cluster && others.length ? `<section class="section" id="s6" aria-labelledby="s6-h">
     <div class="section-head">
       <h2 id="s6-h"><span class="sec-num">06</span>동일 부지 코스</h2>
-      <p class="section-desc">${esc(cluster.relationship || cluster.basis || "같은 소재지의 코스가 별도 레코드로 등록되어 있습니다.")}</p>
+      <p class="section-desc">${esc(visibleText(cluster.relationship) || visibleText(cluster.basis) || "같은 소재지의 코스가 별도 레코드로 등록되어 있습니다.")}</p>
     </div>
     <div class="section-body">
       <div class="cluster-grid">
         ${others.map((o) => {
           const item = o.item;
           const feeV = item ? (item.green_fee?.weekend ?? item.green_fee?.weekday ?? null) : null;
+          const meta = [
+            item?.type && !UNKNOWN_TEXT.test(item.type) ? esc(item.type) : "",
+            feeV != null ? `그린피 ${won(feeV)}~` : "",
+          ].filter(Boolean).join(" · ");
           return `<div class="cluster-card">
             <div class="cluster-top">
               <h3 class="cluster-name">${o.id ? `<a class="link" href="#/c/${esc(o.id)}">${esc(o.name)}</a>` : esc(o.name)}</h3>
-              <span class="stat-pill">${o.holes ? `<b>${o.holes}</b>홀` : "홀수 확인 안 됨"}</span>
+              ${o.holes ? `<span class="stat-pill"><b>${o.holes}</b>홀</span>` : ""}
             </div>
-            <p class="cluster-meta">${item?.type ? esc(item.type) : "이용형태 확인 안 됨"}${feeV != null ? ` · 그린피 ${won(feeV)}~` : ""}</p>
+            ${meta ? `<p class="cluster-meta">${meta}</p>` : ""}
             ${o.id ? `<a class="btn btn-sm" href="#/c/${esc(o.id)}">상세 보기${icon("arrow-right")}</a>` : ""}
           </div>`;
         }).join("")}
@@ -1377,13 +1445,16 @@ function sections(d: CourseDetail, c: CourseIndexItem, others: Array<{ name: str
   }).filter(Boolean).join("");
   const providers = (nd?.providers ?? []).map((p: NearbyDeliveryProvider) => {
     const bookable = p.bookable !== false && !/중단|불가|마감/i.test(p.operating_status ?? "");
+    const price = visibleText(p.price_headline);
+    const basis = visibleText(p.basis);
+    const meta = [basis, visibleText(p.operating_status)].filter(Boolean).join(" · ");
     return `<div class="provider${bookable ? "" : " is-off"}">
       <div class="provider-top">
         <h3 class="provider-name">${esc(p.name)}</h3>
         <span class="badge ${bookable ? "ok" : "danger"}">${bookable ? "예약 가능" : "예약 중단"}</span>
       </div>
-      <p class="provider-price">${esc(p.price_headline || "요금 확인 안 됨")}</p>
-      <p class="provider-meta">${esc(p.basis || "")}${p.operating_status ? ` · ${esc(p.operating_status)}` : ""}</p>
+      ${price ? `<p class="provider-price">${esc(price)}</p>` : ""}
+      ${meta ? `<p class="provider-meta">${esc(meta)}</p>` : ""}
       <div class="provider-actions">
         ${p.phone ? `<a class="btn btn-sm" href="tel:${esc(String(p.phone).replace(/[^\d+]/g, ""))}">${icon("phone")}${esc(p.phone)}</a>` : ""}
         ${p.coverage ? `<span class="tag">권역 ${esc(String(p.coverage))}</span>` : ""}
@@ -1423,14 +1494,18 @@ function sections(d: CourseDetail, c: CourseIndexItem, others: Array<{ name: str
       </section>`
     : `<section class="section" id="s8" aria-labelledby="s8-h">
         <div class="section-head"><h2 id="s8-h"><span class="sec-num">08</span>데이터 기준</h2>
-        <p class="section-desc">${esc(updated || "—")} 기준 · 공개 자료에서 확인된 값만 표시합니다. 확인하지 못한 항목은 위 영역의 '확인 안 됨'으로 남깁니다.</p></div>
+        <p class="section-desc">${esc(updated || "—")} 기준 · 공개 자료에서 확인된 값만 표시합니다.</p></div>
       </section>`;
 
-  return `${s1}${s2}${s3}${s4}${s5}${s6}${s7}${dataInfo}`;
+  return {
+    html: `${s1}${s2}${s3}${s4}${s5}${s6}${s7}${dataInfo}`,
+    visible: { s3: Boolean(s3), s4: Boolean(s4), s6: Boolean(s6) },
+  };
 }
 
 function unconfirmedBox(label: string, labels: string[]): string {
-  if (!labels.length) return "";
+  // 미확인 목록은 수집·검증용 정보이므로 관리자 모드에서만 DOM 에 넣는다
+  if (!isAdmin() || !labels.length) return "";
   return `<details class="more-box unconfirmed"><summary>확인하지 못한 ${label} ${labels.length}개</summary>
     <p>${esc(labels.join(" · "))}</p>
     <p class="muted">값이 없다는 것은 '없음'이 아니라 '확인하지 못함'입니다. 전화로 확인하세요.</p>
@@ -1440,17 +1515,17 @@ function unconfirmedBox(label: string, labels: string[]): string {
 function extraCoursesHTML(list: Array<ExtraCourse | string>): string {
   return `<div class="extra-courses-list">${list.map((raw) => {
     const x: ExtraCourse = typeof raw === "string" ? { name: raw } : raw;
-    const title = [x.name ?? "추가 코스", x.holes ? `${x.holes}홀` : "", x.type ?? ""].filter(Boolean).join(" · ");
+    const title = [visibleText(x.name) || "추가 코스", x.holes ? `${x.holes}홀` : "", visibleText(x.type)].filter(Boolean).join(" · ");
     const facts = [
-      x.open_hours ? `운영 ${x.open_hours}` : "",
-      x.closed ? `휴장 ${x.closed}` : "",
-      x.tel ? `전화 ${x.tel}` : "",
-      x.fee ? `요금 ${x.fee}` : "",
-    ].filter(Boolean).join(" · ");
+      x.open_hours ? `운영 ${visibleText(x.open_hours)}` : "",
+      x.closed ? `휴장 ${visibleText(x.closed)}` : "",
+      x.tel ? `전화 ${visibleText(x.tel)}` : "",
+      x.fee ? `요금 ${visibleText(x.fee)}` : "",
+    ].map((s) => s.trim()).filter((s) => !/^(?:운영|휠장|전화|요금)$/.test(s)).join(" · ");
     return `<div class="extra-course">
       <strong>${esc(title)}</strong>
       ${facts ? `<div class="sub">${esc(facts)}</div>` : ""}
-      ${x.note ? `<div class="sub">${esc(x.note)}</div>` : ""}
+      ${visibleText(x.note) ? `<div class="sub">${esc(visibleText(x.note))}</div>` : ""}
     </div>`;
   }).join("")}</div>`;
 }
@@ -1518,7 +1593,11 @@ function renderRental(): void {
         <span class="badge ${bookable ? "ok" : "danger"}">${bookable ? "예약 가능" : "예약 중단"}</span>
       </div>
       <div class="rental-price">
-        ${day != null ? `<span class="rental-price-k">1일 기준</span><span class="rental-price-v">${won(day)}</span>` : `<span class="rental-price-k">요금</span><span class="rental-price-v is-text">${esc(p.price || "확인 안 됨")}</span>`}
+        ${day != null
+          ? `<span class="rental-price-k">1일 기준</span><span class="rental-price-v">${won(day)}</span>`
+          : visibleText(p.price)
+            ? `<span class="rental-price-k">요금</span><span class="rental-price-v is-text">${esc(visibleText(p.price))}</span>`
+            : ""}
       </div>
       ${day != null && p.price ? `<p class="rental-price-raw">${esc(p.price)}</p>` : ""}
       <dl class="rental-facts">
@@ -1589,11 +1668,11 @@ function renderAbout(): void {
 
   const lead = isAdmin()
     ? "CourseBrief는 골프장 공식 홈페이지·공지·요금표를 직접 수집하고 공개 데이터와 대조해 7개 영역으로 정리합니다. 모든 값에는 출처와 확인 시점이 붙습니다."
-    : "CourseBrief는 전국 골프장을 7개 영역으로 정리한 참고 데이터입니다. 공개 자료에서 확인된 값만 표시하며, 표시되지 않은 항목은 확인하지 못한 값입니다.";
+    : "CourseBrief는 전국 골프장을 7개 영역으로 정리한 참고 데이터입니다. 공개 자료에서 확인된 값만 표시하며, 값이 없는 항목은 비워 둡니다.";
 
   const principles = [
     ["공식 우선", "골프장 공식 홈페이지·공지·요금표를 1순위로 보고, 2차 사이트 값은 교차검증에만 씁니다."],
-    ["없음과 미확인의 구분", "확인되지 않은 값은 비워 둡니다. '정보 없음'을 '없음'으로 해석하지 않습니다."],
+    ["없음과 빈 값의 구분", "값이 없는 항목은 비워 둡니다. '정보 없음'을 '없음'으로 해석하지 않습니다."],
     ["확인 시점 기록", "그린피처럼 빨리 낡는 값에는 확인 날짜를 함께 남깁니다."],
     ["전화·현장 확인 항목", "좌타 클럽, 매트 비율, 락카 요금처럼 전화로만 확인되는 항목은 비워 두고 제보로 채웁니다."],
   ];
@@ -1613,11 +1692,11 @@ function renderAbout(): void {
       <div class="stat"><span class="stat-n">${c.cancelled}</span><span class="stat-l">사업 취소</span></div>
     </div>
 
-    <section class="about-block">
+    ${isAdmin() ? `<section class="about-block">
       <h2 class="h2">영역별 정보 충실도</h2>
-      <p class="section-desc">7개 영역 평균입니다. 100%가 아니어도 비어 있는 값은 '확인 안 됨'이며 '없음'과 다릅니다.</p>
+      <p class="section-desc">7개 영역 평균입니다. 비어 있는 값은 '미확인'이며 '없음'과 다릅니다.</p>
       <div class="cov-list">${covRows || `<p class="section-desc">충실도 정보를 불러오지 못했습니다.</p>`}</div>
-    </section>
+    </section>` : ""}
 
     <section class="about-block">
       <h2 class="h2">7개 영역</h2>
@@ -1627,7 +1706,7 @@ function renderAbout(): void {
           return `<div class="area-card">
             <span class="area-num">${String(i + 1).padStart(2, "0")}</span>
             <div class="area-body"><h3 class="area-title">${esc(label)}</h3><p class="area-desc">${esc(detail)}</p></div>
-            ${typeof v === "number" ? `<span class="area-cov">${Math.round(v * 100)}%</span>` : ""}
+            ${isAdmin() && typeof v === "number" ? `<span class="area-cov">${Math.round(v * 100)}%</span>` : ""}
           </div>`;
         }).join("")}
       </div>

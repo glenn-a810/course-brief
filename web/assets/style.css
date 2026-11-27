@@ -401,6 +401,8 @@ a.card:hover { border-color: var(--line-strong); box-shadow: var(--shadow); tran
 .card-tags .tag { background: var(--accent-soft); border-color: transparent; color: var(--accent); font-weight: 550; }
 .card-tags.is-empty .tag-muted { background: var(--inset); color: var(--text-3); font-weight: 400; }
 .card-foot { margin-top: auto; display: flex; align-items: flex-end; gap: 10px; justify-content: space-between; padding-top: 4px; border-top: 1px solid var(--line); }
+/* 값이 없어 왼쪽이 비면 하단 '상세 보기'만 오른쪽에 붙인다 */
+.card-foot-right { margin-left: auto; display: inline-flex; align-items: center; gap: 6px; }
 .card-fee { display: grid; gap: 1px; }
 .fee-label { font-size: 11px; color: var(--text-3); letter-spacing: .01em; }
 .fee-value { font-size: 19px; font-weight: 720; color: var(--accent); letter-spacing: -.02em; line-height: 1.2; }
@@ -495,6 +497,7 @@ a.card:hover { border-color: var(--line-strong); box-shadow: var(--shadow); tran
 .fee-hero-tilde { font-size: 18px; color: var(--text-3); }
 .fee-hero-none { font-size: 20px; font-weight: 650; color: var(--text-2); }
 .fee-hero-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+.fee-hero-pair.is-single { grid-template-columns: 1fr; }
 .fee-hero-pair > div { background: var(--surface); padding: 8px 10px; display: grid; gap: 1px; }
 .pair-label { font-size: 11px; color: var(--text-3); }
 .pair-value { font-size: 14.5px; font-weight: 650; }
@@ -562,6 +565,8 @@ a.card:hover { border-color: var(--line-strong); box-shadow: var(--shadow); tran
 .section-body { margin-top: 14px; display: grid; gap: 14px; }
 
 .fee-cards { display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(146px, 1fr)); }
+/* 확인된 요금 항목이 하나뿐이면 카드가 화면 폭을 다 차지하지 않게 */
+.fee-cards.is-single { grid-template-columns: minmax(146px, 280px); }
 .fee-card { background: var(--surface); border: 1px solid var(--line); border-radius: 13px; padding: 13px 14px; display: grid; gap: 3px; }
 .fee-card-top { display: flex; align-items: center; justify-content: space-between; gap: 6px; }
 .fee-card-label { font-size: 12px; color: var(--text-2); }
