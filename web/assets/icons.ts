@@ -56,7 +56,8 @@ export type IconName =
   | "food"
   | "card"
   | "bag"
-  | "chart";
+  | "chart"
+  | "golf";
 
 /** 파스텔 서피스 + 아이콘 색 조합 */
 export type IconTone = "blue" | "green" | "orange" | "red" | "purple" | "teal" | "yellow" | "grey";
@@ -106,6 +107,7 @@ const PATHS: Record<IconName, string> = {
   food: '<path d="M7 3.6v7.2M4.6 3.6v4.2a2.4 2.4 0 0 0 4.8 0V3.6M7 10.8V20.4"/><path d="M16.6 3.6c1.8 0 2.8 2.2 2.8 5.2s-1 4.4-2.8 4.4-2.8-1.4-2.8-4.4 1-5.2 2.8-5.2zM16.6 13.2v7.2"/>',
   card: '<rect x="2.8" y="5.2" width="18.4" height="13.6" rx="2.8"/><path d="M2.8 10h18.4M6.4 15h3.4"/>',
   bag: '<path d="M4.6 8.4h14.8l-1.1 10.2a2 2 0 0 1-2 1.8H7.7a2 2 0 0 1-2-1.8z"/><path d="M8.6 8.4V6.6a3.4 3.4 0 0 1 6.8 0v1.8M9.2 12.4h5.6"/>',
+  golf: '<path d="M8 3.4v14.2"/><path d="M8 4.6h9.4l-2.2 3.4 2.2 3.4H8"/><ellipse cx="11.4" cy="20.2" rx="6.4" ry="2"/>',
   chart: '<path d="M4 20.2h16"/><rect x="5.6" y="11.4" width="3.2" height="6.4" rx="1"/><rect x="10.4" y="6.6" width="3.2" height="11.2" rx="1"/><rect x="15.2" y="9" width="3.2" height="8.8" rx="1"/>',
 };
 
@@ -146,6 +148,7 @@ const DUO_BACK: Partial<Record<IconName, string>> = {
   card: '<rect x="2.8" y="5.2" width="18.4" height="13.6" rx="2.8" fill="currentColor" stroke="none" opacity=".14"/>',
   bag: '<path d="M4.6 8.4h14.8l-1.1 10.2a2 2 0 0 1-2 1.8H7.7a2 2 0 0 1-2-1.8z" fill="currentColor" stroke="none" opacity=".16"/>',
   chart: '<rect x="4.4" y="5.4" width="15.2" height="15.6" rx="3" fill="currentColor" stroke="none" opacity=".12"/>',
+  golf: '<path d="M8 4.6h9.4l-2.2 3.4 2.2 3.4H8z" fill="currentColor" stroke="none" opacity=".18"/><ellipse cx="11.4" cy="20.2" rx="6.4" ry="2" fill="currentColor" stroke="none" opacity=".12"/>',
 };
 
 /** 선 아이콘. 크기는 CSS(`.ic` 클래스)가 정한다. */

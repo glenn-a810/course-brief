@@ -753,6 +753,8 @@ async function renderDetail(id: string): Promise<void> {
     : [];
 
   const st = statusOf(course.status);
+  // 이명은 이름과 같은 것을 공백만 달리해 반복해 넣는다 — 중복은 접어서 보여 준다
+  const aliasList = uniqueAliases(course.name, course.aliases);
   // 데이터 원본의 '미확인'은 이용형태 값이 아니다 — 배지·지표에서 뺀다
   const typeLabel = course.type && !UNKNOWN_TEXT.test(course.type) ? course.type : "";
   const fees = feeView(detail?.fee, course);
@@ -787,7 +789,7 @@ async function renderDetail(id: string): Promise<void> {
           ${course.detail ? "" : badge("neutral", "요약 데이터")}
         </div>
         <h1 class="detail-title" id="detail-title" tabindex="-1">${esc(course.name)}</h1>
-        ${course.aliases?.length ? `<p class="detail-alias">${esc(course.aliases.slice(0, 5).join(" · "))}</p>` : ""}
+        ${aliasList.length ? `<p class="detail-alias">${esc(aliasList.join(" · "))}</p>` : ""}
         <p class="detail-meta">
           ${icon("pin")}<span>${esc([course.sido, course.sigungu].filter(Boolean).join(" "))}</span>
           ${detail?.master?.nearest_ic?.name
@@ -800,7 +802,7 @@ async function renderDetail(id: string): Promise<void> {
         </div>` : ""}
 
         <dl class="hero-kpis">
-          ${course.holes ? `<div class="kpi"><dt>${icon("flag")}홀수</dt><dd><b>${course.holes}</b><span>홀</span></dd></div>` : ""}
+          ${course.holes ? `<div class="kpi"><dt>${icon("golf")}홀수</dt><dd><b>${course.holes}</b><span>홀</span></dd></div>` : ""}
           ${course.par ? `<div class="kpi"><dt>${icon("gauge")}파</dt><dd><b>${course.par}</b></dd></div>` : ""}
           ${course.length ? `<div class="kpi"><dt>${icon("ruler")}전장</dt><dd><b>${fmtNum(course.length)}</b><span>m</span></dd></div>` : ""}
           ${typeLabel ? `<div class="kpi"><dt>${icon("building")}이용형태</dt><dd class="kpi-text">${esc(typeLabel)}</dd></div>` : ""}
@@ -964,6 +966,24 @@ function scrollToSection(section: string): void {
 
 function shortUrl(u: string): string {
   try { return new URL(u).hostname.replace(/^www\./, ""); } catch { return u; }
+}
+
+/**
+ * 이명 목록에서 이름·앞선 이명과 같은 것(공백·대소문자만 다른 표기)을 접는다.
+ * 데이터에 '에덴밸리CC'와 '에덴밸리 CC'가 같이 들어 있어 같은 이름이 두 번 보이는 것을 막는다.
+ */
+function uniqueAliases(name: string, aliases: string[] | null | undefined): string[] {
+  const key = (v: string): string => v.replace(/[\s·.,]/g, "").toLowerCase();
+  const seen = new Set<string>([key(name)]);
+  const out: string[] = [];
+  for (const raw of aliases ?? []) {
+    const alias = raw.trim();
+    const k = key(alias);
+    if (!k || seen.has(k)) continue;
+    seen.add(k);
+    out.push(alias);
+  }
+  return out.slice(0, 5);
 }
 
 /**
@@ -1323,7 +1343,7 @@ function sections(d: CourseDetail, c: CourseIndexItem, others: Array<{ name: str
 
   const s2 = `<section class="section" id="s2" aria-labelledby="s2-h">
     <div class="section-head">
-      <h2 id="s2-h">${iconTile("ruler", "green", "sm")}코스 스펙</h2>
+      <h2 id="s2-h">${iconTile("grass", "green", "sm")}코스 스펙</h2>
       <p class="section-desc">규모·전장·잔디와 KGA 공식 레이팅. 레이팅은 난이도 비교의 1차 기준입니다.</p>
     </div>
     <div class="section-body">
@@ -1368,7 +1388,7 @@ function sections(d: CourseDetail, c: CourseIndexItem, others: Array<{ name: str
   }
   const s3 = (isAdmin() || opsTiles.length) ? `<section class="section" id="s3" aria-labelledby="s3-h">
     <div class="section-head">
-      <h2 id="s3-h">${iconTile("flag", "orange", "sm")}현장 운영</h2>
+      <h2 id="s3-h">${iconTile("golf", "orange", "sm")}현장 운영</h2>
       <p class="section-desc">노캐디·인원·카트·체크인처럼 예약 전에 알아야 하는 실제 플레이 조건.</p>
     </div>
     <div class="section-body">
@@ -1433,7 +1453,7 @@ function sections(d: CourseDetail, c: CourseIndexItem, others: Array<{ name: str
     <div class="section-body">
       ${alert ? `<div class="callout ${(alert.level ? LEVEL[alert.level] : undefined) ?? "info"}">
         <strong>${icon(alert.level === "closure" ? "alert" : "info")}${esc(alertSummary || (alert.confirmed ? "확인된 공지" : "안내"))}</strong>
-        ${esc(alertDetail || "")}
+        ${alertDetail && alertDetail !== alertSummary ? esc(alertDetail) : ""}
         ${period ? `<div class="sub">기간: ${esc(period)}</div>` : ""}
         ${isAdmin() && alert.source_url ? `<div class="sub"><a class="link" href="${esc(alert.source_url)}" target="_blank" rel="noopener noreferrer">근거 보기</a></div>` : ""}
       </div>` : ""}
@@ -1688,7 +1708,7 @@ function renderRental(): void {
       <div class="stat"><span class="stat-n">${soldOut}</span><span class="stat-l">예약 중단</span></div>
       <div class="stat"><span class="stat-n">${regions.length}</span><span class="stat-l">권역</span></div>
     </div>
-    ${r.summary ? `<div class="callout info"><strong>${icon("info")}시장 구조</strong>${esc(r.summary)}</div>` : ""}
+    ${r.summary ? `<div class="callout"><strong>${icon("info")}시장 구조</strong>${esc(r.summary)}</div>` : ""}
     <div class="rental-filter" role="group" aria-label="권역 필터">
       <button type="button" class="chip${rentalRegion === "" ? " is-on" : ""}" data-region="" aria-pressed="${rentalRegion === ""}">전체</button>
       ${regions.map((rg) => {
