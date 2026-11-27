@@ -55,6 +55,26 @@ export interface CourseIndexItem {
   homepage?: string | null;
   /** true면 `courses/{id}.json` 에 12키 상세 존재 */
   detail: boolean;
+  /** 파(18홀 기준) */
+  par?: number;
+  /** 전장 m(18홀 기준 정규화) */
+  length?: number;
+  /** 카트 사용료(원, 팀 기준) */
+  cart?: number;
+  /** 캐디피(원, 팀 기준) */
+  caddie?: number;
+  /** 카드 배지 코드 — n=노캐디 2=2인 y=야간 s=사우나 l=숙박 h=셔틀 p=연습장 f=식당 */
+  tags?: string;
+  /** 라운더 평가(10점 만점) */
+  rating?: number;
+  /** 평가 집계 건수 */
+  reviews?: number;
+  /** 가장 최근 운영 공지 날짜(YYYY-MM-DD) */
+  notice?: string;
+  /** 확인이 필요한 운영 알림(휴장·공사 등) 존재 */
+  alert?: boolean;
+  /** 7개 영역 평균 정보 충실도(0~100) */
+  cov?: number;
 }
 
 export interface DatasetCounts {
@@ -80,6 +100,8 @@ export interface DatasetInfo {
   source_dataset?: string;
   source_version?: string;
   counts: DatasetCounts;
+  /** 영역별 평균 충실도(0~1) — 데이터 소개 페이지 인포그래피 */
+  coverage?: Partial<Record<CoverageArea, number>>;
   /** 필드 자가 문서화(키 → 설명) */
   fields?: Record<string, string>;
 }

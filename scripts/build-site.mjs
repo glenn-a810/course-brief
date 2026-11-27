@@ -6,7 +6,8 @@
  * Cloudflare Pages: build command `npm run build`, output directory `dist`, root `/`
  * (`npm run build` 가 먼저 `npm run typecheck` 를 통과해야 한다)
  */
-import { cp, mkdir, readFile, rm, stat, writeFile, readdir } from "node:fs/promises";
+import { cp, mkdir, readFile, rename, rm, stat, writeFile, readdir } from "node:fs/promises";
+import { createHash } from "node:crypto";
 import { existsSync } from "node:fs";
 import path from "node:path";
 import { build } from "esbuild";
@@ -64,6 +65,31 @@ async function bundleWeb() {
   return bytes;
 }
 
+/**
+ * 정적 자산 파일명에 내용 해시를 붙인다(F-14).
+ * HTML 은 no-cache 로 매번 확인하고, 해시가 붙은 자산만 1년 immutable 로 캐시하므로
+ * 새 배포 뒤에 옛 번들이 남아 데이터와 UI 가 어긋나는 일이 없다.
+ */
+async function hashAssets() {
+  const assets = path.join(dist, "assets");
+  const out = { js: "", css: "" };
+  const renameWithHash = async (file, ext) => {
+    const filePath = path.join(assets, file);
+    const hash = createHash("sha256").update(await readFile(filePath)).digest("hex").slice(0, 10);
+    const name = `${path.basename(file, ext)}.${hash}${ext}`;
+    await rename(filePath, path.join(assets, name));
+    return name;
+  };
+  out.js = await renameWithHash("app.js", ".js");
+  out.css = await renameWithHash("style.css", ".css");
+  const htmlPath = path.join(dist, "index.html");
+  let html = await readFile(htmlPath, "utf8");
+  html = html.replace('href="assets/style.css"', `href="assets/${out.css}"`);
+  html = html.replace('src="assets/app.js"', `src="assets/${out.js}"`);
+  await writeFile(htmlPath, html);
+  return out;
+}
+
 async function main() {
   const t0 = Date.now();
   const { idx } = await assertData();
@@ -73,8 +99,9 @@ async function main() {
 
   // 1) 웹 정적 자산 (index.html, assets/style.css)
   await copyWeb();
-  // 2) 웹 TypeScript 번들
+  // 2) 웹 TypeScript 번들 → 내용 해시가 붙은 파일명으로 교체
   const bundleBytes = await bundleWeb();
+  const hashed = await hashAssets();
   // 3) 데이터
   await cp(path.join(root, "data/v29"), path.join(dist, "data/v29"), { recursive: true });
   // 4) 정적 호스팅 설정
@@ -86,6 +113,12 @@ async function main() {
       "  Referrer-Policy: strict-origin-when-cross-origin",
       "  X-Frame-Options: SAMEORIGIN",
       "",
+      "/",
+      "  Cache-Control: no-cache",
+      "",
+      "/index.html",
+      "  Cache-Control: no-cache",
+      "",
       "/data/v29/index.json",
       "  Cache-Control: public, max-age=300",
       "",
@@ -93,7 +126,7 @@ async function main() {
       "  Cache-Control: public, max-age=86400",
       "",
       "/assets/*",
-      "  Cache-Control: public, max-age=3600",
+      "  Cache-Control: public, max-age=31536000, immutable",
       "",
     ].join("\n"),
   );
@@ -103,7 +136,7 @@ async function main() {
   );
 
   // 5) 산출물 확인
-  const assets = ["index.html", "assets/app.js", "assets/style.css"];
+  const assets = ["index.html", `assets/${hashed.js}`, `assets/${hashed.css}`];
   for (const a of assets) {
     if (!existsSync(path.join(dist, a))) {
       console.error(`빌드 실패: ${a} 없음`);
@@ -121,7 +154,7 @@ async function main() {
 
   console.log("빌드 완료 → dist/");
   console.log(`  골프장 ${idx.courses.length}곳 · 구장 JSON ${courseFiles.length}개 · 클러스터 ${idx.clusters?.length ?? 0}개`);
-  console.log(`  app.js ${(bundleBytes / 1024).toFixed(1)}KB (TypeScript 번들) · index.json ${(indexSize / 1024).toFixed(1)}KB · dist 전체 ${(total / 1024 / 1024).toFixed(1)}MB`);
+  console.log(`  ${hashed.js} ${(bundleBytes / 1024).toFixed(1)}KB (TypeScript 번들) · ${hashed.css} · index.json ${(indexSize / 1024).toFixed(1)}KB · dist 전체 ${(total / 1024 / 1024).toFixed(1)}MB`);
   console.log(`  ${((Date.now() - t0) / 1000).toFixed(2)}s`);
 }
 

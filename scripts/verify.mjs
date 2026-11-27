@@ -46,15 +46,21 @@ ok(Boolean(pkg.devDependencies?.esbuild), "devDependencies.esbuild");
 ok(typeof pkg.scripts?.typecheck === "string", "scripts.typecheck");
 ok(typeof pkg.scripts?.build === "string" && pkg.scripts.build.includes("typecheck"), "scripts.build = typecheck 후 빌드");
 
-// 1) 정적 자산
-for (const f of ["index.html", "robots.txt", "_headers", "assets/app.js", "assets/style.css",
+// 1) 정적 자산 — JS·CSS 는 내용 해시가 붙은 파일명이어야 한다(F-14 캐시 버스팅)
+for (const f of ["index.html", "robots.txt", "_headers",
                  "data/v29/index.json", "data/v29/schema.md",
                  "data/v29/clusters.json", "data/v29/sido.json", "data/v29/rental_providers.json"]) {
   ok(await exists(path.join(dist, f)), `dist/${f} 존재`);
 }
+const assetFiles = await readdir(path.join(dist, "assets"));
+const hashedJs = assetFiles.filter((f) => /^app\.[0-9a-f]{10}\.js$/.test(f));
+const hashedCss = assetFiles.filter((f) => /^style\.[0-9a-f]{10}\.css$/.test(f));
+ok(hashedJs.length === 1, `dist/assets 해시 번들 ${hashedJs.join(", ") || "없음"}`);
+ok(hashedCss.length === 1, `dist/assets 해시 스타일 ${hashedCss.join(", ") || "없음"}`);
+ok(!assetFiles.includes("app.js") && !assetFiles.includes("style.css"), "해시 없는 app.js·style.css 없음");
 
 // 1-1) 웹 번들 (TypeScript → esbuild)
-const bundlePath = path.join(dist, "assets/app.js");
+const bundlePath = path.join(dist, "assets", hashedJs[0] ?? "app.js");
 const bundle = (await exists(bundlePath)) ? await readFile(bundlePath, "utf8") : "";
 ok(bundle.length > 20 * 1024, `dist/assets/app.js 번들 ${(bundle.length / 1024).toFixed(1)}KB`);
 ok(bundle.includes("LocalSearchAdapter") && bundle.includes("EsSearchAdapter"), "app.js 에 검색 어댑터 포함");
@@ -64,6 +70,8 @@ ok(!distAssets.some((f) => f.endsWith(".ts")), "dist/assets 에 .ts 없음");
 
 // 1-2) 테마 전환 (라이트/다크) — 첫 페인트 전 초기화 · 토글 · 팔레트 중복 여부
 const html = await readFile(path.join(dist, "index.html"), "utf8");
+ok(hashedJs.length === 1 && html.includes(`assets/${hashedJs[0]}`), "index.html 이 해시 번들을 참조");
+ok(hashedCss.length === 1 && html.includes(`assets/${hashedCss[0]}`), "index.html 이 해시 스타일을 참조");
 ok(html.includes('id="theme-toggle"'), "index.html 테마 전환 버튼");
 ok(html.includes('localStorage.getItem("coursebrief-theme")'), "index.html 테마 초기화 스크립트");
 ok(
@@ -92,7 +100,7 @@ const webSourceText = (await Promise.all(
 )).join("\n");
 ok(!/A810Labs/.test(bundle) && !/A810Labs/.test(webSourceText), "관리자 비밀번호 평문이 소스·산출물에 없음");
 
-const css = await readFile(path.join(dist, "assets/style.css"), "utf8");
+const css = await readFile(path.join(dist, "assets", hashedCss[0] ?? "style.css"), "utf8");
 ok(/:root\[data-theme="light"\]\s*\{/.test(css) && /:root\[data-theme="dark"\]\s*\{/.test(css), "style.css data-theme 변수 블록");
 ok(
   !/@media \(prefers-color-scheme: dark\)\s*\{\s*:root\s*\{/.test(css),

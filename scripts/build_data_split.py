@@ -80,6 +80,136 @@ def fee_summary(course: dict) -> dict:
     }
 
 
+# 클럽·장비 상품명이 공지 목록에 섞여 들어온 경우(렌탈 상품 페이지를 공지로 수집) — 실제 운영 공지와 분리한다
+PRODUCT_NOTICE = re.compile(
+    r"(?i)(xxio|젝시오|mizuno|미즈노|honma|혼마|titleist|타이틀리스트|ping\b|\b핑\b|pxg|callaway|캘러웨어|캘러웨이|"
+    r"taylormade|테일러메이드|cleveland|클리블랜드|odyssey|오디세이|scotty|스카티|cobra|코브라|bridgestone|"
+    r"브릿지스톤|srixon|스릭슨|vokey|보키|드라이버|아이언|웨지|퍼터|풀세트|클럽세트|\biron\b|\bwedge\b|\bdriver\b|\bputter\b)"
+)
+# 수집 잡음(게시판 머리글만 긁힌 항목)
+JUNK_NOTICE = re.compile(r"^(관리자|작성자|등록일|제목\b)")
+
+
+def notice_date(item: dict) -> str | None:
+    d = item.get("date")
+    if isinstance(d, str) and len(d) >= 7:
+        return d[:10]
+    return None
+
+
+def is_real_notice(item: dict) -> bool:
+    """제목이 상품명·게시판 머리글인 항목은 운영 공지로 세지 않는다."""
+    title = (item.get("title") or "").strip()
+    if len(title) < 4 or JUNK_NOTICE.search(title):
+        return False
+    return not PRODUCT_NOTICE.search(title)
+
+
+def _num(v) -> float | None:
+    return float(v) if isinstance(v, (int, float)) and not isinstance(v, bool) else None
+
+
+def summary_fields(course: dict) -> dict:
+    """목록 카드가 상세를 열지 않고도 판단할 수 있게 하는 요약 필드.
+
+    사실 값을 바꾸지 않고, 상세 JSON 에서 카드·목록에 필요한 값만 뽑아 인덱스에 붙인다.
+    인덱스는 목록 첫 화면에서 바로 받는 파일이라 크기를 아껴 짧은 키와 태그 코드를 쓴다.
+    """
+    m = course.get("master") or {}
+    co = course.get("course") or {}
+    fee = course.get("fee") or {}
+    ops = course.get("ops") or {}
+    fac = course.get("facilities") or {}
+    br = course.get("briefing") or {}
+    out: dict = {}
+
+    par = _num(co.get("par")) or _num(m.get("par"))
+    if par:
+        out["par"] = int(par)
+    length = _num(co.get("length_m"))
+    if length:
+        out["length"] = int(length)
+
+    cart = _num((fee.get("cart") or {}).get("value"))
+    if cart:
+        out["cart"] = int(cart)
+    caddie = _num((fee.get("caddie") or {}).get("value"))
+    if caddie:
+        out["caddie"] = int(caddie)
+
+    def value(key: str, holder: dict) -> str | None:
+        v = (holder.get(key) or {}).get("value") if isinstance(holder.get(key), dict) else None
+        if isinstance(v, bool):
+            return "가능" if v else None
+        if isinstance(v, str) and v.strip() and v.strip() != "미확인":
+            return v.strip()
+        return None
+
+    codes: list[str] = []
+    nocaddie = value("nocaddie", ops)
+    if nocaddie and "불가" not in nocaddie:
+        codes.append("n")            # 노캐디
+    two = value("two_player", ops)
+    if two and "불가" not in two:
+        codes.append("2")            # 2인 플레이
+    night = co.get("night_light")
+    if night is True or (isinstance(night, str) and night.strip()) or value("night", fac):
+        codes.append("y")            # 야간 라운드
+    if value("locker_sauna", fac) or value("sauna", ops):
+        codes.append("s")            # 사우나
+    if value("lodging", fac):
+        codes.append("l")            # 숙박
+    if value("shuttle", fac):
+        codes.append("h")            # 셔틀·교통
+    if value("practice", fac) or value("indoor_range", fac):
+        codes.append("p")            # 연습장
+    if value("food", fac):
+        codes.append("f")            # 식당
+    if codes:
+        out["tags"] = "".join(codes)
+
+    review = br.get("review") or {}
+    score = _num(review.get("score_10"))
+    if score is not None:
+        out["rating"] = round(score, 1)
+        count = _num(review.get("count"))
+        if count:
+            out["reviews"] = int(count)
+
+    items = ((br.get("notices") or {}).get("items")) or []
+    dates = sorted(d for d in (notice_date(i) for i in items if isinstance(i, dict) and is_real_notice(i)) if d)
+    if dates:
+        out["notice"] = dates[-1]
+    if br.get("alert"):
+        out["alert"] = True
+
+    cov = course.get("coverage") or {}
+    vals = [v for v in cov.values() if isinstance(v, (int, float)) and not isinstance(v, bool)]
+    if vals:
+        out["cov"] = int(round(100 * sum(vals) / len(vals)))
+    return out
+
+
+def coverage_averages(courses: list[dict]) -> dict:
+    """영역별 평균 충실도 — 데이터 소개 페이지의 인포그래피가 쓴다."""
+    areas = ["basic", "course", "fee", "ops", "facility", "briefing", "rental"]
+    sums = {a: 0.0 for a in areas}
+    n = 0
+    for c in courses:
+        cov = c.get("coverage") or {}
+        vals = [cov.get(a) for a in areas]
+        if not any(isinstance(v, (int, float)) for v in vals):
+            continue
+        n += 1
+        for a in areas:
+            v = cov.get(a)
+            if isinstance(v, (int, float)) and not isinstance(v, bool):
+                sums[a] += float(v)
+    if not n:
+        return {}
+    return {a: round(sums[a] / n, 3) for a in areas}
+
+
 def index_record(course: dict) -> dict:
     m = course.get("master") or {}
     region = m.get("region") or {}
@@ -110,6 +240,7 @@ def index_record(course: dict) -> dict:
     if m.get("status") != "operating":
         rec["status_label"] = STATUS_LABEL.get(m.get("status"), m.get("status"))
         rec["status_note"] = m.get("status_note") or m.get("expected_open")
+    rec.update(summary_fields(course))
     return {k: v for k, v in rec.items() if v is not None}
 
 
@@ -272,6 +403,7 @@ def build(src: str, out_root: str) -> dict:
             "built_at": built_at,
             "source_dataset": (data.get("dataset") or {}).get("name"),
             "source_version": (data.get("dataset") or {}).get("version"),
+            "coverage": coverage_averages(courses),
             "counts": {
                 "total": len(courses),
                 "with_detail": sum(1 for c in courses if (c.get("meta") or {}).get("has_detail")),
@@ -293,6 +425,13 @@ def build(src: str, out_root: str) -> dict:
                 "homepage": "공식 홈페이지",
                 "detail": "true면 data/v29/courses/{id}.json 에 상세 12키 데이터 존재",
                 "status_label / status_note": "비영업 구장에만 존재(영업중단·폐업·건설중·미착공 사유)",
+                "par / length": "파 · 전장(m, 18홀 기준 정규화)",
+                "cart / caddie": "카트·캐디피(원, 팀 기준) — 상세 요금 값이 있을 때만",
+                "tags": "카드 배지 코드. n=노캐디 2=2인 y=야간 s=사우나 l=숙박 h=셔틀 p=연습장 f=식당",
+                "rating / reviews": "라운더 평가(10점) · 집계 건수",
+                "notice": "최근 운영 공지 날짜(YYYY-MM-DD). 상품·게시판 머리글 항목은 제외",
+                "alert": "true면 확인이 필요한 운영 알림(휴장·공사 등) 존재",
+                "cov": "7개 영역 평균 정보 충실도(0~100)",
             },
         },
         "sido": sido_list,

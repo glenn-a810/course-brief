@@ -1,11 +1,16 @@
 import type {
   AlertPeriod,
+  BriefingAlert,
+  CancelInfo,
   ClusterFile,
   ClusterInfo,
   CourseDetail,
+  CourseFacilities,
+  CourseFee,
   CourseIndex,
   CourseIndexItem,
   CourseOps,
+  CourseSpec,
   CourseStatus,
   CoverageArea,
   DatasetCounts,
@@ -14,7 +19,9 @@ import type {
   FeeTableRow,
   NearbyDeliveryProvider,
   OpsKey,
+  RentalProvider,
   RentalProvidersFile,
+  RentalRegion,
   SearchAdapter,
   SearchConfig,
   SidoFile,
@@ -24,10 +31,20 @@ import type {
 import { initAdmin, isAdmin } from "./admin.js";
 import { createSearchAdapter } from "./search.js";
 import { initTheme } from "./theme.js";
+import { coverageBar, gauge, icon, ratingBar } from "./icons.js";
+import type { IconName } from "./icons.js";
 import {
-  STATUS, badge, debounce, esc, fmtDate, fmtKB, fmtNum, fmtPct, fmtWon, isCourseStatus, isMissing, statusOf, textOf,
+  STATUS,
+  badge,
+  debounce,
+  esc,
+  fmtDate,
+  fmtNum,
+  isCourseStatus,
+  isMissing,
+  statusOf,
+  textOf,
 } from "./util.js";
-import type { BadgeTone } from "./util.js";
 
 declare global {
   interface Window {
@@ -53,20 +70,48 @@ const CONFIG: ResolvedConfig = {
 };
 const REPO_URL = CONFIG.repoUrl;
 
+/* ---------------- 라벨·아이콘 ---------------- */
+
 const OPS: Record<OpsKey, string> = {
   nocaddie: "노캐디", two_player: "2인 플레이", three_player: "3인 플레이",
   five_player: "5인 플레이", marshal_caddie: "마샬 캐디", cart_type: "카트 종류",
   cart_entry: "카트 페어웨이 진입", bagdrop: "셀프 백드롭", mat: "매트 티샷",
   checkin: "체크인", locker: "락카", sauna: "사우나", dress: "복장 규정", pace: "진행 속도",
 };
+const OPS_ICON: Record<OpsKey, IconName> = {
+  nocaddie: "person", two_player: "users", three_player: "users", five_player: "users",
+  marshal_caddie: "flag", cart_type: "cart", cart_entry: "cart", bagdrop: "flag",
+  mat: "grass", checkin: "clock", locker: "locker", sauna: "steam", dress: "shirt", pace: "clock",
+};
 const FAC: Record<FacilityKey, string> = {
-  practice: "연그린·연습장", indoor_range: "실내 연습장", food: "식당·조식",
+  practice: "연습장", indoor_range: "실내 연습장", food: "식당·조식",
   snack_bar: "그늘집·스낵", locker_sauna: "락카·사우나", lodging: "숙박",
-  other: "기타 시설", night: "야간 라운드", closed_days: "휴장일", shuttle: "셔틀",
+  other: "기타 시설", night: "야간 라운드", closed_days: "휴장일", shuttle: "셔틀·교통",
   ev_charge: "전기차 충전", proshop: "프로샵",
 };
+const FAC_ICON: Record<FacilityKey, IconName> = {
+  practice: "flag", indoor_range: "building", food: "ball", snack_bar: "ball",
+  locker_sauna: "steam", lodging: "bed", other: "sparkle", night: "moon",
+  closed_days: "calendar", shuttle: "bus", ev_charge: "bolt", proshop: "building",
+};
 const GRASS: Record<"tee" | "fairway" | "green", string> = { tee: "티잉구역", fairway: "페어웨이", green: "그린" };
-const LEVEL: Record<string, BadgeTone> = { info: "info", caution: "warn", closure: "danger" };
+const LEVEL: Record<string, "info" | "warn" | "danger"> = { info: "info", caution: "warn", closure: "danger" };
+
+/** 인덱스 태그 코드 → 카드 배지 (build_data_split.py 의 summary_fields 와 짝) */
+const TAG_LABEL: Record<string, string> = {
+  n: "노캐디", "2": "2인 가능", y: "야간", s: "사우나", l: "숙박", h: "셔틀", p: "연습장", f: "식당",
+};
+const TAG_ORDER = ["n", "2", "y", "s", "l", "h", "p", "f"];
+
+const COVERAGE_LABELS: Array<[CoverageArea, string, string]> = [
+  ["basic", "기본·입지", "소재·규모·개장·운영사·최단 IC"],
+  ["course", "코스 스펙", "홀·파·전장·잔디·KGA 레이팅"],
+  ["fee", "요금·예약", "그린피·카트·캐디·취소 규정"],
+  ["ops", "현장 운영", "노캐디·인원·카트·체크인·복장"],
+  ["facility", "부대시설", "연습장·식음·락카·숙박·셔틀"],
+  ["briefing", "브리핑·공지", "휴장·공사·요금 변경 공지, 평가"],
+  ["rental", "클럽 렌탈", "자체 대여·권역 배송 업체"],
+];
 
 const SORT_KEYS = ["name", "fee-asc", "fee-desc", "holes-desc"] as const;
 type SortKey = (typeof SORT_KEYS)[number];
@@ -74,6 +119,8 @@ type SortKey = (typeof SORT_KEYS)[number];
 function isSortKey(v: string | null | undefined): v is SortKey {
   return typeof v === "string" && (SORT_KEYS as readonly string[]).includes(v);
 }
+
+/* ---------------- 상태 ---------------- */
 
 interface Filters {
   sido: string;
@@ -94,7 +141,6 @@ interface CourseGroup {
   members: CourseIndexItem[];
   holes: number;
   fee: number | null;
-  /** fee 가 주말가인지 주중가인지. 라벨을 값 출처에 맞춰 표기한다 */
   feeKind: FeeKind | null;
   sido: string;
   sigungu: string;
@@ -110,9 +156,11 @@ interface AppState {
   q: string;
   filters: Filters;
   shown: number;
-  matches: Map<string, number> | null;
   groups: CourseGroup[];
-  navToken: number;
+  /** 목록을 떠날 때의 스크롤 위치 — 상세에서 돌아오면 그 자리로 */
+  pendingScroll: number | null;
+  /** 마지막 목록 해시(검색·필터 포함) — 상세의 '목록' 링크가 그 조건으로 돌아간다 */
+  lastListHash: string;
 }
 
 function defaultFilters(): Filters {
@@ -128,9 +176,9 @@ const state: AppState = {
   q: "",
   filters: defaultFilters(),
   shown: CONFIG.pageSize,
-  matches: null,
   groups: [],
-  navToken: 0,
+  pendingScroll: null,
+  lastListHash: "#/",
 };
 
 /** 마크업은 index.html 에 고정돼 있으므로, 없으면 조용히 넘어가지 않고 즉시 알린다. */
@@ -152,7 +200,13 @@ function getAdapter(): SearchAdapter {
   return adapter;
 }
 
+function won(n: number | null | undefined): string {
+  if (n === null || n === undefined || !Number.isFinite(n)) return "";
+  return `${Math.round(n).toLocaleString("ko-KR")}원`;
+}
+
 /* ---------------- 데이터 ---------------- */
+
 /**
  * JSON 경계. 원격 데이터는 스키마(`data/v29/schema.md`)를 따르며,
  * 여기서는 T 로 좁혀서 넘긴다(필드 단위 검증은 data:check 담당).
@@ -167,6 +221,7 @@ async function loadJSON<T>(name: string, version?: string): Promise<T> {
 }
 
 async function boot(): Promise<void> {
+  const skeletons = $<HTMLElement>("#results").innerHTML;
   try {
     const [index, clusters, sido, rental] = await Promise.all([
       loadJSON<CourseIndex>("index.json"),
@@ -181,22 +236,34 @@ async function boot(): Promise<void> {
     state.adapter = await createSearchAdapter(CONFIG, { courses: index.courses });
     buildStaticUI();
     await route();
-    window.addEventListener("hashchange", () => { state.shown = CONFIG.pageSize; void route(); });
+    window.addEventListener("hashchange", () => {
+      state.shown = CONFIG.pageSize;
+      void route();
+    });
   } catch (err) {
     console.error(err);
-    const message = err instanceof Error ? err.message : String(err);
-    $<HTMLElement>("#results").innerHTML = `<div class="error-box">
-      <strong>데이터를 불러오지 못했습니다.</strong>
-      <p>${esc(message)}</p>
-      <p>정적 서버로 열어야 합니다. 리포지토리에서 <code>npm run preview</code> 또는 <code>npm run build</code> 후 <code>npx serve dist</code> 로 확인하세요.</p>
-    </div>`;
+    showBootError(err, skeletons);
   }
 }
 
-/**
- * 푸터 요약 — 일반 화면에는 업데이트 날짜만, 관리자 모드에는 데이터 버전·내역까지.
- * 관리자 모드를 켜고 끄면 이 함수를 다시 불러 문구를 바꾼다.
- */
+/** 데이터 로딩 실패 — 개발자용 안내가 아니라 사용자가 할 수 있는 일과 재시도 버튼을 준다 */
+function showBootError(err: unknown, skeleton: string): void {
+  const message = err instanceof Error ? err.message : String(err);
+  $<HTMLElement>("#results").setAttribute("aria-busy", "false");
+  $<HTMLElement>("#results").innerHTML = `<div class="state-box" role="alert">
+    <span class="state-icon">${icon("alert")}</span>
+    <h2 class="state-title">골프장 목록을 불러오지 못했습니다</h2>
+    <p class="state-desc">잠시 후 다시 시도해 주세요. 계속되면 네트워크 연결을 확인해 주세요.</p>
+    <p class="state-meta">${esc(message)}</p>
+    <button class="btn" type="button" id="boot-retry">다시 시도</button>
+  </div>`;
+  $<HTMLButtonElement>("#boot-retry").addEventListener("click", () => {
+    $<HTMLElement>("#results").innerHTML = skeleton;
+    $<HTMLElement>("#results").setAttribute("aria-busy", "true");
+    void boot();
+  });
+}
+
 function paintFooterMeta(): void {
   const d = getIndex().dataset;
   const counts = `${d.counts.total}곳 (상세 ${d.counts.with_detail} / 요약 ${d.counts.master_only})`;
@@ -205,15 +272,11 @@ function paintFooterMeta(): void {
     : `업데이트 ${fmtDate(d.built_at)} · ${counts}`;
 }
 
-/**
- * 업데이트 기준일 — 값이 있는 첫 날짜를 YYYY.MM.DD 로. 일반 화면이 보여주는 유일한 수집 메타다.
- */
 function updatedAt(...values: Array<string | null | undefined>): string {
   const value = values.find((v): v is string => typeof v === "string" && v.length >= 10);
   return value ? fmtDate(value) : "";
 }
 
-/** 구장 상세의 기준일 — 정규화 시점 → 생성 시점 → 데이터셋 빌드 시점 순 */
 function courseUpdatedAt(detail: CourseDetail | null): string {
   return updatedAt(detail?.meta?.normalized_at, detail?.meta?.generated_at, getIndex().dataset.built_at);
 }
@@ -228,32 +291,31 @@ function buildStaticUI(): void {
   paintFooterMeta();
 
   const sel = $<HTMLSelectElement>("#f-sido");
+  sel.innerHTML = '<option value="">전체</option>';
   for (const s of state.sido) {
     const o = document.createElement("option");
     o.value = s.code;
     o.textContent = `${sidoLabel(s)} (${s.count})`;
     sel.appendChild(o);
   }
+
+  // 상태 칩은 데이터의 건수로 만든다 — 라벨과 숫자를 분리해 스크린리더가 "영업중 512곳"으로 읽게 한다
   const chips = $<HTMLElement>("#status-chips");
-  for (const btn of chips.querySelectorAll<HTMLButtonElement>(".chip")) {
-    const st = btn.dataset.status;
-    if (!isCourseStatus(st)) continue;
-    btn.innerHTML = `${esc(STATUS[st].label)}<span class="n">${statusCount(d.counts, st)}</span>`;
-    btn.setAttribute("aria-pressed", state.filters.status.has(st) ? "true" : "false");
-  }
+  chips.innerHTML = (Object.keys(STATUS) as CourseStatus[]).map((st) => {
+    const meta = STATUS[st];
+    const n = statusCount(d.counts, st);
+    return `<button class="chip" type="button" data-status="${st}" aria-pressed="${state.filters.status.has(st)}"
+      aria-label="${esc(meta.label)} ${n}곳"><span>${esc(meta.label)}</span><span class="chip-n">${n}</span></button>`;
+  }).join("");
 }
 
 /* ---------------- 상태·URL ---------------- */
-/**
- * 지역 셀렉트 라벨. 코드 12는 전남·광주 통합특별시라 데이터 약칭이 한쪽만 남는데,
- * 그대로 쓰면 전남 44곳이 '광주' 하나로 가려지므로 두 지역명을 함께 표기한다.
- */
+
 function sidoLabel(s: SidoInfo): string {
   if (s.code === "12") return "전남·광주";
   return s.short || s.name;
 }
 
-/** `#/?q=…` 의 쿼리만 읽는다. 상세 영역 앵커(`#/c/x#s3`)가 붙어도 안전하게 */
 function readHashQuery(): URLSearchParams {
   const hash = location.hash.replace(/^#/, "").split("#")[0];
   const qi = hash.indexOf("?");
@@ -281,9 +343,9 @@ function syncHash(): void {
 }
 
 function applyHashQuery(params: URLSearchParams): void {
-  if (!params) return;
   state.q = params.get("q") ?? "";
-  $<HTMLInputElement>("#q").value = state.q;
+  const qInput = $<HTMLInputElement>("#q");
+  if (qInput.value !== state.q) qInput.value = state.q;
   $<HTMLButtonElement>("#q-clear").hidden = !state.q;
   const f = state.filters;
   f.sido = params.get("sido") ?? "";
@@ -299,15 +361,20 @@ function applyHashQuery(params: URLSearchParams): void {
   $<HTMLSelectElement>("#f-holes").value = f.holes;
   $<HTMLSelectElement>("#f-fee").value = f.fee;
   $<HTMLSelectElement>("#f-sort").value = f.sort;
+  paintChips();
+}
+
+function paintChips(): void {
   for (const btn of $<HTMLElement>("#status-chips").querySelectorAll<HTMLButtonElement>(".chip")) {
     const status = btn.dataset.status;
-    const on = isCourseStatus(status) && f.status.has(status);
+    const on = isCourseStatus(status) && state.filters.status.has(status);
     btn.classList.toggle("is-on", on);
     btn.setAttribute("aria-pressed", on ? "true" : "false");
   }
 }
 
 /* ---------------- 목록 ---------------- */
+
 function buildGroups(courses: CourseIndexItem[]): CourseGroup[] {
   const grouped = new Map<string, CourseIndexItem[]>();
   for (const c of courses) {
@@ -325,7 +392,7 @@ function buildGroups(courses: CourseIndexItem[]): CourseGroup[] {
       key,
       name: cluster?.name || members[0].name,
       cluster,
-      members: members.sort((a, b) => (b.holes ?? 0) - (a.holes ?? 0)),
+      members: [...members].sort((a, b) => (b.holes ?? 0) - (a.holes ?? 0)),
       holes,
       fee: cheapest?.value ?? null,
       feeKind: cheapest?.kind ?? null,
@@ -351,9 +418,9 @@ function cheapestFee(members: CourseIndexItem[]): { value: number; kind: FeeKind
   return best;
 }
 
-function passesFilters(c: CourseIndexItem): boolean {
+function passesFilters(c: CourseIndexItem, skipStatus = false): boolean {
   const f = state.filters;
-  if (f.status.size && !f.status.has(c.status)) return false;
+  if (!skipStatus && f.status.size && !f.status.has(c.status)) return false;
   if (f.sido && c.sido_code !== f.sido) return false;
   if (f.type && c.type !== f.type) return false;
   if (f.holes) {
@@ -377,19 +444,24 @@ function sortGroups(groups: CourseGroup[]): CourseGroup[] {
   return arr;
 }
 
+/** 검색어와 일치한 부분을 강조한다(이스케이프 후 안전하게 삽입) */
+function highlight(text: string, q: string): string {
+  if (!q) return esc(text);
+  const idx = text.toLowerCase().indexOf(q.toLowerCase());
+  if (idx < 0) return esc(text);
+  return `${esc(text.slice(0, idx))}<mark>${esc(text.slice(idx, idx + q.length))}</mark>${esc(text.slice(idx + q.length))}`;
+}
+
 async function renderList({ reset = false }: { reset?: boolean } = {}): Promise<void> {
   const index = getIndex();
   const courses = index.courses;
+  const resultsEl = $<HTMLElement>("#results");
+  resultsEl.setAttribute("aria-busy", "true");
+
   let allowed: Map<string, number> | null = null;
   if (state.q) {
     const res = await getAdapter().search({ text: state.q, limit: 0 });
     allowed = new Map((res ?? []).map((r) => [r.id, r.score]));
-    const hits = `${allowed.size.toLocaleString("ko-KR")}건 일치`;
-    $<HTMLElement>("#search-mode").hidden = false;
-    // 검색 엔진 이름은 내부 구성이므로 관리자 모드에서만 붙인다
-    $<HTMLElement>("#search-mode").textContent = isAdmin() ? `${getAdapter().label} · ${hits}` : hits;
-  } else {
-    $<HTMLElement>("#search-mode").hidden = true;
   }
 
   const matched = allowed;
@@ -405,196 +477,448 @@ async function renderList({ reset = false }: { reset?: boolean } = {}): Promise<
   }
   state.groups = groups;
 
-  const totalCourses = courses.length;
+  const total = courses.length;
   const n = groups.length;
+  const courseCount = filtered.length;
+  // 상태 필터로만 빠진 수 — "숨김"은 이 값이다
+  const withoutStatus = courses.filter((c) => (matched ? matched.has(c.id) : true) && passesFilters(c, true));
+  const hidden = withoutStatus.length - courseCount;
+  const searchHits = matched ? matched.size : total;
+
   const stLabel = state.filters.status.size
     ? [...state.filters.status].map((s) => statusOf(s).label).join("·")
     : "전체";
-  $<HTMLElement>("#result-count").textContent =
-    `${stLabel} · ${n.toLocaleString("ko-KR")}개 시설 / ${filtered.length.toLocaleString("ko-KR")}개 구장 (전체 ${totalCourses}곳)`;
+
+  $<HTMLElement>("#result-count").innerHTML =
+    `<strong>${n.toLocaleString("ko-KR")}곳</strong> 표시` +
+    `<span class="sep">·</span>구장 ${courseCount.toLocaleString("ko-KR")}` +
+    `<span class="sep">·</span>전체 ${total.toLocaleString("ko-KR")}곳` +
+    (hidden > 0 ? `<button type="button" class="link-btn" id="show-hidden">숨김 ${hidden.toLocaleString("ko-KR")}곳 보기</button>` : "");
+
+  // 검색 + 필터가 겹쳐 결과가 줄었을 때, 무엇 때문에 줄었는지 알려 준다
+  const note = $<HTMLElement>("#filter-note");
+  const excludedByFilter = matched ? searchHits - courseCount : 0;
+  if (matched && excludedByFilter > 0) {
+    note.hidden = false;
+    note.innerHTML = `검색 결과 <b>${searchHits.toLocaleString("ko-KR")}곳</b> 중 ` +
+      `<b>${(searchHits - courseCount).toLocaleString("ko-KR")}곳</b>이 다른 조건으로 제외되었습니다.` +
+      `<button type="button" class="link-btn" id="keep-search-reset">검색은 두고 필터만 초기화</button>`;
+  } else {
+    note.hidden = true;
+    note.textContent = "";
+  }
+
+  renderActiveFilters();
+  const status = $<HTMLElement>("#result-status");
+  status.textContent = `${stLabel} ${n.toLocaleString("ko-KR")}곳 표시 중` +
+    (hidden > 0 ? `. 상태 필터로 ${hidden.toLocaleString("ko-KR")}곳이 숨겨져 있습니다.` : "") +
+    (state.q ? ` 검색어 ${state.q}.` : "");
 
   if (reset) state.shown = CONFIG.pageSize;
   const slice = groups.slice(0, state.shown);
-  $<HTMLElement>("#results").innerHTML = softenUnknown(slice.map(cardHTML).join(""));
+  resultsEl.innerHTML = softenUnknown(slice.map(cardHTML).join(""));
+  resultsEl.setAttribute("aria-busy", "false");
   $<HTMLElement>("#empty").hidden = n > 0;
-  $<HTMLElement>("#more").hidden = n <= state.shown;
-  $<HTMLElement>("#more").textContent = `더 보기 (${state.shown} / ${n})`;
+  if (n === 0) $<HTMLElement>("#empty-desc").textContent = emptyDescription();
+  $<HTMLElement>("#empty-status").hidden = hidden <= 0;
+  const more = $<HTMLButtonElement>("#more");
+  more.hidden = n <= state.shown;
+  more.innerHTML = `더 보기 <span class="more-count">${state.shown} / ${n}</span>`;
+
+}
+
+function emptyDescription(): string {
+  const parts: string[] = [];
+  if (state.q) parts.push(`검색어 ‘${state.q}’`);
+  if (state.filters.sido) parts.push("지역");
+  if (state.filters.type) parts.push("이용형태");
+  if (state.filters.holes) parts.push("홀수");
+  if (state.filters.fee) parts.push("그린피");
+  if (!parts.length) return "다른 조건으로 다시 찾아보세요.";
+  if (parts.length === 1 && state.q) {
+    return `‘${state.q}’와 일치하는 골프장이 없습니다. 다른 이름·지역이나 초성(ㅇㅅ)으로 찾아보세요.`;
+  }
+  return `${parts.join("·")} 조건을 넓히면 결과가 나옵니다.`;
+}
+
+function renderActiveFilters(): void {
+  const f = state.filters;
+  const parts: string[] = [];
+  const add = (label: string, key: string): void => {
+    parts.push(`<button type="button" class="filter-chip" data-clear="${key}" aria-label="${esc(label)} 필터 해제">
+      ${esc(label)}<span class="filter-chip-x" aria-hidden="true">✕</span></button>`);
+  };
+  if (state.q) add(`‘${state.q}’`, "q");
+  if (f.sido) {
+    const s = state.sido.find((x) => x.code === f.sido);
+    add(s ? sidoLabel(s) : f.sido, "sido");
+  }
+  if (f.type) add(f.type, "type");
+  if (f.holes) add(f.holes === "36" ? "36홀 이상" : `${f.holes}홀`, "holes");
+  if (f.fee) add(`주말 ${Number(f.fee) / 10000}만원 이하`, "fee");
+  if (f.sort !== "name") {
+    const label = { "fee-asc": "그린피 낮은순", "fee-desc": "그린피 높은순", "holes-desc": "홀수 많은순" }[f.sort];
+    add(label, "sort");
+  }
+  if (f.status.size !== 1 || !f.status.has("operating")) add(`상태 ${f.status.size}종`, "status");
+  const box = $<HTMLElement>("#active-filters");
+  box.innerHTML = parts.join("");
+  const count = $<HTMLElement>("#filter-count");
+  const activeCount = parts.length;
+  count.hidden = activeCount === 0;
+  count.textContent = String(activeCount);
 }
 
 function cardHTML(g: CourseGroup): string {
+  const single = g.members.length === 1 ? g.members[0] : null;
   const s = g.statuses.length === 1 ? g.statuses[0] : "operating";
   const st = statusOf(s);
   const fee = g.fee;
-  // 라벨은 값의 출처를 따른다 — 주말가가 없어 주중가를 쓴 카드에 '주말'을 붙이면 오표기가 된다
   const feeLabel = g.feeKind === "weekday" ? "주중" : "주말";
-  // 폐업·휴업 구장의 요금은 마지막 확인값이다. 예약 가능한 정상가처럼 보이지 않게 표기한다
   const stale = g.statuses.every((x) => x === "closed" || x === "suspended");
-  const feeLine = fee == null
-    ? ""
-    : stale
-      ? `<span class="fee-stale">마지막 확인 · ${feeLabel} <b>${fmtWon(fee)}</b></span>`
-      : `<span>${feeLabel} <b>${fmtWon(fee)}</b>~</span>`;
-  const title = g.members.length > 1 ? `${g.name} (${g.holes}홀)` : g.name;
-  const sub = g.members.length > 1
-    ? g.members.map((m) => `${m.name} ${m.holes ? m.holes + "홀" : ""}`.trim()).join(" + ")
-    : `${g.sido || ""} ${g.sigungu || ""}`.trim();
+  const tags = (single?.tags ?? "").split("").filter((t) => TAG_LABEL[t]).slice(0, 3);
+  const rating = single?.rating;
 
-  const memberLinks = g.members.length > 1
-    ? `<div class="card-members">${g.members.map((m) => {
-        const ms = statusOf(m.status);
-        return `<a href="#/c/${esc(m.id)}">${esc(m.name)}${m.holes ? ` · ${m.holes}홀` : ""}${
-          m.status !== "operating" ? ` <span class="badge ${ms.tone}">${esc(ms.label)}</span>` : ""}</a>`;
-      }).join("")}</div>`
+  const feeBlock = fee == null
+    ? `<span class="card-fee is-empty"><span class="fee-label">그린피</span><span class="fee-value">확인 안 됨</span></span>`
+    : `<span class="card-fee${stale ? " is-stale" : ""}">
+        <span class="fee-label">${stale ? "마지막 확인" : feeLabel}</span>
+        <span class="fee-value">${won(fee)}</span><span class="fee-tilde">~</span>
+      </span>`;
+
+  const sub = single
+    ? [single.sido, single.sigungu].filter(Boolean).join(" ")
+    : g.members.map((m) => `${m.name}${m.holes ? ` ${m.holes}홀` : ""}`).join(" · ");
+
+  const stats = [
+    g.holes ? `<span class="stat-pill"><b>${g.holes}</b>홀</span>` : "",
+    single?.type ? `<span class="stat-pill">${esc(single.type)}</span>` : "",
+    rating !== undefined ? `<span class="stat-pill"><span class="pill-star" aria-hidden="true">★</span>${rating.toFixed(1)}</span>` : "",
+  ].filter(Boolean).join("");
+
+  const tagHTML = tags.length
+    ? `<div class="card-tags">${tags.map((t) => `<span class="tag">${esc(TAG_LABEL[t])}</span>`).join("")}</div>`
+    : `<div class="card-tags is-empty"><span class="tag tag-muted">운영 정보 확인 안 됨</span></div>`;
+
+  const noticeBadge = single?.notice
+    ? `<span class="notice-dot" title="최근 공지 ${fmtDate(single.notice)}"><span aria-hidden="true">●</span>공지</span>`
     : "";
 
-  const body = `
-    <div class="card-top">
-      <div>
-        <div class="card-name">${esc(title)}</div>
-        <div class="card-sub">${esc(sub)}</div>
+  const head = `<div class="card-head">
+      <div class="card-id">
+        <h3 class="card-name">${highlight(single ? single.name : g.name, state.q)}</h3>
+        <p class="card-sub">${esc(sub)}</p>
       </div>
-      ${badge(st.tone, st.label)}
+      <span class="badge ${st.tone}">${esc(st.label)}</span>
     </div>
-    <div class="card-meta">
-      ${g.holes ? `<span class="tag">${g.holes}홀</span>` : ""}
-      ${g.members[0].type ? `<span class="tag">${esc(g.members[0].type)}</span>` : ""}
-      ${g.members.length > 1 ? `<span class="tag">시설 ${g.members.length}개 코스</span>` : ""}
-      ${g.members[0].detail ? "" : `<span class="tag">요약 데이터</span>`}
-    </div>
-    ${memberLinks}
-    <div class="card-fee">${feeLine}</div>`;
+    <div class="card-stats">${stats || `<span class="stat-pill is-muted">스펙 확인 안 됨</span>`}</div>
+    ${tagHTML}
+    <div class="card-foot">${feeBlock}<span class="card-cta">상세 보기${icon("chevron")}</span>${noticeBadge}</div>`;
 
-  if (g.members.length === 1) {
-    return `<a class="card" href="#/c/${esc(g.members[0].id)}">${body}</a>`;
+  if (single) {
+    return `<a class="card" href="#/c/${esc(single.id)}" data-card="${esc(single.id)}">${head}</a>`;
   }
   return `<div class="card card-group">
-      <div class="card-top">
-        <div>
-          <div class="card-name">${esc(title)}</div>
-          <div class="card-sub">${esc(sub)}</div>
+      <div class="card-head">
+        <div class="card-id">
+          <h3 class="card-name">${highlight(g.name, state.q)}</h3>
+          <p class="card-sub">같은 부지 ${g.members.length}개 코스</p>
         </div>
-        ${badge(st.tone, st.label)}
+        <span class="badge ${st.tone}">${esc(st.label)}</span>
       </div>
-      <div class="card-meta">
-        ${g.holes ? `<span class="tag">합산 ${g.holes}홀</span>` : ""}
-        <span class="tag">같은 부지 ${g.members.length}개 코스</span>
-      </div>
+      <div class="card-stats"><span class="stat-pill"><b>${g.holes}</b>홀 합산</span><span class="stat-pill">시설 1곳</span></div>
       <div class="card-members">${g.members.map((m) => {
         const ms = statusOf(m.status);
-        return `<a href="#/c/${esc(m.id)}">${esc(m.name)}${m.holes ? ` · ${m.holes}홀` : ""}${
+        return `<a class="member-link" href="#/c/${esc(m.id)}">${esc(m.name)}${m.holes ? ` · ${m.holes}홀` : ""}${
           m.status !== "operating" ? ` <span class="badge ${ms.tone}">${esc(ms.label)}</span>` : ""}</a>`;
       }).join("")}</div>
-      <div class="card-fee">${feeLine}</div>
+      <div class="card-foot">${feeBlock}<span class="card-cta">코스 선택${icon("chevron")}</span></div>
     </div>`;
 }
 
 /* ---------------- 상세 ---------------- */
+
 /** 현재 상세 DOM 에 그려진 구장 id. 같은 구장의 영역 앵커 이동은 다시 그리지 않는다 */
 let renderedDetailId: string | null = null;
+let sectionObserver: IntersectionObserver | null = null;
+
+interface FeeSlot {
+  value: number | null;
+  source: "official" | "market" | null;
+}
+
+interface FeeView {
+  weekday: FeeSlot;
+  weekend: FeeSlot;
+  cart: number | null;
+  caddie: number | null;
+  caddieNone: boolean;
+}
+
+/**
+ * 요금 표시 규칙 한 곳 — 공식 요금표 → 관측 최저가 → 없음.
+ * 상단 히어로와 요금 섹션이 같은 함수를 쓰므로 화면 안에서 값이 어긋날 수 없다(F-05).
+ */
+function feeView(fee: CourseFee | null | undefined, fallback: CourseIndexItem): FeeView {
+  const market = fee?.market ?? null;
+  const weekdayOfficial = fee?.weekday ?? null;
+  const weekendOfficial = fee?.weekend ?? null;
+  const weekday: FeeSlot = weekdayOfficial != null
+    ? { value: weekdayOfficial, source: "official" }
+    : market?.weekday_min != null ? { value: market.weekday_min, source: "market" } : { value: null, source: null };
+  const weekend: FeeSlot = weekendOfficial != null
+    ? { value: weekendOfficial, source: "official" }
+    : market?.weekend_min != null ? { value: market.weekend_min, source: "market" } : { value: null, source: null };
+  // 상세가 없거나 비어 있으면 인덱스 요약(같은 규칙으로 계산된 값)을 쓴다
+  if (weekday.value == null && fallback.green_fee?.weekday != null) {
+    weekday.value = fallback.green_fee.weekday;
+    weekday.source = fallback.green_fee.basis === "official" ? "official" : "market";
+  }
+  if (weekend.value == null && fallback.green_fee?.weekend != null) {
+    weekend.value = fallback.green_fee.weekend;
+    weekend.source = fallback.green_fee.basis === "official" ? "official" : "market";
+  }
+  return {
+    weekday,
+    weekend,
+    cart: fee?.cart?.value ?? fallback.cart ?? null,
+    caddie: fee?.caddie?.value ?? fallback.caddie ?? null,
+    caddieNone: fee?.caddie?.none === true,
+  };
+}
+
+function sourceTag(source: FeeSlot["source"]): string {
+  if (source === "official") return `<span class="src-tag src-official">공식 요금표</span>`;
+  if (source === "market") return `<span class="src-tag src-market">관측 최저</span>`;
+  return "";
+}
 
 async function renderDetail(id: string): Promise<void> {
   const index = getIndex();
   const course = index.courses.find((c) => c.id === id);
+  const view = $<HTMLElement>("#view-detail");
   if (!course) {
-    renderedDetailId = null; // 없는 id 뒤에 이전 구장 주소로 돌아오면 다시 그려야 한다
-    $<HTMLElement>("#view-detail").innerHTML = `<div class="page"><div class="error-box">해당 골프장을 찾을 수 없습니다. <a href="#/">목록으로</a></div></div>`;
+    renderedDetailId = null;
+    view.innerHTML = `<div class="page"><div class="state-box" role="alert">
+      <span class="state-icon">${icon("alert")}</span>
+      <h1 class="state-title">골프장을 찾을 수 없습니다</h1>
+      <p class="state-desc">주소가 바뀌었거나 목록에서 빠진 골프장입니다.</p>
+      <a class="btn" href="${esc(state.lastListHash)}">목록으로</a>
+    </div></div>`;
+    setTitle("찾을 수 없는 골프장 — CourseBrief");
     return;
   }
+
+  view.innerHTML = detailSkeleton(course.name);
   let detail: CourseDetail | null = null;
+  let detailError = false;
   if (course.detail) {
     try {
       detail = await loadJSON<CourseDetail>(`courses/${id}.json`, getIndex().dataset.built_at);
     } catch (e) {
       console.warn(e);
+      detailError = true;
     }
   }
   const cluster = course.cluster ? state.clusters.get(course.cluster) ?? null : null;
-  const others: Array<{ name: string; id?: string; holes?: number | null }> = cluster
+  const others: Array<{ name: string; id?: string; holes?: number | null; item?: CourseIndexItem }> = cluster
     ? (cluster.members ?? []).filter((m) => m !== course.name).map((name) => {
         const mc = index.courses.find((c) => c.name === name);
-        return mc ? { name, id: mc.id, holes: mc.holes } : { name };
+        return mc ? { name, id: mc.id, holes: mc.holes, item: mc } : { name };
       })
     : [];
 
   const st = statusOf(course.status);
-  const head = `
-    <a class="back" href="#/">← 목록</a>
-    <div class="detail-head">
-      <h1 class="detail-title">${esc(course.name)}</h1>
-      ${course.aliases?.length ? `<p class="detail-alias">${esc(course.aliases.slice(0, 6).join(" · "))}</p>` : ""}
-      <div class="detail-badges">
-        ${badge(st.tone, st.label)}
-        ${course.holes ? badge("neutral", `${course.holes}홀`) : ""}
-        ${course.type ? badge("neutral", course.type) : ""}
-        ${course.detail ? "" : badge("neutral", "요약 데이터")}
+  const fees = feeView(detail?.fee, course);
+  const feeLine = [fees.weekday.value, fees.weekend.value].filter((v): v is number => v != null);
+  const feeCheapest = feeLine.length ? Math.min(...feeLine) : null;
+  const feeKindLabel = fees.weekend.value != null && feeCheapest === fees.weekend.value ? "주말" : "주중";
+
+  const hero = `
+    <div class="detail-crumbs">
+      <a class="back" href="${esc(state.lastListHash)}" data-back>${icon("arrow-left")} 목록</a>
+      <span class="crumb-sep">·</span>
+      <span class="crumb-loc">${esc([course.sido, course.sigungu].filter(Boolean).join(" "))}</span>
+    </div>
+
+    <section class="detail-hero" aria-labelledby="detail-title">
+      <div class="detail-hero-main">
+        <div class="detail-badges">
+          ${badge(st.tone, st.label)}
+          ${course.holes ? badge("neutral", `${course.holes}홀`) : ""}
+          ${course.type ? badge("neutral", course.type) : ""}
+          ${course.detail ? "" : badge("neutral", "요약 데이터")}
+        </div>
+        <h1 class="detail-title" id="detail-title" tabindex="-1">${esc(course.name)}</h1>
+        ${course.aliases?.length ? `<p class="detail-alias">${esc(course.aliases.slice(0, 5).join(" · "))}</p>` : ""}
+        <p class="detail-meta">
+          ${icon("pin")}<span>${esc([course.sido, course.sigungu].filter(Boolean).join(" "))}</span>
+          ${detail?.master?.nearest_ic?.name
+            ? `<span class="dot" aria-hidden="true">·</span><span>${esc(detail.master.nearest_ic.name)}${detail.master.nearest_ic.distance_km ? ` ${detail.master.nearest_ic.distance_km}km` : ""}</span>`
+            : ""}
+          <span class="dot" aria-hidden="true">·</span><span class="muted">업데이트 ${esc(courseUpdatedAt(detail) || "—")}</span>
+        </p>
+        ${course.status !== "operating" ? `<div class="callout ${st.tone === "neutral" ? "info" : st.tone}">
+          <strong>${esc(st.label)}</strong>${esc(course.status_note || "현재 예약·이용이 어려운 상태입니다.")}
+        </div>` : ""}
+
+        <dl class="hero-kpis">
+          ${course.holes ? `<div class="kpi"><dt>홀수</dt><dd><b>${course.holes}</b><span>홀</span></dd></div>` : ""}
+          ${course.par ? `<div class="kpi"><dt>파</dt><dd><b>${course.par}</b></dd></div>` : ""}
+          ${course.length ? `<div class="kpi"><dt>전장</dt><dd><b>${fmtNum(course.length)}</b><span>m</span></dd></div>` : ""}
+          ${course.type ? `<div class="kpi"><dt>이용형태</dt><dd class="kpi-text">${esc(course.type)}</dd></div>` : ""}
+          ${course.rating !== undefined ? `<div class="kpi kpi-rating"><dt>라운더 평가</dt><dd>${ratingBar(course.rating, course.reviews)}</dd></div>` : ""}
+        </dl>
+
+        <div class="hero-actions">
+          ${course.tel ? `<a class="btn btn-primary" href="tel:${esc(course.tel.replace(/[^\d+]/g, ""))}">${icon("phone")}전화 걸기</a>` : ""}
+          ${course.homepage ? `<a class="btn btn-ghost" href="${esc(course.homepage)}" target="_blank" rel="noopener noreferrer">${icon("globe")}홈페이지</a>` : ""}
+          ${course.lat != null && course.lng != null
+            ? `<a class="btn btn-ghost" href="https://www.google.com/maps?q=${course.lat},${course.lng}" target="_blank" rel="noopener noreferrer">${icon("pin")}지도</a>`
+            : ""}
+        </div>
       </div>
-      ${course.status !== "operating" ? `<div class="callout ${st.tone === "neutral" ? "info" : st.tone}" style="margin-top:14px">
-        <strong>${esc(st.label)}</strong>${esc(course.status_note || "현재 예약·이용이 어려운 상태입니다.")}
-      </div>` : ""}
-      <dl class="detail-facts">
-        <div><dt>지역</dt><dd>${esc([course.sido, course.sigungu].filter(Boolean).join(" "))}</dd></div>
-        <div><dt>주소</dt><dd>${esc(detail?.master?.address || "—")}</dd></div>
-        <div><dt>대표전화</dt><dd>${course.tel ? `<a href="tel:${esc(course.tel.replace(/[^\d+]/g, ""))}">${esc(course.tel)}</a>` : "—"}</dd></div>
-        <div><dt>홈페이지</dt><dd>${course.homepage ? `<a href="${esc(course.homepage)}" target="_blank" rel="noopener noreferrer">${esc(shortUrl(course.homepage))}</a>` : "—"}</dd></div>
-        <div><dt>그린피</dt><dd>${feeSummaryText(course)}</dd></div>
-        <div><dt>좌표</dt><dd>${course.lat != null && course.lng != null ? `<a href="https://www.google.com/maps?q=${course.lat},${course.lng}" target="_blank" rel="noopener noreferrer">${course.lat.toFixed(5)}, ${course.lng.toFixed(5)}</a>` : "—"}</dd></div>
-        <div><dt>업데이트</dt><dd>${esc(courseUpdatedAt(detail) || "—")}</dd></div>
-      </dl>
-    </div>`;
 
-  const clusterBox = cluster ? `<div class="callout info">
-      <strong>같은 부지 시설 ${cluster.members?.length || 1}개 코스</strong>
-      ${esc(cluster.relationship || cluster.basis || "같은 소재지의 코스가 별도 레코드로 등록되어 있습니다.")}
-      ${others.length ? `<div class="tags" style="margin-top:8px">${others.map((o) =>
-        o.id ? `<a class="tag" href="#/c/${esc(o.id)}">${esc(o.name)}${o.holes ? ` · ${o.holes}홀` : ""} →</a>`
-             : `<span class="tag">${esc(o.name)}</span>`).join("")}</div>` : ""}
-    </div>` : "";
+      <aside class="fee-hero${feeCheapest == null ? " is-empty" : ""}" aria-label="그린피 요약">
+        <p class="fee-hero-title">그린피 <span>1인 · 18홀 · 비회원</span></p>
+        ${feeCheapest == null
+          ? `<p class="fee-hero-none">확인 안 됨</p><p class="fee-hero-note">공식 요금표에서 확인하지 못했습니다. 전화로 확인하세요.</p>`
+          : `<p class="fee-hero-value"><span class="fee-hero-from">${feeKindLabel} 최저</span>${won(feeCheapest)}</p>
+            <div class="fee-hero-pair">
+              <div><span class="pair-label">주중</span><span class="pair-value">${fees.weekday.value != null ? won(fees.weekday.value) : "확인 안 됨"}</span>${sourceTag(fees.weekday.source)}</div>
+              <div><span class="pair-label">주말·공휴일</span><span class="pair-value">${fees.weekend.value != null ? won(fees.weekend.value) : "확인 안 됨"}</span>${sourceTag(fees.weekend.source)}</div>
+            </div>
+            <p class="fee-hero-note">${fees.cart != null ? `카트 ${won(fees.cart)}` : "카트 확인 안 됨"} · ${fees.caddieNone ? "노캐디" : fees.caddie != null ? `캐디 ${won(fees.caddie)}` : "캐디 확인 안 됨"} <span class="muted">(팀 기준)</span></p>
+            <p class="fee-hero-asof">업데이트 ${esc(courseUpdatedAt(detail) || "—")}</p>`}
+      </aside>
+    </section>
 
-  // 요약 데이터만 있는 구장은 s1 하나뿐이라 7개 영역 내비를 두면 죽은 링크가 된다
-  const nav = !detail ? "" : `
-    <nav class="section-nav" aria-label="상세 영역">
-      <a href="#/c/${esc(id)}#s1">기본·입지</a>
-      <a href="#/c/${esc(id)}#s2">코스 스펙</a>
-      <a href="#/c/${esc(id)}#s3">요금·예약</a>
-      <a href="#/c/${esc(id)}#s4">현장 운영</a>
-      <a href="#/c/${esc(id)}#s5">부대시설</a>
-      <a href="#/c/${esc(id)}#s6">브리핑·공지</a>
-      <a href="#/c/${esc(id)}#s7">클럽 렌탈</a>
-    </nav>`;
+    ${factsHTML(course, detail)}
 
-  const body = detail ? sections(detail, course) : `
-    <section class="section" id="s1"><h2><span class="num">01</span>기본 정보</h2>
-      <div class="section-body"><div class="callout">이 구장은 <strong>요약 데이터만</strong> 있습니다(건설중·폐업 등으로 상세 수집 전).
-      마스터 정보(주소·좌표·홀수·상태)는 위에 표시된 값이 전부입니다.</div></div></section>`;
+    ${detailError ? `<div class="callout warn" role="alert">
+      <strong>상세 데이터를 불러오지 못했습니다</strong>
+      네트워크 문제일 수 있습니다. 아래는 기본 정보만 표시합니다.
+      <button type="button" class="link-btn" id="detail-retry">다시 시도</button>
+    </div>` : ""}
 
-  $<HTMLElement>("#view-detail").innerHTML = softenUnknown(`<div class="detail">${head}${clusterBox}${nav}${body}</div>`);
+    ${!course.detail ? `<section class="section" aria-labelledby="s0">
+      <h2 id="s0"><span class="sec-num">01</span>기본 정보</h2>
+      <div class="section-body">
+        <div class="callout">
+          <strong>이 구장은 요약 데이터만 있습니다</strong>
+          건설중·폐업 등으로 상세 수집 전이거나, 상세를 불러오지 못한 상태입니다. 위에 표시된 기본 정보가 확인된 값의 전부입니다.
+        </div>
+      </div>
+    </section>` : ""}`;
+
+  const sectionsHTML = detail && !detailError ? sections(detail, course, others) : "";
+  const nav = detail && !detailError ? sectionNav(course, others.length > 0) : "";
+  view.innerHTML = softenUnknown(`<div class="detail">${hero}${nav}${sectionsHTML}</div>`);
   renderedDetailId = id;
-  window.scrollTo({ top: 0 });
+  setTitle(`${course.name} — CourseBrief`);
+
+  document.querySelector<HTMLButtonElement>("#detail-retry")?.addEventListener("click", () => {
+    renderedDetailId = null;
+    void renderDetail(id);
+  });
+  setupSectionSpy();
+  const section = currentSectionAnchor();
+  if (section) {
+    requestAnimationFrame(() => scrollToSection(section));
+  } else {
+    window.scrollTo({ top: 0 });
+  }
 }
 
-/** 상세 영역 앵커(`#/c/{id}#s3`) 이동. 상세를 그린 뒤라야 대상 섹션이 DOM 에 있다 */
+function detailSkeleton(name: string): string {
+  return `<div class="detail">
+    <div class="detail-crumbs"><a class="back" href="${esc(state.lastListHash)}" data-back>${icon("arrow-left")} 목록</a></div>
+    <div class="detail-hero"><div class="detail-hero-main">
+      <h1 class="detail-title">${esc(name)}</h1>
+      <p class="detail-meta"><span class="muted">불러오는 중…</span></p>
+      <div class="skel-line w70"></div><div class="skel-line w55"></div><div class="skel-line w40"></div>
+    </div></div>
+    <p class="sr-only" role="status">상세 정보를 불러오는 중입니다</p>
+  </div>`;
+}
+
+function factsHTML(c: CourseIndexItem, d: CourseDetail | null): string {
+  const m = d?.master;
+  const rows: Array<[string, string]> = [];
+  const address = m?.address;
+  if (address) rows.push(["주소", esc(address)]);
+  if (m?.opened) rows.push(["개장", esc(m.opened)]);
+  if (m?.area_sqm) rows.push(["면적", `${fmtNum(m.area_sqm)}㎡ (${fmtNum(Math.round(m.area_sqm / 3.3058))}평)`]);
+  if (m?.operators?.length) rows.push(["운영사", esc(m.operators.join(", "))]);
+  if (m?.designer) rows.push(["설계", esc(textOf(m.designer))]);
+  if (m?.nearest_ic?.name) {
+    rows.push(["최단 IC", `${esc(m.nearest_ic.name)}${m.nearest_ic.distance_km ? ` · ${m.nearest_ic.distance_km}km` : ""}`]);
+  }
+  if (c.tel) rows.push(["대표전화", `<a class="link" href="tel:${esc(c.tel.replace(/[^\d+]/g, ""))}">${esc(c.tel)}</a>`]);
+  if (c.homepage) {
+    rows.push(["홈페이지", `<a class="link" href="${esc(c.homepage)}" target="_blank" rel="noopener noreferrer">${esc(shortUrl(c.homepage))}</a>`]);
+  }
+  if (c.lat != null && c.lng != null) {
+    rows.push(["좌표", `<a class="link" href="https://www.google.com/maps?q=${c.lat},${c.lng}" target="_blank" rel="noopener noreferrer">${c.lat.toFixed(4)}, ${c.lng.toFixed(4)}</a>`]);
+  }
+  if (!rows.length) return "";
+  return `<dl class="facts">${rows.map(([k, v]) => `<div class="fact"><dt>${esc(k)}</dt><dd>${v}</dd></div>`).join("")}</dl>`;
+}
+
+function sectionNav(c: CourseIndexItem, hasCluster: boolean): string {
+  const items: Array<[string, string]> = [
+    ["s1", "요금·예약"], ["s2", "코스 스펙"], ["s3", "현장 운영"], ["s4", "부대시설"],
+    ["s5", "공지·브리핑"], ...(hasCluster ? [["s6", "동일 부지"] as [string, string]] : []),
+    ["s7", "클럽 렌탈"],
+  ];
+  return `<nav class="section-nav" aria-label="상세 영역">
+    <div class="section-nav-inner">
+      ${items.map(([id, label], i) => `<a href="#/c/${esc(c.id)}#${id}" data-sec="${id}"><span class="sec-i">${String(i + 1).padStart(2, "0")}</span>${label}</a>`).join("")}
+    </div>
+    <span class="section-nav-fade" aria-hidden="true"></span>
+  </nav>`;
+}
+
+function setupSectionSpy(): void {
+  sectionObserver?.disconnect();
+  sectionObserver = null;
+  const nav = document.querySelector<HTMLElement>(".section-nav");
+  if (!nav) return;
+  const links = [...nav.querySelectorAll<HTMLAnchorElement>("a[data-sec]")];
+  const sections = links.map((a) => document.getElementById(a.dataset.sec ?? "")).filter((el): el is HTMLElement => el !== null);
+  if (!sections.length) return;
+  const setCurrent = (id: string): void => {
+    for (const a of links) {
+      if (a.dataset.sec === id) a.setAttribute("aria-current", "true");
+      else a.removeAttribute("aria-current");
+    }
+  };
+  sectionObserver = new IntersectionObserver((entries) => {
+    const visible = entries.filter((e) => e.isIntersecting)
+      .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+    if (visible.length) setCurrent(visible[0].target.id);
+  }, { rootMargin: "-150px 0px -55% 0px", threshold: 0 });
+  for (const s of sections) sectionObserver.observe(s);
+  setCurrent(sections[0].id);
+}
+
+function currentSectionAnchor(): string {
+  const raw = location.hash.replace(/^#/, "");
+  const at = raw.indexOf("#");
+  return at >= 0 ? raw.slice(at + 1) : "";
+}
+
 function scrollToSection(section: string): void {
   const target = document.getElementById(section);
-  if (target) target.scrollIntoView({ block: "start" });
+  if (!target) return;
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  target.scrollIntoView({ block: "start", behavior: reduce ? "auto" : "smooth" });
+  const nav = document.querySelector<HTMLAnchorElement>(`.section-nav a[data-sec="${section}"]`);
+  nav?.setAttribute("aria-current", "true");
 }
 
 function shortUrl(u: string): string {
   try { return new URL(u).hostname.replace(/^www\./, ""); } catch { return u; }
-}
-
-function feeSummaryText(c: CourseIndexItem): string {
-  const f = c.green_fee;
-  if (!f) return "—";
-  const parts: string[] = [];
-  if (f.weekday) parts.push(`주중 ${fmtWon(f.weekday)}`);
-  if (f.weekend) parts.push(`주말 ${fmtWon(f.weekend)}`);
-  if (!parts.length) return "—";
-  // 요금 근거(공식 요금표/관측 최저가)는 관리자 모드에서만 — 일반 화면은 기준일만
-  const asOf = f.as_of ? fmtDate(f.as_of) : "";
-  const sub = isAdmin()
-    ? `${f.basis === "official" ? "공식 요금표" : "실거래 관측 최저가"}${asOf ? ` · ${asOf}` : ""}`
-    : asOf ? `업데이트 ${asOf}` : "";
-  return `${parts.join(" / ")}${sub ? ` <span class="sub">${sub}</span>` : ""}`;
 }
 
 function valCell(v: unknown): string | null {
@@ -604,10 +928,6 @@ function valCell(v: unknown): string | null {
   return isAdmin() ? t : publicNote(t);
 }
 
-/**
- * 데이터 노트 안에 섞여 들어온 외부 사이트 이름은 일반 화면에서 중립 표현으로 바꿔다.
- * 관리자 모드에서는 원문 그대로 — 어느 출처인지 봐야 하는 화면이다.
- */
 const SOURCE_NAMES: Array<[RegExp, string]> = [
   [/그린피가이드/g, "공개 요금 정보"],
   [/티픽/gi, "공개 예약 채널"],
@@ -628,51 +948,9 @@ function evidenceDetails(evidence: unknown, label = "근거"): string {
     .map((e) => `<li>${esc(String(e).slice(0, 220))}</li>`).join("")}</ul></details>`;
 }
 
-function kvRow(label: string, value: string, sub = ""): string {
-  return `<div class="kv"><dt>${esc(label)}</dt><dd>${value}${sub ? `<span class="sub">${sub}</span>` : ""}</dd></div>`;
-}
-
-/**
- * 값이 없으면 일반 화면에서는 행을 숨기고, 관리자 모드에서는 '미확인'으로 남긴다.
- * 일반 화면에 '미확인'이 도배되지 않게 하려는 표시 규칙(데이터는 null 그대로 보존).
- */
-/**
- * 일반 화면에서는 데이터 원문에 섞여 들어온 '미확인'도 '확인 안 됨'으로 바꿔 쓴다.
- * 의미는 그대로 두되 화면에 '미확인' 도배가 남지 않게 하는 표시 규칙.
- */
+/** 일반 화면에서는 데이터 원문의 '미확인'을 '확인 안 됨'으로 바꿔 쓴다(의미는 그대로). */
 function softenUnknown(html: string): string {
   return isAdmin() ? html : html.split("미확인").join("확인 안 됨");
-}
-
-function kvRowKnown(label: string, value: string | null | undefined, sub = ""): string {
-  const t = (value ?? "").trim();
-  if (t) return kvRow(label, esc(t), sub);
-  return isAdmin() ? kvRow(label, "미확인", sub) : "";
-}
-
-/** 추가 코스는 객체 배열이다. 그대로 String() 하면 '[object Object]' 가 되므로 필드별로 편다 */
-function extraCoursesHTML(list: Array<ExtraCourse | string>): string {
-  return list.map((raw) => {
-    const x: ExtraCourse = typeof raw === "string" ? { name: raw } : raw;
-    const title = [x.name ?? "추가 코스", x.holes ? `${x.holes}홀` : "", x.type ?? ""]
-      .filter(Boolean).join(" · ");
-    const facts = [
-      x.open_hours ? `운영 ${x.open_hours}` : "",
-      x.closed ? `휴장 ${x.closed}` : "",
-      x.tel ? `전화 ${x.tel}` : "",
-      x.fee ? `요금 ${x.fee}` : "",
-    ].filter(Boolean).join(" · ");
-    return `<div class="extra-course">
-      <strong>${esc(title)}</strong>
-      ${facts ? `<div class="sub">${esc(facts)}</div>` : ""}
-      ${x.note ? `<div class="sub">${esc(x.note)}</div>` : ""}
-    </div>`;
-  }).join("");
-}
-
-/** '미확인 N개' 목록은 기본 접힘으로 두어 본문 가독성을 지킨다 */
-function unconfirmedList(labels: string[]): string {
-  return `<details class="unconfirmed"><summary>미확인 ${labels.length}개</summary><p>${esc(labels.join(", "))}</p></details>`;
 }
 
 function periodText(period: AlertPeriod | string | null | undefined): string {
@@ -687,107 +965,122 @@ function periodText(period: AlertPeriod | string | null | undefined): string {
   return "";
 }
 
-function sections(d: CourseDetail, c: CourseIndexItem): string {
+/* ---------------- 상세 영역 ---------------- */
+
+function toneOf(value: string, invert = false): { tone: "ok" | "warn" | "danger" | "info"; label: string } {
+  // 휴장일처럼 '없음'이 좋은 뜻인 항목은 뒤집어 읽는다
+  if (invert && /없음|연중무휴|무휴/.test(value)) return { tone: "ok", label: "연중 운영" };
+  if (/불가|불허|미운영|금지|없음/.test(value)) return { tone: "danger", label: "불가" };
+  if (/조건|문의|별도|유료|일부|한정|추가|필요|주의/.test(value)) return { tone: "warn", label: "조건부" };
+  if (/가능|운영|있음|허용|제공/.test(value)) return { tone: "ok", label: "가능" };
+  return { tone: "info", label: "안내" };
+}
+
+function tile(iconName: IconName, label: string, value: string, opts: { tone?: "ok" | "warn" | "danger" | "info"; badgeText?: string } = {}): string {
+  const tone = opts.tone ?? "info";
+  return `<div class="tile tone-${tone}">
+    <span class="tile-icon">${icon(iconName)}</span>
+    <div class="tile-body">
+      <span class="tile-label">${esc(label)}</span>
+      <span class="tile-value">${esc(value)}</span>
+    </div>
+    ${opts.badgeText ? `<span class="tile-badge tone-${tone}">${esc(opts.badgeText)}</span>` : ""}
+  </div>`;
+}
+
+/** 제목이 클럽 상품명이거나 게시판 머리글인 공지 — 운영 공지와 분리한다(F-11) */
+const PRODUCT_NOTICE = /(xxio|젝시오|mizuno|미즈노|honma|혼마|titleist|타이틀리스트|\bping\b|pxg|callaway|캘러웨이|taylormade|테일러메이드|cleveland|클리블랜드|odyssey|오디세이|scotty|스카티|cobra|코브라|bridgestone|브릿지스톤|srixon|스릭슨|vokey|보키|드라이버|아이언|웨지|퍼터|풀세트|클럽세트|\biron\b|\bwedge\b|\bdriver\b|\bputter\b)/i;
+const JUNK_NOTICE = /^(관리자|작성자|등록일|제목)/;
+
+interface NoticeView {
+  title: string;
+  date: string;
+  url: string | null;
+}
+
+function splitNotices(items: Array<{ title?: string; date?: string | null; url?: string | null }>): { real: NoticeView[]; products: NoticeView[] } {
+  const real: NoticeView[] = [];
+  const products: NoticeView[] = [];
+  for (const it of items) {
+    const title = (it.title ?? "").trim();
+    if (title.length < 4 || JUNK_NOTICE.test(title)) continue;
+    const entry: NoticeView = {
+      title,
+      date: fmtDate(it.date),
+      url: typeof it.url === "string" && /^https?:/.test(it.url) ? it.url : null,
+    };
+    if (PRODUCT_NOTICE.test(title)) products.push(entry);
+    else real.push(entry);
+  }
+  return { real, products };
+}
+
+function cancelTimeline(text: string): string {
+  const wd = /주중\s*(\d+)\s*일\s*전/.exec(text);
+  const we = /주말\s*(\d+)\s*일\s*전/.exec(text);
+  if (!wd && !we) return "";
+  const row = (label: string, days: number): string => {
+    const pct = Math.max(6, Math.min(96, ((7 - days) / 7) * 100));
+    return `<div class="penalty-row">
+      <span class="penalty-label">${label}</span>
+      <div class="penalty-track" role="img" aria-label="${label}은 라운드 ${days}일 전까지 무료 취소">
+        <span class="penalty-free" style="width:${pct.toFixed(1)}%"></span>
+        <span class="penalty-mark" style="left:${pct.toFixed(1)}%"><b>D-${days}</b></span>
+      </div>
+      <span class="penalty-note">D-${days}까지 무료</span>
+    </div>`;
+  };
+  return `<div class="penalty">
+    <div class="penalty-legend"><span><i class="lg-free"></i>무료 취소</span><span><i class="lg-fee"></i>위약 발생</span><span class="muted">라운드일 기준</span></div>
+    ${wd ? row("주중", Number(wd[1])) : ""}
+    ${we ? row("주말", Number(we[1])) : ""}
+  </div>`;
+}
+
+function sections(d: CourseDetail, c: CourseIndexItem, others: Array<{ name: string; id?: string; holes?: number | null; item?: CourseIndexItem }>): string {
   const m = d.master ?? {};
-  const co = d.course ?? {};
+  const co: CourseSpec = d.course ?? {};
   const fee = d.fee ?? {};
-  const cancel = d.cancel ?? {};
+  const cancel: CancelInfo = d.cancel ?? {};
   const ops: CourseOps = d.ops ?? {};
-  const fac = d.facilities ?? {};
+  const fac: CourseFacilities = d.facilities ?? {};
   const br = d.briefing ?? {};
   const rt = d.rental ?? {};
   const cov = d.coverage ?? {};
+  const fees = feeView(fee, c);
 
-  /* 01 기본·입지 */
-  const holes = m.holes ?? {};
-  const nameVariants = m.name_variants ?? [];
-  const mergedIds = m.merged_ids ?? [];
-  const holeText = [
-    holes.total ? `총 ${holes.total}홀` : null,
-    holes.member ? `회원 ${holes.member}` : null,
-    holes.public ? `대중 ${holes.public}` : null,
-    holes.non_member ? `비회원 ${holes.non_member}` : null,
-  ].filter(Boolean).join(" · ");
-  const s1 = `
-  <section class="section" id="s1">
-    <h2><span class="num">01</span>기본·입지</h2>
-    <p class="section-desc">규모·소재·접근성.${isAdmin() ? " 값 뒤의 출처는 데이터 원본 표기입니다." : ""}</p>
-    <div class="section-body">
-      ${kvRowKnown("홀 구성", holeText, isAdmin() && m.holes_note ? esc(m.holes_note) : "")}
-      ${kvRowKnown("이용형태", m.type || c.type || "", m.type_note ? esc(m.type_note) : "")}
-      ${kvRowKnown("개장", m.opened || "", m.opened_note ? esc(m.opened_note) : "")}
-      ${kvRowKnown("면적", m.area_sqm ? `${fmtNum(m.area_sqm)}㎡ (${fmtNum(Math.round(m.area_sqm / 3.3058))}평)` : "")}
-      ${kvRowKnown("운영사", (m.operators ?? []).join(", ") || "", m.operators_note ? esc(m.operators_note) : "")}
-      ${m.designer ? kvRow("설계", esc(textOf(m.designer))) : ""}
-      ${kvRowKnown("주소", m.address || "", m.address_note ? esc(m.address_note) : "")}
-      ${m.nearest_ic ? kvRow("최단 IC", `${esc(m.nearest_ic.name)}${m.nearest_ic.distance_km ? ` · ${m.nearest_ic.distance_km}km` : ""}`, isAdmin() ? esc(m.nearest_ic.source || "") : "") : ""}
-      ${m.nearest_ic_note ? kvRow("IC 비고", esc(m.nearest_ic_note)) : ""}
-      ${m.expected_open ? kvRow("개장 예정", esc(m.expected_open), esc(m.project_stage || "")) : ""}
-      ${m.access === "military_only" ? `<div class="callout warn"><strong>군 전용 체력단련장</strong>일반인 이용이 제한되는 시설입니다(현역·군인공제회 등).</div>` : ""}
-      ${nameVariants.length > 1 ? kvRow("이명·구 명칭", esc(nameVariants.slice(0, 8).join(", "))) : ""}
-      ${isAdmin() && mergedIds.length ? kvRow("병합된 레코드", esc(mergedIds.join(", ")), "중복 등록이 확인되어 하나로 합친 구장입니다") : ""}
-    </div>
-  </section>`;
-
-  /* 02 코스 스펙 */
-  const grass = co.grass ?? {};
-  const grassRows = (Object.keys(GRASS) as Array<keyof typeof GRASS>).map((k) => {
-    const g = grass[k];
-    if (isMissing(g)) return null;
-    if (typeof g === "object" && g !== null && g.value === undefined && g.evidence) return null;
-    const t = valCell(g);
-    return t ? kvRow(`잔디 · ${GRASS[k]}`, esc(t)) : null;
-  }).filter((row): row is string => row !== null).join("");
-
-  let kgaHTML = "";
-  const kga = co.kga ?? null;
-  if (kga) {
-    const combos = kga.hole_combinations ?? [];
-    const rows: string[] = [];
-    for (const cb of combos.slice(0, 4)) {
-      if (typeof cb === "string") continue;
-      for (const t of (cb.tees ?? []).slice(0, 8)) {
-        rows.push(`<tr><td>${esc([cb.course_name_1, cb.course_name_2].filter(Boolean).join(" + "))}</td>
-          <td>${esc(t.tee || "")}</td><td>${esc(t.gender || "")}</td>
-          <td>${fmtNum(t.length_yds)}</td><td>${fmtNum(t.course_rating, 1)}</td><td>${fmtNum(t.slope_rating)}</td></tr>`);
-      }
-    }
-    if (rows.length) {
-      kgaHTML = `<div class="table-wrap"><table>
-        <thead><tr><th>조합</th><th>티</th><th>성별</th><th>길이(yd)</th><th>코스레이팅</th><th>슬로프</th></tr></thead>
-        <tbody>${rows.join("")}</tbody></table></div>
-        ${isAdmin() ? `<p class="section-desc">출처: 대한골프협회(KGA) 코스레이팅™/슬로프레이팅™ · 18홀 조합 단위</p>` : ""}`;
-    }
-  }
-
-  const s2 = `
-  <section class="section" id="s2">
-    <h2><span class="num">02</span>코스 스펙</h2>
-    <p class="section-desc">홀수·파·길이·잔디와 KGA 공식 레이팅. 레이팅은 난이도 비교의 1차 기준입니다.</p>
-    <div class="section-body">
-      ${co.holes || co.par || isAdmin() ? kvRow("홀수 / 파", esc([co.holes ? `${co.holes}홀` : null, co.par ? `파 ${co.par}` : null].filter(Boolean).join(" / ") || "미확인")) : ""}
-      ${co.length_m ? kvRow("전장", `${fmtNum(co.length_m)}m (${fmtNum(Math.round(co.length_m * 1.0936))}yd)`) : ""}
-      ${(co.blocks ?? []).length ? kvRow("코스 구성", esc((co.blocks ?? []).join(", "))) : ""}
-      ${(m.course_blocks ?? []).length ? kvRow("세부 코스명", esc((m.course_blocks ?? []).join(", "))) : ""}
-      ${co.course_names ? kvRow("코스명", esc(textOf(co.course_names))) : ""}
-      ${isMissing(co.night_light) ? (isAdmin() ? kvRow("야간 라운드", "미확인") : "") : kvRow("야간 라운드", esc(textOf(co.night_light)))}
-      ${grassRows}
-      ${isAdmin() && co.kga_hole_est ? kvRow("KGA 추정 홀수", esc(String(co.kga_hole_est))) : ""}
-      ${(co.extra_courses ?? []).length ? kvRow("추가 코스", extraCoursesHTML(co.extra_courses ?? [])) : ""}
-      ${kgaHTML ? `<div>${kgaHTML}</div>` : ""}
-      ${co.hole_by_hole ? `<details class="ev"><summary>홀별 파·거리 보기</summary><pre class="pre">${esc(JSON.stringify(co.hole_by_hole, null, 1))}</pre></details>` : ""}
-    </div>
-  </section>`;
-
-  /* 03 요금·예약·취소 */
+  /* 01 요금 & 예약 */
   const unavailable = c.status === "closed" || c.status === "suspended";
   const asOf = fee.as_of || fee.checked_at;
-  // 취소 규정은 문자열이거나 { value, source } 객체다. 객체를 그대로 찍으면 내부 JSON·출처가 노출된다
   const cancelPolicy = cancel.cancel_policy;
-  const cancelText = typeof cancelPolicy === "string"
-    ? cancelPolicy
-    : cancelPolicy ? textOf(cancelPolicy) : "미확인";
-  const member = fee.member;
+  const cancelText = typeof cancelPolicy === "string" ? cancelPolicy : cancelPolicy ? textOf(cancelPolicy) : "";
+  const timeline = cancelText ? cancelTimeline(cancelText) : "";
+
+  const feeCard = (label: string, slot: FeeSlot, note: string): string => {
+    if (slot.value == null) {
+      return `<div class="fee-card is-empty">
+        <div class="fee-card-top"><span class="fee-card-label">${esc(label)}</span></div>
+        <div class="fee-card-value">확인 안 됨</div>
+        <div class="fee-card-note">${esc(note)}</div>
+      </div>`;
+    }
+    return `<div class="fee-card">
+      <div class="fee-card-top"><span class="fee-card-label">${esc(label)}</span>${sourceTag(slot.source)}</div>
+      <div class="fee-card-value">${won(slot.value)}</div>
+      <div class="fee-card-note">${esc(note)}</div>
+    </div>`;
+  };
+  const cartCard = `<div class="fee-card${fees.cart == null ? " is-empty" : ""}">
+      <div class="fee-card-top"><span class="fee-card-label">카트</span><span class="src-tag src-neutral">팀 기준</span></div>
+      <div class="fee-card-value">${fees.cart != null ? won(fees.cart) : "확인 안 됨"}</div>
+      <div class="fee-card-note">${esc(fee.cart?.note || "4인 1팀 기준")}</div>
+    </div>`;
+  const caddieCard = `<div class="fee-card${fees.caddie == null && !fees.caddieNone ? " is-empty" : ""}">
+      <div class="fee-card-top"><span class="fee-card-label">캐디피</span><span class="src-tag src-neutral">팀 기준</span></div>
+      <div class="fee-card-value">${fees.caddieNone ? "노캐디" : fees.caddie != null ? won(fees.caddie) : "확인 안 됨"}</div>
+      <div class="fee-card-note">${esc(fee.caddie?.note || "4인 1팀 기준 · 캐디에게 직접 지급")}</div>
+    </div>`;
+
   const tableHTML = (() => {
     const rows = (fee.official_table?.rows ?? []).filter((r) => r && (r.value || r.amounts?.length));
     if (!rows.length) return "";
@@ -799,332 +1092,609 @@ function sections(d: CourseDetail, c: CourseIndexItem): string {
       const key = `${r.label || ""}|${r.value || ""}`;
       if (!g.rows.some((x) => `${x.label || ""}|${x.value || ""}` === key)) g.rows.push(r);
     }
-    const groupHTML = (g: { sec: string; rows: FeeTableRow[] }): string =>
-      `<tr class="group"><th colspan="2">${esc(g.sec === "구분" ? "요금" : g.sec)}</th></tr>` +
-      g.rows.map((r) => {
-        const label = r.label && r.label !== g.sec ? r.label : "";
-        return `<tr><td>${esc(label)}</td><td class="num">${esc(r.value || "")}</td></tr>`;
-      }).join("");
-    const body = groups.map(groupHTML).join("");
-    const table = `<div class="table-wrap"><table class="fee-table"><tbody>${body}</tbody></table></div>`;
-    // 행이 많으면 기본은 접어 둔다(요금 섹션이 표에 잠식되지 않게)
+    const body = groups.map((g) =>
+      `<tr class="group"><th scope="colgroup" colspan="2">${esc(g.sec === "구분" ? "요금" : g.sec)}</th></tr>` +
+      g.rows.map((r) => `<tr><td>${esc(r.label && r.label !== g.sec ? r.label : "")}</td><td class="num">${esc(r.value || "확인 안 됨")}</td></tr>`).join("")).join("");
+    const table = `<div class="table-wrap"><table class="fee-table"><thead class="sr-only"><tr><th scope="col">구분</th><th scope="col">요금</th></tr></thead><tbody>${body}</tbody></table></div>`;
     if (groups.length > 2 || rows.length > 8) {
-      return `<details class="ev"><summary>공식 요금표 ${rows.length}개 항목 펼치기</summary>${table}</details>`;
+      return `<details class="more-box"><summary>공식 요금표 ${rows.length}개 항목 펼치기</summary>${table}</details>`;
     }
     return table;
   })();
+
   const od = fee.official_detail ?? {};
-  const s3 = `
-  <section class="section" id="s3">
-    <h2><span class="num">03</span>요금·예약·취소</h2>
-    <p class="section-desc">1인 18홀 비회원 기준 정상가. 시즌·시간대·예약 경로에 따라 달라지므로 예약 화면에서 최종 확인하세요.</p>
+  const detailRows = [
+    od.green_detail ? ["공식 요금 상세", esc(od.green_detail)] : null,
+    od.cart_detail ? ["카트 상세", esc(od.cart_detail)] : null,
+    od.caddie_detail ? ["캐디 상세", esc(od.caddie_detail)] : null,
+    od.facility_fee ? ["시설 이용료", esc(textOf(od.facility_fee))] : null,
+    od.rental ? ["클럽 대여", esc(textOf(od.rental))] : null,
+  ].filter((x): x is [string, string] => x !== null);
+
+  const member = fee.member;
+  const market = fee.market;
+
+  const s1 = `<section class="section" id="s1" aria-labelledby="s1-h">
+    <div class="section-head">
+      <h2 id="s1-h"><span class="sec-num">01</span>요금 · 예약</h2>
+      <p class="section-desc">1인 18홀 비회원 정상가. 시즌·시간대·예약 경로에 따라 달라지므로 예약 화면에서 최종 확인하세요.</p>
+    </div>
     <div class="section-body">
       ${unavailable ? `<div class="callout warn"><strong>현재 이용 불가 구장입니다</strong>아래 요금은 마지막으로 확인된 값이며 예약·결제할 수 없습니다.</div>` : ""}
-      <div class="fee-grid">
-        ${fee.weekday != null || isAdmin() ? `<div class="fee-box"><div class="label">주중</div><div class="value">${fmtWon(fee.weekday)}</div>${fee.weekday_text ? `<div class="note">${esc(fee.weekday_text)}</div>` : ""}</div>` : ""}
-        ${fee.weekend != null || isAdmin() ? `<div class="fee-box"><div class="label">주말·공휴일</div><div class="value">${fmtWon(fee.weekend)}</div>${fee.weekend_text ? `<div class="note">${esc(fee.weekend_text)}</div>` : ""}</div>` : ""}
-        ${fee.cart?.value != null || isAdmin() ? `<div class="fee-box"><div class="label">카트</div><div class="value">${fee.cart?.value != null ? fmtWon(fee.cart.value) : "미확인"}</div><div class="note">${esc(fee.cart?.text || "")}</div></div>` : ""}
-        ${fee.caddie?.none || fee.caddie?.value != null || isAdmin() ? `<div class="fee-box"><div class="label">캐디피</div><div class="value">${fee.caddie?.none ? "노캐디" : fee.caddie?.value != null ? fmtWon(fee.caddie.value) : "미확인"}</div><div class="note">${esc(fee.caddie?.text || "")}</div></div>` : ""}
+      <div class="fee-cards">
+        ${feeCard("주중", fees.weekday, "월~금 · 1인 18홀")}
+        ${feeCard("주말·공휴일", fees.weekend, "토·일·공휴일 · 1인 18홀")}
+        ${cartCard}
+        ${caddieCard}
       </div>
-      ${isAdmin()
-        ? (fee.basis || asOf ? `<p class="section-desc">${esc(fee.basis || "")}${asOf ? ` · 확인 ${fmtDate(asOf)}` : ""}</p>` : "")
-        : (asOf ? `<p class="section-desc">업데이트 ${esc(fmtDate(asOf))}</p>` : "")}
-      ${fee.market ? kvRow("실거래 관측 최저", `${fee.market.weekday_min ? `주중 ${fmtWon(fee.market.weekday_min)}` : ""}${fee.market.weekday_min && fee.market.weekend_min ? " · " : ""}${fee.market.weekend_min ? `주말 ${fmtWon(fee.market.weekend_min)}` : ""}`, isAdmin() ? esc(fee.market.note || fee.market.source || "") : "") : ""}
-      ${member && (member.weekday || member.weekend || isAdmin()) ? kvRow("회원제 요금", `${member.weekday ? `주중 ${fmtWon(member.weekday)}` : ""}${member.weekend ? ` · 주말 ${fmtWon(member.weekend)}` : ""}`.trim() || "미확인", isAdmin() ? esc(member.note || "") : "") : ""}
-      ${od.green_detail ? kvRow("공식 요금 상세", esc(od.green_detail), esc(od.checked_at ? `확인 ${fmtDate(od.checked_at)}` : "")) : ""}
-      ${od.cart_detail ? kvRow("카트", esc(od.cart_detail)) : ""}
-      ${od.caddie_detail ? kvRow("캐디", esc(od.caddie_detail)) : ""}
-      ${od.facility_fee ? kvRow("시설 이용료", esc(textOf(od.facility_fee))) : ""}
-      ${od.rental ? kvRow("클럽 대여", esc(textOf(od.rental))) : ""}
+      ${asOf ? `<p class="source-line">${isAdmin() ? `요금 기준 ${esc(fee.basis || "")} · 확인 ${fmtDate(asOf)}` : `요금 업데이트 ${esc(fmtDate(asOf))}`}</p>` : ""}
+      ${market && (market.weekday_min || market.weekend_min) ? `<div class="inline-fact">
+        <span class="inline-fact-label">관측 최저가</span>
+        <span>${market.weekday_min ? `주중 ${won(market.weekday_min)}` : ""}${market.weekday_min && market.weekend_min ? " · " : ""}${market.weekend_min ? `주말 ${won(market.weekend_min)}` : ""}</span>
+        ${isAdmin() && market.source ? `<span class="muted">${esc(market.source)}</span>` : ""}
+      </div>` : ""}
+      ${member && (member.weekday || member.weekend) ? `<div class="inline-fact">
+        <span class="inline-fact-label">회원제 요금</span>
+        <span>${member.weekday ? `주중 ${won(member.weekday)}` : ""}${member.weekday && member.weekend ? " · " : ""}${member.weekend ? `주말 ${won(member.weekend)}` : ""}</span>
+      </div>` : ""}
+      ${detailRows.length ? `<dl class="fact-list">${detailRows.map(([k, v]) => `<div><dt>${esc(k)}</dt><dd>${v}</dd></div>`).join("")}</dl>` : ""}
       ${tableHTML}
-      ${kvRowKnown("예약 오픈", cancel.open_cycle || "")}
-      ${cancelText === "미확인" && !isAdmin() ? "" : kvRow("취소 규정", esc(cancelText), esc(cancel.notes || ""))}
-      ${evidenceDetails(cancel.evidence, "취소·위약 근거")}
-      ${evidenceDetails(cancel.weather_evidence, "악천후 정산 근거")}
-      ${fee.note ? kvRow("요금 비고", esc(fee.note)) : ""}
-      ${isAdmin() && (fee.sources ?? []).length ? `<p class="section-desc">출처: ${(fee.sources ?? []).slice(0, 4).map((s) => s.url ? `<a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.source || shortUrl(s.url))}</a>` : esc(s.source || "")).join(" · ")}</p>` : ""}
+
+      <div class="policy-grid">
+        <div class="policy-card">
+          <h3 class="card-title">${icon("calendar")}예약 오픈</h3>
+          ${cancel.open_cycle
+            ? `<p class="policy-text">${esc(cancel.open_cycle)}</p>`
+            : `<p class="policy-text muted">예약 오픈 주기를 확인하지 못했습니다. 전화로 확인하세요.</p>`}
+        </div>
+        <div class="policy-card">
+          <h3 class="card-title">${icon("clock")}취소 · 위약</h3>
+          ${timeline}
+          ${cancelText
+            ? `<p class="policy-text">${esc(cancelText)}</p>`
+            : `<p class="policy-text muted">취소 규정을 확인하지 못했습니다. 예약 전 전화로 확인하세요.</p>`}
+          ${cancel.notes ? `<p class="policy-text muted">${esc(cancel.notes)}</p>` : ""}
+          ${evidenceDetails(cancel.evidence, "취소·위약 근거")}
+          ${evidenceDetails(cancel.weather_evidence, "악천후 정산 근거")}
+        </div>
+      </div>
+      ${fee.note ? `<p class="source-line">${esc(fee.note)}</p>` : ""}
+      ${isAdmin() && (fee.sources ?? []).length ? `<p class="source-line">출처: ${(fee.sources ?? []).slice(0, 4).map((s) => s.url ? `<a class="link" href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.source || shortUrl(s.url))}</a>` : esc(s.source || "")).join(" · ")}</p>` : ""}
     </div>
   </section>`;
 
-  /* 04 현장 운영 */
-  const opsRows: string[] = [];
+  /* 02 코스 스펙 */
+  const grass = co.grass ?? {};
+  const grassCards = (Object.keys(GRASS) as Array<keyof typeof GRASS>).map((k) => {
+    const g = grass[k];
+    const t = valCell(g);
+    const dot = k === "tee" ? "is-tee" : k === "fairway" ? "is-fairway" : "is-green";
+    return `<div class="grass-card${t ? "" : " is-empty"}">
+      <span class="grass-dot ${dot}" aria-hidden="true"></span>
+      <span class="grass-label">${GRASS[k]}</span>
+      <span class="grass-value">${t ? esc(t) : "확인 안 됨"}</span>
+    </div>`;
+  }).join("");
+
+  let kgaHTML = "";
+  const kga = co.kga ?? null;
+  if (kga) {
+    const combos = kga.hole_combinations ?? [];
+    const rows: string[] = [];
+    for (const cb of combos.slice(0, 4)) {
+      if (typeof cb === "string") continue;
+      for (const t of (cb.tees ?? []).slice(0, 8)) {
+        rows.push(`<tr><td>${esc([cb.course_name_1, cb.course_name_2].filter(Boolean).join(" + "))}</td>
+          <td>${esc(t.tee || "")}</td><td>${esc(t.gender || "")}</td>
+          <td class="num">${fmtNum(t.length_yds)}</td><td class="num">${fmtNum(t.course_rating, 1)}</td><td class="num">${fmtNum(t.slope_rating)}</td></tr>`);
+      }
+    }
+    if (rows.length) {
+      kgaHTML = `<details class="more-box"><summary>KGA 코스레이팅 · 슬로프 ${rows.length}행 펼치기</summary>
+        <div class="table-wrap"><table>
+        <thead><tr><th scope="col">조합</th><th scope="col">티</th><th scope="col">성별</th><th scope="col">길이(yd)</th><th scope="col">코스레이팅</th><th scope="col">슬로프</th></tr></thead>
+        <tbody>${rows.join("")}</tbody></table></div>
+        ${isAdmin() ? `<p class="source-line">출처: 대한골프협회(KGA) 코스레이팅™/슬로프레이팅™ · 18홀 조합 단위</p>` : ""}
+      </details>`;
+    }
+  }
+
+  const holes = m.holes ?? {};
+  const holeText = [
+    holes.total ? `총 ${holes.total}홀` : null,
+    holes.member ? `회원 ${holes.member}` : null,
+    holes.public ? `대중 ${holes.public}` : null,
+    holes.non_member ? `비회원 ${holes.non_member}` : null,
+  ].filter(Boolean).join(" · ");
+  const yard = co.length_m ? Math.round(co.length_m * 1.0936) : null;
+
+  const s2 = `<section class="section" id="s2" aria-labelledby="s2-h">
+    <div class="section-head">
+      <h2 id="s2-h"><span class="sec-num">02</span>코스 스펙</h2>
+      <p class="section-desc">규모·전장·잔디와 KGA 공식 레이팅. 레이팅은 난이도 비교의 1차 기준입니다.</p>
+    </div>
+    <div class="section-body">
+      ${co.length_m ? `<div class="spec-hero">
+        <div class="spec-hero-main">
+          <span class="spec-label">전장 (18홀 기준)</span>
+          <p class="spec-value">${fmtNum(co.length_m)}<span>m</span> <small>${yard ? `${fmtNum(yard)}yd` : ""}</small></p>
+        </div>
+        ${gauge({
+          value: co.length_m, min: 4800, max: 7800,
+          ticks: [{ at: 4800, label: "4.8km" }, { at: 6300, label: "6.3km" }, { at: 7800, label: "7.8km" }],
+          label: `전장 ${fmtNum(co.length_m)}미터, 18홀 기준 4.8km~7.8km 범위`,
+        })}
+        <p class="spec-hint">국내 18홀 평균은 약 6.4km입니다.</p>
+      </div>` : ""}
+      <dl class="spec-facts">
+        ${holeText ? `<div><dt>홀 구성</dt><dd>${esc(holeText)}</dd></div>` : ""}
+        ${co.par ? `<div><dt>파</dt><dd>${co.par}</dd></div>` : ""}
+        ${(co.blocks ?? []).length ? `<div><dt>코스 구성</dt><dd>${esc((co.blocks ?? []).join(" · "))}</dd></div>` : ""}
+        ${(m.course_blocks ?? []).length ? `<div><dt>세부 코스명</dt><dd>${esc((m.course_blocks ?? []).join(" · "))}</dd></div>` : ""}
+        ${co.course_names ? `<div><dt>코스명</dt><dd>${esc(textOf(co.course_names))}</dd></div>` : ""}
+        ${co.night_light ? `<div><dt>야간 라운드</dt><dd>${esc(textOf(co.night_light))}</dd></div>` : ""}
+      </dl>
+      <div class="grass-cards">${grassCards}</div>
+      ${(co.extra_courses ?? []).length ? `<div class="extra-courses"><h3 class="card-title">추가 코스</h3>${extraCoursesHTML(co.extra_courses ?? [])}</div>` : ""}
+      ${kgaHTML}
+      ${co.hole_by_hole ? `<details class="more-box"><summary>홀별 파·거리 원본 보기</summary><pre class="pre">${esc(JSON.stringify(co.hole_by_hole, null, 1))}</pre></details>` : ""}
+    </div>
+  </section>`;
+
+  /* 03 현장 운영 */
+  const opsTiles: string[] = [];
   const opsUnknown: string[] = [];
   for (const k of Object.keys(OPS) as OpsKey[]) {
     const v = ops[k];
     if (!v) { opsUnknown.push(OPS[k]); continue; }
     const t = valCell(v.value);
-    if (t) opsRows.push(kvRow(OPS[k], esc(t), evidenceDetails(v.evidence)));
-    else opsUnknown.push(OPS[k]);
+    if (t) {
+      const tone = toneOf(t);
+      opsTiles.push(tile(OPS_ICON[k], OPS[k], t, { tone: tone.tone, badgeText: tone.label }));
+    } else opsUnknown.push(OPS[k]);
   }
-  const s4 = `
-  <section class="section" id="s4">
-    <h2><span class="num">04</span>현장 운영</h2>
-    <p class="section-desc">노캐디·인원·카트·체크인처럼 예약 전에 알아야 하는 실제 플레이 조건.</p>
+  const s3 = `<section class="section" id="s3" aria-labelledby="s3-h">
+    <div class="section-head">
+      <h2 id="s3-h"><span class="sec-num">03</span>현장 운영</h2>
+      <p class="section-desc">노캐디·인원·카트·체크인처럼 예약 전에 알아야 하는 실제 플레이 조건.</p>
+    </div>
     <div class="section-body">
-      ${opsRows.join("") || `<div class="callout">공식 채널에서 확인된 운영 정보가 아직 없습니다. 아래 항목은 전화·현장 확인이 필요합니다.</div>`}
-      ${isAdmin() && opsUnknown.length ? unconfirmedList(opsUnknown) : ""}
+      ${opsTiles.length ? `<div class="tiles">${opsTiles.join("")}</div>`
+        : `<div class="callout">공식 채널에서 확인된 운영 정보가 아직 없습니다. 전화·현장 확인이 필요합니다.</div>`}
+      ${unconfirmedBox("운영 정보", opsUnknown)}
+      ${isAdmin() && ops.browser_official
+        ? `<details class="more-box"><summary>수집 원문 보기</summary><pre class="pre">${esc(JSON.stringify(ops.browser_official, null, 1))}</pre></details>`
+        : ""}
     </div>
   </section>`;
 
-  /* 05 부대시설 */
-  const facRows: string[] = [];
+  /* 04 부대시설 */
+  const facTiles: string[] = [];
   const facUnknown: string[] = [];
   for (const k of Object.keys(FAC) as FacilityKey[]) {
     const v = fac[k];
     if (!v) { facUnknown.push(FAC[k]); continue; }
     const t = valCell(v.value);
-    if (t) facRows.push(kvRow(FAC[k], esc(t), evidenceDetails(v.evidence)));
-    else facUnknown.push(FAC[k]);
+    if (t) {
+      const tone = toneOf(t, k === "closed_days");
+      facTiles.push(tile(FAC_ICON[k], FAC[k], t, { tone: tone.tone, badgeText: tone.label }));
+    } else facUnknown.push(FAC[k]);
   }
-  const s5 = `
-  <section class="section" id="s5">
-    <h2><span class="num">05</span>부대시설</h2>
-    <p class="section-desc">연습·식음·락카·숙박·야간 조명 등 라운드 환경.</p>
+  const s4 = `<section class="section" id="s4" aria-labelledby="s4-h">
+    <div class="section-head">
+      <h2 id="s4-h"><span class="sec-num">04</span>부대시설</h2>
+      <p class="section-desc">연습·식음·락카·숙박·야간 조명처럼 라운드 환경을 좌우하는 시설.</p>
+    </div>
     <div class="section-body">
-      ${facRows.join("") || `<div class="callout">확인된 부대시설 정보가 없습니다.</div>`}
-      ${isAdmin() && facUnknown.length ? unconfirmedList(facUnknown) : ""}
-      ${isAdmin() && (fac.gf_facilities ?? []).length ? `<p class="section-desc">참고: ${esc((fac.gf_facilities ?? []).slice(0, 3).join(" / "))}</p>` : ""}
+      ${facTiles.length ? `<div class="tiles">${facTiles.join("")}</div>` : `<div class="callout">확인된 부대시설 정보가 없습니다.</div>`}
+      ${unconfirmedBox("시설 정보", facUnknown)}
+      ${isAdmin() && (fac.gf_facilities ?? []).length ? `<p class="source-line">참고(공식 시설 목록): ${esc((fac.gf_facilities ?? []).slice(0, 3).join(" / "))}</p>` : ""}
     </div>
   </section>`;
 
-  /* 06 브리핑·공지 */
-  const alert = br.alert;
-  const noticeTags = br.notices?.tags;
-  const noticeUrl = br.notices?.url;
-  const notices = (br.notices?.items ?? []).slice(0, 10);
-  const noticeHTML = notices.length ? `<ul class="notice-list">${notices.map((n) => {
-    const link = typeof n.url === "string" && /^https?:/.test(n.url);
-    const title = link && n.url ? `<a href="${esc(n.url)}" target="_blank" rel="noopener noreferrer">${esc(n.title ?? "")}</a>` : esc(n.title ?? "");
-    return `<li><time>${esc(fmtDate(n.date))}</time><span>${title}</span></li>`;
-  }).join("")}</ul>` : `<p class="section-desc">최근 공지를 확인하지 못했습니다. 공지 게시판이 없거나 이미지 본문만 있는 경우입니다.</p>`;
+  /* 05 브리핑·공지 */
+  const alert: BriefingAlert | null | undefined = br.alert;
+  const items = br.notices?.items ?? [];
+  const { real, products } = splitNotices(items);
+  const noticeHTML = real.length
+    ? `<ul class="notice-list">${real.slice(0, 10).map((n) => `<li>
+        <time datetime="${esc(n.date.replaceAll(".", "-"))}">${esc(n.date)}</time>
+        <span class="notice-title">${n.url
+          ? `<a class="link" href="${esc(n.url)}" target="_blank" rel="noopener noreferrer">${esc(n.title)}</a>`
+          : esc(n.title)}</span>
+      </li>`).join("")}</ul>`
+    : `<p class="section-desc">운영 공지를 확인하지 못했습니다. 공지 게시판이 없거나 이미지 본문만 있는 경우입니다.</p>`;
   const period = alert ? periodText(alert.period) : "";
-  const s6 = `
-  <section class="section" id="s6">
-    <h2><span class="num">06</span>브리핑·공지</h2>
-    <p class="section-desc">휴장·에어레이션·요금 변경 같은 최근 공지와 라운더 평가. 예약 전에 가장 먼저 볼 영역입니다.</p>
+  const review = br.review;
+  const s5 = `<section class="section" id="s5" aria-labelledby="s5-h">
+    <div class="section-head">
+      <h2 id="s5-h"><span class="sec-num">05</span>공지 · 브리핑</h2>
+      <p class="section-desc">휴장·에어레이션·요금 변경 같은 최근 공지와 라운더 평가. 예약 전에 가장 먼저 볼 영역입니다.</p>
+    </div>
     <div class="section-body">
       ${alert ? `<div class="callout ${(alert.level ? LEVEL[alert.level] : undefined) ?? "info"}">
         <strong>${esc(alert.summary || (alert.confirmed ? "확인된 공지" : "확인 필요"))}</strong>
         ${esc(alert.detail || "")}
         ${period ? `<div class="sub">기간: ${esc(period)}</div>` : ""}
-        ${isAdmin() && alert.source_url ? `<div class="sub"><a href="${esc(alert.source_url)}" target="_blank" rel="noopener noreferrer">근거 보기</a></div>` : ""}
+        ${isAdmin() && alert.source_url ? `<div class="sub"><a class="link" href="${esc(alert.source_url)}" target="_blank" rel="noopener noreferrer">근거 보기</a></div>` : ""}
       </div>` : ""}
-      ${br.review && br.review.score_10 != null ? kvRow("라운더 평가", `${fmtNum(br.review.score_10, 1)} / 10${br.review.count ? ` · ${fmtNum(br.review.count)}건` : ""}`, esc((isAdmin() ? [br.review.note, br.review.source] : [br.review.note]).filter(Boolean).join(" · "))) : ""}
-      ${br.course_notes ? kvRow("코스 메모", esc(isAdmin() ? br.course_notes : publicNote(br.course_notes))) : ""}
-      ${br.recent_notice_text ? kvRow("공지 요약", esc(br.recent_notice_text)) : ""}
-      <div>
-        <h3 class="h3">최근 공지</h3>
+      ${review && review.score_10 != null ? `<div class="review-card">
+        <div class="review-head"><h3 class="card-title">${icon("star")}라운더 평가</h3>${review.count ? `<span class="muted">${fmtNum(review.count)}건 집계</span>` : ""}</div>
+        ${ratingBar(review.score_10)}
+        ${review.note ? `<p class="source-line">${esc(review.note)}</p>` : ""}
+      </div>` : ""}
+      ${br.recent_notice_text ? `<div class="inline-fact"><span class="inline-fact-label">공지 요약</span><span>${esc(br.recent_notice_text)}</span></div>` : ""}
+      ${br.course_notes ? `<div class="inline-fact"><span class="inline-fact-label">코스 메모</span><span>${esc(isAdmin() ? br.course_notes : publicNote(br.course_notes))}</span></div>` : ""}
+      <div class="notice-block">
+        <h3 class="card-title">최근 공지</h3>
         ${noticeHTML}
+        ${products.length ? `<details class="more-box"><summary>클럽·장비 상품 소식 ${products.length}건 (공지 아님)</summary>
+          <ul class="notice-list is-product">${products.slice(0, 10).map((n) => `<li><time>${esc(n.date)}</time><span class="notice-title">${esc(n.title)}</span></li>`).join("")}</ul>
+        </details>` : ""}
+        ${br.collected_at ? `<p class="source-line">${isAdmin() ? `수집 ${fmtDate(br.collected_at)}` : `공지 확인 ${esc(fmtDate(br.collected_at))}`}</p>` : ""}
       </div>
-      ${noticeTags && Object.keys(noticeTags).length ? `<div class="tags">${Object.entries(noticeTags).slice(0, 6).map(([tag, arr]) =>
-        `<span class="tag">${esc(tag)} ${Array.isArray(arr) ? arr.length : ""}</span>`).join("")}</div>` : ""}
-      ${isAdmin() && noticeUrl ? `<p class="section-desc">공지 게시판: ${/^https?:/.test(noticeUrl) ? `<a href="${esc(noticeUrl)}" target="_blank" rel="noopener noreferrer">${esc(shortUrl(noticeUrl))}</a>` : "수집 아카이브"}</p>` : ""}
-      ${isAdmin() && (br.unconfirmed ?? []).length ? unconfirmedList((br.unconfirmed ?? []).slice(0, 14)) : ""}
-      ${br.collected_at ? `<p class="section-desc">${isAdmin() ? `수집 ${fmtDate(br.collected_at)}` : `공지 확인 ${esc(fmtDate(br.collected_at))}`}</p>` : ""}
-      ${isAdmin() && (br.sources ?? []).length ? `<p class="section-desc">출처: ${(br.sources ?? []).slice(0, 5).map((u) => /^https?:/.test(u) ? `<a href="${esc(u)}" target="_blank" rel="noopener noreferrer">${esc(shortUrl(u))}</a>` : esc(u)).join(" · ")}</p>` : ""}
+      ${isAdmin() && (br.unconfirmed ?? []).length ? unconfirmedBox("공지", (br.unconfirmed ?? []).slice(0, 14)) : ""}
+      ${isAdmin() && (br.sources ?? []).length ? `<p class="source-line">출처: ${(br.sources ?? []).slice(0, 5).map((u) => /^https?:/.test(u) ? `<a class="link" href="${esc(u)}" target="_blank" rel="noopener noreferrer">${esc(shortUrl(u))}</a>` : esc(u)).join(" · ")}</p>` : ""}
     </div>
   </section>`;
+
+  /* 06 동일 부지 클러스터 */
+  const cluster = c.cluster ? state.clusters.get(c.cluster) ?? null : null;
+  const s6 = cluster ? `<section class="section" id="s6" aria-labelledby="s6-h">
+    <div class="section-head">
+      <h2 id="s6-h"><span class="sec-num">06</span>동일 부지 코스</h2>
+      <p class="section-desc">${esc(cluster.relationship || cluster.basis || "같은 소재지의 코스가 별도 레코드로 등록되어 있습니다.")}</p>
+    </div>
+    <div class="section-body">
+      <div class="cluster-grid">
+        ${others.map((o) => {
+          const item = o.item;
+          const feeV = item ? (item.green_fee?.weekend ?? item.green_fee?.weekday ?? null) : null;
+          return `<div class="cluster-card">
+            <div class="cluster-top">
+              <h3 class="cluster-name">${o.id ? `<a class="link" href="#/c/${esc(o.id)}">${esc(o.name)}</a>` : esc(o.name)}</h3>
+              <span class="stat-pill">${o.holes ? `<b>${o.holes}</b>홀` : "홀수 확인 안 됨"}</span>
+            </div>
+            <p class="cluster-meta">${item?.type ? esc(item.type) : "이용형태 확인 안 됨"}${feeV != null ? ` · 그린피 ${won(feeV)}~` : ""}</p>
+            ${o.id ? `<a class="btn btn-sm" href="#/c/${esc(o.id)}">상세 보기${icon("arrow-right")}</a>` : ""}
+          </div>`;
+        }).join("")}
+      </div>
+    </div>
+  </section>` : "";
 
   /* 07 클럽 렌탈 */
   const nd = rt.nearby_delivery;
   const rentalRows: Array<[string, unknown]> = [
-    ["대여 가능", rt.available], ["풀세트 요금", rt.full_set != null ? fmtWon(rt.full_set) : null],
+    ["대여 가능", rt.available], ["풀세트 요금", rt.full_set != null ? won(rt.full_set) : null],
     ["요금 안내", rt.fee_text], ["브랜드", rt.brand], ["좌타용", rt.left_handed],
     ["골프화", rt.shoes], ["9홀", rt.nine_hole], ["거리측정기", rt.range_finder],
     ["사전 예약", rt.reservation],
   ];
-  const rentalRowsHTML = rentalRows
-    .map(([label, v]) => {
-      const t = valCell(v);
-      return t ? kvRow(label, esc(t)) : null;
-    })
-    .filter((row): row is string => row !== null)
-    .join("");
-  const providers = (nd?.providers ?? []).map((p: NearbyDeliveryProvider) => `
-    <div class="provider">
+  const rentalTiles = rentalRows.map(([label, v]) => {
+    const t = valCell(v);
+    return t ? `<div class="mini-fact"><span>${esc(label)}</span><b>${esc(t)}</b></div>` : "";
+  }).filter(Boolean).join("");
+  const providers = (nd?.providers ?? []).map((p: NearbyDeliveryProvider) => {
+    const bookable = p.bookable !== false && !/중단|불가|마감/i.test(p.operating_status ?? "");
+    return `<div class="provider${bookable ? "" : " is-off"}">
       <div class="provider-top">
-        <span class="provider-name">${esc(p.name)}</span>
-        ${p.coverage ? badge(p.coverage === "O" ? "ok" : p.coverage === "조건부" ? "warn" : "neutral", p.coverage === "O" ? "권역 가능" : p.coverage) : ""}
+        <h3 class="provider-name">${esc(p.name)}</h3>
+        <span class="badge ${bookable ? "ok" : "danger"}">${bookable ? "예약 가능" : "예약 중단"}</span>
       </div>
-      <div class="provider-meta">${esc(p.basis || "")}</div>
-      <div class="provider-meta">
-        ${p.price_headline ? `${esc(p.price_headline)}` : ""}
-        ${p.phone ? ` · <a href="tel:${esc(String(p.phone).replace(/[^\d+]/g, ""))}">${esc(p.phone)}</a>` : ""}
-        ${p.operating_status ? ` · ${esc(p.operating_status)}` : ""}
+      <p class="provider-price">${esc(p.price_headline || "요금 확인 안 됨")}</p>
+      <p class="provider-meta">${esc(p.basis || "")}${p.operating_status ? ` · ${esc(p.operating_status)}` : ""}</p>
+      <div class="provider-actions">
+        ${p.phone ? `<a class="btn btn-sm" href="tel:${esc(String(p.phone).replace(/[^\d+]/g, ""))}">${icon("phone")}${esc(p.phone)}</a>` : ""}
+        ${p.coverage ? `<span class="tag">권역 ${esc(String(p.coverage))}</span>` : ""}
       </div>
-    </div>`).join("");
-  const s7 = `
-  <section class="section" id="s7">
-    <h2><span class="num">07</span>클럽 렌탈</h2>
-    <p class="section-desc">골프장 자체 대여와, 이 권역에 배송·픽업이 가능한 렌탈 업체. 해외 골퍼·장비 없는 라운드에 필요합니다.</p>
+    </div>`;
+  }).join("");
+
+  const s7 = `<section class="section" id="s7" aria-labelledby="s7-h">
+    <div class="section-head">
+      <h2 id="s7-h"><span class="sec-num">07</span>클럽 렌탈</h2>
+      <p class="section-desc">골프장 자체 대여와, 이 권역에 배송·픽업이 가능한 렌탈 업체.</p>
+    </div>
     <div class="section-body">
-      ${rentalRowsHTML || `<div class="callout">골프장 자체 클럽 대여 정보가 확인되지 않았습니다.</div>`}
+      ${rentalTiles ? `<div class="mini-facts">${rentalTiles}</div>` : `<div class="callout">골프장 자체 클럽 대여 정보가 확인되지 않았습니다.</div>`}
       ${evidenceDetails(rt.evidence, "대여 근거")}
-      ${nd ? `<div>
-        <h3 class="h3">${esc(nd.region || "")} 권역 렌탈·딜리버리 ${providers ? `(${nd.provider_count || (nd.providers ?? []).length}곳)` : ""}</h3>
-        <div class="providers">${providers || `<p class="section-desc">이 권역에 확인된 배송 업체가 없습니다.</p>`}</div>
-        <p class="section-desc">${esc(nd.note_code || "")}${nd.verified_at ? (isAdmin() ? ` · 확인 ${esc(nd.verified_at)}` : ` · 업데이트 ${esc(fmtDate(nd.verified_at))}`) : ""}</p>
-      </div>` : ""}
-      <p class="section-desc"><a href="#/rental">전체 렌탈·딜리버리 업체 8곳 보기 →</a></p>
+      ${nd && (nd.providers ?? []).length ? `<div class="providers">
+        <div class="providers-head"><h3 class="card-title">${esc(nd.region || "")} 권역 배송 업체 ${(nd.providers ?? []).length}곳</h3>
+        <a class="link" href="#/rental">전체 렌탈 업체 보기 →</a></div>
+        ${providers}
+        <p class="source-line">${esc(nd.note_code || "")}${nd.verified_at ? (isAdmin() ? ` · 확인 ${esc(nd.verified_at)}` : ` · 업데이트 ${esc(fmtDate(nd.verified_at))}`) : ""}</p>
+      </div>` : `<p class="section-desc"><a class="link" href="#/rental">전체 렌탈·딜리버리 업체 보기 →</a></p>`}
     </div>
   </section>`;
 
-  const COVERAGE_LABELS: Array<[CoverageArea, string]> = [
-    ["basic", "기본"], ["course", "코스"], ["fee", "요금"], ["ops", "운영"],
-    ["facility", "시설"], ["briefing", "브리핑"], ["rental", "렌탈"],
-  ];
-  const covRow = Object.keys(cov).length ? `<div class="stat-grid" style="margin-top:14px">
-    ${COVERAGE_LABELS.map(([k, l]) => `<div class="stat"><div class="n">${fmtPct(cov[k])}</div><div class="l">${l} 정보 충실도</div></div>`).join("")}
-  </div>` : "";
-
+  /* 데이터 정보 */
+  const covRows = COVERAGE_LABELS.map(([k, label]) => {
+    const v = cov[k];
+    return typeof v === "number" ? coverageBar(label, v) : "";
+  }).join("");
   const updated = updatedAt(d.meta?.normalized_at, d.meta?.generated_at);
-  // 채움률·스키마·스키마 문서는 내부 수집 지표다 — 일반 화면에는 기준일만 남긴다
-  const dataInfo = isAdmin() ? `
-  <section class="section"><h2>데이터 정보</h2>
-    <p class="section-desc">7개 영역 채움률. 100%가 아니어도 비어 있는 값은 '미확인'이며 '없음'과 다릅니다.</p>
-    ${covRow}
-    <p class="section-desc" style="margin-top:14px">수집 ${esc(updated)} · 스키마 ${esc(d.meta?.schema || "")} · <a href="${REPO_URL}/blob/main/data/v29/schema.md" target="_blank" rel="noopener noreferrer">스키마 문서</a></p>
-  </section>` : `
-  <section class="section"><h2>업데이트</h2>
-    <p class="section-desc">${esc(updated || "—")} 기준 · 공개 자료에서 확인된 값만 표시합니다.</p>
-  </section>`;
+  const dataInfo = isAdmin()
+    ? `<section class="section" aria-labelledby="s8-h">
+        <div class="section-head"><h2 id="s8-h"><span class="sec-num">08</span>데이터 정보</h2>
+        <p class="section-desc">7개 영역 채움률. 비어 있는 값은 '미확인'이며 '없음'과 다릅니다.</p></div>
+        <div class="section-body"><div class="cov-list">${covRows}</div>
+        <p class="source-line">수집 ${esc(updated)} · 스키마 ${esc(d.meta?.schema || "")} · <a class="link" href="${REPO_URL}/blob/main/data/v29/schema.md" target="_blank" rel="noopener noreferrer">스키마 문서</a></p></div>
+      </section>`
+    : `<section class="section" aria-labelledby="s8-h">
+        <div class="section-head"><h2 id="s8-h"><span class="sec-num">08</span>데이터 기준</h2>
+        <p class="section-desc">${esc(updated || "—")} 기준 · 공개 자료에서 확인된 값만 표시합니다. 확인하지 못한 항목은 위 영역의 '확인 안 됨'으로 남깁니다.</p></div>
+      </section>`;
 
   return `${s1}${s2}${s3}${s4}${s5}${s6}${s7}${dataInfo}`;
 }
 
+function unconfirmedBox(label: string, labels: string[]): string {
+  if (!labels.length) return "";
+  return `<details class="more-box unconfirmed"><summary>확인하지 못한 ${label} ${labels.length}개</summary>
+    <p>${esc(labels.join(" · "))}</p>
+    <p class="muted">값이 없다는 것은 '없음'이 아니라 '확인하지 못함'입니다. 전화로 확인하세요.</p>
+  </details>`;
+}
+
+function extraCoursesHTML(list: Array<ExtraCourse | string>): string {
+  return `<div class="extra-courses-list">${list.map((raw) => {
+    const x: ExtraCourse = typeof raw === "string" ? { name: raw } : raw;
+    const title = [x.name ?? "추가 코스", x.holes ? `${x.holes}홀` : "", x.type ?? ""].filter(Boolean).join(" · ");
+    const facts = [
+      x.open_hours ? `운영 ${x.open_hours}` : "",
+      x.closed ? `휴장 ${x.closed}` : "",
+      x.tel ? `전화 ${x.tel}` : "",
+      x.fee ? `요금 ${x.fee}` : "",
+    ].filter(Boolean).join(" · ");
+    return `<div class="extra-course">
+      <strong>${esc(title)}</strong>
+      ${facts ? `<div class="sub">${esc(facts)}</div>` : ""}
+      ${x.note ? `<div class="sub">${esc(x.note)}</div>` : ""}
+    </div>`;
+  }).join("")}</div>`;
+}
+
 /* ---------------- 렌탈 페이지 ---------------- */
+
+function dayPrice(text?: string | null): number | null {
+  if (!text) return null;
+  // "1박2일 50,000원", "+1일 10,000원" 같은 조건부·추가 요금은 1일 기준가가 아니다
+  const re = /(?:^|[^0-9박+])(?:1일|일)\s*([0-9][0-9,]{2,})\s*원/g;
+  let m: RegExpExecArray | null;
+  let best: number | null = null;
+  while ((m = re.exec(text)) !== null) {
+    const v = Number(m[1].replace(/,/g, ""));
+    if (!Number.isFinite(v)) continue;
+    if (best === null || v < best) best = v;
+  }
+  return best;
+}
+
+function isBookable(p: RentalProvider): boolean {
+  return !/중단|불가|마감|sold\s*out/i.test(p.status ?? "");
+}
+
+let rentalRegion = "";
+
 function renderRental(): void {
   const r = state.rental;
   if (!r) {
-    $<HTMLElement>("#view-page").innerHTML = `<div class="page"><h1>클럽 렌탈·딜리버리</h1><p class="page-lead">렌탈 데이터를 불러오지 못했습니다.</p></div>`;
+    $<HTMLElement>("#view-page").innerHTML = `<div class="page">
+      <h1 class="page-title" tabindex="-1">클럽 렌탈·딜리버리</h1>
+      <div class="state-box" role="alert"><span class="state-icon">${icon("alert")}</span>
+      <h2 class="state-title">렌탈 데이터를 불러오지 못했습니다</h2>
+      <p class="state-desc">잠시 후 다시 시도해 주세요.</p>
+      <button class="btn" type="button" id="rental-retry">다시 시도</button></div></div>`;
+    $<HTMLButtonElement>("#rental-retry")?.addEventListener("click", () => void renderRental());
+    setTitle("클럽 렌탈 — CourseBrief");
     return;
   }
-  const providers = r.providers ?? [];
-  const regions = ["수도권", "강원", "충청", "호남", "영남", "제주"];
-  const cards = providers.map((p) => `
-    <article class="rental-card">
+  const all = r.providers ?? [];
+  const regions: RentalRegion[] = ["수도권", "강원", "충청", "호남", "영남", "제주"];
+  const region = rentalRegion as RentalRegion | "";
+  const filtered = region ? all.filter((p) => (p.regions ?? []).includes(region)) : all;
+  const sorted = [...filtered].sort((a, b) => {
+    const ba = isBookable(a) ? 0 : 1;
+    const bb = isBookable(b) ? 0 : 1;
+    if (ba !== bb) return ba - bb;
+    const pa = dayPrice(a.price) ?? Infinity;
+    const pb = dayPrice(b.price) ?? Infinity;
+    if (pa !== pb) return pa - pb;
+    return a.name.localeCompare(b.name, "ko");
+  });
+  const soldOut = all.filter((p) => !isBookable(p)).length;
+
+  const cards = sorted.map((p) => {
+    const bookable = isBookable(p);
+    const day = dayPrice(p.price);
+    const langs = (p.languages ?? "").split(/[·,]/).map((s) => s.trim()).filter(Boolean);
+    return `<article class="rental-card${bookable ? "" : " is-off"}">
       <div class="rental-head">
-        <span class="rental-name">${esc(p.name)}</span>
-        <span class="tags">${(p.regions ?? []).map((rg) => `<span class="tag">${esc(rg)}</span>`).join("")}</span>
+        <div>
+          <h2 class="rental-name">${esc(p.name)}</h2>
+          <p class="rental-regions">${(p.regions ?? []).map((rg) => `<span class="tag">${esc(rg)}</span>`).join("")}</p>
+        </div>
+        <span class="badge ${bookable ? "ok" : "danger"}">${bookable ? "예약 가능" : "예약 중단"}</span>
       </div>
-      <div class="rental-grid">
-        ${p.price ? `<div><b>요금</b><span>${esc(p.price)}</span></div>` : ""}
-        ${p.brands ? `<div><b>클럽</b><span>${esc(p.brands)}</span></div>` : ""}
-        ${p.delivery ? `<div><b>배송·픽업</b><span>${esc(p.delivery)}</span></div>` : ""}
-        ${p.languages ? `<div><b>언어</b><span>${esc(p.languages)}</span></div>` : ""}
-        ${p.status ? `<div><b>상태</b><span>${esc(p.status)}</span></div>` : ""}
-        <div><b>연락</b><span>${p.phone ? `<a href="tel:${esc(String(p.phone).replace(/[^\d+]/g, ""))}">${esc(p.phone)}</a>` : "—"}${p.url ? ` · <a href="${esc(p.url)}" target="_blank" rel="noopener noreferrer">홈페이지</a>` : ""}</span></div>
+      <div class="rental-price">
+        ${day != null ? `<span class="rental-price-k">1일 기준</span><span class="rental-price-v">${won(day)}</span>` : `<span class="rental-price-k">요금</span><span class="rental-price-v is-text">${esc(p.price || "확인 안 됨")}</span>`}
       </div>
-      ${p.note ? `<p class="section-desc">${esc(p.note)}</p>` : ""}
-    </article>`).join("");
+      ${day != null && p.price ? `<p class="rental-price-raw">${esc(p.price)}</p>` : ""}
+      <dl class="rental-facts">
+        ${p.brands ? `<div><dt>클럽</dt><dd>${esc(p.brands)}</dd></div>` : ""}
+        ${p.delivery ? `<div><dt>배송·픽업</dt><dd>${esc(p.delivery)}</dd></div>` : ""}
+        ${p.status ? `<div><dt>상태</dt><dd>${esc(p.status)}</dd></div>` : ""}
+        ${langs.length ? `<div><dt>언어</dt><dd>${langs.map((l) => `<span class="tag">${esc(l)}</span>`).join(" ")}</dd></div>` : ""}
+        ${p.course_count ? `<div><dt>연결 구장</dt><dd>${p.course_count}곳</dd></div>` : ""}
+      </dl>
+      <div class="rental-actions">
+        ${p.phone ? `<a class="btn btn-sm" href="tel:${esc(String(p.phone).replace(/[^\d+]/g, ""))}">${icon("phone")}${esc(p.phone)}</a>` : ""}
+        ${p.url ? `<a class="btn btn-ghost btn-sm" href="${esc(p.url)}" target="_blank" rel="noopener noreferrer">${icon("external")}홈페이지</a>` : ""}
+      </div>
+    </article>`;
+  }).join("");
 
   const verified = r.dataset?.verified_at ?? "";
-  // 조사 시점·원문 노트는 관리자 모드에서만. 일반 화면은 업데이트 날짜와 범위만
-  const rentalMeta = isAdmin()
-    ? `조사 ${esc(verified)} · ${regions.length}개 권역 · ${providers.length}곳 · <a href="${REPO_URL}/blob/main/data/v29/rental_deliveries.md" target="_blank" rel="noopener noreferrer">원문 조사 노트</a>`
-    : `${verified ? `업데이트 ${esc(fmtDate(verified))} · ` : ""}${regions.length}개 권역 · ${providers.length}곳`;
+  const meta = isAdmin()
+    ? `조사 ${esc(verified)} · ${regions.length}개 권역 · ${all.length}곳 · <a class="link" href="${REPO_URL}/blob/main/data/v29/rental_deliveries.md" target="_blank" rel="noopener noreferrer">원문 조사 노트</a>`
+    : `${verified ? `업데이트 ${esc(fmtDate(verified))} · ` : ""}${regions.length}개 권역 · ${all.length}곳`;
 
   $<HTMLElement>("#view-page").innerHTML = `<div class="page">
-    <h1>클럽 렌탈·딜리버리</h1>
-    <p class="page-lead">해외에서 오셨거나 장비 없이 라운드하실 때 — 골프장 자체 대여와, 이 지역으로 배송·픽업이 가능한 업체를 한곳에 모았습니다.</p>
-    <div class="callout info" style="margin-top:18px">
-      <strong>시장 구조</strong>
-      ${esc(r.summary || "")}
+    <header class="page-head">
+      <h1 class="page-title" tabindex="-1">클럽 렌탈 · 딜리버리</h1>
+      <p class="page-lead">골프장 자체 대여와, 권역으로 배송·픽업이 가능한 업체를 한곳에 모았습니다. 해외에서 오셨거나 장비 없이 라운드할 때 쓰세요.</p>
+    </header>
+    <div class="stat-row">
+      <div class="stat"><span class="stat-n">${all.length}</span><span class="stat-l">업체</span></div>
+      <div class="stat"><span class="stat-n">${all.length - soldOut}</span><span class="stat-l">예약 가능</span></div>
+      <div class="stat"><span class="stat-n">${soldOut}</span><span class="stat-l">예약 중단</span></div>
+      <div class="stat"><span class="stat-n">${regions.length}</span><span class="stat-l">권역</span></div>
     </div>
-    <div class="stack" style="margin-top:18px">${cards}</div>
-    <div class="callout" style="margin-top:18px">
-      <strong>아직 비어 있는 것</strong>
-      다국어(영어·일본어·중국어) 온라인 예약과 거리측정기 대여 옵션 표기가 거의 없습니다. 재고·개별 견적·권역별 실제 배송 가능 여부는 전화·카카오톡 상담으로만 확인됩니다.
+    ${r.summary ? `<div class="callout info"><strong>시장 구조</strong>${esc(r.summary)}</div>` : ""}
+    <div class="rental-filter" role="group" aria-label="권역 필터">
+      <button type="button" class="chip${rentalRegion === "" ? " is-on" : ""}" data-region="" aria-pressed="${rentalRegion === ""}">전체</button>
+      ${regions.map((rg) => {
+        const n = all.filter((p) => (p.regions ?? []).includes(rg)).length;
+        return `<button type="button" class="chip${rentalRegion === rg ? " is-on" : ""}" data-region="${rg}" aria-pressed="${rentalRegion === rg}">${rg}<span class="chip-n">${n}</span></button>`;
+      }).join("")}
     </div>
-    <p class="section-desc" style="margin-top:14px">${rentalMeta}</p>
+    <div class="rental-list">${cards || `<div class="state-box"><h2 class="state-title">이 권역에 확인된 업체가 없습니다</h2><p class="state-desc">전체 권역으로 다시 보세요.</p></div>`}</div>
+    <div class="callout"><strong>아직 비어 있는 것</strong>다국어(영어·일본어·중국어) 온라인 예약과 거리측정기 대여 옵션 표기가 거의 없습니다. 재고·개별 견적·권역별 실제 배송 가능 여부는 전화·카카오톡 상담으로만 확인됩니다.</div>
+    <p class="source-line">${meta}</p>
   </div>`;
+
+  for (const btn of document.querySelectorAll<HTMLButtonElement>("[data-region]")) {
+    btn.addEventListener("click", () => {
+      rentalRegion = btn.dataset.region ?? "";
+      renderRental();
+    });
+  }
+  setTitle("클럽 렌탈·딜리버리 — CourseBrief");
   window.scrollTo({ top: 0 });
 }
 
 /* ---------------- 데이터 소개 ---------------- */
+
 function renderAbout(): void {
   const index = getIndex();
   const d = index.dataset;
   const c = d.counts;
-  // 서버가 내보내는 index.json 은 minify 된 JSON 이므로 바이트 길이가 실제 파일 크기와 같다.
-  // 문자열 length 는 한글을 1자로 세어 실제보다 작게 나온다(175KB vs 199.9KB).
-  const indexBytes = new TextEncoder().encode(JSON.stringify(index)).length;
   const updated = fmtDate(d.built_at);
-  // 데이터 수집·구조 안내는 내부 파이프라인 설명이므로 관리자 모드에서만 — 일반 화면은 기준일 뿐
+  const cov = d.coverage ?? {};
+  const covRows = COVERAGE_LABELS.map(([k, label, detail]) => {
+    const v = cov[k];
+    return typeof v === "number" ? coverageBar(label, v, detail) : "";
+  }).join("");
+
   const lead = isAdmin()
     ? "CourseBrief는 골프장 공식 홈페이지·공지·요금표를 직접 수집하고 공개 데이터와 대조해 7개 영역으로 정리합니다. 모든 값에는 출처와 확인 시점이 붙습니다."
     : "CourseBrief는 전국 골프장을 7개 영역으로 정리한 참고 데이터입니다. 공개 자료에서 확인된 값만 표시하며, 표시되지 않은 항목은 확인하지 못한 값입니다.";
-  const collectPrinciples = isAdmin() ? `
-    <h2 class="h2">수집 원칙</h2>
-    <div class="stack">
-      <p>· 공식 홈페이지·공지사항·요금표를 1순위로 삼고, 2차 사이트 값은 교차검증에만 사용합니다. 실제로 2차 사이트의 레이팅 오표기 사례가 확인되어 KGA 원본을 우선합니다.</p>
-      <p>· 확인되지 않은 값은 <b>미확인</b>으로 남깁니다. "정보 없음"을 "없음"으로 해석하지 않습니다(예: 공지에 에어레이션 안내가 없는 것은 작업을 안 한다는 뜻이 아닙니다).</p>
-      <p>· 요금에는 확인 시점을 함께 저장합니다. 그린피는 몇 달이면 낡습니다.</p>
-      <p>· 전화·현장에서만 확인되는 항목(좌타 클럽, 매트 비율, 락카 요금, 카트 열선)은 비워 두고 제보로 채웁니다.</p>
-    </div>
 
-    <h2 class="h2">구조</h2>
-    <div class="stack">
-      <p><code>data/v29/index.json</code> — 목록·검색·필터용 경량 인덱스 ${fmtKB(indexBytes)}, 전체 ${c.total}곳</p>
-      <p><code>data/v29/courses/{id}.json</code> — 구장별 상세 12키 JSON ${c.total}개</p>
-      <p><code>data/v29/clusters.json</code> — 같은 부지 복수 코스 시설 클러스터</p>
-      <p><code>elasticsearch/</code> — nori 한글 분석기 매핑·bulk 적재·docker-compose·ES 어댑터(선택)</p>
-    </div>
-` : "";
-  const aboutFoot = isAdmin()
-    ? `${esc(d.version)} · ${esc(updated)} 기준 · <a href="${REPO_URL}" target="_blank" rel="noopener noreferrer">GitHub 저장소</a> · <a href="${REPO_URL}/blob/main/data/v29/schema.md" target="_blank" rel="noopener noreferrer">스키마 문서</a>`
-    : `업데이트 ${esc(updated)}`;
+  const principles = [
+    ["공식 우선", "골프장 공식 홈페이지·공지·요금표를 1순위로 보고, 2차 사이트 값은 교차검증에만 씁니다."],
+    ["없음과 미확인의 구분", "확인되지 않은 값은 비워 둡니다. '정보 없음'을 '없음'으로 해석하지 않습니다."],
+    ["확인 시점 기록", "그린피처럼 빨리 낡는 값에는 확인 날짜를 함께 남깁니다."],
+    ["전화·현장 확인 항목", "좌타 클럽, 매트 비율, 락카 요금처럼 전화로만 확인되는 항목은 비워 두고 제보로 채웁니다."],
+  ];
+
   $<HTMLElement>("#view-page").innerHTML = `<div class="page">
-    <h1>데이터</h1>
-    <p class="page-lead">${esc(lead)}</p>
-    <div class="stat-grid" style="margin-top:22px">
-      <div class="stat"><div class="n">${c.total}</div><div class="l">전체 골프장</div></div>
-      <div class="stat"><div class="n">${c.with_detail}</div><div class="l">상세 7개 영역</div></div>
-      <div class="stat"><div class="n">${c.operating}</div><div class="l">영업중</div></div>
-      <div class="stat"><div class="n">${c.suspended}</div><div class="l">휴업·영업중단</div></div>
-      <div class="stat"><div class="n">${c.closed}</div><div class="l">폐업</div></div>
-      <div class="stat"><div class="n">${c.under_construction + c.planned}</div><div class="l">건설중·미착공</div></div>
+    <header class="page-head">
+      <h1 class="page-title" tabindex="-1">데이터</h1>
+      <p class="page-lead">${esc(lead)}</p>
+    </header>
+
+    <div class="stat-row">
+      <div class="stat"><span class="stat-n">${c.total}</span><span class="stat-l">전체 골프장</span></div>
+      <div class="stat"><span class="stat-n">${c.with_detail}</span><span class="stat-l">상세 7개 영역</span></div>
+      <div class="stat"><span class="stat-n">${c.operating}</span><span class="stat-l">영업중</span></div>
+      <div class="stat"><span class="stat-n">${c.under_construction + c.planned}</span><span class="stat-l">건설중·미착공</span></div>
+      <div class="stat"><span class="stat-n">${c.suspended + c.closed}</span><span class="stat-l">휴업·폐업</span></div>
+      <div class="stat"><span class="stat-n">${c.cancelled}</span><span class="stat-l">사업 취소</span></div>
     </div>
 
-    <h2 class="h2">7개 영역</h2>
-    <div class="stack">
-      ${[
-        ["01 기본·입지", "소재·규모·개장·운영사·좌표·최단 IC·접근성"],
-        ["02 코스 스펙", "홀 구성·파·전장·잔디·KGA 코스레이팅/슬로프"],
-        ["03 요금·예약·취소", "주중/주말 그린피·카트·캐디·예약 오픈 주기·취소 위약·악천후 정산"],
-        ["04 현장 운영", "노캐디·2/3/5인·카트 종류와 진입·셀프 백드롭·매트·체크인·복장"],
-        ["05 부대시설", "연습장·식당·그늘집·락카·사우나·숙박·야간 조명·셔틀·전기차"],
-        ["06 브리핑·공지", "휴장·에어레이션·요금 변경 공지, 라운더 평가, 확인 필요 알림"],
-        ["07 클럽 렌탈", "골프장 자체 대여 + 해외 골퍼용 렌탈·딜리버리 업체"],
-      ].map(([t, desc]) => `<div class="callout"><strong>${t}</strong>${desc}</div>`).join("")}
-    </div>
+    <section class="about-block">
+      <h2 class="h2">영역별 정보 충실도</h2>
+      <p class="section-desc">7개 영역 평균입니다. 100%가 아니어도 비어 있는 값은 '확인 안 됨'이며 '없음'과 다릅니다.</p>
+      <div class="cov-list">${covRows || `<p class="section-desc">충실도 정보를 불러오지 못했습니다.</p>`}</div>
+    </section>
 
-    ${collectPrinciples}
+    <section class="about-block">
+      <h2 class="h2">7개 영역</h2>
+      <div class="area-grid">
+        ${COVERAGE_LABELS.map(([k, label, detail], i) => {
+          const v = cov[k];
+          return `<div class="area-card">
+            <span class="area-num">${String(i + 1).padStart(2, "0")}</span>
+            <div class="area-body"><h3 class="area-title">${esc(label)}</h3><p class="area-desc">${esc(detail)}</p></div>
+            ${typeof v === "number" ? `<span class="area-cov">${Math.round(v * 100)}%</span>` : ""}
+          </div>`;
+        }).join("")}
+      </div>
+    </section>
 
-    <h2 class="h2">주의</h2>
-    <div class="callout warn">
-      <strong>참고 데이터입니다</strong>
-      요금·운영 정보는 수집 시점의 공개 정보이며, 골프장 정책에 따라 수시로 바뀝니다. 예약·결제 전 반드시 공식 채널에서 최종 확인하세요. 이 사이트는 예약을 대행하지 않습니다.
-    </div>
-    <p class="section-desc" style="margin-top:16px">${aboutFoot}</p>
+    <section class="about-block">
+      <h2 class="h2">수집 원칙</h2>
+      <div class="principle-grid">
+        ${principles.map(([t, body]) => `<div class="principle"><h3>${esc(t)}</h3><p>${esc(body)}</p></div>`).join("")}
+      </div>
+    </section>
+
+    <section class="about-block">
+      <h2 class="h2">주의</h2>
+      <div class="callout warn">
+        <strong>참고 데이터입니다</strong>
+        요금·운영 정보는 수집 시점의 공개 정보이며, 골프장 정책에 따라 수시로 바뀝니다. 예약·결제 전 반드시 공식 채널에서 최종 확인하세요. 이 사이트는 예약을 대행하지 않습니다.
+      </div>
+    </section>
+
+    <p class="source-line">${isAdmin()
+      ? `${esc(d.version)} · ${esc(updated)} 기준 · <a class="link" href="${REPO_URL}" target="_blank" rel="noopener noreferrer">GitHub 저장소</a> · <a class="link" href="${REPO_URL}/blob/main/data/v29/schema.md" target="_blank" rel="noopener noreferrer">스키마 문서</a>`
+      : `업데이트 ${esc(updated)}`}</p>
   </div>`;
+  setTitle("데이터 안내 — CourseBrief");
   window.scrollTo({ top: 0 });
 }
 
 /* ---------------- 라우터 ---------------- */
+
 type ViewName = "list" | "detail" | "page";
+
+function setTitle(title: string): void {
+  document.title = title;
+}
+
+function setNav(name: "list" | "rental" | "about"): void {
+  for (const a of document.querySelectorAll<HTMLElement>("[data-nav]")) {
+    const on = a.dataset.nav === name;
+    if (on) a.setAttribute("aria-current", "page");
+    else a.removeAttribute("aria-current");
+  }
+}
 
 function showView(name: ViewName): void {
   $<HTMLElement>("#view-list").hidden = name !== "list";
   $<HTMLElement>("#view-detail").hidden = name !== "detail";
   $<HTMLElement>("#view-page").hidden = name !== "page";
-  for (const a of document.querySelectorAll<HTMLElement>("[data-nav]")) a.removeAttribute("aria-current");
 }
+
+/** 화면 전환 뒤 제목(h1)으로 포커스를 옮겨 스크린리더·키보드 사용자가 새 화면을 인지하게 한다 */
+function focusHeading(selector: string): void {
+  const el = document.querySelector<HTMLElement>(selector);
+  if (!el) return;
+  el.setAttribute("tabindex", "-1");
+  el.focus({ preventScroll: true });
+}
+
+let firstRoute = true;
 
 async function route(): Promise<void> {
   const hash = (location.hash || "#/").replace(/^#/, "");
-  // `#/c/{id}#s3` 처럼 상세 영역 앵커가 붙으면 두 번째 `#` 뒤가 섹션 id 다.
-  // 이걸 분리하지 않으면 id 가 'kr-golf-0498#s3' 가 되어 상세가 '찾을 수 없습니다'로 깨진다.
+  // `#main` 같은 비경로 해시는 라우팅하지 않는다(건너뛰기 링크·앵커와 충돌 방지)
+  if (hash && !hash.startsWith("/")) {
+    document.getElementById(hash)?.scrollIntoView();
+    return;
+  }
   const anchorAt = hash.indexOf("#");
   const section = anchorAt >= 0 ? hash.slice(anchorAt + 1) : "";
   const path = (anchorAt >= 0 ? hash.slice(0, anchorAt) : hash).split("?")[0];
@@ -1133,44 +1703,77 @@ async function route(): Promise<void> {
     const id = decodeURIComponent(path.slice(3));
     const needsRender = id !== renderedDetailId || $<HTMLElement>("#view-detail").hidden;
     showView("detail");
-    if (needsRender) await renderDetail(id);
-    if (section) scrollToSection(section);
+    setNav("list");
+    if (needsRender) {
+      await renderDetail(id);
+      if (!firstRoute) focusHeading("#detail-title");
+    } else if (section) {
+      scrollToSection(section);
+    }
+    firstRoute = false;
     return;
   }
   renderedDetailId = null;
+  sectionObserver?.disconnect();
+
   if (path === "/rental") {
     showView("page");
-    document.querySelector<HTMLElement>('[data-nav="rental"]')?.setAttribute("aria-current", "page");
+    setNav("rental");
     renderRental();
+    if (!firstRoute) focusHeading(".page-title");
+    firstRoute = false;
     return;
   }
   if (path === "/about") {
     showView("page");
-    document.querySelector<HTMLElement>('[data-nav="about"]')?.setAttribute("aria-current", "page");
+    setNav("about");
     renderAbout();
+    if (!firstRoute) focusHeading(".page-title");
+    firstRoute = false;
     return;
   }
   showView("list");
-  document.querySelector<HTMLElement>('[data-nav="list"]')?.setAttribute("aria-current", "page");
+  setNav("list");
   applyHashQuery(readHashQuery());
+  // 상세에서 돌아올 때는 보던 자리로, 아니면 목록 처음으로
+  const targetY = state.pendingScroll;
+  state.pendingScroll = null;
   await renderList({ reset: true });
+  setTitle(`전국 골프장 ${getIndex().dataset.counts.total}곳 — CourseBrief`);
+  if (!firstRoute) {
+    focusHeading("#hero-title");
+    // h1 포커스가 스크롤을 움직이는 브라우저가 있어 위치를 한 번 더 맞춘다
+    const y = targetY ?? 0;
+    requestAnimationFrame(() => window.scrollTo(0, y));
+    if (targetY !== null) {
+      // 브라우저가 해시 이동 뒤 늦게 스크롤을 되돌리는 경우까지 덮는다
+      for (const delay of [120, 320]) setTimeout(() => window.scrollTo(0, targetY), delay);
+    }
+  }
+  state.lastListHash = hashQueryFromState();
+  firstRoute = false;
 }
 
 /* ---------------- 이벤트 ---------------- */
+
+const DEBOUNCE_MS = 140;
+
+function rerenderList(): void {
+  state.shown = CONFIG.pageSize;
+  syncHash();
+  state.lastListHash = hashQueryFromState();
+  void renderList({ reset: true });
+}
+
 function wire(): void {
   const q = $<HTMLInputElement>("#q");
   const qClear = $<HTMLButtonElement>("#q-clear");
   const onQuery = debounce(() => {
     state.q = q.value.trim();
-    state.shown = CONFIG.pageSize;
     const onList = location.hash.replace(/^#/, "").split("?")[0] === "/";
-    if (onList) {
-      syncHash();
-      void renderList({ reset: true });
-    } else {
-      location.hash = hashQueryFromState(); // 라우터가 목록으로 이동하며 검색어를 적용한다
-    }
-  }, 140);
+    if (onList) rerenderList();
+    else location.hash = hashQueryFromState(); // 라우터가 목록으로 이동하며 검색어를 적용한다
+  }, DEBOUNCE_MS);
   q.addEventListener("input", () => {
     qClear.hidden = !q.value;
     onQuery();
@@ -1179,10 +1782,10 @@ function wire(): void {
     q.value = "";
     qClear.hidden = true;
     state.q = "";
-    syncHash();
-    void renderList({ reset: true });
+    rerenderList();
     q.focus();
   });
+
   const selectFilters: Array<[string, "sido" | "type" | "holes" | "fee"]> = [
     ["#f-sido", "sido"], ["#f-type", "type"], ["#f-holes", "holes"], ["#f-fee", "fee"],
   ];
@@ -1191,18 +1794,14 @@ function wire(): void {
       const target = ev.target;
       if (!(target instanceof HTMLSelectElement)) return;
       state.filters[key] = target.value;
-      state.shown = CONFIG.pageSize;
-      syncHash();
-      void renderList({ reset: true });
+      rerenderList();
     });
   }
   $<HTMLSelectElement>("#f-sort").addEventListener("change", (ev) => {
     const target = ev.target;
     if (!(target instanceof HTMLSelectElement)) return;
     state.filters.sort = isSortKey(target.value) ? target.value : "name";
-    state.shown = CONFIG.pageSize;
-    syncHash();
-    void renderList({ reset: true });
+    rerenderList();
   });
   $<HTMLElement>("#status-chips").addEventListener("click", (ev) => {
     const target = ev.target;
@@ -1214,21 +1813,93 @@ function wire(): void {
     const on = state.filters.status.has(st);
     if (on) state.filters.status.delete(st);
     else state.filters.status.add(st);
-    btn.classList.toggle("is-on", !on);
-    btn.setAttribute("aria-pressed", on ? "false" : "true");
-    state.shown = CONFIG.pageSize;
-    syncHash();
-    void renderList({ reset: true });
+    paintChips();
+    rerenderList();
   });
-  $<HTMLButtonElement>("#f-reset").addEventListener("click", resetFilters);
+  $<HTMLButtonElement>("#f-reset").addEventListener("click", () => resetFilters(true));
   $<HTMLButtonElement>("#more").addEventListener("click", () => {
     state.shown += CONFIG.pageSize;
     void renderList();
   });
+
+  // 결과 요약·필터 칩·빈 상태의 동작은 위임으로 한 곳에서 처리한다
   document.addEventListener("click", (ev) => {
     const target = ev.target;
     if (!(target instanceof Element)) return;
-    if (target instanceof HTMLElement && target.id === "empty-reset") resetFilters();
+
+    if (target.closest("#show-hidden")) {
+      state.filters.status = new Set<CourseStatus>(Object.keys(STATUS) as CourseStatus[]);
+      paintChips();
+      rerenderList();
+      return;
+    }
+    if (target.closest("#keep-search-reset")) {
+      const q2 = state.q;
+      state.filters = defaultFilters();
+      state.q = q2;
+      $<HTMLInputElement>("#q").value = q2;
+      $<HTMLSelectElement>("#f-sido").value = "";
+      $<HTMLSelectElement>("#f-type").value = "";
+      $<HTMLSelectElement>("#f-holes").value = "";
+      $<HTMLSelectElement>("#f-fee").value = "";
+      $<HTMLSelectElement>("#f-sort").value = "name";
+      paintChips();
+      rerenderList();
+      return;
+    }
+    if (target.closest("#empty-reset")) {
+      resetFilters(true);
+      return;
+    }
+    if (target.closest("#empty-status")) {
+      state.filters.status = new Set<CourseStatus>(Object.keys(STATUS) as CourseStatus[]);
+      paintChips();
+      rerenderList();
+      return;
+    }
+    const clear = target.closest<HTMLElement>("[data-clear]");
+    if (clear) {
+      const key = clear.dataset.clear;
+      if (key === "q") {
+        state.q = "";
+        $<HTMLInputElement>("#q").value = "";
+        $<HTMLButtonElement>("#q-clear").hidden = true;
+      } else if (key === "sido" || key === "type" || key === "holes" || key === "fee") {
+        state.filters[key] = "";
+        $<HTMLSelectElement>(`#f-${key}`).value = "";
+      } else if (key === "sort") {
+        state.filters.sort = "name";
+        $<HTMLSelectElement>("#f-sort").value = "name";
+      } else if (key === "status") {
+        state.filters.status = new Set<CourseStatus>(["operating"]);
+        paintChips();
+      }
+      rerenderList();
+      return;
+    }
+
+    // 카드 → 상세로 갈 때 목록 스크롤 위치를 기억한다
+    const card = target.closest<HTMLAnchorElement>("a[data-card]");
+    if (card) state.pendingScroll = window.scrollY;
+
+    // '목록' 링크는 떠날 때의 필터 해시로 돌아가고, 보던 스크롤 위치도 그대로 복원한다.
+    // 해시 내비게이션은 브라우저가 스크롤을 다시 계산하므로 pushState + 직접 라우팅으로 처리한다.
+    const back = target.closest<HTMLAnchorElement>("[data-back]");
+    if (back) {
+      const href = back.getAttribute("href") || "#/";
+      if (href !== location.hash) {
+        ev.preventDefault();
+        const y = state.pendingScroll;
+        history.pushState(null, "", href);
+        void route().then(() => {
+          if (y === null) return;
+          requestAnimationFrame(() => window.scrollTo(0, y));
+          setTimeout(() => window.scrollTo(0, y), 140);
+        });
+        return;
+      }
+    }
+
     // 같은 영역을 다시 누르면 해시가 그대로라 hashchange 가 없다 — 직접 스크롤한다
     const link = target.closest<HTMLAnchorElement>(".section-nav a");
     const href = link?.getAttribute("href");
@@ -1237,9 +1908,76 @@ function wire(): void {
       scrollToSection(href.slice(href.lastIndexOf("#") + 1));
     }
   });
+
+  // 건너뛰기 링크 — 해시를 바꾸면 해시 라우터가 목록으로 되돌리므로 직접 포커스만 옮긴다
+  document.getElementById("skip-link")?.addEventListener("click", (ev) => {
+    ev.preventDefault();
+    const main = $<HTMLElement>("#main");
+    main.focus();
+    main.scrollIntoView();
+  });
+
+  wireSearchDialog();
+  wireFilterDetails();
+  wireShortcuts();
 }
 
-function resetFilters(): void {
+function wireSearchDialog(): void {
+  const dialog = $<HTMLDialogElement>("#search-dialog");
+  const input = $<HTMLInputElement>("#search-input");
+  const open = $<HTMLButtonElement>("#search-open");
+  const close = (): void => {
+    if (dialog.open) dialog.close();
+    else dialog.removeAttribute("open");
+  };
+  open.addEventListener("click", () => {
+    input.value = state.q || $<HTMLInputElement>("#q").value;
+    if (typeof dialog.showModal === "function") {
+      if (!dialog.open) dialog.showModal();
+    } else {
+      dialog.setAttribute("open", "");
+    }
+    input.focus();
+    input.select();
+  });
+  $<HTMLButtonElement>("#search-cancel").addEventListener("click", close);
+  $<HTMLFormElement>("#search-form").addEventListener("submit", (ev) => {
+    ev.preventDefault();
+    const text = input.value.trim();
+    state.q = text;
+    $<HTMLInputElement>("#q").value = text;
+    $<HTMLButtonElement>("#q-clear").hidden = !text;
+    close();
+    if (location.hash.replace(/^#/, "").split("?")[0] === "/") rerenderList();
+    else location.hash = hashQueryFromState();
+  });
+  dialog.addEventListener("close", () => open.focus());
+}
+
+/** 좁은 화면에서는 필터를 접어 두고, 넓은 화면에서는 펼쳐 둔다 */
+function wireFilterDetails(): void {
+  const details = $<HTMLDetailsElement>("#filter-details");
+  const wide = window.matchMedia("(min-width: 900px)");
+  // 첫 페인트 전 상태는 index.html 인라인 스크립트가 정한다. 여기서는 창 폭이 바뀔 때만 맞춘다.
+  wide.addEventListener("change", () => { if (wide.matches) details.open = true; });
+}
+
+function wireShortcuts(): void {
+  document.addEventListener("keydown", (ev) => {
+    if (ev.key !== "/" || ev.metaKey || ev.ctrlKey || ev.altKey) return;
+    const target = ev.target;
+    if (target instanceof HTMLElement) {
+      const tag = target.tagName;
+      if (tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT" || target.isContentEditable) return;
+    }
+    ev.preventDefault();
+    const onList = !$<HTMLElement>("#view-list").hidden;
+    if (onList) $<HTMLInputElement>("#q").focus();
+    else $<HTMLButtonElement>("#search-open").click();
+  });
+}
+
+function resetFilters(scrollTop: boolean): void {
   state.filters = defaultFilters();
   state.q = "";
   $<HTMLInputElement>("#q").value = "";
@@ -1249,26 +1987,24 @@ function resetFilters(): void {
   $<HTMLSelectElement>("#f-holes").value = "";
   $<HTMLSelectElement>("#f-fee").value = "";
   $<HTMLSelectElement>("#f-sort").value = "name";
-  for (const btn of $<HTMLElement>("#status-chips").querySelectorAll<HTMLButtonElement>(".chip")) {
-    const on = btn.dataset.status === "operating";
-    btn.classList.toggle("is-on", on);
-    btn.setAttribute("aria-pressed", on ? "true" : "false");
-  }
-  state.shown = CONFIG.pageSize;
-  syncHash();
-  void renderList({ reset: true });
+  paintChips();
+  if (scrollTop) window.scrollTo({ top: 0, behavior: "smooth" });
+  rerenderList();
 }
 
 /**
  * 관리자 모드를 켜고 끄면 화면을 다시 그린다 — 출처 노출과 푸터·기준일 표기가 모드에 따라 다르다.
- * 데이터 로딩 전이면 아무것도 하지 않는다(boot 이 현재 모드로 그린다).
  */
 function reRenderForAdmin(): void {
   if (!state.index) return;
-  renderedDetailId = null;
+  const y = window.scrollY;
   paintFooterMeta();
-  void route();
+  void route().then(() => {
+    requestAnimationFrame(() => window.scrollTo(0, y));
+  });
 }
+
+try { history.scrollRestoration = "manual"; } catch { /* 지원하지 않는 브라우저 */ }
 
 initTheme();
 initAdmin(reRenderForAdmin);
