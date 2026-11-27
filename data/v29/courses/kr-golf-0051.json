@@ -27,7 +27,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch7_supplement_2026_11_27": "누락 필드 보완 배치7(부산·울산·경남) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0051",
@@ -165,8 +166,15 @@
    "evidence": []
   },
   "three_player": {
-   "value": null,
-   "evidence": []
+   "value": "3인 이상 플레이 원칙, 조인예약은 예약일 10일 전 9시부터(인터넷회원 1~2인)",
+   "evidence": [
+    "3인 이상 플레이 원칙. 조인예약은 예약일 10일전 9시, 인터넷회원 1~2인"
+   ],
+   "source_url": "https://wondergolf.co.kr/courses/kr-mcst-335",
+   "source_type": "aggregator_wondergolf",
+   "confidence": "medium",
+   "value_from": "batch7_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "five_player": {
    "value": null,
@@ -203,8 +211,15 @@
    "evidence": []
   },
   "locker": {
-   "value": null,
-   "evidence": []
+   "value": "내장 시 방명록 작성 후 락카번호표 지급",
+   "evidence": [
+    "예약시간을 확인하신 후 방명록을 작성하시고, 락카번호표를 받으시기 바랍니다."
+   ],
+   "source_url": "https://www.dongwongolf.co.kr/pagesite/use/guide.asp",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch7_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "sauna": {
    "value": null,
@@ -388,7 +403,7 @@
   "basic": 0.89,
   "course": 0.4,
   "fee": 1.0,
-  "ops": 0.14,
+  "ops": 0.29,
   "facility": 0.4,
   "briefing": 0.5,
   "rental": 0.75

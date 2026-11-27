@@ -27,7 +27,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch7_supplement_2026_11_27": "누락 필드 보완 배치7(부산·울산·경남) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0056",
@@ -202,8 +203,15 @@
    "evidence": []
   },
   "checkin": {
-   "value": null,
-   "evidence": []
+   "value": "Tee-off 20분 전까지 팀 구성 완료(지각 시 라운드 불가)",
+   "evidence": [
+    "Tee-off 시간 20분 전까지 팀 구성을 하셔야 되며 지각 시 라운드를 하실 수 없습니다."
+   ],
+   "source_url": "https://haeundaecc.co.kr/Guide/PlayGuide.aspx",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch7_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "locker": {
    "value": "락카·사우나실",
@@ -386,7 +394,7 @@
   "basic": 0.89,
   "course": 0.4,
   "fee": 0.75,
-  "ops": 0.21,
+  "ops": 0.29,
   "facility": 0.4,
   "briefing": 0.5,
   "rental": 0.75

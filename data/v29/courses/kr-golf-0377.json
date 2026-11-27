@@ -27,7 +27,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch7_supplement_2026_11_27": "누락 필드 보완 배치7(부산·울산·경남) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0377",
@@ -197,8 +198,15 @@
    "evidence": []
   },
   "checkin": {
-   "value": null,
-   "evidence": []
+   "value": "프론트 25분 전까지 도착·등록, 티박스 티오프 10분 전 도착(위반 시 당일 입장 정지)",
+   "evidence": [
+    "프론트에는 25분 전까지 도착하여 등록하여야 하며, 위반 내장객은 당일 입장 정지함. / 티박스에는 티오프 10분전까지 도착하여야하며, 위반 내장객은 당일 입장 정지함."
+   ],
+   "source_url": "https://www.bkcc.co.kr/sub6_1_4",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch7_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "locker": {
    "value": null,
@@ -383,7 +391,7 @@
   "basic": 0.89,
   "course": 0.4,
   "fee": 0.75,
-  "ops": 0.0,
+  "ops": 0.07,
   "facility": 0.2,
   "briefing": 0.5,
   "rental": 0.0

@@ -49,7 +49,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch7_supplement_2026_11_27": "누락 필드 보완 배치7(부산·울산·경남) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0371",
@@ -214,8 +215,15 @@
    "evidence": []
   },
   "five_player": {
-   "value": null,
-   "evidence": []
+   "value": "5인 플레이 시 캐디피 210,000원/팀(27홀과 동일 요율)",
+   "evidence": [
+    "캐디피 1/2부 140,000원/팀, 3부 150,000원/팀 5인 플레이 or 27홀 210,000원/팀"
+   ],
+   "source_url": "https://www.golfzoncounty.com/golfclub/resvGuide?golfclubSeq=70",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch7_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "marshal_caddie": {
    "value": null,
@@ -447,7 +455,7 @@
   "basic": 0.89,
   "course": 0.4,
   "fee": 1.0,
-  "ops": 0.14,
+  "ops": 0.21,
   "facility": 0.4,
   "briefing": 0.5,
   "rental": 0.0

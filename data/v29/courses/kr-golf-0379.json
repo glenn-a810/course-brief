@@ -27,7 +27,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch7_supplement_2026_11_27": "누락 필드 보완 배치7(부산·울산·경남) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0379",
@@ -97,7 +98,8 @@
   "holes_conflict": false,
   "facility_cluster": null,
   "factcheck_2026_11_26": null,
-  "address_original": "창원시 의창구 대봉로 137"
+  "address_original": "창원시 의창구 대봉로 137",
+  "par": 72
  },
  "course": {
   "holes": 18,
@@ -107,9 +109,19 @@
   "night_light": "야간 라운드 운영(공식 홈페이지 안내)",
   "blocks": [],
   "grass": {
-   "tee": null,
+   "tee": {
+    "value": "티 라이그라스 및 일부 고려지",
+    "evidence": "잔디종류 그린 펜크로스 벤트그라스 페어웨이 한국잔디(조이시아) 티 라이그라스 및 일부 고려지",
+    "source": "공식 홈페이지",
+    "url": "https://www.changwoncountryclub.co.kr/Course/Course.aspx"
+   },
    "fairway": "한국잔디",
-   "green": null
+   "green": {
+    "value": "펜크로스 벤트그라스",
+    "evidence": "그린 펜크로스 벤트그라스",
+    "source": "공식 홈페이지",
+    "url": "https://www.changwoncountryclub.co.kr/Course/Course.aspx"
+   }
   },
   "kga": {
    "code": "190",
@@ -124,7 +136,8 @@
   },
   "kga_hole_est": 18,
   "extra_courses": null,
-  "length_m": 5856
+  "length_m": 5856,
+  "par": 72
  },
  "fee": {
   "weekday": 160000,
@@ -168,8 +181,15 @@
    "evidence": []
   },
   "two_player": {
-   "value": null,
-   "evidence": []
+   "value": "2인 티오프 불가(4백 모노카트, 도우미 1팀 1명 배치)",
+   "evidence": [
+    "4백 모노카트, 도우미 1팀 1명 배치. 2명 티오프 불가"
+   ],
+   "source_url": "https://wondergolf.co.kr/courses/changwon-cc",
+   "source_type": "aggregator_wondergolf",
+   "confidence": "medium",
+   "value_from": "batch7_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "three_player": {
    "value": null,
@@ -180,8 +200,15 @@
    "evidence": []
   },
   "marshal_caddie": {
-   "value": null,
-   "evidence": []
+   "value": "1팀당 도우미 1명 배치",
+   "evidence": [
+    "4백 모노카트, 도우미 1팀 1명 배치."
+   ],
+   "source_url": "https://wondergolf.co.kr/courses/changwon-cc",
+   "source_type": "aggregator_wondergolf",
+   "confidence": "medium",
+   "value_from": "batch7_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "cart_type": {
    "value": null,
@@ -387,7 +414,7 @@
   "basic": 0.89,
   "course": 0.4,
   "fee": 1.0,
-  "ops": 0.29,
+  "ops": 0.43,
   "facility": 0.6,
   "briefing": 0.5,
   "rental": 0.0

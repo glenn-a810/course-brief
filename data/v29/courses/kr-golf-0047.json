@@ -27,7 +27,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch7_supplement_2026_11_27": "누락 필드 보완 배치7(부산·울산·경남) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0047",
@@ -150,7 +151,12 @@
   "checked_at": "2026-11-27"
  },
  "cancel": {
-  "cancel_policy": null,
+  "cancel_policy": {
+   "value": "예약일 포함 4일 전까지 위약 없이 취소 가능, 2일 전 취소는 그린피+카트비 팀합계의 50%, 1일 전·당일 취소는 100%",
+   "source": "공식 홈페이지",
+   "url": "https://www.highestcc.co.kr/booking/guide",
+   "checked_at": "2026-11-27"
+  },
   "open_cycle": "예약은 2주 전부터 가능. 인터넷 예약 24시간(14일 전 예약은 09시부터), 전화 예약 09~18시. 인터넷 회원가입 후 예약",
   "notes": null,
   "evidence": [

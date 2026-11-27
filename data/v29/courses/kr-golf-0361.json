@@ -27,7 +27,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch7_supplement_2026_11_27": "누락 필드 보완 배치7(부산·울산·경남) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0361",
@@ -166,16 +167,37 @@
    "evidence": []
   },
   "two_player": {
-   "value": null,
-   "evidence": []
+   "value": "노캐디(셀프라운드) 2인 플레이 허용",
+   "evidence": [
+    "노캐디 예약시 필수사항 5인 플레이 불가 2인~3인 플레이 허용 핸디 100 이하 운전면허 소지자 필수"
+   ],
+   "source_url": "https://www.miryangnobelcc.co.kr/Miryang_nobel/html/guide/guide_08.asp",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch7_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "three_player": {
-   "value": null,
-   "evidence": []
+   "value": "노캐디(셀프라운드) 3인 플레이 허용",
+   "evidence": [
+    "노캐디 예약시 필수사항 5인 플레이 불가 2인~3인 플레이 허용 핸디 100 이하 운전면허 소지자 필수"
+   ],
+   "source_url": "https://www.miryangnobelcc.co.kr/Miryang_nobel/html/guide/guide_08.asp",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch7_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "five_player": {
-   "value": null,
-   "evidence": []
+   "value": "3부 노캐디 조건에서 5인 플레이 불가",
+   "evidence": [
+    "일부 시간·코스만 노캐디 — 3부 노캐디 조건 핸디 100 이하 · 서약서·동의서 서명 · 운전면허 소지자 운전 · 5인 플레이 불가"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0414/",
+   "source_type": "greenfee_guide",
+   "confidence": "medium",
+   "value_from": "batch7_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "marshal_caddie": {
    "value": null,
@@ -202,8 +224,15 @@
    "evidence": []
   },
   "locker": {
-   "value": null,
-   "evidence": []
+   "value": "락카룸과 사우나 시설 운영(락카 근무자 별도 봉사료 없음)",
+   "evidence": [
+    "청결한 락카룸과 사우나 시설이 준비되어 있습니다. 락카 근무자는 별도의 봉사료를 받지 않습니다."
+   ],
+   "source_url": "https://www.miryangnobelcc.co.kr/Miryang_nobel/html/guide/guide_01.asp",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch7_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "sauna": {
    "value": "사우나 있음",
@@ -236,8 +265,15 @@
    "evidence": []
   },
   "food": {
-   "value": null,
-   "evidence": []
+   "value": "레스토랑 운영(식사·음료 제공)",
+   "evidence": [
+    "레스토랑 식사 및 음료를 즐기실 수 있습니다."
+   ],
+   "source_url": "https://www.miryangnobelcc.co.kr/Miryang_nobel/html/guide/guide_01.asp",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch7_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "snack_bar": {
    "value": null,
@@ -396,8 +432,8 @@
   "basic": 0.89,
   "course": 0.4,
   "fee": 1.0,
-  "ops": 0.21,
-  "facility": 0.4,
+  "ops": 0.5,
+  "facility": 0.5,
   "briefing": 0.5,
   "rental": 0.0
  }

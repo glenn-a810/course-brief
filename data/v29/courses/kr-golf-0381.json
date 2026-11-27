@@ -27,7 +27,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch7_supplement_2026_11_27": "누락 필드 보완 배치7(부산·울산·경남) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0381",
@@ -175,16 +176,30 @@
    "evidence": []
   },
   "two_player": {
-   "value": null,
-   "evidence": []
+   "value": "평일 2인 플레이 가능(1·2부, 3인 요금)",
+   "evidence": [
+    "평일 2인(1·2부, 3인 요금)·5인(1·2부, 전화 예약만, 1일 선착순 2팀) 운동 가능"
+   ],
+   "source_url": "https://wondergolf.co.kr/courses/kr-kakao-10489718",
+   "source_type": "aggregator_wondergolf",
+   "confidence": "medium",
+   "value_from": "batch7_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "three_player": {
    "value": null,
    "evidence": []
   },
   "five_player": {
-   "value": null,
-   "evidence": []
+   "value": "평일 5인 플레이 가능(1·2부, 전화 예약만, 1일 선착순 2팀)",
+   "evidence": [
+    "5인(1·2부, 전화 예약만, 1일 선착순 2팀)"
+   ],
+   "source_url": "https://wondergolf.co.kr/courses/kr-kakao-10489718",
+   "source_type": "aggregator_wondergolf",
+   "confidence": "medium",
+   "value_from": "batch7_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "marshal_caddie": {
    "value": null,
@@ -390,7 +405,7 @@
   "basic": 0.78,
   "course": 0.4,
   "fee": 1.0,
-  "ops": 0.0,
+  "ops": 0.14,
   "facility": 0.1,
   "briefing": 0.5,
   "rental": 0.0

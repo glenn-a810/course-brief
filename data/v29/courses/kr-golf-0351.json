@@ -27,7 +27,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch7_supplement_2026_11_27": "누락 필드 보완 배치7(부산·울산·경남) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0351",
@@ -191,8 +192,15 @@
    "evidence": []
   },
   "cart_entry": {
-   "value": null,
-   "evidence": []
+   "value": "카트는 카트도로를 벗어나 페어웨이로 진입할 수 없고 코스 내 역주행도 금지",
+   "evidence": [
+    "경기 도중 카트도로를 벗어나 페어웨이 안으로 골프카를 진행할 수 없으며, 코스 내에서 역으로 주행할 수 없다."
+   ],
+   "source_url": "http://www.nobelcc.co.kr/html/guide/guide_12.asp",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch7_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "bagdrop": {
    "value": null,
@@ -375,7 +383,7 @@
   "basic": 0.78,
   "course": 0.4,
   "fee": 1.0,
-  "ops": 0.43,
+  "ops": 0.5,
   "facility": 0.6,
   "briefing": 0.5,
   "rental": 0.75

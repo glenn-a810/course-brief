@@ -27,7 +27,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch7_supplement_2026_11_27": "누락 필드 보완 배치7(부산·울산·경남) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0367",
@@ -164,7 +165,7 @@
  },
  "cancel": {
   "cancel_policy": "평일 3일 전·주말 4일 전 17:00까지 위약 없이 취소. 이후 팀 이용요금의 10%·20%·30% 또는 1~3개월·영구 예약정지(공식 위약 규정). 강풍 취소·환불은 초속 14m(10분 평균)부터 적용",
-  "open_cycle": null,
+  "open_cycle": "인터넷·전화 예약 모두 1부는 28일 전 09시부터 경기일 전일 21시까지, 2·3부는 28일 전 09시부터 당일 14시까지(당일 예약은 2·3부만 가능)",
   "notes": "정기 휴장일 없음. 지역주민 할인. 중복예약으로 인한 당일 노쇼 시 위약금 납부 전까지 당일 라운드 불가",
   "evidence": [],
   "weather_evidence": []
@@ -185,8 +186,15 @@
    ]
   },
   "five_player": {
-   "value": null,
-   "evidence": []
+   "value": "5인 플레이 가능(공식 이벤트 공지)",
+   "evidence": [
+    "[진행] 5인 플레이 가능 ! | 골프장이벤트 2024.01.30"
+   ],
+   "source_url": "https://www.diamondcc.co.kr/Board/BoardView.aspx?cfgid=event&post=9664&type=18",
+   "source_type": "official_site",
+   "confidence": "low",
+   "value_from": "batch7_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "marshal_caddie": {
    "value": null,
@@ -411,7 +419,7 @@
   "basic": 0.78,
   "course": 0.4,
   "fee": 1.0,
-  "ops": 0.36,
+  "ops": 0.43,
   "facility": 0.4,
   "briefing": 0.5,
   "rental": 0.0

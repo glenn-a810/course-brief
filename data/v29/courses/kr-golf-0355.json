@@ -49,7 +49,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch7_supplement_2026_11_27": "누락 필드 보완 배치7(부산·울산·경남) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0355",
@@ -191,7 +192,12 @@
   "checked_at": "2026-11-27"
  },
  "cancel": {
-  "cancel_policy": null,
+  "cancel_policy": {
+   "value": "회원 예약취소는 예약일 5일 전 12시까지(이후 취소·미내장 시 위약금·벌점에 따른 예약정지 또는 이용제한)",
+   "source": "공식 홈페이지",
+   "url": "https://www.jeongsancc.co.kr/agreeInfo/guideInfo.do",
+   "checked_at": "2026-11-27"
+  },
   "open_cycle": "정회원: 평일/공휴일 해당일 2주전 월요일 10:00, 주말 2주전 수요일 10:00. 기타회원(평일): 2주전 화요일 10:00. 예약은 해당일 1일전 17:00까지.",
   "notes": "정기 휴장은 명절 당일. 카트 운전은 경기도우미만 가능. 2017~2019 최경주 인비테이셔널 개최",
   "evidence": [
@@ -213,8 +219,15 @@
    "evidence": []
   },
   "five_player": {
-   "value": null,
-   "evidence": []
+   "value": "5인 플레이는 회원 동반 시 가능(비회원만으로는 불가), 리무진카트·2캐디 기본 적용",
+   "evidence": [
+    "고객 요청시 5인 플레이시 리무진카드 및 2캐디 기본적용입니다. / 5인 플레이는 회원 동반 시 가능(비회원만 이용 불가)."
+   ],
+   "source_url": "https://www.jeongsancc.co.kr/guide/guide03.do",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch7_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "marshal_caddie": {
    "value": null,
@@ -247,8 +260,15 @@
    "evidence": []
   },
   "locker": {
-   "value": null,
-   "evidence": []
+   "value": "클럽하우스 1층에 락카·욕실 등 배치",
+   "evidence": [
+    "1층은 메인로비와 프론트, 식당, 단체실, 라운지, 비지니스룸, 락카, 욕실 등이 위치하고 있습니다."
+   ],
+   "source_url": "https://www.jeongsancc.co.kr/house/house.do",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch7_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "sauna": {
    "value": null,
@@ -424,7 +444,7 @@
   "basic": 0.89,
   "course": 0.4,
   "fee": 1.0,
-  "ops": 0.07,
+  "ops": 0.21,
   "facility": 0.3,
   "briefing": 0.5,
   "rental": 0.75

@@ -27,7 +27,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch7_supplement_2026_11_27": "누락 필드 보완 배치7(부산·울산·경남) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0348",
@@ -165,8 +166,15 @@
    "evidence": []
   },
   "two_player": {
-   "value": null,
-   "evidence": []
+   "value": "주중 2~3인 라운드 시 3인 그린피+대당 카트비, 주말(금~일) 2~3인은 4인 그린피+대당 카트비, 5인은 프론트 문의",
+   "evidence": [
+    "주중 2~3인 라운드시 3인 그린피+대당 카트비, 주말(금~일) 2~3인 라운드시 4인 그린피+대당 카트비. 5인 플레이는 프론트 문의."
+   ],
+   "source_url": "https://wondergolf.co.kr/courses/kr-kakao-27134403",
+   "source_type": "aggregator_wondergolf",
+   "confidence": "medium",
+   "value_from": "batch7_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "three_player": {
    "value": "월~목 1팀만 3인 가능(11인 이상)",
@@ -217,8 +225,15 @@
    "evidence": []
   },
   "dress": {
-   "value": null,
-   "evidence": []
+   "value": "속내의가 드러나는 상의·반바지·짧은 스커트·혐오감을 주는 복장·샌들은 삼가",
+   "evidence": [
+    "속내의가 많이 보이는 상의, 반바지, 짧은 스커트, 혐오감을 주는 복장, 샌달 등은 삼가하여 주시기 바랍니다"
+   ],
+   "source_url": "https://www.geojeview.co.kr/guide-info/etiquette",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch7_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "pace": {
    "value": null,
@@ -391,7 +406,7 @@
   "basic": 0.78,
   "course": 0.4,
   "fee": 1.0,
-  "ops": 0.36,
+  "ops": 0.5,
   "facility": 0.6,
   "briefing": 0.5,
   "rental": 0.0

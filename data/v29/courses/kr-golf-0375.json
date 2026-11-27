@@ -42,7 +42,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch7_supplement_2026_11_27": "누락 필드 보완 배치7(부산·울산·경남) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0375",
@@ -127,7 +128,12 @@
   "grass": {
    "tee": null,
    "fairway": "미확인(화학농약·화학비료를 쓰지 않고 인력으로 잡초 관리)",
-   "green": null
+   "green": {
+    "value": "인조 그린",
+    "evidence": "그린 : 인조",
+    "source": "공식 홈페이지",
+    "url": "https://xn--289a6cv80bnhpdlav75a4vlwrc.kr/Club/Info"
+   }
   },
   "kga": null,
   "kga_hole_est": null,

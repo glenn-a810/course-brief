@@ -70,7 +70,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch7_supplement_2026_11_27": "누락 필드 보완 배치7(부산·울산·경남) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0380",
@@ -236,12 +237,26 @@
    "evidence": []
   },
   "two_player": {
-   "value": null,
-   "evidence": []
+   "value": "1·2부 2~4인 플레이 가능(3부는 3~4인)",
+   "evidence": [
+    "1부~2부 2인 ~ 4인 플레이 팀당 90,000원 3부 3인~4인플레이 인당 22,500원"
+   ],
+   "source_url": "https://www.jhnpcc.co.kr/Guide/Fees.aspx",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch7_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "three_player": {
-   "value": null,
-   "evidence": []
+   "value": "1·2부 2~4인, 3부 3~4인 플레이 가능",
+   "evidence": [
+    "1부~2부 2인 ~ 4인 플레이 팀당 90,000원 3부 3인~4인플레이 인당 22,500원"
+   ],
+   "source_url": "https://www.jhnpcc.co.kr/Guide/Fees.aspx",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch7_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "five_player": {
    "value": null,
@@ -272,12 +287,26 @@
    "evidence": []
   },
   "locker": {
-   "value": null,
-   "evidence": []
+   "value": "락커룸·사우나실 운영",
+   "evidence": [
+    "락커룸/사우나실"
+   ],
+   "source_url": "https://www.jhnpcc.co.kr/About/Clubhouse.aspx",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch7_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "sauna": {
-   "value": null,
-   "evidence": []
+   "value": "사우나실 운영",
+   "evidence": [
+    "락커룸/사우나실"
+   ],
+   "source_url": "https://www.jhnpcc.co.kr/About/Clubhouse.aspx",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch7_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "dress": {
    "value": null,
@@ -298,8 +327,15 @@
    "evidence": []
   },
   "food": {
-   "value": null,
-   "evidence": []
+   "value": "대식당·스타트하우스 운영",
+   "evidence": [
+    "문의 : 대식당 055-548-9959 / 스타트하우스 055-548-9991~2"
+   ],
+   "source_url": "https://www.jhnpcc.co.kr/Guide/Menu.aspx",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch7_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "snack_bar": {
    "value": null,
@@ -461,8 +497,8 @@
   "basic": 0.89,
   "course": 0.4,
   "fee": 1.0,
-  "ops": 0.0,
-  "facility": 0.3,
+  "ops": 0.29,
+  "facility": 0.4,
   "briefing": 0.5,
   "rental": 0.75
  }

@@ -27,7 +27,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch7_supplement_2026_11_27": "누락 필드 보완 배치7(부산·울산·경남) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0384",
@@ -165,7 +166,12 @@
   }
  },
  "cancel": {
-  "cancel_policy": null,
+  "cancel_policy": {
+   "value": "18홀 예약취소는 평일 3일 전·주말·공휴일 4일 전까지 가능(위약금은 팀당). 이후 2~3일 전 취소는 2개월 예약금지·이용요금 10%, 1일 전은 3개월·20%, 당일·잔존예약 취소는 6개월·30%",
+   "source": "공식 홈페이지",
+   "url": "https://www.skyviewcc.co.kr/Guide/PenaltyGuide.aspx",
+   "checked_at": "2026-11-27"
+  },
   "open_cycle": "인터넷 예약 연중 24시간. 6주전 매주 월요일 오전 9시부터 6주후 월요일~일요일 1주일 오픈.",
   "notes": "연중무휴",
   "evidence": [
@@ -179,20 +185,48 @@
    "evidence": []
   },
   "two_player": {
-   "value": null,
-   "evidence": []
+   "value": "2인 플레이 불가(주중·주말 모두 3~4인만 가능)",
+   "evidence": [
+    "주중 3인~4인플레이, 주말 3~4인플레이 가능합니다.(2인,5인플레이 불가)"
+   ],
+   "source_url": "https://www.skyviewcc.co.kr/Guide/Guide.aspx",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch7_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "three_player": {
-   "value": null,
-   "evidence": []
+   "value": "3~4인 플레이 가능",
+   "evidence": [
+    "주중 3인~4인플레이, 주말 3~4인플레이 가능합니다."
+   ],
+   "source_url": "https://www.skyviewcc.co.kr/Guide/Guide.aspx",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch7_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "five_player": {
-   "value": null,
-   "evidence": []
+   "value": "5인 플레이 불가",
+   "evidence": [
+    "(2인,5인플레이 불가)"
+   ],
+   "source_url": "https://www.skyviewcc.co.kr/Guide/Guide.aspx",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch7_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "marshal_caddie": {
-   "value": null,
-   "evidence": []
+   "value": "4인 1팀에 필드매니저 1명 배정(라운드 후 골프백 운반 동행)",
+   "evidence": [
+    "4인1팀, 1카트, 1필드매니저 배정이 원칙입니다. / 라운드 후 필드매니저가 동반하여 골프백을 실어드립니다."
+   ],
+   "source_url": "https://www.skyviewcc.co.kr/Guide/Guide.aspx",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch7_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "cart_type": {
    "value": "5인승 전동카트",
@@ -211,12 +245,26 @@
    "evidence": []
   },
   "checkin": {
-   "value": null,
-   "evidence": []
+   "value": "티오프 예약 15분 전 광장 대기",
+   "evidence": [
+    "티오프 예약 15분 전에 광장에 대기"
+   ],
+   "source_url": "https://www.skyviewcc.co.kr/Guide/Guide.aspx",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch7_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "locker": {
-   "value": null,
-   "evidence": []
+   "value": "락카실 운영(비밀번호 분실 시 클럽 절차 후 개방)",
+   "evidence": [
+    "내장객은 락카실의 이용방법을 잘 숙지하여 사용한다. / 내장객은 본인 락카의 비밀번호를 잊어 버렸을 경우 클럽이 정한 절차 진행 후 락카를 개방할 수 있다."
+   ],
+   "source_url": "https://www.skyviewcc.co.kr/Guide/LocalRule.aspx",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch7_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "sauna": {
    "value": null,
@@ -243,8 +291,15 @@
    "evidence": []
   },
   "food": {
-   "value": null,
-   "evidence": []
+   "value": "대식당 운영",
+   "evidence": [
+    "\"맛있는 골프장\" 스카이뷰 대식당에 오신 것을 환영합니다^^"
+   ],
+   "source_url": "https://www.skyviewcc.co.kr/About/Restaurant.aspx",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch7_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "snack_bar": {
    "value": null,
@@ -255,8 +310,15 @@
    "evidence": []
   },
   "lodging": {
-   "value": null,
-   "evidence": []
+   "value": "골프텔 운영(2인실·4인실·필드뷰 4인실)",
+   "evidence": [
+    "골프텔 가장 전망 좋은 곳, 편안한 휴식과 유쾌한 대화(2인실,4인실,필드뷰4인실)"
+   ],
+   "source_url": "https://www.skyviewcc.co.kr/About/GolfTel.aspx",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch7_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "other": {
    "value": "프로샵",
@@ -401,8 +463,8 @@
   "basic": 0.89,
   "course": 0.4,
   "fee": 1.0,
-  "ops": 0.14,
-  "facility": 0.2,
+  "ops": 0.57,
+  "facility": 0.4,
   "briefing": 0.5,
   "rental": 0.0
  }

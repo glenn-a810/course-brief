@@ -27,7 +27,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch7_supplement_2026_11_27": "누락 필드 보완 배치7(부산·울산·경남) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0357",
@@ -156,7 +157,12 @@
   "checked_at": "2026-11-27"
  },
  "cancel": {
-  "cancel_policy": null,
+  "cancel_policy": {
+   "value": "개인 예약은 14일 전부터 당일 취소·노쇼 시 1일 3만원 차감(연중 동일, 팀별 적용), 단체(3~4팀)는 21일 전부터 취소·노쇼 시 팀별 위약 적용",
+   "source": "공식 홈페이지",
+   "url": "https://www.southcape.co.kr/info3.asp",
+   "checked_at": "2026-11-27"
+  },
   "open_cycle": "매월 1일 09:00 다음 한달 예약이 모바일로 오픈(예: 6월 1일 오픈 → 온라인 7월 1일~31일 접수). 예약실 유선 예약은 해당 월(6월 1일~30일) 접수",
   "notes": null,
   "evidence": [
@@ -214,8 +220,15 @@
    "evidence": []
   },
   "dress": {
-   "value": null,
-   "evidence": []
+   "value": "남성 민소매 복장 지양",
+   "evidence": [
+    "골프 코스 내장 시, 남성의 경우 민소매 복장은 지양해 주시기 바랍니다."
+   ],
+   "source_url": "https://www.southcape.co.kr/info1.asp",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch7_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "pace": {
    "value": "다른 팀 플레이에 지장을 주는 슬로 플레이 시 퇴장",
@@ -234,8 +247,15 @@
    "evidence": []
   },
   "food": {
-   "value": null,
-   "evidence": []
+   "value": "대식당(더 로우) 운영 — 팜투테이블·씨투테이블 컨셉, 07:00~22:00",
+   "evidence": [
+    "'팜투테이블 Farm to table' 혹은 '씨투테이블 Sea to table'이 본 식당의 컨셉이다. / 운영시간 07:00~22:00"
+   ],
+   "source_url": "https://www.southcape.co.kr/dining_restaurant.asp",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch7_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "snack_bar": {
    "value": null,
@@ -246,8 +266,15 @@
    "evidence": []
   },
   "lodging": {
-   "value": null,
-   "evidence": []
+   "value": "객실(리니어스위트) 운영",
+   "evidence": [
+    "* 해당객실 : 리니어스위트 전객실(단, 빌라 제외)"
+   ],
+   "source_url": "https://www.southcape.co.kr/info3.asp",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch7_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "other": {
    "value": "스파·찜질 시설",
@@ -383,8 +410,8 @@
   "basic": 0.89,
   "course": 0.4,
   "fee": 1.0,
-  "ops": 0.14,
-  "facility": 0.1,
+  "ops": 0.21,
+  "facility": 0.3,
   "briefing": 0.5,
   "rental": 0.75
  }

@@ -71,7 +71,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch7_supplement_2026_11_27": "누락 필드 보완 배치7(부산·울산·경남) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0358",
@@ -216,7 +217,7 @@
  },
  "cancel": {
   "cancel_policy": "이용일 기준 주말 3일 전 10%, 2일 전 10%, 1일 전 20%, 당일 취소·노쇼 30%. 월 4회 이상 취소 시 1개월 예약 정지.",
-  "open_cycle": null,
+  "open_cycle": "골프 예약은 매주 화요일 오전 9시에 오픈하며 6주 전 일정까지 예약 가능(객실+골프 패키지는 8주 전 오픈)",
   "notes": "문체부 전국 골프장 현황에 아난티남해CC(9홀)·아난티남해GC(9홀)로 나뉘어 등록된 한 단지. 회원 예약 우선, 회원 간 경합 시 추첨(이용약관)",
   "evidence": [],
   "weather_evidence": []
@@ -263,8 +264,15 @@
    "evidence": []
   },
   "locker": {
-   "value": null,
-   "evidence": []
+   "value": "클럽하우스 락커·샤워실 운영(이용요금에 포함)",
+   "evidence": [
+    "락커 및 샤워실 등 클럽하우스 시설이용 요금"
+   ],
+   "source_url": "https://ananti.kr/ko/namhae/golfclub/information",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch7_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "sauna": {
    "value": null,
@@ -460,7 +468,7 @@
   "basic": 0.89,
   "course": 0.4,
   "fee": 1.0,
-  "ops": 0.29,
+  "ops": 0.36,
   "facility": 0.5,
   "briefing": 0.5,
   "rental": 0.75
