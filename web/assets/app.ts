@@ -31,8 +31,8 @@ import type {
 import { initAdmin, isAdmin } from "./admin.js";
 import { createSearchAdapter } from "./search.js";
 import { initTheme } from "./theme.js";
-import { coverageBar, gauge, icon, ratingBar } from "./icons.js";
-import type { IconName } from "./icons.js";
+import { coverageBar, gauge, icon, iconDuo, iconTile, ratingBar } from "./icons.js";
+import type { IconName, IconTone } from "./icons.js";
 import {
   STATUS,
   badge,
@@ -102,6 +102,13 @@ const TAG_LABEL: Record<string, string> = {
   n: "노캐디", "2": "2인 가능", y: "야간", s: "사우나", l: "숙박", h: "셔틀", p: "연습장", f: "식당",
 };
 const TAG_ORDER = ["n", "2", "y", "s", "l", "h", "p", "f"];
+/** 카드 특징 태그의 2-톤 아이콘과 파스텔 톤 */
+const TAG_ICON: Record<string, IconName> = {
+  n: "person", "2": "users", y: "moon", s: "steam", l: "bed", h: "bus", p: "flag", f: "food",
+};
+const TAG_TONE: Record<string, IconTone> = {
+  n: "purple", "2": "teal", y: "blue", s: "orange", l: "green", h: "blue", p: "green", f: "yellow",
+};
 
 /** 데이터 원문이 값 대신 남긴 '미확인' 표기 — 일반 화면에서는 확인된 값이 아니다 */
 const UNKNOWN_TEXT = /미확인|확인\s*안\s*됨|확인하지\s*못한/;
@@ -606,18 +613,19 @@ function cardHTML(g: CourseGroup): string {
   const stats = [
     g.holes ? `<span class="stat-pill"><b>${g.holes}</b>홀</span>` : "",
     type ? `<span class="stat-pill">${esc(type)}</span>` : "",
-    rating !== undefined ? `<span class="stat-pill"><span class="pill-star" aria-hidden="true">★</span>${rating.toFixed(1)}</span>` : "",
+    rating !== undefined ? `<span class="stat-pill"><span class="pill-star" aria-hidden="true">${icon("star")}</span>${rating.toFixed(1)}</span>` : "",
   ].filter(Boolean).join("");
 
   const statsHTML = stats ? `<div class="card-stats">${stats}</div>` : "";
   const tagHTML = tags.length
-    ? `<div class="card-tags">${tags.map((t) => `<span class="tag">${esc(TAG_LABEL[t])}</span>`).join("")}</div>`
+    ? `<div class="card-tags">${tags.map((t) => `<span class="tag tone-${TAG_TONE[t] ?? "blue"}">${
+      iconDuo(TAG_ICON[t] ?? "sparkle")}${esc(TAG_LABEL[t])}</span>`).join("")}</div>`
     : "";
 
   // 공지 날짜가 비어 있으면 꼬리표에 날짜 칸을 만들지 않는다
   const noticeDate = fmtDate(single?.notice);
   const noticeBadge = single?.notice?.trim()
-    ? `<span class="notice-dot" title="최근 공지${noticeDate ? ` ${noticeDate}` : ""}"><span aria-hidden="true">●</span>공지</span>`
+    ? `<span class="notice-dot" title="최근 공지${noticeDate ? ` ${noticeDate}` : ""}">${icon("bell")}공지</span>`
     : "";
 
   const head = `<div class="card-head">
@@ -788,15 +796,15 @@ async function renderDetail(id: string): Promise<void> {
           <span class="dot" aria-hidden="true">·</span><span class="muted">업데이트 ${esc(courseUpdatedAt(detail) || "—")}</span>
         </p>
         ${course.status !== "operating" ? `<div class="callout ${st.tone === "neutral" ? "info" : st.tone}">
-          <strong>${esc(st.label)}</strong>${esc(course.status_note || "현재 예약·이용이 어려운 상태입니다.")}
+          <strong>${icon(st.tone === "danger" ? "alert" : "info")}${esc(st.label)}</strong>${esc(course.status_note || "현재 예약·이용이 어려운 상태입니다.")}
         </div>` : ""}
 
         <dl class="hero-kpis">
-          ${course.holes ? `<div class="kpi"><dt>홀수</dt><dd><b>${course.holes}</b><span>홀</span></dd></div>` : ""}
-          ${course.par ? `<div class="kpi"><dt>파</dt><dd><b>${course.par}</b></dd></div>` : ""}
-          ${course.length ? `<div class="kpi"><dt>전장</dt><dd><b>${fmtNum(course.length)}</b><span>m</span></dd></div>` : ""}
-          ${typeLabel ? `<div class="kpi"><dt>이용형태</dt><dd class="kpi-text">${esc(typeLabel)}</dd></div>` : ""}
-          ${course.rating !== undefined ? `<div class="kpi kpi-rating"><dt>라운더 평가</dt><dd>${ratingBar(course.rating, course.reviews)}</dd></div>` : ""}
+          ${course.holes ? `<div class="kpi"><dt>${icon("flag")}홀수</dt><dd><b>${course.holes}</b><span>홀</span></dd></div>` : ""}
+          ${course.par ? `<div class="kpi"><dt>${icon("gauge")}파</dt><dd><b>${course.par}</b></dd></div>` : ""}
+          ${course.length ? `<div class="kpi"><dt>${icon("ruler")}전장</dt><dd><b>${fmtNum(course.length)}</b><span>m</span></dd></div>` : ""}
+          ${typeLabel ? `<div class="kpi"><dt>${icon("building")}이용형태</dt><dd class="kpi-text">${esc(typeLabel)}</dd></div>` : ""}
+          ${course.rating !== undefined ? `<div class="kpi kpi-rating"><dt>${icon("star")}라운더 평가</dt><dd>${ratingBar(course.rating, course.reviews)}</dd></div>` : ""}
         </dl>
 
         <div class="hero-actions">
@@ -826,16 +834,16 @@ async function renderDetail(id: string): Promise<void> {
     ${factsHTML(course, detail)}
 
     ${detailError ? `<div class="callout warn" role="alert">
-      <strong>상세 데이터를 불러오지 못했습니다</strong>
+      <strong>${icon("alert")}상세 데이터를 불러오지 못했습니다</strong>
       네트워크 문제일 수 있습니다. 아래는 기본 정보만 표시합니다.
       <button type="button" class="link-btn" id="detail-retry">다시 시도</button>
     </div>` : ""}
 
     ${!course.detail ? `<section class="section" aria-labelledby="s0">
-      <h2 id="s0"><span class="sec-num">01</span>기본 정보</h2>
+      <h2 id="s0">${iconTile("info", "blue", "sm")}기본 정보</h2>
       <div class="section-body">
         <div class="callout">
-          <strong>이 구장은 요약 데이터만 있습니다</strong>
+          <strong>${icon("info")}이 구장은 요약 데이터만 있습니다</strong>
           건설중·폐업 등으로 상세 수집 전이거나, 상세를 불러오지 못한 상태입니다. 위에 표시된 기본 정보가 확인된 값의 전부입니다.
         </div>
       </div>
@@ -1078,7 +1086,7 @@ function toneOf(value: string, invert = false): { tone: "ok" | "warn" | "danger"
 function tile(iconName: IconName, label: string, value: string, opts: { tone?: "ok" | "warn" | "danger" | "info"; badgeText?: string } = {}): string {
   const tone = opts.tone ?? "info";
   return `<div class="tile tone-${tone}">
-    <span class="tile-icon">${icon(iconName)}</span>
+    <span class="tile-icon">${iconDuo(iconName)}</span>
     <div class="tile-body">
       <span class="tile-label">${esc(label)}</span>
       <span class="tile-value">${esc(value)}</span>
@@ -1222,11 +1230,11 @@ function sections(d: CourseDetail, c: CourseIndexItem, others: Array<{ name: str
 
   const s1 = `<section class="section" id="s1" aria-labelledby="s1-h">
     <div class="section-head">
-      <h2 id="s1-h"><span class="sec-num">01</span>요금 · 예약</h2>
+      <h2 id="s1-h">${iconTile("card", "blue", "sm")}요금 · 예약</h2>
       <p class="section-desc">1인 18홀 비회원 정상가. 시즌·시간대·예약 경로에 따라 달라지므로 예약 화면에서 최종 확인하세요.</p>
     </div>
     <div class="section-body">
-      ${unavailable ? `<div class="callout warn"><strong>현재 이용 불가 구장입니다</strong>아래 요금은 마지막으로 확인된 값이며 예약·결제할 수 없습니다.</div>` : ""}
+      ${unavailable ? `<div class="callout warn"><strong>${icon("alert")}현재 이용 불가 구장입니다</strong>아래 요금은 마지막으로 확인된 값이며 예약·결제할 수 없습니다.</div>` : ""}
       ${feeCardsHTML}
       ${asOf ? `<p class="source-line">${isAdmin() ? `요금 기준 ${esc(fee.basis || "")} · 확인 ${fmtDate(asOf)}` : `요금 업데이트 ${esc(fmtDate(asOf))}`}</p>` : ""}
       ${market && (market.weekday_min || market.weekend_min) ? `<div class="inline-fact">
@@ -1315,7 +1323,7 @@ function sections(d: CourseDetail, c: CourseIndexItem, others: Array<{ name: str
 
   const s2 = `<section class="section" id="s2" aria-labelledby="s2-h">
     <div class="section-head">
-      <h2 id="s2-h"><span class="sec-num">02</span>코스 스펙</h2>
+      <h2 id="s2-h">${iconTile("ruler", "green", "sm")}코스 스펙</h2>
       <p class="section-desc">규모·전장·잔디와 KGA 공식 레이팅. 레이팅은 난이도 비교의 1차 기준입니다.</p>
     </div>
     <div class="section-body">
@@ -1360,12 +1368,12 @@ function sections(d: CourseDetail, c: CourseIndexItem, others: Array<{ name: str
   }
   const s3 = (isAdmin() || opsTiles.length) ? `<section class="section" id="s3" aria-labelledby="s3-h">
     <div class="section-head">
-      <h2 id="s3-h"><span class="sec-num">03</span>현장 운영</h2>
+      <h2 id="s3-h">${iconTile("flag", "orange", "sm")}현장 운영</h2>
       <p class="section-desc">노캐디·인원·카트·체크인처럼 예약 전에 알아야 하는 실제 플레이 조건.</p>
     </div>
     <div class="section-body">
       ${opsTiles.length ? `<div class="tiles">${opsTiles.join("")}</div>`
-        : `<div class="callout">공식 채널에서 확인된 운영 정보가 아직 없습니다. 전화·현장 확인이 필요합니다.</div>`}
+        : `<div class="callout"><strong>${icon("info")}확인된 운영 정보가 없습니다</strong>공식 채널에서 확인된 운영 정보가 아직 없습니다. 전화·현장 확인이 필요합니다.</div>`}
       ${unconfirmedBox("운영 정보", opsUnknown)}
       ${isAdmin() && ops.browser_official
         ? `<details class="more-box"><summary>수집 원문 보기</summary><pre class="pre">${esc(JSON.stringify(ops.browser_official, null, 1))}</pre></details>`
@@ -1387,11 +1395,11 @@ function sections(d: CourseDetail, c: CourseIndexItem, others: Array<{ name: str
   }
   const s4 = (isAdmin() || facTiles.length) ? `<section class="section" id="s4" aria-labelledby="s4-h">
     <div class="section-head">
-      <h2 id="s4-h"><span class="sec-num">04</span>부대시설</h2>
+      <h2 id="s4-h">${iconTile("building", "purple", "sm")}부대시설</h2>
       <p class="section-desc">연습·식음·락카·숙박·야간 조명처럼 라운드 환경을 좌우하는 시설.</p>
     </div>
     <div class="section-body">
-      ${facTiles.length ? `<div class="tiles">${facTiles.join("")}</div>` : `<div class="callout">확인된 부대시설 정보가 없습니다.</div>`}
+      ${facTiles.length ? `<div class="tiles">${facTiles.join("")}</div>` : `<div class="callout"><strong>${icon("info")}확인된 시설 정보가 없습니다</strong>공식 채널에서 확인된 부대시설 정보가 아직 없습니다.</div>`}
       ${unconfirmedBox("시설 정보", facUnknown)}
       ${isAdmin() && (fac.gf_facilities ?? []).length ? `<p class="source-line">참고(공식 시설 목록): ${esc((fac.gf_facilities ?? []).slice(0, 3).join(" / "))}</p>` : ""}
     </div>
@@ -1419,12 +1427,12 @@ function sections(d: CourseDetail, c: CourseIndexItem, others: Array<{ name: str
   const review = br.review;
   const s5 = `<section class="section" id="s5" aria-labelledby="s5-h">
     <div class="section-head">
-      <h2 id="s5-h"><span class="sec-num">05</span>공지 · 브리핑</h2>
+      <h2 id="s5-h">${iconTile("bell", "yellow", "sm")}공지 · 브리핑</h2>
       <p class="section-desc">휴장·에어레이션·요금 변경 같은 최근 공지와 라운더 평가. 예약 전에 가장 먼저 볼 영역입니다.</p>
     </div>
     <div class="section-body">
       ${alert ? `<div class="callout ${(alert.level ? LEVEL[alert.level] : undefined) ?? "info"}">
-        <strong>${esc(alertSummary || (alert.confirmed ? "확인된 공지" : "안내"))}</strong>
+        <strong>${icon(alert.level === "closure" ? "alert" : "info")}${esc(alertSummary || (alert.confirmed ? "확인된 공지" : "안내"))}</strong>
         ${esc(alertDetail || "")}
         ${period ? `<div class="sub">기간: ${esc(period)}</div>` : ""}
         ${isAdmin() && alert.source_url ? `<div class="sub"><a class="link" href="${esc(alert.source_url)}" target="_blank" rel="noopener noreferrer">근거 보기</a></div>` : ""}
@@ -1437,7 +1445,7 @@ function sections(d: CourseDetail, c: CourseIndexItem, others: Array<{ name: str
       ${br.recent_notice_text && visibleText(br.recent_notice_text) ? `<div class="inline-fact"><span class="inline-fact-label">공지 요약</span><span>${esc(visibleText(br.recent_notice_text))}</span></div>` : ""}
       ${br.course_notes && visibleText(br.course_notes) ? `<div class="inline-fact"><span class="inline-fact-label">코스 메모</span><span>${esc(visibleText(br.course_notes))}</span></div>` : ""}
       <div class="notice-block">
-        <h3 class="card-title">최근 공지</h3>
+        <h3 class="card-title">${icon("bell")}최근 공지</h3>
         ${noticeHTML}
         ${products.length ? `<details class="more-box"><summary>클럽·장비 상품 소식 ${products.length}건 (공지 아님)</summary>
           <ul class="notice-list is-product">${products.slice(0, 10).map((n) => `<li${n.date ? "" : ' class="is-undated"'}>${noticeTime(n.date)}<span class="notice-title">${esc(n.title)}</span></li>`).join("")}</ul>
@@ -1453,7 +1461,7 @@ function sections(d: CourseDetail, c: CourseIndexItem, others: Array<{ name: str
   const cluster = c.cluster ? state.clusters.get(c.cluster) ?? null : null;
   const s6 = cluster && others.length ? `<section class="section" id="s6" aria-labelledby="s6-h">
     <div class="section-head">
-      <h2 id="s6-h"><span class="sec-num">06</span>동일 부지 코스</h2>
+      <h2 id="s6-h">${iconTile("pin", "teal", "sm")}동일 부지 코스</h2>
       <p class="section-desc">${esc(visibleText(cluster.relationship) || visibleText(cluster.basis) || "같은 소재지의 코스가 별도 레코드로 등록되어 있습니다.")}</p>
     </div>
     <div class="section-body">
@@ -1511,11 +1519,11 @@ function sections(d: CourseDetail, c: CourseIndexItem, others: Array<{ name: str
 
   const s7 = `<section class="section" id="s7" aria-labelledby="s7-h">
     <div class="section-head">
-      <h2 id="s7-h"><span class="sec-num">07</span>클럽 렌탈</h2>
+      <h2 id="s7-h">${iconTile("bag", "blue", "sm")}클럽 렌탈</h2>
       <p class="section-desc">골프장 자체 대여와, 이 권역에 배송·픽업이 가능한 렌탈 업체.</p>
     </div>
     <div class="section-body">
-      ${rentalTiles ? `<div class="mini-facts">${rentalTiles}</div>` : `<div class="callout">골프장 자체 클럽 대여 정보가 확인되지 않았습니다.</div>`}
+      ${rentalTiles ? `<div class="mini-facts">${rentalTiles}</div>` : `<div class="callout"><strong>${icon("info")}자체 대여 정보 없음</strong>골프장 자체 클럽 대여 정보가 확인되지 않았습니다.</div>`}
       ${evidenceDetails(rt.evidence, "대여 근거")}
       ${nd && (nd.providers ?? []).length ? `<div class="providers">
         <div class="providers-head"><h3 class="card-title">${esc(nd.region || "")} 권역 배송 업체 ${(nd.providers ?? []).length}곳</h3>
@@ -1534,13 +1542,13 @@ function sections(d: CourseDetail, c: CourseIndexItem, others: Array<{ name: str
   const updated = updatedAt(d.meta?.normalized_at, d.meta?.generated_at);
   const dataInfo = isAdmin()
     ? `<section class="section" id="s8" aria-labelledby="s8-h">
-        <div class="section-head"><h2 id="s8-h"><span class="sec-num">08</span>데이터 정보</h2>
+        <div class="section-head"><h2 id="s8-h">${iconTile("chart", "grey", "sm")}데이터 정보</h2>
         <p class="section-desc">7개 영역 채움률. 비어 있는 값은 '미확인'이며 '없음'과 다릅니다.</p></div>
         <div class="section-body"><div class="cov-list">${covRows}</div>
         <p class="source-line">수집 ${esc(updated)} · 스키마 ${esc(d.meta?.schema || "")} · <a class="link" href="${REPO_URL}/blob/main/data/v29/schema.md" target="_blank" rel="noopener noreferrer">스키마 문서</a></p></div>
       </section>`
     : `<section class="section" id="s8" aria-labelledby="s8-h">
-        <div class="section-head"><h2 id="s8-h"><span class="sec-num">08</span>데이터 기준</h2>
+        <div class="section-head"><h2 id="s8-h">${iconTile("chart", "grey", "sm")}데이터 기준</h2>
         <p class="section-desc">${esc(updated || "—")} 기준 · 공개 자료에서 확인된 값만 표시합니다.</p></div>
       </section>`;
 
@@ -1668,8 +1676,11 @@ function renderRental(): void {
 
   $<HTMLElement>("#view-page").innerHTML = `<div class="page">
     <header class="page-head">
-      <h1 class="page-title" tabindex="-1">클럽 렌탈 · 딜리버리</h1>
-      <p class="page-lead">골프장 자체 대여와, 권역으로 배송·픽업이 가능한 업체를 한곳에 모았습니다. 해외에서 오셨거나 장비 없이 라운드할 때 쓰세요.</p>
+      ${iconTile("bag", "blue", "lg")}
+      <div class="page-head-text">
+        <h1 class="page-title" tabindex="-1">클럽 렌탈 · 딜리버리</h1>
+        <p class="page-lead">골프장 자체 대여와, 권역으로 배송·픽업이 가능한 업체를 한곳에 모았습니다. 해외에서 오셨거나 장비 없이 라운드할 때 쓰세요.</p>
+      </div>
     </header>
     <div class="stat-row">
       <div class="stat"><span class="stat-n">${all.length}</span><span class="stat-l">업체</span></div>
@@ -1677,7 +1688,7 @@ function renderRental(): void {
       <div class="stat"><span class="stat-n">${soldOut}</span><span class="stat-l">예약 중단</span></div>
       <div class="stat"><span class="stat-n">${regions.length}</span><span class="stat-l">권역</span></div>
     </div>
-    ${r.summary ? `<div class="callout info"><strong>시장 구조</strong>${esc(r.summary)}</div>` : ""}
+    ${r.summary ? `<div class="callout info"><strong>${icon("info")}시장 구조</strong>${esc(r.summary)}</div>` : ""}
     <div class="rental-filter" role="group" aria-label="권역 필터">
       <button type="button" class="chip${rentalRegion === "" ? " is-on" : ""}" data-region="" aria-pressed="${rentalRegion === ""}">전체</button>
       ${regions.map((rg) => {
@@ -1686,7 +1697,7 @@ function renderRental(): void {
       }).join("")}
     </div>
     <div class="rental-list">${cards || `<div class="state-box"><h2 class="state-title">이 권역에 확인된 업체가 없습니다</h2><p class="state-desc">전체 권역으로 다시 보세요.</p></div>`}</div>
-    <div class="callout"><strong>아직 비어 있는 것</strong>다국어(영어·일본어·중국어) 온라인 예약과 거리측정기 대여 옵션 표기가 거의 없습니다. 재고·개별 견적·권역별 실제 배송 가능 여부는 전화·카카오톡 상담으로만 확인됩니다.</div>
+    <div class="callout"><strong>${icon("info")}아직 비어 있는 것</strong>다국어(영어·일본어·중국어) 온라인 예약과 거리측정기 대여 옵션 표기가 거의 없습니다. 재고·개별 견적·권역별 실제 배송 가능 여부는 전화·카카오톡 상담으로만 확인됩니다.</div>
     <p class="source-line">${meta}</p>
   </div>`;
 
@@ -1726,8 +1737,11 @@ function renderAbout(): void {
 
   $<HTMLElement>("#view-page").innerHTML = `<div class="page">
     <header class="page-head">
-      <h1 class="page-title" tabindex="-1">데이터</h1>
-      <p class="page-lead">${esc(lead)}</p>
+      ${iconTile("chart", "grey", "lg")}
+      <div class="page-head-text">
+        <h1 class="page-title" tabindex="-1">데이터</h1>
+        <p class="page-lead">${esc(lead)}</p>
+      </div>
     </header>
 
     <div class="stat-row">
@@ -1769,7 +1783,7 @@ function renderAbout(): void {
     <section class="about-block">
       <h2 class="h2">주의</h2>
       <div class="callout warn">
-        <strong>참고 데이터입니다</strong>
+        <strong>${icon("alert")}참고 데이터입니다</strong>
         요금·운영 정보는 수집 시점의 공개 정보이며, 골프장 정책에 따라 수시로 바뀝니다. 예약·결제 전 반드시 공식 채널에서 최종 확인하세요. 이 사이트는 예약을 대행하지 않습니다.
       </div>
     </section>

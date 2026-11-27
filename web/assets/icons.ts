@@ -1,5 +1,11 @@
 /**
- * 인라인 SVG 아이콘 — 런타임 의존성 없는 24×24 스트로크 세트.
+ * 인라인 SVG 아이콘 — 런타임 의존성 없는 24×24 세트.
+ *
+ * 두 가지로 쓴다.
+ * - `icon()`      : 선(stroke)만 있는 유틸리티 아이콘 — 화살표·닫기·검색처럼 문장 안에 붙는 것.
+ * - `iconDuo()`   : 2-톤(소프트 채움 + 선) 아이콘 — 목록 카드 태그·섹션 헤더·타일처럼
+ *                   정보의 성격을 색으로 먼저 읽히게 하는 자리.
+ * - `iconTile()`  : 토스풍 파스텔 스쿼클 서피스 위에 2-톤 아이콘을 얹은 배지.
  *
  * 모두 `currentColor` 로 그려 색은 CSS 가 정한다(라이트/다크 자동 대응).
  * 장식 아이콘이므로 항상 `aria-hidden="true"` + `focusable="false"` 로 내보내고,
@@ -45,7 +51,15 @@ export type IconName =
   | "parking"
   | "bolt"
   | "menu"
-  | "ball";
+  | "ball"
+  | "bell"
+  | "food"
+  | "card"
+  | "bag"
+  | "chart";
+
+/** 파스텔 서피스 + 아이콘 색 조합 */
+export type IconTone = "blue" | "green" | "orange" | "red" | "purple" | "teal" | "yellow" | "grey";
 
 const PATHS: Record<IconName, string> = {
   search: '<circle cx="11" cy="11" r="6.6"/><path d="M16 16l4.4 4.4"/>',
@@ -57,7 +71,7 @@ const PATHS: Record<IconName, string> = {
   phone: '<path d="M6.2 3.6h3l1.5 3.8-2 1.4a12 12 0 0 0 6.5 6.5l1.4-2 3.8 1.5v3a2 2 0 0 1-2.2 2A16.6 16.6 0 0 1 4.2 5.8a2 2 0 0 1 2-2.2z"/>',
   globe: '<circle cx="12" cy="12" r="8.6"/><path d="M3.6 12h16.8M12 3.4c2.3 2.4 3.4 5.4 3.4 8.6s-1.1 6.2-3.4 8.6c-2.3-2.4-3.4-5.4-3.4-8.6S9.7 5.8 12 3.4z"/>',
   pin: '<path d="M12 21.2c4.2-4.3 6.4-7.6 6.4-10.6a6.4 6.4 0 1 0-12.8 0c0 3 2.2 6.3 6.4 10.6z"/><circle cx="12" cy="10.2" r="2.3"/>',
-  flag: '<path d="M6.5 21V3.6M6.5 4.4h10.2l-1.8 3.4h2.6l-1.8 3.4H6.5"/>',
+  flag: '<path d="M6.6 21V3.6M6.6 4.4h10.2l-1.8 3.4h2.6l-1.8 3.4H6.6"/>',
   cart: '<path d="M3.5 5.5h2.2l1.1 8.2h9.6l1.9-6.3H6.4"/><circle cx="8.6" cy="18.2" r="1.6"/><circle cx="15.4" cy="18.2" r="1.6"/>',
   person: '<circle cx="12" cy="8" r="3.6"/><path d="M4.8 20.2c0-3.6 3.2-6 7.2-6s7.2 2.4 7.2 6"/>',
   users: '<circle cx="9" cy="8.4" r="3.1"/><path d="M2.8 19.6c0-3.2 2.8-5.3 6.2-5.3s6.2 2.1 6.2 5.3"/><path d="M16 6.2a3 3 0 0 1 0 5.8M17.4 14.7c2.2.5 3.8 2.2 3.8 4.9"/>',
@@ -88,13 +102,69 @@ const PATHS: Record<IconName, string> = {
   bolt: '<path d="M13.4 2.8L5.6 13.4h5.4l-.8 7.8 7.8-10.6h-5.4z"/>',
   menu: '<path d="M4 7h16M4 12h16M4 17h16"/>',
   ball: '<circle cx="12" cy="12" r="8.6"/><path d="M8.4 6.6l1.4 2.2M15.4 6.6l-1.4 2.2M6.6 12h2.4M15 12h2.4M9.4 18l1.2-2M14.6 18l-1.2-2"/>',
+  bell: '<path d="M6.4 10.2a5.6 5.6 0 0 1 11.2 0c0 3.1.9 4.6 1.7 5.5.4.5 0 1.3-.7 1.3H5.4c-.7 0-1.1-.8-.7-1.3.8-.9 1.7-2.4 1.7-5.5z"/><path d="M10.2 20.2a2 2 0 0 0 3.6 0"/>',
+  food: '<path d="M7 3.6v7.2M4.6 3.6v4.2a2.4 2.4 0 0 0 4.8 0V3.6M7 10.8V20.4"/><path d="M16.6 3.6c1.8 0 2.8 2.2 2.8 5.2s-1 4.4-2.8 4.4-2.8-1.4-2.8-4.4 1-5.2 2.8-5.2zM16.6 13.2v7.2"/>',
+  card: '<rect x="2.8" y="5.2" width="18.4" height="13.6" rx="2.8"/><path d="M2.8 10h18.4M6.4 15h3.4"/>',
+  bag: '<path d="M4.6 8.4h14.8l-1.1 10.2a2 2 0 0 1-2 1.8H7.7a2 2 0 0 1-2-1.8z"/><path d="M8.6 8.4V6.6a3.4 3.4 0 0 1 6.8 0v1.8M9.2 12.4h5.6"/>',
+  chart: '<path d="M4 20.2h16"/><rect x="5.6" y="11.4" width="3.2" height="6.4" rx="1"/><rect x="10.4" y="6.6" width="3.2" height="11.2" rx="1"/><rect x="15.2" y="9" width="3.2" height="8.8" rx="1"/>',
 };
 
-/** 아이콘 SVG. 크기는 CSS(`.ic` 클래스)가 정한다. */
+/**
+ * 2-톤 아이콘의 소프트 채움 레이어. 아이콘의 일부를 같은 색 18% 로 채워
+ * 선만 있는 아이콘보다 면이 생기게 한다(토스 앱의 소프트 2-톤 감각).
+ */
+const DUO_BACK: Partial<Record<IconName, string>> = {
+  flag: '<path d="M6.6 4.4h10.2l-1.8 3.4h2.6l-1.8 3.4H6.6z" fill="currentColor" stroke="none" opacity=".18"/>',
+  cart: '<path d="M3.5 5.5h2.2l1.1 8.2h9.6l1.9-6.3z" fill="currentColor" stroke="none" opacity=".18"/>',
+  person: '<circle cx="12" cy="8" r="3.6" fill="currentColor" stroke="none" opacity=".18"/>',
+  users: '<circle cx="9" cy="8.4" r="3.1" fill="currentColor" stroke="none" opacity=".18"/><circle cx="16.4" cy="8.6" r="2.4" fill="currentColor" stroke="none" opacity=".12"/>',
+  moon: '<path d="M20.2 14.8A8.6 8.6 0 0 1 9.2 3.8 8.6 8.6 0 1 0 20.2 14.8z" fill="currentColor" stroke="none" opacity=".18"/>',
+  steam: '<rect x="4.2" y="12.4" width="15.6" height="6.6" rx="3" fill="currentColor" stroke="none" opacity=".14"/>',
+  bed: '<rect x="3.4" y="10.8" width="17" height="6.4" rx="1.6" fill="currentColor" stroke="none" opacity=".18"/>',
+  bus: '<rect x="4.4" y="4.4" width="15.2" height="12.4" rx="2.6" fill="currentColor" stroke="none" opacity=".18"/>',
+  clock: '<circle cx="12" cy="12" r="8.6" fill="currentColor" stroke="none" opacity=".14"/>',
+  shirt: '<path d="M8.6 3.8L5 5.6l-1.6 4 2.6 1.2V20h12v-9.2l2.6-1.2-1.6-4-3.6-1.8z" fill="currentColor" stroke="none" opacity=".18"/>',
+  locker: '<rect x="4.6" y="3.6" width="6.2" height="16.8" rx="1.8" fill="currentColor" stroke="none" opacity=".18"/><rect x="13.2" y="3.6" width="6.2" height="16.8" rx="1.8" fill="currentColor" stroke="none" opacity=".1"/>',
+  ruler: '<path d="M3.2 15.6l12.4-12.4 4.8 4.8L8 20.4z" fill="currentColor" stroke="none" opacity=".16"/>',
+  grass: '<path d="M4 20c0-5 2.2-8.6 5.4-10.4C9 13 9.4 16.4 9.4 20z" fill="currentColor" stroke="none" opacity=".18"/><path d="M12 20c0-6 2-10.6 5.6-13.2-.4 4.4-.4 8.8-.4 13.2z" fill="currentColor" stroke="none" opacity=".12"/>',
+  calendar: '<rect x="3.8" y="5.4" width="16.4" height="15" rx="2.2" fill="currentColor" stroke="none" opacity=".14"/>',
+  star: '<path d="M12 3.6l2.7 5.6 6.1.8-4.5 4.2 1.2 6-5.5-3-5.5 3 1.2-6L3.2 10l6.1-.8z" fill="currentColor" stroke="none" opacity=".2"/>',
+  alert: '<path d="M12 3.8L21 20H3z" fill="currentColor" stroke="none" opacity=".16"/>',
+  info: '<circle cx="12" cy="12" r="8.6" fill="currentColor" stroke="none" opacity=".14"/>',
+  bolt: '<path d="M13.4 2.8L5.6 13.4h5.4l-.8 7.8 7.8-10.6h-5.4z" fill="currentColor" stroke="none" opacity=".2"/>',
+  building: '<rect x="4.4" y="3.8" width="15.2" height="16.4" rx="2.4" fill="currentColor" stroke="none" opacity=".16"/>',
+  ball: '<circle cx="12" cy="12" r="8.6" fill="currentColor" stroke="none" opacity=".14"/>',
+  pin: '<circle cx="12" cy="10.2" r="6.2" fill="currentColor" stroke="none" opacity=".16"/>',
+  phone: '<path d="M6.2 3.6h3l1.5 3.8-2 1.4a12 12 0 0 0 6.5 6.5l1.4-2 3.8 1.5v3a2 2 0 0 1-2.2 2A16.6 16.6 0 0 1 4.2 5.8a2 2 0 0 1 2-2.2z" fill="currentColor" stroke="none" opacity=".16"/>',
+  globe: '<circle cx="12" cy="12" r="8.6" fill="currentColor" stroke="none" opacity=".12"/>',
+  gauge: '<path d="M4.2 17.8a8.8 8.8 0 1 1 15.6 0z" fill="currentColor" stroke="none" opacity=".14"/>',
+  sparkle: '<path d="M12 3.4l1.9 5.3 5.3 1.9-5.3 1.9L12 17.8l-1.9-5.3L4.8 10.6l5.3-1.9z" fill="currentColor" stroke="none" opacity=".18"/>',
+  search: '<circle cx="11" cy="11" r="6.6" fill="currentColor" stroke="none" opacity=".14"/>',
+  filter: '<rect x="4" y="6" width="16" height="2" rx="1" fill="currentColor" stroke="none" opacity=".16"/><rect x="7.5" y="11" width="9" height="2" rx="1" fill="currentColor" stroke="none" opacity=".16"/><rect x="10.5" y="16" width="3" height="2" rx="1" fill="currentColor" stroke="none" opacity=".16"/>',
+  bell: '<path d="M6.4 10.2a5.6 5.6 0 0 1 11.2 0c0 3.1.9 4.6 1.7 5.5.4.5 0 1.3-.7 1.3H5.4c-.7 0-1.1-.8-.7-1.3.8-.9 1.7-2.4 1.7-5.5z" fill="currentColor" stroke="none" opacity=".18"/>',
+  food: '<circle cx="7" cy="8.4" r="4.4" fill="currentColor" stroke="none" opacity=".14"/><circle cx="16.6" cy="8.4" r="3" fill="currentColor" stroke="none" opacity=".14"/>',
+  card: '<rect x="2.8" y="5.2" width="18.4" height="13.6" rx="2.8" fill="currentColor" stroke="none" opacity=".14"/>',
+  bag: '<path d="M4.6 8.4h14.8l-1.1 10.2a2 2 0 0 1-2 1.8H7.7a2 2 0 0 1-2-1.8z" fill="currentColor" stroke="none" opacity=".16"/>',
+  chart: '<rect x="4.4" y="5.4" width="15.2" height="15.6" rx="3" fill="currentColor" stroke="none" opacity=".12"/>',
+};
+
+/** 선 아이콘. 크기는 CSS(`.ic` 클래스)가 정한다. */
 export function icon(name: IconName, extraClass = ""): string {
   const body = PATHS[name];
   const cls = extraClass ? `ic ${extraClass}` : "ic";
-  return `<svg class="${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">${body}</svg>`;
+  return `<svg class="${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">${body}</svg>`;
+}
+
+/** 2-톤 아이콘 — 소프트 채움 레이어 + 선. 타일·태그·섹션 헤더에 쓴다. */
+export function iconDuo(name: IconName, extraClass = ""): string {
+  const back = DUO_BACK[name] ?? "";
+  const cls = extraClass ? `ic ${extraClass}` : "ic";
+  return `<svg class="${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">${back}${PATHS[name]}</svg>`;
+}
+
+/** 파스텔 스쿼클 서피스 위의 2-톤 아이콘 (토스 앱 스타일 아이콘 배지) */
+export function iconTile(name: IconName, tone: IconTone = "blue", size: "xs" | "sm" | "md" | "lg" = "md"): string {
+  return `<span class="ic-tile tone-${tone} size-${size}" aria-hidden="true">${iconDuo(name)}</span>`;
 }
 
 /* ---------------- 인포그래피 ---------------- */

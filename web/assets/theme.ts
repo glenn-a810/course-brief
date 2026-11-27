@@ -13,7 +13,7 @@ export type ThemeChoice = "system" | "light" | "dark";
 const STORAGE_KEY = "coursebrief-theme";
 const CHOICES: readonly ThemeChoice[] = ["system", "light", "dark"];
 const LABEL: Record<ThemeChoice, string> = { system: "자동(시스템 설정)", light: "라이트", dark: "다크" };
-const THEME_COLOR: Record<"light" | "dark", string> = { light: "#f5f5f7", dark: "#000000" };
+const THEME_COLOR: Record<"light" | "dark", string> = { light: "#f2f4f6", dark: "#17171c" };
 
 const darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
 
