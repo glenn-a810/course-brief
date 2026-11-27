@@ -13,7 +13,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch1_supplement_2026_11_27": "누락 필드 보완 배치1(수도권 A) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0131",
@@ -489,8 +490,15 @@
    "value": null
   },
   "bagdrop": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "백 하차시 현관 도우미가 클럽을 하차시켜 드리며 하차 후 차량은 고객님께서 직접 주차하여야 합니다."
+   ],
+   "value": "현관 도우미가 클럽 하차, 차량은 직접 주차",
+   "source_url": "https://www.ansungcc.co.kr/Guide/Guide.aspx",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch1_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "mat": {
    "evidence": [],
@@ -922,7 +930,7 @@
   "basic": 0.89,
   "course": 0.4,
   "fee": 1.0,
-  "ops": 0.36,
+  "ops": 0.43,
   "facility": 0.3,
   "briefing": 0.0,
   "rental": 0.0

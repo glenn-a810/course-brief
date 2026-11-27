@@ -84,7 +84,8 @@
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
   "pass2_patch": "2026-11-27 2차 보완 패스: 4개 항목(그린피가이드·1박2일골프·원더골프·공식 홈페이지 대조, 미확인 값 생성 없음)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch4_supplement_2026_11_27": "누락 필드 보완 배치4(충청권) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0282",
@@ -235,7 +236,12 @@
   }
  },
  "cancel": {
-  "cancel_policy": null,
+  "cancel_policy": {
+   "value": "1·2팀 예약은 경기일을 제외하고 3일 전 17:30까지 취소 시 위약 없음, 이후 팀별 이용요금 10~30% 위약금과 예약정지",
+   "source": "블로그(공개 정리)",
+   "url": "https://golf.tjinmoney.com/buyeo-baekje-cc-caddie-fee-cancellation/",
+   "checked_at": "2026-11-27"
+  },
   "open_cycle": "경기일 해당 주 기준 4주 전 월요일 오전 10시(월~일 일괄 오픈)",
   "notes": "1팀 4인 플레이 원칙, 5인 불가",
   "evidence": [],
@@ -283,8 +289,15 @@
    "evidence": []
   },
   "locker": {
-   "value": null,
-   "evidence": []
+   "value": "락커룸 운영(사우나·파우더룸 병설)",
+   "evidence": [
+    "사우나: 사우나 있음 락커룸/사우나/파우더룸"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0312/",
+   "source_type": "greenfee_guide",
+   "confidence": "medium",
+   "value_from": "batch4_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "sauna": {
    "value": "사우나 있음 락커룸/사우나/파우더룸",
@@ -313,8 +326,15 @@
  },
  "facilities": {
   "practice": {
-   "value": null,
-   "evidence": []
+   "value": "연습장 운영(60분 12,000원, 주말·공휴일 동일)",
+   "evidence": [
+    "백제CC | 충남 부여군 | 60분 12,000원 | 12,000원 | 공식 안내 ↗"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/guides/golf-course-driving-range-fee-guide/",
+   "source_type": "greenfee_guide",
+   "confidence": "medium",
+   "value_from": "batch4_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "indoor_range": {
    "value": null,
@@ -490,8 +510,8 @@
   "basic": 0.78,
   "course": 0.4,
   "fee": 1.0,
-  "ops": 0.29,
-  "facility": 0.5,
+  "ops": 0.36,
+  "facility": 0.6,
   "briefing": 0.5,
   "rental": 0.0
  }

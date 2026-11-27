@@ -13,7 +13,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch1_supplement_2026_11_27": "누락 필드 보완 배치1(수도권 A) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0134",
@@ -353,8 +354,21 @@
   "weekend_text": null,
   "basis": null,
   "tax_included": null,
-  "cart": null,
-  "caddie": null,
+  "cart": {
+   "value": 100000,
+   "raw": "100,000원",
+   "text": "팀당",
+   "source": "공식 홈페이지",
+   "url": "https://www.golfzoncounty.com/golfclub/resvGuide"
+  },
+  "caddie": {
+   "value": 150000,
+   "raw": "150,000원",
+   "text": "팀당",
+   "source": "공식 홈페이지",
+   "url": "https://www.golfzoncounty.com/golfclub/resvGuide",
+   "none": false
+  },
   "as_of": null,
   "source_url": null,
   "note": null,
@@ -372,28 +386,54 @@
   }
  },
  "cancel": {
-  "cancel_policy": null,
-  "open_cycle": null,
+  "cancel_policy": {
+   "value": "경기 전 입장절차 후 임의 취소 시 그린피 50%+카트비, 1~9홀 중단 시 시설이용료+(그린피-시설이용료)×75%+카트비, 10~18홀 중단 시 이용요금 100%",
+   "source": "공식 홈페이지",
+   "url": "https://www.golfzoncounty.com/golfclub/resvGuide",
+   "checked_at": "2026-11-27"
+  },
+  "open_cycle": "매주 월요일 오전 9시, 오픈 주 포함 4주 뒤 월~일요일 오픈",
   "notes": null,
   "evidence": [],
   "weather_evidence": []
  },
  "ops": {
   "nocaddie": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "이용가능시간 셀프라운드 골프장 입니다.(1,2부 모두 이용 가능)"
+   ],
+   "value": "셀프(노캐디) 라운드 운영(1·2부 모두)",
+   "source_url": "https://www.golfzoncounty.com/golfclub/useGuide",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch1_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "two_player": {
    "evidence": [],
    "value": null
   },
   "three_player": {
-   "value": null,
-   "evidence": []
+   "value": "3인 플레이 가능(3~4인)",
+   "evidence": [
+    "5인플레이는 불가하며, 3인~4인만 가능합니다."
+   ],
+   "source_url": "https://www.golfzoncounty.com/golfclub/useGuide",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch1_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "five_player": {
-   "value": null,
-   "evidence": []
+   "value": "5인 플레이 불가(3~4인만 가능)",
+   "evidence": [
+    "5인플레이는 불가하며, 3인~4인만 가능합니다."
+   ],
+   "source_url": "https://www.golfzoncounty.com/golfclub/useGuide",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch1_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "marshal_caddie": {
    "value": null,
@@ -404,20 +444,41 @@
    "value": null
   },
   "cart_entry": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "카트는 정해진 카트도로로 이동하며 카트도로를 벗어난 운행은 향후 셀프라운드 이용이 제한될 수 있습니다."
+   ],
+   "value": "카트는 카트도로로만 이동(페어웨이 진입 불가)",
+   "source_url": "https://www.golfzoncounty.com/golfclub/useGuide",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch1_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "bagdrop": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "클럽하우스 현관에 도착하면, 차량에서 캐디백을 하차해드립니다. 다만, 라운드 종료 후 캐디백 상차는 본인이 직접 하셔야 합니다."
+   ],
+   "value": "클럽하우스 현관에서 캐디백 하차 서비스(상차는 본인)",
+   "source_url": "https://www.golfzoncounty.com/golfclub/useGuide",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch1_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "mat": {
    "evidence": [],
    "value": null
   },
   "checkin": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "티오프 40분전 도착 시간 약속은 골퍼의 기본 매너입니다."
+   ],
+   "value": "티오프 40분 전 도착",
+   "source_url": "https://www.golfzoncounty.com/golfclub/useGuide",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch1_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "locker": {
    "evidence": [],
@@ -604,8 +665,8 @@
  "coverage": {
   "basic": 0.89,
   "course": 0.6,
-  "fee": 0.0,
-  "ops": 0.0,
+  "fee": 0.5,
+  "ops": 0.43,
   "facility": 0.0,
   "briefing": 0.0,
   "rental": 0.0

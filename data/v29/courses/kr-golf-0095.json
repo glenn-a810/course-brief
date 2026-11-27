@@ -13,7 +13,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch1_supplement_2026_11_27": "누락 필드 보완 배치1(수도권 A) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0095",
@@ -85,7 +86,12 @@
   "night_light": "야간 라운드 운영(공식 홈페이지 안내)",
   "blocks": [],
   "grass": {
-   "tee": null,
+   "tee": {
+    "value": "크리핑 벤트그라스, 한국잔디(중지·야지)",
+    "evidence": "잔디 종류 크리핑 밴트그라스, 한국잔디 (중지, 야지)",
+    "source": "공식 홈페이지",
+    "url": "https://123golfclub.co.kr/"
+   },
    "fairway": null,
    "green": null
   },
@@ -259,9 +265,15 @@
   "checkin": {
    "evidence": [
     "도착순과 동시에 티켓팅 후 경기과에 접수, 티업시간을 배정받은 분에 한하여 라운드 가능합니다.",
-    "도착순과 동시에 티켓팅 절차를 마친 때 배정받은 티업 시간에 한하여 라운딩이 가능합니다."
+    "도착순과 동시에 티켓팅 절차를 마친 때 배정받은 티업 시간에 한하여 라운딩이 가능합니다.",
+    "티업 시간 30분 전 에 도착하셔야 하며 지연도착 시 맨 마지막 팀으로 배정됩니다."
    ],
-   "value": null
+   "value": "티업 30분 전 도착",
+   "source_url": "https://123golfclub.co.kr/",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch1_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "locker": {
    "evidence": [
@@ -289,12 +301,26 @@
    "value_from": "capital_supplement(official_site)"
   },
   "dress": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "운동 복장 중 찢어진 청바지 차림, 칼라 없는 티셔츠와 지나치게 짧은 반바지(남자)와 치마, 스카프를 머리와 얼굴에 감는 차림, 티셔츠가 아닌 블라우스(여자) 등의 착용을 금지"
+   ],
+   "value": "찢어진 청바지·칼라 없는 티셔츠·지나치게 짧은 반바지(남)·치마 등 착용 금지",
+   "source_url": "https://123golfclub.co.kr/",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch1_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "pace": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "6홀 경기 기준 시간은 1시간 20분입니다."
+   ],
+   "value": "6홀 기준 1시간 20분",
+   "source_url": "https://123golfclub.co.kr/",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch1_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   }
  },
  "facilities": {
@@ -569,7 +595,7 @@
   "basic": 0.89,
   "course": 0.2,
   "fee": 1.0,
-  "ops": 0.14,
+  "ops": 0.36,
   "facility": 0.3,
   "briefing": 0.0,
   "rental": 0.0

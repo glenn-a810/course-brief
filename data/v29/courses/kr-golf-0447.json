@@ -27,7 +27,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch3_supplement_2026_11_27": "누락 필드 보완 배치3(강원·제주) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0447",
@@ -156,8 +157,13 @@
   "checked_at": "2026-11-27"
  },
  "cancel": {
-  "cancel_policy": null,
-  "open_cycle": null,
+  "cancel_policy": {
+   "value": "평일 3일 전·주말·공휴일 4일 전까지 취소 시 예약금 전액 환불, 당일 취소·노쇼는 팀별 이용요금 30%, 경기 전 취소는 이용요금 50% 환불, 기상 악화·천재지변 취소는 위약 없음",
+   "source": "공식 홈페이지 웨이백 스냅샷(2024)",
+   "url": "http://web.archive.org/web/20240523090744/https://bearcreek.co.kr/",
+   "checked_at": "2026-11-27"
+  },
+  "open_cycle": "춘천 사전예약은 매주 월요일 09시 오픈(주 단위)",
   "notes": "1팀 3~4인, 2인은 3인 그린피 적용(비수기 예외), 1일 1팀 예약",
   "evidence": [],
   "weather_evidence": []
@@ -230,8 +236,15 @@
    "evidence": []
   },
   "food": {
-   "value": null,
-   "evidence": []
+   "value": "프로샵·레스토랑",
+   "evidence": [
+    "프로샵&레스토랑"
+   ],
+   "source_url": "http://web.archive.org/web/20240523090744/https://bearcreek.co.kr/Reservation/MonthFeesList.aspx",
+   "source_type": "official_archive",
+   "confidence": "low",
+   "value_from": "batch3_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "snack_bar": {
    "value": null,
@@ -387,7 +400,7 @@
   "course": 0.2,
   "fee": 1.0,
   "ops": 0.14,
-  "facility": 0.0,
+  "facility": 0.1,
   "briefing": 0.5,
   "rental": 0.0
  }

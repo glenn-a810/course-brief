@@ -13,7 +13,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch1_supplement_2026_11_27": "누락 필드 보완 배치1(수도권 A) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0142",
@@ -175,7 +176,12 @@
     "source": "공식",
     "url": "https://www.360cc.co.kr/mobile/board/boardList.do?groupcode=NOTICE&mainMenuCd=reservation&subMenuCd=%2Fboard%2FboardView.do"
    },
-   "green": null
+   "green": {
+    "value": "벤트(T1)",
+    "evidence": "그린 잔디 벤트(T1) (코스 정보: 360도 CC 18홀 파72)",
+    "source": "골프 예약 플랫폼(톡티·골프조인)",
+    "url": "https://tokti.golf/golf/course?ground_idx=16792&lang=ko"
+   }
   },
   "kga": {
    "kga_course_code": "302",
@@ -273,8 +279,11 @@
   "tax_included": null,
   "cart": {
    "evidence": "프런트에서 락카 키를 수령하여 준비를 마친 후, tee-off 10분 전에 스타트하우스 앞 배정카트에서 대기하시면 됩니다.",
-   "url": "https://www.360cc.co.kr/mobile/subContents/use/guide_01.do",
-   "source": "공식"
+   "url": "https://www.360cc.co.kr/use/charge.do",
+   "source": "공식 홈페이지",
+   "value": 100000,
+   "raw": "100,000원",
+   "text": "5인승 220,000원"
   },
   "caddie": null,
   "as_of": null,
@@ -340,8 +349,15 @@
    "evidence": []
   },
   "five_player": {
-   "value": null,
-   "evidence": []
+   "value": "5인승 카트 운영(5인승 카트비 220,000원)",
+   "evidence": [
+    "카트피 100,000원 / 5인승 220,000원"
+   ],
+   "source_url": "https://www.360cc.co.kr/use/charge.do",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch1_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "marshal_caddie": {
    "value": null,
@@ -365,8 +381,15 @@
    "value": null
   },
   "bagdrop": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "하차 후 주차장으로 이동하시면 됩니다. - 차량 키는 소지하여"
+   ],
+   "value": "현관에서 백 하차 후 직접 주차(차량키 소지)",
+   "source_url": "https://www.360cc.co.kr/use/guide.do",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch1_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "mat": {
    "evidence": [],
@@ -689,8 +712,8 @@
  "coverage": {
   "basic": 0.89,
   "course": 0.4,
-  "fee": 0.0,
-  "ops": 0.43,
+  "fee": 0.25,
+  "ops": 0.57,
   "facility": 0.1,
   "briefing": 0.0,
   "rental": 0.0

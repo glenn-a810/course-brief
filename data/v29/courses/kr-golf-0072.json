@@ -13,7 +13,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch1_supplement_2026_11_27": "누락 필드 보완 배치1(수도권 A) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0072",
@@ -198,8 +199,15 @@
    "evidence": []
   },
   "food": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "이용안내 이용요금 이용안내 예약안내 레스토랑 안내 로컬룰 전화번호 안내"
+   ],
+   "value": "레스토랑 운영(사이트 레스토랑 안내)",
+   "source_url": "https://www.orangedunesyj.com/",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch1_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "snack_bar": {
    "value": null,
@@ -362,7 +370,7 @@
   "course": 0.2,
   "fee": 0.0,
   "ops": 0.0,
-  "facility": 0.1,
+  "facility": 0.2,
   "briefing": 0.0,
   "rental": 0.0
  }

@@ -128,7 +128,8 @@
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
   "batch3_patch": "2026-11-27 배치3 보완: 2개 항목(공식 홈페이지·공개 요금 안내 기준, 미확인 값 생성 없음)",
   "pass2_patch": "2026-11-27 2차 보완 패스: 2개 항목(그린피가이드·1박2일골프·원더골프·공식 홈페이지 대조, 미확인 값 생성 없음)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch3_supplement_2026_11_27": "누락 필드 보완 배치3(강원·제주) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0459",
@@ -297,12 +298,26 @@
  },
  "ops": {
   "nocaddie": {
-   "value": null,
-   "evidence": []
+   "value": "노캐디 타임 운영(예약 후 캐디 동반 변경 불가, 3~4인팀 1만원·2인팀 5천원 비용)",
+   "evidence": [
+    "노캐디타임 예약 후 캐디동반으로 변경은 불가하며, 별도의 준비 비용이 발생됩니다. (3~4인팀 1만원/팀, 2인팀 5천원/팀)"
+   ],
+   "source_url": "https://www.yongpyong.co.kr/kor/golf/appointment/priceInfo.do",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch3_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "two_player": {
-   "value": null,
-   "evidence": []
+   "value": "2인 단독 진행 시 추가요금(주중 5만원·주말 7만원/팀)",
+   "evidence": [
+    "2인 단독진행을 원하는 경우 팀예약 후 내장 시, 추가요금이 발생됩니다 (주중 5만원/팀, 주말 7만원/팀)"
+   ],
+   "source_url": "https://www.yongpyong.co.kr/kor/golf/appointment/priceInfo.do",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch3_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "three_player": {
    "value": null,
@@ -554,7 +569,7 @@
   "basic": 0.89,
   "course": 0.6,
   "fee": 1.0,
-  "ops": 0.07,
+  "ops": 0.21,
   "facility": 0.6,
   "briefing": 0.5,
   "rental": 0.0

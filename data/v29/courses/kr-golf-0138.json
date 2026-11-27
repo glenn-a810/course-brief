@@ -13,7 +13,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch1_supplement_2026_11_27": "누락 필드 보완 배치1(수도권 A) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0138",
@@ -230,7 +231,12 @@
     "source": "공식",
     "url": "https://lakewood.co.kr/swp/range_facil"
    },
-   "green": null
+   "green": {
+    "value": "벤트",
+    "evidence": "그린 잔디 벤트 (코스 정보: 레이크우드 CC 36홀 파144)",
+    "source": "골프 예약 플랫폼(톡티·골프조인)",
+    "url": "https://tokti.golf/golf/course?ground_idx=16780&lang=ko"
+   }
   },
   "kga": {
    "kga_course_code": "85",
@@ -470,8 +476,15 @@
    }
   },
   "three_player": {
-   "value": null,
-   "evidence": []
+   "value": "3인 플레이부터 이용 가능",
+   "evidence": [
+    "3인 플레이부터 이용 가능"
+   ],
+   "source_url": "https://lakewood.co.kr/",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch1_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "five_player": {
    "value": null,
@@ -768,7 +781,7 @@
   "basic": 0.89,
   "course": 0.4,
   "fee": 1.0,
-  "ops": 0.21,
+  "ops": 0.29,
   "facility": 0.4,
   "briefing": 0.0,
   "rental": 0.75

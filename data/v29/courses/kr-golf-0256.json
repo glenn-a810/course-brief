@@ -74,7 +74,8 @@
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
   "checked_at": "2026-11-27",
   "pass2_patch": "2026-11-27 2차 보완 패스: 2개 항목(그린피가이드·1박2일골프·원더골프·공식 홈페이지 대조, 미확인 값 생성 없음)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch4_supplement_2026_11_27": "누락 필드 보완 배치4(충청권) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0256",
@@ -214,8 +215,13 @@
   }
  },
  "cancel": {
-  "cancel_policy": null,
-  "open_cycle": null,
+  "cancel_policy": {
+   "value": "주말·공휴일은 4일 전, 평일은 3일 전 16:00까지 취소(이후 페널티·위약금)",
+   "source": "블로그(공개 정리)",
+   "url": "https://seoosport.com/%eb%96%bc%ec%a0%9c%eb%b2%a0cc-%ed%9a%8c%ec%9b%90%ea%b0%80%ec%9e%85-%ec%98%88%ec%95%bd-%ea%b7%b8%eb%a6%b0%ed%94%bc-%ec%bd%94%ec%8a%a4%eb%82%9c%ec%9d%b4%eb%8f%84-%ed%9b%84%ea%b8%b0%ec%b6%a9%eb%b6%81/",
+   "checked_at": "2026-11-27"
+  },
+  "open_cycle": "라운드 3주 전 월요일 09:00 선착순 오픈",
   "notes": "미확인(공식 오픈 주기 미게시 — 홈페이지 실시간 예약)",
   "evidence": [],
   "weather_evidence": []

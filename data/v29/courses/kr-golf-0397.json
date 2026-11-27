@@ -41,7 +41,8 @@
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
   "pass2_patch": "2026-11-27 2차 보완 패스: 요금 확인일·출처 기록 갱신(값 변경 없음)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch3_supplement_2026_11_27": "누락 필드 보완 배치3(강원·제주) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0397",
@@ -175,7 +176,12 @@
   }
  },
  "cancel": {
-  "cancel_policy": null,
+  "cancel_policy": {
+   "value": "(대중제 9홀) 경기 중단 시 환불·홀정산 불가, 결제 후 미입장은 당일에 한해 환불",
+   "source": "공식 홈페이지",
+   "url": "https://www.castlexjj.com/html/guide/guide01.asp",
+   "checked_at": "2026-11-27"
+  },
   "open_cycle": null,
   "notes": "정규홀 인코스 당일 배정(인코스 남→아웃 동, 인코스 동→아웃 남), 퍼블릭은 일자 예약·시간 선착순",
   "evidence": [],
@@ -187,8 +193,15 @@
    "evidence": []
   },
   "two_player": {
-   "value": null,
-   "evidence": []
+   "value": "2인 플레이 가능(대중제 9홀, 1인 플레이 불가)",
+   "evidence": [
+    "2인부터 등록/내장이 가능(1인플레이 불가)"
+   ],
+   "source_url": "https://www.castlexjj.com/html/guide/guide03.asp",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch3_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "three_player": {
    "value": "가능",
@@ -219,24 +232,52 @@
    "evidence": []
   },
   "checkin": {
-   "value": null,
-   "evidence": []
+   "value": "티오프 30분 전까지 입장해 프런트 데스크 접수",
+   "evidence": [
+    "원활한 경기진행을 위해 TEE OFF시간 30분전까지 입장하시어 프론트 데스트에 접수해 주시기 바랍니다."
+   ],
+   "source_url": "https://www.castlexjj.com/html/guide/guide01.asp",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch3_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "locker": {
-   "value": null,
-   "evidence": []
+   "value": "퍼블릭코스 락카장 이용 제한(샤워만 가능, 락카키 미제공)",
+   "evidence": [
+    "퍼블릭코스 락카장 이용 안내 : 샤워는 가능하지만 락카장이용은 제한되어 락카키 제공되지않습니다."
+   ],
+   "source_url": "https://www.castlexjj.com/html/guide/guide01.asp",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch3_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "sauna": {
    "value": null,
    "evidence": []
   },
   "dress": {
-   "value": null,
-   "evidence": []
+   "value": "남성 반바지 착용 시 긴스타킹 필수, 쇠징 스파이크 금지",
+   "evidence": [
+    "남성플레이가 반바지를 착용할시에는 긴스타킹을 반드시 착용해주시기 바랍니다. / 쇠징스파이크 착용은 금지하고 있습니다."
+   ],
+   "source_url": "https://www.castlexjj.com/html/guide/guide01.asp",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch3_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "pace": {
-   "value": null,
-   "evidence": []
+   "value": "티오프 7분 간격",
+   "evidence": [
+    "2. TEE - OFF : 7분"
+   ],
+   "source_url": "https://www.castlexjj.com/html/guide/guide01.asp",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch3_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   }
  },
  "facilities": {
@@ -439,7 +480,7 @@
   "basic": 0.89,
   "course": 0.4,
   "fee": 1.0,
-  "ops": 0.14,
+  "ops": 0.5,
   "facility": 0.3,
   "briefing": 0.5,
   "rental": 0.75

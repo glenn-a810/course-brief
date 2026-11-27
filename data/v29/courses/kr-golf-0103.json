@@ -13,7 +13,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch1_supplement_2026_11_27": "누락 필드 보완 배치1(수도권 A) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0103",
@@ -148,7 +149,12 @@
     "source": "공식",
     "url": "https://www.konjiamgolfclub.co.kr/index.dev"
    },
-   "green": null
+   "green": {
+    "value": "벤트",
+    "evidence": "그린 잔디 벤트 (코스 정보: 곤지암 GC 18홀 파72)",
+    "source": "골프 예약 플랫폼(톡티·골프조인)",
+    "url": "https://tokti.golf/golf/course?ground_idx=16645&lang=ko"
+   }
   },
   "kga": {
    "kga_course_code": "47",
@@ -535,7 +541,12 @@
   }
  },
  "cancel": {
-  "cancel_policy": null,
+  "cancel_policy": {
+   "value": "6일 전 이후 취소 시 위약금 50%, 당일 취소 위약금 100%. 15일 전~6일 전 구간 취소는 내장·예약 정지 1개월",
+   "source": "공식 홈페이지",
+   "url": "https://www.konjiamgolfclub.co.kr/operate/cancellation.dev",
+   "checked_at": "2026-11-27"
+  },
   "open_cycle": null,
   "notes": null,
   "evidence": [
@@ -629,8 +640,15 @@
    "value": null
   },
   "dress": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "1. 재킷 착용을 권장드립니다. 2. 하기 복장 착용 시 이용이 제한될 수 있습니다 (반바지, 짧은 스커트, 레깅스 등산복, 샌들&슬리퍼, 등산화)"
+   ],
+   "value": "재킷 착용 권장, 반바지·레깅스·등산복·샌들 착용 제한",
+   "source_url": "https://www.konjiamgolfclub.co.kr/operate/cancellation.dev",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch1_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "pace": {
    "evidence": [
@@ -1033,7 +1051,7 @@
   "basic": 0.78,
   "course": 0.4,
   "fee": 1.0,
-  "ops": 0.21,
+  "ops": 0.29,
   "facility": 0.5,
   "briefing": 0.0,
   "rental": 0.75

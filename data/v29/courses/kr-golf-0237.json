@@ -27,7 +27,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch4_supplement_2026_11_27": "누락 필드 보완 배치4(충청권) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0237",
@@ -157,7 +158,12 @@
   }
  },
  "cancel": {
-  "cancel_policy": null,
+  "cancel_policy": {
+   "value": "예약일 제외 5일 전 17:00까지 정상 취소(월 3회 취소 시 6개월 예약정지), 이후 4일 전 1개월 정지, 3일 전 2개월 정지·10%, 2일 전 3개월·10%, 1일 전 4개월·20%, 당일·노쇼 6개월·30%",
+   "source": "공식 홈페이지",
+   "url": "https://monarchcc.co.kr/guide/reservation-guide",
+   "checked_at": "2026-11-27"
+  },
   "open_cycle": "예약 신청 4주 전 오전 9시, 예약 범위는 주간 단위(월~일) 오픈. 인터넷·모바일웹",
   "notes": "1일 1인 1팀, 4인 내장 필수(비수기 1·2·7·8·12월 예외). 5인은 예약실 문의, 3팀 이상 단체는 유선",
   "evidence": [],
@@ -205,8 +211,15 @@
    "evidence": []
   },
   "locker": {
-   "value": null,
-   "evidence": []
+   "value": "락카 운영(4자리 비밀번호 잠금장치, 사용 전 락카문 닫고 설정)",
+   "evidence": [
+    "· 사용 전 오픈되어 있는 락카문을 닫으신 후 비밀번호 4자리 설정 후, 다시 비밀번호 4자리 누르시면 문이 열립니다."
+   ],
+   "source_url": "https://monarchcc.co.kr/guide/visitor-guide",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch4_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "sauna": {
    "value": null,
@@ -384,7 +397,7 @@
   "basic": 0.89,
   "course": 0.4,
   "fee": 1.0,
-  "ops": 0.07,
+  "ops": 0.14,
   "facility": 0.0,
   "briefing": 0.5,
   "rental": 0.0

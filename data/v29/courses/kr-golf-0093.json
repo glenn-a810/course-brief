@@ -13,7 +13,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch1_supplement_2026_11_27": "누락 필드 보완 배치1(수도권 A) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0093",
@@ -156,7 +157,12 @@
     "source": "공식",
     "url": "https://www.crystalvalley.co.kr/html/reserve/reserve07.asp"
    },
-   "green": null
+   "green": {
+    "value": "벤트(펜크로스/펜A-1)",
+    "evidence": "그린 잔디 벤트(펜크로스/펜A-1) (코스 정보: 크리스탈 밸리 CC 18홀 파72)",
+    "source": "골프 예약 플랫폼(톡티·골프조인)",
+    "url": "https://tokti.golf/golf/course?ground_idx=16658&lang=ko"
+   }
   },
   "kga": {
    "kga_course_code": "198",
@@ -299,7 +305,7 @@
    "source": "공식 홈페이지",
    "url": "https://www.crystalvalley.co.kr/html/reserve/reserve01.asp"
   },
-  "open_cycle": null,
+  "open_cycle": "월~금요일 예약은 오전 9시부터 경기일 하루 전까지 인터넷 예약, 토·일·공휴일은 일괄접수 후 일괄배정",
   "notes": null,
   "evidence": [
    "크리스탈밸리 본문바로가기 HOME > 예약/이용안내 > 요금표 | 이용요금※ 2024년 1월 1일부터 시행 공지사항 구분 주중 주말 카트료 캐디피 정회원 105,000 120,000 120,000리무진카트200,000 160,000리무진160,000 주중회원 115,000 290,000 비회원 230,000 290,000 3인 플레이 4인 팀 요금 적용 9홀 추가 125,560 155,560 60,000 80,000 | NO-SHOW 패널티 - 주중 : 569,700원 - 주말 : 733,400원 * 내장인원 4인 필수입니다.",

@@ -13,7 +13,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch1_supplement_2026_11_27": "누락 필드 보완 배치1(수도권 A) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0148",
@@ -154,9 +155,10 @@
   "grass": {
    "tee": null,
    "fairway": {
-    "evidence": "코스 내 잔디 보호를 위하여 고무징 스파이크를 착용하여 주시기 바랍니다.",
-    "source": "공식",
-    "url": "https://www.blueheron.co.kr/swp/information/use/use"
+    "evidence": "잔디종류 중지(페어웨이), 벤트그라스(그린)",
+    "source": "공식 홈페이지",
+    "url": "https://www.blueheron.co.kr/swp/course/outline",
+    "value": "중지"
    },
    "green": {
     "value": "벤트그라스",
@@ -285,7 +287,7 @@
    "source": "공식 홈페이지",
    "url": "https://www.blueheron.co.kr/swp/information/use/reservation"
   },
-  "open_cycle": null,
+  "open_cycle": "주중예약 정회원·주중회원 두 번째 목요일 9시, 주말예약 세 번째 목요일 9~11시 접수 후 추첨",
   "notes": null,
   "evidence": [
    "블루헤런 주요 메뉴 바로가기 컨텐트 바로가기 블루헤런 메뉴 Hitejinro Championship Job Opening 코스 예약 로그인 닫기 블루헤런 로그인 회원가입 아이디/비밀번호 찾기 About 인사말 정도경영선언문 클럽개요 부대시설 오시는길 Course 코스개요 코스안내 reservation 예약방법 실시간예약 주말추첨신청 예약확인 및 변경/취소 Info 공지사항 이용안내 포토갤러리 자료실 Magazine 하이트진로 챔피언십 하이트진로 소속프로 Recruit 채용절차 채용공고 닫기 코스소개 전략성이 풍부한 블루헤런의 코스를",
@@ -338,8 +340,15 @@
    "value": null
   },
   "bagdrop": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "클럽하우스 도착 시 현관에서 골프 백을 하차한 후 직접 주차해 주시기 바랍니다."
+   ],
+   "value": "현관에서 골프백 하차 후 직접 주차",
+   "source_url": "https://www.blueheron.co.kr/",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch1_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "mat": {
    "evidence": [],
@@ -393,8 +402,15 @@
  },
  "facilities": {
   "practice": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "개장일 1992. 3. 9 연습장 12타석 클럽하우스 1,500평(B1F, 3F)"
+   ],
+   "value": "연습장 12타석 운영",
+   "source_url": "https://www.blueheron.co.kr/swp/about/overview",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch1_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "indoor_range": {
    "value": null,
@@ -404,9 +420,15 @@
    "evidence": [
     "블루헤런 주요 메뉴 바로가기 컨텐트 바로가기 블루헤런 메뉴 Hitejinro Championship Job Opening 코스 예약 로그인 닫기 블루헤런 로그인 회원가입 아이디/비밀번호 찾기 About 인사말 정도경영선언문 클럽개요 부대시설 오시는길 Course 코스개요 코스안내 reservation 예약방법 실시간예약 주말추첨신청 예약확인 및 변경/취소 Info 공지사항 이용안내 포토갤러리 자료실 Magazine 하이트진로 챔피언십 하이트진로 소속프로 Recruit 채용절차 채용공고 닫기 코스소개 전략성이 풍부한 블루헤런의 코스를",
     "블루헤런 주요 메뉴 바로가기 컨텐트 바로가기 블루헤런 메뉴 Hitejinro Championship Job Opening 코스 예약 로그인 닫기 블루헤런 로그인 회원가입 아이디/비밀번호 찾기 About 인사말 정도경영선언문 클럽개요 부대시설 오시는길 Course 코스개요 코스안내 reservation 예약방법 실시간예약 주말추첨신청 예약확인 및 변경/취소 Info 공지사항 이용안내 포토갤러리 자료실 Magazine 하이트진로 챔피언십 하이트진로 소속프로 Recruit 채용절차 채용공고 닫기 코스소개 전략성이 풍부한 블루헤런의 코스를",
-    "블루헤런 주요 메뉴 바로가기 컨텐트 바로가기 블루헤런 메뉴 Hitejinro Championship Job Opening 코스 예약 로그인 닫기 블루헤런 로그인 회원가입 아이디/비밀번호 찾기 About 인사말 정도경영선언문 클럽개요 부대시설 오시는길 Course 코스개요 코스안내 reservation 예약방법 실시간예약 주말추첨신청 예약확인 및 변경/취소 Info 공지사항 이용안내 포토갤러리 자료실 Magazine 하이트진로 챔피언십 하이트진로 소속프로 Recruit 채용절차 채용공고 닫기 코스소개 전략성이 풍부한 블루헤런의 코스를"
+    "블루헤런 주요 메뉴 바로가기 컨텐트 바로가기 블루헤런 메뉴 Hitejinro Championship Job Opening 코스 예약 로그인 닫기 블루헤런 로그인 회원가입 아이디/비밀번호 찾기 About 인사말 정도경영선언문 클럽개요 부대시설 오시는길 Course 코스개요 코스안내 reservation 예약방법 실시간예약 주말추첨신청 예약확인 및 변경/취소 Info 공지사항 이용안내 포토갤러리 자료실 Magazine 하이트진로 챔피언십 하이트진로 소속프로 Recruit 채용절차 채용공고 닫기 코스소개 전략성이 풍부한 블루헤런의 코스를",
+    "클럽하우스 레스토랑 메뉴 주중 주말 음료 및 주류 와인 10T/H 그늘집 메뉴"
    ],
-   "value": null
+   "value": "클럽하우스 레스토랑·그늘집 운영",
+   "source_url": "https://www.blueheron.co.kr/swp/information/use/food",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch1_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "snack_bar": {
    "value": null,
@@ -564,8 +586,8 @@
   "basic": 0.89,
   "course": 0.4,
   "fee": 1.0,
-  "ops": 0.21,
-  "facility": 0.0,
+  "ops": 0.29,
+  "facility": 0.2,
   "briefing": 0.0,
   "rental": 0.0
  }

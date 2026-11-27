@@ -13,7 +13,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch1_supplement_2026_11_27": "누락 필드 보완 배치1(수도권 A) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0125",
@@ -203,8 +204,15 @@
    "evidence": []
   },
   "five_player": {
-   "value": null,
-   "evidence": []
+   "value": "5인 라운드 가능(승용식 리무진 카트 배정, 사전 전화 문의)",
+   "evidence": [
+    "※ 5인라운드 시 카트 운영은 승용식 리무진 카트를 배정합니다. ※ 5인라운드는 골프장 사정에 따라 이용 제한이 있을 수 있으므로 사전 전화 문의하여 주시기 바랍니다."
+   ],
+   "source_url": "https://www.golfclubq.com/",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch1_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "marshal_caddie": {
    "value": null,
@@ -314,8 +322,15 @@
  },
  "facilities": {
   "practice": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "HOME > 연습장 클럽하우스 그늘집 레스토랑 프로샵"
+   ],
+   "value": "연습장 운영",
+   "source_url": "https://www.golfclubq.com/facil/facil01_3.asp",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch1_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "indoor_range": {
    "value": null,
@@ -586,8 +601,8 @@
   "basic": 0.89,
   "course": 0.4,
   "fee": 0.5,
-  "ops": 0.5,
-  "facility": 0.5,
+  "ops": 0.57,
+  "facility": 0.6,
   "briefing": 0.0,
   "rental": 0.75
  }

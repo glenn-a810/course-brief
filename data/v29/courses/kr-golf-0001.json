@@ -13,7 +13,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch1_supplement_2026_11_27": "누락 필드 보완 배치1(수도권 A) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0001",
@@ -203,16 +204,29 @@
  },
  "ops": {
   "nocaddie": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "노캐디 선택 시범운행 안내"
+   ],
+   "value": "노캐디 선택 운영(시범운행)",
+   "source_url": "https://inseoul27.co.kr/board/board.php?bo_table=notice",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch1_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "two_player": {
    "evidence": [
     "날씨 흐림 10.0℃ 강수없음 3.0m/s 코스 East 자연 습지 경관과 조화를 이루는 코스 West 자연 습지 경관과 조화를 이루는 코스 South 자연 습지 경관과 조화를 이루는 코스 공지사항 동계기간 3인 플레이 가능 안내 2026.11.16 2027년 연단체 2차 모집 2026.11.11 쇼골프 40분 타석 이용권 무료증정 2026.11.11 오시는 길 인서울27에 찾아 오시는 길입니다.",
     "- 개인예약 : 3주전 월요일 AM9시~ (주단위오픈 실시간예약) - 단체예약 : 전달 1일 인터넷접수 오픈(마감시 까지 수시모집) *이용가이드/ 예약규정 참고 모든 예약타임은 1팀 4인 필수입니다.",
-    "3인 내장시, 1인당 2만원 추가 요금이 발생됩니다."
+    "3인 내장시, 1인당 2만원 추가 요금이 발생됩니다.",
+    "■ 내용 : 2~3인 플레이 가능 (추가금X)"
    ],
-   "value": null
+   "value": "2~3인 플레이 가능(추가금 없음)",
+   "source_url": "https://inseoul27.co.kr/board/board.php?bo_table=notice",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch1_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "three_player": {
    "value": "3인 가능",
@@ -288,8 +302,15 @@
    "value_from": "capital_supplement(greenfee_guide)"
   },
   "dress": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "복장은 스포티하게 신발은 운동화 또는 골프화를 착용하여 타인에게 불쾌감을 주지않도록 한다."
+   ],
+   "value": "스포티한 복장, 운동화 또는 골프화 착용",
+   "source_url": "https://inseoul27.co.kr/m42.php",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch1_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "pace": {
    "evidence": [],
@@ -512,7 +533,7 @@
   "basic": 0.89,
   "course": 0.6,
   "fee": 0.5,
-  "ops": 0.29,
+  "ops": 0.5,
   "facility": 0.4,
   "briefing": 0.0,
   "rental": 0.0

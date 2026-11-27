@@ -13,7 +13,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch1_supplement_2026_11_27": "누락 필드 보완 배치1(수도권 A) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0117",
@@ -137,13 +138,24 @@
   "night_light": null,
   "blocks": [],
   "grass": {
-   "tee": null,
-   "fairway": {
-    "evidence": "아래와 같은 복장은 클럽하우스 입장/퇴장 및 라운드가 불가하오니 회원님 및 동반자분들의 넓은 양해와 적극적인 협조 부탁드립니다.※ 반바지, 슬리퍼&샌들, 노출이 심한 복장 등 ※ 뒤 팀을 패스하거나, 잔디를 훼손하는 행위를 삼가주시기 바랍니다.",
-    "source": "공식",
-    "url": "https://www.teecloud.co.kr/new/guide/round.asp"
+   "tee": {
+    "value": "켄터키 블루그래스",
+    "evidence": "티잉그라운드 켄터키 블루그라스 (Kentucky bluegrass)",
+    "source": "공식 홈페이지",
+    "url": "https://www.teecloud.co.kr/new/course/map.asp"
    },
-   "green": null
+   "fairway": {
+    "evidence": "페어웨이 한국잔디 (Zoysia) 삼덕중지 + 안양중지",
+    "source": "공식 홈페이지",
+    "url": "https://www.teecloud.co.kr/new/course/map.asp",
+    "value": "한국잔디(삼덕중지+안양중지)"
+   },
+   "green": {
+    "value": "크리핑 벤트그라스",
+    "evidence": "그린 크리핑 벤트그라스 (Creeping bentgrass)",
+    "source": "공식 홈페이지",
+    "url": "https://www.teecloud.co.kr/new/course/map.asp"
+   }
   },
   "kga": {
    "kga_course_code": "71",
@@ -500,14 +512,20 @@
   },
   "checkin": {
    "evidence": [
-    "TEE-OFF 1시간 전 도착 캐디백 및 보스턴백에 네임택을 다시 한번 확인해 주시기 바랍니다."
+    "TEE-OFF 1시간 전 도착 캐디백 및 보스턴백에 네임택을 다시 한번 확인해 주시기 바랍니다.",
+    "TEE-OFF시간 20분 전까지 스타트홀로 준비해 주시기 바랍니다."
    ],
-   "value": null,
+   "value": "티오프 1시간 전 도착·20분 전 스타트홀 준비",
    "third_party": {
     "value": null,
     "source": "그린피가이드",
     "url": "https://greenfeeguide.co.kr/course/gc-0145/"
-   }
+   },
+   "source_url": "https://www.teecloud.co.kr/new/guide/guide.asp",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch1_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "locker": {
    "evidence": [],
@@ -882,7 +900,7 @@
   "basic": 0.89,
   "course": 0.4,
   "fee": 1.0,
-  "ops": 0.43,
+  "ops": 0.5,
   "facility": 0.3,
   "briefing": 0.0,
   "rental": 0.75

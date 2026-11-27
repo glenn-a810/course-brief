@@ -27,7 +27,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch4_supplement_2026_11_27": "누락 필드 보완 배치4(충청권) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0264",
@@ -176,7 +177,12 @@
   }
  },
  "cancel": {
-  "cancel_policy": null,
+  "cancel_policy": {
+   "value": "주말·공휴일 4일 전, 평일 3일 전까지 정상 취소(이후 주말 3일·2일 전, 평일 2일 전 정상요금의 10%)",
+   "source": "공식 홈페이지",
+   "url": "https://www.cygnuscc.com/community/board_read.asp?board_id=spage&num=9",
+   "checked_at": "2026-11-27"
+  },
   "open_cycle": "평일 예약 4주 전 같은 요일 09:00, 주말 예약 4주 전 금요일 09:00(금·토·일 동시), 공휴일은 평일과 동일",
   "notes": "2팀 이상 단체는 예약실 문의",
   "evidence": [],

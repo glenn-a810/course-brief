@@ -13,7 +13,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch1_supplement_2026_11_27": "누락 필드 보완 배치1(수도권 A) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0129",
@@ -189,8 +190,18 @@
   "blocks": [],
   "grass": {
    "tee": null,
-   "fairway": null,
-   "green": null
+   "fairway": {
+    "value": "안양중지",
+    "evidence": "안양중지 페어웨이와 벤트그라스 그린을 갖췄고",
+    "source": "골프 예약 플랫폼(톡티·골프조인)",
+    "url": "https://golfjoin.co.kr/golf-courses/anseongbeneseuteup"
+   },
+   "green": {
+    "value": "벤트그라스",
+    "evidence": "안양중지 페어웨이와 벤트그라스 그린을 갖췄고",
+    "source": "골프 예약 플랫폼(톡티·골프조인)",
+    "url": "https://golfjoin.co.kr/golf-courses/anseongbeneseuteup"
+   }
   },
   "kga": {
    "kga_course_code": "124",
@@ -354,15 +365,22 @@
  },
  "cancel": {
   "cancel_policy": null,
-  "open_cycle": null,
+  "open_cycle": "회원 4주 전 월요일 09:30, 비회원 4주 전 목요일 09:30 오픈",
   "notes": null,
   "evidence": [],
   "weather_evidence": []
  },
  "ops": {
   "nocaddie": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "캐디필수 운영으로 캐디피 15만 원, 카트피 10만 원이 별도입니다."
+   ],
+   "value": "노캐디 불가(캐디 필수 운영)",
+   "source_url": "https://papahun.com/anseongbenestcc/",
+   "source_type": "blog",
+   "confidence": "low",
+   "value_from": "batch1_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "two_player": {
    "evidence": [],
@@ -668,7 +686,7 @@
   "basic": 0.89,
   "course": 0.4,
   "fee": 1.0,
-  "ops": 0.07,
+  "ops": 0.14,
   "facility": 0.1,
   "briefing": 0.0,
   "rental": 0.0

@@ -14,7 +14,8 @@
   "merged_note": "v2.8: kr-golf-0510(유니아일랜드 골프&스파 리조트) 행을 이 레코드로 병합(중복 계상 방지).",
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch1_supplement_2026_11_27": "누락 필드 보완 배치1(수도권 A) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0063",
@@ -100,13 +101,24 @@
   "night_light": null,
   "blocks": [],
   "grass": {
-   "tee": null,
-   "fairway": {
-    "evidence": "2024.05.16 이벤트 한시적 3인플레이 가능!!",
-    "source": "공식",
-    "url": "https://www.uniisland.com:443/index"
+   "tee": {
+    "value": "켄터키블루그라스",
+    "evidence": "그린은 벤트그라스, 티잉그라운드와 페어웨이는 켄터키블루그라스로 구성되어 있습니다.",
+    "source": "공식 홈페이지",
+    "url": "https://www.uniisland.com/board/qna"
    },
-   "green": null
+   "fairway": {
+    "evidence": "그린은 벤트그라스, 티잉그라운드와 페어웨이는 켄터키블루그라스로 구성되어 있습니다.",
+    "source": "공식 홈페이지",
+    "url": "https://www.uniisland.com/board/qna",
+    "value": "켄터키블루그라스"
+   },
+   "green": {
+    "value": "벤트그라스",
+    "evidence": "그린은 벤트그라스, 티잉그라운드와 페어웨이는 켄터키블루그라스로 구성되어 있습니다.",
+    "source": "공식 홈페이지",
+    "url": "https://www.uniisland.com/board/qna"
+   }
   },
   "kga": null,
   "kga_hole_est": null,
@@ -122,8 +134,21 @@
   "weekend_text": null,
   "basis": null,
   "tax_included": null,
-  "cart": null,
-  "caddie": null,
+  "cart": {
+   "value": 100000,
+   "raw": "100,000원",
+   "text": "리무진 6인승 200,000원",
+   "source": "공식 홈페이지",
+   "url": "https://www.uniisland.com/reservation/fee"
+  },
+  "caddie": {
+   "value": 160000,
+   "raw": "160,000원",
+   "text": "5인 플레이 220,000원",
+   "source": "공식 홈페이지",
+   "url": "https://www.uniisland.com/reservation/fee",
+   "none": false
+  },
   "as_of": null,
   "source_url": null,
   "note": null,
@@ -143,44 +168,90 @@
   "official_rental": null
  },
  "cancel": {
-  "cancel_policy": null,
-  "open_cycle": null,
+  "cancel_policy": {
+   "value": "예약일 기준 주중·주말 5일 전 17시까지 취소 시 위약 없음. 4일 전 1개월·3일 전 2개월·2일 전 4개월·1일 전 6개월 예약정지(당일 4인 그린피의 10~20% 위약금), 당일취소·노쇼 30% 위약금",
+   "source": "공식 홈페이지",
+   "url": "https://www.uniisland.com/guide/penalty",
+   "checked_at": "2026-11-27"
+  },
+  "open_cycle": "3주 전 월요일 9시 오픈",
   "notes": null,
   "evidence": [],
   "weather_evidence": []
  },
  "ops": {
   "nocaddie": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "노캐디 라운딩 이용 시 고객님의 셀프라운드 세팅, 카트점검, 카트청소 비용 1팀당 20,000원씩 부과됩니다."
+   ],
+   "value": "노캐디(셀프) 라운딩 운영, 세팅·카트청소비 1팀당 20,000원",
+   "source_url": "https://www.uniisland.com/guide/use-guide",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch1_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "two_player": {
    "evidence": [
     "공지사항 한시적 3인플레이 가능!!",
     "2024.05.16 공지사항 5월 전타임 특가 + 3인플 가능 5월 전타임 특가 + 3인플 가능 2024.05.16 공지사항 한시적 3인플레이 가능!!",
-    "2024.05.16 공지사항 한시적 3인플레이 가능!!"
+    "2024.05.16 공지사항 한시적 3인플레이 가능!!",
+    "2인플레이 진행 시 3인그린피 요금이 부과됩니다.(3인플레이와 동일금액)"
    ],
-   "value": null
+   "value": "2인 플레이 가능(3인 그린피 적용)",
+   "source_url": "https://www.uniisland.com/guide/use-guide",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch1_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "three_player": {
-   "value": null,
-   "evidence": []
+   "value": "3인 플레이 가능",
+   "evidence": [
+    "1팀 3인 플레이 이상 가능합니다."
+   ],
+   "source_url": "https://www.uniisland.com/reservation/fee",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch1_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "five_player": {
-   "value": null,
-   "evidence": []
+   "value": "5인 플레이 가능(리무진 카트), 셀프라운딩 시 불가",
+   "evidence": [
+    "4. 셀프라운딩 예약시 5인플레이 및 갤러리입장 불가합니다."
+   ],
+   "source_url": "https://www.uniisland.com/guide/self",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch1_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "marshal_caddie": {
-   "value": null,
-   "evidence": []
+   "value": "캐디(경기보조원) 배치",
+   "evidence": [
+    "로컬룰, 안전, 진행 등에 관한 경기보조원의 안내에 적극 협조 바랍니다."
+   ],
+   "source_url": "https://www.uniisland.com/guide/info-guide",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch1_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "cart_type": {
    "evidence": [],
    "value": null
   },
   "cart_entry": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "11. 카트는 코스내 역주행 및 페어웨이 출입을 금합니다."
+   ],
+   "value": "카트 코스 내 역주행·페어웨이 출입 금지",
+   "source_url": "https://www.uniisland.com/guide/self",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch1_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "bagdrop": {
    "evidence": [],
@@ -191,24 +262,52 @@
    "value": null
   },
   "checkin": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "원활한 팀 배치와 Tee-off 준비를 위하여 예약시간 40분 전까지 내장 바랍니다."
+   ],
+   "value": "예약시간 40분 전까지 내장",
+   "source_url": "https://www.uniisland.com/guide/info-guide",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch1_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "locker": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "클럽하우스,대식당,프로샵,락카룸,그늘집이 편리하게 배치되어 있으며"
+   ],
+   "value": "락카룸·락카장 운영",
+   "source_url": "https://www.uniisland.com/board/qna",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch1_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "sauna": {
    "evidence": [],
    "value": null
   },
   "dress": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "드레스코드는 자유입니다."
+   ],
+   "value": "드레스코드 자유",
+   "source_url": "https://www.uniisland.com/guide/info-guide",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch1_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "pace": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "경기소요시간은 4시간 50분이며, 티오프는 7분 간격입니다."
+   ],
+   "value": "경기소요 4시간 50분, 티오프 7분 간격",
+   "source_url": "https://www.uniisland.com/board/qna",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch1_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   }
  },
  "facilities": {
@@ -240,8 +339,15 @@
    "evidence": []
   },
   "lodging": {
-   "value": null,
-   "evidence": []
+   "value": "숙박 가능(객실 운영, 16시부터 체크인)",
+   "evidence": [
+    "당일 라운드 이후 객실 체크인. (16:00 부터 체크인 가능)"
+   ],
+   "source_url": "https://www.uniisland.com/reservation/fee",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch1_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "other": {
    "value": null,
@@ -387,9 +493,9 @@
  "coverage": {
   "basic": 0.89,
   "course": 0.2,
-  "fee": 0.0,
-  "ops": 0.0,
-  "facility": 0.1,
+  "fee": 0.5,
+  "ops": 0.71,
+  "facility": 0.2,
   "briefing": 0.0,
   "rental": 0.0
  }

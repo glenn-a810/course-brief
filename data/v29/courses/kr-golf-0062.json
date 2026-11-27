@@ -13,7 +13,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch1_supplement_2026_11_27": "누락 필드 보완 배치1(수도권 A) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0062",
@@ -122,8 +123,8 @@
   "caddie": {
    "value": null,
    "none": true,
-   "note": "No 캐디 운영",
-   "source": "공식 홈페이지 요금표",
+   "note": "노캐디(No캐디) 운영 — 공식 요금표",
+   "source": "공식 홈페이지",
    "url": "https://www.gakorea.com/wellbeing/guide/fee.asp"
   },
   "as_of": "2026-11-27",
@@ -170,12 +171,26 @@
  },
  "ops": {
   "nocaddie": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "(1인용 배터리 카트) / No 캐디 운영"
+   ],
+   "value": "노캐디(No캐디) 운영",
+   "source_url": "https://www.gakorea.com/wellbeing/guide/fee.asp",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch1_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "two_player": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "※ 2인/팀 라운드 시 9홀 기준 1인당 주중 2만원, 주말/공휴일 3만원 추가"
+   ],
+   "value": "2인/팀 라운드 시 9홀 기준 1인당 주중 2만원·주말/공휴일 3만원 추가",
+   "source_url": "https://www.gakorea.com/wellbeing/guide/fee.asp",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch1_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "three_player": {
    "value": null,
@@ -444,7 +459,7 @@
   "basic": 0.89,
   "course": 0.2,
   "fee": 0.75,
-  "ops": 0.29,
+  "ops": 0.43,
   "facility": 0.2,
   "briefing": 0.0,
   "rental": 0.0

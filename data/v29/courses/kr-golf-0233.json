@@ -27,7 +27,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch4_supplement_2026_11_27": "누락 필드 보완 배치4(충청권) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0233",
@@ -168,8 +169,13 @@
   }
  },
  "cancel": {
-  "cancel_policy": null,
-  "open_cycle": null,
+  "cancel_policy": {
+   "value": "예약일 기준 주중 3일 전·주말 4일 전 17:00까지 취소 가능, 이후 위약 규정 적용(주중 2일 전 팀별 이용요금 10%, 1일 전 20%, 당일 30% / 주말·공휴일 3~2일 전 10%, 1일 전 20%, 당일 30%)",
+   "source": "공식 홈페이지",
+   "url": "https://www.clublonge.com/Club/songnisan/Information",
+   "checked_at": "2026-11-27"
+  },
+  "open_cycle": "이용일 4주 전 월요일 09:00 오픈(예약 마감은 이용 전날 23:59)",
   "notes": "일부 시간만 노캐디(주중) 운영 미확인(공식 오픈 주기 미게시 — 홈페이지·예약처 예약)",
   "evidence": [],
   "weather_evidence": []

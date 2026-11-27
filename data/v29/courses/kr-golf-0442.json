@@ -53,7 +53,8 @@
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
   "batch3_patch": "2026-11-27 배치3 보완: 1개 항목(공식 홈페이지·공개 요금 안내 기준, 미확인 값 생성 없음)",
   "pass2_patch": "2026-11-27 2차 보완 패스: 요금 확인일·출처 기록 갱신(값 변경 없음)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch3_supplement_2026_11_27": "누락 필드 보완 배치3(강원·제주) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0442",
@@ -209,8 +210,15 @@
    "evidence": []
   },
   "three_player": {
-   "value": null,
-   "evidence": []
+   "value": "4인 필수, 3인 내장 시 요금 변동",
+   "evidence": [
+    "4인필수,3인내장시요금변동"
+   ],
+   "source_url": "https://todaygolfgo.com/golf-courses/master/golf-course-moct-20241231-0004/",
+   "source_type": "aggregator",
+   "confidence": "low",
+   "value_from": "batch3_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "five_player": {
    "value": null,
@@ -428,7 +436,7 @@
   "basic": 0.89,
   "course": 0.2,
   "fee": 1.0,
-  "ops": 0.0,
+  "ops": 0.07,
   "facility": 0.0,
   "briefing": 0.5,
   "rental": 0.0

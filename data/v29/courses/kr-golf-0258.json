@@ -28,7 +28,8 @@
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
   "checked_at": "2026-11-27",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch4_supplement_2026_11_27": "누락 필드 보완 배치4(충청권) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0258",
@@ -177,7 +178,12 @@
   }
  },
  "cancel": {
-  "cancel_policy": null,
+  "cancel_policy": {
+   "value": "주말 4일 전·평일 3일 전 17:00까지 위약 없이 취소, 2일 전 팀별 이용요금 10%, 1일 전 20%, 당일·미내장 30%",
+   "source": "공식 홈페이지",
+   "url": "http://dyhills.basecc.co.kr:6443/Info/PenaltyInfo.aspx",
+   "checked_at": "2026-11-27"
+  },
   "open_cycle": "예약은 7주 전 해당 요일 09시 오픈, 홈페이지·모바일·전화",
   "notes": "대영베이스와 별도 코스·별도 예약",
   "evidence": [],

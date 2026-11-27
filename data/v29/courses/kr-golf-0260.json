@@ -29,7 +29,8 @@
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
   "batch4_patch": "royalforet.com 은 DNS 조회 실패. 로얄포레는 올데이골프그룹 계열로 공식 안내가 alldaygolf.co.kr에서 운영됨(충주시 관광 안내도 동일 URL)",
   "checked_at": "2026-11-27",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch4_supplement_2026_11_27": "누락 필드 보완 배치4(충청권) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0260",
@@ -175,7 +176,12 @@
   }
  },
  "cancel": {
-  "cancel_policy": null,
+  "cancel_policy": {
+   "value": "주중 3일 전, 주말·공휴일 4일 전까지 위약 없이 취소(이후 시점별 위약금)",
+   "source": "알데이골프(운영사) 예약 안내",
+   "url": "https://www.alldaygolf.co.kr/",
+   "checked_at": "2026-11-27"
+  },
   "open_cycle": "평일·휴일 모두 31일 전 오픈(올데이 통합 예약안내 표기)",
   "notes": "할인공시가는 1팀 4인 조건, 3인은 4인 요금, 2인 플레이 불가",
   "evidence": [],

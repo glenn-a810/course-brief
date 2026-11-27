@@ -118,7 +118,8 @@
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
   "checked_at": "2026-11-27",
   "pass2_patch": "2026-11-27 2차 보완 패스: 10개 항목(그린피가이드·1박2일골프·원더골프·공식 홈페이지 대조, 미확인 값 생성 없음)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch4_supplement_2026_11_27": "누락 필드 보완 배치4(충청권) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0242",
@@ -330,8 +331,15 @@
    "checked_at": "2026-11-27"
   },
   "locker": {
-   "value": null,
-   "evidence": []
+   "value": "락커룸 운영(사우나 병설)",
+   "evidence": [
+    "사우나: 사우나 있음 락커룸/사우나"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0284/",
+   "source_type": "greenfee_guide",
+   "confidence": "medium",
+   "value_from": "batch4_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "sauna": {
    "value": "사우나 있음 락커룸/사우나",
@@ -538,7 +546,7 @@
   "basic": 0.89,
   "course": 0.4,
   "fee": 1.0,
-  "ops": 0.21,
+  "ops": 0.29,
   "facility": 0.3,
   "briefing": 0.5,
   "rental": 0.75

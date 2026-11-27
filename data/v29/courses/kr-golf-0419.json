@@ -163,7 +163,8 @@
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
   "batch3_patch": "2026-11-27 배치3 보완: 1개 항목(공식 홈페이지·공개 요금 안내 기준, 미확인 값 생성 없음)",
   "pass2_patch": "2026-11-27 2차 보완 패스: 11개 항목(그린피가이드·1박2일골프·원더골프·공식 홈페이지 대조, 미확인 값 생성 없음)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch3_supplement_2026_11_27": "누락 필드 보완 배치3(강원·제주) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0419",
@@ -299,7 +300,7 @@
  },
  "cancel": {
   "cancel_policy": "평일 3일 전·주말 4일 전까지(4일 전 취소는 주중·주말 모두 위약 없음, 3일 전 취소는 주말 10% 위약 또는 6개월 예약정지)",
-  "open_cycle": null,
+  "open_cycle": "4주 전 월요일 09시부터 일주일 단위(월~일) 일괄 오픈",
   "notes": "위약 규정에 위약금과 예약 제한(예약 정지·이용 제한·벌점 가운데 하나 이상)이 적혀 있습니다",
   "evidence": [
    "기한이 지나면 위약 규정에 위약금과 예약 제한(예약 정지·이용 제한·벌점 가운데 하나 이상)이 적혀 있습니다"
@@ -320,12 +321,26 @@
    "evidence": []
   },
   "two_player": {
-   "value": null,
-   "evidence": []
+   "value": "2인 플레이 가능(9홀 기준 추가요금 주중 2만·주말 3.5만원)",
+   "evidence": [
+    "(단, 2인 플레이 희망시 추가요금 발생 : (9H 기준) 주중 20천원, 주말 35천원 [※ 할인, D카드적립, 홀별정산 불가])"
+   ],
+   "source_url": "https://www.sonofelicecc.com/rsv.choice.dp/dmparse.dm",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch3_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "three_player": {
-   "value": null,
-   "evidence": []
+   "value": "4인 플레이 필수, 3인 이하 내장 시 추가요금 발생",
+   "evidence": [
+    "1팀 4인 플레이 필수 (3인 이하 내장시 추가요금 발생)"
+   ],
+   "source_url": "https://www.sonofelicecc.com/rsvguide.rsvGuide.dp/dmparse.dm",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch3_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "five_player": {
    "value": null,
@@ -588,7 +603,7 @@
   "basic": 0.89,
   "course": 0.2,
   "fee": 1.0,
-  "ops": 0.21,
+  "ops": 0.36,
   "facility": 0.6,
   "briefing": 0.5,
   "rental": 0.0

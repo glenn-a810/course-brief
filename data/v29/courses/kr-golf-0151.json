@@ -13,7 +13,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch1_supplement_2026_11_27": "누락 필드 보완 배치1(수도권 A) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0151",
@@ -91,7 +92,12 @@
   "grass": {
    "tee": null,
    "fairway": null,
-   "green": null
+   "green": {
+    "value": "벤트",
+    "evidence": "그린 잔디 벤트 (코스 정보: 소피아그린 CC 27홀 파108)",
+    "source": "골프 예약 플랫폼(톡티·골프조인)",
+    "url": "https://tokti.golf/golf/course?ground_idx=16639&lang=ko"
+   }
   },
   "kga": null,
   "kga_hole_est": null,
@@ -160,8 +166,15 @@
  },
  "ops": {
   "nocaddie": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "카트운행 및 타구사고 등에 대한 우려로 현재는 셀프라운드가 불가합니다."
+   ],
+   "value": "셀프(노캐디) 라운드 불가",
+   "source_url": "https://sophiagreen.co.kr/swp/qna",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch1_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "two_player": {
    "evidence": [],
@@ -180,8 +193,15 @@
    "value_from": "capital_supplement(greenfee_guide)"
   },
   "five_player": {
-   "value": null,
-   "evidence": []
+   "value": "시즌별 5인 플레이 가능(2캐디·2카트 필요, 캐디봉사료·카트대여료 추가)",
+   "evidence": [
+    "시즌별 5인 플레이 가능여부는 별도 문의 바랍니다. 5인 플레이가 가능한 시기에는 2캐디 2카트를 이용하셔야 하며, 관련 캐디봉사료 및 카트대여료가 추가 발생합니다."
+   ],
+   "source_url": "https://sophiagreen.co.kr/",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch1_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "marshal_caddie": {
    "value": null,
@@ -439,7 +459,7 @@
   "basic": 0.89,
   "course": 0.6,
   "fee": 0.5,
-  "ops": 0.29,
+  "ops": 0.43,
   "facility": 0.2,
   "briefing": 0.0,
   "rental": 0.0

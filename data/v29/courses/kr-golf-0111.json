@@ -13,7 +13,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch1_supplement_2026_11_27": "누락 필드 보완 배치1(수도권 A) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0111",
@@ -613,9 +614,15 @@
   },
   "food": {
    "evidence": [
-    "* 문자 전송 오류가 발생할 수 있으니 반드시 최종 예약 확정은 홈페이지 예약확인/취소 메뉴에서 확인해주시기 바랍니다."
+    "* 문자 전송 오류가 발생할 수 있으니 반드시 최종 예약 확정은 홈페이지 예약확인/취소 메뉴에서 확인해주시기 바랍니다.",
+    "클럽하우스 대식당, 연회장, 프로샵, (남/여)락커 및 샤워시설"
    ],
-   "value": null
+   "value": "클럽하우스 대식당·연회장 운영",
+   "source_url": "https://www.gimpocc.co.kr/club/introduction",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch1_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "snack_bar": {
    "value": null,
@@ -796,7 +803,7 @@
   "course": 0.4,
   "fee": 1.0,
   "ops": 0.43,
-  "facility": 0.1,
+  "facility": 0.2,
   "briefing": 0.0,
   "rental": 0.75
  }

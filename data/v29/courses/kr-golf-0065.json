@@ -13,7 +13,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch1_supplement_2026_11_27": "누락 필드 보완 배치1(수도권 A) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0065",
@@ -299,8 +300,18 @@
   "blocks": [],
   "grass": {
    "tee": null,
-   "fairway": null,
-   "green": null
+   "fairway": {
+    "value": "켄터키블루 및 다년생 라이그라스",
+    "evidence": "페어웨이는 켄터키블루 및 다년생 라이그라스를 심었다. 1년 내내 푸른 페어웨이를 유지한다.",
+    "source": "언론 보도",
+    "url": "https://www.asiae.co.kr/article/2024030714351911939"
+   },
+   "green": {
+    "value": "벤트그라스",
+    "evidence": "그린은 벤트그라스로 만들어 최고의 플레이 환경을 제공한다.",
+    "source": "언론 보도",
+    "url": "https://www.asiae.co.kr/article/2024030714351911939"
+   }
   },
   "kga": {
    "kga_course_code": "292",
@@ -596,12 +607,26 @@
    "value": null
   },
   "two_player": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "예약 인원이 4인 플레이를 기본으로 하며, 3인 플레이까지 가능합니다. 2인 플레이는 불허되고 있습니다."
+   ],
+   "value": "2인 플레이 불허(3인까지 가능)",
+   "source_url": "https://camerongchamp.tistory.com/entry/베어즈-베스트-청라CC-정보",
+   "source_type": "blog",
+   "confidence": "low",
+   "value_from": "batch1_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "three_player": {
-   "value": null,
-   "evidence": []
+   "value": "3인 플레이까지 가능",
+   "evidence": [
+    "예약 인원이 4인 플레이를 기본으로 하며, 3인 플레이까지 가능합니다."
+   ],
+   "source_url": "https://camerongchamp.tistory.com/entry/베어즈-베스트-청라CC-정보",
+   "source_type": "blog",
+   "confidence": "low",
+   "value_from": "batch1_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "five_player": {
    "value": null,
@@ -895,7 +920,7 @@
   "basic": 0.78,
   "course": 0.4,
   "fee": 0.5,
-  "ops": 0.21,
+  "ops": 0.36,
   "facility": 0.3,
   "briefing": 0.0,
   "rental": 0.0
