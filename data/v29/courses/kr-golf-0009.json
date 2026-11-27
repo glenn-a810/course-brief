@@ -607,8 +607,24 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
-   "items": [],
+   "url": "https://www.goldlake.co.kr/board/notice",
+   "items": [
+    {
+     "title": "12월 07일(월) 대중제 예약관련 안내",
+     "date": "2026-11-06",
+     "url": "https://www.goldlake.co.kr/board/notice-view/12085"
+    },
+    {
+     "title": "12월 1박 2일 패키지",
+     "date": "2026-11-03",
+     "url": "https://www.goldlake.co.kr/board/notice-view/12077"
+    },
+    {
+     "title": "골드레이크 아마추어골프대회 예선 통과자(10월)",
+     "date": "2026-10-30",
+     "url": "https://www.goldlake.co.kr/board/notice-view/12073"
+    }
+   ],
    "tags": {}
   },
   "review": {
@@ -618,8 +634,8 @@
    "url": "https://teepickgolf.com/course/%EA%B3%A8%EB%93%9C%EB%A0%88%EC%9D%B4%ED%81%AC"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T10:25:40+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T21:45:00+09:00",
+  "recent_notice_text": "2026-11-06 12월 7일(월) 대중제 예약관련 안내, 2026-11-03 12월·11월 1박 2일 패키지, 2026-10-30 골드레이크 아마추어골프대회 예선 통과자(10월) 발표. 골프 딜리버리 서비스 안내도 홈에서 함께 게시.",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [
@@ -634,19 +650,24 @@
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
     "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공식 공지사항(브라우저 확인)",
+    "url": "https://www.goldlake.co.kr/board/notice",
+    "checked_at": "2026-11-27"
    }
   ]
  },
  "collection": {
-  "official_site": "unavailable",
-  "official_reason": "HTTP0",
-  "pages_collected": 0,
+  "official_site": "ok",
+  "official_reason": "공식 홈페이지 확인(2026-11-27, 브라우저 직접 접속)",
+  "pages_collected": 2,
   "third_party": {
    "teepick": true,
    "greenfeeguide": true
   },
-  "render_hint": "thin",
-  "plan_strategy": "unreachable(브라우저 재시도)",
+  "render_hint": "browser",
+  "plan_strategy": "browser_check(2026-11-27)",
   "browser_batch": false,
   "browser_pages": 0,
   "browser_pdf": []
@@ -657,7 +678,7 @@
   "fee": 1.0,
   "ops": 0.07,
   "facility": 0.4,
-  "briefing": 0.25,
+  "briefing": 0.75,
   "rental": 0.25
  }
 }

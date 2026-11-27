@@ -519,8 +519,39 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
-   "items": [],
+   "url": "https://www.gochangcc.co.kr/html/company.asp#company04",
+   "items": [
+    {
+     "title": "1월 그린피 안내",
+     "date": "2026-11-27",
+     "url": "https://www.gochangcc.co.kr/html/company.asp#company04"
+    },
+    {
+     "title": "12월 15~31일 그린피 안내",
+     "date": "2026-10-30",
+     "url": "https://www.gochangcc.co.kr/html/company.asp#company04"
+    },
+    {
+     "title": "12월 1~14일 그린피 안내",
+     "date": "2026-10-30",
+     "url": "https://www.gochangcc.co.kr/html/company.asp#company04"
+    },
+    {
+     "title": "N골프 1억원 홀인원챌린지 4차",
+     "date": "2026-10-06",
+     "url": "https://www.gochangcc.co.kr/html/company.asp#company04"
+    },
+    {
+     "title": "11월 그린피 안내",
+     "date": "2026-09-28",
+     "url": "https://www.gochangcc.co.kr/html/company.asp#company04"
+    },
+    {
+     "title": "매일 셀렉스배 제31회 한국 시니어오픈",
+     "date": "2026-09-28",
+     "url": "https://www.gochangcc.co.kr/html/company.asp#company04"
+    }
+   ],
    "tags": {}
   },
   "review": {
@@ -530,8 +561,8 @@
    "url": "https://teepickgolf.com/course/%EA%B3%A0%EC%B0%BD"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T10:25:42+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T21:45:00+09:00",
+  "recent_notice_text": "2026-11-27 1월 그린피 안내, 2026-10-30 12월 1~14일·12월 15~31일 그린피 안내, 2026-10-06 N골프 1억원 홀인원챌린지 4차, 2026-09-28 11월 그린피 안내·제31회 한국 시니어오픈 개최. 홈 팝업에 노캐디 운영·홀인원 이벤트·11월~1월 요금 배너 게시.",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [
@@ -545,19 +576,24 @@
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
     "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공식 공지사항(브라우저 확인)",
+    "url": "https://www.gochangcc.co.kr/html/company.asp#company04",
+    "checked_at": "2026-11-27"
    }
   ]
  },
  "collection": {
-  "official_site": "unavailable",
-  "official_reason": "HTTP0",
-  "pages_collected": 0,
+  "official_site": "ok",
+  "official_reason": "공식 홈페이지 확인(2026-11-27, 브라우저 직접 접속)",
+  "pages_collected": 2,
   "third_party": {
    "teepick": true,
    "greenfeeguide": true
   },
-  "render_hint": "thin",
-  "plan_strategy": "blocked(헤드리스·UA 우회)",
+  "render_hint": "browser",
+  "plan_strategy": "browser_check(2026-11-27)",
   "browser_batch": false,
   "browser_pages": 0,
   "browser_pdf": []
@@ -568,7 +604,7 @@
   "fee": 1.0,
   "ops": 0.43,
   "facility": 0.3,
-  "briefing": 0.25,
+  "briefing": 0.75,
   "rental": 1.0
  }
 }

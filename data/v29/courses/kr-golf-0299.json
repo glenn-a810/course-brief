@@ -595,32 +595,37 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
+   "url": "https://kolongolf.com/board/notice",
    "items": [],
    "tags": {}
   },
   "review": null,
   "fee_change": null,
-  "collected_at": "2026-11-26T10:28:33+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T21:45:00+09:00",
+  "recent_notice_text": "스페셜오퍼 게시판 최신 6건: 골프장 휴장안내, 12월 1(화)~13(일) 이용요금, 12월 1(화)~13(일) 프로모션, 2인 30일 패키지, 11월 16~30일 이용요금(조회 3,934), 11월 16~30일 프로모션. 회원가입 없이 이용요금·프로모션별 상세를 볼 수 있고 게시판에는 작성일이 표시되지 않음. 골프클럽 대여·골프 딜리버리 안내도 함께 게시.",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [],
   "sources": [
    "https://www.kolongolf.com/swp/club",
-   "https://www.rankue.co.kr/golf/course/%EA%B0%80%EB%93%A0%EA%B3%A8%ED%94%84%ED%81%B4%EB%9F%BD"
+   "https://www.rankue.co.kr/golf/course/%EA%B0%80%EB%93%A0%EA%B3%A8%ED%94%84%ED%81%B4%EB%9F%BD",
+   {
+    "source": "공식 공지사항(브라우저 확인)",
+    "url": "https://kolongolf.com/board/notice",
+    "checked_at": "2026-11-27"
+   }
   ]
  },
  "collection": {
-  "official_site": "unavailable",
-  "official_reason": "HTTP0",
-  "pages_collected": 0,
+  "official_site": "ok",
+  "official_reason": "공식 홈페이지 확인(2026-11-27, 브라우저 직접 접속)",
+  "pages_collected": 2,
   "third_party": {
    "teepick": false,
    "greenfeeguide": true
   },
-  "render_hint": "thin",
-  "plan_strategy": "thin(상세페이지 탐색)",
+  "render_hint": "browser",
+  "plan_strategy": "browser_check(2026-11-27)",
   "browser_batch": false
  },
  "coverage": {
@@ -629,7 +634,7 @@
   "fee": 0.5,
   "ops": 0.64,
   "facility": 0.5,
-  "briefing": 0.0,
+  "briefing": 0.25,
   "rental": 0.25
  }
 }

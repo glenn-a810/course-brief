@@ -644,8 +644,44 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
-   "items": [],
+   "url": "https://www.plazacc.co.kr/plzcc/irsweb/golf2/customer/notice/list.do",
+   "items": [
+    {
+     "title": "레스토랑(그릴) 동절기 운영(12/1~) [제주]",
+     "date": "2026-11-26",
+     "url": "https://www.plazacc.co.kr/plzcc/irsweb/golf2/customer/notice/list.do"
+    },
+    {
+     "title": "12월 그린피 안내 [용인]",
+     "date": "2026-11-26",
+     "url": "https://www.plazacc.co.kr/plzcc/irsweb/golf2/customer/notice/list.do"
+    },
+    {
+     "title": "레스토랑 운영시간안내(12/1~) [용인]",
+     "date": "2026-11-26",
+     "url": "https://www.plazacc.co.kr/plzcc/irsweb/golf2/customer/notice/list.do"
+    },
+    {
+     "title": "시스템 정기점검으로 인한 온라인 서비스 중단 안내(2026.12.1) [전체]",
+     "date": "2026-11-26",
+     "url": "https://www.plazacc.co.kr/plzcc/irsweb/golf2/customer/notice/list.do"
+    },
+    {
+     "title": "레스토랑 운영시간안내(11/10~) [용인]",
+     "date": "2026-11-05",
+     "url": "https://www.plazacc.co.kr/plzcc/irsweb/golf2/customer/notice/list.do"
+    },
+    {
+     "title": "11월 야간 그린피 안내 [용인]",
+     "date": "2026-10-30",
+     "url": "https://www.plazacc.co.kr/plzcc/irsweb/golf2/customer/notice/list.do"
+    },
+    {
+     "title": "2027년 연단체 접수 안내 [용인]",
+     "date": "2026-10-08",
+     "url": "https://www.plazacc.co.kr/plzcc/irsweb/golf2/customer/notice/list.do"
+    }
+   ],
    "tags": {}
   },
   "review": {
@@ -655,8 +691,8 @@
    "url": "https://teepickgolf.com/course/%EC%9A%A9%EC%9D%B8%ED%94%8C%EB%9D%BC%EC%9E%90cc"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T09:51:57+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T21:45:00+09:00",
+  "recent_notice_text": "2026-11-26 용인 12월 그린피 안내·레스토랑 운영시간(12/1~), 전체 시스템 정기점검으로 인한 온라인 서비스 중단(2026-12-01), 제주 그릴 동절기 운영(12/1~). 2026-11-05 레스토랑 운영시간(11/10~), 2026-10-30 11월 야간 그린피, 2026-10-08 2027년 연단체 접수.",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [
@@ -672,19 +708,24 @@
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
     "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공식 공지사항(브라우저 확인)",
+    "url": "https://www.plazacc.co.kr/plzcc/irsweb/golf2/customer/notice/list.do",
+    "checked_at": "2026-11-27"
    }
   ]
  },
  "collection": {
-  "official_site": "unavailable",
-  "official_reason": "HTTP0",
-  "pages_collected": 0,
+  "official_site": "ok",
+  "official_reason": "공식 홈페이지 확인(2026-11-27, 브라우저 직접 접속)",
+  "pages_collected": 2,
   "third_party": {
    "teepick": true,
    "greenfeeguide": true
   },
-  "render_hint": "thin",
-  "plan_strategy": "unreachable(브라우저 재시도)",
+  "render_hint": "browser",
+  "plan_strategy": "browser_check(2026-11-27)",
   "browser_batch": false
  },
  "coverage": {
@@ -693,7 +734,7 @@
   "fee": 1.0,
   "ops": 0.36,
   "facility": 0.2,
-  "briefing": 0.25,
+  "briefing": 0.75,
   "rental": 0.25
  }
 }
