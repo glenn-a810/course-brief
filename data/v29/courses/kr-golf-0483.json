@@ -889,8 +889,19 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
-   "items": [],
+   "url": "https://www.gunsancc.net/main/notice",
+   "items": [
+    {
+     "title": "군산CC 연단체 모집 안내",
+     "date": "2026-11-23",
+     "url": "https://www.gunsancc.net/main/notice"
+    },
+    {
+     "title": "[군산cc 휴장 안내] 폭설로 인한 임시 휴장 안내",
+     "date": "2026-11-20",
+     "url": "https://www.gunsancc.net/main/notice"
+    }
+   ],
    "tags": {}
   },
   "review": {
@@ -900,8 +911,8 @@
    "url": "https://teepickgolf.com/course/%EA%B5%B0%EC%82%B0"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T10:25:42+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T23:55:00+09:00",
+  "recent_notice_text": "2027 군산CC 연단체 모집 안내(2026-11-23). 함께 폭설로 인한 임시 휴장 안내(2026-11-20), 12월 LOVE PKG 전체 일정 오픈(2026-11-13), 2027시즌 무기명 주중 이용 25% 할인 쿠폰 판매(2026-11-06), 아모르아티제 영업시간 변경(2026-10-30) 게시",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [
@@ -915,6 +926,11 @@
    {
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공식 공지사항(교차검증 2026-11-27)",
+    "url": "https://www.gunsancc.net/main/notice",
     "checked_at": "2026-11-27"
    }
   ]
@@ -939,7 +955,7 @@
   "fee": 1.0,
   "ops": 0.14,
   "facility": 0.4,
-  "briefing": 0.25,
+  "briefing": 0.75,
   "rental": 0.25
  }
 }

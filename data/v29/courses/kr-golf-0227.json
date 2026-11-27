@@ -462,22 +462,22 @@
    "url": "https://www.linknine.co.kr/",
    "items": [
     {
-     "title": "제11회 2026 링크나인 자선 골프행사",
-     "date": "2026-11-20",
-     "url": "https://www.linknine.co.kr/"
-    },
-    {
      "title": "2026년 12월 그린피 안내",
      "date": "2026-11-20",
      "url": "https://www.linknine.co.kr/"
     },
     {
-     "title": "2026년 11월 고객감사 이벤트",
-     "date": "2026-10-20",
+     "title": "제11회 2026 링크나인 자선 골프행사",
+     "date": "2026-11-20",
      "url": "https://www.linknine.co.kr/"
     },
     {
      "title": "2026년 11월 그린피 안내",
+     "date": "2026-10-20",
+     "url": "https://www.linknine.co.kr/"
+    },
+    {
+     "title": "2026년 11월 고객감사 이벤트",
      "date": "2026-10-20",
      "url": "https://www.linknine.co.kr/"
     },
@@ -496,7 +496,7 @@
    "url": "https://teepickgolf.com/course/%EB%A7%81%ED%81%AC%EB%82%98%EC%9D%B8"
   },
   "fee_change": null,
-  "collected_at": "2026-11-27T23:40:00+09:00",
+  "collected_at": "2026-11-27T23:55:00+09:00",
   "recent_notice_text": "2026-11-20 제11회 2026 링크나인 자선 골프행사·2026년 12월 그린피 안내, 2026-10-20 11월 고객감사 이벤트·11월 그린피 안내, 2026-09-20 10월 고객 감사 이벤트. 매달 그린피와 고객감사 이벤트를 함께 공지한다.",
   "course_notes": null,
   "alert": null,
@@ -515,8 +515,8 @@
     "checked_at": "2026-11-27"
    },
    {
-    "source": "공식 공지사항(브라우저 확인)",
-    "url": "https://www.linknine.co.kr/",
+    "source": "공식 공지사항(교차검증 2026-11-27)",
+    "url": "http://www.linknine.co.kr/html/company/company04.asp",
     "checked_at": "2026-11-27"
    }
   ]

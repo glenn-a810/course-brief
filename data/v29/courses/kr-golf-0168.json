@@ -445,8 +445,8 @@
   },
   "review": null,
   "fee_change": null,
-  "collected_at": "2026-11-26T09:51:55+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T23:55:00+09:00",
+  "recent_notice_text": "카카오골프예약 '골프장에서 알립니다'(2026-11-27 확인): 2026년 10월 8일부터 3인 예약 가능(예약 인원과 실제 내장 인원이 다르면 추가 요금), 전 타임 노캐디·카트피 인당 12,500원(05:00~18:59)·8,000원(19:00~22:00), 18홀 플레이는 2시간 30분 간격 9홀 추가 예약 필요",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [],
@@ -454,6 +454,11 @@
    {
     "source": "그린피가이드 코스 페이지",
     "url": "https://greenfeeguide.co.kr/course/gc-0026/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "카카오골프예약 골프장에서 알립니다(교차검증 2026-11-27)",
+    "url": "https://www.kakao.golf/golf/430",
     "checked_at": "2026-11-27"
    }
   ]
@@ -476,7 +481,7 @@
   "fee": 1.0,
   "ops": 0.5,
   "facility": 0.5,
-  "briefing": 0.0,
+  "briefing": 0.25,
   "rental": 0.25
  }
 }

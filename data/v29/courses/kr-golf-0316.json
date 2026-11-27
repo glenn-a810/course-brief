@@ -476,8 +476,14 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
-   "items": [],
+   "url": "https://www.univalley.co.kr/community/notice",
+   "items": [
+    {
+     "title": "12월 스페셜 그린피",
+     "date": "2026-11-16",
+     "url": "https://www.univalley.co.kr/community/notice"
+    }
+   ],
    "tags": {}
   },
   "review": {
@@ -487,16 +493,20 @@
    "url": "https://teepickgolf.com/course/%EC%9C%A0%EB%8B%88%EB%B0%B8%EB%A6%ACCC"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T10:28:34+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T23:55:00+09:00",
+  "recent_notice_text": "12월 스페셜 그린피(12.01~12.20) 안내(2026-11-16). 함께 11월 가을 할인 그린피(11/1~11/30, 2026-11-03), 10월 가을 스폐셜 그린피(10/1~10/31, 2026-10-02) 게시",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [],
   "sources": [
-   "https://ob.memebro.kr/1010",
    {
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공식 공지사항(교차검증 2026-11-27)",
+    "url": "https://www.univalley.co.kr/community/notice",
     "checked_at": "2026-11-27"
    }
   ]
@@ -519,7 +529,7 @@
   "fee": 1.0,
   "ops": 0.21,
   "facility": 0.1,
-  "briefing": 0.0,
+  "briefing": 0.5,
   "rental": 0.25
  }
 }

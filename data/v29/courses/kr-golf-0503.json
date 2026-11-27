@@ -744,8 +744,29 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
-   "items": [],
+   "url": "https://www.naejangsancc.com/board/notice",
+   "items": [
+    {
+     "title": "2027년 패키지 연단체 회원 모집",
+     "date": "2026-11-03",
+     "url": "https://www.naejangsancc.com/board/notice"
+    },
+    {
+     "title": "2027년 일반 연단체 회원 모집",
+     "date": "2026-11-03",
+     "url": "https://www.naejangsancc.com/board/notice"
+    },
+    {
+     "title": "12월 요금 안내",
+     "date": "2026-10-29",
+     "url": "https://www.naejangsancc.com/board/notice"
+    },
+    {
+     "title": "11월 요금 안내",
+     "date": "2026-10-08",
+     "url": "https://www.naejangsancc.com/board/notice"
+    }
+   ],
    "tags": {}
   },
   "review": {
@@ -755,8 +776,8 @@
    "url": "https://teepickgolf.com/course/%EB%82%B4%EC%9E%A5%EC%82%B0"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T10:25:44+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T23:55:00+09:00",
+  "recent_notice_text": "2027년 패키지 연단체 회원 모집(2026-11-03)과 2027년 일반 연단체 회원 모집(2026-11-03). 함께 12월 요금 안내(2026-10-29), 11월 요금 안내(2026-10-08) 게시",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [
@@ -767,6 +788,11 @@
    {
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공식 공지사항(교차검증 2026-11-27)",
+    "url": "https://www.naejangsancc.com/board/notice",
     "checked_at": "2026-11-27"
    }
   ]
@@ -791,7 +817,7 @@
   "fee": 1.0,
   "ops": 0.36,
   "facility": 0.6,
-  "briefing": 0.25,
+  "briefing": 0.75,
   "rental": 1.0
  }
 }

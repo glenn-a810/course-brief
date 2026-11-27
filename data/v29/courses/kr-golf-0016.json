@@ -327,14 +327,20 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
-   "items": [],
+   "url": "http://www.cppc.co.kr/",
+   "items": [
+    {
+     "title": "11월 요금 안내",
+     "date": null,
+     "url": "http://www.cppc.co.kr/"
+    }
+   ],
    "tags": {}
   },
   "review": null,
   "fee_change": null,
-  "collected_at": "2026-11-26T10:25:40+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T23:55:00+09:00",
+  "recent_notice_text": "11월 요금 안내(팝업 공지), 주간 요금 공지(11/23(월)~, 11/30(월)~, 12/7(월)~, 12/14(월)~ 4주분), 예약양도 금지·예약 횟수 제한 안내 게시",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [
@@ -343,7 +349,13 @@
    "진행 시간",
    "휴장일"
   ],
-  "sources": []
+  "sources": [
+   {
+    "source": "공식 공지사항(교차검증 2026-11-27)",
+    "url": "http://www.cppc.co.kr/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "ok",
@@ -365,7 +377,7 @@
   "fee": 0.75,
   "ops": 0.07,
   "facility": 0.3,
-  "briefing": 0.0,
+  "briefing": 0.5,
   "rental": 0.25
  }
 }

@@ -557,7 +557,7 @@
    "url": "https://teepickgolf.com/course/%EC%BA%90%EC%8A%AC%EB%A0%89%EC%8A%A4"
   },
   "fee_change": null,
-  "collected_at": "2026-11-27T23:40:00+09:00",
+  "collected_at": "2026-11-27T23:55:00+09:00",
   "recent_notice_text": "2026-11-24 12월 그린피 안내, 2026-11-18 불법 매크로·부킹 판매 행위 근절 안내, 2026-11-04 전자접수 시행 안내, 2026-10-28 11월 그린피 안내, 2026-10-19 캐디피 카드결제 안내.",
   "course_notes": null,
   "alert": null,
@@ -574,7 +574,7 @@
     "checked_at": "2026-11-27"
    },
    {
-    "source": "공식 공지사항(브라우저 확인)",
+    "source": "공식 공지사항(교차검증 2026-11-27)",
     "url": "https://castlexseoul.com/",
     "checked_at": "2026-11-27"
    }

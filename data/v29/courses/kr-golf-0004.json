@@ -49,7 +49,7 @@
    "straight_name": "옥과IC"
   },
   "tel": "061-362-2500",
-  "homepage": "http://lehonnetecc.com/",
+  "homepage": "https://www.lehonnetecc.com/",
   "operators": [
    "김양석"
   ],
@@ -578,7 +578,7 @@
    "url": "https://teepickgolf.com/course/%EB%A5%B4%EC%98%A4%EB%84%A4%EB%9C%A8cc"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T10:25:40+09:00",
+  "collected_at": "2026-11-27T23:55:00+09:00",
   "recent_notice_text": null,
   "course_notes": null,
   "alert": null,
@@ -599,7 +599,7 @@
  },
  "collection": {
   "official_site": "ok",
-  "official_reason": null,
+  "official_reason": "공식 홈페이지 주소 확인·정정(https://www.lehonnetecc.com/, 2026-11-27)",
   "pages_collected": 14,
   "third_party": {
    "teepick": true,

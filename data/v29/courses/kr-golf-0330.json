@@ -421,8 +421,14 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
-   "items": [],
+   "url": "https://oceanhills.com/use-information/notice",
+   "items": [
+    {
+     "title": "2027년 연단체 모집 안내",
+     "date": "2026-10-26",
+     "url": "https://oceanhills.com/use-information/notice"
+    }
+   ],
    "tags": {}
   },
   "review": {
@@ -432,15 +438,17 @@
    "url": "https://teepickgolf.com/course/%EC%98%A4%EC%85%98%ED%9E%90%EC%8A%A4%20%EC%98%81%EC%B2%9CCC"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T10:28:34+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T23:55:00+09:00",
+  "recent_notice_text": "2027년 연단체 모집 안내(2026-10-26). 함께 교육생 캐디피 조정 안내(2026-09-21), 조식 할인 쿠폰 및 이벤트 안내(2026-08-28), 프리미엄 식사세트 출시 안내(2026-08-08) 게시",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [],
   "sources": [
-   "https://www.oceanhills.com/yc/club-introduction",
-   "https://parkgolfinfo.co.kr/%ec%98%a4%ec%85%98%ed%9e%90%ec%8a%a4-%ec%98%81%ec%b2%9ccc-%ec%9d%b4%ec%9a%a9%eb%b0%a9%eb%b2%95-%ec%83%81%ec%84%b8-%ec%95%88%eb%82%b4-%ea%b3%a8%ed%94%84%ec%9e%a5-%ed%95%9c%eb%88%88%ec%97%90-%ec%a3%bc/",
-   "https://papahun.com/%ec%98%a4%ec%85%98%ed%9e%90%ec%8a%a4-%ec%98%81%ec%b2%9c-cc-27%ed%99%80-%ec%bd%94%ec%8a%a4%eb%b6%84%ec%84%9d-%ec%9d%b4%ec%9a%a9%ed%95%98%ea%b8%b0-%eb%9d%bc%ec%9a%b4%eb%94%a9-%eb%b9%84%ec%9a%a9/"
+   {
+    "source": "공식 공지사항(교차검증 2026-11-27)",
+    "url": "https://oceanhills.com/use-information/notice",
+    "checked_at": "2026-11-27"
+   }
   ]
  },
  "collection": {
@@ -461,7 +469,7 @@
   "fee": 1.0,
   "ops": 0.0,
   "facility": 0.0,
-  "briefing": 0.0,
+  "briefing": 0.5,
   "rental": 0.25
  }
 }

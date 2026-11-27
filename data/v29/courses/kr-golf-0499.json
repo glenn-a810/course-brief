@@ -503,8 +503,8 @@
    "url": "https://teepickgolf.com/course/%ED%8F%AC%EC%84%B8%EB%B8%90%EA%B8%88%EA%B0%95"
   },
   "fee_change": null,
-  "collected_at": "2026-11-27T23:40:00+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T23:55:00+09:00",
+  "recent_notice_text": "카카오골프예약 '골프장에서 알립니다'(2026-11-27 확인): 회원가입 필수(미가입 시 현장 정상가) 및 특가상품 정산 안내",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [
@@ -522,6 +522,11 @@
    },
    {
     "source": "카카오골프예약 골프장에서 알립니다",
+    "url": "https://www.kakao.golf/golf/451",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "카카오골프예약 골프장에서 알립니다(교차검증 2026-11-27)",
     "url": "https://www.kakao.golf/golf/451",
     "checked_at": "2026-11-27"
    }
@@ -547,7 +552,7 @@
   "fee": 1.0,
   "ops": 0.14,
   "facility": 0.1,
-  "briefing": 0.25,
+  "briefing": 0.5,
   "rental": 0.25
  }
 }

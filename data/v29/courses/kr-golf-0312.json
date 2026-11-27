@@ -470,8 +470,14 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
-   "items": [],
+   "url": "https://www.hillskycc.com/main/contents.do?proc_type=view&a_num=27307260&b_num=498&prepage=%2Fmain%2Fcontents.do%3Fa_num%3D27307260",
+   "items": [
+    {
+     "title": "2027년 연단체팀 모집 안내",
+     "date": "2026-11-03",
+     "url": "https://www.hillskycc.com/main/contents.do?proc_type=view&a_num=27307260&b_num=498&prepage=%2Fmain%2Fcontents.do%3Fa_num%3D27307260"
+    }
+   ],
    "tags": {}
   },
   "review": {
@@ -481,8 +487,8 @@
    "url": "https://teepickgolf.com/course/%EB%A3%A8%EB%82%98%EC%97%91%EC%8A%A4"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T10:28:33+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T23:55:00+09:00",
+  "recent_notice_text": "2027년 연단체팀 모집 안내(2026-11-03 게시)가 공지사항 최신 글 — 모집 공고문·신청서는 자료실에서 내려받고 문의 1811-0770(예약실). 같은 기간 메인 팝업으로 '26년 11월 골프패키지'·'26년 12월 골프패키지'·'2027 연단체팀 모집공고' 게시",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [],
@@ -490,6 +496,11 @@
    {
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공식 공지사항(교차검증 2026-11-27)",
+    "url": "https://www.hillskycc.com/main/contents.do?proc_type=view&a_num=27307260&b_num=498&prepage=%2Fmain%2Fcontents.do%3Fa_num%3D27307260",
     "checked_at": "2026-11-27"
    }
   ]
@@ -512,7 +523,7 @@
   "fee": 0.75,
   "ops": 0.21,
   "facility": 0.4,
-  "briefing": 0.0,
+  "briefing": 0.5,
   "rental": 0.25
  }
 }

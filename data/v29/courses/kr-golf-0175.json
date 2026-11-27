@@ -418,7 +418,7 @@
    "url": "https://teepickgolf.com/course/%EC%84%B8%ED%98%84cc"
   },
   "fee_change": null,
-  "collected_at": "2026-11-27T23:40:00+09:00",
+  "collected_at": "2026-11-27T23:55:00+09:00",
   "recent_notice_text": "2026-11-27 여자락카 온탕 공사안내, 2026-11-23 1월 예약일정 및 그린피, 2026-11-09 2026년 동계 패키지, 2026-11-08 12월 예약일정 및 그린피, 2026-10-26 2027년 연단체 결과 조회·신청. 매달 예약일정과 그린피를 함께 공지한다.",
   "course_notes": null,
   "alert": null,
@@ -435,7 +435,7 @@
     "checked_at": "2026-11-27"
    },
    {
-    "source": "공식 공지사항(브라우저 확인)",
+    "source": "공식 공지사항(교차검증 2026-11-27)",
     "url": "https://www.sehyeoncc.com/",
     "checked_at": "2026-11-27"
    }

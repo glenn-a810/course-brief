@@ -518,8 +518,8 @@
    "url": "https://teepickgolf.com/course/%EC%83%B4%EB%B0%9C%EB%9D%BCcc"
   },
   "fee_change": null,
-  "collected_at": "2026-11-27T23:40:00+09:00",
-  "recent_notice_text": "2026-11-10 12월 그린피 공지. 홈페이지 NEW & NOTICE 최신글 기준이며, 팝업으로 27년도 연단체 모집·2인플레이·11월 이벤트·분양안내를 함께 게시 중이다.",
+  "collected_at": "2026-11-27T23:55:00+09:00",
+  "recent_notice_text": "12월 그린피 안내 공지 게시",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [],
@@ -530,7 +530,7 @@
     "checked_at": "2026-11-27"
    },
    {
-    "source": "공식 공지사항(브라우저 확인)",
+    "source": "공식 공지사항(교차검증 2026-11-27)",
     "url": "https://shambhalacc.co.kr/",
     "checked_at": "2026-11-27"
    }

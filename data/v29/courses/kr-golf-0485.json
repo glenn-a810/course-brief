@@ -664,8 +664,14 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
-   "items": [],
+   "url": "https://theninegc.co.kr/",
+   "items": [
+    {
+     "title": "26년 12월 운영 안내사항",
+     "date": "2026-10-25",
+     "url": "https://theninegc.co.kr/"
+    }
+   ],
    "tags": {}
   },
   "review": {
@@ -675,9 +681,9 @@
    "url": "https://teepickgolf.com/course/%EB%8D%94%EB%82%98%EC%9D%B8GC"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T10:25:42+09:00",
+  "collected_at": "2026-11-27T23:55:00+09:00",
   "browser_verified_at": "2026-11-26",
-  "recent_notice_text": null,
+  "recent_notice_text": "26년 12월 운영 안내사항(26-10-25), 26년 11월 이용요금 안내(26-10-22), 임시휴장 안내(10월 27일 화, 26-10-02) 게시. 10월 25일 이후 신규 공지 없음",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [
@@ -690,6 +696,11 @@
    {
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공식 공지사항(교차검증 2026-11-27)",
+    "url": "https://theninegc.co.kr/",
     "checked_at": "2026-11-27"
    }
   ]
@@ -717,7 +728,7 @@
   "fee": 0.75,
   "ops": 0.36,
   "facility": 0.3,
-  "briefing": 0.0,
+  "briefing": 0.5,
   "rental": 0.25
  }
 }

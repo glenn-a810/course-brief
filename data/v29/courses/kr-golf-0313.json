@@ -390,12 +390,18 @@
    "url": "https://teepickgolf.com/course/%EA%B3%A0%EB%A0%B9%EC%98%A4%ED%8E%A0GC"
   },
   "fee_change": null,
-  "collected_at": "2026-11-27T23:40:00+09:00",
-  "recent_notice_text": "다산 샤인힐CC는 문체부 등록명이고 같은 소재지의 카카오맵·운영 표기는 '고령오펠GC'다. 공식 홈페이지는 오펠GC 통합 사이트(ophelgc.com)이며, 고령 지점 공지·예약은 통합 사이트에서 운영한다.",
+  "collected_at": "2026-11-27T23:55:00+09:00",
+  "recent_notice_text": "다산 샤인힐CC는 문체부 등록명이고 같은 소재지의 카카오맵·운영 표기는 '고령오펠GC'다. 공식 홈페이지는 오펠GC 통합 사이트(ophelgc.com)이며, 고령 지점 공지·예약은 통합 사이트에서 운영한다. 카카오골프예약 '골프장에서 알립니다'(2026-11-27 확인): 당일 예약·취소 규정 및 카트비(캐디동반 10만원 / 노캐디 12만원) 안내",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [],
-  "sources": []
+  "sources": [
+   {
+    "source": "카카오골프예약 골프장에서 알립니다(교차검증 2026-11-27)",
+    "url": "https://www.kakao.golf/golf/405",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "unavailable",

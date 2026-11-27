@@ -413,8 +413,8 @@
    "url": "https://teepickgolf.com/course/JNJ"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T10:25:42+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T23:55:00+09:00",
+  "recent_notice_text": "카카오골프예약 '골프장에서 알립니다'(2026-11-27 확인): 3부 노캐디(셀프) 운영·키오스크 체크인 필수·매주 일요일 휴장(구장 상황에 따라 변경), 1/2부 3인 라운드 조건, 3부 선결제 상품 이용 규정 안내",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [
@@ -426,6 +426,11 @@
    {
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "카카오골프예약 골프장에서 알립니다(교차검증 2026-11-27)",
+    "url": "https://www.kakao.golf/golf/361",
     "checked_at": "2026-11-27"
    }
   ]
@@ -450,7 +455,7 @@
   "fee": 1.0,
   "ops": 0.36,
   "facility": 0.4,
-  "briefing": 0.25,
+  "briefing": 0.5,
   "rental": 0.25
  }
 }

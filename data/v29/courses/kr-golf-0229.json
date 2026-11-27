@@ -946,8 +946,8 @@
    "url": "https://teepickgolf.com/course/%ED%99%94%EC%84%B1%EC%83%81%EB%A1%9D"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T09:51:59+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T23:55:00+09:00",
+  "recent_notice_text": "카카오골프예약 '골프장에서 알립니다'(2026-11-27 확인): 카트 포함 상품은 4인 필수(3인 내장 시 카트 별도), 공공기관 골프장으로 과도한 문신은 락카·샤워실 이용 제한",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [],
@@ -960,6 +960,11 @@
    {
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "카카오골프예약 골프장에서 알립니다(교차검증 2026-11-27)",
+    "url": "https://www.kakao.golf/golf/100",
     "checked_at": "2026-11-27"
    }
   ]
@@ -982,7 +987,7 @@
   "fee": 1.0,
   "ops": 0.14,
   "facility": 0.5,
-  "briefing": 0.25,
+  "briefing": 0.5,
   "rental": 0.25
  }
 }

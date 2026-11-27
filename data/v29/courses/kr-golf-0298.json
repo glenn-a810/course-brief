@@ -858,8 +858,8 @@
    "url": "https://teepickgolf.com/course/%ED%95%B4%EB%82%B4%EB%8B%A4CC"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T10:28:33+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T23:55:00+09:00",
+  "recent_notice_text": "카카오골프예약 '골프장에서 알립니다'(2026-11-27 확인): 캐디피 10월 1일부터 14만원 → 15만원 인상, 노캐디 신청은 앱 예약 후 예약실(1544-4222)로 확인, 카트피 캐디 동반 10만원·노캐디 12만원",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [],
@@ -867,6 +867,11 @@
    {
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "카카오골프예약 골프장에서 알립니다(교차검증 2026-11-27)",
+    "url": "https://www.kakao.golf/golf/247",
     "checked_at": "2026-11-27"
    }
   ]
@@ -889,7 +894,7 @@
   "fee": 1.0,
   "ops": 0.43,
   "facility": 0.3,
-  "briefing": 0.25,
+  "briefing": 0.5,
   "rental": 1.0
  }
 }

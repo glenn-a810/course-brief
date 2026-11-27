@@ -466,8 +466,8 @@
    "note": "v2.9에서 후기 URL을 현 명칭(유니아일랜드cc) 페이지로 교체. 2026-11-26 확인: 7.8/10, 라운더 1명."
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T09:52:00+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T23:55:00+09:00",
+  "recent_notice_text": "카카오골프예약 '골프장에서 알립니다'(2026-11-27 확인): 얼리버드 특가: 매주 월요일 신규 오픈 마지막 1주일 지정(예약자명·타임 변경 불가), 4인 필수·5인 불가, 인터넷 회원가입 필수(미가입 1인 1만원 추가), 예약자 미내장 시 팀 전원 비회원가+1만원·신분증 확인, 노캐디팀 카트 세팅비 2만원",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [
@@ -482,6 +482,11 @@
    {
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "카카오골프예약 골프장에서 알립니다(교차검증 2026-11-27)",
+    "url": "https://www.kakao.golf/golf/392",
     "checked_at": "2026-11-27"
    }
   ]
@@ -504,7 +509,7 @@
   "fee": 0.5,
   "ops": 0.79,
   "facility": 0.2,
-  "briefing": 0.25,
+  "briefing": 0.5,
   "rental": 0.25
  }
 }

@@ -118,7 +118,7 @@
    "source": "최근접 IC 직선거리"
   },
   "tel": "054-450-2800",
-  "homepage": "https://www.newspring.co.kr/",
+  "homepage": "https://sangju.newspring.co.kr/Home/Index",
   "operators": [
    "㈜동승레저 김용식 홍건표"
   ],
@@ -466,8 +466,24 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
-   "items": [],
+   "url": "https://sangju.newspring.co.kr/Board/List?board_idx=1",
+   "items": [
+    {
+     "title": "2027년 연단체 신규모집 안내",
+     "date": "2026-11-03",
+     "url": "https://sangju.newspring.co.kr/Board/List?board_idx=1"
+    },
+    {
+     "title": "로즈파크(PAR3, 9홀 코스)안내",
+     "date": "2026-04-17",
+     "url": "https://sangju.newspring.co.kr/Board/List?board_idx=1"
+    },
+    {
+     "title": "2026년 평일 예약 일정표",
+     "date": "2025-12-15",
+     "url": "https://sangju.newspring.co.kr/Board/List?board_idx=1"
+    }
+   ],
    "tags": {}
   },
   "review": {
@@ -477,18 +493,22 @@
    "url": "https://teepickgolf.com/course/%EB%B8%94%EB%A3%A8%EC%9B%90%EC%83%81%EC%A3%BC"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T10:28:34+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T23:55:00+09:00",
+  "recent_notice_text": "[공지] 2027년 연단체 신규모집 안내(2026-11-03). 직전 공지는 로즈파크(PAR3, 9홀) 안내(2026-04-17)",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [],
   "sources": [
-   "https://greenfeeguide.co.kr/course/gc-0351/"
+   {
+    "source": "공식 공지사항(교차검증 2026-11-27)",
+    "url": "https://sangju.newspring.co.kr/Board/List?board_idx=1",
+    "checked_at": "2026-11-27"
+   }
   ]
  },
  "collection": {
   "official_site": "ok",
-  "official_reason": null,
+  "official_reason": "공식 홈페이지 주소 확인·정정(https://sangju.newspring.co.kr/Home/Index, 2026-11-27)",
   "pages_collected": 1,
   "third_party": {
    "teepick": true,
@@ -504,7 +524,7 @@
   "fee": 1.0,
   "ops": 0.14,
   "facility": 0.1,
-  "briefing": 0.25,
+  "briefing": 0.75,
   "rental": 1.0
  }
 }

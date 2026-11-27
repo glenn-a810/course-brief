@@ -626,8 +626,14 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
-   "items": [],
+   "url": "https://www.asianacc.co.kr/about_us/news.asp?code=01",
+   "items": [
+    {
+     "title": "동절기 휴장 안내",
+     "date": "2026-11-17",
+     "url": "https://www.asianacc.co.kr/about_us/news.asp?code=01"
+    }
+   ],
    "tags": {}
   },
   "review": {
@@ -637,8 +643,8 @@
    "url": "https://teepickgolf.com/course/%EC%95%84%EC%8B%9C%EC%95%84%EB%82%98"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T09:51:55+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T23:55:00+09:00",
+  "recent_notice_text": "동절기 휴장 안내(2026-11-17 게시) — 공지사항 게시판 최신 공지",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [
@@ -653,6 +659,11 @@
    {
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공식 공지사항(교차검증 2026-11-27)",
+    "url": "https://www.asianacc.co.kr/about_us/news.asp?code=01",
     "checked_at": "2026-11-27"
    }
   ]
@@ -675,7 +686,7 @@
   "fee": 1.0,
   "ops": 0.29,
   "facility": 0.0,
-  "briefing": 0.25,
+  "briefing": 0.75,
   "rental": 0.25
  }
 }

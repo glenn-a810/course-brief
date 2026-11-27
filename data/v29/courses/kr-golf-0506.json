@@ -355,8 +355,34 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
-   "items": [],
+   "url": "https://www.creasvalley.com/lounge/notice/list",
+   "items": [
+    {
+     "title": "12/14(월)~12/20(일) 그린피 안내",
+     "date": "2026-11-23",
+     "url": "https://www.creasvalley.com/lounge/notice/list"
+    },
+    {
+     "title": "11/30(월)~12/13(일) 그린피 안내",
+     "date": "2026-11-09",
+     "url": "https://www.creasvalley.com/lounge/notice/list"
+    },
+    {
+     "title": "11/16(월)~11/29(일) 그린피 안내·2027년 연단체 모집 마감",
+     "date": "2026-10-26",
+     "url": "https://www.creasvalley.com/lounge/notice/list"
+    },
+    {
+     "title": "11/02(월)~11/15(일) 그린피 안내",
+     "date": "2026-10-12",
+     "url": "https://www.creasvalley.com/lounge/notice/list"
+    },
+    {
+     "title": "크리스밸리 예약 인원 안내(상단 고정)",
+     "date": "2026-09-22",
+     "url": "https://www.creasvalley.com/lounge/notice/list"
+    }
+   ],
    "tags": {}
   },
   "review": {
@@ -366,8 +392,8 @@
    "url": "https://teepickgolf.com/course/%ED%81%AC%EB%A6%AC%EC%8A%A4%EB%B0%B8%EB%A6%ACcc"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T09:51:53+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T23:55:00+09:00",
+  "recent_notice_text": "12/14(월)~12/20(일) 그린피 안내(2026-11-23). 함께 11/30~12/13 그린피 안내(2026-11-09), 11/16~11/29 그린피 안내·2027년 연단체 모집 마감(2026-10-26), 11/02~11/15 그린피 안내(2026-10-12) 게시. 상단 고정 '크리스밸리 예약 인원 안내'(2026-09-22)",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [],
@@ -375,6 +401,11 @@
    {
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공식 공지사항(교차검증 2026-11-27)",
+    "url": "https://www.creasvalley.com/lounge/notice/list",
     "checked_at": "2026-11-27"
    }
   ]
@@ -397,7 +428,7 @@
   "fee": 0.5,
   "ops": 0.07,
   "facility": 0.0,
-  "briefing": 0.25,
+  "briefing": 0.75,
   "rental": 1.0
  }
 }

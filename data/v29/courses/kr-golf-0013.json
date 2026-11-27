@@ -393,7 +393,7 @@
    "url": "https://teepickgolf.com/course/%EB%B9%9B%EA%B3%A0%EC%9D%84CC"
   },
   "fee_change": null,
-  "collected_at": "2026-11-27T23:40:00+09:00",
+  "collected_at": "2026-11-27T23:55:00+09:00",
   "recent_notice_text": "2026-10-28 동절기 라운딩 운영 안내(2026.12.16~2027.2.28)와 노인대상 예약제 티업시간·라운딩 신청안내(2026.12.16~2027.02.28), 2026-09-15 주말·공휴일 입장료 할인 행사, 2026-07-27 연습그린 운영 안내, 2026-06-16 주중 18홀 시니어 입장료 할인. 12월 16일부터 동절기 운영으로 전환한다.",
   "course_notes": null,
   "alert": null,
@@ -409,8 +409,8 @@
     "checked_at": "2026-11-27"
    },
    {
-    "source": "공식 공지사항(브라우저 확인)",
-    "url": "https://bitgoeulcc.co.kr/web/community/notice.do",
+    "source": "공식 공지사항(교차검증 2026-11-27)",
+    "url": "https://www.bitgoeulcc.co.kr/web/community/notice.do",
     "checked_at": "2026-11-27"
    }
   ]

@@ -349,7 +349,7 @@
    "url": "https://teepickgolf.com/course/%EC%BC%80%EC%9D%B4%EB%B0%B8%EB%A6%ACCC"
   },
   "fee_change": null,
-  "collected_at": "2026-11-27T23:40:00+09:00",
+  "collected_at": "2026-11-27T23:55:00+09:00",
   "recent_notice_text": "케이밸리CC 홈페이지 공지사항은 이미지 공지 중심으로, 2026-11-27 현재 '동시티업' 안내 이미지가 최신 게시물이다. 텍스트 공지는 확인되지 않는다.",
   "course_notes": null,
   "alert": null,
@@ -364,11 +364,6 @@
    {
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
-    "checked_at": "2026-11-27"
-   },
-   {
-    "source": "공식 공지사항(브라우저 확인)",
-    "url": "https://www.kvalleycc.co.kr/",
     "checked_at": "2026-11-27"
    }
   ]

@@ -387,7 +387,7 @@
    "url": "https://teepickgolf.com/course/YJC%EA%B3%A8%ED%94%84%ED%81%B4%EB%9F%BD"
   },
   "fee_change": null,
-  "collected_at": "2026-11-27T23:40:00+09:00",
+  "collected_at": "2026-11-27T23:55:00+09:00",
   "recent_notice_text": "2026-11-16 12월 그린피 안내, 2026-11-09 동계 휴장 안내, 2026-10-19 11월 그린피 및 동계 회원 그린피 안내, 2026-10-13 2027 연단체 운영 안내, 2026-09-22 2026년 중간배당 안내.",
   "course_notes": null,
   "alert": null,
@@ -411,8 +411,8 @@
     "checked_at": "2026-11-27"
    },
    {
-    "source": "공식 공지사항(브라우저 확인)",
-    "url": "https://www.yeojoocc.co.kr/",
+    "source": "공식 공지사항(교차검증 2026-11-27)",
+    "url": "https://www.yeojoocc.co.kr/board/notice",
     "checked_at": "2026-11-27"
    }
   ]

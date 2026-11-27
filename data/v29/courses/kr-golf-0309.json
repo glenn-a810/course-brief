@@ -500,8 +500,8 @@
    "url": "https://teepickgolf.com/course/%EC%95%88%EA%B0%95%EB%A0%88%EC%A0%84%EB%93%9CGC"
   },
   "fee_change": null,
-  "collected_at": "2026-11-27T23:40:00+09:00",
-  "recent_notice_text": "카카오골프예약 '골프장에서 알립니다'(2026-11-27): - 타 할인 중복적용 불가 * 대행사를 통한 예약은 골프장 자체 이벤트 적용 불가 * 카트비, 캐디피 별도 / ■ 운영안내 / - 골프장 자체 이벤트 적용불가 / ■ 유선 전화 예약 건은 온라인 취소가 불가합니다. 골프장 유선(054-760-0707)을 통해 직접 문의하시어 취소해 주시기 바랍니다.",
+  "collected_at": "2026-11-27T23:55:00+09:00",
+  "recent_notice_text": "'12월 1일~ 요금 안내' · '11월 마지막, 12월 첫 라운드' 이벤트",
   "course_notes": "2026-10-02 18홀 오픈. 3인 플레이 시 1부(주중)·3부(주중·주말)는 4인 요금 미적용(10/23 공지). 예약 오픈 3주 전 14:00.",
   "alert": {
    "type": "winter_operating",
@@ -520,12 +520,6 @@
    "1부·2부 잔여 특가지 적용 기간"
   ],
   "sources": [
-   "https://www.legendgolf.co.kr/blt/notice_view",
-   "https://www.legendgolf.co.kr/guide/fee",
-   "https://papahun.com/gyeongjurejeondeu-cc-greenfee/",
-   "https://inwon.kr/c/k276",
-   "https://todaygolfgo.com/golf-courses/master/golf-course-moct-20241231-0279/",
-   "https://sports.hankooki.com/news/articleView.html?idxno=6874164",
    {
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
@@ -535,11 +529,16 @@
     "source": "카카오골프예약 골프장에서 알립니다",
     "url": "https://www.kakao.golf/golf/276",
     "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공식 공지사항(교차검증 2026-11-27)",
+    "url": "https://www.legendgolf.co.kr/",
+    "checked_at": "2026-11-27"
    }
   ]
  },
  "collection": {
-  "official_site": "unavailable",
+  "official_site": "ok",
   "official_reason": "경주레전드CC 공식 홈페이지(legendgolf.co.kr)는 2026-11-27 자동수집에서 403으로 차단됐다. 운영·요금 안내는 카카오골프예약 '골프장에서 알립니다'로 보완.",
   "pages_collected": 0,
   "third_party": {

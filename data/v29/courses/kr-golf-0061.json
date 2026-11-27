@@ -510,21 +510,19 @@
    "url": "https://teepickgolf.com/course/%ED%8C%94%EA%B3%B5"
   },
   "fee_change": null,
-  "collected_at": "2026-11-27T23:40:00+09:00",
+  "collected_at": "2026-11-27T23:55:00+09:00",
   "recent_notice_text": "2026-11-27 12월 공휴일 예약안내, 2026-11-23 12월 입장요금 안내(12/1~13, 12/14~31 두 편), 2026-11-16 2027년 연간단체팀 신청 안내, 2026-10-21 11월 입장요금 안내, 2026-09-22 캐디피 조정 안내.",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [],
   "sources": [
-   "https://www.palgong-cc.co.kr/html/course.asp",
-   "https://www.palgong-cc.co.kr/html/guide01.asp",
    {
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
     "checked_at": "2026-11-27"
    },
    {
-    "source": "공식 공지사항(브라우저 확인)",
+    "source": "공식 공지사항(교차검증 2026-11-27)",
     "url": "https://www.palgong-cc.co.kr/",
     "checked_at": "2026-11-27"
    }

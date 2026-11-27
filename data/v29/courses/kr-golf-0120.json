@@ -331,8 +331,8 @@
    "url": "https://teepickgolf.com/course/%EC%95%84%EC%84%B8%EC%BD%94(%EC%8B%9C%ED%9D%A5)gc"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T09:51:52+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T23:55:00+09:00",
+  "recent_notice_text": "카카오골프예약 '골프장에서 알립니다'(2026-11-27 확인): 모든 티타임은 골프장 회원가입 조건(미가입 시 현장 정상가 적용), 4인필수(3인 내장 시 4인 요금), 최종 결제금액 카트비 불포함",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [
@@ -351,6 +351,11 @@
    {
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "카카오골프예약 골프장에서 알립니다(교차검증 2026-11-27)",
+    "url": "https://www.kakao.golf/golf/454",
     "checked_at": "2026-11-27"
    }
   ]
@@ -373,7 +378,7 @@
   "fee": 0.0,
   "ops": 0.0,
   "facility": 0.1,
-  "briefing": 0.0,
+  "briefing": 0.25,
   "rental": 0.25
  }
 }

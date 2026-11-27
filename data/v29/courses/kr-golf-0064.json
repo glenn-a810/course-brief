@@ -588,8 +588,34 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
-   "items": [],
+   "url": "https://www.dreamparkcc.or.kr/06member/member01.asp",
+   "items": [
+    {
+     "title": "동계 그린피 할인 안내",
+     "date": "2026-11-27",
+     "url": "https://www.dreamparkcc.or.kr/06member/member01.asp"
+    },
+    {
+     "title": "26년 12월 지역주민의 날",
+     "date": "2026-11-13",
+     "url": "https://www.dreamparkcc.or.kr/06member/member01.asp"
+    },
+    {
+     "title": "2027년 드림파크CC 정기 단체 신청 안내",
+     "date": "2026-10-30",
+     "url": "https://www.dreamparkcc.or.kr/06member/member01.asp"
+    },
+    {
+     "title": "26년 11월 지역주민의 날",
+     "date": "2026-10-23",
+     "url": "https://www.dreamparkcc.or.kr/06member/member01.asp"
+    },
+    {
+     "title": "12월 코스작업 관련 공지 안내",
+     "date": "2026-10-23",
+     "url": "https://www.dreamparkcc.or.kr/06member/member01.asp"
+    }
+   ],
    "tags": {}
   },
   "review": {
@@ -599,8 +625,8 @@
    "url": "https://teepickgolf.com/course/%EB%93%9C%EB%A6%BC%ED%8C%8C%ED%81%AC"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T09:52:00+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T23:55:00+09:00",
+  "recent_notice_text": "동계 그린피 할인 안내(2026-11-27) 게시. 최근 공지: 26년 12월 지역주민의 날(2026-11-13), 2027년 정기 단체 신청 안내(2026-10-30), 26년도 11~12월 코스작업 관련 공지(2026-10-23)",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [
@@ -621,6 +647,11 @@
    {
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공식 공지사항(교차검증 2026-11-27)",
+    "url": "https://www.dreamparkcc.or.kr/06member/member01.asp",
     "checked_at": "2026-11-27"
    }
   ]
@@ -643,7 +674,7 @@
   "fee": 0.25,
   "ops": 0.07,
   "facility": 0.0,
-  "briefing": 0.0,
+  "briefing": 0.5,
   "rental": 0.25
  }
 }

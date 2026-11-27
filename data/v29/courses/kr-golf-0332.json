@@ -568,15 +568,14 @@
    "url": "https://teepickgolf.com/course/%EA%B3%A8%ED%94%84%EC%A1%B4%20%EC%B2%AD%ED%86%B5cc"
   },
   "fee_change": null,
-  "collected_at": "2026-11-27T23:40:00+09:00",
+  "collected_at": "2026-11-27T23:55:00+09:00",
   "recent_notice_text": "2026-11-05 12월 그린피 안내, 2026-10-26 2027년 연단체 모집 안내, 2026-10-02 11월 그린피 안내.",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [],
   "sources": [
-   "https://greenfeeguide.co.kr/course/gc-0349/",
    {
-    "source": "공식 공지사항(브라우저 확인)",
+    "source": "공식 공지사항(교차검증 2026-11-27)",
     "url": "https://golfzoncounty.com/golfclub/notice?golfclubSeq=58",
     "checked_at": "2026-11-27"
    }

@@ -489,7 +489,7 @@
    "url": "https://teepickgolf.com/course/%ED%8E%9C%ED%83%80%EB%B7%B0GC"
   },
   "fee_change": null,
-  "collected_at": "2026-11-27T23:40:00+09:00",
+  "collected_at": "2026-11-27T23:55:00+09:00",
   "recent_notice_text": "카카오골프예약 '골프장에서 알립니다'(2026-11-27): ■예약 안내 / - 2인, 5인 또는 노캐디(셀프라운드) 드라이빙 캐디 예약을 원하시는 고객님께서는 골프장 예약실로 문의부탁드립니다. 대표번호 ( ☎️ 1644-8053 ) / - 기타 쿠폰 및 할인 이벤트 적용 불가 / - 선결제 4인필수 상품으로 예약 시, 3인내장 하셔도 4인요금을 지불하여야 합니다.",
   "course_notes": "노캐디는 3회 이상 이용 회원이 1팀 1인 이상 조건으로 신청 가능(사전 서약·카트 안전교육, 40분 전 도착). 3인 플레이 가능(카트비 팀당).",
   "alert": {
@@ -509,10 +509,6 @@
    "야간 라이트"
   ],
   "sources": [
-   "https://papahun.com/pentaview-cc-greenfee/",
-   "https://howwiki.net/pentaview-cc-no-caddie",
-   "https://inwon.kr/c/k472",
-   "https://todaygolfgo.com/golf-courses/master/golf-course-moct-20241231-0292/",
    {
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
@@ -520,6 +516,11 @@
    },
    {
     "source": "카카오골프예약 골프장에서 알립니다",
+    "url": "https://www.kakao.golf/golf/472",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "카카오골프예약 골프장에서 알립니다(교차검증 2026-11-27)",
     "url": "https://www.kakao.golf/golf/472",
     "checked_at": "2026-11-27"
    }

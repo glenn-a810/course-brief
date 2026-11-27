@@ -854,8 +854,8 @@
    "url": "https://teepickgolf.com/course/%EB%B2%A0%EB%89%B4%EC%A7%80CC"
   },
   "fee_change": null,
-  "collected_at": "2026-11-27T23:40:00+09:00",
-  "recent_notice_text": "홈페이지 공지 위젯에 12월 그린피·12월 이벤트·도로확장 교통안내·프리미엄 리무진 카트 운영 안내·27년 연단체 모집안내가 올라와 있다. 위젯이 제목만 노출해 게시 날짜는 표기되지 않는다(2026-11-27 확인).",
+  "collected_at": "2026-11-27T23:55:00+09:00",
+  "recent_notice_text": "12월 그린피·12월 이벤트·2027년 연단체 모집안내·11월 1박2일 올인원 패키지가 공지사항 최상단에 게시",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [
@@ -876,7 +876,7 @@
     "checked_at": "2026-11-27"
    },
    {
-    "source": "공식 공지사항(브라우저 확인)",
+    "source": "공식 공지사항(교차검증 2026-11-27)",
     "url": "https://www.venuegcc.com/WEB/index.asp",
     "checked_at": "2026-11-27"
    }

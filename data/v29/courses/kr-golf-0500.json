@@ -841,8 +841,24 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
-   "items": [],
+   "url": "https://www.jeonjucc.co.kr/html/company/company04.asp",
+   "items": [
+    {
+     "title": "제3차 홀인원 챌린지 대회 안내",
+     "date": "2026-11-12",
+     "url": "https://www.jeonjucc.co.kr/html/company/company04.asp"
+    },
+    {
+     "title": "26년 12월 주중 주말 예약접수 일정 안내",
+     "date": "2026-10-30",
+     "url": "https://www.jeonjucc.co.kr/html/company/company04.asp"
+    },
+    {
+     "title": "제2차 홀인원 챌린지 대회 안내",
+     "date": "2026-10-06",
+     "url": "https://www.jeonjucc.co.kr/html/company/company04.asp"
+    }
+   ],
    "tags": {}
   },
   "review": {
@@ -852,8 +868,8 @@
    "url": "https://teepickgolf.com/course/%EC%A0%84%EC%A3%BC%20%EC%83%B9%EA%B7%B8%EB%A6%B4%EB%9D%BC"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T10:25:43+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T23:55:00+09:00",
+  "recent_notice_text": "제3차 홀인원 챌린지 대회 안내(2026-11-12). 함께 26년 12월 주중·주말 예약접수 일정 안내(2026-10-30), 제2차 홀인원 챌린지 대회 안내(2026-10-06), 26년 11월 예약접수 일정 안내(2026-10-02) 게시",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [
@@ -863,6 +879,11 @@
    {
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공식 공지사항(교차검증 2026-11-27)",
+    "url": "https://www.jeonjucc.co.kr/html/company/company04.asp",
     "checked_at": "2026-11-27"
    }
   ]
@@ -887,7 +908,7 @@
   "fee": 1.0,
   "ops": 0.21,
   "facility": 0.6,
-  "briefing": 0.0,
+  "briefing": 0.5,
   "rental": 0.25
  }
 }

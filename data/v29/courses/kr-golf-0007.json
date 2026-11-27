@@ -18,10 +18,9 @@
  },
  "master": {
   "course_id": "kr-golf-0007",
-  "name": "에콜리안광산골프장",
+  "name": "광산CC",
   "name_variants": [
    "에콜리안광산골프장",
-   "광산CC",
    "광산컨트리클럽",
    "에콜리안 광산CC"
   ],
@@ -48,7 +47,7 @@
    "distance_km": 6.8,
    "source": "최근접 IC 직선거리"
   },
-  "tel": "062-616-5870",
+  "tel": "062-960-1501",
   "homepage": "https://www.gwangsancc.kr/",
   "operators": [
    "국민체육진흥공단이사장"
@@ -79,7 +78,11 @@
   "facility_cluster": null,
   "factcheck_2026_11_26": null,
   "address_original": "광주광역시 광산구 오목내길 26(연산동)",
-  "address_note": "2026-07-01 출범한 전남광주통합특별시 명칭으로 주소 접두 정규화(옛 표기는 address_original)."
+  "address_note": "2026-07-01 출범한 전남광주통합특별시 명칭으로 주소 접두 정규화(옛 표기는 address_original).",
+  "former_names": [
+   "에콜리안광산골프장",
+   "에콜리안 광산CC"
+  ]
  },
  "course": {
   "holes": 9,
@@ -346,8 +349,8 @@
    "url": "https://teepickgolf.com/course/%EC%97%90%EC%BD%9C%EB%A6%AC%EC%95%88%EA%B4%91%EC%82%B0%EA%B3%A8%ED%94%84%EC%9E%A5"
   },
   "fee_change": null,
-  "collected_at": "2026-11-27T23:40:00+09:00",
-  "recent_notice_text": "광산CC(옛 에콜리안 광산CC)는 2025-07-01 광주 광산구 직영으로 전환하며 공식 누리집(gwangsancc.kr)을 개설했으나, 2026-11-27 현재 도메인이 응답하지 않는다. 대표전화 062-616-5870, 예약은 매월 1·16일 19시 오픈, 노캐디 운영.",
+  "collected_at": "2026-11-27T23:55:00+09:00",
+  "recent_notice_text": "광산CC(옛 에콜리안 광산CC)는 2025-07-01 광주 광산구 직영으로 전환하며 명칭을 광산CC로 바꿨다. 대표전화 062-960-1501, 예약은 매월 1·16일 19시 오픈, 노캐디 운영. 공식 누리집(gwangsancc.kr)은 2026-11-27 현재 도메인이 응답하지 않아 공지 확인은 카카오골프예약 안내로 보완했다. 카카오골프예약 '골프장에서 알립니다'(2026-11-27 확인): 일일 1회·월 4회 예약 제한(9홀·18홀 포함), 위약 벌점제 운영, 결제금액 카트비 불포함.",
   "course_notes": "9홀 코스(1H 영산강~9H 떡갈비)로 홀마다 지역 명칭을 붙였고, 3~4인 예약·1인 월 4회 제한·인터넷 예약 전용으로 운영한다. (광산CC 공식 홈페이지, 2026-11-27 확인)",
   "alert": null,
   "unconfirmed": [
@@ -360,6 +363,11 @@
    {
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "카카오골프예약 골프장에서 알립니다(교차검증 2026-11-27)",
+    "url": "https://www.kakao.golf/golf/336",
     "checked_at": "2026-11-27"
    }
   ]

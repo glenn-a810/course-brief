@@ -682,8 +682,8 @@
    "url": "https://teepickgolf.com/course/%EB%B2%A0%EC%96%B4%ED%81%AC%EB%A6%AC%ED%81%AC"
   },
   "fee_change": null,
-  "collected_at": "2026-11-27T23:40:00+09:00",
-  "recent_notice_text": "홈페이지 공지로 포천 크리크코스가 리뉴얼 공사로 2026-11-16부터 운영을 중단하고 2027년 6월 오픈 예정이라고 안내한다. 동계 라운드 안전·화재 예방 안내와 2023년도 적립분 마일리지가 2026-12-31 소멸한다는 안내도 함께 게시 중이다.",
+  "collected_at": "2026-11-27T23:55:00+09:00",
+  "recent_notice_text": "포천 크리크코스 리뉴얼로 2026-11-16(월)부터 운영 중단(2027.06 오픈 예정)",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [
@@ -702,7 +702,7 @@
     "checked_at": "2026-11-27"
    },
    {
-    "source": "공식 공지사항(브라우저 확인)",
+    "source": "공식 공지사항(교차검증 2026-11-27)",
     "url": "https://www.bearcreek.co.kr/",
     "checked_at": "2026-11-27"
    }

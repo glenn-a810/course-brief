@@ -482,12 +482,12 @@
    "items": [
     {
      "title": "12월 골프요금 안내",
-     "date": null,
+     "date": "2026-11-25",
      "url": "https://www.nc-golf.com/"
     },
     {
      "title": "11월 골프요금 안내",
-     "date": null,
+     "date": "2026-10-19",
      "url": "https://www.nc-golf.com/"
     },
     {
@@ -515,8 +515,8 @@
    "url": "https://teepickgolf.com/course/%EB%83%89%EC%B2%9CCC"
   },
   "fee_change": null,
-  "collected_at": "2026-11-27T23:40:00+09:00",
-  "recent_notice_text": "홈페이지 NOTICE에 12월·11월·10월·9월·8월 골프요금 안내가 차례로 올라와 있고, 최신글은 12월 골프요금 안내다(2026-11-27 확인). 위젯은 제목만 노출한다.",
+  "collected_at": "2026-11-27T23:55:00+09:00",
+  "recent_notice_text": "12월 골프요금 안내 게시(11월 요금 안내는 2026-10-19)",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [],
@@ -527,8 +527,8 @@
     "checked_at": "2026-11-27"
    },
    {
-    "source": "공식 공지사항(브라우저 확인)",
-    "url": "https://www.nc-golf.com/",
+    "source": "공식 공지사항(교차검증 2026-11-27)",
+    "url": "https://www.nc-golf.com/Board/List.aspx?cfgid=notice",
     "checked_at": "2026-11-27"
    }
   ]

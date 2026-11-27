@@ -409,8 +409,14 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
-   "items": [],
+   "url": "https://www.ghcc.kr/mobile/board/board.asp",
+   "items": [
+    {
+     "title": "동절기 경기 시간 안내",
+     "date": "2026-11-22",
+     "url": "https://www.ghcc.kr/mobile/board/board.asp"
+    }
+   ],
    "tags": {}
   },
   "review": {
@@ -420,8 +426,8 @@
    "url": "https://teepickgolf.com/course/%EA%B8%B0%ED%9D%A5"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T09:51:59+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T23:55:00+09:00",
+  "recent_notice_text": "동절기 경기 시간 안내(2026-11-12)와 12/01(화)~06(일) 비회원 그린피 할인 요금 안내(2026-11-22), 11/28(토)~30(월) 비회원 그린피 할인 요금 안내(2026-11-21) 게시. 2027년 평일 연간단체 팀 안내(11-17)도 게시",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [
@@ -436,6 +442,11 @@
    {
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공식 공지사항(교차검증 2026-11-27)",
+    "url": "https://www.ghcc.kr/mobile/board/board.asp",
     "checked_at": "2026-11-27"
    }
   ]
@@ -458,7 +469,7 @@
   "fee": 1.0,
   "ops": 0.5,
   "facility": 0.2,
-  "briefing": 0.25,
+  "briefing": 0.75,
   "rental": 1.0
  }
 }

@@ -538,8 +538,19 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
-   "items": [],
+   "url": "https://www.blueheron.co.kr/board/boardDetail?boardCode=NOTICE&boardPostSeq=337",
+   "items": [
+    {
+     "title": "12월 티오프 안내",
+     "date": "2026-10-30",
+     "url": "https://www.blueheron.co.kr/board/boardDetail?boardCode=NOTICE&boardPostSeq=337"
+    },
+    {
+     "title": "여주시 골프장 상생바우처 지급안내",
+     "date": "2026-10-30",
+     "url": "https://www.blueheron.co.kr/board/boardDetail?boardCode=NOTICE&boardPostSeq=337"
+    }
+   ],
    "tags": {}
   },
   "review": {
@@ -549,8 +560,8 @@
    "url": "https://teepickgolf.com/course/%EB%B8%94%EB%A3%A8%ED%97%A4%EB%9F%B0"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T09:51:53+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T23:55:00+09:00",
+  "recent_notice_text": "12월 티오프 안내(2026-10-30 게시) — 12월 티오프 시간표 공지(본문 이미지). 같은 날 '여주시 골프장 상생바우처 지급안내'도 게시",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [
@@ -566,6 +577,11 @@
    {
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공식 공지사항(교차검증 2026-11-27)",
+    "url": "https://www.blueheron.co.kr/board/boardDetail?boardCode=NOTICE&boardPostSeq=337",
     "checked_at": "2026-11-27"
    }
   ]
@@ -588,7 +604,7 @@
   "fee": 1.0,
   "ops": 0.29,
   "facility": 0.2,
-  "briefing": 0.25,
+  "briefing": 0.75,
   "rental": 0.25
  }
 }

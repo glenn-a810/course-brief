@@ -412,8 +412,14 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
-   "items": [],
+   "url": "https://sophiagreen.co.kr/board/notice",
+   "items": [
+    {
+     "title": "2026년 12월 상반기 그린피 안내",
+     "date": "2026-11-13",
+     "url": "https://sophiagreen.co.kr/board/notice"
+    }
+   ],
    "tags": {}
   },
   "review": {
@@ -423,8 +429,8 @@
    "url": "https://teepickgolf.com/course/%EC%86%8C%ED%94%BC%EC%95%84%EA%B7%B8%EB%A6%B0"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T09:51:54+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T23:55:00+09:00",
+  "recent_notice_text": "2026년 12월 상반기 그린피 안내(2026-11-13). 함께 2027년도 연단체 추가모집·선발단체 등록 절차 안내(11-20), 클럽하우스 대식당 '하나 더 드림' 이벤트(11-12) 게시",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [
@@ -441,6 +447,11 @@
    {
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공식 공지사항(교차검증 2026-11-27)",
+    "url": "https://sophiagreen.co.kr/board/notice",
     "checked_at": "2026-11-27"
    }
   ]
@@ -463,7 +474,7 @@
   "fee": 0.5,
   "ops": 0.43,
   "facility": 0.2,
-  "briefing": 0.25,
+  "briefing": 0.75,
   "rental": 0.25
  }
 }

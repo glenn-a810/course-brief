@@ -402,7 +402,7 @@
   },
   "review": null,
   "fee_change": null,
-  "collected_at": "2026-11-27T23:40:00+09:00",
+  "collected_at": "2026-11-27T23:55:00+09:00",
   "recent_notice_text": "2026-11-23 한양파인 연습장 운영시간 변경 안내, 2026-11-17 연습장 동절기 초특가 할인 이벤트. 홈페이지 NOTICE 섹션에 최근 글이 2건이며 12월 그린피 공지는 아직 없다.",
   "course_notes": null,
   "alert": null,
@@ -418,8 +418,8 @@
     "checked_at": "2026-11-27"
    },
    {
-    "source": "공식 공지사항(브라우저 확인)",
-    "url": "https://www.hypine.co.kr/",
+    "source": "공식 공지사항(교차검증 2026-11-27)",
+    "url": "http://www.hypine.co.kr/",
     "checked_at": "2026-11-27"
    }
   ]

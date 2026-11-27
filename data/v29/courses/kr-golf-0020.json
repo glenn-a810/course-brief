@@ -381,14 +381,30 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
-   "items": [],
+   "url": "http://www.edencc.co.kr/",
+   "items": [
+    {
+     "title": "12월그린피안내",
+     "date": "2026-11-26",
+     "url": "http://www.edencc.co.kr/"
+    },
+    {
+     "title": "에덴골프장 이벤트 안내",
+     "date": "2026-06-06",
+     "url": "http://www.edencc.co.kr/"
+    },
+    {
+     "title": "6월 그린피 안내",
+     "date": "2026-05-27",
+     "url": "http://www.edencc.co.kr/"
+    }
+   ],
    "tags": {}
   },
   "review": null,
   "fee_change": null,
-  "collected_at": "2026-11-26T10:25:41+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T23:55:00+09:00",
+  "recent_notice_text": "12월 그린피 안내(2026-11-26) 게시. 직전 공지: 2026년 10월~11월 그린피 안내(2026-09-19)",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [
@@ -398,7 +414,13 @@
    "식당",
    "휴장일"
   ],
-  "sources": []
+  "sources": [
+   {
+    "source": "공식 공지사항(교차검증 2026-11-27)",
+    "url": "http://www.edencc.co.kr/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "ok",
@@ -420,7 +442,7 @@
   "fee": 0.75,
   "ops": 0.21,
   "facility": 0.0,
-  "briefing": 0.0,
+  "briefing": 0.5,
   "rental": 0.25
  }
 }

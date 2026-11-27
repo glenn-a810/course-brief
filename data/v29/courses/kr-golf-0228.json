@@ -720,9 +720,19 @@
      "url": "https://baliosgc.com/"
     },
     {
+     "title": "2026발리오스클럽챔피언 1차 예선 조편성",
+     "date": "2026-10-01",
+     "url": "http://www.baliosgc.com/community/clubnotice_list.asp"
+    },
+    {
      "title": "2026 발리오스 클럽챔피언십",
      "date": "2026-08-10",
      "url": "https://baliosgc.com/"
+    },
+    {
+     "title": "동계휴장 및 예약 접수 안내",
+     "date": "2025-12-02",
+     "url": "http://www.baliosgc.com/community/clubnotice_list.asp"
     }
    ],
    "tags": {}
@@ -734,8 +744,8 @@
    "url": "https://teepickgolf.com/course/%EB%B0%9C%EB%A6%AC%EC%98%A4%EC%8A%A4"
   },
   "fee_change": null,
-  "collected_at": "2026-11-27T23:40:00+09:00",
-  "recent_notice_text": "2026-10-01 2027년 단체팀 예약, 2026-08-10 2026 발리오스 클럽챔피언십 공지가 홈페이지 최신글이다. 연부킹 단체팀 접수 팝업과 이용요금안내 메뉴를 함께 운영한다.",
+  "collected_at": "2026-11-27T23:55:00+09:00",
+  "recent_notice_text": "2027년 단체팀 예약신청 안내(최신 게시물)",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [],
@@ -751,8 +761,8 @@
     "checked_at": "2026-11-27"
    },
    {
-    "source": "공식 공지사항(브라우저 확인)",
-    "url": "https://baliosgc.com/",
+    "source": "공식 공지사항(교차검증 2026-11-27)",
+    "url": "http://www.baliosgc.com/community/clubnotice_list.asp",
     "checked_at": "2026-11-27"
    }
   ]

@@ -47,7 +47,7 @@
    "straight_km_nearest": 5.5,
    "straight_name": "동함평IC"
   },
-  "tel": "061-320-7800",
+  "tel": "061-320-7700",
   "homepage": "http://www.hpelichecc.co.kr/hampyeong/index.asp",
   "operators": [
    "류채봉"
@@ -86,7 +86,8 @@
   "status": "operating",
   "facility_cluster": null,
   "factcheck_2026_11_26": null,
-  "address_original": "전남 함평군 학교면 서당매길 242"
+  "address_original": "전남 함평군 학교면 서당매길 242",
+  "factcheck_2026_11_27": "대표번호는 공식 홈페이지 표기(061-320-7700)로 정정. 예약 문의는 구장으로 확인 필요."
  },
  "course": {
   "holes": 27,
@@ -386,8 +387,8 @@
    "url": "https://teepickgolf.com/course/%ED%95%A8%ED%8F%89%EC%97%98%EB%A6%AC%EC%B2%B4cc"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T10:25:42+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T23:55:00+09:00",
+  "recent_notice_text": "카카오골프예약 '골프장에서 알립니다'(2026-11-27 확인): 모든 티타임은 전원 골프장 회원가입 시 적용되는 금액(미가입 시 비회원 요금), 4인 필수 상품은 3인 내장 시에도 4인 요금, 노캐디팀 카트 세팅비 1만원",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [
@@ -395,7 +396,13 @@
    "복장",
    "진행 시간"
   ],
-  "sources": []
+  "sources": [
+   {
+    "source": "카카오골프예약 골프장에서 알립니다(교차검증 2026-11-27)",
+    "url": "https://www.kakao.golf/golf/320",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "ok",
@@ -417,7 +424,7 @@
   "fee": 0.75,
   "ops": 0.07,
   "facility": 0.3,
-  "briefing": 0.0,
+  "briefing": 0.25,
   "rental": 1.0
  }
 }

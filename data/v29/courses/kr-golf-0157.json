@@ -467,8 +467,14 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
-   "items": [],
+   "url": "https://www.ipocc.com/lounge/notice/detail/607",
+   "items": [
+    {
+     "title": "2027년 1월 동계 휴장 안내(2027-01-01~01-31)",
+     "date": "2026-11-18",
+     "url": "https://www.ipocc.com/lounge/notice/detail/607"
+    }
+   ],
    "tags": {}
   },
   "review": {
@@ -478,10 +484,23 @@
    "url": "https://teepickgolf.com/course/%EC%9D%B4%ED%8F%ACcc"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T09:51:54+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T23:55:00+09:00",
+  "recent_notice_text": "2027년 1월 동계 휴장: 2027-01-01(금)~01-31(일) 휴장, 2월 예약은 정상 오픈. 휴장 기간은 기상 상황에 따라 변경될 수 있음",
   "course_notes": null,
-  "alert": null,
+  "alert": {
+   "type": "winter_closure",
+   "level": "closure",
+   "confirmed": true,
+   "summary": "2027년 1월 동계휴장: 2027-01-01~01-31, 2월 예약은 정상 오픈",
+   "detail": "공식 공지 '2027년 1월 동계 휴장 안내'(2026-11-18)로 1월 한 달 휴장을 안내한다. 휴장 기간은 기상 상황에 따라 변경될 수 있다.",
+   "period": {
+    "from": "2027-01-01",
+    "to": "2027-01-31",
+    "reopen": "2027-02-01"
+   },
+   "checked_at": "2026-11-27",
+   "source_url": "https://www.ipocc.com/lounge/notice/detail/607"
+  },
   "unconfirmed": [
    "취소·위약 규정 미확인: 공식 홈페이지에 요금표 게시 없음(티픽 실거래 최저 11만/19만원으로 대체)"
   ],
@@ -494,6 +513,11 @@
    {
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공식 공지사항(교차검증 2026-11-27)",
+    "url": "https://www.ipocc.com/lounge/notice/detail/607",
     "checked_at": "2026-11-27"
    }
   ]
@@ -516,7 +540,7 @@
   "fee": 0.5,
   "ops": 0.14,
   "facility": 0.1,
-  "briefing": 0.25,
+  "briefing": 0.75,
   "rental": 0.25
  }
 }

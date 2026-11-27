@@ -390,8 +390,24 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
-   "items": [],
+   "url": "https://www.summitcc.co.kr/blt/notice",
+   "items": [
+    {
+     "title": "셀프카트비 인상",
+     "date": "2026-10-06",
+     "url": "https://www.summitcc.co.kr/blt/notice"
+    },
+    {
+     "title": "★ 써미트CC 골프시즌권 판매 ★",
+     "date": "2026-03-09",
+     "url": "https://www.summitcc.co.kr/blt/notice"
+    },
+    {
+     "title": "2026년 연단체 모집 안내",
+     "date": "2026-03-09",
+     "url": "https://www.summitcc.co.kr/blt/notice"
+    }
+   ],
    "tags": {}
   },
   "review": {
@@ -401,9 +417,9 @@
    "url": "https://teepickgolf.com/course/%EC%8D%A8%EB%AF%B8%ED%8A%B8%20CC"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T10:25:44+09:00",
+  "collected_at": "2026-11-27T23:55:00+09:00",
   "browser_verified_at": "2026-11-26",
-  "recent_notice_text": null,
+  "recent_notice_text": "셀프카트비 인상(2026-10-06)이 최신 공지. 다음 게시글은 2026-03-09(시즌권 판매·2026년 연단체 모집·캐디 모집·스타트하우스 메뉴·개인 선불카드 신청서)",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [
@@ -416,6 +432,11 @@
    {
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공식 공지사항(교차검증 2026-11-27)",
+    "url": "https://www.summitcc.co.kr/blt/notice",
     "checked_at": "2026-11-27"
    }
   ]
@@ -442,7 +463,7 @@
   "fee": 1.0,
   "ops": 0.21,
   "facility": 0.1,
-  "briefing": 0.0,
+  "briefing": 0.5,
   "rental": 0.25
  }
 }

@@ -111,7 +111,7 @@
    "straight_name": "영덕IC"
   },
   "tel": "054-230-2000",
-  "homepage": "http://pohangcc.co.kr",
+  "homepage": "http://www.pohangcc.com/",
   "operators": [
    "㈜홍익레저산업 김청룡"
   ],
@@ -627,8 +627,24 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
-   "items": [],
+   "url": "http://www.pohangcc.com/board/notice",
+   "items": [
+    {
+     "title": "2027 연단체 모집 공고",
+     "date": "2026-11-06",
+     "url": "http://www.pohangcc.com/board/notice"
+    },
+    {
+     "title": "12월 그린피 안내",
+     "date": "2026-10-30",
+     "url": "http://www.pohangcc.com/board/notice"
+    },
+    {
+     "title": "시타행사 금지 안내",
+     "date": "2026-10-30",
+     "url": "http://www.pohangcc.com/board/notice"
+    }
+   ],
    "tags": {}
   },
   "review": {
@@ -638,8 +654,8 @@
    "url": "https://teepickgolf.com/course/%ED%8F%AC%ED%95%AD"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T10:28:35+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T23:55:00+09:00",
+  "recent_notice_text": "입찰공고(프로샵 외주용역) 2026-11-09가 최신. 함께 2027 연단체 모집 공고(2026-11-06), 12월 그린피 안내(2026-10-30), 시타행사 금지 안내(2026-10-30), 11월 그린피 안내·캐디피 인상 안내(2026-09-30) 게시",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [],
@@ -648,12 +664,17 @@
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
     "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공식 공지사항(교차검증 2026-11-27)",
+    "url": "http://www.pohangcc.com/board/notice",
+    "checked_at": "2026-11-27"
    }
   ]
  },
  "collection": {
   "official_site": "ok",
-  "official_reason": null,
+  "official_reason": "공식 홈페이지 주소 확인·정정(http://www.pohangcc.com/, 2026-11-27)",
   "pages_collected": 14,
   "third_party": {
    "teepick": true,
@@ -669,7 +690,7 @@
   "fee": 0.75,
   "ops": 0.29,
   "facility": 0.2,
-  "briefing": 0.25,
+  "briefing": 0.75,
   "rental": 1.0
  }
 }

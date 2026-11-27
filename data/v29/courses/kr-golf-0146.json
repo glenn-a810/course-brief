@@ -625,8 +625,14 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
-   "items": [],
+   "url": "https://www.namyeoju.co.kr/Board/List.aspx?cfgid=notice",
+   "items": [
+    {
+     "title": "송구영신 할인 이벤트",
+     "date": "2026-11-26",
+     "url": "https://www.namyeoju.co.kr/Board/List.aspx?cfgid=notice"
+    }
+   ],
    "tags": {}
   },
   "review": {
@@ -636,8 +642,8 @@
    "url": "https://teepickgolf.com/course/%EB%82%A8%EC%97%AC%EC%A3%BC"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T09:51:53+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T23:55:00+09:00",
+  "recent_notice_text": "송구영신 할인 이벤트(26.12.14~27.1.14) 공지(2026-11-26) 게시. 주간 그린피 공지: 12.07~12.13(2026-11-18), 11.30~12.06(2026-11-11), 11.23~11.29(2026-11-04)",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [
@@ -656,6 +662,11 @@
    {
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공식 공지사항(교차검증 2026-11-27)",
+    "url": "https://www.namyeoju.co.kr/Board/List.aspx?cfgid=notice",
     "checked_at": "2026-11-27"
    }
   ]
@@ -678,7 +689,7 @@
   "fee": 0.5,
   "ops": 0.14,
   "facility": 0.2,
-  "briefing": 0.25,
+  "briefing": 0.75,
   "rental": 1.0
  }
 }

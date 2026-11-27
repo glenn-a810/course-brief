@@ -433,9 +433,14 @@
    "url": "https://www.theban.co.kr/",
    "items": [
     {
-     "title": "2027 연단체 모집",
-     "date": null,
-     "url": "https://www.theban.co.kr/"
+     "title": "2026년 12월 요금표",
+     "date": "2026-11-13",
+     "url": "https://www.theban.co.kr/blt/notice"
+    },
+    {
+     "title": "2026년 11월 요금표",
+     "date": "2026-10-17",
+     "url": "https://www.theban.co.kr/blt/notice"
     },
     {
      "title": "11월 지역할인 이벤트",
@@ -445,6 +450,11 @@
     {
      "title": "11월 커피제공 이벤트",
      "date": "2026-10-14",
+     "url": "https://www.theban.co.kr/"
+    },
+    {
+     "title": "2027 연단체 모집",
+     "date": null,
      "url": "https://www.theban.co.kr/"
     }
    ],
@@ -457,8 +467,8 @@
    "url": "https://teepickgolf.com/course/%EB%8D%94%EB%B0%98%20GC"
   },
   "fee_change": null,
-  "collected_at": "2026-11-27T23:40:00+09:00",
-  "recent_notice_text": "홈페이지 팝업으로 2027 연단체 모집을, EVENT에 2026-10-14 11월 지역할인·11월 커피제공 이벤트를 게시 중이다. 11월 27일 기준 12월 그린피 공지는 확인되지 않는다.",
+  "collected_at": "2026-11-27T23:55:00+09:00",
+  "recent_notice_text": "2026년 12월 요금표(2026-11-13), 2026년 11월 요금표(2026-10-17) 게시. 2026년 8월부터 카카오골프예약으로만 예약 접수",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [],
@@ -474,8 +484,8 @@
     "checked_at": "2026-11-27"
    },
    {
-    "source": "공식 공지사항(브라우저 확인)",
-    "url": "https://www.theban.co.kr/",
+    "source": "공식 공지사항(교차검증 2026-11-27)",
+    "url": "https://www.theban.co.kr/blt/notice",
     "checked_at": "2026-11-27"
    }
   ]

@@ -464,8 +464,14 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
-   "items": [],
+   "url": "https://www.gakorea.com/gold/index.asp",
+   "items": [
+    {
+     "title": "11월 비회원 그린피 안내",
+     "date": "2026-11-02",
+     "url": "https://www.gakorea.com/gold/index.asp"
+    }
+   ],
    "tags": {}
   },
   "review": {
@@ -475,8 +481,8 @@
    "url": "https://teepickgolf.com/course/%EA%B3%A8%EB%93%9Ccc"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T09:51:54+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T23:55:00+09:00",
+  "recent_notice_text": "11월 비회원 그린피 안내(2026-11-02 게시) — 11월 비회원 요금표 공지",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [],
@@ -489,6 +495,11 @@
    {
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공식 공지사항(교차검증 2026-11-27)",
+    "url": "https://www.gakorea.com/gold/index.asp",
     "checked_at": "2026-11-27"
    }
   ]
@@ -511,7 +522,7 @@
   "fee": 1.0,
   "ops": 0.64,
   "facility": 0.4,
-  "briefing": 0.25,
+  "briefing": 0.75,
   "rental": 0.25
  }
 }

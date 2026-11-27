@@ -874,8 +874,24 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
-   "items": [],
+   "url": "https://www.hwasuncc.co.kr/",
+   "items": [
+    {
+     "title": "붕어빵이벤트",
+     "date": "2026-11-27",
+     "url": "https://www.hwasuncc.co.kr/"
+    },
+    {
+     "title": "2026년 12월 그린피 안내",
+     "date": "2026-11-13",
+     "url": "https://www.hwasuncc.co.kr/"
+    },
+    {
+     "title": "2027년 단체 연부킹 접수",
+     "date": "2026-10-23",
+     "url": "https://www.hwasuncc.co.kr/"
+    }
+   ],
    "tags": {}
   },
   "review": {
@@ -885,8 +901,8 @@
    "url": "https://teepickgolf.com/course/%ED%99%94%EC%88%9C"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T10:25:42+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T23:55:00+09:00",
+  "recent_notice_text": "붕어빵이벤트(2026-11-27)·2026년 12월 그린피 안내(2026-11-13)·2027년 단체 연부킹 접수(2026-10-23) 게시",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [
@@ -899,6 +915,11 @@
    {
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공식 공지사항(교차검증 2026-11-27)",
+    "url": "https://www.hwasuncc.co.kr/",
     "checked_at": "2026-11-27"
    }
   ]
@@ -923,7 +944,7 @@
   "fee": 1.0,
   "ops": 0.29,
   "facility": 0.5,
-  "briefing": 0.0,
+  "briefing": 0.5,
   "rental": 0.25
  }
 }

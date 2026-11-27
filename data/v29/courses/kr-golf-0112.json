@@ -445,9 +445,19 @@
    "url": "http://www.kwangneungcc.co.kr/",
    "items": [
     {
-     "title": "주중반환안내",
-     "date": null,
-     "url": "http://www.kwangneungcc.co.kr/"
+     "title": "동계기간 운영안내(12월~2월)",
+     "date": "2026-11-12",
+     "url": "https://www.kwangneungcc.co.kr/html/center/center01_view.asp?b_idx=71"
+    },
+    {
+     "title": "주중회원 입회기간 만료안내",
+     "date": "2026-11-09",
+     "url": "https://www.kwangneungcc.co.kr/html/center/center01_view.asp?b_idx=71"
+    },
+    {
+     "title": "2027년 연단체 모집안내",
+     "date": "2026-10-13",
+     "url": "https://www.kwangneungcc.co.kr/html/center/center01_view.asp?b_idx=71"
     }
    ],
    "tags": {}
@@ -459,8 +469,8 @@
    "url": "https://teepickgolf.com/course/%ED%95%9C%EB%A6%BC%EA%B4%91%EB%A6%89"
   },
   "fee_change": null,
-  "collected_at": "2026-11-27T23:40:00+09:00",
-  "recent_notice_text": "광릉CC 홈페이지는 팝업 공지('주중반환안내') 중심으로 운영되어 2026-11-27 현재 텍스트 공지를 확보하지 못했다. 예약·운영 안내는 카카오골프예약 '골프장에서 알립니다'로 보완.",
+  "collected_at": "2026-11-27T23:55:00+09:00",
+  "recent_notice_text": "동계기간 운영안내(12월~2월) 게시(2026-11-12), 2027년 연단체 모집(2026-10-13), 주중회원 입회기간 만료 안내(2026-11-09)",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [
@@ -481,13 +491,13 @@
     "checked_at": "2026-11-27"
    },
    {
-    "source": "공식 공지사항(브라우저 확인)",
-    "url": "http://www.kwangneungcc.co.kr/",
+    "source": "카카오골프예약 골프장에서 알립니다",
+    "url": "https://www.kakao.golf/golf/52",
     "checked_at": "2026-11-27"
    },
    {
-    "source": "카카오골프예약 골프장에서 알립니다",
-    "url": "https://www.kakao.golf/golf/52",
+    "source": "공식 공지사항(교차검증 2026-11-27)",
+    "url": "https://www.kwangneungcc.co.kr/html/center/center01_view.asp?b_idx=71",
     "checked_at": "2026-11-27"
    }
   ]

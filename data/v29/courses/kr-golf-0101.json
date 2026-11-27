@@ -476,8 +476,14 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
-   "items": [],
+   "url": "http://www.springhills.co.kr/",
+   "items": [
+    {
+     "title": "12월 그린피",
+     "date": "2026-11-27",
+     "url": "http://www.springhills.co.kr/"
+    }
+   ],
    "tags": {}
   },
   "review": {
@@ -487,8 +493,8 @@
    "url": "https://teepickgolf.com/course/%EC%8A%A4%ED%94%84%EB%A7%81%ED%9E%90%EC%8A%A4"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T09:51:50+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T23:55:00+09:00",
+  "recent_notice_text": "12월 그린피(2026-11-27), 동계 라운딩쿠폰 판매 안내(2026-11-19) 게시",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [
@@ -504,6 +510,11 @@
    {
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공식 공지사항(교차검증 2026-11-27)",
+    "url": "http://www.springhills.co.kr/",
     "checked_at": "2026-11-27"
    }
   ]
@@ -526,7 +537,7 @@
   "fee": 1.0,
   "ops": 0.5,
   "facility": 0.4,
-  "briefing": 0.0,
+  "briefing": 0.5,
   "rental": 0.25
  }
 }

@@ -488,11 +488,6 @@
      "url": "https://www.kyongjugolf.co.kr/html/Guide/Fees.asp"
     },
     {
-     "title": "2026년 12월 티오프 시간 및 이용요금 안내",
-     "date": "2026-11-08",
-     "url": "https://www.kyongjugolf.co.kr/html/Guide/Fees.asp"
-    },
-    {
      "title": "2026년 11월 티오프 시간 및 이용요금 안내",
      "date": "2026-10-11",
      "url": "https://www.kyongjugolf.co.kr/html/Guide/Fees.asp"
@@ -517,8 +512,8 @@
    "url": "https://teepickgolf.com/course/%EA%B2%BD%EC%A3%BCCC"
   },
   "fee_change": null,
-  "collected_at": "2026-11-27T23:40:00+09:00",
-  "recent_notice_text": "카카오골프예약 '골프장에서 알립니다'(2026-11-27): ■ 당일 예약/취소 안내 / - 당일 예약의 경우, 취소 불가 하오니 신중한 예약 부탁드립니다. 대표번호 ☎ 054-778-8900",
+  "collected_at": "2026-11-27T23:55:00+09:00",
+  "recent_notice_text": "2026년 12월 티오프 시간 및 이용요금 안내",
   "course_notes": "리무진 카트 운영. 예약은 3주 전 월요일 09:00, 1주 단위 오픈. 취소는 3일 전까지 무료, 2일 전 10%·1일 전 20%·당일 30%(4인 그린피 기준, 카트비 제외). 클럽 대여 18홀 40,000원.",
   "alert": {
    "type": "winter_operating",
@@ -536,12 +531,6 @@
    "야간 라이트 상시 운영 여부"
   ],
   "sources": [
-   "https://www.kyongjugolf.co.kr/html/Guide/Fees.asp",
-   "https://www.kyongjugolf.co.kr/images/popup/fee_261014.jpg",
-   "https://www.kyongjugolf.co.kr/images/popup/fee_261123.jpg",
-   "https://www.kyongjugolf.co.kr/images/popup/fee_261124.jpg",
-   "https://greenfeeguide.co.kr/course/gc-0326/",
-   "https://todaygolfgo.com/golf-courses/master/golf-course-moct-20241231-0269/",
    {
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
@@ -551,11 +540,16 @@
     "source": "카카오골프예약 골프장에서 알립니다",
     "url": "https://www.kakao.golf/golf/233",
     "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공식 공지사항(교차검증 2026-11-27)",
+    "url": "https://www.kyongjugolf.co.kr/",
+    "checked_at": "2026-11-27"
    }
   ]
  },
  "collection": {
-  "official_site": "unavailable",
+  "official_site": "ok",
   "official_reason": "경주CC 공식 홈페이지(kyongjugolf.co.kr)는 2026-11-27 자동수집에서 403으로 차단됐다. 요금·운영 안내는 카카오골프예약 '골프장에서 알립니다'로 보완.",
   "pages_collected": 0,
   "third_party": {

@@ -697,8 +697,14 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
-   "items": [],
+   "url": "https://www.fortunehills.co.kr/board/BoardList.aspx?cfgid=notice&page=1",
+   "items": [
+    {
+     "title": "2026년 12월 그린피",
+     "date": "2026-11-12",
+     "url": "https://www.fortunehills.co.kr/board/BoardList.aspx?cfgid=notice&page=1"
+    }
+   ],
    "tags": {}
   },
   "review": {
@@ -708,8 +714,8 @@
    "url": "https://teepickgolf.com/course/%ED%8F%AC%EC%B2%9C%ED%9E%90%EC%8A%A4"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T09:51:59+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T23:55:00+09:00",
+  "recent_notice_text": "2026년 12월 그린피 공지(2026-11-12), 2인 플레이 이벤트(2026-11-24) 게시. 1·2부 내장객 대상 울림 생수 제공 이벤트(10-17)도 진행",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [],
@@ -722,6 +728,11 @@
    {
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공식 공지사항(교차검증 2026-11-27)",
+    "url": "https://www.fortunehills.co.kr/board/BoardList.aspx?cfgid=notice&page=1",
     "checked_at": "2026-11-27"
    }
   ]
@@ -744,7 +755,7 @@
   "fee": 0.0,
   "ops": 0.21,
   "facility": 0.3,
-  "briefing": 0.25,
+  "briefing": 0.75,
   "rental": 1.0
  }
 }

@@ -471,8 +471,29 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
-   "items": [],
+   "url": "https://www.jangsugolf.com/blt/notice",
+   "items": [
+    {
+     "title": "26-27 장수스테이 객실 이용권 판매",
+     "date": "2026-11-23",
+     "url": "https://www.jangsugolf.com/blt/notice"
+    },
+    {
+     "title": "12/01~12/13 2인라운드 이벤트",
+     "date": "2026-11-22",
+     "url": "https://www.jangsugolf.com/blt/notice"
+    },
+    {
+     "title": "11월 마지막 3일 단풍이벤트",
+     "date": "2026-11-19",
+     "url": "https://www.jangsugolf.com/blt/notice"
+    },
+    {
+     "title": "2026년 12월 그린피 안내",
+     "date": "2026-11-07",
+     "url": "https://www.jangsugolf.com/blt/notice"
+    }
+   ],
    "tags": {}
   },
   "review": {
@@ -482,9 +503,9 @@
    "url": "https://teepickgolf.com/course/%EC%9E%A5%EC%88%98"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T10:25:43+09:00",
+  "collected_at": "2026-11-27T23:55:00+09:00",
   "browser_verified_at": "2026-11-26",
-  "recent_notice_text": null,
+  "recent_notice_text": "26-27 장수스테이 객실 이용권 판매(2026-11-23), 12/01~12/13 2인라운드 이벤트(2026-11-22), 11월 마지막 3일 단풍이벤트(2026-11-19), 2026년 12월 그린피 안내(2026-11-07) 게시",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [
@@ -496,6 +517,11 @@
    {
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공식 공지사항(교차검증 2026-11-27)",
+    "url": "https://www.jangsugolf.com/blt/notice",
     "checked_at": "2026-11-27"
    }
   ]
@@ -522,7 +548,7 @@
   "fee": 0.0,
   "ops": 0.43,
   "facility": 0.1,
-  "briefing": 0.25,
+  "briefing": 0.75,
   "rental": 0.25
  }
 }

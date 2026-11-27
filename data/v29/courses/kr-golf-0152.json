@@ -469,7 +469,7 @@
    "url": "https://teepickgolf.com/course/%EC%86%94%EB%AA%A8%EB%A1%9CCC"
   },
   "fee_change": null,
-  "collected_at": "2026-11-27T23:40:00+09:00",
+  "collected_at": "2026-11-27T23:55:00+09:00",
   "recent_notice_text": "2026-11-18 12월 그린피 안내, 2026-11-01 동절기 경기운영 안내, 2026-08-09 개인정보 유출 통지. 홈페이지 NOTICE 섹션 기준이며, 게시판 최신글도 11월 18일자다.",
   "course_notes": null,
   "alert": null,
@@ -492,7 +492,7 @@
     "checked_at": "2026-11-27"
    },
    {
-    "source": "공식 공지사항(브라우저 확인)",
+    "source": "공식 공지사항(교차검증 2026-11-27)",
     "url": "https://www.solmoro.com/",
     "checked_at": "2026-11-27"
    }

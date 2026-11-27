@@ -443,8 +443,14 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
-   "items": [],
+   "url": "https://hanwoncc.co.kr/board/board_list.asp?cfgid=notice",
+   "items": [
+    {
+     "title": "12월 그린피 이벤트",
+     "date": "2026-11-20",
+     "url": "https://hanwoncc.co.kr/board/board_list.asp?cfgid=notice"
+    }
+   ],
    "tags": {}
   },
   "review": {
@@ -454,8 +460,8 @@
    "url": "https://teepickgolf.com/course/%ED%95%9C%EC%9B%90"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T09:51:57+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T23:55:00+09:00",
+  "recent_notice_text": "12월 그린피 이벤트(2026-11-20). 함께 12월 주중 및 주말 접수 안내(11-03), 11월 주중 그린피 추가 할인 이벤트(11-09), 2027년 연단체 추가모집(10-19) 게시",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [],
@@ -468,6 +474,11 @@
    {
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공식 공지사항(교차검증 2026-11-27)",
+    "url": "https://hanwoncc.co.kr/board/board_list.asp?cfgid=notice",
     "checked_at": "2026-11-27"
    }
   ]
@@ -490,7 +501,7 @@
   "fee": 1.0,
   "ops": 0.57,
   "facility": 0.5,
-  "briefing": 0.25,
+  "briefing": 0.75,
   "rental": 1.0
  }
 }

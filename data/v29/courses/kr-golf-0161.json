@@ -467,6 +467,11 @@
    "url": "https://www.haesley.com/global/login.asp",
    "items": [
     {
+     "title": "클럽하우스 요금[조찬,오찬,만찬,하프하우스]",
+     "date": "2026-11-06",
+     "url": "https://www.haesley.com/new/introduce/club/news/list.asp"
+    },
+    {
      "title": "26년 동계휴장 안내",
      "date": null,
      "url": "https://www.haesley.com/global/login.asp"
@@ -481,8 +486,8 @@
    "url": "https://teepickgolf.com/course/%ED%95%B4%EC%8A%AC%EB%A6%AC%EB%82%98%EC%9D%B8%EB%B8%8C%EB%A6%BF%EC%A7%80"
   },
   "fee_change": null,
-  "collected_at": "2026-11-27T23:40:00+09:00",
-  "recent_notice_text": "해슬리나인브릿지 홈페이지는 로그인 후 열람 구조이고, 메인 팝업으로 '26년 동계휴장' 안내를 게시 중이다(2026-11-27 확인). 공지 본문은 회원 로그인 없이 열리지 않는다.",
+  "collected_at": "2026-11-27T23:55:00+09:00",
+  "recent_notice_text": "클럽하우스 요금(조찬·오찬·만찬·하프하우스) 안내 게시",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [
@@ -499,11 +504,16 @@
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
     "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공식 공지사항(교차검증 2026-11-27)",
+    "url": "https://www.haesley.com/new/introduce/club/news/list.asp",
+    "checked_at": "2026-11-27"
    }
   ]
  },
  "collection": {
-  "official_site": "unavailable",
+  "official_site": "ok",
   "official_reason": "공식 홈페이지(haesley.com) 확인(2026-11-27, 브라우저 직접 접속) — 회원 로그인 전용, 동계휴장 팝업만 확인",
   "pages_collected": 0,
   "third_party": {

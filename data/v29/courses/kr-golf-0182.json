@@ -408,13 +408,29 @@
  "briefing": {
   "notices": {
    "url": "https://www.jisanresort.co.kr/",
-   "items": [],
+   "items": [
+    {
+     "title": "월요영업 및 예약스케줄 안내",
+     "date": "2026-11-27",
+     "url": "https://www.jisanresort.co.kr/w/event/notice.asp"
+    },
+    {
+     "title": "골프장 동계 운영 안내",
+     "date": "2026-10-29",
+     "url": "https://www.jisanresort.co.kr/w/event/notice.asp"
+    },
+    {
+     "title": "그늘집 무인 운영 및 이용 방법 안내",
+     "date": "2026-10-12",
+     "url": "https://www.jisanresort.co.kr/w/event/notice.asp"
+    }
+   ],
    "tags": {}
   },
   "review": null,
   "fee_change": null,
-  "collected_at": "2026-11-27T23:40:00+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T23:55:00+09:00",
+  "recent_notice_text": "골프장 동계 운영 안내(2026-10-29), 월요영업 및 예약스케줄 안내(2026-11-27) 게시",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [],
@@ -423,11 +439,16 @@
     "source": "그린피가이드 코스 페이지",
     "url": "https://greenfeeguide.co.kr/course/gc-0028/",
     "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공식 공지사항(교차검증 2026-11-27)",
+    "url": "https://www.jisanresort.co.kr/w/event/notice.asp",
+    "checked_at": "2026-11-27"
    }
   ]
  },
  "collection": {
-  "official_site": "unavailable",
+  "official_site": "ok",
   "official_reason": "공식 홈페이지(지산리조트 퍼블릭) 접속·코스 안내 확인(2026-11-27, 브라우저 직접 접속). 공지·이벤트는 별도 게시판에서 운영하며 2026-11-27 현재 확인된 텍스트 공지가 없다.",
   "pages_collected": 0,
   "third_party": {
@@ -444,7 +465,7 @@
   "fee": 0.75,
   "ops": 0.36,
   "facility": 0.4,
-  "briefing": 0.0,
+  "briefing": 0.5,
   "rental": 0.25
  }
 }

@@ -890,8 +890,8 @@
    "url": "https://teepickgolf.com/course/%ED%83%9C%EA%B4%91"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T09:51:55+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T23:55:00+09:00",
+  "recent_notice_text": "카카오골프예약 '골프장에서 알립니다'(2026-11-27 확인): 당일 예약·취소는 3부 야간 라운드 한정(1·2부 당일 예약 불가), 취소는 골프장 문의, 특가·이벤트 상품은 18홀 종료 시 적용·중복 할인 불가",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [],
@@ -904,6 +904,11 @@
    {
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "카카오골프예약 골프장에서 알립니다(교차검증 2026-11-27)",
+    "url": "https://www.kakao.golf/golf/68",
     "checked_at": "2026-11-27"
    }
   ]
@@ -926,7 +931,7 @@
   "fee": 1.0,
   "ops": 0.64,
   "facility": 0.4,
-  "briefing": 0.25,
+  "briefing": 0.5,
   "rental": 0.25
  }
 }

@@ -212,24 +212,33 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
-   "items": [],
+   "url": "http://terracc.kr/kor/pr_center/menu_02.html",
+   "items": [
+    {
+     "title": "27홀 개발행위허가 변경접수완료",
+     "date": "2026-04-08",
+     "url": "http://terracc.kr/kor/pr_center/menu_02.html"
+    }
+   ],
    "tags": {}
   },
-  "recent_notice_text": null,
+  "recent_notice_text": "27홀 개발행위허가 변경접수완료(2026-04-08), 27홀 변경 지구단위계획고시 완료(2026-04-01) — 건설중 구장의 최신 사업 소식. 이후 신규 게시 없음(총 23건)",
   "course_notes": "",
   "review": null,
   "fee_change": null,
   "alert": null,
   "unconfirmed": [],
   "sources": [
-   "http://terracc.kr/",
-   "https://www.ksilbo.co.kr/news/articleView.html?idxno=1025323"
+   {
+    "source": "공식 공지사항(교차검증 2026-11-27)",
+    "url": "http://terracc.kr/kor/pr_center/menu_02.html",
+    "checked_at": "2026-11-27"
+   }
   ],
-  "collected_at": "2026-11-27"
+  "collected_at": "2026-11-27T23:55:00+09:00"
  },
  "collection": {
-  "official_site": null,
+  "official_site": "ok",
   "official_reason": "구장 JSON 미생성(건설중·미착공)",
   "pages_collected": 0,
   "third_party": {},
@@ -242,7 +251,7 @@
   "fee": 0.0,
   "ops": 0.0,
   "facility": 0.0,
-  "briefing": 0.0,
+  "briefing": 0.5,
   "rental": 0.0
  }
 }

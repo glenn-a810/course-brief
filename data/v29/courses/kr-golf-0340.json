@@ -413,11 +413,6 @@
      "url": "https://www.gasancc.com/Board/Details/99"
     },
     {
-     "title": "12월 그린피 안내",
-     "date": "2026-11-20",
-     "url": "https://www.gasancc.com/Board/Details/99"
-    },
-    {
      "title": "11월 그린피 안내",
      "date": "2026-11-17",
      "url": "https://www.gasancc.com/Board/Details/99"
@@ -442,8 +437,8 @@
   },
   "review": null,
   "fee_change": null,
-  "collected_at": "2026-11-27T23:40:00+09:00",
-  "recent_notice_text": "카카오골프예약 '골프장에서 알립니다'(2026-11-27): ■ 가산CC 오픈 기념 홀인원 이벤트 1) 3번홀 홀인원! / - 스폰서 지원금((주)대원엔비폴) 1,000만원 + 참가비 적립금 합계액 50%상당 지급(제세공과금 제외) 2) 6번홀 홀인원! / - 익일부터 1개월간 본인그린피 면제 * 참가비 무료 / ■ 골프장 이용 안내 / - 확정그린피로 추가 할인 불가 (단, 소지하신 할인 쿠폰 중복 사용 가능) / - 인터넷회원에 미가입시 인당 10,000원 추가요금 발생 / - 쿠폰 유효기간내에서만 사용가능합니다.(기간 만료시 사용불가) / - 카트료 별도",
+  "collected_at": "2026-11-27T23:55:00+09:00",
+  "recent_notice_text": "동계 휴장 안내(2026-11-25) · 12월 그린피 안내(11-20) · 11월 그린피 안내(11-18)",
   "course_notes": "2025-08-08부터 (주)대원엔비텍이 운영하며 '가산CC'로 전환, 기존 회원 재가입 필요. 예약은 매주 월요일 10:00에 2주 후 1주일분 오픈. 내장객 인터넷 회원가입 필수. 외부 음식물 반입 금지(위반 시 1인 20,000원). 12월 공지에 캐디피·카트비 별도(18홀 1팀 기준) 명시.",
   "alert": {
    "type": "winter_closure",
@@ -465,11 +460,6 @@
    "동계 휴장 공지(2026-27)"
   ],
   "sources": [
-   "https://www.gasancc.com/Board/Notice",
-   "https://www.gasancc.com/Board/Details/100?page=1",
-   "https://www.gasancc.com/Board/Details/99?page=1",
-   "https://www.gasancc.com/Reservation/ReservationPrice",
-   "https://papahun.com/gasancc-greenfee/",
    {
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
@@ -479,11 +469,16 @@
     "source": "카카오골프예약 골프장에서 알립니다",
     "url": "https://www.kakao.golf/golf/483",
     "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공식 공지사항(교차검증 2026-11-27)",
+    "url": "https://www.gasancc.com/Board/Notice",
+    "checked_at": "2026-11-27"
    }
   ]
  },
  "collection": {
-  "official_site": "unavailable",
+  "official_site": "ok",
   "official_reason": "가산CC 공식 홈페이지(gasancc.com)는 열리지만 공지가 스크립트로만 렌더링돼 2026-11-27 현재 텍스트 공지를 확보하지 못했다. 운영·요금 안내는 카카오골프예약 '골프장에서 알립니다'로 보완.",
   "pages_collected": 0,
   "third_party": {

@@ -765,8 +765,8 @@
    "url": "https://teepickgolf.com/course/%EA%B9%80%ED%8F%AC%EC%8B%9C%EC%82%AC%EC%9D%B4%EB%93%9C"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T09:51:51+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T23:55:00+09:00",
+  "recent_notice_text": "카카오골프예약 '골프장에서 알립니다'(2026-11-27 확인): 외부 음식물 반입 금지(위반 시 퇴장), 전신 문신은 긴팔·긴바지 착용 후 경기 가능하며 샤워실 사용 제한, 반바지 라운드·슬리퍼 입장 제한, 예약자 미내장 입장 제한, 라이브방송·유튜브 촬영 증가에 따른 안내",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [
@@ -782,6 +782,11 @@
    {
     "source": "티픽골프장 코스 페이지",
     "url": "https://teepickgolf.com/course/%EA%B9%80%ED%8F%AC%EC%8B%9C%EC%82%AC%EC%9D%B4%EB%93%9C",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "카카오골프예약 골프장에서 알립니다(교차검증 2026-11-27)",
+    "url": "https://www.kakao.golf/golf/409",
     "checked_at": "2026-11-27"
    }
   ]
@@ -804,7 +809,7 @@
   "fee": 1.0,
   "ops": 0.43,
   "facility": 0.2,
-  "briefing": 0.0,
+  "briefing": 0.25,
   "rental": 1.0
  }
 }

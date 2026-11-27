@@ -341,8 +341,19 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
-   "items": [],
+   "url": "https://www.trinityclub.co.kr/board/list",
+   "items": [
+    {
+     "title": "27년 동계휴장",
+     "date": "2026-10-19",
+     "url": "https://www.trinityclub.co.kr/board/list"
+    },
+    {
+     "title": "화요개장",
+     "date": "2026-09-23",
+     "url": "https://www.trinityclub.co.kr/board/list"
+    }
+   ],
    "tags": {}
   },
   "review": {
@@ -352,8 +363,8 @@
    "url": "https://teepickgolf.com/course/%ED%8A%B8%EB%A6%AC%EB%8B%88%ED%8B%B0"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T09:51:54+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T23:55:00+09:00",
+  "recent_notice_text": "26~27년 동계휴장(2026-10-19)이 공지사항 최신 글(본문 이미지). 함께 11/10 화요개장(2026-09-23), 클럽 내 부대서비스 요금 안내 5건(2026-09-10), 26년 하반기 에어레이션&추석연휴 휴장(2026-07-10) 게시",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [
@@ -364,6 +375,11 @@
    {
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공식 공지사항(교차검증 2026-11-27)",
+    "url": "https://www.trinityclub.co.kr/board/list",
     "checked_at": "2026-11-27"
    }
   ]
@@ -386,7 +402,7 @@
   "fee": 0.25,
   "ops": 0.07,
   "facility": 0.1,
-  "briefing": 0.0,
+  "briefing": 0.5,
   "rental": 0.25
  }
 }

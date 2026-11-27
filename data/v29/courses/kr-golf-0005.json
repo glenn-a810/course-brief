@@ -338,14 +338,35 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
-   "items": [],
+   "url": "http://www.okgwakiancc.co.kr/",
+   "items": [
+    {
+     "title": "연말 할인 행사 안내",
+     "date": "2026-11-25",
+     "url": "http://www.okgwakiancc.co.kr/"
+    },
+    {
+     "title": "가을 이벤트 연장 안내",
+     "date": "2026-11-18",
+     "url": "http://www.okgwakiancc.co.kr/"
+    },
+    {
+     "title": "가을 이벤트 요금 안내",
+     "date": "2026-10-13",
+     "url": "http://www.okgwakiancc.co.kr/"
+    },
+    {
+     "title": "10월 이벤트 안내",
+     "date": "2026-09-28",
+     "url": "http://www.okgwakiancc.co.kr/"
+    }
+   ],
    "tags": {}
   },
   "review": null,
   "fee_change": null,
-  "collected_at": "2026-11-26T10:25:40+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T23:55:00+09:00",
+  "recent_notice_text": "연말 할인 행사 안내(2026-11-25) 게시. 직전 공지: 가을 이벤트 연장 안내(2026-11-18), 가을 이벤트 요금 안내(2026-10-13)",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [
@@ -354,7 +375,13 @@
    "진행 시간",
    "식당"
   ],
-  "sources": []
+  "sources": [
+   {
+    "source": "공식 공지사항(교차검증 2026-11-27)",
+    "url": "http://www.okgwakiancc.co.kr/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "ok",
@@ -376,7 +403,7 @@
   "fee": 0.75,
   "ops": 0.29,
   "facility": 0.1,
-  "briefing": 0.0,
+  "briefing": 0.5,
   "rental": 0.25
  }
 }

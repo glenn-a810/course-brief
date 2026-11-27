@@ -779,7 +779,7 @@
    "url": "https://teepickgolf.com/course/%EB%82%A8%EC%9B%90%EC%83%81%EB%A1%9D"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T10:25:43+09:00",
+  "collected_at": "2026-11-27T23:55:00+09:00",
   "recent_notice_text": null,
   "course_notes": null,
   "alert": null,
@@ -792,6 +792,11 @@
    {
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "카카오골프예약 골프장에서 알립니다(교차검증 2026-11-27)",
+    "url": "https://www.kakao.golf/golf/344",
     "checked_at": "2026-11-27"
    }
   ]

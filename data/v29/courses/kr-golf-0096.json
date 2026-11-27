@@ -449,14 +449,35 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
-   "items": [],
+   "url": "https://www.goyangcc.com/board/news",
+   "items": [
+    {
+     "title": "2026년 골프연습장 동절기 운영시간 변경안내",
+     "date": "2026-11-23",
+     "url": "https://www.goyangcc.com/board/view/notice/10784"
+    },
+    {
+     "title": "26년 12월 그린피 이용요금 안내",
+     "date": "2026-11-23",
+     "url": "https://www.goyangcc.com/board/fee"
+    },
+    {
+     "title": "2027년 연단체 모집안내",
+     "date": "2026-11-03",
+     "url": "https://www.goyangcc.com/board/view/notice/10746"
+    },
+    {
+     "title": "고양CC 헬로캐디 정식오픈 예약안내",
+     "date": "2026-08-31",
+     "url": "https://www.goyangcc.com/board/view/notice/10580"
+    }
+   ],
    "tags": {}
   },
   "review": null,
   "fee_change": null,
-  "collected_at": "2026-11-26T09:51:50+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T23:55:00+09:00",
+  "recent_notice_text": "공지사항에 2026년 골프연습장 동절기 운영시간 변경안내(2026-11-23)·2027년 연단체 모집안내(2026-11-03)·고양CC 헬로캐디 정식오픈 예약안내(2026-08-31)가, 매월그린피 게시판에 26년 12월 그린피 이용요금 안내(2026-11-23)가 게시되어 있다.",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [
@@ -473,6 +494,11 @@
    {
     "source": "그린피가이드 코스 페이지",
     "url": "https://greenfeeguide.co.kr/course/gc-0003/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공식 공지사항(교차검증 2026-11-27)",
+    "url": "https://www.goyangcc.com/board/news",
     "checked_at": "2026-11-27"
    }
   ]
@@ -495,7 +521,7 @@
   "fee": 0.0,
   "ops": 0.79,
   "facility": 0.5,
-  "briefing": 0.0,
+  "briefing": 0.5,
   "rental": 0.25
  }
 }

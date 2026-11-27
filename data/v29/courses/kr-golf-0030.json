@@ -446,8 +446,8 @@
    "url": "https://www.westoceancc.co.kr/html/guide/guide01.asp",
    "items": [
     {
-     "title": "26년 송년 레이디스 골프대회 (12/02)",
-     "date": "2026-11-09",
+     "title": "크리스마스 특선 디너",
+     "date": "2026-11-20",
      "url": "https://www.westoceancc.co.kr/html/guide/guide01.asp"
     },
     {
@@ -456,13 +456,13 @@
      "url": "https://www.westoceancc.co.kr/html/guide/guide01.asp"
     },
     {
-     "title": "크리스마스 특선 디너",
-     "date": "2026-11-20",
+     "title": "2인 골프 당일이벤트 (11월/12월)",
+     "date": "2026-11-17",
      "url": "https://www.westoceancc.co.kr/html/guide/guide01.asp"
     },
     {
-     "title": "2인 골프 당일이벤트 (11월/12월)",
-     "date": "2026-11-17",
+     "title": "26년 송년 레이디스 골프대회 (12/02)",
+     "date": "2026-11-09",
      "url": "https://www.westoceancc.co.kr/html/guide/guide01.asp"
     },
     {
@@ -495,7 +495,7 @@
    "url": "https://teepickgolf.com/course/%EC%9B%A8%EC%8A%A4%ED%8A%B8%EC%98%A4%EC%85%98cc"
   },
   "fee_change": null,
-  "collected_at": "2026-11-27T23:40:00+09:00",
+  "collected_at": "2026-11-27T23:55:00+09:00",
   "recent_notice_text": "2026-11-20 크리스마스 특선 디너·크리스마스 소원 트리, 2026-11-17 2인 골프 당일이벤트(11·12월), 2026-11-09 26년 송년 레이디스 골프대회(12/02), 2026-10-26 27년 연부킹·연단체 모집과 정미년 해맞이·크리스마스 석식 패키지, 2026-10-23 26년 12월 이용요금(12/13까지).",
   "course_notes": null,
   "alert": null,
@@ -512,7 +512,7 @@
     "checked_at": "2026-11-27"
    },
    {
-    "source": "공식 공지사항(브라우저 확인)",
+    "source": "공식 공지사항(교차검증 2026-11-27)",
     "url": "https://www.westoceancc.co.kr/html/guide/guide01.asp",
     "checked_at": "2026-11-27"
    }

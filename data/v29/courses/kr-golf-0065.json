@@ -889,7 +889,7 @@
    "url": "https://teepickgolf.com/course/%EB%B2%A0%EC%96%B4%EC%A6%88%EB%B2%A0%EC%8A%A4%ED%8A%B8"
   },
   "fee_change": null,
-  "collected_at": "2026-11-27T23:40:00+09:00",
+  "collected_at": "2026-11-27T23:55:00+09:00",
   "recent_notice_text": "2026-11-02 2026년 12월 이용요금 안내, 2026-10-01 2026년 11월 이용요금 안내, 2026-09-21 예약상담시간안내.",
   "course_notes": null,
   "alert": null,
@@ -913,7 +913,7 @@
     "checked_at": "2026-11-27"
    },
    {
-    "source": "공식 공지사항(브라우저 확인)",
+    "source": "공식 공지사항(교차검증 2026-11-27)",
     "url": "https://www.bearsbestcheongnagc.com/",
     "checked_at": "2026-11-27"
    }

@@ -424,7 +424,7 @@
    "url": "https://teepickgolf.com/course/%ED%95%B4%EC%86%94%EB%A6%AC%EC%95%84cc"
   },
   "fee_change": null,
-  "collected_at": "2026-11-27T23:40:00+09:00",
+  "collected_at": "2026-11-27T23:55:00+09:00",
   "recent_notice_text": "2026-11-26 2027년 1~2월 일반 그린피, 2026-11-04 2026년 12월 일반 그린피, 2026-10-26 2027년 연단체 모집안내. 매달 일반 그린피를 공지한다.",
   "course_notes": null,
   "alert": null,
@@ -443,7 +443,7 @@
     "checked_at": "2026-11-27"
    },
    {
-    "source": "공식 공지사항(브라우저 확인)",
+    "source": "공식 공지사항(교차검증 2026-11-27)",
     "url": "http://www.haesoliacc.co.kr/",
     "checked_at": "2026-11-27"
    }

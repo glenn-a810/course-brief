@@ -328,8 +328,8 @@
    "url": "https://teepickgolf.com/course/%EB%94%94%EC%BC%80%EC%9D%B4%EB%A0%88%EC%A0%80"
   },
   "fee_change": null,
-  "collected_at": "2026-11-27T23:40:00+09:00",
-  "recent_notice_text": "순창CC(NEW 순창CC)는 자체 홈페이지 대신 카카오골프예약 전용 페이지(web.kakao.golf/golf/sunchangcc)에서 모든 티타임을 예약받고, 전화 예약은 063-652-8000으로 안내한다.",
+  "collected_at": "2026-11-27T23:55:00+09:00",
+  "recent_notice_text": "순창CC(NEW 순창CC)는 자체 홈페이지 대신 카카오골프예약 전용 페이지(web.kakao.golf/golf/sunchangcc)에서 모든 티타임을 예약받고, 전화 예약은 063-652-8000으로 안내한다. 카카오골프예약 '골프장에서 알립니다'(2026-11-27 확인): 노캐디·카트비 6만원·인원별 그린피 및 군민할인 안내",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [
@@ -348,6 +348,11 @@
    {
     "source": "공식 대체 채널(카카오골프예약) 확인",
     "url": "https://web.kakao.golf/golf/sunchangcc",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "카카오골프예약 골프장에서 알립니다(교차검증 2026-11-27)",
+    "url": "https://www.kakao.golf/golf/539",
     "checked_at": "2026-11-27"
    }
   ]

@@ -48,7 +48,7 @@
    "straight_name": "음성IC"
   },
   "tel": "031-670-0777",
-  "homepage": "https://www.golfsamsung.com/web/asCourseMap.do",
+  "homepage": "https://www.benestgolf.com/reve/pc/main.do",
   "operators": [
    "삼성물산㈜"
   ],
@@ -88,7 +88,9 @@
    "relationship": null,
    "note": null
   },
-  "factcheck_2026_11_26": null
+  "factcheck_2026_11_26": [
+   "통합운영(베네스트골프) 게시판에서 이 구장 전용이 아닌 타 구장 공지로 확인되어 제외(2026-11-27 교차검증)"
+  ]
  },
  "course": {
   "holes": 9,
@@ -384,18 +386,8 @@
  },
  "briefing": {
   "notices": {
-   "url": "https://www.golfsamsung.com/web/asCourseMap.do",
+   "url": "https://www.benestgolf.com/reve/pc/board/notice.do",
    "items": [
-    {
-     "title": "동래베네스트 겨울철 페어웨이 관리 안내",
-     "date": "2026-10-30",
-     "url": "https://www.benestgolf.com/reve/pc/board/notice.do"
-    },
-    {
-     "title": "글렌로스 2026년 11월 이용요금 안내",
-     "date": "2026-10-02",
-     "url": "https://www.benestgolf.com/reve/pc/board/notice.do"
-    },
     {
      "title": "안성베네스트 (챌린지코스) 2026년 11월 이용요금 안내",
      "date": "2026-10-02",
@@ -417,18 +409,8 @@
      "url": "https://www.benestgolf.com/reve/pc/board/notice.do"
     },
     {
-     "title": "글렌로스 2026년 10월 이용요금 안내",
-     "date": "2026-08-31",
-     "url": "https://www.benestgolf.com/reve/pc/board/notice.do"
-    },
-    {
      "title": "★한결 더 가까워지는 안성베네스트★ 신설도로 개통",
      "date": "2026-08-12",
-     "url": "https://www.benestgolf.com/reve/pc/board/notice.do"
-    },
-    {
-     "title": "가평베네스트 캐디피 변경 안내",
-     "date": "2026-06-22",
      "url": "https://www.benestgolf.com/reve/pc/board/notice.do"
     },
     {
@@ -441,8 +423,8 @@
   },
   "review": null,
   "fee_change": null,
-  "collected_at": "2026-11-27T23:40:00+09:00",
-  "recent_notice_text": "카카오골프예약 '골프장에서 알립니다'(2026-11-27): ■ 골프장 이용안내 / - 명시된 그린피 금액은 베네스트골프 인터넷 회원가입 필수조건입니다. ※ 미가입시 정상가 그린피 적용 / - 모든 티타임은 4인 필수이며, 3인 내장 시 추가요금 발생됩니다. (현장문의) / - 예약자 본인 미내장 시 라운드 진행 불가, 기예약 전체 취소 됩니다. ⋆ 본인 미내장 시 예약 당일 포함하여 3개월 간 이용 불가합니다. ⋆ 가평⋅안성⋅동래베네스트, 글렌로스 4개 골프장 동시 적용) / ■ S프론트 체크인 이용안내 / - 4인 이용 및 전원 S프론트 체크인 조건의 티타임입니다. / - 이용 조건이 맞지 않을 경우 이용 금액이 달라질 수 있습니다. (상세 내용은 예약실로 문의하시기 바랍니다. 1577-9727)",
+  "collected_at": "2026-11-27T23:55:00+09:00",
+  "recent_notice_text": "안성베네스트(챌린지코스) 2026년 11월 이용요금 안내 게시",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [
@@ -467,12 +449,17 @@
     "source": "카카오골프예약 골프장에서 알립니다",
     "url": "https://www.kakao.golf/golf/4",
     "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공식 공지사항(교차검증 2026-11-27)",
+    "url": "https://www.benestgolf.com/reve/pc/board/notice.do",
+    "checked_at": "2026-11-27"
    }
   ]
  },
  "collection": {
-  "official_site": "unavailable",
-  "official_reason": "안성베네스트 일반대중홀은 삼성 계열 통합 사이트(golfsamsung.com)와 베네스트골프(benestgolf.com)에서 운영되며, 2026-11-27 현재 자동수집이 403으로 막혀 브라우저 외 접근이 되지 않는다. 예약·운영 안내는 카카오골프예약 '골프장에서 알립니다'로 보완.",
+  "official_site": "ok",
+  "official_reason": "공식 홈페이지 주소 확인·정정(https://www.benestgolf.com/reve/pc/main.do, 2026-11-27)",
   "pages_collected": 0,
   "third_party": {
    "teepick": true,

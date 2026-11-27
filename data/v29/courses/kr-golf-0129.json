@@ -592,12 +592,17 @@
  },
  "briefing": {
   "notices": {
-   "url": "https://www.benestgolf.com/reve/pc/main.do",
+   "url": "https://www.benestgolf.com/reve/pc/board/notice.do",
    "items": [
     {
      "title": "안성베네스트 (챌린지코스) 2026년 11월 이용요금 안내",
      "date": "2026-10-02",
      "url": "https://www.benestgolf.com/reve/pc/main.do"
+    },
+    {
+     "title": "노쇼 등에 대한 위약금 제도 시행 안내",
+     "date": "2026-09-01",
+     "url": "https://www.benestgolf.com/reve/pc/board/notice.do"
     },
     {
      "title": "2027년 베네스트골프 연단체 모집 안내",
@@ -614,8 +619,8 @@
    "url": "https://teepickgolf.com/course/%EC%95%88%EC%84%B1%EB%B2%A0%EB%84%A4%EC%8A%A4%ED%8A%B8"
   },
   "fee_change": null,
-  "collected_at": "2026-11-27T23:40:00+09:00",
-  "recent_notice_text": "2026-10-02 안성베네스트(챌린지코스) 2026년 11월 이용요금 안내가 통합 공지 최신 안성 관련 글이고, 2027년 연단체 모집 안내가 이벤트로 게시 중이다. 12월 이용요금 공지는 2026-11-27 현재 아직 없다.",
+  "collected_at": "2026-11-27T23:55:00+09:00",
+  "recent_notice_text": "안성베네스트(챌린지코스) 2026년 11월 이용요금 안내 게시(10월 요금 안내는 2026-08-31)",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [
@@ -637,8 +642,8 @@
     "checked_at": "2026-11-27"
    },
    {
-    "source": "공식 공지사항(브라우저 확인)",
-    "url": "https://www.benestgolf.com/reve/pc/main.do",
+    "source": "공식 공지사항(교차검증 2026-11-27)",
+    "url": "https://www.benestgolf.com/reve/pc/board/notice.do",
     "checked_at": "2026-11-27"
    }
   ]

@@ -304,8 +304,8 @@
   },
   "review": null,
   "fee_change": null,
-  "collected_at": "2026-11-26T10:25:41+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T23:55:00+09:00",
+  "recent_notice_text": "카카오골프예약 '골프장에서 알립니다'(2026-11-27 확인): 2·3인 플레이 가능(2인 내장 시 현장 추가요금), 3부 야간 라운드 4~11월 수~토 운영, 당일 취소 시 4인 그린피 30% 위약금, 5인 플레이·갤러리 입장 불가, 라운드 20분 전 도착",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [
@@ -315,7 +315,13 @@
    "진행 시간",
    "식당"
   ],
-  "sources": []
+  "sources": [
+   {
+    "source": "카카오골프예약 골프장에서 알립니다(교차검증 2026-11-27)",
+    "url": "https://www.kakao.golf/golf/671",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "ok",
@@ -337,7 +343,7 @@
   "fee": 0.0,
   "ops": 0.14,
   "facility": 0.0,
-  "briefing": 0.0,
+  "briefing": 0.25,
   "rental": 0.25
  }
 }

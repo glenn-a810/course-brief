@@ -627,8 +627,8 @@
    "url": "https://teepickgolf.com/course/%EC%88%98%EC%9B%90"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T09:51:55+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T23:55:00+09:00",
+  "recent_notice_text": "카카오골프예약 '골프장에서 알립니다'(2026-11-27 확인): 신코스 코스공사 안내(2026.06.15~2027.03.31): 전체홀 벙커 개보수·그린 2→1 변경(4·9·16·17·18번홀), 공사구간으로 페어웨이 폭 축소 및 중장비 이동, 2인 라운드 불가(2인 내장 시 영구정지)",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [
@@ -643,6 +643,11 @@
    {
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "카카오골프예약 골프장에서 알립니다(교차검증 2026-11-27)",
+    "url": "https://www.kakao.golf/golf/77",
     "checked_at": "2026-11-27"
    }
   ]
@@ -665,7 +670,7 @@
   "fee": 1.0,
   "ops": 0.29,
   "facility": 0.0,
-  "briefing": 0.25,
+  "briefing": 0.5,
   "rental": 0.25
  }
 }

@@ -562,8 +562,8 @@
    "url": "https://teepickgolf.com/course/%EC%B2%AD%ED%95%98%EC%9D%B4%EC%8A%A4%ED%84%B4CC"
   },
   "fee_change": null,
-  "collected_at": "2026-11-27T23:40:00+09:00",
-  "recent_notice_text": "2026-11-27 26년 11/30~12/06 할인요금안내가 최신 공지다. 주 단위로 할인요금을 공지한다.",
+  "collected_at": "2026-11-27T23:55:00+09:00",
+  "recent_notice_text": "2026-11-27 26년 11/30~12/06 할인요금안내가 최신 공지다. 주 단위로 할인요금을 공지한다. 카카오골프예약 '골프장에서 알립니다'(2026-11-27 확인): 노캐디(셀프) 운영 안내",
   "course_notes": "9홀 규모. 2인 플레이는 대기자 의무 조인, 3인은 대기자 없으면 허용. 카트는 카트도로만 운행(페어웨이 진입 절대 금지). 골프텔 병설, 식당 아메리카노 4,000원.",
   "alert": {
    "type": "winter_unverified",
@@ -582,17 +582,14 @@
    "동계 휴장 공지(2026-27)"
   ],
   "sources": [
-   "https://greenfeeguide.co.kr/course/gc-0322/",
-   "https://todaygolfgo.com/golf-courses/master/golf-course-moct-20241231-0265/",
-   "https://greenfeeguide.co.kr/guides/golf-course-closing-day-guide/",
    {
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
     "checked_at": "2026-11-27"
    },
    {
-    "source": "공식 공지사항(브라우저 확인)",
-    "url": "https://www.easterncc.co.kr/",
+    "source": "카카오골프예약 골프장에서 알립니다(교차검증 2026-11-27)",
+    "url": "https://www.kakao.golf/golf/555",
     "checked_at": "2026-11-27"
    }
   ]

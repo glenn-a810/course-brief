@@ -474,8 +474,8 @@
    "url": "https://teepickgolf.com/course/%EA%B0%95%EB%82%A8300"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T09:51:50+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T23:55:00+09:00",
+  "recent_notice_text": "카카오골프예약 '골프장에서 알립니다'(2026-11-27 확인): 주말·공휴일 예약실 미운영(임박 취소 시 차주 월요일 기준 위약 적용), 3부 이용안내(야간 캐디피 16만원, 1팀 2인 이상, 3인 이상 1만원 현장할인), 미성년자는 만14세 이상·보호자 동반 시 라운드 가능(갤러리 불가), 우천 시 홀별 정산",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [
@@ -491,6 +491,11 @@
    {
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "카카오골프예약 골프장에서 알립니다(교차검증 2026-11-27)",
+    "url": "https://www.kakao.golf/golf/437",
     "checked_at": "2026-11-27"
    }
   ]
@@ -513,7 +518,7 @@
   "fee": 1.0,
   "ops": 0.64,
   "facility": 0.3,
-  "briefing": 0.25,
+  "briefing": 0.5,
   "rental": 1.0
  }
 }

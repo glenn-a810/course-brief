@@ -141,7 +141,7 @@
    "source": "최근접 IC 직선거리"
   },
   "tel": "054-773-7000",
-  "homepage": "https://www.seorabolgc.com/",
+  "homepage": "https://www.seorabolgc.co.kr/index",
   "operators": [
    "㈜서라벌 김광세",
    "㈜디아너스 이명숙"
@@ -463,7 +463,7 @@
  },
  "briefing": {
   "notices": {
-   "url": "https://www.seorabolgc.com/",
+   "url": "https://www.seorabolgc.co.kr/index",
    "items": [
     {
      "title": "12월 이용요금 [적용일자: 12월14일(월)~12월31일(목)]",
@@ -515,23 +515,27 @@
    "url": "https://teepickgolf.com/course/%EC%84%9C%EB%9D%BC%EB%B2%8Ccc"
   },
   "fee_change": null,
-  "collected_at": "2026-11-27T23:40:00+09:00",
-  "recent_notice_text": "서라벌골프클럽은 경주 외동 45홀(힐·레이크·마운틴·밸리·파인) 대중제 코스로, 공식 홈페이지는 seorabolgc.com이며 예약 문의 054-773-7000이다. 월 이용요금은 홈페이지 공지사항에서 안내한다.",
+  "collected_at": "2026-11-27T23:55:00+09:00",
+  "recent_notice_text": "서라벌골프클럽은 경주 외동 45홀(힐·레이크·마운틴·밸리·파인) 대중제 코스로, 공식 홈페이지는 seorabolgc.co.kr이며 예약 문의 054-773-7000이다. 공지 배너에 12월 이용요금(12/1~12/13, 12/14~12/31)과 2027년 연단체(써클팀) 모집안내, 셀프(노캐디) 카트료·3부 캐디피 변경 안내를 게시 중이다(게시일 표기 없음, 2026-11-27 확인).",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [],
   "sources": [
-   "https://parkgolfinfo.co.kr/%ec%84%9c%eb%9d%bc%eb%b2%8c%ea%b3%a8%ed%94%84%ed%81%b4%eb%9f%bd-%ec%98%88%ec%95%bd%eb%b0%a9%eb%b2%95-%eb%b0%8f-%ec%9d%b4%ec%9a%a9%eb%b0%a9%eb%b2%95-%ec%83%81%ec%84%b8-%ec%95%88%eb%82%b4/",
    {
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공식 공지사항(교차검증 2026-11-27)",
+    "url": "https://www.seorabolgc.co.kr/index",
     "checked_at": "2026-11-27"
    }
   ]
  },
  "collection": {
-  "official_site": "unavailable",
-  "official_reason": "공식 홈페이지(seorabolgc.com) 확인(2026-11-27) — 공지 목록은 추가 확인 필요",
+  "official_site": "ok",
+  "official_reason": "공식 홈페이지 주소 확인·정정(https://www.seorabolgc.co.kr/index, 2026-11-27)",
   "pages_collected": 0,
   "third_party": {
    "teepick": true,

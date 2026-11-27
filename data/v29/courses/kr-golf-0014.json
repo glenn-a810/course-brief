@@ -378,7 +378,7 @@
    "url": "https://teepickgolf.com/course/%EB%8B%B4%EC%96%91%EB%A0%88%EC%9D%B4%EB%82%98cc"
   },
   "fee_change": null,
-  "collected_at": "2026-11-27T23:40:00+09:00",
+  "collected_at": "2026-11-27T23:55:00+09:00",
   "recent_notice_text": "2026-11-12 2027년 연단체 모집·12월 그린피·12월 패키지, 2026-10-05 11월 그린피·11월 패키지, 2026-09-08 10월 그린피·10월 패키지. 매달 그린피와 패키지를 함께 공지한다.",
   "course_notes": null,
   "alert": null,
@@ -396,7 +396,7 @@
     "checked_at": "2026-11-27"
    },
    {
-    "source": "공식 공지사항(브라우저 확인)",
+    "source": "공식 공지사항(교차검증 2026-11-27)",
     "url": "https://www.reinacc.co.kr/blt/notice",
     "checked_at": "2026-11-27"
    }

@@ -510,8 +510,8 @@
    "url": "https://teepickgolf.com/course/%EB%A3%A8%ED%8A%B852"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T09:51:53+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T23:55:00+09:00",
+  "recent_notice_text": "카카오골프예약 '골프장에서 알립니다'(2026-11-27 확인): 2027년 연단체 모집 접수 시작 2026-10-13(화)~(모집 마감 시), 냉난방 카트 2026-05-01부터 도입(일반 10만원/냉난방 11만원 랜덤배정), 전 타임 홈페이지 회원가입 필수, 월 3회 취소 시 3개월 예약정지, 음식물 반입 금지, 슬리퍼(쪼리) 클럽하우스 출입 불가",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [
@@ -528,6 +528,11 @@
    {
     "source": "티픽골프장 코스 페이지",
     "url": "https://teepickgolf.com/course/%EB%A3%A8%ED%8A%B852",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "카카오골프예약 골프장에서 알립니다(교차검증 2026-11-27)",
+    "url": "https://www.kakao.golf/golf/473",
     "checked_at": "2026-11-27"
    }
   ]
@@ -550,7 +555,7 @@
   "fee": 0.0,
   "ops": 0.29,
   "facility": 0.3,
-  "briefing": 0.25,
+  "briefing": 0.5,
   "rental": 0.25
  }
 }

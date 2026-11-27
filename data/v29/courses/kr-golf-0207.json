@@ -302,8 +302,8 @@
   },
   "review": null,
   "fee_change": null,
-  "collected_at": "2026-11-26T09:51:58+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T23:55:00+09:00",
+  "recent_notice_text": "카카오골프예약 '골프장에서 알립니다'(2026-11-27 확인): 코스 운영(홀 순서) 변경: 기존 1→2→3→4→5→6홀 진행에서 3번홀(1번)→4홀(2번)→5홀(3번)→2홀(4번)→1홀(5번)→6홀(6번) 순으로 변경",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [
@@ -314,6 +314,11 @@
    {
     "source": "그린피가이드 코스 페이지",
     "url": "https://greenfeeguide.co.kr/course/gc-0059/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "카카오골프예약 골프장에서 알립니다(교차검증 2026-11-27)",
+    "url": "https://www.kakao.golf/golf/574",
     "checked_at": "2026-11-27"
    }
   ]
@@ -336,7 +341,7 @@
   "fee": 0.0,
   "ops": 0.0,
   "facility": 0.0,
-  "briefing": 0.0,
+  "briefing": 0.25,
   "rental": 0.25
  }
 }

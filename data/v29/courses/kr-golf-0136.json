@@ -478,21 +478,21 @@
    "items": [
     {
      "title": "26년 12월 그린피 안내",
-     "date": null,
-     "url": "https://as.4wellcc.com/"
-    },
-    {
-     "title": "26년 11월 그린피 안내",
-     "date": null,
+     "date": "2026-11-25",
      "url": "https://as.4wellcc.com/"
     },
     {
      "title": "2026-2027 혹한기 팀이용권 윈터패스 판매 개시",
-     "date": null,
+     "date": "2026-11-08",
      "url": "https://as.4wellcc.com/"
     },
     {
      "title": "27년 연단체 추가모집 안내",
+     "date": "2026-10-31",
+     "url": "https://as.4wellcc.com/"
+    },
+    {
+     "title": "26년 11월 그린피 안내",
      "date": null,
      "url": "https://as.4wellcc.com/"
     },
@@ -521,8 +521,8 @@
    "url": "https://teepickgolf.com/course/%ED%8F%AC%EC%9B%B0%20%EC%95%88%EC%84%B1"
   },
   "fee_change": null,
-  "collected_at": "2026-11-27T23:40:00+09:00",
-  "recent_notice_text": "홈페이지 배너로 26년 12월·11월 그린피 안내, 2026-2027 혹한기 팀이용권 윈터패스 판매, 27년 연단체 추가모집, 난방카트 이벤트, 3부 야간라운드 3인플, 회원가입 혜택·단골이벤트를 게시 중이다. 배너 이미지라 게시 날짜는 표기되지 않는다(2026-11-27 확인).",
+  "collected_at": "2026-11-27T23:55:00+09:00",
+  "recent_notice_text": "26년 12월 그린피 안내(2026-11-25), 2026-2027 혹한기 팀이용권 윈터패스 판매(2026-11-08), 27년 연단체 추가모집(2026-10-31)",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [
@@ -544,8 +544,8 @@
     "checked_at": "2026-11-27"
    },
    {
-    "source": "공식 공지사항(브라우저 확인)",
-    "url": "https://as.4wellcc.com/",
+    "source": "공식 공지사항(교차검증 2026-11-27)",
+    "url": "https://as.4wellcc.com/blt/notice",
     "checked_at": "2026-11-27"
    }
   ]
