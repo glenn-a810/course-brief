@@ -49,7 +49,7 @@
    "straight_name": "양노IC"
   },
   "tel": "031-369-8900",
-  "homepage": "https://www.hwaseonggc.com/mobile/index.asp",
+  "homepage": "https://www.hwaseonggc.com/",
   "operators": [
    "㈜리더스"
   ],
@@ -369,8 +369,34 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
-   "items": [],
+   "url": "https://www.hwaseonggc.com/board/list.asp?type=1",
+   "items": [
+    {
+     "title": "2026년 12월 상반기 요금 안내",
+     "date": "2026-11-17",
+     "url": "https://www.hwaseonggc.com/board/list.asp?type=1"
+    },
+    {
+     "title": "2026년 11월 하반기 요금 안내",
+     "date": "2026-11-02",
+     "url": "https://www.hwaseonggc.com/board/list.asp?type=1"
+    },
+    {
+     "title": "2026년 11월 상반기 요금 안내",
+     "date": "2026-10-13",
+     "url": "https://www.hwaseonggc.com/board/list.asp?type=1"
+    },
+    {
+     "title": "2027년 화성골프클럽 연단체 모집",
+     "date": "2026-10-12",
+     "url": "https://www.hwaseonggc.com/board/list.asp?type=1"
+    },
+    {
+     "title": "2026년 10월 요금 안내",
+     "date": "2026-09-10",
+     "url": "https://www.hwaseonggc.com/board/list.asp?type=1"
+    }
+   ],
    "tags": {}
   },
   "review": {
@@ -380,8 +406,8 @@
    "url": "https://teepickgolf.com/course/%ED%99%94%EC%84%B1cc"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T09:51:59+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T22:00:00+09:00",
+  "recent_notice_text": "2026-11-17 2026년 12월 상반기 요금 안내, 2026-11-02 11월 하반기 요금, 2026-10-13 11월 상반기 요금, 2026-10-12 2027년 연단체 모집, 2026-09-10 10월 요금 안내. 매달 상·하반기로 나눠 요금을 공지한다.",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [],
@@ -395,19 +421,24 @@
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
     "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공식 공지사항(브라우저 확인)",
+    "url": "https://www.hwaseonggc.com/board/list.asp?type=1",
+    "checked_at": "2026-11-27"
    }
   ]
  },
  "collection": {
-  "official_site": "unavailable",
-  "official_reason": "HTTP0",
-  "pages_collected": 0,
+  "official_site": "ok",
+  "official_reason": "공식 홈페이지 공지사항(hwaseonggc.com/board/list.asp?type=1) 확인(2026-11-27, 브라우저 직접 접속) — 모바일 경로 대신 대표 주소 사용",
+  "pages_collected": 2,
   "third_party": {
    "teepick": true,
    "greenfeeguide": true
   },
-  "render_hint": "thin",
-  "plan_strategy": "unreachable(브라우저 재시도)",
+  "render_hint": "browser",
+  "plan_strategy": "browser_check(2026-11-27)",
   "browser_batch": false
  },
  "coverage": {
@@ -416,7 +447,7 @@
   "fee": 1.0,
   "ops": 0.07,
   "facility": 0.2,
-  "briefing": 0.25,
+  "briefing": 0.75,
   "rental": 0.25
  }
 }

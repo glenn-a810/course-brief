@@ -48,7 +48,7 @@
    "straight_name": "연성IC"
   },
   "tel": "031-400-0050",
-  "homepage": "https://www.saltbaydrivingrange.co.kr/",
+  "homepage": "https://www.saltbay.co.kr/",
   "operators": [
    "㈜성담"
   ],
@@ -366,8 +366,29 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
-   "items": [],
+   "url": "https://www.saltbay.co.kr/Board/List?cfgid=notice",
+   "items": [
+    {
+     "title": "[공지] 2027년 솔트베이골프클럽 신규 2차 연단체 모집",
+     "date": "2026-11-23",
+     "url": "https://www.saltbay.co.kr/Board/List?cfgid=notice"
+    },
+    {
+     "title": "[공지] 2027년 솔트베이골프클럽 신규 연단체 모집",
+     "date": "2026-10-28",
+     "url": "https://www.saltbay.co.kr/Board/List?cfgid=notice"
+    },
+    {
+     "title": "[공지] 예약일 오픈 변경안내",
+     "date": "2026-04-10",
+     "url": "https://www.saltbay.co.kr/Board/List?cfgid=notice"
+    },
+    {
+     "title": "[공지] [공지] 26년 연단체 스탬프 이벤트",
+     "date": "2026-02-09",
+     "url": "https://www.saltbay.co.kr/Board/List?cfgid=notice"
+    }
+   ],
    "tags": {}
   },
   "review": {
@@ -377,8 +398,8 @@
    "url": "https://teepickgolf.com/course/%EC%86%94%ED%8A%B8%EB%B2%A0%EC%9D%B4cc"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T09:51:52+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T22:00:00+09:00",
+  "recent_notice_text": "2026-11-23 2027년 신규 2차 연단체 모집, 2026-10-28 2027년 신규 연단체 모집, 2026-04-10 예약일 오픈 변경안내, 2026-02-09 26년 연단체 스탬프 이벤트. 2026년 11~12월 그린피 공지는 게시판에 따로 없다.",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [
@@ -397,19 +418,24 @@
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
     "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공식 공지사항(브라우저 확인)",
+    "url": "https://www.saltbay.co.kr/Board/List?cfgid=notice",
+    "checked_at": "2026-11-27"
    }
   ]
  },
  "collection": {
-  "official_site": "unavailable",
-  "official_reason": "HTTP0",
-  "pages_collected": 0,
+  "official_site": "ok",
+  "official_reason": "공식 홈페이지 공지사항(saltbay.co.kr/Board/List?cfgid=notice) 확인(2026-11-27, 브라우저 직접 접속) — 종전 saltbaydrivingrange.co.kr 도메인 대신 대표 도메인 사용",
+  "pages_collected": 2,
   "third_party": {
    "teepick": true,
    "greenfeeguide": true
   },
-  "render_hint": "thin",
-  "plan_strategy": "unreachable(브라우저 재시도)",
+  "render_hint": "browser",
+  "plan_strategy": "browser_check(2026-11-27)",
   "browser_batch": true
  },
  "coverage": {
@@ -418,7 +444,7 @@
   "fee": 1.0,
   "ops": 0.0,
   "facility": 0.1,
-  "briefing": 0.25,
+  "briefing": 0.75,
   "rental": 0.25
  }
 }

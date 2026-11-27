@@ -84,7 +84,7 @@
   "name_note": "문체부 등록명 「cosmos 1」. 영암 삼호읍 에프원로 121-4·18홀 대중제·홈페이지 도메인(cosmoslinks.kr)이 코스모스링스CC와 일치해 같은 구장으로 확인(2026-11-26).",
   "status_note": "2024-03 개장 후 2025-08-31 영업종료. 공매 13회 유찰 끝에 2026-03-04 BS그룹 계열 대신피플앤피플이 650억원에 소유권 취득했으나, 2026-11 현재에도 운영을 재개하지 않은 상태이며 부지 활용(태양광 등)을 검토 중.",
   "operators_note": "운영사 ㈜파크카운티(서남해안레저 100% 자회사). 2026-03 부지 소유권은 대신피플앤피플로 이전.",
-  "homepage_note": "2026-11-26 접속 불가(HTTP 000). 영업종료 후 도메인 응답 없음."
+  "homepage_note": "2026-11-27 재확인 결과 접속 불가(HTTP 000). 영업종료 이후 도메인이 응답하지 않는다."
  },
  "course": {
   "holes": 18,
@@ -317,7 +317,7 @@
   },
   "fee_change": null,
   "collected_at": "2026-11-26T10:25:41+09:00",
-  "recent_notice_text": null,
+  "recent_notice_text": "영업종료(2025-08-31)로 공지사항이 없다. 2026-11-01 보도까지 재개장 계획 없이 부지의 태양광 발전 등 에너지 사업 활용을 검토 중이며, 인수 후에도 골프장 영업은 재개되지 않았다.",
   "course_notes": null,
   "alert": {
    "type": "closure",
@@ -330,18 +330,24 @@
     "reopen": null
    },
    "confirmed": true,
-   "checked_at": "2026-11-26",
+   "checked_at": "2026-11-27",
    "source_url": "https://www.joongang.co.kr/article/25364577",
    "source_file": "중앙일보 2025-09-05 / 땅집고 2026-03-25 / 남도일보 2026-05-12",
    "raw": "홈페이지 공지 「영업종료안내. 영업종료일 : 2025년 8월 31일」",
    "currently_closed": true
   },
   "unconfirmed": [],
-  "sources": []
+  "sources": [
+   {
+    "source": "세계일보 머니볼 2026-11-01(인수 후 운영 재개 없음·부지 활용 검토)",
+    "url": "https://www.segye.com/newsView/20261101500231",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "unavailable",
-  "official_reason": "HTTP0",
+  "official_reason": "HTTP0(영업종료·도메인 응답 없음, 2026-11-27 재확인)",
   "pages_collected": 0,
   "third_party": {
    "teepick": true,
@@ -359,7 +365,7 @@
   "fee": 0.0,
   "ops": 0.0,
   "facility": 0.0,
-  "briefing": 0.0,
+  "briefing": 0.25,
   "rental": 0.25
  }
 }

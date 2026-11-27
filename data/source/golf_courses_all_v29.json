@@ -18618,7 +18618,7 @@
     "name_note": "문체부 등록명 「cosmos 1」. 영암 삼호읍 에프원로 121-4·18홀 대중제·홈페이지 도메인(cosmoslinks.kr)이 코스모스링스CC와 일치해 같은 구장으로 확인(2026-11-26).",
     "status_note": "2024-03 개장 후 2025-08-31 영업종료. 공매 13회 유찰 끝에 2026-03-04 BS그룹 계열 대신피플앤피플이 650억원에 소유권 취득했으나, 2026-11 현재에도 운영을 재개하지 않은 상태이며 부지 활용(태양광 등)을 검토 중.",
     "operators_note": "운영사 ㈜파크카운티(서남해안레저 100% 자회사). 2026-03 부지 소유권은 대신피플앤피플로 이전.",
-    "homepage_note": "2026-11-26 접속 불가(HTTP 000). 영업종료 후 도메인 응답 없음."
+    "homepage_note": "2026-11-27 재확인 결과 접속 불가(HTTP 000). 영업종료 이후 도메인이 응답하지 않는다."
    },
    "course": {
     "holes": 18,
@@ -18851,7 +18851,7 @@
     },
     "fee_change": null,
     "collected_at": "2026-11-26T10:25:41+09:00",
-    "recent_notice_text": null,
+    "recent_notice_text": "영업종료(2025-08-31)로 공지사항이 없다. 2026-11-01 보도까지 재개장 계획 없이 부지의 태양광 발전 등 에너지 사업 활용을 검토 중이며, 인수 후에도 골프장 영업은 재개되지 않았다.",
     "course_notes": null,
     "alert": {
      "type": "closure",
@@ -18864,18 +18864,24 @@
       "reopen": null
      },
      "confirmed": true,
-     "checked_at": "2026-11-26",
+     "checked_at": "2026-11-27",
      "source_url": "https://www.joongang.co.kr/article/25364577",
      "source_file": "중앙일보 2025-09-05 / 땅집고 2026-03-25 / 남도일보 2026-05-12",
      "raw": "홈페이지 공지 「영업종료안내. 영업종료일 : 2025년 8월 31일」",
      "currently_closed": true
     },
     "unconfirmed": [],
-    "sources": []
+    "sources": [
+     {
+      "source": "세계일보 머니볼 2026-11-01(인수 후 운영 재개 없음·부지 활용 검토)",
+      "url": "https://www.segye.com/newsView/20261101500231",
+      "checked_at": "2026-11-27"
+     }
+    ]
    },
    "collection": {
     "official_site": "unavailable",
-    "official_reason": "HTTP0",
+    "official_reason": "HTTP0(영업종료·도메인 응답 없음, 2026-11-27 재확인)",
     "pages_collected": 0,
     "third_party": {
      "teepick": true,
@@ -22767,14 +22773,30 @@
    },
    "briefing": {
     "notices": {
-     "url": null,
-     "items": [],
+     "url": "https://www.verthillcc.co.kr/board/list.asp?type=1",
+     "items": [
+      {
+       "title": "아트 골프 카트",
+       "date": "2026-10-21",
+       "url": "https://www.verthillcc.co.kr/board/list.asp?type=1"
+      },
+      {
+       "title": "5인플레이 VIP카트 예약 진행",
+       "date": "2026-09-17",
+       "url": "https://www.verthillcc.co.kr/board/list.asp?type=1"
+      },
+      {
+       "title": "한국미드아마추어 골프대회 종료",
+       "date": "2026-04-30",
+       "url": "https://www.verthillcc.co.kr/board/list.asp?type=1"
+      }
+     ],
      "tags": {}
     },
     "review": null,
     "fee_change": null,
-    "collected_at": "2026-11-26T10:25:42+09:00",
-    "recent_notice_text": null,
+    "collected_at": "2026-11-27T22:00:00+09:00",
+    "recent_notice_text": "2026-10-21 아트 골프 카트, 2026-09-17 5인플레이 VIP카트 예약 진행, 2026-04-30 한국미드아마추어 골프대회 종료. 공지 게시판 최신글이 10월 21일자로, 2026년 11~12월 그린피 공지는 아직 없다.",
     "course_notes": null,
     "alert": null,
     "unconfirmed": [
@@ -22784,18 +22806,24 @@
      "진행 시간",
      "식당"
     ],
-    "sources": []
+    "sources": [
+     {
+      "source": "공식 공지사항(브라우저 확인)",
+      "url": "https://www.verthillcc.co.kr/board/list.asp?type=1",
+      "checked_at": "2026-11-27"
+     }
+    ]
    },
    "collection": {
-    "official_site": "unavailable",
-    "official_reason": "HTTP0",
-    "pages_collected": 0,
+    "official_site": "ok",
+    "official_reason": "공식 홈페이지 공지사항(verthillcc.co.kr/board/list.asp?type=1) 확인(2026-11-27, 브라우저 직접 접속)",
+    "pages_collected": 2,
     "third_party": {
      "teepick": true,
      "greenfeeguide": false
     },
-    "render_hint": "thin",
-    "plan_strategy": "unreachable(브라우저 재시도)",
+    "render_hint": "browser",
+    "plan_strategy": "browser_check(2026-11-27)",
     "browser_batch": false,
     "browser_pages": 0,
     "browser_pdf": []
@@ -24191,8 +24219,39 @@
    },
    "briefing": {
     "notices": {
-     "url": null,
-     "items": [],
+     "url": "https://www.solaseadocc.com/sub/notice.asp",
+     "items": [
+      {
+       "title": "♥2027 솔라시도 패키지 안내(1/1~1/31)♥",
+       "date": "2026-11-06",
+       "url": "https://www.solaseadocc.com/sub/notice.asp"
+      },
+      {
+       "title": "2027 연단체 모집안내",
+       "date": "2026-10-29",
+       "url": "https://www.solaseadocc.com/sub/notice.asp"
+      },
+      {
+       "title": "♥2026 솔라시도 패키지 안내(12/1~12/31)♥",
+       "date": "2026-10-07",
+       "url": "https://www.solaseadocc.com/sub/notice.asp"
+      },
+      {
+       "title": "♥2026 솔라시도 패키지 안내(11/1~11/30)♥",
+       "date": "2026-09-03",
+       "url": "https://www.solaseadocc.com/sub/notice.asp"
+      },
+      {
+       "title": "2026년 10,11월 그린피 안내",
+       "date": "2026-09-03",
+       "url": "https://www.solaseadocc.com/sub/notice.asp"
+      },
+      {
+       "title": "3부 야간라운드 운영안내",
+       "date": "2026-08-01",
+       "url": "https://www.solaseadocc.com/sub/notice.asp"
+      }
+     ],
      "tags": {}
     },
     "review": {
@@ -24202,8 +24261,8 @@
      "url": "https://teepickgolf.com/course/%EC%86%94%EB%9D%BC%EC%8B%9C%EB%8F%84"
     },
     "fee_change": null,
-    "collected_at": "2026-11-26T10:25:42+09:00",
-    "recent_notice_text": null,
+    "collected_at": "2026-11-27T22:00:00+09:00",
+    "recent_notice_text": "2026-11-06 2027 솔라시도 패키지(1/1~1/31), 2026-10-29 2027 연단체 모집, 2026-10-07 2026 솔라시도 패키지(12/1~12/31), 2026-09-03 2026 패키지(11/1~11/30)와 2026년 10·11월 그린피 안내, 2026-08-01 3부 야간라운드 운영안내. 12월 그린피 공지는 아직 따로 없다.",
     "course_notes": null,
     "alert": null,
     "unconfirmed": [
@@ -24217,19 +24276,24 @@
       "source": "티픽골프장 코스·스코어카드",
       "url": "https://teepickgolf.com/",
       "checked_at": "2026-11-27"
+     },
+     {
+      "source": "공식 공지사항(브라우저 확인)",
+      "url": "https://www.solaseadocc.com/sub/notice.asp",
+      "checked_at": "2026-11-27"
      }
     ]
    },
    "collection": {
-    "official_site": "unavailable",
-    "official_reason": "HTTP0",
-    "pages_collected": 0,
+    "official_site": "ok",
+    "official_reason": "공식 홈페이지 공지사항(solaseadocc.com/sub/notice.asp) 확인(2026-11-27, 브라우저 직접 접속)",
+    "pages_collected": 2,
     "third_party": {
      "teepick": true,
      "greenfeeguide": true
     },
-    "render_hint": "thin",
-    "plan_strategy": "unreachable(브라우저 재시도)",
+    "render_hint": "browser",
+    "plan_strategy": "browser_check(2026-11-27)",
     "browser_batch": false,
     "browser_pages": 0,
     "browser_pdf": []
@@ -24295,7 +24359,7 @@
      "source": "최근접 IC 직선거리"
     },
     "tel": "061-530-7750",
-    "homepage": "http://www.pinebeachcc.co.kr/",
+    "homepage": "https://www.pinebeachcc.co.kr/",
     "operators": [
      "한국관광공사(안영배)"
     ],
@@ -24634,7 +24698,7 @@
    },
    "briefing": {
     "notices": {
-     "url": null,
+     "url": "https://www.pinebeachcc.co.kr/board/list.asp?type=1",
      "items": [],
      "tags": {}
     },
@@ -24645,8 +24709,8 @@
      "url": "https://teepickgolf.com/course/%ED%95%B4%EB%82%A8%20%ED%8C%8C%EC%9D%B8%EB%B9%84%EC%B9%98cc"
     },
     "fee_change": null,
-    "collected_at": "2026-11-26T10:25:42+09:00",
-    "recent_notice_text": null,
+    "collected_at": "2026-11-27T22:00:00+09:00",
+    "recent_notice_text": "오시아노는 파인비치와 같은 법인(주식회사 파인비치)·같은 부지의 9홀 대중제 코스로 전용 공지 게시판이 없다. 파인비치 통합 공지사항에서 오시아노가 언급된 최신글은 2025-11-18 '오시아노 18H 프로모션'이고, 2026년 오시아노 전용 공지는 확인되지 않는다. 통합 게시판의 2026-10-30 11월 그린피·2027 LPGA 패키지 공지는 파인비치 기준이다.",
     "course_notes": null,
     "alert": null,
     "unconfirmed": [
@@ -24654,18 +24718,24 @@
      "진행 시간",
      "식당"
     ],
-    "sources": []
+    "sources": [
+     {
+      "source": "공식 공지사항(브라우저 확인)",
+      "url": "https://www.pinebeachcc.co.kr/board/list.asp?type=1",
+      "checked_at": "2026-11-27"
+     }
+    ]
    },
    "collection": {
-    "official_site": "unavailable",
-    "official_reason": "HTTP0",
-    "pages_collected": 0,
+    "official_site": "ok",
+    "official_reason": "공식(파인비치) 홈페이지 확인(2026-11-27) — 오시아노 코스 페이지(/course/o.asp)는 열리지만 전용 게시판은 없다",
+    "pages_collected": 2,
     "third_party": {
      "teepick": true,
      "greenfeeguide": true
     },
-    "render_hint": "thin",
-    "plan_strategy": "unreachable(브라우저 재시도)",
+    "render_hint": "browser",
+    "plan_strategy": "browser_check(2026-11-27)",
     "browser_batch": false,
     "browser_pages": 0,
     "browser_pdf": []
@@ -24731,7 +24801,7 @@
      "source": "최근접 IC 직선거리"
     },
     "tel": "061-530-7700",
-    "homepage": "http://www.pinebeachcc.co.kr/",
+    "homepage": "https://www.pinebeachcc.co.kr/",
     "operators": [
      "파인비치㈜(이화영)"
     ],
@@ -25450,8 +25520,39 @@
    },
    "briefing": {
     "notices": {
-     "url": null,
-     "items": [],
+     "url": "https://www.pinebeachcc.co.kr/board/list.asp?type=1",
+     "items": [
+      {
+       "title": "11월 그린피안내",
+       "date": "2026-10-30",
+       "url": "https://www.pinebeachcc.co.kr/board/list.asp?type=1"
+      },
+      {
+       "title": "♥2027 파인비치 LPGA Experience Package(1/1~1/31)♥",
+       "date": "2026-10-30",
+       "url": "https://www.pinebeachcc.co.kr/board/list.asp?type=1"
+      },
+      {
+       "title": "2026 BMW 레이디스 챔피언십 개최 안내 및 셔틀버스안내",
+       "date": "2026-10-06",
+       "url": "https://www.pinebeachcc.co.kr/board/list.asp?type=1"
+      },
+      {
+       "title": "♥2026 파인비치 LPGA Experience Package(12/01~12/31)♥",
+       "date": "2026-09-30",
+       "url": "https://www.pinebeachcc.co.kr/board/list.asp?type=1"
+      },
+      {
+       "title": "10월 그린피안내",
+       "date": "2026-09-29",
+       "url": "https://www.pinebeachcc.co.kr/board/list.asp?type=1"
+      },
+      {
+       "title": "♥2026 파인비치 LPGA Experience Package(11/01~11/30)♥",
+       "date": "2026-08-28",
+       "url": "https://www.pinebeachcc.co.kr/board/list.asp?type=1"
+      }
+     ],
      "tags": {}
     },
     "review": {
@@ -25461,8 +25562,8 @@
      "url": "https://teepickgolf.com/course/%ED%8C%8C%EC%9D%B8%EB%B9%84%EC%B9%98"
     },
     "fee_change": null,
-    "collected_at": "2026-11-26T10:25:42+09:00",
-    "recent_notice_text": null,
+    "collected_at": "2026-11-27T22:00:00+09:00",
+    "recent_notice_text": "2026-10-30 11월 그린피안내·2027 파인비치 LPGA Experience Package(1/1~1/31), 2026-10-06 2026 BMW 레이디스 챔피언십 개최 및 셔틀버스 안내, 2026-09-30 2026 LPGA Experience Package(12/1~12/31), 2026-09-29 10월 그린피안내, 2026-08-28 2026 LPGA 패키지(11/1~11/30).",
     "course_notes": null,
     "alert": null,
     "unconfirmed": [
@@ -25477,19 +25578,24 @@
       "source": "티픽골프장 코스·스코어카드",
       "url": "https://teepickgolf.com/",
       "checked_at": "2026-11-27"
+     },
+     {
+      "source": "공식 공지사항(브라우저 확인)",
+      "url": "https://www.pinebeachcc.co.kr/board/list.asp?type=1",
+      "checked_at": "2026-11-27"
      }
     ]
    },
    "collection": {
-    "official_site": "unavailable",
-    "official_reason": "HTTP0",
-    "pages_collected": 0,
+    "official_site": "ok",
+    "official_reason": "공식 홈페이지 공지사항(pinebeachcc.co.kr/board/list.asp?type=1) 확인(2026-11-27, 브라우저 직접 접속)",
+    "pages_collected": 2,
     "third_party": {
      "teepick": true,
      "greenfeeguide": true
     },
-    "render_hint": "thin",
-    "plan_strategy": "unreachable(브라우저 재시도)",
+    "render_hint": "browser",
+    "plan_strategy": "browser_check(2026-11-27)",
     "browser_batch": false,
     "browser_pages": 0,
     "browser_pdf": []
@@ -33097,7 +33203,7 @@
      "straight_name": "의성IC"
     },
     "tel": "054-380-0028",
-    "homepage": "http://www.gunicc.co.kr/",
+    "homepage": "https://www.gunicc.co.kr/",
     "operators": [
      "케이알스포츠㈜ (정하석)"
     ],
@@ -33517,8 +33623,49 @@
    },
    "briefing": {
     "notices": {
-     "url": null,
-     "items": [],
+     "url": "https://www.gunicc.co.kr/multi_board/site/board/list.asp?groupcode=NOTICE",
+     "items": [
+      {
+       "title": "[공지] 단부제 운영안내",
+       "date": "2026-11-25",
+       "url": "https://www.gunicc.co.kr/multi_board/site/board/list.asp?groupcode=NOTICE"
+      },
+      {
+       "title": "[공지] 구니CC 12월 변동요금(그린피)",
+       "date": "2026-11-24",
+       "url": "https://www.gunicc.co.kr/multi_board/site/board/list.asp?groupcode=NOTICE"
+      },
+      {
+       "title": "[공지] 구니CC 12월 변동요금(그린피)",
+       "date": "2026-11-13",
+       "url": "https://www.gunicc.co.kr/multi_board/site/board/list.asp?groupcode=NOTICE"
+      },
+      {
+       "title": "[공지] 캐디피 인상 안내",
+       "date": "2026-11-13",
+       "url": "https://www.gunicc.co.kr/multi_board/site/board/list.asp?groupcode=NOTICE"
+      },
+      {
+       "title": "[공지] 11월 단체팀 특별 할인 이벤트",
+       "date": "2026-11-06",
+       "url": "https://www.gunicc.co.kr/multi_board/site/board/list.asp?groupcode=NOTICE"
+      },
+      {
+       "title": "[공지] 구니CC 11월 변동요금(그린피)",
+       "date": "2026-10-30",
+       "url": "https://www.gunicc.co.kr/multi_board/site/board/list.asp?groupcode=NOTICE"
+      },
+      {
+       "title": "[공지] 구니CC 11월 변동요금(그린피)",
+       "date": "2026-10-13",
+       "url": "https://www.gunicc.co.kr/multi_board/site/board/list.asp?groupcode=NOTICE"
+      },
+      {
+       "title": "[공지] 2027년 연단체 모집안내",
+       "date": "2026-10-01",
+       "url": "https://www.gunicc.co.kr/multi_board/site/board/list.asp?groupcode=NOTICE"
+      }
+     ],
      "tags": {}
     },
     "review": {
@@ -33528,8 +33675,8 @@
      "url": "https://teepickgolf.com/course/%EA%B5%AC%EB%8B%88"
     },
     "fee_change": null,
-    "collected_at": "2026-11-26T10:28:35+09:00",
-    "recent_notice_text": null,
+    "collected_at": "2026-11-27T22:00:00+09:00",
+    "recent_notice_text": "2026-11-25 단부제 운영안내(본문 이미지), 2026-11-24·11-13 구니CC 12월 변동요금(그린피), 2026-11-13 캐디피 인상 안내, 2026-11-06 11월 단체팀 특별 할인 이벤트, 2026-10-30·10-13 11월 변동요금, 2026-10-01 2027년 연단체 모집안내. 월별 변동요금제라 매달 그린피를 공지한다.",
     "course_notes": null,
     "alert": null,
     "unconfirmed": [],
@@ -33538,19 +33685,24 @@
       "source": "티픽골프장 코스·스코어카드",
       "url": "https://teepickgolf.com/",
       "checked_at": "2026-11-27"
+     },
+     {
+      "source": "공식 공지사항(브라우저 확인)",
+      "url": "https://www.gunicc.co.kr/multi_board/site/board/list.asp?groupcode=NOTICE",
+      "checked_at": "2026-11-27"
      }
     ]
    },
    "collection": {
-    "official_site": "unavailable",
-    "official_reason": "HTTP0",
-    "pages_collected": 0,
+    "official_site": "ok",
+    "official_reason": "공식 홈페이지 공지사항(gunicc.co.kr 공지 게시판) 확인(2026-11-27, 브라우저 직접 접속)",
+    "pages_collected": 2,
     "third_party": {
      "teepick": true,
      "greenfeeguide": true
     },
-    "render_hint": "thin",
-    "plan_strategy": "unreachable(브라우저 재시도)",
+    "render_hint": "browser",
+    "plan_strategy": "browser_check(2026-11-27)",
     "browser_batch": false
    },
    "coverage": {
@@ -34011,8 +34163,34 @@
    },
    "briefing": {
     "notices": {
-     "url": null,
-     "items": [],
+     "url": "https://www.ophelgc.com/_Gunwi/Board/BoardList.aspx?cfgid=notice",
+     "items": [
+      {
+       "title": "2027년 군위오펠GC 연부킹 단체팀 신청 안내",
+       "date": "2026-11-02",
+       "url": "https://www.ophelgc.com/_Gunwi/Board/BoardView.aspx?post=10831&cfgid=notice&page=1&gubun=3"
+      },
+      {
+       "title": "그린 통기 작업 안내",
+       "date": "2026-10-12",
+       "url": "https://www.ophelgc.com/_Gunwi/Board/BoardView.aspx?post=10819&cfgid=notice&page=1&gubun=3"
+      },
+      {
+       "title": "SUMMER EVENT",
+       "date": "2026-06-16",
+       "url": "https://www.ophelgc.com/_Gunwi/Board/BoardView.aspx?post=10793&cfgid=notice&page=1&gubun=3"
+      },
+      {
+       "title": "5월 예약안내",
+       "date": "2026-04-28",
+       "url": "https://www.ophelgc.com/_Gunwi/Board/BoardView.aspx?post=10776&cfgid=notice&page=1&gubun=3"
+      },
+      {
+       "title": "3부 야간라운드 오픈 및 노캐디 운영안내",
+       "date": "2026-02-13",
+       "url": "https://www.ophelgc.com/_Gunwi/Board/BoardView.aspx?post=10761&cfgid=notice&page=1&gubun=3"
+      }
+     ],
      "tags": {}
     },
     "review": {
@@ -34022,25 +34200,30 @@
      "url": "https://teepickgolf.com/course/%EA%B5%B0%EC%9C%84%EC%98%A4%ED%8E%A0GC"
     },
     "fee_change": null,
-    "collected_at": "2026-11-26T10:28:35+09:00",
-    "recent_notice_text": null,
+    "collected_at": "2026-11-27T22:00:00+09:00",
+    "recent_notice_text": "2026-11-02 2027년 군위오펠GC 연부킹 단체팀 신청 안내, 2026-10-12 그린 통기 작업 안내, 2026-06-16 SUMMER EVENT, 2026-04-28 5월 예약안내. 게시판 상단 고정글로 2026-02-13 3부 야간라운드 오픈 및 노캐디 운영안내가 있다. 군위 게시판에는 12월 그린피 공지가 아직 없다.",
     "course_notes": null,
     "alert": null,
     "unconfirmed": [],
     "sources": [
-     "https://greenfeeguide.co.kr/course/gc-0356/"
+     "https://greenfeeguide.co.kr/course/gc-0356/",
+     {
+      "source": "공식 공지사항(브라우저 확인)",
+      "url": "https://www.ophelgc.com/_Gunwi/Board/BoardList.aspx?cfgid=notice",
+      "checked_at": "2026-11-27"
+     }
     ]
    },
    "collection": {
-    "official_site": "unavailable",
-    "official_reason": "HTTP0",
-    "pages_collected": 0,
+    "official_site": "ok",
+    "official_reason": "공식 홈페이지(오펠GC 통합, 군위오펠 공지 게시판) 확인(2026-11-27, 브라우저 직접 접속)",
+    "pages_collected": 2,
     "third_party": {
      "teepick": true,
      "greenfeeguide": true
     },
-    "render_hint": "thin",
-    "plan_strategy": "unreachable(브라우저 재시도)",
+    "render_hint": "browser",
+    "plan_strategy": "browser_check(2026-11-27)",
     "browser_batch": true
    },
    "coverage": {
@@ -38322,7 +38505,7 @@
      "straight_name": "송내IC"
     },
     "tel": "032-562-6666",
-    "homepage": "https://www.incheoncc.com:1436/",
+    "homepage": "https://www.incheoncc.com/",
     "operators": [
      "㈜신태진(강형식김태진)"
     ],
@@ -38742,8 +38925,34 @@
    },
    "briefing": {
     "notices": {
-     "url": null,
-     "items": [],
+     "url": "https://www.incheoncc.com/multi_board/site/board/list.asp?groupcode=NOTICE",
+     "items": [
+      {
+       "title": "12월 할인 안내",
+       "date": "2026-11-20",
+       "url": "https://www.incheoncc.com/multi_board/site/board/list.asp?groupcode=NOTICE"
+      },
+      {
+       "title": "2027년도 연단체 배정 공고",
+       "date": "2026-11-18",
+       "url": "https://www.incheoncc.com/multi_board/site/board/list.asp?groupcode=NOTICE"
+      },
+      {
+       "title": "11월 할인 안내",
+       "date": "2026-10-27",
+       "url": "https://www.incheoncc.com/multi_board/site/board/list.asp?groupcode=NOTICE"
+      },
+      {
+       "title": "2027년도 단체신청 안내 & 신청서 다운",
+       "date": "2026-10-12",
+       "url": "https://www.incheoncc.com/multi_board/site/board/list.asp?groupcode=NOTICE"
+      },
+      {
+       "title": "그린 개선 작업 안내",
+       "date": "2026-09-19",
+       "url": "https://www.incheoncc.com/multi_board/site/board/list.asp?groupcode=NOTICE"
+      }
+     ],
      "tags": {}
     },
     "review": {
@@ -38753,8 +38962,8 @@
      "url": "https://teepickgolf.com/course/%EC%9D%B8%EC%B2%9C%EA%B5%AD%EC%A0%9C"
     },
     "fee_change": null,
-    "collected_at": "2026-11-26T09:52:00+09:00",
-    "recent_notice_text": null,
+    "collected_at": "2026-11-27T22:00:00+09:00",
+    "recent_notice_text": "2026-11-20 12월 할인 안내, 2026-11-18 2027년도 연단체 배정 공고, 2026-10-27 11월 할인 안내, 2026-10-12 2027년도 단체신청 안내·신청서, 2026-09-19 그린 개선 작업 안내.",
     "course_notes": null,
     "alert": null,
     "unconfirmed": [
@@ -38775,19 +38984,24 @@
       "source": "티픽골프장 코스·스코어카드",
       "url": "https://teepickgolf.com/",
       "checked_at": "2026-11-27"
+     },
+     {
+      "source": "공식 공지사항(브라우저 확인)",
+      "url": "https://www.incheoncc.com/multi_board/site/board/list.asp?groupcode=NOTICE",
+      "checked_at": "2026-11-27"
      }
     ]
    },
    "collection": {
-    "official_site": "unavailable",
-    "official_reason": "HTTP0",
-    "pages_collected": 0,
+    "official_site": "ok",
+    "official_reason": "공식 홈페이지 공지사항 확인(2026-11-27, 브라우저 직접 접속) — 종전 :1436 포트 없이 https://www.incheoncc.com/ 로 접속된다",
+    "pages_collected": 2,
     "third_party": {
      "teepick": true,
      "greenfeeguide": true
     },
-    "render_hint": "thin",
-    "plan_strategy": "unreachable(브라우저 재시도)",
+    "render_hint": "browser",
+    "plan_strategy": "browser_check(2026-11-27)",
     "browser_batch": false
    },
    "coverage": {
@@ -56363,8 +56577,34 @@
    },
    "briefing": {
     "notices": {
-     "url": null,
-     "items": [],
+     "url": "https://www.newkoreacc.co.kr/customer/customer01.asp",
+     "items": [
+      {
+       "title": "2027년 동계휴장 안내",
+       "date": "2026-11-26",
+       "url": "https://www.newkoreacc.co.kr/customer/customer01_view.asp?seq=639"
+      },
+      {
+       "title": "회원 비빌번호 정기 변경 및 개인정보 보호 안내",
+       "date": "2026-11-12",
+       "url": "https://www.newkoreacc.co.kr/customer/customer01.asp"
+      },
+      {
+       "title": "2026년 회원 친선 골프대회 이모저모",
+       "date": "2026-11-10",
+       "url": "https://www.newkoreacc.co.kr/customer/customer01.asp"
+      },
+      {
+       "title": "금연 안내",
+       "date": "2026-10-22",
+       "url": "https://www.newkoreacc.co.kr/customer/customer01.asp"
+      },
+      {
+       "title": "골프 연습장 이용안내",
+       "date": "2026-10-17",
+       "url": "https://www.newkoreacc.co.kr/customer/customer01.asp"
+      }
+     ],
      "tags": {}
     },
     "review": {
@@ -56374,8 +56614,8 @@
      "url": "https://teepickgolf.com/course/%EB%89%B4%EC%BD%94%EB%A6%AC%EC%95%84"
     },
     "fee_change": null,
-    "collected_at": "2026-11-26T09:51:50+09:00",
-    "recent_notice_text": null,
+    "collected_at": "2026-11-27T22:00:00+09:00",
+    "recent_notice_text": "2026-11-26 2027년 동계휴장 안내 — 2027년 1월 4일(월)부터 1월 24일(일)까지 21일간 휴장. 2026-11-12 회원 비밀번호 정기 변경 및 개인정보 보호 안내, 2026-11-10 회원 친선 골프대회, 2026-10-22 금연 안내, 2026-10-17 골프 연습장 이용안내.",
     "course_notes": null,
     "alert": null,
     "unconfirmed": [
@@ -56394,19 +56634,24 @@
       "source": "티픽골프장 코스·스코어카드",
       "url": "https://teepickgolf.com/",
       "checked_at": "2026-11-27"
+     },
+     {
+      "source": "공식 공지사항(브라우저 확인)",
+      "url": "https://www.newkoreacc.co.kr/customer/customer01.asp",
+      "checked_at": "2026-11-27"
      }
     ]
    },
    "collection": {
-    "official_site": "unavailable",
-    "official_reason": "HTTP0",
-    "pages_collected": 0,
+    "official_site": "ok",
+    "official_reason": "공식 홈페이지 공지사항(newkoreacc.co.kr/customer/customer01.asp) 확인(2026-11-27, 브라우저 직접 접속)",
+    "pages_collected": 2,
     "third_party": {
      "teepick": true,
      "greenfeeguide": true
     },
-    "render_hint": "thin",
-    "plan_strategy": "unreachable(브라우저 재시도)",
+    "render_hint": "browser",
+    "plan_strategy": "browser_check(2026-11-27)",
     "browser_batch": true
    },
    "coverage": {
@@ -70895,7 +71140,7 @@
      "straight_name": "연성IC"
     },
     "tel": "031-400-0050",
-    "homepage": "https://www.saltbaydrivingrange.co.kr/",
+    "homepage": "https://www.saltbay.co.kr/",
     "operators": [
      "㈜성담"
     ],
@@ -71213,8 +71458,29 @@
    },
    "briefing": {
     "notices": {
-     "url": null,
-     "items": [],
+     "url": "https://www.saltbay.co.kr/Board/List?cfgid=notice",
+     "items": [
+      {
+       "title": "[공지] 2027년 솔트베이골프클럽 신규 2차 연단체 모집",
+       "date": "2026-11-23",
+       "url": "https://www.saltbay.co.kr/Board/List?cfgid=notice"
+      },
+      {
+       "title": "[공지] 2027년 솔트베이골프클럽 신규 연단체 모집",
+       "date": "2026-10-28",
+       "url": "https://www.saltbay.co.kr/Board/List?cfgid=notice"
+      },
+      {
+       "title": "[공지] 예약일 오픈 변경안내",
+       "date": "2026-04-10",
+       "url": "https://www.saltbay.co.kr/Board/List?cfgid=notice"
+      },
+      {
+       "title": "[공지] [공지] 26년 연단체 스탬프 이벤트",
+       "date": "2026-02-09",
+       "url": "https://www.saltbay.co.kr/Board/List?cfgid=notice"
+      }
+     ],
      "tags": {}
     },
     "review": {
@@ -71224,8 +71490,8 @@
      "url": "https://teepickgolf.com/course/%EC%86%94%ED%8A%B8%EB%B2%A0%EC%9D%B4cc"
     },
     "fee_change": null,
-    "collected_at": "2026-11-26T09:51:52+09:00",
-    "recent_notice_text": null,
+    "collected_at": "2026-11-27T22:00:00+09:00",
+    "recent_notice_text": "2026-11-23 2027년 신규 2차 연단체 모집, 2026-10-28 2027년 신규 연단체 모집, 2026-04-10 예약일 오픈 변경안내, 2026-02-09 26년 연단체 스탬프 이벤트. 2026년 11~12월 그린피 공지는 게시판에 따로 없다.",
     "course_notes": null,
     "alert": null,
     "unconfirmed": [
@@ -71244,19 +71510,24 @@
       "source": "티픽골프장 코스·스코어카드",
       "url": "https://teepickgolf.com/",
       "checked_at": "2026-11-27"
+     },
+     {
+      "source": "공식 공지사항(브라우저 확인)",
+      "url": "https://www.saltbay.co.kr/Board/List?cfgid=notice",
+      "checked_at": "2026-11-27"
      }
     ]
    },
    "collection": {
-    "official_site": "unavailable",
-    "official_reason": "HTTP0",
-    "pages_collected": 0,
+    "official_site": "ok",
+    "official_reason": "공식 홈페이지 공지사항(saltbay.co.kr/Board/List?cfgid=notice) 확인(2026-11-27, 브라우저 직접 접속) — 종전 saltbaydrivingrange.co.kr 도메인 대신 대표 도메인 사용",
+    "pages_collected": 2,
     "third_party": {
      "teepick": true,
      "greenfeeguide": true
     },
-    "render_hint": "thin",
-    "plan_strategy": "unreachable(브라우저 재시도)",
+    "render_hint": "browser",
+    "plan_strategy": "browser_check(2026-11-27)",
     "browser_batch": true
    },
    "coverage": {
@@ -79925,7 +80196,7 @@
      "straight_name": "일죽IC"
     },
     "tel": "031-288-0900",
-    "homepage": "https://www.golfzoncounty.com/gcounty/info/main?cc_code=63",
+    "homepage": "https://www.golfzoncounty.com/golfclub/main?golfclubSeq=64",
     "operators": [
      "주식회사 지씨에이치피"
     ],
@@ -80495,8 +80766,29 @@
    },
    "briefing": {
     "notices": {
-     "url": null,
-     "items": [],
+     "url": "https://www.golfzoncounty.com/golfclub/notice?golfclubSeq=64",
+     "items": [
+      {
+       "title": "이달의 그린피 이글몬트_12월 그린피 안내",
+       "date": "2026-11-04",
+       "url": "https://www.golfzoncounty.com/golfclub/notice?golfclubSeq=64"
+      },
+      {
+       "title": "연단체 이글몬트_2027년 연단체 모집 안내",
+       "date": "2026-10-27",
+       "url": "https://www.golfzoncounty.com/golfclub/notice?golfclubSeq=64"
+      },
+      {
+       "title": "이달의 그린피 이글몬트_11월 그린피 안내",
+       "date": "2026-10-02",
+       "url": "https://www.golfzoncounty.com/golfclub/notice?golfclubSeq=64"
+      },
+      {
+       "title": "안내 [이글몬트, 안성H, 안성W] 5인플레이 운영 안내",
+       "date": "2026-07-24",
+       "url": "https://www.golfzoncounty.com/golfclub/notice?golfclubSeq=64"
+      }
+     ],
      "tags": {}
     },
     "review": {
@@ -80506,8 +80798,8 @@
      "url": "https://teepickgolf.com/course/%EC%9D%B4%EA%B8%80%EB%AA%AC%ED%8A%B8CC"
     },
     "fee_change": null,
-    "collected_at": "2026-11-26T09:51:53+09:00",
-    "recent_notice_text": null,
+    "collected_at": "2026-11-27T22:00:00+09:00",
+    "recent_notice_text": "2026-11-04 이글몬트 12월 그린피 안내, 2026-10-27 이글몬트 2027년 연단체 모집 안내, 2026-10-02 11월 그린피 안내, 2026-07-24 이글몬트·안성H·안성W 5인플레이 운영 안내.",
     "course_notes": null,
     "alert": null,
     "unconfirmed": [
@@ -80524,19 +80816,24 @@
       "source": "티픽골프장 코스·스코어카드",
       "url": "https://teepickgolf.com/",
       "checked_at": "2026-11-27"
+     },
+     {
+      "source": "공식 공지사항(브라우저 확인)",
+      "url": "https://www.golfzoncounty.com/golfclub/notice?golfclubSeq=64",
+      "checked_at": "2026-11-27"
      }
     ]
    },
    "collection": {
-    "official_site": "unavailable",
-    "official_reason": "HTTP404",
-    "pages_collected": 0,
+    "official_site": "ok",
+    "official_reason": "골프존카운티 통합 홈페이지 공지사항(golfclubSeq=64) 확인(2026-11-27, 브라우저 직접 접속) — 종전 gcounty/info/main?cc_code=63 경로는 404",
+    "pages_collected": 2,
     "third_party": {
      "teepick": true,
      "greenfeeguide": false
     },
-    "render_hint": "static",
-    "plan_strategy": "static(직접 파싱)",
+    "render_hint": "browser",
+    "plan_strategy": "browser_check(2026-11-27)",
     "browser_batch": false
    },
    "coverage": {
@@ -81567,7 +81864,7 @@
      "source": "최근접 IC 직선거리"
     },
     "tel": "031-660-7455",
-    "homepage": "http://www.golfzoncounty.com/gcounty/info/main?cc_code=7",
+    "homepage": "https://ansung.hanlimgolf.co.kr/",
     "operators": [
      "일송개발㈜"
     ],
@@ -81835,14 +82132,40 @@
    },
    "briefing": {
     "notices": {
-     "url": null,
-     "items": [],
+     "url": "https://ansung.hanlimgolf.co.kr/html/board/notice_list.asp",
+     "items": [
+      {
+       "title": "[한림안성] 12월 그린피",
+       "date": "2026-11-07",
+       "url": "https://ansung.hanlimgolf.co.kr/html/board/notice_view.asp?b_idx=38&Page=1&searchField=b_subject&searchValue="
+      },
+      {
+       "title": "[한림안성] 11월 그린피",
+       "date": "2026-10-10",
+       "url": "https://ansung.hanlimgolf.co.kr/html/board/notice_list.asp"
+      },
+      {
+       "title": "[한림안성] 10월 그린피(10/1~11/1)",
+       "date": "2026-09-06",
+       "url": "https://ansung.hanlimgolf.co.kr/html/board/notice_list.asp"
+      },
+      {
+       "title": "[한림안성] 9월 그린피",
+       "date": "2026-08-09",
+       "url": "https://ansung.hanlimgolf.co.kr/html/board/notice_list.asp"
+      },
+      {
+       "title": "[한림안성] 9홀 운영 안내",
+       "date": "2026-05-10",
+       "url": "https://ansung.hanlimgolf.co.kr/html/board/notice_list.asp"
+      }
+     ],
      "tags": {}
     },
     "review": null,
     "fee_change": null,
-    "collected_at": "2026-11-26T09:51:53+09:00",
-    "recent_notice_text": null,
+    "collected_at": "2026-11-27T22:00:00+09:00",
+    "recent_notice_text": "2026-11-07 12월 그린피, 2026-10-10 11월 그린피, 2026-09-06 10월 그린피(10/1~11/1), 2026-08-09 9월 그린피, 2026-05-10 9홀 운영 안내. 매달 그린피를 공지한다.",
     "course_notes": null,
     "alert": null,
     "unconfirmed": [
@@ -81858,19 +82181,24 @@
       "source": "그린피가이드 코스 페이지",
       "url": "https://greenfeeguide.co.kr/course/gc-0104/",
       "checked_at": "2026-11-27"
+     },
+     {
+      "source": "공식 공지사항(브라우저 확인)",
+      "url": "https://ansung.hanlimgolf.co.kr/html/board/notice_list.asp",
+      "checked_at": "2026-11-27"
      }
     ]
    },
    "collection": {
-    "official_site": "unavailable",
-    "official_reason": "HTTP404",
-    "pages_collected": 0,
+    "official_site": "ok",
+    "official_reason": "공식 홈페이지(ansung.hanlimgolf.co.kr) 공지·이벤트 확인(2026-11-27, 브라우저 직접 접속) — 종전 golfzoncounty cc_code=7 경로는 골프존카운티 안성W로 한림안성과 다른 구장",
+    "pages_collected": 2,
     "third_party": {
      "teepick": false,
      "greenfeeguide": true
     },
-    "render_hint": "static",
-    "plan_strategy": "static(직접 파싱)",
+    "render_hint": "browser",
+    "plan_strategy": "browser_check(2026-11-27)",
     "browser_batch": false
    },
    "coverage": {
@@ -89869,7 +90197,7 @@
      "source": "최근접 IC 직선거리"
     },
     "tel": "031-883-0111",
-    "homepage": "http://www.victoriagc.co.kr/",
+    "homepage": "https://www.victoriagc.co.kr/",
     "operators": [
      "에스비레져㈜"
     ],
@@ -90246,14 +90574,40 @@
    },
    "briefing": {
     "notices": {
-     "url": null,
-     "items": [],
+     "url": "https://www.victoriagc.co.kr/07member/notice.asp",
+     "items": [
+      {
+       "title": "2027년 1월 ~ 3월 예약오픈일",
+       "date": "2026-11-27",
+       "url": "https://www.victoriagc.co.kr/07member/noticeView.asp?idx=300&PageNum=1&Column=&SearchString="
+      },
+      {
+       "title": "12월 그린피 안내",
+       "date": "2026-11-16",
+       "url": "https://www.victoriagc.co.kr/07member/noticeView.asp?idx=297&PageNum=1&Column=&SearchString="
+      },
+      {
+       "title": "11월 하반기 그린피 안내",
+       "date": "2026-11-16",
+       "url": "https://www.victoriagc.co.kr/07member/noticeView.asp?idx=296&PageNum=1&Column=&SearchString="
+      },
+      {
+       "title": "2027년 연단체 모집안내",
+       "date": "2026-10-21",
+       "url": "https://www.victoriagc.co.kr/07member/noticeView.asp?idx=292&PageNum=1&Column=&SearchString="
+      },
+      {
+       "title": "2026년 10월 ~ 12월 예약오픈일",
+       "date": "2026-09-03",
+       "url": "https://www.victoriagc.co.kr/07member/noticeView.asp?idx=290&PageNum=1&Column=&SearchString="
+      }
+     ],
      "tags": {}
     },
     "review": null,
     "fee_change": null,
-    "collected_at": "2026-11-26T09:51:53+09:00",
-    "recent_notice_text": null,
+    "collected_at": "2026-11-27T22:00:00+09:00",
+    "recent_notice_text": "2026-11-27 2027년 1~3월 예약오픈일, 2026-11-16 12월 그린피·11월 하반기 그린피 안내, 2026-10-21 2027년 연단체 모집안내, 2026-09-03 2026년 10~12월 예약오픈일. 메인 팝업에 11월 하반기·12월 그린피·연단체·1~3월 오픈일 배너가 함께 게시된다.",
     "course_notes": null,
     "alert": null,
     "unconfirmed": [
@@ -90271,19 +90625,24 @@
       "source": "그린피가이드 코스 페이지",
       "url": "https://greenfeeguide.co.kr/course/gc-0129/",
       "checked_at": "2026-11-27"
+     },
+     {
+      "source": "공식 공지사항(브라우저 확인)",
+      "url": "https://www.victoriagc.co.kr/07member/notice.asp",
+      "checked_at": "2026-11-27"
      }
     ]
    },
    "collection": {
-    "official_site": "unavailable",
-    "official_reason": "HTTP0",
-    "pages_collected": 0,
+    "official_site": "ok",
+    "official_reason": "공식 홈페이지 공지사항(victoriagc.co.kr/07member/notice.asp) 확인(2026-11-27, 브라우저 직접 접속)",
+    "pages_collected": 2,
     "third_party": {
      "teepick": false,
      "greenfeeguide": true
     },
-    "render_hint": "thin",
-    "plan_strategy": "unreachable(브라우저 재시도)",
+    "render_hint": "browser",
+    "plan_strategy": "browser_check(2026-11-27)",
     "browser_batch": false
    },
    "coverage": {
@@ -104382,14 +104741,30 @@
    },
    "briefing": {
     "notices": {
-     "url": null,
-     "items": [],
+     "url": "https://www.hansung-cc.co.kr/html/members/members01_hcc.asp",
+     "items": [
+      {
+       "title": "2026. 12월 동계 그린피 할인 현황",
+       "date": "2026-11-24",
+       "url": "https://www.hansung-cc.co.kr/html/members/members01_hcc_view.asp?b_idx=270&GotoPage=1"
+      },
+      {
+       "title": "추석맞이 특별세일 8+1",
+       "date": "2026-08-30",
+       "url": "https://www.hansung-cc.co.kr/html/members/members01_hcc_view.asp?b_idx=269&GotoPage=1"
+      },
+      {
+       "title": "여름시즌 대식당 단축메뉴 운영안내",
+       "date": "2026-07-30",
+       "url": "https://www.hansung-cc.co.kr/html/members/members01_hcc_view.asp?b_idx=268&GotoPage=1"
+      }
+     ],
      "tags": {}
     },
     "review": null,
     "fee_change": null,
-    "collected_at": "2026-11-26T09:51:55+09:00",
-    "recent_notice_text": null,
+    "collected_at": "2026-11-27T22:00:00+09:00",
+    "recent_notice_text": "2026-11-24 2026년 12월 동계 그린피 할인 현황, 2026-08-30 추석맞이 특별세일 8+1, 2026-07-30 여름시즌 대식당 단축메뉴 운영안내. 메인 팝업에 2027년 1부 연단체 추가 모집 안내와 12월 동계 그린피 할인 현황이 게시된다.",
     "course_notes": null,
     "alert": null,
     "unconfirmed": [
@@ -104405,19 +104780,24 @@
       "source": "티픽골프장 코스·스코어카드",
       "url": "https://teepickgolf.com/",
       "checked_at": "2026-11-27"
+     },
+     {
+      "source": "공식 공지사항(브라우저 확인)",
+      "url": "https://www.hansung-cc.co.kr/html/members/members01_hcc.asp",
+      "checked_at": "2026-11-27"
      }
     ]
    },
    "collection": {
-    "official_site": "unavailable",
-    "official_reason": "HTTP0",
-    "pages_collected": 0,
+    "official_site": "ok",
+    "official_reason": "공식 홈페이지 공지사항(hansung-cc.co.kr) 확인(2026-11-27, 브라우저 직접 접속)",
+    "pages_collected": 2,
     "third_party": {
      "teepick": true,
      "greenfeeguide": true
     },
-    "render_hint": "thin",
-    "plan_strategy": "unreachable(브라우저 재시도)",
+    "render_hint": "browser",
+    "plan_strategy": "browser_check(2026-11-27)",
     "browser_batch": true
    },
    "coverage": {
@@ -127018,7 +127398,7 @@
      "straight_name": "송추IC"
     },
     "tel": "031-930-1600",
-    "homepage": "http://www.kugolf.co.kr/",
+    "homepage": "https://kugolf.co.kr/",
     "operators": [
      "학교법인 건국대학교"
     ],
@@ -127418,8 +127798,44 @@
    },
    "briefing": {
     "notices": {
-     "url": null,
-     "items": [],
+     "url": "https://kugolf.co.kr/board/notice",
+     "items": [
+      {
+       "title": "2026년 12월 2차 이용요금",
+       "date": "2026-11-10",
+       "url": "https://kugolf.co.kr/board/notice"
+      },
+      {
+       "title": "2026년 12월 1차 이용요금",
+       "date": "2026-11-10",
+       "url": "https://kugolf.co.kr/board/notice"
+      },
+      {
+       "title": "2027년 신규 연단체 추가 모집 안내",
+       "date": "2026-11-06",
+       "url": "https://kugolf.co.kr/board/notice"
+      },
+      {
+       "title": "2026년 11월 2차 이용요금",
+       "date": "2026-11-04",
+       "url": "https://kugolf.co.kr/board/notice"
+      },
+      {
+       "title": "2026년 11월 1차 이용요금",
+       "date": "2026-10-08",
+       "url": "https://kugolf.co.kr/board/notice"
+      },
+      {
+       "title": "2026년 10월 이용요금",
+       "date": "2026-09-10",
+       "url": "https://kugolf.co.kr/board/notice"
+      },
+      {
+       "title": "그린 통기작업 안내",
+       "date": "2026-09-03",
+       "url": "https://kugolf.co.kr/board/notice"
+      }
+     ],
      "tags": {}
     },
     "review": {
@@ -127429,8 +127845,8 @@
      "url": "https://teepickgolf.com/course/%EC%8A%A4%EB%A7%88%ED%8A%B8KU"
     },
     "fee_change": null,
-    "collected_at": "2026-11-26T09:51:58+09:00",
-    "recent_notice_text": null,
+    "collected_at": "2026-11-27T22:00:00+09:00",
+    "recent_notice_text": "2026-11-10 2026년 12월 1차·2차 이용요금, 2026-11-06 2027년 신규 연단체 추가 모집 안내, 2026-11-04 11월 2차 이용요금, 2026-10-08 11월 1차 이용요금, 2026-09-10 10월 이용요금, 2026-09-03 그린 통기작업 안내. 상단 고정글은 2026년 일반단체 신청·클럽하우스 메뉴.",
     "course_notes": null,
     "alert": null,
     "unconfirmed": [
@@ -127446,19 +127862,24 @@
       "source": "티픽골프장 코스·스코어카드",
       "url": "https://teepickgolf.com/",
       "checked_at": "2026-11-27"
+     },
+     {
+      "source": "공식 공지사항(브라우저 확인)",
+      "url": "https://kugolf.co.kr/board/notice",
+      "checked_at": "2026-11-27"
      }
     ]
    },
    "collection": {
-    "official_site": "unavailable",
-    "official_reason": "HTTP0",
-    "pages_collected": 0,
+    "official_site": "ok",
+    "official_reason": "공식 홈페이지 공지사항(kugolf.co.kr/board/notice) 확인(2026-11-27, 브라우저 직접 접속) — http://www.kugolf.co.kr/ 는 https://kugolf.co.kr/ 로 넘어간다",
+    "pages_collected": 2,
     "third_party": {
      "teepick": true,
      "greenfeeguide": true
     },
-    "render_hint": "thin",
-    "plan_strategy": "unreachable(브라우저 재시도)",
+    "render_hint": "browser",
+    "plan_strategy": "browser_check(2026-11-27)",
     "browser_batch": false
    },
    "coverage": {
@@ -142347,7 +142768,7 @@
      "straight_name": "양노IC"
     },
     "tel": "031-369-8900",
-    "homepage": "https://www.hwaseonggc.com/mobile/index.asp",
+    "homepage": "https://www.hwaseonggc.com/",
     "operators": [
      "㈜리더스"
     ],
@@ -142667,8 +143088,34 @@
    },
    "briefing": {
     "notices": {
-     "url": null,
-     "items": [],
+     "url": "https://www.hwaseonggc.com/board/list.asp?type=1",
+     "items": [
+      {
+       "title": "2026년 12월 상반기 요금 안내",
+       "date": "2026-11-17",
+       "url": "https://www.hwaseonggc.com/board/list.asp?type=1"
+      },
+      {
+       "title": "2026년 11월 하반기 요금 안내",
+       "date": "2026-11-02",
+       "url": "https://www.hwaseonggc.com/board/list.asp?type=1"
+      },
+      {
+       "title": "2026년 11월 상반기 요금 안내",
+       "date": "2026-10-13",
+       "url": "https://www.hwaseonggc.com/board/list.asp?type=1"
+      },
+      {
+       "title": "2027년 화성골프클럽 연단체 모집",
+       "date": "2026-10-12",
+       "url": "https://www.hwaseonggc.com/board/list.asp?type=1"
+      },
+      {
+       "title": "2026년 10월 요금 안내",
+       "date": "2026-09-10",
+       "url": "https://www.hwaseonggc.com/board/list.asp?type=1"
+      }
+     ],
      "tags": {}
     },
     "review": {
@@ -142678,8 +143125,8 @@
      "url": "https://teepickgolf.com/course/%ED%99%94%EC%84%B1cc"
     },
     "fee_change": null,
-    "collected_at": "2026-11-26T09:51:59+09:00",
-    "recent_notice_text": null,
+    "collected_at": "2026-11-27T22:00:00+09:00",
+    "recent_notice_text": "2026-11-17 2026년 12월 상반기 요금 안내, 2026-11-02 11월 하반기 요금, 2026-10-13 11월 상반기 요금, 2026-10-12 2027년 연단체 모집, 2026-09-10 10월 요금 안내. 매달 상·하반기로 나눠 요금을 공지한다.",
     "course_notes": null,
     "alert": null,
     "unconfirmed": [],
@@ -142693,19 +143140,24 @@
       "source": "티픽골프장 코스·스코어카드",
       "url": "https://teepickgolf.com/",
       "checked_at": "2026-11-27"
+     },
+     {
+      "source": "공식 공지사항(브라우저 확인)",
+      "url": "https://www.hwaseonggc.com/board/list.asp?type=1",
+      "checked_at": "2026-11-27"
      }
     ]
    },
    "collection": {
-    "official_site": "unavailable",
-    "official_reason": "HTTP0",
-    "pages_collected": 0,
+    "official_site": "ok",
+    "official_reason": "공식 홈페이지 공지사항(hwaseonggc.com/board/list.asp?type=1) 확인(2026-11-27, 브라우저 직접 접속) — 모바일 경로 대신 대표 주소 사용",
+    "pages_collected": 2,
     "third_party": {
      "teepick": true,
      "greenfeeguide": true
     },
-    "render_hint": "thin",
-    "plan_strategy": "unreachable(브라우저 재시도)",
+    "render_hint": "browser",
+    "plan_strategy": "browser_check(2026-11-27)",
     "browser_batch": false
    },
    "coverage": {
@@ -174369,14 +174821,40 @@
    },
    "briefing": {
     "notices": {
-     "url": null,
-     "items": [],
+     "url": "https://www.daegucc.co.kr/Board/BoardList?board_idx=1",
+     "items": [
+      {
+       "title": "[공지] 3부 야간 운영 종료 안내",
+       "date": "2026-11-20",
+       "url": "https://www.daegucc.co.kr/Board/BoardList?board_idx=1"
+      },
+      {
+       "title": "[공지] 12월 비회원 요금안내",
+       "date": "2026-11-20",
+       "url": "https://www.daegucc.co.kr/Board/BoardList?board_idx=1"
+      },
+      {
+       "title": "[공지] 제3회 대구C.C 회원 FATHER & SON 친선 골프대회 조편성",
+       "date": "2026-11-18",
+       "url": "https://www.daegucc.co.kr/Board/BoardList?board_idx=1"
+      },
+      {
+       "title": "[공지] 2027년 신규단체 모집 안내",
+       "date": "2026-11-03",
+       "url": "https://www.daegucc.co.kr/Board/BoardList?board_idx=1"
+      },
+      {
+       "title": "[공지] 11/13(금) 행사로 인한 예약안내",
+       "date": "2026-10-28",
+       "url": "https://www.daegucc.co.kr/Board/BoardList?board_idx=1"
+      }
+     ],
      "tags": {}
     },
     "review": null,
     "fee_change": null,
-    "collected_at": "2026-11-26T10:28:32+09:00",
-    "recent_notice_text": null,
+    "collected_at": "2026-11-27T22:00:00+09:00",
+    "recent_notice_text": "2026-11-20 3부 야간 운영 종료 안내·12월 비회원 요금안내, 2026-11-18 회원 FATHER & SON 친선 골프대회 조편성, 2026-11-03 2027년 신규단체 모집 안내, 2026-10-28 11/13(금) 행사로 인한 예약안내. 3부 야간 라운드는 종료됐다.",
     "course_notes": null,
     "alert": null,
     "unconfirmed": [],
@@ -174386,19 +174864,24 @@
       "source": "티픽골프장 코스·스코어카드",
       "url": "https://teepickgolf.com/",
       "checked_at": "2026-11-27"
+     },
+     {
+      "source": "공식 공지사항(브라우저 확인)",
+      "url": "https://www.daegucc.co.kr/Board/BoardList?board_idx=1",
+      "checked_at": "2026-11-27"
      }
     ]
    },
    "collection": {
-    "official_site": "unavailable",
-    "official_reason": "HTTP0",
-    "pages_collected": 0,
+    "official_site": "ok",
+    "official_reason": "공식 홈페이지 공지사항(daegucc.co.kr/Board/BoardList?board_idx=1) 확인(2026-11-27, 브라우저 직접 접속)",
+    "pages_collected": 2,
     "third_party": {
      "teepick": true,
      "greenfeeguide": true
     },
-    "render_hint": "thin",
-    "plan_strategy": "unreachable(브라우저 재시도)",
+    "render_hint": "browser",
+    "plan_strategy": "browser_check(2026-11-27)",
     "browser_batch": true
    },
    "coverage": {
@@ -181743,8 +182226,34 @@
    },
    "briefing": {
     "notices": {
-     "url": null,
-     "items": [],
+     "url": "https://golf.gtc.co.kr/lounge/lounge_news.asp",
+     "items": [
+      {
+       "title": "12월 티업시간 및 입장요금 할인 안내",
+       "date": "2026-11-24",
+       "url": "https://golf.gtc.co.kr/lounge/lounge_news.asp"
+      },
+      {
+       "title": "2027년 보문골프클럽 연단체 추가 모집 안내",
+       "date": "2026-11-10",
+       "url": "https://golf.gtc.co.kr/lounge/lounge_news.asp"
+      },
+      {
+       "title": "고객 만족도 조사",
+       "date": "2026-11-09",
+       "url": "https://golf.gtc.co.kr/lounge/lounge_news.asp"
+      },
+      {
+       "title": "11월 티업시간 및 입장요금 안내",
+       "date": "2026-10-15",
+       "url": "https://golf.gtc.co.kr/lounge/lounge_news.asp"
+      },
+      {
+       "title": "예약 취소 및 위약 규정 변경 안내",
+       "date": "2026-04-01",
+       "url": "https://golf.gtc.co.kr/lounge/lounge_news.asp"
+      }
+     ],
      "tags": {}
     },
     "review": {
@@ -181754,8 +182263,8 @@
      "url": "https://teepickgolf.com/course/%EB%B3%B4%EB%AC%B8CC"
     },
     "fee_change": null,
-    "collected_at": "2026-11-26T10:28:33+09:00",
-    "recent_notice_text": null,
+    "collected_at": "2026-11-27T22:00:00+09:00",
+    "recent_notice_text": "2026-11-24 12월 티업시간 및 입장요금 할인 안내, 2026-11-10 2027년 보문골프클럽 연단체 추가 모집, 2026-11-09 고객 만족도 조사, 2026-10-15 11월 티업시간 및 입장요금 안내, 2026-04-01 예약 취소 및 위약 규정 변경 안내. 게시판 상단 고정글은 2023-04-13 보문GC 2인 라운드 불가 안내.",
     "course_notes": null,
     "alert": null,
     "unconfirmed": [],
@@ -181765,19 +182274,24 @@
       "source": "티픽골프장 코스·스코어카드",
       "url": "https://teepickgolf.com/",
       "checked_at": "2026-11-27"
+     },
+     {
+      "source": "공식 공지사항(브라우저 확인)",
+      "url": "https://golf.gtc.co.kr/lounge/lounge_news.asp",
+      "checked_at": "2026-11-27"
      }
     ]
    },
    "collection": {
-    "official_site": "unavailable",
-    "official_reason": "HTTP0",
-    "pages_collected": 0,
+    "official_site": "ok",
+    "official_reason": "공식(경상북도문화관광공사) 홈페이지 공지사항 확인(2026-11-27, 브라우저 직접 접속)",
+    "pages_collected": 2,
     "third_party": {
      "teepick": true,
      "greenfeeguide": true
     },
-    "render_hint": "thin",
-    "plan_strategy": "thin(상세페이지 탐색)",
+    "render_hint": "browser",
+    "plan_strategy": "browser_check(2026-11-27)",
     "browser_batch": true
    },
    "coverage": {
@@ -204302,8 +204816,34 @@
    },
    "briefing": {
     "notices": {
-     "url": null,
-     "items": [],
+     "url": "https://www.palmyhillscc.co.kr/info/list.asp?type=8",
+     "items": [
+      {
+       "title": "남코스 그늘집 화장실 환경개선 공사안내",
+       "date": "2026-11-02",
+       "url": "https://www.palmyhillscc.co.kr/info/list.asp?type=8"
+      },
+      {
+       "title": "2027년 1부 신규 단체팀 모집",
+       "date": "2026-10-28",
+       "url": "https://www.palmyhillscc.co.kr/info/list.asp?type=8"
+      },
+      {
+       "title": "남코스 스타트하우스 운영중단 안내",
+       "date": "2026-10-13",
+       "url": "https://www.palmyhillscc.co.kr/info/list.asp?type=8"
+      },
+      {
+       "title": "캐디피 인상 안내",
+       "date": "2026-10-13",
+       "url": "https://www.palmyhillscc.co.kr/info/list.asp?type=8"
+      },
+      {
+       "title": "예약 및 개인팀 그린피 안내",
+       "date": "2026-05-19",
+       "url": "https://www.palmyhillscc.co.kr/info/list.asp?type=8"
+      }
+     ],
      "tags": {}
     },
     "review": {
@@ -204313,8 +204853,8 @@
      "url": "https://teepickgolf.com/course/%ED%8C%8C%EB%AF%B8%ED%9E%90%EC%8A%A4CC"
     },
     "fee_change": null,
-    "collected_at": "2026-11-26T10:28:35+09:00",
-    "recent_notice_text": null,
+    "collected_at": "2026-11-27T22:00:00+09:00",
+    "recent_notice_text": "2026-11-02 남코스 그늘집 화장실 환경개선 공사안내, 2026-10-28 2027년 1부 신규 단체팀 모집, 2026-10-13 남코스 스타트하우스 운영중단 안내·캐디피 인상 안내. 최신 그린피 공지는 2026-05-19 예약 및 개인팀 그린피 안내다(월별 그린피 공지는 없다).",
     "course_notes": null,
     "alert": null,
     "unconfirmed": [],
@@ -204323,19 +204863,24 @@
       "source": "티픽골프장 코스·스코어카드",
       "url": "https://teepickgolf.com/",
       "checked_at": "2026-11-27"
+     },
+     {
+      "source": "공식 공지사항(브라우저 확인)",
+      "url": "https://www.palmyhillscc.co.kr/info/list.asp?type=8",
+      "checked_at": "2026-11-27"
      }
     ]
    },
    "collection": {
-    "official_site": "unavailable",
-    "official_reason": "HTTP0",
-    "pages_collected": 0,
+    "official_site": "ok",
+    "official_reason": "공식 홈페이지 고객안내>새소식(palmyhillscc.co.kr/info/list.asp?type=8) 확인(2026-11-27, 브라우저 직접 접속)",
+    "pages_collected": 2,
     "third_party": {
      "teepick": true,
      "greenfeeguide": true
     },
-    "render_hint": "thin",
-    "plan_strategy": "unreachable(브라우저 재시도)",
+    "render_hint": "browser",
+    "plan_strategy": "browser_check(2026-11-27)",
     "browser_batch": true
    },
    "coverage": {
@@ -275831,7 +276376,7 @@
      "source": "최근접 IC 직선거리"
     },
     "tel": "063-630-3000",
-    "homepage": "http://www.dragonlake.co.kr/",
+    "homepage": "https://www.golfzoncounty.com/golfclub/main?golfclubSeq=55",
     "operators": [
      "신한레저㈜(박남식)",
      "골프존카운티㈜(서상현)"
@@ -276395,8 +276940,34 @@
    },
    "briefing": {
     "notices": {
-     "url": null,
-     "items": [],
+     "url": "https://www.golfzoncounty.com/golfclub/notice?golfclubSeq=55",
+     "items": [
+      {
+       "title": "연단체 드래곤_2027년 연단체 모집안내",
+       "date": "2026-10-31",
+       "url": "https://www.golfzoncounty.com/golfclub/notice?golfclubSeq=55"
+      },
+      {
+       "title": "이달의 그린피 12월 패키지 안내",
+       "date": "2026-10-30",
+       "url": "https://www.golfzoncounty.com/golfclub/notice?golfclubSeq=55"
+      },
+      {
+       "title": "이달의 그린피 12월 그린피 안내",
+       "date": "2026-10-30",
+       "url": "https://www.golfzoncounty.com/golfclub/notice?golfclubSeq=55"
+      },
+      {
+       "title": "이달의 그린피 11월 패키지 안내",
+       "date": "2026-09-26",
+       "url": "https://www.golfzoncounty.com/golfclub/notice?golfclubSeq=55"
+      },
+      {
+       "title": "이달의 그린피 11월 그린피 안내",
+       "date": "2026-09-26",
+       "url": "https://www.golfzoncounty.com/golfclub/notice?golfclubSeq=55"
+      }
+     ],
      "tags": {}
     },
     "review": {
@@ -276406,8 +276977,8 @@
      "url": "https://teepickgolf.com/course/%EA%B3%A8%ED%94%84%EC%A1%B4%20%EB%93%9C%EB%9E%98%EA%B3%A4"
     },
     "fee_change": null,
-    "collected_at": "2026-11-26T10:25:42+09:00",
-    "recent_notice_text": null,
+    "collected_at": "2026-11-27T22:00:00+09:00",
+    "recent_notice_text": "2026-10-31 드래곤 2027년 연단체 모집안내, 2026-10-30 12월 그린피·12월 패키지 안내, 2026-09-26 11월 그린피·11월 패키지 안내. 매달 그린피와 패키지를 함께 공지한다.",
     "course_notes": null,
     "alert": null,
     "unconfirmed": [
@@ -276416,18 +276987,24 @@
      "진행 시간",
      "휴장일"
     ],
-    "sources": []
+    "sources": [
+     {
+      "source": "공식 공지사항(브라우저 확인)",
+      "url": "https://www.golfzoncounty.com/golfclub/notice?golfclubSeq=55",
+      "checked_at": "2026-11-27"
+     }
+    ]
    },
    "collection": {
-    "official_site": "unavailable",
-    "official_reason": "HTTP0",
-    "pages_collected": 0,
+    "official_site": "ok",
+    "official_reason": "골프존카운티 통합 홈페이지 공지사항(golfclubSeq=55) 확인(2026-11-27, 브라우저 직접 접속) — 종전 dragonlake.co.kr 은 golfzoncounty 404로 넘어간다",
+    "pages_collected": 2,
     "third_party": {
      "teepick": true,
      "greenfeeguide": true
     },
-    "render_hint": "static",
-    "plan_strategy": "static(직접 파싱)",
+    "render_hint": "browser",
+    "plan_strategy": "browser_check(2026-11-27)",
     "browser_batch": false,
     "browser_pages": 0,
     "browser_pdf": []

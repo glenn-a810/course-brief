@@ -45,7 +45,7 @@
    "source": "최근접 IC 직선거리"
   },
   "tel": "063-630-3000",
-  "homepage": "http://www.dragonlake.co.kr/",
+  "homepage": "https://www.golfzoncounty.com/golfclub/main?golfclubSeq=55",
   "operators": [
    "신한레저㈜(박남식)",
    "골프존카운티㈜(서상현)"
@@ -609,8 +609,34 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
-   "items": [],
+   "url": "https://www.golfzoncounty.com/golfclub/notice?golfclubSeq=55",
+   "items": [
+    {
+     "title": "연단체 드래곤_2027년 연단체 모집안내",
+     "date": "2026-10-31",
+     "url": "https://www.golfzoncounty.com/golfclub/notice?golfclubSeq=55"
+    },
+    {
+     "title": "이달의 그린피 12월 패키지 안내",
+     "date": "2026-10-30",
+     "url": "https://www.golfzoncounty.com/golfclub/notice?golfclubSeq=55"
+    },
+    {
+     "title": "이달의 그린피 12월 그린피 안내",
+     "date": "2026-10-30",
+     "url": "https://www.golfzoncounty.com/golfclub/notice?golfclubSeq=55"
+    },
+    {
+     "title": "이달의 그린피 11월 패키지 안내",
+     "date": "2026-09-26",
+     "url": "https://www.golfzoncounty.com/golfclub/notice?golfclubSeq=55"
+    },
+    {
+     "title": "이달의 그린피 11월 그린피 안내",
+     "date": "2026-09-26",
+     "url": "https://www.golfzoncounty.com/golfclub/notice?golfclubSeq=55"
+    }
+   ],
    "tags": {}
   },
   "review": {
@@ -620,8 +646,8 @@
    "url": "https://teepickgolf.com/course/%EA%B3%A8%ED%94%84%EC%A1%B4%20%EB%93%9C%EB%9E%98%EA%B3%A4"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T10:25:42+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T22:00:00+09:00",
+  "recent_notice_text": "2026-10-31 드래곤 2027년 연단체 모집안내, 2026-10-30 12월 그린피·12월 패키지 안내, 2026-09-26 11월 그린피·11월 패키지 안내. 매달 그린피와 패키지를 함께 공지한다.",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [
@@ -630,18 +656,24 @@
    "진행 시간",
    "휴장일"
   ],
-  "sources": []
+  "sources": [
+   {
+    "source": "공식 공지사항(브라우저 확인)",
+    "url": "https://www.golfzoncounty.com/golfclub/notice?golfclubSeq=55",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
-  "official_site": "unavailable",
-  "official_reason": "HTTP0",
-  "pages_collected": 0,
+  "official_site": "ok",
+  "official_reason": "골프존카운티 통합 홈페이지 공지사항(golfclubSeq=55) 확인(2026-11-27, 브라우저 직접 접속) — 종전 dragonlake.co.kr 은 golfzoncounty 404로 넘어간다",
+  "pages_collected": 2,
   "third_party": {
    "teepick": true,
    "greenfeeguide": true
   },
-  "render_hint": "static",
-  "plan_strategy": "static(직접 파싱)",
+  "render_hint": "browser",
+  "plan_strategy": "browser_check(2026-11-27)",
   "browser_batch": false,
   "browser_pages": 0,
   "browser_pdf": []
@@ -652,7 +684,7 @@
   "fee": 1.0,
   "ops": 0.0,
   "facility": 0.3,
-  "briefing": 0.0,
+  "briefing": 0.5,
   "rental": 0.25
  }
 }

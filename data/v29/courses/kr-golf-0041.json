@@ -49,7 +49,7 @@
    "source": "최근접 IC 직선거리"
   },
   "tel": "061-530-7750",
-  "homepage": "http://www.pinebeachcc.co.kr/",
+  "homepage": "https://www.pinebeachcc.co.kr/",
   "operators": [
    "한국관광공사(안영배)"
   ],
@@ -388,7 +388,7 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
+   "url": "https://www.pinebeachcc.co.kr/board/list.asp?type=1",
    "items": [],
    "tags": {}
   },
@@ -399,8 +399,8 @@
    "url": "https://teepickgolf.com/course/%ED%95%B4%EB%82%A8%20%ED%8C%8C%EC%9D%B8%EB%B9%84%EC%B9%98cc"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T10:25:42+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T22:00:00+09:00",
+  "recent_notice_text": "오시아노는 파인비치와 같은 법인(주식회사 파인비치)·같은 부지의 9홀 대중제 코스로 전용 공지 게시판이 없다. 파인비치 통합 공지사항에서 오시아노가 언급된 최신글은 2025-11-18 '오시아노 18H 프로모션'이고, 2026년 오시아노 전용 공지는 확인되지 않는다. 통합 게시판의 2026-10-30 11월 그린피·2027 LPGA 패키지 공지는 파인비치 기준이다.",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [
@@ -408,18 +408,24 @@
    "진행 시간",
    "식당"
   ],
-  "sources": []
+  "sources": [
+   {
+    "source": "공식 공지사항(브라우저 확인)",
+    "url": "https://www.pinebeachcc.co.kr/board/list.asp?type=1",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
-  "official_site": "unavailable",
-  "official_reason": "HTTP0",
-  "pages_collected": 0,
+  "official_site": "ok",
+  "official_reason": "공식(파인비치) 홈페이지 확인(2026-11-27) — 오시아노 코스 페이지(/course/o.asp)는 열리지만 전용 게시판은 없다",
+  "pages_collected": 2,
   "third_party": {
    "teepick": true,
    "greenfeeguide": true
   },
-  "render_hint": "thin",
-  "plan_strategy": "unreachable(브라우저 재시도)",
+  "render_hint": "browser",
+  "plan_strategy": "browser_check(2026-11-27)",
   "browser_batch": false,
   "browser_pages": 0,
   "browser_pdf": []
@@ -430,7 +436,7 @@
   "fee": 0.75,
   "ops": 0.5,
   "facility": 0.2,
-  "briefing": 0.25,
+  "briefing": 0.5,
   "rental": 0.25
  }
 }

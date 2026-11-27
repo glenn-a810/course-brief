@@ -46,7 +46,7 @@
    "source": "최근접 IC 직선거리"
   },
   "tel": "031-660-7455",
-  "homepage": "http://www.golfzoncounty.com/gcounty/info/main?cc_code=7",
+  "homepage": "https://ansung.hanlimgolf.co.kr/",
   "operators": [
    "일송개발㈜"
   ],
@@ -314,14 +314,40 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
-   "items": [],
+   "url": "https://ansung.hanlimgolf.co.kr/html/board/notice_list.asp",
+   "items": [
+    {
+     "title": "[한림안성] 12월 그린피",
+     "date": "2026-11-07",
+     "url": "https://ansung.hanlimgolf.co.kr/html/board/notice_view.asp?b_idx=38&Page=1&searchField=b_subject&searchValue="
+    },
+    {
+     "title": "[한림안성] 11월 그린피",
+     "date": "2026-10-10",
+     "url": "https://ansung.hanlimgolf.co.kr/html/board/notice_list.asp"
+    },
+    {
+     "title": "[한림안성] 10월 그린피(10/1~11/1)",
+     "date": "2026-09-06",
+     "url": "https://ansung.hanlimgolf.co.kr/html/board/notice_list.asp"
+    },
+    {
+     "title": "[한림안성] 9월 그린피",
+     "date": "2026-08-09",
+     "url": "https://ansung.hanlimgolf.co.kr/html/board/notice_list.asp"
+    },
+    {
+     "title": "[한림안성] 9홀 운영 안내",
+     "date": "2026-05-10",
+     "url": "https://ansung.hanlimgolf.co.kr/html/board/notice_list.asp"
+    }
+   ],
    "tags": {}
   },
   "review": null,
   "fee_change": null,
-  "collected_at": "2026-11-26T09:51:53+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T22:00:00+09:00",
+  "recent_notice_text": "2026-11-07 12월 그린피, 2026-10-10 11월 그린피, 2026-09-06 10월 그린피(10/1~11/1), 2026-08-09 9월 그린피, 2026-05-10 9홀 운영 안내. 매달 그린피를 공지한다.",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [
@@ -337,19 +363,24 @@
     "source": "그린피가이드 코스 페이지",
     "url": "https://greenfeeguide.co.kr/course/gc-0104/",
     "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공식 공지사항(브라우저 확인)",
+    "url": "https://ansung.hanlimgolf.co.kr/html/board/notice_list.asp",
+    "checked_at": "2026-11-27"
    }
   ]
  },
  "collection": {
-  "official_site": "unavailable",
-  "official_reason": "HTTP404",
-  "pages_collected": 0,
+  "official_site": "ok",
+  "official_reason": "공식 홈페이지(ansung.hanlimgolf.co.kr) 공지·이벤트 확인(2026-11-27, 브라우저 직접 접속) — 종전 golfzoncounty cc_code=7 경로는 골프존카운티 안성W로 한림안성과 다른 구장",
+  "pages_collected": 2,
   "third_party": {
    "teepick": false,
    "greenfeeguide": true
   },
-  "render_hint": "static",
-  "plan_strategy": "static(직접 파싱)",
+  "render_hint": "browser",
+  "plan_strategy": "browser_check(2026-11-27)",
   "browser_batch": false
  },
  "coverage": {
@@ -358,7 +389,7 @@
   "fee": 0.75,
   "ops": 0.0,
   "facility": 0.0,
-  "briefing": 0.0,
+  "briefing": 0.5,
   "rental": 0.25
  }
 }

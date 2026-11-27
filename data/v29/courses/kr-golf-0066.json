@@ -48,7 +48,7 @@
    "straight_name": "송내IC"
   },
   "tel": "032-562-6666",
-  "homepage": "https://www.incheoncc.com:1436/",
+  "homepage": "https://www.incheoncc.com/",
   "operators": [
    "㈜신태진(강형식김태진)"
   ],
@@ -468,8 +468,34 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
-   "items": [],
+   "url": "https://www.incheoncc.com/multi_board/site/board/list.asp?groupcode=NOTICE",
+   "items": [
+    {
+     "title": "12월 할인 안내",
+     "date": "2026-11-20",
+     "url": "https://www.incheoncc.com/multi_board/site/board/list.asp?groupcode=NOTICE"
+    },
+    {
+     "title": "2027년도 연단체 배정 공고",
+     "date": "2026-11-18",
+     "url": "https://www.incheoncc.com/multi_board/site/board/list.asp?groupcode=NOTICE"
+    },
+    {
+     "title": "11월 할인 안내",
+     "date": "2026-10-27",
+     "url": "https://www.incheoncc.com/multi_board/site/board/list.asp?groupcode=NOTICE"
+    },
+    {
+     "title": "2027년도 단체신청 안내 & 신청서 다운",
+     "date": "2026-10-12",
+     "url": "https://www.incheoncc.com/multi_board/site/board/list.asp?groupcode=NOTICE"
+    },
+    {
+     "title": "그린 개선 작업 안내",
+     "date": "2026-09-19",
+     "url": "https://www.incheoncc.com/multi_board/site/board/list.asp?groupcode=NOTICE"
+    }
+   ],
    "tags": {}
   },
   "review": {
@@ -479,8 +505,8 @@
    "url": "https://teepickgolf.com/course/%EC%9D%B8%EC%B2%9C%EA%B5%AD%EC%A0%9C"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T09:52:00+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T22:00:00+09:00",
+  "recent_notice_text": "2026-11-20 12월 할인 안내, 2026-11-18 2027년도 연단체 배정 공고, 2026-10-27 11월 할인 안내, 2026-10-12 2027년도 단체신청 안내·신청서, 2026-09-19 그린 개선 작업 안내.",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [
@@ -501,19 +527,24 @@
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
     "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공식 공지사항(브라우저 확인)",
+    "url": "https://www.incheoncc.com/multi_board/site/board/list.asp?groupcode=NOTICE",
+    "checked_at": "2026-11-27"
    }
   ]
  },
  "collection": {
-  "official_site": "unavailable",
-  "official_reason": "HTTP0",
-  "pages_collected": 0,
+  "official_site": "ok",
+  "official_reason": "공식 홈페이지 공지사항 확인(2026-11-27, 브라우저 직접 접속) — 종전 :1436 포트 없이 https://www.incheoncc.com/ 로 접속된다",
+  "pages_collected": 2,
   "third_party": {
    "teepick": true,
    "greenfeeguide": true
   },
-  "render_hint": "thin",
-  "plan_strategy": "unreachable(브라우저 재시도)",
+  "render_hint": "browser",
+  "plan_strategy": "browser_check(2026-11-27)",
   "browser_batch": false
  },
  "coverage": {
@@ -522,7 +553,7 @@
   "fee": 0.75,
   "ops": 0.0,
   "facility": 0.2,
-  "briefing": 0.0,
+  "briefing": 0.5,
   "rental": 1.0
  }
 }

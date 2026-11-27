@@ -527,8 +527,39 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
-   "items": [],
+   "url": "https://www.solaseadocc.com/sub/notice.asp",
+   "items": [
+    {
+     "title": "♥2027 솔라시도 패키지 안내(1/1~1/31)♥",
+     "date": "2026-11-06",
+     "url": "https://www.solaseadocc.com/sub/notice.asp"
+    },
+    {
+     "title": "2027 연단체 모집안내",
+     "date": "2026-10-29",
+     "url": "https://www.solaseadocc.com/sub/notice.asp"
+    },
+    {
+     "title": "♥2026 솔라시도 패키지 안내(12/1~12/31)♥",
+     "date": "2026-10-07",
+     "url": "https://www.solaseadocc.com/sub/notice.asp"
+    },
+    {
+     "title": "♥2026 솔라시도 패키지 안내(11/1~11/30)♥",
+     "date": "2026-09-03",
+     "url": "https://www.solaseadocc.com/sub/notice.asp"
+    },
+    {
+     "title": "2026년 10,11월 그린피 안내",
+     "date": "2026-09-03",
+     "url": "https://www.solaseadocc.com/sub/notice.asp"
+    },
+    {
+     "title": "3부 야간라운드 운영안내",
+     "date": "2026-08-01",
+     "url": "https://www.solaseadocc.com/sub/notice.asp"
+    }
+   ],
    "tags": {}
   },
   "review": {
@@ -538,8 +569,8 @@
    "url": "https://teepickgolf.com/course/%EC%86%94%EB%9D%BC%EC%8B%9C%EB%8F%84"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T10:25:42+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T22:00:00+09:00",
+  "recent_notice_text": "2026-11-06 2027 솔라시도 패키지(1/1~1/31), 2026-10-29 2027 연단체 모집, 2026-10-07 2026 솔라시도 패키지(12/1~12/31), 2026-09-03 2026 패키지(11/1~11/30)와 2026년 10·11월 그린피 안내, 2026-08-01 3부 야간라운드 운영안내. 12월 그린피 공지는 아직 따로 없다.",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [
@@ -553,19 +584,24 @@
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
     "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공식 공지사항(브라우저 확인)",
+    "url": "https://www.solaseadocc.com/sub/notice.asp",
+    "checked_at": "2026-11-27"
    }
   ]
  },
  "collection": {
-  "official_site": "unavailable",
-  "official_reason": "HTTP0",
-  "pages_collected": 0,
+  "official_site": "ok",
+  "official_reason": "공식 홈페이지 공지사항(solaseadocc.com/sub/notice.asp) 확인(2026-11-27, 브라우저 직접 접속)",
+  "pages_collected": 2,
   "third_party": {
    "teepick": true,
    "greenfeeguide": true
   },
-  "render_hint": "thin",
-  "plan_strategy": "unreachable(브라우저 재시도)",
+  "render_hint": "browser",
+  "plan_strategy": "browser_check(2026-11-27)",
   "browser_batch": false,
   "browser_pages": 0,
   "browser_pdf": []
@@ -576,7 +612,7 @@
   "fee": 1.0,
   "ops": 0.21,
   "facility": 0.1,
-  "briefing": 0.25,
+  "briefing": 0.75,
   "rental": 1.0
  }
 }

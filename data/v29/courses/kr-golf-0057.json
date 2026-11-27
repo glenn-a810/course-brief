@@ -109,7 +109,7 @@
    "straight_name": "의성IC"
   },
   "tel": "054-380-0028",
-  "homepage": "http://www.gunicc.co.kr/",
+  "homepage": "https://www.gunicc.co.kr/",
   "operators": [
    "케이알스포츠㈜ (정하석)"
   ],
@@ -529,8 +529,49 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
-   "items": [],
+   "url": "https://www.gunicc.co.kr/multi_board/site/board/list.asp?groupcode=NOTICE",
+   "items": [
+    {
+     "title": "[공지] 단부제 운영안내",
+     "date": "2026-11-25",
+     "url": "https://www.gunicc.co.kr/multi_board/site/board/list.asp?groupcode=NOTICE"
+    },
+    {
+     "title": "[공지] 구니CC 12월 변동요금(그린피)",
+     "date": "2026-11-24",
+     "url": "https://www.gunicc.co.kr/multi_board/site/board/list.asp?groupcode=NOTICE"
+    },
+    {
+     "title": "[공지] 구니CC 12월 변동요금(그린피)",
+     "date": "2026-11-13",
+     "url": "https://www.gunicc.co.kr/multi_board/site/board/list.asp?groupcode=NOTICE"
+    },
+    {
+     "title": "[공지] 캐디피 인상 안내",
+     "date": "2026-11-13",
+     "url": "https://www.gunicc.co.kr/multi_board/site/board/list.asp?groupcode=NOTICE"
+    },
+    {
+     "title": "[공지] 11월 단체팀 특별 할인 이벤트",
+     "date": "2026-11-06",
+     "url": "https://www.gunicc.co.kr/multi_board/site/board/list.asp?groupcode=NOTICE"
+    },
+    {
+     "title": "[공지] 구니CC 11월 변동요금(그린피)",
+     "date": "2026-10-30",
+     "url": "https://www.gunicc.co.kr/multi_board/site/board/list.asp?groupcode=NOTICE"
+    },
+    {
+     "title": "[공지] 구니CC 11월 변동요금(그린피)",
+     "date": "2026-10-13",
+     "url": "https://www.gunicc.co.kr/multi_board/site/board/list.asp?groupcode=NOTICE"
+    },
+    {
+     "title": "[공지] 2027년 연단체 모집안내",
+     "date": "2026-10-01",
+     "url": "https://www.gunicc.co.kr/multi_board/site/board/list.asp?groupcode=NOTICE"
+    }
+   ],
    "tags": {}
   },
   "review": {
@@ -540,8 +581,8 @@
    "url": "https://teepickgolf.com/course/%EA%B5%AC%EB%8B%88"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T10:28:35+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T22:00:00+09:00",
+  "recent_notice_text": "2026-11-25 단부제 운영안내(본문 이미지), 2026-11-24·11-13 구니CC 12월 변동요금(그린피), 2026-11-13 캐디피 인상 안내, 2026-11-06 11월 단체팀 특별 할인 이벤트, 2026-10-30·10-13 11월 변동요금, 2026-10-01 2027년 연단체 모집안내. 월별 변동요금제라 매달 그린피를 공지한다.",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [],
@@ -550,19 +591,24 @@
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
     "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공식 공지사항(브라우저 확인)",
+    "url": "https://www.gunicc.co.kr/multi_board/site/board/list.asp?groupcode=NOTICE",
+    "checked_at": "2026-11-27"
    }
   ]
  },
  "collection": {
-  "official_site": "unavailable",
-  "official_reason": "HTTP0",
-  "pages_collected": 0,
+  "official_site": "ok",
+  "official_reason": "공식 홈페이지 공지사항(gunicc.co.kr 공지 게시판) 확인(2026-11-27, 브라우저 직접 접속)",
+  "pages_collected": 2,
   "third_party": {
    "teepick": true,
    "greenfeeguide": true
   },
-  "render_hint": "thin",
-  "plan_strategy": "unreachable(브라우저 재시도)",
+  "render_hint": "browser",
+  "plan_strategy": "browser_check(2026-11-27)",
   "browser_batch": false
  },
  "coverage": {
@@ -571,7 +617,7 @@
   "fee": 1.0,
   "ops": 0.21,
   "facility": 0.2,
-  "briefing": 0.25,
+  "briefing": 0.75,
   "rental": 0.25
  }
 }

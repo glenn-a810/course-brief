@@ -446,8 +446,34 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
-   "items": [],
+   "url": "https://www.ophelgc.com/_Gunwi/Board/BoardList.aspx?cfgid=notice",
+   "items": [
+    {
+     "title": "2027년 군위오펠GC 연부킹 단체팀 신청 안내",
+     "date": "2026-11-02",
+     "url": "https://www.ophelgc.com/_Gunwi/Board/BoardView.aspx?post=10831&cfgid=notice&page=1&gubun=3"
+    },
+    {
+     "title": "그린 통기 작업 안내",
+     "date": "2026-10-12",
+     "url": "https://www.ophelgc.com/_Gunwi/Board/BoardView.aspx?post=10819&cfgid=notice&page=1&gubun=3"
+    },
+    {
+     "title": "SUMMER EVENT",
+     "date": "2026-06-16",
+     "url": "https://www.ophelgc.com/_Gunwi/Board/BoardView.aspx?post=10793&cfgid=notice&page=1&gubun=3"
+    },
+    {
+     "title": "5월 예약안내",
+     "date": "2026-04-28",
+     "url": "https://www.ophelgc.com/_Gunwi/Board/BoardView.aspx?post=10776&cfgid=notice&page=1&gubun=3"
+    },
+    {
+     "title": "3부 야간라운드 오픈 및 노캐디 운영안내",
+     "date": "2026-02-13",
+     "url": "https://www.ophelgc.com/_Gunwi/Board/BoardView.aspx?post=10761&cfgid=notice&page=1&gubun=3"
+    }
+   ],
    "tags": {}
   },
   "review": {
@@ -457,25 +483,30 @@
    "url": "https://teepickgolf.com/course/%EA%B5%B0%EC%9C%84%EC%98%A4%ED%8E%A0GC"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T10:28:35+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T22:00:00+09:00",
+  "recent_notice_text": "2026-11-02 2027년 군위오펠GC 연부킹 단체팀 신청 안내, 2026-10-12 그린 통기 작업 안내, 2026-06-16 SUMMER EVENT, 2026-04-28 5월 예약안내. 게시판 상단 고정글로 2026-02-13 3부 야간라운드 오픈 및 노캐디 운영안내가 있다. 군위 게시판에는 12월 그린피 공지가 아직 없다.",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [],
   "sources": [
-   "https://greenfeeguide.co.kr/course/gc-0356/"
+   "https://greenfeeguide.co.kr/course/gc-0356/",
+   {
+    "source": "공식 공지사항(브라우저 확인)",
+    "url": "https://www.ophelgc.com/_Gunwi/Board/BoardList.aspx?cfgid=notice",
+    "checked_at": "2026-11-27"
+   }
   ]
  },
  "collection": {
-  "official_site": "unavailable",
-  "official_reason": "HTTP0",
-  "pages_collected": 0,
+  "official_site": "ok",
+  "official_reason": "공식 홈페이지(오펠GC 통합, 군위오펠 공지 게시판) 확인(2026-11-27, 브라우저 직접 접속)",
+  "pages_collected": 2,
   "third_party": {
    "teepick": true,
    "greenfeeguide": true
   },
-  "render_hint": "thin",
-  "plan_strategy": "unreachable(브라우저 재시도)",
+  "render_hint": "browser",
+  "plan_strategy": "browser_check(2026-11-27)",
   "browser_batch": true
  },
  "coverage": {
@@ -484,7 +515,7 @@
   "fee": 1.0,
   "ops": 0.07,
   "facility": 0.3,
-  "briefing": 0.0,
+  "briefing": 0.5,
   "rental": 1.0
  }
 }

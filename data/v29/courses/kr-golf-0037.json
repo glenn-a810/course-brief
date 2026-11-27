@@ -600,14 +600,30 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
-   "items": [],
+   "url": "https://www.verthillcc.co.kr/board/list.asp?type=1",
+   "items": [
+    {
+     "title": "아트 골프 카트",
+     "date": "2026-10-21",
+     "url": "https://www.verthillcc.co.kr/board/list.asp?type=1"
+    },
+    {
+     "title": "5인플레이 VIP카트 예약 진행",
+     "date": "2026-09-17",
+     "url": "https://www.verthillcc.co.kr/board/list.asp?type=1"
+    },
+    {
+     "title": "한국미드아마추어 골프대회 종료",
+     "date": "2026-04-30",
+     "url": "https://www.verthillcc.co.kr/board/list.asp?type=1"
+    }
+   ],
    "tags": {}
   },
   "review": null,
   "fee_change": null,
-  "collected_at": "2026-11-26T10:25:42+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T22:00:00+09:00",
+  "recent_notice_text": "2026-10-21 아트 골프 카트, 2026-09-17 5인플레이 VIP카트 예약 진행, 2026-04-30 한국미드아마추어 골프대회 종료. 공지 게시판 최신글이 10월 21일자로, 2026년 11~12월 그린피 공지는 아직 없다.",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [
@@ -617,18 +633,24 @@
    "진행 시간",
    "식당"
   ],
-  "sources": []
+  "sources": [
+   {
+    "source": "공식 공지사항(브라우저 확인)",
+    "url": "https://www.verthillcc.co.kr/board/list.asp?type=1",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
-  "official_site": "unavailable",
-  "official_reason": "HTTP0",
-  "pages_collected": 0,
+  "official_site": "ok",
+  "official_reason": "공식 홈페이지 공지사항(verthillcc.co.kr/board/list.asp?type=1) 확인(2026-11-27, 브라우저 직접 접속)",
+  "pages_collected": 2,
   "third_party": {
    "teepick": true,
    "greenfeeguide": false
   },
-  "render_hint": "thin",
-  "plan_strategy": "unreachable(브라우저 재시도)",
+  "render_hint": "browser",
+  "plan_strategy": "browser_check(2026-11-27)",
   "browser_batch": false,
   "browser_pages": 0,
   "browser_pdf": []
@@ -639,7 +661,7 @@
   "fee": 0.0,
   "ops": 0.0,
   "facility": 0.0,
-  "briefing": 0.0,
+  "briefing": 0.5,
   "rental": 0.25
  }
 }

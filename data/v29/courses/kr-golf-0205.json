@@ -49,7 +49,7 @@
    "straight_name": "송추IC"
   },
   "tel": "031-930-1600",
-  "homepage": "http://www.kugolf.co.kr/",
+  "homepage": "https://kugolf.co.kr/",
   "operators": [
    "학교법인 건국대학교"
   ],
@@ -449,8 +449,44 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
-   "items": [],
+   "url": "https://kugolf.co.kr/board/notice",
+   "items": [
+    {
+     "title": "2026년 12월 2차 이용요금",
+     "date": "2026-11-10",
+     "url": "https://kugolf.co.kr/board/notice"
+    },
+    {
+     "title": "2026년 12월 1차 이용요금",
+     "date": "2026-11-10",
+     "url": "https://kugolf.co.kr/board/notice"
+    },
+    {
+     "title": "2027년 신규 연단체 추가 모집 안내",
+     "date": "2026-11-06",
+     "url": "https://kugolf.co.kr/board/notice"
+    },
+    {
+     "title": "2026년 11월 2차 이용요금",
+     "date": "2026-11-04",
+     "url": "https://kugolf.co.kr/board/notice"
+    },
+    {
+     "title": "2026년 11월 1차 이용요금",
+     "date": "2026-10-08",
+     "url": "https://kugolf.co.kr/board/notice"
+    },
+    {
+     "title": "2026년 10월 이용요금",
+     "date": "2026-09-10",
+     "url": "https://kugolf.co.kr/board/notice"
+    },
+    {
+     "title": "그린 통기작업 안내",
+     "date": "2026-09-03",
+     "url": "https://kugolf.co.kr/board/notice"
+    }
+   ],
    "tags": {}
   },
   "review": {
@@ -460,8 +496,8 @@
    "url": "https://teepickgolf.com/course/%EC%8A%A4%EB%A7%88%ED%8A%B8KU"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T09:51:58+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T22:00:00+09:00",
+  "recent_notice_text": "2026-11-10 2026년 12월 1차·2차 이용요금, 2026-11-06 2027년 신규 연단체 추가 모집 안내, 2026-11-04 11월 2차 이용요금, 2026-10-08 11월 1차 이용요금, 2026-09-10 10월 이용요금, 2026-09-03 그린 통기작업 안내. 상단 고정글은 2026년 일반단체 신청·클럽하우스 메뉴.",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [
@@ -477,19 +513,24 @@
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
     "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공식 공지사항(브라우저 확인)",
+    "url": "https://kugolf.co.kr/board/notice",
+    "checked_at": "2026-11-27"
    }
   ]
  },
  "collection": {
-  "official_site": "unavailable",
-  "official_reason": "HTTP0",
-  "pages_collected": 0,
+  "official_site": "ok",
+  "official_reason": "공식 홈페이지 공지사항(kugolf.co.kr/board/notice) 확인(2026-11-27, 브라우저 직접 접속) — http://www.kugolf.co.kr/ 는 https://kugolf.co.kr/ 로 넘어간다",
+  "pages_collected": 2,
   "third_party": {
    "teepick": true,
    "greenfeeguide": true
   },
-  "render_hint": "thin",
-  "plan_strategy": "unreachable(브라우저 재시도)",
+  "render_hint": "browser",
+  "plan_strategy": "browser_check(2026-11-27)",
   "browser_batch": false
  },
  "coverage": {
@@ -498,7 +539,7 @@
   "fee": 0.0,
   "ops": 0.14,
   "facility": 0.0,
-  "briefing": 0.25,
+  "briefing": 0.75,
   "rental": 0.25
  }
 }

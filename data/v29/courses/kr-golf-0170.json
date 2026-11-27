@@ -735,14 +735,30 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
-   "items": [],
+   "url": "https://www.hansung-cc.co.kr/html/members/members01_hcc.asp",
+   "items": [
+    {
+     "title": "2026. 12월 동계 그린피 할인 현황",
+     "date": "2026-11-24",
+     "url": "https://www.hansung-cc.co.kr/html/members/members01_hcc_view.asp?b_idx=270&GotoPage=1"
+    },
+    {
+     "title": "추석맞이 특별세일 8+1",
+     "date": "2026-08-30",
+     "url": "https://www.hansung-cc.co.kr/html/members/members01_hcc_view.asp?b_idx=269&GotoPage=1"
+    },
+    {
+     "title": "여름시즌 대식당 단축메뉴 운영안내",
+     "date": "2026-07-30",
+     "url": "https://www.hansung-cc.co.kr/html/members/members01_hcc_view.asp?b_idx=268&GotoPage=1"
+    }
+   ],
    "tags": {}
   },
   "review": null,
   "fee_change": null,
-  "collected_at": "2026-11-26T09:51:55+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T22:00:00+09:00",
+  "recent_notice_text": "2026-11-24 2026년 12월 동계 그린피 할인 현황, 2026-08-30 추석맞이 특별세일 8+1, 2026-07-30 여름시즌 대식당 단축메뉴 운영안내. 메인 팝업에 2027년 1부 연단체 추가 모집 안내와 12월 동계 그린피 할인 현황이 게시된다.",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [
@@ -758,19 +774,24 @@
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
     "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공식 공지사항(브라우저 확인)",
+    "url": "https://www.hansung-cc.co.kr/html/members/members01_hcc.asp",
+    "checked_at": "2026-11-27"
    }
   ]
  },
  "collection": {
-  "official_site": "unavailable",
-  "official_reason": "HTTP0",
-  "pages_collected": 0,
+  "official_site": "ok",
+  "official_reason": "공식 홈페이지 공지사항(hansung-cc.co.kr) 확인(2026-11-27, 브라우저 직접 접속)",
+  "pages_collected": 2,
   "third_party": {
    "teepick": true,
    "greenfeeguide": true
   },
-  "render_hint": "thin",
-  "plan_strategy": "unreachable(브라우저 재시도)",
+  "render_hint": "browser",
+  "plan_strategy": "browser_check(2026-11-27)",
   "browser_batch": true
  },
  "coverage": {
@@ -779,7 +800,7 @@
   "fee": 1.0,
   "ops": 0.07,
   "facility": 0.1,
-  "briefing": 0.0,
+  "briefing": 0.5,
   "rental": 0.25
  }
 }

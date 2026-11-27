@@ -440,8 +440,34 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
-   "items": [],
+   "url": "https://golf.gtc.co.kr/lounge/lounge_news.asp",
+   "items": [
+    {
+     "title": "12월 티업시간 및 입장요금 할인 안내",
+     "date": "2026-11-24",
+     "url": "https://golf.gtc.co.kr/lounge/lounge_news.asp"
+    },
+    {
+     "title": "2027년 보문골프클럽 연단체 추가 모집 안내",
+     "date": "2026-11-10",
+     "url": "https://golf.gtc.co.kr/lounge/lounge_news.asp"
+    },
+    {
+     "title": "고객 만족도 조사",
+     "date": "2026-11-09",
+     "url": "https://golf.gtc.co.kr/lounge/lounge_news.asp"
+    },
+    {
+     "title": "11월 티업시간 및 입장요금 안내",
+     "date": "2026-10-15",
+     "url": "https://golf.gtc.co.kr/lounge/lounge_news.asp"
+    },
+    {
+     "title": "예약 취소 및 위약 규정 변경 안내",
+     "date": "2026-04-01",
+     "url": "https://golf.gtc.co.kr/lounge/lounge_news.asp"
+    }
+   ],
    "tags": {}
   },
   "review": {
@@ -451,8 +477,8 @@
    "url": "https://teepickgolf.com/course/%EB%B3%B4%EB%AC%B8CC"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T10:28:33+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T22:00:00+09:00",
+  "recent_notice_text": "2026-11-24 12월 티업시간 및 입장요금 할인 안내, 2026-11-10 2027년 보문골프클럽 연단체 추가 모집, 2026-11-09 고객 만족도 조사, 2026-10-15 11월 티업시간 및 입장요금 안내, 2026-04-01 예약 취소 및 위약 규정 변경 안내. 게시판 상단 고정글은 2023-04-13 보문GC 2인 라운드 불가 안내.",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [],
@@ -462,19 +488,24 @@
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
     "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공식 공지사항(브라우저 확인)",
+    "url": "https://golf.gtc.co.kr/lounge/lounge_news.asp",
+    "checked_at": "2026-11-27"
    }
   ]
  },
  "collection": {
-  "official_site": "unavailable",
-  "official_reason": "HTTP0",
-  "pages_collected": 0,
+  "official_site": "ok",
+  "official_reason": "공식(경상북도문화관광공사) 홈페이지 공지사항 확인(2026-11-27, 브라우저 직접 접속)",
+  "pages_collected": 2,
   "third_party": {
    "teepick": true,
    "greenfeeguide": true
   },
-  "render_hint": "thin",
-  "plan_strategy": "thin(상세페이지 탐색)",
+  "render_hint": "browser",
+  "plan_strategy": "browser_check(2026-11-27)",
   "browser_batch": true
  },
  "coverage": {
@@ -483,7 +514,7 @@
   "fee": 1.0,
   "ops": 0.29,
   "facility": 0.1,
-  "briefing": 0.25,
+  "briefing": 0.75,
   "rental": 0.75
  }
 }
