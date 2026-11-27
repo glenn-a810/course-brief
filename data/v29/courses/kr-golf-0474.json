@@ -61,7 +61,8 @@
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
   "batch3_patch": "2026-11-27 배치3 보완: 1개 항목(공식 홈페이지·공개 요금 안내 기준, 미확인 값 생성 없음)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "user_supplement_batch3_2026_11_27": "2차(일반 사용자 자료) 배치3(강원·제주) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0474",
@@ -203,8 +204,16 @@
    "evidence": []
   },
   "two_player": {
-   "value": null,
-   "evidence": []
+   "value": "2인 라운딩 불가(1팀 4인 원칙, 5인도 불가)",
+   "evidence": [
+    "1팀 2인 또는 5인 라운딩을 하실 수 없습니다."
+   ],
+   "source_url": "https://www.bella45.com/masters/swp/guide",
+   "source_type": "official_site",
+   "confidence": "high",
+   "value_from": "user_batch3_2026_11_27(원문 재확인)",
+   "source_date": "2026-11-27(확인일)",
+   "checked_at": "2026-11-27"
   },
   "three_player": {
    "value": null,

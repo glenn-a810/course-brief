@@ -28,6 +28,19 @@
      "verified": "3자(원더골프·10월 요금표) 기준",
      "result": "3자 출처",
      "url": "https://wondergolf.co.kr/courses/wolsongri-cc"
+    },
+    {
+     "field": "course.length_m",
+     "received": null,
+     "verified": 5487,
+     "result": "보완",
+     "url": "https://blog.naver.com/floggolfnote/224435753694",
+     "quote": "전장은 5,487m로 짧은 편이에요.",
+     "source_type": "blog_round_review",
+     "source_date": "2026-10-08",
+     "confidence": "low",
+     "checked_at": "2026-11-27",
+     "note": "2차 사용자 자료 배치3(강원·제주)"
     }
    ]
   },
@@ -43,7 +56,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "user_supplement_batch3_2026_11_27": "2차(일반 사용자 자료) 배치3(강원·제주) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0436",
@@ -154,7 +168,8 @@
    ]
   },
   "kga_hole_est": 18,
-  "extra_courses": null
+  "extra_courses": null,
+  "length_m": 5487
  },
  "fee": {
   "weekday": 130000,

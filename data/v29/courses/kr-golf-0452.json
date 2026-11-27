@@ -83,7 +83,8 @@
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
   "batch3_patch": "2026-11-27 배치3 보완: 1개 항목(공식 홈페이지·공개 요금 안내 기준, 미확인 값 생성 없음)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "user_supplement_batch3_2026_11_27": "2차(일반 사용자 자료) 배치3(강원·제주) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0452",
@@ -226,8 +227,16 @@
    "evidence": []
   },
   "two_player": {
-   "value": null,
-   "evidence": []
+   "value": "1팀 3~4인 기준 기본, 2인 이용 시 추가금·예약 제한 가능(사전 문의)",
+   "evidence": [
+    "1팀당 3~4인 기준 플레이가 기본이며, 2인 이용 시 추가금 발생 및 예약 제한이 있을 수 있으니 사전에 문의하시는 게 좋습니다."
+   ],
+   "source_url": "https://blog.naver.com/seo-juni/224367212378",
+   "source_type": "blog_review",
+   "confidence": "low",
+   "value_from": "user_batch3_2026_11_27(원문 재확인)",
+   "source_date": "2026-08-04",
+   "checked_at": "2026-11-27"
   },
   "three_player": {
    "value": "가능(1인 20,000원 추가)",

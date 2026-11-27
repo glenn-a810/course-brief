@@ -58,6 +58,19 @@
      "source_type": "third_party",
      "confidence": "high",
      "checked_at": "2026-11-27"
+    },
+    {
+     "field": "course.length_m",
+     "received": null,
+     "verified": 6904,
+     "result": "보완",
+     "url": "http://www.ardenhill.co.kr/swp/course",
+     "quote": "코스전장 연장길이 6,904 x 7,550",
+     "source_type": "official_site",
+     "source_date": "2026-11-27(확인일)",
+     "confidence": "high",
+     "checked_at": "2026-11-27",
+     "note": "2차 사용자 자료 배치3(강원·제주) · 원문 표기 '6,904m(7,550야드)' → 정수(m)로 정제"
     }
    ]
   },
@@ -72,7 +85,8 @@
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
   "batch3_patch": "2026-11-27 배치3 보완: 3개 항목(공식 홈페이지·공개 요금 안내 기준, 미확인 값 생성 없음)",
   "pass2_patch": "2026-11-27 2차 보완 패스: 요금 확인일·출처 기록 갱신(값 변경 없음)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "user_supplement_batch3_2026_11_27": "2차(일반 사용자 자료) 배치3(강원·제주) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0408",
@@ -164,7 +178,8 @@
   },
   "kga_hole_est": 18,
   "extra_courses": null,
-  "par": 72
+  "par": 72,
+  "length_m": 6904
  },
  "fee": {
   "weekday": 160000,
@@ -217,8 +232,16 @@
  },
  "ops": {
   "nocaddie": {
-   "value": null,
-   "evidence": []
+   "value": "노캐디 라운딩 가능(노캐디 타임 한정, 2026-11-06 여행사 안내 기준)",
+   "evidence": [
+    "현재 기준으로 라온 · 아덴힐 · 에코랜드 · 해비치 제주 · 롯데스카이힐 제주에서 노캐디로 칠 수 있어요."
+   ],
+   "source_url": "https://www.anyjeju.com/play-2.html",
+   "source_type": "travel_site",
+   "confidence": "medium",
+   "value_from": "user_batch3_2026_11_27(원문 재확인)",
+   "source_date": "2026-11-06",
+   "checked_at": "2026-11-27"
   },
   "two_player": {
    "value": "불가(1팀 3~4인 원칙, 일부 자료 2인 가능·요금 별도 문의)",

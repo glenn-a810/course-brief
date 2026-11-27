@@ -108,6 +108,19 @@
      "source_type": "official_site",
      "confidence": "high",
      "checked_at": "2026-11-27"
+    },
+    {
+     "field": "course.night_light",
+     "received": null,
+     "verified": "야간 라운드 운영(야간 셀프 라운드 병행)",
+     "result": "보완",
+     "url": "https://blog.naver.com/choe6/224433261018",
+     "quote": "야간 셀프 라운드도 운영하는 구장이라 그런지 시스템이 완벽했습니다.",
+     "source_type": "blog_round_review",
+     "source_date": "2026-10-06",
+     "confidence": "low",
+     "checked_at": "2026-11-27",
+     "note": "2차 사용자 자료 배치3(강원·제주)"
     }
    ]
   },
@@ -126,7 +139,8 @@
   "batch3_patch": "2026-11-27 배치3 보완: 2개 항목(공식 홈페이지·공개 요금 안내 기준, 미확인 값 생성 없음)",
   "pass2_patch": "2026-11-27 2차 보완 패스: 1개 항목(그린피가이드·1박2일골프·원더골프·공식 홈페이지 대조, 미확인 값 생성 없음)",
   "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
-  "batch3_supplement_2026_11_27": "누락 필드 보완 배치3(강원·제주) 검수 반영"
+  "batch3_supplement_2026_11_27": "누락 필드 보완 배치3(강원·제주) 검수 반영",
+  "user_supplement_batch3_2026_11_27": "2차(일반 사용자 자료) 배치3(강원·제주) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0434",
@@ -202,7 +216,7 @@
   "holes_received": 18,
   "course_names": null,
   "membership_type": "대중제",
-  "night_light": null,
+  "night_light": "야간 라운드 운영(야간 셀프 라운드 병행)",
   "blocks": [],
   "grass": {
    "tee": null,

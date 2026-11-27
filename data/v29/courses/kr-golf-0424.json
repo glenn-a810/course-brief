@@ -55,7 +55,8 @@
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
   "batch3_patch": "2026-11-27 배치3 보완: 2개 항목(공식 홈페이지·공개 요금 안내 기준, 미확인 값 생성 없음)",
   "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
-  "batch3_supplement_2026_11_27": "누락 필드 보완 배치3(강원·제주) 검수 반영"
+  "batch3_supplement_2026_11_27": "누락 필드 보완 배치3(강원·제주) 검수 반영",
+  "user_supplement_batch3_2026_11_27": "2차(일반 사용자 자료) 배치3(강원·제주) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0424",
@@ -173,20 +174,44 @@
   "checked_at": "2026-11-27"
  },
  "cancel": {
-  "cancel_policy": null,
+  "cancel_policy": {
+   "value": "평일 3일 전·주말 4일 전까지 위약 없이 취소, 주말 3~2일 전 10%·1일 전 20%·당일·노쇼 30% 위약금, 월 4회 이상 취소 시 3개월 예약정지",
+   "source": "블로그(공개 정리글)",
+   "url": "https://blog.naver.com/sbj533/224395136421",
+   "source_date": "2026-08-30",
+   "checked_at": "2026-11-27"
+  },
   "open_cycle": "매월 1일 익월 전체 오픈(온라인 09:00, 유선 10:00)",
   "notes": "티오프 30분 전까지 입장·프론트 접수. 명의 도용·시간 미준수 시 제재 조항 있음",
-  "evidence": [],
+  "evidence": [
+   "평일 3일 전 위약 없음 주말 4일 전 위약 없음 주말 3일 전·2일 전 팀 이용요금의 10% 1일 전 팀 이용요금의 20% 당일 취소·노쇼 팀 이용요금의 30%"
+  ],
   "weather_evidence": []
  },
  "ops": {
   "nocaddie": {
-   "value": null,
-   "evidence": []
+   "value": "노캐디 가능(AI캐디·셀프 전동카트 이용, 티타임 한정)",
+   "evidence": [
+    "AI캐디나 셀프 전동카트를 이용하는 노캐디 운영이 있습니다."
+   ],
+   "source_url": "https://blog.naver.com/sbj533/224395136421",
+   "source_type": "blog_review",
+   "confidence": "low",
+   "value_from": "user_batch3_2026_11_27(원문 재확인)",
+   "source_date": "2026-08-30",
+   "checked_at": "2026-11-27"
   },
   "two_player": {
-   "value": null,
-   "evidence": []
+   "value": "2인 플레이 가능(공식 2인 골프 안내 공지, 날짜·시간별 조건 확인)",
+   "evidence": [
+    "공식 홈페이지에 2인 골프 안내 공지가 게시되어 있습니다."
+   ],
+   "source_url": "https://blog.naver.com/sbj533/224395136421",
+   "source_type": "blog_review",
+   "confidence": "low",
+   "value_from": "user_batch3_2026_11_27(원문 재확인)",
+   "source_date": "2026-08-30",
+   "checked_at": "2026-11-27"
   },
   "three_player": {
    "value": null,

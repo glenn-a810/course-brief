@@ -110,7 +110,8 @@
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
   "batch3_patch": "2026-11-27 배치3 보완: 2개 항목(공식 홈페이지·공개 요금 안내 기준, 미확인 값 생성 없음)",
   "pass2_patch": "2026-11-27 2차 보완 패스: 4개 항목(그린피가이드·1박2일골프·원더골프·공식 홈페이지 대조, 미확인 값 생성 없음)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "user_supplement_batch3_2026_11_27": "2차(일반 사용자 자료) 배치3(강원·제주) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0440",
@@ -251,10 +252,19 @@
   }
  },
  "cancel": {
-  "cancel_policy": null,
-  "open_cycle": null,
+  "cancel_policy": {
+   "value": "주말 이용 4일 전·주중 이용 3일 전 17시까지 취소 가능(주말 3일 전 취소는 10%) — 이후 2일 전 10%·1일 전 20%·당일·노쇼 30%, 위약금은 그린피 정상가 기준",
+   "source": "공식 홈페이지",
+   "url": "https://www.high1.com/golf/contents.do?key=760",
+   "source_date": "2026-11-27(확인일)",
+   "checked_at": "2026-11-27"
+  },
+  "open_cycle": "매주 화요일 정기예약 접수(약 3개월 전 일정) — 같은 페이지에 '매월 1일 10:00 오픈' 안내도 병존",
   "notes": null,
-  "evidence": [],
+  "evidence": [
+   "※ 예약취소는 경기일 기준 주말(4일전),주중(3일전) 17시까지 취소해야 합니다.",
+   "정기예약 접수일자-예약접수일(매주 화요일) (https://www.high1.com/golf/contents.do?key=760)"
+  ],
   "weather_evidence": []
  },
  "ops": {
@@ -271,8 +281,16 @@
    "evidence": []
   },
   "five_player": {
-   "value": null,
-   "evidence": []
+   "value": "5인 플레이 불가(1팀 4인 기준)",
+   "evidence": [
+    "1팀 4인 (5인 플레이 불가)"
+   ],
+   "source_url": "https://www.high1.com/golf/contents.do?key=760",
+   "source_type": "official_site",
+   "confidence": "high",
+   "value_from": "user_batch3_2026_11_27(원문 재확인)",
+   "source_date": "2026-11-27(확인일)",
+   "checked_at": "2026-11-27"
   },
   "marshal_caddie": {
    "value": null,
