@@ -64,6 +64,12 @@ export function fmtPct(x: number | null | undefined): string {
   return Math.round(Number(x) * 100) + "%";
 }
 
+/** 바이트 크기 → KB. index.json 처럼 실제 파일 크기를 보여줄 때 쓴다 */
+export function fmtKB(bytes: number): string {
+  if (!Number.isFinite(bytes) || bytes <= 0) return "—";
+  return (bytes / 1024).toFixed(1) + "KB";
+}
+
 export type BadgeTone = "ok" | "warn" | "danger" | "info" | "neutral";
 
 export interface StatusMeta {

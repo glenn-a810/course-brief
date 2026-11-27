@@ -233,15 +233,24 @@ def build(src: str, out_root: str) -> dict:
     status_counts = collections.Counter(c["master"].get("status") for c in courses)
     sido_counter = collections.Counter()
     sido_meta = {}
+    sido_labels = collections.defaultdict(collections.Counter)
     for c in courses:
         r = c["master"].get("region") or {}
         code = r.get("sido_code")
         sido_counter[code] += 1
-        sido_meta[code] = {"code": code, "name": r.get("sido_name"), "short": r.get("sido_short")}
+        sido_meta[code] = {"code": code, "name": r.get("sido_name")}
+        if r.get("sido_short"):
+            sido_labels[code][r["sido_short"]] += 1
 
     sido_list = []
-    for code, meta in sorted(sido_meta.items(), key=lambda kv: (-sido_counter[kv[0]], kv[1]["short"] or "")):
-        sido_list.append({**meta, "count": sido_counter[code]})
+    sido_shorts = {
+        code: "·".join(label for label, _ in sorted(labels.items(), key=lambda kv: -kv[1]))
+        for code, labels in sido_labels.items()
+    }
+    for code, meta in sorted(sido_meta.items(), key=lambda kv: (-sido_counter[kv[0]], sido_shorts.get(kv[0], ""))):
+        # 통합특별시(전남·광주)처럼 한 코드에 약칭이 둘 이상이면 둘 다 표기한다.
+        # 하나만 남기면 다른 지역 44곳이 그 라벨 아래 보이지 않는다.
+        sido_list.append({**meta, "short": sido_shorts.get(code, ""), "count": sido_counter[code]})
 
     clusters = []
     for cl in data.get("facility_clusters", []):

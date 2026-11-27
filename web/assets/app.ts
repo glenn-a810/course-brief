@@ -9,6 +9,7 @@ import type {
   CourseStatus,
   CoverageArea,
   DatasetCounts,
+  ExtraCourse,
   FacilityKey,
   FeeTableRow,
   NearbyDeliveryProvider,
@@ -22,7 +23,7 @@ import type {
 } from "../../shared/types";
 import { createSearchAdapter } from "./search.js";
 import {
-  STATUS, badge, debounce, esc, fmtDate, fmtNum, fmtPct, fmtWon, isCourseStatus, isMissing, statusOf, textOf,
+  STATUS, badge, debounce, esc, fmtDate, fmtKB, fmtNum, fmtPct, fmtWon, isCourseStatus, isMissing, statusOf, textOf,
 } from "./util.js";
 import type { BadgeTone } from "./util.js";
 
@@ -81,6 +82,9 @@ interface Filters {
   status: Set<CourseStatus>;
 }
 
+/** 그린피 요약값과 그 값이 어느 요일 기준인지 함께 들고 다닌다(주말가가 없으면 주중가로 대체) */
+type FeeKind = "weekday" | "weekend";
+
 interface CourseGroup {
   key: string;
   name: string;
@@ -88,6 +92,8 @@ interface CourseGroup {
   members: CourseIndexItem[];
   holes: number;
   fee: number | null;
+  /** fee 가 주말가인지 주중가인지. 라벨을 값 출처에 맞춰 표기한다 */
+  feeKind: FeeKind | null;
   sido: string;
   sigungu: string;
   statuses: CourseStatus[];
@@ -190,13 +196,13 @@ function buildStaticUI(): void {
   const d = getIndex().dataset;
   $<HTMLElement>("#hero-count").textContent = String(d.counts.total);
   $<HTMLElement>("#footer-meta").textContent =
-    `${d.version} · ${d.built_at?.slice(0, 10).replaceAll("-", ".") || ""} 기준 · ${d.counts.total}곳 (상세 ${d.counts.with_detail} / 요약 ${d.counts.master_only})`;
+    `${d.version} · ${fmtDate(d.built_at)} 기준 · ${d.counts.total}곳 (상세 ${d.counts.with_detail} / 요약 ${d.counts.master_only})`;
 
   const sel = $<HTMLSelectElement>("#f-sido");
   for (const s of state.sido) {
     const o = document.createElement("option");
     o.value = s.code;
-    o.textContent = `${s.short || s.name} (${s.count})`;
+    o.textContent = `${sidoLabel(s)} (${s.count})`;
     sel.appendChild(o);
   }
   const chips = $<HTMLElement>("#status-chips");
@@ -209,8 +215,18 @@ function buildStaticUI(): void {
 }
 
 /* ---------------- 상태·URL ---------------- */
+/**
+ * 지역 셀렉트 라벨. 코드 12는 전남·광주 통합특별시라 데이터 약칭이 한쪽만 남는데,
+ * 그대로 쓰면 전남 44곳이 '광주' 하나로 가려지므로 두 지역명을 함께 표기한다.
+ */
+function sidoLabel(s: SidoInfo): string {
+  if (s.code === "12") return "전남·광주";
+  return s.short || s.name;
+}
+
+/** `#/?q=…` 의 쿼리만 읽는다. 상세 영역 앵커(`#/c/x#s3`)가 붙어도 안전하게 */
 function readHashQuery(): URLSearchParams {
-  const hash = location.hash.replace(/^#/, "");
+  const hash = location.hash.replace(/^#/, "").split("#")[0];
   const qi = hash.indexOf("?");
   if (qi < 0) return new URLSearchParams();
   return new URLSearchParams(hash.slice(qi + 1));
@@ -275,22 +291,35 @@ function buildGroups(courses: CourseIndexItem[]): CourseGroup[] {
   for (const [key, members] of grouped) {
     const cluster = key.startsWith("id:") ? null : state.clusters.get(key) ?? null;
     const holes = members.reduce((a, m) => a + (m.holes ?? 0), 0);
-    const fees = members
-      .map((m) => m.green_fee?.weekend ?? m.green_fee?.weekday)
-      .filter((v): v is number => v != null);
+    const cheapest = cheapestFee(members);
     groups.push({
       key,
       name: cluster?.name || members[0].name,
       cluster,
       members: members.sort((a, b) => (b.holes ?? 0) - (a.holes ?? 0)),
       holes,
-      fee: fees.length ? Math.min(...fees) : null,
+      fee: cheapest?.value ?? null,
+      feeKind: cheapest?.kind ?? null,
       sido: members[0].sido,
       sigungu: [...new Set(members.map((m) => m.sigungu).filter(Boolean))].join(", "),
       statuses: [...new Set(members.map((m) => m.status))],
     });
   }
   return groups;
+}
+
+/** 그룹 안에서 가장 싼 그린피와 그 요일 구분. 주말가가 없으면 주중가를 쓴다 */
+function cheapestFee(members: CourseIndexItem[]): { value: number; kind: FeeKind } | null {
+  let best: { value: number; kind: FeeKind } | null = null;
+  for (const m of members) {
+    const weekend = m.green_fee?.weekend;
+    const weekday = m.green_fee?.weekday;
+    const pick: { value: number; kind: FeeKind } | null = weekend != null
+      ? { value: weekend, kind: "weekend" }
+      : weekday != null ? { value: weekday, kind: "weekday" } : null;
+    if (pick && (best === null || pick.value < best.value)) best = pick;
+  }
+  return best;
 }
 
 function passesFilters(c: CourseIndexItem): boolean {
@@ -365,9 +394,15 @@ function cardHTML(g: CourseGroup): string {
   const s = g.statuses.length === 1 ? g.statuses[0] : "operating";
   const st = statusOf(s);
   const fee = g.fee;
+  // 라벨은 값의 출처를 따른다 — 주말가가 없어 주중가를 쓴 카드에 '주말'을 붙이면 오표기가 된다
+  const feeLabel = g.feeKind === "weekday" ? "주중" : "주말";
+  // 폐업·휴업 구장의 요금은 마지막 확인값이다. 예약 가능한 정상가처럼 보이지 않게 표기한다
+  const stale = g.statuses.every((x) => x === "closed" || x === "suspended");
   const feeLine = fee == null
     ? `<span>그린피 <b>미확인</b></span>`
-    : `<span>주말 <b>${fmtWon(fee)}</b>~</span>`;
+    : stale
+      ? `<span class="fee-stale">마지막 확인 · ${feeLabel} <b>${fmtWon(fee)}</b></span>`
+      : `<span>${feeLabel} <b>${fmtWon(fee)}</b>~</span>`;
   const title = g.members.length > 1 ? `${g.name} (${g.holes}홀)` : g.name;
   const sub = g.members.length > 1
     ? g.members.map((m) => `${m.name} ${m.holes ? m.holes + "홀" : ""}`.trim()).join(" + ")
@@ -423,6 +458,9 @@ function cardHTML(g: CourseGroup): string {
 }
 
 /* ---------------- 상세 ---------------- */
+/** 현재 상세 DOM 에 그려진 구장 id. 같은 구장의 영역 앵커 이동은 다시 그리지 않는다 */
+let renderedDetailId: string | null = null;
+
 async function renderDetail(id: string): Promise<void> {
   const index = getIndex();
   const course = index.courses.find((c) => c.id === id);
@@ -479,7 +517,8 @@ async function renderDetail(id: string): Promise<void> {
              : `<span class="tag">${esc(o.name)}</span>`).join("")}</div>` : ""}
     </div>` : "";
 
-  const nav = `
+  // 요약 데이터만 있는 구장은 s1 하나뿐이라 7개 영역 내비를 두면 죽은 링크가 된다
+  const nav = !detail ? "" : `
     <nav class="section-nav" aria-label="상세 영역">
       <a href="#/c/${esc(id)}#s1">기본·입지</a>
       <a href="#/c/${esc(id)}#s2">코스 스펙</a>
@@ -496,7 +535,14 @@ async function renderDetail(id: string): Promise<void> {
       마스터 정보(주소·좌표·홀수·상태)는 위에 표시된 값이 전부입니다.</div></div></section>`;
 
   $<HTMLElement>("#view-detail").innerHTML = `<div class="detail">${head}${clusterBox}${nav}${body}</div>`;
+  renderedDetailId = id;
   window.scrollTo({ top: 0 });
+}
+
+/** 상세 영역 앵커(`#/c/{id}#s3`) 이동. 상세를 그린 뒤라야 대상 섹션이 DOM 에 있다 */
+function scrollToSection(section: string): void {
+  const target = document.getElementById(section);
+  if (target) target.scrollIntoView({ block: "start" });
 }
 
 function shortUrl(u: string): string {
@@ -529,6 +575,31 @@ function evidenceDetails(evidence: unknown, label = "근거"): string {
 
 function kvRow(label: string, value: string, sub = ""): string {
   return `<div class="kv"><dt>${esc(label)}</dt><dd>${value}${sub ? `<span class="sub">${sub}</span>` : ""}</dd></div>`;
+}
+
+/** 추가 코스는 객체 배열이다. 그대로 String() 하면 '[object Object]' 가 되므로 필드별로 편다 */
+function extraCoursesHTML(list: Array<ExtraCourse | string>): string {
+  return list.map((raw) => {
+    const x: ExtraCourse = typeof raw === "string" ? { name: raw } : raw;
+    const title = [x.name ?? "추가 코스", x.holes ? `${x.holes}홀` : "", x.type ?? ""]
+      .filter(Boolean).join(" · ");
+    const facts = [
+      x.open_hours ? `운영 ${x.open_hours}` : "",
+      x.closed ? `휴장 ${x.closed}` : "",
+      x.tel ? `전화 ${x.tel}` : "",
+      x.fee ? `요금 ${x.fee}` : "",
+    ].filter(Boolean).join(" · ");
+    return `<div class="extra-course">
+      <strong>${esc(title)}</strong>
+      ${facts ? `<div class="sub">${esc(facts)}</div>` : ""}
+      ${x.note ? `<div class="sub">${esc(x.note)}</div>` : ""}
+    </div>`;
+  }).join("");
+}
+
+/** '미확인 N개' 목록은 기본 접힘으로 두어 본문 가독성을 지킨다 */
+function unconfirmedList(labels: string[]): string {
+  return `<details class="unconfirmed"><summary>미확인 ${labels.length}개</summary><p>${esc(labels.join(", "))}</p></details>`;
 }
 
 function periodText(period: AlertPeriod | string | null | undefined): string {
@@ -629,7 +700,7 @@ function sections(d: CourseDetail, c: CourseIndexItem): string {
       ${kvRow("야간 라운드", isMissing(co.night_light) ? "미확인" : esc(textOf(co.night_light)))}
       ${grassRows}
       ${co.kga_hole_est ? kvRow("KGA 추정 홀수", esc(String(co.kga_hole_est))) : ""}
-      ${co.extra_courses ? kvRow("추가 코스", esc(textOf(co.extra_courses))) : ""}
+      ${(co.extra_courses ?? []).length ? kvRow("추가 코스", extraCoursesHTML(co.extra_courses ?? [])) : ""}
       ${kgaHTML ? `<div>${kgaHTML}</div>` : ""}
       ${co.hole_by_hole ? `<details class="ev"><summary>홀별 파·거리 보기</summary><pre class="pre">${esc(JSON.stringify(co.hole_by_hole, null, 1))}</pre></details>` : ""}
     </div>
@@ -711,7 +782,7 @@ function sections(d: CourseDetail, c: CourseIndexItem): string {
     <p class="section-desc">노캐디·인원·카트·체크인처럼 예약 전에 알아야 하는 실제 플레이 조건.</p>
     <div class="section-body">
       ${opsRows.join("") || `<div class="callout">공식 채널에서 확인된 운영 정보가 아직 없습니다. 아래 항목은 전화·현장 확인이 필요합니다.</div>`}
-      ${opsUnknown.length ? `<p class="unconfirmed-line">미확인 ${opsUnknown.length}개: ${esc(opsUnknown.join(", "))}</p>` : ""}
+      ${opsUnknown.length ? unconfirmedList(opsUnknown) : ""}
     </div>
   </section>`;
 
@@ -731,7 +802,7 @@ function sections(d: CourseDetail, c: CourseIndexItem): string {
     <p class="section-desc">연습·식음·락카·숙박·야간 조명 등 라운드 환경.</p>
     <div class="section-body">
       ${facRows.join("") || `<div class="callout">확인된 부대시설 정보가 없습니다.</div>`}
-      ${facUnknown.length ? `<p class="unconfirmed-line">미확인 ${facUnknown.length}개: ${esc(facUnknown.join(", "))}</p>` : ""}
+      ${facUnknown.length ? unconfirmedList(facUnknown) : ""}
       ${(fac.gf_facilities ?? []).length ? `<p class="section-desc">참고: ${esc((fac.gf_facilities ?? []).slice(0, 3).join(" / "))}</p>` : ""}
     </div>
   </section>`;
@@ -758,7 +829,7 @@ function sections(d: CourseDetail, c: CourseIndexItem): string {
         ${period ? `<div class="sub">기간: ${esc(period)}</div>` : ""}
         ${alert.source_url ? `<div class="sub"><a href="${esc(alert.source_url)}" target="_blank" rel="noopener noreferrer">근거 보기</a></div>` : ""}
       </div>` : ""}
-      ${br.review ? kvRow("라운더 평가", `${fmtNum(br.review.score_10, 1)} / 10${br.review.count ? ` · ${fmtNum(br.review.count)}건` : ""}`, esc(br.review.note || br.review.source || "")) : ""}
+      ${br.review && br.review.score_10 != null ? kvRow("라운더 평가", `${fmtNum(br.review.score_10, 1)} / 10${br.review.count ? ` · ${fmtNum(br.review.count)}건` : ""}`, esc(br.review.note || br.review.source || "")) : ""}
       ${br.course_notes ? kvRow("코스 메모", esc(br.course_notes)) : ""}
       ${br.recent_notice_text ? kvRow("공지 요약", esc(br.recent_notice_text)) : ""}
       <div>
@@ -768,7 +839,7 @@ function sections(d: CourseDetail, c: CourseIndexItem): string {
       ${noticeTags && Object.keys(noticeTags).length ? `<div class="tags">${Object.entries(noticeTags).slice(0, 6).map(([tag, arr]) =>
         `<span class="tag">${esc(tag)} ${Array.isArray(arr) ? arr.length : ""}</span>`).join("")}</div>` : ""}
       ${noticeUrl ? `<p class="section-desc">공지 게시판: ${/^https?:/.test(noticeUrl) ? `<a href="${esc(noticeUrl)}" target="_blank" rel="noopener noreferrer">${esc(shortUrl(noticeUrl))}</a>` : "수집 아카이브"}</p>` : ""}
-      ${(br.unconfirmed ?? []).length ? `<p class="unconfirmed-line">아직 확인되지 않은 항목 ${(br.unconfirmed ?? []).length}개: ${esc((br.unconfirmed ?? []).slice(0, 14).join(", "))}</p>` : ""}
+      ${(br.unconfirmed ?? []).length ? unconfirmedList((br.unconfirmed ?? []).slice(0, 14)) : ""}
       ${br.collected_at ? `<p class="section-desc">수집 ${fmtDate(br.collected_at)}</p>` : ""}
       ${(br.sources ?? []).length ? `<p class="section-desc">출처: ${(br.sources ?? []).slice(0, 5).map((u) => /^https?:/.test(u) ? `<a href="${esc(u)}" target="_blank" rel="noopener noreferrer">${esc(shortUrl(u))}</a>` : esc(u)).join(" · ")}</p>` : ""}
     </div>
@@ -879,8 +950,12 @@ function renderRental(): void {
 
 /* ---------------- 데이터 소개 ---------------- */
 function renderAbout(): void {
-  const d = getIndex().dataset;
+  const index = getIndex();
+  const d = index.dataset;
   const c = d.counts;
+  // 서버가 내보내는 index.json 은 minify 된 JSON 이므로 바이트 길이가 실제 파일 크기와 같다.
+  // 문자열 length 는 한글을 1자로 세어 실제보다 작게 나온다(175KB vs 199.9KB).
+  const indexBytes = new TextEncoder().encode(JSON.stringify(index)).length;
   $<HTMLElement>("#view-page").innerHTML = `<div class="page">
     <h1>데이터</h1>
     <p class="page-lead">CourseBrief는 골프장 공식 홈페이지·공지·요금표를 직접 수집하고 공개 데이터와 대조해 7개 영역으로 정리합니다. 모든 값에는 출처와 확인 시점이 붙습니다.</p>
@@ -916,7 +991,7 @@ function renderAbout(): void {
 
     <h2 class="h2">구조</h2>
     <div class="stack">
-      <p><code>data/v29/index.json</code> — 목록·검색·필터용 경량 인덱스 ${Math.round(JSON.stringify(getIndex()).length / 1024)}KB, 전체 ${c.total}곳</p>
+      <p><code>data/v29/index.json</code> — 목록·검색·필터용 경량 인덱스 ${fmtKB(indexBytes)}, 전체 ${c.total}곳</p>
       <p><code>data/v29/courses/{id}.json</code> — 구장별 상세 12키 JSON ${c.total}개</p>
       <p><code>data/v29/clusters.json</code> — 같은 부지 복수 코스 시설 클러스터</p>
       <p><code>elasticsearch/</code> — nori 한글 분석기 매핑·bulk 적재·docker-compose·ES 어댑터(선택)</p>
@@ -927,7 +1002,7 @@ function renderAbout(): void {
       <strong>참고 데이터입니다</strong>
       요금·운영 정보는 수집 시점의 공개 정보이며, 골프장 정책에 따라 수시로 바뀝니다. 예약·결제 전 반드시 공식 채널에서 최종 확인하세요. 이 사이트는 예약을 대행하지 않습니다.
     </div>
-    <p class="section-desc" style="margin-top:16px">${esc(d.version)} · ${esc(d.built_at || "")} · <a href="${REPO_URL}" target="_blank" rel="noopener noreferrer">GitHub 저장소</a> · <a href="${REPO_URL}/blob/main/data/v29/schema.md" target="_blank" rel="noopener noreferrer">스키마 문서</a></p>
+    <p class="section-desc" style="margin-top:16px">${esc(d.version)} · ${esc(fmtDate(d.built_at))} 기준 · <a href="${REPO_URL}" target="_blank" rel="noopener noreferrer">GitHub 저장소</a> · <a href="${REPO_URL}/blob/main/data/v29/schema.md" target="_blank" rel="noopener noreferrer">스키마 문서</a></p>
   </div>`;
   window.scrollTo({ top: 0 });
 }
@@ -943,15 +1018,22 @@ function showView(name: ViewName): void {
 }
 
 async function route(): Promise<void> {
-  const hash = location.hash || "#/";
-  const path = hash.replace(/^#/, "").split("?")[0];
+  const hash = (location.hash || "#/").replace(/^#/, "");
+  // `#/c/{id}#s3` 처럼 상세 영역 앵커가 붙으면 두 번째 `#` 뒤가 섹션 id 다.
+  // 이걸 분리하지 않으면 id 가 'kr-golf-0498#s3' 가 되어 상세가 '찾을 수 없습니다'로 깨진다.
+  const anchorAt = hash.indexOf("#");
+  const section = anchorAt >= 0 ? hash.slice(anchorAt + 1) : "";
+  const path = (anchorAt >= 0 ? hash.slice(0, anchorAt) : hash).split("?")[0];
 
   if (path.startsWith("/c/")) {
-    showView("detail");
     const id = decodeURIComponent(path.slice(3));
-    await renderDetail(id);
+    const needsRender = id !== renderedDetailId || $<HTMLElement>("#view-detail").hidden;
+    showView("detail");
+    if (needsRender) await renderDetail(id);
+    if (section) scrollToSection(section);
     return;
   }
+  renderedDetailId = null;
   if (path === "/rental") {
     showView("page");
     document.querySelector<HTMLElement>('[data-nav="rental"]')?.setAttribute("aria-current", "page");
@@ -1041,7 +1123,15 @@ function wire(): void {
   });
   document.addEventListener("click", (ev) => {
     const target = ev.target;
+    if (!(target instanceof Element)) return;
     if (target instanceof HTMLElement && target.id === "empty-reset") resetFilters();
+    // 같은 영역을 다시 누르면 해시가 그대로라 hashchange 가 없다 — 직접 스크롤한다
+    const link = target.closest<HTMLAnchorElement>(".section-nav a");
+    const href = link?.getAttribute("href");
+    if (link && href && href === location.hash) {
+      ev.preventDefault();
+      scrollToSection(href.slice(href.lastIndexOf("#") + 1));
+    }
   });
 }
 
