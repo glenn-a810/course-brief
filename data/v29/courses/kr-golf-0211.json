@@ -14,7 +14,8 @@
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
   "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
-  "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
+  "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영",
+  "user_supplement_batch1245_2026_11_27": "2차(일반 사용자 자료) 배치1·2·4·5 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0211",
@@ -410,18 +411,25 @@
   "par": 72
  },
  "fee": {
-  "weekday": null,
+  "weekday": 100000,
   "weekend": null,
   "weekday_text": null,
   "weekend_text": null,
-  "basis": null,
+  "basis": "1인·18홀 비회원(공개 요금 정보, 블로그·후기 인용)",
   "tax_included": null,
   "cart": null,
   "caddie": null,
-  "as_of": null,
-  "source_url": null,
-  "note": null,
-  "sources": [],
+  "as_of": "2026-11",
+  "source_url": "https://blog.naver.com/tscharger01/224466765277",
+  "note": "주중 1부 100,000/110,000원, 2부 120,000/130,000원",
+  "sources": [
+   {
+    "source": "블로그(공개 정리글)",
+    "url": "https://blog.naver.com/tscharger01/224466765277",
+    "checked_at": "2026-11-27",
+    "note": "주중 1부: 10만 원 / 11만 원 주중 2부: 12만 원 / 13만 원"
+   }
+  ],
   "checked_at": "2026-11-27",
   "market": {
    "weekday_min": null,
@@ -434,16 +442,30 @@
   }
  },
  "cancel": {
-  "cancel_policy": null,
+  "cancel_policy": {
+   "value": "주중 3일 전, 주말·공휴일 4일 전 18:00까지 취소 시 위약 없음",
+   "source": "블로그(공개 정리글)",
+   "url": "https://blog.naver.com/tscharger01/224466765277",
+   "checked_at": "2026-11-27"
+  },
   "open_cycle": "포천: 매주 화요일 오전 10시에 3주 후 일주일(월~일)분 예약 오픈. 회원 가입 후 예치금 납입(유료회원) 시 예약 가능",
   "notes": null,
-  "evidence": [],
+  "evidence": [
+   "공식 안내상 위약 없이 취소하려면 주중 3일 전, 주말·공휴일 4일 전 오후 6시까지 취소해야 합니다."
+  ],
   "weather_evidence": []
  },
  "ops": {
   "nocaddie": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "④ 셀프라운드(노캐디) - 베어코스 예약 시 ‘베어"
+   ],
+   "value": "셀프라운드(노캐디) 선택 가능(베어코스 예약 시)",
+   "source_url": "https://blog.naver.com/speciallifecity/224364029385",
+   "source_type": "blog",
+   "confidence": "medium",
+   "value_from": "user_batch2_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "two_player": {
    "evidence": [

@@ -14,7 +14,8 @@
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
   "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
-  "batch1_supplement_2026_11_27": "누락 필드 보완 배치1(수도권 A) 검수 반영"
+  "batch1_supplement_2026_11_27": "누락 필드 보완 배치1(수도권 A) 검수 반영",
+  "user_supplement_batch1245_2026_11_27": "2차(일반 사용자 자료) 배치1·2·4·5 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0072",
@@ -95,23 +96,30 @@
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": null,
-  "par": null
+  "length_m": 6047,
+  "par": 72
  },
  "fee": {
-  "weekday": null,
+  "weekday": 140000,
   "weekend": null,
   "weekday_text": null,
   "weekend_text": null,
-  "basis": null,
+  "basis": "1인·18홀 비회원(공개 요금 정보, 블로그·후기 인용)",
   "tax_included": null,
   "cart": null,
   "caddie": null,
-  "as_of": null,
-  "source_url": null,
-  "note": null,
-  "sources": [],
-  "checked_at": null,
+  "as_of": "2026-04",
+  "source_url": "https://parkgolfinfo.co.kr/%ec%98%a4%eb%a0%8c%ec%a7%80%eb%93%84%ec%8a%a4%ec%98%81%ec%a2%85gc-%ea%b3%a8%ed%94%84%ec%9e%a5-%ec%98%88%ec%95%bd-%ec%a0%84-%ea%bc%ad-%ed%99%95%ec%9d%b8-18%ed%99%80-%ec%9a%94%ea%b8%88%c2%b7%ec%b6%94/",
+  "note": "공식 요금안내 검색 결과 인용. 주중 140,000·주말 179,000원",
+  "sources": [
+   {
+    "source": "블로그(공개 정리글)",
+    "url": "https://parkgolfinfo.co.kr/%ec%98%a4%eb%a0%8c%ec%a7%80%eb%93%84%ec%8a%a4%ec%98%81%ec%a2%85gc-%ea%b3%a8%ed%94%84%ec%9e%a5-%ec%98%88%ec%95%bd-%ec%a0%84-%ea%bc%ad-%ed%99%95%ec%9d%b8-18%ed%99%80-%ec%9a%94%ea%b8%88%c2%b7%ec%b6%94/",
+    "checked_at": "2026-11-27",
+    "note": "공식 요금안내 검색 결과 기준 일반 그린피는 주중 140,000원 / 주말 179,000원입니다"
+   }
+  ],
+  "checked_at": "2026-11-27",
   "market": {
    "weekday_min": 99000,
    "weekend_min": 159000.0,
@@ -125,10 +133,18 @@
   "official_rental": null
  },
  "cancel": {
-  "cancel_policy": null,
-  "open_cycle": null,
+  "cancel_policy": {
+   "value": "주중 예약 취소는 이용 5일 전 17:00까지, 주말·공휴일은 이용 7일 전 17:00까지 사이트에서 직접 취소. 기한이 지나면 전화로만 취소 가능",
+   "source": "블로그(공개 정리글)",
+   "url": "https://m.blog.naver.com/kkal28/223903912118",
+   "checked_at": "2026-11-27"
+  },
+  "open_cycle": "추첨 예약제 — 시즌(3~12월)에는 매주 월요일 06:00~15:00에 3주 후 일주일분 신청, 비시즌(1~2월)에는 2주 후분 신청. 당첨자는 월요일 17:00 문자 통보, 1주 1팀·월 1회 신청 제한",
   "notes": null,
-  "evidence": [],
+  "evidence": [
+   "주중 예약 취소: 이용 5일 전 17시 이전까지 / 주말/공휴일 취소: 이용 7일 전 17시 이전까지 / 기한 내에는 사이트에서 바로 취소가 가능하고, 기한이 지난 경우에는 전화로만 취소 가능",
+   "시즌(3월~12월): 매주 월요일 6시~15시 / 신청 대상: 3주 후 일주일치 (월~일) … 당첨자에게만 월요일 17시에 문자 발송 … 1주 1팀, 월 1회 신청 가능 (https://m.blog.naver.com/kkal28/223903912118)"
+  ],
   "weather_evidence": []
  },
  "ops": {

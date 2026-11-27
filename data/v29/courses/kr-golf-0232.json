@@ -108,7 +108,8 @@
   "batch4_patch": "기존 http://www.clubd.com/boeun 은 404. 공식 클럽디 보은 페이지로 교체",
   "checked_at": "2026-11-27",
   "pass2_patch": "2026-11-27 2차 보완 패스: 6개 항목(그린피가이드·1박2일골프·원더골프·공식 홈페이지 대조, 미확인 값 생성 없음)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "user_supplement_batch1245_2026_11_27": "2차(일반 사용자 자료) 배치1·2·4·5 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0232",
@@ -194,7 +195,12 @@
   "grass": {
    "tee": null,
    "fairway": null,
-   "green": null
+   "green": {
+    "value": "한국잔디",
+    "evidence": "그린 잔디 한국잔디",
+    "source": "공개 자료",
+    "url": "https://tokti.golf/golf/course?ground_idx=16994&lang=ko"
+   }
   },
   "kga": {
    "code": "318",
@@ -209,7 +215,8 @@
   },
   "kga_hole_est": 18,
   "extra_courses": null,
-  "par": 72
+  "par": 72,
+  "length_m": 6163
  },
  "fee": {
   "weekday": 180000,

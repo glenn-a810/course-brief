@@ -13,7 +13,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "user_supplement_batch1245_2026_11_27": "2차(일반 사용자 자료) 배치1·2·4·5 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0209",
@@ -226,7 +227,12 @@
     "source": "공식",
     "url": "http://www.lassagc.com/"
    },
-   "green": null
+   "green": {
+    "value": "벤트그라스",
+    "evidence": "그린 : Bent grass",
+    "source": "블로그(공개 정리글)",
+    "url": "https://blog.naver.com/daharyyo/224444441679"
+   }
   },
   "kga": {
    "kga_course_code": "327",
@@ -504,12 +510,26 @@
    "value_from": "capital_supplement(greenfee_guide)"
   },
   "five_player": {
-   "value": null,
-   "evidence": []
+   "value": "5인 플레이 가능(리무진 카트)",
+   "evidence": [
+    "▶5인 플레이 가능 & 리무진 카트 -5인이 가능한 골프장이 몇 안 되는데, 아주 만족"
+   ],
+   "source_url": "https://blog.naver.com/wc55/224485743503",
+   "source_type": "blog",
+   "confidence": "medium",
+   "value_from": "user_batch2_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "marshal_caddie": {
-   "value": null,
-   "evidence": []
+   "value": "마샬 카트 운영(진행요원이 마샬 카트로 코스 이동)",
+   "evidence": [
+    "동반자가 마샬타고 올 동안 걸어서 레드티로 이동해 티샷을 했어요"
+   ],
+   "source_url": "https://blog.naver.com/daharyyo/224444441679",
+   "source_type": "blog",
+   "confidence": "medium",
+   "value_from": "user_batch2_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "cart_type": {
    "evidence": [
@@ -527,8 +547,15 @@
    "value": null
   },
   "mat": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "▶티박스 : 잔디:매트=6:4 비율 ... 파3에 몇몇개 있었고, 파4에도 종종 보임"
+   ],
+   "value": "티박스 잔디:매트 6:4 비율",
+   "source_url": "https://blog.naver.com/wc55/224485743503",
+   "source_type": "blog",
+   "confidence": "medium",
+   "value_from": "user_batch2_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "checkin": {
    "evidence": [],

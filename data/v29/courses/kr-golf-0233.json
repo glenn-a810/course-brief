@@ -28,7 +28,8 @@
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
   "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
-  "batch4_supplement_2026_11_27": "누락 필드 보완 배치4(충청권) 검수 반영"
+  "batch4_supplement_2026_11_27": "누락 필드 보완 배치4(충청권) 검수 반영",
+  "user_supplement_batch1245_2026_11_27": "2차(일반 사용자 자료) 배치1·2·4·5 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0233",
@@ -111,7 +112,7 @@
   "holes_received": 18,
   "course_names": "18홀",
   "membership_type": "대중제",
-  "night_light": null,
+  "night_light": "야간(3부) 미운영(2026 확인)",
   "blocks": [],
   "grass": {
    "tee": null,
@@ -186,8 +187,15 @@
    "evidence": []
   },
   "two_player": {
-   "value": null,
-   "evidence": []
+   "value": "불가(3인 이상 플레이 원칙)",
+   "evidence": [
+    "3부 야간은 운영하지 않고 3인 이상 플레이가 원칙입니다."
+   ],
+   "source_url": "https://golfjoin.co.kr/golf-courses/clubdisongnisan",
+   "source_type": "골프 예약 플랫폼(조인성공)",
+   "confidence": "medium",
+   "value_from": "user_batch4_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "three_player": {
    "value": null,
@@ -220,8 +228,15 @@
    "evidence": []
   },
   "mat": {
-   "value": null,
-   "evidence": []
+   "value": "일부 홀만 매트(90% 이상 홀은 매트 없는 잔디 티박스)",
+   "evidence": [
+    "90% 이상 홀에서 매트가 아닌 잔디 티박스를 쓴다는 점은 최근 후기에서도 가장 큰 칭찬을 받는 부분입니다."
+   ],
+   "source_url": "https://golfjoin.co.kr/golf-courses/clubdisongnisan",
+   "source_type": "골프 예약 플랫폼(조인성공)",
+   "confidence": "medium",
+   "value_from": "user_batch4_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "checkin": {
    "value": null,

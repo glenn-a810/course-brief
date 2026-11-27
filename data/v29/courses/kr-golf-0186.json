@@ -14,7 +14,8 @@
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
   "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
-  "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
+  "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영",
+  "user_supplement_batch1245_2026_11_27": "2차(일반 사용자 자료) 배치1·2·4·5 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0186",
@@ -92,7 +93,12 @@
   "grass": {
    "tee": null,
    "fairway": null,
-   "green": null
+   "green": {
+    "value": "벤트그라스",
+    "evidence": "그린은 벤트그라스",
+    "source": "블로그(공개 정리글)",
+    "url": "https://blog.naver.com/j-hoo/224411036580"
+   }
   },
   "kga": null,
   "kga_hole_est": null,
@@ -160,8 +166,15 @@
  },
  "ops": {
   "nocaddie": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "이번에는 조금 특별하게 3인 플레이에 노캐디, 오후 5시 20분 티업으로 다녀왔어요."
+   ],
+   "value": "노캐디 라운드 가능(3인)",
+   "source_url": "https://blog.naver.com/aaallzz/224482408574",
+   "source_type": "blog",
+   "confidence": "medium",
+   "value_from": "user_batch2_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "two_player": {
    "evidence": [
@@ -220,8 +233,15 @@
    "value": null
   },
   "mat": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "티박스는 매트도 있고 잔디도 있는데 원하는곳에서 치면 된다."
+   ],
+   "value": "매트·잔디 티박스 중 선택 가능",
+   "source_url": "https://blog.naver.com/bbo-lab/224355473193",
+   "source_type": "blog",
+   "confidence": "medium",
+   "value_from": "user_batch2_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "checkin": {
    "evidence": [],

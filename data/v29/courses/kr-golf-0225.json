@@ -14,7 +14,8 @@
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
   "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
-  "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
+  "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영",
+  "user_supplement_batch1245_2026_11_27": "2차(일반 사용자 자료) 배치1·2·4·5 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0225",
@@ -145,8 +146,15 @@
  },
  "ops": {
   "nocaddie": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "진행방식 : 노캐디 셀프 라운드 또는 카트 운영 방식으로"
+   ],
+   "value": "노캐디 셀프 라운드 또는 카트 운영",
+   "source_url": "https://blog.naver.com/seo-juni/224384696050",
+   "source_type": "blog",
+   "confidence": "medium",
+   "value_from": "user_batch2_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "two_player": {
    "evidence": [],
@@ -184,8 +192,15 @@
    "value": null
   },
   "mat": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "다만 티박스는 전부 매트 였는데 ... ✔️ 티박스는 매트"
+   ],
+   "value": "전 홀 매트 티박스",
+   "source_url": "https://blog.naver.com/228mm/224394594680",
+   "source_type": "blog",
+   "confidence": "medium",
+   "value_from": "user_batch2_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "checkin": {
    "evidence": [],

@@ -14,7 +14,8 @@
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
   "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
-  "batch1_supplement_2026_11_27": "누락 필드 보완 배치1(수도권 A) 검수 반영"
+  "batch1_supplement_2026_11_27": "누락 필드 보완 배치1(수도권 A) 검수 반영",
+  "user_supplement_batch1245_2026_11_27": "2차(일반 사용자 자료) 배치1·2·4·5 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0108",
@@ -559,10 +560,18 @@
   }
  },
  "cancel": {
-  "cancel_policy": null,
-  "open_cycle": null,
+  "cancel_policy": {
+   "value": "회원 예약 기준 — 플레이 7일 전까지 통보 시 정상 취소, 2팀 취소는 10일 전까지. 6일 전 취소 2주 예약정지, 3일 전 취소 3주 예약정지, 1일 전·당일 취소·노쇼는 위약금(주중 72만원·주말 87만원) 또는 한 달 예약정지",
+   "source": "회원권 거래소 공개 자료",
+   "url": "https://www.premiumgolf.co.kr/product/view.html?idx=52",
+   "checked_at": "2026-11-27"
+  },
+  "open_cycle": "회원 예약 기준 — 주중은 4주 전 해당 요일 10:00부터 전화 접수(즉시 배정), 주말은 3주 전 화요일 09:00~16:00 인터넷 접수 후 수요일 14:00 문자 회신",
   "notes": null,
-  "evidence": [],
+  "evidence": [
+   "플레이 7일전까지 통보하여 주시기 바랍니다 … 6일전 취소 2주간 예약정지 … 3일전 취소 3주간 예약정지 … 1일전 취소 위약금 72만원 or 한달 예약정지 … 당일취소 및 NO SHOW 위약금 72만원 or 한달 예약정지",
+   "접수: 4주전 해당요일 10시부터 전화접수 / 주말 접수: 3주전 화요일 09시부터 16시까지 접수(홈페이지 - 인터넷예약) / 예약결과: 수요일 14시 문자회신 (https://www.premiumgolf.co.kr/product/view.html?idx=52)"
+  ],
   "weather_evidence": [
    "악천후로 인한중간 정산기준 입장요금안내 구 분 그린피 비고 1홀~18홀 해당일 적용 그린피×(이용홀수÷18) Tee-Off 기준 경기보조원요금안내 경기보조원 요금안내 구 분 1캐디 2캐디 4BAG 170,000원 340,000원 * 캐디피는 프론트 정산 ( 현금 )입니다.",
    "코스 내 화재예방 및 청결, 비흡연자 배려를 위하여 지정 장소외 흡연을 강력하게 규제하며 위반 시 경기중단 및 내장제한, 담당캐디 업무 제재 조치가 적용되오니 협조하여 주시기 바랍니다."
@@ -588,8 +597,15 @@
    "evidence": []
   },
   "five_player": {
-   "value": null,
-   "evidence": []
+   "value": "불가 — 주중·주말 모두 5인 플레이 불가",
+   "evidence": [
+    "주중,주말 5인play 불가"
+   ],
+   "source_url": "https://www.premiumgolf.co.kr/product/view.html?idx=52",
+   "source_type": "membership_broker",
+   "confidence": "medium",
+   "value_from": "user_batch1_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "marshal_caddie": {
    "value": null,

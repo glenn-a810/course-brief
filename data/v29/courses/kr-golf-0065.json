@@ -14,7 +14,8 @@
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
   "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
-  "batch1_supplement_2026_11_27": "누락 필드 보완 배치1(수도권 A) 검수 반영"
+  "batch1_supplement_2026_11_27": "누락 필드 보완 배치1(수도권 A) 검수 반영",
+  "user_supplement_batch1245_2026_11_27": "2차(일반 사용자 자료) 배치1·2·4·5 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0065",
@@ -596,15 +597,24 @@
  },
  "cancel": {
   "cancel_policy": null,
-  "open_cycle": null,
+  "open_cycle": "매월 1일 오전 10:00에 다음 달 영업일 전체가 열리고, 예약일 하루 전 16:00 마감. 평일은 1인 1일 1팀(월 4회), 주말·공휴일은 1주 1인 1팀(월 2회)",
   "notes": null,
-  "evidence": [],
+  "evidence": [
+   "평일과 주말·공휴일 모두 매월 1일 오전 10시에 다음 달 영업일 전체가 열리고, 예약일 하루 전 오후 4시에 마감합니다. 평일은 하루 1인 1팀(월 4회까지), 주말·공휴일은 1주 1인 1팀(월 2회까지)입니다 (https://roundingday.kr/cc/%EB%B2%A0%EC%96%B4%EC%A6%88%EB%B2%A0%EC%8A%A4%ED%8A%B8%EC%B2%AD%EB%9D%BCgc/)"
+  ],
   "weather_evidence": []
  },
  "ops": {
   "nocaddie": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "운영 방식 | 캐디필수 … 비회원도 온라인 예약이 가능하며, 캐디 필수 운영이므로 예약 시 인원 구성을 미리 확정하시기 바랍니다"
+   ],
+   "value": "불가 — 캐디 필수 운영",
+   "source_url": "https://papahun.com/bearsbestcheongnacc-reservation/",
+   "source_type": "blog",
+   "confidence": "medium",
+   "value_from": "user_batch1_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "two_player": {
    "evidence": [

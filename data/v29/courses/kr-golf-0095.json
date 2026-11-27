@@ -14,7 +14,8 @@
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
   "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
-  "batch1_supplement_2026_11_27": "누락 필드 보완 배치1(수도권 A) 검수 반영"
+  "batch1_supplement_2026_11_27": "누락 필드 보완 배치1(수도권 A) 검수 반영",
+  "user_supplement_batch1245_2026_11_27": "2차(일반 사용자 자료) 배치1·2·4·5 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0095",
@@ -213,12 +214,13 @@
    "source": "공식 홈페이지",
    "url": "https://123golfclub.co.kr/sub/sub0202.php"
   },
-  "open_cycle": null,
+  "open_cycle": "예약 없이 도착순 선착순 — 도착 후 티켓팅·접수 순서로 티업 시간 배정(공식 예약안내). 2023년 기사 기준 오전 5시부터 라운드·연습장 이용권 판매",
   "notes": null,
   "evidence": [
    "환불규정 라운드 티켓 환불은 당일 발행일분만 가능합니다.",
    "골프연습장 환불은 당일 발행일분만 가능합니다.",
-   "입장절차를 마친 이용자가 경기 전 임의로 이용계약을 취소한 경우에는 이용 요금의 50%만 환불됩니다."
+   "입장절차를 마친 이용자가 경기 전 임의로 이용계약을 취소한 경우에는 이용 요금의 50%만 환불됩니다.",
+   "예약을 받지 않고 선착순을 고수한다. 오전 5시에 가면 길게 늘어선 줄을 마주하고 … 선착순으로 티켓을 사면 라운드 시간도 그에 맞춰 예약한다 (http://www.golfissue.com/news/articleView.html?idxno=20397)"
   ],
   "weather_evidence": []
  },
@@ -228,8 +230,15 @@
    "value": null
   },
   "two_player": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "전화로 대기시간을 확인하고 오시면 편리하게 이용하실 수 있습니다. (한 분 오셔도 이용 가능합니다.)"
+   ],
+   "value": "1~2인도 이용 가능(부족 인원은 조인). 공식 이용수칙에 \"한 분 오셔도 이용 가능\" 안내",
+   "source_url": "http://www.123golfclub.co.kr/sub/sub0204.php",
+   "source_type": "official_site",
+   "confidence": "high",
+   "value_from": "user_batch1_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "three_player": {
    "value": null,

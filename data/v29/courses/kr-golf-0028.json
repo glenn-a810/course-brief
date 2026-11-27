@@ -13,7 +13,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "user_supplement_batch1245_2026_11_27": "2차(일반 사용자 자료) 배치1·2·4·5 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0028",
@@ -81,7 +82,7 @@
   "holes_received": null,
   "course_names": null,
   "membership_type": "대중제",
-  "night_light": null,
+  "night_light": "야간(3부) 운영(2026-11 후기)",
   "blocks": [],
   "grass": {
    "tee": null,
@@ -92,8 +93,8 @@
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": null,
-  "par": null
+  "length_m": 6369,
+  "par": 72
  },
  "fee": {
   "weekday": 110000,
@@ -129,15 +130,24 @@
  },
  "cancel": {
   "cancel_policy": null,
-  "open_cycle": null,
+  "open_cycle": "희망일 28일 전 오전 7시부터(1인 1일 1팀)",
   "notes": null,
-  "evidence": [],
+  "evidence": [
+   "개인예약은 희망일 28일 전 오전 7시 티오프 오픈 , 1인 1일 1팀 한정 으로 운영됩니다. (https://parkgolfinfo.co.kr/여수시티파크리조트골프장-예약-전-꼭-확인-18홀-요금/)"
+  ],
   "weather_evidence": []
  },
  "ops": {
   "nocaddie": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "노캐디 라운딩까지 대만족이었던 여수 시티파크 CC"
+   ],
+   "value": "가능 — 노캐디 라운딩",
+   "source_url": "https://golfjang.kr/courses/dbegl-570-여수시티파크/",
+   "source_type": "user_review",
+   "confidence": "low",
+   "value_from": "user_batch5_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "two_player": {
    "evidence": [],
@@ -148,8 +158,15 @@
    "evidence": []
   },
   "five_player": {
-   "value": null,
-   "evidence": []
+   "value": "가능 — 2024년 3월부터 1부·2부 5인 플레이 가능",
+   "evidence": [
+    "2024년 3월부터 1부·2부 5인 플레이 가능 문구가 확인됩니다."
+   ],
+   "source_url": "https://parkgolfinfo.co.kr/여수시티파크리조트골프장-예약-전-꼭-확인-18홀-요금/",
+   "source_type": "blog",
+   "confidence": "medium",
+   "value_from": "user_batch5_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "marshal_caddie": {
    "value": null,

@@ -13,7 +13,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "user_supplement_batch1245_2026_11_27": "2차(일반 사용자 자료) 배치1·2·4·5 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0505",
@@ -204,8 +205,15 @@
    "value": "노캐디 가능 / 팀당 +40,000원"
   },
   "two_player": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "가장 많이 나온 건 2인·노캐디 라운드를 할 수 있다는 이야기로 5편이었어요."
+   ],
+   "value": "가능 — 2인 라운드",
+   "source_url": "https://everysearch.store/golf/써미트cc",
+   "source_type": "review_aggregator",
+   "confidence": "low",
+   "value_from": "user_batch5_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "three_player": {
    "value": null,

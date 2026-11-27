@@ -14,7 +14,8 @@
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
   "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
-  "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
+  "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영",
+  "user_supplement_batch1245_2026_11_27": "2차(일반 사용자 자료) 배치1·2·4·5 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0160",
@@ -165,7 +166,7 @@
   "holes_received": 18,
   "course_names": "동·서 각 9홀",
   "membership_type": "대중제",
-  "night_light": null,
+  "night_light": "야간 라운드·조명 운영(2026-11 후기)",
   "blocks": [],
   "grass": {
    "tee": null,
@@ -174,7 +175,12 @@
     "source": "공식",
     "url": "https://www.ferrumclub.com/information/notice_view.asp?idx=9302&GotoPage=1&search_key=&search_value="
    },
-   "green": null
+   "green": {
+    "value": "크리핑 벤트그라스",
+    "evidence": "그린 : 크리핑 벤트그래스",
+    "source": "블로그(공개 정리글)",
+    "url": "https://blog.naver.com/orangetops/224283334944"
+   }
   },
   "kga": {
    "kga_course_code": "297",
@@ -264,18 +270,25 @@
   "par": 72
  },
  "fee": {
-  "weekday": null,
+  "weekday": 145000,
   "weekend": null,
   "weekday_text": null,
   "weekend_text": null,
-  "basis": null,
+  "basis": "1인·18홀 비회원(공개 요금 정보, 블로그·후기 인용)",
   "tax_included": null,
   "cart": null,
   "caddie": null,
-  "as_of": null,
-  "source_url": null,
-  "note": null,
-  "sources": [],
+  "as_of": "2026-06",
+  "source_url": "https://blog.naver.com/atotravel/224329979912",
+  "note": "18홀 평일 145,000~150,000원",
+  "sources": [
+   {
+    "source": "블로그(공개 정리글)",
+    "url": "https://blog.naver.com/atotravel/224329979912",
+    "checked_at": "2026-11-27",
+    "note": "페럼클럽CC 이용요금 그린피 (18홀 기준) 평일 : 145,000원 ~ 150,000원"
+   }
+  ],
   "checked_at": "2026-11-27",
   "market": {
    "weekday_min": null,
@@ -359,8 +372,15 @@
    "value": null
   },
   "mat": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "티잉 구역은 초록빛 잔디가 유지되고 있었고, 매트로 보호 관리를 하고 있었어요."
+   ],
+   "value": "티잉구역 매트 보호 관리",
+   "source_url": "https://blog.naver.com/qw23er/224487095304",
+   "source_type": "blog",
+   "confidence": "medium",
+   "value_from": "user_batch2_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "checkin": {
    "evidence": [],

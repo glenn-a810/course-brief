@@ -14,7 +14,8 @@
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
   "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
-  "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
+  "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영",
+  "user_supplement_batch1245_2026_11_27": "2차(일반 사용자 자료) 배치1·2·4·5 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0156",
@@ -81,12 +82,17 @@
   "holes_received": 9,
   "course_names": "9홀(파5 3개·파4 4개·파3 2개) · 파 37",
   "membership_type": "대중제",
-  "night_light": null,
+  "night_light": "야간 라운드·조명 운영(2026-11 후기)",
   "blocks": [],
   "grass": {
    "tee": null,
    "fairway": null,
-   "green": null
+   "green": {
+    "value": "벤트그라스",
+    "evidence": "그린에는 벤트그래스(Bent Grass)를 사용하고 있어요",
+    "source": "블로그(공개 정리글)",
+    "url": "https://blog.naver.com/tutor2013/224482599841"
+   }
   },
   "kga": null,
   "kga_hole_est": null,
@@ -187,8 +193,15 @@
    "value": null
   },
   "mat": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "티박스는 매트도 있습니다"
+   ],
+   "value": "일부 홀 매트 티박스 운영",
+   "source_url": "https://blog.naver.com/bangyoungche/224437965079",
+   "source_type": "blog",
+   "confidence": "medium",
+   "value_from": "user_batch2_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "checkin": {
    "evidence": [

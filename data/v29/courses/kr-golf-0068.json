@@ -13,7 +13,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "user_supplement_batch1245_2026_11_27": "2차(일반 사용자 자료) 배치1·2·4·5 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0068",
@@ -165,7 +166,7 @@
   "holes_received": 18,
   "course_names": "동·서 각 9홀",
   "membership_type": "대중제",
-  "night_light": null,
+  "night_light": "야간 라운드 운영(2026-04 확인)",
   "blocks": [],
   "grass": {
    "tee": null,
@@ -174,7 +175,12 @@
     "source": "공식",
     "url": "https://www.golfzoncounty.com/golfclub/useGuide"
    },
-   "green": null
+   "green": {
+    "value": "T1",
+    "evidence": "잔디 | 티박스 - 켄터기 블루 그래스 페어웨이 - 켄터기 블루 그래스/장성중지 그린 - T1",
+    "source": "공식 홈페이지",
+    "url": "https://www.golfzoncounty.com/golfclub/intro?golfclubSeq=68"
+   }
   },
   "kga": {
    "kga_course_code": "424",
@@ -264,11 +270,11 @@
   "par": 72
  },
  "fee": {
-  "weekday": null,
+  "weekday": 139000,
   "weekend": null,
   "weekday_text": null,
   "weekend_text": null,
-  "basis": null,
+  "basis": "1인·18홀 비회원(공개 요금 정보, 블로그·후기 인용)",
   "tax_included": null,
   "cart": {
    "value": 100000,
@@ -285,10 +291,17 @@
    "source": "공식 요금표",
    "none": false
   },
-  "as_of": null,
-  "source_url": null,
-  "note": null,
-  "sources": [],
+  "as_of": "2026-05",
+  "source_url": "https://parkgolfinfo.co.kr/%ea%b3%a8%ed%94%84%ec%a1%b4%ec%b9%b4%ec%9a%b4%ed%8b%b0-%ec%86%a1%eb%8f%84-%ec%98%88%ec%95%bd-%ec%a0%84-%ea%bc%ad-%ed%99%95%ec%9d%b8-%ed%98%84%ec%9e%ac-%ec%9a%b4%ec%98%81%eb%aa%85%c2%b718%ed%99%80/",
+  "note": "2026-05 월별 안내 주중 1부 최저. 1부 139,000~199,000·3부 129,000~179,000원",
+  "sources": [
+   {
+    "source": "블로그(공개 정리글)",
+    "url": "https://parkgolfinfo.co.kr/%ea%b3%a8%ed%94%84%ec%a1%b4%ec%b9%b4%ec%9a%b4%ed%8b%b0-%ec%86%a1%eb%8f%84-%ec%98%88%ec%95%bd-%ec%a0%84-%ea%bc%ad-%ed%99%95%ec%9d%b8-%ed%98%84%ec%9e%ac-%ec%9a%b4%ec%98%81%eb%aa%85%c2%b718%ed%99%80/",
+    "checked_at": "2026-11-27",
+    "note": "2026년 5월 안내 스니펫 기준 주중 1부는 139,000원~199,000원, 2부는 199,000원~239,000원, 3부는 129,000원~179,000원"
+   }
+  ],
   "checked_at": "2026-11-27",
   "market": {
    "weekday_min": 109000.0,
@@ -423,14 +436,20 @@
   }
  },
  "cancel": {
-  "cancel_policy": null,
+  "cancel_policy": {
+   "value": "평일 5일 전 17:00·주말 7일 전 17:00까지 취소 시 위약 없음. 이후 위약금은 팀별 이용요금의 30%",
+   "source": "예약 플랫폼(공개 정책·요금표)",
+   "url": "https://www.golftopia.com/booking/main/introduce/introducePolicy.jsp",
+   "checked_at": "2026-11-27"
+  },
   "open_cycle": "매주 월요일 오전 9시, 오픈 주 포함 4주 뒤 월~일요일 티타임 오픈",
   "notes": "입장 절차 후 임의 취소 시 그린피 50%+카트비, 1~9홀 중단 시 시설이용료+{(그린피-시설이용료)×75%}+카트비, 10~18홀 중단 시 이용요금 100% 정산",
   "evidence": [
    "요금안내 예약안내 취소/위약규정 이용 안내표 카트 사용료 100,000원/팀 캐디피 150,000원/팀 골프채 대여료 풀세트 50,000원 / 퍼터 20,000원 시설 이용료 20,000원 공정거래위원회 약관에 의해 골프장 내장 시 시설 이용료가 부과됩니다.",
    "경기중단 요금안내 라운드일 기준으로 취소 수수료는 아래와 같다.",
    "경기 전 입장절차를 마친 후 임의로 취소한 경우 그린피의 50%+카트비 경기 중 1홀~9홀 라운드 중 임의로 중단한 경우 시설이용료+{(그린피-시설이용료)x75%}+카트비 10홀~18홀 라운드 중 임의로 중단한 경우 이용요금의 100% 강설, 폭우, 안개 등 천재지변 또는 그 밖의 불가항력적인 사유로 입장에 관한 절차를 마친 이용객 팀 전원이 경기를 마치지 못하게 된 경우에는 다음과 같이 이용요금을 부과한다.",
-   "예약 오픈 주기: 매주 월요일 오전 9시, 오픈 주 포함 4주 뒤 월~일요일 티타임 오픈 (https://www.golfzoncounty.com/golfclub/resvGuide)"
+   "예약 오픈 주기: 매주 월요일 오전 9시, 오픈 주 포함 4주 뒤 월~일요일 티타임 오픈 (https://www.golfzoncounty.com/golfclub/resvGuide)",
+   "오렌지듄스(골프존카운티 송도) | 주중 취소·변경 시한 05일 전 17:00 | 주말 07일 전 17:00 | 주중 위약 팀별 이용요금의 30% | 주말 위약 팀별 이용요금의 30%"
   ],
   "weather_evidence": [
    "경기중단 요금안내 라운드일 기준으로 취소 수수료는 아래와 같다."

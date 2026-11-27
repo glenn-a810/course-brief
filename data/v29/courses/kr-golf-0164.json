@@ -14,7 +14,8 @@
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
   "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
-  "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
+  "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영",
+  "user_supplement_batch1245_2026_11_27": "2차(일반 사용자 자료) 배치1·2·4·5 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0164",
@@ -101,7 +102,12 @@
     "source": "그린피가이드(공식 코스소개 인용)",
     "url": "https://greenfeeguide.co.kr/course/gc-0015/"
    },
-   "green": null
+   "green": {
+    "value": "벤트그라스",
+    "evidence": "그린 은 벤트그래스 를 사용하고 있습니다",
+    "source": "블로그(공개 정리글)",
+    "url": "https://blog.naver.com/seaoflover/224482198006"
+   }
   },
   "kga": null,
   "kga_hole_est": null,
@@ -232,8 +238,15 @@
    "value": null
   },
   "mat": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "티박스는 인조잔디 매트에서 치는 구조였다."
+   ],
+   "value": "인조잔디 매트 티박스에서 티샷",
+   "source_url": "https://blog.naver.com/dlfrlwkd262/224462363700",
+   "source_type": "blog",
+   "confidence": "medium",
+   "value_from": "user_batch2_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "checkin": {
    "evidence": [

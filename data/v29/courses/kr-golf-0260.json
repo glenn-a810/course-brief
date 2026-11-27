@@ -30,7 +30,8 @@
   "batch4_patch": "royalforet.com 은 DNS 조회 실패. 로얄포레는 올데이골프그룹 계열로 공식 안내가 alldaygolf.co.kr에서 운영됨(충주시 관광 안내도 동일 URL)",
   "checked_at": "2026-11-27",
   "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
-  "batch4_supplement_2026_11_27": "누락 필드 보완 배치4(충청권) 검수 반영"
+  "batch4_supplement_2026_11_27": "누락 필드 보완 배치4(충청권) 검수 반영",
+  "user_supplement_batch1245_2026_11_27": "2차(일반 사용자 자료) 배치1·2·4·5 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0260",
@@ -221,8 +222,15 @@
    "evidence": []
   },
   "mat": {
-   "value": null,
-   "evidence": []
+   "value": "일부 매트 티박스",
+   "evidence": [
+    "아쉬운 점 그린 관리와 배수 구간의 잔디, 매트 티박스, 라운드 중 코스 작업이 반복적으로 지적되는 부분."
+   ],
+   "source_url": "https://golfjoin.co.kr/golf-courses/royalporecc",
+   "source_type": "골프 예약 플랫폼(조인성공)",
+   "confidence": "medium",
+   "value_from": "user_batch4_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "checkin": {
    "value": null,

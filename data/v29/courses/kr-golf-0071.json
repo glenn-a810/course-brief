@@ -13,7 +13,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "user_supplement_batch1245_2026_11_27": "2차(일반 사용자 자료) 배치1·2·4·5 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0071",
@@ -192,7 +193,7 @@
   "holes_received": 18,
   "course_names": "베르힐·스카이·오션·레이크 각 9홀",
   "membership_type": "대중제",
-  "night_light": null,
+  "night_light": "3부 나이트골프 운영(2026-04 공지 확인)",
   "blocks": [],
   "grass": {
    "tee": null,
@@ -340,10 +341,18 @@
   }
  },
  "cancel": {
-  "cancel_policy": null,
-  "open_cycle": null,
+  "cancel_policy": {
+   "value": "취소 가능 기간은 라운드 7일 전까지이며 이후에는 예약실 전화로만 취소되고 위약이 적용됨. 월 취소 2회까지 가능하고 3회 이상 취소 시 2개월 예약정지",
+   "source": "블로그(공개 정리글)",
+   "url": "https://beomstory.co.kr/%ec%b6%9c%eb%b0%9c-%ec%a0%84%ec%97%90-%ea%bc%ad-%ec%b2%b4%ed%81%ac%ed%95%98%ec%84%b8%ec%9a%94-%ec%98%81%ec%a2%85-%eb%b2%a0%eb%a5%b4%ed%9e%90cc-%ea%b3%a8%ed%94%84%ec%9e%a5-%ec%8b%a4%ec%a0%9c-%ec%a4%80/",
+   "checked_at": "2026-11-27"
+  },
+  "open_cycle": "4주 전 예약분이 주 단위로 열리며, 월요일 09:00에 오픈. 웹 회원가입 후 홈페이지·모바일 실시간 예약",
   "notes": null,
-  "evidence": [],
+  "evidence": [
+   "공식 기준 예약 오픈은 4주 전 월요일 오전 9시, 예약자 필수 내장, 월 취소는 2회까지 가능, 3회 이상 취소 시 2개월 예약 정지입니다. 또 취소 가능 기간은 라운드 7일 전까지",
+   "4주 전 예약으로 주 단위로 열리며, 월요일 9시에 예약이 오픈됩니다. 웹 회원가입 후 홈페이지·모바일 실시간 예약으로 할 수 있습니다 (https://roundingday.kr/cc/%EB%B2%A0%EB%A5%B4%ED%9E%90cc-%EC%98%81%EC%A2%85/)"
+  ],
   "weather_evidence": []
  },
  "ops": {

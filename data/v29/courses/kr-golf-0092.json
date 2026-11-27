@@ -14,7 +14,8 @@
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
   "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
-  "batch1_supplement_2026_11_27": "누락 필드 보완 배치1(수도권 A) 검수 반영"
+  "batch1_supplement_2026_11_27": "누락 필드 보완 배치1(수도권 A) 검수 반영",
+  "user_supplement_batch1245_2026_11_27": "2차(일반 사용자 자료) 배치1·2·4·5 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0092",
@@ -257,8 +258,15 @@
    "value": null
   },
   "mat": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "파 3 : 매트는 없었습니다 … 파 4, 5 : 역시나 매트 없이 관리되고 있었지만"
+   ],
+   "value": "티샷 매트 없음 — 파3·파4·파5 모두 매트 없이 티잉구역 잔디에서 진행",
+   "source_url": "https://9manual.com/entry/%EC%95%84%EB%82%9C%ED%8B%B0%EC%BD%94%EB%93%9Cgc-%EC%9E%A3%EB%82%98%EB%AC%B4-%EB%8A%90%ED%8B%B0%EB%82%98%EB%AC%B4-%EC%BD%94%EC%8A%A4-%EB%9D%BC%EC%9A%B4%EB%93%9C-%ED%9B%84%EA%B8%B0",
+   "source_type": "user_review",
+   "confidence": "low",
+   "value_from": "user_batch1_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "checkin": {
    "evidence": [

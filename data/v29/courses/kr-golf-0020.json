@@ -13,7 +13,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "user_supplement_batch1245_2026_11_27": "2차(일반 사용자 자료) 배치1·2·4·5 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0020",
@@ -188,20 +189,28 @@
  },
  "cancel": {
   "cancel_policy": "1일전 예약취소 : 30점",
-  "open_cycle": null,
+  "open_cycle": "이용예정일 28일 전부터 예약 가능",
   "notes": null,
   "evidence": [
    "- 예약취소 ·",
    "인터넷에서 실시간 예약취소를 할 수 있습니다.",
    "당일 예약취소는 전화로 직접 취소하여 주시기 바랍니다.",
-   "· 1일전 예약취소 : 30점 (출처: http://www.edencc.co.kr/reserve/index.asp, 2026-11-27 확인)"
+   "· 1일전 예약취소 : 30점 (출처: http://www.edencc.co.kr/reserve/index.asp, 2026-11-27 확인)",
+   "공식 이용약관 검색 결과에는 이용예정일 28일 전부터 예약 가능 하다고 나와 있어 (https://parkgolfinfo.co.kr/예약-전에-꼭-확인하세요-보성에덴cc-골프장-위치·예/)"
   ],
   "weather_evidence": []
  },
  "ops": {
   "nocaddie": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "좋았다는 이야기는 2인·노캐디 라운드를 할 수 있다는 점, 코스·그린 관리가 잘 되어 있다는 점이었고"
+   ],
+   "value": "가능 — 노캐디 라운드",
+   "source_url": "https://everysearch.store/golf/보성에덴cc",
+   "source_type": "review_aggregator",
+   "confidence": "low",
+   "value_from": "user_batch5_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "two_player": {
    "evidence": [

@@ -13,7 +13,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "user_supplement_batch1245_2026_11_27": "2차(일반 사용자 자료) 배치1·2·4·5 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0171",
@@ -128,7 +129,12 @@
   "grass": {
    "tee": null,
    "fairway": null,
-   "green": null
+   "green": {
+    "value": "벤트그라스",
+    "evidence": "그린: 벤트그라스",
+    "source": "블로그(공개 정리글)",
+    "url": "https://blog.naver.com/esther_8588/224440056337"
+   }
   },
   "kga": {
    "kga_course_code": "378",
@@ -271,12 +277,26 @@
    "value": null
   },
   "bagdrop": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "★백 드롭 & 실어주는 서비스★ 골프백 하차부터 카트 적재까지 이건 여성 골퍼들에겐 정말 감동 서비스입니다"
+   ],
+   "value": "백 드롭 및 카트 적재 서비스 운영",
+   "source_url": "https://blog.naver.com/88bloger/224400065565",
+   "source_type": "blog",
+   "confidence": "medium",
+   "value_from": "user_batch2_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "mat": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "제가 다녀온 골프장들 중 손에 꼽을 정도로 티박스 상태가 좋았어요. 매트 티 박스가 하나도 없음!! 전 홀 잔디 티박스입니다!!"
+   ],
+   "value": "매트 없이 전 홀 잔디 티박스",
+   "source_url": "https://blog.naver.com/rinastudio_/224313349207",
+   "source_type": "blog",
+   "confidence": "medium",
+   "value_from": "user_batch2_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "checkin": {
    "evidence": [],

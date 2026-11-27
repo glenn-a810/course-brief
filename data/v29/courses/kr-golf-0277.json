@@ -28,7 +28,8 @@
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
   "checked_at": "2026-11-27",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "user_supplement_batch1245_2026_11_27": "2차(일반 사용자 자료) 배치1·2·4·5 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0277",
@@ -111,7 +112,7 @@
   "holes_received": 18,
   "course_names": "18홀",
   "membership_type": "대중제",
-  "night_light": null,
+  "night_light": "야간(3부) 자율 라운드 운영(2026-04부터)",
   "blocks": [],
   "grass": {
    "tee": null,
@@ -183,8 +184,15 @@
  },
  "ops": {
   "nocaddie": {
-   "value": null,
-   "evidence": []
+   "value": "노캐디(셀프) 운영 가능",
+   "evidence": [
+    "캐디 노캐디(셀프) 운영 가능"
+   ],
+   "source_url": "https://www.tgmpark.com/golf-courses/ED8C8CEC9DB8EC8AA4ED86A4cc",
+   "source_type": "골프장 정보 플랫폼(토탈골프 TGM)",
+   "confidence": "medium",
+   "value_from": "user_batch4_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "two_player": {
    "value": "불가(4인 원칙)",

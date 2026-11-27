@@ -14,7 +14,8 @@
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
   "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
-  "batch1_supplement_2026_11_27": "누락 필드 보완 배치1(수도권 A) 검수 반영"
+  "batch1_supplement_2026_11_27": "누락 필드 보완 배치1(수도권 A) 검수 반영",
+  "user_supplement_batch1245_2026_11_27": "2차(일반 사용자 자료) 배치1·2·4·5 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0064",
@@ -354,18 +355,25 @@
   "par": 72
  },
  "fee": {
-  "weekday": null,
+  "weekday": 165000,
   "weekend": null,
   "weekday_text": null,
   "weekend_text": null,
-  "basis": null,
+  "basis": "1인·18홀 비회원(공개 요금 정보, 블로그·후기 인용)",
   "tax_included": null,
   "cart": null,
   "caddie": null,
-  "as_of": null,
-  "source_url": null,
-  "note": null,
-  "sources": [],
+  "as_of": "2026-10",
+  "source_url": "https://www.make2t.kr/2026/11/dreampark-cc-reservation-green-fee-2026.html",
+  "note": "2026-10 공개자료 기준 일반 주중(1인·18홀). 카트 100,000·코스매니저 160,000 별도",
+  "sources": [
+   {
+    "source": "블로그(공개 정리글)",
+    "url": "https://www.make2t.kr/2026/11/dreampark-cc-reservation-green-fee-2026.html",
+    "checked_at": "2026-11-27",
+    "note": "일반 주중 165,000원(1인·18홀) / 일반 주말·공휴일 209,000원 — 2026년 10월 공개자료 기준 일반 그린피"
+   }
+  ],
   "checked_at": "2026-11-27",
   "market": {
    "weekday_min": null,
@@ -380,10 +388,18 @@
   "official_rental": null
  },
  "cancel": {
-  "cancel_policy": null,
-  "open_cycle": null,
+  "cancel_policy": {
+   "value": "예약 취소는 인터넷(24시간, 라운딩일 4일 이전까지) 또는 전화(09:00~17:00)로 가능. 4일 이내 취소·당일 미내장은 위약 대상이고, 당일 미내장은 1년 예약정지. 확정 후 취소 시 주중 1포인트·주말·공휴일 2포인트가 차감되며 환불되지 않음",
+   "source": "블로그(공개 정리글)",
+   "url": "https://papahun.com/%eb%93%9c%eb%a6%bc%ed%8c%8c%ed%81%accc-%ec%98%88%ec%95%bd-%eb%8b%b9%ec%b2%a8%ed%99%95%ec%9d%b8-%eb%b0%a9%eb%b2%95-%ec%9d%b8%ec%a6%9d%eb%b2%88%ed%98%b8-%ec%9e%85%eb%a0%a5%eb%b6%80%ed%84%b0/",
+   "checked_at": "2026-11-27"
+  },
+  "open_cycle": "정기예약은 2주 전 월요일 09:00~17:00에 주중분, 2주 전 화요일 09:00~17:00에 주말·공휴일분을 포인트 추첨으로 접수하고 같은 날 17:00 추첨. 취소분은 매일 15:00 이후 재추첨, 당첨 인증은 16:00까지",
   "notes": null,
-  "evidence": [],
+  "evidence": [
+   "라운딩일 기준 4일 이전까지 취소해야 위약 처리를 피할 수 있다. 4일 이내 취소 또는 당일 미내장 시 위약 대상이 되며, 당일 미내장의 경우 1년간 예약 정지 패널티가 부과된다. 주중 예약 취소는 1포인트, 주말 및 공휴일 예약 취소는 2포인트가 차감",
+   "주중 정기예약 2주 전 월요일 09:00~17:00 / 주말·공휴일 예약 2주 전 화요일 09:00~17:00 / 배정방식 포인트 적용 추첨 / 취소분 재추첨은 매일 오후 3시 이후, 당첨 인증은 오후 4시까지 (https://www.make2t.kr/2026/11/dreampark-cc-reservation-green-fee-2026.html)"
+  ],
   "weather_evidence": []
  },
  "ops": {
@@ -392,8 +408,15 @@
    "value": null
   },
   "two_player": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "기본 4인 라운딩 운영이 원칙이며, 3인 이하 구성은 공식적으로 허용되지 않습니다"
+   ],
+   "value": "불가 — 기본 4인 1팀 운영, 3인 이하 구성은 허용되지 않음",
+   "source_url": "https://papahun.com/%eb%93%9c%eb%a6%bc%ed%8c%8c%ed%81%accc-%ec%98%88%ec%95%bd-%eb%8b%b9%ec%b2%b8%ed%99%95%ec%9d%b8-%eb%b0%a9%eb%b2%95-%ec%9d%b8%ec%a6%9d%eb%b2%88%ed%98%b8-%ec%9e%85%eb%a0%a5%eb%b6%80%ed%84%b0/",
+   "source_type": "blog",
+   "confidence": "medium",
+   "value_from": "user_batch1_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "three_player": {
    "value": null,

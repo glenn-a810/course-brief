@@ -41,7 +41,8 @@
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
   "pass2_patch": "2026-11-27 2차 보완 패스: 요금 확인일·출처 기록 갱신(값 변경 없음)",
   "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
-  "batch4_supplement_2026_11_27": "누락 필드 보완 배치4(충청권) 검수 반영"
+  "batch4_supplement_2026_11_27": "누락 필드 보완 배치4(충청권) 검수 반영",
+  "user_supplement_batch1245_2026_11_27": "2차(일반 사용자 자료) 배치1·2·4·5 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0243",
@@ -128,11 +129,18 @@
   "grass": {
    "tee": null,
    "fairway": null,
-   "green": null
+   "green": {
+    "value": "한국잔디",
+    "evidence": "그린은 한국잔디 특성상 가을 이후 색이 바래고 속도가 느려지는 시기가 있으므로 욕심 없이 그린 중앙을 노리는 전략이 유리합니다.",
+    "source": "공개 자료",
+    "url": "https://golfjoin.co.kr/golf-courses/ekollianjecheon"
+   }
   },
   "kga": null,
   "kga_hole_est": null,
-  "extra_courses": null
+  "extra_courses": null,
+  "length_m": 2824,
+  "par": 36
  },
  "fee": {
   "weekday": 40000,
@@ -194,8 +202,15 @@
    "evidence": []
   },
   "five_player": {
-   "value": null,
-   "evidence": []
+   "value": "불가(3인 이상 4인 이하 원칙)",
+   "evidence": [
+    "3인 이상 4인 이하 원칙. 입장 시 예약자 동반 필요"
+   ],
+   "source_url": "https://wondergolf.co.kr/courses/kr-kakao-18385289",
+   "source_type": "골프 예약 플랫폼(원더골프)",
+   "confidence": "medium",
+   "value_from": "user_batch4_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "marshal_caddie": {
    "value": null,
@@ -214,8 +229,15 @@
    "evidence": []
   },
   "mat": {
-   "value": null,
-   "evidence": []
+   "value": "불가(매트 없는 티박스)",
+   "evidence": [
+    "부담 없는 비용과 매트 없는 티박스, 넓은 페어웨이 덕에 골프 입문자와 실속파에게 인기가 높지만, 인터넷 예약만 가능한 데다 취소 티가 잘 나오지 않아 부킹이 어렵다는 평이 많습니다."
+   ],
+   "source_url": "https://golfjoin.co.kr/golf-courses/ekollianjecheon",
+   "source_type": "골프 예약 플랫폼(조인성공)",
+   "confidence": "medium",
+   "value_from": "user_batch4_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "checkin": {
    "value": null,

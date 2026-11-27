@@ -13,7 +13,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "user_supplement_batch1245_2026_11_27": "2차(일반 사용자 자료) 배치1·2·4·5 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0200",
@@ -146,7 +147,7 @@
   "holes_received": 18,
   "course_names": "동·서 각 9홀",
   "membership_type": "대중제",
-  "night_light": null,
+  "night_light": "false",
   "blocks": [],
   "grass": {
    "tee": null,
@@ -343,8 +344,15 @@
    "value": null
   },
   "mat": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "티박스는 화이트티는 파4와 파3 2-3군데 매트를 이용해야 합니다. 레드티는 파3에만 매트티샷이구요"
+   ],
+   "value": "파3 홀 매트, 파4 일부 매트 티샷",
+   "source_url": "https://blog.naver.com/yunderella_luvgolf/224465617267",
+   "source_type": "blog",
+   "confidence": "medium",
+   "value_from": "user_batch2_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "checkin": {
    "evidence": [

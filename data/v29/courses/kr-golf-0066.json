@@ -13,7 +13,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "user_supplement_batch1245_2026_11_27": "2차(일반 사용자 자료) 배치1·2·4·5 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0066",
@@ -257,9 +258,11 @@
  },
  "cancel": {
   "cancel_policy": null,
-  "open_cycle": null,
+  "open_cycle": "회원 주말 예약은 3주 전 화요일 09:00, 주중은 3주 전 목요일 09:00. 비회원은 2주 전부터 예약 가능(선착순)",
   "notes": null,
-  "evidence": [],
+  "evidence": [
+   "주말 (회원) 3주 전 화요일 9시 / 주중 (회원) 3주 전 목요일 9시 / 비회원 2주 전부터 가능 … 선착순 예약 (https://contents.premium.naver.com/cleek/economiclaboratory/contents/260429101649653lv)"
+  ],
   "weather_evidence": []
  },
  "ops": {

@@ -64,7 +64,8 @@
   "checked_at": "2026-11-27",
   "pass2_patch": "2026-11-27 2차 보완 패스: 3개 항목(그린피가이드·1박2일골프·원더골프·공식 홈페이지 대조, 미확인 값 생성 없음)",
   "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
-  "batch4_supplement_2026_11_27": "누락 필드 보완 배치4(충청권) 검수 반영"
+  "batch4_supplement_2026_11_27": "누락 필드 보완 배치4(충청권) 검수 반영",
+  "user_supplement_batch1245_2026_11_27": "2차(일반 사용자 자료) 배치1·2·4·5 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0266",
@@ -210,12 +211,26 @@
  },
  "ops": {
   "nocaddie": {
-   "value": null,
-   "evidence": []
+   "value": "불가(노캐디 운영 안 함)",
+   "evidence": [
+    "클럽하우스는 규모가 작아 락커룸과 샤워 시설이 컴팩트하며, 노캐디 운영은 하지 않습니다."
+   ],
+   "source_url": "https://golfjoin.co.kr/golf-courses/illebeuncc",
+   "source_type": "골프 예약 플랫폼(조인성공)",
+   "confidence": "medium",
+   "value_from": "user_batch4_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "two_player": {
-   "value": null,
-   "evidence": []
+   "value": "불가(팀 4인 조건, 3인은 인당 주중 2만·주말 4만원 추가)",
+   "evidence": [
+    "팀 4인 조건, 3인 내장 시 인당 추가비용(주중 2만원/주말·공휴일 4만원). 3부 야간라운드·골프텔 패키지는 4인 요금"
+   ],
+   "source_url": "https://wondergolf.co.kr/courses/kr-kakao-1439829278",
+   "source_type": "골프 예약 플랫폼(원더골프)",
+   "confidence": "medium",
+   "value_from": "user_batch4_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "three_player": {
    "value": "가능(주중 2만·주말 4만원 추가)",
@@ -248,8 +263,15 @@
    "evidence": []
   },
   "mat": {
-   "value": null,
-   "evidence": []
+   "value": "일부 티박스 매트 병행",
+   "evidence": [
+    "잔디 티박스는 관리가 잘돼 있으나 일부 티박스는 잔디 교체 중이라 매트와 병행 운영됐습니다."
+   ],
+   "source_url": "https://golfjoin.co.kr/golf-courses/illebeuncc",
+   "source_type": "골프 예약 플랫폼(조인성공)",
+   "confidence": "medium",
+   "value_from": "user_batch4_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "checkin": {
    "value": "티오프 30분 전 도착, 10분 전 스타트·카트 대기",

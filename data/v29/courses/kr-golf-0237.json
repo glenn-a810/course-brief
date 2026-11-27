@@ -28,7 +28,8 @@
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
   "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
-  "batch4_supplement_2026_11_27": "누락 필드 보완 배치4(충청권) 검수 반영"
+  "batch4_supplement_2026_11_27": "누락 필드 보완 배치4(충청권) 검수 반영",
+  "user_supplement_batch1245_2026_11_27": "2차(일반 사용자 자료) 배치1·2·4·5 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0237",
@@ -111,7 +112,7 @@
   "holes_received": 18,
   "course_names": "18홀",
   "membership_type": "대중제",
-  "night_light": null,
+  "night_light": "야간(3부) 운영(2026 확인)",
   "blocks": [],
   "grass": {
    "tee": null,
@@ -171,12 +172,26 @@
  },
  "ops": {
   "nocaddie": {
-   "value": null,
-   "evidence": []
+   "value": "노캐디(셀프) 운영 가능",
+   "evidence": [
+    "캐디 노캐디(셀프) 운영 가능"
+   ],
+   "source_url": "https://www.tgmpark.com/golf-courses/EBAAA8EB8298ED81ACcc",
+   "source_type": "골프장 정보 플랫폼(토탈골프 TGM)",
+   "confidence": "medium",
+   "value_from": "user_batch4_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "two_player": {
-   "value": null,
-   "evidence": []
+   "value": "불가(4인 내장 필수, 비수기 1·2·7·8·12월 예외)",
+   "evidence": [
+    "1일 1인 1팀, 4인 내장 필수(비수기 1·2·7·8·12월 예외). 5인 플레이는 예약실 문의, 단체(3팀 이상) 유선 문의"
+   ],
+   "source_url": "https://wondergolf.co.kr/courses/kr-kakao-990487411",
+   "source_type": "골프 예약 플랫폼(원더골프)",
+   "confidence": "medium",
+   "value_from": "user_batch4_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "three_player": {
    "value": null,
@@ -203,8 +218,15 @@
    "evidence": []
   },
   "mat": {
-   "value": null,
-   "evidence": []
+   "value": "파3 홀 매트 티샷 운영",
+   "evidence": [
+    "화이트 티가 옐로우 박스 위치에 놓여 남성 골퍼는 드라이버 뒤 웨지만 남는다는 불만이 있고, 파3는 매트 티샷으로 운영됩니다."
+   ],
+   "source_url": "https://golfjoin.co.kr/golf-courses/monakeucc",
+   "source_type": "골프 예약 플랫폼(조인성공)",
+   "confidence": "medium",
+   "value_from": "user_batch4_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "checkin": {
    "value": null,

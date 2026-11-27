@@ -41,7 +41,8 @@
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
   "pass2_patch": "2026-11-27 2차 보완 패스: 요금 확인일·출처 기록 갱신(값 변경 없음)",
   "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
-  "batch4_supplement_2026_11_27": "누락 필드 보완 배치4(충청권) 검수 반영"
+  "batch4_supplement_2026_11_27": "누락 필드 보완 배치4(충청권) 검수 반영",
+  "user_supplement_batch1245_2026_11_27": "2차(일반 사용자 자료) 배치1·2·4·5 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0269",
@@ -231,8 +232,15 @@
    "evidence": []
   },
   "mat": {
-   "value": null,
-   "evidence": []
+   "value": "불가(파3 포함 전 홀 천연 잔디 티)",
+   "evidence": [
+    "회원제 골프장과 비교해도 손색없다는 평이 나올 정도로 티잉구역·페어웨이·그린 관리 상태가 최상급이며, 파3 홀은 매트 없이 전 홀 천연 잔디에서 티샷이 가능합니다."
+   ],
+   "source_url": "https://golfjoin.co.kr/golf-courses/kingseudeil",
+   "source_type": "골프 예약 플랫폼(조인성공)",
+   "confidence": "medium",
+   "value_from": "user_batch4_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "checkin": {
    "value": null,

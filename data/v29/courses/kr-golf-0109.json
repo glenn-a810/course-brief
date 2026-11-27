@@ -13,7 +13,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "user_supplement_batch1245_2026_11_27": "2차(일반 사용자 자료) 배치1·2·4·5 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0109",
@@ -95,13 +96,18 @@
   "grass": {
    "tee": null,
    "fairway": null,
-   "green": null
+   "green": {
+    "value": "벤트그라스",
+    "evidence": "페어웨이는 한국잔듸 / 그린은 벤트클라스 로 조성되어 있다",
+    "source": "블로그(공개 정리글)",
+    "url": "https://m.blog.naver.com/zenten63/223986514833"
+   }
   },
   "kga": null,
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": null,
+  "length_m": 5873,
   "par": null
  },
  "fee": {
@@ -188,10 +194,18 @@
   }
  },
  "cancel": {
-  "cancel_policy": null,
-  "open_cycle": null,
+  "cancel_policy": {
+   "value": "예약 취소는 플레이일 기준 6일 전 17:00까지 가능(홈페이지). 단체팀은 플레이 1일 전까지 카카오 채널로 조편성표 제출",
+   "source": "공식 홈페이지",
+   "url": "https://thesiena.co.kr/content/seoulcc_operation_1",
+   "checked_at": "2026-11-27"
+  },
+  "open_cycle": "신규 예약은 매일 09:00에 오픈되어 24시간 홈페이지 예약 가능. 오픈 기준은 주중 플레이일 30일 전, 주말·공휴일 20일 전이고 1일 1팀 선착순",
   "notes": null,
-  "evidence": [],
+  "evidence": [
+   "예약 취소는 플레이일 기준 6일 전 17:00까지 가능합니다 … 단체팀의 경우, 플레이 1일 전까지 더 시에나 서울 컨트리클럽 카카오 채널을 통해 조편성표를 제출",
+   "신규 예약은 매일 오전 9시에 오픈되며, 24시간 동안 홈페이지를 통해 예약이 가능합니다. 예약 오픈 기준 - 주중 : 플레이일 기준 30일 전 - 주말 및 공휴일 : 플레이일 기준 20일 전 … 1일 1팀에 한해 가능 (https://thesiena.co.kr/content/seoulcc_operation_1)"
+  ],
   "weather_evidence": []
  },
  "ops": {
@@ -200,8 +214,15 @@
    "value": null
   },
   "two_player": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "원칙적으로 4인 플레이를 기준으로 운영합니다. 다만, 비수기 또는 골프장 운영 상황에 따라 사전 협의된 경우에 한해 3인 플레이가 제한적으로 허용될 수 있습니다"
+   ],
+   "value": "2인 불가로 안내 — 4인 플레이 원칙, 비수기·운영 상황에 따라 사전 협의 시 3인만 제한 허용",
+   "source_url": "https://thesiena.co.kr/content/seoulcc_operation_1",
+   "source_type": "official_site",
+   "confidence": "high",
+   "value_from": "user_batch1_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "three_player": {
    "value": null,

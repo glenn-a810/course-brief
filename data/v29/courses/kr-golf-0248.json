@@ -73,7 +73,8 @@
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
   "pass2_patch": "2026-11-27 2차 보완 패스: 3개 항목(그린피가이드·1박2일골프·원더골프·공식 홈페이지 대조, 미확인 값 생성 없음)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "user_supplement_batch1245_2026_11_27": "2차(일반 사용자 자료) 배치1·2·4·5 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0248",
@@ -158,7 +159,7 @@
   "holes_received": 27,
   "course_names": "27홀(스카이 코스 등)",
   "membership_type": "회원제",
-  "night_light": null,
+  "night_light": "야간(3부) 운영(2026 확인)",
   "blocks": [],
   "grass": {
    "tee": null,
@@ -244,8 +245,15 @@
    "evidence": []
   },
   "mat": {
-   "value": null,
-   "evidence": []
+   "value": "티박스 매트 사용 홀 있음",
+   "evidence": [
+    "3부까지 운영하면서 티박스 매트 사용 홀이 나오고 시즌에 따라 페어웨이·그린 상태가 들쭉날쭉했다는 후기가 있으며, 2026년 초여름에는 그린 보수 공사로 수리지 구간이 많았다는 언급도 있습니다."
+   ],
+   "source_url": "https://golfjoin.co.kr/golf-courses/ananti-junganggolfclub",
+   "source_type": "골프 예약 플랫폼(조인성공)",
+   "confidence": "medium",
+   "value_from": "user_batch4_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "checkin": {
    "value": "티오프 30분 전 도착(1시간 전 내장 권장)",

@@ -14,7 +14,8 @@
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
   "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
-  "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
+  "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영",
+  "user_supplement_batch1245_2026_11_27": "2차(일반 사용자 자료) 배치1·2·4·5 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0157",
@@ -148,7 +149,12 @@
   "grass": {
    "tee": null,
    "fairway": null,
-   "green": null
+   "green": {
+    "value": "벤트그라스",
+    "evidence": "그린: 벤트그라스",
+    "source": "블로그(공개 정리글)",
+    "url": "https://blog.naver.com/yangpro_golf/224441398508"
+   }
   },
   "kga": {
    "kga_course_code": "173",
@@ -292,8 +298,15 @@
    "value": null
   },
   "bagdrop": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "도착하니 직원들이 빠르고 민첩하게 백드랍받아주니, 나는 주차장에 주차한 후 스마트등록을 마친 후 골프옷으로 갈아입고 스타트하우스쪽으로 이동했다."
+   ],
+   "value": "백 드롭 운영(도착 시 직원이 차량에서 캐디백 인수)",
+   "source_url": "https://blog.naver.com/golfandfood/224357230236",
+   "source_type": "blog",
+   "confidence": "medium",
+   "value_from": "user_batch2_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "mat": {
    "evidence": [],

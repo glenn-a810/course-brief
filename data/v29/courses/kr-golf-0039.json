@@ -13,7 +13,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "user_supplement_batch1245_2026_11_27": "2차(일반 사용자 자료) 배치1·2·4·5 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0039",
@@ -137,10 +138,11 @@
    "source": "그린피가이드(공식 안내 인용)",
    "url": "https://greenfeeguide.co.kr/course/gc-0480/"
   },
-  "open_cycle": null,
+  "open_cycle": "희망일 4주(28일) 전 오전 10시",
   "notes": null,
   "evidence": [
-   "기존 cancel_policy 값이 인접 안내 항목과 뒤섞여 있어(오류) 그린피가이드 원문 인용으로 정정 — 평일 3일 전 · 주말 4일 전까지 (이용약관 기준 — 예약 안내에 더 이른 기한이 따로 있을 수 있으니 함께 확인하세요) (출처: https://greenfeeguide.co.kr/course/gc-0480/, 2026-11 확인)"
+   "기존 cancel_policy 값이 인접 안내 항목과 뒤섞여 있어(오류) 그린피가이드 원문 인용으로 정정 — 평일 3일 전 · 주말 4일 전까지 (이용약관 기준 — 예약 안내에 더 이른 기한이 따로 있을 수 있으니 함께 확인하세요) (출처: https://greenfeeguide.co.kr/course/gc-0480/, 2026-11 확인)",
+   "예약 오픈은 희망일 4주(28일) 전 오전 10시 입니다. (https://parkgolfinfo.co.kr/지금-확인하세요-천지cc-골프장-예약-전-꼭-체크할-요금/)"
   ],
   "weather_evidence": []
  },
@@ -166,8 +168,15 @@
    "evidence": []
   },
   "five_player": {
-   "value": null,
-   "evidence": []
+   "value": "가능 — 팀원 전체 95타 이하, 1일 전까지 전화 신청",
+   "evidence": [
+    "또 5인 플레이는 팀원 전체 95타 이하 조건에 1일 전까지 전화 신청이 있어야 가능하며"
+   ],
+   "source_url": "https://parkgolfinfo.co.kr/지금-확인하세요-천지cc-골프장-예약-전-꼭-체크할-요금/",
+   "source_type": "blog",
+   "confidence": "medium",
+   "value_from": "user_batch5_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "marshal_caddie": {
    "value": null,
@@ -192,8 +201,15 @@
    "value": null
   },
   "mat": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "후기 31편 중 8편은 일부 티는 매트에서 친다고 했어요."
+   ],
+   "value": "일부 티 매트 운영",
+   "source_url": "https://everysearch.store/golf/함평천지cc",
+   "source_type": "review_aggregator",
+   "confidence": "low",
+   "value_from": "user_batch5_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "checkin": {
    "evidence": [],

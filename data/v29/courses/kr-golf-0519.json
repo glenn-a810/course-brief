@@ -13,7 +13,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "user_supplement_batch1245_2026_11_27": "2차(일반 사용자 자료) 배치1·2·4·5 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0519",
@@ -79,34 +80,46 @@
   "holes_received": null,
   "course_names": null,
   "membership_type": "회원제",
-  "night_light": null,
+  "night_light": "야간 라운드·조명 운영(2026-10 후기)",
   "blocks": [],
   "grass": {
    "tee": null,
    "fairway": null,
-   "green": null
+   "green": {
+    "value": "벤트그라스",
+    "evidence": "그린 벤트그라스",
+    "source": "블로그(공개 정리글)",
+    "url": "https://blog.naver.com/wisesarah72/224344490490"
+   }
   },
   "kga": null,
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
   "length_m": 5853,
-  "par": null
+  "par": 72
  },
  "fee": {
-  "weekday": null,
+  "weekday": 140000,
   "weekend": null,
   "weekday_text": null,
   "weekend_text": null,
-  "basis": null,
+  "basis": "1인·18홀 비회원(공개 요금 정보, 블로그·후기 인용)",
   "tax_included": null,
   "cart": null,
   "caddie": null,
-  "as_of": null,
-  "source_url": null,
-  "note": null,
-  "sources": [],
-  "checked_at": null,
+  "as_of": "2026-09",
+  "source_url": "https://blog.naver.com/awesomemomento/224424735845",
+  "note": "비회원 18홀 주중 140,000·공휴일 200,000원, 카트 20,000원",
+  "sources": [
+   {
+    "source": "블로그(공개 정리글)",
+    "url": "https://blog.naver.com/awesomemomento/224424735845",
+    "checked_at": "2026-11-27",
+    "note": "이용 요금(비회원) : 주중 그린피 14만 원 / 공휴일 그린피 20만 원 / 카트비 2만 원"
+   }
+  ],
+  "checked_at": "2026-11-27",
   "market": {
    "weekday_min": null,
    "weekend_min": null,
@@ -158,8 +171,15 @@
    "value": null
   },
   "mat": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "티샷 방식 : 대부분 잔디 티샷 (파3 홀은 매트 티샷)"
+   ],
+   "value": "파3 홀 매트 티샷(나머지 잔디)",
+   "source_url": "https://blog.naver.com/awesomemomento/224424735845",
+   "source_type": "blog",
+   "confidence": "medium",
+   "value_from": "user_batch2_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "checkin": {
    "evidence": [],

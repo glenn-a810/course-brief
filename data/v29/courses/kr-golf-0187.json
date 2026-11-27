@@ -13,7 +13,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "user_supplement_batch1245_2026_11_27": "2차(일반 사용자 자료) 배치1·2·4·5 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0187",
@@ -191,8 +192,15 @@
    "evidence": []
   },
   "five_player": {
-   "value": null,
-   "evidence": []
+   "value": "5인 플레이 가능(리무진 카트)",
+   "evidence": [
+    "해솔리아CC 야간골프/5인플레이/리무진카트 라운딩 후기는 이 포스팅을 확인해 주세요"
+   ],
+   "source_url": "https://blog.naver.com/howgolf_syj/224457903237",
+   "source_type": "blog",
+   "confidence": "medium",
+   "value_from": "user_batch2_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "marshal_caddie": {
    "value": null,
@@ -211,8 +219,15 @@
    "value": null
   },
   "mat": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "일부 티박스 ‘매트’ 사용 이슈 – 매트 노후/높낮이로 미세한 불편 후기가 있음."
+   ],
+   "value": "일부 티박스 매트 운영",
+   "source_url": "https://blog.naver.com/zero6307/223979894658",
+   "source_type": "blog",
+   "confidence": "low",
+   "value_from": "user_batch2_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "checkin": {
    "evidence": [],

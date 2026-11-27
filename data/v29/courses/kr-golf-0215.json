@@ -13,7 +13,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "user_supplement_batch1245_2026_11_27": "2차(일반 사용자 자료) 배치1·2·4·5 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0215",
@@ -87,7 +88,7 @@
   "holes_received": 18,
   "course_names": null,
   "membership_type": "대중제",
-  "night_light": null,
+  "night_light": "야간 라운드·조명 운영(2026-10 후기)",
   "blocks": [],
   "grass": {
    "tee": null,
@@ -102,18 +103,25 @@
   "par": 72
  },
  "fee": {
-  "weekday": null,
+  "weekday": 100000,
   "weekend": null,
   "weekday_text": null,
   "weekend_text": null,
-  "basis": null,
+  "basis": "1인·18홀 비회원(공개 요금 정보, 블로그·후기 인용)",
   "tax_included": null,
   "cart": null,
   "caddie": null,
-  "as_of": null,
-  "source_url": null,
-  "note": null,
-  "sources": [],
+  "as_of": "2026-06",
+  "source_url": "https://blog.naver.com/y870505/224311969674",
+  "note": "평일 100,000~150,000원(티오프 시간대별), 주말·공휴일 150,000원 이상",
+  "sources": [
+   {
+    "source": "블로그(공개 정리글)",
+    "url": "https://blog.naver.com/y870505/224311969674",
+    "checked_at": "2026-11-27",
+    "note": "그린피 주말 및 공휴일 150,000원 이상 평일 100,000원 ~ 150,000원 선 (티오프 시간에 따라 상이)"
+   }
+  ],
   "checked_at": "2026-11-27",
   "market": {
    "weekday_min": 70000,
@@ -168,8 +176,15 @@
    "value": null
   },
   "mat": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "참고로 전 홀 잔디티샷은 아닙니다. 매트티가 있는 홀도 있으니 참고하세요!"
+   ],
+   "value": "일부 홀 매트 티 운영",
+   "source_url": "https://blog.naver.com/daharyyo/224386404966",
+   "source_type": "blog",
+   "confidence": "medium",
+   "value_from": "user_batch2_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "checkin": {
    "evidence": [],

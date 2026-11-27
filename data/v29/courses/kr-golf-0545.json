@@ -8,7 +8,8 @@
   "normalized_at": "2026-11-27T14:40:00+09:00",
   "has_detail": false,
   "v29_patch": "v2.9 N-08 신규 수록",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "user_supplement_batch1245_2026_11_27": "2차(일반 사용자 자료) 배치1·2·4·5 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0545",
@@ -107,30 +108,47 @@
   "hole_by_hole": null
  },
  "fee": {
-  "weekday": null,
+  "weekday": 58000,
   "weekend": null,
   "weekday_text": null,
   "weekend_text": null,
-  "basis": null,
+  "basis": "1인·18홀 비회원(공개 요금 정보, 블로그·후기 인용)",
   "tax_included": null,
   "cart": null,
   "caddie": null,
-  "as_of": null,
-  "source_url": null,
-  "note": null,
-  "sources": []
+  "as_of": "2025-09",
+  "source_url": "https://parkgolfinfo.co.kr/광주체력단련장-골프장공군-예약상세-한눈-가이드/",
+  "note": "민간인 사례요금 평일 58,000·민간인의 날 51,000·휴일 78,000원(9홀)",
+  "sources": [
+   {
+    "source": "블로그(공개 정리글)",
+    "url": "https://parkgolfinfo.co.kr/광주체력단련장-골프장공군-예약상세-한눈-가이드/",
+    "checked_at": "2026-11-27",
+    "note": "민간인 사례요금 : 평일 58,000 , 민간인의 날 51,000 , 휴일 78,000"
+   }
+  ],
+  "checked_at": "2026-11-27"
  },
  "cancel": {
   "cancel_policy": null,
-  "open_cycle": null,
+  "open_cycle": "평일 이용일 15~9일 전 14:00까지 신청, 7일 전 14:00 확정",
   "notes": null,
-  "evidence": [],
+  "evidence": [
+   "평일 : 이용일 15~9일 전 14:00까지 신청 → 7일 전 14:00 확정 (https://parkgolfinfo.co.kr/광주체력단련장-골프장공군-예약상세-한눈-가이드/)"
+  ],
   "weather_evidence": []
  },
  "ops": {
   "nocaddie": {
-   "value": null,
-   "evidence": []
+   "value": "가능 — 노캐디+승용카트",
+   "evidence": [
+    "노캐디+승용카트 운영"
+   ],
+   "source_url": "https://parkgolfinfo.co.kr/광주체력단련장-골프장공군-예약상세-한눈-가이드/",
+   "source_type": "blog",
+   "confidence": "low",
+   "value_from": "user_batch5_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "two_player": {
    "value": null,

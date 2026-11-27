@@ -13,7 +13,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "user_supplement_batch1245_2026_11_27": "2차(일반 사용자 자료) 배치1·2·4·5 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0090",
@@ -560,15 +561,24 @@
    "source": "그린피가이드(공식 인용)",
    "url": "https://greenfeeguide.co.kr/course/gc-0154/"
   },
-  "open_cycle": null,
+  "open_cycle": "플레이일 기준 4주 전부터 예약 오픈(공식 홈페이지·카카오골프). 성수기 주말은 오픈 당일 조기 마감",
   "notes": null,
-  "evidence": [],
+  "evidence": [
+   "베뉴지CC 예약은 공식 홈페이지(venuegcc.com)와 카카오골프 두 채널을 통해 가능하며, 예약 오픈은 플레이 4주 전 기준으로 진행됩니다 … 플레이일 기준 4주 전부터 예약이 오픈됩니다 (https://papahun.com/venuegcc-reservation/)"
+  ],
   "weather_evidence": []
  },
  "ops": {
   "nocaddie": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "비회원제 퍼블릭 골프장으로 회원권 없이 누구나 예약할 수 있으며, 전 코스 캐디 필수 방식으로 운영됩니다"
+   ],
+   "value": "불가 — 전 코스 캐디 필수",
+   "source_url": "https://papahun.com/venuegcc-reservation/",
+   "source_type": "blog",
+   "confidence": "medium",
+   "value_from": "user_batch1_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "two_player": {
    "evidence": [],
@@ -585,8 +595,15 @@
    "evidence": []
   },
   "five_player": {
-   "value": null,
-   "evidence": []
+   "value": "가능 — 예약실을 통해 미리 예약한 경우에만 5인 플레이 가능",
+   "evidence": [
+    "2인 플레이는 원칙적으로 할 수 없습니다. 5인 플레이는 미리 예약실을 통해 예약한 경우에만 가능합니다(홈페이지 기준)"
+   ],
+   "source_url": "https://roundingday.kr/cc/%EB%B2%A0%EB%89%B4%EC%A7%80cc/",
+   "source_type": "blog",
+   "confidence": "low",
+   "value_from": "user_batch1_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "marshal_caddie": {
    "value": null,

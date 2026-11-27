@@ -14,7 +14,8 @@
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
   "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
-  "batch5_supplement_2026_11_27": "누락 필드 보완 배치5(호남권) 검수 반영"
+  "batch5_supplement_2026_11_27": "누락 필드 보완 배치5(호남권) 검수 반영",
+  "user_supplement_batch1245_2026_11_27": "2차(일반 사용자 자료) 배치1·2·4·5 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0003",
@@ -421,11 +422,11 @@
   "par": 72
  },
  "fee": {
-  "weekday": null,
+  "weekday": 160000,
   "weekend": null,
   "weekday_text": null,
   "weekend_text": null,
-  "basis": null,
+  "basis": "1인·18홀 비회원(공개 요금 정보, 블로그·후기 인용)",
   "tax_included": null,
   "cart": {
    "value": 100000,
@@ -442,10 +443,17 @@
    "source": "공식 요금표",
    "none": false
   },
-  "as_of": null,
-  "source_url": null,
-  "note": null,
-  "sources": [],
+  "as_of": "2026-11",
+  "source_url": "https://golfjang.kr/courses/dbegl-597-광주/",
+  "note": "공식 정상가 평일 160,000·주말 200,000원",
+  "sources": [
+   {
+    "source": "예약 플랫폼(공개 정책·요금표)",
+    "url": "https://golfjang.kr/courses/dbegl-597-광주/",
+    "checked_at": "2026-11-27",
+    "note": "공식 정상가 평일 16만원 / 주말 20만원"
+   }
+  ],
   "checked_at": "2026-11-27",
   "market": {
    "weekday_min": null,

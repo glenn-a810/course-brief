@@ -13,7 +13,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "user_supplement_batch1245_2026_11_27": "2차(일반 사용자 자료) 배치1·2·4·5 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0088",
@@ -87,7 +88,12 @@
   "grass": {
    "tee": null,
    "fairway": null,
-   "green": null
+   "green": {
+    "value": "벤트그라스(양잔디)",
+    "evidence": "필드 사용 잔디 - 페어웨이 – 한국형 잔디(중지) - 그린 – 양잔디(벤티그라스)",
+    "source": "블로그(공개 정리글)",
+    "url": "https://twinpapa1.com/%eb%a6%ac%ec%95%a4%eb%a6%accc-%ec%98%88%ec%95%bd-%ea%b7%b8%eb%a6%b0%ed%94%bc-%ec%bd%94%ec%8a%a4-%eb%82%9c%ec%9d%b4%eb%8f%84-%ed%9b%84%ea%b8%b0-%ea%b2%bd%ea%b8%b0-%ea%b0%80%ed%8f%89-%ea%b3%a8%ed%94%84/"
+   }
   },
   "kga": null,
   "kga_hole_est": null,
@@ -157,10 +163,18 @@
   }
  },
  "cancel": {
-  "cancel_policy": null,
-  "open_cycle": null,
+  "cancel_policy": {
+   "value": "평일 07일 전 17:00, 주말 07일 전 17:00까지 취소 시 위약 없음. 이후 평일: 6일전 취소: 1개월 예약정지 5일전 취소: 2개월 예약정지 4일전 취소: 3개월 예약정지 3일전 취소: 4개월 예약정지 2일전 취소: 팀 이용 요금의 10% 1일전 취소: 팀 이용 요금의 20% 당일 미내장 : 팀 이용 요금의 30% / 주말: 6일전 취소: 1개월 예약정지 5일전 취소: 2개월 예약정지 4일전 취소: 3개월 예약정지 3일전 취소: 팀 이용 요금의 10% 2일전 취소: 팀 이용 요금의 10% 1일전 취소: 팀 이용 요금의 20% 당일 미내장 : 팀 이용 요금의 30%",
+   "source": "예약 플랫폼(공개 정책·요금표)",
+   "url": "https://www.golftopia.com/booking/main/introduce/introducePolicy.jsp",
+   "checked_at": "2026-11-27"
+  },
+  "open_cycle": "예약 신청은 3주 전 화요일 09:00~17:00, 확정은 수요일 10:00 이후 확인(확정 시 유선 연락)",
   "notes": null,
-  "evidence": [],
+  "evidence": [
+   "리앤리 | 주중 취소·변경 시한 07일 전 17:00 | 주말 07일 전 17:00 | 주중 위약 6일전 취소: 1개월 예약정지 5일전 취소: 2개월 예약정지 4일전 취소: 3개월 예약정지 3일전 취소: 4개월 예약정지 2일전 취소: 팀 이용 요금의 10% 1일전 취소: 팀 이용 요금의 20% 당일 미내장 : 팀 | 주말 위약 6일전 취소: 1개월 예약정지 5일전 취소: 2개월 예약정지 4일전 취소: 3개월 예약정지 3일전 취소: 팀 이용 요금의 10% 2일전 취소: 팀 이용 요금의 10% 1일전 취소: 팀 이용 요금의 20% 당일 미내장",
+   "예약 신청 3주 전 화요일 오전 9시~오후 5시 / 예약 확정 수요일 오전 10시 이후 확인 가능 … 확정 시 유선 연락을 별도로 주는 경우가 많습니다 (https://contents.premium.naver.com/cleek/economiclaboratory/contents/260518092026152yb)"
+  ],
   "weather_evidence": []
  },
  "ops": {
@@ -169,8 +183,15 @@
    "value": null
   },
   "two_player": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "리앤리CC 는 가끔 2인 플레이 이벤트를 운영합니다 … 상시 운영은 아님 … 여름·추석 연휴 시즌 중심 … 2인 플레이는 스카이 + 레이크 조합으로 배정되는 경우가 많다"
+   ],
+   "value": "이벤트 기간에만 2인 플레이 가능(여름·추석 연휴 중심, 스카이+레이크 조합 배정)",
+   "source_url": "https://contents.premium.naver.com/cleek/economiclaboratory/contents/260518092026152yb",
+   "source_type": "blog",
+   "confidence": "medium",
+   "value_from": "user_batch1_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "three_player": {
    "value": null,

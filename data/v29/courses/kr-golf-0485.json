@@ -13,7 +13,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "user_supplement_batch1245_2026_11_27": "2차(일반 사용자 자료) 배치1·2·4·5 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0485",
@@ -86,7 +87,7 @@
   "holes_received": 9,
   "course_names": "9홀 · 파 36",
   "membership_type": "대중제",
-  "night_light": null,
+  "night_light": "야간 라운드 운영(2024-08 후기)",
   "blocks": [],
   "grass": {
    "tee": null,
@@ -102,7 +103,7 @@
   "extra_courses": null,
   "hole_by_hole": null,
   "length_m": 3296,
-  "par": null
+  "par": 36
  },
  "fee": {
   "weekday": 110000,
@@ -437,13 +438,20 @@
   }
  },
  "cancel": {
-  "cancel_policy": null,
-  "open_cycle": null,
+  "cancel_policy": {
+   "value": "3일 전 취소 팀 이용요금 10%, 1일 전 20%, 당일·노쇼 30% 및 예약정지",
+   "source": "블로그(공개 정리글)",
+   "url": "https://parkgolfinfo.co.kr/더나인-골프클럽-예약요금-상세-퍼블릭골프장-9h-한눈/",
+   "checked_at": "2026-11-27"
+  },
+  "open_cycle": "이용일 4주 전 매일 오전 9시",
   "notes": null,
   "evidence": [
    "무분별한 취소와 양도 및 중복된 계정을 이용한 예약 적발시 무기한 예약정지와 내장정지가 될 수 있음.",
    "로그인 회원가입 사이트맵 SERVICE INFO 이용요금 > SERVICE INFO > 이용요금 BOOKING SERVICE INFO COURSE INTRODUCTION CLUB HOUSE MEMBERSHIP 단체팀 취소 규정 단체팀 취소 또는 변경은 예약일 기준 7일전 17시까지 전화로 가능.",
-   "예) 단체 3팀 예약후 예약일 1일전 1팀 또는 2팀 취소시 1년간 단체예약금지."
+   "예) 단체 3팀 예약후 예약일 1일전 1팀 또는 2팀 취소시 1년간 단체예약금지.",
+   "취소 위약 (예시, 18H/팀): 3일 전 10% , 1일 전 20% , 당일·노쇼 30% + 예약정지 페널티 (해제는 위약금 납부 시)",
+   "예약 오픈 : 이용일 4주 전, 매일 오전 9시 (주중/주말 동일) (https://parkgolfinfo.co.kr/더나인-골프클럽-예약요금-상세-퍼블릭골프장-9h-한눈/)"
   ],
   "weather_evidence": [
    "지정된 흡연 구역을 이용해 주시기바랍니다.( 골프장 코스,클럽하우스,대기광장은 공공시설로 꼭 흡연구역 준수해주시길바랍니다.) 휴장일 안내 정기휴장일 : 설, 추석 명절 당일 * 휴장은 당 클럽 사정과 기상상황에 따라 변경될 수 있습니다."

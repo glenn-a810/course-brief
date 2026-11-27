@@ -119,7 +119,8 @@
   "checked_at": "2026-11-27",
   "pass2_patch": "2026-11-27 2차 보완 패스: 10개 항목(그린피가이드·1박2일골프·원더골프·공식 홈페이지 대조, 미확인 값 생성 없음)",
   "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
-  "batch4_supplement_2026_11_27": "누락 필드 보완 배치4(충청권) 검수 반영"
+  "batch4_supplement_2026_11_27": "누락 필드 보완 배치4(충청권) 검수 반영",
+  "user_supplement_batch1245_2026_11_27": "2차(일반 사용자 자료) 배치1·2·4·5 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0242",
@@ -207,7 +208,12 @@
   "grass": {
    "tee": null,
    "fairway": null,
-   "green": null
+   "green": {
+    "value": "벤트",
+    "evidence": "그린 잔디 벤트",
+    "source": "공개 자료",
+    "url": "https://tokti.golf/golf/course?ground_idx=16699&lang=ko"
+   }
   },
   "kga": {
    "code": "281",
@@ -317,8 +323,15 @@
    "evidence": []
   },
   "mat": {
-   "value": null,
-   "evidence": []
+   "value": "불가(연중 매트 없는 잔디 티박스)",
+   "evidence": [
+    "충북 음성 보현산 자락 해발 250m에 자리한 대중제 27홀로, 전문건설공제조합이 조성하고 양용은 프로가 설계에 참여한 넓은 페어웨이와 큰 그린, 연중 매트 없는 잔디 티박스가 강점인 골프장입니다."
+   ],
+   "source_url": "https://golfjoin.co.kr/golf-courses/coursekacc",
+   "source_type": "골프 예약 플랫폼(조인성공)",
+   "confidence": "medium",
+   "value_from": "user_batch4_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "checkin": {
    "value": "티오프 30분 전까지 내장 등록",

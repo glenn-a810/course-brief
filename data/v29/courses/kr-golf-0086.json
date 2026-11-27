@@ -51,7 +51,8 @@
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
   "pass2_patch": "2026-11-27 2차 보완 패스: 2개 항목(그린피가이드·1박2일골프·원더골프·공식 홈페이지 대조, 미확인 값 생성 없음)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "user_supplement_batch1245_2026_11_27": "2차(일반 사용자 자료) 배치1·2·4·5 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0086",
@@ -149,7 +150,12 @@
   "grass": {
    "tee": null,
    "fairway": null,
-   "green": null
+   "green": {
+    "value": "벤트그라스(투그린)",
+    "evidence": "페어웨이는 켄터키블루그라스, 그린은 벤트그라스이며 투그린 시스템을 운영합니다.",
+    "source": "공개 자료",
+    "url": "https://golfjoin.co.kr/golf-courses/sejongemeoseuncountryclub"
+   }
   },
   "kga": {
    "code": "153",
@@ -199,10 +205,18 @@
   "checked_at": "2026-11-27"
  },
  "cancel": {
-  "cancel_policy": null,
-  "open_cycle": null,
+  "cancel_policy": {
+   "value": "이용일 5일 전 16시 이전까지 취소 가능(이후 2주 예약정지), 1일 전 취소·노쇼는 8주 예약정지(평일 위약금 661,000원·주말 744,000원으로 대체 가능), 월 3회 이상·동일일자 2회 이상 취소는 4주 정지",
+   "source": "공개 자료",
+   "url": "https://chilkka.kr/c/sejong-emerson/",
+   "checked_at": "2026-11-27"
+  },
+  "open_cycle": "평일은 경기일이 속한 주를 제외한 2주 전 화요일 10:00(월~금 동시 오픈), 주말·공휴일은 2주 전 수요일 10:00(토·일 동시 오픈)",
   "notes": "캐디 필수 운영",
-  "evidence": [],
+  "evidence": [
+   "취소 기한: 이용일 5일 전 16시 이전 (이후 취소 시 2주 예약정지) / 위약: 5일 전 16시 이후~2일 전 취소 2주, 1일 전 취소·노쇼 8주 예약정지(8주는 위약금 평일 661,000원/주말·공휴일 744,000원으로 대체 가능). 월 3회↑·동일일자 2회↑ 취소 4주",
+   "평 일 | 경기일이 속한 해당주를 제외한 2주전 화요일 오전 10시에 예약오픈 → 해당 5일분 (월~금) 동시오픈 / 주말 및 공휴일 | 경기일이 속한 해당주를 제외한 2주전 수요일 오전 10시에 예약오픈 → 해당 2일분 (토,일) 동시오픈 (https://www.premiumgolf.co.kr/product/view.html?idx=5)"
+  ],
   "weather_evidence": []
  },
  "ops": {
@@ -211,16 +225,30 @@
    "evidence": []
   },
   "two_player": {
-   "value": null,
-   "evidence": []
+   "value": "조건부 가능(2인 플레이 시 비회원 1명 그린피 부담, 1인·5인 이상 불가)",
+   "evidence": [
+    "1팀 3인 또는 4인 플레이만 가능 (1인, 2인, 5인이상 플레이 불가) → 부득이한경우 2인 플레이시 비회원1명 그린피 부담후 가능"
+   ],
+   "source_url": "https://www.premiumgolf.co.kr/product/view.html?idx=5",
+   "source_type": "골프장 예약 안내(회원권사이트)",
+   "confidence": "medium",
+   "value_from": "user_batch4_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "three_player": {
    "value": null,
    "evidence": []
   },
   "five_player": {
-   "value": null,
-   "evidence": []
+   "value": "불가(1팀 3~4인만 가능)",
+   "evidence": [
+    "1팀 3인 또는 4인 플레이만 가능 (1인, 2인, 5인이상 플레이 불가)"
+   ],
+   "source_url": "https://www.premiumgolf.co.kr/product/view.html?idx=5",
+   "source_type": "골프장 예약 안내(회원권사이트)",
+   "confidence": "medium",
+   "value_from": "user_batch4_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "marshal_caddie": {
    "value": null,

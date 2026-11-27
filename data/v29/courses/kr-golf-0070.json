@@ -14,7 +14,8 @@
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
   "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
-  "batch1_supplement_2026_11_27": "누락 필드 보완 배치1(수도권 A) 검수 반영"
+  "batch1_supplement_2026_11_27": "누락 필드 보완 배치1(수도권 A) 검수 반영",
+  "user_supplement_batch1245_2026_11_27": "2차(일반 사용자 자료) 배치1·2·4·5 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0070",
@@ -321,10 +322,17 @@
   "official_rental": null
  },
  "cancel": {
-  "cancel_policy": null,
+  "cancel_policy": {
+   "value": "비회원 예약금은 평일 3일 전·주말·공휴일 4일 전까지 취소하면 전액 환불, 2일 전 취소는 예약금 50%만 환불되며 그 이후 취소·노쇼는 예약금 미환불. 강설·폭우·안개 등 임시휴장 시 예약금 환불, 경기 중 1번 홀을 마치지 못하면 이용요금 전액 환불",
+   "source": "블로그(공개 정리글)",
+   "url": "https://chilkka.kr/c/jacknicklaus/",
+   "checked_at": "2026-11-27"
+  },
   "open_cycle": null,
   "notes": null,
-  "evidence": [],
+  "evidence": [
+   "이용약관상 비회원 예약금은 주말·공휴일 4일, 평일 3일 전까지 취소하면 모두 돌려받아요 … 비회원은 2일 전 취소 시 예약금 50%만 환불, 2일 전까지 미취소·노쇼 시 예약금 미환불 … 강설·폭우·안개 등으로 임시휴장 시 예약금 환불"
+  ],
   "weather_evidence": []
  },
  "ops": {

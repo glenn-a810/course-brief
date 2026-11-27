@@ -14,7 +14,8 @@
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
   "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
-  "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
+  "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영",
+  "user_supplement_batch1245_2026_11_27": "2차(일반 사용자 자료) 배치1·2·4·5 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0195",
@@ -96,7 +97,7 @@
   "holes_received": null,
   "course_names": null,
   "membership_type": "대중제",
-  "night_light": null,
+  "night_light": "야간 조명 운영(2026-03 후기)",
   "blocks": [],
   "grass": {
    "tee": null,
@@ -145,10 +146,17 @@
   "market": {}
  },
  "cancel": {
-  "cancel_policy": null,
+  "cancel_policy": {
+   "value": "예약일을 제외한 4일 전 15:00까지 취소(이후 위약 규정 적용)",
+   "source": "블로그(공개 정리글)",
+   "url": "https://blog.naver.com/telleverything/224389329483",
+   "checked_at": "2026-11-27"
+  },
   "open_cycle": "회원제 실시간 인터넷 예약: 주중 한달 전 같은 날짜 오전 9시 오픈(회원·사이버회원). 주말 사이버회원은 토요일 기준 2주 전 수요일 오전 9시 오픈, 회원은 2주 전 화요일(09:00~15:00) 인터넷 접수",
   "notes": null,
-  "evidence": [],
+  "evidence": [
+   "취소는 예약일을 제외한 4일 전 15:00까지가 기본이며 세부 위약 규정을 확인해야 합니다."
+  ],
   "weather_evidence": []
  },
  "ops": {

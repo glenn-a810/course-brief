@@ -41,7 +41,8 @@
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
   "pass2_patch": "2026-11-27 2차 보완 패스: 요금 확인일·출처 기록 갱신(값 변경 없음)",
   "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
-  "batch4_supplement_2026_11_27": "누락 필드 보완 배치4(충청권) 검수 반영"
+  "batch4_supplement_2026_11_27": "누락 필드 보완 배치4(충청권) 검수 반영",
+  "user_supplement_batch1245_2026_11_27": "2차(일반 사용자 자료) 배치1·2·4·5 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0276",
@@ -123,7 +124,7 @@
   "holes_received": 9,
   "course_names": "9홀(파36)",
   "membership_type": "대중제",
-  "night_light": null,
+  "night_light": "야간 라운드 운영(LED 조명, 2026 확인)",
   "blocks": [],
   "grass": {
    "tee": null,
@@ -193,8 +194,15 @@
    "evidence": []
   },
   "two_player": {
-   "value": null,
-   "evidence": []
+   "value": "조건부 가능(2인 플레이 가능 시간대 운영)",
+   "evidence": [
+    "2인 플레이가 가능한 시간대가 있어 부부 골퍼에게도 편리합니다."
+   ],
+   "source_url": "https://golfjoin.co.kr/golf-courses/panasia-golfclub",
+   "source_type": "골프 예약 플랫폼(조인성공)",
+   "confidence": "medium",
+   "value_from": "user_batch4_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "three_player": {
    "value": null,
@@ -221,8 +229,15 @@
    "evidence": []
   },
   "mat": {
-   "value": null,
-   "evidence": []
+   "value": "티박스 잔디·매트 혼용",
+   "evidence": [
+    "이용객이 많은 시기에는 페어웨이 디봇이 눈에 띄고, 티박스가 잔디와 매트로 혼용된다는 후기가 있습니다."
+   ],
+   "source_url": "https://golfjoin.co.kr/golf-courses/panasia-golfclub",
+   "source_type": "골프 예약 플랫폼(조인성공)",
+   "confidence": "medium",
+   "value_from": "user_batch4_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "checkin": {
    "value": null,

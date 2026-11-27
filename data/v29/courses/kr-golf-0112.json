@@ -14,7 +14,8 @@
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
   "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
-  "batch1_supplement_2026_11_27": "누락 필드 보완 배치1(수도권 A) 검수 반영"
+  "batch1_supplement_2026_11_27": "누락 필드 보완 배치1(수도권 A) 검수 반영",
+  "user_supplement_batch1245_2026_11_27": "2차(일반 사용자 자료) 배치1·2·4·5 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0112",
@@ -181,20 +182,41 @@
   }
  },
  "cancel": {
-  "cancel_policy": null,
+  "cancel_policy": {
+   "value": "평일·주말 모두 6일 전 17:00까지 취소 시 위약 없음. 4~5일 전 1개월, 2~3일 전 2개월, 1일 전 3개월 예약정지, 1일 전 17시 이후 6개월, 미내장·당일 취소는 영구정지",
+   "source": "예약 플랫폼(공개 정책·요금표)",
+   "url": "https://www.golftopia.com/booking/main/introduce/introducePolicy.jsp",
+   "checked_at": "2026-11-27"
+  },
   "open_cycle": null,
   "notes": null,
-  "evidence": [],
+  "evidence": [
+   "한림광릉 | 주중 취소·변경 시한 06일 전 17:00 | 주말 06일 전 17:00 | 미내장 및 당일 취소 : 영구정지 1일전 취소(17시이후) : 6개월 예약정지 1일전 취소 : 3개월 예약정지 2~3일전 취소 : 2개월 예약정지 4~5일전 취소 : 1개월 예약정지"
+  ],
   "weather_evidence": []
  },
  "ops": {
   "nocaddie": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "퍼블릭 코스는 2인 노캐디 라운딩도 가능해서 언제든지 라운딩 가능합니다 … 노캐디로 운영을 하고 있는 점"
+   ],
+   "value": "퍼블릭 9홀은 노캐디(셀프) 운영",
+   "source_url": "https://seoosport.com/%ed%95%9c%eb%a6%bc-%ea%b4%91%eb%a6%89cc-%ed%8d%bc%eb%b8%94%eb%a6%ad-%ea%b0%80%ea%b2%a9-2%ec%9d%b8-%ea%b7%b8%eb%a6%b0%ed%94%bc-%ec%98%88%ec%95%bd-%ec%bd%94%ec%8a%a4-%ed%9b%84%ea%b8%b0-%ea%b2%bd/",
+   "source_type": "blog",
+   "confidence": "low",
+   "value_from": "user_batch1_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "two_player": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "2인 경기는 불가하고, 부득이 2인 진행 시 추가요금이 적용됩니다 … 퍼블릭은 전화예약으로만 가능하며 주중,주말 모두 2인 이상 예약이 가능"
+   ],
+   "value": "정규 18홀은 2인 불가(부득이 2인 진행 시 추가요금). 별도 퍼블릭 9홀은 2인 이상 예약 가능",
+   "source_url": "https://parkgolfinfo.co.kr/%eb%82%a8%ec%96%91%ec%a3%bc-%ed%95%9c%eb%a6%bc%ea%b4%91%eb%a6%89cc-%ea%b3%a8%ed%94%84%ec%9e%a5-%ec%98%88%ec%95%bd%eb%b0%a9%eb%b2%95-%ec%9a%94%ea%b8%88-18%ed%99%80-%ec%bd%94%ec%8a%a4-%ed%8a%b9/",
+   "source_type": "blog",
+   "confidence": "medium",
+   "value_from": "user_batch1_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "three_player": {
    "value": null,

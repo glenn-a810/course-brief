@@ -14,7 +14,8 @@
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
   "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
-  "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
+  "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영",
+  "user_supplement_batch1245_2026_11_27": "2차(일반 사용자 자료) 배치1·2·4·5 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0509",
@@ -98,7 +99,12 @@
     "source": "공식",
     "url": "https://www.trinityclub.co.kr/member/login"
    },
-   "green": null
+   "green": {
+    "value": "벤트그라스",
+    "evidence": "그린 모두 최고급 벤트그라스 잔디로 양잔디 밀도가 촘촘하여",
+    "source": "블로그(공개 정리글)",
+    "url": "https://blog.naver.com/cjhye6603/224453470648"
+   }
   },
   "kga": null,
   "kga_hole_est": null,
@@ -108,19 +114,26 @@
   "par": null
  },
  "fee": {
-  "weekday": null,
+  "weekday": 300000,
   "weekend": null,
   "weekday_text": null,
   "weekend_text": null,
-  "basis": null,
+  "basis": "1인·18홀 비회원(공개 요금 정보, 블로그·후기 인용)",
   "tax_included": null,
   "cart": null,
   "caddie": null,
-  "as_of": null,
-  "source_url": null,
-  "note": null,
-  "sources": [],
-  "checked_at": null,
+  "as_of": "2025-06",
+  "source_url": "https://blog.naver.com/tablestone_/223897252282",
+  "note": "비회원 주중 300,000원(2025-06 기준)",
+  "sources": [
+   {
+    "source": "블로그(공개 정리글)",
+    "url": "https://blog.naver.com/tablestone_/223897252282",
+    "checked_at": "2026-11-27",
+    "note": "비회원 주중: 30만 원"
+   }
+  ],
+  "checked_at": "2026-11-27",
   "market": {
    "weekday_min": null,
    "weekend_min": null,
@@ -135,9 +148,11 @@
  },
  "cancel": {
   "cancel_policy": null,
-  "open_cycle": null,
+  "open_cycle": "라운드 날짜 기준 2개월 전부터 접수(온라인 실시간 예약 또는 전화·팩스)",
   "notes": null,
-  "evidence": [],
+  "evidence": [
+   "예약 오픈 : 원하는 라운드 날짜 기준 2개월 전부터 접수 가능 ▷ 방법 : 온라인 → reservation 메뉴 클릭 후 실시간 예약 OR 전화(031‑887‑7900) / 팩스(031‑886‑8340)로도 가능 (https://blog.naver.com/tablestone_/223897252282)"
+  ],
   "weather_evidence": []
  },
  "ops": {

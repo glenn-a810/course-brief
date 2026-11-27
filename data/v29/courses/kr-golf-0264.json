@@ -28,7 +28,8 @@
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
   "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
-  "batch4_supplement_2026_11_27": "누락 필드 보완 배치4(충청권) 검수 반영"
+  "batch4_supplement_2026_11_27": "누락 필드 보완 배치4(충청권) 검수 반영",
+  "user_supplement_batch1245_2026_11_27": "2차(일반 사용자 자료) 배치1·2·4·5 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0264",
@@ -190,8 +191,15 @@
  },
  "ops": {
   "nocaddie": {
-   "value": null,
-   "evidence": []
+   "value": "셀프(노캐디) 라운드 옵션 운영",
+   "evidence": [
+    "현대적인 클럽하우스와 큰 프로샵, 깔끔한 락커룸이 회원제 구장의 분위기를 내고, 캐디 친절도와 셀프 라운드 옵션, VIP 카트 등 운영 편의도 갖췄습니다."
+   ],
+   "source_url": "https://golfjoin.co.kr/golf-courses/sigeuneoseucc",
+   "source_type": "골프 예약 플랫폼(조인성공)",
+   "confidence": "medium",
+   "value_from": "user_batch4_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "two_player": {
    "value": null,

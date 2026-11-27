@@ -61,7 +61,8 @@
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
   "pass2_patch": "2026-11-27 2차 보완 패스: 1개 항목(그린피가이드·1박2일골프·원더골프·공식 홈페이지 대조, 미확인 값 생성 없음)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "user_supplement_batch1245_2026_11_27": "2차(일반 사용자 자료) 배치1·2·4·5 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0280",
@@ -144,12 +145,17 @@
   "holes_received": 9,
   "course_names": "9홀(18홀은 2바퀴)",
   "membership_type": "대중제",
-  "night_light": null,
+  "night_light": "야간 라운드 운영(2026 확인)",
   "blocks": [],
   "grass": {
    "tee": null,
    "fairway": null,
-   "green": null
+   "green": {
+    "value": "벤트그라스",
+    "evidence": "티잉그라운드는 켄터키블루그래스, 페어웨이는 한국잔디, 그린은 벤트그래스로 조성되어 있습니다.",
+    "source": "공개 자료",
+    "url": "https://golfjoin.co.kr/golf-courses/eseuaen-golfresort"
+   }
   },
   "kga": {
    "code": "439",
@@ -162,7 +168,9 @@
    ]
   },
   "kga_hole_est": 9,
-  "extra_courses": null
+  "extra_courses": null,
+  "length_m": 3076,
+  "par": 36
  },
  "fee": {
   "weekday": 140000,
@@ -205,8 +213,15 @@
    "evidence": []
   },
   "two_player": {
-   "value": null,
-   "evidence": []
+   "value": "가능(2인 플레이 운영)",
+   "evidence": [
+    "2인 플레이와 야간 라운드도 가능해 소규모 팀에게도 편리합니다."
+   ],
+   "source_url": "https://golfjoin.co.kr/golf-courses/eseuaen-golfresort",
+   "source_type": "골프 예약 플랫폼(조인성공)",
+   "confidence": "medium",
+   "value_from": "user_batch4_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "three_player": {
    "value": null,
@@ -233,8 +248,15 @@
    "evidence": []
   },
   "mat": {
-   "value": null,
-   "evidence": []
+   "value": "레귤러·레드 티 일부 홀 매트 설치",
+   "evidence": [
+    "3부까지 운영하는 만큼 그린이 고르지 않거나 볼이 튀는 구간이 있었다는 후기가 있고, 레귤러·레드 티에 매트가 설치된 홀도 있습니다."
+   ],
+   "source_url": "https://golfjoin.co.kr/golf-courses/eseuaen-golfresort",
+   "source_type": "골프 예약 플랫폼(조인성공)",
+   "confidence": "medium",
+   "value_from": "user_batch4_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "checkin": {
    "value": "티오프 10분 전 담당캐디 미팅",

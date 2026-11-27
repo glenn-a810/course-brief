@@ -14,7 +14,8 @@
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
   "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
-  "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
+  "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영",
+  "user_supplement_batch1245_2026_11_27": "2차(일반 사용자 자료) 배치1·2·4·5 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0180",
@@ -93,7 +94,12 @@
   "grass": {
    "tee": null,
    "fairway": null,
-   "green": null
+   "green": {
+    "value": "펜크로스",
+    "evidence": "그린은 펜크로스 잔디로 조성되었습니다",
+    "source": "블로그(공개 정리글)",
+    "url": "https://blog.naver.com/isi19155/224479168201"
+   }
   },
   "kga": null,
   "kga_hole_est": null,
@@ -235,12 +241,26 @@
    "value": null
   },
   "bagdrop": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "백 드롭을 하고 로비에 들어서면 차분하고 안락한 분위기가 느껴져요"
+   ],
+   "value": "백 드롭 운영(클럽하우스 앞 하차)",
+   "source_url": "https://blog.naver.com/myhandfun/224275169883",
+   "source_type": "blog",
+   "confidence": "medium",
+   "value_from": "user_batch2_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "mat": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "내장객들이 아쉽다고 평가하는 요소는 티잉그라운드에 매트 티샷이 일부 있다는 점 외에는"
+   ],
+   "value": "일부 홀(파3 등) 매트 티샷 운영",
+   "source_url": "https://blog.naver.com/donga_blog/224437822194",
+   "source_type": "blog",
+   "confidence": "medium",
+   "value_from": "user_batch2_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "checkin": {
    "evidence": [],
