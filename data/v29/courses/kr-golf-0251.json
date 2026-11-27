@@ -12,9 +12,54 @@
   ],
   "source": "raw/received_chungcheong_77.json (외부 데이터 수신, 2026-11-26)",
   "review": {
-   "checked_at": null,
+   "checked_at": "2026-11-27",
    "status": "not_crosschecked",
-   "checks": []
+   "checks": [
+    {
+     "field": "master.opened",
+     "received": null,
+     "verified": "1989-09",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0255/",
+     "quote": "개장 1989년 9월",
+     "source_type": "third_party",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "ops.pace",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "고의적인 경기 지연 및 도박행위: 1차 경고 조치, 2차 경고 조치, 3차 퇴장",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0255/",
+     "quote": "진행/경기시간 고의적인 경기 지연 및 도박행위: 1차 경고 조치, 2차 경고 조치, 3차 퇴장",
+     "source_type": "third_party",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "ops.dress",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "민소매·청바지 등 타인에게 불쾌감을 주는 복장 입장 불가",
+     "result": "보완",
+     "url": "https://www.grandgolf.co.kr/html/guide/guide_01.asp",
+     "quote": "경과 시는 Tee Off 할 수 없습니다. 클럽의 품위를 위해 정해진 복장을 준수하여 주시기 바랍니다. (민소매, 청바지등 타인에게 불쾌감이나 혐오감을 주는 복장을 하시는 경우는 입장이 불가합니다.) 경기진행안내 코스진행은 클럽에서 달리 정하지 않는 한 클럽에서 정한 순서대로 진행",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.proshop",
+     "received": null,
+     "verified": "프로샵",
+     "result": "보완",
+     "url": "https://www.grandgolf.co.kr/html/company/company_01.asp",
+     "quote": "재지 충북 청주시 청원구 오창읍 꽃화산길 51-20 업종 골프장 개장 1989년 9월 부대시설 클럽하우스, 락카룸/사우나, 레스토랑, 스타트하우스, 프로샵 대표번호 043) 212 - 7111 면적 53만평 전장 6,158m 홀수 27Hole Par 108 코스설계 加藤俊輔(가토 슌스케) 특징 2",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    }
+   ]
   },
   "data_checks": [
    "미확인 목록 누락 라벨 보완: 제세금"
@@ -22,11 +67,14 @@
   "schema_previous": "stage2b/1.0",
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "restructured_from_7key": false,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "checked_at": "2026-11-27",
+  "pass2_patch": "2026-11-27 2차 보완 패스: 4개 항목(그린피가이드·1박2일골프·원더골프·공식 홈페이지 대조, 미확인 값 생성 없음)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0251",
@@ -87,7 +135,7 @@
   ],
   "operators_note": null,
   "area_sqm": 1696299,
-  "opened": null,
+  "opened": "1989-09",
   "course_blocks": [],
   "facility_id": null,
   "facility_members": null,
@@ -104,7 +152,12 @@
   "holes_received": 27,
   "holes_conflict": false,
   "facility_cluster": null,
-  "factcheck_2026_11_26": null
+  "factcheck_2026_11_26": null,
+  "designer": {
+   "value": "加藤俊輔(가토 슌스케)가토 슌스케 설계 다른 골프장: 타미우스CC",
+   "source": "공개 정보(그린피가이드)",
+   "url": "https://greenfeeguide.co.kr/course/gc-0255/"
+  }
  },
  "course": {
   "holes": 27,
@@ -133,7 +186,8 @@
    ]
   },
   "kga_hole_est": 27,
-  "extra_courses": null
+  "extra_courses": null,
+  "length_m": 5750
  },
  "fee": {
   "weekday": 220000,
@@ -160,13 +214,23 @@
     "url": "https://www.grandgolf.co.kr/",
     "checked_at": "2026-11-26 (공식 요금표 확인, 시행일 2026-05-16)"
    }
-  ]
+  ],
+  "checked_at": "2026-11-27",
+  "market": {
+   "weekday_min": 109000,
+   "weekend_min": 120000,
+   "source": "공개 예약 채널 실거래 관측(티픽)",
+   "url": "https://teepickgolf.com/",
+   "note": "공시가 아닌 최근 관측 실거래 최저가"
+  }
  },
  "cancel": {
-  "cancel_policy": "위약규정에 따라 패널티(인원 변동 포함), 당일 무단결장은 예약정지 또는 위약금 납부 선택",
+  "cancel_policy": "비회원 기준 주말·공휴일 4일 전, 평일 3일 전까지 취소하면 예약금 전액 환불. 이후 주말 3~2일 전·평일 2일 전 10%, 1일 전 20%, 당일·노쇼 30%. 경기 전 임의 취소 50%·9홀까지 25% 환불.",
   "open_cycle": "정회원 평일 3주 전부터 인터넷 실시간 선착순(전일 17:00 마감). 정회원 주말 2주 전 금요일~1주 전 월요일 17:00 신청, 1주 전 화요일 12:00 이후 배정 확인. 사이버회원은 정회원 배정 후 잔여시간 1주 전 화요일 14:00부터",
   "notes": "1팀 4인 원칙(내장 인원이 예약 인원에 못 미치면 입장 불가). 5인 플레이 요금 별도 공시",
-  "evidence": [],
+  "evidence": [
+   "https://www.grandgolf.co.kr/html/member/terms.asp"
+  ],
   "weather_evidence": []
  },
  "ops": {
@@ -219,12 +283,24 @@
    "evidence": []
   },
   "dress": {
-   "value": null,
-   "evidence": []
+   "value": "민소매·청바지 등 타인에게 불쾌감을 주는 복장 입장 불가",
+   "evidence": [
+    "경과 시는 Tee Off 할 수 없습니다. 클럽의 품위를 위해 정해진 복장을 준수하여 주시기 바랍니다. (민소매, 청바지등 타인에게 불쾌감이나 혐오감을 주는 복장을 하시는 경우는 입장이 불가합니다.) 경기진행안내 코스진행은 클럽에서 달리 정하지 않는 한 클럽에서 정한 순서대로 진행"
+   ],
+   "source_url": "https://www.grandgolf.co.kr/html/guide/guide_01.asp",
+   "confidence": "high",
+   "source_type": "official_site",
+   "checked_at": "2026-11-27"
   },
   "pace": {
-   "value": null,
-   "evidence": []
+   "value": "고의적인 경기 지연 및 도박행위: 1차 경고 조치, 2차 경고 조치, 3차 퇴장",
+   "evidence": [
+    "진행/경기시간 고의적인 경기 지연 및 도박행위: 1차 경고 조치, 2차 경고 조치, 3차 퇴장"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0255/",
+   "confidence": "high",
+   "source_type": "third_party",
+   "checked_at": "2026-11-27"
   }
  },
  "facilities": {
@@ -268,6 +344,16 @@
   "shuttle": {
    "value": null,
    "evidence": []
+  },
+  "proshop": {
+   "value": "프로샵",
+   "evidence": [
+    "재지 충북 청주시 청원구 오창읍 꽃화산길 51-20 업종 골프장 개장 1989년 9월 부대시설 클럽하우스, 락카룸/사우나, 레스토랑, 스타트하우스, 프로샵 대표번호 043) 212 - 7111 면적 53만평 전장 6,158m 홀수 27Hole Par 108 코스설계 加藤俊輔(가토 슌스케) 특징 2"
+   ],
+   "source_url": "https://www.grandgolf.co.kr/html/company/company_01.asp",
+   "confidence": "high",
+   "source_type": "official_site",
+   "checked_at": "2026-11-27"
   }
  },
  "rental": {
@@ -361,7 +447,13 @@
   "sources": [
    "https://www.grandgolf.co.kr/",
    "https://wondergolf.co.kr/courses/cheongju-grand-cc",
-   "https://todaygolfgo.com/golf-courses/master/golf-course-moct-20241231-0500/"
+   "https://todaygolfgo.com/golf-courses/master/golf-course-moct-20241231-0500/",
+   "https://greenfeeguide.co.kr/course/gc-0255/",
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
   ],
   "collected_at": "2026-11-26T10:24:29+09:00"
  },
@@ -370,18 +462,20 @@
   "official_reason": "운영 중(공식 홈페이지 정상)",
   "pages_collected": 0,
   "third_party": {
-   "received_report": true
+   "received_report": true,
+   "teepick": true,
+   "greenfeeguide": true
   },
   "render_hint": "report",
   "plan_strategy": "subagent_report(2026-11-26)"
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 1.0,
+  "basic": 0.89,
+  "course": 0.4,
   "fee": 1.0,
-  "ops": 0.21,
+  "ops": 0.36,
   "facility": 0.4,
-  "briefing": 0.75,
-  "rental": 0.25
+  "briefing": 0.5,
+  "rental": 0.0
  }
 }

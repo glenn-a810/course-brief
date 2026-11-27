@@ -8,11 +8,73 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "review": {
+   "checks": [
+    {
+     "field": "course.night_light",
+     "received": null,
+     "verified": "야간 라운드 운영(공식 홈페이지 안내)",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0356/",
+     "quote": "야간 운영: 야간 라운드 운영(공식 홈페이지 안내)",
+     "source_type": "official_summary(greenfeeguide)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.night.value",
+     "received": null,
+     "verified": "야간 라운드 운영(공식 홈페이지 안내)",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0356/",
+     "quote": "야간 운영: 야간 라운드 운영(공식 홈페이지 안내)",
+     "source_type": "official_summary(greenfeeguide)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "ops.nocaddie.value",
+     "received": null,
+     "verified": "노캐디(셀프) 라운드 가능",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0356/",
+     "quote": "노캐디: 노캐디(셀프) 라운드 가능",
+     "source_type": "official_summary(greenfeeguide)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.closed_days.value",
+     "received": null,
+     "verified": "연중무휴",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0356/",
+     "quote": "정기 휴장일: 연중무휴",
+     "source_type": "official_summary(greenfeeguide)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.other.value",
+     "received": null,
+     "verified": "프로샵",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0356/",
+     "quote": "그 밖의 시설: 프로샵",
+     "source_type": "official_summary(greenfeeguide)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    }
+   ],
+   "checked_at": "2026-11-27"
+  },
+  "batch3_patch": "2026-11-27 배치6(대구·경북) 보완: 5개 항목(공식 홈페이지·그린피가이드 공식 안내 확인 기준, 미확인 값 생성 없음)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0058",
@@ -81,7 +143,7 @@
   "holes_received": 18,
   "course_names": null,
   "membership_type": "대중제",
-  "night_light": null,
+  "night_light": "야간 라운드 운영(공식 홈페이지 안내)",
   "blocks": [],
   "grass": {
    "tee": null,
@@ -174,8 +236,14 @@
  },
  "ops": {
   "nocaddie": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "노캐디: 노캐디(셀프) 라운드 가능"
+   ],
+   "value": "노캐디(셀프) 라운드 가능",
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0356/",
+   "confidence": "medium",
+   "source_type": "official_summary(greenfeeguide)",
+   "checked_at": "2026-11-27"
   },
   "two_player": {
    "evidence": [],
@@ -271,17 +339,35 @@
    "evidence": []
   },
   "other": {
-   "value": null,
-   "evidence": []
+   "value": "프로샵",
+   "evidence": [
+    "그 밖의 시설: 프로샵"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0356/",
+   "confidence": "medium",
+   "source_type": "official_summary(greenfeeguide)",
+   "checked_at": "2026-11-27"
   },
   "night": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "야간 운영: 야간 라운드 운영(공식 홈페이지 안내)"
+   ],
+   "value": "야간 라운드 운영(공식 홈페이지 안내)",
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0356/",
+   "confidence": "medium",
+   "source_type": "official_summary(greenfeeguide)",
+   "checked_at": "2026-11-27"
   },
   "closed_days": {
-   "evidence": [],
+   "evidence": [
+    "정기 휴장일: 연중무휴"
+   ],
    "third_party": "연중무휴",
-   "value": null
+   "value": "연중무휴",
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0356/",
+   "confidence": "medium",
+   "source_type": "official_summary(greenfeeguide)",
+   "checked_at": "2026-11-27"
   },
   "shuttle": {
    "evidence": [],
@@ -302,14 +388,14 @@
  "rental": {
   "available": "가능",
   "full_set": 50000,
-  "fee_text": null,
+  "fee_text": "50,000원 · 18홀",
   "brand": null,
   "left_handed": null,
   "shoes": null,
   "nine_hole": null,
   "range_finder": null,
   "reservation": null,
-  "source_url": null,
+  "source_url": "https://greenfeeguide.co.kr/course/gc-0356/",
   "evidence": [],
   "official": {
    "full_set": 50000
@@ -374,7 +460,9 @@
   "course_notes": null,
   "alert": null,
   "unconfirmed": [],
-  "sources": []
+  "sources": [
+   "https://greenfeeguide.co.kr/course/gc-0356/"
+  ]
  },
  "collection": {
   "official_site": "unavailable",
@@ -389,12 +477,12 @@
   "browser_batch": true
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.6,
+  "basic": 0.78,
+  "course": 0.2,
   "fee": 1.0,
-  "ops": 0.0,
-  "facility": 0.0,
-  "briefing": 0.5,
+  "ops": 0.07,
+  "facility": 0.3,
+  "briefing": 0.0,
   "rental": 0.75
  }
 }

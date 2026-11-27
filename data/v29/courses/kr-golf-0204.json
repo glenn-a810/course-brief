@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0204",
@@ -66,7 +67,7 @@
    "blocks": [
     "EASTWESTSOUTH"
    ],
-   "length_m": null,
+   "length_m": 5381,
    "kga": {
     "kga_course_code": "298",
     "kga_name": "서원힐스",
@@ -282,7 +283,7 @@
  "course": {
   "holes": 27,
   "holes_received": 27,
-  "course_names": null,
+  "course_names": "남·동·서 각 9홀",
   "membership_type": "대중제",
   "night_light": null,
   "blocks": [
@@ -484,7 +485,7 @@
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": null,
+  "length_m": 5381,
   "par": 72
  },
  "fee": {
@@ -500,15 +501,16 @@
   "source_url": null,
   "note": null,
   "sources": [],
-  "checked_at": null,
+  "checked_at": "2026-11-27",
   "market": {
-   "weekday_min": 140000.0,
-   "weekend_min": 190000.0,
-   "part1": null,
-   "part2": null,
+   "weekday_min": 120000,
+   "weekend_min": 190000,
+   "part1": "7.9만 ~ 32만",
+   "part2": "8만 ~ 27만",
    "source": "티픽골프장(실거래 관측)",
-   "url": "https://teepickgolf.com/course/%EC%84%9C%EC%9B%90%ED%9E%90%EC%8A%A4",
-   "note": "공시가 아닌 최근 관측 실거래 최저가"
+   "url": "https://teepickgolf.com/course/서원힐스",
+   "note": "공시가 아닌 최근 관측 실거래 최저가",
+   "checked_at": "2026-11-27"
   },
   "official_green_evidence": [],
   "official_rental": null
@@ -569,8 +571,14 @@
    "value": null
   },
   "sauna": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "사우나: 사우나 있음온탕과 샤워시설"
+   ],
+   "value": "사우나 있음온탕과 샤워시설",
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0058/",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfeeguide)"
   },
   "dress": {
    "evidence": [],
@@ -584,7 +592,6 @@
  "facilities": {
   "practice": {
    "evidence": [
-    "서원밸리 닫기 로고 파주시 광탄면 reservation - 예약현황 건 - 대기예약 건 - 베스트 스코어 타 정보수정 닫기 About Seowon 스토리 토너먼트 ESG 서원에세이 클럽하우스 오시는길 Course 코스소개 서원코스 밸리코스 Reservation 실시간예약 이용안내 이용요금 Our Special 서원 인레인지(연습장) 서원 아트리움(웨딩,모임) 서원정/서원더뷰 Membership 공지사항 이벤트 Q&A 자료실 My Page 예약현황 쿠폰함 나의 활동 고객의 소리 회원정보수정 LOGIN 아이디 저장하기 로그인 유지 로그",
     "VIEW ALL → 경기도 파주시 광탄면 서원길 333 031-940-9400(서원밸리 9401 / 서원힐스 9402 / 연습장 9550) VIEW ALL → 서원밸리 자선 그린 콘서트 매년 5월 마지막 주 토요일, 즐거움과 행복이 가득한 따듯한 나눔 이야기가 펼쳐집니다.",
     "서원힐스 닫기 로고 파주시 광탄면 reservation KO EN - 예약현황 건 - 쿠폰현황 건 - 대기예약 건 - 베스트 스코어 타 정보수정 닫기 About Seowon 스토리 토너먼트 ESG 서원에세이 클럽하우스 오시는길 Course 코스소개 코스제원 웨스트 사우스 이스트 Reservation 실시간예약 일반단체 신청 이용안내 이용요금 Our Special 서원 인레인지(연습장) 서원 아트리움(웨딩,모임) 서원정/서원더뷰 CONTACT 공지사항 이벤트 Q&A My Page 예약현황 쿠폰함 나의활동 고객의 소리 회원정보 수정 L",
     "서원 인레인지(연습장)"
@@ -616,16 +623,28 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": null,
-   "evidence": []
+   "value": "사우나 있음온탕과 샤워시설",
+   "evidence": [
+    "사우나: 사우나 있음온탕과 샤워시설"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0058/",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfeeguide)"
   },
   "lodging": {
    "value": null,
    "evidence": []
   },
   "other": {
-   "value": null,
-   "evidence": []
+   "value": "프로샵",
+   "evidence": [
+    "그 밖의 시설: 프로샵"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0058/",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfeeguide)"
   },
   "night": {
    "evidence": [],
@@ -646,21 +665,27 @@
   },
   "gf_facilities": null,
   "proshop": {
-   "evidence": [],
-   "value": null
+   "value": "프로샵",
+   "evidence": [
+    "other: 프로샵"
+   ],
+   "source_url": "https://greenfeeguide.com/course/gc-0058/",
+   "confidence": "medium",
+   "checked_at": "2026-11-27",
+   "value_from": "batch2_supplement"
   }
  },
  "rental": {
-  "available": null,
-  "full_set": null,
-  "fee_text": null,
+  "available": true,
+  "full_set": 80000,
+  "fee_text": "80,000원 · 18홀",
   "brand": null,
   "left_handed": null,
   "shoes": null,
   "nine_hole": null,
   "range_finder": null,
   "reservation": null,
-  "source_url": null,
+  "source_url": "https://greenfeeguide.co.kr/course/gc-0058/",
   "evidence": [],
   "official": null,
   "nearby_delivery": {
@@ -734,8 +759,16 @@
   "recent_notice_text": null,
   "course_notes": null,
   "alert": null,
-  "unconfirmed": [],
-  "sources": []
+  "unconfirmed": [
+   "취소·위약 규정 미확인: 공식 홈페이지에 위약 규정 게시를 확인하지 못함"
+  ],
+  "sources": [
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "ok",
@@ -743,19 +776,19 @@
   "pages_collected": 3,
   "third_party": {
    "teepick": true,
-   "greenfeeguide": false
+   "greenfeeguide": true
   },
   "render_hint": "thin",
   "plan_strategy": "thin(상세페이지 탐색)",
   "browser_batch": false
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 1.0,
+  "basic": 0.78,
+  "course": 0.6,
   "fee": 0.0,
-  "ops": 0.0,
-  "facility": 0.2,
-  "briefing": 0.5,
-  "rental": 0.25
+  "ops": 0.07,
+  "facility": 0.4,
+  "briefing": 0.0,
+  "rental": 0.75
  }
 }

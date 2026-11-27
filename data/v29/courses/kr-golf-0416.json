@@ -12,9 +12,112 @@
   ],
   "source": "raw/received_gangwon_65.json (외부 데이터 수신, 2026-11-26)",
   "review": {
-   "checked_at": null,
-   "status": "not_crosschecked",
-   "checks": []
+   "checked_at": "2026-11-27",
+   "status": "supplemented(공개 요약·조사자료)",
+   "checks": [
+    {
+     "field": "course.par",
+     "received": null,
+     "verified": 72,
+     "result": "보완",
+     "url": "https://www.maplebeach.co.kr/golf/golf-use-information/price",
+     "quote": "비치·메이플 각 9홀, 파72",
+     "source_type": "official_research",
+     "confidence": "medium",
+     "checked_at": "2026-11-27",
+     "note": "2026-11-26 공식 홈페이지 조사자료에서 이관한 값(문구는 요약·환산일 수 있음)"
+    },
+    {
+     "field": "course.length_m",
+     "received": null,
+     "verified": 6650,
+     "result": "보완",
+     "url": "https://www.maplebeach.co.kr/golf/golf-use-information/price",
+     "quote": "18홀 약 6,650m",
+     "source_type": "official_research",
+     "confidence": "medium",
+     "checked_at": "2026-11-27",
+     "note": "2026-11-26 공식 홈페이지 조사자료에서 이관한 값(문구는 요약·환산일 수 있음)"
+    },
+    {
+     "field": "master.opened",
+     "received": null,
+     "verified": "2011-07",
+     "result": "보완",
+     "url": "https://www.maplebeach.co.kr/golf/golf-use-information/price",
+     "quote": "2011년 7월 개장",
+     "source_type": "official_research",
+     "confidence": "medium",
+     "checked_at": "2026-11-27",
+     "note": "2026-11-26 공식 홈페이지 조사자료에서 이관한 값(문구는 요약·환산일 수 있음)"
+    },
+    {
+     "field": "facilities.food",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "클럽하우스 레스토랑 (한식·양식), 회코스·BBQ 사전예약",
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/maple-beach/info/",
+     "quote": "레스토랑: 클럽하우스 레스토랑 (한식·양식), 회코스·BBQ 사전예약",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "ops.locker",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "남녀 분리 라커룸, 사우나, 샤워실",
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/maple-beach/info/",
+     "quote": "라커/사우나: 남녀 분리 라커룸, 사우나, 샤워실",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "ops.sauna",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "남녀 분리 라커룸, 사우나, 샤워실",
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/maple-beach/info/",
+     "quote": "라커/사우나: 남녀 분리 라커룸, 사우나, 샤워실",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.locker_sauna",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "남녀 분리 라커룸, 사우나, 샤워실",
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/maple-beach/info/",
+     "quote": "라커/사우나: 남녀 분리 라커룸, 사우나, 샤워실",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.proshop",
+     "received": null,
+     "verified": "프로샵",
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/maple-beach/info/",
+     "quote": "프로샵: 프로샵 (골프용품·의류)",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.practice",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "드라이빙 레인지, 퍼팅 그린",
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/maple-beach/info/",
+     "quote": "연습 시설: 드라이빙 레인지, 퍼팅 그린",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    }
+   ]
   },
   "data_checks": [
    "대표전화 표기 차이: 마스터 033-650-0070 / 수신 033-650-0000"
@@ -22,11 +125,14 @@
   "schema_previous": "stage2b/1.0",
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "restructured_from_7key": false,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "batch3_patch": "2026-11-27 배치3 보완: 3개 항목(공식 홈페이지·공개 요금 안내 기준, 미확인 값 생성 없음)",
+  "pass2_patch": "2026-11-27 2차 보완 패스: 6개 항목(그린피가이드·1박2일골프·원더골프·공식 홈페이지 대조, 미확인 값 생성 없음)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0416",
@@ -79,7 +185,7 @@
    "원익엘앤디㈜(이재천)"
   ],
   "area_sqm": 776652,
-  "opened": null,
+  "opened": "2011-07",
   "course_blocks": [],
   "facility_id": null,
   "facility_members": null,
@@ -94,7 +200,8 @@
   "holes_conflict": false,
   "facility_cluster": null,
   "factcheck_2026_11_26": null,
-  "address_original": "강릉시 강동면 풍호길 300-78"
+  "address_original": "강릉시 강동면 풍호길 300-78",
+  "par": 72
  },
  "course": {
   "holes": 18,
@@ -110,7 +217,9 @@
   },
   "kga": null,
   "kga_hole_est": null,
-  "extra_courses": null
+  "extra_courses": null,
+  "par": 72,
+  "length_m": 6650
  },
  "fee": {
   "weekday": 140000,
@@ -137,7 +246,15 @@
     "url": "https://www.maplebeach.co.kr/golf/golf-use-information/price",
     "checked_at": "2026-11 (공식 이용요금 페이지 확인)"
    }
-  ]
+  ],
+  "checked_at": "2026-11-27",
+  "market": {
+   "weekday_min": 110000,
+   "weekend_min": 150000,
+   "source": "공개 예약 채널 실거래 관측(티픽)",
+   "url": "https://teepickgolf.com/",
+   "note": "공시가 아닌 최근 관측 실거래 최저가"
+  }
  },
  "cancel": {
   "cancel_policy": null,
@@ -188,12 +305,26 @@
    "evidence": []
   },
   "locker": {
-   "value": null,
-   "evidence": []
+   "value": "남녀 분리 라커룸, 사우나, 샤워실",
+   "evidence": [
+    "라커/사우나: 남녀 분리 라커룸, 사우나, 샤워실"
+   ],
+   "source_url": "https://1n2d-golf.co.kr/maple-beach/info/",
+   "confidence": "medium",
+   "source_type": "public_info(1n2d-golf)",
+   "checked_at": "2026-11-27",
+   "note": "1박2일골프 시설·기타 요약(2차 공개자료, 2026-11-27 조회) — 예약 전 공식 채널 재확인 권장"
   },
   "sauna": {
-   "value": null,
-   "evidence": []
+   "value": "남녀 분리 라커룸, 사우나, 샤워실",
+   "evidence": [
+    "라커/사우나: 남녀 분리 라커룸, 사우나, 샤워실"
+   ],
+   "source_url": "https://1n2d-golf.co.kr/maple-beach/info/",
+   "confidence": "medium",
+   "source_type": "public_info(1n2d-golf)",
+   "checked_at": "2026-11-27",
+   "note": "1박2일골프 시설·기타 요약(2차 공개자료, 2026-11-27 조회) — 예약 전 공식 채널 재확인 권장"
   },
   "dress": {
    "value": null,
@@ -206,24 +337,45 @@
  },
  "facilities": {
   "practice": {
-   "value": null,
-   "evidence": []
+   "value": "드라이빙 레인지, 퍼팅 그린",
+   "evidence": [
+    "연습 시설: 드라이빙 레인지, 퍼팅 그린"
+   ],
+   "source_url": "https://1n2d-golf.co.kr/maple-beach/info/",
+   "confidence": "medium",
+   "source_type": "public_info(1n2d-golf)",
+   "checked_at": "2026-11-27",
+   "note": "1박2일골프 시설·기타 요약(2차 공개자료, 2026-11-27 조회) — 예약 전 공식 채널 재확인 권장"
   },
   "indoor_range": {
    "value": null,
    "evidence": []
   },
   "food": {
-   "value": null,
-   "evidence": []
+   "value": "클럽하우스 레스토랑 (한식·양식), 회코스·BBQ 사전예약",
+   "evidence": [
+    "레스토랑: 클럽하우스 레스토랑 (한식·양식), 회코스·BBQ 사전예약"
+   ],
+   "source_url": "https://1n2d-golf.co.kr/maple-beach/info/",
+   "confidence": "medium",
+   "source_type": "public_info(1n2d-golf)",
+   "checked_at": "2026-11-27",
+   "note": "1박2일골프 시설·기타 요약(2차 공개자료, 2026-11-27 조회) — 예약 전 공식 채널 재확인 권장"
   },
   "snack_bar": {
    "value": null,
    "evidence": []
   },
   "locker_sauna": {
-   "value": null,
-   "evidence": []
+   "value": "남녀 분리 라커룸, 사우나, 샤워실",
+   "evidence": [
+    "라커/사우나: 남녀 분리 라커룸, 사우나, 샤워실"
+   ],
+   "source_url": "https://1n2d-golf.co.kr/maple-beach/info/",
+   "confidence": "medium",
+   "source_type": "public_info(1n2d-golf)",
+   "checked_at": "2026-11-27",
+   "note": "1박2일골프 시설·기타 요약(2차 공개자료, 2026-11-27 조회) — 예약 전 공식 채널 재확인 권장"
   },
   "lodging": {
    "value": "골프텔(리조트 일체형)",
@@ -245,6 +397,17 @@
   "shuttle": {
    "value": null,
    "evidence": []
+  },
+  "proshop": {
+   "value": "프로샵",
+   "evidence": [
+    "프로샵: 프로샵 (골프용품·의류)"
+   ],
+   "source_url": "https://1n2d-golf.co.kr/maple-beach/info/",
+   "confidence": "medium",
+   "source_type": "public_info(1n2d-golf)",
+   "checked_at": "2026-11-27",
+   "note": "1박2일골프 시설·기타 요약(2차 공개자료, 2026-11-27 조회) — 예약 전 공식 채널 재확인 권장"
   }
  },
  "rental": {
@@ -312,7 +475,6 @@
   "alert": null,
   "unconfirmed": [
    "야간 라이트",
-   "잔디(티)",
    "예약 오픈 주기",
    "취소·위약 규정",
    "3인 플레이",
@@ -335,7 +497,12 @@
    "https://www.maplebeach.co.kr/golf/golf-use-information/price",
    "https://greenfeeguide.co.kr/course/gc-0218/",
    "https://todaygolfgo.com/regions/gangwon/",
-   "https://inwon.kr/c/k156"
+   "https://inwon.kr/c/k156",
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
   ],
   "collected_at": "2026-11-26T09:55:47+09:00"
  },
@@ -344,18 +511,20 @@
   "official_reason": "운영 중(공식 홈페이지 정상, 이용요금 페이지 공개)",
   "pages_collected": 0,
   "third_party": {
-   "received_report": true
+   "received_report": true,
+   "teepick": true,
+   "greenfeeguide": true
   },
   "render_hint": "report",
   "plan_strategy": "subagent_report(2026-11-26)"
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.8,
+  "basic": 0.89,
+  "course": 0.4,
   "fee": 1.0,
-  "ops": 0.14,
-  "facility": 0.2,
-  "briefing": 0.75,
-  "rental": 1.0
+  "ops": 0.29,
+  "facility": 0.5,
+  "briefing": 0.5,
+  "rental": 0.75
  }
 }

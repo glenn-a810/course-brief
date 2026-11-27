@@ -5,8 +5,10 @@
   "schema": "stage2c/1.0",
   "batch": null,
   "structure": "master only (구장 JSON 미생성 — 건설중·미착공)",
-  "normalized_at": "2026-11-26T12:20:52+09:00",
-  "has_detail": false
+  "normalized_at": "2026-11-27T14:40:00+09:00",
+  "has_detail": false,
+  "checked_at": "2026-11-27",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0527",
@@ -48,11 +50,12 @@
   "facility_id": null,
   "facility_members": null,
   "status": "planned",
-  "expected_open": "2028-하반기",
+  "expected_open": "2028-07(준공 목표)",
   "nearest_ic": null,
   "facility_cluster": null,
   "factcheck_2026_11_26": null,
-  "provenance": {}
+  "provenance": {},
+  "project_stage": "18홀+숙박 111실. 2026-02 진입도로 착공, 환경·재해영향평가 본안 협의(2026-09) 후 2027-01 착공~2028-07 준공 계획"
  },
  "course": {
   "holes": null,
@@ -213,12 +216,16 @@
    "tags": {}
   },
   "recent_notice_text": null,
-  "course_notes": null,
+  "course_notes": "",
   "review": null,
   "fee_change": null,
   "alert": null,
   "unconfirmed": [],
-  "sources": []
+  "sources": [
+   "https://www.goesan.go.kr/DATA/upload/site/chief/pdf_202611/2-8.pdf",
+   "https://www.goesan.go.kr/www/selectBbsNttView.do?bbsNo=213&nttNo=131197"
+  ],
+  "collected_at": "2026-11-27"
  },
  "collection": {
   "official_site": null,
@@ -229,12 +236,12 @@
   "plan_strategy": null
  },
  "coverage": {
-  "basic": 0,
-  "course": 0,
-  "fee": 0,
-  "ops": 0,
-  "facility": 0,
-  "briefing": 0,
-  "rental": 0
+  "basic": 0.56,
+  "course": 0.0,
+  "fee": 0.0,
+  "ops": 0.0,
+  "facility": 0.0,
+  "briefing": 0.0,
+  "rental": 0.0
  }
 }

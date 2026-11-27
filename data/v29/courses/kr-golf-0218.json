@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0218",
@@ -132,7 +133,7 @@
   "source_url": null,
   "note": null,
   "sources": [],
-  "checked_at": null,
+  "checked_at": "2026-11-27",
   "official_green": {
    "value": 0,
    "raw": "[ 9시이전 1+1이벤트 정상가적용 (정상가 65.000원)]",
@@ -185,16 +186,21 @@
     }
    ],
    "url": "https://www.adoniscc.co.kr/public/booking/cart-guide"
-  }
+  },
+  "market": {}
  },
  "cancel": {
-  "cancel_policy": null,
+  "cancel_policy": {
+   "value": "예약 날짜·취소·시간 변경은 3일 전까지, 인원 변경은 1일 전까지 가능. 인터넷은 3일 전 24:00까지 취소 가능하며 이후는 위약 적용(당일 취소 시 3~6개월 예약정지)",
+   "source": "공식 홈페이지",
+   "url": "https://www.adoniscc.co.kr/public/booking/guide"
+  },
   "open_cycle": null,
   "notes": null,
   "evidence": [
-   "카트요금 - 아도니스 컨트리클럽 회원제 퍼블릭 호텔 퍼블릭 전화 031) 530-9140 로그인 회원가입 SITEMAP ADONIS RESORT FAMILY SITE  아도니스 호텔 A-ONE CC 드비치 GC 아도니스 퍼블릭 퍼블릭 소개 찾아오시는 길 코스소개 코스공략도 스코어카드 퍼블릭 예약 퍼블릭 예약 카트요금 예약안내 예약확인/취소 무인내장 안내 1:1문의 이용요금/이벤트 이용요금/이벤트 조인게시판 분실물안내 기상정보 실시간 영상(기상정보) 마이페이지 카트요금 진행상 1인 1카트가 의무 사용입니다.",
-   "예약안내 - 아도니스 컨트리클럽 회원제 퍼블릭 호텔 퍼블릭 전화 031) 530-9140 로그인 회원가입 SITEMAP ADONIS RESORT FAMILY SITE  아도니스 호텔 A-ONE CC 드비치 GC 아도니스 퍼블릭 퍼블릭 소개 찾아오시는 길 코스소개 코스공략도 스코어카드 퍼블릭 예약 퍼블릭 예약 카트요금 예약안내 예약확인/취소 무인내장 안내 1:1문의 이용요금/이벤트 이용요금/이벤트 조인게시판 분실물안내 기상정보 실시간 영상(기상정보) 마이페이지 예약안내 예약방법 취소 및 위약처리 규정 퍼블릭 준수사항 퇴장규정 환불규",
-   "예약 날짜 및 취소, 시간 변경은 3일 전까지 가능하며 인원 변경은 1일 전까지 가능합니다."
+   "예약 날짜 및 취소, 시간 변경은 3일 전까지 가능하며 인원 변경은 1일 전까지 가능합니다.",
+   "인터넷으로 3일전 24:00(자정)까지 가능하며 이후 취소에 대해서는 위약으로 간주되어 패널티가 적용됩니다.",
+   "이용자가 이용예정일 당일 예약을 취소하거나 아무런 통보 없이 이용예정일에 골프장을 이용하지 않을 경우 : 3개월~6개월 예약정지"
   ],
   "weather_evidence": [
    "카트요금 - 아도니스 컨트리클럽 회원제 퍼블릭 호텔 퍼블릭 전화 031) 530-9140 로그인 회원가입 SITEMAP ADONIS RESORT FAMILY SITE  아도니스 호텔 A-ONE CC 드비치 GC 아도니스 퍼블릭 퍼블릭 소개 찾아오시는 길 코스소개 코스공략도 스코어카드 퍼블릭 예약 퍼블릭 예약 카트요금 예약안내 예약확인/취소 무인내장 안내 1:1문의 이용요금/이벤트 이용요금/이벤트 조인게시판 분실물안내 기상정보 실시간 영상(기상정보) 마이페이지 카트요금 진행상 1인 1카트가 의무 사용입니다.",
@@ -208,8 +214,6 @@
   },
   "two_player": {
    "evidence": [
-    "카트요금 - 아도니스 컨트리클럽 회원제 퍼블릭 호텔 퍼블릭 전화 031) 530-9140 로그인 회원가입 SITEMAP ADONIS RESORT FAMILY SITE  아도니스 호텔 A-ONE CC 드비치 GC 아도니스 퍼블릭 퍼블릭 소개 찾아오시는 길 코스소개 코스공략도 스코어카드 퍼블릭 예약 퍼블릭 예약 카트요금 예약안내 예약확인/취소 무인내장 안내 1:1문의 이용요금/이벤트 이용요금/이벤트 조인게시판 분실물안내 기상정보 실시간 영상(기상정보) 마이페이지 카트요금 진행상 1인 1카트가 의무 사용입니다.",
-    "예약안내 - 아도니스 컨트리클럽 회원제 퍼블릭 호텔 퍼블릭 전화 031) 530-9140 로그인 회원가입 SITEMAP ADONIS RESORT FAMILY SITE  아도니스 호텔 A-ONE CC 드비치 GC 아도니스 퍼블릭 퍼블릭 소개 찾아오시는 길 코스소개 코스공략도 스코어카드 퍼블릭 예약 퍼블릭 예약 카트요금 예약안내 예약확인/취소 무인내장 안내 1:1문의 이용요금/이벤트 이용요금/이벤트 조인게시판 분실물안내 기상정보 실시간 영상(기상정보) 마이페이지 예약안내 예약방법 취소 및 위약처리 규정 퍼블릭 준수사항 퇴장규정 환불규",
     "(단, 온라인상으로 사전에 예약 조인이 안 될 경우 라운딩 당일날 전화 예약으로 오신 고객님 및 선착순(walk-in) 고객님들과 조인되므로 예약시간이 재조정될 수 있습니다.) 3인, 4인 18홀 예약은 3주 전 동일한 요일 자정 00시부터 하루 전 24:00분까지 실시간으로 예약 가능합니다.ex) 7월 01일 월요일에 예약할 경우 3주 전 6월 10일 월요일 00시부터 예약 가능."
    ],
    "value": null
@@ -228,7 +232,6 @@
   },
   "cart_type": {
    "evidence": [
-    "카트요금 - 아도니스 컨트리클럽 회원제 퍼블릭 호텔 퍼블릭 전화 031) 530-9140 로그인 회원가입 SITEMAP ADONIS RESORT FAMILY SITE  아도니스 호텔 A-ONE CC 드비치 GC 아도니스 퍼블릭 퍼블릭 소개 찾아오시는 길 코스소개 코스공략도 스코어카드 퍼블릭 예약 퍼블릭 예약 카트요금 예약안내 예약확인/취소 무인내장 안내 1:1문의 이용요금/이벤트 이용요금/이벤트 조인게시판 분실물안내 기상정보 실시간 영상(기상정보) 마이페이지 카트요금 진행상 1인 1카트가 의무 사용입니다.",
     "모토카트 10,000원 (1인, 9홀) 승용카트 1인당 12,000원 (1인, 9홀) ※ 승용카트는 사전예약제로 운영됩니다."
    ],
    "value": null
@@ -247,7 +250,6 @@
   },
   "checkin": {
    "evidence": [
-    "무인내장 안내 - 아도니스 컨트리클럽 회원제 퍼블릭 호텔 퍼블릭 전화 031) 530-9140 로그인 회원가입 SITEMAP ADONIS RESORT FAMILY SITE  아도니스 호텔 A-ONE CC 드비치 GC 아도니스 퍼블릭 퍼블릭 소개 찾아오시는 길 코스소개 코스공략도 스코어카드 퍼블릭 예약 퍼블릭 예약 카트요금 예약안내 예약확인/취소 무인내장 안내 1:1문의 이용요금/이벤트 이용요금/이벤트 조인게시판 분실물안내 기상정보 실시간 영상(기상정보) 마이페이지 무인내장 안내 APP QR코드로 내장하기(회원) 앱 회원 빠른 내장",
     "예약번호로 내장하기(비회원) 비회원 내장 키오스크 화면에 있는 비회원 내장을 선택하여 주세요."
    ],
    "value": null
@@ -350,17 +352,19 @@
   }
  },
  "rental": {
-  "available": null,
-  "full_set": null,
-  "fee_text": null,
+  "available": true,
+  "full_set": 100000,
+  "fee_text": "80,000~100,000원 · 남성용, 브랜드별 · 18홀",
   "brand": null,
   "left_handed": null,
   "shoes": null,
   "nine_hole": null,
   "range_finder": null,
   "reservation": null,
-  "source_url": null,
-  "evidence": [],
+  "source_url": "https://greenfeeguide.co.kr/course/gc-0108/",
+  "evidence": [
+   "풀세트 대여 80,000~100,000원 · 남성용, 브랜드별 · 18홀 — https://greenfeeguide.co.kr/course/gc-0108/"
+  ],
   "official": null,
   "nearby_delivery": {
    "region": "수도권",
@@ -553,28 +557,41 @@
   "recent_notice_text": null,
   "course_notes": null,
   "alert": null,
-  "unconfirmed": [],
-  "sources": []
+  "unconfirmed": [
+   "그린피(주중/주말) 미확인: 공식 채널에서 비회원 요금표를 확인하지 못함"
+  ],
+  "sources": [
+   {
+    "source": "그린피가이드 코스 페이지",
+    "url": "https://greenfeeguide.co.kr/course/gc-0108/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "티픽골프장 코스 페이지",
+    "url": "https://teepickgolf.com/course/포천아도니스",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "ok",
   "official_reason": null,
   "pages_collected": 14,
   "third_party": {
-   "teepick": false,
-   "greenfeeguide": false
+   "teepick": true,
+   "greenfeeguide": true
   },
   "render_hint": "static",
   "plan_strategy": "static(직접 파싱)",
   "browser_batch": false
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.6,
+  "basic": 0.78,
+  "course": 0.2,
   "fee": 0.25,
   "ops": 0.14,
   "facility": 0.2,
-  "briefing": 0.25,
-  "rental": 0.25
+  "briefing": 0.0,
+  "rental": 0.75
  }
 }

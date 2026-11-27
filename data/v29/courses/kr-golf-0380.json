@@ -65,11 +65,12 @@
   "schema_previous": "stage2b/1.0",
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "restructured_from_7key": false,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0380",
@@ -177,14 +178,15 @@
    ]
   },
   "kga_hole_est": 18,
-  "extra_courses": null
+  "extra_courses": null,
+  "length_m": 5852
  },
  "fee": {
-  "weekday": null,
-  "weekend": null,
-  "weekday_text": "1부 100,000~120,000원 / 2부 130,000~150,000원 (월~금, 11월 그린피, VAT 포함)",
-  "weekend_text": "1부 150,000~170,000원 / 2부 160,000~180,000원 (토·일, 11월 그린피, VAT 포함)",
-  "basis": "1인·18홀, 2026년 11월 그린피(진해신항CC 공식 요금안내, 부가세 포함·시설이용료 10,000원 포함). 경남도민 2만원·부산시민 1만원 할인(18홀 종료 기준, 신분증 실물 확인)",
+  "weekday": 100000,
+  "weekend": 150000,
+  "weekday_text": "100,000~150,000원 (일반 18홀 1·2부, 시설이용료 포함, 2026년 10월)",
+  "weekend_text": "150,000~170,000원 (토·공휴일)",
+  "basis": "1인·18홀 비회원, 공식 요금표에서 원더골프가 수집한 2026년 10월 적용가(최저~최고 범위의 하한을 값으로 기재)",
   "tax_included": "포함(VAT 10%, 시설이용료 10,000원 포함)",
   "cart": {
    "value": 90000,
@@ -195,22 +197,37 @@
    "text": "150,000원/팀(1·2부·3부, 2~4인), 캐디에게 직접 지급",
    "none": false
   },
-  "as_of": "2026-11-26 공식 11월 그린피(2026-10-09 공지) 확인",
-  "source_url": "https://www.jhnpcc.co.kr/Guide/Fees.aspx",
+  "as_of": "2026-10",
+  "source_url": "https://wondergolf.co.kr/courses/kr-mcst-223",
   "note": "2026년 11월 그린피. 12월은 1~13일·14~31일로 나눠 인하(3부 60,000~110,000). 경남도민 2만원·부산시민 1만원 할인(18홀 종료 기준, 신분증 실물).",
   "sources": [
    {
     "source": "공식 요금표(검수 확인)",
     "url": "https://www.jhnpcc.co.kr/Guide/Fees.aspx",
     "checked_at": "2026-11-26"
+   },
+   {
+    "source": "원더골프 공식 요금표 수집분",
+    "url": "https://wondergolf.co.kr/courses/kr-mcst-223",
+    "checked_at": "2026-10"
    }
-  ]
+  ],
+  "checked_at": "2026-11-27",
+  "market": {
+   "weekday_min": 121000,
+   "weekend_min": 171000,
+   "source": "공개 예약 채널 실거래 관측(티픽)",
+   "url": "https://teepickgolf.com/",
+   "note": "공시가 아닌 최근 관측 실거래 최저가"
+  }
  },
  "cancel": {
   "cancel_policy": "개인사정 중단 시 경기 전 50%, 9홀까지 75%, 10홀 이후 100% 부과(시설이용료 별도). 천재지변 중단 시 1홀 미완료 그린피 면제·캐디피 30,000원, 9홀까지 홀 비례·캐디피 80,000원",
-  "open_cycle": null,
+  "open_cycle": "주중·주말 3주 전 해당 요일 9시 오픈. 홈페이지 실시간 예약(PC·모바일), 전화 055-548-9999",
   "notes": null,
-  "evidence": [],
+  "evidence": [
+   "https://wondergolf.co.kr/courses/kr-mcst-223"
+  ],
   "weather_evidence": []
  },
  "ops": {
@@ -289,8 +306,10 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": null,
-   "evidence": []
+   "value": "락커룸·사우나실",
+   "evidence": [
+    "https://www.jhnpcc.co.kr/About/Clubhouse.aspx"
+   ]
   },
   "lodging": {
    "value": null,
@@ -391,9 +410,6 @@
   "fee_change": null,
   "alert": null,
   "unconfirmed": [
-   "잔디(티)",
-   "잔디(그린)",
-   "예약 오픈 주기",
    "2인 플레이",
    "3인 플레이",
    "5인 플레이",
@@ -407,10 +423,8 @@
    "인도어 연습장",
    "식당·조식",
    "그늘집",
-   "락커·사우나",
    "숙박",
-   "좌타용 클럽",
-   "예약 비고"
+   "좌타용 클럽"
   ],
   "unconfirmed_labels_added": [
    "예약 비고"
@@ -420,7 +434,14 @@
    "https://www.yna.co.kr/view/AKR20260326123800051",
    "https://www.bjfez.go.kr/kor/01410/01496/01697.web?amode=view&gcode=1033&idx=64237",
    "https://www.gnnews.co.kr/news/articleView.html?idxno=633766",
-   "https://greenfeeguide.co.kr/course/gc-0377/"
+   "https://greenfeeguide.co.kr/course/gc-0377/",
+   "https://www.jhnpcc.co.kr/About/Clubhouse.aspx",
+   "https://wondergolf.co.kr/courses/kr-mcst-223",
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
   ],
   "collected_at": "2026-11-26T10:33:21+09:00"
  },
@@ -429,18 +450,20 @@
   "official_reason": "운영 중. 2026-04-01부터 '진해신항CC'로 명칭 변경, 경남개발공사 직영(공식 보도·홈페이지). 구 홈페이지 ara-mir.com은 접속 차단",
   "pages_collected": 0,
   "third_party": {
-   "received_report": true
+   "received_report": true,
+   "teepick": true,
+   "greenfeeguide": true
   },
   "render_hint": "report",
   "plan_strategy": "subagent_report(2026-11-26)"
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 1.0,
-  "fee": 0.5,
+  "basic": 0.89,
+  "course": 0.4,
+  "fee": 1.0,
   "ops": 0.0,
-  "facility": 0.2,
-  "briefing": 0.75,
-  "rental": 1.0
+  "facility": 0.3,
+  "briefing": 0.5,
+  "rental": 0.75
  }
 }

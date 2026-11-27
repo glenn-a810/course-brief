@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0015",
@@ -86,16 +87,30 @@
   "holes_received": 9,
   "course_names": null,
   "membership_type": "대중제",
-  "night_light": null,
+  "night_light": true,
   "blocks": [],
   "grass": {
-   "tee": null,
-   "fairway": {
-    "evidence": "JUKHYANG COUNTRY CLUB CUSTOMER COMMUNIY 정보마당 공지사항 공지사항&이벤트 죽향컨트리클럽 고객전용 공간입니다.",
-    "source": "공식",
-    "url": "https://www.jhcc.co.kr/board/board_view.asp?cfgid=notice&PostIdx=1647"
+   "tee": {
+    "value": "티 켄터키블루그라스",
+    "evidence": [
+     "페어웨이 중지(한국잔디) · 그린 밴트그라스 · 티 켄터키블루그라스 · 러프 켄터키블루그라스"
+    ]
    },
-   "green": null
+   "fairway": {
+    "value": "페어웨이 중지(한국잔디)",
+    "evidence": [
+     "JUKHYANG COUNTRY CLUB CUSTOMER COMMUNIY 정보마당 공지사항 공지사항&이벤트 죽향컨트리클럽 고객전용 공간입니다.",
+     "페어웨이 중지(한국잔디) · 그린 밴트그라스 · 티 켄터키블루그라스 · 러프 켄터키블루그라스"
+    ],
+    "url": "https://www.jhcc.co.kr/board/board_view.asp?cfgid=notice&PostIdx=1647",
+    "source": "공식"
+   },
+   "green": {
+    "value": "그린 밴트그라스",
+    "evidence": [
+     "페어웨이 중지(한국잔디) · 그린 밴트그라스 · 티 켄터키블루그라스 · 러프 켄터키블루그라스"
+    ]
+   }
   },
   "kga": null,
   "kga_hole_est": null,
@@ -107,16 +122,15 @@
  "fee": {
   "weekday": 60000,
   "weekend": 80000,
-  "weekday_text": null,
-  "weekend_text": null,
-  "basis": null,
+  "weekday_text": "60,000원 ~ 65,000원",
+  "weekend_text": "80,000원 ~ 100,000원",
+  "basis": "official",
   "tax_included": null,
   "cart": {
    "value": 80000,
    "source": "그린피가이드",
    "url": "https://greenfeeguide.co.kr/course/gc-0461/"
   },
-  "caddie": null,
   "as_of": "2026-11-01",
   "source_url": null,
   "note": null,
@@ -127,7 +141,7 @@
     "checked_at": "2026-11-01"
    }
   ],
-  "checked_at": "2026-11-01",
+  "checked_at": "2026-11-27",
   "market": {
    "weekday_min": null,
    "weekend_min": null,
@@ -353,8 +367,8 @@
  },
  "cancel": {
   "cancel_policy": {
-   "value": "평일 3일 전 · 주말 4일 전까지(이용약관 기준)캐디노캐디(셀프) 라운드 가능야간(3부) 라운드2026년 7월 26일부터정기 휴장일정기 휴장일",
-   "source": "그린피가이드(공식 인용)",
+   "value": "위약 없이 취소: 평일 3일 전 · 주말 4일 전까지 (이용약관 기준 — 예약 안내에 더 이른 기한이 따로 있을 수 있으니 함께 확인하세요)",
+   "source": "그린피가이드(공식 안내 인용)",
    "url": "https://greenfeeguide.co.kr/course/gc-0461/"
   },
   "open_cycle": null,
@@ -362,7 +376,8 @@
   "evidence": [
    "죽향CC ▒ JUKHYANG COUNTRY CLUB ▒ LOGIN JOIN 클럽소개 코스안내 이용안내 실시간 예약 예약확인/취소 조인 정보마당 대표전화061.382.7200 네비게이션 메뉴 클럽소개 클럽소개 부대시설 오시는 길 코스안내 코스소개 코스공략도 스코어카드 이용안내 이용안내 노캐디이용안내 예약안내 위약규정 모바일 이용안내 실시간 예약 예약확인/취소 조인 조인게시판 JH조인 정보마당 공지사항 고객게시판 포토갤러리 자료실 명예의 전당 이용안내 USER GUIDE.",
    "※ 환불 정산과 상관없이 홀아웃 후 재입장은 불가합니다.",
-   "※ 악천후로 인한 환불시 정상요금에서 환불됩니다."
+   "※ 악천후로 인한 환불시 정상요금에서 환불됩니다.",
+   "기존 cancel_policy 값이 인접 안내 항목과 뒤섞여 있어(오류) 그린피가이드 원문 인용으로 정정 — 평일 3일 전 · 주말 4일 전까지 (이용약관 기준 — 예약 안내에 더 이른 기한이 따로 있을 수 있으니 함께 확인하세요) (출처: https://greenfeeguide.co.kr/course/gc-0461/, 2026-11 확인)"
   ],
   "weather_evidence": [
    "※ 악천후로 인한 환불시 정상요금에서 환불됩니다.",
@@ -407,9 +422,14 @@
   "cart_type": {
    "evidence": [
     "이용요금(입장료) 구분 18홀 9홀 그린피 카트비 그린피 카트비 월요일~금요일 1부 60,000원 80,000원(1대당) 36,000원 40,000원(1대당) 2부 65,000원 39,000원 월요일~목요일 3부 60,000원 36,000원 금요일 65,000원 39,000원 토요일/일요일/공휴일 1부 100,000원 56,000원 2부 100,000원 56,000원 토요일 3부 85,000원 49,000원 일요일 80,000원 49,000원 ※ 그린피에 기본요금 10,000원(시설이용료 외) 포함된 금액입니다.",
-    "※ 이용요금(입장료) = 그린피(코스이용료 + 기본요금) + 카트비 ※ 이용요금엔 부가가치세(VAT)가 포함되어 있습니다."
+    "※ 이용요금(입장료) = 그린피(코스이용료 + 기본요금) + 카트비 ※ 이용요금엔 부가가치세(VAT)가 포함되어 있습니다.",
+    "노캐디: 경기 중 카트도로를 벗어나 페어웨이 안으로 골프카 진행 불가 · 노캐디 라운드는 이용자가 골프카 운행(운행 사고 책임은 본인팀) · 코스 내 역주행 금지"
    ],
-   "value": null
+   "value": "노캐디: 경기 중 카트도로를 벗어나 페어웨이 안으로 골프카 진행 불가 · 노캐디 라운드는 이용자가 골프카 운행(운행 사고 책임은 본인팀) · 코스 내 역주행 금지",
+   "source_url": "https://www.jhcc.co.kr/guide/nocaddy_info.asp",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfee guide tables)"
   },
   "cart_entry": {
    "evidence": [
@@ -450,8 +470,14 @@
    "value": null
   },
   "pace": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "고의 지연·도박성 내기 → 퇴장·예약 정지·입장 정지 (1개월 정지)"
+   ],
+   "value": "고의 지연·도박성 내기 → 퇴장·예약 정지·입장 정지 (1개월 정지)",
+   "source_url": "https://www.jhcc.co.kr/guide/Penalty.asp",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfee guide tables)"
   },
   "grass": null
  },
@@ -489,13 +515,18 @@
    "evidence": []
   },
   "night": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "야간(3부) 라운드 운영 (2026-07-26부터) (출처: https://greenfeeguide.co.kr/course/gc-0461/, 2026-11-27 확인)",
+    "2026년 7월 26일부터"
+   ],
+   "value": "야간(3부) 라운드 운영 (2026-07-26부터)"
   },
   "closed_days": {
-   "evidence": [],
+   "evidence": [
+    "정기 휴장일 없음 (출처: https://greenfeeguide.co.kr/course/gc-0461/, 2026-11-27 확인)"
+   ],
    "third_party": "정기 휴장일 없음카트페어웨이",
-   "value": null
+   "value": "정기 휴장일 없음"
   },
   "shuttle": {
    "evidence": [],
@@ -787,8 +818,19 @@
   "recent_notice_text": null,
   "course_notes": null,
   "alert": null,
-  "unconfirmed": [],
-  "sources": []
+  "unconfirmed": [
+   "체크인",
+   "복장",
+   "진행 시간",
+   "식당"
+  ],
+  "sources": [
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "ok",
@@ -805,12 +847,12 @@
   "browser_pdf": []
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.6,
+  "basic": 0.89,
+  "course": 0.2,
   "fee": 0.75,
-  "ops": 0.21,
-  "facility": 0.0,
-  "briefing": 0.5,
-  "rental": 1.0
+  "ops": 0.36,
+  "facility": 0.2,
+  "briefing": 0.0,
+  "rental": 0.75
  }
 }

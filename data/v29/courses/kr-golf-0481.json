@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0481",
@@ -56,13 +57,13 @@
    "master": "courses_master.json v2.0 (문체부·KGA·KGBA·티픽·지도)",
    "synced_to": "courses_master.json v2.7 (2026-11-26 단일 스키마 정규화)"
   },
-  "par": null,
+  "par": 72,
   "holes_teepick": 18,
   "course_spec": {
    "holes": 18,
-   "par": null,
+   "par": 72,
    "blocks": [],
-   "length_m": null,
+   "length_m": 5430,
    "kga": {
     "kga_course_code": "296",
     "kga_name": "골프존카운티 선운",
@@ -131,7 +132,10 @@
  "course": {
   "holes": 18,
   "holes_received": 18,
-  "course_names": null,
+  "course_names": [
+   "선운",
+   "화시"
+  ],
   "membership_type": "대중제",
   "night_light": null,
   "blocks": [],
@@ -197,16 +201,125 @@
   },
   "kga_hole_est": null,
   "extra_courses": null,
-  "hole_by_hole": null,
-  "length_m": null,
-  "par": null
+  "hole_by_hole": [
+   {
+    "hole": 1,
+    "par": 4,
+    "white_m": 281,
+    "red_m": 242
+   },
+   {
+    "hole": 2,
+    "par": 5,
+    "white_m": 431,
+    "red_m": 393
+   },
+   {
+    "hole": 3,
+    "par": 4,
+    "white_m": 288,
+    "red_m": 246
+   },
+   {
+    "hole": 4,
+    "par": 3,
+    "white_m": 132,
+    "red_m": 98
+   },
+   {
+    "hole": 5,
+    "par": 4,
+    "white_m": 349,
+    "red_m": 284
+   },
+   {
+    "hole": 6,
+    "par": 4,
+    "white_m": 286,
+    "red_m": 242
+   },
+   {
+    "hole": 7,
+    "par": 4,
+    "white_m": 291,
+    "red_m": 245
+   },
+   {
+    "hole": 8,
+    "par": 3,
+    "white_m": 142,
+    "red_m": 113
+   },
+   {
+    "hole": 9,
+    "par": 5,
+    "white_m": 451,
+    "red_m": 394
+   },
+   {
+    "hole": 10,
+    "par": 4,
+    "white_m": 315,
+    "red_m": 272
+   },
+   {
+    "hole": 11,
+    "par": 3,
+    "white_m": 132,
+    "red_m": 103
+   },
+   {
+    "hole": 12,
+    "par": 5,
+    "white_m": 435,
+    "red_m": 374
+   },
+   {
+    "hole": 13,
+    "par": 4,
+    "white_m": 303,
+    "red_m": 246
+   },
+   {
+    "hole": 14,
+    "par": 4,
+    "white_m": 334,
+    "red_m": 267
+   },
+   {
+    "hole": 15,
+    "par": 4,
+    "white_m": 350,
+    "red_m": 287
+   },
+   {
+    "hole": 16,
+    "par": 3,
+    "white_m": 154,
+    "red_m": 92
+   },
+   {
+    "hole": 17,
+    "par": 5,
+    "white_m": 419,
+    "red_m": 347
+   },
+   {
+    "hole": 18,
+    "par": 4,
+    "white_m": 337,
+    "red_m": 258
+   }
+  ],
+  "length_m": 5430,
+  "par": 72
  },
  "fee": {
   "weekday": 130000,
   "weekend": 160000,
-  "weekday_text": null,
-  "weekend_text": null,
-  "basis": null,
+  "weekday_text": "130,000원 ~ 140,000원",
+  "weekend_text": "160,000원 ~ 170,000원",
+  "basis": "official",
   "tax_included": null,
   "cart": {
    "value": 100000,
@@ -233,7 +346,7 @@
     "checked_at": "2026-11-01"
    }
   ],
-  "checked_at": "2026-11-01",
+  "checked_at": "2026-11-27",
   "market": {
    "weekday_min": null,
    "weekend_min": null,
@@ -378,7 +491,7 @@
  },
  "cancel": {
   "cancel_policy": null,
-  "open_cycle": null,
+  "open_cycle": "매주 월요일 09:00, 오픈 주 포함 5주 뒤 월~일요일 예약 오픈",
   "notes": null,
   "evidence": [
    "요금안내 예약안내 취소/위약규정 이용 안내표 카트 사용료 100,000원/팀 캐디피 150,000원/팀 골프채 대여료 풀세트 50,000원 / 퍼터 20,000원 시설 이용료 20,000원 공정거래위원회 약관에 의해 골프장 내장 시 시설 이용료가 부과됩니다.",
@@ -398,10 +511,12 @@
   },
   "two_player": {
    "evidence": [
+    "불가 (출처: https://greenfeeguide.co.kr/course/gc-0442/, 2026-11-27 확인)",
+    "2인: 불가 (출처: https://greenfeeguide.co.kr/guides/two-player-golf-guide/, 2026-10-08 확인)",
     "상세검색 골프장선택 경기 전체 이글몬트 안성H 안성W 송도 충청 전체 천안 진천 화랑 경상 전체 경남 사천 더골프 감포 구미 청통 선산 이든 전라 전체 영암45 드래곤 순천 선운 무주 제주 전체 오라 날짜 선택 < > 기타 옵션 홀 18홀 27홀 인원 4인 3인 이상 2인 시간 새벽 오전 오후 야간 캐디여부 캐디 셀프 스마일캐디 닫기 검색 > 보안키패드 보안숫자 3회 입력 실패 보안 숫자를 3회 잘못 입력하셨습니다.아래 시간동안 예약이 불가합니다.",
     "상세검색 골프장선택 경기 전체 이글몬트 안성H 안성W 송도 충청 전체 천안 진천 화랑 경상 전체 경남 사천 더골프 감포 구미 청통 선산 이든 전라 전체 영암45 드래곤 순천 선운 무주 제주 전체 오라 날짜 선택 < > 기타 옵션 홀 18홀 27홀 인원 4인 3인 이상 2인 시간 새벽 오전 오후 야간 캐디여부 캐디 셀프 스마일캐디 닫기 검색 > 보안키패드 보안숫자 3회 입력 실패 보안 숫자를 3회 잘못 입력하셨습니다.아래 시간동안 예약이 불가합니다."
    ],
-   "value": null,
+   "value": "불가",
    "third_party": {
     "two": "불가",
     "three": null,
@@ -493,8 +608,10 @@
    "evidence": []
   },
   "lodging": {
-   "value": null,
-   "evidence": []
+   "value": "골프텔",
+   "evidence": [
+    "골프텔 (출처: https://greenfeeguide.co.kr/course/gc-0442/, 2026-11-27 확인)"
+   ]
   },
   "other": {
    "value": null,
@@ -617,8 +734,20 @@
   "recent_notice_text": null,
   "course_notes": null,
   "alert": null,
-  "unconfirmed": [],
-  "sources": []
+  "unconfirmed": [
+   "취소·위약 규정",
+   "체크인",
+   "복장",
+   "진행 시간",
+   "식당"
+  ],
+  "sources": [
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "ok",
@@ -635,12 +764,12 @@
   "browser_pdf": []
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.8,
+  "basic": 0.89,
+  "course": 0.4,
   "fee": 1.0,
-  "ops": 0.14,
-  "facility": 0.0,
-  "briefing": 0.5,
-  "rental": 1.0
+  "ops": 0.21,
+  "facility": 0.1,
+  "briefing": 0.0,
+  "rental": 0.75
  }
 }

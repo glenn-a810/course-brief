@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0034",
@@ -82,7 +83,7 @@
   "holes_received": 9,
   "course_names": null,
   "membership_type": "대중제",
-  "night_light": null,
+  "night_light": true,
   "blocks": [],
   "grass": {
    "tee": null,
@@ -101,9 +102,13 @@
   "weekend": 65000,
   "weekday_text": null,
   "weekend_text": null,
-  "basis": null,
+  "basis": "official",
   "tax_included": null,
-  "cart": null,
+  "cart": {
+   "value": "그린피에 포함",
+   "source": "그린피가이드(공식 요금표 확인)",
+   "url": "https://woori-cc.co.kr/guide/guide02"
+  },
   "caddie": null,
   "as_of": "2026-10-21",
   "source_url": null,
@@ -115,7 +120,7 @@
     "checked_at": "2026-10-21"
    }
   ],
-  "checked_at": "2026-10-21",
+  "checked_at": "2026-11-27",
   "market": {
    "weekday_min": null,
    "weekend_min": null,
@@ -128,7 +133,7 @@
  },
  "cancel": {
   "cancel_policy": null,
-  "open_cycle": null,
+  "open_cycle": "주중(월~금) 이용일 3주 전 요일별 오후 3시 오픈 (연중 3주 전부터 예약 가능)",
   "notes": null,
   "evidence": [],
   "weather_evidence": []
@@ -139,8 +144,10 @@
    "value": null
   },
   "two_player": {
-   "evidence": [],
-   "value": null,
+   "evidence": [
+    "3인 그린피 (출처: https://greenfeeguide.co.kr/course/gc-0484/, 2026-11-27 확인)"
+   ],
+   "value": "3인 그린피",
    "third_party": {
     "two": null,
     "three": null,
@@ -149,8 +156,10 @@
    }
   },
   "three_player": {
-   "value": null,
-   "evidence": []
+   "value": "할인 제외",
+   "evidence": [
+    "할인 제외 (출처: https://greenfeeguide.co.kr/course/gc-0484/, 2026-11-27 확인)"
+   ]
   },
   "five_player": {
    "value": null,
@@ -233,8 +242,11 @@
    "evidence": []
   },
   "night": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "야간(3부) 라운드 운영 (출처: https://greenfeeguide.co.kr/course/gc-0484/, 2026-11-27 확인)",
+    "야간 라운드 운영(공식 홈페이지 안내)"
+   ],
+   "value": "야간(3부) 라운드 운영"
   },
   "closed_days": {
    "evidence": [],
@@ -326,8 +338,20 @@
   "recent_notice_text": null,
   "course_notes": null,
   "alert": null,
-  "unconfirmed": [],
-  "sources": []
+  "unconfirmed": [
+   "취소·위약 규정",
+   "체크인",
+   "복장",
+   "진행 시간",
+   "식당"
+  ],
+  "sources": [
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "unavailable",
@@ -344,12 +368,12 @@
   "browser_pdf": []
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.6,
-  "fee": 0.5,
-  "ops": 0.0,
-  "facility": 0.0,
-  "briefing": 0.5,
-  "rental": 0.25
+  "basic": 0.78,
+  "course": 0.2,
+  "fee": 0.75,
+  "ops": 0.14,
+  "facility": 0.1,
+  "briefing": 0.0,
+  "rental": 0.0
  }
 }

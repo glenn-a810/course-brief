@@ -412,7 +412,7 @@ async function renderList({ reset = false }: { reset?: boolean } = {}): Promise<
 
   if (reset) state.shown = CONFIG.pageSize;
   const slice = groups.slice(0, state.shown);
-  $<HTMLElement>("#results").innerHTML = slice.map(cardHTML).join("");
+  $<HTMLElement>("#results").innerHTML = softenUnknown(slice.map(cardHTML).join(""));
   $<HTMLElement>("#empty").hidden = n > 0;
   $<HTMLElement>("#more").hidden = n <= state.shown;
   $<HTMLElement>("#more").textContent = `더 보기 (${state.shown} / ${n})`;
@@ -427,7 +427,7 @@ function cardHTML(g: CourseGroup): string {
   // 폐업·휴업 구장의 요금은 마지막 확인값이다. 예약 가능한 정상가처럼 보이지 않게 표기한다
   const stale = g.statuses.every((x) => x === "closed" || x === "suspended");
   const feeLine = fee == null
-    ? `<span>그린피 <b>미확인</b></span>`
+    ? ""
     : stale
       ? `<span class="fee-stale">마지막 확인 · ${feeLabel} <b>${fmtWon(fee)}</b></span>`
       : `<span>${feeLabel} <b>${fmtWon(fee)}</b>~</span>`;
@@ -564,7 +564,7 @@ async function renderDetail(id: string): Promise<void> {
       <div class="section-body"><div class="callout">이 구장은 <strong>요약 데이터만</strong> 있습니다(건설중·폐업 등으로 상세 수집 전).
       마스터 정보(주소·좌표·홀수·상태)는 위에 표시된 값이 전부입니다.</div></div></section>`;
 
-  $<HTMLElement>("#view-detail").innerHTML = `<div class="detail">${head}${clusterBox}${nav}${body}</div>`;
+  $<HTMLElement>("#view-detail").innerHTML = softenUnknown(`<div class="detail">${head}${clusterBox}${nav}${body}</div>`);
   renderedDetailId = id;
   window.scrollTo({ top: 0 });
 }
@@ -581,11 +581,11 @@ function shortUrl(u: string): string {
 
 function feeSummaryText(c: CourseIndexItem): string {
   const f = c.green_fee;
-  if (!f) return "미확인";
+  if (!f) return "—";
   const parts: string[] = [];
   if (f.weekday) parts.push(`주중 ${fmtWon(f.weekday)}`);
   if (f.weekend) parts.push(`주말 ${fmtWon(f.weekend)}`);
-  if (!parts.length) return "미확인";
+  if (!parts.length) return "—";
   // 요금 근거(공식 요금표/관측 최저가)는 관리자 모드에서만 — 일반 화면은 기준일만
   const asOf = f.as_of ? fmtDate(f.as_of) : "";
   const sub = isAdmin()
@@ -627,6 +627,24 @@ function evidenceDetails(evidence: unknown, label = "근거"): string {
 
 function kvRow(label: string, value: string, sub = ""): string {
   return `<div class="kv"><dt>${esc(label)}</dt><dd>${value}${sub ? `<span class="sub">${sub}</span>` : ""}</dd></div>`;
+}
+
+/**
+ * 값이 없으면 일반 화면에서는 행을 숨기고, 관리자 모드에서는 '미확인'으로 남긴다.
+ * 일반 화면에 '미확인'이 도배되지 않게 하려는 표시 규칙(데이터는 null 그대로 보존).
+ */
+/**
+ * 일반 화면에서는 데이터 원문에 섞여 들어온 '미확인'도 '확인 안 됨'으로 바꿔 쓴다.
+ * 의미는 그대로 두되 화면에 '미확인' 도배가 남지 않게 하는 표시 규칙.
+ */
+function softenUnknown(html: string): string {
+  return isAdmin() ? html : html.split("미확인").join("확인 안 됨");
+}
+
+function kvRowKnown(label: string, value: string | null | undefined, sub = ""): string {
+  const t = (value ?? "").trim();
+  if (t) return kvRow(label, esc(t), sub);
+  return isAdmin() ? kvRow(label, "미확인", sub) : "";
 }
 
 /** 추가 코스는 객체 배열이다. 그대로 String() 하면 '[object Object]' 가 되므로 필드별로 편다 */
@@ -692,13 +710,13 @@ function sections(d: CourseDetail, c: CourseIndexItem): string {
     <h2><span class="num">01</span>기본·입지</h2>
     <p class="section-desc">규모·소재·접근성.${isAdmin() ? " 값 뒤의 출처는 데이터 원본 표기입니다." : ""}</p>
     <div class="section-body">
-      ${kvRow("홀 구성", esc(holeText || "미확인"), isAdmin() && m.holes_note ? esc(m.holes_note) : "")}
-      ${kvRow("이용형태", esc(m.type || c.type || "미확인"), m.type_note ? esc(m.type_note) : "")}
-      ${kvRow("개장", esc(m.opened || "미확인"), m.opened_note ? esc(m.opened_note) : "")}
-      ${kvRow("면적", m.area_sqm ? `${fmtNum(m.area_sqm)}㎡ (${fmtNum(Math.round(m.area_sqm / 3.3058))}평)` : "미확인")}
-      ${kvRow("운영사", esc((m.operators ?? []).join(", ") || "미확인"), m.operators_note ? esc(m.operators_note) : "")}
+      ${kvRowKnown("홀 구성", holeText, isAdmin() && m.holes_note ? esc(m.holes_note) : "")}
+      ${kvRowKnown("이용형태", m.type || c.type || "", m.type_note ? esc(m.type_note) : "")}
+      ${kvRowKnown("개장", m.opened || "", m.opened_note ? esc(m.opened_note) : "")}
+      ${kvRowKnown("면적", m.area_sqm ? `${fmtNum(m.area_sqm)}㎡ (${fmtNum(Math.round(m.area_sqm / 3.3058))}평)` : "")}
+      ${kvRowKnown("운영사", (m.operators ?? []).join(", ") || "", m.operators_note ? esc(m.operators_note) : "")}
       ${m.designer ? kvRow("설계", esc(textOf(m.designer))) : ""}
-      ${kvRow("주소", esc(m.address || "미확인"), m.address_note ? esc(m.address_note) : "")}
+      ${kvRowKnown("주소", m.address || "", m.address_note ? esc(m.address_note) : "")}
       ${m.nearest_ic ? kvRow("최단 IC", `${esc(m.nearest_ic.name)}${m.nearest_ic.distance_km ? ` · ${m.nearest_ic.distance_km}km` : ""}`, isAdmin() ? esc(m.nearest_ic.source || "") : "") : ""}
       ${m.nearest_ic_note ? kvRow("IC 비고", esc(m.nearest_ic_note)) : ""}
       ${m.expected_open ? kvRow("개장 예정", esc(m.expected_open), esc(m.project_stage || "")) : ""}
@@ -744,12 +762,12 @@ function sections(d: CourseDetail, c: CourseIndexItem): string {
     <h2><span class="num">02</span>코스 스펙</h2>
     <p class="section-desc">홀수·파·길이·잔디와 KGA 공식 레이팅. 레이팅은 난이도 비교의 1차 기준입니다.</p>
     <div class="section-body">
-      ${kvRow("홀수 / 파", esc([co.holes ? `${co.holes}홀` : null, co.par ? `파 ${co.par}` : null].filter(Boolean).join(" / ") || "미확인"))}
+      ${co.holes || co.par || isAdmin() ? kvRow("홀수 / 파", esc([co.holes ? `${co.holes}홀` : null, co.par ? `파 ${co.par}` : null].filter(Boolean).join(" / ") || "미확인")) : ""}
       ${co.length_m ? kvRow("전장", `${fmtNum(co.length_m)}m (${fmtNum(Math.round(co.length_m * 1.0936))}yd)`) : ""}
       ${(co.blocks ?? []).length ? kvRow("코스 구성", esc((co.blocks ?? []).join(", "))) : ""}
       ${(m.course_blocks ?? []).length ? kvRow("세부 코스명", esc((m.course_blocks ?? []).join(", "))) : ""}
       ${co.course_names ? kvRow("코스명", esc(textOf(co.course_names))) : ""}
-      ${kvRow("야간 라운드", isMissing(co.night_light) ? "미확인" : esc(textOf(co.night_light)))}
+      ${isMissing(co.night_light) ? (isAdmin() ? kvRow("야간 라운드", "미확인") : "") : kvRow("야간 라운드", esc(textOf(co.night_light)))}
       ${grassRows}
       ${isAdmin() && co.kga_hole_est ? kvRow("KGA 추정 홀수", esc(String(co.kga_hole_est))) : ""}
       ${(co.extra_courses ?? []).length ? kvRow("추가 코스", extraCoursesHTML(co.extra_courses ?? [])) : ""}
@@ -802,22 +820,22 @@ function sections(d: CourseDetail, c: CourseIndexItem): string {
       <div class="fee-grid">
         <div class="fee-box"><div class="label">주중</div><div class="value">${fmtWon(fee.weekday)}</div>${fee.weekday_text ? `<div class="note">${esc(fee.weekday_text)}</div>` : ""}</div>
         <div class="fee-box"><div class="label">주말·공휴일</div><div class="value">${fmtWon(fee.weekend)}</div>${fee.weekend_text ? `<div class="note">${esc(fee.weekend_text)}</div>` : ""}</div>
-        <div class="fee-box"><div class="label">카트</div><div class="value">${fee.cart?.value != null ? fmtWon(fee.cart.value) : "미확인"}</div><div class="note">${esc(fee.cart?.text || "")}</div></div>
-        <div class="fee-box"><div class="label">캐디피</div><div class="value">${fee.caddie?.none ? "노캐디" : fee.caddie?.value != null ? fmtWon(fee.caddie.value) : "미확인"}</div><div class="note">${esc(fee.caddie?.text || "")}</div></div>
+        ${fee.cart?.value != null || isAdmin() ? `<div class="fee-box"><div class="label">카트</div><div class="value">${fee.cart?.value != null ? fmtWon(fee.cart.value) : "미확인"}</div><div class="note">${esc(fee.cart?.text || "")}</div></div>` : ""}
+        ${fee.caddie?.none || fee.caddie?.value != null || isAdmin() ? `<div class="fee-box"><div class="label">캐디피</div><div class="value">${fee.caddie?.none ? "노캐디" : fee.caddie?.value != null ? fmtWon(fee.caddie.value) : "미확인"}</div><div class="note">${esc(fee.caddie?.text || "")}</div></div>` : ""}
       </div>
       ${isAdmin()
         ? (fee.basis || asOf ? `<p class="section-desc">${esc(fee.basis || "")}${asOf ? ` · 확인 ${fmtDate(asOf)}` : ""}</p>` : "")
         : (asOf ? `<p class="section-desc">업데이트 ${esc(fmtDate(asOf))}</p>` : "")}
       ${fee.market ? kvRow("실거래 관측 최저", `${fee.market.weekday_min ? `주중 ${fmtWon(fee.market.weekday_min)}` : ""}${fee.market.weekday_min && fee.market.weekend_min ? " · " : ""}${fee.market.weekend_min ? `주말 ${fmtWon(fee.market.weekend_min)}` : ""}`, isAdmin() ? esc(fee.market.note || fee.market.source || "") : "") : ""}
-      ${member ? kvRow("회원제 요금", `${member.weekday ? `주중 ${fmtWon(member.weekday)}` : ""}${member.weekend ? ` · 주말 ${fmtWon(member.weekend)}` : ""}`.trim() || "미확인", isAdmin() ? esc(member.note || "") : "") : ""}
+      ${member && (member.weekday || member.weekend || isAdmin()) ? kvRow("회원제 요금", `${member.weekday ? `주중 ${fmtWon(member.weekday)}` : ""}${member.weekend ? ` · 주말 ${fmtWon(member.weekend)}` : ""}`.trim() || "미확인", isAdmin() ? esc(member.note || "") : "") : ""}
       ${od.green_detail ? kvRow("공식 요금 상세", esc(od.green_detail), esc(od.checked_at ? `확인 ${fmtDate(od.checked_at)}` : "")) : ""}
       ${od.cart_detail ? kvRow("카트", esc(od.cart_detail)) : ""}
       ${od.caddie_detail ? kvRow("캐디", esc(od.caddie_detail)) : ""}
       ${od.facility_fee ? kvRow("시설 이용료", esc(textOf(od.facility_fee))) : ""}
       ${od.rental ? kvRow("클럽 대여", esc(textOf(od.rental))) : ""}
       ${tableHTML}
-      ${kvRow("예약 오픈", esc(cancel.open_cycle || "미확인"))}
-      ${kvRow("취소 규정", esc(cancelText), esc(cancel.notes || ""))}
+      ${kvRowKnown("예약 오픈", cancel.open_cycle || "")}
+      ${cancelText === "미확인" && !isAdmin() ? "" : kvRow("취소 규정", esc(cancelText), esc(cancel.notes || ""))}
       ${evidenceDetails(cancel.evidence, "취소·위약 근거")}
       ${evidenceDetails(cancel.weather_evidence, "악천후 정산 근거")}
       ${fee.note ? kvRow("요금 비고", esc(fee.note)) : ""}
@@ -841,7 +859,7 @@ function sections(d: CourseDetail, c: CourseIndexItem): string {
     <p class="section-desc">노캐디·인원·카트·체크인처럼 예약 전에 알아야 하는 실제 플레이 조건.</p>
     <div class="section-body">
       ${opsRows.join("") || `<div class="callout">공식 채널에서 확인된 운영 정보가 아직 없습니다. 아래 항목은 전화·현장 확인이 필요합니다.</div>`}
-      ${opsUnknown.length ? unconfirmedList(opsUnknown) : ""}
+      ${isAdmin() && opsUnknown.length ? unconfirmedList(opsUnknown) : ""}
     </div>
   </section>`;
 
@@ -861,7 +879,7 @@ function sections(d: CourseDetail, c: CourseIndexItem): string {
     <p class="section-desc">연습·식음·락카·숙박·야간 조명 등 라운드 환경.</p>
     <div class="section-body">
       ${facRows.join("") || `<div class="callout">확인된 부대시설 정보가 없습니다.</div>`}
-      ${facUnknown.length ? unconfirmedList(facUnknown) : ""}
+      ${isAdmin() && facUnknown.length ? unconfirmedList(facUnknown) : ""}
       ${isAdmin() && (fac.gf_facilities ?? []).length ? `<p class="section-desc">참고: ${esc((fac.gf_facilities ?? []).slice(0, 3).join(" / "))}</p>` : ""}
     </div>
   </section>`;
@@ -898,7 +916,7 @@ function sections(d: CourseDetail, c: CourseIndexItem): string {
       ${noticeTags && Object.keys(noticeTags).length ? `<div class="tags">${Object.entries(noticeTags).slice(0, 6).map(([tag, arr]) =>
         `<span class="tag">${esc(tag)} ${Array.isArray(arr) ? arr.length : ""}</span>`).join("")}</div>` : ""}
       ${isAdmin() && noticeUrl ? `<p class="section-desc">공지 게시판: ${/^https?:/.test(noticeUrl) ? `<a href="${esc(noticeUrl)}" target="_blank" rel="noopener noreferrer">${esc(shortUrl(noticeUrl))}</a>` : "수집 아카이브"}</p>` : ""}
-      ${(br.unconfirmed ?? []).length ? unconfirmedList((br.unconfirmed ?? []).slice(0, 14)) : ""}
+      ${isAdmin() && (br.unconfirmed ?? []).length ? unconfirmedList((br.unconfirmed ?? []).slice(0, 14)) : ""}
       ${br.collected_at ? `<p class="section-desc">${isAdmin() ? `수집 ${fmtDate(br.collected_at)}` : `업데이트 ${esc(fmtDate(br.collected_at))}`}</p>` : ""}
       ${isAdmin() && (br.sources ?? []).length ? `<p class="section-desc">출처: ${(br.sources ?? []).slice(0, 5).map((u) => /^https?:/.test(u) ? `<a href="${esc(u)}" target="_blank" rel="noopener noreferrer">${esc(shortUrl(u))}</a>` : esc(u)).join(" · ")}</p>` : ""}
     </div>
@@ -923,7 +941,7 @@ function sections(d: CourseDetail, c: CourseIndexItem): string {
     <div class="provider">
       <div class="provider-top">
         <span class="provider-name">${esc(p.name)}</span>
-        ${badge(p.coverage === "O" ? "ok" : p.coverage === "조건부" ? "warn" : "neutral", p.coverage === "O" ? "권역 가능" : p.coverage || "미확인")}
+        ${p.coverage ? badge(p.coverage === "O" ? "ok" : p.coverage === "조건부" ? "warn" : "neutral", p.coverage === "O" ? "권역 가능" : p.coverage) : ""}
       </div>
       <div class="provider-meta">${esc(p.basis || "")}</div>
       <div class="provider-meta">
@@ -965,7 +983,7 @@ function sections(d: CourseDetail, c: CourseIndexItem): string {
     <p class="section-desc" style="margin-top:14px">수집 ${esc(updated)} · 스키마 ${esc(d.meta?.schema || "")} · <a href="${REPO_URL}/blob/main/data/v29/schema.md" target="_blank" rel="noopener noreferrer">스키마 문서</a></p>
   </section>` : `
   <section class="section"><h2>업데이트</h2>
-    <p class="section-desc">${esc(updated || "—")} 기준</p>
+    <p class="section-desc">${esc(updated || "—")} 기준 · 공개 자료에서 확인된 값만 표시합니다.</p>
   </section>`;
 
   return `${s1}${s2}${s3}${s4}${s5}${s6}${s7}${dataInfo}`;
@@ -992,7 +1010,7 @@ function renderRental(): void {
         ${p.delivery ? `<div><b>배송·픽업</b><span>${esc(p.delivery)}</span></div>` : ""}
         ${p.languages ? `<div><b>언어</b><span>${esc(p.languages)}</span></div>` : ""}
         ${p.status ? `<div><b>상태</b><span>${esc(p.status)}</span></div>` : ""}
-        <div><b>연락</b><span>${p.phone ? `<a href="tel:${esc(String(p.phone).replace(/[^\d+]/g, ""))}">${esc(p.phone)}</a>` : "미확인"}${p.url ? ` · <a href="${esc(p.url)}" target="_blank" rel="noopener noreferrer">홈페이지</a>` : ""}</span></div>
+        <div><b>연락</b><span>${p.phone ? `<a href="tel:${esc(String(p.phone).replace(/[^\d+]/g, ""))}">${esc(p.phone)}</a>` : "—"}${p.url ? ` · <a href="${esc(p.url)}" target="_blank" rel="noopener noreferrer">홈페이지</a>` : ""}</span></div>
       </div>
       ${p.note ? `<p class="section-desc">${esc(p.note)}</p>` : ""}
     </article>`).join("");
@@ -1032,7 +1050,7 @@ function renderAbout(): void {
   // 데이터 수집·구조 안내는 내부 파이프라인 설명이므로 관리자 모드에서만 — 일반 화면은 기준일 뿐
   const lead = isAdmin()
     ? "CourseBrief는 골프장 공식 홈페이지·공지·요금표를 직접 수집하고 공개 데이터와 대조해 7개 영역으로 정리합니다. 모든 값에는 출처와 확인 시점이 붙습니다."
-    : "CourseBrief는 전국 골프장을 7개 영역으로 정리한 참고 데이터입니다. 확인하지 못한 값은 비워 두고 '미확인'으로 표시합니다.";
+    : "CourseBrief는 전국 골프장을 7개 영역으로 정리한 참고 데이터입니다. 공개 자료에서 확인된 값만 표시하며, 표시되지 않은 항목은 확인하지 못한 값입니다.";
   const collectPrinciples = isAdmin() ? `
     <h2 class="h2">수집 원칙</h2>
     <div class="stack">

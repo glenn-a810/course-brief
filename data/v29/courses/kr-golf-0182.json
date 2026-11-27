@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0182",
@@ -43,13 +44,13 @@
    "distance_km": 4.2,
    "source": "최근접 IC 직선거리"
   },
-  "tel": null,
-  "homepage": null,
+  "tel": "031-330-1441",
+  "homepage": "https://www.jisanresort.co.kr/w/golf/public/info.asp",
   "operators": [
    "지산리조트㈜"
   ],
   "area_sqm": 184356,
-  "opened": null,
+  "opened": "1999-02",
   "course_blocks": [],
   "facility_id": null,
   "provenance": {
@@ -58,7 +59,7 @@
   },
   "course_spec": {
    "holes": 9,
-   "par": null,
+   "par": 36,
    "blocks": [],
    "length_m": null,
    "kga": null,
@@ -70,7 +71,9 @@
   ],
   "status": "operating",
   "facility_cluster": null,
-  "factcheck_2026_11_26": null
+  "factcheck_2026_11_26": null,
+  "par": 36,
+  "opened_note": "지산리조트 골프장 소개 연혁 — 퍼블릭 1999년 2월 10일 개장"
  },
  "course": {
   "holes": 9,
@@ -89,28 +92,54 @@
   "extra_courses": null,
   "hole_by_hole": null,
   "length_m": null,
-  "par": null
+  "par": 36
  },
  "fee": {
-  "weekday": null,
-  "weekend": null,
+  "weekday": 50000,
+  "weekend": 65000,
   "weekday_text": null,
   "weekend_text": null,
-  "basis": null,
+  "basis": "official",
   "tax_included": null,
-  "cart": null,
-  "caddie": null,
-  "as_of": null,
+  "cart": {
+   "value": 8000,
+   "source": "그린피가이드(공식 요금표)",
+   "url": "https://greenfeeguide.com/course/gc-0028/",
+   "note": "1인용 전동카트(수동카트 무료)"
+  },
+  "caddie": {
+   "value": null,
+   "none": true,
+   "source": "그린피가이드(공식 요금표)",
+   "url": "https://greenfeeguide.com/course/gc-0028/",
+   "note": "전면 노캐디(모든 라운드 셀프)"
+  },
+  "as_of": "2026-10-09",
   "source_url": null,
-  "note": null,
-  "sources": [],
-  "checked_at": null
+  "note": "9홀 1회 기준 요금",
+  "sources": [
+   {
+    "source": "그린피가이드(공식 요금표 확인)",
+    "url": "https://greenfeeguide.com/course/gc-0028/",
+    "checked_at": "2026-10-09"
+   }
+  ],
+  "checked_at": "2026-11-27",
+  "market": {}
  },
  "cancel": {
-  "cancel_policy": null,
-  "open_cycle": null,
+  "cancel_policy": {
+   "value": "무단결장(당일 취소 포함) 1회 3개월·1년 내 2회 영구 예약정지, 임박취소(3일 전 17시 이후~1일 전 17시) 1회 1개월·6개월 내 2회 3개월·3회 영구 정지",
+   "source": "공식 홈페이지 예약취소 안내",
+   "url": "https://www.jisanresort.co.kr/w/reservation/golfResv/public_reserv_list.asp"
+  },
+  "open_cycle": "라운드 희망일 기준 3주 전 월요일 11:00부터 1일 전 17:00까지",
   "notes": null,
-  "evidence": [],
+  "evidence": [
+   "무단결장(당일취소 포함) 1회 3개월 / 1년 내 2회 영구",
+   "임박취소,매너불량,예약자 미내장 등 1회 1개월 / 6개월 내 2회 3개월 / 6개월 내 3회 영구",
+   "예약기간: 주중/주말/휴일 라운드희망일 기준 3주전 월요일 11시부터 1일전 17시까지 — https://www.jisanresort.co.kr/w/reservation/golfResv/public_reserv01.asp"
+  ],
   "weather_evidence": []
  },
  "ops": {
@@ -245,8 +274,15 @@
    "evidence": []
   },
   "other": {
-   "value": null,
-   "evidence": []
+   "value": "프로샵",
+   "evidence": [
+    "other: 프로샵"
+   ],
+   "source_url": "https://greenfeeguide.com/course/gc-0028/",
+   "source_type": "greenfee_guide",
+   "confidence": "medium",
+   "checked_at": "2026-11-27",
+   "value_from": "batch2_supplement"
   },
   "night": {
    "evidence": [],
@@ -367,7 +403,13 @@
   "course_notes": null,
   "alert": null,
   "unconfirmed": [],
-  "sources": []
+  "sources": [
+   {
+    "source": "그린피가이드 코스 페이지",
+    "url": "https://greenfeeguide.co.kr/course/gc-0028/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "unavailable",
@@ -375,19 +417,19 @@
   "pages_collected": 0,
   "third_party": {
    "teepick": false,
-   "greenfeeguide": false
+   "greenfeeguide": true
   },
   "render_hint": "",
   "plan_strategy": "no_homepage(지도·예약앱 대체)",
   "browser_batch": false
  },
  "coverage": {
-  "basic": 0.78,
-  "course": 0.6,
-  "fee": 0.0,
+  "basic": 0.89,
+  "course": 0.2,
+  "fee": 0.75,
   "ops": 0.36,
-  "facility": 0.1,
-  "briefing": 0.25,
-  "rental": 0.25
+  "facility": 0.2,
+  "briefing": 0.0,
+  "rental": 0.0
  }
 }

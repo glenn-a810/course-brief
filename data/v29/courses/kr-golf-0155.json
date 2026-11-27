@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0155",
@@ -66,7 +67,7 @@
    "blocks": [
     "햇님달님별님"
    ],
-   "length_m": null,
+   "length_m": 5662,
    "kga": null,
    "grass": null,
    "hole_by_hole": null
@@ -81,7 +82,7 @@
  "course": {
   "holes": 27,
   "holes_received": 27,
-  "course_names": null,
+  "course_names": "햇님·달님·별님 각 9홀",
   "membership_type": "대중제",
   "night_light": null,
   "blocks": [
@@ -96,7 +97,7 @@
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": null,
+  "length_m": 5662,
   "par": 72
  },
  "fee": {
@@ -106,13 +107,29 @@
   "weekend_text": null,
   "basis": null,
   "tax_included": null,
-  "cart": null,
-  "caddie": null,
+  "cart": {
+   "value": 100000,
+   "source": "공식 홈페이지 요금안내",
+   "url": "https://www.ariji.co.kr/use-information/fee-information",
+   "note": "리무진카트 200,000원"
+  },
+  "caddie": {
+   "value": 150000,
+   "none": false,
+   "source": "공식 홈페이지 요금안내",
+   "url": "https://www.ariji.co.kr/use-information/fee-information"
+  },
   "as_of": null,
   "source_url": null,
   "note": null,
-  "sources": [],
-  "checked_at": null,
+  "sources": [
+   {
+    "source": "아리지CC 공식 홈페이지 요금안내",
+    "url": "https://www.ariji.co.kr/use-information/fee-information",
+    "checked_at": "2026-11-27"
+   }
+  ],
+  "checked_at": "2026-11-27",
   "market": {
    "weekday_min": null,
    "weekend_min": null,
@@ -138,8 +155,15 @@
    "value": null
   },
   "two_player": {
-   "evidence": [],
-   "value": null
+   "value": "4인 1팀 구성 원칙, 인원 변경 시 추가요금",
+   "evidence": [
+    "내장인원은 1팀에 4인 구성이 원칙입니다.",
+    "사정에 의해 불가피하게 인원의 변경이 생기는 경우 추가요금이 발생됩니다."
+   ],
+   "source_url": "https://www.ariji.co.kr/use-information/usage-information",
+   "confidence": "high",
+   "checked_at": "2026-11-27",
+   "value_from": "batch2_supplement"
   },
   "three_player": {
    "value": null,
@@ -170,8 +194,15 @@
    "value": null
   },
   "checkin": {
-   "evidence": [],
-   "value": null
+   "value": "티오프 40분 전 프론트 접수, 15분 전 카트 도착",
+   "evidence": [
+    "Tee Off 40분전까지 예약인원 전원이 프론트에 접수를 하셔야 합니다.",
+    "Tee Off 15분전까지 예약인원 전원이 지정된 카트 앞에 도착하셔야 합니다."
+   ],
+   "source_url": "https://www.ariji.co.kr/use-information/fee-information",
+   "confidence": "high",
+   "checked_at": "2026-11-27",
+   "value_from": "batch2_supplement"
   },
   "locker": {
    "evidence": [],
@@ -182,8 +213,14 @@
    "value": null
   },
   "dress": {
-   "evidence": [],
-   "value": null
+   "value": "민소매·슬리퍼 등 불쾌감을 주는 복장 입장 불가",
+   "evidence": [
+    "( 민소매, 슬리퍼 착용 등 타인에게 불쾌감이나 혐오감을 주는 복장을 하시는 경우는 입장이 불가합니다)"
+   ],
+   "source_url": "https://www.ariji.co.kr/use-information/usage-information",
+   "confidence": "high",
+   "checked_at": "2026-11-27",
+   "value_from": "batch2_supplement"
   },
   "pace": {
    "evidence": [],
@@ -244,16 +281,18 @@
  },
  "rental": {
   "available": null,
-  "full_set": null,
+  "full_set": 50000,
   "fee_text": null,
   "brand": null,
   "left_handed": null,
-  "shoes": null,
+  "shoes": "10,000원",
   "nine_hole": null,
   "range_finder": null,
   "reservation": null,
-  "source_url": null,
-  "evidence": [],
+  "source_url": "https://www.ariji.co.kr/use-information/fee-information",
+  "evidence": [
+   "클럽 풀세트 50,000원 / 골프화 10,000원 / 드라이버·퍼터 각 10,000원"
+  ],
   "official": null,
   "nearby_delivery": {
    "region": "수도권",
@@ -326,8 +365,22 @@
   "recent_notice_text": null,
   "course_notes": null,
   "alert": null,
-  "unconfirmed": [],
-  "sources": []
+  "unconfirmed": [
+   "그린피(주중/주말) 미확인: 공식 사이트가 SPA로 요금표가 별도 공지(이미지)에만 있어 그린피 숫자 미확인(카트·캐디피는 확인)",
+   "취소·위약 규정 미확인: 공식 사이트가 SPA로 요금표가 별도 공지(이미지)에만 있어 그린피 숫자 미확인(카트·캐디피는 확인)"
+  ],
+  "sources": [
+   {
+    "source": "그린피가이드 코스 페이지",
+    "url": "https://greenfeeguide.co.kr/course/gc-0130/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "ok",
@@ -335,19 +388,19 @@
   "pages_collected": 1,
   "third_party": {
    "teepick": true,
-   "greenfeeguide": false
+   "greenfeeguide": true
   },
   "render_hint": "spa",
   "plan_strategy": "spa(헤드리스)",
   "browser_batch": false
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.8,
-  "fee": 0.0,
-  "ops": 0.0,
+  "basic": 0.89,
+  "course": 0.6,
+  "fee": 0.5,
+  "ops": 0.21,
   "facility": 0.0,
-  "briefing": 0.5,
+  "briefing": 0.0,
   "rental": 0.25
  }
 }

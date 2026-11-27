@@ -22,11 +22,12 @@
   "schema_previous": "stage2b/1.0",
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "restructured_from_7key": false,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0354",
@@ -98,7 +99,13 @@
   "holes_conflict": false,
   "facility_cluster": null,
   "factcheck_2026_11_26": null,
-  "address_original": "김해시 한림면 김해대로 974번길 198"
+  "address_original": "김해시 한림면 김해대로 974번길 198",
+  "designer": {
+   "value": "우대기술단(설계단:임상하)임상하(임골프) 설계 다른 골프장: 뉴서울컨트리클럽 · 코리아CC · 천안상록골프장 · 디아너스C.C",
+   "source": "공개 정보(그린피가이드)",
+   "url": "https://greenfeeguide.co.kr/course/gc-0388/"
+  },
+  "par": 73
  },
  "course": {
   "holes": 18,
@@ -124,7 +131,9 @@
    ]
   },
   "kga_hole_est": 18,
-  "extra_courses": null
+  "extra_courses": null,
+  "par": 73,
+  "length_m": 6310
  },
  "fee": {
   "weekday": 130000,
@@ -151,7 +160,8 @@
     "url": "https://greenfeeguide.co.kr/course/gc-0388/",
     "checked_at": "2026-11-01"
    }
-  ]
+  ],
+  "checked_at": "2026-11-27"
  },
  "cancel": {
   "cancel_policy": "개인사정·고객 요청으로 홀아웃 시 18홀 그린피·카트비·캐디피 전액 적용, 1홀 티샷 이후 캐디피 전액 지급(공식 이용안내). 추첨 취소 위약 세부 기준은 예약 시 확인 필요",
@@ -240,8 +250,10 @@
    "evidence": []
   },
   "lodging": {
-   "value": null,
-   "evidence": []
+   "value": "상록호텔(가족호텔·유스호스텔 객실) 운영",
+   "evidence": [
+    "https://www.sangnokresort.co.kr/M010501"
+   ]
   },
   "other": {
    "value": "상록골프앤리조트(천안·화성·남원·김해) 연계, 리조트 부대시설",
@@ -271,7 +283,7 @@
   "nine_hole": null,
   "range_finder": null,
   "reservation": null,
-  "source_url": null,
+  "source_url": "https://greenfeeguide.co.kr/course/gc-0388/",
   "nearby_delivery": {
    "region": "영남",
    "sido": "경상남도",
@@ -326,8 +338,6 @@
   "alert": null,
   "unconfirmed": [
    "야간 라이트",
-   "잔디(티)",
-   "잔디(그린)",
    "2인 플레이",
    "3인 플레이",
    "5인 플레이",
@@ -337,9 +347,7 @@
    "카트 페어웨이 진입",
    "셀프 백드롭",
    "매트 티샷",
-   "인도어 연습장",
    "그늘집",
-   "숙박",
    "좌타용 클럽",
    "제세금"
   ],
@@ -349,7 +357,13 @@
   "sources": [
    "https://www.sangnokresort.co.kr/M070201",
    "https://greenfeeguide.co.kr/course/gc-0388/",
-   "https://www.rankue.co.kr/golf/course/김해상록GC"
+   "https://www.rankue.co.kr/golf/course/김해상록GC",
+   "https://www.sangnokresort.co.kr/M010501",
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
   ],
   "collected_at": "2026-11-26T10:33:21+09:00"
  },
@@ -358,18 +372,20 @@
   "official_reason": "운영 중(상록골프앤리조트 공식 홈페이지, 예약·요금·추첨 안내 게시)",
   "pages_collected": 0,
   "third_party": {
-   "received_report": true
+   "received_report": true,
+   "teepick": true,
+   "greenfeeguide": true
   },
   "render_hint": "report",
   "plan_strategy": "subagent_report(2026-11-26)"
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 1.0,
+  "basic": 0.89,
+  "course": 0.4,
   "fee": 1.0,
   "ops": 0.14,
-  "facility": 0.4,
-  "briefing": 0.75,
-  "rental": 1.0
+  "facility": 0.5,
+  "briefing": 0.5,
+  "rental": 0.75
  }
 }

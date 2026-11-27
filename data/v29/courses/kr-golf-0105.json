@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0105",
@@ -61,13 +62,13 @@
    "source": "그린피가이드",
    "url": "https://greenfeeguide.co.kr/course/gc-0066/"
   },
-  "par": null,
+  "par": 72,
   "holes_teepick": 18,
   "course_spec": {
    "holes": 18,
-   "par": null,
+   "par": 72,
    "blocks": [],
-   "length_m": null,
+   "length_m": 6464,
    "kga": {
     "kga_course_code": "67",
     "kga_name": "남촌",
@@ -152,14 +153,14 @@
  "course": {
   "holes": 18,
   "holes_received": 18,
-  "course_names": null,
+  "course_names": "동·서 각 9홀",
   "membership_type": "회원제",
   "night_light": null,
   "blocks": [],
   "grass": {
-   "tee": null,
-   "fairway": null,
-   "green": null
+   "tee": "Kentucky Bluegrass",
+   "fairway": "Zoysiagrass(한국잔디)",
+   "green": "Creeping Bentgrass"
   },
   "kga": {
    "kga_course_code": "67",
@@ -235,8 +236,8 @@
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": null,
-  "par": null
+  "length_m": 6464,
+  "par": 72
  },
  "fee": {
   "weekday": 260000,
@@ -268,13 +269,14 @@
   ],
   "checked_at": "2026-11-01",
   "market": {
-   "weekday_min": null,
+   "weekday_min": 110000,
    "weekend_min": null,
    "part1": null,
    "part2": null,
    "source": "티픽골프장(실거래 관측)",
    "url": "https://teepickgolf.com/course/%EB%82%A8%EC%B4%8C",
-   "note": "공시가 아닌 최근 관측 실거래 최저가"
+   "note": "공시가 아닌 최근 관측 실거래 최저가",
+   "checked_at": "2026-11-27"
   },
   "official_green_evidence": [
    "이용요금 남촌 골프클럽의 이용요금은 공지한 그린피, 카트비, 캐디피 등 기타 남촌 골프클럽의 이용과 관련하여 발생하는 모든 비용으로 한다.",
@@ -460,13 +462,21 @@
   }
  },
  "cancel": {
-  "cancel_policy": null,
-  "open_cycle": null,
+  "cancel_policy": {
+   "value": "예약일 기준 7일 전까지 위약 없이 취소. 6~2일 전 취소는 위약금 주중 60만원·주말 및 공휴일 80만원, 당일 취소(No-show 포함)는 별도 위약",
+   "source": "공식 홈페이지",
+   "url": "https://www.namchoncc.co.kr/Guide/Rule"
+  },
+  "open_cycle": "6주 전 월요일 접수, 화요일 마감, 수요일 배정",
   "notes": null,
   "evidence": [
    "남촌GC 예약.취소 안내 예약자내장원칙예약취소기간(7일전)예약취소횟수(2회/月)예약변경(해당주內) 동의 미동의 구분 내용 COVID-19 예방 입장제한 안내 자가격리대상 및 확진환자접촉발열/기침/인후통 등 증상 회원님 께서는 동반자의 사전정보를 반드시 확인해 주시기 바랍니다.",
    "남촌GC 예약.취소 안내 예약자내장원칙예약취소기간(7일전)예약취소횟수(2회/月)예약변경(해당주內) 동의 미동의 구분 내용 COVID-19 예방 입장제한 안내 자가격리대상 및 확진환자접촉발열/기침/인후통 등 증상 회원님 께서는 동반자의 사전정보를 반드시 확인해 주시기 바랍니다.",
-   "예약 취소 구분 패널티 예약일 기준 7일전 취소 없음(단, 월 취소 가능 횟수 차감) 예약일 기준 6~2일전 취소 예약정지 1개월, 또는위약금(주중 60만원, 주말 및 공휴일 80만원) 전일 취소,당일 취소(No-show 포함) 예약정지 2개월, 또는위약금(주중 100만원, 주말 및 공휴일 120만원) 예약 취소 가능 시점 예약 취소는 예약일 기준 7일 전까지 패널티 없이 가능하다."
+   "예약 취소 구분 패널티 예약일 기준 7일전 취소 없음(단, 월 취소 가능 횟수 차감) 예약일 기준 6~2일전 취소 예약정지 1개월, 또는위약금(주중 60만원, 주말 및 공휴일 80만원) 전일 취소,당일 취소(No-show 포함) 예약정지 2개월, 또는위약금(주중 100만원, 주말 및 공휴일 120만원) 예약 취소 가능 시점 예약 취소는 예약일 기준 7일 전까지 패널티 없이 가능하다.",
+   "예약일 기준 7일전 취소",
+   "예약일 기준 6~2일전 취소 위약금(주중 60만원, 주말 및 공휴일 80만원)",
+   "당일 취소(No-show 포함)",
+   "예약 오픈 주기: 6주 전 월요일 접수, 화요일 마감, 수요일 배정 (https://www.namchoncc.co.kr/Guide/Rule)"
   ],
   "weather_evidence": [
    "이용요금 안내 구분 비회원 그린피 카트비 캐디피 주중 260,000원 120,000원 170,000원 주말(토/일/공휴일) 310,000원 * 9홀 추가 시 카트비 60,000원, 캐디피 80,000원 추가 발생 전문 캐디피 구분 18홀 9홀 베스트 / 외국어캐디 200,000 110,000 대여료 구분 골프채 골프화 1set 50,000원 10,000원 악천후 시 이용요금 구분 그린피 카트비 캐디피 1~9홀 홀별정산 60,000원 90,000원 10홀 이상 홀별정산 120,000원 170,000원 * 고객사정으로 인한 경기 종료 "
@@ -598,8 +608,14 @@
    "evidence": []
   },
   "other": {
-   "value": null,
-   "evidence": []
+   "value": "퍼팅 연습 그린",
+   "evidence": [
+    "퍼팅 연습 그린"
+   ],
+   "source_url": "https://www.namchoncc.co.kr/Club/Intro",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfee guide tables)"
   },
   "night": {
    "evidence": [],
@@ -625,16 +641,16 @@
   }
  },
  "rental": {
-  "available": null,
+  "available": true,
   "full_set": 50000,
-  "fee_text": null,
+  "fee_text": "50,000원 · 18홀",
   "brand": null,
   "left_handed": null,
-  "shoes": null,
+  "shoes": 10000,
   "nine_hole": null,
   "range_finder": null,
   "reservation": null,
-  "source_url": null,
+  "source_url": "https://greenfeeguide.co.kr/course/gc-0066/",
   "evidence": [],
   "official": null,
   "nearby_delivery": {
@@ -739,8 +755,21 @@
   "recent_notice_text": null,
   "course_notes": null,
   "alert": null,
-  "unconfirmed": [],
-  "sources": []
+  "unconfirmed": [
+   "야간(3부) 운영 여부 미확인"
+  ],
+  "sources": [
+   {
+    "source": "그린피가이드 코스 페이지",
+    "url": "https://greenfeeguide.co.kr/course/gc-0066/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "ok",
@@ -755,12 +784,12 @@
   "browser_batch": false
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.8,
+  "basic": 0.89,
+  "course": 0.4,
   "fee": 1.0,
   "ops": 0.14,
-  "facility": 0.1,
-  "briefing": 0.5,
-  "rental": 0.5
+  "facility": 0.2,
+  "briefing": 0.0,
+  "rental": 0.75
  }
 }

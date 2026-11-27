@@ -116,7 +116,7 @@ ok(index.dataset?.counts?.total === courses.length, "dataset.counts.total == cou
 ok(new Set(courses.map((c) => c.id)).size === courses.length, "course id 중복 없음");
 
 const statusCount = courses.reduce((a, c) => ((a[c.status] = (a[c.status] || 0) + 1), a), {});
-for (const [k, v] of Object.entries({ operating: 512, suspended: 1, closed: 2, under_construction: 5, planned: 20 })) {
+for (const [k, v] of Object.entries({ operating: 512, suspended: 1, closed: 2, under_construction: 5, planned: 19, cancelled: 1 })) {
   ok(statusCount[k] === v, `status ${k} = ${statusCount[k]} (${v} 기대)`);
 }
 

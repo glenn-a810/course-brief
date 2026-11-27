@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0229",
@@ -58,13 +59,13 @@
    "master": "courses_master.json v2.0 (문체부·KGA·KGBA·티픽·지도)",
    "synced_to": "courses_master.json v2.7 (2026-11-26 단일 스키마 정규화)"
   },
-  "par": null,
+  "par": 72,
   "holes_teepick": 27,
   "course_spec": {
    "holes": 27,
-   "par": null,
+   "par": 72,
    "blocks": [],
-   "length_m": null,
+   "length_m": 6431,
    "kga": {
     "kga_course_code": "414",
     "kga_name": "화성상록",
@@ -201,12 +202,17 @@
   ],
   "status": "operating",
   "facility_cluster": null,
-  "factcheck_2026_11_26": null
+  "factcheck_2026_11_26": null,
+  "designer": {
+   "value": "㈜인성골프코스 설계연구소",
+   "source": "공개 정보(그린피가이드)",
+   "url": "https://greenfeeguide.co.kr/course/gc-0043/"
+  }
  },
  "course": {
   "holes": 27,
   "holes_received": 27,
-  "course_names": null,
+  "course_names": "서·남·동 각 9홀",
   "membership_type": "대중제",
   "night_light": null,
   "blocks": [],
@@ -346,30 +352,42 @@
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": null,
-  "par": null
+  "length_m": 6431,
+  "par": 72
  },
  "fee": {
-  "weekday": null,
-  "weekend": null,
+  "weekday": 170000,
+  "weekend": 220000,
   "weekday_text": null,
   "weekend_text": null,
-  "basis": null,
+  "basis": "official",
   "tax_included": null,
   "cart": {
-   "evidence": "카트이용요금 등 기타 상록골프장이 정한 특별요금 상록골프장 이용 시 기본적으로 발생되는 비용으로서 제1항제2호의 클럽하우스 시설 이용에 부과되는 요금 및 제1항제3호의 제세공과금을 기본요금이라 한다.",
-   "url": "https://www.sangnokresort.co.kr/M150201",
-   "source": "공식"
+   "value": 80000,
+   "source": "그린피가이드(공식 요금표)",
+   "url": "https://greenfeeguide.com/course/gc-0043/",
+   "note": "팀당(4인 1대)"
   },
-  "caddie": null,
-  "as_of": null,
+  "caddie": {
+   "value": 150000,
+   "none": false,
+   "source": "그린피가이드(공식 요금표)",
+   "url": "https://greenfeeguide.com/course/gc-0043/"
+  },
+  "as_of": "2026-11-01",
   "source_url": null,
   "note": null,
-  "sources": [],
-  "checked_at": null,
+  "sources": [
+   {
+    "source": "그린피가이드(공식 요금표 확인)",
+    "url": "https://greenfeeguide.com/course/gc-0043/",
+    "checked_at": "2026-11-01"
+   }
+  ],
+  "checked_at": "2026-11-27",
   "market": {
    "weekday_min": null,
-   "weekend_min": 200000.0,
+   "weekend_min": 200000,
    "part1": null,
    "part2": null,
    "source": "티픽골프장(실거래 관측)",
@@ -655,13 +673,19 @@
   }
  },
  "cancel": {
-  "cancel_policy": null,
-  "open_cycle": null,
+  "cancel_policy": {
+   "value": "이용예정일 5일 전 취소 1개월, 4일 전 2개월, 3일 전 3개월, 2일 전 5개월, 당일 취소·No-Show 6개월 예약 제한. 예약변경은 이용일 3일 전까지",
+   "source": "공식 홈페이지",
+   "url": "https://www.sangnokresort.co.kr/M150201"
+  },
+  "open_cycle": "추첨제 — 주중은 5주 전·주말은 4주 전 월요일 09:00~목요일 17:00 신청, 금요일 10:00 추첨",
   "notes": null,
   "evidence": [
    "당일 취소 및 No Show 시 6개월 예약불가 1일 전 취소 시 : 3개월 예약불가 2일 전 취소 시 : 1개월 예약불가 객실 이용요금 구분 형태 온돌/패밀리(2인) 트윈(2인) 디럭스트윈(2인) 퀸트윈(2인) 스위트(5인) 성수기(7월 25일 ~ 8월 16일) 일반 190,000원 190,000원 190,000원 190,000원 340,000원 회원 95,000원 95,000원 95,000원 95,000원 170,000원 비수기(성수기 외 기간) 일반 172,000원 172,000원 172,000원 172,000원 320,000",
    "당일 취소 및 No Show 시 6개월 예약불가 1일 전 취소 시 : 3개월 예약불가 2일 전 취소 시 : 1개월 예약불가 객실 이용요금 구분 형태 콘도형(13평형) 콘도형(24평형) 트윈(16평형) 성수기(7월 25일 ~ 8월 16일) 일반 190,000원 340,000원 190,000원 회원 95,000원 170,000원 95,000원 비수기(성수기 외 기간) 일반 172,000원 320,000원 172,000원 회원 86,000원 160,000원 86,000원 ※ 회원요금은 1인당 2실에 한해 적용되며 추가(중복)할인은 되지 ",
-   "다만, 천재지변등 기타 불가피한 사유로 인하여 예약을 취소하는 경우에는 그러하지 아니한다."
+   "다만, 천재지변등 기타 불가피한 사유로 인하여 예약을 취소하는 경우에는 그러하지 아니한다.",
+   "이용예정일 5일 전 취소 : 1개월 예약 제한 / 4일 전 : 2개월 / 3일 전 : 3개월 / 2일 전 : 5개월",
+   "당일 취소 및 No Show 시 6개월 예약불가"
   ],
   "weather_evidence": [
    "특별한 경우(천재지변, 불가항력, 예측하지 못한 기상변화, 사업자의 경영사정, 영업정책 등)에는 일정기간 휴장할 수 있다.",
@@ -793,8 +817,15 @@
    "value_from": "capital_supplement(official_site)"
   },
   "other": {
-   "value": null,
-   "evidence": []
+   "value": "프로샵",
+   "evidence": [
+    "other: 프로샵"
+   ],
+   "source_url": "https://greenfeeguide.com/course/gc-0043/",
+   "source_type": "greenfee_guide",
+   "confidence": "medium",
+   "checked_at": "2026-11-27",
+   "value_from": "batch2_supplement"
   },
   "night": {
    "evidence": [],
@@ -920,7 +951,18 @@
   "course_notes": null,
   "alert": null,
   "unconfirmed": [],
-  "sources": []
+  "sources": [
+   {
+    "source": "그린피가이드 코스 페이지",
+    "url": "https://greenfeeguide.co.kr/course/gc-0043/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "ok",
@@ -928,19 +970,19 @@
   "pages_collected": 14,
   "third_party": {
    "teepick": true,
-   "greenfeeguide": false
+   "greenfeeguide": true
   },
   "render_hint": "static",
   "plan_strategy": "static(직접 파싱)",
   "browser_batch": false
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.8,
-  "fee": 0.0,
+  "basic": 0.89,
+  "course": 0.4,
+  "fee": 1.0,
   "ops": 0.14,
-  "facility": 0.4,
-  "briefing": 0.5,
-  "rental": 0.25
+  "facility": 0.5,
+  "briefing": 0.0,
+  "rental": 0.0
  }
 }

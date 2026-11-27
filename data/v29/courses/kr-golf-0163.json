@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0163",
@@ -64,7 +65,7 @@
    "blocks": [
     "에벤에셀데이비드솔로몬"
    ],
-   "length_m": null,
+   "length_m": 5836,
    "kga": {
     "kga_course_code": "136",
     "kga_name": "신원",
@@ -241,20 +242,20 @@
  "course": {
   "holes": 27,
   "holes_received": 27,
-  "course_names": null,
+  "course_names": "솔로몬·에벤에셀·데이비드 각 9홀",
   "membership_type": "회원제",
   "night_light": null,
   "blocks": [
    "에벤에셀데이비드솔로몬"
   ],
   "grass": {
-   "tee": null,
+   "tee": "켄터키 블루그래스 Kentucky Bluegrass",
    "fairway": {
     "evidence": "신원 컨트리클럽 주요 메뉴 바로가기 컨텐트 바로가기 LOGO 클럽소개 회사소개 CEO인사말 찾아오시는길 이용안내 예약안내 요금안내 모바일예약 회원권안내 코스소개 코스소개 솔로몬 에벤에셀 데이비드 멤버십 예약등록 예약조회 위약현황 회원정보 My신원 Q&A 회원관련규정 조별공지 이사회 회원친선대회 부대시설 프론트 로비라운지 락커실및사우나 클럽하우스대식당 메뉴안내 고객광장 연부킹 단체팀 명의개서 공지사항 뉴스&이벤트 자료실 실시간 웹캠 LOGIN SITEMAP 요금안내 최고의 가치와 품격을 지닌 신원컨트리클럽이 있습니다.",
     "source": "공식",
     "url": "https://www.swcc.co.kr/swp/charge"
    },
-   "green": null
+   "green": "펜크로스 Penncross"
   },
   "kga": {
    "kga_course_code": "136",
@@ -413,7 +414,7 @@
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": null,
+  "length_m": 5836,
   "par": 72
  },
  "fee": {
@@ -421,18 +422,19 @@
   "weekend": 280000,
   "weekday_text": null,
   "weekend_text": null,
-  "basis": null,
+  "basis": "official",
   "tax_included": null,
   "cart": {
    "value": 100000,
-   "source": "그린피가이드",
-   "url": "https://greenfeeguide.co.kr/course/gc-0020/"
+   "source": "그린피가이드(공식 요금표)",
+   "url": "https://greenfeeguide.com/course/gc-0020/",
+   "note": "팀당(4인 1대)"
   },
   "caddie": {
    "value": 150000,
-   "source": "그린피가이드",
-   "url": "https://greenfeeguide.co.kr/course/gc-0020/",
-   "none": false
+   "none": false,
+   "source": "그린피가이드(공식 요금표)",
+   "url": "https://greenfeeguide.com/course/gc-0020/"
   },
   "as_of": "2026-11-01",
   "source_url": null,
@@ -440,11 +442,11 @@
   "sources": [
    {
     "source": "그린피가이드(공식 요금표 확인)",
-    "url": "https://greenfeeguide.co.kr/course/gc-0020/",
+    "url": "https://greenfeeguide.com/course/gc-0020/",
     "checked_at": "2026-11-01"
    }
   ],
-  "checked_at": "2026-11-01",
+  "checked_at": "2026-11-27",
   "market": {
    "weekday_min": null,
    "weekend_min": null,
@@ -615,15 +617,21 @@
   }
  },
  "cancel": {
-  "cancel_policy": null,
+  "cancel_policy": {
+   "value": "회원이 주말·휴일 예약을 취소하면 취소일수별 벌점 부과(6일 전 주중 2점·주말 4점 → 당일 주중 25점·주말 55점), 17:00 이후 취소는 당일 취소로 처리. 단체팀은 경기 5일 전까지 통보 취소",
+   "source": "공식 홈페이지",
+   "url": "https://www.swcc.co.kr/swp/reserve_guide"
+  },
   "open_cycle": null,
   "notes": null,
   "evidence": [
-   "신원 컨트리클럽 주요 메뉴 바로가기 컨텐트 바로가기 LOGO 클럽소개 회사소개 CEO인사말 찾아오시는길 이용안내 예약안내 요금안내 모바일예약 회원권안내 코스소개 코스소개 솔로몬 에벤에셀 데이비드 멤버십 예약등록 예약조회 위약현황 회원정보 My신원 Q&A 회원관련규정 조별공지 이사회 회원친선대회 부대시설 프론트 로비라운지 락커실및사우나 클럽하우스대식당 메뉴안내 고객광장 연부킹 단체팀 명의개서 공지사항 뉴스&이벤트 자료실 실시간 웹캠 LOGIN SITEMAP 요금안내 최고의 가치와 품격을 지닌 신원컨트리클럽이 있습니다.",
-   "신원 컨트리클럽 주요 메뉴 바로가기 컨텐트 바로가기 LOGO 클럽소개 회사소개 CEO인사말 찾아오시는길 이용안내 예약안내 요금안내 모바일예약 회원권안내 코스소개 코스소개 솔로몬 에벤에셀 데이비드 멤버십 예약등록 예약조회 위약현황 회원정보 My신원 Q&A 회원관련규정 조별공지 이사회 회원친선대회 부대시설 프론트 로비라운지 락커실및사우나 클럽하우스대식당 메뉴안내 고객광장 연부킹 단체팀 명의개서 공지사항 뉴스&이벤트 자료실 실시간 웹캠 LOGIN SITEMAP 공지사항 최고의 가치와 품격을 지닌 신원컨트리클럽이 있습니다.",
-   "신원 컨트리클럽 주요 메뉴 바로가기 컨텐트 바로가기 LOGO 클럽소개 회사소개 CEO인사말 찾아오시는길 이용안내 예약안내 요금안내 모바일예약 회원권안내 코스소개 코스소개 솔로몬 에벤에셀 데이비드 멤버십 예약등록 예약조회 위약현황 회원정보 My신원 Q&A 회원관련규정 조별공지 이사회 회원친선대회 부대시설 프론트 로비라운지 락커실및사우나 클럽하우스대식당 메뉴안내 고객광장 연부킹 단체팀 명의개서 공지사항 뉴스&이벤트 자료실 실시간 웹캠 LOGIN SITEMAP 공지사항 최고의 가치와 품격을 지닌 신원컨트리클럽이 있습니다."
+   "회원이 주말 · 휴일 예약 후 취소하고자 할 때에는 취소일에 따라 차등 된 벌점이 부과된다.",
+   "※ 취소 시 벌점 (오후 5시 이후 취소는 당일 취소 처리됨.)",
+   "예약팀을 취소하고자 할 경우에는 경기 5일전까지 예약 담당자에게 통보하여 취소한다."
   ],
-  "weather_evidence": []
+  "weather_evidence": [
+   "우천 예보가 있고, 현장기준 3시간 전 비가 오면 취소 가능(6시대 팀은 예약실에 4시부터 우천취소 확인)"
+  ]
  },
  "ops": {
   "nocaddie": {
@@ -639,46 +647,43 @@
    "value_from": "capital_supplement(greenfee_guide)"
   },
   "two_player": {
+   "value": "2인 불가(주주·정회원 동반 시 예외 허용)",
    "evidence": [
-    "1팀당 2인 이상의 도우미를 요청하면 당일 예약 상황을 고려하여 경기부와 협의 후 배정 결과를 통보한다.",
-    "9월,10월,11월은 2일전 잔여팀에 한해 주주(정)회원 동반시 2인 플레이를 허용 합니다."
+    "2인 이하 또는 5인 이상의 플레이는 금지합니다.",
+    "1월~8월, 12월은 반드시 주주(정)회원 동반시 2인 플레이를 허용 합니다."
    ],
-   "value": "2인 가능",
-   "third_party": {
-    "two": null,
-    "three": null,
-    "source": "그린피가이드",
-    "url": "https://greenfeeguide.co.kr/course/gc-0020/"
-   },
-   "source_url": "https://www.swcc.co.kr/swp/use_guide",
+   "source_url": "https://www.swcc.co.kr/swp/reserve_guide",
    "confidence": "medium",
-   "source_type": "official_site",
-   "page_label": "이용안내",
-   "value_from": "capital_supplement(official_site)"
+   "checked_at": "2026-11-27",
+   "value_from": "batch2_supplement"
   },
   "three_player": {
    "value": null,
    "evidence": []
   },
   "five_player": {
-   "value": null,
-   "evidence": []
+   "value": "5인 불가",
+   "evidence": [
+    "2인 이하 또는 5인 이상의 플레이는 금지합니다."
+   ],
+   "source_url": "https://www.swcc.co.kr/swp/reserve_guide",
+   "confidence": "medium",
+   "checked_at": "2026-11-27",
+   "value_from": "batch2_supplement"
   },
   "marshal_caddie": {
    "value": null,
    "evidence": []
   },
   "cart_type": {
+   "value": "5인승 카트(카트비 100,000원)",
    "evidence": [
-    "타구사고, 카트사고, 기타 시설물 사고발생 등으로 플레이가 어려울 경우 면제 응급조치 또는 119후송 2.",
-    "- 캐디피 : 15만원 (1캐디 4백) - 카트비 : 10만원(5인승)"
+    "카트비 : 10만원(5인승)"
    ],
-   "value": "5인승",
-   "source_url": "https://www.swcc.co.kr/swp/member_guide",
-   "confidence": "low",
-   "source_type": "official_site",
-   "page_label": "회원권안내",
-   "value_from": "capital_supplement(official_site)"
+   "source_url": "https://www.swcc.co.kr/swp/reserve_guide",
+   "confidence": "medium",
+   "checked_at": "2026-11-27",
+   "value_from": "batch2_supplement"
   },
   "cart_entry": {
    "evidence": [],
@@ -693,25 +698,17 @@
    "value": null
   },
   "checkin": {
+   "value": "티오프 10분 전 티잉그라운드 도착",
    "evidence": [
     "티오프 시간 10분전에 티잉 그라운드에 도착해 주시기 바랍니다."
    ],
-   "value": "티업 10분 전 티박스 도착",
-   "third_party": {
-    "value": null,
-    "source": "그린피가이드",
-    "url": "https://greenfeeguide.co.kr/course/gc-0020/"
-   },
-   "source_url": "https://www.swcc.co.kr/swp/use_guide",
+   "source_url": "https://www.swcc.co.kr/swp/reserve_guide",
    "confidence": "medium",
-   "source_type": "official_site",
-   "page_label": "이용안내",
-   "value_from": "capital_supplement(official_site)"
+   "checked_at": "2026-11-27",
+   "value_from": "batch2_supplement"
   },
   "locker": {
    "evidence": [
-    "신원 컨트리클럽 주요 메뉴 바로가기 컨텐트 바로가기 LOGO 클럽소개 회사소개 CEO인사말 찾아오시는길 이용안내 예약안내 요금안내 모바일예약 회원권안내 코스소개 코스소개 솔로몬 에벤에셀 데이비드 멤버십 예약등록 예약조회 위약현황 회원정보 My신원 Q&A 회원관련규정 조별공지 이사회 회원친선대회 부대시설 프론트 로비라운지 락커실및사우나 클럽하우스대식당 메뉴안내 고객광장 연부킹 단체팀 명의개서 공지사항 뉴스&이벤트 자료실 실시간 웹캠 LOGIN SITEMAP 요금안내 최고의 가치와 품격을 지닌 신원컨트리클럽이 있습니다.",
-    "신원 컨트리클럽 주요 메뉴 바로가기 컨텐트 바로가기 LOGO 클럽소개 회사소개 CEO인사말 찾아오시는길 이용안내 예약안내 요금안내 모바일예약 회원권안내 코스소개 코스소개 솔로몬 에벤에셀 데이비드 멤버십 예약등록 예약조회 위약현황 회원정보 My신원 Q&A 회원관련규정 조별공지 이사회 회원친선대회 부대시설 프론트 로비라운지 락커실및사우나 클럽하우스대식당 메뉴안내 고객광장 연부킹 단체팀 명의개서 공지사항 뉴스&이벤트 자료실 실시간 웹캠 LOGIN SITEMAP 공지사항 최고의 가치와 품격을 지닌 신원컨트리클럽이 있습니다.",
     "연면적 약 5,400m2(1,630여평), 지상 3층, Private Room, 대형프론트, 락카룸, 대식당, 휴게실 등"
    ],
    "value": "락커 운영",
@@ -724,8 +721,6 @@
   },
   "sauna": {
    "evidence": [
-    "신원 컨트리클럽 주요 메뉴 바로가기 컨텐트 바로가기 LOGO 클럽소개 회사소개 CEO인사말 찾아오시는길 이용안내 예약안내 요금안내 모바일예약 회원권안내 코스소개 코스소개 솔로몬 에벤에셀 데이비드 멤버십 예약등록 예약조회 위약현황 회원정보 My신원 Q&A 회원관련규정 조별공지 이사회 회원친선대회 부대시설 프론트 로비라운지 락커실및사우나 클럽하우스대식당 메뉴안내 고객광장 연부킹 단체팀 명의개서 공지사항 뉴스&이벤트 자료실 실시간 웹캠 LOGIN SITEMAP 요금안내 최고의 가치와 품격을 지닌 신원컨트리클럽이 있습니다.",
-    "신원 컨트리클럽 주요 메뉴 바로가기 컨텐트 바로가기 LOGO 클럽소개 회사소개 CEO인사말 찾아오시는길 이용안내 예약안내 요금안내 모바일예약 회원권안내 코스소개 코스소개 솔로몬 에벤에셀 데이비드 멤버십 예약등록 예약조회 위약현황 회원정보 My신원 Q&A 회원관련규정 조별공지 이사회 회원친선대회 부대시설 프론트 로비라운지 락커실및사우나 클럽하우스대식당 메뉴안내 고객광장 연부킹 단체팀 명의개서 공지사항 뉴스&이벤트 자료실 실시간 웹캠 LOGIN SITEMAP 공지사항 최고의 가치와 품격을 지닌 신원컨트리클럽이 있습니다.",
     "사우나 있음 · 퍼팅 연습 그린·드라이빙 레인지 · 프로샵"
    ],
    "value": "사우나 운영",
@@ -738,8 +733,14 @@
    "value_from": "capital_supplement(greenfee_guide)"
   },
   "dress": {
-   "evidence": [],
-   "value": null
+   "value": "남자 양복 상의·여자 단정한 복장, 슬리퍼·반바지·민소매 제한",
+   "evidence": [
+    "클럽 입장시 남자는 양복 상의를 착용하고, 여자는 단정한 복장으로 입장하셔야 합니다."
+   ],
+   "source_url": "https://www.swcc.co.kr/swp/reserve_guide",
+   "confidence": "medium",
+   "checked_at": "2026-11-27",
+   "value_from": "batch2_supplement"
   },
   "pace": {
    "evidence": [
@@ -774,9 +775,6 @@
   },
   "food": {
    "evidence": [
-    "신원 컨트리클럽 주요 메뉴 바로가기 컨텐트 바로가기 LOGO 클럽소개 회사소개 CEO인사말 찾아오시는길 이용안내 예약안내 요금안내 모바일예약 회원권안내 코스소개 코스소개 솔로몬 에벤에셀 데이비드 멤버십 예약등록 예약조회 위약현황 회원정보 My신원 Q&A 회원관련규정 조별공지 이사회 회원친선대회 부대시설 프론트 로비라운지 락커실및사우나 클럽하우스대식당 메뉴안내 고객광장 연부킹 단체팀 명의개서 공지사항 뉴스&이벤트 자료실 실시간 웹캠 LOGIN SITEMAP 요금안내 최고의 가치와 품격을 지닌 신원컨트리클럽이 있습니다.",
-    "신원 컨트리클럽 주요 메뉴 바로가기 컨텐트 바로가기 LOGO 클럽소개 회사소개 CEO인사말 찾아오시는길 이용안내 예약안내 요금안내 모바일예약 회원권안내 코스소개 코스소개 솔로몬 에벤에셀 데이비드 멤버십 예약등록 예약조회 위약현황 회원정보 My신원 Q&A 회원관련규정 조별공지 이사회 회원친선대회 부대시설 프론트 로비라운지 락커실및사우나 클럽하우스대식당 메뉴안내 고객광장 연부킹 단체팀 명의개서 공지사항 뉴스&이벤트 자료실 실시간 웹캠 LOGIN SITEMAP 공지사항 최고의 가치와 품격을 지닌 신원컨트리클럽이 있습니다.",
-    "신원 컨트리클럽 주요 메뉴 바로가기 컨텐트 바로가기 LOGO 클럽소개 회사소개 CEO인사말 찾아오시는길 이용안내 예약안내 요금안내 모바일예약 회원권안내 코스소개 코스소개 솔로몬 에벤에셀 데이비드 멤버십 예약등록 예약조회 위약현황 회원정보 My신원 Q&A 회원관련규정 조별공지 이사회 회원친선대회 부대시설 프론트 로비라운지 락커실및사우나 클럽하우스대식당 메뉴안내 고객광장 연부킹 단체팀 명의개서 공지사항 뉴스&이벤트 자료실 실시간 웹캠 LOGIN SITEMAP 공지사항 최고의 가치와 품격을 지닌 신원컨트리클럽이 있습니다.",
     "식당은 클럽하우스를 이용하고 프로샵에서 시상품 등 필요한 물품을 구입하는 것을 원칙으로 하고 외부에서 시상품을 반입하는 것을 금한다."
    ],
    "value": "식당",
@@ -791,25 +789,44 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": null,
-   "evidence": []
+   "value": "사우나 있음",
+   "evidence": [
+    "locker_sauna: 사우나 있음"
+   ],
+   "source_url": "https://greenfeeguide.com/course/gc-0020/",
+   "source_type": "greenfee_guide",
+   "confidence": "medium",
+   "checked_at": "2026-11-27",
+   "value_from": "batch2_supplement"
   },
   "lodging": {
    "value": null,
    "evidence": []
   },
   "other": {
-   "value": null,
-   "evidence": []
+   "value": "프로샵",
+   "evidence": [
+    "other: 프로샵"
+   ],
+   "source_url": "https://greenfeeguide.com/course/gc-0020/",
+   "source_type": "greenfee_guide",
+   "confidence": "medium",
+   "checked_at": "2026-11-27",
+   "value_from": "batch2_supplement"
   },
   "night": {
    "evidence": [],
    "value": null
   },
   "closed_days": {
-   "evidence": [],
-   "third_party": null,
-   "value": null
+   "value": "영하 7~10℃이고 10팀 미만일 경우 휴장",
+   "evidence": [
+    "영하 7℃~10℃이고 10팀 미만일 경우 휴장"
+   ],
+   "source_url": "https://www.swcc.co.kr/swp/reserve_guide",
+   "confidence": "medium",
+   "checked_at": "2026-11-27",
+   "value_from": "batch2_supplement"
   },
   "shuttle": {
    "evidence": [
@@ -950,7 +967,18 @@
   "course_notes": null,
   "alert": null,
   "unconfirmed": [],
-  "sources": []
+  "sources": [
+   {
+    "source": "그린피가이드 코스 페이지",
+    "url": "https://greenfeeguide.co.kr/course/gc-0020/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "ok",
@@ -965,12 +993,12 @@
   "browser_batch": false
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 1.0,
+  "basic": 0.89,
+  "course": 0.6,
   "fee": 1.0,
-  "ops": 0.5,
-  "facility": 0.2,
-  "briefing": 0.5,
-  "rental": 1.0
+  "ops": 0.64,
+  "facility": 0.5,
+  "briefing": 0.0,
+  "rental": 0.75
  }
 }

@@ -12,8 +12,8 @@
   ],
   "source": "raw/received_gangwon_65.json (외부 데이터 수신, 2026-11-26)",
   "review": {
-   "checked_at": "2026-11-26",
-   "status": "partial_official",
+   "checked_at": "2026-11-27",
+   "status": "supplemented(공개 요약·조사자료)",
    "checks": [
     {
      "field": "그린피",
@@ -35,6 +35,97 @@
      "verified": "지난 시즌 값, 2026-27 공지 미확인",
      "result": "미확인 유지",
      "url": "https://greenfeeguide.co.kr/guides/winter-golf-guide/"
+    },
+    {
+     "field": "ops.checkin",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "티오프 30분 전 도착",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0211/",
+     "quote": "도착: 티오프 30분 전 도착",
+     "source_type": "official_summary(greenfeeguide)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "ops.checkin",
+     "received": "{\"value\": \"티오프 30분 전 도착\", \"evidence\": [\"도착: 티오프 30분 전 도착\"], \"source_url\": \"https://greenfeeguide.co.kr/course/gc-0211/\", \"confidence\": \"medium\", \"source_type\": \"official_summary(greenfeeguide)\", \"chec",
+     "verified": "예약시간 30분 전 도착",
+     "result": "보완",
+     "url": "https://www.century21cc.co.kr/",
+     "quote": "예약시간 30분 전에는 도착",
+     "source_type": "official_research",
+     "confidence": "medium",
+     "checked_at": "2026-11-27",
+     "note": "2026-11-26 공식 홈페이지 조사자료에서 이관한 값(문구는 요약·환산일 수 있음)"
+    },
+    {
+     "field": "ops.dress",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "규정된 복장 착용",
+     "result": "보완",
+     "url": "https://www.century21cc.co.kr/",
+     "quote": "규정된 복장을 착용",
+     "source_type": "official_research",
+     "confidence": "medium",
+     "checked_at": "2026-11-27",
+     "note": "2026-11-26 공식 홈페이지 조사자료에서 이관한 값(문구는 요약·환산일 수 있음)"
+    },
+    {
+     "field": "facilities.food",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "클럽 레스토랑",
+     "result": "보완",
+     "url": "https://www.century21cc.co.kr/",
+     "quote": "클럽레스토랑",
+     "source_type": "official_research",
+     "confidence": "medium",
+     "checked_at": "2026-11-27",
+     "note": "2026-11-26 공식 홈페이지 조사자료에서 이관한 값(문구는 요약·환산일 수 있음)"
+    },
+    {
+     "field": "fee.checked_at",
+     "received": null,
+     "verified": "2026-11-27",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0211/",
+     "quote": "요금 확인일 2026-11-01 (그린피가이드 2026-11-27 조회)",
+     "source_type": "third_party",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.closed_days",
+     "received": "{\"value\": null, \"third_party\": null, \"evidence\": []}",
+     "verified": "정기 휴장일 없음",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0211/",
+     "quote": "정기 휴장일 정기 휴장일 없음",
+     "source_type": "third_party",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.proshop",
+     "received": null,
+     "verified": "프로샵",
+     "result": "보완",
+     "url": "https://www.century21cc.co.kr/guide_operation",
+     "quote": "결한 락커룸과 샤워 시설이 준비되어 있습니다. 락커 근무자는 별도의 봉사료를 받지 않습니다. 부대시설 안내 프로샵 : 다양한 골프 용품 및 지역 특상품, 시상품을 구입할 수 있습니다. 레스토랑 : 식사 및 음료를 즐기실 수 있습니다. 연회실 : 대연회실과 소연회실이 준비되어 있",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "ops.locker",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "락커룸·샤워 시설",
+     "result": "보완",
+     "url": "https://www.century21cc.co.kr/guide_operation",
+     "quote": "가 이루어집니다. 우천 시 : 레인코트, 우산은 지정 장소에 넣어 주시기 바랍니다. 시설안내 락커이용 안내 청결한 락커룸과 샤워 시설이 준비되어 있습니다. 락커 근무자는 별도의 봉사료를 받지 않습니다. 부대시설 안내 프로샵 : 다양한 골프 용품 및 지역 특상품, 시상품을 구입",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
     }
    ]
   },
@@ -45,11 +136,14 @@
   "schema_previous": "stage2b/1.0",
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "restructured_from_7key": false,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "batch3_patch": "2026-11-27 배치3 보완: 4개 항목(공식 홈페이지·공개 요금 안내 기준, 미확인 값 생성 없음)",
+  "pass2_patch": "2026-11-27 2차 보완 패스: 3개 항목(그린피가이드·1박2일골프·원더골프·공식 홈페이지 대조, 미확인 값 생성 없음)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0431",
@@ -138,7 +232,13 @@
    "note": null
   },
   "factcheck_2026_11_26": null,
-  "address_original": "원주시 문막읍 궁말길 193"
+  "address_original": "원주시 문막읍 궁말길 193",
+  "designer": {
+   "value": "프랭크 오다 우드(FRANK ODOWD)",
+   "source": "공개 정보(그린피가이드)",
+   "url": "https://greenfeeguide.co.kr/course/gc-0211/"
+  },
+  "par": 72
  },
  "course": {
   "holes": 18,
@@ -174,7 +274,8 @@
    ]
   },
   "kga_hole_est": 45,
-  "extra_courses": null
+  "extra_courses": null,
+  "par": 72
  },
  "fee": {
   "weekday": 197000,
@@ -200,8 +301,22 @@
     "source": "수신 조사(공식·공개 예약정보)",
     "url": "https://greenfeeguide.co.kr/course/gc-0211/",
     "checked_at": "2026-11-01(공식 요금표 확인)"
+   },
+   {
+    "source": "third_party",
+    "url": "https://greenfeeguide.co.kr/course/gc-0211/",
+    "quote": "요금 확인일 2026-11-01 (그린피가이드 2026-11-27 조회)",
+    "checked_at": "2026-11-27"
    }
-  ]
+  ],
+  "checked_at": "2026-11-27",
+  "market": {
+   "weekday_min": 60000,
+   "weekend_min": 80000,
+   "source": "공개 예약 채널 실거래 관측(티픽)",
+   "url": "https://teepickgolf.com/",
+   "note": "공시가 아닌 최근 관측 실거래 최저가"
+  }
  },
  "cancel": {
   "cancel_policy": "평일 3일 전·주말 4일 전까지(이용약관 기준)",
@@ -232,8 +347,14 @@
    "evidence": []
   },
   "cart_type": {
-   "value": null,
-   "evidence": []
+   "value": "셀프라운드: 경기 도중 카트도로를 벗어나 페어웨이 내부로 골프카트 진입 불가 · 셀프라운드 시 고객 직접 운전(카트 사고 책임은 운전자 본인) · 코스 내 역주행 절대 금지",
+   "evidence": [
+    "셀프라운드: 경기 도중 카트도로를 벗어나 페어웨이 내부로 골프카트 진입 불가 · 셀프라운드 시 고객 직접 운전(카트 사고 책임은 운전자 본인) · 코스 내 역주행 절대 금지"
+   ],
+   "source_url": "https://www.century21cc.co.kr/guide_self",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfee guide tables)"
   },
   "cart_entry": {
    "value": "페어웨이 진입 불가",
@@ -248,20 +369,40 @@
    "evidence": []
   },
   "checkin": {
-   "value": null,
-   "evidence": []
+   "value": "예약시간 30분 전 도착",
+   "evidence": [
+    "도착: 티오프 30분 전 도착",
+    "예약시간 30분 전에는 도착"
+   ],
+   "source_url": "https://www.century21cc.co.kr/",
+   "confidence": "medium",
+   "source_type": "official_research",
+   "checked_at": "2026-11-27",
+   "note": "공개 요금 정보가 골프장 공식 안내를 정리한 값(확인일 페이지 표기)"
   },
   "locker": {
-   "value": null,
-   "evidence": []
+   "value": "락커룸·샤워 시설",
+   "evidence": [
+    "가 이루어집니다. 우천 시 : 레인코트, 우산은 지정 장소에 넣어 주시기 바랍니다. 시설안내 락커이용 안내 청결한 락커룸과 샤워 시설이 준비되어 있습니다. 락커 근무자는 별도의 봉사료를 받지 않습니다. 부대시설 안내 프로샵 : 다양한 골프 용품 및 지역 특상품, 시상품을 구입"
+   ],
+   "source_url": "https://www.century21cc.co.kr/guide_operation",
+   "confidence": "high",
+   "source_type": "official_site",
+   "checked_at": "2026-11-27"
   },
   "sauna": {
    "value": null,
    "evidence": []
   },
   "dress": {
-   "value": null,
-   "evidence": []
+   "value": "규정된 복장 착용",
+   "evidence": [
+    "규정된 복장을 착용"
+   ],
+   "source_url": "https://www.century21cc.co.kr/",
+   "confidence": "medium",
+   "source_type": "official_research",
+   "checked_at": "2026-11-27"
   },
   "pace": {
    "value": null,
@@ -278,8 +419,14 @@
    "evidence": []
   },
   "food": {
-   "value": null,
-   "evidence": []
+   "value": "클럽 레스토랑",
+   "evidence": [
+    "클럽레스토랑"
+   ],
+   "source_url": "https://www.century21cc.co.kr/",
+   "confidence": "medium",
+   "source_type": "official_research",
+   "checked_at": "2026-11-27"
   },
   "snack_bar": {
    "value": null,
@@ -302,13 +449,29 @@
    "evidence": []
   },
   "closed_days": {
-   "value": null,
+   "value": "정기 휴장일 없음",
    "third_party": null,
-   "evidence": []
+   "evidence": [
+    "정기 휴장일 정기 휴장일 없음"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0211/",
+   "confidence": "high",
+   "source_type": "third_party",
+   "checked_at": "2026-11-27"
   },
   "shuttle": {
    "value": null,
    "evidence": []
+  },
+  "proshop": {
+   "value": "프로샵",
+   "evidence": [
+    "결한 락커룸과 샤워 시설이 준비되어 있습니다. 락커 근무자는 별도의 봉사료를 받지 않습니다. 부대시설 안내 프로샵 : 다양한 골프 용품 및 지역 특상품, 시상품을 구입할 수 있습니다. 레스토랑 : 식사 및 음료를 즐기실 수 있습니다. 연회실 : 대연회실과 소연회실이 준비되어 있"
+   ],
+   "source_url": "https://www.century21cc.co.kr/guide_operation",
+   "confidence": "high",
+   "source_type": "official_site",
+   "checked_at": "2026-11-27"
   }
  },
  "rental": {
@@ -321,7 +484,7 @@
   "nine_hole": null,
   "range_finder": null,
   "reservation": null,
-  "source_url": null,
+  "source_url": "https://greenfeeguide.co.kr/course/gc-0211/",
   "nearby_delivery": {
    "region": "강원",
    "sido": "강원특별자치도",
@@ -398,7 +561,12 @@
   "sources": [
    "https://greenfeeguide.co.kr/course/gc-0211/",
    "https://todaygolfgo.com/regions/gangwon/",
-   "https://www.mk.co.kr/news/sports/11493433"
+   "https://www.mk.co.kr/news/sports/11493433",
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
   ],
   "collected_at": "2026-11-26T09:55:47+09:00"
  },
@@ -407,18 +575,20 @@
   "official_reason": "운영 중(공식 홈페이지 정상)",
   "pages_collected": 0,
   "third_party": {
-   "received_report": true
+   "received_report": true,
+   "teepick": true,
+   "greenfeeguide": true
   },
   "render_hint": "report",
   "plan_strategy": "subagent_report(2026-11-26)"
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 1.0,
+  "basic": 0.78,
+  "course": 0.6,
   "fee": 1.0,
-  "ops": 0.36,
-  "facility": 0.3,
-  "briefing": 0.75,
-  "rental": 1.0
+  "ops": 0.64,
+  "facility": 0.5,
+  "briefing": 0.5,
+  "rental": 0.75
  }
 }

@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0482",
@@ -58,13 +59,13 @@
    "master": "courses_master.json v2.0 (문체부·KGA·KGBA·티픽·지도)",
    "synced_to": "courses_master.json v2.7 (2026-11-26 단일 스키마 정규화)"
   },
-  "par": null,
+  "par": 72,
   "holes_teepick": 18,
   "course_spec": {
    "holes": 18,
-   "par": null,
+   "par": 72,
    "blocks": [],
-   "length_m": null,
+   "length_m": 5539,
    "kga": null,
    "grass": null,
    "hole_by_hole": null
@@ -91,16 +92,125 @@
   "kga": null,
   "kga_hole_est": null,
   "extra_courses": null,
-  "hole_by_hole": null,
-  "length_m": null,
-  "par": null
+  "hole_by_hole": [
+   {
+    "hole": 1,
+    "par": 4,
+    "white_m": 282,
+    "red_m": 214
+   },
+   {
+    "hole": 2,
+    "par": 5,
+    "white_m": 424,
+    "red_m": 356
+   },
+   {
+    "hole": 3,
+    "par": 4,
+    "white_m": 340,
+    "red_m": 243
+   },
+   {
+    "hole": 4,
+    "par": 5,
+    "white_m": 533,
+    "red_m": 463
+   },
+   {
+    "hole": 5,
+    "par": 3,
+    "white_m": 161,
+    "red_m": 125
+   },
+   {
+    "hole": 6,
+    "par": 4,
+    "white_m": 253,
+    "red_m": 206
+   },
+   {
+    "hole": 7,
+    "par": 3,
+    "white_m": 145,
+    "red_m": 114
+   },
+   {
+    "hole": 8,
+    "par": 4,
+    "white_m": 293,
+    "red_m": 226
+   },
+   {
+    "hole": 9,
+    "par": 4,
+    "white_m": 293,
+    "red_m": 225
+   },
+   {
+    "hole": 10,
+    "par": 4,
+    "white_m": 340,
+    "red_m": 286
+   },
+   {
+    "hole": 11,
+    "par": 4,
+    "white_m": 320,
+    "red_m": 259
+   },
+   {
+    "hole": 12,
+    "par": 4,
+    "white_m": 348,
+    "red_m": 244
+   },
+   {
+    "hole": 13,
+    "par": 5,
+    "white_m": 482,
+    "red_m": 439
+   },
+   {
+    "hole": 14,
+    "par": 3,
+    "white_m": 167,
+    "red_m": 92
+   },
+   {
+    "hole": 15,
+    "par": 4,
+    "white_m": 294,
+    "red_m": 213
+   },
+   {
+    "hole": 16,
+    "par": 4,
+    "white_m": 319,
+    "red_m": 240
+   },
+   {
+    "hole": 17,
+    "par": 3,
+    "white_m": 128,
+    "red_m": 103
+   },
+   {
+    "hole": 18,
+    "par": 5,
+    "white_m": 417,
+    "red_m": 342
+   }
+  ],
+  "length_m": 5539,
+  "par": 72
  },
  "fee": {
-  "weekday": null,
-  "weekend": null,
+  "weekday": 125000,
+  "weekend": 175000,
   "weekday_text": null,
   "weekend_text": null,
-  "basis": null,
+  "basis": "official",
   "tax_included": null,
   "cart": {
    "value": 90000,
@@ -110,11 +220,17 @@
    "source": "공식 요금표"
   },
   "caddie": null,
-  "as_of": null,
-  "source_url": null,
-  "note": null,
-  "sources": [],
-  "checked_at": null,
+  "as_of": "2026-11-27",
+  "source_url": "https://hillcc.com/swp/charge",
+  "note": "공식 이용요금표 6월 기준 1부(07:10 이전) 주중 125,000원·주말·공휴일 175,000원, 07:11 이후 주중 135,000원. 카트비 팀당(4인) 90,000원 별도. 2026-11-27 확인.",
+  "sources": [
+   {
+    "source": "공식(이용요금표)",
+    "url": "https://hillcc.com/swp/charge",
+    "checked_at": "2026-11-27"
+   }
+  ],
+  "checked_at": "2026-11-27",
   "market": {
    "weekday_min": 75000.0,
    "weekend_min": 130000.0,
@@ -214,8 +330,14 @@
    "value": null
   },
   "pace": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "앞 팀과 1홀 이상 벌어짐 → 경고·퇴장"
+   ],
+   "value": "앞 팀과 1홀 이상 벌어짐 → 경고·퇴장",
+   "source_url": "https://www.hillcc.com/swp/penalty",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfee guide tables)"
   }
  },
  "facilities": {
@@ -229,9 +351,10 @@
   },
   "food": {
    "evidence": [
+    "레스토랑메뉴 (출처: https://hillcc.com/, 2026-11-27 확인)",
     "석정힐CC에서 자주찾는 메뉴 입니다."
    ],
-   "value": null
+   "value": "레스토랑"
   },
   "snack_bar": {
    "value": null,
@@ -242,12 +365,24 @@
    "evidence": []
   },
   "lodging": {
-   "value": null,
-   "evidence": []
+   "value": "호텔석정힐",
+   "evidence": [
+    "숙박 시설: 호텔석정힐"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0443/",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfeeguide)"
   },
   "other": {
-   "value": null,
-   "evidence": []
+   "value": "프로샵",
+   "evidence": [
+    "그 밖의 시설: 프로샵"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0443/",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfeeguide)"
   },
   "night": {
    "evidence": [],
@@ -259,12 +394,24 @@
    "value": null
   },
   "shuttle": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "대중교통: 고창버스터미널·KTX 정읍역·광주공항고창터미널에서 10분, 정읍역에서 30분, 광주공항에서 50분"
+   ],
+   "value": "고창버스터미널·KTX 정읍역·광주공항고창터미널에서 10분, 정읍역에서 30분, 광주공항에서 50분",
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0443/",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfeeguide)"
   },
   "ev_charge": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "전기차 충전소"
+   ],
+   "value": "전기차 충전소",
+   "source_url": "https://www.hillcc.com/",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfee guide tables)"
   },
   "gf_facilities": null,
   "proshop": {
@@ -354,8 +501,20 @@
   "recent_notice_text": null,
   "course_notes": null,
   "alert": null,
-  "unconfirmed": [],
-  "sources": []
+  "unconfirmed": [
+   "취소·위약 규정",
+   "체크인",
+   "복장",
+   "진행 시간",
+   "휴장일"
+  ],
+  "sources": [
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "ok",
@@ -363,7 +522,7 @@
   "pages_collected": 14,
   "third_party": {
    "teepick": true,
-   "greenfeeguide": false
+   "greenfeeguide": true
   },
   "render_hint": "static",
   "plan_strategy": "static(직접 파싱)",
@@ -372,12 +531,12 @@
   "browser_pdf": []
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.6,
-  "fee": 0.25,
-  "ops": 0.07,
-  "facility": 0.0,
-  "briefing": 0.5,
-  "rental": 0.25
+  "basic": 0.89,
+  "course": 0.2,
+  "fee": 0.75,
+  "ops": 0.14,
+  "facility": 0.4,
+  "briefing": 0.0,
+  "rental": 0.0
  }
 }

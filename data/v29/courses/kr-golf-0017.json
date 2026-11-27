@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0017",
@@ -66,7 +67,7 @@
    "blocks": [
     "동코스서코스남코스"
    ],
-   "length_m": null,
+   "length_m": 6149,
    "kga": {
     "kga_course_code": "98",
     "kga_name": "무안",
@@ -264,12 +265,21 @@
   "facility_cluster": null,
   "factcheck_2026_11_26": null,
   "address_original": "전남 무안군 청계면 도대리 818",
-  "holes_note": "등록(문체부) 54홀 · 수집 27홀 — 등록 기준과 수집처(티픽·조사) 표기 차이다. 등록 54홀을 정본으로 두고 집계에는 master.holes를 쓴다. 복합단지 합산 여부는 미확정."
+  "holes_note": "등록(문체부) 54홀 · 수집 27홀 — 등록 기준과 수집처(티픽·조사) 표기 차이다. 등록 54홀을 정본으로 두고 집계에는 master.holes를 쓴다. 복합단지 합산 여부는 미확정.",
+  "designer": {
+   "value": "인성골프디자인스",
+   "source": "공개 정보(그린피가이드)",
+   "url": "https://greenfeeguide.co.kr/course/gc-0477/"
+  }
  },
  "course": {
   "holes": 54,
   "holes_received": 27,
-  "course_names": null,
+  "course_names": [
+   "동코스",
+   "서코스",
+   "남코스"
+  ],
   "membership_type": "대중제",
   "night_light": null,
   "blocks": [
@@ -470,16 +480,16 @@
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": null,
+  "length_m": 6149,
   "par": 72,
   "holes_note": "등록(문체부) 54홀 · 수집 27홀 — 등록 기준과 수집처(티픽·조사) 표기 차이다. 등록 54홀을 정본으로 두고 집계에는 master.holes를 쓴다. 복합단지 합산 여부는 미확정."
  },
  "fee": {
   "weekday": 90000,
   "weekend": 140000,
-  "weekday_text": null,
+  "weekday_text": "90,000원 ~ 105,000원",
   "weekend_text": null,
-  "basis": null,
+  "basis": "official",
   "tax_included": null,
   "cart": {
    "value": 80000,
@@ -506,7 +516,7 @@
     "checked_at": "2026-11-02"
    }
   ],
-  "checked_at": "2026-11-02",
+  "checked_at": "2026-11-27",
   "market": {
    "weekday_min": 145000.0,
    "weekend_min": 145000.0,
@@ -597,13 +607,14 @@
   }
  },
  "cancel": {
-  "cancel_policy": null,
-  "open_cycle": null,
+  "cancel_policy": "① 이용자가 주말이나 공휴일인 이용예정일로부터 4일전까지, 평일인 이용예정일로부터 3일전까지 예약을 취소한 경우에는 예약금의 전액을 환불한다.",
+  "open_cycle": "평일 : 매월1일에 다음달 말일까지 예약가능",
   "notes": null,
   "evidence": [
    "(예약금1박2일 :10만원, 2박3일:15만원) ◆ 위약금 및 환불규정 ※ 평일패키지는 이용예정일의 2일이내, 주말포함패키지는 3일이내 예약취소시 예약금은 환불하지 아니한다.",
    "(예약취소 위약금 처리함) ※ 이용기간중 개인사정으로 패키지 중단시 환불없음.",
-   "(OPEN시간-08:00) 인터넷예약 - 평일,주말.공휴일 : 금일 기준으로 한달 이내는 실시간 예약이 가능합니다.(토요일,공휴일 동시 OPEN)전화예약 - 평일 : 매월1일에 다음달 말일까지 예약가능 -주말,공휴일 : 금일기준 한달 이내는 실시간 예약가능 (토요일,일요일 동시 OPEN) - 패키지 : 매월1일에 다음달 말일까지 전화예약만 가능 (선착순접수) 예약취소 위약규정 1.라운드 예정일부터 5일 전에 예약취소를 할 경우 아래와 같이 예약정지 기간을 시행합니다."
+   "(OPEN시간-08:00) 인터넷예약 - 평일,주말.공휴일 : 금일 기준으로 한달 이내는 실시간 예약이 가능합니다.(토요일,공휴일 동시 OPEN)전화예약 - 평일 : 매월1일에 다음달 말일까지 예약가능 -주말,공휴일 : 금일기준 한달 이내는 실시간 예약가능 (토요일,일요일 동시 OPEN) - 패키지 : 매월1일에 다음달 말일까지 전화예약만 가능 (선착순접수) 예약취소 위약규정 1.라운드 예정일부터 5일 전에 예약취소를 할 경우 아래와 같이 예약정지 기간을 시행합니다.",
+   "① 이용자가 주말이나 공휴일인 이용예정일로부터 4일전까지, 평일인 이용예정일로부터 3일전까지 예약을 취소한 경우에는 예약금의 전액을 환불한다. (출처: http://www.muangc.co.kr/bbs/board.php?bo_table=main&wr_id=13, 2026-11-27 확인)"
   ],
   "weather_evidence": [
    "기상악화 예보에 따른 예약취소는 위약 처리하며, 라운드 당일 회사가 라운드 불가로 판단한 경우에는 위약처리 하지 않습니다."
@@ -611,8 +622,11 @@
  },
  "ops": {
   "nocaddie": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "True (출처: https://greenfeeguide.co.kr/course/gc-0477/, 2026-11-27 확인)",
+    "노캐디(셀프) 라운드 가능"
+   ],
+   "value": true
   },
   "two_player": {
    "evidence": [
@@ -628,8 +642,10 @@
    }
   },
   "three_player": {
-   "value": null,
-   "evidence": []
+   "value": "※ 본상품은 1팀 4인기준이며, 3인 내장시 4인 요금이 적용됨.",
+   "evidence": [
+    "※ 본상품은 1팀 4인기준이며, 3인 내장시 4인 요금이 적용됨. (출처: http://www.muangc.co.kr/bbs/board.php?bo_table=main&wr_id=10, 2026-11-27 확인)"
+   ]
   },
   "five_player": {
    "value": null,
@@ -697,8 +713,10 @@
    "evidence": []
   },
   "food": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "레스토랑 (출처: http://www.muangc.co.kr/, 2026-11-27 확인)"
+   ],
+   "value": "레스토랑"
   },
   "snack_bar": {
    "value": null,
@@ -709,12 +727,16 @@
    "evidence": []
   },
   "lodging": {
-   "value": null,
-   "evidence": []
+   "value": "골프텔",
+   "evidence": [
+    "골프텔 (출처: https://greenfeeguide.co.kr/course/gc-0477/, 2026-11-27 확인)"
+   ]
   },
   "other": {
-   "value": null,
-   "evidence": []
+   "value": "프로샵",
+   "evidence": [
+    "프로샵 (출처: https://greenfeeguide.co.kr/course/gc-0477/, 2026-11-27 확인)"
+   ]
   },
   "night": {
    "evidence": [],
@@ -828,8 +850,19 @@
   "recent_notice_text": null,
   "course_notes": null,
   "alert": null,
-  "unconfirmed": [],
-  "sources": []
+  "unconfirmed": [
+   "체크인",
+   "복장",
+   "진행 시간",
+   "휴장일"
+  ],
+  "sources": [
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "ok",
@@ -846,12 +879,12 @@
   "browser_pdf": []
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 1.0,
+  "basic": 0.78,
+  "course": 0.6,
   "fee": 1.0,
-  "ops": 0.07,
-  "facility": 0.0,
-  "briefing": 0.5,
-  "rental": 0.5
+  "ops": 0.21,
+  "facility": 0.3,
+  "briefing": 0.0,
+  "rental": 0.25
  }
 }

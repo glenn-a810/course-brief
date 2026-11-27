@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0191",
@@ -69,7 +70,7 @@
    "blocks": [
     "아리아빌리샬롯"
    ],
-   "length_m": null,
+   "length_m": 5482,
    "kga": {
     "kga_course_code": "382",
     "kga_name": "더 크로스비",
@@ -241,7 +242,7 @@
  "course": {
   "holes": 27,
   "holes_received": 27,
-  "course_names": null,
+  "course_names": "아리아·빌리·샬롯 각 9홀",
   "membership_type": "대중제",
   "night_light": null,
   "blocks": [
@@ -413,7 +414,7 @@
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": null,
+  "length_m": 5482,
   "par": 72
  },
  "fee": {
@@ -421,18 +422,19 @@
   "weekend": 258000,
   "weekday_text": null,
   "weekend_text": null,
-  "basis": null,
+  "basis": "official",
   "tax_included": null,
   "cart": {
    "value": 100000,
-   "source": "그린피가이드",
-   "url": "https://greenfeeguide.co.kr/course/gc-0091/"
+   "source": "그린피가이드(공식 요금표)",
+   "url": "https://greenfeeguide.com/course/gc-0091/",
+   "note": "팀당(4인 1대)"
   },
   "caddie": {
    "value": 150000,
-   "source": "그린피가이드",
-   "url": "https://greenfeeguide.co.kr/course/gc-0091/",
-   "none": false
+   "none": false,
+   "source": "그린피가이드(공식 요금표)",
+   "url": "https://greenfeeguide.com/course/gc-0091/"
   },
   "as_of": "2026-11-04",
   "source_url": null,
@@ -440,19 +442,20 @@
   "sources": [
    {
     "source": "그린피가이드(공식 요금표 확인)",
-    "url": "https://greenfeeguide.co.kr/course/gc-0091/",
+    "url": "https://greenfeeguide.com/course/gc-0091/",
     "checked_at": "2026-11-04"
    }
   ],
-  "checked_at": "2026-11-04",
+  "checked_at": "2026-11-27",
   "market": {
-   "weekday_min": 127000.0,
-   "weekend_min": 200000.0,
+   "weekday_min": 127000,
+   "weekend_min": 200000,
    "part1": null,
    "part2": null,
    "source": "티픽골프장(실거래 관측)",
    "url": "https://teepickgolf.com/course/%EB%8D%94%ED%81%AC%EB%A1%9C%EC%8A%A4%EB%B9%84",
-   "note": "공시가 아닌 최근 관측 실거래 최저가"
+   "note": "공시가 아닌 최근 관측 실거래 최저가",
+   "checked_at": "2026-11-27"
   },
   "official_green": {
    "value": 197000,
@@ -493,16 +496,18 @@
  },
  "cancel": {
   "cancel_policy": {
-   "value": "8일 전 17:00까지(예약일 제외)개장·설계2020",
-   "source": "그린피가이드(공식 인용)",
-   "url": "https://greenfeeguide.co.kr/course/gc-0091/"
+   "value": "예약 취소는 8일 전 17:00까지 위약 없이 가능(이후 취소분은 익일 처리). 눈·우천으로 플레이에 지장이 있으면 당일 전화 취소 가능하며 위약 미적용",
+   "source": "공식 홈페이지",
+   "url": "http://www.thecrosbygc.co.kr/Guide/ReservationInfo.aspx"
   },
   "open_cycle": null,
-  "notes": null,
+  "notes": "최종 취소·위약 조건은 예약 채널 공지와 다를 수 있으니 예약 전 확인 필요",
   "evidence": [
-   "더크로스비골프클럽 실시간예약 인터넷예약 예약확인/취소 내장현황 위약현황 클럽소개 클럽소개 부대시설 오시는 길 이용안내 이용안내 이용요금 예약안내 위약안내 경기중단 기준안내 코스소개 코스소개 코스공략도 코스갤러리 커뮤니티 공지사항 자료실 조인게시판 연단체 로그인 회원가입 오늘 하루 보지 않기 닫기 2026 11 이전 다음 일 월 화 수 목 금 토 예약 123456789101112131415161718192021222324252627282930 선택한 날짜 잔여타임 0팀 이벤트THE CROSBY GC Event 더크로스비GC의 새로운 ",
    "QUICK MENU 실시간예약 예약확인/취소 앱 다운로드 TOP 휴대폰번호 입력하고 SMS로 App설치 URL받기 안드로이드 아이폰 010 011 016 017 018 019 전송 닫기 현재 처리 중 입니다.잠시만 기다려주시기 바랍니다.",
-   "더크로스비골프클럽 실시간예약 인터넷예약 예약확인/취소 내장현황 위약현황 클럽소개 클럽소개 부대시설 오시는 길 이용안내 이용안내 이용요금 예약안내 위약안내 경기중단 기준안내 코스소개 코스소개 코스공략도 코스갤러리 커뮤니티 공지사항 자료실 조인게시판 연단체 로그인 회원가입 이용요금 GUIDE 이용안내 이용요금 예약안내 위약안내 경기중단 기준안내 1."
+   "“예약취소는 예약일 제외 8일 전 17시까지 취소하셔야 위약 처리 없습니다. (이후 취소분은 익일로 처리)”",
+   "골프장 공식 홈페이지 안내(비회원 예약 기준) · 2026.10.28·2026.11.05 확인 ·",
+   "예약 취소는 8일 전 17시까지 취소하셔야 위약 처리 없습니다.(이후 취소분은 익일로 처리)",
+   "※ 눈이나 우천 등으로 인하여 플레이에 심각한 지장을 줄 수 있을 경우에는 당일 전화로 예약 취소가 가능하며 위약 처리되지 않습니다."
   ],
   "weather_evidence": [
    "더크로스비골프클럽 실시간예약 인터넷예약 예약확인/취소 내장현황 위약현황 클럽소개 클럽소개 부대시설 오시는 길 이용안내 이용안내 이용요금 예약안내 위약안내 경기중단 기준안내 코스소개 코스소개 코스공략도 코스갤러리 커뮤니티 공지사항 자료실 조인게시판 연단체 로그인 회원가입 오늘 하루 보지 않기 닫기 2026 11 이전 다음 일 월 화 수 목 금 토 예약 123456789101112131415161718192021222324252627282930 선택한 날짜 잔여타임 0팀 이벤트THE CROSBY GC Event 더크로스비GC의 새로운 ",
@@ -515,11 +520,7 @@
    "value": null
   },
   "two_player": {
-   "evidence": [
-    "더크로스비골프클럽 실시간예약 인터넷예약 예약확인/취소 내장현황 위약현황 클럽소개 클럽소개 부대시설 오시는 길 이용안내 이용안내 이용요금 예약안내 위약안내 경기중단 기준안내 코스소개 코스소개 코스공략도 코스갤러리 커뮤니티 공지사항 자료실 조인게시판 연단체 로그인 회원가입 오늘 하루 보지 않기 닫기 2026 11 이전 다음 일 월 화 수 목 금 토 예약 123456789101112131415161718192021222324252627282930 선택한 날짜 잔여타임 0팀 이벤트THE CROSBY GC Event 더크로스비GC의 새로운 ",
-    "더크로스비골프클럽 실시간예약 인터넷예약 예약확인/취소 내장현황 위약현황 클럽소개 클럽소개 부대시설 오시는 길 이용안내 이용안내 이용요금 예약안내 위약안내 경기중단 기준안내 코스소개 코스소개 코스공략도 코스갤러리 커뮤니티 공지사항 자료실 조인게시판 연단체 로그인 회원가입 이용요금 GUIDE 이용안내 이용요금 예약안내 위약안내 경기중단 기준안내 1.",
-    "더크로스비골프클럽 실시간예약 인터넷예약 예약확인/취소 내장현황 위약현황 클럽소개 클럽소개 부대시설 오시는 길 이용안내 이용안내 이용요금 예약안내 위약안내 경기중단 기준안내 코스소개 코스소개 코스공략도 코스갤러리 커뮤니티 공지사항 자료실 조인게시판 연단체 로그인 회원가입 공지사항 COMMUNITY 공지사항 자료실 조인게시판 연단체 제목 : 26년 11월 그린피 작성자 : 관리자 등록일 : 2026-11-02 조회수 : 1540 이전 이전글이 없습니다."
-   ],
+   "evidence": [],
    "value": null,
    "third_party": {
     "two": null,
@@ -542,7 +543,6 @@
   },
   "cart_type": {
    "evidence": [
-    "Detail View → 계열사 골프장 보라 C.C (27H) 미국 더크로스비 G.C (18H) 일본 카모 G.C (18H) 일본 노스쇼어 G.C (18H) 공지사항MORE + 26년 11월 그린피 스마트 셀프 키오스크 운영안내 홀인원 기념 라운드 이벤트 코스에 피어 있는 꽃 프리미엄 카트 클럽소개Club Introduction 클럽소개Club Introduction 서울에서 40분, 동서남북 4개의 IC 지정학적 최고의 위치 동쪽으로 이천IC, 서쪽으로 덕평IC, 남쪽으로 남이천IC, 북쪽으로 서이천IC 가 위치해 있으며, 각 I",
     "주중 : 197,000원(평균) 주말 및 공휴일 : 258,000원(평균) 실시간 예약 페이지 바로가기 홀수 18홀 9홀 캐디피 15 8 카트료(1대) 10 5 T-OFF 시간 경과 후 내장 시 홀 패스 및 18홀 라운드 요금 적용 2."
    ],
    "value": null
@@ -563,7 +563,6 @@
   },
   "checkin": {
    "evidence": [
-    "Detail View → 계열사 골프장 보라 C.C (27H) 미국 더크로스비 G.C (18H) 일본 카모 G.C (18H) 일본 노스쇼어 G.C (18H) 공지사항MORE + 26년 11월 그린피 스마트 셀프 키오스크 운영안내 홀인원 기념 라운드 이벤트 코스에 피어 있는 꽃 프리미엄 카트 클럽소개Club Introduction 클럽소개Club Introduction 서울에서 40분, 동서남북 4개의 IC 지정학적 최고의 위치 동쪽으로 이천IC, 서쪽으로 덕평IC, 남쪽으로 남이천IC, 북쪽으로 서이천IC 가 위치해 있으며, 각 I",
     "서울에서 40분, 동서남북 4개의 IC 지정학적 최고의 위치 동쪽으로 이천IC, 서쪽으로 덕평IC, 남쪽으로 남이천IC, 북쪽으로 서이천IC 가 위치해 있으며, 각 IC에서 더크로스비GC까지 10여분만에 도착이 가능한 접근성은 더크로스비GC만의 장점입니다.",
     "TEE-OFF 30분 전까지 프런트에 내장 등록 후 10분 전까지 스타트 광장으로 이동하여 주시기 바랍니다."
    ],
@@ -620,8 +619,14 @@
    "value_from": "capital_supplement(official_site)"
   },
   "pace": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "지나친 지연·고의 지연·경기 능력 부족 → 퇴장"
+   ],
+   "value": "지나친 지연·고의 지연·경기 능력 부족 → 퇴장",
+   "source_url": "https://www.thecrosbygc.co.kr/Guide/UseGuide.aspx",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfee guide tables)"
   },
   "grass": null
  },
@@ -651,16 +656,29 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": null,
-   "evidence": []
+   "value": "사우나 있음",
+   "evidence": [
+    "사우나 있음 — https://greenfeeguide.co.kr/course/gc-0091/"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0091/",
+   "confidence": "medium",
+   "checked_at": "2026-11-27",
+   "value_from": "pass2_third_party"
   },
   "lodging": {
    "value": null,
    "evidence": []
   },
   "other": {
-   "value": null,
-   "evidence": []
+   "value": "프로샵",
+   "evidence": [
+    "other: 프로샵"
+   ],
+   "source_url": "https://greenfeeguide.com/course/gc-0091/",
+   "source_type": "greenfee_guide",
+   "confidence": "medium",
+   "checked_at": "2026-11-27",
+   "value_from": "batch2_supplement"
   },
   "night": {
    "evidence": [
@@ -860,7 +878,18 @@
   "course_notes": null,
   "alert": null,
   "unconfirmed": [],
-  "sources": []
+  "sources": [
+   {
+    "source": "그린피가이드 코스 페이지",
+    "url": "https://greenfeeguide.co.kr/course/gc-0091/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "ok",
@@ -875,12 +904,12 @@
   "browser_batch": false
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 1.0,
+  "basic": 0.89,
+  "course": 0.6,
   "fee": 1.0,
-  "ops": 0.36,
-  "facility": 0.1,
-  "briefing": 0.5,
-  "rental": 0.25
+  "ops": 0.43,
+  "facility": 0.3,
+  "briefing": 0.0,
+  "rental": 0.0
  }
 }

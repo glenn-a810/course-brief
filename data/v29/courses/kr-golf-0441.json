@@ -12,9 +12,79 @@
   ],
   "source": "raw/received_gangwon_65.json (외부 데이터 수신, 2026-11-26)",
   "review": {
-   "checked_at": null,
-   "status": "not_crosschecked",
-   "checks": []
+   "checked_at": "2026-11-27",
+   "status": "supplemented(공개 요약·조사자료)",
+   "checks": [
+    {
+     "field": "ops.checkin",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "티오프 30분 전 프런트 등록(지각 시 홀패스)",
+     "result": "보완",
+     "url": "https://hantancc.co.kr/",
+     "quote": "티 오프 시간 30분 전까지 프론트에 등록",
+     "source_type": "official_research",
+     "confidence": "medium",
+     "checked_at": "2026-11-27",
+     "note": "2026-11-26 공식 홈페이지 조사자료에서 이관한 값(문구는 요약·환산일 수 있음)"
+    },
+    {
+     "field": "facilities.lodging",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "한탄강온천호텔",
+     "result": "보완",
+     "url": "https://hantancc.co.kr/",
+     "quote": "한탄강게르마늄온천호텔",
+     "source_type": "official_research",
+     "confidence": "medium",
+     "checked_at": "2026-11-27",
+     "note": "2026-11-26 공식 홈페이지 조사자료에서 이관한 값(문구는 요약·환산일 수 있음)"
+    },
+    {
+     "field": "fee.note",
+     "received": null,
+     "verified": "기후·시간·시즌별 차등 요금으로 고정 그린피표가 없습니다. 2026-11 기준 카트비 100,000원/팀(5인승), 캐디피 으뜸 150,000원·친절 130,000원/팀(후불).",
+     "result": "보완",
+     "url": "https://hantancc.co.kr/m43.php",
+     "quote": "기후·시간·시즌별 차등 요금으로 고정 그린피표가 없습니다. 2026-11 기준 카트비 100,000원/팀(5인승), 캐디피 으뜸 150,000원·친절 130,000원/팀(후불).",
+     "source_type": "official_research",
+     "confidence": "medium",
+     "checked_at": "2026-11-27",
+     "note": "2026-11-26 공식 홈페이지 조사자료에서 이관한 값(문구는 요약·환산일 수 있음)"
+    },
+    {
+     "field": "course.par",
+     "received": null,
+     "verified": 72,
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0249/",
+     "quote": "코스 구성 18홀 · 파 72",
+     "source_type": "third_party",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "course.length_m",
+     "received": null,
+     "verified": 6369,
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0249/",
+     "quote": "전장 6,965Yds (야드→미터 환산)",
+     "source_type": "third_party",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.other",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "프로샵",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0249/",
+     "quote": "그 밖의 시설 프로샵",
+     "source_type": "third_party",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    }
+   ]
   },
   "data_checks": [
    "미확인 목록 누락 라벨 보완: 제세금"
@@ -22,11 +92,14 @@
   "schema_previous": "stage2b/1.0",
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "restructured_from_7key": false,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "batch3_patch": "2026-11-27 배치3 보완: 1개 항목(공식 홈페이지·공개 요금 안내 기준, 미확인 값 생성 없음)",
+  "pass2_patch": "2026-11-27 2차 보완 패스: 3개 항목(그린피가이드·1박2일골프·원더골프·공식 홈페이지 대조, 미확인 값 생성 없음)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0441",
@@ -94,7 +167,8 @@
   "holes_conflict": false,
   "facility_cluster": null,
   "factcheck_2026_11_26": null,
-  "address_original": "철원군 갈말읍 순담길 59"
+  "address_original": "철원군 갈말읍 순담길 59",
+  "par": 72
  },
  "course": {
   "holes": 18,
@@ -110,7 +184,9 @@
   },
   "kga": null,
   "kga_hole_est": null,
-  "extra_courses": null
+  "extra_courses": null,
+  "par": 72,
+  "length_m": 6369
  },
  "fee": {
   "weekday": null,
@@ -130,14 +206,28 @@
   },
   "as_of": "2026-11(공식 요금안내 확인)",
   "source_url": "https://hantancc.co.kr/m43.php",
-  "note": null,
+  "note": "기후·시간·시즌별 차등 요금으로 고정 그린피표가 없습니다. 2026-11 기준 카트비 100,000원/팀(5인승), 캐디피 으뜸 150,000원·친절 130,000원/팀(후불).",
   "sources": [
    {
     "source": "수신 조사(공식·공개 예약정보)",
     "url": "https://hantancc.co.kr/m43.php",
     "checked_at": "2026-11(공식 요금안내 확인)"
+   },
+   {
+    "source": "공식·공개 안내",
+    "url": "https://hantancc.co.kr/m43.php",
+    "quote": "기후·시간·시즌별 차등 요금으로 고정 그린피표가 없습니다. 2026-11 기준 카트비 100,000원/팀(5인승), 캐디피 으뜸 150,000원·친절 130,000원/팀(후불).",
+    "checked_at": "2026-11-27"
    }
-  ]
+  ],
+  "checked_at": "2026-11-27",
+  "market": {
+   "weekday_min": 80000,
+   "weekend_min": 120000,
+   "source": "공개 예약 채널 실거래 관측(티픽)",
+   "url": "https://teepickgolf.com/",
+   "note": "공시가 아닌 최근 관측 실거래 최저가"
+  }
  },
  "cancel": {
   "cancel_policy": "예약일 기준 10일 전까지 취소 가능",
@@ -184,8 +274,14 @@
    "evidence": []
   },
   "checkin": {
-   "value": null,
-   "evidence": []
+   "value": "티오프 30분 전 프런트 등록(지각 시 홀패스)",
+   "evidence": [
+    "티 오프 시간 30분 전까지 프론트에 등록"
+   ],
+   "source_url": "https://hantancc.co.kr/",
+   "confidence": "medium",
+   "source_type": "official_research",
+   "checked_at": "2026-11-27"
   },
   "locker": {
    "value": null,
@@ -226,12 +322,24 @@
    "evidence": []
   },
   "lodging": {
-   "value": null,
-   "evidence": []
+   "value": "한탄강온천호텔",
+   "evidence": [
+    "한탄강게르마늄온천호텔"
+   ],
+   "source_url": "https://hantancc.co.kr/",
+   "confidence": "medium",
+   "source_type": "official_research",
+   "checked_at": "2026-11-27"
   },
   "other": {
-   "value": null,
-   "evidence": []
+   "value": "프로샵",
+   "evidence": [
+    "그 밖의 시설 프로샵"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0249/",
+   "confidence": "high",
+   "source_type": "third_party",
+   "checked_at": "2026-11-27"
   },
   "night": {
    "value": null,
@@ -339,7 +447,13 @@
   "sources": [
    "https://hantancc.co.kr/m43.php",
    "https://hantancc.co.kr/board/board.php?bo_table=notice&idx=1168",
-   "https://parkgolfinfo.co.kr/철원-한탄강cc-골프장-18홀-퍼블릭-이용방법-안내/"
+   "https://parkgolfinfo.co.kr/철원-한탄강cc-골프장-18홀-퍼블릭-이용방법-안내/",
+   "https://greenfeeguide.co.kr/course/gc-0249/",
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
   ],
   "collected_at": "2026-11-26T09:55:48+09:00"
  },
@@ -348,18 +462,20 @@
   "official_reason": "운영 중(공식 홈페이지 정상, 예약실 주중 09:00~16:30)",
   "pages_collected": 0,
   "third_party": {
-   "received_report": true
+   "received_report": true,
+   "teepick": true,
+   "greenfeeguide": true
   },
   "render_hint": "report",
   "plan_strategy": "subagent_report(2026-11-26)"
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.8,
+  "basic": 0.89,
+  "course": 0.4,
   "fee": 0.5,
-  "ops": 0.21,
-  "facility": 0.2,
-  "briefing": 0.75,
-  "rental": 0.25
+  "ops": 0.29,
+  "facility": 0.4,
+  "briefing": 0.5,
+  "rental": 0.0
  }
 }

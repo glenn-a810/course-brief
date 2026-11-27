@@ -12,9 +12,153 @@
   ],
   "source": "raw/received_chungcheong_77.json (외부 데이터 수신, 2026-11-26)",
   "review": {
-   "checked_at": null,
+   "checked_at": "2026-11-27",
    "status": "not_crosschecked",
-   "checks": []
+   "checks": [
+    {
+     "field": "fee.checked_at",
+     "received": null,
+     "verified": "2026-11-27",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0315/",
+     "quote": "요금 확인일 2026-10-05 (그린피가이드 2026-11-27 조회)",
+     "source_type": "third_party",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "course.par",
+     "received": null,
+     "verified": 72,
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/stone-beach/course/",
+     "quote": "코스 개요 — 파: Par 72",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "course.length_m",
+     "received": null,
+     "verified": 6487,
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/stone-beach/course/",
+     "quote": "코스 개요 — 거리: 6,487m",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "course.grass.green",
+     "received": null,
+     "verified": "벤트그라스",
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/stone-beach/course/",
+     "quote": "코스 개요 — 잔디: 벤트그라스 (그린), 한국잔디 (페어웨이)",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "course.grass.fairway",
+     "received": null,
+     "verified": "한국잔디",
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/stone-beach/course/",
+     "quote": "코스 개요 — 잔디: 벤트그라스 (그린), 한국잔디 (페어웨이)",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "master.opened",
+     "received": null,
+     "verified": "2006",
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/stone-beach/course/",
+     "quote": "코스 개요 — 개장: 2006년 (2019년 스톤비치CC로 재개장)",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.food",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "클럽하우스 내 레스토랑 (필드·바다 조망), 한식·양식 메뉴",
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/stone-beach/info/",
+     "quote": "레스토랑: 클럽하우스 내 레스토랑 (필드·바다 조망), 한식·양식 메뉴",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "ops.locker",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "현대식 락카룸 (샤워·사우나 완비)",
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/stone-beach/info/",
+     "quote": "라커/사우나: 현대식 락카룸 (샤워·사우나 완비)",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "ops.sauna",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "현대식 락카룸 (샤워·사우나 완비)",
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/stone-beach/info/",
+     "quote": "라커/사우나: 현대식 락카룸 (샤워·사우나 완비)",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.locker_sauna",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "현대식 락카룸 (샤워·사우나 완비)",
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/stone-beach/info/",
+     "quote": "라커/사우나: 현대식 락카룸 (샤워·사우나 완비)",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.proshop",
+     "received": null,
+     "verified": "프로샵",
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/stone-beach/info/",
+     "quote": "프로샵: 프로샵 (골프용품·의류·액세서리)",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.practice",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "퍼팅 연습 그린, 어프로치 연습장",
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/stone-beach/info/",
+     "quote": "연습 시설: 퍼팅 연습 그린, 어프로치 연습장",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.lodging",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "골프텔",
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/stone-beach/info/",
+     "quote": "숙박 시설: 골프텔",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    }
+   ]
   },
   "data_checks": [
    "미확인 목록 누락 라벨 보완: 제세금"
@@ -22,11 +166,13 @@
   "schema_previous": "stage2b/1.0",
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "restructured_from_7key": false,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "pass2_patch": "2026-11-27 2차 보완 패스: 12개 항목(그린피가이드·1박2일골프·원더골프·공식 홈페이지 대조, 미확인 값 생성 없음)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0296",
@@ -81,7 +227,7 @@
   ],
   "operators_note": null,
   "area_sqm": 523948,
-  "opened": null,
+  "opened": "2006",
   "course_blocks": [],
   "facility_id": null,
   "facility_members": null,
@@ -99,7 +245,8 @@
   "holes_conflict": false,
   "facility_cluster": null,
   "factcheck_2026_11_26": null,
-  "address_original": "태안군 근흥면 갈음이길 88"
+  "address_original": "태안군 근흥면 갈음이길 88",
+  "par": 72
  },
  "course": {
   "holes": 18,
@@ -110,8 +257,8 @@
   "blocks": [],
   "grass": {
    "tee": null,
-   "fairway": null,
-   "green": null
+   "fairway": "한국잔디",
+   "green": "벤트그라스"
   },
   "kga": {
    "code": "341",
@@ -125,7 +272,9 @@
    ]
   },
   "kga_hole_est": 18,
-  "extra_courses": null
+  "extra_courses": null,
+  "par": 72,
+  "length_m": 6487
  },
  "fee": {
   "weekday": 110000,
@@ -151,8 +300,22 @@
     "source": "수신 조사(공식·공개 예약정보)",
     "url": "https://stonebeachcc.com/",
     "checked_at": "2026-11-26 (공식 11월 그린피 공지·공개 요금정보 확인)"
+   },
+   {
+    "source": "third_party",
+    "url": "https://greenfeeguide.co.kr/course/gc-0315/",
+    "quote": "요금 확인일 2026-10-05 (그린피가이드 2026-11-27 조회)",
+    "checked_at": "2026-11-27"
    }
-  ]
+  ],
+  "checked_at": "2026-11-27",
+  "market": {
+   "weekday_min": 70000,
+   "weekend_min": 90000,
+   "source": "공개 예약 채널 실거래 관측(티픽)",
+   "url": "https://teepickgolf.com/",
+   "note": "공시가 아닌 최근 관측 실거래 최저가"
+  }
  },
  "cancel": {
   "cancel_policy": "4인→3인 변경 시 추가요금 또는 조인 처리, 2인 이하 구성 불가(예약 취소로 간주)",
@@ -203,12 +366,26 @@
    "evidence": []
   },
   "locker": {
-   "value": null,
-   "evidence": []
+   "value": "현대식 락카룸 (샤워·사우나 완비)",
+   "evidence": [
+    "라커/사우나: 현대식 락카룸 (샤워·사우나 완비)"
+   ],
+   "source_url": "https://1n2d-golf.co.kr/stone-beach/info/",
+   "confidence": "medium",
+   "source_type": "public_info(1n2d-golf)",
+   "checked_at": "2026-11-27",
+   "note": "1박2일골프 시설·기타 요약(2차 공개자료, 2026-11-27 조회) — 예약 전 공식 채널 재확인 권장"
   },
   "sauna": {
-   "value": null,
-   "evidence": []
+   "value": "현대식 락카룸 (샤워·사우나 완비)",
+   "evidence": [
+    "라커/사우나: 현대식 락카룸 (샤워·사우나 완비)"
+   ],
+   "source_url": "https://1n2d-golf.co.kr/stone-beach/info/",
+   "confidence": "medium",
+   "source_type": "public_info(1n2d-golf)",
+   "checked_at": "2026-11-27",
+   "note": "1박2일골프 시설·기타 요약(2차 공개자료, 2026-11-27 조회) — 예약 전 공식 채널 재확인 권장"
   },
   "dress": {
    "value": null,
@@ -221,28 +398,56 @@
  },
  "facilities": {
   "practice": {
-   "value": null,
-   "evidence": []
+   "value": "퍼팅 연습 그린, 어프로치 연습장",
+   "evidence": [
+    "연습 시설: 퍼팅 연습 그린, 어프로치 연습장"
+   ],
+   "source_url": "https://1n2d-golf.co.kr/stone-beach/info/",
+   "confidence": "medium",
+   "source_type": "public_info(1n2d-golf)",
+   "checked_at": "2026-11-27",
+   "note": "1박2일골프 시설·기타 요약(2차 공개자료, 2026-11-27 조회) — 예약 전 공식 채널 재확인 권장"
   },
   "indoor_range": {
    "value": null,
    "evidence": []
   },
   "food": {
-   "value": null,
-   "evidence": []
+   "value": "클럽하우스 내 레스토랑 (필드·바다 조망), 한식·양식 메뉴",
+   "evidence": [
+    "레스토랑: 클럽하우스 내 레스토랑 (필드·바다 조망), 한식·양식 메뉴"
+   ],
+   "source_url": "https://1n2d-golf.co.kr/stone-beach/info/",
+   "confidence": "medium",
+   "source_type": "public_info(1n2d-golf)",
+   "checked_at": "2026-11-27",
+   "note": "1박2일골프 시설·기타 요약(2차 공개자료, 2026-11-27 조회) — 예약 전 공식 채널 재확인 권장"
   },
   "snack_bar": {
    "value": null,
    "evidence": []
   },
   "locker_sauna": {
-   "value": null,
-   "evidence": []
+   "value": "현대식 락카룸 (샤워·사우나 완비)",
+   "evidence": [
+    "라커/사우나: 현대식 락카룸 (샤워·사우나 완비)"
+   ],
+   "source_url": "https://1n2d-golf.co.kr/stone-beach/info/",
+   "confidence": "medium",
+   "source_type": "public_info(1n2d-golf)",
+   "checked_at": "2026-11-27",
+   "note": "1박2일골프 시설·기타 요약(2차 공개자료, 2026-11-27 조회) — 예약 전 공식 채널 재확인 권장"
   },
   "lodging": {
-   "value": null,
-   "evidence": []
+   "value": "골프텔",
+   "evidence": [
+    "숙박 시설: 골프텔"
+   ],
+   "source_url": "https://1n2d-golf.co.kr/stone-beach/info/",
+   "confidence": "medium",
+   "source_type": "public_info(1n2d-golf)",
+   "checked_at": "2026-11-27",
+   "note": "1박2일골프 시설·기타 요약(2차 공개자료, 2026-11-27 조회) — 예약 전 공식 채널 재확인 권장"
   },
   "other": {
    "value": null,
@@ -260,6 +465,17 @@
   "shuttle": {
    "value": null,
    "evidence": []
+  },
+  "proshop": {
+   "value": "프로샵",
+   "evidence": [
+    "프로샵: 프로샵 (골프용품·의류·액세서리)"
+   ],
+   "source_url": "https://1n2d-golf.co.kr/stone-beach/info/",
+   "confidence": "medium",
+   "source_type": "public_info(1n2d-golf)",
+   "checked_at": "2026-11-27",
+   "note": "1박2일골프 시설·기타 요약(2차 공개자료, 2026-11-27 조회) — 예약 전 공식 채널 재확인 권장"
   }
  },
  "rental": {
@@ -326,9 +542,6 @@
   "fee_change": null,
   "alert": null,
   "unconfirmed": [
-   "잔디(티)",
-   "잔디(페어웨이)",
-   "잔디(그린)",
    "5인 플레이",
    "노캐디",
    "마샬캐디",
@@ -355,7 +568,13 @@
   "sources": [
    "https://stonebeachcc.com/",
    "https://wondergolf.co.kr/courses/kr-kakao-1357847052",
-   "https://todaygolfgo.com/golf-courses/master/golf-course-moct-20241231-0494/"
+   "https://todaygolfgo.com/golf-courses/master/golf-course-moct-20241231-0494/",
+   "https://1n2d-golf.co.kr/stone-beach/course/",
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
   ],
   "collected_at": "2026-11-26T10:24:30+09:00"
  },
@@ -364,18 +583,20 @@
   "official_reason": "운영 중(공식 홈페이지 정상)",
   "pages_collected": 0,
   "third_party": {
-   "received_report": true
+   "received_report": true,
+   "teepick": true,
+   "greenfeeguide": true
   },
   "render_hint": "report",
   "plan_strategy": "subagent_report(2026-11-26)"
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 1.0,
+  "basic": 0.89,
+  "course": 0.4,
   "fee": 1.0,
-  "ops": 0.14,
-  "facility": 0.1,
-  "briefing": 0.75,
-  "rental": 0.25
+  "ops": 0.29,
+  "facility": 0.5,
+  "briefing": 0.5,
+  "rental": 0.0
  }
 }

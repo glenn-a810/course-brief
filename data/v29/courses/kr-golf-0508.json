@@ -12,9 +12,21 @@
   ],
   "source": "raw/received_chungcheong_77.json (외부 데이터 수신, 2026-11-26)",
   "review": {
-   "checked_at": null,
+   "checked_at": "2026-11-27",
    "status": "not_crosschecked",
-   "checks": []
+   "checks": [
+    {
+     "field": "ops.dress",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "청바지·반바지·슬리퍼·샌들 등 입장 불가",
+     "result": "보완",
+     "url": "http://www.yemizicc.co.kr/guide/guide",
+     "quote": "기준 요금으로 정산하여야 합니다. 클럽의 품위를 위해 정해진 복장을 준수하여 주시기 바랍니다. (라운드티, 청바지, 반바지, 슬리퍼 및 샌들 등 타인에게 불쾌감이나 혐오감을 주는 복장을 하시는 경우는 입장 불가합니다.) 내장자는 1인 1 풀세트 클럽 지참을 기본 원칙으로 합니다. (",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    }
+   ]
   },
   "data_checks": [
    "미확인 목록 누락 라벨 보완: 제세금"
@@ -22,11 +34,15 @@
   "schema_previous": "stage2b/1.0",
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "restructured_from_7key": false,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "batch4_patch": "2026-04-25 18홀 개장, 2026-09 27홀 완공. 개장일·대표전화 보완",
+  "checked_at": "2026-11-27",
+  "pass2_patch": "2026-11-27 2차 보완 패스: 1개 항목(그린피가이드·1박2일골프·원더골프·공식 홈페이지 대조, 미확인 값 생성 없음)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0508",
@@ -74,7 +90,7 @@
    "straight_name": "청양IC"
   },
   "nearest_ic_note": null,
-  "tel": null,
+  "tel": "041-943-8777",
   "tel_official": "041-943-8777",
   "tel_conflict": false,
   "tel_source": null,
@@ -145,16 +161,34 @@
    "text": "150,000원/팀",
    "none": false
   },
-  "as_of": "2026-11-26 (공식 안내·공개 자료 확인)",
+  "as_of": "2026-11-27 (공식 요금 안내 + 실거래 관측)",
   "source_url": "http://www.yemizicc.co.kr/",
-  "note": null,
+  "note": "공식 기본요금(1인·18홀) 기준. 2026-11-27 공개 예약채널 실거래 최저가는 평일 90,000원·주말 170,000원으로 공식 기본가보다 낮게 관측됨(시즌·잔여석 할인). 2026-04-25 18홀 개장, 2026-09 27홀 완공.",
   "sources": [
    {
     "source": "수신 조사(공식·공개 예약정보)",
     "url": "http://www.yemizicc.co.kr/",
     "checked_at": "2026-11-26 (공식 안내·공개 자료 확인)"
+   },
+   {
+    "source": "공개 예약채널 실거래",
+    "url": "https://teepickgolf.com/course/%EC%98%88%EB%AF%B8%EC%A7%80",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공개 예약채널 실거래",
+    "url": "https://inwon.kr/c/k701",
+    "checked_at": "2026-11-27"
    }
-  ]
+  ],
+  "checked_at": "2026-11-27",
+  "market": {
+   "weekday_min": 90000,
+   "weekend_min": 170000,
+   "source": "공개 예약 채널 실거래 관측(티픽)",
+   "url": "https://teepickgolf.com/",
+   "note": "공시가 아닌 최근 관측 실거래 최저가"
+  }
  },
  "cancel": {
   "cancel_policy": "예약일 제외 주중·주말 모두 4일 전 17시까지 취소·시간 변경 가능(전화 취소 09:00~17:00)",
@@ -213,8 +247,14 @@
    "evidence": []
   },
   "dress": {
-   "value": null,
-   "evidence": []
+   "value": "청바지·반바지·슬리퍼·샌들 등 입장 불가",
+   "evidence": [
+    "기준 요금으로 정산하여야 합니다. 클럽의 품위를 위해 정해진 복장을 준수하여 주시기 바랍니다. (라운드티, 청바지, 반바지, 슬리퍼 및 샌들 등 타인에게 불쾌감이나 혐오감을 주는 복장을 하시는 경우는 입장 불가합니다.) 내장자는 1인 1 풀세트 클럽 지참을 기본 원칙으로 합니다. ("
+   ],
+   "source_url": "http://www.yemizicc.co.kr/guide/guide",
+   "confidence": "high",
+   "source_type": "official_site",
+   "checked_at": "2026-11-27"
   },
   "pace": {
    "value": null,
@@ -360,7 +400,13 @@
    "http://www.yemizicc.co.kr/",
    "https://inwon.kr/c/k701",
    "https://shortents.net/12290",
-   "https://golfduck.co.kr/course/%EC%98%88%EB%AF%B8%EC%A7%80"
+   "https://golfduck.co.kr/course/%EC%98%88%EB%AF%B8%EC%A7%80",
+   "https://teepickgolf.com/course/%EC%98%88%EB%AF%B8%EC%A7%80",
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
   ],
   "collected_at": "2026-11-26T10:24:30+09:00"
  },
@@ -369,18 +415,19 @@
   "official_reason": "운영 중(칠갑산 자락, 27홀)",
   "pages_collected": 0,
   "third_party": {
-   "received_report": true
+   "received_report": true,
+   "teepick": true
   },
   "render_hint": "report",
   "plan_strategy": "subagent_report(2026-11-26)"
  },
  "coverage": {
   "basic": 0.89,
-  "course": 0.8,
+  "course": 0.6,
   "fee": 1.0,
-  "ops": 0.07,
+  "ops": 0.14,
   "facility": 0.0,
-  "briefing": 0.75,
-  "rental": 0.25
+  "briefing": 0.5,
+  "rental": 0.0
  }
 }

@@ -5,8 +5,10 @@
   "schema": "stage2c/1.0",
   "batch": null,
   "structure": "master only (구장 JSON 미생성 — 건설중·미착공)",
-  "normalized_at": "2026-11-26T12:20:52+09:00",
-  "has_detail": false
+  "normalized_at": "2026-11-27T14:40:00+09:00",
+  "has_detail": false,
+  "checked_at": "2026-11-27",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0528",
@@ -48,12 +50,13 @@
   "facility_id": null,
   "facility_members": null,
   "status": "planned",
-  "expected_open": "2029년 이후(미정)",
+  "expected_open": "미정(도시계획 입안 단계)",
   "nearest_ic": null,
   "facility_cluster": null,
   "factcheck_2026_11_26": null,
   "holes_note": "계획 홀수 36홀. 회원제/대중제 구성(내역)은 확정되지 않아 member/public/non_member를 0으로 두었다(master.holes.total만 유효).",
-  "provenance": {}
+  "provenance": {},
+  "project_stage": "36홀+골프텔 270실·콘도 50실. 2026-06 기준 도시계획 입안 검토 단계로 착공 시점 미정"
  },
  "course": {
   "holes": null,
@@ -214,12 +217,16 @@
    "tags": {}
   },
   "recent_notice_text": null,
-  "course_notes": null,
+  "course_notes": "",
   "review": null,
   "fee_change": null,
   "alert": null,
   "unconfirmed": [],
-  "sources": []
+  "sources": [
+   "http://www.jbfocus.co.kr/news/articleView.html?idxno=84865",
+   "https://www.goesan.go.kr/www/selectBbsNttView.do?bbsNo=213&nttNo=131197"
+  ],
+  "collected_at": "2026-11-27"
  },
  "collection": {
   "official_site": null,
@@ -230,12 +237,12 @@
   "plan_strategy": null
  },
  "coverage": {
-  "basic": 0,
-  "course": 0,
-  "fee": 0,
-  "ops": 0,
-  "facility": 0,
-  "briefing": 0,
-  "rental": 0
+  "basic": 0.56,
+  "course": 0.0,
+  "fee": 0.0,
+  "ops": 0.0,
+  "facility": 0.0,
+  "briefing": 0.0,
+  "rental": 0.0
  }
 }

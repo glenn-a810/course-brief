@@ -22,11 +22,12 @@
   "schema_previous": "stage2b/1.0",
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "restructured_from_7key": false,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0361",
@@ -149,7 +150,8 @@
     "url": "https://greenfeeguide.co.kr/course/gc-0414/",
     "checked_at": "2026-11-01"
    }
-  ]
+  ],
+  "checked_at": "2026-11-27"
  },
  "cancel": {
   "cancel_policy": "주중 3일 전·주말 4일 전 17:00까지 인터넷·전화 취소 시 위약 없음(공식 예약안내)",
@@ -204,16 +206,24 @@
    "evidence": []
   },
   "sauna": {
-   "value": null,
-   "evidence": []
+   "value": "사우나 있음",
+   "evidence": [
+    "사우나: 사우나 있음"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0414/",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfeeguide)"
   },
   "dress": {
    "value": null,
    "evidence": []
   },
   "pace": {
-   "value": null,
-   "evidence": []
+   "value": "앞팀과 1홀 이상 차이 시 2회 시정요구, 지속 위반 시 앞팀 뒤로 점프(9홀 60타 이상 경기 방해 시 홀 점프)",
+   "evidence": [
+    "https://greenfeeguide.co.kr/course/gc-0414/"
+   ]
   }
  },
  "facilities": {
@@ -234,25 +244,35 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": null,
-   "evidence": []
+   "value": "사우나",
+   "evidence": [
+    "https://greenfeeguide.co.kr/course/gc-0414/"
+   ]
   },
   "lodging": {
    "value": null,
    "evidence": []
   },
   "other": {
-   "value": null,
-   "evidence": []
+   "value": "프로샵",
+   "evidence": [
+    "https://greenfeeguide.co.kr/course/gc-0414/"
+   ]
   },
   "night": {
    "value": "야간 라운드 운영(공식 홈페이지 안내)",
    "evidence": []
   },
   "closed_days": {
-   "value": null,
+   "value": "겨울 휴장 동계 정규휴장(일정 별도 공지)",
    "third_party": null,
-   "evidence": []
+   "evidence": [
+    "2026년 영업 기간: — · 겨울 휴장 동계 정규휴장(일정 별도 공지)"
+   ],
+   "source_url": "https://www.miryangnobelcc.co.kr/Miryang_nobel/html/guide/guide_01.asp",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfee guide tables)"
   },
   "shuttle": {
    "value": null,
@@ -338,15 +358,12 @@
    "인도어 연습장",
    "식당·조식",
    "그늘집",
-   "락커·사우나",
    "숙박",
-   "기타 시설",
    "클럽 렌탈 여부",
    "클럽 렌탈 요금",
    "좌타용 클럽",
    "골프화 대여",
-   "제세금",
-   "예약 비고"
+   "제세금"
   ],
   "unconfirmed_labels_added": [
    "제세금",
@@ -354,7 +371,12 @@
   ],
   "sources": [
    "https://greenfeeguide.co.kr/course/gc-0414/",
-   "https://www.rankue.co.kr/golf/course/밀양노벨컨트리클럽"
+   "https://www.rankue.co.kr/golf/course/밀양노벨컨트리클럽",
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
   ],
   "collected_at": "2026-11-26T10:33:21+09:00"
  },
@@ -363,18 +385,20 @@
   "official_reason": "공식 홈페이지 접속 제한(2026-11-26). 요금·운영 정보는 공개 요금 정보로 확인",
   "pages_collected": 0,
   "third_party": {
-   "received_report": true
+   "received_report": true,
+   "teepick": true,
+   "greenfeeguide": true
   },
   "render_hint": "report",
   "plan_strategy": "subagent_report(2026-11-26)"
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 1.0,
+  "basic": 0.89,
+  "course": 0.4,
   "fee": 1.0,
-  "ops": 0.07,
-  "facility": 0.1,
-  "briefing": 0.75,
-  "rental": 0.25
+  "ops": 0.21,
+  "facility": 0.4,
+  "briefing": 0.5,
+  "rental": 0.0
  }
 }

@@ -5,8 +5,37 @@
   "schema": "stage2c/1.0",
   "batch": null,
   "structure": "master only (구장 JSON 미생성 — 건설중·미착공)",
-  "normalized_at": "2026-11-26T12:20:52+09:00",
-  "has_detail": false
+  "normalized_at": "2026-11-27T14:40:00+09:00",
+  "has_detail": false,
+  "review": {
+   "checks": [
+    {
+     "field": "master.status_note",
+     "received": null,
+     "verified": "2024-06-07 문경시 개발행위허가 완료. 마성면 외어리 산101 일원 910,334㎡에 18홀 대중제+골프텔, 2027년 준공 목표(시행 ㈜비에이치엠).",
+     "result": "보완",
+     "url": "https://www.metroseoul.co.kr/article/20240610500240",
+     "quote": "문경시는 지난 7일 「마성면 외어리 버드힐 문경 컨트리클럽」 개발을 본격화하기 위한 개발행위허가를 완료했다.",
+     "source_type": "news",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "briefing.recent_notice_text",
+     "received": null,
+     "verified": "2024-06-07 문경시 개발행위허가 완료, 18홀 대중제+골프텔(910,334㎡), 2027년 준공 목표. 2026-11-27 기준 착공·개장 공지는 확인되지 않음.",
+     "result": "보완",
+     "url": "https://www.metroseoul.co.kr/article/20240610500240",
+     "quote": "총면적 910,334㎡ 규모로 골프장 18홀과 골프텔 등으로 구성되어 있으며 2027년 준공을 목표로 한다.",
+     "source_type": "news",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    }
+   ],
+   "checked_at": "2026-11-27"
+  },
+  "batch3_patch": "2026-11-27 배치6(대구·경북) 보완: 2개 항목(공식 홈페이지·그린피가이드 공식 안내 확인 기준, 미확인 값 생성 없음)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0533",
@@ -52,7 +81,8 @@
   "nearest_ic": null,
   "facility_cluster": null,
   "factcheck_2026_11_26": null,
-  "provenance": {}
+  "provenance": {},
+  "status_note": "2024-06-07 문경시 개발행위허가 완료. 마성면 외어리 산101 일원 910,334㎡에 18홀 대중제+골프텔, 2027년 준공 목표(시행 ㈜비에이치엠)."
  },
  "course": {
   "holes": null,
@@ -212,13 +242,15 @@
    "items": [],
    "tags": {}
   },
-  "recent_notice_text": null,
+  "recent_notice_text": "2024-06-07 문경시 개발행위허가 완료, 18홀 대중제+골프텔(910,334㎡), 2027년 준공 목표. 2026-11-27 기준 착공·개장 공지는 확인되지 않음.",
   "course_notes": null,
   "review": null,
   "fee_change": null,
   "alert": null,
   "unconfirmed": [],
-  "sources": []
+  "sources": [
+   "https://www.metroseoul.co.kr/article/20240610500240"
+  ]
  },
  "collection": {
   "official_site": null,
@@ -229,12 +261,12 @@
   "plan_strategy": null
  },
  "coverage": {
-  "basic": 0,
-  "course": 0,
-  "fee": 0,
-  "ops": 0,
-  "facility": 0,
-  "briefing": 0,
-  "rental": 0
+  "basic": 0.56,
+  "course": 0.0,
+  "fee": 0.0,
+  "ops": 0.0,
+  "facility": 0.0,
+  "briefing": 0.25,
+  "rental": 0.0
  }
 }

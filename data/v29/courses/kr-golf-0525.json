@@ -5,8 +5,9 @@
   "schema": "stage2c/1.0",
   "batch": null,
   "structure": "master only (구장 JSON 미생성 — 건설중·미착공)",
-  "normalized_at": "2026-11-26T12:20:52+09:00",
-  "has_detail": false
+  "normalized_at": "2026-11-27T14:40:00+09:00",
+  "has_detail": false,
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0525",
@@ -217,7 +218,16 @@
   "review": null,
   "fee_change": null,
   "alert": null,
-  "unconfirmed": [],
+  "unconfirmed": [
+   "그린피(주중/주말) 미확인: 공식 채널에서 비회원 18홀 요금표를 확인하지 못함",
+   "카트비 미확인",
+   "캐디피 미확인",
+   "취소·위약 규정 미확인",
+   "예약 오픈 주기 미확인",
+   "야간(3부) 운영 여부 미확인",
+   "잔디 종류 미확인",
+   "수집 한계(2026-11-27): 공식 홈페이지 본문을 HTTP 수집으로 확보하지 못함(접속 실패)"
+  ],
   "sources": []
  },
  "collection": {
@@ -229,12 +239,12 @@
   "plan_strategy": null
  },
  "coverage": {
-  "basic": 0,
-  "course": 0,
-  "fee": 0,
-  "ops": 0,
-  "facility": 0,
-  "briefing": 0,
-  "rental": 0
+  "basic": 0.56,
+  "course": 0.0,
+  "fee": 0.0,
+  "ops": 0.0,
+  "facility": 0.0,
+  "briefing": 0.0,
+  "rental": 0.0
  }
 }

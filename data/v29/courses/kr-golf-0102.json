@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0102",
@@ -63,13 +64,13 @@
    "source": "그린피가이드",
    "url": "https://greenfeeguide.co.kr/course/gc-0069/"
   },
-  "par": null,
+  "par": 72,
   "holes_teepick": 18,
   "course_spec": {
    "holes": 18,
-   "par": null,
+   "par": 72,
    "blocks": [],
-   "length_m": null,
+   "length_m": 6344,
    "kga": null,
    "grass": {
     "value": "그린 벤타그라스",
@@ -90,7 +91,7 @@
   "holes_received": 18,
   "course_names": null,
   "membership_type": "회원제",
-  "night_light": null,
+  "night_light": "야간 3부 운영(17:30~18:00 티오프, 2026년 11월 현재), 야간 캐디피 팀당 160,000원",
   "blocks": [],
   "grass": {
    "tee": null,
@@ -99,14 +100,14 @@
     "source": "그린피가이드(공식 코스소개 인용)",
     "url": "https://greenfeeguide.co.kr/course/gc-0069/"
    },
-   "green": null
+   "green": "벤타그라스"
   },
   "kga": null,
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": null,
-  "par": null
+  "length_m": 6344,
+  "par": 72
  },
  "fee": {
   "weekday": 245000,
@@ -124,7 +125,8 @@
    "value": 150000,
    "source": "그린피가이드",
    "url": "https://greenfeeguide.co.kr/course/gc-0069/",
-   "none": false
+   "none": false,
+   "note": "2026년 11월에도 운영 · 17:30~18:00 티오프 · 야간 캐디피 1팀당 150,000원 · 야간 160,000원"
   },
   "as_of": "2026-11-01",
   "source_url": null,
@@ -294,8 +296,14 @@
    "evidence": []
   },
   "other": {
-   "value": null,
-   "evidence": []
+   "value": "프로샵",
+   "evidence": [
+    "그 밖의 시설: 프로샵"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0069/",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfeeguide)"
   },
   "night": {
    "evidence": [
@@ -339,16 +347,16 @@
   }
  },
  "rental": {
-  "available": null,
+  "available": true,
   "full_set": 50000,
-  "fee_text": null,
+  "fee_text": "50,000원 · 18홀",
   "brand": null,
   "left_handed": null,
   "shoes": null,
   "nine_hole": null,
   "range_finder": null,
   "reservation": null,
-  "source_url": null,
+  "source_url": "https://greenfeeguide.co.kr/course/gc-0069/",
   "evidence": [],
   "official": null,
   "nearby_delivery": {
@@ -422,8 +430,22 @@
   "recent_notice_text": null,
   "course_notes": null,
   "alert": null,
-  "unconfirmed": [],
-  "sources": []
+  "unconfirmed": [
+   "취소·위약 규정 미확인",
+   "예약 오픈 주기 미확인"
+  ],
+  "sources": [
+   {
+    "source": "그린피가이드 코스 페이지",
+    "url": "https://greenfeeguide.co.kr/course/gc-0069/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "ok",
@@ -438,12 +460,12 @@
   "browser_batch": false
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.6,
+  "basic": 0.89,
+  "course": 0.2,
   "fee": 1.0,
   "ops": 0.29,
-  "facility": 0.1,
-  "briefing": 0.5,
-  "rental": 0.5
+  "facility": 0.2,
+  "briefing": 0.0,
+  "rental": 0.75
  }
 }

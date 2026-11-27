@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0012",
@@ -66,7 +67,7 @@
    "blocks": [
     "HIDDENHEALING"
    ],
-   "length_m": null,
+   "length_m": 5632,
    "kga": {
     "kga_course_code": "289",
     "kga_name": "해피니스",
@@ -138,7 +139,10 @@
  "course": {
   "holes": 36,
   "holes_received": 18,
-  "course_names": null,
+  "course_names": [
+   "휴먼",
+   "해피"
+  ],
   "membership_type": "회원제",
   "night_light": null,
   "blocks": [
@@ -203,7 +207,7 @@
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": null,
+  "length_m": 5632,
   "par": 72,
   "holes_note": "등록(문체부) 36홀 · 수집 18홀 — 등록 기준과 수집처(티픽·조사) 표기 차이다. 등록 36홀을 정본으로 두고 집계에는 master.holes를 쓴다. 복합단지 합산 여부는 미확정."
  },
@@ -212,7 +216,7 @@
   "weekend": 180000,
   "weekday_text": null,
   "weekend_text": null,
-  "basis": null,
+  "basis": "official",
   "tax_included": null,
   "cart": {
    "value": 70000,
@@ -235,7 +239,7 @@
     "checked_at": "2026-11-01"
    }
   ],
-  "checked_at": "2026-11-01",
+  "checked_at": "2026-11-27",
   "market": {
    "weekday_min": 105000.0,
    "weekend_min": 150000.0,
@@ -249,13 +253,14 @@
   "official_rental": null
  },
  "cancel": {
-  "cancel_policy": null,
+  "cancel_policy": "① 이용자가 주말이나 공휴일인 경우 이용예정일로부터 4일전까지, 평일인 경우 이용예정일로부터 3일전까지 예약을 취소한 경우에는 예약금의 전액을 환불한다.",
   "open_cycle": null,
   "notes": null,
   "evidence": [
    "로그인 회원가입 클럽소개 인사말 클럽소개 부대시설 오시는길 인터넷예약 골프예약 골프호텔예약 예약조회/취소 예약규정 조인게시판 대기예약 코스안내 코스소개 코스공략 골프호텔 골프호텔소개 이용안내 객실안내 요금안내 이용안내 이용요금 위약안내 분양안내 로컬룰 정보마당 공지사항 자료실 명예의전당 포토갤러리 해피니스 뉴스 오픈채팅방 1부,2부 조인방 3부(야간) 조인방 패키지 조인방 골프대회 아마추어 대회 KLPGA 대회 자연과 하나 되는 45홀 골프 천국 울창한 숲과 호수로 이루어진 45홀에서 골프의 진정한 품격을 경험하세요.",
    "11:00 이후 퇴실시 추가요금 부과 (시간당 1만원) (퇴실 연장시 프런트에 문의/최대 4시간까지만 가능) 위약안내 위약안내 구분 환불기준 7일전 취소 전액환불 6일전 취소 90% 환불 5일전 취소 80% 환불 4일전 취소 70% 환불 3일전 취소 50% 환불 2일전 취소 30% 환불 1일전 취소 / 당일취소 환불불가 취소는 5일전까지 가능하오니, 취소기간을 준수하여 주시기 바랍니다.",
-   "로그인 회원가입 클럽소개 인사말 클럽소개 부대시설 오시는길 인터넷예약 골프예약 골프호텔예약 예약조회/취소 예약규정 조인게시판 대기예약 코스안내 코스소개 코스공략 골프호텔 골프호텔소개 이용안내 객실안내 요금안내 이용안내 이용요금 위약안내 분양안내 로컬룰 정보마당 공지사항 자료실 명예의전당 포토갤러리 해피니스 뉴스 오픈채팅방 1부,2부 조인방 3부(야간) 조인방 패키지 조인방 골프대회 아마추어 대회 KLPGA 대회 community 정보마당 인터넷예약 클럽소개 코스안내 골프호텔 이용안내 정보마당 공지사항 자료실 명예의전당 포토갤러리 해"
+   "로그인 회원가입 클럽소개 인사말 클럽소개 부대시설 오시는길 인터넷예약 골프예약 골프호텔예약 예약조회/취소 예약규정 조인게시판 대기예약 코스안내 코스소개 코스공략 골프호텔 골프호텔소개 이용안내 객실안내 요금안내 이용안내 이용요금 위약안내 분양안내 로컬룰 정보마당 공지사항 자료실 명예의전당 포토갤러리 해피니스 뉴스 오픈채팅방 1부,2부 조인방 3부(야간) 조인방 패키지 조인방 골프대회 아마추어 대회 KLPGA 대회 community 정보마당 인터넷예약 클럽소개 코스안내 골프호텔 이용안내 정보마당 공지사항 자료실 명예의전당 포토갤러리 해",
+   "① 이용자가 주말이나 공휴일인 경우 이용예정일로부터 4일전까지, 평일인 경우 이용예정일로부터 3일전까지 예약을 취소한 경우에는 예약금의 전액을 환불한다. (출처: https://www.happinesscc.com/html/footmenu.asp, 2026-11-27 확인)"
   ],
   "weather_evidence": [
    "기상악화(악천후 등)으로 인한 홀 정산 요금은 기본 요금을 제외한 1홀~18홀 홀별 정산."
@@ -294,9 +299,10 @@
   },
   "cart_type": {
    "evidence": [
+    "4인승 (출처: https://greenfeeguide.co.kr/course/gc-0454/, 2026-11-27 확인)",
     "카트비 구분 18홀 9홀 4인승 카트비 70,000 35,000 VIP 및 5인플레이 전용 리무진 카트 150,000 75,000 리무진카트 예약완료시 5인플레이 종전대로 2카트로 운영됩니다."
    ],
-   "value": null
+   "value": "4인승"
   },
   "cart_entry": {
    "evidence": [],
@@ -311,8 +317,10 @@
    "value": null
   },
   "checkin": {
-   "evidence": [],
-   "value": null,
+   "evidence": [
+    "TEE OFF 30분까지 프론트에 도착하시어 10분전까지는 TEE OFF 준비를 하여 주시기 바랍니다. (출처: https://www.happinesscc.com/html/guide01.asp, 2026-11-27 확인)"
+   ],
+   "value": "티오프 30분 전 도착",
    "third_party": {
     "value": null,
     "source": "그린피가이드",
@@ -337,15 +345,23 @@
    "value": null
   },
   "pace": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "경기 능력 부족·스코어 기준 → 그 밖의 제한"
+   ],
+   "value": "경기 능력 부족·스코어 기준 → 그 밖의 제한",
+   "source_url": "https://www.happinesscc.com/html/guide01.asp",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfee guide tables)"
   },
   "grass": null
  },
  "facilities": {
   "practice": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "퍼팅 연습 그린 (출처: https://greenfeeguide.co.kr/course/gc-0454/, 2026-11-27 확인)"
+   ],
+   "value": "퍼팅 연습 그린"
   },
   "indoor_range": {
    "value": null,
@@ -353,27 +369,38 @@
   },
   "food": {
    "evidence": [
+    "레스토랑 (출처: https://www.happinesscc.com/html/facility.asp, 2026-11-27 확인)",
     "(특히 레귤러 티에서는 우드를 사용하고, 백티를 사용시에는 그늘집 앞에 있는 벙커를 보고 공략해야 안전한 페어웨이 안착이 가능하다.) Green Analysis Human 코스HOLE 5PAR 3 HDCP 4 Pro Tip 짧은 거리의 첫 파3홀로서 다소 편안한 홀이다.",
     "로그인 회원가입 클럽소개 인사말 클럽소개 부대시설 오시는길 인터넷예약 골프예약 골프호텔예약 예약조회/취소 예약규정 조인게시판 대기예약 코스안내 코스소개 코스공략 골프호텔 골프호텔소개 이용안내 객실안내 요금안내 이용안내 이용요금 위약안내 분양안내 로컬룰 정보마당 공지사항 자료실 명예의전당 포토갤러리 해피니스 뉴스 오픈채팅방 1부,2부 조인방 3부(야간) 조인방 패키지 조인방 골프대회 아마추어 대회 KLPGA 대회 happiness 클럽소개 인터넷예약 클럽소개 코스안내 골프호텔 이용안내 정보마당 인사말 클럽소개 부대시설 오시는길 클럽하",
     "유러피안 스타일의 클럽하우스에는 VIP실, 라운지, 사우나, 식당, 골프호텔 등 다양한 부대시설이 갖춰져 있어 편안하게 이용하실 수 있습니다."
    ],
-   "value": null
+   "value": "레스토랑"
   },
   "snack_bar": {
-   "value": null,
-   "evidence": []
+   "value": "그늘집",
+   "evidence": [
+    "그늘집 (출처: https://www.happinesscc.com/html/facility.asp, 2026-11-27 확인)"
+   ]
   },
   "locker_sauna": {
-   "value": null,
-   "evidence": []
+   "value": "사우나",
+   "evidence": [
+    "사우나 (출처: https://greenfeeguide.co.kr/course/gc-0454/, 2026-11-27 확인)",
+    "사우나 있음"
+   ]
   },
   "lodging": {
-   "value": null,
-   "evidence": []
+   "value": "호텔",
+   "evidence": [
+    "호텔 (출처: https://greenfeeguide.co.kr/course/gc-0454/, 2026-11-27 확인)",
+    "골프호텔"
+   ]
   },
   "other": {
-   "value": null,
-   "evidence": []
+   "value": "카페·라운지",
+   "evidence": [
+    "카페·라운지 (출처: https://greenfeeguide.co.kr/course/gc-0454/, 2026-11-27 확인)"
+   ]
   },
   "night": {
    "evidence": [
@@ -501,8 +528,18 @@
   "recent_notice_text": null,
   "course_notes": null,
   "alert": null,
-  "unconfirmed": [],
-  "sources": []
+  "unconfirmed": [
+   "복장",
+   "진행 시간",
+   "휴장일"
+  ],
+  "sources": [
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "ok",
@@ -519,12 +556,12 @@
   "browser_pdf": []
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 1.0,
+  "basic": 0.78,
+  "course": 0.6,
   "fee": 1.0,
-  "ops": 0.14,
-  "facility": 0.0,
-  "briefing": 0.5,
-  "rental": 0.25
+  "ops": 0.36,
+  "facility": 0.6,
+  "briefing": 0.0,
+  "rental": 0.0
  }
 }

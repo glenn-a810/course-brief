@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0025",
@@ -66,7 +67,7 @@
    "blocks": [
     "스카이베이가든"
    ],
-   "length_m": null,
+   "length_m": 5758,
    "kga": {
     "kga_course_code": "346",
     "kga_name": "포라이즌",
@@ -265,7 +266,11 @@
  "course": {
   "holes": 27,
   "holes_received": 27,
-  "course_names": null,
+  "course_names": [
+   "스카이",
+   "베이",
+   "가든"
+  ],
   "membership_type": "회원제",
   "night_light": null,
   "blocks": [
@@ -463,7 +468,7 @@
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": null,
+  "length_m": 5758,
   "par": 72
  },
  "fee": {
@@ -479,7 +484,7 @@
   "source_url": null,
   "note": null,
   "sources": [],
-  "checked_at": null,
+  "checked_at": "2026-11-27",
   "market": {
    "weekday_min": null,
    "weekend_min": null,
@@ -680,8 +685,20 @@
   "recent_notice_text": null,
   "course_notes": null,
   "alert": null,
-  "unconfirmed": [],
-  "sources": []
+  "unconfirmed": [
+   "취소·위약 규정",
+   "체크인",
+   "복장",
+   "진행 시간",
+   "식당"
+  ],
+  "sources": [
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "ok",
@@ -689,7 +706,7 @@
   "pages_collected": 1,
   "third_party": {
    "teepick": true,
-   "greenfeeguide": false
+   "greenfeeguide": true
   },
   "render_hint": "spa",
   "plan_strategy": "spa(헤드리스)",
@@ -698,12 +715,12 @@
   "browser_pdf": []
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 1.0,
+  "basic": 0.78,
+  "course": 0.6,
   "fee": 0.0,
   "ops": 0.0,
   "facility": 0.0,
-  "briefing": 0.5,
-  "rental": 0.25
+  "briefing": 0.0,
+  "rental": 0.0
  }
 }

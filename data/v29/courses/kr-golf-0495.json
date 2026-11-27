@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0495",
@@ -46,7 +47,7 @@
    "straight_name": "금산IC"
   },
   "tel": "063-263-3555",
-  "homepage": null,
+  "homepage": "https://www.kvalleycc.co.kr/",
   "operators": [
    "스마트시티(유)(김한주)(유)미래로골프(송호범)"
   ],
@@ -81,7 +82,7 @@
   "holes_received": 9,
   "course_names": null,
   "membership_type": "대중제",
-  "night_light": null,
+  "night_light": true,
   "blocks": [],
   "grass": {
    "tee": null,
@@ -100,7 +101,7 @@
   "weekend": 130000,
   "weekday_text": null,
   "weekend_text": null,
-  "basis": null,
+  "basis": "official",
   "tax_included": null,
   "cart": {
    "value": 90000,
@@ -118,7 +119,7 @@
     "checked_at": "2026-11-01"
    }
   ],
-  "checked_at": "2026-11-01",
+  "checked_at": "2026-11-27",
   "market": {
    "weekday_min": null,
    "weekend_min": null,
@@ -138,8 +139,10 @@
  },
  "ops": {
   "nocaddie": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "일부 시간·코스만 노캐디 — 9홀·12홀·15홀 (출처: https://greenfeeguide.co.kr/course/gc-0433/, 2026-11-27 확인)"
+   ],
+   "value": "일부 시간·코스만 노캐디 — 9홀·12홀·15홀"
   },
   "two_player": {
    "evidence": [],
@@ -152,8 +155,11 @@
    }
   },
   "three_player": {
-   "value": null,
-   "evidence": []
+   "value": "그린피 추가 없음(카트비 9만 원)",
+   "evidence": [
+    "그린피 추가 없음(카트비 9만 원) (출처: https://greenfeeguide.co.kr/course/gc-0433/, 2026-11-27 확인)",
+    "3인: 그린피 추가 없음(카트비 9만 원) (출처: https://greenfeeguide.co.kr/guides/two-player-golf-guide/, 2026-10-08 확인)"
+   ]
   },
   "five_player": {
    "value": null,
@@ -201,8 +207,14 @@
    "value": null
   },
   "pace": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "지나친 지연·도박성 내기·경기 능력 부족·진행 비협조 → 퇴장"
+   ],
+   "value": "지나친 지연·도박성 내기·경기 능력 부족·진행 비협조 → 퇴장",
+   "source_url": "https://www.kvalleycc.co.kr/guide/guide.asp",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfee guide tables)"
   },
   "grass": null
  },
@@ -228,16 +240,21 @@
    "evidence": []
   },
   "lodging": {
-   "value": null,
-   "evidence": []
+   "value": "골프텔",
+   "evidence": [
+    "골프텔 (출처: https://greenfeeguide.co.kr/course/gc-0433/, 2026-11-27 확인)"
+   ]
   },
   "other": {
    "value": null,
    "evidence": []
   },
   "night": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "야간(3부) 라운드 운영 (출처: https://greenfeeguide.co.kr/course/gc-0433/, 2026-11-27 확인)",
+    "야간 라운드 운영(공식 홈페이지 안내)"
+   ],
+   "value": "야간(3부) 라운드 운영"
   },
   "closed_days": {
    "evidence": [],
@@ -329,8 +346,20 @@
   "recent_notice_text": null,
   "course_notes": null,
   "alert": null,
-  "unconfirmed": [],
-  "sources": []
+  "unconfirmed": [
+   "취소·위약 규정",
+   "체크인",
+   "복장",
+   "진행 시간",
+   "식당"
+  ],
+  "sources": [
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "unavailable",
@@ -347,12 +376,12 @@
   "browser_pdf": []
  },
  "coverage": {
-  "basic": 0.89,
-  "course": 0.6,
+  "basic": 0.78,
+  "course": 0.2,
   "fee": 0.75,
-  "ops": 0.0,
-  "facility": 0.0,
-  "briefing": 0.5,
-  "rental": 0.25
+  "ops": 0.21,
+  "facility": 0.2,
+  "briefing": 0.0,
+  "rental": 0.0
  }
 }

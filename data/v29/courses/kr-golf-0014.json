@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0014",
@@ -46,7 +47,7 @@
    "straight_name": "담양IC"
   },
   "tel": "061-380-7500",
-  "homepage": null,
+  "homepage": "https://www.reinacc.co.kr/",
   "operators": [
    "차성만"
   ],
@@ -64,7 +65,7 @@
    "holes": 18,
    "par": null,
    "blocks": [],
-   "length_m": null,
+   "length_m": 6439,
    "kga": null,
    "grass": null,
    "hole_by_hole": null
@@ -93,7 +94,7 @@
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": null,
+  "length_m": 6439,
   "par": null
  },
  "fee": {
@@ -101,7 +102,7 @@
   "weekend": 190000,
   "weekday_text": null,
   "weekend_text": null,
-  "basis": null,
+  "basis": "official",
   "tax_included": null,
   "cart": {
    "value": 100000,
@@ -124,7 +125,7 @@
     "checked_at": "2026-11-02"
    }
   ],
-  "checked_at": "2026-11-02",
+  "checked_at": "2026-11-27",
   "market": {
    "weekday_min": 85000.0,
    "weekend_min": 136000.0,
@@ -137,13 +138,15 @@
  },
  "cancel": {
   "cancel_policy": {
-   "value": "주중 4일 전 17:00까지할인지역주민숙박골프텔014인 1팀 기준 예상 비용구분그린피(1인)1인 부담팀 합계(4인)주중145,000원207,50",
-   "source": "그린피가이드(공식 인용)",
+   "value": "위약 없이 취소: 주중 4일 전 17:00까지",
+   "source": "그린피가이드(공식 안내 인용)",
    "url": "https://greenfeeguide.co.kr/course/gc-0460/"
   },
-  "open_cycle": null,
+  "open_cycle": "매월 둘째주 화요일 09:00부터 다음 달(1개월) 예약 가능",
   "notes": null,
-  "evidence": [],
+  "evidence": [
+   "기존 cancel_policy 값이 인접 안내 항목과 뒤섞여 있어(오류) 그린피가이드 원문 인용으로 정정 — 주중 4일 전 17:00까지 (출처: https://greenfeeguide.co.kr/course/gc-0460/, 2026-11 확인)"
+  ],
   "weather_evidence": []
  },
  "ops": {
@@ -174,8 +177,10 @@
    "evidence": []
   },
   "cart_type": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "6인승 4백 승용 카트 (출처: https://greenfeeguide.co.kr/course/gc-0460/, 2026-11-27 확인)"
+   ],
+   "value": "6인승 4백 승용 카트"
   },
   "cart_entry": {
    "evidence": [],
@@ -238,8 +243,10 @@
    "evidence": []
   },
   "lodging": {
-   "value": null,
-   "evidence": []
+   "value": "골프텔",
+   "evidence": [
+    "골프텔 (출처: https://greenfeeguide.co.kr/course/gc-0460/, 2026-11-27 확인)"
+   ]
   },
   "other": {
    "value": null,
@@ -269,16 +276,16 @@
   }
  },
  "rental": {
-  "available": null,
+  "available": true,
   "full_set": 50000,
-  "fee_text": null,
+  "fee_text": "50,000원 · 18홀",
   "brand": null,
   "left_handed": null,
   "shoes": null,
   "nine_hole": null,
   "range_finder": null,
   "reservation": null,
-  "source_url": null,
+  "source_url": "https://greenfeeguide.co.kr/course/gc-0460/",
   "evidence": [],
   "official": null,
   "nearby_delivery": {
@@ -339,8 +346,20 @@
   "recent_notice_text": null,
   "course_notes": null,
   "alert": null,
-  "unconfirmed": [],
-  "sources": []
+  "unconfirmed": [
+   "체크인",
+   "복장",
+   "진행 시간",
+   "식당",
+   "휴장일"
+  ],
+  "sources": [
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "unavailable",
@@ -358,11 +377,11 @@
  },
  "coverage": {
   "basic": 0.89,
-  "course": 0.6,
+  "course": 0.2,
   "fee": 1.0,
-  "ops": 0.0,
-  "facility": 0.0,
-  "briefing": 0.5,
-  "rental": 0.5
+  "ops": 0.07,
+  "facility": 0.1,
+  "briefing": 0.0,
+  "rental": 0.75
  }
 }

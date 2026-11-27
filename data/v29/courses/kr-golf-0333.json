@@ -8,11 +8,95 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "review": {
+   "checks": [
+    {
+     "field": "course.length_m",
+     "received": null,
+     "verified": 6691,
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0373/",
+     "quote": "전장: 6,691m(7,317yd)",
+     "source_type": "official_summary(greenfeeguide)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "course.night_light",
+     "received": null,
+     "verified": "야간 라운드 운영(공식 홈페이지 안내)",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0373/",
+     "quote": "야간 운영: 야간 라운드 운영(공식 홈페이지 안내)",
+     "source_type": "official_summary(greenfeeguide)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.night.value",
+     "received": null,
+     "verified": "야간 라운드 운영(공식 홈페이지 안내)",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0373/",
+     "quote": "야간 운영: 야간 라운드 운영(공식 홈페이지 안내)",
+     "source_type": "official_summary(greenfeeguide)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "ops.pace.value",
+     "received": null,
+     "verified": "도박성 내기골프, 진행지연 및 품위를 손상시킬 경우 즉시 퇴장 조치",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0373/",
+     "quote": "진행이 늦으면: 도박성 내기골프, 진행지연 및 품위를 손상시킬 경우 즉시 퇴장 조치",
+     "source_type": "official_summary(greenfeeguide)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.lodging.value",
+     "received": null,
+     "verified": "미호안 · 골프텔",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0373/",
+     "quote": "숙박 시설: 미호안 · 골프텔",
+     "source_type": "official_summary(greenfeeguide)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.other.value",
+     "received": null,
+     "verified": "프로샵 · 카페·라운지",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0373/",
+     "quote": "그 밖의 시설: 프로샵 · 카페·라운지",
+     "source_type": "official_summary(greenfeeguide)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "cancel.cancel_policy",
+     "received": null,
+     "verified": "위약 없이 취소: 평일 3일 전 · 주말 4일 전까지(이용약관 기준)",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0373/",
+     "quote": "위약 없이 취소: 평일 3일 전 · 주말 4일 전까지(이용약관 기준)",
+     "source_type": "official_summary(greenfeeguide)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    }
+   ],
+   "checked_at": "2026-11-27"
+  },
+  "batch3_patch": "2026-11-27 배치6(대구·경북) 보완: 7개 항목(공식 홈페이지·그린피가이드 공식 안내 확인 기준, 미확인 값 생성 없음)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0333",
@@ -51,20 +135,20 @@
    "한맥개발㈜ 임기주"
   ],
   "area_sqm": 1000226,
-  "opened": null,
+  "opened": "2009-04",
   "course_blocks": [],
   "facility_id": null,
   "provenance": {
    "master": "courses_master.json v2.0 (문체부·KGA·KGBA·티픽·지도)",
    "synced_to": "courses_master.json v2.7 (2026-11-26 단일 스키마 정규화)"
   },
-  "par": null,
+  "par": 72,
   "holes_teepick": 18,
   "course_spec": {
    "holes": 18,
-   "par": null,
+   "par": 72,
    "blocks": [],
-   "length_m": null,
+   "length_m": 6691,
    "kga": {
     "kga_course_code": "222",
     "kga_name": "한맥",
@@ -151,7 +235,7 @@
   "holes_received": 18,
   "course_names": null,
   "membership_type": "대중제",
-  "night_light": null,
+  "night_light": "야간 라운드 운영(공식 홈페이지 안내)",
   "blocks": [],
   "grass": {
    "tee": null,
@@ -226,8 +310,8 @@
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": null,
-  "par": null
+  "length_m": 6691,
+  "par": 72
  },
  "fee": {
   "weekday": 150000,
@@ -268,7 +352,7 @@
     "note": "공식 요금표(이미지 포함) 판독 + 공개 요금 사이트 보조"
    }
   ],
-  "checked_at": null,
+  "checked_at": "2026-11-27",
   "market": {
    "weekday_min": null,
    "weekend_min": null,
@@ -442,19 +526,33 @@
   "weekend_basis": "max"
  },
  "cancel": {
-  "cancel_policy": null,
+  "cancel_policy": {
+   "value": "위약 없이 취소: 평일 3일 전 · 주말 4일 전까지(이용약관 기준)",
+   "source": "공개 안내",
+   "url": "https://greenfeeguide.co.kr/course/gc-0373/",
+   "checked_at": "2026-11-27"
+  },
   "open_cycle": null,
   "notes": null,
   "evidence": [
    "한맥컨트리클럽 11.26(목) 오늘 VR영상보기 로그인 회원가입 클럽소개 인사말 클럽소개 연혁 이미지갤러리 오시는길 코스소개 코스안내 코스공략 미호안 미호안소개 미호안예약 예약확인 및 취소 시설소개 클럽하우스 프론트/로비 레스토랑/연회장 락커/스파 클럽샵 골프예약 이용안내 요금안내 골프예약 예약확인 및 취소 조인게시판 고객라운지 패키지예약 패키지요금안내 패키지예약 예약확인 및 취소 커뮤니티 공지사항 한맥소식 자료실 날씨안내 FAQ 한맥컨트리클럽 SCROLL DOWN 미호안예약 골프예약 패키지예약 예약취소/확인 예약안내 코스안내 날씨",
    "한맥컨트리클럽 11.26(목) 오늘 VR영상보기 로그인 회원가입 클럽소개 인사말 클럽소개 연혁 이미지갤러리 오시는길 코스소개 코스안내 코스공략 미호안 미호안소개 미호안예약 예약확인 및 취소 시설소개 클럽하우스 프론트/로비 레스토랑/연회장 락커/스파 클럽샵 골프예약 이용안내 요금안내 골프예약 예약확인 및 취소 조인게시판 고객라운지 패키지예약 패키지요금안내 패키지예약 예약확인 및 취소 커뮤니티 공지사항 한맥소식 자료실 날씨안내 FAQ 요금 안내 11월 그린피 12월 그린피 예약접수 주중예약 (평일 : 월~금요일) 전전주 월요일 9시부터",
-   "주말 예약 확인 및 취소는 전화로만 가능합니다."
+   "주말 예약 확인 및 취소는 전화로만 가능합니다.",
+   "위약 없이 취소: 평일 3일 전 · 주말 4일 전까지(이용약관 기준)"
   ],
   "weather_evidence": [
    "우천시 전기그릴 대여 불가 합니다.",
    "우천시 전기그릴 대여 불가 합니다."
   ],
-  "browser_official": null
+  "browser_official": null,
+  "sources": [
+   {
+    "url": "https://greenfeeguide.co.kr/course/gc-0373/",
+    "quote": "위약 없이 취소: 평일 3일 전 · 주말 4일 전까지(이용약관 기준)",
+    "checked_at": "2026-11-27",
+    "source_type": "official_summary(greenfeeguide)"
+   }
+  ]
  },
  "ops": {
   "nocaddie": {
@@ -523,8 +621,14 @@
    "value": null
   },
   "pace": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "진행이 늦으면: 도박성 내기골프, 진행지연 및 품위를 손상시킬 경우 즉시 퇴장 조치"
+   ],
+   "value": "도박성 내기골프, 진행지연 및 품위를 손상시킬 경우 즉시 퇴장 조치",
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0373/",
+   "confidence": "medium",
+   "source_type": "official_summary(greenfeeguide)",
+   "checked_at": "2026-11-27"
   }
  },
  "facilities": {
@@ -542,29 +646,58 @@
    "evidence": [
     "한맥컨트리클럽 11.26(목) 오늘 VR영상보기 로그인 회원가입 클럽소개 인사말 클럽소개 연혁 이미지갤러리 오시는길 코스소개 코스안내 코스공략 미호안 미호안소개 미호안예약 예약확인 및 취소 시설소개 클럽하우스 프론트/로비 레스토랑/연회장 락커/스파 클럽샵 골프예약 이용안내 요금안내 골프예약 예약확인 및 취소 조인게시판 고객라운지 패키지예약 패키지요금안내 패키지예약 예약확인 및 취소 커뮤니티 공지사항 한맥소식 자료실 날씨안내 FAQ 한맥컨트리클럽 SCROLL DOWN 미호안예약 골프예약 패키지예약 예약취소/확인 예약안내 코스안내 날씨",
     "한맥컨트리클럽 11.26(목) 오늘 VR영상보기 로그인 회원가입 클럽소개 인사말 클럽소개 연혁 이미지갤러리 오시는길 코스소개 코스안내 코스공략 미호안 미호안소개 미호안예약 예약확인 및 취소 시설소개 클럽하우스 프론트/로비 레스토랑/연회장 락커/스파 클럽샵 골프예약 이용안내 요금안내 골프예약 예약확인 및 취소 조인게시판 고객라운지 패키지예약 패키지요금안내 패키지예약 예약확인 및 취소 커뮤니티 공지사항 한맥소식 자료실 날씨안내 FAQ 요금 안내 11월 그린피 12월 그린피 예약접수 주중예약 (평일 : 월~금요일) 전전주 월요일 9시부터",
-    "한맥컨트리클럽 11.26(목) 오늘 VR영상보기 로그인 회원가입 클럽소개 인사말 클럽소개 연혁 이미지갤러리 오시는길 코스소개 코스안내 코스공략 미호안 미호안소개 미호안예약 예약확인 및 취소 시설소개 클럽하우스 프론트/로비 레스토랑/연회장 락커/스파 클럽샵 골프예약 이용안내 요금안내 골프예약 예약확인 및 취소 조인게시판 고객라운지 패키지예약 패키지요금안내 패키지예약 예약확인 및 취소 커뮤니티 공지사항 한맥소식 자료실 날씨안내 FAQ 코스안내 Course Info 국제대회가 가능한 정규 18홀 규모로 전장길이가 7,317야드(6,691"
+    "한맥컨트리클럽 11.26(목) 오늘 VR영상보기 로그인 회원가입 클럽소개 인사말 클럽소개 연혁 이미지갤러리 오시는길 코스소개 코스안내 코스공략 미호안 미호안소개 미호안예약 예약확인 및 취소 시설소개 클럽하우스 프론트/로비 레스토랑/연회장 락커/스파 클럽샵 골프예약 이용안내 요금안내 골프예약 예약확인 및 취소 조인게시판 고객라운지 패키지예약 패키지요금안내 패키지예약 예약확인 및 취소 커뮤니티 공지사항 한맥소식 자료실 날씨안내 FAQ 코스안내 Course Info 국제대회가 가능한 정규 18홀 규모로 전장길이가 7,317야드(6,691",
+    "사우나 있음 · 프로샵·카페·라운지"
    ],
-   "value": null
+   "value": "사우나 있음 · 프로샵·카페·라운지",
+   "source_url": "https://www.hmcn.co.kr/",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfee guide tables)"
   },
   "snack_bar": {
    "value": null,
    "evidence": []
   },
   "locker_sauna": {
-   "value": null,
-   "evidence": []
+   "value": "사우나 있음락커/스파",
+   "evidence": [
+    "사우나: 사우나 있음락커/스파"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0373/",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfeeguide)"
   },
   "lodging": {
-   "value": null,
-   "evidence": []
+   "value": "미호안 · 골프텔",
+   "evidence": [
+    "숙박 시설: 미호안 · 골프텔"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0373/",
+   "confidence": "medium",
+   "source_type": "official_summary(greenfeeguide)",
+   "checked_at": "2026-11-27"
   },
   "other": {
-   "value": null,
-   "evidence": []
+   "value": "프로샵 · 카페·라운지",
+   "evidence": [
+    "그 밖의 시설: 프로샵 · 카페·라운지"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0373/",
+   "confidence": "medium",
+   "source_type": "official_summary(greenfeeguide)",
+   "checked_at": "2026-11-27"
   },
   "night": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "야간 운영: 야간 라운드 운영(공식 홈페이지 안내)"
+   ],
+   "value": "야간 라운드 운영(공식 홈페이지 안내)",
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0373/",
+   "confidence": "medium",
+   "source_type": "official_summary(greenfeeguide)",
+   "checked_at": "2026-11-27"
   },
   "closed_days": {
    "evidence": [],
@@ -798,14 +931,18 @@
   },
   "unconfirmed": [
    "동계 휴장 공지(2026-27)",
-   "12월 그린피 본문 값(이미지)",
    "노캐디 셀프라운드 현재 운영 조건"
   ],
   "sources": [
    "https://hmcn.co.kr/",
    "https://hmcn.co.kr/Board/BoardView?board_idx=1&bd_main_seq=1457",
    "https://greenfeeguide.co.kr/course/gc-0373/",
-   "https://todaygolfgo.com/golf-courses/master/golf-course-moct-20241231-0314/"
+   "https://todaygolfgo.com/golf-courses/master/golf-course-moct-20241231-0314/",
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
   ]
  },
  "collection": {
@@ -814,19 +951,19 @@
   "pages_collected": 14,
   "third_party": {
    "teepick": true,
-   "greenfeeguide": false
+   "greenfeeguide": true
   },
   "render_hint": "static",
   "plan_strategy": "static(직접 파싱)",
   "browser_batch": false
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.8,
+  "basic": 0.89,
+  "course": 0.2,
   "fee": 1.0,
-  "ops": 0.14,
-  "facility": 0.0,
-  "briefing": 1.0,
-  "rental": 0.25
+  "ops": 0.21,
+  "facility": 0.5,
+  "briefing": 0.5,
+  "rental": 0.0
  }
 }

@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0107",
@@ -60,9 +61,9 @@
   },
   "course_spec": {
    "holes": 27,
-   "par": null,
+   "par": 72,
    "blocks": [],
-   "length_m": null,
+   "length_m": 6027,
    "kga": {
     "kga_course_code": "333",
     "kga_name": "로제비앙",
@@ -236,14 +237,15 @@
    "url": "http://www.logebiengc.com/html/course/course_01.asp"
   },
   "address_original": "경기도 광주시 곤지암읍 오항길 180",
-  "address_note": "도로명 표기 오항길→오향길 정정(카카오맵·구글맵 일치)."
+  "address_note": "도로명 표기 오항길→오향길 정정(카카오맵·구글맵 일치).",
+  "par": 72
  },
  "course": {
   "holes": 27,
   "holes_received": null,
-  "course_names": null,
+  "course_names": "비앙·네오·로제 각 9홀",
   "membership_type": "대중제",
-  "night_light": null,
+  "night_light": "3부 야간 운영(16:51~18:36, 월요일 미운영), 3부 캐디피 160,000원",
   "blocks": [],
   "grass": {
    "tee": null,
@@ -411,8 +413,8 @@
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": null,
-  "par": null
+  "length_m": 6027,
+  "par": 72
  },
  "fee": {
   "weekday": 170000,
@@ -742,13 +744,19 @@
   }
  },
  "cancel": {
-  "cancel_policy": null,
-  "open_cycle": null,
+  "cancel_policy": {
+   "value": "예약일 제외 주중 3일 전·주말 및 공휴일 4일 전까지 취소 가능",
+   "source": "공식 홈페이지",
+   "url": "http://www.logebiengc.com/html/guide/guide_03.asp"
+  },
+  "open_cycle": "4주 전 오전 9시 정각 오픈, 매월 첫째 주 월~수요일 접수(선착순)",
   "notes": null,
   "evidence": [
    "※ 이용수칙 위반 시 경기 중단·퇴장·이용 정지 등의 조치가 취해질 수 있으며, 세부 패널티는 별도 패널티 규정에 따릅니다.",
    "▶ 경기 중단 시 정상 요금이 적용되며 환불되지 않습니다.",
-   "※ 예약 취소·위약금 등 예약 관련 패널티 및 세부 제재 기준은 [예약·패널티 규정]을 참조하여 주십시오."
+   "※ 예약 취소·위약금 등 예약 관련 패널티 및 세부 제재 기준은 [예약·패널티 규정]을 참조하여 주십시오.",
+   "* 예약일 제외 주중 3일전 / 주말, 공휴일 4일전까지 취소 가능합니다.",
+   "예약 오픈 주기: 4주 전 오전 9시 정각 오픈, 매월 첫째 주 월~수요일 접수(선착순) (http://www.logebiengc.com/html/reservation/reservation_03.asp)"
   ],
   "weather_evidence": [
    "예약 바로가기 카트피 및 캐디피 이용요금 구분 카트피(팀) 캐디피(팀) 1부,2부(주간) 3부(야간) 금액 100,000원 150,000원 160,000원 대여료 대여료 구분 최고급세트 고급세트 단품 대여채 100,000원 70,000원 10,000원 홀별정산 - 악천후나 천재지변으로 인하여 경기중단 시 다음과 같이 홀별 정산됩니다.",
@@ -910,16 +918,28 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": null,
-   "evidence": []
+   "value": "사우나 있음",
+   "evidence": [
+    "사우나 있음 — https://greenfeeguide.co.kr/course/gc-0070/"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0070/",
+   "confidence": "medium",
+   "checked_at": "2026-11-27",
+   "value_from": "pass2_third_party"
   },
   "lodging": {
    "value": null,
    "evidence": []
   },
   "other": {
-   "value": null,
-   "evidence": []
+   "value": "프로샵",
+   "evidence": [
+    "그 밖의 시설: 프로샵"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0070/",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfeeguide)"
   },
   "night": {
    "evidence": [
@@ -1165,7 +1185,18 @@
   "course_notes": null,
   "alert": null,
   "unconfirmed": [],
-  "sources": []
+  "sources": [
+   {
+    "source": "그린피가이드 코스 페이지",
+    "url": "https://greenfeeguide.co.kr/course/gc-0070/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "ok",
@@ -1180,12 +1211,12 @@
   "browser_batch": false
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.8,
+  "basic": 0.78,
+  "course": 0.4,
   "fee": 1.0,
   "ops": 0.36,
-  "facility": 0.3,
-  "briefing": 0.5,
-  "rental": 0.25
+  "facility": 0.5,
+  "briefing": 0.0,
+  "rental": 0.0
  }
 }

@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0026",
@@ -58,13 +59,13 @@
    "master": "courses_master.json v2.0 (문체부·KGA·KGBA·티픽·지도)",
    "synced_to": "courses_master.json v2.7 (2026-11-26 단일 스키마 정규화)"
   },
-  "par": null,
+  "par": 72,
   "holes_teepick": 18,
   "course_spec": {
    "holes": 18,
-   "par": null,
+   "par": 72,
    "blocks": [],
-   "length_m": null,
+   "length_m": 5300,
    "kga": {
     "kga_course_code": "359",
     "kga_name": "디오션",
@@ -150,7 +151,10 @@
  "course": {
   "holes": 18,
   "holes_received": 18,
-  "course_names": null,
+  "course_names": [
+   "서",
+   "동"
+  ],
   "membership_type": "대중제",
   "night_light": null,
   "blocks": [],
@@ -232,16 +236,125 @@
   },
   "kga_hole_est": null,
   "extra_courses": null,
-  "hole_by_hole": null,
-  "length_m": null,
-  "par": null
+  "hole_by_hole": [
+   {
+    "hole": 1,
+    "par": 4,
+    "white_m": 265,
+    "red_m": 231
+   },
+   {
+    "hole": 2,
+    "par": 4,
+    "white_m": 361,
+    "red_m": 294
+   },
+   {
+    "hole": 3,
+    "par": 3,
+    "white_m": 155,
+    "red_m": 122
+   },
+   {
+    "hole": 4,
+    "par": 5,
+    "white_m": 414,
+    "red_m": 377
+   },
+   {
+    "hole": 5,
+    "par": 4,
+    "white_m": 343,
+    "red_m": 291
+   },
+   {
+    "hole": 6,
+    "par": 3,
+    "white_m": 129,
+    "red_m": 107
+   },
+   {
+    "hole": 7,
+    "par": 4,
+    "white_m": 277,
+    "red_m": 242
+   },
+   {
+    "hole": 8,
+    "par": 4,
+    "white_m": 292,
+    "red_m": 254
+   },
+   {
+    "hole": 9,
+    "par": 5,
+    "white_m": 453,
+    "red_m": 383
+   },
+   {
+    "hole": 10,
+    "par": 4,
+    "white_m": 283,
+    "red_m": 263
+   },
+   {
+    "hole": 11,
+    "par": 4,
+    "white_m": 271,
+    "red_m": 239
+   },
+   {
+    "hole": 12,
+    "par": 5,
+    "white_m": 513,
+    "red_m": 481
+   },
+   {
+    "hole": 13,
+    "par": 4,
+    "white_m": 284,
+    "red_m": 212
+   },
+   {
+    "hole": 14,
+    "par": 3,
+    "white_m": 98,
+    "red_m": 98
+   },
+   {
+    "hole": 15,
+    "par": 5,
+    "white_m": 433,
+    "red_m": 410
+   },
+   {
+    "hole": 16,
+    "par": 3,
+    "white_m": 129,
+    "red_m": 126
+   },
+   {
+    "hole": 17,
+    "par": 4,
+    "white_m": 294,
+    "red_m": 254
+   },
+   {
+    "hole": 18,
+    "par": 4,
+    "white_m": 306,
+    "red_m": 237
+   }
+  ],
+  "length_m": 5300,
+  "par": 72
  },
  "fee": {
   "weekday": 170000,
   "weekend": 190000,
-  "weekday_text": null,
-  "weekend_text": null,
-  "basis": null,
+  "weekday_text": "170,000원 ~ 200,000원",
+  "weekend_text": "190,000원 ~ 220,000원",
+  "basis": "official",
   "tax_included": null,
   "cart": {
    "value": 100000,
@@ -264,7 +377,7 @@
     "checked_at": "2026-11-01"
    }
   ],
-  "checked_at": "2026-11-01",
+  "checked_at": "2026-11-27",
   "market": {
    "weekday_min": null,
    "weekend_min": 390000.0,
@@ -282,8 +395,8 @@
  },
  "cancel": {
   "cancel_policy": {
-   "value": "평일 3일 전 · 주말 4일 전 16:00까지카트리무진카트 300,000 (9홀 150,000)숙박디오션리조트교통대중교통 여천역(KTX·SR)·",
-   "source": "그린피가이드(공식 인용)",
+   "value": "위약 없이 취소: 평일 3일 전 · 주말 4일 전 16:00까지 / 기한 이후: 위약 규정에 위약금과 예약 제한(예약 정지·이용 제한·벌점 가운데 하나 이상)이 적혀 있습니다",
+   "source": "그린피가이드(공식 안내 인용)",
    "url": "https://greenfeeguide.co.kr/course/gc-0445/"
   },
   "open_cycle": null,
@@ -291,7 +404,8 @@
   "evidence": [
    "디오션C.C 천재지변으로 인한 환불 안내 천재지변 취소 환불 및 납부 규정 강설, 폭우, 안개 기타 천재지변 등의 불가항력적인 사유로 사업자가 이용 예정일에 골프장 이용이 불가능하다고 판단되어 임시휴장을 하는 경우에는 예약금을 환불합니다.",
    "천재지변 등에 따른 취소 시 요금 및 환불 규정(입장 후) - 폭우, 낙뢰, 강설, 안개 등 불가항력적인 천재지변으로 인하여 경기를 계속 할 수 없다고 골프장에서 선언한 경우에 적용됩니다.- 여행사를 통해 예약하신 PKG 고객님의 경우 여행사별 정산금액이 상이합니다.(여행사 별도 문의)- 모든 홀정산은 정상가 기준으로 적용됩니다.",
-   "카트비 : 9홀 기준 구분 4인1카트 리무진카트 9홀 50,000 150,000 18홀 100,000 300,000 캐디피 : 티샷 기준 구분 4인1카트 4인1카트(리무진) 5인 1카트(리무진) 1H 티샷 10,000 10,000 10,000 1H~3H 40,000 40,000 50,000 4H~9H 80,000 80,000 150,000 10H~18H 150,000 150,000 230,000 위약금 안내 구분 위약률 취소 위약규정 일반 예약 : 주중 예약일 3일전, 주말 예약일 4일전 16:00까지 취소가능 단체(3팀이상) 및 "
+   "카트비 : 9홀 기준 구분 4인1카트 리무진카트 9홀 50,000 150,000 18홀 100,000 300,000 캐디피 : 티샷 기준 구분 4인1카트 4인1카트(리무진) 5인 1카트(리무진) 1H 티샷 10,000 10,000 10,000 1H~3H 40,000 40,000 50,000 4H~9H 80,000 80,000 150,000 10H~18H 150,000 150,000 230,000 위약금 안내 구분 위약률 취소 위약규정 일반 예약 : 주중 예약일 3일전, 주말 예약일 4일전 16:00까지 취소가능 단체(3팀이상) 및 ",
+   "기존 cancel_policy 값이 인접 안내 항목과 뒤섞여 있어(오류) 그린피가이드 원문 인용으로 정정 — 평일 3일 전 · 주말 4일 전 16:00까지 (출처: https://greenfeeguide.co.kr/course/gc-0445/, 2026-11 확인)"
   ],
   "weather_evidence": [
    "(우천, 강설 등 기상악화, 천재지변 등의 사유는 사업자 취소 위약 배상 대상에서 제외됨) 3.실시간 예약 취소 패널티(인터넷 예약) 구분 취소 제한 횟수 취소 횟수 초과 패널티 비고 골프 예약 취소 1인 3회/월 2개월 예약정지 3회까지 패널티 없습니다."
@@ -326,10 +440,11 @@
   },
   "cart_type": {
    "evidence": [
+    "리무진카트 300,000 (9홀 150,000) (출처: https://greenfeeguide.co.kr/course/gc-0445/, 2026-11-27 확인)",
     "카트비 : 9홀 기준 구분 4인1카트 리무진카트 9홀 50,000 150,000 18홀 100,000 300,000 캐디피 : 티샷 기준 구분 4인1카트 4인1카트(리무진) 5인 1카트(리무진) 1H 티샷 10,000 10,000 10,000 1H~3H 40,000 40,000 50,000 4H~9H 80,000 80,000 150,000 10H~18H 150,000 150,000 230,000 위약금 안내 구분 위약률 취소 위약규정 일반 예약 : 주중 예약일 3일전, 주말 예약일 4일전 16:00까지 취소가능 단체(3팀이상) 및 ",
     "* 입장 전 이용요금 미결제 시에는, 이용 요금에서 상기 환불 금액이 공제된 금액을 별도 징수함* 이용 요금 : 그린피+카트비 기준 3) 예외 규정 ① 본인 및 직계가족의 상, 사고 ② 국가가 지정한 감염성 질병의 감염 ③ 갑작스러운 병변의 악화 등 ※ 부고장, 진단서, 진료확인서, 보험회사 사고증명서 등 공식적으로 증빙 가능한 서류 제출 요망 2.그 외 취소의 경우 1) 사업자 취소 위약 배상 규정 : 손해배상 - 사업자의 책임 있는 사유로 골프장 운영을 할 수 없을 경우에 적용됩니다."
    ],
-   "value": null
+   "value": "리무진카트 300,000 (9홀 150,000)"
   },
   "cart_entry": {
    "evidence": [],
@@ -383,27 +498,38 @@
   },
   "food": {
    "evidence": [
+    "레스토랑 (출처: https://www.theoceanresort.co.kr/country, 2026-11-27 확인)",
     "남도의 풍미를 담은 다양한 메뉴와 함께, 계절에 따라 신선한 별미를 즐기며 다음 홀을 위한 재충전의 시간을 가져보세요.",
     "※ 클럽하우스 신축공사 진행으로 가설 클럽하우스 내 임시 레스토랑 시설이 운영중입니다.",
     "디오션리조트 메뉴 The Ocean Resort 홈 로그인 회원가입 사이트맵 Family Site ▼ - Family Site - 용평리조트 비체펠리스 파인리즈리조트 세일여행사 예약 서브메뉴보기 예약하기 객실 예약안내 예약정보확인(호텔/콘도) 예약정보확인(골프) 성수기 추첨 안내 성수기 추첨 신청 성수기 추첨 신청 리스트 성수기 추첨 결과 확인 예약결제 콘도 QR코드 확인 골프 예약 카드 기본정보 입력 QR확인 예약하기 HOME > 예약 > 예약하기 디오션 리조트 방문을 환영합니다."
    ],
-   "value": null
+   "value": "레스토랑"
   },
   "snack_bar": {
-   "value": null,
-   "evidence": []
+   "value": "그늘집",
+   "evidence": [
+    "그늘집 (출처: https://greenfeeguide.co.kr/course/gc-0445/, 2026-11-27 확인)",
+    "황태 콩나물 해장국 · 18,000원 · 여수 생 막걸리 · 8,000원 · 메뉴 원문"
+   ]
   },
   "locker_sauna": {
-   "value": null,
-   "evidence": []
+   "value": "사우나",
+   "evidence": [
+    "스파 & 사우나 (출처: https://www.theoceanresort.co.kr/, 2026-11-27 확인)"
+   ]
   },
   "lodging": {
-   "value": null,
-   "evidence": []
+   "value": "리조트",
+   "evidence": [
+    "리조트 (출처: https://greenfeeguide.co.kr/course/gc-0445/, 2026-11-27 확인)",
+    "디오션리조트"
+   ]
   },
   "other": {
-   "value": null,
-   "evidence": []
+   "value": "카페·라운지 · 편의점 · 스파·찜질 · 피트니스",
+   "evidence": [
+    "카페·라운지 · 편의점 · 스파·찜질 · 피트니스 (출처: https://greenfeeguide.co.kr/course/gc-0445/, 2026-11-27 확인)"
+   ]
   },
   "night": {
    "evidence": [],
@@ -417,8 +543,10 @@
    "value": null
   },
   "shuttle": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "여천역(KTX·SR)·여천터미널 (출처: https://greenfeeguide.co.kr/course/gc-0445/, 2026-11-27 확인)"
+   ],
+   "value": "여천역(KTX·SR)·여천터미널"
   },
   "ev_charge": {
    "evidence": [
@@ -505,8 +633,19 @@
   "recent_notice_text": null,
   "course_notes": null,
   "alert": null,
-  "unconfirmed": [],
-  "sources": []
+  "unconfirmed": [
+   "체크인",
+   "복장",
+   "진행 시간",
+   "휴장일"
+  ],
+  "sources": [
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "ok",
@@ -523,12 +662,12 @@
   "browser_pdf": []
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.8,
+  "basic": 0.78,
+  "course": 0.4,
   "fee": 1.0,
-  "ops": 0.07,
-  "facility": 0.0,
-  "briefing": 0.5,
-  "rental": 0.25
+  "ops": 0.14,
+  "facility": 0.6,
+  "briefing": 0.0,
+  "rental": 0.0
  }
 }

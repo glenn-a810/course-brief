@@ -12,9 +12,32 @@
   ],
   "source": "raw/received_chungcheong_77.json (외부 데이터 수신, 2026-11-26)",
   "review": {
-   "checked_at": null,
+   "checked_at": "2026-11-27",
    "status": "not_crosschecked",
-   "checks": []
+   "checks": [
+    {
+     "field": "ops.pace",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "1홀 이상 홀을 비우는 등 경기를 지연시키면 퇴장",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0275/",
+     "quote": "진행/경기시간 1홀 이상 홀을 비우는 등 경기를 지연시키면 퇴장",
+     "source_type": "third_party",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.closed_days",
+     "received": "{\"value\": null, \"third_party\": null, \"evidence\": []}",
+     "verified": "정기 휴장일 없음",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0275/",
+     "quote": "정기 휴장일 정기 휴장일 없음",
+     "source_type": "third_party",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    }
+   ]
   },
   "data_checks": [
    "미확인 목록 누락 라벨 보완: 제세금"
@@ -22,11 +45,14 @@
   "schema_previous": "stage2b/1.0",
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "restructured_from_7key": false,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "checked_at": "2026-11-27",
+  "pass2_patch": "2026-11-27 2차 보완 패스: 2개 항목(그린피가이드·1박2일골프·원더골프·공식 홈페이지 대조, 미확인 값 생성 없음)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0255",
@@ -99,7 +125,8 @@
   "holes_conflict": false,
   "facility_cluster": null,
   "factcheck_2026_11_26": null,
-  "address_original": "청주시 청원구 오창읍 두릉유리로 846"
+  "address_original": "청주시 청원구 오창읍 두릉유리로 846",
+  "par": 36
  },
  "course": {
   "holes": 9,
@@ -125,14 +152,16 @@
    ]
   },
   "kga_hole_est": 18,
-  "extra_courses": null
+  "extra_courses": null,
+  "par": 36,
+  "length_m": 2970
  },
  "fee": {
-  "weekday": null,
-  "weekend": null,
-  "weekday_text": "월별 공지 그린피(매달 금액 상이)",
-  "weekend_text": "월별 공지 그린피",
-  "basis": "공식 요금이 매달 달라지는 월별 공지 형식. 18홀은 9홀 2회",
+  "weekday": 70000,
+  "weekend": 120000,
+  "weekday_text": "70,000~160,000원 (주중, 1·2부 18홀·일반캐디(9홀 별도))",
+  "weekend_text": "120,000~180,000원 (토·공휴일, 1·2부 18홀·일반캐디(9홀 별도))",
+  "basis": "원더골프가 각 구장 공식 요금표에서 수집한 공시정상가 범위(2026-10 수집). 요일·시간대·계절별 차등이라 최저~최고로 표기",
   "tax_included": null,
   "cart": {
    "value": 100000,
@@ -143,16 +172,22 @@
    "text": "18홀 150,000원/팀, 9홀 75,000원/팀",
    "none": false
   },
-  "as_of": "2026-11-26 (공식 요금 안내 확인)",
+  "as_of": "2026-11-27 (원더골프 공식 요금표 수집분 확인)",
   "source_url": "http://www.ochangedincc.com",
-  "note": null,
+  "note": "계절·시간대·잔여예약에 따라 실제 결제가는 달라질 수 있음.",
   "sources": [
    {
     "source": "수신 조사(공식·공개 예약정보)",
     "url": "http://www.ochangedincc.com",
     "checked_at": "2026-11-26 (공식 요금 안내 확인)"
+   },
+   {
+    "source": "원더골프(공식 요금표 정리)",
+    "url": "https://wondergolf.co.kr/courses/kr-kakao-12411550",
+    "checked_at": "2026-11-27"
    }
-  ]
+  ],
+  "checked_at": "2026-11-27"
  },
  "cancel": {
   "cancel_policy": "4일 전 17:00까지",
@@ -215,8 +250,14 @@
    "evidence": []
   },
   "pace": {
-   "value": null,
-   "evidence": []
+   "value": "1홀 이상 홀을 비우는 등 경기를 지연시키면 퇴장",
+   "evidence": [
+    "진행/경기시간 1홀 이상 홀을 비우는 등 경기를 지연시키면 퇴장"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0275/",
+   "confidence": "high",
+   "source_type": "third_party",
+   "checked_at": "2026-11-27"
   }
  },
  "facilities": {
@@ -253,9 +294,15 @@
    "evidence": []
   },
   "closed_days": {
-   "value": null,
+   "value": "정기 휴장일 없음",
    "third_party": null,
-   "evidence": []
+   "evidence": [
+    "정기 휴장일 정기 휴장일 없음"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0275/",
+   "confidence": "high",
+   "source_type": "third_party",
+   "checked_at": "2026-11-27"
   },
   "shuttle": {
    "value": null,
@@ -359,18 +406,19 @@
   "official_reason": "운영 중(공식 홈페이지 정상)",
   "pages_collected": 0,
   "third_party": {
-   "received_report": true
+   "received_report": true,
+   "greenfeeguide": true
   },
   "render_hint": "report",
   "plan_strategy": "subagent_report(2026-11-26)"
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 1.0,
-  "fee": 0.5,
-  "ops": 0.5,
-  "facility": 0.3,
-  "briefing": 0.75,
-  "rental": 0.25
+  "basic": 0.78,
+  "course": 0.4,
+  "fee": 1.0,
+  "ops": 0.57,
+  "facility": 0.4,
+  "briefing": 0.5,
+  "rental": 0.0
  }
 }

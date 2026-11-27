@@ -12,9 +12,98 @@
   ],
   "source": "raw/received_gangwon_65.json (외부 데이터 수신, 2026-11-26)",
   "review": {
-   "checked_at": null,
-   "status": "not_crosschecked",
-   "checks": []
+   "checked_at": "2026-11-27",
+   "status": "supplemented(공식+공개 요약)",
+   "checks": [
+    {
+     "field": "ops.checkin",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "티오프 30분 전 도착",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0213/",
+     "quote": "도착: 티오프 30분 전 도착",
+     "source_type": "official_summary(greenfeeguide)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "master.homepage",
+     "received": "http://www.century21cc.co.kr/",
+     "verified": "https://www.century21cc.co.kr/",
+     "result": "수정",
+     "url": "https://www.century21cc.co.kr/",
+     "quote": "http→https 정규 URL(2026-11-27 확인)",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "ops.dress",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "규정된 복장 착용",
+     "result": "보완",
+     "url": "https://www.century21cc.co.kr/guide_operation",
+     "quote": "규정된 복장을 착용하시고 입장하여 주시기 바랍니다.",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.food",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "클럽 레스토랑",
+     "result": "보완",
+     "url": "https://www.century21cc.co.kr/",
+     "quote": "클럽레스토랑",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "fee.checked_at",
+     "received": null,
+     "verified": "2026-11-27",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0213/",
+     "quote": "요금 확인일 2026-11-05 (그린피가이드 2026-11-27 조회)",
+     "source_type": "third_party",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.closed_days",
+     "received": "{\"value\": null, \"third_party\": null, \"evidence\": []}",
+     "verified": "정기 휴장일 없음",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0213/",
+     "quote": "정기 휴장일 정기 휴장일 없음",
+     "source_type": "third_party",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "ops.five_player",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "별도 문의(033-733-2114)",
+     "result": "보완",
+     "url": "https://www.century21cc.co.kr/guide_operation",
+     "quote": ") 2만 원(1인 기준)이 추가됩니다. (3인 플레이 추가요금은 4~6월, 9~11월 적용) 2인 플레이, 5인 플레이: 별도 문의 033-733-2114 (해당일 예약 상황에 따라 진행 여부 안내드리겠습니다.) 휴장 안내 악천 및 천재지변 등으로 인하여 내장객의 안전 및",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.proshop",
+     "received": null,
+     "verified": "프로샵",
+     "result": "보완",
+     "url": "https://www.century21cc.co.kr/guide_operation",
+     "quote": "결한 락커룸과 샤워 시설이 준비되어 있습니다. 락커 근무자는 별도의 봉사료를 받지 않습니다. 부대시설 안내 프로샵 : 다양한 골프 용품 및 지역 특상품, 시상품을 구입할 수 있습니다. 레스토랑 : 식사 및 음료를 즐기실 수 있습니다. 연회실 : 대연회실과 소연회실이 준비되어 있",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    }
+   ]
   },
   "data_checks": [
    "요금 출처 표기 불일치: as_of에 \"공식\"이나 URL은 3자(https://greenfeeguide.co.kr/course/gc-0213/)",
@@ -23,11 +112,14 @@
   "schema_previous": "stage2b/1.0",
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "restructured_from_7key": false,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "batch3_patch": "2026-11-27 배치3 보완: 3개 항목(공식 홈페이지·공개 요금 안내 기준, 미확인 값 생성 없음)",
+  "pass2_patch": "2026-11-27 2차 보완 패스: 3개 항목(그린피가이드·1박2일골프·원더골프·공식 홈페이지 대조, 미확인 값 생성 없음)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0433",
@@ -74,7 +166,7 @@
   "tel_conflict": false,
   "tel_source": "KGA",
   "tel_note": null,
-  "homepage": "http://www.century21cc.co.kr/",
+  "homepage": "https://www.century21cc.co.kr/",
   "homepage_master": "http://www.century21cc.co.kr/",
   "operators": [
    "센추리개발㈜(이병철 차기광)"
@@ -156,8 +248,15 @@
     "source": "수신 조사(공식·공개 예약정보)",
     "url": "https://greenfeeguide.co.kr/course/gc-0213/",
     "checked_at": "2026-11-05(공식 요금표 확인)"
+   },
+   {
+    "source": "third_party",
+    "url": "https://greenfeeguide.co.kr/course/gc-0213/",
+    "quote": "요금 확인일 2026-11-05 (그린피가이드 2026-11-27 조회)",
+    "checked_at": "2026-11-27"
    }
-  ]
+  ],
+  "checked_at": "2026-11-27"
  },
  "cancel": {
   "cancel_policy": "평일 3일 전·주말 4일 전까지(이용약관 기준)",
@@ -180,8 +279,14 @@
    "evidence": []
   },
   "five_player": {
-   "value": null,
-   "evidence": []
+   "value": "별도 문의(033-733-2114)",
+   "evidence": [
+    ") 2만 원(1인 기준)이 추가됩니다. (3인 플레이 추가요금은 4~6월, 9~11월 적용) 2인 플레이, 5인 플레이: 별도 문의 033-733-2114 (해당일 예약 상황에 따라 진행 여부 안내드리겠습니다.) 휴장 안내 악천 및 천재지변 등으로 인하여 내장객의 안전 및"
+   ],
+   "source_url": "https://www.century21cc.co.kr/guide_operation",
+   "confidence": "high",
+   "source_type": "official_site",
+   "checked_at": "2026-11-27"
   },
   "marshal_caddie": {
    "value": null,
@@ -204,8 +309,15 @@
    "evidence": []
   },
   "checkin": {
-   "value": null,
-   "evidence": []
+   "value": "티오프 30분 전 도착",
+   "evidence": [
+    "도착: 티오프 30분 전 도착"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0213/",
+   "confidence": "medium",
+   "source_type": "official_summary(greenfeeguide)",
+   "checked_at": "2026-11-27",
+   "note": "공개 요금 정보가 골프장 공식 안내를 정리한 값(확인일 페이지 표기)"
   },
   "locker": {
    "value": "사우나·숏게임 연습장",
@@ -216,8 +328,14 @@
    "evidence": []
   },
   "dress": {
-   "value": null,
-   "evidence": []
+   "value": "규정된 복장 착용",
+   "evidence": [
+    "규정된 복장을 착용하시고 입장하여 주시기 바랍니다."
+   ],
+   "source_url": "https://www.century21cc.co.kr/guide_operation",
+   "confidence": "high",
+   "source_type": "official_site",
+   "checked_at": "2026-11-27"
   },
   "pace": {
    "value": null,
@@ -234,8 +352,14 @@
    "evidence": []
   },
   "food": {
-   "value": null,
-   "evidence": []
+   "value": "클럽 레스토랑",
+   "evidence": [
+    "클럽레스토랑"
+   ],
+   "source_url": "https://www.century21cc.co.kr/",
+   "confidence": "high",
+   "source_type": "official_site",
+   "checked_at": "2026-11-27"
   },
   "snack_bar": {
    "value": null,
@@ -258,13 +382,29 @@
    "evidence": []
   },
   "closed_days": {
-   "value": null,
+   "value": "정기 휴장일 없음",
    "third_party": null,
-   "evidence": []
+   "evidence": [
+    "정기 휴장일 정기 휴장일 없음"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0213/",
+   "confidence": "high",
+   "source_type": "third_party",
+   "checked_at": "2026-11-27"
   },
   "shuttle": {
    "value": null,
    "evidence": []
+  },
+  "proshop": {
+   "value": "프로샵",
+   "evidence": [
+    "결한 락커룸과 샤워 시설이 준비되어 있습니다. 락커 근무자는 별도의 봉사료를 받지 않습니다. 부대시설 안내 프로샵 : 다양한 골프 용품 및 지역 특상품, 시상품을 구입할 수 있습니다. 레스토랑 : 식사 및 음료를 즐기실 수 있습니다. 연회실 : 대연회실과 소연회실이 준비되어 있"
+   ],
+   "source_url": "https://www.century21cc.co.kr/guide_operation",
+   "confidence": "high",
+   "source_type": "official_site",
+   "checked_at": "2026-11-27"
   }
  },
  "rental": {
@@ -357,7 +497,8 @@
   ],
   "sources": [
    "https://greenfeeguide.co.kr/course/gc-0213/",
-   "https://todaygolfgo.com/regions/gangwon/"
+   "https://todaygolfgo.com/regions/gangwon/",
+   "https://www.century21cc.co.kr/"
   ],
   "collected_at": "2026-11-26T09:55:47+09:00"
  },
@@ -366,18 +507,19 @@
   "official_reason": "운영 중(공식 홈페이지 정상)",
   "pages_collected": 0,
   "third_party": {
-   "received_report": true
+   "received_report": true,
+   "greenfeeguide": true
   },
   "render_hint": "report",
   "plan_strategy": "subagent_report(2026-11-26)"
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.8,
+  "basic": 0.78,
+  "course": 0.6,
   "fee": 1.0,
-  "ops": 0.36,
-  "facility": 0.3,
-  "briefing": 0.75,
-  "rental": 0.25
+  "ops": 0.57,
+  "facility": 0.5,
+  "briefing": 0.5,
+  "rental": 0.0
  }
 }

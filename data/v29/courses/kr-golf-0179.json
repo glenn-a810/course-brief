@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0179",
@@ -58,11 +59,11 @@
    "master": "courses_master.json v2.0 (문체부·KGA·KGBA·티픽·지도)",
    "synced_to": "courses_master.json v2.7 (2026-11-26 단일 스키마 정규화)"
   },
-  "par": null,
+  "par": 36,
   "holes_teepick": 18,
   "course_spec": {
    "holes": 9,
-   "par": null,
+   "par": 36,
    "blocks": [],
    "length_m": null,
    "kga": null,
@@ -94,14 +95,19 @@
    "source": "공식",
    "url": "https://www.yongincc.com/Club/CompanyInfo.aspx"
   },
-  "holes_note": "등록(문체부) 9홀 · 수집 18홀 — 등록 기준과 수집처(티픽·조사) 표기 차이다. 등록 9홀을 정본으로 두고 집계에는 master.holes를 쓴다. 복합단지 합산 여부는 미확정."
+  "holes_note": "등록(문체부) 9홀 · 수집 18홀 — 등록 기준과 수집처(티픽·조사) 표기 차이다. 등록 9홀을 정본으로 두고 집계에는 master.holes를 쓴다. 복합단지 합산 여부는 미확정.",
+  "designer": {
+   "value": "주식회사 서원엔지니어링",
+   "source": "공개 정보(그린피가이드)",
+   "url": "https://greenfeeguide.co.kr/course/gc-0032/"
+  }
  },
  "course": {
   "holes": 9,
   "holes_received": 18,
   "course_names": null,
   "membership_type": "대중제",
-  "night_light": null,
+  "night_light": "3부(야간) 티타임 판매 관측(티픽, 최근 1건)",
   "blocks": [],
   "grass": {
    "tee": null,
@@ -113,41 +119,42 @@
   "extra_courses": null,
   "hole_by_hole": null,
   "length_m": null,
-  "par": null,
+  "par": 36,
   "holes_note": "등록(문체부) 9홀 · 수집 18홀 — 등록 기준과 수집처(티픽·조사) 표기 차이다. 등록 9홀을 정본으로 두고 집계에는 master.holes를 쓴다. 복합단지 합산 여부는 미확정."
  },
  "fee": {
   "weekday": 105000,
   "weekend": 125000,
-  "weekday_text": null,
-  "weekend_text": null,
-  "basis": null,
+  "weekday_text": "105,000원 ~ 150,000원",
+  "weekend_text": "125,000원 ~ 210,000원",
+  "basis": "official",
   "tax_included": null,
   "cart": {
    "value": 100000,
-   "source": "그린피가이드",
-   "url": "https://greenfeeguide.co.kr/course/gc-0032/"
+   "source": "그린피가이드(공식 요금표)",
+   "url": "https://greenfeeguide.com/course/gc-0032/",
+   "note": "팀당(4인 1대)"
   },
   "caddie": {
    "value": 150000,
-   "source": "그린피가이드",
-   "url": "https://greenfeeguide.co.kr/course/gc-0032/",
-   "none": false
+   "none": false,
+   "source": "그린피가이드(공식 요금표)",
+   "url": "https://greenfeeguide.com/course/gc-0032/"
   },
   "as_of": "2026-11-01",
   "source_url": null,
-  "note": null,
+  "note": "주중/주말 그린피는 시간대·시즌별 최저~최고 범위(최저값을 대표값으로 기재); 9홀 1회(또는 9홀×2) 기준 요금",
   "sources": [
    {
     "source": "그린피가이드(공식 요금표 확인)",
-    "url": "https://greenfeeguide.co.kr/course/gc-0032/",
+    "url": "https://greenfeeguide.com/course/gc-0032/",
     "checked_at": "2026-11-01"
    }
   ],
-  "checked_at": "2026-11-01",
+  "checked_at": "2026-11-27",
   "market": {
-   "weekday_min": 80000.0,
-   "weekend_min": 140000.0,
+   "weekday_min": 80000,
+   "weekend_min": 140000,
    "part1": null,
    "part2": null,
    "source": "티픽골프장(실거래 관측)",
@@ -308,11 +315,9 @@
    "source": "그린피가이드(공식 인용)",
    "url": "https://greenfeeguide.co.kr/course/gc-0032/"
   },
-  "open_cycle": null,
+  "open_cycle": "이용예정일로부터 3주 전 예약 가능(이용약관)",
   "notes": null,
   "evidence": [
-   "컨트리클럽유스호스텔테니스클럽 LOGIN ID/PW SEARCH MEMBERS JOIN 클럽소개 회사소개 CEO인사말 설계자개요 오시는길 이용안내 예약안내 이용요금 위약안내 시설안내 클럽하우스 그늘집 연회장 사우나 프론트/로비 코스안내 코스안내 코스공략도 포토갤러리 고객광장 공지사항 자료실 부킹게시판 실시간예약 예약하기 대기예약 예약확인/취소 예약취소내역 마이페이지 회원정보수정 회원탈퇴 고객광장 공지사항자료실부킹게시판 제목 2027년 연단체 신청서 작성자 관리자 작성일 2024.12.29 조회 251 첨부파일 2027년연간단체신청서.",
-   "컨트리클럽유스호스텔테니스클럽 LOGIN ID/PW SEARCH MEMBERS JOIN 클럽소개 회사소개 CEO인사말 설계자개요 오시는길 이용안내 예약안내 이용요금 위약안내 시설안내 클럽하우스 그늘집 연회장 사우나 프론트/로비 코스안내 코스안내 코스공략도 포토갤러리 고객광장 공지사항 자료실 부킹게시판 실시간예약 예약하기 대기예약 예약확인/취소 예약취소내역 마이페이지 회원정보수정 회원탈퇴 이용안내 예약안내이용요금위약안내 01.예약접수 구분 예약시간 예약방법 일반 매주 화요일 오전 9시부터 4주후 주중/주말분 예약신청 2차 예약은 원하는",
    "예약자 본인이 내장하지 않거나 본인확인이 되지 않는 경우에는 위약처리 되며, 주중은 예약자 없이 동반객만 입장시, 해당팀의 예약자는 1개월간 당 클럽의 예약이 정지되며, 주말(토요일/일요일/공휴일)은 예약자 없이 동반객만 입장시, 해당 팀의 예약자는 2개월간 당 클럽의 예약이 정지됩니다."
   ],
   "weather_evidence": [
@@ -322,8 +327,6 @@
  "ops": {
   "nocaddie": {
    "evidence": [
-    "11월,12월 노캐디 운영 안내 11/23 ~ 11/29 그린피...",
-    "11월,12월 노캐디 운영 안내 11/23 ~ 11/29 그린피...",
     "11월,12월 노캐디 운영 안내 11/23 ~ 11/29 그린피..."
    ],
    "value": "노캐디 선택 가능(문구 확인)"
@@ -397,8 +400,6 @@
   },
   "sauna": {
    "evidence": [
-    "컨트리클럽유스호스텔테니스클럽 LOGIN ID/PW SEARCH MEMBERS JOIN 클럽소개 회사소개 CEO인사말 설계자개요 오시는길 이용안내 예약안내 이용요금 위약안내 시설안내 클럽하우스 그늘집 연회장 사우나 프론트/로비 코스안내 코스안내 코스공략도 포토갤러리 고객광장 공지사항 자료실 부킹게시판 실시간예약 예약하기 대기예약 예약확인/취소 예약취소내역 마이페이지 회원정보수정 회원탈퇴 고객광장 공지사항자료실부킹게시판 제목 2027년 연단체 신청서 작성자 관리자 작성일 2024.12.29 조회 251 첨부파일 2027년연간단체신청서.",
-    "컨트리클럽유스호스텔테니스클럽 LOGIN ID/PW SEARCH MEMBERS JOIN 클럽소개 회사소개 CEO인사말 설계자개요 오시는길 이용안내 예약안내 이용요금 위약안내 시설안내 클럽하우스 그늘집 연회장 사우나 프론트/로비 코스안내 코스안내 코스공략도 포토갤러리 고객광장 공지사항 자료실 부킹게시판 실시간예약 예약하기 대기예약 예약확인/취소 예약취소내역 마이페이지 회원정보수정 회원탈퇴 이용안내 예약안내이용요금위약안내 01.예약접수 구분 예약시간 예약방법 일반 매주 화요일 오전 9시부터 4주후 주중/주말분 예약신청 2차 예약은 원하는",
     "사우나 있음"
    ],
    "value": "사우나 운영",
@@ -415,8 +416,14 @@
    "value": null
   },
   "pace": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "앞 팀과 1홀 이상 벌어짐·뒤 팀 항의 → 퇴장·예약 정지 (3개월 정지)"
+   ],
+   "value": "앞 팀과 1홀 이상 벌어짐·뒤 팀 항의 → 퇴장·예약 정지 (3개월 정지)",
+   "source_url": "https://yongincc.com/Guide/PenaltyInfo.aspx",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfee guide tables)"
   },
   "grass": null
  },
@@ -431,8 +438,6 @@
   },
   "food": {
    "evidence": [
-    "컨트리클럽유스호스텔테니스클럽 LOGIN ID/PW SEARCH MEMBERS JOIN 클럽소개 회사소개 CEO인사말 설계자개요 오시는길 이용안내 예약안내 이용요금 위약안내 시설안내 클럽하우스 그늘집 연회장 사우나 프론트/로비 코스안내 코스안내 코스공략도 포토갤러리 고객광장 공지사항 자료실 부킹게시판 실시간예약 예약하기 대기예약 예약확인/취소 예약취소내역 마이페이지 회원정보수정 회원탈퇴 고객광장 공지사항자료실부킹게시판 제목 2027년 연단체 신청서 작성자 관리자 작성일 2024.12.29 조회 251 첨부파일 2027년연간단체신청서.",
-    "컨트리클럽유스호스텔테니스클럽 LOGIN ID/PW SEARCH MEMBERS JOIN 클럽소개 회사소개 CEO인사말 설계자개요 오시는길 이용안내 예약안내 이용요금 위약안내 시설안내 클럽하우스 그늘집 연회장 사우나 프론트/로비 코스안내 코스안내 코스공략도 포토갤러리 고객광장 공지사항 자료실 부킹게시판 실시간예약 예약하기 대기예약 예약확인/취소 예약취소내역 마이페이지 회원정보수정 회원탈퇴 이용안내 예약안내이용요금위약안내 01.예약접수 구분 예약시간 예약방법 일반 매주 화요일 오전 9시부터 4주후 주중/주말분 예약신청 2차 예약은 원하는",
     "'인터넷 예약' → '예약하기' 메뉴에 들어가셔서 희망예약일을 선택하시면, 해당일에 예약이 가능한 코스와 시간이 출력됩니다.",
     "클럽하우스그늘집연회장사우나프론트/로비"
    ],
@@ -448,8 +453,14 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": null,
-   "evidence": []
+   "value": "사우나 있음",
+   "evidence": [
+    "사우나 있음 — https://greenfeeguide.co.kr/course/gc-0032/"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0032/",
+   "confidence": "medium",
+   "checked_at": "2026-11-27",
+   "value_from": "pass2_third_party"
   },
   "lodging": {
    "value": "숙박 가능(객실 운영)",
@@ -463,8 +474,14 @@
    "value_from": "capital_supplement(official_site)"
   },
   "other": {
-   "value": null,
-   "evidence": []
+   "value": "사우나 있음",
+   "evidence": [
+    "사우나 있음"
+   ],
+   "source_url": "https://yongincc.com/Facilities/ClubHouse.aspx",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfee guide tables)"
   },
   "night": {
    "evidence": [
@@ -721,7 +738,18 @@
   "course_notes": null,
   "alert": null,
   "unconfirmed": [],
-  "sources": []
+  "sources": [
+   {
+    "source": "그린피가이드 코스 페이지",
+    "url": "https://greenfeeguide.co.kr/course/gc-0032/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "ok",
@@ -736,12 +764,12 @@
   "browser_batch": false
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.6,
+  "basic": 0.78,
+  "course": 0.2,
   "fee": 1.0,
-  "ops": 0.29,
-  "facility": 0.3,
-  "briefing": 0.5,
-  "rental": 0.25
+  "ops": 0.36,
+  "facility": 0.5,
+  "briefing": 0.0,
+  "rental": 0.0
  }
 }

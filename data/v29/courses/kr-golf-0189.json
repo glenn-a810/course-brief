@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0189",
@@ -59,13 +60,13 @@
    "master": "courses_master.json v2.0 (문체부·KGA·KGBA·티픽·지도)",
    "synced_to": "courses_master.json v2.7 (2026-11-26 단일 스키마 정규화)"
   },
-  "par": null,
+  "par": 72,
   "holes_teepick": 54,
   "course_spec": {
    "holes": 45,
-   "par": null,
+   "par": 72,
    "blocks": [],
-   "length_m": null,
+   "length_m": 5632,
    "kga": null,
    "grass": null,
    "hole_by_hole": null
@@ -94,27 +95,28 @@
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": null,
-  "par": null,
+  "length_m": 5632,
+  "par": 72,
   "holes_note": "등록(문체부) 45홀 · 수집 54홀 — 등록 기준과 수집처(티픽·조사) 표기 차이다. 등록 45홀을 정본으로 두고 집계에는 master.holes를 쓴다. 복합단지 합산 여부는 미확정."
  },
  "fee": {
   "weekday": 220000,
   "weekend": 270000,
   "weekday_text": null,
-  "weekend_text": null,
-  "basis": null,
+  "weekend_text": "270,000원 ~ 280,000원",
+  "basis": "official",
   "tax_included": null,
   "cart": {
    "value": 100000,
-   "source": "그린피가이드",
-   "url": "https://greenfeeguide.co.kr/course/gc-0080/"
+   "source": "그린피가이드(공식 요금표)",
+   "url": "https://greenfeeguide.com/course/gc-0080/",
+   "note": "팀당(4인 1대)"
   },
   "caddie": {
    "value": 150000,
-   "source": "그린피가이드",
-   "url": "https://greenfeeguide.co.kr/course/gc-0080/",
-   "none": false
+   "none": false,
+   "source": "그린피가이드(공식 요금표)",
+   "url": "https://greenfeeguide.com/course/gc-0080/"
   },
   "as_of": "2026-11-01",
   "source_url": null,
@@ -122,14 +124,14 @@
   "sources": [
    {
     "source": "그린피가이드(공식 요금표 확인)",
-    "url": "https://greenfeeguide.co.kr/course/gc-0080/",
+    "url": "https://greenfeeguide.com/course/gc-0080/",
     "checked_at": "2026-11-01"
    }
   ],
-  "checked_at": "2026-11-01",
+  "checked_at": "2026-11-27",
   "market": {
-   "weekday_min": 160000.0,
-   "weekend_min": 200000.0,
+   "weekday_min": 160000,
+   "weekend_min": 200000,
    "part1": null,
    "part2": null,
    "source": "티픽골프장(실거래 관측)",
@@ -141,7 +143,7 @@
  },
  "cancel": {
   "cancel_policy": null,
-  "open_cycle": null,
+  "open_cycle": "회원제 주중: 위약예탁금 납부 인터넷 회원은 2주 전부터 잔여시간 예약 가능",
   "notes": null,
   "evidence": [],
   "weather_evidence": []
@@ -384,8 +386,21 @@
   "recent_notice_text": null,
   "course_notes": null,
   "alert": null,
-  "unconfirmed": [],
-  "sources": []
+  "unconfirmed": [
+   "취소·위약 규정 미확인: 공식 홈페이지에 위약 규정 게시를 확인하지 못함"
+  ],
+  "sources": [
+   {
+    "source": "그린피가이드 코스 페이지",
+    "url": "https://greenfeeguide.co.kr/course/gc-0080/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "ok",
@@ -400,12 +415,12 @@
   "browser_batch": false
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.6,
+  "basic": 0.89,
+  "course": 0.2,
   "fee": 1.0,
   "ops": 0.14,
   "facility": 0.2,
-  "briefing": 0.5,
-  "rental": 0.25
+  "briefing": 0.0,
+  "rental": 0.0
  }
 }

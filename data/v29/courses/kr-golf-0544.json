@@ -5,8 +5,37 @@
   "schema": "stage2c/1.0",
   "batch": null,
   "structure": "master only (구장 JSON 미생성 — 건설중·미착공)",
-  "normalized_at": "2026-11-26T12:20:52+09:00",
-  "has_detail": false
+  "normalized_at": "2026-11-27T14:40:00+09:00",
+  "has_detail": false,
+  "review": {
+   "checks": [
+    {
+     "field": "master.status_note",
+     "received": null,
+     "verified": "2026-09-21 성주군의회 군유지 매각안 가결로 9홀 우선 조성으로 축소(당초 18홀). 2028년 말까지 조성 목표, 절차상 2027년 3월 착공 가능 전망.",
+     "result": "보완",
+     "url": "https://m.seongjuro.co.kr/view.php?idx=61196",
+     "quote": "9홀 우선 조성으로 방향을 틀었다 … 2028년 말까지 대중제 골프장(9홀 코스 및 클럽하우스 등)을 조성",
+     "source_type": "news",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "briefing.recent_notice_text",
+     "received": null,
+     "verified": "2026-09-21 성주군의회가 군유지 매각 관련 공유재산관리계획안을 가결(찬성 5·반대 3). 사유지 확보 난항으로 18홀에서 9홀 우선 조성으로 축소, 2028년 말 조성 목표.",
+     "result": "보완",
+     "url": "https://www.imaeil.com/page/view/2026092115170823368",
+     "quote": "찬성 5명·반대 3명으로 가결 … 9홀 우선 조성",
+     "source_type": "news",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    }
+   ],
+   "checked_at": "2026-11-27"
+  },
+  "batch3_patch": "2026-11-27 배치6(대구·경북) 보완: 2개 항목(공식 홈페이지·그린피가이드 공식 안내 확인 기준, 미확인 값 생성 없음)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0544",
@@ -53,7 +82,8 @@
   "facility_cluster": null,
   "factcheck_2026_11_26": null,
   "holes_note": "계획 홀수 9홀. 회원제/대중제 구성(내역)은 확정되지 않아 member/public/non_member를 0으로 두었다(master.holes.total만 유효).",
-  "provenance": {}
+  "provenance": {},
+  "status_note": "2026-09-21 성주군의회 군유지 매각안 가결로 9홀 우선 조성으로 축소(당초 18홀). 2028년 말까지 조성 목표, 절차상 2027년 3월 착공 가능 전망."
  },
  "course": {
   "holes": null,
@@ -213,13 +243,16 @@
    "items": [],
    "tags": {}
   },
-  "recent_notice_text": null,
+  "recent_notice_text": "2026-09-21 성주군의회가 군유지 매각 관련 공유재산관리계획안을 가결(찬성 5·반대 3). 사유지 확보 난항으로 18홀에서 9홀 우선 조성으로 축소, 2028년 말 조성 목표.",
   "course_notes": null,
   "review": null,
   "fee_change": null,
   "alert": null,
   "unconfirmed": [],
-  "sources": []
+  "sources": [
+   "https://m.seongjuro.co.kr/view.php?idx=61196",
+   "https://www.imaeil.com/page/view/2026092115170823368"
+  ]
  },
  "collection": {
   "official_site": null,
@@ -230,12 +263,12 @@
   "plan_strategy": null
  },
  "coverage": {
-  "basic": 0,
-  "course": 0,
-  "fee": 0,
-  "ops": 0,
-  "facility": 0,
-  "briefing": 0,
-  "rental": 0
+  "basic": 0.56,
+  "course": 0.0,
+  "fee": 0.0,
+  "ops": 0.0,
+  "facility": 0.0,
+  "briefing": 0.25,
+  "rental": 0.0
  }
 }

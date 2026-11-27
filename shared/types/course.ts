@@ -13,7 +13,7 @@ import type { ClusterInfo, SidoInfo } from "./cluster";
 import type { NearbyDelivery } from "./rental";
 
 /** 비영업 상태를 포함한 운영 상태. 목록·상세 배지와 필터가 이 값을 쓴다. */
-export type CourseStatus = "operating" | "suspended" | "closed" | "under_construction" | "planned";
+export type CourseStatus = "operating" | "suspended" | "closed" | "under_construction" | "planned" | "cancelled";
 
 /** 이용형태. `미확인`은 값이 비어 있는 구장에 쓰인다(데이터 원본 표기). */
 export type MembershipType = "회원제" | "대중제" | "비회원제" | "미확인";
@@ -66,6 +66,7 @@ export interface DatasetCounts {
   closed: number;
   under_construction: number;
   planned: number;
+  cancelled: number;
 }
 
 /** counts에서 상태별 건수만 뽑은 형태(목록 상태 칩이 쓴다) */

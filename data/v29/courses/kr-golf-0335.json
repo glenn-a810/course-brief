@@ -8,11 +8,62 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "review": {
+   "checks": [
+    {
+     "field": "master.homepage",
+     "received": "http://www.msclub.co.kr/",
+     "verified": "https://www.clublonge.com/Club/uiseong",
+     "result": "보완",
+     "url": "https://www.clublonge.com/Club/uiseong",
+     "quote": "엠스클럽의성 공식 클럽 페이지(CLUB LONGE)",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "course.par",
+     "received": null,
+     "verified": 109,
+     "result": "보완",
+     "url": "https://www.clublonge.com/Club/uiseong/Course",
+     "quote": "TOTAL : Par 109 / 10,136m, 총 27홀 챔피언/마스터/챌린저",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "course.length_m",
+     "received": null,
+     "verified": 10136,
+     "result": "보완",
+     "url": "https://www.clublonge.com/Club/uiseong/Course",
+     "quote": "TOTAL : Par 109 / 10,136m",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "course.course_names",
+     "received": null,
+     "verified": "[\"CHAMPION\", \"MASTER\", \"CHALLENGER\"]",
+     "result": "보완",
+     "url": "https://www.clublonge.com/Club/uiseong/Course",
+     "quote": "챔피언/마스터/챌린저로 구성된 27홀",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    }
+   ],
+   "checked_at": "2026-11-27"
+  },
+  "batch3_patch": "2026-11-27 배치6(대구·경북) 보완: 4개 항목(공식 홈페이지·그린피가이드 공식 안내 확인 기준, 미확인 값 생성 없음)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0335",
@@ -46,7 +97,7 @@
    "straight_name": "의성IC"
   },
   "tel": "054-830-3300",
-  "homepage": "http://www.msclub.co.kr/",
+  "homepage": "https://www.clublonge.com/Club/uiseong",
   "operators": [
    "㈜바이오컨트리클럽 이하수 민병소",
    "대지개발㈜ 문병동"
@@ -59,13 +110,13 @@
    "master": "courses_master.json v2.0 (문체부·KGA·KGBA·티픽·지도)",
    "synced_to": "courses_master.json v2.7 (2026-11-26 단일 스키마 정규화)"
   },
-  "par": null,
+  "par": 73,
   "holes_teepick": 27,
   "course_spec": {
    "holes": 27,
-   "par": null,
+   "par": 73,
    "blocks": [],
-   "length_m": null,
+   "length_m": 10136,
    "kga": {
     "kga_course_code": "427",
     "kga_name": "엠스클럽의성",
@@ -237,9 +288,13 @@
  "course": {
   "holes": 27,
   "holes_received": 27,
-  "course_names": null,
+  "course_names": [
+   "CHAMPION",
+   "MASTER",
+   "CHALLENGER"
+  ],
   "membership_type": "대중제",
-  "night_light": null,
+  "night_light": "야간 라운드 운영(공식 홈페이지 안내)",
   "blocks": [],
   "grass": {
    "tee": null,
@@ -407,8 +462,8 @@
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": null,
-  "par": null
+  "length_m": 10136,
+  "par": 73
  },
  "fee": {
   "weekday": 200000,
@@ -426,7 +481,8 @@
    "value": 140000,
    "source": "그린피가이드",
    "url": "https://greenfeeguide.co.kr/course/gc-0359/",
-   "none": false
+   "none": false,
+   "note": "야간 캐디피 10~18홀 140,000원 · 야간 160,000원"
   },
   "as_of": "2026-11-01",
   "source_url": null,
@@ -494,8 +550,14 @@
    "evidence": []
   },
   "cart_type": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "리무진·특수 카트: 리무진 카트"
+   ],
+   "value": "리무진 카트",
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0358/",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfeeguide)"
   },
   "cart_entry": {
    "evidence": [],
@@ -542,8 +604,14 @@
    "value": null
   },
   "pace": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "티오프 7분 간격"
+   ],
+   "value": "티오프 7분 간격",
+   "source_url": "https://www.clublonge.com/Club/uiseong/Information",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfee guide tables)"
   },
   "grass": null
  },
@@ -575,20 +643,37 @@
    "evidence": []
   },
   "other": {
-   "value": null,
-   "evidence": []
+   "value": "프로샵",
+   "evidence": [
+    "그 밖의 시설: 프로샵"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0358/",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfeeguide)"
   },
   "night": {
    "evidence": [
     "코스안내 클럽안내 예약하기 이용안내 코스안내 시설안내 공지 및 이벤트 코스소개 코스소개 홀별공략법 코스소개 홀별공략법 세계적인 골프조명 '머스코'에 의한 조명설계 완비 남양주 CC, 야간 라운딩시 볼이 공중에서 사라지는 문제 해결 남양주 C.C COURSE TOTAL AREA 총 849.000 ㎡ COURSE SCALE 퍼블릭 9홀 (36파) COURSE DESIGN 휴먼골프 LANDSCAPING (주)건우 남양주CC는 자연을 정복의 대상이 아닌 공존의 공간으로 설계하였습니다.",
-    "POINT 야간 라운딩의 상식을 바꾸다 볼이 사라지는 문제, 남양주CC는 해결했습니다 야간 라운딩 시 공중에서 볼이 일시적으로 사라지는 현상은 골퍼들에게 큰 스트레스였습니다."
+    "POINT 야간 라운딩의 상식을 바꾸다 볼이 사라지는 문제, 남양주CC는 해결했습니다 야간 라운딩 시 공중에서 볼이 일시적으로 사라지는 현상은 골퍼들에게 큰 스트레스였습니다.",
+    "야간 운영: 야간 라운드 운영(공식 홈페이지 안내)"
    ],
-   "value": null
+   "value": "야간 라운드 운영(공식 홈페이지 안내)",
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0358/",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfeeguide)"
   },
   "closed_days": {
-   "evidence": [],
+   "evidence": [
+    "정기 휴장일: 정기 휴장일 없음"
+   ],
    "third_party": "정기 휴장일 없음카트리무진",
-   "value": null
+   "value": "정기 휴장일 없음",
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0358/",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfeeguide)"
   },
   "shuttle": {
    "evidence": [],
@@ -697,7 +782,15 @@
   "course_notes": null,
   "alert": null,
   "unconfirmed": [],
-  "sources": []
+  "sources": [
+   "https://www.clublonge.com/Club/uiseong",
+   "https://www.clublonge.com/Club/uiseong/Course",
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "ok",
@@ -712,12 +805,12 @@
   "browser_batch": false
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.8,
+  "basic": 0.89,
+  "course": 0.4,
   "fee": 1.0,
-  "ops": 0.21,
-  "facility": 0.0,
-  "briefing": 0.5,
-  "rental": 0.25
+  "ops": 0.36,
+  "facility": 0.3,
+  "briefing": 0.0,
+  "rental": 0.0
  }
 }

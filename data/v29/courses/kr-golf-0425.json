@@ -12,9 +12,175 @@
   ],
   "source": "raw/received_gangwon_65.json (외부 데이터 수신, 2026-11-26)",
   "review": {
-   "checked_at": null,
-   "status": "not_crosschecked",
-   "checks": []
+   "checked_at": "2026-11-27",
+   "status": "supplemented(공개 요약·조사자료)",
+   "checks": [
+    {
+     "field": "ops.checkin",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "티오프 40분 전 도착 권장, 20분 전 카트 탑승",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0253/",
+     "quote": "도착: 티오프 40분 전 도착 권장, 20분 전 카트 탑승",
+     "source_type": "official_summary(greenfeeguide)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "ops.dress",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "모자·칼라 셔츠, 상의는 하의 안에·벨트, 발목 양말·니삭스, 남성 반바지는 무릎 길이까지, 7부 바지·청바지 불가, 스파이크 없는 골프화",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0253/",
+     "quote": "복장: 모자·칼라 셔츠, 상의는 하의 안에·벨트, 발목 양말·니삭스, 남성 반바지는 무릎 길이까지, 7부 바지·청바지 불가, 스파이크 없는 골프화",
+     "source_type": "official_summary(greenfeeguide)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "ops.pace",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "1홀 이상 플레이 지연 등 지나친 진행 지연은 패널티 적용 대상",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0253/",
+     "quote": "진행이 늦으면: 1홀 이상 플레이 지연 등 지나친 진행 지연은 패널티 적용 대상",
+     "source_type": "official_summary(greenfeeguide)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "fee.checked_at",
+     "received": null,
+     "verified": "2026-11-27",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0253/",
+     "quote": "요금 확인일 2026-11-01 (그린피가이드 2026-11-27 조회)",
+     "source_type": "third_party",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "course.par",
+     "received": null,
+     "verified": 72,
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/seolhaewon/course/",
+     "quote": "코스 개요 — 파: Par 72",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "course.length_m",
+     "received": null,
+     "verified": 6492,
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/seolhaewon/course/",
+     "quote": "코스 개요 — 거리: 7,100야드 (챔피언 티 기준, 18홀 기준) (야드→m 환산)",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "course.grass.green",
+     "received": null,
+     "verified": "벤트그라스",
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/seolhaewon/course/",
+     "quote": "코스 개요 — 잔디: 벤트그라스 (그린) / 켄터키블루그라스 (페어웨이)",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "course.grass.fairway",
+     "received": null,
+     "verified": "켄터키블루그라스",
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/seolhaewon/course/",
+     "quote": "코스 개요 — 잔디: 벤트그라스 (그린) / 켄터키블루그라스 (페어웨이)",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "master.opened",
+     "received": null,
+     "verified": "2008",
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/seolhaewon/course/",
+     "quote": "코스 개요 — 개장: 2008년 (골든비치CC → 2018년 설해원 리브랜딩)",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.food",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "한식·양식 레스토랑, 서양식 조식·해장국·짬뽕·섭국 등",
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/seolhaewon/info/",
+     "quote": "레스토랑: 한식·양식 레스토랑, 서양식 조식·해장국·짬뽕·섭국 등",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "ops.locker",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "남녀 분리 라커룸, 사우나·샤워 완비",
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/seolhaewon/info/",
+     "quote": "라커/사우나: 남녀 분리 라커룸, 사우나·샤워 완비",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "ops.sauna",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "남녀 분리 라커룸, 사우나·샤워 완비",
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/seolhaewon/info/",
+     "quote": "라커/사우나: 남녀 분리 라커룸, 사우나·샤워 완비",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.locker_sauna",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "남녀 분리 라커룸, 사우나·샤워 완비",
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/seolhaewon/info/",
+     "quote": "라커/사우나: 남녀 분리 라커룸, 사우나·샤워 완비",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.proshop",
+     "received": null,
+     "verified": "프로샵",
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/seolhaewon/info/",
+     "quote": "프로샵: 골프 용품 프로샵 운영",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.practice",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "드라이빙 레인지, 퍼팅 그린, 어프로치 연습장",
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/seolhaewon/info/",
+     "quote": "연습 시설: 드라이빙 레인지, 퍼팅 그린, 어프로치 연습장",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    }
+   ]
   },
   "data_checks": [
    "대표전화 표기 차이: 마스터 033-670-7800 / 수신 033-670-7700",
@@ -24,11 +190,14 @@
   "schema_previous": "stage2b/1.0",
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "restructured_from_7key": false,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "batch3_patch": "2026-11-27 배치3 보완: 3개 항목(공식 홈페이지·공개 요금 안내 기준, 미확인 값 생성 없음)",
+  "pass2_patch": "2026-11-27 2차 보완 패스: 11개 항목(그린피가이드·1박2일골프·원더골프·공식 홈페이지 대조, 미확인 값 생성 없음)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0425",
@@ -81,7 +250,7 @@
    "㈜새서울레저(안제근)"
   ],
   "area_sqm": 1430946,
-  "opened": null,
+  "opened": "2008",
   "course_blocks": [
    "설해원",
    "더 레전드"
@@ -112,7 +281,8 @@
    "note": null
   },
   "factcheck_2026_11_26": null,
-  "address_original": "양양군 손양면 공항로 230"
+  "address_original": "양양군 손양면 공항로 230",
+  "par": 72
  },
  "course": {
   "holes": 27,
@@ -126,8 +296,8 @@
   ],
   "grass": {
    "tee": null,
-   "fairway": null,
-   "green": null
+   "fairway": "켄터키블루그라스",
+   "green": "벤트그라스"
   },
   "kga": {
    "code": "324",
@@ -146,7 +316,9 @@
    ]
   },
   "kga_hole_est": 36,
-  "extra_courses": null
+  "extra_courses": null,
+  "par": 72,
+  "length_m": 6492
  },
  "fee": {
   "weekday": 198000,
@@ -172,8 +344,15 @@
     "source": "수신 조사(공식·공개 예약정보)",
     "url": "https://greenfeeguide.co.kr/course/gc-0253/",
     "checked_at": "2026-11-01(공식 요금표 확인)"
+   },
+   {
+    "source": "third_party",
+    "url": "https://greenfeeguide.co.kr/course/gc-0253/",
+    "quote": "요금 확인일 2026-11-01 (그린피가이드 2026-11-27 조회)",
+    "checked_at": "2026-11-27"
    }
-  ]
+  ],
+  "checked_at": "2026-11-27"
  },
  "cancel": {
   "cancel_policy": "평일 3일 전·주말 4일 전 18:00까지",
@@ -220,46 +399,102 @@
    "evidence": []
   },
   "checkin": {
-   "value": null,
-   "evidence": []
+   "value": "티오프 40분 전 도착 권장, 20분 전 카트 탑승",
+   "evidence": [
+    "도착: 티오프 40분 전 도착 권장, 20분 전 카트 탑승"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0253/",
+   "confidence": "medium",
+   "source_type": "official_summary(greenfeeguide)",
+   "checked_at": "2026-11-27",
+   "note": "공개 요금 정보가 골프장 공식 안내를 정리한 값(확인일 페이지 표기)"
   },
   "locker": {
-   "value": null,
-   "evidence": []
+   "value": "남녀 분리 라커룸, 사우나·샤워 완비",
+   "evidence": [
+    "라커/사우나: 남녀 분리 라커룸, 사우나·샤워 완비"
+   ],
+   "source_url": "https://1n2d-golf.co.kr/seolhaewon/info/",
+   "confidence": "medium",
+   "source_type": "public_info(1n2d-golf)",
+   "checked_at": "2026-11-27",
+   "note": "1박2일골프 시설·기타 요약(2차 공개자료, 2026-11-27 조회) — 예약 전 공식 채널 재확인 권장"
   },
   "sauna": {
-   "value": null,
-   "evidence": []
+   "value": "남녀 분리 라커룸, 사우나·샤워 완비",
+   "evidence": [
+    "라커/사우나: 남녀 분리 라커룸, 사우나·샤워 완비"
+   ],
+   "source_url": "https://1n2d-golf.co.kr/seolhaewon/info/",
+   "confidence": "medium",
+   "source_type": "public_info(1n2d-golf)",
+   "checked_at": "2026-11-27",
+   "note": "1박2일골프 시설·기타 요약(2차 공개자료, 2026-11-27 조회) — 예약 전 공식 채널 재확인 권장"
   },
   "dress": {
-   "value": null,
-   "evidence": []
+   "value": "모자·칼라 셔츠, 상의는 하의 안에·벨트, 발목 양말·니삭스, 남성 반바지는 무릎 길이까지, 7부 바지·청바지 불가, 스파이크 없는 골프화",
+   "evidence": [
+    "복장: 모자·칼라 셔츠, 상의는 하의 안에·벨트, 발목 양말·니삭스, 남성 반바지는 무릎 길이까지, 7부 바지·청바지 불가, 스파이크 없는 골프화"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0253/",
+   "confidence": "medium",
+   "source_type": "official_summary(greenfeeguide)",
+   "checked_at": "2026-11-27",
+   "note": "공개 요금 정보가 골프장 공식 안내를 정리한 값(확인일 페이지 표기)"
   },
   "pace": {
-   "value": null,
-   "evidence": []
+   "value": "1홀 이상 플레이 지연 등 지나친 진행 지연은 패널티 적용 대상",
+   "evidence": [
+    "진행이 늦으면: 1홀 이상 플레이 지연 등 지나친 진행 지연은 패널티 적용 대상"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0253/",
+   "confidence": "medium",
+   "source_type": "official_summary(greenfeeguide)",
+   "checked_at": "2026-11-27",
+   "note": "공개 요금 정보가 골프장 공식 안내를 정리한 값(확인일 페이지 표기)"
   }
  },
  "facilities": {
   "practice": {
-   "value": null,
-   "evidence": []
+   "value": "드라이빙 레인지, 퍼팅 그린, 어프로치 연습장",
+   "evidence": [
+    "연습 시설: 드라이빙 레인지, 퍼팅 그린, 어프로치 연습장"
+   ],
+   "source_url": "https://1n2d-golf.co.kr/seolhaewon/info/",
+   "confidence": "medium",
+   "source_type": "public_info(1n2d-golf)",
+   "checked_at": "2026-11-27",
+   "note": "1박2일골프 시설·기타 요약(2차 공개자료, 2026-11-27 조회) — 예약 전 공식 채널 재확인 권장"
   },
   "indoor_range": {
    "value": null,
    "evidence": []
   },
   "food": {
-   "value": null,
-   "evidence": []
+   "value": "한식·양식 레스토랑, 서양식 조식·해장국·짬뽕·섭국 등",
+   "evidence": [
+    "레스토랑: 한식·양식 레스토랑, 서양식 조식·해장국·짬뽕·섭국 등"
+   ],
+   "source_url": "https://1n2d-golf.co.kr/seolhaewon/info/",
+   "confidence": "medium",
+   "source_type": "public_info(1n2d-golf)",
+   "checked_at": "2026-11-27",
+   "note": "1박2일골프 시설·기타 요약(2차 공개자료, 2026-11-27 조회) — 예약 전 공식 채널 재확인 권장"
   },
   "snack_bar": {
    "value": null,
    "evidence": []
   },
   "locker_sauna": {
-   "value": null,
-   "evidence": []
+   "value": "남녀 분리 라커룸, 사우나·샤워 완비",
+   "evidence": [
+    "라커/사우나: 남녀 분리 라커룸, 사우나·샤워 완비"
+   ],
+   "source_url": "https://1n2d-golf.co.kr/seolhaewon/info/",
+   "confidence": "medium",
+   "source_type": "public_info(1n2d-golf)",
+   "checked_at": "2026-11-27",
+   "note": "1박2일골프 시설·기타 요약(2차 공개자료, 2026-11-27 조회) — 예약 전 공식 채널 재확인 권장"
   },
   "lodging": {
    "value": "골프텔",
@@ -281,6 +516,17 @@
   "shuttle": {
    "value": null,
    "evidence": []
+  },
+  "proshop": {
+   "value": "프로샵",
+   "evidence": [
+    "프로샵: 골프 용품 프로샵 운영"
+   ],
+   "source_url": "https://1n2d-golf.co.kr/seolhaewon/info/",
+   "confidence": "medium",
+   "source_type": "public_info(1n2d-golf)",
+   "checked_at": "2026-11-27",
+   "note": "1박2일골프 시설·기타 요약(2차 공개자료, 2026-11-27 조회) — 예약 전 공식 채널 재확인 권장"
   }
  },
  "rental": {
@@ -293,7 +539,7 @@
   "nine_hole": null,
   "range_finder": null,
   "reservation": null,
-  "source_url": null,
+  "source_url": "https://greenfeeguide.co.kr/course/gc-0253/",
   "nearby_delivery": {
    "region": "강원",
    "sido": "강원특별자치도",
@@ -348,9 +594,6 @@
   "alert": null,
   "unconfirmed": [
    "야간 라이트",
-   "잔디(티)",
-   "잔디(페어웨이)",
-   "잔디(그린)",
    "2인 플레이",
    "3인 플레이",
    "5인 플레이",
@@ -377,7 +620,13 @@
    "https://greenfeeguide.co.kr/course/gc-0253/",
    "https://parkgolfinfo.co.kr/설해원cc양양-골프장-이용-가이드-예약-바로가기/",
    "https://papahun.com/seolhaewoncc-greenfee/",
-   "https://todaygolfgo.com/regions/gangwon/"
+   "https://todaygolfgo.com/regions/gangwon/",
+   "https://1n2d-golf.co.kr/seolhaewon/course/",
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
   ],
   "collected_at": "2026-11-26T09:55:47+09:00"
  },
@@ -386,18 +635,20 @@
   "official_reason": "운영 중(공식 홈페이지 정상)",
   "pages_collected": 0,
   "third_party": {
-   "received_report": true
+   "received_report": true,
+   "teepick": true,
+   "greenfeeguide": true
   },
   "render_hint": "report",
   "plan_strategy": "subagent_report(2026-11-26)"
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.8,
+  "basic": 0.89,
+  "course": 0.4,
   "fee": 1.0,
-  "ops": 0.07,
-  "facility": 0.2,
-  "briefing": 0.75,
-  "rental": 1.0
+  "ops": 0.43,
+  "facility": 0.5,
+  "briefing": 0.5,
+  "rental": 0.75
  }
 }

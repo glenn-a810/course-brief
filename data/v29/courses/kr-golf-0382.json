@@ -22,11 +22,12 @@
   "schema_previous": "stage2b/1.0",
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "restructured_from_7key": false,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0382",
@@ -98,7 +99,8 @@
   "holes_conflict": false,
   "facility_cluster": null,
   "factcheck_2026_11_26": null,
-  "address_original": "통영시 산양읍 담안길 240"
+  "address_original": "통영시 산양읍 담안길 240",
+  "par": 72
  },
  "course": {
   "holes": 18,
@@ -114,7 +116,9 @@
   },
   "kga": null,
   "kga_hole_est": null,
-  "extra_courses": null
+  "extra_courses": null,
+  "length_m": 6534,
+  "par": 72
  },
  "fee": {
   "weekday": 145000,
@@ -141,13 +145,16 @@
     "url": "https://greenfeeguide.co.kr/course/gc-0379/",
     "checked_at": "2026-11-01"
    }
-  ]
+  ],
+  "checked_at": "2026-11-27"
  },
  "cancel": {
   "cancel_policy": null,
-  "open_cycle": null,
+  "open_cycle": "일반예약: 3주전부터 매주 월요일(9시)~1주일 분에 대한 실시간 예약신청. 인터넷 홈페이지·모바일 웹·전화 예약. 예약 마감 해당일 1일전 17시.",
   "notes": null,
-  "evidence": [],
+  "evidence": [
+   "https://wondergolf.co.kr/courses/kr-kakao-1493127856"
+  ],
   "weather_evidence": []
  },
  "ops": {
@@ -172,8 +179,14 @@
    "evidence": []
   },
   "cart_type": {
-   "value": null,
-   "evidence": []
+   "value": "카트 운전은 캐디만",
+   "evidence": [
+    "카트 운전은 캐디만"
+   ],
+   "source_url": "https://dongwonresort.co.kr/pagesite/golf/guide.asp",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfee guide tables)"
   },
   "cart_entry": {
    "value": null,
@@ -261,7 +274,7 @@
   "nine_hole": null,
   "range_finder": null,
   "reservation": null,
-  "source_url": null,
+  "source_url": "https://greenfeeguide.co.kr/course/gc-0379/",
   "nearby_delivery": {
    "region": "영남",
    "sido": "경상남도",
@@ -316,7 +329,6 @@
   "alert": null,
   "unconfirmed": [
    "야간 라이트",
-   "예약 오픈 주기",
    "취소·위약 규정",
    "2인 플레이",
    "3인 플레이",
@@ -334,8 +346,7 @@
    "락커·사우나",
    "좌타용 클럽",
    "골프화 대여",
-   "제세금",
-   "예약 비고"
+   "제세금"
   ],
   "unconfirmed_labels_added": [
    "제세금",
@@ -343,7 +354,13 @@
   ],
   "sources": [
    "https://greenfeeguide.co.kr/course/gc-0379/",
-   "https://www.rankue.co.kr/golf/course/통영동원로얄CC"
+   "https://www.rankue.co.kr/golf/course/통영동원로얄CC",
+   "https://wondergolf.co.kr/courses/kr-kakao-1493127856",
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
   ],
   "collected_at": "2026-11-26T10:33:21+09:00"
  },
@@ -352,18 +369,20 @@
   "official_reason": "공식 홈페이지 접속 불가(2026-11-26). 요금·코스 정보는 공개 요금 정보로 확인",
   "pages_collected": 0,
   "third_party": {
-   "received_report": true
+   "received_report": true,
+   "teepick": true,
+   "greenfeeguide": true
   },
   "render_hint": "report",
   "plan_strategy": "subagent_report(2026-11-26)"
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.8,
+  "basic": 0.78,
+  "course": 0.4,
   "fee": 1.0,
-  "ops": 0.0,
+  "ops": 0.07,
   "facility": 0.2,
-  "briefing": 0.75,
-  "rental": 1.0
+  "briefing": 0.5,
+  "rental": 0.75
  }
 }

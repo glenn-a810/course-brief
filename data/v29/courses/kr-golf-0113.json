@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0113",
@@ -58,9 +59,9 @@
   },
   "course_spec": {
    "holes": 9,
-   "par": null,
+   "par": 36,
    "blocks": [],
-   "length_m": null,
+   "length_m": 5464,
    "kga": {
     "kga_course_code": "426",
     "kga_name": "남양주",
@@ -124,14 +125,15 @@
   ],
   "status": "operating",
   "facility_cluster": null,
-  "factcheck_2026_11_26": null
+  "factcheck_2026_11_26": null,
+  "par": 36
  },
  "course": {
   "holes": 9,
   "holes_received": null,
-  "course_names": null,
+  "course_names": "9홀(우그린·좌그린)",
   "membership_type": "대중제",
-  "night_light": null,
+  "night_light": "머스코(Musco) 야간 조명으로 주·야간 라운드 운영",
   "blocks": [],
   "grass": {
    "tee": null,
@@ -196,34 +198,48 @@
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": null,
-  "par": null
+  "length_m": 5464,
+  "par": 36
  },
  "fee": {
-  "weekday": null,
-  "weekend": null,
+  "weekday": 180000,
+  "weekend": 240000,
   "weekday_text": null,
-  "weekend_text": null,
-  "basis": null,
+  "weekend_text": "240,000원 ~ 250,000원",
+  "basis": "official",
   "tax_included": null,
-  "cart": null,
-  "caddie": {
-   "value": null,
-   "none": false,
-   "evidence": "고객 편의를 위해 그린피, 식음료, 캐디피 등 모든 비용은 퇴장 시 한 번에 결제하는 후불제로 운영됩니다.",
-   "source": "공식",
-   "url": "https://www.clublonge.com/Club/namyangju/ClubHouse"
+  "cart": {
+   "value": 100000,
+   "note": "팀당(4인 1대)",
+   "source": "그린피가이드(골프장 공식 요금표 인용)",
+   "url": "https://greenfeeguide.co.kr/course/gc-0053/"
   },
-  "as_of": null,
-  "source_url": null,
+  "caddie": {
+   "value": 150000,
+   "raw": "150,000원",
+   "text": "팀당(4인 기준)",
+   "source": "공개 요금 정보",
+   "url": "https://greenfeeguide.co.kr/course/gc-0053/",
+   "none": false
+  },
+  "as_of": "2026-10-06",
+  "source_url": "https://greenfeeguide.co.kr/course/gc-0053/",
   "note": null,
-  "sources": [],
-  "checked_at": null,
+  "sources": [
+   {
+    "source": "그린피가이드 — 골프장 공식 요금표 인용",
+    "url": "https://greenfeeguide.co.kr/course/gc-0053/",
+    "checked_at": "2026-11-27",
+    "note": "주중 180000원 / 주말 240000원 (비회원 18홀 기준, 2026-10-06 확인)"
+   }
+  ],
+  "checked_at": "2026-11-27",
   "official_green_evidence": [
    "FRONT 품위 있는 고객서비스 프론트는 고객내장시 체크인, 체크아웃 뿐만 아니라 클럽 이용시 각종 문의사항을 안내하는 역할을 담당하고 있습니다.품위있는 고객서비스를 위하여 그린피, 식음료등 모든 요금은 후불제로 운영하고 있습니다.도우미 피도 고객의 편의를 도모코자 현장에서 지불하지 않고 프론트에서 나가실때 정산하도록 운영하고 있습니다.",
    "고객 편의를 위해 그린피, 식음료, 캐디피 등 모든 비용은 퇴장 시 한 번에 결제하는 후불제로 운영됩니다."
   ],
-  "official_rental": null
+  "official_rental": null,
+  "market": {}
  },
  "cancel": {
   "cancel_policy": null,
@@ -528,8 +544,19 @@
   "recent_notice_text": null,
   "course_notes": null,
   "alert": null,
-  "unconfirmed": [],
-  "sources": []
+  "unconfirmed": [
+   "캐디피 미확인",
+   "취소·위약 규정 미확인",
+   "예약 오픈 주기 미확인",
+   "수집 한계(2026-11-27): 공식 홈페이지가 스크립트·프레임 기반으로 렌더링되어 HTTP 수집으로 요금·규정 본문 확보 불가"
+  ],
+  "sources": [
+   {
+    "source": "그린피가이드 코스 페이지",
+    "url": "https://greenfeeguide.co.kr/course/gc-0053/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "ok",
@@ -537,19 +564,19 @@
   "pages_collected": 14,
   "third_party": {
    "teepick": false,
-   "greenfeeguide": false
+   "greenfeeguide": true
   },
   "render_hint": "static",
   "plan_strategy": "static(직접 파싱)",
   "browser_batch": false
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.8,
-  "fee": 0.0,
+  "basic": 0.78,
+  "course": 0.4,
+  "fee": 1.0,
   "ops": 0.43,
   "facility": 0.4,
-  "briefing": 0.25,
-  "rental": 0.25
+  "briefing": 0.0,
+  "rental": 0.0
  }
 }

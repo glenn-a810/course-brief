@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0159",
@@ -58,13 +59,13 @@
    "master": "courses_master.json v2.0 (문체부·KGA·KGBA·티픽·지도)",
    "synced_to": "courses_master.json v2.7 (2026-11-26 단일 스키마 정규화)"
   },
-  "par": null,
+  "par": 72,
   "holes_teepick": 18,
   "course_spec": {
    "holes": 18,
-   "par": null,
+   "par": 72,
    "blocks": [],
-   "length_m": null,
+   "length_m": 5491,
    "kga": null,
    "grass": {
     "evidence": "캐슬파인 골프클럽 GNB 바로가기 본문 바로가기 하단 바로가기 클럽소개 클럽소개 분실물 센터 오시는길 코스소개 코스소개 VALLEY LAKE 이용안내 이용안내 이용요금 예약안내 위약안내 마일리지제도 로컬룰 모바일웹 인터넷예약 실시간예약 대기예약 예약확인/취소 회원라운지 회원정보 My 마일리지 정보마당 공지사항/이벤트 자료실 포토갤러리 명예의전당 날씨정보 로그인 아이디 비밀번호 아이디 저장 회원가입 *원하시는 날짜를 누르시면 예약이 가능합니다.",
@@ -85,7 +86,7 @@
   "holes_received": 18,
   "course_names": null,
   "membership_type": "대중제",
-  "night_light": null,
+  "night_light": true,
   "blocks": [],
   "grass": {
    "tee": null,
@@ -94,52 +95,54 @@
     "source": "공식",
     "url": "https://www.castlepine.co.kr/index.asp"
    },
-   "green": null
+   "green": "벤트그라스 (Dominant)"
   },
   "kga": null,
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": null,
-  "par": null
+  "length_m": 5491,
+  "par": 72
  },
  "fee": {
   "weekday": 80000,
   "weekend": 90000,
-  "weekday_text": null,
-  "weekend_text": null,
-  "basis": null,
+  "weekday_text": "80,000원 ~ 170,000원",
+  "weekend_text": "90,000원 ~ 220,000원",
+  "basis": "official",
   "tax_included": null,
   "cart": {
    "value": 100000,
-   "source": "그린피가이드",
-   "url": "https://greenfeeguide.co.kr/course/gc-0138/"
+   "source": "그린피가이드(공식 요금표)",
+   "url": "https://greenfeeguide.com/course/gc-0138/",
+   "note": "팀당(4인 1대)"
   },
   "caddie": {
    "value": 150000,
-   "source": "그린피가이드",
-   "url": "https://greenfeeguide.co.kr/course/gc-0138/",
-   "none": false
+   "none": false,
+   "source": "그린피가이드(공식 요금표)",
+   "url": "https://greenfeeguide.com/course/gc-0138/"
   },
   "as_of": "2026-11-01",
   "source_url": null,
-  "note": null,
+  "note": "주중/주말 그린피는 시간대·시즌별 최저~최고 범위(최저값을 대표값으로 기재)",
   "sources": [
    {
     "source": "그린피가이드(공식 요금표 확인)",
-    "url": "https://greenfeeguide.co.kr/course/gc-0138/",
+    "url": "https://greenfeeguide.com/course/gc-0138/",
     "checked_at": "2026-11-01"
    }
   ],
-  "checked_at": "2026-11-01",
+  "checked_at": "2026-11-27",
   "market": {
-   "weekday_min": null,
+   "weekday_min": 89000,
    "weekend_min": null,
    "part1": null,
    "part2": null,
    "source": "티픽골프장(실거래 관측)",
    "url": "https://teepickgolf.com/course/%EC%BA%90%EC%8A%AC%ED%8C%8C%EC%9D%B8cc",
-   "note": "공시가 아닌 최근 관측 실거래 최저가"
+   "note": "공시가 아닌 최근 관측 실거래 최저가",
+   "checked_at": "2026-11-27"
   },
   "official_green": {
    "value": 140000,
@@ -432,19 +435,21 @@
  },
  "cancel": {
   "cancel_policy": {
-   "value": "3일 전 17:00까지(예약일 제외)캐디일부 시간·코스만 노캐디 — 17:00 이후캐디피 결제캐디에게 직접·현장 지급야간(3부) 라운드야간 라운",
-   "source": "그린피가이드(공식 인용)",
-   "url": "https://greenfeeguide.co.kr/course/gc-0138/"
+   "value": "비회원 기준 주말·공휴일은 4일 전까지, 평일은 3일 전까지 취소 시 예약금 전액 환불. 당일 취소·무단 미내장은 팀별 이용요금의 30% 부과",
+   "source": "공식 홈페이지",
+   "url": "https://www.castlepine.co.kr/pagesite/clause/guide.asp"
   },
   "open_cycle": null,
-  "notes": null,
+  "notes": "최종 취소·위약 조건은 예약 채널 공지와 다를 수 있으니 예약 전 확인 필요",
   "evidence": [
-   "캐슬파인 골프클럽 GNB 바로가기 본문 바로가기 하단 바로가기 클럽소개 클럽소개 분실물 센터 오시는길 코스소개 코스소개 VALLEY LAKE 이용안내 이용안내 이용요금 예약안내 위약안내 마일리지제도 로컬룰 모바일웹 인터넷예약 실시간예약 대기예약 예약확인/취소 회원라운지 회원정보 My 마일리지 정보마당 공지사항/이벤트 자료실 포토갤러리 명예의전당 날씨정보 로그인 아이디 비밀번호 아이디 저장 회원가입 *원하시는 날짜를 누르시면 예약이 가능합니다.",
-   "캐슬파인 골프클럽 GNB 바로가기 본문 바로가기 하단 바로가기 클럽소개 클럽소개 분실물 센터 오시는길 코스소개 코스소개 VALLEY LAKE 이용안내 이용안내 이용요금 예약안내 위약안내 마일리지제도 로컬룰 모바일웹 인터넷예약 실시간예약 대기예약 예약확인/취소 회원라운지 회원정보 My 마일리지 정보마당 공지사항/이벤트 자료실 포토갤러리 명예의전당 날씨정보 코스소개 VALLEY LAKE > 코스소개 > VALLEY 1 HOLE 2 HOLE 3 HOLE 4 HOLE 5 HOLE 6 HOLE 7 HOLE 8 HOLE 9 HOLE 코스공략 ",
-   "캐슬파인 골프클럽 GNB 바로가기 본문 바로가기 하단 바로가기 클럽소개 클럽소개 분실물 센터 오시는길 코스소개 코스소개 VALLEY LAKE 이용안내 이용안내 이용요금 예약안내 위약안내 마일리지제도 로컬룰 모바일웹 인터넷예약 실시간예약 대기예약 예약확인/취소 회원라운지 회원정보 My 마일리지 정보마당 공지사항/이벤트 자료실 포토갤러리 명예의전당 날씨정보 코스소개 VALLEY LAKE > 코스소개 > LAKE 1 HOLE 2 HOLE 3 HOLE 4 HOLE 5 HOLE 6 HOLE 7 HOLE 8 HOLE 9 HOLE 코스공략 TI"
+   "“예약일을 제외한 3일전 17:00이전까지 홈페이지에서 취소가 가능합니다. (17:00이후 취소분은 익일로 취소처리 됨)”",
+   "골프장 공식 홈페이지 안내(비회원 예약 기준) · 2026.10.08 확인 ·",
+   "① 비회원 이용자가 주말이나 공휴일인 이용예정일로부터 4일전까지, 평일인 이용예정일로부터 3일전까지 예약을 취소한 경우에는 예약금의 전액을 환불하여야 한다.",
+   "이용자가 이용예정일 당일 예약을 취소하거나 아무런 통보 없이 이용예정일에 골프장을 이용하지 않을 경우 : 팀별 이용요금의 30%]"
   ],
   "weather_evidence": [
-   "캐디피 및 카트사용료 구 분 캐디피 카트사용료 18 홀 150,000원 100,000원 9 홀 75,000원 50,000원 악천후 정산안내 ※ 9홀 추가시 9홀 요금 적용 상황별요금 구분 1홀 티샷 1홀 종료 2~9홀 10~18홀 그린피 무료 홀별정산 카트비 무료 홀별정산 캐디피 40,000원 50,000원 75,000원 150,000원 ※ 상황별 요금은 강설, 폭우, 기타 천재지변 등으로 경기를 마치지 못했을 경우에만 적용됩니다."
+   "캐디피 및 카트사용료 구 분 캐디피 카트사용료 18 홀 150,000원 100,000원 9 홀 75,000원 50,000원 악천후 정산안내 ※ 9홀 추가시 9홀 요금 적용 상황별요금 구분 1홀 티샷 1홀 종료 2~9홀 10~18홀 그린피 무료 홀별정산 카트비 무료 홀별정산 캐디피 40,000원 50,000원 75,000원 150,000원 ※ 상황별 요금은 강설, 폭우, 기타 천재지변 등으로 경기를 마치지 못했을 경우에만 적용됩니다.",
+   "강설, 폭우, 기타 천재지변 등으로 경기를 마치지 못했을 경우에만 홀별 정산 적용"
   ]
  },
  "ops": {
@@ -508,9 +513,13 @@
   "cart_type": {
    "evidence": [
     "캐디피 및 카트사용료 구 분 캐디피 카트사용료 18 홀 150,000원 100,000원 9 홀 75,000원 50,000원 악천후 정산안내 ※ 9홀 추가시 9홀 요금 적용 상황별요금 구분 1홀 티샷 1홀 종료 2~9홀 10~18홀 그린피 무료 홀별정산 카트비 무료 홀별정산 캐디피 40,000원 50,000원 75,000원 150,000원 ※ 상황별 요금은 강설, 폭우, 기타 천재지변 등으로 경기를 마치지 못했을 경우에만 적용됩니다.",
-    "캐슬파인 골프클럽 GNB 바로가기 본문 바로가기 하단 바로가기 클럽소개 클럽소개 분실물 센터 오시는길 코스소개 코스소개 VALLEY LAKE 이용안내 이용안내 이용요금 예약안내 위약안내 마일리지제도 로컬룰 모바일웹 인터넷예약 실시간예약 대기예약 예약확인/취소 회원라운지 회원정보 My 마일리지 정보마당 공지사항/이벤트 자료실 포토갤러리 명예의전당 날씨정보 코스소개 VALLEY LAKE > 코스소개 > VALLEY 1 HOLE 2 HOLE 3 HOLE 4 HOLE 5 HOLE 6 HOLE 7 HOLE 8 HOLE 9 HOLE 코스공략 "
+    "캐디 이외는 골프카트 운전 삼가"
    ],
-   "value": null
+   "value": "캐디 이외는 골프카트 운전 삼가",
+   "source_url": "https://www.castlepine.co.kr/pagesite/use/guide.asp",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfee guide tables)"
   },
   "cart_entry": {
    "evidence": [],
@@ -573,8 +582,14 @@
    "value": "문구 확인(원문 근거)"
   },
   "pace": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "지나친 지연·진행 비협조 → 퇴장·예약 정지 (3개월 정지)"
+   ],
+   "value": "지나친 지연·진행 비협조 → 퇴장·예약 정지 (3개월 정지)",
+   "source_url": "https://castlepine.co.kr/pagesite/use/penalty.asp",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfee guide tables)"
   },
   "grass": null
  },
@@ -611,16 +626,28 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": null,
-   "evidence": []
+   "value": "사우나 있음",
+   "evidence": [
+    "사우나 있음 — https://greenfeeguide.co.kr/course/gc-0138/"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0138/",
+   "confidence": "medium",
+   "checked_at": "2026-11-27",
+   "value_from": "pass2_third_party"
   },
   "lodging": {
    "value": null,
    "evidence": []
   },
   "other": {
-   "value": null,
-   "evidence": []
+   "value": "사우나 있음",
+   "evidence": [
+    "사우나 있음"
+   ],
+   "source_url": "https://castlepine.co.kr/pagesite/use/penalty.asp",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfee guide tables)"
   },
   "night": {
    "evidence": [
@@ -664,16 +691,16 @@
   }
  },
  "rental": {
-  "available": null,
+  "available": true,
   "full_set": 30000,
-  "fee_text": null,
+  "fee_text": "30,000원 · 18홀",
   "brand": null,
   "left_handed": null,
   "shoes": null,
   "nine_hole": null,
   "range_finder": null,
   "reservation": null,
-  "source_url": null,
+  "source_url": "https://greenfeeguide.co.kr/course/gc-0138/",
   "evidence": [],
   "official": null,
   "nearby_delivery": {
@@ -809,7 +836,18 @@
   "course_notes": null,
   "alert": null,
   "unconfirmed": [],
-  "sources": []
+  "sources": [
+   {
+    "source": "그린피가이드 코스 페이지",
+    "url": "https://greenfeeguide.co.kr/course/gc-0138/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "ok",
@@ -824,12 +862,12 @@
   "browser_batch": false
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.6,
+  "basic": 0.89,
+  "course": 0.2,
   "fee": 1.0,
-  "ops": 0.57,
-  "facility": 0.4,
-  "briefing": 0.5,
-  "rental": 0.5
+  "ops": 0.71,
+  "facility": 0.6,
+  "briefing": 0.0,
+  "rental": 0.75
  }
 }

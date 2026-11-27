@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0200",
@@ -58,13 +59,13 @@
    "master": "courses_master.json v2.0 (문체부·KGA·KGBA·티픽·지도)",
    "synced_to": "courses_master.json v2.7 (2026-11-26 단일 스키마 정규화)"
   },
-  "par": null,
+  "par": 72,
   "holes_teepick": 18,
   "course_spec": {
    "holes": 18,
-   "par": null,
+   "par": 72,
    "blocks": [],
-   "length_m": null,
+   "length_m": 6510,
    "kga": {
     "kga_course_code": "283",
     "kga_name": "노스팜",
@@ -143,7 +144,7 @@
  "course": {
   "holes": 18,
   "holes_received": 18,
-  "course_names": null,
+  "course_names": "동·서 각 9홀",
   "membership_type": "대중제",
   "night_light": null,
   "blocks": [],
@@ -220,46 +221,48 @@
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": null,
-  "par": null
+  "length_m": 6510,
+  "par": 72
  },
  "fee": {
   "weekday": 180000,
   "weekend": 220000,
-  "weekday_text": null,
-  "weekend_text": null,
-  "basis": null,
+  "weekday_text": "180,000원 ~ 220,000원",
+  "weekend_text": "220,000원 ~ 240,000원",
+  "basis": "official",
   "tax_included": null,
   "cart": {
    "value": 100000,
-   "source": "그린피가이드",
-   "url": "https://greenfeeguide.co.kr/course/gc-0062/"
+   "source": "그린피가이드(공식 요금표)",
+   "url": "https://greenfeeguide.com/course/gc-0062/",
+   "note": "팀당(4인 1대)"
   },
   "caddie": {
    "value": 150000,
-   "source": "그린피가이드",
-   "url": "https://greenfeeguide.co.kr/course/gc-0062/",
-   "none": false
+   "none": false,
+   "source": "그린피가이드(공식 요금표)",
+   "url": "https://greenfeeguide.com/course/gc-0062/"
   },
   "as_of": "2026-11-01",
   "source_url": null,
-  "note": null,
+  "note": "주중/주말 그린피는 시간대·시즌별 최저~최고 범위(최저값을 대표값으로 기재)",
   "sources": [
    {
     "source": "그린피가이드(공식 요금표 확인)",
-    "url": "https://greenfeeguide.co.kr/course/gc-0062/",
+    "url": "https://greenfeeguide.com/course/gc-0062/",
     "checked_at": "2026-11-01"
    }
   ],
-  "checked_at": "2026-11-01",
+  "checked_at": "2026-11-27",
   "market": {
-   "weekday_min": null,
-   "weekend_min": 240000.0,
+   "weekday_min": 140000,
+   "weekend_min": 240000,
    "part1": null,
    "part2": null,
    "source": "티픽골프장(실거래 관측)",
    "url": "https://teepickgolf.com/course/%EB%85%B8%EC%8A%A4%ED%8C%9C",
-   "note": "공시가 아닌 최근 관측 실거래 최저가"
+   "note": "공시가 아닌 최근 관측 실거래 최저가",
+   "checked_at": "2026-11-27"
   },
   "official_green_evidence": [
    "※ 최종 적용 요금은 예약 진행 시 표시되는 그린피 금액을 기준으로 합니다.",
@@ -269,13 +272,16 @@
   "official_rental": null
  },
  "cancel": {
-  "cancel_policy": null,
-  "open_cycle": null,
+  "cancel_policy": {
+   "value": "6일 전까지 정상 취소. 4~5일 전 1개월, 3일 전 2개월, 2일 전 3개월, 1일 전 6개월, 당일 취소 1년, 미내장(No-Show) 예약 영구정지. 월 3회 취소 시 6개월 정지",
+   "source": "공식 홈페이지",
+   "url": "https://www.npcc.co.kr/guide/terms.asp"
+  },
+  "open_cycle": "(※ 전화예약은 받지 않습니다) • 예약일 3주전 오전 10시에 실시간 오픈됩니다.",
   "notes": null,
   "evidence": [
-   "노스팜 컨트리클럽 클럽안내 인터넷예약 코스안내 이용안내 정보안내 마이페이지 로그인 회원가입 인사말 연혁 찾아오시는길 부대시설 실시간예약 예약확인 및 취소 예약안내 위약안내 코스소개 코스제원 코스갤러리 이용료 셀프체크인 골프장 이용수칙 로컬룰 단체팀 안내 공지사항 명예의 전당 날씨정보 분실물 안내 로그인 회원가입 아이디/비밀번호찾기 Course Guide 코스안내 코스소개 코스제원 코스갤러리 코스소개 코스안내 > 코스소개 ‘노스팜 컨트리클럽 코스 및 홀 안내입니다.’코스를 선택해주세요.",
-   "노스팜 컨트리클럽 클럽안내 인터넷예약 코스안내 이용안내 정보안내 마이페이지 로그인 회원가입 인사말 연혁 찾아오시는길 부대시설 실시간예약 예약확인 및 취소 예약안내 위약안내 코스소개 코스제원 코스갤러리 이용료 셀프체크인 골프장 이용수칙 로컬룰 단체팀 안내 공지사항 명예의 전당 날씨정보 분실물 안내 로그인 회원가입 아이디/비밀번호찾기 Course Guide 코스안내 코스소개 코스제원 코스갤러리 코스제원 코스안내 > 코스제원 ‘노스팜 컨트리클럽 코스 및 홀 안내입니다.’코스를 선택해주세요.",
-   "노스팜 컨트리클럽 클럽안내 인터넷예약 코스안내 이용안내 정보안내 마이페이지 로그인 회원가입 인사말 연혁 찾아오시는길 부대시설 실시간예약 예약확인 및 취소 예약안내 위약안내 코스소개 코스제원 코스갤러리 이용료 셀프체크인 골프장 이용수칙 로컬룰 단체팀 안내 공지사항 명예의 전당 날씨정보 분실물 안내 로그인 회원가입 아이디/비밀번호찾기 reservation 인터넷예약 실시간예약 예약확인/취소 예약안내 위약안내 예약안내 인터넷예약 > 예약안내 • 예약방법 • 예약은 인터넷회원만 가능하며, 노스팜 홈페이지 또는 모바일 예약으로 가능합니다."
+   "미내장(No-Show) 예약 영구정지 / 당일취소 1년 예약정지 / 1일전 취소 6개월 예약정지 / 2일전 취소 3개월 예약정지 / 3일전 취소 2개월 예약정지 / 4~5일전 취소 1개월 예약정지 / 6일전 취소 정상취소",
+   "월 3회 취소 시 6개월 예약정지"
   ],
   "weather_evidence": [
    "악천후시 이용료 악천후시 이용료 구분 그린피 카트비 캐디피 평일 주말 1~3홀 홀별 정산해당일 그린피 Ⅹ (이용홀수 ÷ 18) 30,000 40,000 4~9홀 60,000 80,000 10~18홀 100,000 150,000 ※ 홀별정산 요금은 폭우, 낙뢰, 강설 등 불가항력적인 천재지변으로 인하여 경기를 계속 할 수 없다고 골프장에서 선언한 경우에 적용됩니다.",
@@ -342,8 +348,6 @@
   },
   "checkin": {
    "evidence": [
-    "노스팜 컨트리클럽 클럽안내 인터넷예약 코스안내 이용안내 정보안내 마이페이지 로그인 회원가입 인사말 연혁 찾아오시는길 부대시설 실시간예약 예약확인 및 취소 예약안내 위약안내 코스소개 코스제원 코스갤러리 이용료 셀프체크인 골프장 이용수칙 로컬룰 단체팀 안내 공지사항 명예의 전당 날씨정보 분실물 안내 로그인 회원가입 아이디/비밀번호찾기 Course Guide 코스안내 코스소개 코스제원 코스갤러리 코스소개 코스안내 > 코스소개 ‘노스팜 컨트리클럽 코스 및 홀 안내입니다.’코스를 선택해주세요.",
-    "노스팜 컨트리클럽 클럽안내 인터넷예약 코스안내 이용안내 정보안내 마이페이지 로그인 회원가입 인사말 연혁 찾아오시는길 부대시설 실시간예약 예약확인 및 취소 예약안내 위약안내 코스소개 코스제원 코스갤러리 이용료 셀프체크인 골프장 이용수칙 로컬룰 단체팀 안내 공지사항 명예의 전당 날씨정보 분실물 안내 로그인 회원가입 아이디/비밀번호찾기 Course Guide 코스안내 코스소개 코스제원 코스갤러리 코스제원 코스안내 > 코스제원 ‘노스팜 컨트리클럽 코스 및 홀 안내입니다.’코스를 선택해주세요.",
     "내장객은 티오프시간 40분 전까지 프론트에 등록하여야 합니다."
    ],
    "value": "티오프 40분 전 도착",
@@ -388,8 +392,14 @@
    "value": null
   },
   "pace": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "도박성 내기·스코어 기준 → 경고·홀 패스·퇴장"
+   ],
+   "value": "도박성 내기·스코어 기준 → 경고·홀 패스·퇴장",
+   "source_url": "https://www.npcc.co.kr/guide/local.asp",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfee guide tables)"
   },
   "grass": null
  },
@@ -418,16 +428,29 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": null,
-   "evidence": []
+   "value": "사우나 있음",
+   "evidence": [
+    "사우나 있음 — https://greenfeeguide.co.kr/course/gc-0062/"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0062/",
+   "confidence": "medium",
+   "checked_at": "2026-11-27",
+   "value_from": "pass2_third_party"
   },
   "lodging": {
    "value": null,
    "evidence": []
   },
   "other": {
-   "value": null,
-   "evidence": []
+   "value": "프로샵",
+   "evidence": [
+    "other: 프로샵"
+   ],
+   "source_url": "https://greenfeeguide.com/course/gc-0062/",
+   "source_type": "greenfee_guide",
+   "confidence": "medium",
+   "checked_at": "2026-11-27",
+   "value_from": "batch2_supplement"
   },
   "night": {
    "evidence": [],
@@ -463,16 +486,16 @@
   }
  },
  "rental": {
-  "available": null,
+  "available": true,
   "full_set": 50000,
-  "fee_text": null,
+  "fee_text": "50,000원 · 18홀",
   "brand": null,
   "left_handed": null,
   "shoes": null,
   "nine_hole": null,
   "range_finder": null,
   "reservation": null,
-  "source_url": null,
+  "source_url": "https://greenfeeguide.co.kr/course/gc-0062/",
   "evidence": [
    "이용료 안내 이용료 카트비 100,000 팀당 캐디피 150,000 팀당 대여채 풀세트 50,000 / 단품 10,000 ※ 대여채의 경우 사전에 마감될 수 있습니다."
   ],
@@ -549,7 +572,18 @@
   "course_notes": null,
   "alert": null,
   "unconfirmed": [],
-  "sources": []
+  "sources": [
+   {
+    "source": "그린피가이드 코스 페이지",
+    "url": "https://greenfeeguide.co.kr/course/gc-0062/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "ok",
@@ -564,12 +598,12 @@
   "browser_batch": false
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.8,
+  "basic": 0.89,
+  "course": 0.4,
   "fee": 1.0,
-  "ops": 0.29,
-  "facility": 0.1,
-  "briefing": 0.5,
-  "rental": 0.5
+  "ops": 0.36,
+  "facility": 0.3,
+  "briefing": 0.0,
+  "rental": 0.75
  }
 }

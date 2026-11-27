@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0117",
@@ -56,13 +57,13 @@
    "master": "courses_master.json v2.0 (문체부·KGA·KGBA·티픽·지도)",
    "synced_to": "courses_master.json v2.7 (2026-11-26 단일 스키마 정규화)"
   },
-  "par": null,
+  "par": 72,
   "holes_teepick": 18,
   "course_spec": {
    "holes": 18,
-   "par": null,
+   "par": 72,
    "blocks": [],
-   "length_m": null,
+   "length_m": 6322,
    "kga": {
     "kga_course_code": "71",
     "kga_name": "티클라우드",
@@ -131,7 +132,7 @@
  "course": {
   "holes": 18,
   "holes_received": 18,
-  "course_names": null,
+  "course_names": "해밀·비체 각 9홀",
   "membership_type": "회원제",
   "night_light": null,
   "blocks": [],
@@ -198,8 +199,8 @@
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": null,
-  "par": null
+  "length_m": 6322,
+  "par": 72
  },
  "fee": {
   "weekday": 240000,
@@ -409,13 +410,18 @@
   }
  },
  "cancel": {
-  "cancel_policy": null,
-  "open_cycle": null,
+  "cancel_policy": {
+   "value": "이용예정일 2일 전까지 취소하면 예약금의 50% 환불, 2일 전까지 취소하지 않거나 노쇼 시 예약금 환불 없음",
+   "source": "공식 홈페이지",
+   "url": "https://www.teecloud.co.kr/"
+  },
+  "open_cycle": "이용예정일 기준 최대 1개월 전부터 예약 가능",
   "notes": null,
   "evidence": [
    "⑤ 이용자가 예약을 불이행하는 경우에는 사업자는 합리적인 범위내에서 벌점부과 또는 일정기간의 예약정지나 이용제한 등의 조치를 취할 수 있으며 본 약관에 첨부된 [별표 1]위약규정 에 의한다.",
    "다만, 이용예정일로부터 2일전에 예약을 취소한 경우에는 예약금 중 50%를 환불한다.",
-   "② 비회원 이용자가 이용예정일로부터 2일전까지 예약의 취소가 없거나 아무런 통지없이 이용예정일에 골프장을 이용하지 않을 경우에는, 예약금을 환불하지 않는다."
+   "② 비회원 이용자가 이용예정일로부터 2일전까지 예약의 취소가 없거나 아무런 통지없이 이용예정일에 골프장을 이용하지 않을 경우에는, 예약금을 환불하지 않는다.",
+   "예약 오픈 주기: 이용예정일 기준 최대 1개월 전부터 예약 가능 (https://greenfeeguide.co.kr/guides/golf-course-booking-guide/)"
   ],
   "weather_evidence": [
    "구분 주중 주말 비고 비회원 240,000 290,000 * 폭우, 강설로 인한 경기중단 시 : 홀별정산 * 개인사유로 플레이 중단한 경우 : 전액 * 5월1일 근로자의날은 주말 요금이 적용됩니다."
@@ -574,8 +580,14 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": null,
-   "evidence": []
+   "value": "사우나 있음",
+   "evidence": [
+    "사우나 있음 — https://greenfeeguide.co.kr/course/gc-0145/"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0145/",
+   "confidence": "medium",
+   "checked_at": "2026-11-27",
+   "value_from": "pass2_third_party"
   },
   "lodging": {
    "value": null,
@@ -837,8 +849,22 @@
   "recent_notice_text": null,
   "course_notes": null,
   "alert": null,
-  "unconfirmed": [],
-  "sources": []
+  "unconfirmed": [
+   "야간(3부) 운영 여부 미확인",
+   "수집 한계(2026-11-27): 공식 홈페이지가 스크립트·프레임 기반으로 렌더링되어 HTTP 수집으로 요금·규정 본문 확보 불가"
+  ],
+  "sources": [
+   {
+    "source": "그린피가이드 코스 페이지",
+    "url": "https://greenfeeguide.co.kr/course/gc-0145/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "ok",
@@ -853,12 +879,12 @@
   "browser_batch": false
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.8,
+  "basic": 0.89,
+  "course": 0.4,
   "fee": 1.0,
   "ops": 0.43,
-  "facility": 0.2,
-  "briefing": 0.5,
-  "rental": 1.0
+  "facility": 0.3,
+  "briefing": 0.0,
+  "rental": 0.75
  }
 }

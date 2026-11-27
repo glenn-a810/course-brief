@@ -12,9 +12,34 @@
   ],
   "source": "raw/received_gangwon_65.json (외부 데이터 수신, 2026-11-26)",
   "review": {
-   "checked_at": null,
-   "status": "not_crosschecked",
-   "checks": []
+   "checked_at": "2026-11-27",
+   "status": "supplemented(공개 요약·조사자료)",
+   "checks": [
+    {
+     "field": "facilities.locker_sauna",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "사우나·헬스클럽",
+     "result": "보완",
+     "url": "https://www.wellihillipark.com/",
+     "quote": "사우나/헬스클럽",
+     "source_type": "official_research",
+     "confidence": "medium",
+     "checked_at": "2026-11-27",
+     "note": "2026-11-26 공식 홈페이지 조사자료에서 이관한 값(문구는 요약·환산일 수 있음)"
+    },
+    {
+     "field": "fee.note",
+     "received": null,
+     "verified": "공식 요금표 미게시, 예약처 실시간 가격으로만 확인됩니다(2026-10~11 실거래 18홀 주중 130,000원선, 주말 140,000~160,000원).",
+     "result": "보완",
+     "url": "https://todaygolfgo.com/golf-courses/master/golf-courses/",
+     "quote": "공식 요금표 미게시, 예약처 실시간 가격으로만 확인됩니다(2026-10~11 실거래 18홀 주중 130,000원선, 주말 140,000~160,000원).",
+     "source_type": "official_research",
+     "confidence": "medium",
+     "checked_at": "2026-11-27",
+     "note": "2026-11-26 공식 홈페이지 조사자료에서 이관한 값(문구는 요약·환산일 수 있음)"
+    }
+   ]
   },
   "data_checks": [
    "대표전화 표기 차이: 마스터 033-340-3000 / 수신 033-340-3048",
@@ -23,11 +48,13 @@
   "schema_previous": "stage2b/1.0",
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "restructured_from_7key": false,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "batch3_patch": "2026-11-27 배치3 보완: 1개 항목(공식 홈페이지·공개 요금 안내 기준, 미확인 값 생성 없음)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0479",
@@ -129,8 +156,8 @@
  "fee": {
   "weekday": null,
   "weekend": null,
-  "weekday_text": "미확인 — 공식 요금표 미게시, 2026-10~11 실거래 18홀 130,000원선(최고 200,000원·특가 120,000원)",
-  "weekend_text": "미확인 — 2026-10~11 실거래 18홀 140,000~160,000원",
+  "weekday_text": null,
+  "weekend_text": null,
   "basis": "공식 홈페이지에 요금표 미게시(2026-11-26 확인). 요금은 예약처 실시간 가격으로만 확인됨. 웰리힐리CC 관리팀이 코스 관리를 함께 담당",
   "tax_included": null,
   "cart": {
@@ -139,14 +166,27 @@
   "caddie": null,
   "as_of": null,
   "source_url": "https://todaygolfgo.com/golf-courses/master/golf-course-moct-20241231-0042/",
-  "note": null,
+  "note": "공식 요금표 미게시, 예약처 실시간 가격으로만 확인됩니다(2026-10~11 실거래 18홀 주중 130,000원선, 주말 140,000~160,000원).",
   "sources": [
    {
     "source": "수신 조사(공식·공개 예약정보)",
     "url": "https://todaygolfgo.com/golf-courses/master/golf-course-moct-20241231-0042/",
     "checked_at": null
+   },
+   {
+    "source": "공식·공개 안내",
+    "url": "https://greenfeeguide.co.kr/course/gc-0234/",
+    "quote": "캐디피: 0/4",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공식·공개 안내",
+    "url": "https://todaygolfgo.com/golf-courses/master/golf-courses/",
+    "quote": "공식 요금표 미게시, 예약처 실시간 가격으로만 확인됩니다(2026-10~11 실거래 18홀 주중 130,000원선, 주말 140,000~160,000원).",
+    "checked_at": "2026-11-27"
    }
-  ]
+  ],
+  "checked_at": "2026-11-27"
  },
  "cancel": {
   "cancel_policy": null,
@@ -231,8 +271,14 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": null,
-   "evidence": []
+   "value": "사우나·헬스클럽",
+   "evidence": [
+    "사우나/헬스클럽"
+   ],
+   "source_url": "https://www.wellihillipark.com/",
+   "confidence": "medium",
+   "source_type": "official_research",
+   "checked_at": "2026-11-27"
   },
   "lodging": {
    "value": "웰리힐리파크(콘도)",
@@ -368,18 +414,19 @@
   "official_reason": "운영 중(웰리힐리파크 부속 퍼블릭 코스)",
   "pages_collected": 0,
   "third_party": {
-   "received_report": true
+   "received_report": true,
+   "greenfeeguide": true
   },
   "render_hint": "report",
   "plan_strategy": "subagent_report(2026-11-26)"
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.8,
+  "basic": 0.78,
+  "course": 0.4,
   "fee": 0.0,
   "ops": 0.0,
-  "facility": 0.1,
-  "briefing": 0.75,
-  "rental": 0.25
+  "facility": 0.2,
+  "briefing": 0.5,
+  "rental": 0.0
  }
 }

@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0090",
@@ -45,7 +46,7 @@
    "straight_km_nearest": 18.3,
    "straight_name": "강촌IC"
   },
-  "tel": null,
+  "tel": "031-582-5999",
   "homepage": "https://www.venuegcc.com/",
   "operators": [
    "부국관광㈜"
@@ -66,7 +67,7 @@
    "blocks": [
     "GNEWHILL"
    ],
-   "length_m": null,
+   "length_m": 6247,
    "kga": {
     "kga_course_code": "390",
     "kga_name": "베뉴지",
@@ -259,12 +260,18 @@
   ],
   "status": "operating",
   "facility_cluster": null,
-  "factcheck_2026_11_26": null
+  "factcheck_2026_11_26": null,
+  "tel_note": "공식 홈페이지(베뉴지CC) 문의 번호",
+  "designer": {
+   "value": "G & D inc",
+   "source": "공개 정보(그린피가이드)",
+   "url": "https://greenfeeguide.co.kr/course/gc-0154/"
+  }
  },
  "course": {
   "holes": 27,
   "holes_received": 27,
-  "course_names": null,
+  "course_names": "G·휴·힐 각 9홀",
   "membership_type": "대중제",
   "night_light": null,
   "blocks": [
@@ -462,7 +469,7 @@
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": null,
+  "length_m": 6247,
   "par": 72
  },
  "fee": {
@@ -505,7 +512,8 @@
    "part2": null,
    "source": "티픽골프장(실거래 관측)",
    "url": "https://teepickgolf.com/course/%EB%B2%A0%EB%89%B4%EC%A7%80CC",
-   "note": "공시가 아닌 최근 관측 실거래 최저가"
+   "note": "공시가 아닌 최근 관측 실거래 최저가",
+   "checked_at": "2026-11-27"
   },
   "official_browser": {
    "green": {
@@ -673,8 +681,14 @@
    "evidence": []
   },
   "other": {
-   "value": null,
-   "evidence": []
+   "value": "프로샵",
+   "evidence": [
+    "그 밖의 시설: 프로샵"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0154/",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfeeguide)"
   },
   "night": {
    "evidence": [],
@@ -718,16 +732,16 @@
   }
  },
  "rental": {
-  "available": null,
+  "available": true,
   "full_set": 50000,
-  "fee_text": null,
+  "fee_text": "50,000원 · 18홀",
   "brand": null,
   "left_handed": null,
   "shoes": null,
   "nine_hole": null,
   "range_finder": null,
   "reservation": null,
-  "source_url": null,
+  "source_url": "https://greenfeeguide.co.kr/course/gc-0154/",
   "evidence": [],
   "official": null,
   "nearby_delivery": {
@@ -822,8 +836,24 @@
   "recent_notice_text": null,
   "course_notes": null,
   "alert": null,
-  "unconfirmed": [],
-  "sources": []
+  "unconfirmed": [
+   "예약 오픈 주기 미확인",
+   "야간(3부) 운영 여부 미확인",
+   "잔디 종류 미확인",
+   "수집 한계(2026-11-27): 공식 홈페이지 본문을 HTTP 수집으로 확보하지 못함(접속 오류)"
+  ],
+  "sources": [
+   {
+    "source": "그린피가이드 코스 페이지",
+    "url": "https://greenfeeguide.co.kr/course/gc-0154/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "unavailable",
@@ -839,11 +869,11 @@
  },
  "coverage": {
   "basic": 0.89,
-  "course": 1.0,
+  "course": 0.6,
   "fee": 1.0,
   "ops": 0.07,
-  "facility": 0.1,
-  "briefing": 0.5,
-  "rental": 0.5
+  "facility": 0.2,
+  "briefing": 0.0,
+  "rental": 0.75
  }
 }

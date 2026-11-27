@@ -12,8 +12,8 @@
   ],
   "source": "raw/received_gangwon_65.json (외부 데이터 수신, 2026-11-26)",
   "review": {
-   "checked_at": "2026-11-26",
-   "status": "verified_official",
+   "checked_at": "2026-11-27",
+   "status": "supplemented(공개 요약·조사자료)",
    "checks": [
     {
      "field": "홀수",
@@ -56,6 +56,74 @@
      "verified": "동일(퍼터 10,000, VAT 포함)",
      "result": "일치",
      "url": "https://cistar.kr/golf/golf-guide/"
+    },
+    {
+     "field": "ops.checkin",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "티오프 30분 전 도착",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0239/",
+     "quote": "도착: 티오프 30분 전 도착",
+     "source_type": "official_summary(greenfeeguide)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "ops.dress",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "별도 복장 규정 없음(골프웨어 권장), 남성 반바지는 무릎 바로 위 길이까지",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0239/",
+     "quote": "복장: 별도 복장 규정 없음(골프웨어 권장), 남성 반바지는 무릎 바로 위 길이까지",
+     "source_type": "official_summary(greenfeeguide)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "ops.pace",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "경기진행지연 및 비협조로 팀 플레이에 막대한 지장초래 시 6개월 예약 및 회원혜택 정지, 퇴장",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0239/",
+     "quote": "진행이 늦으면: 경기진행지연 및 비협조로 팀 플레이에 막대한 지장초래 시 6개월 예약 및 회원혜택 정지, 퇴장",
+     "source_type": "official_summary(greenfeeguide)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.closed_days",
+     "received": "{\"value\": null, \"third_party\": null, \"evidence\": []}",
+     "verified": "정기 휴장일 없음",
+     "result": "보완",
+     "url": "https://www.cistar.co.kr/",
+     "quote": "정기 휴장일 없음, 티오프 30분 전 도착",
+     "source_type": "official_research",
+     "confidence": "medium",
+     "checked_at": "2026-11-27",
+     "note": "2026-11-26 공식 홈페이지 조사자료에서 이관한 값(문구는 요약·환산일 수 있음)"
+    },
+    {
+     "field": "ops.checkin",
+     "received": "{\"value\": \"티오프 30분 전 도착\", \"evidence\": [\"도착: 티오프 30분 전 도착\"], \"source_url\": \"https://greenfeeguide.co.kr/course/gc-0239/\", \"confidence\": \"medium\", \"source_type\": \"official_summary(greenfeeguide)\", \"chec",
+     "verified": "티오프 30분 전 도착(지각 시 홀 점프)",
+     "result": "보완",
+     "url": "https://www.cistar.co.kr/",
+     "quote": "티오프 30분 전 도착, 지각 시 홀 점프 원칙",
+     "source_type": "official_research",
+     "confidence": "medium",
+     "checked_at": "2026-11-27",
+     "note": "2026-11-26 공식 홈페이지 조사자료에서 이관한 값(문구는 요약·환산일 수 있음)"
+    },
+    {
+     "field": "fee.checked_at",
+     "received": null,
+     "verified": "2026-11-27",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0239/",
+     "quote": "요금 확인일 2026-11-01 (그린피가이드 2026-11-27 조회)",
+     "source_type": "third_party",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
     }
    ]
   },
@@ -66,11 +134,14 @@
   "schema_previous": "stage2b/1.0",
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "restructured_from_7key": false,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "batch3_patch": "2026-11-27 배치3 보완: 5개 항목(공식 홈페이지·공개 요금 안내 기준, 미확인 값 생성 없음)",
+  "pass2_patch": "2026-11-27 2차 보완 패스: 요금 확인일·출처 기록 갱신(값 변경 없음)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0427",
@@ -138,7 +209,8 @@
   "holes_conflict": true,
   "facility_cluster": null,
   "factcheck_2026_11_26": null,
-  "address_original": "영월군 영월읍 사지막길 160"
+  "address_original": "영월군 영월읍 사지막길 160",
+  "par": 72
  },
  "course": {
   "holes": 18,
@@ -154,7 +226,8 @@
   },
   "kga": null,
   "kga_hole_est": null,
-  "extra_courses": null
+  "extra_courses": null,
+  "par": 72
  },
  "fee": {
   "weekday": 150000,
@@ -180,8 +253,22 @@
     "source": "수신 조사(공식·공개 예약정보)",
     "url": "https://greenfeeguide.co.kr/course/gc-0239/",
     "checked_at": "2026-11-01(공식 요금표 확인)"
+   },
+   {
+    "source": "third_party",
+    "url": "https://greenfeeguide.co.kr/course/gc-0239/",
+    "quote": "요금 확인일 2026-11-01 (그린피가이드 2026-11-27 조회)",
+    "checked_at": "2026-11-27"
    }
-  ]
+  ],
+  "checked_at": "2026-11-27",
+  "market": {
+   "weekday_min": 45000,
+   "weekend_min": 68000,
+   "source": "공개 예약 채널 실거래 관측(티픽)",
+   "url": "https://teepickgolf.com/",
+   "note": "공시가 아닌 최근 관측 실거래 최저가"
+  }
  },
  "cancel": {
   "cancel_policy": null,
@@ -228,8 +315,16 @@
    "evidence": []
   },
   "checkin": {
-   "value": null,
-   "evidence": []
+   "value": "티오프 30분 전 도착(지각 시 홀 점프)",
+   "evidence": [
+    "도착: 티오프 30분 전 도착",
+    "티오프 30분 전 도착, 지각 시 홀 점프 원칙"
+   ],
+   "source_url": "https://www.cistar.co.kr/",
+   "confidence": "medium",
+   "source_type": "official_research",
+   "checked_at": "2026-11-27",
+   "note": "공개 요금 정보가 골프장 공식 안내를 정리한 값(확인일 페이지 표기)"
   },
   "locker": {
    "value": "사우나 있음",
@@ -240,12 +335,26 @@
    "evidence": []
   },
   "dress": {
-   "value": null,
-   "evidence": []
+   "value": "별도 복장 규정 없음(골프웨어 권장), 남성 반바지는 무릎 바로 위 길이까지",
+   "evidence": [
+    "복장: 별도 복장 규정 없음(골프웨어 권장), 남성 반바지는 무릎 바로 위 길이까지"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0239/",
+   "confidence": "medium",
+   "source_type": "official_summary(greenfeeguide)",
+   "checked_at": "2026-11-27",
+   "note": "공개 요금 정보가 골프장 공식 안내를 정리한 값(확인일 페이지 표기)"
   },
   "pace": {
-   "value": null,
-   "evidence": []
+   "value": "경기진행지연 및 비협조로 팀 플레이에 막대한 지장초래 시 6개월 예약 및 회원혜택 정지, 퇴장",
+   "evidence": [
+    "진행이 늦으면: 경기진행지연 및 비협조로 팀 플레이에 막대한 지장초래 시 6개월 예약 및 회원혜택 정지, 퇴장"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0239/",
+   "confidence": "medium",
+   "source_type": "official_summary(greenfeeguide)",
+   "checked_at": "2026-11-27",
+   "note": "공개 요금 정보가 골프장 공식 안내를 정리한 값(확인일 페이지 표기)"
   }
  },
  "facilities": {
@@ -258,8 +367,14 @@
    "evidence": []
   },
   "food": {
-   "value": null,
-   "evidence": []
+   "value": "사우나 있음 · 프로샵·카페·라운지·편의점·수영장·피트니스",
+   "evidence": [
+    "사우나 있음 · 프로샵·카페·라운지·편의점·수영장·피트니스"
+   ],
+   "source_url": "https://cistar.kr/golf/golf-facilities/clubhouse/",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfee guide tables)"
   },
   "snack_bar": {
    "value": null,
@@ -282,9 +397,15 @@
    "evidence": []
   },
   "closed_days": {
-   "value": null,
+   "value": "정기 휴장일 없음",
    "third_party": null,
-   "evidence": []
+   "evidence": [
+    "정기 휴장일 없음, 티오프 30분 전 도착"
+   ],
+   "source_url": "https://www.cistar.co.kr/",
+   "confidence": "medium",
+   "source_type": "official_research",
+   "checked_at": "2026-11-27"
   },
   "shuttle": {
    "value": null,
@@ -301,7 +422,7 @@
   "nine_hole": null,
   "range_finder": null,
   "reservation": null,
-  "source_url": null,
+  "source_url": "https://greenfeeguide.co.kr/course/gc-0239/",
   "nearby_delivery": {
    "region": "강원",
    "sido": "강원특별자치도",
@@ -355,7 +476,6 @@
   "fee_change": null,
   "alert": null,
   "unconfirmed": [
-   "대표 전화",
    "야간 라이트",
    "잔디(티)",
    "잔디(페어웨이)",
@@ -382,7 +502,12 @@
   "sources": [
    "https://greenfeeguide.co.kr/course/gc-0239/",
    "https://todaygolfgo.com/regions/gangwon/",
-   "https://greenfeeguide.co.kr/guides/golf-course-closing-day-guide/"
+   "https://greenfeeguide.co.kr/guides/golf-course-closing-day-guide/",
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
   ],
   "collected_at": "2026-11-26T09:55:47+09:00"
  },
@@ -391,18 +516,20 @@
   "official_reason": "운영 중(공식 홈페이지 정상)",
   "pages_collected": 0,
   "third_party": {
-   "received_report": true
+   "received_report": true,
+   "teepick": true,
+   "greenfeeguide": true
   },
   "render_hint": "report",
   "plan_strategy": "subagent_report(2026-11-26)"
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.8,
+  "basic": 0.78,
+  "course": 0.4,
   "fee": 1.0,
-  "ops": 0.36,
-  "facility": 0.3,
-  "briefing": 0.75,
-  "rental": 1.0
+  "ops": 0.57,
+  "facility": 0.5,
+  "briefing": 0.5,
+  "rental": 0.75
  }
 }

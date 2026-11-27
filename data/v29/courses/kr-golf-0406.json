@@ -12,9 +12,131 @@
   ],
   "source": "raw/received_jeju_31.json (외부 데이터 수신, 2026-11-26)",
   "review": {
-   "checked_at": null,
-   "status": "not_crosschecked",
-   "checks": []
+   "checked_at": "2026-11-27",
+   "status": "verified_official",
+   "checks": [
+    {
+     "field": "course.par",
+     "received": null,
+     "verified": 72,
+     "result": "보완",
+     "url": "http://www.blackstoneresort.com/jj/aboutList?section=course",
+     "quote": "North Course 3,340m/Par36, South Course 3,429m/Par36, East Course 3,349m/Par36 (27홀)",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "fee.checked_at",
+     "received": null,
+     "verified": "2026-11-27",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0485/",
+     "quote": "요금 확인일 2026-11-01 (그린피가이드 2026-11-27 조회)",
+     "source_type": "third_party",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "ops.checkin",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "티오프 30분 전 도착, 15분 전 스타트·카트 대기",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0485/",
+     "quote": "도착 티오프 30분 전 도착, 15분 전 스타트·카트 대기",
+     "source_type": "third_party",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "ops.dress",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "별도 복장 규정 없음, 클럽 분위기에 맞는 단정한 복장 권장",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0485/",
+     "quote": "복장 별도 복장 규정 없음, 클럽 분위기에 맞는 단정한 복장 권장",
+     "source_type": "third_party",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "ops.pace",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "경기 진행 지연 및 비협조로 뒤 팀의 플레이에 막대한 지장 초래 시 퇴장 조치",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0485/",
+     "quote": "진행/경기시간 경기 진행 지연 및 비협조로 뒤 팀의 플레이에 막대한 지장 초래 시 퇴장 조치",
+     "source_type": "third_party",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.food",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "한식·양식 레스토랑 (회원제 클럽하우스 내)",
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/blackstone-jeju/info/",
+     "quote": "레스토랑: 한식·양식 레스토랑 (회원제 클럽하우스 내)",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "ops.locker",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "프리미엄 로커룸 + 대형 사우나",
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/blackstone-jeju/info/",
+     "quote": "라커/사우나: 프리미엄 로커룸 + 대형 사우나",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "ops.sauna",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "프리미엄 로커룸 + 대형 사우나",
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/blackstone-jeju/info/",
+     "quote": "라커/사우나: 프리미엄 로커룸 + 대형 사우나",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.locker_sauna",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "프리미엄 로커룸 + 대형 사우나",
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/blackstone-jeju/info/",
+     "quote": "라커/사우나: 프리미엄 로커룸 + 대형 사우나",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.proshop",
+     "received": null,
+     "verified": "프로샵",
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/blackstone-jeju/info/",
+     "quote": "프로샵: 프로숍 (주요 골프 브랜드)",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.practice",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "드라이빙 레인지 + 퍼팅 연습장 + 어프로치 연습장",
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/blackstone-jeju/info/",
+     "quote": "연습 시설: 드라이빙 레인지 + 퍼팅 연습장 + 어프로치 연습장",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    }
+   ]
   },
   "data_checks": [
    "대표전화 불일치: 마스터 064-796-9988 / 수신 064-795-2121",
@@ -23,11 +145,14 @@
   "schema_previous": "stage2b/1.0",
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "restructured_from_7key": false,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "batch3_patch": "2026-11-27 배치3 보완: 1개 항목(공식 홈페이지·공개 요금 안내 기준, 미확인 값 생성 없음)",
+  "pass2_patch": "2026-11-27 2차 보완 패스: 9개 항목(그린피가이드·1박2일골프·원더골프·공식 홈페이지 대조, 미확인 값 생성 없음)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0406",
@@ -86,7 +211,8 @@
   "holes_conflict": false,
   "facility_cluster": null,
   "factcheck_2026_11_26": null,
-  "tel_former": "064-796-9988"
+  "tel_former": "064-796-9988",
+  "par": 72
  },
  "course": {
   "holes": 27,
@@ -115,7 +241,8 @@
    ]
   },
   "kga_hole_est": 27,
-  "extra_courses": null
+  "extra_courses": null,
+  "par": 72
  },
  "fee": {
   "weekday": 228880,
@@ -141,9 +268,16 @@
     "source": "수신 조사(공식·공개 예약정보)",
     "url": "http://www.blackstoneresort.com/jj/aboutList?section=membership",
     "checked_at": "2026-11-02 공식 요금표 확인"
+   },
+   {
+    "source": "third_party",
+    "url": "https://greenfeeguide.co.kr/course/gc-0485/",
+    "quote": "요금 확인일 2026-11-01 (그린피가이드 2026-11-27 조회)",
+    "checked_at": "2026-11-27"
    }
   ],
-  "resident": null
+  "resident": null,
+  "checked_at": "2026-11-27"
  },
  "cancel": {
   "cancel_policy": "1주 전까지 무료, 6일~1일 전 예약 1개월 정지, 당일·노쇼 2개월 정지. 예약실 064-795-2121(평일 9~17시)",
@@ -190,46 +324,99 @@
    "evidence": []
   },
   "checkin": {
-   "value": null,
-   "evidence": []
+   "value": "티오프 30분 전 도착, 15분 전 스타트·카트 대기",
+   "evidence": [
+    "도착 티오프 30분 전 도착, 15분 전 스타트·카트 대기"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0485/",
+   "confidence": "high",
+   "source_type": "third_party",
+   "checked_at": "2026-11-27"
   },
   "locker": {
-   "value": null,
-   "evidence": []
+   "value": "프리미엄 로커룸 + 대형 사우나",
+   "evidence": [
+    "라커/사우나: 프리미엄 로커룸 + 대형 사우나"
+   ],
+   "source_url": "https://1n2d-golf.co.kr/blackstone-jeju/info/",
+   "confidence": "medium",
+   "source_type": "public_info(1n2d-golf)",
+   "checked_at": "2026-11-27",
+   "note": "1박2일골프 시설·기타 요약(2차 공개자료, 2026-11-27 조회) — 예약 전 공식 채널 재확인 권장"
   },
   "sauna": {
-   "value": null,
-   "evidence": []
+   "value": "프리미엄 로커룸 + 대형 사우나",
+   "evidence": [
+    "라커/사우나: 프리미엄 로커룸 + 대형 사우나"
+   ],
+   "source_url": "https://1n2d-golf.co.kr/blackstone-jeju/info/",
+   "confidence": "medium",
+   "source_type": "public_info(1n2d-golf)",
+   "checked_at": "2026-11-27",
+   "note": "1박2일골프 시설·기타 요약(2차 공개자료, 2026-11-27 조회) — 예약 전 공식 채널 재확인 권장"
   },
   "dress": {
-   "value": null,
-   "evidence": []
+   "value": "별도 복장 규정 없음, 클럽 분위기에 맞는 단정한 복장 권장",
+   "evidence": [
+    "복장 별도 복장 규정 없음, 클럽 분위기에 맞는 단정한 복장 권장"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0485/",
+   "confidence": "high",
+   "source_type": "third_party",
+   "checked_at": "2026-11-27"
   },
   "pace": {
-   "value": null,
-   "evidence": []
+   "value": "경기 진행 지연 및 비협조로 뒤 팀의 플레이에 막대한 지장 초래 시 퇴장 조치",
+   "evidence": [
+    "진행/경기시간 경기 진행 지연 및 비협조로 뒤 팀의 플레이에 막대한 지장 초래 시 퇴장 조치"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0485/",
+   "confidence": "high",
+   "source_type": "third_party",
+   "checked_at": "2026-11-27"
   }
  },
  "facilities": {
   "practice": {
-   "value": null,
-   "evidence": []
+   "value": "드라이빙 레인지 + 퍼팅 연습장 + 어프로치 연습장",
+   "evidence": [
+    "연습 시설: 드라이빙 레인지 + 퍼팅 연습장 + 어프로치 연습장"
+   ],
+   "source_url": "https://1n2d-golf.co.kr/blackstone-jeju/info/",
+   "confidence": "medium",
+   "source_type": "public_info(1n2d-golf)",
+   "checked_at": "2026-11-27",
+   "note": "1박2일골프 시설·기타 요약(2차 공개자료, 2026-11-27 조회) — 예약 전 공식 채널 재확인 권장"
   },
   "indoor_range": {
    "value": null,
    "evidence": []
   },
   "food": {
-   "value": null,
-   "evidence": []
+   "value": "한식·양식 레스토랑 (회원제 클럽하우스 내)",
+   "evidence": [
+    "레스토랑: 한식·양식 레스토랑 (회원제 클럽하우스 내)"
+   ],
+   "source_url": "https://1n2d-golf.co.kr/blackstone-jeju/info/",
+   "confidence": "medium",
+   "source_type": "public_info(1n2d-golf)",
+   "checked_at": "2026-11-27",
+   "note": "1박2일골프 시설·기타 요약(2차 공개자료, 2026-11-27 조회) — 예약 전 공식 채널 재확인 권장"
   },
   "snack_bar": {
    "value": null,
    "evidence": []
   },
   "locker_sauna": {
-   "value": null,
-   "evidence": []
+   "value": "프리미엄 로커룸 + 대형 사우나",
+   "evidence": [
+    "라커/사우나: 프리미엄 로커룸 + 대형 사우나"
+   ],
+   "source_url": "https://1n2d-golf.co.kr/blackstone-jeju/info/",
+   "confidence": "medium",
+   "source_type": "public_info(1n2d-golf)",
+   "checked_at": "2026-11-27",
+   "note": "1박2일골프 시설·기타 요약(2차 공개자료, 2026-11-27 조회) — 예약 전 공식 채널 재확인 권장"
   },
   "lodging": {
    "value": "골프텔(55평형 할인), 빌라 182㎡ 1,000,000원·264㎡ 1,500,000원",
@@ -251,6 +438,17 @@
   "shuttle": {
    "value": null,
    "evidence": []
+  },
+  "proshop": {
+   "value": "프로샵",
+   "evidence": [
+    "프로샵: 프로숍 (주요 골프 브랜드)"
+   ],
+   "source_url": "https://1n2d-golf.co.kr/blackstone-jeju/info/",
+   "confidence": "medium",
+   "source_type": "public_info(1n2d-golf)",
+   "checked_at": "2026-11-27",
+   "note": "1박2일골프 시설·기타 요약(2차 공개자료, 2026-11-27 조회) — 예약 전 공식 채널 재확인 권장"
   }
  },
  "rental": {
@@ -263,7 +461,7 @@
   "nine_hole": null,
   "range_finder": null,
   "reservation": null,
-  "source_url": null,
+  "source_url": "https://greenfeeguide.co.kr/course/gc-0485/",
   "nearby_delivery": {
    "region": "제주",
    "sido": "제주특별자치도",
@@ -365,7 +563,6 @@
   "alert": null,
   "unconfirmed": [
    "야간 라이트",
-   "잔디(티)",
    "3인 플레이",
    "노캐디",
    "마샬캐디",
@@ -386,7 +583,13 @@
    "https://golf.tjinmoney.com/blackstone-jeju-cc-caddie-fee-cancellation/",
    "https://greenfeeguide.co.kr/region/jeju/jeju-si/",
    "https://www.hngolf.co.kr/program/view?bid=180&idx=12677",
-   "https://jejukimpro.co.kr/ko/golf/blackstone"
+   "https://jejukimpro.co.kr/ko/golf/blackstone",
+   "http://www.blackstoneresort.com/jj/aboutList?section=course",
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
   ],
   "collected_at": "2026-11-26T09:35:01+09:00"
  },
@@ -395,18 +598,20 @@
   "official_reason": "운영 중(홈페이지 정상)",
   "pages_collected": 0,
   "third_party": {
-   "received_report": true
+   "received_report": true,
+   "teepick": true,
+   "greenfeeguide": true
   },
   "render_hint": "report",
   "plan_strategy": "subagent_report(2026-11-26)"
  },
  "coverage": {
   "basic": 0.89,
-  "course": 1.0,
+  "course": 0.4,
   "fee": 1.0,
-  "ops": 0.14,
-  "facility": 0.2,
-  "briefing": 0.75,
-  "rental": 1.0
+  "ops": 0.5,
+  "facility": 0.5,
+  "briefing": 0.5,
+  "rental": 0.75
  }
 }

@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0132",
@@ -85,7 +86,7 @@
   "holes_received": 27,
   "course_names": null,
   "membership_type": "대중제",
-  "night_light": null,
+  "night_light": "야간 3부 운영(3부 야간 캐디피 160,000원)",
   "blocks": [],
   "grass": {
    "tee": null,
@@ -112,14 +113,15 @@
   "tax_included": null,
   "cart": {
    "value": 100000,
-   "source": "그린피가이드",
-   "url": "https://greenfeeguide.co.kr/course/gc-0105/"
+   "note": "1대당",
+   "source": "공식 홈페이지 요금표",
+   "url": "https://www.edenblue.co.kr/pagesite/use/charge.asp"
   },
   "caddie": {
    "value": 150000,
-   "source": "그린피가이드",
-   "url": "https://greenfeeguide.co.kr/course/gc-0105/",
-   "none": false
+   "note": "1·2부 기준(야간 3부 160,000원)",
+   "source": "공식 홈페이지 요금표",
+   "url": "https://www.edenblue.co.kr/pagesite/use/charge.asp"
   },
   "as_of": "2026-11-01",
   "source_url": null,
@@ -129,9 +131,15 @@
     "source": "그린피가이드(공식 요금표 확인)",
     "url": "https://greenfeeguide.co.kr/course/gc-0105/",
     "checked_at": "2026-11-01"
+   },
+   {
+    "source": "공식 홈페이지 요금표",
+    "url": "https://www.edenblue.co.kr/pagesite/use/charge.asp",
+    "checked_at": "2026-11-27",
+    "note": "캐디피 1·2부 150,000원 / 야간 3부 160,000원, 카트비 100,000원(1대)"
    }
   ],
-  "checked_at": "2026-11-01",
+  "checked_at": "2026-11-27",
   "market": {
    "weekday_min": 60000.0,
    "weekend_min": 97000.0,
@@ -203,16 +211,18 @@
  },
  "cancel": {
   "cancel_policy": {
-   "value": "평일 3일 전 · 주말 4일 전까지(이용약관 기준)야간(3부) 라운드야간 라운드 운영(공식 홈페이지 안내)정기 휴장일정기 휴장일 없음부대시설사우",
-   "source": "그린피가이드(공식 인용)",
-   "url": "https://greenfeeguide.co.kr/course/gc-0105/"
+   "value": "예약일 제외 5일 전 17시까지 홈페이지에서 위약 없이 취소(17시 이후는 익일 처리), 이후 취소는 예약실 전화·위약 규정 적용",
+   "source": "공식 홈페이지",
+   "url": "https://www.edenblue.co.kr/pagesite/use/reservation.asp"
   },
-  "open_cycle": null,
+  "open_cycle": "예약 오픈일 오전 9시부터 인터넷 회원 선착순 예약",
   "notes": null,
   "evidence": [
    "카트이용요금 등 기타 사업자가 정한 특별요금(카트료 : 입장에 관한 절차를 마친 이용자 팀 전원이 라운드를 시작한 경우 9홀 이하까지 경기를 마친 경우 카트료의 50%(5만원)를 환불하고, 10홀 이상 라운딩을 마친 경우에는 정상요금( 10만원 )을 적용한다.",
    "② 이용자가 개인 사정의 변경이나 단순 변심 등 정당한 사유없이 예약을 취소하는 경우에는 취소일을 기준으로 다음과 같이 손해를 배상한다.",
-   "이용자가 이용예정일 당일 예약을 취소하거나 아무런 통보 없이 이용예정일에 골프장을 이용하지 않을 경우 : 팀별 이용요금의 30% ③ 강설, 폭우, 안개 기타 천재지변 등의 불가항력적인 사유로, 사업자가 이용예정일에 골프장 이용이 불가능하다고 판단되어 임시휴장을 하는 경우에는 예약금을 환불하여야 한다."
+   "이용자가 이용예정일 당일 예약을 취소하거나 아무런 통보 없이 이용예정일에 골프장을 이용하지 않을 경우 : 팀별 이용요금의 30% ③ 강설, 폭우, 안개 기타 천재지변 등의 불가항력적인 사유로, 사업자가 이용예정일에 골프장 이용이 불가능하다고 판단되어 임시휴장을 하는 경우에는 예약금을 환불하여야 한다.",
+   "예약일 제외한 5일전17:00이전까지 홈페이지에서 취소가 가능합니다.(17:00이후 취소분은 익일로 취소처리 됨)",
+   "예약 오픈 주기: 예약 오픈일 오전 9시부터 인터넷 회원 선착순 예약 (https://www.edenblue.co.kr/pagesite/use/reservation.asp)"
   ],
   "weather_evidence": [
    "기상악화 요금은 공정거래위원회 골프장이용 표준약관 기준으로 산정됩니다."
@@ -339,16 +349,28 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": null,
-   "evidence": []
+   "value": "사우나 있음",
+   "evidence": [
+    "사우나 있음 — https://greenfeeguide.co.kr/course/gc-0105/"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0105/",
+   "confidence": "medium",
+   "checked_at": "2026-11-27",
+   "value_from": "pass2_third_party"
   },
   "lodging": {
    "value": null,
    "evidence": []
   },
   "other": {
-   "value": null,
-   "evidence": []
+   "value": "프로샵",
+   "evidence": [
+    "그 밖의 시설: 프로샵"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0105/",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfeeguide)"
   },
   "night": {
    "evidence": [
@@ -582,7 +604,18 @@
   "course_notes": null,
   "alert": null,
   "unconfirmed": [],
-  "sources": []
+  "sources": [
+   {
+    "source": "그린피가이드 코스 페이지",
+    "url": "https://greenfeeguide.co.kr/course/gc-0105/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "ok",
@@ -597,12 +630,12 @@
   "browser_batch": false
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.6,
+  "basic": 0.89,
+  "course": 0.2,
   "fee": 1.0,
   "ops": 0.14,
-  "facility": 0.3,
-  "briefing": 0.5,
-  "rental": 0.25
+  "facility": 0.5,
+  "briefing": 0.0,
+  "rental": 0.0
  }
 }

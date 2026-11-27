@@ -41,7 +41,7 @@ data/v29/
     "source_version": "2.9",
     "counts": { "total": 540, "with_detail": 515, "master_only": 25,
                 "operating": 512, "suspended": 1, "closed": 2,
-                "under_construction": 5, "planned": 20 },
+                "under_construction": 5, "planned": 19, "cancelled": 1 },
     "fields": { /* 필드 설명(자가 문서화) */ }
   },
   "sido":    [ { "code": "41", "name": "경기도", "short": "경기", "count": 151 }, … ],
@@ -59,7 +59,7 @@ data/v29/
 | `aliases` | string[]? | 이명·구 명칭. 검색 보조용(없으면 필드 자체가 없음) |
 | `sido` / `sido_code` | string | 시도 약칭 / 행정표준코드 |
 | `sigungu` | string | 시군구 |
-| `status` | enum | `operating` `suspended` `closed` `under_construction` `planned` |
+| `status` | enum | `operating` `suspended` `closed` `under_construction` `planned` `cancelled` |
 | `status_label` / `status_note` | string? | 비영업 구장에만 존재. 사유·기간 |
 | `holes` | number? | 총 홀수 |
 | `type` | string? | `회원제` `대중제` `비회원제` |
@@ -114,7 +114,7 @@ data/v29/
 
 | 표기 | 의미 | 화면 처리 |
 | --- | --- | --- |
-| `null` / `[]` | **미확인** — 공개 정보에서 확인하지 못함 | "미확인"으로 표시. **"없음"으로 해석 금지** |
+| `null` / `[]` | **확인 안 됨** — 공개 정보에서 확인하지 못함 | 일반 화면은 행을 숨기고, 관리자 모드에서 `미확인`으로 표시. **"없음"으로 해석 금지** |
 | `{ "value": …, "evidence": [...] }` | 확인된 값 + 원문 근거 | 값 표시, 근거는 접어서 제공 |
 | `"value": "문구 확인(원문 근거)"` | 문구는 확인됐으나 정량화 불가 | 그대로 표시 |
 | `"value": false` | 확인 결과 **불가/없음** | "불가"로 표시 |
@@ -136,7 +136,8 @@ data/v29/
 | `suspended` | **휴업(영업중단)** | **1곳 — 아벨CC(`kr-golf-0511`)** | 배지로 구분. 목록 기본 필터에서 제외. 요금은 "마지막 확인값"으로만 표시 |
 | `closed` | 폐업 | 2곳 — 코스모스링스CC(`0031`), ㈜그랜드부민 꿈드림목장(`0400`) | 명시적 폐업 배지. 예약·요금 UI 비활성 |
 | `under_construction` | 건설중 | 5곳 — 골드힐CC, 테라CC, 김해 진례, 부안 격포, 홍성 서부 | `expected_open` 표시 |
-| `planned` | 미착공 | 20곳 | `expected_open`·`project_stage` 표시 |
+| `planned` | 미착공 | 19곳 | `expected_open`·`project_stage` 표시 |
+| `cancelled` | 사업 취소 | 1곳(대전 금고동) | `status_note`에 백지화 근거 표시 |
 
 **`suspended`(아벨CC) 처리 원칙**
 - 2025-07 영업중단(기업회생) → 2025-12 와이제이 인수 → 2026-05-07 회생절차 종결. 2026-11-26 기준 재개장 공지·티타임 판매가 확인되지 않아 `suspended`로 둡니다.

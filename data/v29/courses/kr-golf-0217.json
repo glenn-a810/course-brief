@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0217",
@@ -58,9 +59,9 @@
   },
   "course_spec": {
    "holes": 27,
-   "par": null,
+   "par": 72,
    "blocks": [],
-   "length_m": null,
+   "length_m": 6381,
    "kga": {
     "kga_course_code": "215",
     "kga_name": "아도니스",
@@ -237,12 +238,13 @@
    "relationship": null,
    "note": null
   },
-  "factcheck_2026_11_26": null
+  "factcheck_2026_11_26": null,
+  "par": 72
  },
  "course": {
   "holes": 27,
   "holes_received": null,
-  "course_names": null,
+  "course_names": "동·서·중 각 9홀",
   "membership_type": "회원제",
   "night_light": null,
   "blocks": [],
@@ -408,26 +410,27 @@
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": null,
-  "par": null
+  "length_m": 6381,
+  "par": 72
  },
  "fee": {
   "weekday": 220000,
   "weekend": 280000,
   "weekday_text": null,
   "weekend_text": null,
-  "basis": null,
+  "basis": "official",
   "tax_included": null,
   "cart": {
    "value": 100000,
-   "source": "그린피가이드",
-   "url": "https://greenfeeguide.co.kr/course/gc-0107/"
+   "source": "그린피가이드(공식 요금표)",
+   "url": "https://greenfeeguide.com/course/gc-0107/",
+   "note": "팀당(4인 1대)"
   },
   "caddie": {
    "value": 160000,
-   "source": "그린피가이드",
-   "url": "https://greenfeeguide.co.kr/course/gc-0107/",
-   "none": false
+   "none": false,
+   "source": "그린피가이드(공식 요금표)",
+   "url": "https://greenfeeguide.com/course/gc-0107/"
   },
   "as_of": "2026-11-01",
   "source_url": null,
@@ -435,11 +438,11 @@
   "sources": [
    {
     "source": "그린피가이드(공식 요금표 확인)",
-    "url": "https://greenfeeguide.co.kr/course/gc-0107/",
+    "url": "https://greenfeeguide.com/course/gc-0107/",
     "checked_at": "2026-11-01"
    }
   ],
-  "checked_at": "2026-11-01",
+  "checked_at": "2026-11-27",
   "market": {
    "weekday_min": null,
    "weekend_min": null,
@@ -598,9 +601,15 @@
    "value": null
   },
   "closed_days": {
-   "evidence": [],
+   "evidence": [
+    "2026년 영업 기간: — · 겨울 휴장 혹한기 동계휴장(일정은 홈페이지 공지)"
+   ],
    "third_party": null,
-   "value": null
+   "value": "겨울 휴장 혹한기 동계휴장(일정은 홈페이지 공지)",
+   "source_url": "https://www.adoniscc.co.kr/standard-terms",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfee guide tables)"
   },
   "shuttle": {
    "evidence": [],
@@ -617,17 +626,19 @@
   }
  },
  "rental": {
-  "available": null,
-  "full_set": null,
-  "fee_text": null,
+  "available": true,
+  "full_set": 100000,
+  "fee_text": "80,000~100,000원 · 남성용, 브랜드별 · 18홀",
   "brand": null,
   "left_handed": null,
   "shoes": null,
   "nine_hole": null,
   "range_finder": null,
   "reservation": null,
-  "source_url": null,
-  "evidence": [],
+  "source_url": "https://greenfeeguide.co.kr/course/gc-0107/",
+  "evidence": [
+   "풀세트 대여 80,000~100,000원 · 남성용, 브랜드별 · 18홀 — https://greenfeeguide.co.kr/course/gc-0107/"
+  ],
   "official": null,
   "nearby_delivery": {
    "region": "수도권",
@@ -700,8 +711,21 @@
   "recent_notice_text": null,
   "course_notes": null,
   "alert": null,
-  "unconfirmed": [],
-  "sources": []
+  "unconfirmed": [
+   "취소·위약 규정 미확인: 회원제로 비회원 요금·취소규정 비공개"
+  ],
+  "sources": [
+   {
+    "source": "그린피가이드 코스 페이지",
+    "url": "https://greenfeeguide.co.kr/course/gc-0107/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "ok",
@@ -716,12 +740,12 @@
   "browser_batch": false
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.8,
+  "basic": 0.78,
+  "course": 0.4,
   "fee": 1.0,
   "ops": 0.14,
-  "facility": 0.1,
-  "briefing": 0.5,
-  "rental": 0.25
+  "facility": 0.2,
+  "briefing": 0.0,
+  "rental": 0.75
  }
 }

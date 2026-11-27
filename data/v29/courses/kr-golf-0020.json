@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0020",
@@ -99,7 +100,13 @@
   "weekend_text": null,
   "basis": null,
   "tax_included": null,
-  "cart": null,
+  "cart": {
+   "value": 60000,
+   "raw": "60,000원",
+   "text": "팀당(공식 홈페이지 안내)",
+   "source": "공식 홈페이지",
+   "url": "http://www.edencc.co.kr/eden_info.asp?gubun=02"
+  },
   "caddie": null,
   "as_of": null,
   "source_url": null,
@@ -110,7 +117,7 @@
     "url": "https://edencc.co.kr/eden_info.asp?gubun=02"
    }
   ],
-  "checked_at": null,
+  "checked_at": "2026-11-27",
   "official_detail": {
    "green_detail": "18홀 1인당, 카트비 포함. 평일 4인 50,000·3인 56,000 / 휴일 4인 70,000·3인 76,000. 카트비 팀당 60,000은 그린피에 포함, 2인 입장은 3인 요금",
    "cart_detail": "카트비 팀당 60,000(그린피 포함)",
@@ -180,13 +187,14 @@
   }
  },
  "cancel": {
-  "cancel_policy": null,
+  "cancel_policy": "1일전 예약취소 : 30점",
   "open_cycle": null,
   "notes": null,
   "evidence": [
    "- 예약취소 ·",
    "인터넷에서 실시간 예약취소를 할 수 있습니다.",
-   "당일 예약취소는 전화로 직접 취소하여 주시기 바랍니다."
+   "당일 예약취소는 전화로 직접 취소하여 주시기 바랍니다.",
+   "· 1일전 예약취소 : 30점 (출처: http://www.edencc.co.kr/reserve/index.asp, 2026-11-27 확인)"
   ],
   "weather_evidence": []
  },
@@ -196,8 +204,10 @@
    "value": null
   },
   "two_player": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "※ 2인 입장시 3인요금 적용 (출처: http://www.edencc.co.kr/eden_info.asp?gubun=02, 2026-11-27 확인)"
+   ],
+   "value": "※ 2인 입장시 3인요금 적용"
   },
   "three_player": {
    "value": null,
@@ -244,8 +254,14 @@
    "value": null
   },
   "pace": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "진행 지연 → 퇴장"
+   ],
+   "value": "진행 지연 → 퇴장",
+   "source_url": "https://edencc.co.kr/reserve/index.asp?gubun=01",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfee guide tables)"
   }
  },
  "facilities": {
@@ -366,7 +382,13 @@
   "recent_notice_text": null,
   "course_notes": null,
   "alert": null,
-  "unconfirmed": [],
+  "unconfirmed": [
+   "체크인",
+   "복장",
+   "진행 시간",
+   "식당",
+   "휴장일"
+  ],
   "sources": []
  },
  "collection": {
@@ -375,7 +397,7 @@
   "pages_collected": 14,
   "third_party": {
    "teepick": false,
-   "greenfeeguide": false
+   "greenfeeguide": true
   },
   "render_hint": "thin",
   "plan_strategy": "unreachable(브라우저 재시도)",
@@ -384,12 +406,12 @@
   "browser_pdf": []
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.6,
-  "fee": 0.5,
-  "ops": 0.0,
+  "basic": 0.78,
+  "course": 0.2,
+  "fee": 0.75,
+  "ops": 0.14,
   "facility": 0.0,
-  "briefing": 0.25,
-  "rental": 0.25
+  "briefing": 0.0,
+  "rental": 0.0
  }
 }

@@ -12,9 +12,76 @@
   ],
   "source": "raw/received_jeju_31.json (외부 데이터 수신, 2026-11-26)",
   "review": {
-   "checked_at": null,
-   "status": "not_crosschecked",
-   "checks": []
+   "checked_at": "2026-11-27",
+   "status": "supplemented(공식+공개 요약)",
+   "checks": [
+    {
+     "field": "ops.dress",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "남성 반바지·여성 과다 노출 복장은 위반 사항",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0492/",
+     "quote": "복장: 남성 반바지·여성 과다 노출 복장은 위반 사항",
+     "source_type": "official_summary(greenfeeguide)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "ops.pace",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "고의적인 경기진행 지연 등: 1회의 경고를 받고도 지속적 위반시 즉각 퇴장조치 및 본 클럽 입장불가",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0492/",
+     "quote": "진행이 늦으면: 고의적인 경기진행 지연 등: 1회의 경고를 받고도 지속적 위반시 즉각 퇴장조치 및 본 클럽 입장불가",
+     "source_type": "official_summary(greenfeeguide)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "ops.dress",
+     "received": "{\"value\": \"남성 반바지·여성 과다 노출 복장은 위반 사항\", \"evidence\": [\"복장: 남성 반바지·여성 과다 노출 복장은 위반 사항\"], \"source_url\": \"https://greenfeeguide.co.kr/course/gc-0492/\", \"confidence\": \"medium\", \"source_type\": \"official_summ",
+     "verified": "남성 반바지·여성 과다노출 복장 등 제한",
+     "result": "보완",
+     "url": "https://greenfieldcc.co.kr/swp/penalty",
+     "quote": "남성: 반바지 복장, 여성: 과다노출로 타인에게 혐오감을 주는 복장 등",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "fee.checked_at",
+     "received": null,
+     "verified": "2026-11-27",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0492/",
+     "quote": "요금 확인일 2026-11-02 (그린피가이드 2026-11-27 조회)",
+     "source_type": "third_party",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "course.par",
+     "received": null,
+     "verified": 72,
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0492/",
+     "quote": "코스 구성 회원제 18Hole · 파 72",
+     "source_type": "third_party",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "course.length_m",
+     "received": null,
+     "verified": 6440,
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0492/",
+     "quote": "전장 7,043 Yard (야드→미터 환산)",
+     "source_type": "third_party",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    }
+   ]
   },
   "data_checks": [
    "대표전화 불일치: 마스터 031-452-8811 / 수신 064-720-7000",
@@ -23,11 +90,14 @@
   "schema_previous": "stage2b/1.0",
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "restructured_from_7key": false,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "batch3_patch": "2026-11-27 배치3 보완: 3개 항목(공식 홈페이지·공개 요금 안내 기준, 미확인 값 생성 없음)",
+  "pass2_patch": "2026-11-27 2차 보완 패스: 2개 항목(그린피가이드·1박2일골프·원더골프·공식 홈페이지 대조, 미확인 값 생성 없음)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0402",
@@ -86,7 +156,8 @@
   "holes_conflict": false,
   "facility_cluster": null,
   "factcheck_2026_11_26": null,
-  "tel_former": "031-452-8811"
+  "tel_former": "031-452-8811",
+  "par": 72
  },
  "course": {
   "holes": 18,
@@ -102,7 +173,9 @@
   },
   "kga": null,
   "kga_hole_est": null,
-  "extra_courses": null
+  "extra_courses": null,
+  "par": 72,
+  "length_m": 6440
  },
  "fee": {
   "weekday": 150000,
@@ -128,9 +201,23 @@
     "source": "수신 조사(공식·공개 예약정보)",
     "url": "https://greenfieldcc.co.kr/swp/charge",
     "checked_at": "2022-05-10 변경 요금(2026-11 확인)"
+   },
+   {
+    "source": "third_party",
+    "url": "https://greenfeeguide.co.kr/course/gc-0492/",
+    "quote": "요금 확인일 2026-11-02 (그린피가이드 2026-11-27 조회)",
+    "checked_at": "2026-11-27"
    }
   ],
-  "resident": null
+  "resident": null,
+  "checked_at": "2026-11-27",
+  "market": {
+   "weekday_min": 141000,
+   "weekend_min": 171000,
+   "source": "공개 예약 채널 실거래 관측(티픽)",
+   "url": "https://teepickgolf.com/",
+   "note": "공시가 아닌 최근 관측 실거래 최저가"
+  }
  },
  "cancel": {
   "cancel_policy": "취소 6일 전(주중)·8일 전(주말). 당일~6일 전 취소 시 회원 1개월(주말 2개월) 예약정지, 비회원 3인 그린피 징수",
@@ -189,12 +276,27 @@
    "evidence": []
   },
   "dress": {
-   "value": null,
-   "evidence": []
+   "value": "남성 반바지·여성 과다노출 복장 등 제한",
+   "evidence": [
+    "복장: 남성 반바지·여성 과다 노출 복장은 위반 사항",
+    "남성: 반바지 복장, 여성: 과다노출로 타인에게 혐오감을 주는 복장 등"
+   ],
+   "source_url": "https://greenfieldcc.co.kr/swp/penalty",
+   "confidence": "high",
+   "source_type": "official_site",
+   "checked_at": "2026-11-27",
+   "note": "공개 요금 정보가 골프장 공식 안내를 정리한 값(확인일 페이지 표기)"
   },
   "pace": {
-   "value": null,
-   "evidence": []
+   "value": "고의적인 경기진행 지연 등: 1회의 경고를 받고도 지속적 위반시 즉각 퇴장조치 및 본 클럽 입장불가",
+   "evidence": [
+    "진행이 늦으면: 고의적인 경기진행 지연 등: 1회의 경고를 받고도 지속적 위반시 즉각 퇴장조치 및 본 클럽 입장불가"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0492/",
+   "confidence": "medium",
+   "source_type": "official_summary(greenfeeguide)",
+   "checked_at": "2026-11-27",
+   "note": "공개 요금 정보가 골프장 공식 안내를 정리한 값(확인일 페이지 표기)"
   }
  },
  "facilities": {
@@ -352,7 +454,6 @@
   "alert": null,
   "unconfirmed": [
    "야간 라이트",
-   "잔디(티)",
    "2인 플레이",
    "5인 플레이",
    "노캐디",
@@ -374,7 +475,13 @@
    "https://greenfieldcc.co.kr/swp/reserv_guide",
    "https://greenfieldcc.co.kr/swp/penalty",
    "https://greenfeeguide.co.kr/region/jeju/jeju-si/",
-   "https://jejukimpro.co.kr/ko/golf/greenfield"
+   "https://jejukimpro.co.kr/ko/golf/greenfield",
+   "https://greenfeeguide.co.kr/course/gc-0492/",
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
   ],
   "collected_at": "2026-11-26T09:35:01+09:00"
  },
@@ -383,18 +490,20 @@
   "official_reason": "운영 중(홈페이지 정상)",
   "pages_collected": 0,
   "third_party": {
-   "received_report": true
+   "received_report": true,
+   "teepick": true,
+   "greenfeeguide": true
   },
   "render_hint": "report",
   "plan_strategy": "subagent_report(2026-11-26)"
  },
  "coverage": {
-  "basic": 0.89,
-  "course": 0.8,
+  "basic": 0.78,
+  "course": 0.4,
   "fee": 1.0,
-  "ops": 0.14,
+  "ops": 0.29,
   "facility": 0.3,
-  "briefing": 0.75,
-  "rental": 0.25
+  "briefing": 0.5,
+  "rental": 0.0
  }
 }

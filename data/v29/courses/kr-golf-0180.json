@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0180",
@@ -74,14 +75,19 @@
   ],
   "status": "operating",
   "facility_cluster": null,
-  "factcheck_2026_11_26": null
+  "factcheck_2026_11_26": null,
+  "designer": {
+   "value": "아놀드 파머",
+   "source": "공개 정보(그린피가이드)",
+   "url": "https://greenfeeguide.co.kr/course/gc-0021/"
+  }
  },
  "course": {
   "holes": 18,
   "holes_received": 18,
-  "course_names": null,
+  "course_names": "East·West 코스",
   "membership_type": "회원제",
-  "night_light": null,
+  "night_light": "3부(야간) 티타임 판매 관측(티픽, 최근 1건)",
   "blocks": [],
   "grass": {
    "tee": null,
@@ -100,18 +106,19 @@
   "weekend": 260000,
   "weekday_text": null,
   "weekend_text": null,
-  "basis": null,
+  "basis": "official",
   "tax_included": null,
   "cart": {
    "value": 120000,
-   "source": "그린피가이드",
-   "url": "https://greenfeeguide.co.kr/course/gc-0021/"
+   "source": "그린피가이드(공식 요금표)",
+   "url": "https://greenfeeguide.com/course/gc-0021/",
+   "note": "팀당(4인 1대)"
   },
   "caddie": {
    "value": 150000,
-   "source": "그린피가이드",
-   "url": "https://greenfeeguide.co.kr/course/gc-0021/",
-   "none": false
+   "none": false,
+   "source": "그린피가이드(공식 요금표)",
+   "url": "https://greenfeeguide.com/course/gc-0021/"
   },
   "as_of": "2026-11-02",
   "source_url": null,
@@ -119,14 +126,14 @@
   "sources": [
    {
     "source": "그린피가이드(공식 요금표 확인)",
-    "url": "https://greenfeeguide.co.kr/course/gc-0021/",
+    "url": "https://greenfeeguide.com/course/gc-0021/",
     "checked_at": "2026-11-02"
    }
   ],
-  "checked_at": "2026-11-02",
+  "checked_at": "2026-11-27",
   "market": {
-   "weekday_min": 140000.0,
-   "weekend_min": 230000.0,
+   "weekday_min": 140000,
+   "weekend_min": 230000,
    "part1": null,
    "part2": null,
    "source": "티픽골프장(실거래 관측)",
@@ -141,13 +148,19 @@
   "official_rental": null
  },
  "cancel": {
-  "cancel_policy": null,
+  "cancel_policy": {
+   "value": "이용예정일 7일 전까지 취소 시 예약금 전액 환불. 날씨로 인한 취소는 예보만으로 불가하며 입장 2시간 전 클럽 현장 날씨 기준으로 결정",
+   "source": "공식 홈페이지",
+   "url": "https://www.ehscc.co.kr/Privacy/UseTerm"
+  },
   "open_cycle": null,
   "notes": null,
   "evidence": [
    "※4인 내장 및 예약자본인 내장 필수 → 사전 클럽 유선승인 후 정회원 월1회 비회원 위임가능(비회원가 적용) 예약변경 및 취소기한 구분 주중 주말 정회원 예약일 기준 1주일(7일)전 17:00까지 주중회원 인터넷회원 ※ 비,눈 등 날씨로 인한 취소는 기상예보만으로 사전취소는불가하며, 티업시간 2시간전 현장날씨 기준으로 결정됩니다.",
    "(기상악화로 인한 임의취소 시 이용횟수 차감처리 됩니다.) ※ 예약 변경/취소의 경우 7일전 17시까지 가능하며, 17시 이후에는 페널티가 발생됩니다.",
-   "※ 잦은 취소시 예약이 제한될 수 있습니다."
+   "※ 잦은 취소시 예약이 제한될 수 있습니다.",
+   "① 비회원 이용자가 이용예정일로부터 7일전까지 예약을 취소한 경우에는 예약금의 전액을 환불한다.",
+   "④ 날씨로 인한 예약 취소는 눈, 비 등의 기상예보만으로는 불가하며, 입장 2시간전 클럽의 현장날씨 기준으로 결정된다."
   ],
   "weather_evidence": [
    "※4인 내장 및 예약자본인 내장 필수 → 사전 클럽 유선승인 후 정회원 월1회 비회원 위임가능(비회원가 적용) 예약변경 및 취소기한 구분 주중 주말 정회원 예약일 기준 1주일(7일)전 17:00까지 주중회원 인터넷회원 ※ 비,눈 등 날씨로 인한 취소는 기상예보만으로 사전취소는불가하며, 티업시간 2시간전 현장날씨 기준으로 결정됩니다.",
@@ -297,22 +310,39 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": null,
-   "evidence": []
+   "value": "사우나 있음",
+   "evidence": [
+    "사우나 있음 — https://greenfeeguide.co.kr/course/gc-0021/"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0021/",
+   "confidence": "medium",
+   "checked_at": "2026-11-27",
+   "value_from": "pass2_third_party"
   },
   "lodging": {
    "value": null,
    "evidence": []
   },
   "other": {
-   "value": null,
-   "evidence": []
+   "value": "프로샵",
+   "evidence": [
+    "other: 프로샵"
+   ],
+   "source_url": "https://greenfeeguide.com/course/gc-0021/",
+   "source_type": "greenfee_guide",
+   "confidence": "medium",
+   "checked_at": "2026-11-27",
+   "value_from": "batch2_supplement"
   },
   "night": {
+   "value": "3부(야간) 티타임 판매 관측(티픽, 최근 1건)",
    "evidence": [
-    "홀별요금 (천재지변시) (단위:원) 구분 1-3홀 4-9홀 10홀 11홀 12홀 13홀 14홀 15홀 16홀 17홀 18홀 그린피 [ { ( 18홀 이용요금 - 기본요금 ) ÷ 18 } × 이용홀수 ] + 기본요금 카트피 60,000 70,000 76,000 82,000 88,000 94,000 100,000 106,000 112,000 120,000 캐디피 40,000 80,000 120,000 150,000(주간) / 160,000(야간) ※ 기본요금에는 제세공과금 및 시설이용료가 포함됩니다."
+    "3부(야간) 티타임 판매 관측(티픽, 최근 1건) — https://teepickgolf.com/course/%EC%9D%80%ED%99%94%EC%82%BCcc"
    ],
-   "value": null
+   "source_url": "https://teepickgolf.com/course/%EC%9D%80%ED%99%94%EC%82%BCcc",
+   "confidence": "medium",
+   "checked_at": "2026-11-27",
+   "value_from": "pass2_third_party"
   },
   "closed_days": {
    "evidence": [],
@@ -344,16 +374,16 @@
   }
  },
  "rental": {
-  "available": null,
+  "available": true,
   "full_set": 55000,
-  "fee_text": null,
+  "fee_text": "55,000원 · 18홀",
   "brand": null,
   "left_handed": null,
   "shoes": null,
   "nine_hole": null,
   "range_finder": null,
   "reservation": null,
-  "source_url": null,
+  "source_url": "https://greenfeeguide.co.kr/course/gc-0021/",
   "evidence": [
    "대여채 (단위:원) 구분 1 SET 퍼터 대여요금 55,000 11,000 ※ 대여채는 홀별정산이 적용되지 않습니다."
   ],
@@ -518,7 +548,18 @@
   "course_notes": null,
   "alert": null,
   "unconfirmed": [],
-  "sources": []
+  "sources": [
+   {
+    "source": "그린피가이드 코스 페이지",
+    "url": "https://greenfeeguide.co.kr/course/gc-0021/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "ok",
@@ -533,12 +574,12 @@
   "browser_batch": false
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.6,
+  "basic": 0.89,
+  "course": 0.4,
   "fee": 1.0,
   "ops": 0.5,
-  "facility": 0.0,
-  "briefing": 0.5,
-  "rental": 0.5
+  "facility": 0.3,
+  "briefing": 0.0,
+  "rental": 0.75
  }
 }

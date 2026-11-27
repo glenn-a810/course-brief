@@ -23,11 +23,13 @@
   "schema_previous": "stage2b/1.0",
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "restructured_from_7key": false,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "checked_at": "2026-11-27",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0265",
@@ -134,11 +136,11 @@
   "extra_courses": null
  },
  "fee": {
-  "weekday": null,
-  "weekend": null,
-  "weekday_text": "일자별 공지요금(실시간 예약에서 확인)",
-  "weekend_text": "일자별 공지요금",
-  "basis": "공식 이용요금표에 입장료가 '일자별 공지요금'으로 표기. 할인공시가는 1팀 4인 조건",
+  "weekday": 69000,
+  "weekend": 89000,
+  "weekday_text": "69,000~129,000원 (주중, 주간 1·2부 18홀 인터넷회원·하우스캐디)",
+  "weekend_text": "89,000~149,000원 (토·공휴일, 주간 1·2부 18홀 인터넷회원·하우스캐디)",
+  "basis": "원더골프가 각 구장 공식 요금표에서 수집한 공시정상가 범위(2026-10 수집). 요일·시간대·계절별 차등이라 최저~최고로 표기",
   "tax_included": null,
   "cart": {
    "value": 100000,
@@ -149,16 +151,29 @@
    "text": "캐디피 150,000원(2026-05-01부터 160,000원 적용 안내)",
    "none": false
   },
-  "as_of": "2026-11-26 (공식 요금 안내 확인)",
+  "as_of": "2026-11-27 (원더골프 공식 요금표 수집분 확인)",
   "source_url": "https://www.alldaygolf.co.kr/",
-  "note": null,
+  "note": "계절·시간대·잔여예약에 따라 실제 결제가는 달라질 수 있음.",
   "sources": [
    {
     "source": "수신 조사(공식·공개 예약정보)",
     "url": "https://www.alldaygolf.co.kr/",
     "checked_at": "2026-11-26 (공식 요금 안내 확인)"
+   },
+   {
+    "source": "원더골프(공식 요금표 정리)",
+    "url": "https://wondergolf.co.kr/courses/kr-kakao-228423269",
+    "checked_at": "2026-11-27"
    }
-  ]
+  ],
+  "checked_at": "2026-11-27",
+  "market": {
+   "weekday_min": 35000,
+   "weekend_min": 40000,
+   "source": "공개 예약 채널 실거래 관측(티픽)",
+   "url": "https://teepickgolf.com/",
+   "note": "공시가 아닌 최근 관측 실거래 최저가"
+  }
  },
  "cancel": {
   "cancel_policy": null,
@@ -361,7 +376,12 @@
   "sources": [
    "https://www.alldaygolf.co.kr/",
    "https://wondergolf.co.kr/courses/kr-kakao-228423269",
-   "https://todaygolfgo.com/golf-courses/master/golf-course-moct-20241231-0533/"
+   "https://todaygolfgo.com/golf-courses/master/golf-course-moct-20241231-0533/",
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
   ],
   "collected_at": "2026-11-26T10:24:29+09:00"
  },
@@ -370,18 +390,20 @@
   "official_reason": "운영 중(공식 홈페이지 정상)",
   "pages_collected": 0,
   "third_party": {
-   "received_report": true
+   "received_report": true,
+   "teepick": true,
+   "greenfeeguide": true
   },
   "render_hint": "report",
   "plan_strategy": "subagent_report(2026-11-26)"
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 1.0,
-  "fee": 0.5,
+  "basic": 0.78,
+  "course": 0.4,
+  "fee": 1.0,
   "ops": 0.14,
   "facility": 0.2,
-  "briefing": 0.75,
-  "rental": 0.25
+  "briefing": 0.5,
+  "rental": 0.0
  }
 }

@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0216",
@@ -58,13 +59,13 @@
    "master": "courses_master.json v2.0 (문체부·KGA·KGBA·티픽·지도)",
    "synced_to": "courses_master.json v2.7 (2026-11-26 단일 스키마 정규화)"
   },
-  "par": null,
+  "par": 72,
   "holes_teepick": 24,
   "course_spec": {
    "holes": 24,
-   "par": null,
+   "par": 72,
    "blocks": [],
-   "length_m": null,
+   "length_m": 5950,
    "kga": null,
    "grass": {
     "evidence": "※ 시간대별 인원 제한 운영 ※ 지역할인(포천/남양주)은 주중에만 적용/2인플레이 적용제외/신분증제시필수 ※ 우대혜택은 타 할인 이벤트와 중복할인 불가 ※ 월별 그린피 참조 기상악화 요금 안내 강설, 폭우, 기타 천재지변 등으로 경기를 정상적으로 마치지 못하시는 경우 기상악화 요금이 적용됩니다.",
@@ -85,7 +86,7 @@
   "holes_received": 24,
   "course_names": null,
   "membership_type": "대중제",
-  "night_light": null,
+  "night_light": true,
   "blocks": [],
   "grass": {
    "tee": null,
@@ -100,41 +101,42 @@
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": null,
-  "par": null
+  "length_m": 5950,
+  "par": 72
  },
  "fee": {
   "weekday": 100000,
   "weekend": 110000,
-  "weekday_text": null,
-  "weekend_text": null,
-  "basis": null,
+  "weekday_text": "100,000원 ~ 210,000원",
+  "weekend_text": "110,000원 ~ 260,000원",
+  "basis": "official",
   "tax_included": null,
   "cart": {
    "value": 100000,
-   "source": "그린피가이드",
-   "url": "https://greenfeeguide.co.kr/course/gc-0116/"
+   "source": "그린피가이드(공식 요금표)",
+   "url": "https://greenfeeguide.com/course/gc-0116/",
+   "note": "팀당(4인 1대)"
   },
   "caddie": {
    "value": 150000,
-   "source": "그린피가이드",
-   "url": "https://greenfeeguide.co.kr/course/gc-0116/",
-   "none": false
+   "none": false,
+   "source": "그린피가이드(공식 요금표)",
+   "url": "https://greenfeeguide.com/course/gc-0116/"
   },
   "as_of": "2026-11-05",
   "source_url": null,
-  "note": null,
+  "note": "주중/주말 그린피는 시간대·시즌별 최저~최고 범위(최저값을 대표값으로 기재)",
   "sources": [
    {
     "source": "그린피가이드(공식 요금표 확인)",
-    "url": "https://greenfeeguide.co.kr/course/gc-0116/",
+    "url": "https://greenfeeguide.com/course/gc-0116/",
     "checked_at": "2026-11-05"
    }
   ],
-  "checked_at": "2026-11-05",
+  "checked_at": "2026-11-27",
   "market": {
-   "weekday_min": 160000.0,
-   "weekend_min": 160000.0,
+   "weekday_min": 160000,
+   "weekend_min": 160000,
    "part1": null,
    "part2": null,
    "source": "티픽골프장(실거래 관측)",
@@ -348,13 +350,18 @@
   }
  },
  "cancel": {
-  "cancel_policy": null,
+  "cancel_policy": {
+   "value": "당일 취소·No-Show 12개월 예약정지 및 팀별 이용요금 30%, 1일 전 6개월·20%, 2일 전 3개월·10%, 3일 전 1개월 정지, 4~5일 전 취소는 위약 없음",
+   "source": "공식 홈페이지",
+   "url": "https://www.foresthill.kr/html/guide03_5.asp"
+  },
   "open_cycle": null,
   "notes": null,
   "evidence": [
    "② 이용자가 개인 사정의 변경이나 단순 변심 등 정당한 사유없이 예약을 취소하는 경우에는 취소일을 기준으로 다음과 같이 손해를 배상한다.",
    "이용자가 이용예정일 당일 예약을 취소하거나 아무런 통보 없이 이용예정일에 골프장을 이용하지 않을 경우 : 팀별 이용요금의 30% ③ 강설, 폭우, 안개 기타 천재지변 등의 불가항력적인 사유로, 사업자가 이용예정일에 골프장 이용이 불가능하다고 판단되어 임시휴장을 하는 경우에는 예약금을 환불하여야 한다.",
-   "④ 사업자의 책임 있는 사유로 이용자의 예약을 취소하는 경우에는 취소일을 기준으로 다음과 같이 손해를 배상한다."
+   "④ 사업자의 책임 있는 사유로 이용자의 예약을 취소하는 경우에는 취소일을 기준으로 다음과 같이 손해를 배상한다.",
+   "당일취소 및 No-Show : 12개월 예약정지, 팀별 이용요금의 30% / 1일전 취소 : 6개월 예약정지, 20% / 2일전 취소 : 3개월 예약정지, 10% / 3일전 취소 : 1개월 예약정지 / 4~5일전 취소 : -"
   ],
   "weather_evidence": [
    "※ 시간대별 인원 제한 운영 ※ 지역할인(포천/남양주)은 주중에만 적용/2인플레이 적용제외/신분증제시필수 ※ 우대혜택은 타 할인 이벤트와 중복할인 불가 ※ 월별 그린피 참조 기상악화 요금 안내 강설, 폭우, 기타 천재지변 등으로 경기를 정상적으로 마치지 못하시는 경우 기상악화 요금이 적용됩니다.",
@@ -540,16 +547,29 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": null,
-   "evidence": []
+   "value": "사우나 있음",
+   "evidence": [
+    "사우나 있음 — https://greenfeeguide.co.kr/course/gc-0116/"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0116/",
+   "confidence": "medium",
+   "checked_at": "2026-11-27",
+   "value_from": "pass2_third_party"
   },
   "lodging": {
    "value": null,
    "evidence": []
   },
   "other": {
-   "value": null,
-   "evidence": []
+   "value": "프로샵",
+   "evidence": [
+    "other: 프로샵"
+   ],
+   "source_url": "https://greenfeeguide.com/course/gc-0116/",
+   "source_type": "greenfee_guide",
+   "confidence": "medium",
+   "checked_at": "2026-11-27",
+   "value_from": "batch2_supplement"
   },
   "night": {
    "evidence": [
@@ -797,7 +817,18 @@
   "course_notes": null,
   "alert": null,
   "unconfirmed": [],
-  "sources": []
+  "sources": [
+   {
+    "source": "그린피가이드 코스 페이지",
+    "url": "https://greenfeeguide.co.kr/course/gc-0116/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "ok",
@@ -812,12 +843,12 @@
   "browser_batch": false
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.6,
+  "basic": 0.89,
+  "course": 0.2,
   "fee": 1.0,
   "ops": 0.71,
-  "facility": 0.3,
-  "briefing": 0.5,
-  "rental": 0.25
+  "facility": 0.5,
+  "briefing": 0.0,
+  "rental": 0.0
  }
 }

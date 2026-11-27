@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0178",
@@ -43,7 +44,7 @@
    "distance_km": 2.4,
    "source": "최근접 IC 직선거리"
   },
-  "tel": null,
+  "tel": "031-329-9500",
   "homepage": "https://www.pineresort.com/",
   "operators": [
    "미래개발㈜"
@@ -81,7 +82,7 @@
  "course": {
   "holes": 27,
   "holes_received": 27,
-  "course_names": null,
+  "course_names": "서·남·동 3개 코스",
   "membership_type": "대중제",
   "night_light": null,
   "blocks": [],
@@ -104,35 +105,36 @@
  "fee": {
   "weekday": 110000,
   "weekend": 180000,
-  "weekday_text": null,
-  "weekend_text": null,
-  "basis": null,
+  "weekday_text": "110,000원 ~ 230,000원",
+  "weekend_text": "180,000원 ~ 270,000원",
+  "basis": "official",
   "tax_included": null,
   "cart": {
    "value": 100000,
-   "source": "그린피가이드",
-   "url": "https://greenfeeguide.co.kr/course/gc-0009/"
+   "source": "그린피가이드(공식 요금표)",
+   "url": "https://greenfeeguide.com/course/gc-0009/",
+   "note": "팀당(4인 1대)"
   },
   "caddie": {
    "value": 150000,
-   "source": "그린피가이드",
-   "url": "https://greenfeeguide.co.kr/course/gc-0009/",
-   "none": false
+   "none": false,
+   "source": "그린피가이드(공식 요금표)",
+   "url": "https://greenfeeguide.com/course/gc-0009/"
   },
   "as_of": "2026-11-02",
   "source_url": null,
-  "note": null,
+  "note": "주중/주말 그린피는 시간대·시즌별 최저~최고 범위(최저값을 대표값으로 기재)",
   "sources": [
    {
     "source": "그린피가이드(공식 요금표 확인)",
-    "url": "https://greenfeeguide.co.kr/course/gc-0009/",
+    "url": "https://greenfeeguide.com/course/gc-0009/",
     "checked_at": "2026-11-02"
    }
   ],
-  "checked_at": "2026-11-02",
+  "checked_at": "2026-11-27",
   "market": {
-   "weekday_min": 90000.0,
-   "weekend_min": 160000.0,
+   "weekday_min": 90000,
+   "weekend_min": 160000,
    "part1": null,
    "part2": null,
    "source": "티픽골프장(실거래 관측)",
@@ -212,16 +214,18 @@
  },
  "cancel": {
   "cancel_policy": {
-   "value": "7일 전 17:00까지숙박양지파인리조트 · 콘도교통대중교통 용인터미널·양지사거리(서울 고속·남부터미널 버스)개장·설계1970",
-   "source": "그린피가이드(공식 인용)",
-   "url": "https://greenfeeguide.co.kr/course/gc-0009/"
+   "value": "7일 전 17:00까지 정상 취소. 눈·우천 등으로 플레이에 지장이 있을 경우 당일 전화 취소 가능하며 위약 미적용",
+   "source": "공식 홈페이지",
+   "url": "https://www.pineresort.com/Reservation/Reservation.aspx"
   },
   "open_cycle": null,
-  "notes": null,
+  "notes": "최종 취소·위약 조건은 예약 채널 공지와 다를 수 있으니 예약 전 확인 필요",
   "evidence": [
-   "양지파인리조트 로그인 홈페이지가입 아이디/비밀번호 찾기 언어별선택 ENGLISH 中國語 日本語 통합예약골프예약콘도예약예약확인 및 취소골프골프장소개부대시설예약/이용요금이용안내콘도양지파인리조트설악파인리조트양지파인펫파크펫파크 소개주요시설부대시설부대업장단체행사시설안내단체행사 담당자고객센터FAQ고객의 말씀정보광장공지사항이벤트 통합예약골프예약콘도예약예약확인 및 취소골프골프장소개부대시설예약/이용요금이용안내콘도양지파인리조트설악파인리조트양지파인펫파크펫파크 소개주요시설부대시설부대업장단체행사시설안내단체행사 담당자고객센터FAQ고객의 말씀정보광장공지사항이",
    "4일전 취소 2개월 예약정지 2개월 예약정지 3일전 취소 3개월 예약정지 3개월 예약정지 또는이용요금 10% 2일전 취소 4개월 예약정지 또는이용요금 10% 4개월 예약정지 또는이용요금 10% 1일전 취소 6개월 예약정지 또는이용요금 20% 6개월 예약정지 또는이용요금 20% 당일취소(미내장) 1년 예약정지 또는이용요금 30% 1년 예약정지이용요금 30% ※ 7일전(17시) 까지 정상취소 가능합니다.",
-   "양지파인리조트 로그인 홈페이지가입 아이디/비밀번호 찾기 언어별선택 ENGLISH 中國語 日本語 통합예약골프예약콘도예약예약확인 및 취소골프골프장소개부대시설예약/이용요금이용안내콘도양지파인리조트설악파인리조트양지파인펫파크펫파크 소개주요시설부대시설부대업장단체행사시설안내단체행사 담당자고객센터FAQ고객의 말씀정보광장공지사항이벤트 통합예약골프예약콘도예약예약확인 및 취소골프골프장소개부대시설예약/이용요금이용안내콘도양지파인리조트설악파인리조트양지파인펫파크펫파크 소개주요시설부대시설부대업장단체행사시설안내단체행사 담당자고객센터FAQ고객의 말씀정보광장공지사항이"
+   "“7일전(17시) 까지 정상취소 가능합니다.”",
+   "골프장 공식 홈페이지 안내(비회원 예약 기준) · 2026.10.08 확인 ·",
+   "※ 7일전(17시) 까지 정상취소 가능합니다.",
+   "※ 눈이나 우천 등으로 인하여 플레이에 심각한 지장을 줄 수 있을 경우에는 당일 전화로 예약 취소가 가능하며 위약 처리되지 않습니다."
   ],
   "weather_evidence": [
    "품목종류 보관일수 속옷 1주일 보관 후 미회수 시 폐기 의류, 신발, 클럽 3개월 보관 후 미회수 시 폐기 기타품목 3개월 보관 후 미회수 시 폐기 기 타 ※ 눈이나 우천 등으로 인하여 플레이에 심각한 지장을 줄 수 있을 경우에는 당일 전화로 예약 취소가 가능하며 위약 처리되지 않습니다."
@@ -326,7 +330,6 @@
   "dress": {
    "evidence": [
     "A 콘도 지하1층에 CU 편의점이 있으며,영업시간은 주중/주말 07:00~익일 01:00입니다.※ 문의전화 : CU(031-329-9421) Q (부대시설) 설악 가든스파 이용 시 착용 가능 복장은 무엇인가요?",
-    "양지파인리조트 로그인 홈페이지가입 아이디/비밀번호 찾기 언어별선택 ENGLISH 中國語 日本語 통합예약골프예약콘도예약예약확인 및 취소골프골프장소개부대시설예약/이용요금이용안내콘도양지파인리조트설악파인리조트양지파인펫파크펫파크 소개주요시설부대시설부대업장단체행사시설안내단체행사 담당자고객센터FAQ고객의 말씀정보광장공지사항이벤트 통합예약골프예약콘도예약예약확인 및 취소골프골프장소개부대시설예약/이용요금이용안내콘도양지파인리조트설악파인리조트양지파인펫파크펫파크 소개주요시설부대시설부대업장단체행사시설안내단체행사 담당자고객센터FAQ고객의 말씀정보광장공지사항이",
     "클럽 내장시 트레이닝복,슬리퍼,노출이 심한 복장은 삼가 하여 골퍼의 품위를 지켜주시기 바랍니다."
    ],
    "value": "복장 규정 안내",
@@ -338,8 +341,14 @@
    "value_from": "capital_supplement(official_site)"
   },
   "pace": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "지나친 지연·고의 지연·경기 능력 부족 → 경고·퇴장·예약 정지·입장 정지 (최대 무기한 정지)"
+   ],
+   "value": "지나친 지연·고의 지연·경기 능력 부족 → 경고·퇴장·예약 정지·입장 정지 (최대 무기한 정지)",
+   "source_url": "https://www.pineresort.com/Golf/UseInfo.aspx",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfee guide tables)"
   },
   "grass": null
  },
@@ -376,8 +385,14 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": null,
-   "evidence": []
+   "value": "사우나 있음",
+   "evidence": [
+    "사우나 있음 — https://greenfeeguide.co.kr/course/gc-0009/"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0009/",
+   "confidence": "medium",
+   "checked_at": "2026-11-27",
+   "value_from": "pass2_third_party"
   },
   "lodging": {
    "value": "양지파인리조트 · 콘도",
@@ -419,10 +434,14 @@
    "value": null
   },
   "shuttle": {
+   "value": "용인터미널·양지사거리(서울 고속·남부터미널 버스)",
    "evidence": [
-    "자가용 이용시 대중교통 이용시 출발지 종착지 첫차 막차 간격 소요시간 고속터미널이용 용인행 버스 이용 (지하철 3호선 고속버스터미널역 하차) 용인터미널하차 06:30 20:10 20~30분 50분 남부터미널이용 양지/진천행 버스 이용 (지하철 3호선 남부터미널역 하차) 양지사거리하차 06:10 20:30 10~30분 60분 - 터미널 하차 후 -> 택시 or 시내버스 이용 - 노선 및 시간안내등 기타사항은 각 출발지 터미널 안내센터를 통해 확인 바랍니다."
+    "용인터미널·양지사거리(서울 고속·남부터미널 버스) — https://greenfeeguide.co.kr/course/gc-0009/"
    ],
-   "value": null
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0009/",
+   "confidence": "medium",
+   "checked_at": "2026-11-27",
+   "value_from": "pass2_third_party"
   },
   "ev_charge": {
    "evidence": [],
@@ -445,7 +464,7 @@
   }
  },
  "rental": {
-  "available": null,
+  "available": false,
   "full_set": null,
   "fee_text": null,
   "brand": null,
@@ -588,7 +607,18 @@
   "course_notes": null,
   "alert": null,
   "unconfirmed": [],
-  "sources": []
+  "sources": [
+   {
+    "source": "그린피가이드 코스 페이지",
+    "url": "https://greenfeeguide.co.kr/course/gc-0009/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "ok",
@@ -604,11 +634,11 @@
  },
  "coverage": {
   "basic": 0.89,
-  "course": 0.6,
+  "course": 0.4,
   "fee": 1.0,
-  "ops": 0.36,
-  "facility": 0.5,
-  "briefing": 0.5,
+  "ops": 0.43,
+  "facility": 0.7,
+  "briefing": 0.0,
   "rental": 0.25
  }
 }

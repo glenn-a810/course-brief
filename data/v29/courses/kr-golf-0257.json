@@ -12,9 +12,43 @@
   ],
   "source": "raw/received_chungcheong_77.json (외부 데이터 수신, 2026-11-26)",
   "review": {
-   "checked_at": null,
+   "checked_at": "2026-11-27",
    "status": "not_crosschecked",
-   "checks": []
+   "checks": [
+    {
+     "field": "cancel.cancel_policy",
+     "received": null,
+     "verified": "평일 3일 전 · 주말 4일 전까지(이용약관 기준)",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0273/",
+     "quote": "위약 없이 취소 평일 3일 전 · 주말 4일 전까지(이용약관 기준)",
+     "source_type": "third_party",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "ops.three_player",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "팀당 월~목 6만·금~일 9만 원 추가",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0273/",
+     "quote": "3인 플레이 팀당 월~목 6만·금~일 9만 원 추가",
+     "source_type": "third_party",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "rental.full_set",
+     "received": null,
+     "verified": "25,000~50,000원 · 세트 종류별 · 18홀",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0273/",
+     "quote": "골프채(풀세트) 25,000~50,000원 · 세트 종류별 · 18홀",
+     "source_type": "third_party",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    }
+   ]
   },
   "data_checks": [
    "미확인 목록 누락 라벨 보완: 제세금, 예약 비고"
@@ -22,11 +56,14 @@
   "schema_previous": "stage2b/1.0",
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "restructured_from_7key": false,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "checked_at": "2026-11-27",
+  "pass2_patch": "2026-11-27 2차 보완 패스: 5개 항목(그린피가이드·1박2일골프·원더골프·공식 홈페이지 대조, 미확인 값 생성 없음)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0257",
@@ -116,7 +153,8 @@
   "factcheck_2026_11_26": null,
   "tel_former": "043-850-8600",
   "address_original": "충주시 대소원면 성종두담길 113",
-  "facility_cluster_note": "v2.8 I-02 반영 — 클러스터 표시만 추가."
+  "facility_cluster_note": "v2.8 I-02 반영 — 클러스터 표시만 추가.",
+  "par": 72
  },
  "course": {
   "holes": 18,
@@ -132,14 +170,15 @@
   },
   "kga": null,
   "kga_hole_est": null,
-  "extra_courses": null
+  "extra_courses": null,
+  "par": 72
  },
  "fee": {
-  "weekday": null,
-  "weekend": null,
-  "weekday_text": "날짜·시간별 실시간 요금",
-  "weekend_text": "날짜·시간별 실시간 요금",
-  "basis": "공식 이용요금 안내에 그린피가 월별·요일별·시간대별 할인이벤트 금액으로 상이하고 표 없음. 인터넷 회원 미가입 시 1만원 추가",
+  "weekday": 79000,
+  "weekend": 169000,
+  "weekday_text": "79,000~179,000원 (주중, 주간 1·2부 18홀 인터넷회원)",
+  "weekend_text": "169,000~229,000원 (토·공휴일, 주간 1·2부 18홀 인터넷회원)",
+  "basis": "원더골프가 각 구장 공식 요금표에서 수집한 공시정상가 범위(2026-10 수집). 요일·시간대·계절별 차등이라 최저~최고로 표기",
   "tax_included": null,
   "cart": {
    "value": 100000,
@@ -148,25 +187,49 @@
   "caddie": {
    "value": 150000,
    "text": "1·2부 150,000원/팀, 3부 160,000원/팀",
-   "none": false
+   "none": false,
+   "note": "야간 캐디피 하우스캐디 1·2부 150,000원 · 3부(야간) 160,000원"
   },
-  "as_of": "2026-11-26 (공식 이용요금 안내 확인)",
+  "as_of": "2026-11-27 (원더골프 공식 요금표 수집분 확인)",
   "source_url": "http://daeyoungcc.co.kr/",
-  "note": null,
+  "note": "계절·시간대·잔여예약에 따라 실제 결제가는 달라질 수 있음.",
   "sources": [
    {
     "source": "수신 조사(공식·공개 예약정보)",
     "url": "http://daeyoungcc.co.kr/",
     "checked_at": "2026-11-26 (공식 이용요금 안내 확인)"
+   },
+   {
+    "source": "원더골프(공식 요금표 정리)",
+    "url": "https://wondergolf.co.kr/courses/kr-kakao-11319725",
+    "checked_at": "2026-11-27"
    }
-  ]
+  ],
+  "checked_at": "2026-11-27",
+  "market": {
+   "weekday_min": 40000,
+   "weekend_min": 59000,
+   "source": "공개 예약 채널 실거래 관측(티픽)",
+   "url": "https://teepickgolf.com/",
+   "note": "공시가 아닌 최근 관측 실거래 최저가"
+  }
  },
  "cancel": {
-  "cancel_policy": null,
+  "cancel_policy": "평일 3일 전 · 주말 4일 전까지(이용약관 기준)",
   "open_cycle": "예약은 7주 전 해당 요일 09시 오픈, 홈페이지·모바일·전화",
   "notes": null,
-  "evidence": [],
-  "weather_evidence": []
+  "evidence": [
+   "위약 없이 취소 평일 3일 전 · 주말 4일 전까지(이용약관 기준)"
+  ],
+  "weather_evidence": [],
+  "sources": [
+   {
+    "url": "https://greenfeeguide.co.kr/course/gc-0273/",
+    "quote": "위약 없이 취소 평일 3일 전 · 주말 4일 전까지(이용약관 기준)",
+    "checked_at": "2026-11-27",
+    "source_type": "third_party"
+   }
+  ]
  },
  "ops": {
   "nocaddie": {
@@ -178,8 +241,14 @@
    "evidence": []
   },
   "three_player": {
-   "value": null,
-   "evidence": []
+   "value": "팀당 월~목 6만·금~일 9만 원 추가",
+   "evidence": [
+    "3인 플레이 팀당 월~목 6만·금~일 9만 원 추가"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0273/",
+   "confidence": "high",
+   "source_type": "third_party",
+   "checked_at": "2026-11-27"
   },
   "five_player": {
    "value": null,
@@ -190,8 +259,14 @@
    "evidence": []
   },
   "cart_type": {
-   "value": null,
-   "evidence": []
+   "value": "리무진카트 160,000원",
+   "evidence": [
+    "리무진·특수 카트: 리무진카트 160,000원"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0273/",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfeeguide)"
   },
   "cart_entry": {
    "value": null,
@@ -236,8 +311,14 @@
    "evidence": []
   },
   "food": {
-   "value": null,
-   "evidence": []
+   "value": "카페·라운지",
+   "evidence": [
+    "카페·라운지"
+   ],
+   "source_url": "https://basecc.co.kr/Reservation/Reservation.aspx",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfee guide tables)"
   },
   "snack_bar": {
    "value": null,
@@ -270,16 +351,16 @@
   }
  },
  "rental": {
-  "available": null,
-  "full_set": null,
-  "fee_text": null,
+  "available": "가능",
+  "full_set": 25000,
+  "fee_text": "25,000~50,000원 · 세트 종류별 · 18홀",
   "brand": null,
   "left_handed": null,
   "shoes": null,
   "nine_hole": null,
   "range_finder": null,
   "reservation": null,
-  "source_url": null,
+  "source_url": "https://greenfeeguide.co.kr/course/gc-0273/",
   "nearby_delivery": {
    "region": "충청",
    "sido": "충청북도",
@@ -319,7 +400,10 @@
    "not_verified": "전화·문자·카카오톡 상담으로만 확인 가능한 항목(재고, 개별 견적, 권역별 실제 배송 가능 여부)은 '미확인'으로 남김",
    "source_file": "5-rental_8_coverage_verified.json",
    "note_code": "해외 골퍼용 골프채 렌탈·딜리버리 업체. 같은 권역이라도 실제 배송 가능 여부·재고·견적은 전화 확인 필요."
-  }
+  },
+  "evidence": [
+   "골프채(풀세트) 25,000~50,000원 · 세트 종류별 · 18홀"
+  ]
  },
  "briefing": {
   "notices": {
@@ -336,7 +420,6 @@
    "잔디(티)",
    "잔디(페어웨이)",
    "잔디(그린)",
-   "취소·위약 규정",
    "2인 플레이",
    "3인 플레이",
    "5인 플레이",
@@ -355,8 +438,7 @@
    "클럽 렌탈 요금",
    "좌타용 클럽",
    "골프화 대여",
-   "제세금",
-   "예약 비고"
+   "제세금"
   ],
   "unconfirmed_labels_added": [
    "제세금",
@@ -365,7 +447,12 @@
   "sources": [
    "http://daeyoungcc.co.kr/",
    "https://wondergolf.co.kr/courses/kr-kakao-11319725",
-   "https://todaygolfgo.com/golf-courses/master/golf-course-moct-20241231-0517/"
+   "https://todaygolfgo.com/golf-courses/master/golf-course-moct-20241231-0517/",
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
   ],
   "collected_at": "2026-11-26T10:24:29+09:00"
  },
@@ -374,18 +461,20 @@
   "official_reason": "운영 중(공식 홈페이지 정상)",
   "pages_collected": 0,
   "third_party": {
-   "received_report": true
+   "received_report": true,
+   "teepick": true,
+   "greenfeeguide": true
   },
   "render_hint": "report",
   "plan_strategy": "subagent_report(2026-11-26)"
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.8,
-  "fee": 0.5,
-  "ops": 0.0,
-  "facility": 0.3,
-  "briefing": 0.75,
-  "rental": 0.25
+  "basic": 0.89,
+  "course": 0.4,
+  "fee": 1.0,
+  "ops": 0.14,
+  "facility": 0.4,
+  "briefing": 0.5,
+  "rental": 0.75
  }
 }

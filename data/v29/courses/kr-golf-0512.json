@@ -23,11 +23,13 @@
   "schema_previous": "stage2b/1.0",
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "restructured_from_7key": false,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "checked_at": "2026-11-27",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0512",
@@ -91,9 +93,9 @@
   "facility_id": null,
   "facility_members": null,
   "status": "under_construction",
-  "status_note": null,
-  "expected_open": "2027-상반기",
-  "project_stage": "골드힐카운티리조트 관광단지 내 18홀. 2026-07 코스 공사 완료, 클럽하우스 사용승인 → 체육시설업 조건부 등록 추진. 2026-11 기준 미개장.",
+  "status_note": "18홀 코스 공사 완료(2026-07), 클럽하우스 사용승인·체육시설업 조건부 등록 절차 진행. 2026-11-27 기준 미개장",
+  "expected_open": "2026-하반기(개장 준비)",
+  "project_stage": "골드힐카운티리조트 관광단지 내 18홀. 코스 공사 완료 후 클럽하우스 사용승인·조건부 등록 추진, 개장 시점 미정",
   "access": "public",
   "provenance": {
    "master": "courses_master.json v2.5 (문체부·KGA·KGBA·티픽·지도 + 충청 검수 정정)",
@@ -321,7 +323,6 @@
   },
   "unconfirmed": [
    "공식 홈페이지",
-   "대표 전화",
    "회원제/대중제",
    "야간 라이트",
    "잔디(티)",
@@ -360,9 +361,10 @@
    "https://www.pressian.com/pages/articles/2026072711205689314",
    "http://www.golfin.co.kr/news/articleView.html?idxno=7882",
    "https://www.golfmonthlykorea.com/article/20102863",
-   "https://www.chungnam.go.kr/cnportal/province/province/view.do?cl1CdValue=&edate=2026-08-28&menuNo=500487&nttId=2182276&pageIndex=1&sdate=2025-08-28"
+   "https://www.chungnam.go.kr/cnportal/province/province/view.do?cl1CdValue=&edate=2026-08-28&menuNo=500487&nttId=2182276&pageIndex=1&sdate=2025-08-28",
+   "https://www.jbnews.com/news/articleView.html?idxno=1508357"
   ],
-  "collected_at": "2026-11-26T10:24:30+09:00"
+  "collected_at": "2026-11-27"
  },
  "collection": {
   "official_site": "unavailable",
@@ -375,12 +377,12 @@
   "plan_strategy": "subagent_report(2026-11-26)"
  },
  "coverage": {
-  "basic": 0.89,
-  "course": 0.8,
+  "basic": 0.67,
+  "course": 0.4,
   "fee": 0.0,
   "ops": 0.0,
   "facility": 0.2,
-  "briefing": 0.75,
-  "rental": 0.25
+  "briefing": 0.5,
+  "rental": 0.0
  }
 }

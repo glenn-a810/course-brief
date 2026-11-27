@@ -12,8 +12,8 @@
   ],
   "source": "raw/received_jeju_31.json (외부 데이터 수신, 2026-11-26)",
   "review": {
-   "checked_at": "2026-11-26",
-   "status": "verified_official",
+   "checked_at": "2026-11-27",
+   "status": "supplemented(공식+공개 요약)",
    "checks": [
     {
      "field": "그린피",
@@ -28,6 +28,61 @@
      "verified": "동일",
      "result": "일치",
      "url": "https://www.lotteskyhill.com/reservation?bizCd=31"
+    },
+    {
+     "field": "ops.dress",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "복장 규정 없음(단정한 복장 권장)",
+     "result": "보완",
+     "url": "https://www.lotteskyhill.com/reservation/reservation-guide",
+     "quote": "롯데스카이힐 컨트리 클럽에서는 내장 및 플레이 복장 규정을 지정하지 않지만, 클럽 분위기에 맞는 단정한 복장 착용을 권장 드립니다.",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.food",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "레스토랑",
+     "result": "보완",
+     "url": "https://www.lotteskyhill.com/club/facility/club-facility",
+     "quote": "레스토랑",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "ops.cart_type",
+     "received": "{\"value\": \"5인승 일반카트·6인승 리무진카트\", \"evidence\": []}",
+     "verified": "5인승 일반카트·6인승 리무진카트·1인 싱글카트",
+     "result": "수정",
+     "url": "https://www.lotteskyhill.com/",
+     "quote": "제주CC 1인 싱글 카트 도입 안내",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "ops.checkin",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "티오프 15분 전까지 스타트홀 도착",
+     "result": "보완",
+     "url": "https://www.lotteskyhill.com/reservation/reservation-guide",
+     "quote": "rvice를 원칙으로 하고 있으며, 모든 임직원은 별도의 봉사료를 받지 않습니다. 코스 플레이 스타트홀에는 티오프 시간 15분 전까지 도착해 주시기 바랍니다. 쾌적한 진행을 위하여 라운드 소요 시간 총 4시간 30 ~ 4시간 50분으로 운영하고 있습니다. (앞 팀과의 간격을 유지하",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.proshop",
+     "received": null,
+     "verified": "프로샵",
+     "result": "보완",
+     "url": "https://www.lotteskyhill.com/club/facility/club-facility",
+     "quote": "번 홀 비대면 무인 편의점 셀프 간식/음료 간편결제 가능 03 이전 다음 프로샵 라운드 전후로 들르기 좋은 롯데스카이힐CC 제주 프로샵 프리미엄 골프 브랜드부터 계절별 추천 아이템까지, 골퍼를 위한 용품과 의류를 합리적으로 갖추고 있습니다. 운영시간 : 07:00 ~ 18:00",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
     }
    ]
   },
@@ -35,11 +90,14 @@
   "schema_previous": "stage2b/1.0",
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "restructured_from_7key": false,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "batch3_patch": "2026-11-27 배치3 보완: 3개 항목(공식 홈페이지·공개 요금 안내 기준, 미확인 값 생성 없음)",
+  "pass2_patch": "2026-11-27 2차 보완 패스: 2개 항목(그린피가이드·1박2일골프·원더골프·공식 홈페이지 대조, 미확인 값 생성 없음)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0389",
@@ -104,7 +162,12 @@
   "holes_received": 36,
   "holes_conflict": false,
   "facility_cluster": null,
-  "factcheck_2026_11_26": null
+  "factcheck_2026_11_26": null,
+  "designer": {
+   "value": "Robert Trent Jones JR.로버트 트렌트 존스 주니어 설계 다른 골프장: 용평리조트골프클럽 · 레인보우힐스",
+   "source": "공개 정보(그린피가이드)",
+   "url": "https://greenfeeguide.co.kr/course/gc-0487/"
+  }
  },
  "course": {
   "holes": 36,
@@ -133,7 +196,8 @@
    ]
   },
   "kga_hole_est": 36,
-  "extra_courses": null
+  "extra_courses": null,
+  "length_m": 5508
  },
  "fee": {
   "weekday": 240000,
@@ -161,10 +225,22 @@
     "checked_at": "2026-10-06 공식 요금표 확인"
    }
   ],
-  "resident": null
+  "resident": null,
+  "checked_at": "2026-11-27",
+  "market": {
+   "weekday_min": 105000,
+   "weekend_min": 160000,
+   "source": "공개 예약 채널 실거래 관측(티픽)",
+   "url": "https://teepickgolf.com/",
+   "note": "공시가 아닌 최근 관측 실거래 최저가"
+  }
  },
  "cancel": {
-  "cancel_policy": null,
+  "cancel_policy": {
+   "value": "예약취소는 예약일로부터 지정된 기간까지는 벌점/위약금 없이 가능하며, 홈페이지를 통한 직접 취소 또는 예약실을 통한 문의 후 취소 가능합니다.",
+   "source": "공식 홈페이지",
+   "url": "https://www.lotteskyhill.com/package-event/package/detail/buyeo%20cc-package-20251202171411?id=54352564-bcc7-4805-a40d-0f3deb4a8319&urlLang=ko"
+  },
   "open_cycle": "인터넷·전화 예약 60일 전부터(정회원·준회원 회원제 70일 전). 인터넷 1일 1회 선착순",
   "notes": "혼용 코스 이용 시 대중제 그린피 및 개별소비세 적용",
   "evidence": [],
@@ -192,8 +268,14 @@
    "evidence": []
   },
   "cart_type": {
-   "value": "5인승 일반카트·6인승 리무진카트",
-   "evidence": []
+   "value": "5인승 일반카트·6인승 리무진카트·1인 싱글카트",
+   "evidence": [
+    "제주CC 1인 싱글 카트 도입 안내"
+   ],
+   "source_url": "https://www.lotteskyhill.com/",
+   "confidence": "high",
+   "source_type": "official_site",
+   "checked_at": "2026-11-27"
   },
   "cart_entry": {
    "value": null,
@@ -208,8 +290,14 @@
    "evidence": []
   },
   "checkin": {
-   "value": null,
-   "evidence": []
+   "value": "티오프 15분 전까지 스타트홀 도착",
+   "evidence": [
+    "rvice를 원칙으로 하고 있으며, 모든 임직원은 별도의 봉사료를 받지 않습니다. 코스 플레이 스타트홀에는 티오프 시간 15분 전까지 도착해 주시기 바랍니다. 쾌적한 진행을 위하여 라운드 소요 시간 총 4시간 30 ~ 4시간 50분으로 운영하고 있습니다. (앞 팀과의 간격을 유지하"
+   ],
+   "source_url": "https://www.lotteskyhill.com/reservation/reservation-guide",
+   "confidence": "high",
+   "source_type": "official_site",
+   "checked_at": "2026-11-27"
   },
   "locker": {
    "value": null,
@@ -220,8 +308,14 @@
    "evidence": []
   },
   "dress": {
-   "value": null,
-   "evidence": []
+   "value": "복장 규정 없음(단정한 복장 권장)",
+   "evidence": [
+    "롯데스카이힐 컨트리 클럽에서는 내장 및 플레이 복장 규정을 지정하지 않지만, 클럽 분위기에 맞는 단정한 복장 착용을 권장 드립니다."
+   ],
+   "source_url": "https://www.lotteskyhill.com/reservation/reservation-guide",
+   "confidence": "high",
+   "source_type": "official_site",
+   "checked_at": "2026-11-27"
   },
   "pace": {
    "value": null,
@@ -238,8 +332,14 @@
    "evidence": []
   },
   "food": {
-   "value": null,
-   "evidence": []
+   "value": "레스토랑",
+   "evidence": [
+    "레스토랑"
+   ],
+   "source_url": "https://www.lotteskyhill.com/club/facility/club-facility",
+   "confidence": "high",
+   "source_type": "official_site",
+   "checked_at": "2026-11-27"
   },
   "snack_bar": {
    "value": null,
@@ -267,8 +367,24 @@
    "evidence": []
   },
   "shuttle": {
-   "value": null,
-   "evidence": []
+   "value": "제주국제공항(600번 공항리무진버스)중문관광단지 여미지식물원 하차(약 52분) 후 택시 · 첫차 06:00·막차 21:50, 18~27분 간격",
+   "evidence": [
+    "대중교통: 제주국제공항(600번 공항리무진버스)중문관광단지 여미지식물원 하차(약 52분) 후 택시 · 첫차 06:00·막차 21:50, 18~27분 간격"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0487/",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfeeguide)"
+  },
+  "proshop": {
+   "value": "프로샵",
+   "evidence": [
+    "번 홀 비대면 무인 편의점 셀프 간식/음료 간편결제 가능 03 이전 다음 프로샵 라운드 전후로 들르기 좋은 롯데스카이힐CC 제주 프로샵 프리미엄 골프 브랜드부터 계절별 추천 아이템까지, 골퍼를 위한 용품과 의류를 합리적으로 갖추고 있습니다. 운영시간 : 07:00 ~ 18:00"
+   ],
+   "source_url": "https://www.lotteskyhill.com/club/facility/club-facility",
+   "confidence": "high",
+   "source_type": "official_site",
+   "checked_at": "2026-11-27"
   }
  },
  "rental": {
@@ -383,8 +499,6 @@
   "alert": null,
   "unconfirmed": [
    "야간 라이트",
-   "잔디(티)",
-   "취소·위약 규정",
    "노캐디",
    "마샬캐디",
    "카트 페어웨이 진입",
@@ -404,7 +518,12 @@
    "https://www.lotteskyhill.com/club/course/club-course-jeju",
    "https://wondergolf.co.kr/courses/kr-kakao-24120253",
    "https://greenfeeguide.co.kr/region/jeju/",
-   "https://jejukimpro.co.kr/ko/golf/lotte-skyhill"
+   "https://jejukimpro.co.kr/ko/golf/lotte-skyhill",
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
   ],
   "collected_at": "2026-11-26T09:35:01+09:00"
  },
@@ -413,18 +532,20 @@
   "official_reason": "운영 중(홈페이지 정상)",
   "pages_collected": 0,
   "third_party": {
-   "received_report": true
+   "received_report": true,
+   "teepick": true,
+   "greenfeeguide": true
   },
   "render_hint": "report",
   "plan_strategy": "subagent_report(2026-11-26)"
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 1.0,
+  "basic": 0.89,
+  "course": 0.4,
   "fee": 1.0,
-  "ops": 0.29,
-  "facility": 0.3,
-  "briefing": 0.75,
-  "rental": 0.25
+  "ops": 0.43,
+  "facility": 0.5,
+  "briefing": 0.5,
+  "rental": 0.0
  }
 }

@@ -12,19 +12,67 @@
   ],
   "source": "raw/received_jeju_31.json (외부 데이터 수신, 2026-11-26)",
   "review": {
-   "checked_at": null,
-   "status": "not_crosschecked",
-   "checks": []
+   "checked_at": "2026-11-27",
+   "status": "supplemented(공식+공개 요약)",
+   "checks": [
+    {
+     "field": "course.par",
+     "received": null,
+     "verified": 72,
+     "result": "보완",
+     "url": "http://www.ardenhill.co.kr/swp/course",
+     "quote": "18홀 PAR 72",
+     "source_type": "18홀 PAR 72",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.shuttle",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "공항 셔틀버스 운행(시간표 게시)",
+     "result": "보완",
+     "url": "http://www.ardenhill.co.kr/swp/contact",
+     "quote": "공항셔틀 운행 시간표",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.food",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "레스토랑",
+     "result": "보완",
+     "url": "http://www.ardenhill.co.kr/",
+     "quote": "레스토랑",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "fee.checked_at",
+     "received": null,
+     "verified": "2026-11-27",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0525/",
+     "quote": "요금 확인일 2026-11-02 (그린피가이드 2026-11-27 조회)",
+     "source_type": "third_party",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    }
+   ]
   },
   "data_checks": [],
   "schema_previous": "stage2b/1.0",
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "restructured_from_7key": false,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "batch3_patch": "2026-11-27 배치3 보완: 3개 항목(공식 홈페이지·공개 요금 안내 기준, 미확인 값 생성 없음)",
+  "pass2_patch": "2026-11-27 2차 보완 패스: 요금 확인일·출처 기록 갱신(값 변경 없음)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0408",
@@ -88,7 +136,8 @@
   "holes_received": 18,
   "holes_conflict": false,
   "facility_cluster": null,
-  "factcheck_2026_11_26": null
+  "factcheck_2026_11_26": null,
+  "par": 72
  },
  "course": {
   "holes": 18,
@@ -114,7 +163,8 @@
    ]
   },
   "kga_hole_est": 18,
-  "extra_courses": null
+  "extra_courses": null,
+  "par": 72
  },
  "fee": {
   "weekday": 160000,
@@ -140,9 +190,23 @@
     "source": "수신 조사(공식·공개 예약정보)",
     "url": "https://ardenhill.co.kr/swp/charge",
     "checked_at": "2026-11-02 공식 요금표 확인"
+   },
+   {
+    "source": "third_party",
+    "url": "https://greenfeeguide.co.kr/course/gc-0525/",
+    "quote": "요금 확인일 2026-11-02 (그린피가이드 2026-11-27 조회)",
+    "checked_at": "2026-11-27"
    }
   ],
-  "resident": null
+  "resident": null,
+  "checked_at": "2026-11-27",
+  "market": {
+   "weekday_min": 111000,
+   "weekend_min": 146000,
+   "source": "공개 예약 채널 실거래 관측(티픽)",
+   "url": "https://teepickgolf.com/",
+   "note": "공시가 아닌 최근 관측 실거래 최저가"
+  }
  },
  "cancel": {
   "cancel_policy": "조인 상품 기준 주중·주말 7일 전까지 취소, 이후 그린피 상당 위약(대행사 안내)",
@@ -205,8 +269,14 @@
    "evidence": []
   },
   "pace": {
-   "value": null,
-   "evidence": []
+   "value": "티오프 7분 간격",
+   "evidence": [
+    "티오프 7분 간격"
+   ],
+   "source_url": "https://www.ardenhillcc.com/swp/course",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfee guide tables)"
   }
  },
  "facilities": {
@@ -219,8 +289,14 @@
    "evidence": []
   },
   "food": {
-   "value": null,
-   "evidence": []
+   "value": "레스토랑",
+   "evidence": [
+    "레스토랑"
+   ],
+   "source_url": "http://www.ardenhill.co.kr/",
+   "confidence": "high",
+   "source_type": "official_site",
+   "checked_at": "2026-11-27"
   },
   "snack_bar": {
    "value": null,
@@ -248,8 +324,14 @@
    "evidence": []
   },
   "shuttle": {
-   "value": null,
-   "evidence": []
+   "value": "공항 셔틀버스 운행(시간표 게시)",
+   "evidence": [
+    "공항셔틀 운행 시간표"
+   ],
+   "source_url": "http://www.ardenhill.co.kr/swp/contact",
+   "confidence": "high",
+   "source_type": "official_site",
+   "checked_at": "2026-11-27"
   }
  },
  "rental": {
@@ -364,7 +446,6 @@
   "alert": null,
   "unconfirmed": [
    "야간 라이트",
-   "잔디(티)",
    "예약 오픈 주기",
    "노캐디",
    "마샬캐디",
@@ -381,7 +462,13 @@
    "https://ardenhill.co.kr/swp/charge",
    "https://ardenhill.co.kr/board/boardDetail?boardCode=NOTICE&boardPostSeq=36",
    "https://jejukimpro.co.kr/ko/golf/ardenhill",
-   "https://greenfeeguide.co.kr/region/jeju/"
+   "https://greenfeeguide.co.kr/region/jeju/",
+   "http://www.ardenhill.co.kr/swp/course",
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
   ],
   "collected_at": "2026-11-26T09:35:01+09:00"
  },
@@ -390,18 +477,20 @@
   "official_reason": "운영 중(홈페이지 정상)",
   "pages_collected": 0,
   "third_party": {
-   "received_report": true
+   "received_report": true,
+   "teepick": true,
+   "greenfeeguide": true
   },
   "render_hint": "report",
   "plan_strategy": "subagent_report(2026-11-26)"
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 1.0,
+  "basic": 0.78,
+  "course": 0.4,
   "fee": 1.0,
-  "ops": 0.43,
-  "facility": 0.3,
-  "briefing": 0.75,
-  "rental": 1.0
+  "ops": 0.5,
+  "facility": 0.5,
+  "briefing": 0.5,
+  "rental": 0.75
  }
 }

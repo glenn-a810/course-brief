@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0027",
@@ -56,11 +57,11 @@
    "master": "courses_master.json v2.0 (문체부·KGA·KGBA·티픽·지도)",
    "synced_to": "courses_master.json v2.7 (2026-11-26 단일 스키마 정규화)"
   },
-  "par": null,
+  "par": 72,
   "holes_teepick": 27,
   "course_spec": {
    "holes": 27,
-   "par": null,
+   "par": 72,
    "blocks": [],
    "length_m": null,
    "kga": {
@@ -266,7 +267,11 @@
  "course": {
   "holes": 27,
   "holes_received": 27,
-  "course_names": null,
+  "course_names": [
+   "돌산도",
+   "거문도",
+   "오동도"
+  ],
   "membership_type": "대중제",
   "night_light": null,
   "blocks": [],
@@ -467,7 +472,7 @@
   "extra_courses": null,
   "hole_by_hole": null,
   "length_m": null,
-  "par": null
+  "par": 72
  },
  "fee": {
   "weekday": 180000,
@@ -505,7 +510,7 @@
     "note": "공식 요금표(이미지 포함) 판독 + 공개 요금 사이트 보조"
    }
   ],
-  "checked_at": "2026-11-01",
+  "checked_at": "2026-11-27",
   "market": {
    "weekday_min": null,
    "weekend_min": null,
@@ -563,13 +568,14 @@
   "weekend_basis": "fixed"
  },
  "cancel": {
-  "cancel_policy": null,
+  "cancel_policy": "주중, 주말 : 7일 전 정상 취소입니다.",
   "open_cycle": null,
   "notes": null,
   "evidence": [
    "2.\"세이지우드 홈페이지\"는 이용자가 약관에 동의하기에 앞서 약관에 정하여져 있는 내용 중청약철회, 배송책임, 환불조건 등과 같은 중요한 내용을 이용자가 이해할 수 있도록 별도의 연결화면 또는 팝업화면 등을 제공하여 이용자의 확인을 구하여야 합니다.",
    "지역세이지우드 여수경도 대기신청일26/01/13(화) 희망시간7시 코스금오도-오동도(18홀) 상태진행중 대기예약 취소 지역세이지우드 여수경도 대기신청일26/01/13(화) 희망시간7시 코스금오도-오동도(18홀) 상태진행중 대기예약 완료 지역세이지우드 여수경도 대기신청일26/01/13(화) 희망시간7시 코스금오도-오동도(18홀) 상태진행중 취소 첫 페이지 이전 페이지 1 2 다음 페이지 마지막 페이지 세이지우드 이용안내 유의사항 • 원활한 경기 진행을 위해 티 오프 10분 전 까지 카트에 탑승하여 주시기 바랍니다.",
-   "• 고의적인 경기 지연 및 도박행위 • 경기능력이 현저히 부족하여 진행에 막대한 지장을 초래하거나 방해하는 경우 • 근무자에 대한 폭행, 성희롱, 언어폭력 및 직원의 정당한 요구에 불응하는 경우 • 금연구역 위반행위 (코스 내 흡연 절대금지) • 음주, 약물 등으로 정상적인 라운드가 불가능한 경우 위약규정 [ 홍천 ] 예약 취소 시 아래의 기준일에 따라 위약금이 부과됩니다."
+   "• 고의적인 경기 지연 및 도박행위 • 경기능력이 현저히 부족하여 진행에 막대한 지장을 초래하거나 방해하는 경우 • 근무자에 대한 폭행, 성희롱, 언어폭력 및 직원의 정당한 요구에 불응하는 경우 • 금연구역 위반행위 (코스 내 흡연 절대금지) • 음주, 약물 등으로 정상적인 라운드가 불가능한 경우 위약규정 [ 홍천 ] 예약 취소 시 아래의 기준일에 따라 위약금이 부과됩니다.",
+   "주중, 주말 : 7일 전 정상 취소입니다. (출처: https://www.sagewood.co.kr/global/reservation/golf, 2026-11-27 확인)"
   ],
   "weather_evidence": [
    "우천시 1~9홀(9홀정산), 10~18홀(18홀정산)입니다."
@@ -586,10 +592,11 @@
   },
   "two_player": {
    "evidence": [
+    "• 3인 이상 라운드 가능하며, 2인 라운드시 3인 비용이 청구됩니다. (출처: https://www.sagewood.co.kr/global/member/mypage-golf, 2026-11-27 확인)",
     "• 3인 이상 라운드 가능하며, 2인 라운드시 3인 비용이 청구됩니다.(여수 업장에만 해당됨) 퇴장규정 아래 의 경우 경기과와 캐디마스터의 판단에 의해 퇴장 조치됩니다.",
     "(1팀 기준: 최소3인) 예약확정은 단체 예약 접수 2~3일 후, 유선으로 안내 드립니다."
    ],
-   "value": null,
+   "value": "• 3인 이상 라운드 가능하며, 2인 라운드시 3인 비용이 청구됩니다.",
    "third_party": {
     "two": null,
     "three": null,
@@ -612,9 +619,14 @@
   "cart_type": {
    "evidence": [
     "지역세이지우드 여수경도 대기신청일26/01/13(화) 희망시간7시 코스금오도-오동도(18홀) 상태진행중 대기예약 취소 지역세이지우드 여수경도 대기신청일26/01/13(화) 희망시간7시 코스금오도-오동도(18홀) 상태진행중 대기예약 완료 지역세이지우드 여수경도 대기신청일26/01/13(화) 희망시간7시 코스금오도-오동도(18홀) 상태진행중 취소 첫 페이지 이전 페이지 1 2 다음 페이지 마지막 페이지 세이지우드 이용안내 유의사항 • 원활한 경기 진행을 위해 티 오프 10분 전 까지 카트에 탑승하여 주시기 바랍니다.",
-    "로그인 회원가입 리워즈 안내 객실 골프 패키지 수정 지역 및 기간 수정 인원 4명 자세히보기 수정 라운드 정보 지역 선택 예약가능 마감 오픈전 2026.04 일 월 화 수 목 금 토 2026.05 일 월 화 수 목 금 토 ※ 카트피 120,000원."
+    "로그인 회원가입 리워즈 안내 객실 골프 패키지 수정 지역 및 기간 수정 인원 4명 자세히보기 수정 라운드 정보 지역 선택 예약가능 마감 오픈전 2026.04 일 월 화 수 목 금 토 2026.05 일 월 화 수 목 금 토 ※ 카트피 120,000원.",
+    "카트 운전은 캐디가 전담"
    ],
-   "value": null
+   "value": "카트 운전은 캐디가 전담",
+   "source_url": "https://www.sagewood.co.kr/yeosu/golf",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfee guide tables)"
   },
   "cart_entry": {
    "evidence": [],
@@ -630,9 +642,11 @@
   },
   "checkin": {
    "evidence": [
-    "앞 팀이 안전한 지점(거리)에 도착 후 안전을 확인하시고 샷을 합니다."
+    "티오프 30분 전 도착 (출처: https://greenfeeguide.co.kr/course/gc-0446/, 2026-11-27 확인)",
+    "앞 팀이 안전한 지점(거리)에 도착 후 안전을 확인하시고 샷을 합니다.",
+    "티오프 30분 전 도착, 10분 전 스타트·카트 대기"
    ],
-   "value": null,
+   "value": "티오프 30분 전 도착",
    "third_party": {
     "value": "30분 전",
     "source": "그린피가이드",
@@ -655,8 +669,10 @@
    "value": "문구 확인(원문 근거)"
   },
   "pace": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "18홀 약 4시간 30분 (출처: https://greenfeeguide.co.kr/course/gc-0446/, 2026-11-27 확인)"
+   ],
+   "value": "18홀 약 4시간 30분"
   },
   "grass": null
  },
@@ -671,11 +687,12 @@
   },
   "food": {
    "evidence": [
+    "클럽하우스 레스토랑 (출처: https://www.sagewood.co.kr/yeosu/main, 2026-11-27 확인)",
     "| Sagewood 주요 메뉴 바로가기본문 컨텐츠 바로가기 global LOGO 예약조회 리워즈조회 로그인 예약조회 리워즈조회 로그아웃 SAGEWOOD HOTEL & RESORT COUNTRY CLUB VILLA (예정) SAGEWOOD SHOP SPECIAL OFFER 삶을 지혜롭게 만드는 것은 완벽한 휴식입니다 세이지우드는 생각합니다 고요한 산책길에서의 사색, 새로운 영감을 주는 대자연의 풍경과 함께완벽한 휴식으로 깊어지는 지혜로운 삶에 대해.",
     "| Sagewood 본문 컨텐츠 바로가기 global LOGO 예약조회 리워즈조회 로그인 예약조회 리워즈조회 로그아웃 global logo room객실 golf골프 dining다이닝 event연회 wellness웰니스 special offer스페셜 오퍼 sagewood shop세이지우드 샵 sagewood story세이지우드 스토리 예약조회 리워즈조회 로그인 예약조회 리워즈조회 로그아웃 brand site notice contact us 유투브 인스타그램 카카오채널 페이스북 2026년 11월 26일 목요일글로벌 현재날씨 미세먼지 ㎍",
     "| Sagewood 본문 컨텐츠 바로가기 global LOGO 예약조회 리워즈조회 로그인 예약조회 리워즈조회 로그아웃 global logo room객실 golf골프 dining다이닝 event연회 wellness웰니스 special offer스페셜 오퍼 sagewood shop세이지우드 샵 sagewood story세이지우드 스토리 예약조회 리워즈조회 로그인 예약조회 리워즈조회 로그아웃 brand site notice contact us 유투브 인스타그램 카카오채널 페이스북 2026년 11월 26일 목요일글로벌 현재날씨 미세먼지 ㎍"
    ],
-   "value": null
+   "value": "레스토랑"
   },
   "snack_bar": {
    "value": null,
@@ -686,8 +703,10 @@
    "evidence": []
   },
   "lodging": {
-   "value": null,
-   "evidence": []
+   "value": "콘도미니엄",
+   "evidence": [
+    "콘도미니엄 (출처: https://greenfeeguide.co.kr/course/gc-0446/, 2026-11-27 확인)"
+   ]
   },
   "other": {
    "value": null,
@@ -698,9 +717,11 @@
    "value": null
   },
   "closed_days": {
-   "evidence": [],
+   "evidence": [
+    "정기 휴장일 없음 (출처: https://greenfeeguide.co.kr/course/gc-0446/, 2026-11-27 확인)"
+   ],
    "third_party": "정기 휴장일 없음숙박콘도미니엄경기",
-   "value": null
+   "value": "정기 휴장일 없음"
   },
   "shuttle": {
    "evidence": [],
@@ -807,7 +828,12 @@
    "https://www.sagewood.co.kr/yeosu/golf",
    "https://www.sagewood.co.kr/yeosu/facility-terms",
    "https://greenfeeguide.co.kr/course/gc-0446/",
-   "https://www.yna.co.kr/view/AKR20251216103600007"
+   "https://www.yna.co.kr/view/AKR20251216103600007",
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
   ]
  },
  "collection": {
@@ -825,12 +851,12 @@
   "browser_pdf": []
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.8,
+  "basic": 0.89,
+  "course": 0.4,
   "fee": 1.0,
-  "ops": 0.14,
-  "facility": 0.0,
-  "briefing": 1.0,
-  "rental": 0.25
+  "ops": 0.43,
+  "facility": 0.3,
+  "briefing": 0.5,
+  "rental": 0.0
  }
 }

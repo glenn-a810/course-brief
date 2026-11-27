@@ -12,9 +12,89 @@
   ],
   "source": "raw/received_gangwon_65.json (외부 데이터 수신, 2026-11-26)",
   "review": {
-   "checked_at": null,
-   "status": "not_crosschecked",
-   "checks": []
+   "checked_at": "2026-11-27",
+   "status": "supplemented(공개 요약·조사자료)",
+   "checks": [
+    {
+     "field": "master.opened",
+     "received": null,
+     "verified": "2005-07",
+     "result": "보완",
+     "url": "https://www.high1.com/",
+     "quote": "2005년 7월 개장",
+     "source_type": "official_research",
+     "confidence": "medium",
+     "checked_at": "2026-11-27",
+     "note": "2026-11-26 공식 홈페이지 조사자료에서 이관한 값(문구는 요약·환산일 수 있음)"
+    },
+    {
+     "field": "facilities.shuttle",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "리조트 순환셔틀",
+     "result": "보완",
+     "url": "https://www.high1.com/",
+     "quote": "리조트 순환셔틀",
+     "source_type": "official_research",
+     "confidence": "medium",
+     "checked_at": "2026-11-27",
+     "note": "2026-11-26 공식 홈페이지 조사자료에서 이관한 값(문구는 요약·환산일 수 있음)"
+    },
+    {
+     "field": "fee.checked_at",
+     "received": null,
+     "verified": "2026-11-27",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0247/",
+     "quote": "요금 확인일 2026-11-01 (그린피가이드 2026-11-27 조회)",
+     "source_type": "third_party",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "course.par",
+     "received": null,
+     "verified": 72,
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/high1/course/",
+     "quote": "코스 개요 — 파: Par 72",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "course.length_m",
+     "received": null,
+     "verified": 6592,
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/high1/course/",
+     "quote": "코스 개요 — 거리: 6,592m",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "course.course_names",
+     "received": null,
+     "verified": "마운틴코스·밸리코스",
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/high1/course/",
+     "quote": "코스 개요 — 코스: 2개 코스 (마운틴코스, 밸리코스)",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.proshop",
+     "received": null,
+     "verified": "프로샵",
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/high1/info/",
+     "quote": "프로샵: 골프 용품 프로샵 운영",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    }
+   ]
   },
   "data_checks": [
    "요금 출처 표기 불일치: as_of에 \"공식\"이나 URL은 3자(https://greenfeeguide.co.kr/course/gc-0247/)",
@@ -23,11 +103,14 @@
   "schema_previous": "stage2b/1.0",
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "restructured_from_7key": false,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "batch3_patch": "2026-11-27 배치3 보완: 2개 항목(공식 홈페이지·공개 요금 안내 기준, 미확인 값 생성 없음)",
+  "pass2_patch": "2026-11-27 2차 보완 패스: 4개 항목(그린피가이드·1박2일골프·원더골프·공식 홈페이지 대조, 미확인 값 생성 없음)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0440",
@@ -80,7 +163,7 @@
    "㈜강원랜드(이삼걸)"
   ],
   "area_sqm": 1079662,
-  "opened": null,
+  "opened": "2005-07",
   "course_blocks": [],
   "facility_id": null,
   "facility_members": null,
@@ -95,12 +178,13 @@
   "holes_conflict": false,
   "facility_cluster": null,
   "factcheck_2026_11_26": null,
-  "address_original": "정선군 고한읍 고한7길 399"
+  "address_original": "정선군 고한읍 고한7길 399",
+  "par": 72
  },
  "course": {
   "holes": 18,
   "holes_received": 18,
-  "course_names": null,
+  "course_names": "마운틴코스·밸리코스",
   "membership_type": "대중제",
   "night_light": null,
   "blocks": [],
@@ -121,7 +205,9 @@
    ]
   },
   "kga_hole_est": 18,
-  "extra_courses": null
+  "extra_courses": null,
+  "par": 72,
+  "length_m": 6592
  },
  "fee": {
   "weekday": 140000,
@@ -147,8 +233,22 @@
     "source": "수신 조사(공식·공개 예약정보)",
     "url": "https://greenfeeguide.co.kr/course/gc-0247/",
     "checked_at": "2026-11-01(공식 요금표 확인)"
+   },
+   {
+    "source": "third_party",
+    "url": "https://greenfeeguide.co.kr/course/gc-0247/",
+    "quote": "요금 확인일 2026-11-01 (그린피가이드 2026-11-27 조회)",
+    "checked_at": "2026-11-27"
    }
-  ]
+  ],
+  "checked_at": "2026-11-27",
+  "market": {
+   "weekday_min": 120000,
+   "weekend_min": 130000,
+   "source": "공개 예약 채널 실거래 관측(티픽)",
+   "url": "https://teepickgolf.com/",
+   "note": "공시가 아닌 최근 관측 실거래 최저가"
+  }
  },
  "cancel": {
   "cancel_policy": null,
@@ -254,8 +354,35 @@
    "evidence": []
   },
   "shuttle": {
-   "value": null,
-   "evidence": []
+   "value": "리조트 순환셔틀",
+   "evidence": [
+    "리조트 순환셔틀"
+   ],
+   "source_url": "https://www.high1.com/",
+   "confidence": "medium",
+   "source_type": "official_research",
+   "checked_at": "2026-11-27"
+  },
+  "proshop": {
+   "value": "프로샵",
+   "evidence": [
+    "프로샵: 골프 용품 프로샵 운영"
+   ],
+   "source_url": "https://1n2d-golf.co.kr/high1/info/",
+   "confidence": "medium",
+   "source_type": "public_info(1n2d-golf)",
+   "checked_at": "2026-11-27",
+   "note": "1박2일골프 시설·기타 요약(2차 공개자료, 2026-11-27 조회) — 예약 전 공식 채널 재확인 권장"
+  },
+  "ev_charge": {
+   "evidence": [
+    "하이원 팰리스호텔 & 하이원CC 주차장 완속 5기, 급속 1기"
+   ],
+   "value": "하이원 팰리스호텔 & 하이원CC 주차장 완속 5기, 급속 1기",
+   "source_url": "https://www.high1.com/golf/contents.do?key=762",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfee guide tables)"
   }
  },
  "rental": {
@@ -322,7 +449,6 @@
   "fee_change": null,
   "alert": null,
   "unconfirmed": [
-   "대표 전화",
    "야간 라이트",
    "잔디(티)",
    "잔디(페어웨이)",
@@ -356,7 +482,14 @@
   "sources": [
    "https://greenfeeguide.co.kr/course/gc-0247/",
    "https://parkgolfinfo.co.kr/하이원cc정선-고한읍-골프장-라운딩-가이드-예약방법/",
-   "https://www.mk.co.kr/news/sports/11493433"
+   "https://www.mk.co.kr/news/sports/11493433",
+   "https://www.high1.com/",
+   "https://1n2d-golf.co.kr/high1/course/",
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
   ],
   "collected_at": "2026-11-26T09:55:48+09:00"
  },
@@ -365,18 +498,20 @@
   "official_reason": "운영 중(하이원리조트 통합 홈페이지)",
   "pages_collected": 0,
   "third_party": {
-   "received_report": true
+   "received_report": true,
+   "teepick": true,
+   "greenfeeguide": true
   },
   "render_hint": "report",
   "plan_strategy": "subagent_report(2026-11-26)"
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.8,
+  "basic": 0.89,
+  "course": 0.4,
   "fee": 1.0,
   "ops": 0.14,
-  "facility": 0.5,
-  "briefing": 0.75,
-  "rental": 0.25
+  "facility": 0.6,
+  "briefing": 0.5,
+  "rental": 0.0
  }
 }

@@ -12,8 +12,8 @@
   ],
   "source": "raw/received_gangwon_65.json (외부 데이터 수신, 2026-11-26)",
   "review": {
-   "checked_at": "2026-11-26",
-   "status": "verified_official",
+   "checked_at": "2026-11-27",
+   "status": "supplemented(공개 요약·조사자료)",
    "checks": [
     {
      "field": "그린피",
@@ -56,6 +56,162 @@
      "verified": "동일",
      "result": "일치",
      "url": "https://www.phoenixhnr.co.kr/static/pyeongchang/golf/phoenix-reservation"
+    },
+    {
+     "field": "ops.dress",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "노출이 심한 옷·청바지·트레이닝복·등산복은 이용 불가",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0243/",
+     "quote": "복장: 노출이 심한 옷·청바지·트레이닝복·등산복은 이용 불가",
+     "source_type": "official_summary(greenfeeguide)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "course.length_m",
+     "received": null,
+     "verified": 6338,
+     "result": "보완",
+     "url": "https://www.phoenixhnr.co.kr/",
+     "quote": "총 연장 6,338m, 18홀",
+     "source_type": "official_research",
+     "confidence": "medium",
+     "checked_at": "2026-11-27",
+     "note": "2026-11-26 공식 홈페이지 조사자료에서 이관한 값(문구는 요약·환산일 수 있음)"
+    },
+    {
+     "field": "course.night_light",
+     "received": null,
+     "verified": "야간 운영",
+     "result": "보완",
+     "url": "https://www.phoenixhnr.co.kr/",
+     "quote": "야간 운영",
+     "source_type": "official_research",
+     "confidence": "medium",
+     "checked_at": "2026-11-27",
+     "note": "2026-11-26 공식 홈페이지 조사자료에서 이관한 값(문구는 요약·환산일 수 있음)"
+    },
+    {
+     "field": "fee.checked_at",
+     "received": null,
+     "verified": "2026-11-27",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0243/",
+     "quote": "요금 확인일 2026-11-01 (그린피가이드 2026-11-27 조회)",
+     "source_type": "third_party",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "rental.shoes",
+     "received": null,
+     "verified": "15,000원",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0243/",
+     "quote": "골프화 15,000원",
+     "source_type": "third_party",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "course.par",
+     "received": null,
+     "verified": 72,
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/phoenix-park/course/",
+     "quote": "코스 개요 — 파: Par 72",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "course.grass.green",
+     "received": null,
+     "verified": "벤트그래스",
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/phoenix-park/course/",
+     "quote": "코스 개요 — 잔디: 켄터키블루그래스 (페어웨이), 벤트그래스 (그린)",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "course.grass.fairway",
+     "received": null,
+     "verified": "켄터키블루그래스",
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/phoenix-park/course/",
+     "quote": "코스 개요 — 잔디: 켄터키블루그래스 (페어웨이), 벤트그래스 (그린)",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.food",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "클럽하우스 레스토랑 (한식·양식·일식), 라운지 바",
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/phoenix-park/info/",
+     "quote": "레스토랑: 클럽하우스 레스토랑 (한식·양식·일식), 라운지 바",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "ops.locker",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "남녀 분리 프리미엄 라커룸, 사우나, 스파",
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/phoenix-park/info/",
+     "quote": "라커/사우나: 남녀 분리 프리미엄 라커룸, 사우나, 스파",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "ops.sauna",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "남녀 분리 프리미엄 라커룸, 사우나, 스파",
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/phoenix-park/info/",
+     "quote": "라커/사우나: 남녀 분리 프리미엄 라커룸, 사우나, 스파",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.locker_sauna",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "남녀 분리 프리미엄 라커룸, 사우나, 스파",
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/phoenix-park/info/",
+     "quote": "라커/사우나: 남녀 분리 프리미엄 라커룸, 사우나, 스파",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.proshop",
+     "received": null,
+     "verified": "프로샵",
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/phoenix-park/info/",
+     "quote": "프로샵: 프로샵 (프리미엄 골프용품·의류·액세서리)",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.practice",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "드라이빙 레인지, 퍼팅 그린, 벙커 연습장",
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/phoenix-park/info/",
+     "quote": "연습 시설: 드라이빙 레인지, 퍼팅 그린, 벙커 연습장",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
     }
    ]
   },
@@ -65,11 +221,14 @@
   "schema_previous": "stage2b/1.0",
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "restructured_from_7key": false,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "batch3_patch": "2026-11-27 배치3 보완: 3개 항목(공식 홈페이지·공개 요금 안내 기준, 미확인 값 생성 없음)",
+  "pass2_patch": "2026-11-27 2차 보완 패스: 10개 항목(그린피가이드·1박2일골프·원더골프·공식 홈페이지 대조, 미확인 값 생성 없음)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0461",
@@ -154,21 +313,27 @@
    "note": null
   },
   "factcheck_2026_11_26": null,
-  "address_original": "평창군 봉평면 태기로 227-84"
+  "address_original": "평창군 봉평면 태기로 227-84",
+  "designer": {
+   "value": "잭 니클라우스니클라우스(잭 니클라우스·니클라우스 디자인) 설계 다른 골프장: 더클래식CC",
+   "source": "공개 정보(그린피가이드)",
+   "url": "https://greenfeeguide.co.kr/course/gc-0243/"
+  },
+  "par": 72
  },
  "course": {
   "holes": 18,
   "holes_received": 18,
   "course_names": "MOUNTAIN 1~9홀 + LAKE 10~18홀 (1999년 4월 개장, 잭 니클라우스 설계)",
   "membership_type": "회원제",
-  "night_light": null,
+  "night_light": "야간 운영",
   "blocks": [
    "몽블랑·챔피언 등"
   ],
   "grass": {
    "tee": null,
-   "fairway": null,
-   "green": null
+   "fairway": "켄터키블루그래스",
+   "green": "벤트그래스"
   },
   "kga": {
    "code": "233",
@@ -182,7 +347,9 @@
    ]
   },
   "kga_hole_est": 18,
-  "extra_courses": null
+  "extra_courses": null,
+  "length_m": 6338,
+  "par": 72
  },
  "fee": {
   "weekday": 250000,
@@ -208,8 +375,22 @@
     "source": "수신 조사(공식·공개 예약정보)",
     "url": "https://greenfeeguide.co.kr/course/gc-0243/",
     "checked_at": "2026-11-01(공식 요금표 확인)"
+   },
+   {
+    "source": "third_party",
+    "url": "https://greenfeeguide.co.kr/course/gc-0243/",
+    "quote": "요금 확인일 2026-11-01 (그린피가이드 2026-11-27 조회)",
+    "checked_at": "2026-11-27"
    }
-  ]
+  ],
+  "checked_at": "2026-11-27",
+  "market": {
+   "weekday_min": 150000,
+   "weekend_min": 190000,
+   "source": "공개 예약 채널 실거래 관측(티픽)",
+   "url": "https://teepickgolf.com/",
+   "note": "공시가 아닌 최근 관측 실거래 최저가"
+  }
  },
  "cancel": {
   "cancel_policy": "이용 10일 전 16:00 이전까지 취소·변경 가능(토·일·공휴일은 프런트 처리). 취소율 누적에 따른 위약 별도.",
@@ -260,16 +441,37 @@
    "evidence": []
   },
   "locker": {
-   "value": null,
-   "evidence": []
+   "value": "남녀 분리 프리미엄 라커룸, 사우나, 스파",
+   "evidence": [
+    "라커/사우나: 남녀 분리 프리미엄 라커룸, 사우나, 스파"
+   ],
+   "source_url": "https://1n2d-golf.co.kr/phoenix-park/info/",
+   "confidence": "medium",
+   "source_type": "public_info(1n2d-golf)",
+   "checked_at": "2026-11-27",
+   "note": "1박2일골프 시설·기타 요약(2차 공개자료, 2026-11-27 조회) — 예약 전 공식 채널 재확인 권장"
   },
   "sauna": {
-   "value": null,
-   "evidence": []
+   "value": "남녀 분리 프리미엄 라커룸, 사우나, 스파",
+   "evidence": [
+    "라커/사우나: 남녀 분리 프리미엄 라커룸, 사우나, 스파"
+   ],
+   "source_url": "https://1n2d-golf.co.kr/phoenix-park/info/",
+   "confidence": "medium",
+   "source_type": "public_info(1n2d-golf)",
+   "checked_at": "2026-11-27",
+   "note": "1박2일골프 시설·기타 요약(2차 공개자료, 2026-11-27 조회) — 예약 전 공식 채널 재확인 권장"
   },
   "dress": {
-   "value": null,
-   "evidence": []
+   "value": "노출이 심한 옷·청바지·트레이닝복·등산복은 이용 불가",
+   "evidence": [
+    "복장: 노출이 심한 옷·청바지·트레이닝복·등산복은 이용 불가"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0243/",
+   "confidence": "medium",
+   "source_type": "official_summary(greenfeeguide)",
+   "checked_at": "2026-11-27",
+   "note": "공개 요금 정보가 골프장 공식 안내를 정리한 값(확인일 페이지 표기)"
   },
   "pace": {
    "value": null,
@@ -278,24 +480,45 @@
  },
  "facilities": {
   "practice": {
-   "value": null,
-   "evidence": []
+   "value": "드라이빙 레인지, 퍼팅 그린, 벙커 연습장",
+   "evidence": [
+    "연습 시설: 드라이빙 레인지, 퍼팅 그린, 벙커 연습장"
+   ],
+   "source_url": "https://1n2d-golf.co.kr/phoenix-park/info/",
+   "confidence": "medium",
+   "source_type": "public_info(1n2d-golf)",
+   "checked_at": "2026-11-27",
+   "note": "1박2일골프 시설·기타 요약(2차 공개자료, 2026-11-27 조회) — 예약 전 공식 채널 재확인 권장"
   },
   "indoor_range": {
    "value": null,
    "evidence": []
   },
   "food": {
-   "value": null,
-   "evidence": []
+   "value": "클럽하우스 레스토랑 (한식·양식·일식), 라운지 바",
+   "evidence": [
+    "레스토랑: 클럽하우스 레스토랑 (한식·양식·일식), 라운지 바"
+   ],
+   "source_url": "https://1n2d-golf.co.kr/phoenix-park/info/",
+   "confidence": "medium",
+   "source_type": "public_info(1n2d-golf)",
+   "checked_at": "2026-11-27",
+   "note": "1박2일골프 시설·기타 요약(2차 공개자료, 2026-11-27 조회) — 예약 전 공식 채널 재확인 권장"
   },
   "snack_bar": {
    "value": null,
    "evidence": []
   },
   "locker_sauna": {
-   "value": null,
-   "evidence": []
+   "value": "남녀 분리 프리미엄 라커룸, 사우나, 스파",
+   "evidence": [
+    "라커/사우나: 남녀 분리 프리미엄 라커룸, 사우나, 스파"
+   ],
+   "source_url": "https://1n2d-golf.co.kr/phoenix-park/info/",
+   "confidence": "medium",
+   "source_type": "public_info(1n2d-golf)",
+   "checked_at": "2026-11-27",
+   "note": "1박2일골프 시설·기타 요약(2차 공개자료, 2026-11-27 조회) — 예약 전 공식 채널 재확인 권장"
   },
   "lodging": {
    "value": "휘닉스 평창(리조트)",
@@ -310,13 +533,36 @@
    "evidence": []
   },
   "closed_days": {
-   "value": null,
+   "value": "겨울 휴장 12월 7일~",
    "third_party": null,
-   "evidence": []
+   "evidence": [
+    "2026년 영업 기간: 3월 6일~12월 6일 · 겨울 휴장 12월 7일~"
+   ],
+   "source_url": "https://www.phoenixhnr.co.kr/static/pyeongchang/golf/phoenix-guide",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfee guide tables)"
   },
   "shuttle": {
-   "value": null,
-   "evidence": []
+   "value": "KTX 평창역·장평터미널서울에서 KTX 약 1시간 30분, 동서울터미널에서 장평터미널행 시외버스",
+   "evidence": [
+    "대중교통: KTX 평창역·장평터미널서울에서 KTX 약 1시간 30분, 동서울터미널에서 장평터미널행 시외버스"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0243/",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfeeguide)"
+  },
+  "proshop": {
+   "value": "프로샵",
+   "evidence": [
+    "프로샵: 프로샵 (프리미엄 골프용품·의류·액세서리)"
+   ],
+   "source_url": "https://1n2d-golf.co.kr/phoenix-park/info/",
+   "confidence": "medium",
+   "source_type": "public_info(1n2d-golf)",
+   "checked_at": "2026-11-27",
+   "note": "1박2일골프 시설·기타 요약(2차 공개자료, 2026-11-27 조회) — 예약 전 공식 채널 재확인 권장"
   }
  },
  "rental": {
@@ -325,7 +571,7 @@
   "fee_text": "대여채 50,000원 / 대여화 15,000원",
   "brand": null,
   "left_handed": null,
-  "shoes": null,
+  "shoes": 15000,
   "nine_hole": null,
   "range_finder": null,
   "reservation": null,
@@ -369,7 +615,10 @@
    "not_verified": "전화·문자·카카오톡 상담으로만 확인 가능한 항목(재고, 개별 견적, 권역별 실제 배송 가능 여부)은 '미확인'으로 남김",
    "source_file": "5-rental_8_coverage_verified.json",
    "note_code": "해외 골퍼용 골프채 렌탈·딜리버리 업체. 같은 권역이라도 실제 배송 가능 여부·재고·견적은 전화 확인 필요."
-  }
+  },
+  "evidence": [
+   "골프화 15,000원"
+  ]
  },
  "briefing": {
   "notices": {
@@ -406,13 +655,7 @@
    "currently_closed": false
   },
   "unconfirmed": [
-   "대표 전화",
-   "야간 라이트",
-   "잔디(티)",
-   "잔디(페어웨이)",
-   "잔디(그린)",
    "예약 오픈 주기",
-   "취소·위약 규정",
    "5인 플레이",
    "노캐디",
    "마샬캐디",
@@ -436,7 +679,14 @@
   "sources": [
    "https://greenfeeguide.co.kr/course/gc-0243/",
    "https://greenfeeguide.co.kr/guides/golf-course-closing-day-guide/",
-   "https://todaygolfgo.com/regions/gangwon/"
+   "https://todaygolfgo.com/regions/gangwon/",
+   "https://www.phoenixhnr.co.kr/",
+   "https://1n2d-golf.co.kr/phoenix-park/course/",
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
   ],
   "collected_at": "2026-11-26T09:55:48+09:00"
  },
@@ -445,18 +695,20 @@
   "official_reason": "운영 중(휘닉스 평창 리조트 공식 홈페이지)",
   "pages_collected": 0,
   "third_party": {
-   "received_report": true
+   "received_report": true,
+   "teepick": true,
+   "greenfeeguide": true
   },
   "render_hint": "report",
   "plan_strategy": "subagent_report(2026-11-26)"
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 1.0,
+  "basic": 0.89,
+  "course": 0.6,
   "fee": 1.0,
-  "ops": 0.14,
-  "facility": 0.1,
-  "briefing": 0.75,
-  "rental": 1.0
+  "ops": 0.36,
+  "facility": 0.6,
+  "briefing": 0.5,
+  "rental": 0.75
  }
 }

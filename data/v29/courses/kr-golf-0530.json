@@ -5,8 +5,9 @@
   "schema": "stage2c/1.0",
   "batch": null,
   "structure": "master only (구장 JSON 미생성 — 건설중·미착공)",
-  "normalized_at": "2026-11-26T12:20:52+09:00",
-  "has_detail": false
+  "normalized_at": "2026-11-27T14:40:00+09:00",
+  "has_detail": false,
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0530",
@@ -55,7 +56,8 @@
   "holes_note": "계획 홀수 18홀. 회원제/대중제 구성(내역)은 확정되지 않아 member/public/non_member를 0으로 두었다(master.holes.total만 유효).",
   "provenance": {},
   "address_original": "전라남도 해남군 옥천면 용동리 산127-1 일원",
-  "address_note": "2026-07-01 출범한 전남광주통합특별시 명칭으로 주소 접두 정규화(옛 표기는 address_original)."
+  "address_note": "2026-07-01 출범한 전남광주통합특별시 명칭으로 주소 접두 정규화(옛 표기는 address_original).",
+  "status_note": "에이치엠힐스 18홀+골프텔, 총사업비 1,140억원. 2026-10-28 해남 군기본계획 변경 도시계획위원회 심의 통과, 2027년 초 착공·2028년 완공 목표(2026-11-27 기준 미착공)."
  },
  "course": {
   "holes": null,
@@ -221,7 +223,18 @@
   "fee_change": null,
   "alert": null,
   "unconfirmed": [],
-  "sources": []
+  "sources": [
+   {
+    "name": "해남우리신문(2026-11-02)",
+    "url": "http://www.hnwoori.com/news/articleView.html?idxno=220078",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "name": "해남신문(2026-11-27)",
+    "url": "http://www.hnews.co.kr/news/articleView.html?idxno=311495",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": null,
@@ -232,12 +245,12 @@
   "plan_strategy": null
  },
  "coverage": {
-  "basic": 0,
-  "course": 0,
-  "fee": 0,
-  "ops": 0,
-  "facility": 0,
-  "briefing": 0,
-  "rental": 0
+  "basic": 0.56,
+  "course": 0.0,
+  "fee": 0.0,
+  "ops": 0.0,
+  "facility": 0.0,
+  "briefing": 0.0,
+  "rental": 0.0
  }
 }

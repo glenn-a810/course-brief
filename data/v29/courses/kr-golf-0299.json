@@ -8,11 +8,184 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "review": {
+   "checks": [
+    {
+     "field": "ops.nocaddie.value",
+     "received": null,
+     "verified": "전면 노캐디(모든 라운드 셀프)",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0329/",
+     "quote": "노캐디: 전면 노캐디(모든 라운드 셀프)",
+     "source_type": "official_summary(greenfeeguide)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.practice.value",
+     "received": null,
+     "verified": "드라이빙 레인지",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0329/",
+     "quote": "연습 시설: 드라이빙 레인지",
+     "source_type": "official_summary(greenfeeguide)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "course.par",
+     "received": null,
+     "verified": 34,
+     "result": "보완",
+     "url": "https://www.kolongolf.com/swp/club",
+     "quote": "9홀 퍼블릭 … Total 2042m PAR 34",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "course.length_m",
+     "received": null,
+     "verified": 2042,
+     "result": "보완",
+     "url": "https://www.kolongolf.com/swp/club",
+     "quote": "Total A(m) 2042",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "course.course_names",
+     "received": null,
+     "verified": "[\"가든\"]",
+     "result": "보완",
+     "url": "https://www.rankue.co.kr/golf/course/%EA%B0%80%EB%93%A0%EA%B3%A8%ED%94%84%ED%81%B4%EB%9F%BD",
+     "quote": "코스 · 가든 — 9홀 · 파 34",
+     "source_type": "public_info",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "course.night_light",
+     "received": null,
+     "verified": "전 홀 LED 조명",
+     "result": "보완",
+     "url": "https://www.kolongolf.com/swp/club",
+     "quote": "9홀 퍼블릭 골프장 (노캐디, 1인전용 AI카트, 전홀 LED 조명)",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.night.value",
+     "received": null,
+     "verified": "전 홀 LED 조명",
+     "result": "보완",
+     "url": "https://www.kolongolf.com/swp/club",
+     "quote": "전홀 LED 조명",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "ops.two_player.value",
+     "received": null,
+     "verified": "2인부터 가능(4인 미만은 조인 우선)",
+     "result": "보완",
+     "url": "https://www.kolongolf.com/swp/useGuide",
+     "quote": "4인 미만 예약의 경우 다른 고객님과 조인이 우선이며, 최소 플레이 인원은 2인 부터 가능",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "ops.checkin.value",
+     "received": null,
+     "verified": "티오프 40분 전 도착, 20분 전 카트실, 10분 전 스타트홀",
+     "result": "보완",
+     "url": "https://www.kolongolf.com/swp/useGuide",
+     "quote": "티오프 40분전 주차장 도착 … 20분전 까지 카트실 … 스타트홀 10분전에 도착",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "ops.dress.value",
+     "received": null,
+     "verified": "슬리퍼·골프에 맞지 않는 신발, 너무 짧은 반바지·나시 입장 불가",
+     "result": "보완",
+     "url": "https://www.kolongolf.com/swp/useGuide",
+     "quote": "슬리퍼 및 골프에 맞지않는 신발 착용시 입장이 불가 … 너무 짧은 반바지나 나시 종류는 입장이 불가능",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.food.value",
+     "received": null,
+     "verified": "레스토랑",
+     "result": "보완",
+     "url": "https://www.kolongolf.com/swp/club",
+     "quote": "식사가능한 레스트랑",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.locker_sauna.value",
+     "received": null,
+     "verified": "락카룸·사우나",
+     "result": "보완",
+     "url": "https://www.kolongolf.com/swp/club",
+     "quote": "스타트하우스, 락카룸, 사우나, 주차장",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.other.value",
+     "received": null,
+     "verified": "스타트하우스·주차장",
+     "result": "보완",
+     "url": "https://www.kolongolf.com/swp/club",
+     "quote": "스타트하우스, 락카룸, 사우나, 주차장",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "cancel.cancel_policy",
+     "received": null,
+     "verified": "2일 전 17:00까지 위약 없이 취소·시간변경 가능",
+     "result": "보완",
+     "url": "https://parkgolfinfo.co.kr/경주-코오롱호텔-가든-골프장코오롱-가든-예약방법/",
+     "quote": "위약 없이 취소/시간변경: 2일 전 17:00까지",
+     "source_type": "public_info",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "fee.note",
+     "received": null,
+     "verified": "요금은 1·2·3부 시간대별 차등(예시 2부 비회원 주중 49,000원·주말·공휴일 65,000원, 온라인회원·멤버십 별도). 카트비 18홀 14,000원·9홀 8,000원(2026-02-01 시행), 이용요금=입장료+코스관리비 10,000원 구조",
+     "result": "보완",
+     "url": "https://parkgolfinfo.co.kr/경주-코오롱호텔-가든-골프장코오롱-가든-예약방법/",
+     "quote": "주중 2부(08:30~16:30): 비회원 49,000 / 주말·공휴일 2부: 비회원 65,000 · 카트비 9홀 8,000원 / 18홀 14,000원",
+     "source_type": "public_info",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    }
+   ],
+   "checked_at": "2026-11-27"
+  },
+  "batch3_patch": "2026-11-27 배치6(대구·경북) 보완: 2개 항목(공식 홈페이지·그린피가이드 공식 안내 확인 기준, 미확인 값 생성 없음)",
+  "batch6_patch": "2026-11-27 배치6(대구·경북) 보완: 2개 항목(공식 홈페이지·그린피가이드·예약 플랫폼 공개 안내 확인 기준, 미확인 값 생성 없음)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0299",
@@ -64,9 +237,9 @@
   },
   "course_spec": {
    "holes": 9,
-   "par": null,
+   "par": 34,
    "blocks": [],
-   "length_m": null,
+   "length_m": 2042,
    "kga": null,
    "grass": null,
    "hole_by_hole": null
@@ -87,14 +260,17 @@
    "source": "0-golf_factcheck_duplicates_3pairs.json pair 3"
   },
   "tel_former": "054-745-1672",
-  "homepage_former": "https://golf.gtc.co.kr/"
+  "homepage_former": "https://golf.gtc.co.kr/",
+  "par": 34
  },
  "course": {
   "holes": 9,
   "holes_received": null,
-  "course_names": null,
+  "course_names": [
+   "가든"
+  ],
   "membership_type": "대중제",
-  "night_light": null,
+  "night_light": "전 홀 LED 조명",
   "blocks": [],
   "grass": {
    "tee": null,
@@ -105,8 +281,8 @@
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": null,
-  "par": null
+  "length_m": 2042,
+  "par": 34
  },
  "fee": {
   "weekday": null,
@@ -115,30 +291,70 @@
   "weekend_text": null,
   "basis": null,
   "tax_included": null,
-  "cart": null,
+  "cart": {
+   "value": 10000,
+   "raw": "10,000원",
+   "text": "팀당(공식 홈페이지 안내)",
+   "source": "공식 홈페이지",
+   "url": "https://www.kolongolf.com/swp/useReserv"
+  },
   "caddie": null,
   "as_of": null,
-  "source_url": null,
-  "note": null,
-  "sources": [],
-  "checked_at": null
+  "source_url": "https://parkgolfinfo.co.kr/경주-코오롱호텔-가든-골프장코오롱-가든-예약방법/",
+  "note": "요금은 1·2·3부 시간대별 차등(예시 2부 비회원 주중 49,000원·주말·공휴일 65,000원, 온라인회원·멤버십 별도). 카트비 18홀 14,000원·9홀 8,000원(2026-02-01 시행), 이용요금=입장료+코스관리비 10,000원 구조",
+  "sources": [
+   {
+    "source": "공개 안내",
+    "url": "https://parkgolfinfo.co.kr/경주-코오롱호텔-가든-골프장코오롱-가든-예약방법/",
+    "quote": "주중 2부(08:30~16:30): 비회원 49,000 / 주말·공휴일 2부: 비회원 65,000 · 카트비 9홀 8,000원 / 18홀 14,000원",
+    "checked_at": "2026-11-27"
+   }
+  ],
+  "checked_at": "2026-11-27"
  },
  "cancel": {
-  "cancel_policy": null,
+  "cancel_policy": {
+   "value": "2일 전 17:00까지 위약 없이 취소·시간변경 가능",
+   "source": "공개 안내",
+   "url": "https://parkgolfinfo.co.kr/경주-코오롱호텔-가든-골프장코오롱-가든-예약방법/",
+   "checked_at": "2026-11-27"
+  },
   "open_cycle": null,
   "notes": null,
-  "evidence": [],
+  "evidence": [
+   "위약 없이 취소/시간변경: 2일 전 17:00까지"
+  ],
   "weather_evidence": [],
-  "browser_official": null
+  "browser_official": null,
+  "sources": [
+   {
+    "url": "https://parkgolfinfo.co.kr/경주-코오롱호텔-가든-골프장코오롱-가든-예약방법/",
+    "quote": "위약 없이 취소/시간변경: 2일 전 17:00까지",
+    "checked_at": "2026-11-27",
+    "source_type": "public_info"
+   }
+  ]
  },
  "ops": {
   "nocaddie": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "노캐디: 전면 노캐디(모든 라운드 셀프)"
+   ],
+   "value": "전면 노캐디(모든 라운드 셀프)",
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0329/",
+   "confidence": "medium",
+   "source_type": "official_summary(greenfeeguide)",
+   "checked_at": "2026-11-27"
   },
   "two_player": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "4인 미만 예약의 경우 다른 고객님과 조인이 우선이며, 최소 플레이 인원은 2인 부터 가능"
+   ],
+   "value": "2인부터 가능(4인 미만은 조인 우선)",
+   "source_url": "https://www.kolongolf.com/swp/useGuide",
+   "confidence": "high",
+   "source_type": "official_site",
+   "checked_at": "2026-11-27"
   },
   "three_player": {
    "value": null,
@@ -153,12 +369,24 @@
    "evidence": []
   },
   "cart_type": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "전동 카트 페어웨이 진입 가능(그린·벙커·기타 위험지역 진입 불가) · 전동카트는 라운딩 동선 외 사용 제한, 종료 후 카트실로 반납"
+   ],
+   "value": "전동 카트 페어웨이 진입 가능(그린·벙커·기타 위험지역 진입 불가) · 전동카트는 라운딩 동선 외 사용 제한, 종료 후 카트실로 반납",
+   "source_url": "https://kolongolf.com/swp/useGuide",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfee guide tables)"
   },
   "cart_entry": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "페어웨이 진입: 페어웨이 진입 가능전동 카트 페어웨이 진입 가능(그린·벙커·기타 위험지역 진입 불가)"
+   ],
+   "value": "페어웨이 진입 가능전동 카트 페어웨이 진입 가능(그린·벙커·기타 위험지역 진입 불가)",
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0329/",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfeeguide)"
   },
   "bagdrop": {
    "evidence": [],
@@ -169,20 +397,38 @@
    "value": null
   },
   "checkin": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "티오프 40분전 주차장 도착 … 20분전 까지 카트실 … 스타트홀 10분전에 도착"
+   ],
+   "value": "티오프 40분 전 도착, 20분 전 카트실, 10분 전 스타트홀",
+   "source_url": "https://www.kolongolf.com/swp/useGuide",
+   "confidence": "high",
+   "source_type": "official_site",
+   "checked_at": "2026-11-27"
   },
   "locker": {
    "evidence": [],
    "value": null
   },
   "sauna": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "사우나: 사우나 있음"
+   ],
+   "value": "사우나 있음",
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0329/",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfeeguide)"
   },
   "dress": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "슬리퍼 및 골프에 맞지않는 신발 착용시 입장이 불가 … 너무 짧은 반바지나 나시 종류는 입장이 불가능"
+   ],
+   "value": "슬리퍼·골프에 맞지 않는 신발, 너무 짧은 반바지·나시 입장 불가",
+   "source_url": "https://www.kolongolf.com/swp/useGuide",
+   "confidence": "high",
+   "source_type": "official_site",
+   "checked_at": "2026-11-27"
   },
   "pace": {
    "evidence": [],
@@ -191,36 +437,66 @@
  },
  "facilities": {
   "practice": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "연습 시설: 드라이빙 레인지"
+   ],
+   "value": "드라이빙 레인지",
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0329/",
+   "confidence": "medium",
+   "source_type": "official_summary(greenfeeguide)",
+   "checked_at": "2026-11-27"
   },
   "indoor_range": {
    "value": null,
    "evidence": []
   },
   "food": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "식사가능한 레스트랑"
+   ],
+   "value": "레스토랑",
+   "source_url": "https://www.kolongolf.com/swp/club",
+   "confidence": "high",
+   "source_type": "official_site",
+   "checked_at": "2026-11-27"
   },
   "snack_bar": {
    "value": null,
    "evidence": []
   },
   "locker_sauna": {
-   "value": null,
-   "evidence": []
+   "value": "락카룸·사우나",
+   "evidence": [
+    "스타트하우스, 락카룸, 사우나, 주차장"
+   ],
+   "source_url": "https://www.kolongolf.com/swp/club",
+   "confidence": "high",
+   "source_type": "official_site",
+   "checked_at": "2026-11-27"
   },
   "lodging": {
    "value": null,
    "evidence": []
   },
   "other": {
-   "value": null,
-   "evidence": []
+   "value": "스타트하우스·주차장",
+   "evidence": [
+    "스타트하우스, 락카룸, 사우나, 주차장"
+   ],
+   "source_url": "https://www.kolongolf.com/swp/club",
+   "confidence": "high",
+   "source_type": "official_site",
+   "checked_at": "2026-11-27"
   },
   "night": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "전홀 LED 조명"
+   ],
+   "value": "전 홀 LED 조명",
+   "source_url": "https://www.kolongolf.com/swp/club",
+   "confidence": "high",
+   "source_type": "official_site",
+   "checked_at": "2026-11-27"
   },
   "closed_days": {
    "evidence": [],
@@ -308,7 +584,10 @@
   "course_notes": null,
   "alert": null,
   "unconfirmed": [],
-  "sources": []
+  "sources": [
+   "https://www.kolongolf.com/swp/club",
+   "https://www.rankue.co.kr/golf/course/%EA%B0%80%EB%93%A0%EA%B3%A8%ED%94%84%ED%81%B4%EB%9F%BD"
+  ]
  },
  "collection": {
   "official_site": "unavailable",
@@ -316,19 +595,19 @@
   "pages_collected": 0,
   "third_party": {
    "teepick": false,
-   "greenfeeguide": false
+   "greenfeeguide": true
   },
   "render_hint": "thin",
   "plan_strategy": "thin(상세페이지 탐색)",
   "browser_batch": false
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.6,
-  "fee": 0.0,
-  "ops": 0.0,
-  "facility": 0.0,
-  "briefing": 0.25,
-  "rental": 0.25
+  "basic": 0.89,
+  "course": 0.4,
+  "fee": 0.25,
+  "ops": 0.5,
+  "facility": 0.5,
+  "briefing": 0.0,
+  "rental": 0.0
  }
 }

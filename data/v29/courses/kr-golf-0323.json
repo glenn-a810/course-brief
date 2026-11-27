@@ -8,11 +8,85 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "review": {
+   "checks": [
+    {
+     "field": "course.par",
+     "received": null,
+     "verified": 72,
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0351/",
+     "quote": "코스 구성: 대중제 18홀 · 파 72",
+     "source_type": "official_summary(greenfeeguide)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "course.length_m",
+     "received": null,
+     "verified": 7200,
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0351/",
+     "quote": "전장: 7,200YD",
+     "source_type": "official_summary(greenfeeguide)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "ops.checkin.value",
+     "received": null,
+     "verified": "티오프 30분 전 도착, 10분 전 스타트·카트 대기",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0351/",
+     "quote": "도착: 티오프 30분 전 도착, 10분 전 스타트·카트 대기",
+     "source_type": "official_summary(greenfeeguide)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "ops.pace.value",
+     "received": null,
+     "verified": "정당한 이유없이 경기를 지연시킬 때(지나친 경기지연, 진행 미협조): 퇴장 규정 해당, 3개월간 예약 정지",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0351/",
+     "quote": "진행이 늦으면: 정당한 이유없이 경기를 지연시킬 때(지나친 경기지연, 진행 미협조): 퇴장 규정 해당, 3개월간 예약 정지",
+     "source_type": "official_summary(greenfeeguide)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.lodging.value",
+     "received": null,
+     "verified": "게스트하우스",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0351/",
+     "quote": "숙박 시설: 게스트하우스",
+     "source_type": "official_summary(greenfeeguide)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "course.length_m",
+     "received": 7200,
+     "verified": 6584,
+     "result": "수정",
+     "url": "https://greenfeeguide.co.kr/course/gc-0351/",
+     "quote": "전장: 7,200YD",
+     "source_type": "official_summary(greenfeeguide)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    }
+   ],
+   "checked_at": "2026-11-27"
+  },
+  "batch3_patch": "2026-11-27 배치6(대구·경북) 보완: 5개 항목(공식 홈페이지·그린피가이드 공식 안내 확인 기준, 미확인 값 생성 없음)",
+  "batch6_patch": "2026-11-27 배치6(대구·경북) 보완: 1개 항목(공식 홈페이지·그린피가이드·예약 플랫폼 공개 안내 확인 기준, 미확인 값 생성 없음)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0323",
@@ -56,13 +130,13 @@
    "master": "courses_master.json v2.0 (문체부·KGA·KGBA·티픽·지도)",
    "synced_to": "courses_master.json v2.7 (2026-11-26 단일 스키마 정규화)"
   },
-  "par": null,
+  "par": 72,
   "holes_teepick": 18,
   "course_spec": {
    "holes": 18,
-   "par": null,
+   "par": 72,
    "blocks": [],
-   "length_m": null,
+   "length_m": 6584,
    "kga": null,
    "grass": null,
    "hole_by_hole": null
@@ -93,8 +167,8 @@
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": null,
-  "par": null
+  "length_m": 6584,
+  "par": 72
  },
  "fee": {
   "weekday": 150000,
@@ -227,13 +301,19 @@
    "value": null
   },
   "checkin": {
-   "evidence": [],
-   "value": null,
+   "evidence": [
+    "도착: 티오프 30분 전 도착, 10분 전 스타트·카트 대기"
+   ],
+   "value": "티오프 30분 전 도착, 10분 전 스타트·카트 대기",
    "third_party": {
     "value": "30분 전",
     "source": "그린피가이드",
     "url": "https://greenfeeguide.co.kr/course/gc-0351/"
-   }
+   },
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0351/",
+   "confidence": "medium",
+   "source_type": "official_summary(greenfeeguide)",
+   "checked_at": "2026-11-27"
   },
   "locker": {
    "evidence": [],
@@ -248,8 +328,14 @@
    "value": null
   },
   "pace": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "진행이 늦으면: 정당한 이유없이 경기를 지연시킬 때(지나친 경기지연, 진행 미협조): 퇴장 규정 해당, 3개월간 예약 정지"
+   ],
+   "value": "정당한 이유없이 경기를 지연시킬 때(지나친 경기지연, 진행 미협조): 퇴장 규정 해당, 3개월간 예약 정지",
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0351/",
+   "confidence": "medium",
+   "source_type": "official_summary(greenfeeguide)",
+   "checked_at": "2026-11-27"
   },
   "browser_official": {
    "cancel": "예약일 4일 전 17:00까지 홈페이지·본사예약실 유선 취소 가능, 3일 전부터 위약규정 제재. 예약 마감은 전날 17:00",
@@ -283,8 +369,14 @@
    "evidence": []
   },
   "lodging": {
-   "value": null,
-   "evidence": []
+   "value": "게스트하우스",
+   "evidence": [
+    "숙박 시설: 게스트하우스"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0351/",
+   "confidence": "medium",
+   "source_type": "official_summary(greenfeeguide)",
+   "checked_at": "2026-11-27"
   },
   "other": {
    "value": null,
@@ -316,14 +408,14 @@
  "rental": {
   "available": "가능",
   "full_set": 50000,
-  "fee_text": null,
+  "fee_text": "50,000원 · 18홀",
   "brand": null,
   "left_handed": null,
   "shoes": 20000,
   "nine_hole": null,
   "range_finder": null,
   "reservation": null,
-  "source_url": null,
+  "source_url": "https://greenfeeguide.co.kr/course/gc-0351/",
   "evidence": [],
   "official": {
    "full_set": 50000,
@@ -390,7 +482,9 @@
   "course_notes": null,
   "alert": null,
   "unconfirmed": [],
-  "sources": []
+  "sources": [
+   "https://greenfeeguide.co.kr/course/gc-0351/"
+  ]
  },
  "collection": {
   "official_site": "ok",
@@ -405,12 +499,12 @@
   "browser_batch": true
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.6,
+  "basic": 0.78,
+  "course": 0.2,
   "fee": 1.0,
-  "ops": 0.0,
-  "facility": 0.0,
-  "briefing": 0.5,
-  "rental": 1.0
+  "ops": 0.14,
+  "facility": 0.1,
+  "briefing": 0.0,
+  "rental": 0.75
  }
 }

@@ -12,7 +12,7 @@
   ],
   "source": "raw/received_chungcheong_77.json (외부 데이터 수신, 2026-11-26)",
   "review": {
-   "checked_at": "2026-11-26",
+   "checked_at": "2026-11-27",
    "status": "verified_official",
    "checks": [
     {
@@ -42,6 +42,50 @@
      "verified": "공식 \"3인 플레이 이용요금+20,000 추가/인\"",
      "result": "일치",
      "url": "https://www.serenitycc.co.kr/guide/fee.asp"
+    },
+    {
+     "field": "fee.checked_at",
+     "received": null,
+     "verified": "2026-11-27",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0264/",
+     "quote": "요금 확인일 2026-10-08 (그린피가이드 2026-11-27 조회)",
+     "source_type": "third_party",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "ops.dress",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "반바지·청바지·칼라 없는 상의·노출이 심한 옷은 복장 규정 위반",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0264/",
+     "quote": "복장 반바지·청바지·칼라 없는 상의·노출이 심한 옷은 복장 규정 위반",
+     "source_type": "third_party",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "ops.pace",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "18홀 4시간 20분 이내",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0264/",
+     "quote": "진행/경기시간 18홀 4시간 20분 이내",
+     "source_type": "third_party",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "ops.cart_type",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "5인승",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0264/",
+     "quote": "카트 종류 5인승",
+     "source_type": "third_party",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
     }
    ]
   },
@@ -51,11 +95,13 @@
   "schema_previous": "stage2b/1.0",
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "restructured_from_7key": false,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "pass2_patch": "2026-11-27 2차 보완 패스: 3개 항목(그린피가이드·1박2일골프·원더골프·공식 홈페이지 대조, 미확인 값 생성 없음)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0253",
@@ -135,7 +181,8 @@
   "holes_conflict": false,
   "facility_cluster": null,
   "factcheck_2026_11_26": null,
-  "address_original": "청주시 서원구 남이면 문곡구절골길 235"
+  "address_original": "청주시 서원구 남이면 문곡구절골길 235",
+  "par": 72
  },
  "course": {
   "holes": 27,
@@ -164,7 +211,9 @@
    ]
   },
   "kga_hole_est": 27,
-  "extra_courses": null
+  "extra_courses": null,
+  "length_m": 5848,
+  "par": 72
  },
  "fee": {
   "weekday": 220000,
@@ -190,8 +239,22 @@
     "source": "수신 조사(공식·공개 예약정보)",
     "url": "https://www.serenitycc.co.kr/",
     "checked_at": "2026-11-26 (공식·공개 요금 확인)"
+   },
+   {
+    "source": "third_party",
+    "url": "https://greenfeeguide.co.kr/course/gc-0264/",
+    "quote": "요금 확인일 2026-10-08 (그린피가이드 2026-11-27 조회)",
+    "checked_at": "2026-11-27"
    }
-  ]
+  ],
+  "checked_at": "2026-11-27",
+  "market": {
+   "weekday_min": 100000,
+   "weekend_min": 130000,
+   "source": "공개 예약 채널 실거래 관측(티픽)",
+   "url": "https://teepickgolf.com/",
+   "note": "공시가 아닌 최근 관측 실거래 최저가"
+  }
  },
  "cancel": {
   "cancel_policy": null,
@@ -222,8 +285,14 @@
    "evidence": []
   },
   "cart_type": {
-   "value": null,
-   "evidence": []
+   "value": "5인승",
+   "evidence": [
+    "카트 종류 5인승"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0264/",
+   "confidence": "high",
+   "source_type": "third_party",
+   "checked_at": "2026-11-27"
   },
   "cart_entry": {
    "value": null,
@@ -250,12 +319,24 @@
    "evidence": []
   },
   "dress": {
-   "value": null,
-   "evidence": []
+   "value": "반바지·청바지·칼라 없는 상의·노출이 심한 옷은 복장 규정 위반",
+   "evidence": [
+    "복장 반바지·청바지·칼라 없는 상의·노출이 심한 옷은 복장 규정 위반"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0264/",
+   "confidence": "high",
+   "source_type": "third_party",
+   "checked_at": "2026-11-27"
   },
   "pace": {
-   "value": null,
-   "evidence": []
+   "value": "18홀 4시간 20분 이내",
+   "evidence": [
+    "진행/경기시간 18홀 4시간 20분 이내"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0264/",
+   "confidence": "high",
+   "source_type": "third_party",
+   "checked_at": "2026-11-27"
   }
  },
  "facilities": {
@@ -284,8 +365,14 @@
    "evidence": []
   },
   "other": {
-   "value": null,
-   "evidence": []
+   "value": "퍼팅 연습 그린",
+   "evidence": [
+    "퍼팅 연습 그린"
+   ],
+   "source_url": "https://www.serenitycc.co.kr/mobile/guide/guide.asp",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfee guide tables)"
   },
   "night": {
    "value": null,
@@ -395,7 +482,12 @@
   "sources": [
    "https://www.serenitycc.co.kr/",
    "https://greenfeeguide.co.kr/course/gc-0264/",
-   "https://wondergolf.co.kr/courses/kr-kakao-10614847"
+   "https://wondergolf.co.kr/courses/kr-kakao-10614847",
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
   ],
   "collected_at": "2026-11-26T10:24:29+09:00"
  },
@@ -404,18 +496,20 @@
   "official_reason": "운영 중(공식 홈페이지 정상)",
   "pages_collected": 0,
   "third_party": {
-   "received_report": true
+   "received_report": true,
+   "teepick": true,
+   "greenfeeguide": true
   },
   "render_hint": "report",
   "plan_strategy": "subagent_report(2026-11-26)"
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 1.0,
+  "basic": 0.78,
+  "course": 0.4,
   "fee": 1.0,
-  "ops": 0.14,
-  "facility": 0.1,
-  "briefing": 0.75,
-  "rental": 0.25
+  "ops": 0.36,
+  "facility": 0.2,
+  "briefing": 0.5,
+  "rental": 0.0
  }
 }

@@ -12,9 +12,21 @@
   ],
   "source": "raw/received_jeju_31.json (외부 데이터 수신, 2026-11-26)",
   "review": {
-   "checked_at": null,
+   "checked_at": "2026-11-27",
    "status": "not_crosschecked",
-   "checks": []
+   "checks": [
+    {
+     "field": "fee.checked_at",
+     "received": null,
+     "verified": "2026-11-27",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0503/",
+     "quote": "요금 확인일 2026-11-02 (그린피가이드 2026-11-27 조회)",
+     "source_type": "third_party",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    }
+   ]
   },
   "data_checks": [
    "제주 권역은 고속도로 IC가 없어 마스터의 최근접 IC 값(도외 130~160km)이 유효하지 않음"
@@ -22,11 +34,13 @@
   "schema_previous": "stage2b/1.0",
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "restructured_from_7key": false,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "pass2_patch": "2026-11-27 2차 보완 패스: 요금 확인일·출처 기록 갱신(값 변경 없음)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0414",
@@ -112,7 +126,8 @@
    ]
   },
   "kga_hole_est": 9,
-  "extra_courses": null
+  "extra_courses": null,
+  "length_m": 5627
  },
  "fee": {
   "weekday": 120000,
@@ -128,7 +143,8 @@
   "caddie": {
    "value": 150000,
    "text": "3~4인 75,000/150,000원, 2인 65,000/130,000원. 마샬캐디 50,000/100,000원(오후·야간, 당일 확정)",
-   "none": false
+   "none": false,
+   "note": "마샬 캐디는 오후·야간 시간대에만 운영(라운드 당일 확정)"
   },
   "as_of": "2026-11-02 공식 요금표 확인",
   "source_url": "https://www.plazacc.co.kr/",
@@ -138,9 +154,16 @@
     "source": "수신 조사(공식·공개 예약정보)",
     "url": "https://www.plazacc.co.kr/",
     "checked_at": "2026-11-02 공식 요금표 확인"
+   },
+   {
+    "source": "third_party",
+    "url": "https://greenfeeguide.co.kr/course/gc-0503/",
+    "quote": "요금 확인일 2026-11-02 (그린피가이드 2026-11-27 조회)",
+    "checked_at": "2026-11-27"
    }
   ],
-  "resident": null
+  "resident": null,
+  "checked_at": "2026-11-27"
  },
  "cancel": {
   "cancel_policy": "노쇼 3개월 예약정지, 당일~2일 전 취소 3개월, 3~4일 전 2개월",
@@ -380,7 +403,12 @@
    "https://greenfeeguide.co.kr/course/gc-0503/",
    "https://parkgolfinfo.co.kr/",
    "https://todaygolfgo.com/golf-courses/master/golf-course-moct-20241231-0444/",
-   "https://inwon.kr/c/k370"
+   "https://inwon.kr/c/k370",
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
   ],
   "collected_at": "2026-11-26T09:35:01+09:00"
  },
@@ -389,18 +417,19 @@
   "official_reason": "운영 중(홈페이지 정상)",
   "pages_collected": 0,
   "third_party": {
-   "received_report": true
+   "received_report": true,
+   "teepick": true
   },
   "render_hint": "report",
   "plan_strategy": "subagent_report(2026-11-26)"
  },
  "coverage": {
-  "basic": 0.89,
-  "course": 1.0,
+  "basic": 0.78,
+  "course": 0.4,
   "fee": 1.0,
   "ops": 0.29,
   "facility": 0.3,
-  "briefing": 0.75,
-  "rental": 1.0
+  "briefing": 0.5,
+  "rental": 0.75
  }
 }

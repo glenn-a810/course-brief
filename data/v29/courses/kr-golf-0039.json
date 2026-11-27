@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0039",
@@ -99,9 +100,9 @@
  "fee": {
   "weekday": 70000,
   "weekend": 105000,
-  "weekday_text": null,
+  "weekday_text": "70,000원 ~ 80,000원",
   "weekend_text": null,
-  "basis": null,
+  "basis": "official",
   "tax_included": null,
   "cart": {
    "value": 80000,
@@ -119,7 +120,7 @@
     "checked_at": "2026-11-02"
    }
   ],
-  "checked_at": "2026-11-02",
+  "checked_at": "2026-11-27",
   "market": {
    "weekday_min": null,
    "weekend_min": null,
@@ -132,19 +133,23 @@
  },
  "cancel": {
   "cancel_policy": {
-   "value": "평일 3일 전 · 주말 4일 전까지(이용약관 기준)캐디전면 노캐디(모든 라운드 셀프)정기 휴장일정기 휴장일 없음014인 1팀 기준 예상 비용(1",
-   "source": "그린피가이드(공식 인용)",
+   "value": "위약 없이 취소: 평일 3일 전 · 주말 4일 전까지 (이용약관 기준 — 예약 안내에 더 이른 기한이 따로 있을 수 있으니 함께 확인하세요)",
+   "source": "그린피가이드(공식 안내 인용)",
    "url": "https://greenfeeguide.co.kr/course/gc-0480/"
   },
   "open_cycle": null,
   "notes": null,
-  "evidence": [],
+  "evidence": [
+   "기존 cancel_policy 값이 인접 안내 항목과 뒤섞여 있어(오류) 그린피가이드 원문 인용으로 정정 — 평일 3일 전 · 주말 4일 전까지 (이용약관 기준 — 예약 안내에 더 이른 기한이 따로 있을 수 있으니 함께 확인하세요) (출처: https://greenfeeguide.co.kr/course/gc-0480/, 2026-11 확인)"
+  ],
   "weather_evidence": []
  },
  "ops": {
   "nocaddie": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "전면 노캐디(모든 라운드 셀프) (출처: https://greenfeeguide.co.kr/course/gc-0480/, 2026-11-27 확인)"
+   ],
+   "value": "전면 노캐디(모든 라운드 셀프)"
   },
   "two_player": {
    "evidence": [],
@@ -169,8 +174,14 @@
    "evidence": []
   },
   "cart_type": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "이용자가 직접 카트 운전(셀프 라운드)"
+   ],
+   "value": "이용자가 직접 카트 운전(셀프 라운드)",
+   "source_url": "https://www.hpnabicc.co.kr/html/guide/guide_01.asp",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfee guide tables)"
   },
   "cart_entry": {
    "evidence": [],
@@ -245,9 +256,11 @@
    "value": null
   },
   "closed_days": {
-   "evidence": [],
+   "evidence": [
+    "정기 휴장일 없음 (출처: https://greenfeeguide.co.kr/course/gc-0480/, 2026-11-27 확인)"
+   ],
    "third_party": "정기 휴장일 없음",
-   "value": null
+   "value": "정기 휴장일 없음"
   },
   "shuttle": {
    "evidence": [],
@@ -264,16 +277,16 @@
   }
  },
  "rental": {
-  "available": null,
+  "available": true,
   "full_set": 50000,
-  "fee_text": null,
+  "fee_text": "50,000원 · 18홀",
   "brand": null,
   "left_handed": null,
-  "shoes": null,
+  "shoes": 5000,
   "nine_hole": null,
   "range_finder": null,
   "reservation": null,
-  "source_url": null,
+  "source_url": "https://greenfeeguide.co.kr/course/gc-0480/",
   "evidence": [],
   "official": null,
   "nearby_delivery": {
@@ -334,8 +347,19 @@
   "recent_notice_text": null,
   "course_notes": null,
   "alert": null,
-  "unconfirmed": [],
-  "sources": []
+  "unconfirmed": [
+   "체크인",
+   "복장",
+   "진행 시간",
+   "식당"
+  ],
+  "sources": [
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "unavailable",
@@ -352,12 +376,12 @@
   "browser_pdf": []
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.6,
+  "basic": 0.78,
+  "course": 0.2,
   "fee": 0.75,
-  "ops": 0.0,
-  "facility": 0.0,
-  "briefing": 0.5,
-  "rental": 0.5
+  "ops": 0.14,
+  "facility": 0.1,
+  "briefing": 0.0,
+  "rental": 0.75
  }
 }

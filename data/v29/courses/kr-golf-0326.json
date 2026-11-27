@@ -8,11 +8,74 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "review": {
+   "checks": [
+    {
+     "field": "facilities.other.value",
+     "received": null,
+     "verified": "프로샵",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0342/",
+     "quote": "그 밖의 시설: 프로샵",
+     "source_type": "official_summary(greenfeeguide)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "cancel.open_cycle",
+     "received": null,
+     "verified": "매주 월요일 오전 10시에 2주 후 월~일요일(일주일분) 예약 가능",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0342/",
+     "quote": "예약 오픈: 매주 월요일 오전 10시에 2주 후 월~일요일(일주일분) 예약 가능",
+     "source_type": "official_summary(greenfeeguide)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "course.par",
+     "received": null,
+     "verified": 72,
+     "result": "보완",
+     "url": "https://parkgolfinfo.co.kr/안동-레이크gc-예약방법·요금-골프장-이용방법-안내/",
+     "quote": "18홀 파72, 전장 6,333m(OUT 3,200m·IN 3,133m)",
+     "source_type": "public_info",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "course.length_m",
+     "received": null,
+     "verified": 6333,
+     "result": "보완",
+     "url": "https://parkgolfinfo.co.kr/안동-레이크gc-예약방법·요금-골프장-이용방법-안내/",
+     "quote": "총 전장 6,333m(OUT 3,200m·IN 3,133m)",
+     "source_type": "public_info",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "ops.checkin.value",
+     "received": null,
+     "verified": "티오프 30분 전 도착, 10분 전 스타트 대기",
+     "result": "보완",
+     "url": "https://parkgolfinfo.co.kr/안동-레이크gc-예약방법·요금-골프장-이용방법-안내/",
+     "quote": "예약시간 30분 전 도착, 티오프 10분 전 스타트 대기 권장",
+     "source_type": "public_info",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    }
+   ],
+   "checked_at": "2026-11-27"
+  },
+  "batch3_patch": "2026-11-27 배치6(대구·경북) 보완: 2개 항목(공식 홈페이지·그린피가이드 공식 안내 확인 기준, 미확인 값 생성 없음)",
+  "batch6_patch": "2026-11-27 배치6(대구·경북) 보완: 3개 항목(공식 홈페이지·그린피가이드·예약 플랫폼 공개 안내 확인 기준, 미확인 값 생성 없음)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0326",
@@ -56,13 +119,13 @@
    "master": "courses_master.json v2.0 (문체부·KGA·KGBA·티픽·지도)",
    "synced_to": "courses_master.json v2.7 (2026-11-26 단일 스키마 정규화)"
   },
-  "par": null,
+  "par": 72,
   "holes_teepick": 18,
   "course_spec": {
    "holes": 18,
-   "par": null,
+   "par": 72,
    "blocks": [],
-   "length_m": null,
+   "length_m": 6333,
    "kga": null,
    "grass": null,
    "hole_by_hole": null
@@ -90,8 +153,8 @@
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": null,
-  "par": null
+  "length_m": 6333,
+  "par": 72
  },
  "fee": {
   "weekday": 80000,
@@ -160,15 +223,25 @@
    "source": "공식(브라우저 수집)",
    "url": "https://golf.gtc.co.kr/ANDONGLAKE/content/info-greenfee.asp"
   },
-  "open_cycle": null,
+  "open_cycle": "매주 월요일 오전 10시에 2주 후 월~일요일(일주일분) 예약 가능",
   "notes": null,
-  "evidence": [],
+  "evidence": [
+   "예약 오픈: 매주 월요일 오전 10시에 2주 후 월~일요일(일주일분) 예약 가능"
+  ],
   "weather_evidence": [],
   "browser_official": {
    "cancel": "경기 예정일 5일 전 17:00까지 온라인 취소(토요일은 5일 전 월요일 17:00). 위약: 4일 전 1개월, 3일 전 2개월, 2일 전 3개월, 1일 전 4개월, 당일·미내장 5개월 예약정지(평일·주말 동일). 17시 이후 취소는 익일 적용",
    "booking": "매주 월요일 10:00 오픈, 2주 후 월~일 일주일분. 회원가입·휴대폰 인증 필요, 예약 시 매크로방지문자 입력",
    "arrival": "예약시간 30분 전 도착, 티오프 10분 전 스타트 대기, 팀원 미도착 시 먼저 진행 후 합류"
-  }
+  },
+  "sources": [
+   {
+    "url": "https://greenfeeguide.co.kr/course/gc-0342/",
+    "quote": "예약 오픈: 매주 월요일 오전 10시에 2주 후 월~일요일(일주일분) 예약 가능",
+    "checked_at": "2026-11-27",
+    "source_type": "official_summary(greenfeeguide)"
+   }
+  ]
  },
  "ops": {
   "nocaddie": {
@@ -208,8 +281,14 @@
    "value": null
   },
   "checkin": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "예약시간 30분 전 도착, 티오프 10분 전 스타트 대기 권장"
+   ],
+   "value": "티오프 30분 전 도착, 10분 전 스타트 대기",
+   "source_url": "https://parkgolfinfo.co.kr/안동-레이크gc-예약방법·요금-골프장-이용방법-안내/",
+   "confidence": "medium",
+   "source_type": "public_info",
+   "checked_at": "2026-11-27"
   },
   "locker": {
    "evidence": [],
@@ -259,8 +338,14 @@
    "evidence": []
   },
   "other": {
-   "value": null,
-   "evidence": []
+   "value": "프로샵",
+   "evidence": [
+    "그 밖의 시설: 프로샵"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0342/",
+   "confidence": "medium",
+   "source_type": "official_summary(greenfeeguide)",
+   "checked_at": "2026-11-27"
   },
   "night": {
    "evidence": [],
@@ -288,14 +373,14 @@
  "rental": {
   "available": "가능",
   "full_set": 30000,
-  "fee_text": null,
+  "fee_text": "30,000원 · 18홀",
   "brand": null,
   "left_handed": null,
   "shoes": null,
   "nine_hole": null,
   "range_finder": null,
   "reservation": null,
-  "source_url": null,
+  "source_url": "https://greenfeeguide.co.kr/course/gc-0342/",
   "evidence": [],
   "official": {
    "putter": 10000,
@@ -361,7 +446,14 @@
   "course_notes": null,
   "alert": null,
   "unconfirmed": [],
-  "sources": []
+  "sources": [
+   "https://parkgolfinfo.co.kr/안동-레이크gc-예약방법·요금-골프장-이용방법-안내/",
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "ok",
@@ -369,19 +461,19 @@
   "pages_collected": 1,
   "third_party": {
    "teepick": true,
-   "greenfeeguide": false
+   "greenfeeguide": true
   },
   "render_hint": "thin",
   "plan_strategy": "thin(상세페이지 탐색)",
   "browser_batch": true
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.6,
+  "basic": 0.78,
+  "course": 0.2,
   "fee": 1.0,
-  "ops": 0.0,
-  "facility": 0.0,
-  "briefing": 0.5,
+  "ops": 0.07,
+  "facility": 0.1,
+  "briefing": 0.0,
   "rental": 0.75
  }
 }

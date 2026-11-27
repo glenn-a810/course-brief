@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0151",
@@ -66,7 +67,7 @@
    "blocks": [
     "세종여강황학"
    ],
-   "length_m": null,
+   "length_m": 5451,
    "kga": null,
    "grass": null,
    "hole_by_hole": null
@@ -81,7 +82,7 @@
  "course": {
   "holes": 27,
   "holes_received": 27,
-  "course_names": null,
+  "course_names": "세종·여강·황학 각 9홀",
   "membership_type": "대중제",
   "night_light": null,
   "blocks": [
@@ -96,7 +97,7 @@
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": null,
+  "length_m": 5451,
   "par": 72
  },
  "fee": {
@@ -106,13 +107,30 @@
   "weekend_text": null,
   "basis": null,
   "tax_included": null,
-  "cart": null,
-  "caddie": null,
+  "cart": {
+   "value": 100000,
+   "note": "18홀 기준(9홀 추가 50,000원)",
+   "source": "공식 홈페이지 요금표",
+   "url": "https://sophiagreen.co.kr/swp/charge"
+  },
+  "caddie": {
+   "value": 150000,
+   "note": "18홀 기준",
+   "source": "공식 홈페이지 요금표",
+   "url": "https://sophiagreen.co.kr/swp/charge"
+  },
   "as_of": null,
   "source_url": null,
   "note": null,
-  "sources": [],
-  "checked_at": null,
+  "sources": [
+   {
+    "source": "공식 홈페이지 요금표",
+    "url": "https://sophiagreen.co.kr/swp/charge",
+    "checked_at": "2026-11-27",
+    "note": "카트 대여료 100,000원(18홀), 캐디피 150,000원(18홀)"
+   }
+  ],
+  "checked_at": "2026-11-27",
   "market": {
    "weekday_min": 100000.0,
    "weekend_min": 160000.0,
@@ -120,16 +138,24 @@
    "part2": null,
    "source": "티픽골프장(실거래 관측)",
    "url": "https://teepickgolf.com/course/%EC%86%8C%ED%94%BC%EC%95%84%EA%B7%B8%EB%A6%B0",
-   "note": "공시가 아닌 최근 관측 실거래 최저가"
+   "note": "공시가 아닌 최근 관측 실거래 최저가",
+   "checked_at": "2026-11-27"
   },
   "official_green_evidence": [],
   "official_rental": null
  },
  "cancel": {
-  "cancel_policy": null,
+  "cancel_policy": {
+   "value": "2026년 4월 1일부터 주중 티타임도 취소 기일이 8일 전으로 주말·공휴일과 동일. 임박 취소·당일 임의 취소는 위약(예: 6개월 예약정지) 적용",
+   "source": "공식 홈페이지",
+   "url": "https://sophiagreen.co.kr/swp/reserve_penalty"
+  },
   "open_cycle": null,
   "notes": null,
-  "evidence": [],
+  "evidence": [
+   "2026년 4월 1일 부터 모든 주중 티타임의 취소기일이 8일전으로 주말·공휴일과 동일하게 적용됩니다",
+   "일기예보 상황에 의한 당일 임의취소는 6개월 예약정지 위약 페널티가 적용되니 유의바랍니다."
+  ],
   "weather_evidence": []
  },
  "ops": {
@@ -379,8 +405,23 @@
   "recent_notice_text": null,
   "course_notes": null,
   "alert": null,
-  "unconfirmed": [],
-  "sources": []
+  "unconfirmed": [
+   "예약 오픈 주기 미확인",
+   "야간(3부) 운영 여부 미확인",
+   "잔디 종류 미확인"
+  ],
+  "sources": [
+   {
+    "source": "그린피가이드 코스 페이지",
+    "url": "https://greenfeeguide.co.kr/course/gc-0124/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "ok",
@@ -388,19 +429,19 @@
   "pages_collected": 2,
   "third_party": {
    "teepick": true,
-   "greenfeeguide": false
+   "greenfeeguide": true
   },
   "render_hint": "static",
   "plan_strategy": "static(직접 파싱)",
   "browser_batch": false
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.8,
-  "fee": 0.0,
+  "basic": 0.89,
+  "course": 0.6,
+  "fee": 0.5,
   "ops": 0.29,
   "facility": 0.2,
-  "briefing": 0.5,
-  "rental": 0.25
+  "briefing": 0.0,
+  "rental": 0.0
  }
 }

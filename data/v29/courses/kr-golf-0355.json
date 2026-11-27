@@ -44,11 +44,12 @@
   "schema_previous": "stage2b/1.0",
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "restructured_from_7key": false,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0355",
@@ -104,7 +105,7 @@
    "정산개발㈜김호철"
   ],
   "area_sqm": 1514206,
-  "opened": null,
+  "opened": "2005-10",
   "course_blocks": [],
   "facility_id": null,
   "facility_members": null,
@@ -120,7 +121,16 @@
   "holes_conflict": false,
   "facility_cluster": null,
   "factcheck_2026_11_26": null,
-  "address_original": "김해시 주촌면 서부로 1637번길 299-194"
+  "address_original": "김해시 주촌면 서부로 1637번길 299-194",
+  "designer": {
+   "value": "Ronald W. Fream(Golf Plan 社)로널드 프림(골프플랜) 설계 다른 골프장: 용평리조트대중골프장 · 용평버치힐골프클럽 · 파인힐스CC · 함평엘리체CC",
+   "source": "공개 정보(그린피가이드)",
+   "url": "https://greenfeeguide.co.kr/course/gc-0386/"
+  },
+  "course_spec": {
+   "length_m": 3245,
+   "holes": 27
+  }
  },
  "course": {
   "holes": 27,
@@ -149,7 +159,8 @@
    ]
   },
   "kga_hole_est": 27,
-  "extra_courses": null
+  "extra_courses": null,
+  "length_m": 3245
  },
  "fee": {
   "weekday": 210000,
@@ -176,13 +187,16 @@
     "url": "https://greenfeeguide.co.kr/course/gc-0386/",
     "checked_at": "2026-08-11"
    }
-  ]
+  ],
+  "checked_at": "2026-11-27"
  },
  "cancel": {
-  "cancel_policy": "미확인(예약실 유선 문의)",
-  "open_cycle": null,
+  "cancel_policy": null,
+  "open_cycle": "정회원: 평일/공휴일 해당일 2주전 월요일 10:00, 주말 2주전 수요일 10:00. 기타회원(평일): 2주전 화요일 10:00. 예약은 해당일 1일전 17:00까지.",
   "notes": "정기 휴장은 명절 당일. 카트 운전은 경기도우미만 가능. 2017~2019 최경주 인비테이셔널 개최",
-  "evidence": [],
+  "evidence": [
+   "https://wondergolf.co.kr/courses/kr-kakao-8060635"
+  ],
   "weather_evidence": []
  },
  "ops": {
@@ -207,8 +221,14 @@
    "evidence": []
   },
   "cart_type": {
-   "value": null,
-   "evidence": []
+   "value": "골프카트 운전은 경기도우미만 가능",
+   "evidence": [
+    "골프카트 운전은 경기도우미만 가능"
+   ],
+   "source_url": "https://www.jeongsancc.co.kr/guide/guide01.do",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfee guide tables)"
   },
   "cart_entry": {
    "value": null,
@@ -253,8 +273,14 @@
    "evidence": []
   },
   "food": {
-   "value": null,
-   "evidence": []
+   "value": "프로샵·카페·라운지",
+   "evidence": [
+    "프로샵·카페·라운지"
+   ],
+   "source_url": "https://www.jeongsancc.co.kr/house/house.do",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfee guide tables)"
   },
   "snack_bar": {
    "value": null,
@@ -277,9 +303,11 @@
    "evidence": []
   },
   "closed_days": {
-   "value": null,
+   "value": "명절 당일",
    "third_party": null,
-   "evidence": []
+   "evidence": [
+    "https://greenfeeguide.co.kr/course/gc-0386/"
+   ]
   },
   "shuttle": {
    "value": null,
@@ -296,7 +324,7 @@
   "nine_hole": null,
   "range_finder": null,
   "reservation": null,
-  "source_url": null,
+  "source_url": "https://greenfeeguide.co.kr/course/gc-0386/",
   "nearby_delivery": {
    "region": "영남",
    "sido": "경상남도",
@@ -351,10 +379,6 @@
   "alert": null,
   "unconfirmed": [
    "야간 라이트",
-   "잔디(티)",
-   "잔디(그린)",
-   "예약 오픈 주기",
-   "취소·위약 규정",
    "2인 플레이",
    "3인 플레이",
    "5인 플레이",
@@ -380,7 +404,8 @@
   "sources": [
    "https://www.jeongsancc.co.kr/club/intro.do",
    "https://greenfeeguide.co.kr/course/gc-0386/",
-   "https://www.rankue.co.kr/golf/course/김해정산컨트리클럽"
+   "https://www.rankue.co.kr/golf/course/김해정산컨트리클럽",
+   "https://wondergolf.co.kr/courses/kr-kakao-8060635"
   ],
   "collected_at": "2026-11-26T10:33:21+09:00"
  },
@@ -389,18 +414,19 @@
   "official_reason": "운영 중(공식 홈페이지 정상, 코스·클럽 소개 게시)",
   "pages_collected": 0,
   "third_party": {
-   "received_report": true
+   "received_report": true,
+   "greenfeeguide": true
   },
   "render_hint": "report",
   "plan_strategy": "subagent_report(2026-11-26)"
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 1.0,
+  "basic": 0.89,
+  "course": 0.4,
   "fee": 1.0,
-  "ops": 0.0,
-  "facility": 0.1,
-  "briefing": 0.75,
-  "rental": 1.0
+  "ops": 0.07,
+  "facility": 0.3,
+  "briefing": 0.5,
+  "rental": 0.75
  }
 }

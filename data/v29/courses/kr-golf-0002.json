@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0002",
@@ -51,7 +52,7 @@
    "이애자"
   ],
   "area_sqm": 1420762,
-  "opened": null,
+  "opened": "2018",
   "course_blocks": [],
   "facility_id": null,
   "provenance": {
@@ -66,7 +67,7 @@
    "blocks": [
     "다산베아채장보고"
    ],
-   "length_m": null,
+   "length_m": 6045,
    "kga": {
     "kga_course_code": "380",
     "kga_name": "다산베아채",
@@ -239,7 +240,11 @@
  "course": {
   "holes": 27,
   "holes_received": 27,
-  "course_names": null,
+  "course_names": [
+   "다산",
+   "베아채",
+   "장보고"
+  ],
   "membership_type": "대중제",
   "night_light": null,
   "blocks": [
@@ -411,15 +416,15 @@
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": null,
+  "length_m": 6045,
   "par": 72
  },
  "fee": {
   "weekday": 135000,
   "weekend": 185000,
-  "weekday_text": null,
+  "weekday_text": "135,000원 ~ 165,000원",
   "weekend_text": null,
-  "basis": null,
+  "basis": "official",
   "tax_included": null,
   "cart": {
    "value": 100000,
@@ -455,7 +460,7 @@
    "url": "https://www.beachegolf.com/html/guide02.asp",
    "checked_at": "2026-11-26"
   },
-  "checked_at": "2026-11-02",
+  "checked_at": "2026-11-27",
   "market": {
    "weekday_min": null,
    "weekend_min": 196000.0,
@@ -549,8 +554,12 @@
  },
  "ops": {
   "nocaddie": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "True (출처: https://greenfeeguide.co.kr/course/gc-0471/, 2026-11-27 확인)",
+    "노캐디(셀프) 라운드 가능"
+   ],
+   "value": true,
+   "fee_note": "팀당 10,000원 추가"
   },
   "two_player": {
    "evidence": [],
@@ -576,10 +585,11 @@
   },
   "cart_type": {
    "evidence": [
+    "6인승 4백 승용 카트 (출처: https://greenfeeguide.co.kr/course/gc-0471/, 2026-11-27 확인)",
     "예약안내 이용요금 준수사항 패널티규정 이용안내 이용요금 구분 그린피 카트료 18홀 주중(월~목) 1부 135,000 대당 : 100,000 2부 145,000 금요일 1부 135,000 2부 165,000 주말/공휴일 1부 185,000 2부 185,000 9홀(추가) 주중(월~목) 1부 62,500 대당 : 50,000 2부 67,500 금요일 1부 62,500 2부 77,500 주말/공휴일 1부 87,500 2부 87,500 시설이용료 : 10,000원 (공정거래위원회[제10033호]약관에 의거 시설이용료는 골프장 내장등록시 부",
     "카트는 6인승 4Bag 승용전용 카트이며, 카트 요금 시 4인 기준 적용합니다."
    ],
-   "value": null
+   "value": "6인승 4백 승용 카트"
   },
   "cart_entry": {
    "evidence": [],
@@ -646,8 +656,10 @@
    "evidence": []
   },
   "lodging": {
-   "value": null,
-   "evidence": []
+   "value": "리조트",
+   "evidence": [
+    "리조트 (출처: https://greenfeeguide.co.kr/course/gc-0471/, 2026-11-27 확인)"
+   ]
   },
   "other": {
    "value": null,
@@ -677,16 +689,16 @@
   }
  },
  "rental": {
-  "available": null,
+  "available": true,
   "full_set": 50000,
-  "fee_text": null,
+  "fee_text": "50,000원 · 18홀",
   "brand": null,
   "left_handed": null,
   "shoes": null,
   "nine_hole": null,
   "range_finder": null,
   "reservation": null,
-  "source_url": null,
+  "source_url": "https://greenfeeguide.co.kr/course/gc-0471/",
   "evidence": [],
   "official": null,
   "nearby_delivery": {
@@ -826,8 +838,20 @@
   "recent_notice_text": null,
   "course_notes": null,
   "alert": null,
-  "unconfirmed": [],
-  "sources": []
+  "unconfirmed": [
+   "취소·위약 규정",
+   "복장",
+   "진행 시간",
+   "식당",
+   "휴장일"
+  ],
+  "sources": [
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "ok",
@@ -847,12 +871,12 @@
   ]
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 1.0,
+  "basic": 0.89,
+  "course": 0.6,
   "fee": 1.0,
-  "ops": 0.07,
-  "facility": 0.0,
-  "briefing": 0.5,
-  "rental": 0.5
+  "ops": 0.21,
+  "facility": 0.1,
+  "briefing": 0.0,
+  "rental": 0.75
  }
 }

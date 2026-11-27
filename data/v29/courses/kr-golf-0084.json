@@ -12,9 +12,98 @@
   ],
   "source": "raw/received_chungcheong_77.json (외부 데이터 수신, 2026-11-26)",
   "review": {
-   "checked_at": null,
+   "checked_at": "2026-11-27",
    "status": "not_crosschecked",
-   "checks": []
+   "checks": [
+    {
+     "field": "course.par",
+     "received": null,
+     "verified": 72,
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0193/",
+     "quote": "코스 구성 18홀(세종코스·행복코스) · 파 72",
+     "source_type": "third_party",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "course.length_m",
+     "received": null,
+     "verified": 6685,
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0193/",
+     "quote": "전장 7,310yds(6,685m)",
+     "source_type": "third_party",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "cancel.cancel_policy",
+     "received": null,
+     "verified": "3일 전 17:00까지",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0193/",
+     "quote": "위약 없이 취소 3일 전 17:00까지",
+     "source_type": "third_party",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "ops.checkin",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "티오프 40분 전 도착, 10분 전 스타트·카트 대기",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0193/",
+     "quote": "도착 티오프 40분 전 도착, 10분 전 스타트·카트 대기",
+     "source_type": "third_party",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "ops.cart_type",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "5인승",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0193/",
+     "quote": "카트 종류 5인승",
+     "source_type": "third_party",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "ops.sauna",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "사우나 있음 락커룸/사우나",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0193/",
+     "quote": "사우나 사우나 있음 락커룸/사우나",
+     "source_type": "third_party",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.locker_sauna",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "사우나 있음 락커룸/사우나",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0193/",
+     "quote": "사우나 사우나 있음 락커룸/사우나",
+     "source_type": "third_party",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "rental.full_set",
+     "received": null,
+     "verified": "50,000원 · 18홀",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0193/",
+     "quote": "골프채(풀세트) 50,000원 · 18홀",
+     "source_type": "third_party",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    }
+   ]
   },
   "data_checks": [
    "미확인 목록 누락 라벨 보완: 제세금"
@@ -22,11 +111,13 @@
   "schema_previous": "stage2b/1.0",
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "restructured_from_7key": false,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "pass2_patch": "2026-11-27 2차 보완 패스: 9개 항목(그린피가이드·1박2일골프·원더골프·공식 홈페이지 대조, 미확인 값 생성 없음)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0084",
@@ -100,7 +191,8 @@
   "holes_received": 18,
   "holes_conflict": false,
   "facility_cluster": null,
-  "factcheck_2026_11_26": null
+  "factcheck_2026_11_26": null,
+  "par": 72
  },
  "course": {
   "holes": 18,
@@ -116,7 +208,9 @@
   },
   "kga": null,
   "kga_hole_est": null,
-  "extra_courses": null
+  "extra_courses": null,
+  "par": 72,
+  "length_m": 6685
  },
  "fee": {
   "weekday": 190000,
@@ -143,14 +237,25 @@
     "url": "http://www.sejongcc.com/",
     "checked_at": "2026-11-26 (공식 11월 요금 공지 확인)"
    }
-  ]
+  ],
+  "checked_at": "2026-11-27"
  },
  "cancel": {
-  "cancel_policy": null,
+  "cancel_policy": "3일 전 17:00까지",
   "open_cycle": null,
   "notes": "홈페이지 시간예약·대기예약 운영, 위약안내 별도 게시",
-  "evidence": [],
-  "weather_evidence": []
+  "evidence": [
+   "위약 없이 취소 3일 전 17:00까지"
+  ],
+  "weather_evidence": [],
+  "sources": [
+   {
+    "url": "https://greenfeeguide.co.kr/course/gc-0193/",
+    "quote": "위약 없이 취소 3일 전 17:00까지",
+    "checked_at": "2026-11-27",
+    "source_type": "third_party"
+   }
+  ]
  },
  "ops": {
   "nocaddie": {
@@ -174,8 +279,14 @@
    "evidence": []
   },
   "cart_type": {
-   "value": null,
-   "evidence": []
+   "value": "5인승",
+   "evidence": [
+    "카트 종류 5인승"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0193/",
+   "confidence": "high",
+   "source_type": "third_party",
+   "checked_at": "2026-11-27"
   },
   "cart_entry": {
    "value": null,
@@ -190,16 +301,28 @@
    "evidence": []
   },
   "checkin": {
-   "value": null,
-   "evidence": []
+   "value": "티오프 40분 전 도착, 10분 전 스타트·카트 대기",
+   "evidence": [
+    "도착 티오프 40분 전 도착, 10분 전 스타트·카트 대기"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0193/",
+   "confidence": "high",
+   "source_type": "third_party",
+   "checked_at": "2026-11-27"
   },
   "locker": {
    "value": null,
    "evidence": []
   },
   "sauna": {
-   "value": null,
-   "evidence": []
+   "value": "사우나 있음 락커룸/사우나",
+   "evidence": [
+    "사우나 사우나 있음 락커룸/사우나"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0193/",
+   "confidence": "high",
+   "source_type": "third_party",
+   "checked_at": "2026-11-27"
   },
   "dress": {
    "value": null,
@@ -228,8 +351,14 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": null,
-   "evidence": []
+   "value": "사우나 있음 락커룸/사우나",
+   "evidence": [
+    "사우나 사우나 있음 락커룸/사우나"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0193/",
+   "confidence": "high",
+   "source_type": "third_party",
+   "checked_at": "2026-11-27"
   },
   "lodging": {
    "value": null,
@@ -255,15 +384,15 @@
  },
  "rental": {
   "available": "가능",
-  "full_set": null,
-  "fee_text": "골프채 대여요금표 게시, 1회 18홀 기준·대여채 보유현황에 따라 랜덤 배정, 미예약 시 대여 불가 가능",
+  "full_set": 50000,
+  "fee_text": "50,000원 · 18홀",
   "brand": null,
   "left_handed": null,
   "shoes": null,
   "nine_hole": null,
   "range_finder": null,
   "reservation": null,
-  "source_url": null,
+  "source_url": "https://greenfeeguide.co.kr/course/gc-0193/",
   "nearby_delivery": {
    "region": "충청",
    "sido": "세종특별자치시",
@@ -303,7 +432,10 @@
    "not_verified": "전화·문자·카카오톡 상담으로만 확인 가능한 항목(재고, 개별 견적, 권역별 실제 배송 가능 여부)은 '미확인'으로 남김",
    "source_file": "5-rental_8_coverage_verified.json",
    "note_code": "해외 골퍼용 골프채 렌탈·딜리버리 업체. 같은 권역이라도 실제 배송 가능 여부·재고·견적은 전화 확인 필요."
-  }
+  },
+  "evidence": [
+   "골프채(풀세트) 50,000원 · 18홀"
+  ]
  },
  "briefing": {
   "notices": {
@@ -322,7 +454,6 @@
    "잔디(페어웨이)",
    "잔디(그린)",
    "예약 오픈 주기",
-   "취소·위약 규정",
    "2인 플레이",
    "3인 플레이",
    "5인 플레이",
@@ -347,7 +478,13 @@
   ],
   "sources": [
    "http://www.sejongcc.com/",
-   "https://todaygolfgo.com/golf-courses/master/golf-course-moct-20241231-0339/"
+   "https://todaygolfgo.com/golf-courses/master/golf-course-moct-20241231-0339/",
+   "https://greenfeeguide.co.kr/course/gc-0193/",
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
   ],
   "collected_at": "2026-11-26T10:24:29+09:00"
  },
@@ -356,18 +493,20 @@
   "official_reason": "운영 중(공식 홈페이지 정상, 시간예약·대기예약·위약안내 게시)",
   "pages_collected": 0,
   "third_party": {
-   "received_report": true
+   "received_report": true,
+   "teepick": true,
+   "greenfeeguide": true
   },
   "render_hint": "report",
   "plan_strategy": "subagent_report(2026-11-26)"
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.8,
+  "basic": 0.89,
+  "course": 0.4,
   "fee": 1.0,
-  "ops": 0.0,
-  "facility": 0.2,
-  "briefing": 0.75,
+  "ops": 0.21,
+  "facility": 0.3,
+  "briefing": 0.5,
   "rental": 0.75
  }
 }

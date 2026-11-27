@@ -12,9 +12,46 @@
   ],
   "source": "raw/received_gangwon_65.json (외부 데이터 수신, 2026-11-26)",
   "review": {
-   "checked_at": null,
-   "status": "not_crosschecked",
-   "checks": []
+   "checked_at": "2026-11-27",
+   "status": "supplemented(공개 요약·조사자료)",
+   "checks": [
+    {
+     "field": "course.length_m",
+     "received": null,
+     "verified": 6539,
+     "result": "보완",
+     "url": "https://www.alldaygolf.co.kr/",
+     "quote": "OX 3,303m + FIELD 3,236m 18홀",
+     "source_type": "official_research",
+     "confidence": "medium",
+     "checked_at": "2026-11-27",
+     "note": "2026-11-26 공식 홈페이지 조사자료에서 이관한 값(문구는 요약·환산일 수 있음)"
+    },
+    {
+     "field": "master.opened",
+     "received": null,
+     "verified": "2011",
+     "result": "보완",
+     "url": "https://www.alldaygolf.co.kr/",
+     "quote": "2011년 개장",
+     "source_type": "official_research",
+     "confidence": "medium",
+     "checked_at": "2026-11-27",
+     "note": "2026-11-26 공식 홈페이지 조사자료에서 이관한 값(문구는 요약·환산일 수 있음)"
+    },
+    {
+     "field": "fee.note",
+     "received": null,
+     "verified": "고정 요금표 없이 일자·시간대·기후별 그린피 적용. 2026-11 실거래 주중 40,000~59,000원, 주말 50,000원~.",
+     "result": "보완",
+     "url": "https://www.alldaygolf.co.kr/",
+     "quote": "고정 요금표 없이 일자·시간대·기후별 그린피 적용. 2026-11 실거래 주중 40,000~59,000원, 주말 50,000원~.",
+     "source_type": "official_research",
+     "confidence": "medium",
+     "checked_at": "2026-11-27",
+     "note": "2026-11-26 공식 홈페이지 조사자료에서 이관한 값(문구는 요약·환산일 수 있음)"
+    }
+   ]
   },
   "data_checks": [
    "미확인 목록 누락 라벨 보완: 제세금"
@@ -22,11 +59,13 @@
   "schema_previous": "stage2b/1.0",
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "restructured_from_7key": false,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "batch3_patch": "2026-11-27 배치3 보완: 1개 항목(공식 홈페이지·공개 요금 안내 기준, 미확인 값 생성 없음)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0477",
@@ -81,7 +120,7 @@
    "주식회사 에스엘세레스(최창호)"
   ],
   "area_sqm": 1033597,
-  "opened": null,
+  "opened": "2011",
   "course_blocks": [],
   "facility_id": null,
   "facility_members": null,
@@ -122,7 +161,8 @@
    ]
   },
   "kga_hole_est": 18,
-  "extra_courses": null
+  "extra_courses": null,
+  "length_m": 6539
  },
  "fee": {
   "weekday": null,
@@ -142,14 +182,28 @@
   },
   "as_of": "2026-11(공식 요금안내·실거래 확인)",
   "source_url": "https://twinpapa1.com/옥스필드cc-oxfield-예약-그린피-18홀-코스공략-날씨-후기/",
-  "note": null,
+  "note": "고정 요금표 없이 일자·시간대·기후별 그린피 적용. 2026-11 실거래 주중 40,000~59,000원, 주말 50,000원~.",
   "sources": [
    {
     "source": "수신 조사(공식·공개 예약정보)",
     "url": "https://twinpapa1.com/옥스필드cc-oxfield-예약-그린피-18홀-코스공략-날씨-후기/",
     "checked_at": "2026-11(공식 요금안내·실거래 확인)"
+   },
+   {
+    "source": "공식·공개 안내",
+    "url": "https://www.alldaygolf.co.kr/",
+    "quote": "고정 요금표 없이 일자·시간대·기후별 그린피 적용. 2026-11 실거래 주중 40,000~59,000원, 주말 50,000원~.",
+    "checked_at": "2026-11-27"
    }
-  ]
+  ],
+  "checked_at": "2026-11-27",
+  "market": {
+   "weekday_min": 40000,
+   "weekend_min": 59000,
+   "source": "공개 예약 채널 실거래 관측(티픽)",
+   "url": "https://teepickgolf.com/",
+   "note": "공시가 아닌 최근 관측 실거래 최저가"
+  }
  },
  "cancel": {
   "cancel_policy": null,
@@ -323,7 +377,6 @@
   "fee_change": null,
   "alert": null,
   "unconfirmed": [
-   "잔디(티)",
    "예약 오픈 주기",
    "취소·위약 규정",
    "2인 플레이",
@@ -354,7 +407,13 @@
    "https://twinpapa1.com/옥스필드cc-oxfield-예약-그린피-18홀-코스공략-날씨-후기/",
    "https://inwon.kr/c/k162",
    "https://www.mk.co.kr/news/sports/11493433",
-   "https://todaygolfgo.com/regions/gangwon/"
+   "https://todaygolfgo.com/regions/gangwon/",
+   "https://www.alldaygolf.co.kr/",
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
   ],
   "collected_at": "2026-11-26T09:55:48+09:00"
  },
@@ -363,18 +422,20 @@
   "official_reason": "운영 중(올데이 브랜드 통합 운영)",
   "pages_collected": 0,
   "third_party": {
-   "received_report": true
+   "received_report": true,
+   "teepick": true,
+   "greenfeeguide": true
   },
   "render_hint": "report",
   "plan_strategy": "subagent_report(2026-11-26)"
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 1.0,
+  "basic": 0.89,
+  "course": 0.4,
   "fee": 0.75,
   "ops": 0.07,
   "facility": 0.1,
-  "briefing": 0.75,
-  "rental": 0.25
+  "briefing": 0.5,
+  "rental": 0.0
  }
 }

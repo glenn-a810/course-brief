@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0068",
@@ -56,13 +57,13 @@
    "master": "courses_master.json v2.0 (문체부·KGA·KGBA·티픽·지도)",
    "synced_to": "courses_master.json v2.7 (2026-11-26 단일 스키마 정규화)"
   },
-  "par": null,
+  "par": 72,
   "holes_teepick": 18,
   "course_spec": {
    "holes": 18,
-   "par": null,
+   "par": 72,
    "blocks": [],
-   "length_m": null,
+   "length_m": 6422,
    "kga": {
     "kga_course_code": "424",
     "kga_name": "골프존카운티 송도",
@@ -162,7 +163,7 @@
  "course": {
   "holes": 18,
   "holes_received": 18,
-  "course_names": null,
+  "course_names": "동·서 각 9홀",
   "membership_type": "대중제",
   "night_light": null,
   "blocks": [],
@@ -259,8 +260,8 @@
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": null,
-  "par": null
+  "length_m": 6422,
+  "par": 72
  },
  "fee": {
   "weekday": null,
@@ -288,7 +289,7 @@
   "source_url": null,
   "note": null,
   "sources": [],
-  "checked_at": null,
+  "checked_at": "2026-11-27",
   "market": {
    "weekday_min": 109000.0,
    "weekend_min": 259000.0,
@@ -423,12 +424,13 @@
  },
  "cancel": {
   "cancel_policy": null,
-  "open_cycle": null,
-  "notes": null,
+  "open_cycle": "매주 월요일 오전 9시, 오픈 주 포함 4주 뒤 월~일요일 티타임 오픈",
+  "notes": "입장 절차 후 임의 취소 시 그린피 50%+카트비, 1~9홀 중단 시 시설이용료+{(그린피-시설이용료)×75%}+카트비, 10~18홀 중단 시 이용요금 100% 정산",
   "evidence": [
    "요금안내 예약안내 취소/위약규정 이용 안내표 카트 사용료 100,000원/팀 캐디피 150,000원/팀 골프채 대여료 풀세트 50,000원 / 퍼터 20,000원 시설 이용료 20,000원 공정거래위원회 약관에 의해 골프장 내장 시 시설 이용료가 부과됩니다.",
    "경기중단 요금안내 라운드일 기준으로 취소 수수료는 아래와 같다.",
-   "경기 전 입장절차를 마친 후 임의로 취소한 경우 그린피의 50%+카트비 경기 중 1홀~9홀 라운드 중 임의로 중단한 경우 시설이용료+{(그린피-시설이용료)x75%}+카트비 10홀~18홀 라운드 중 임의로 중단한 경우 이용요금의 100% 강설, 폭우, 안개 등 천재지변 또는 그 밖의 불가항력적인 사유로 입장에 관한 절차를 마친 이용객 팀 전원이 경기를 마치지 못하게 된 경우에는 다음과 같이 이용요금을 부과한다."
+   "경기 전 입장절차를 마친 후 임의로 취소한 경우 그린피의 50%+카트비 경기 중 1홀~9홀 라운드 중 임의로 중단한 경우 시설이용료+{(그린피-시설이용료)x75%}+카트비 10홀~18홀 라운드 중 임의로 중단한 경우 이용요금의 100% 강설, 폭우, 안개 등 천재지변 또는 그 밖의 불가항력적인 사유로 입장에 관한 절차를 마친 이용객 팀 전원이 경기를 마치지 못하게 된 경우에는 다음과 같이 이용요금을 부과한다.",
+   "예약 오픈 주기: 매주 월요일 오전 9시, 오픈 주 포함 4주 뒤 월~일요일 티타임 오픈 (https://www.golfzoncounty.com/golfclub/resvGuide)"
   ],
   "weather_evidence": [
    "경기중단 요금안내 라운드일 기준으로 취소 수수료는 아래와 같다."
@@ -669,8 +671,17 @@
   "recent_notice_text": null,
   "course_notes": null,
   "alert": null,
-  "unconfirmed": [],
-  "sources": []
+  "unconfirmed": [
+   "취소·위약 규정 미확인",
+   "야간(3부) 운영 여부 미확인"
+  ],
+  "sources": [
+   {
+    "source": "티픽골프장 코스 페이지",
+    "url": "https://teepickgolf.com/course/%EA%B3%A8%ED%94%84%EC%A1%B4%20%EC%86%A1%EB%8F%84(%EA%B5%AC%20%EC%98%A4%EB%A0%8C%EC%A7%80%EB%93%84%EC%8A%A4)",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "ok",
@@ -678,19 +689,19 @@
   "pages_collected": 13,
   "third_party": {
    "teepick": true,
-   "greenfeeguide": false
+   "greenfeeguide": true
   },
   "render_hint": "static",
   "plan_strategy": "static(직접 파싱)",
   "browser_batch": false
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.8,
+  "basic": 0.89,
+  "course": 0.4,
   "fee": 0.5,
   "ops": 0.14,
   "facility": 0.1,
-  "briefing": 0.5,
-  "rental": 1.0
+  "briefing": 0.0,
+  "rental": 0.75
  }
 }

@@ -8,17 +8,20 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0092",
   "name": "아난티클럽서울",
   "name_variants": [
-   "아난티클럽서울"
+   "아난티클럽서울",
+   "아난티 코드",
+   "ANANTI CHORD"
   ],
   "type": "회원제",
   "holes": {
@@ -84,7 +87,7 @@
  "course": {
   "holes": 27,
   "holes_received": null,
-  "course_names": null,
+  "course_names": "자작나무·느티나무·잣나무 각 9홀",
   "membership_type": "회원제",
   "night_light": null,
   "blocks": [],
@@ -105,29 +108,38 @@
   "par": null
  },
  "fee": {
-  "weekday": null,
-  "weekend": null,
+  "weekday": 260000,
+  "weekend": 290000,
   "weekday_text": null,
   "weekend_text": null,
-  "basis": null,
+  "basis": "official",
   "tax_included": null,
   "cart": {
-   "evidence": "- 골프 코스 이용에 따른 요금(입장료 및 카트 이용요금) - 제세공과금(부가가치세, 개별소비세, 농어촌특별세, 교육세 포함) - 락커 및 샤워실 등 클럽하우스 시설이용 요금 - 기타 회사가 정한 특별요금 2.",
-   "url": "https://ananti.kr/ko",
-   "source": "공식"
+   "value": 110000,
+   "note": "1팀 기준",
+   "source": "공식 홈페이지 요금표",
+   "url": "https://ananti.kr/ko/chord/golfclub/information",
+   "evidence": "- 골프 코스 이용에 따른 요금(입장료 및 카트 이용요금) - 제세공과금(부가가치세, 개별소비세, 농어촌특별세, 교육세 포함) - 락커 및 샤워실 등 클럽하우스 시설이용 요금 - 기타 회사가 정한 특별요금 2."
   },
   "caddie": {
-   "value": null,
-   "none": false,
-   "evidence": "정회원이 예약하고 준회원에게도 위임 불가- 예약자 미 내장시 라운딩 불가 회원의 날 예약 예약 대상 및 기간 - 예약자 : 정회원, 준회원(준회원 단독 예약 불가, 정회원이 동반자로 준회원 등록 가능)- 예약신청 : 오픈 주차를 제외한 2주 전 수요일 9시부터 실시간 예약- 예약마감 : 내장일 3일전 13시- 마감된 이후에는 취소가 불가합니다.- 부득이 취소 하실 경우 그린피, 캐디피 및 카트비는 지불 하셔야 합니다.",
-   "source": "공식",
-   "url": "https://ananti.kr/ko/joongang/JOAN0105"
+   "value": 150000,
+   "note": "1팀 기준",
+   "source": "공식 홈페이지 요금표",
+   "url": "https://ananti.kr/ko/chord/golfclub/information",
+   "evidence": "정회원이 예약하고 준회원에게도 위임 불가- 예약자 미 내장시 라운딩 불가 회원의 날 예약 예약 대상 및 기간 - 예약자 : 정회원, 준회원(준회원 단독 예약 불가, 정회원이 동반자로 준회원 등록 가능)- 예약신청 : 오픈 주차를 제외한 2주 전 수요일 9시부터 실시간 예약- 예약마감 : 내장일 3일전 13시- 마감된 이후에는 취소가 불가합니다.- 부득이 취소 하실 경우 그린피, 캐디피 및 카트비는 지불 하셔야 합니다."
   },
-  "as_of": null,
-  "source_url": null,
-  "note": null,
-  "sources": [],
-  "checked_at": null,
+  "as_of": "2026-11-27",
+  "source_url": "https://ananti.kr/ko/chord/golfclub/information",
+  "note": "공식 사이트 이용요금표(시행일 2024-01-01) 기준",
+  "sources": [
+   {
+    "source": "공식 홈페이지 요금표",
+    "url": "https://ananti.kr/ko/chord/golfclub/information",
+    "checked_at": "2026-11-27",
+    "note": "비회원 그린피 주중 260,000원 / 주말 290,000원, 캐디피 150,000원, 카트비 110,000원 (시행일 2024-01-01)"
+   }
+  ],
+  "checked_at": "2026-11-27",
   "official_green_evidence": [
    "정회원이 예약하고 준회원에게도 위임 불가- 예약자 미 내장시 라운딩 불가 회원의 날 예약 예약 대상 및 기간 - 예약자 : 정회원, 준회원(준회원 단독 예약 불가, 정회원이 동반자로 준회원 등록 가능)- 예약신청 : 오픈 주차를 제외한 2주 전 수요일 9시부터 실시간 예약- 예약마감 : 내장일 3일전 13시- 마감된 이후에는 취소가 불가합니다.- 부득이 취소 하실 경우 그린피, 캐디피 및 카트비는 지불 하셔야 합니다."
   ],
@@ -154,16 +166,22 @@
     }
    ],
    "url": "https://ananti.kr/ko/joongang/journey/location"
-  }
+  },
+  "market": {}
  },
  "cancel": {
-  "cancel_policy": null,
-  "open_cycle": null,
+  "cancel_policy": {
+   "value": "입장 절차를 마친 이용자가 경기 전(티오프 시점 이전) 임의로 이용계약을 취소한 경우에는 이용요금의 50%를 환불하고, 티오프 시점부터는 이용요금이 환불되지 아니한다.",
+   "source": "공식 홈페이지",
+   "url": "https://ananti.kr/ko"
+  },
+  "open_cycle": "주중은 4주 전 화요일에 월~금요일, 주말은 4주 전 목요일에 토~일요일 예약 접수",
   "notes": null,
   "evidence": [
    "확인 오늘 하루 보지 않기 RESERVATION 닫기 확인 닫기 취소 확인 닫기 취소 확인 닫기 Back Ok 닫기 확인 생일 축하합니다!지금 바로 쿠폰함에서 생일 선물을 확인해보세요.",
    "신청된 RIM은 차감되며, 발급된 쿠폰은 취소 되지 않습니다.",
-   "닫기 취소 확인 멤버십 카드 닫기 플랫폼 선택 닫기 선택 아난티 코드 아난티 코브 아난티 남해 아난티 회원권 확인 관심 플랫폼&저니 설정 닫기 관심있는 아난티 플랫폼과 저니를 선택해 주세요 다음에 할게요 확인 닫기 라메르 or 라포레 or 다모임 닫기 우아한 바다, 라메르!"
+   "닫기 취소 확인 멤버십 카드 닫기 플랫폼 선택 닫기 선택 아난티 코드 아난티 코브 아난티 남해 아난티 회원권 확인 관심 플랫폼&저니 설정 닫기 관심있는 아난티 플랫폼과 저니를 선택해 주세요 다음에 할게요 확인 닫기 라메르 or 라포레 or 다모임 닫기 우아한 바다, 라메르!",
+   "예약 오픈 주기: 주중은 4주 전 화요일에 월~금요일, 주말은 4주 전 목요일에 토~일요일 예약 접수 (https://ananti.kr/ko/chord/golfclub/information)"
   ],
   "weather_evidence": []
  },
@@ -294,8 +312,14 @@
    "value_from": "capital_supplement(greenfee_guide)"
   },
   "pace": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "앞 팀과 1홀 이상 벌어짐·지나친 지연·경기 능력 부족 → 벌칙 적용"
+   ],
+   "value": "앞 팀과 1홀 이상 벌어짐·지나친 지연·경기 능력 부족 → 벌칙 적용",
+   "source_url": "https://ananti.kr/ko/chord/golfclub/information",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfee guide tables)"
   },
   "cart_limousine": {
    "value": "VIP 리무진 카트 220,000원(1대), 5인 전용 플레이",
@@ -377,11 +401,14 @@
    "value": null
   },
   "shuttle": {
+   "value": "설악면 버스정류소(잠실역 7000번)·청평역/가평역(ITX 경춘선)",
    "evidence": [
-    "닫기 확인 취소 확인 아난티까지 편안하게,왕복 리무진 버스를 이용해보세요 부산역과 아난티를 연결하는 전용 리무진 버스입니다.",
-    "신규 등록 예약 번호를 선택해 주세요 리무진 버스와 연결할 숙박 예약을 선택해 주세요."
+    "설악면 버스정류소(잠실역 7000번)·청평역/가평역(ITX 경춘선) — https://greenfeeguide.co.kr/course/gc-0150/"
    ],
-   "value": null
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0150/",
+   "confidence": "medium",
+   "checked_at": "2026-11-27",
+   "value_from": "pass2_third_party"
   },
   "ev_charge": {
    "evidence": [
@@ -555,8 +582,16 @@
   "recent_notice_text": null,
   "course_notes": null,
   "alert": null,
-  "unconfirmed": [],
-  "sources": []
+  "unconfirmed": [
+   "야간(3부) 운영 여부 미확인"
+  ],
+  "sources": [
+   {
+    "source": "그린피가이드 코스 페이지",
+    "url": "https://greenfeeguide.co.kr/course/gc-0150/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "ok",
@@ -564,19 +599,19 @@
   "pages_collected": 14,
   "third_party": {
    "teepick": false,
-   "greenfeeguide": false
+   "greenfeeguide": true
   },
   "render_hint": "static",
   "plan_strategy": "static(직접 파싱)",
   "browser_batch": false
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.6,
-  "fee": 0.0,
-  "ops": 0.57,
-  "facility": 0.3,
-  "briefing": 0.25,
-  "rental": 0.25
+  "basic": 0.78,
+  "course": 0.4,
+  "fee": 1.0,
+  "ops": 0.64,
+  "facility": 0.4,
+  "briefing": 0.0,
+  "rental": 0.0
  }
 }

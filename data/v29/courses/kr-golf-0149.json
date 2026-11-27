@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0149",
@@ -58,9 +59,9 @@
   },
   "course_spec": {
    "holes": 9,
-   "par": null,
+   "par": 36,
    "blocks": [],
-   "length_m": null,
+   "length_m": 5587,
    "kga": {
     "kga_course_code": "445",
     "kga_name": "빅토리아",
@@ -119,12 +120,13 @@
   ],
   "status": "operating",
   "facility_cluster": null,
-  "factcheck_2026_11_26": null
+  "factcheck_2026_11_26": null,
+  "par": 36
  },
  "course": {
   "holes": 9,
   "holes_received": null,
-  "course_names": null,
+  "course_names": "9홀",
   "membership_type": "대중제",
   "night_light": null,
   "blocks": [],
@@ -186,8 +188,8 @@
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": null,
-  "par": null
+  "length_m": 5587,
+  "par": 36
  },
  "fee": {
   "weekday": null,
@@ -202,7 +204,8 @@
   "source_url": null,
   "note": null,
   "sources": [],
-  "checked_at": null
+  "checked_at": "2026-11-27",
+  "market": {}
  },
  "cancel": {
   "cancel_policy": null,
@@ -213,8 +216,13 @@
  },
  "ops": {
   "nocaddie": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "빅토리아 선택 가능 —"
+   ],
+   "value": "선택 가능",
+   "source_url": "https://greenfeeguide.co.kr/guides/no-caddie-golf-course-guide/",
+   "source_type": "official_site",
+   "checked_at": "2026-11-27"
   },
   "two_player": {
    "evidence": [],
@@ -261,12 +269,24 @@
    "value": null
   },
   "dress": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "복장: 슬리퍼·노출이 심한 옷은 복장 규정 위반"
+   ],
+   "value": "슬리퍼·노출이 심한 옷은 복장 규정 위반",
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0129/",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfeeguide)"
   },
   "pace": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "경기 시간: 9홀 2시간 8분"
+   ],
+   "value": "9홀 2시간 8분",
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0129/",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfeeguide)"
   }
  },
  "facilities": {
@@ -303,9 +323,14 @@
    "value": null
   },
   "closed_days": {
-   "evidence": [],
+   "evidence": [
+    "빅토리아 경기 여주시 정기 휴장일 없음"
+   ],
    "third_party": null,
-   "value": null
+   "value": "정기 휴장일 없음",
+   "source_url": "https://greenfeeguide.co.kr/guides/golf-course-closing-day-guide/",
+   "source_type": "greenfee_guide",
+   "checked_at": "2026-11-27"
   },
   "shuttle": {
    "evidence": [],
@@ -400,8 +425,23 @@
   "recent_notice_text": null,
   "course_notes": null,
   "alert": null,
-  "unconfirmed": [],
-  "sources": []
+  "unconfirmed": [
+   "그린피(주중/주말) 미확인: 공식 채널에서 비회원 9홀 요금표를 확인하지 못함",
+   "카트비 미확인",
+   "캐디피 미확인",
+   "취소·위약 규정 미확인",
+   "예약 오픈 주기 미확인",
+   "야간(3부) 운영 여부 미확인",
+   "잔디 종류 미확인",
+   "수집 한계(2026-11-27): 공식 홈페이지 본문을 HTTP 수집으로 확보하지 못함(접속 오류)"
+  ],
+  "sources": [
+   {
+    "source": "그린피가이드 코스 페이지",
+    "url": "https://greenfeeguide.co.kr/course/gc-0129/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "unavailable",
@@ -409,19 +449,19 @@
   "pages_collected": 0,
   "third_party": {
    "teepick": false,
-   "greenfeeguide": false
+   "greenfeeguide": true
   },
   "render_hint": "thin",
   "plan_strategy": "unreachable(브라우저 재시도)",
   "browser_batch": false
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.8,
+  "basic": 0.78,
+  "course": 0.4,
   "fee": 0.0,
-  "ops": 0.0,
-  "facility": 0.0,
-  "briefing": 0.25,
-  "rental": 0.25
+  "ops": 0.21,
+  "facility": 0.1,
+  "briefing": 0.0,
+  "rental": 0.0
  }
 }

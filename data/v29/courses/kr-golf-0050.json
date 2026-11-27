@@ -22,11 +22,12 @@
   "schema_previous": "stage2b/1.0",
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "restructured_from_7key": false,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0050",
@@ -80,7 +81,7 @@
    "(사)부산컨트리클럽(서정의)"
   ],
   "area_sqm": 495417,
-  "opened": null,
+  "opened": "1971-07",
   "course_blocks": [],
   "facility_id": null,
   "facility_members": null,
@@ -95,7 +96,8 @@
   "holes_received": 18,
   "holes_conflict": false,
   "facility_cluster": null,
-  "factcheck_2026_11_26": null
+  "factcheck_2026_11_26": null,
+  "par": 72
  },
  "course": {
   "holes": 18,
@@ -121,7 +123,9 @@
    ]
   },
   "kga_hole_est": 18,
-  "extra_courses": null
+  "extra_courses": null,
+  "par": 72,
+  "length_m": 6111
  },
  "fee": {
   "weekday": 172500,
@@ -137,7 +141,8 @@
   "caddie": {
    "value": 150000,
    "text": "150,000원/팀(4인 기준)",
-   "none": false
+   "none": false,
+   "note": "야간 캐디피 주간·야간 모두 150,000원 (평일·주말)"
   },
   "as_of": "2026-10-05",
   "source_url": "https://greenfeeguide.co.kr/course/gc-0156/",
@@ -148,13 +153,16 @@
     "url": "https://greenfeeguide.co.kr/course/gc-0156/",
     "checked_at": "2026-10-05"
    }
-  ]
+  ],
+  "checked_at": "2026-11-27"
  },
  "cancel": {
-  "cancel_policy": null,
-  "open_cycle": null,
+  "cancel_policy": "경기 4일 전 12:00까지 취소 가능하며, 이후 취소·노쇼 시 위약금 평일 200,000원·주말 300,000원",
+  "open_cycle": "예약 희망일 2주일 전부터 접수(10:00~18:00, 회원은 09:00부터)",
   "notes": null,
-  "evidence": [],
+  "evidence": [
+   "https://www.bscc.co.kr/reservation/guide"
+  ],
   "weather_evidence": []
  },
  "ops": {
@@ -241,8 +249,11 @@
    "evidence": []
   },
   "other": {
-   "value": null,
-   "evidence": []
+   "value": "프로샵",
+   "evidence": [
+    "https://greenfeeguide.co.kr/course/gc-0156/",
+    "https://www.bscc.co.kr/facilities/course"
+   ]
   },
   "night": {
    "value": "야간 라운드 운영(공식 홈페이지 안내)",
@@ -268,7 +279,7 @@
   "nine_hole": null,
   "range_finder": null,
   "reservation": null,
-  "source_url": null,
+  "source_url": "https://greenfeeguide.co.kr/course/gc-0156/",
   "nearby_delivery": {
    "region": "영남",
    "sido": "부산광역시",
@@ -322,10 +333,6 @@
   "fee_change": null,
   "alert": null,
   "unconfirmed": [
-   "잔디(티)",
-   "잔디(그린)",
-   "예약 오픈 주기",
-   "취소·위약 규정",
    "2인 플레이",
    "3인 플레이",
    "5인 플레이",
@@ -339,10 +346,8 @@
    "식당·조식",
    "그늘집",
    "숙박",
-   "기타 시설",
    "좌타용 클럽",
-   "제세금",
-   "예약 비고"
+   "제세금"
   ],
   "unconfirmed_labels_added": [
    "제세금",
@@ -351,7 +356,14 @@
   "sources": [
    "https://www.bscc.co.kr/course/intro",
    "https://greenfeeguide.co.kr/course/gc-0156/",
-   "https://www.rankue.co.kr/golf/course/부산컨트리클럽"
+   "https://www.rankue.co.kr/golf/course/부산컨트리클럽",
+   "https://www.bscc.co.kr/reservation/guide",
+   "https://www.bscc.co.kr/facilities/course",
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
   ],
   "collected_at": "2026-11-26T10:33:22+09:00"
  },
@@ -360,18 +372,20 @@
   "official_reason": "운영 중(공식 홈페이지 정상, 코스 안내 게시)",
   "pages_collected": 0,
   "third_party": {
-   "received_report": true
+   "received_report": true,
+   "teepick": true,
+   "greenfeeguide": true
   },
   "render_hint": "report",
   "plan_strategy": "subagent_report(2026-11-26)"
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 1.0,
+  "basic": 0.89,
+  "course": 0.4,
   "fee": 1.0,
   "ops": 0.21,
-  "facility": 0.2,
-  "briefing": 0.75,
-  "rental": 1.0
+  "facility": 0.3,
+  "briefing": 0.5,
+  "rental": 0.75
  }
 }

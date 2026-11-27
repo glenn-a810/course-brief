@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0208",
@@ -124,25 +125,27 @@
    "source": "공식"
   },
   "caddie": {
-   "value": null,
-   "none": false,
-   "evidence": "라운드가 레슨이 되는 순간 파주CC [파주CC] 3부 캐디피 인상안내 통합 원더클럽 앱으로 더 빠르고 더 스마트하게!",
-   "source": "공식",
-   "url": "https://www.onetheclub.com/"
+   "value": 250000,
+   "raw": "250,000원",
+   "text": "팀당(공식 홈페이지 안내)",
+   "source": "공식 홈페이지",
+   "url": "https://www.onetheclub.com/reservation/golf",
+   "none": false
   },
   "as_of": null,
   "source_url": null,
   "note": null,
   "sources": [],
-  "checked_at": null,
+  "checked_at": "2026-11-27",
   "market": {
-   "weekday_min": 80000.0,
-   "weekend_min": 150000.0,
-   "part1": null,
-   "part2": null,
+   "weekday_min": 80000,
+   "weekend_min": 150000,
+   "part1": "3.5만 ~ 33만",
+   "part2": "3.9만 ~ 32만",
    "source": "티픽골프장(실거래 관측)",
-   "url": "https://teepickgolf.com/course/%ED%8C%8C%EC%A3%BCcc",
-   "note": "공시가 아닌 최근 관측 실거래 최저가"
+   "url": "https://teepickgolf.com/course/파주cc",
+   "note": "공시가 아닌 최근 관측 실거래 최저가",
+   "checked_at": "2026-11-27"
   },
   "official_green_evidence": [
    "확인 취소 Close 알펜시아리조트 호텔/콘도 분양회원의 그린피 결제 안내 레저플러스에서 알펜시아700GC를 이용하시는 KH강원개발의 알펜시아리조트 호텔/콘도 분양회원(이하 \"분양회원\")께 그린피 결제 등에 대해 안내 말씀 올립니다.",
@@ -152,13 +155,17 @@
   "official_rental": null
  },
  "cancel": {
-  "cancel_policy": null,
+  "cancel_policy": {
+   "value": "평일은 2일 전~이용일 당일, 주말·공휴일은 3일 전~이용일 당일 취소 시 예약금 환불 불가(위약금은 예약보증금에서 차감)",
+   "source": "공식 홈페이지",
+   "url": "https://www.onetheclub.com/reservation/golfPartner"
+  },
   "open_cycle": null,
   "notes": null,
   "evidence": [
-   "원더클럽 주요 메뉴 바로가기 컨텐트 바로가기 원더클럽 예약하기 실시간예약 제휴골프장예약 조인하기 조인예약 조인예약확인 설정 골프장정보 클럽72CC 신라CC 파주CC 듄스코스 [제휴] 하이원 [제휴] 해피니스 [제휴] 파인힐스 [제휴] 세이지우드 [제휴] 아덴힐 [제휴] 사우스스프링스 해외 골프투어 이벤트/공지 진행중인 이벤트 공지사항 원더몰 일본 회원권 고객라운지 FAQ 고객의소리 전화번호 및 기타 안내 갤러리 My페이지 마이원더클럽 쿠폰함 예약조회/수정 연단체/임시단체 클럽72 VIP 리워드 스코어조회 내정보관리 멤버십안내 클럽7",
    "예 아니오 확인 Close 예약안내 확인 Close 예약안내 확인 Close 예약안내 확인 Close 알펜시아CC 예약안내 확인 Close 위약기간으로 예약취소 시 위약금이 발생합니다.",
-   "위약금은 예약보증금에서 차감되며, 보유한 예약보증금이 500,000 원 이하인 경우 회원제 골프장 예약이 제한됩니다."
+   "위약금은 예약보증금에서 차감되며, 보유한 예약보증금이 500,000 원 이하인 경우 회원제 골프장 예약이 제한됩니다.",
+   "※ 평일 : 2일전~이용일 당일, 주말 및 공휴일: 3일전~이용일 당일 취소 시 예약금은 환불되지 않습니다."
   ],
   "weather_evidence": []
  },
@@ -191,7 +198,6 @@
   },
   "two_player": {
    "evidence": [
-    "원더클럽 주요 메뉴 바로가기 컨텐트 바로가기 원더클럽 예약하기 실시간예약 제휴골프장예약 조인하기 조인예약 조인예약확인 설정 골프장정보 클럽72CC 신라CC 파주CC 듄스코스 [제휴] 하이원 [제휴] 해피니스 [제휴] 파인힐스 [제휴] 세이지우드 [제휴] 아덴힐 [제휴] 사우스스프링스 해외 골프투어 이벤트/공지 진행중인 이벤트 공지사항 원더몰 일본 회원권 고객라운지 FAQ 고객의소리 전화번호 및 기타 안내 갤러리 My페이지 마이원더클럽 쿠폰함 예약조회/수정 연단체/임시단체 클럽72 VIP 리워드 스코어조회 내정보관리 멤버십안내 클럽7",
     "자세히보기 예약정보 캐디피 및 기타요금확인 자세히보기 골프장명 예약일자 ※ 3인내장시 4인요금 적용 (2인, 3인 이벤트 시 제외) 코스홀시간 [ 레이크 IN코스 내장 안내 ] 레이크(IN) 스타트홀인 10번홀까지 이동하는데 15분이상 소요되니 20분 전에 스타트하우스에서 카트 탑승 부탁드립니다.",
     "3인 내장시 3인그린피 결제, 4인 내장시 4인그린피 결제 가능한 티타임입니다."
    ],
@@ -258,8 +264,14 @@
    "value": null
   },
   "pace": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "지나친 지연·도박성 내기·경기 능력 부족·진행 비협조 → 퇴장·예약 정지·입장 정지 (영구 정지)"
+   ],
+   "value": "지나친 지연·도박성 내기·경기 능력 부족·진행 비협조 → 퇴장·예약 정지·입장 정지 (영구 정지)",
+   "source_url": "https://www.onetheclub.com/paju/penalty_clause",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfee guide tables)"
   }
  },
  "facilities": {
@@ -282,11 +294,7 @@
    "evidence": []
   },
   "food": {
-   "evidence": [
-    "원더클럽 주요 메뉴 바로가기 컨텐트 바로가기 원더클럽 예약하기 실시간예약 제휴골프장예약 조인하기 조인예약 조인예약확인 설정 골프장정보 클럽72CC 신라CC 파주CC 듄스코스 [제휴] 하이원 [제휴] 해피니스 [제휴] 파인힐스 [제휴] 세이지우드 [제휴] 아덴힐 [제휴] 사우스스프링스 해외 골프투어 이벤트/공지 진행중인 이벤트 공지사항 원더몰 일본 회원권 고객라운지 FAQ 고객의소리 전화번호 및 기타 안내 갤러리 My페이지 마이원더클럽 쿠폰함 예약조회/수정 연단체/임시단체 클럽72 VIP 리워드 스코어조회 내정보관리 멤버십안내 클럽7",
-    "원더클럽 주요 메뉴 바로가기 컨텐트 바로가기 원더클럽 예약하기 실시간예약 제휴골프장예약 조인하기 조인예약 조인예약확인 설정 골프장정보 클럽72CC 신라CC 파주CC 듄스코스 [제휴] 하이원 [제휴] 해피니스 [제휴] 파인힐스 [제휴] 세이지우드 [제휴] 아덴힐 [제휴] 사우스스프링스 해외 골프투어 이벤트/공지 진행중인 이벤트 공지사항 원더몰 일본 회원권 고객라운지 FAQ 고객의소리 전화번호 및 기타 안내 갤러리 My페이지 마이원더클럽 쿠폰함 예약조회/수정 연단체/임시단체 클럽72 VIP 리워드 스코어조회 내정보관리 멤버십안내 클럽7",
-    "원더클럽 주요 메뉴 바로가기 컨텐트 바로가기 원더클럽 예약하기 실시간예약 제휴골프장예약 조인하기 조인예약 조인예약확인 설정 골프장정보 클럽72CC 신라CC 파주CC 듄스코스 [제휴] 하이원 [제휴] 해피니스 [제휴] 파인힐스 [제휴] 세이지우드 [제휴] 아덴힐 [제휴] 사우스스프링스 해외 골프투어 이벤트/공지 진행중인 이벤트 공지사항 원더몰 일본 회원권 고객라운지 FAQ 고객의소리 전화번호 및 기타 안내 갤러리 My페이지 마이원더클럽 쿠폰함 예약조회/수정 연단체/임시단체 클럽72 VIP 리워드 스코어조회 내정보관리 멤버십안내 클럽7"
-   ],
+   "evidence": [],
    "value": null
   },
   "snack_bar": {
@@ -309,8 +317,15 @@
    "value_from": "capital_supplement(official_site)"
   },
   "other": {
-   "value": null,
-   "evidence": []
+   "value": "프로샵",
+   "evidence": [
+    "other: 프로샵"
+   ],
+   "source_url": "https://greenfeeguide.com/course/gc-0060/",
+   "source_type": "greenfee_guide",
+   "confidence": "medium",
+   "checked_at": "2026-11-27",
+   "value_from": "batch2_supplement"
   },
   "night": {
    "evidence": [],
@@ -323,7 +338,6 @@
   },
   "shuttle": {
    "evidence": [
-    "정보제공 동의 및 상담신청 Close 신청자 핸드폰 -- 신청 Close login 아이디 저장 비밀번호 저장 아이디찾기/비밀번호찾기 아직 원더멤버스가 아니세요?",
     "정보제공 동의 및 상담신청 Close 신청자 핸드폰 -- 신청 Close login 아이디 저장 비밀번호 저장 아이디찾기/비밀번호찾기 아직 원더멤버스가 아니세요?"
    ],
    "value": null
@@ -462,7 +476,18 @@
   "course_notes": null,
   "alert": null,
   "unconfirmed": [],
-  "sources": []
+  "sources": [
+   {
+    "source": "그린피가이드 코스 페이지",
+    "url": "https://greenfeeguide.co.kr/course/gc-0060/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "ok",
@@ -470,19 +495,19 @@
   "pages_collected": 14,
   "third_party": {
    "teepick": true,
-   "greenfeeguide": false
+   "greenfeeguide": true
   },
   "render_hint": "static",
   "plan_strategy": "static(직접 파싱)",
   "browser_batch": false
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.6,
-  "fee": 0.0,
-  "ops": 0.21,
-  "facility": 0.2,
-  "briefing": 0.5,
-  "rental": 0.25
+  "basic": 0.78,
+  "course": 0.2,
+  "fee": 0.25,
+  "ops": 0.29,
+  "facility": 0.3,
+  "briefing": 0.0,
+  "rental": 0.0
  }
 }

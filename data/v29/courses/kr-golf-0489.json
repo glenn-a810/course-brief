@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0489",
@@ -49,7 +50,7 @@
    "공무원연금공단"
   ],
   "area_sqm": 1149543,
-  "opened": null,
+  "opened": "2012-09",
   "course_blocks": [],
   "facility_id": null,
   "provenance": {
@@ -61,13 +62,13 @@
    "source": "그린피가이드",
    "url": "https://greenfeeguide.co.kr/course/gc-0425/"
   },
-  "par": null,
+  "par": 72,
   "holes_teepick": 18,
   "course_spec": {
    "holes": 18,
-   "par": null,
+   "par": 72,
    "blocks": [],
-   "length_m": null,
+   "length_m": 6672,
    "kga": {
     "kga_course_code": "447",
     "kga_name": "남원상록",
@@ -146,7 +147,10 @@
  "course": {
   "holes": 18,
   "holes_received": 18,
-  "course_names": null,
+  "course_names": [
+   "몽룡",
+   "춘향"
+  ],
   "membership_type": "대중제",
   "night_light": null,
   "blocks": [],
@@ -223,8 +227,8 @@
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": null,
-  "par": null
+  "length_m": 6672,
+  "par": 72
  },
  "fee": {
   "weekday": 110000,
@@ -543,13 +547,14 @@
   }
  },
  "cancel": {
-  "cancel_policy": null,
-  "open_cycle": null,
+  "cancel_policy": "예약변경은 이용일로부터 3일 전까지 해야 하며, 이후 취소 시 아래와 같이 예약을 제한합니다.",
+  "open_cycle": "추첨제 — 주중은 5주 전·주말은 4주 전 월요일 09:00~목요일 17:00 신청, 금요일 10:00 추첨",
   "notes": null,
   "evidence": [
    "당일 취소 및 No Show 시 6개월 예약불가 1일 전 취소 시 : 3개월 예약불가 2일 전 취소 시 : 1개월 예약불가 객실 이용요금 구분 형태 온돌/패밀리(2인) 트윈(2인) 디럭스트윈(2인) 퀸트윈(2인) 스위트(5인) 성수기(7월 25일 ~ 8월 16일) 일반 190,000원 190,000원 190,000원 190,000원 340,000원 회원 95,000원 95,000원 95,000원 95,000원 170,000원 비수기(성수기 외 기간) 일반 172,000원 172,000원 172,000원 172,000원 320,000",
    "당일 취소 및 No Show 시 6개월 예약불가 1일 전 취소 시 : 3개월 예약불가 2일 전 취소 시 : 1개월 예약불가 객실 이용요금 구분 형태 콘도형(13평형) 콘도형(24평형) 트윈(16평형) 성수기(7월 25일 ~ 8월 16일) 일반 190,000원 340,000원 190,000원 회원 95,000원 170,000원 95,000원 비수기(성수기 외 기간) 일반 172,000원 320,000원 172,000원 회원 86,000원 160,000원 86,000원 ※ 회원요금은 1인당 2실에 한해 적용되며 추가(중복)할인은 되지 ",
-   "다만, 천재지변등 기타 불가피한 사유로 인하여 예약을 취소하는 경우에는 그러하지 아니한다."
+   "다만, 천재지변등 기타 불가피한 사유로 인하여 예약을 취소하는 경우에는 그러하지 아니한다.",
+   "예약변경은 이용일로부터 3일 전까지 해야 하며, 이후 취소 시 아래와 같이 예약을 제한합니다. (출처: https://www.sangnokresort.co.kr/M010301, 2026-11-27 확인)"
   ],
   "weather_evidence": [
    "특별한 경우(천재지변, 불가항력, 예측하지 못한 기상변화, 사업자의 경영사정, 영업정책 등)에는 일정기간 휴장할 수 있다.",
@@ -647,27 +652,36 @@
   },
   "food": {
    "evidence": [
+    "1층 한식당(소담) (출처: https://www.sangnokresort.co.kr/M010101, 2026-11-27 확인)",
     "회원은 제1항의 정보 제공을 원치 않을 경우 공단 서비스 통합로그인센터를 통합 회원가입신청 시, 또는 회원정보수정 메뉴에서 정보 수신거부를 설정할 수 있습니다.",
     "다양한 메뉴들로 고객님들의 뜻깊은 행사진행을 위해 언제나 최선을 다하고 있습니다.",
     "시설정보 컨벤션센터 대식당 좌석 : 272석, 위치 : 컨벤션센터 1층 호텔 한식당(소담) 좌석 : 150석, 위치 : 호텔별관 1층, 영업시간 : 오전 07:00 ~ 오후 21:00 공원 대식당 좌석 : 400석, 위치 : 공원단지내 1층 커피숍 위치 : 호텔본관 1층."
    ],
-   "value": null
+   "value": "식당"
   },
   "snack_bar": {
    "value": null,
    "evidence": []
   },
   "locker_sauna": {
-   "value": null,
-   "evidence": []
+   "value": "사우나",
+   "evidence": [
+    "사우나 시설이용 요금 (출처: https://www.sangnokresort.co.kr/M010301, 2026-11-27 확인)"
+   ]
   },
   "lodging": {
    "value": null,
    "evidence": []
   },
   "other": {
-   "value": null,
-   "evidence": []
+   "value": "프로샵",
+   "evidence": [
+    "그 밖의 시설: 프로샵"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0425/",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfeeguide)"
   },
   "night": {
    "evidence": [],
@@ -675,11 +689,12 @@
   },
   "closed_days": {
    "evidence": [
+    "매주 목,금요일은 휴장입니다 (출처: https://www.sangnokresort.co.kr/M010301, 2026-11-27 확인)",
     "이용자가 이용예정일 당일 예약을 취소하거나 아무런 통보 없이 이용예정일에 골프장을 이용하지 않을 경우 : 팀별 이용요금의 30% 강설, 폭우, 안개 기타 천재지변 등의 불가항력적인 사유로, 상록골프장이 이용예정일에 골프장 이용이 불가능하다고 판단되어 임시휴장을 하는 경우에는 예약금을 환불하여야 한다.",
     "상록골프장의 정기 휴장일은 설, 추석 명절 당일로 한다."
    ],
    "third_party": null,
-   "value": null
+   "value": "매주 목·금요일"
   },
   "shuttle": {
    "evidence": [],
@@ -768,8 +783,18 @@
   "recent_notice_text": null,
   "course_notes": null,
   "alert": null,
-  "unconfirmed": [],
-  "sources": []
+  "unconfirmed": [
+   "체크인",
+   "복장",
+   "진행 시간"
+  ],
+  "sources": [
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "ok",
@@ -786,12 +811,12 @@
   "browser_pdf": []
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.8,
+  "basic": 0.89,
+  "course": 0.4,
   "fee": 1.0,
   "ops": 0.14,
-  "facility": 0.0,
-  "briefing": 0.5,
-  "rental": 0.25
+  "facility": 0.4,
+  "briefing": 0.0,
+  "rental": 0.0
  }
 }

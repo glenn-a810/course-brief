@@ -12,8 +12,8 @@
   ],
   "source": "raw/received_jeju_31.json (외부 데이터 수신, 2026-11-26)",
   "review": {
-   "checked_at": "2026-11-26",
-   "status": "verified_official",
+   "checked_at": "2026-11-27",
+   "status": "supplemented(공식+공개 요약)",
    "checks": [
     {
      "field": "그린피",
@@ -28,6 +28,73 @@
      "verified": "064-786-2222",
      "result": "일치(마스터 064-787-8888은 오류)",
      "url": "https://cypress.co.kr/swp/charge"
+    },
+    {
+     "field": "course.length_m",
+     "received": null,
+     "verified": 6596,
+     "result": "보완",
+     "url": "https://cypress.co.kr/",
+     "quote": "18홀 전장 7,213yd(공식 코스 소개) → 6,596m 환산",
+     "source_type": "official_research",
+     "confidence": "medium",
+     "checked_at": "2026-11-27",
+     "note": "2026-11-26 공식 홈페이지 조사자료에서 이관한 값(문구는 요약·환산일 수 있음)"
+    },
+    {
+     "field": "ops.checkin",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "예약시간 30분 전까지 도착",
+     "result": "보완",
+     "url": "https://www.cypress.co.kr/swp/etiquette",
+     "quote": "여유로운 라운드를 위해 예약시간 30분 전까지 도착한다.",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.closed_days",
+     "received": "{\"value\": null, \"third_party\": null, \"evidence\": []}",
+     "verified": "정기휴장일 없음(클럽 사정에 따른 휴장은 사전 통보)",
+     "result": "보완",
+     "url": "https://www.cypress.co.kr/swp/etiquette",
+     "quote": "정기휴장일은 없으며, 본 클럽 사정으로 인한 휴장은 사전 통보한다.",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "fee.checked_at",
+     "received": null,
+     "verified": "2026-11-27",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0494/",
+     "quote": "요금 확인일 2026-11-02 (그린피가이드 2026-11-27 조회)",
+     "source_type": "third_party",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "master.opened",
+     "received": null,
+     "verified": "2006-12",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0494/",
+     "quote": "개장 2006년 12월",
+     "source_type": "third_party",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "ops.pace",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "18홀 4시간 20분",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0494/",
+     "quote": "진행/경기시간 18홀 4시간 20분",
+     "source_type": "third_party",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
     }
    ]
   },
@@ -38,11 +105,14 @@
   "schema_previous": "stage2b/1.0",
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "restructured_from_7key": false,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "batch3_patch": "2026-11-27 배치3 보완: 3개 항목(공식 홈페이지·공개 요금 안내 기준, 미확인 값 생성 없음)",
+  "pass2_patch": "2026-11-27 2차 보완 패스: 2개 항목(그린피가이드·1박2일골프·원더골프·공식 홈페이지 대조, 미확인 값 생성 없음)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0392",
@@ -88,7 +158,7 @@
    "남영산업㈜(김헌국)"
   ],
   "area_sqm": 889445,
-  "opened": null,
+  "opened": "2006-12",
   "course_blocks": [],
   "facility_id": null,
   "status": "operating",
@@ -102,7 +172,12 @@
   "holes_conflict": false,
   "facility_cluster": null,
   "factcheck_2026_11_26": null,
-  "tel_former": "064-787-8888"
+  "tel_former": "064-787-8888",
+  "designer": {
+   "value": "Dye designs Group다이 디자인(페리 다이) 설계 다른 골프장: 아시아드컨트리클럽 · 이븐데일 · 우정힐스 컨트리클럽 · 캐슬렉스제주GC",
+   "source": "공개 정보(그린피가이드)",
+   "url": "https://greenfeeguide.co.kr/course/gc-0494/"
+  }
  },
  "course": {
   "holes": 36,
@@ -131,7 +206,8 @@
    ]
   },
   "kga_hole_est": 36,
-  "extra_courses": null
+  "extra_courses": null,
+  "length_m": 6596
  },
  "fee": {
   "weekday": 200000,
@@ -157,13 +233,27 @@
     "source": "수신 조사(공식·공개 예약정보)",
     "url": "https://cypress.co.kr/swp/charge",
     "checked_at": "2026-11 기준 공식 요금표"
+   },
+   {
+    "source": "third_party",
+    "url": "https://greenfeeguide.co.kr/course/gc-0494/",
+    "quote": "요금 확인일 2026-11-02 (그린피가이드 2026-11-27 조회)",
+    "checked_at": "2026-11-27"
    }
   ],
-  "resident": null
+  "resident": null,
+  "checked_at": "2026-11-27",
+  "market": {
+   "weekday_min": 135000,
+   "weekend_min": 155000,
+   "source": "공개 예약 채널 실거래 관측(티픽)",
+   "url": "https://teepickgolf.com/",
+   "note": "공시가 아닌 최근 관측 실거래 최저가"
+  }
  },
  "cancel": {
   "cancel_policy": "악천후 시 홀별 정산(티샷 여부 기준). 플레이어 판단에 의한 환불 불가",
-  "open_cycle": null,
+  "open_cycle": "일반: 8주전 월요일 9시 오픈, 1주일 단위 예약",
   "notes": "3인 내장 시 4인 그린피, 노쇼 100%, 2인 불가",
   "evidence": [],
   "weather_evidence": []
@@ -206,8 +296,14 @@
    "evidence": []
   },
   "checkin": {
-   "value": null,
-   "evidence": []
+   "value": "예약시간 30분 전까지 도착",
+   "evidence": [
+    "여유로운 라운드를 위해 예약시간 30분 전까지 도착한다."
+   ],
+   "source_url": "https://www.cypress.co.kr/swp/etiquette",
+   "confidence": "high",
+   "source_type": "official_site",
+   "checked_at": "2026-11-27"
   },
   "locker": {
    "value": null,
@@ -222,8 +318,14 @@
    "evidence": []
   },
   "pace": {
-   "value": null,
-   "evidence": []
+   "value": "18홀 4시간 20분",
+   "evidence": [
+    "진행/경기시간 18홀 4시간 20분"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0494/",
+   "confidence": "high",
+   "source_type": "third_party",
+   "checked_at": "2026-11-27"
   }
  },
  "facilities": {
@@ -236,8 +338,14 @@
    "evidence": []
   },
   "food": {
-   "value": null,
-   "evidence": []
+   "value": "카페·라운지",
+   "evidence": [
+    "카페·라운지"
+   ],
+   "source_url": "https://www.cypress.co.kr/swp/facil_clubhouse",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfee guide tables)"
   },
   "snack_bar": {
    "value": "카페·라운지",
@@ -260,9 +368,15 @@
    "evidence": []
   },
   "closed_days": {
-   "value": null,
+   "value": "정기휴장일 없음(클럽 사정에 따른 휴장은 사전 통보)",
    "third_party": null,
-   "evidence": []
+   "evidence": [
+    "정기휴장일은 없으며, 본 클럽 사정으로 인한 휴장은 사전 통보한다."
+   ],
+   "source_url": "https://www.cypress.co.kr/swp/etiquette",
+   "confidence": "high",
+   "source_type": "official_site",
+   "checked_at": "2026-11-27"
   },
   "shuttle": {
    "value": null,
@@ -381,7 +495,6 @@
   "alert": null,
   "unconfirmed": [
    "야간 라이트",
-   "예약 오픈 주기",
    "노캐디",
    "마샬캐디",
    "카트 종류",
@@ -401,7 +514,13 @@
    "https://cypress.co.kr/swp/charge",
    "https://www.cypress.co.kr/swp/course_info",
    "https://greenfeeguide.co.kr/course/gc-0494/",
-   "https://jejukimpro.co.kr/ko/golf/cypress"
+   "https://jejukimpro.co.kr/ko/golf/cypress",
+   "https://cypress.co.kr/",
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
   ],
   "collected_at": "2026-11-26T09:35:01+09:00"
  },
@@ -410,18 +529,20 @@
   "official_reason": "운영 중(홈페이지 정상)",
   "pages_collected": 0,
   "third_party": {
-   "received_report": true
+   "received_report": true,
+   "teepick": true,
+   "greenfeeguide": true
   },
   "render_hint": "report",
   "plan_strategy": "subagent_report(2026-11-26)"
  },
  "coverage": {
   "basic": 0.89,
-  "course": 1.0,
+  "course": 0.4,
   "fee": 1.0,
-  "ops": 0.21,
-  "facility": 0.3,
-  "briefing": 0.75,
-  "rental": 0.25
+  "ops": 0.36,
+  "facility": 0.5,
+  "briefing": 0.5,
+  "rental": 0.0
  }
 }

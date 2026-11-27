@@ -8,11 +8,96 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "review": {
+   "checks": [
+    {
+     "field": "ops.nocaddie.value",
+     "received": null,
+     "verified": "노캐디(셀프) 라운드 가능",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0168/",
+     "quote": "노캐디: 노캐디(셀프) 라운드 가능",
+     "source_type": "official_summary(greenfeeguide)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "ops.two_player.value",
+     "received": null,
+     "verified": "주중만, 주말·공휴일은 3인 요금",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0168/",
+     "quote": "2인 플레이: 주중만, 주말·공휴일은 3인 요금",
+     "source_type": "official_summary(greenfeeguide)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "ops.cart_type.value",
+     "received": null,
+     "verified": "리모컨 카트 · 5인승 전동카트",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0168/",
+     "quote": "카트: 리모컨 카트 · 5인승 전동카트",
+     "source_type": "official_summary(greenfeeguide)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.closed_days.value",
+     "received": null,
+     "verified": "설날·추석 당일",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0168/",
+     "quote": "정기 휴장일: 설날·추석 당일",
+     "source_type": "official_summary(greenfeeguide)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.practice.value",
+     "received": null,
+     "verified": "드라이빙 레인지",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0168/",
+     "quote": "연습 시설: 드라이빙 레인지",
+     "source_type": "official_summary(greenfeeguide)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "cancel.open_cycle",
+     "received": null,
+     "verified": "인터넷·모바일 예약은 2주 전 오전 9시부터, 전화예약은 2주 전 오전 10시부터 가능",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0168/",
+     "quote": "예약 오픈: 인터넷·모바일 예약은 2주 전 오전 9시부터, 전화예약은 2주 전 오전 10시부터 가능",
+     "source_type": "official_summary(greenfeeguide)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "fee.cart",
+     "received": null,
+     "verified": "{\"value\": 20000, \"source\": \"오늘골프(공공데이터·공식 요금)\", \"url\": \"https://todaygolfgo.com/golf-courses/master/golf-course-moct-20241231-0320/\"}",
+     "result": "보완",
+     "url": "https://todaygolfgo.com/golf-courses/master/golf-course-moct-20241231-0320/",
+     "quote": "18홀 20,000원/인 1인 카트비. 9홀 10,000원/인.",
+     "source_type": "public_info(todaygolfgo)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    }
+   ],
+   "checked_at": "2026-11-27"
+  },
+  "batch3_patch": "2026-11-27 배치6(대구·경북) 보완: 6개 항목(공식 홈페이지·그린피가이드 공식 안내 확인 기준, 미확인 값 생성 없음)",
+  "batch6_patch": "2026-11-27 배치6(대구·경북) 보완: 1개 항목(공식 홈페이지·그린피가이드·예약 플랫폼 공개 안내 확인 기준, 미확인 값 생성 없음)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0060",
@@ -102,19 +187,29 @@
   "weekend_text": null,
   "basis": null,
   "tax_included": null,
-  "cart": null,
+  "cart": {
+   "value": 20000,
+   "source": "오늘골프(공공데이터·공식 요금)",
+   "url": "https://todaygolfgo.com/golf-courses/master/golf-course-moct-20241231-0320/"
+  },
   "caddie": null,
   "as_of": "2026-10-07",
-  "source_url": null,
+  "source_url": "https://todaygolfgo.com/golf-courses/master/golf-course-moct-20241231-0320/",
   "note": null,
   "sources": [
    {
     "source": "그린피가이드(공식 요금표 확인)",
     "url": "https://greenfeeguide.co.kr/course/gc-0168/",
     "checked_at": "2026-10-07"
+   },
+   {
+    "source": "공개 안내",
+    "url": "https://todaygolfgo.com/golf-courses/master/golf-course-moct-20241231-0320/",
+    "quote": "18홀 20,000원/인 1인 카트비. 9홀 10,000원/인.",
+    "checked_at": "2026-11-27"
    }
   ],
-  "checked_at": "2026-10-07",
+  "checked_at": "2026-11-27",
   "market": {
    "weekday_min": null,
    "weekend_min": null,
@@ -131,9 +226,11 @@
    "source": "그린피가이드(공식 인용)",
    "url": "https://greenfeeguide.co.kr/course/gc-0168/"
   },
-  "open_cycle": null,
+  "open_cycle": "인터넷·모바일 예약은 2주 전 오전 9시부터, 전화예약은 2주 전 오전 10시부터 가능",
   "notes": null,
-  "evidence": [],
+  "evidence": [
+   "예약 오픈: 인터넷·모바일 예약은 2주 전 오전 9시부터, 전화예약은 2주 전 오전 10시부터 가능"
+  ],
   "weather_evidence": [],
   "browser_official": {
    "no_caddie": "노캐디제(셀프라운딩) 운영",
@@ -142,22 +239,42 @@
    "dress": "불쾌감을 주는 복장 입장 불가(반바지 가능) — 2026-10-05 개정 공지",
    "pace": "9홀 2시간 / 18홀 4시간 30분 준수",
    "rule": "코스 내 금연·음식물 반입 금지, 원구 플레이, 7번홀은 7번 아이언보다 긴 클럽 사용 금지(여성 우드 가능), 음주·주취 라운딩 금지"
-  }
+  },
+  "sources": [
+   {
+    "url": "https://greenfeeguide.co.kr/course/gc-0168/",
+    "quote": "예약 오픈: 인터넷·모바일 예약은 2주 전 오전 9시부터, 전화예약은 2주 전 오전 10시부터 가능",
+    "checked_at": "2026-11-27",
+    "source_type": "official_summary(greenfeeguide)"
+   }
+  ]
  },
  "ops": {
   "nocaddie": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "노캐디: 노캐디(셀프) 라운드 가능"
+   ],
+   "value": "노캐디(셀프) 라운드 가능",
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0168/",
+   "confidence": "medium",
+   "source_type": "official_summary(greenfeeguide)",
+   "checked_at": "2026-11-27"
   },
   "two_player": {
-   "evidence": [],
-   "value": null,
+   "evidence": [
+    "2인 플레이: 주중만, 주말·공휴일은 3인 요금"
+   ],
+   "value": "주중만, 주말·공휴일은 3인 요금",
    "third_party": {
     "two": null,
     "three": null,
     "source": "그린피가이드",
     "url": "https://greenfeeguide.co.kr/course/gc-0168/"
-   }
+   },
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0168/",
+   "confidence": "medium",
+   "source_type": "official_summary(greenfeeguide)",
+   "checked_at": "2026-11-27"
   },
   "three_player": {
    "value": null,
@@ -172,8 +289,14 @@
    "evidence": []
   },
   "cart_type": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "카트: 리모컨 카트 · 5인승 전동카트"
+   ],
+   "value": "리모컨 카트 · 5인승 전동카트",
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0168/",
+   "confidence": "medium",
+   "source_type": "official_summary(greenfeeguide)",
+   "checked_at": "2026-11-27"
   },
   "cart_entry": {
    "evidence": [],
@@ -209,8 +332,14 @@
    "value": null
   },
   "pace": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "경기 시간: 18홀 4시간 30분 · 9홀 2시간"
+   ],
+   "value": "18홀 4시간 30분 · 9홀 2시간",
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0168/",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfeeguide)"
   },
   "browser_official": {
    "no_caddie": "노캐디제(셀프라운딩) 운영",
@@ -225,8 +354,14 @@
  },
  "facilities": {
   "practice": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "연습 시설: 드라이빙 레인지"
+   ],
+   "value": "드라이빙 레인지",
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0168/",
+   "confidence": "medium",
+   "source_type": "official_summary(greenfeeguide)",
+   "checked_at": "2026-11-27"
   },
   "indoor_range": {
    "value": null,
@@ -249,17 +384,29 @@
    "evidence": []
   },
   "other": {
-   "value": null,
-   "evidence": []
+   "value": "드라이빙 레인지",
+   "evidence": [
+    "드라이빙 레인지"
+   ],
+   "source_url": "https://www.nc-golf.com/",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfee guide tables)"
   },
   "night": {
    "evidence": [],
    "value": null
   },
   "closed_days": {
-   "evidence": [],
+   "evidence": [
+    "정기 휴장일: 설날·추석 당일"
+   ],
    "third_party": "설날·추석 당일경기",
-   "value": null
+   "value": "설날·추석 당일",
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0168/",
+   "confidence": "medium",
+   "source_type": "official_summary(greenfeeguide)",
+   "checked_at": "2026-11-27"
   },
   "shuttle": {
    "evidence": [],
@@ -378,7 +525,13 @@
   "course_notes": null,
   "alert": null,
   "unconfirmed": [],
-  "sources": []
+  "sources": [
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "unavailable",
@@ -393,12 +546,12 @@
   "browser_batch": true
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.6,
-  "fee": 0.5,
-  "ops": 0.0,
-  "facility": 0.0,
-  "briefing": 0.5,
-  "rental": 0.25
+  "basic": 0.89,
+  "course": 0.2,
+  "fee": 0.75,
+  "ops": 0.29,
+  "facility": 0.3,
+  "briefing": 0.0,
+  "rental": 0.0
  }
 }

@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0162",
@@ -66,7 +67,7 @@
    "blocks": [
     "대한민국통일"
    ],
-   "length_m": null,
+   "length_m": 5958,
    "kga": {
     "kga_course_code": "408",
     "kga_name": "자유로",
@@ -268,7 +269,7 @@
  "course": {
   "holes": 27,
   "holes_received": 27,
-  "course_names": null,
+  "course_names": "통일·대한·민국 각 9홀",
   "membership_type": "대중제",
   "night_light": null,
   "blocks": [
@@ -470,7 +471,7 @@
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": null,
+  "length_m": 5958,
   "par": 72
  },
  "fee": {
@@ -486,46 +487,61 @@
   "source_url": null,
   "note": null,
   "sources": [],
-  "checked_at": null,
+  "checked_at": "2026-11-27",
   "market": {
-   "weekday_min": 130000.0,
-   "weekend_min": 165000.0,
-   "part1": null,
-   "part2": null,
+   "weekday_min": 125000,
+   "weekend_min": 160000,
+   "part1": "4만 ~ 25만",
+   "part2": "8만 ~ 26만",
    "source": "티픽골프장(실거래 관측)",
-   "url": "https://teepickgolf.com/course/%EC%9E%90%EC%9C%A0%EB%A1%9Ccc",
-   "note": "공시가 아닌 최근 관측 실거래 최저가"
+   "url": "https://teepickgolf.com/course/자유로cc",
+   "note": "공시가 아닌 최근 관측 실거래 최저가",
+   "checked_at": "2026-11-27"
   },
   "official_green_evidence": [],
   "official_rental": null
  },
  "cancel": {
-  "cancel_policy": null,
+  "cancel_policy": {
+   "value": "예약일 7일 전(예약일 미포함) 17:00까지 위약 없이 취소. 이후 4~6일 전 취소는 1개월 예약정지, 주말·공휴일 2~3일 전은 2개월 정지 또는 팀별 이용요금 10%, 평일 1~2일 전은 3개월 정지 또는 20%, 당일 미내장·당일 취소는 영구 예약정지 또는 30%",
+   "source": "공식 홈페이지",
+   "url": "https://www.jayurocc.com/View?ID=guide05"
+  },
   "open_cycle": null,
   "notes": null,
   "evidence": [
-   "자유로CC 로그인 회원가입 실시간예약 실시간예약 대기예약 예약확인 및 취소 조인게시판 클럽소개 인사말 오시는 길 클럽소개 CI소개 코스정보 코스소개 코스공략도 코스갤러리 코스레이팅 이용안내 이용안내 이용요금 예약안내 위약안내 회원라운지 내장현황 위약현황 스코어현황 회원정보관리 공지사항 공지사항 이벤트 식음 메뉴 명예의전당 날씨정보 메인으로 HOME 실시간예약 RESERVATION 이용요금 GREEN FEE 예약확인 RESERVATION 오시는 길 Map 조인하기 JOIN 연천군소개 yeoncheon 회원가입 MEMBERSHIP 이용",
-   "자유로CC 로그인 회원가입 실시간예약 실시간예약 대기예약 예약확인 및 취소 조인게시판 클럽소개 인사말 오시는 길 클럽소개 CI소개 코스정보 코스소개 코스공략도 코스갤러리 코스레이팅 이용안내 이용안내 이용요금 예약안내 위약안내 회원라운지 내장현황 위약현황 스코어현황 회원정보관리 공지사항 공지사항 이벤트 식음 메뉴 명예의전당 날씨정보 메인으로 HOME 실시간예약 RESERVATION 이용요금 GREEN FEE 예약확인 RESERVATION 오시는 길 Map 조인하기 JOIN 연천군소개 yeoncheon 회원가입 MEMBERSHIP 이용",
-   "모바일에서 로그인 후 간편하게 예약 / 변경 / 취소가 가능합니다."
+   "모바일에서 로그인 후 간편하게 예약 / 변경 / 취소가 가능합니다.",
+   "예약일 7일전(예약일 미포함) 17시까지 위약 없이 취소 가능하십니다.",
+   "4~6일 전 취소 : 1개월 예약정지 / 2~3일 전 취소(주말,공휴일) : 2개월 예약정지 혹은 팀별 이용요금의 10% / 당일 미내장·당일 취소 : 영구 예약정지 및 내장불가 혹은 팀별 이용요금의 30%"
   ],
-  "weather_evidence": []
+  "weather_evidence": [
+   "우천 예보만으로는 취소 불가(현장 기준), 기상악화 취소 시 위약 미적용"
+  ]
  },
  "ops": {
   "nocaddie": {
+   "value": "노캐디 라운드 운영(약관에 규정)",
+   "evidence": [
+    "제 17조 노캐디 라운드 이용 안내"
+   ],
+   "source_url": "https://www.jayurocc.com/View?ID=guide05",
+   "confidence": "medium",
+   "checked_at": "2026-11-27",
+   "value_from": "batch2_supplement"
+  },
+  "two_player": {
    "evidence": [],
    "value": null
   },
-  "two_player": {
-   "evidence": [
-    "2026.10.08 Welcome 로그인 회원가입 아이디/비밀번호 찾기 실시간예약 이용요금 예약확인/조회 오시는길 조인게시판 연천군안내 회원가입 클럽소개Club Introduction 클럽소개Club Introduction “백학이 노닌다”는 연천군 백학면에 위치한 자유로CC는 오염되지 않은 공기로 때묻지 않은 청정한 자연을 느낄 수 있는 27홀 골프코스로서 방문하시는 모든 분들이 편안하게 골프에 집중하실 수 있도록 최고의 편의시설과 최상의 서비스를 제공하고 있습니다.",
-    "자유로CC 로그인 회원가입 실시간예약 실시간예약 대기예약 예약확인 및 취소 조인게시판 클럽소개 인사말 오시는 길 클럽소개 CI소개 코스정보 코스소개 코스공략도 코스갤러리 코스레이팅 이용안내 이용안내 이용요금 예약안내 위약안내 회원라운지 내장현황 위약현황 스코어현황 회원정보관리 공지사항 공지사항 이벤트 식음 메뉴 명예의전당 날씨정보 메인으로 HOME 실시간예약 RESERVATION 이용요금 GREEN FEE 예약확인 RESERVATION 오시는 길 Map 조인하기 JOIN 연천군소개 yeoncheon 회원가입 MEMBERSHIP 이용",
-    "자유로CC 로그인 회원가입 실시간예약 실시간예약 대기예약 예약확인 및 취소 조인게시판 클럽소개 인사말 오시는 길 클럽소개 CI소개 코스정보 코스소개 코스공략도 코스갤러리 코스레이팅 이용안내 이용안내 이용요금 예약안내 위약안내 회원라운지 내장현황 위약현황 스코어현황 회원정보관리 공지사항 공지사항 이벤트 식음 메뉴 명예의전당 날씨정보 메인으로 HOME 실시간예약 RESERVATION 이용요금 GREEN FEE 예약확인 RESERVATION 오시는 길 Map 조인하기 JOIN 연천군소개 yeoncheon 회원가입 MEMBERSHIP 이용"
-   ],
-   "value": null
-  },
   "three_player": {
-   "value": null,
-   "evidence": []
+   "value": "3인 가능(3.5인 그린피 적용)",
+   "evidence": [
+    "주중/주말 3인 내장시 \"3.5인 그린피 적용\""
+   ],
+   "source_url": "https://www.jayurocc.com/View?ID=guide05",
+   "confidence": "medium",
+   "checked_at": "2026-11-27",
+   "value_from": "batch2_supplement"
   },
   "five_player": {
    "value": null,
@@ -536,8 +552,14 @@
    "evidence": []
   },
   "cart_type": {
-   "evidence": [],
-   "value": null
+   "value": "카트 1팀 기준 운영",
+   "evidence": [
+    "캐디피 및 카트 사용료 (1팀 기준)"
+   ],
+   "source_url": "https://www.jayurocc.com/View?ID=guide05",
+   "confidence": "medium",
+   "checked_at": "2026-11-27",
+   "value_from": "batch2_supplement"
   },
   "cart_entry": {
    "evidence": [],
@@ -552,11 +574,14 @@
    "value": null
   },
   "checkin": {
+   "value": "예약 1시간 전 도착",
    "evidence": [
-    "자유로CC 로그인 회원가입 실시간예약 실시간예약 대기예약 예약확인 및 취소 조인게시판 클럽소개 인사말 오시는 길 클럽소개 CI소개 코스정보 코스소개 코스공략도 코스갤러리 코스레이팅 이용안내 이용안내 이용요금 예약안내 위약안내 회원라운지 내장현황 위약현황 스코어현황 회원정보관리 공지사항 공지사항 이벤트 식음 메뉴 명예의전당 날씨정보 메인으로 HOME 실시간예약 RESERVATION 이용요금 GREEN FEE 예약확인 RESERVATION 오시는 길 Map 조인하기 JOIN 연천군소개 yeoncheon 회원가입 MEMBERSHIP 이용",
-    "수도권 서북부 최고의 접근성을 갖춘 자유로CC는 자유로와 서울문산고속도로, 구리포천고속도로, 서울양주고속도로 등을 통해 강남 등 수도권에서 교통정체 없이 도착 하실 수 있어 보다 더 여유로운 라운드를 즐기실 수 있습니다."
+    "예약 한시간 전에 도착"
    ],
-   "value": null
+   "source_url": "https://www.jayurocc.com/View?ID=guide05",
+   "confidence": "medium",
+   "checked_at": "2026-11-27",
+   "value_from": "batch2_supplement"
   },
   "locker": {
    "evidence": [],
@@ -567,17 +592,14 @@
    "value": null
   },
   "dress": {
+   "value": "청바지·트레이닝복·노출 심한 복장 입장 불가",
    "evidence": [
-    "통상적인 골프웨어가 아닌 청바지나 트레이닝복 및 노출이 심한 복장은 입장이 불가하오니 유의 바랍니다.",
-    "복장허용 허벅지가 과도하게 드러나지 않는 반바지 및 옷깃이 있는 상의 여성의 경우 배꼽이 드러나지 않는 민소매 상의가능 (단, 어깨 끈 5cm 이상) 현관 자유로CC는 셀프 주차를 실시하고 있습니다."
+    "통상적인 골프웨어가 아닌 청바지나 트레이닝복 및 노출이 심한 복장은 입장이 불가하오니 유의 바랍니다."
    ],
-   "value": "복장 규정 안내",
-   "value_previous": "문구 확인(원문 근거)",
-   "source_url": "https://www.jayurocc.com/View?ID=guide01",
+   "source_url": "https://www.jayurocc.com/View?ID=guide05",
    "confidence": "medium",
-   "source_type": "official_site",
-   "page_label": "이용요금",
-   "value_from": "capital_supplement(official_site)"
+   "checked_at": "2026-11-27",
+   "value_from": "batch2_supplement"
   },
   "pace": {
    "evidence": [
@@ -601,11 +623,7 @@
    "evidence": []
   },
   "food": {
-   "evidence": [
-    "자유로CC 로그인 회원가입 실시간예약 실시간예약 대기예약 예약확인 및 취소 조인게시판 클럽소개 인사말 오시는 길 클럽소개 CI소개 코스정보 코스소개 코스공략도 코스갤러리 코스레이팅 이용안내 이용안내 이용요금 예약안내 위약안내 회원라운지 내장현황 위약현황 스코어현황 회원정보관리 공지사항 공지사항 이벤트 식음 메뉴 명예의전당 날씨정보 메인으로 HOME 실시간예약 RESERVATION 이용요금 GREEN FEE 예약확인 RESERVATION 오시는 길 Map 조인하기 JOIN 연천군소개 yeoncheon 회원가입 MEMBERSHIP 이용",
-    "자유로CC 로그인 회원가입 실시간예약 실시간예약 대기예약 예약확인 및 취소 조인게시판 클럽소개 인사말 오시는 길 클럽소개 CI소개 코스정보 코스소개 코스공략도 코스갤러리 코스레이팅 이용안내 이용안내 이용요금 예약안내 위약안내 회원라운지 내장현황 위약현황 스코어현황 회원정보관리 공지사항 공지사항 이벤트 식음 메뉴 명예의전당 날씨정보 메인으로 HOME 실시간예약 RESERVATION 이용요금 GREEN FEE 예약확인 RESERVATION 오시는 길 Map 조인하기 JOIN 연천군소개 yeoncheon 회원가입 MEMBERSHIP 이용",
-    "자유로CC 로그인 회원가입 실시간예약 실시간예약 대기예약 예약확인 및 취소 조인게시판 클럽소개 인사말 오시는 길 클럽소개 CI소개 코스정보 코스소개 코스공략도 코스갤러리 코스레이팅 이용안내 이용안내 이용요금 예약안내 위약안내 회원라운지 내장현황 위약현황 스코어현황 회원정보관리 공지사항 공지사항 이벤트 식음 메뉴 명예의전당 날씨정보 메인으로 HOME 실시간예약 RESERVATION 이용요금 GREEN FEE 예약확인 RESERVATION 오시는 길 Map 조인하기 JOIN 연천군소개 yeoncheon 회원가입 MEMBERSHIP 이용"
-   ],
+   "evidence": [],
    "value": null
   },
   "snack_bar": {
@@ -613,8 +631,14 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": null,
-   "evidence": []
+   "value": "락커·샤워실 등 클럽하우스 시설",
+   "evidence": [
+    "락커, 샤워실 등 클럽하우스 시설 이용"
+   ],
+   "source_url": "https://www.jayurocc.com/View?ID=guide05",
+   "confidence": "medium",
+   "checked_at": "2026-11-27",
+   "value_from": "batch2_supplement"
   },
   "lodging": {
    "value": null,
@@ -625,8 +649,14 @@
    "evidence": []
   },
   "night": {
-   "evidence": [],
-   "value": null
+   "value": "후반 4개홀 조명 설치, 22시까지 운영",
+   "evidence": [
+    "조명이 후반 4개홀에 설치되어 있는 바 22시까지로 정합니다"
+   ],
+   "source_url": "https://www.jayurocc.com/View?ID=guide05",
+   "confidence": "medium",
+   "checked_at": "2026-11-27",
+   "value_from": "batch2_supplement"
   },
   "closed_days": {
    "evidence": [
@@ -849,7 +879,18 @@
   "course_notes": null,
   "alert": null,
   "unconfirmed": [],
-  "sources": []
+  "sources": [
+   {
+    "source": "그린피가이드 코스 페이지",
+    "url": "https://greenfeeguide.co.kr/course/gc-0155/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "ok",
@@ -857,19 +898,19 @@
   "pages_collected": 14,
   "third_party": {
    "teepick": true,
-   "greenfeeguide": false
+   "greenfeeguide": true
   },
   "render_hint": "static",
   "plan_strategy": "static(직접 파싱)",
   "browser_batch": false
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 1.0,
+  "basic": 0.78,
+  "course": 0.6,
   "fee": 0.0,
-  "ops": 0.14,
-  "facility": 0.0,
-  "briefing": 0.5,
-  "rental": 0.25
+  "ops": 0.43,
+  "facility": 0.2,
+  "briefing": 0.0,
+  "rental": 0.0
  }
 }

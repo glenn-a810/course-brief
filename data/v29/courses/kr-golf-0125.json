@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0125",
@@ -58,13 +59,13 @@
    "master": "courses_master.json v2.0 (문체부·KGA·KGBA·티픽·지도)",
    "synced_to": "courses_master.json v2.7 (2026-11-26 단일 스키마 정규화)"
   },
-  "par": null,
+  "par": 72,
   "holes_teepick": 18,
   "course_spec": {
    "holes": 18,
-   "par": null,
+   "par": 72,
    "blocks": [],
-   "length_m": null,
+   "length_m": 5695,
    "kga": null,
    "grass": {
     "evidence": "골프클럽Q 로그인 회원가입 실시간예약 실시간예약 예약확인/취소 조인예약 클럽이용안내 이용 및 요금안내 예약안내 오시는길 시설안내 클럽하우스 그늘집 레스토랑 프로샵 코스소개 코스소개 코스공략도 클럽소식 공지사항 이벤트 포토갤러리 2021 클럽큐展 2022 클럽큐展 명예의전당 Myzone 예약확인/취소 스코어카드 쿠폰함 회원정보관리 실시간 예약 SUN MON TUE WEN THU FRI SAT 실시간예약하기 골프클럽큐 홍보영상보기 NEWS 2027년 연단체팀 모집 안내 2026.10.22 HOME > 이용안내 이용안내 이용안내 요금안내",
@@ -78,14 +79,19 @@
   ],
   "status": "operating",
   "facility_cluster": null,
-  "factcheck_2026_11_26": null
+  "factcheck_2026_11_26": null,
+  "designer": {
+   "value": "게리플레이어(Gary Player)",
+   "source": "공개 정보(그린피가이드)",
+   "url": "https://greenfeeguide.co.kr/course/gc-0093/"
+  }
  },
  "course": {
   "holes": 18,
   "holes_received": 18,
-  "course_names": null,
+  "course_names": "Pampas·Valley 코스",
   "membership_type": "대중제",
-  "night_light": null,
+  "night_light": "3부(야간) 운영 — 1·2부 셀프라운드, 3부 야간라운드",
   "blocks": [],
   "grass": {
    "tee": null,
@@ -100,8 +106,8 @@
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": null,
-  "par": null
+  "length_m": 5695,
+  "par": 72
  },
  "fee": {
   "weekday": null,
@@ -111,22 +117,31 @@
   "basis": null,
   "tax_included": null,
   "cart": {
-   "evidence": "접수 및 요금정산 프런트에 비치된 접수부에 내장하시는 고객명을 적어주시고 모든 이용요금(그린피, 카트피, 식음료, 프로샵)은 후불로 정산입니다.",
-   "url": "https://www.golfclubq.com/guide/guide.asp",
-   "source": "공식"
+   "value": 100000,
+   "note": "4인 팀당(5인 170,000원)",
+   "source": "공식 홈페이지 요금표",
+   "url": "https://www.golfclubq.com/guide/charge.asp",
+   "evidence": "접수 및 요금정산 프런트에 비치된 접수부에 내장하시는 고객명을 적어주시고 모든 이용요금(그린피, 카트피, 식음료, 프로샵)은 후불로 정산입니다."
   },
   "caddie": {
-   "value": null,
-   "none": false,
-   "evidence": "캐디피는 경기 종료 후 캐디에게 직접 주시면 됩니다.",
-   "source": "공식",
-   "url": "https://www.golfclubq.com/guide/guide.asp"
+   "value": 150000,
+   "note": "4인 팀당(5인 220,000원)",
+   "source": "공식 홈페이지 요금표",
+   "url": "https://www.golfclubq.com/guide/charge.asp",
+   "evidence": "캐디피는 경기 종료 후 캐디에게 직접 주시면 됩니다."
   },
   "as_of": null,
   "source_url": null,
   "note": null,
-  "sources": [],
-  "checked_at": null,
+  "sources": [
+   {
+    "source": "공식 홈페이지 요금표",
+    "url": "https://www.golfclubq.com/guide/charge.asp",
+    "checked_at": "2026-11-27",
+    "note": "카트 사용료 100,000원/팀(4인), 캐디피 150,000원/팀(4인)"
+   }
+  ],
+  "checked_at": "2026-11-27",
   "market": {
    "weekday_min": 90000.0,
    "weekend_min": 140000.0,
@@ -134,7 +149,8 @@
    "part2": null,
    "source": "티픽골프장(실거래 관측)",
    "url": "https://teepickgolf.com/course/%EA%B3%A8%ED%94%84%ED%81%B4%EB%9F%BDQ",
-   "note": "공시가 아닌 최근 관측 실거래 최저가"
+   "note": "공시가 아닌 최근 관측 실거래 최저가",
+   "checked_at": "2026-11-27"
   },
   "official_green_evidence": [
    "접수 및 요금정산 프런트에 비치된 접수부에 내장하시는 고객명을 적어주시고 모든 이용요금(그린피, 카트피, 식음료, 프로샵)은 후불로 정산입니다.",
@@ -143,13 +159,21 @@
   "official_rental": null
  },
  "cancel": {
-  "cancel_policy": null,
-  "open_cycle": null,
+  "cancel_policy": {
+   "value": "정상 취소 기간은 주중 3일 전·주말 4일 전(주말 기준 이후 취소는 패널티, 주중은 2일 전부터 패널티)",
+   "source": "공식 홈페이지",
+   "url": "https://www.golfclubq.com/guide/charge.asp"
+  },
+  "open_cycle": "정회원은 3개월(90일) 전부터, 인터넷·모바일 예약은 이용예정일 4주 전 00:00부터(주중·주말 동일) 전일 18시까지",
   "notes": null,
   "evidence": [
    "골프클럽Q 로그인 회원가입 실시간예약 실시간예약 예약확인/취소 조인예약 클럽이용안내 이용 및 요금안내 예약안내 오시는길 시설안내 클럽하우스 그늘집 레스토랑 프로샵 코스소개 코스소개 코스공략도 클럽소식 공지사항 이벤트 포토갤러리 2021 클럽큐展 2022 클럽큐展 명예의전당 Myzone 예약확인/취소 스코어카드 쿠폰함 회원정보관리 실시간 예약 SUN MON TUE WEN THU FRI SAT 실시간예약하기 골프클럽큐 홍보영상보기 NEWS 2027년 연단체팀 모집 안내 2026.10.22 HOME > 이용안내 이용안내 이용안내 요금안내",
    "골프클럽Q 로그인 회원가입 실시간예약 실시간예약 예약확인/취소 조인예약 클럽이용안내 이용 및 요금안내 예약안내 오시는길 시설안내 클럽하우스 그늘집 레스토랑 프로샵 코스소개 코스소개 코스공략도 클럽소식 공지사항 이벤트 포토갤러리 2021 클럽큐展 2022 클럽큐展 명예의전당 Myzone 예약확인/취소 스코어카드 쿠폰함 회원정보관리 실시간 예약 SUN MON TUE WEN THU FRI SAT 실시간예약하기 골프클럽큐 홍보영상보기 NEWS 2027년 연단체팀 모집 안내 2026.10.22 HOME > 코스공략법 전체코스 코스공략법 코스",
-   "골프클럽Q 로그인 회원가입 실시간예약 실시간예약 예약확인/취소 조인예약 클럽이용안내 이용 및 요금안내 예약안내 오시는길 시설안내 클럽하우스 그늘집 레스토랑 프로샵 코스소개 코스소개 코스공략도 클럽소식 공지사항 이벤트 포토갤러리 2021 클럽큐展 2022 클럽큐展 명예의전당 Myzone 예약확인/취소 스코어카드 쿠폰함 회원정보관리 실시간 예약 SUN MON TUE WEN THU FRI SAT 실시간예약하기 골프클럽큐 홍보영상보기 NEWS 2027년 연단체팀 모집 안내 2026.10.22 HOME > 예약안내 예약안내 예약방법 1."
+   "골프클럽Q 로그인 회원가입 실시간예약 실시간예약 예약확인/취소 조인예약 클럽이용안내 이용 및 요금안내 예약안내 오시는길 시설안내 클럽하우스 그늘집 레스토랑 프로샵 코스소개 코스소개 코스공략도 클럽소식 공지사항 이벤트 포토갤러리 2021 클럽큐展 2022 클럽큐展 명예의전당 Myzone 예약확인/취소 스코어카드 쿠폰함 회원정보관리 실시간 예약 SUN MON TUE WEN THU FRI SAT 실시간예약하기 골프클럽큐 홍보영상보기 NEWS 2027년 연단체팀 모집 안내 2026.10.22 HOME > 예약안내 예약안내 예약방법 1.",
+   "※ 예약 정상 취소 기간은 주중 3일 전 주말 4일 전입니다.",
+   "※ 상기취소안내는 주말 기준이며 주중은 2일전 부터 패널티 적용합니다.",
+   "예약 오픈 주기: 3개월 전(90일)부터 예약 전일 18시까지 예약 (https://www.golfclubq.com/guide/reserGuide.asp)",
+   "예약 오픈 주기: 정회원은 3개월(90일) 전부터, 인터넷·모바일 예약은 이용예정일 4주 전 00:00부터(주중·주말 동일) 전일 18시까지 (https://greenfeeguide.co.kr/guides/golf-course-booking-guide/)"
   ],
   "weather_evidence": []
  },
@@ -200,8 +224,14 @@
    "value_from": "capital_supplement(greenfee_guide)"
   },
   "cart_entry": {
-   "evidence": [],
-   "value": null
+   "value": "페어웨이 진입 불가",
+   "evidence": [
+    "페어웨이 진입 불가 — https://greenfeeguide.co.kr/course/gc-0093/"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0093/",
+   "confidence": "medium",
+   "checked_at": "2026-11-27",
+   "value_from": "pass2_third_party"
   },
   "bagdrop": {
    "evidence": [],
@@ -310,8 +340,14 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": null,
-   "evidence": []
+   "value": "사우나 있음",
+   "evidence": [
+    "사우나 있음 — https://greenfeeguide.co.kr/course/gc-0093/"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0093/",
+   "confidence": "medium",
+   "checked_at": "2026-11-27",
+   "value_from": "pass2_third_party"
   },
   "lodging": {
    "value": null,
@@ -376,17 +412,19 @@
   }
  },
  "rental": {
-  "available": null,
-  "full_set": null,
-  "fee_text": null,
+  "available": true,
+  "full_set": 50000,
+  "fee_text": "50,000원 · 18홀",
   "brand": null,
   "left_handed": null,
   "shoes": null,
   "nine_hole": null,
   "range_finder": null,
   "reservation": null,
-  "source_url": null,
-  "evidence": [],
+  "source_url": "https://greenfeeguide.co.kr/course/gc-0093/",
+  "evidence": [
+   "풀세트 대여 50,000원 · 18홀 — https://greenfeeguide.co.kr/course/gc-0093/"
+  ],
   "official": null,
   "nearby_delivery": {
    "region": "수도권",
@@ -519,7 +557,18 @@
   "course_notes": null,
   "alert": null,
   "unconfirmed": [],
-  "sources": []
+  "sources": [
+   {
+    "source": "그린피가이드 코스 페이지",
+    "url": "https://greenfeeguide.co.kr/course/gc-0093/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "ok",
@@ -527,19 +576,19 @@
   "pages_collected": 14,
   "third_party": {
    "teepick": true,
-   "greenfeeguide": false
+   "greenfeeguide": true
   },
   "render_hint": "static",
   "plan_strategy": "static(직접 파싱)",
   "browser_batch": false
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.6,
-  "fee": 0.0,
-  "ops": 0.43,
-  "facility": 0.4,
-  "briefing": 0.5,
-  "rental": 0.25
+  "basic": 0.89,
+  "course": 0.4,
+  "fee": 0.5,
+  "ops": 0.5,
+  "facility": 0.5,
+  "briefing": 0.0,
+  "rental": 0.75
  }
 }

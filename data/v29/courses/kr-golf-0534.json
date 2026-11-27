@@ -5,8 +5,9 @@
   "schema": "stage2c/1.0",
   "batch": null,
   "structure": "master only (구장 JSON 미생성 — 건설중·미착공)",
-  "normalized_at": "2026-11-26T12:20:52+09:00",
-  "has_detail": false
+  "normalized_at": "2026-11-27T14:40:00+09:00",
+  "has_detail": false,
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0534",
@@ -49,11 +50,12 @@
   "facility_id": null,
   "facility_members": null,
   "status": "planned",
-  "expected_open": "2030-상반기(준공 2029-12 후)",
+  "expected_open": "2029-12 준공 목표(2027-01 착공 계획)",
   "nearest_ic": null,
   "facility_cluster": null,
   "factcheck_2026_11_26": null,
-  "provenance": {}
+  "provenance": {},
+  "status_note": "2025-10 기존 사업자(서전리젠시) 지정 취소 후 공매로 사업권을 확보한 타이거레저(주)가 새 사업자로 추진. 명칭을 나폴리 거제 골프&리조트에서 블랙타이거 골프&리조트 거제로 변경, 18홀+122실 콘도. 2026-07 기준 실시계획인가 보완 절차 진행, 연말 인허가 완료 후 2027-01 착공 계획"
  },
  "course": {
   "holes": null,
@@ -219,7 +221,9 @@
   "fee_change": null,
   "alert": null,
   "unconfirmed": [],
-  "sources": []
+  "sources": [
+   "https://www.geojejournal.co.kr/news/articleView.html?idxno=206841"
+  ]
  },
  "collection": {
   "official_site": null,
@@ -230,12 +234,12 @@
   "plan_strategy": null
  },
  "coverage": {
-  "basic": 0,
-  "course": 0,
-  "fee": 0,
-  "ops": 0,
-  "facility": 0,
-  "briefing": 0,
-  "rental": 0
+  "basic": 0.56,
+  "course": 0.0,
+  "fee": 0.0,
+  "ops": 0.0,
+  "facility": 0.0,
+  "briefing": 0.0,
+  "rental": 0.0
  }
 }

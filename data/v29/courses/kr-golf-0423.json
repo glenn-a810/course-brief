@@ -12,9 +12,142 @@
   ],
   "source": "raw/received_gangwon_65.json (외부 데이터 수신, 2026-11-26)",
   "review": {
-   "checked_at": null,
-   "status": "not_crosschecked",
-   "checks": []
+   "checked_at": "2026-11-27",
+   "status": "verified_official",
+   "checks": [
+    {
+     "field": "course.night_light",
+     "received": null,
+     "verified": "18홀 전홀 야간조명 설치",
+     "result": "보완",
+     "url": "https://www.plazacc.co.kr/plzcc/irsweb/golf2/course/yongin/yongin_club.do",
+     "quote": "코스가 아기자기한 맛이 있어 주로 여성적이라는 평이 있으며, 총 연장 길이는 5,798m입니다. 또한, 18홀 전홀 야간조명이 설치되어 야간에도 주간과 같은 느낌으로 라운딩이 가능합니다.",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "cancel.cancel_policy",
+     "received": null,
+     "verified": "주중 4일 전, 주말 7일 전까지 취소 가능",
+     "result": "보완",
+     "url": "https://www.plazacc.co.kr/plzcc/irsweb/golf2/guideline/yongin/operationGuide_tab1.do",
+     "quote": "예약 취소는 주중 4일전, 주말은 7일전 까지 가능하십니다.",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.food",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "레스토랑",
+     "result": "보완",
+     "url": "https://www.plazacc.co.kr/plzcc/irsweb/golf2/course/seorak/seorak_club.do",
+     "quote": "코스공략법을 제공하고 있으며 품격 있는 서비스와 맛을 자랑하는 레스토랑,",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.other",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "프로샵·설악워터피아(온천 워터파크)",
+     "result": "보완",
+     "url": "https://www.plazacc.co.kr/plzcc/irsweb/golf2/course/seorak/seorak_club.do",
+     "quote": "천연 온천욕을 즐길 수 있는 설악워터피아 등 종합 레저타운으로서 잊지 못할 추억과 즐거움을 선사해 드립니다.",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "fee.checked_at",
+     "received": null,
+     "verified": "2026-11-27",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0221/",
+     "quote": "요금 확인일 2026-11-05 (그린피가이드 2026-11-27 조회)",
+     "source_type": "third_party",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "ops.cart_type",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "4인승",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0221/",
+     "quote": "카트 종류 4인승",
+     "source_type": "third_party",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "course.par",
+     "received": null,
+     "verified": 72,
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/seorak-plaza/course/",
+     "quote": "코스 개요 — 파: Par 72",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "course.length_m",
+     "received": null,
+     "verified": 6456,
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/seorak-plaza/course/",
+     "quote": "코스 개요 — 거리: 6,456m",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.snack_bar",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "그늘집 운영",
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/seorak-plaza/info/",
+     "quote": "레스토랑: 클럽하우스 레스토랑 (한식·양식), 그늘집",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.proshop",
+     "received": null,
+     "verified": "프로샵",
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/seorak-plaza/info/",
+     "quote": "프로샵: 프로샵 (골프용품·의류)",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.practice",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "드라이빙 레인지, 퍼팅 그린",
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/seorak-plaza/info/",
+     "quote": "연습 시설: 드라이빙 레인지, 퍼팅 그린",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.lodging",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "한화리조트 설악 (쏘라노·별관)",
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/seorak-plaza/info/",
+     "quote": "숙박 시설: 한화리조트 설악 (쏘라노·별관)",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    }
+   ]
   },
   "data_checks": [
    "요금 출처 표기 불일치: as_of에 \"공식\"이나 URL은 3자(https://greenfeeguide.co.kr/course/gc-0221/)",
@@ -23,11 +156,14 @@
   "schema_previous": "stage2b/1.0",
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "restructured_from_7key": false,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "batch3_patch": "2026-11-27 배치3 보완: 4개 항목(공식 홈페이지·공개 요금 안내 기준, 미확인 값 생성 없음)",
+  "pass2_patch": "2026-11-27 2차 보완 패스: 7개 항목(그린피가이드·1박2일골프·원더골프·공식 홈페이지 대조, 미확인 값 생성 없음)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0423",
@@ -95,14 +231,15 @@
   "holes_conflict": false,
   "facility_cluster": null,
   "factcheck_2026_11_26": null,
-  "address_original": "속초시 미시령로2983번길 56-20"
+  "address_original": "속초시 미시령로2983번길 56-20",
+  "par": 72
  },
  "course": {
   "holes": 18,
   "holes_received": 18,
   "course_names": null,
   "membership_type": "회원제",
-  "night_light": null,
+  "night_light": "18홀 전홀 야간조명 설치",
   "blocks": [],
   "grass": {
    "tee": null,
@@ -121,7 +258,9 @@
    ]
   },
   "kga_hole_est": 18,
-  "extra_courses": null
+  "extra_courses": null,
+  "par": 72,
+  "length_m": 6456
  },
  "fee": {
   "weekday": 200000,
@@ -147,15 +286,32 @@
     "source": "수신 조사(공식·공개 예약정보)",
     "url": "https://greenfeeguide.co.kr/course/gc-0221/",
     "checked_at": "2026-11-05(공식 요금표 확인)"
+   },
+   {
+    "source": "third_party",
+    "url": "https://greenfeeguide.co.kr/course/gc-0221/",
+    "quote": "요금 확인일 2026-11-05 (그린피가이드 2026-11-27 조회)",
+    "checked_at": "2026-11-27"
    }
-  ]
+  ],
+  "checked_at": "2026-11-27"
  },
  "cancel": {
-  "cancel_policy": null,
+  "cancel_policy": "주중 4일 전, 주말 7일 전까지 취소 가능",
   "open_cycle": null,
   "notes": null,
-  "evidence": [],
-  "weather_evidence": []
+  "evidence": [
+   "예약 취소는 주중 4일전, 주말은 7일전 까지 가능하십니다."
+  ],
+  "weather_evidence": [],
+  "sources": [
+   {
+    "url": "https://www.plazacc.co.kr/plzcc/irsweb/golf2/guideline/yongin/operationGuide_tab1.do",
+    "quote": "예약 취소는 주중 4일전, 주말은 7일전 까지 가능하십니다.",
+    "checked_at": "2026-11-27",
+    "source_type": "official_site"
+   }
+  ]
  },
  "ops": {
   "nocaddie": {
@@ -179,8 +335,14 @@
    "evidence": []
   },
   "cart_type": {
-   "value": null,
-   "evidence": []
+   "value": "4인승",
+   "evidence": [
+    "카트 종류 4인승"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0221/",
+   "confidence": "high",
+   "source_type": "third_party",
+   "checked_at": "2026-11-27"
   },
   "cart_entry": {
    "value": null,
@@ -217,32 +379,65 @@
  },
  "facilities": {
   "practice": {
-   "value": null,
-   "evidence": []
+   "value": "드라이빙 레인지, 퍼팅 그린",
+   "evidence": [
+    "연습 시설: 드라이빙 레인지, 퍼팅 그린"
+   ],
+   "source_url": "https://1n2d-golf.co.kr/seorak-plaza/info/",
+   "confidence": "medium",
+   "source_type": "public_info(1n2d-golf)",
+   "checked_at": "2026-11-27",
+   "note": "1박2일골프 시설·기타 요약(2차 공개자료, 2026-11-27 조회) — 예약 전 공식 채널 재확인 권장"
   },
   "indoor_range": {
    "value": null,
    "evidence": []
   },
   "food": {
-   "value": null,
-   "evidence": []
+   "value": "레스토랑",
+   "evidence": [
+    "코스공략법을 제공하고 있으며 품격 있는 서비스와 맛을 자랑하는 레스토랑,"
+   ],
+   "source_url": "https://www.plazacc.co.kr/plzcc/irsweb/golf2/course/seorak/seorak_club.do",
+   "confidence": "high",
+   "source_type": "official_site",
+   "checked_at": "2026-11-27"
   },
   "snack_bar": {
-   "value": null,
-   "evidence": []
+   "value": "그늘집 운영",
+   "evidence": [
+    "레스토랑: 클럽하우스 레스토랑 (한식·양식), 그늘집"
+   ],
+   "source_url": "https://1n2d-golf.co.kr/seorak-plaza/info/",
+   "confidence": "medium",
+   "source_type": "public_info(1n2d-golf)",
+   "checked_at": "2026-11-27",
+   "note": "1박2일골프 시설·기타 요약(2차 공개자료, 2026-11-27 조회) — 예약 전 공식 채널 재확인 권장"
   },
   "locker_sauna": {
    "value": "사우나 있음",
    "evidence": []
   },
   "lodging": {
-   "value": null,
-   "evidence": []
+   "value": "한화리조트 설악 (쏘라노·별관)",
+   "evidence": [
+    "숙박 시설: 한화리조트 설악 (쏘라노·별관)"
+   ],
+   "source_url": "https://1n2d-golf.co.kr/seorak-plaza/info/",
+   "confidence": "medium",
+   "source_type": "public_info(1n2d-golf)",
+   "checked_at": "2026-11-27",
+   "note": "1박2일골프 시설·기타 요약(2차 공개자료, 2026-11-27 조회) — 예약 전 공식 채널 재확인 권장"
   },
   "other": {
-   "value": null,
-   "evidence": []
+   "value": "프로샵·설악워터피아(온천 워터파크)",
+   "evidence": [
+    "천연 온천욕을 즐길 수 있는 설악워터피아 등 종합 레저타운으로서 잊지 못할 추억과 즐거움을 선사해 드립니다."
+   ],
+   "source_url": "https://www.plazacc.co.kr/plzcc/irsweb/golf2/course/seorak/seorak_club.do",
+   "confidence": "high",
+   "source_type": "official_site",
+   "checked_at": "2026-11-27"
   },
   "night": {
    "value": null,
@@ -256,6 +451,17 @@
   "shuttle": {
    "value": null,
    "evidence": []
+  },
+  "proshop": {
+   "value": "프로샵",
+   "evidence": [
+    "프로샵: 프로샵 (골프용품·의류)"
+   ],
+   "source_url": "https://1n2d-golf.co.kr/seorak-plaza/info/",
+   "confidence": "medium",
+   "source_type": "public_info(1n2d-golf)",
+   "checked_at": "2026-11-27",
+   "note": "1박2일골프 시설·기타 요약(2차 공개자료, 2026-11-27 조회) — 예약 전 공식 채널 재확인 권장"
   }
  },
  "rental": {
@@ -268,7 +474,7 @@
   "nine_hole": null,
   "range_finder": null,
   "reservation": null,
-  "source_url": null,
+  "source_url": "https://greenfeeguide.co.kr/course/gc-0221/",
   "nearby_delivery": {
    "region": "강원",
    "sido": "강원특별자치도",
@@ -322,12 +528,10 @@
   "fee_change": null,
   "alert": null,
   "unconfirmed": [
-   "야간 라이트",
    "잔디(티)",
    "잔디(페어웨이)",
    "잔디(그린)",
    "예약 오픈 주기",
-   "취소·위약 규정",
    "2인 플레이",
    "3인 플레이",
    "5인 플레이",
@@ -357,7 +561,9 @@
   "sources": [
    "https://greenfeeguide.co.kr/course/gc-0221/",
    "https://todaygolfgo.com/regions/gangwon/",
-   "https://www.mk.co.kr/news/sports/11493433"
+   "https://www.mk.co.kr/news/sports/11493433",
+   "https://www.plazacc.co.kr/plzcc/irsweb/golf2/course/yongin/yongin_club.do",
+   "https://1n2d-golf.co.kr/seorak-plaza/course/"
   ],
   "collected_at": "2026-11-26T09:55:47+09:00"
  },
@@ -366,18 +572,19 @@
   "official_reason": "운영 중(공식 홈페이지 정상)",
   "pages_collected": 0,
   "third_party": {
-   "received_report": true
+   "received_report": true,
+   "greenfeeguide": true
   },
   "render_hint": "report",
   "plan_strategy": "subagent_report(2026-11-26)"
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.8,
+  "basic": 0.89,
+  "course": 0.2,
   "fee": 1.0,
-  "ops": 0.14,
-  "facility": 0.1,
-  "briefing": 0.75,
-  "rental": 1.0
+  "ops": 0.21,
+  "facility": 0.6,
+  "briefing": 0.5,
+  "rental": 0.75
  }
 }

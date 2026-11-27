@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0044",
@@ -61,13 +62,13 @@
    "source": "그린피가이드",
    "url": "https://greenfeeguide.co.kr/course/gc-0466/"
   },
-  "par": null,
+  "par": 72,
   "holes_teepick": 18,
   "course_spec": {
    "holes": 18,
-   "par": null,
+   "par": 72,
    "blocks": [],
-   "length_m": null,
+   "length_m": 5721,
    "kga": null,
    "grass": {
     "evidence": "잔디보호를 위해 이동시 보경로를 이용하여 주시기 바랍니다.",
@@ -103,16 +104,125 @@
   "kga": null,
   "kga_hole_est": null,
   "extra_courses": null,
-  "hole_by_hole": null,
-  "length_m": null,
-  "par": null
+  "hole_by_hole": [
+   {
+    "hole": 1,
+    "par": 4,
+    "white_m": 355,
+    "red_m": 321
+   },
+   {
+    "hole": 2,
+    "par": 4,
+    "white_m": 291,
+    "red_m": 278
+   },
+   {
+    "hole": 3,
+    "par": 3,
+    "white_m": 131,
+    "red_m": 126
+   },
+   {
+    "hole": 4,
+    "par": 5,
+    "white_m": 462,
+    "red_m": 393
+   },
+   {
+    "hole": 5,
+    "par": 4,
+    "white_m": 366,
+    "red_m": 326
+   },
+   {
+    "hole": 6,
+    "par": 3,
+    "white_m": 144,
+    "red_m": 143
+   },
+   {
+    "hole": 7,
+    "par": 4,
+    "white_m": 317,
+    "red_m": 303
+   },
+   {
+    "hole": 8,
+    "par": 4,
+    "white_m": 334,
+    "red_m": 286
+   },
+   {
+    "hole": 9,
+    "par": 5,
+    "white_m": 452,
+    "red_m": 375
+   },
+   {
+    "hole": 10,
+    "par": 5,
+    "white_m": 454,
+    "red_m": 428
+   },
+   {
+    "hole": 11,
+    "par": 4,
+    "white_m": 336,
+    "red_m": 291
+   },
+   {
+    "hole": 12,
+    "par": 4,
+    "white_m": 362,
+    "red_m": 311
+   },
+   {
+    "hole": 13,
+    "par": 4,
+    "white_m": 358,
+    "red_m": 332
+   },
+   {
+    "hole": 14,
+    "par": 3,
+    "white_m": 132,
+    "red_m": 121
+   },
+   {
+    "hole": 15,
+    "par": 4,
+    "white_m": 274,
+    "red_m": 244
+   },
+   {
+    "hole": 16,
+    "par": 5,
+    "white_m": 453,
+    "red_m": 403
+   },
+   {
+    "hole": 17,
+    "par": 4,
+    "white_m": 353,
+    "red_m": 332
+   },
+   {
+    "hole": 18,
+    "par": 3,
+    "white_m": 147,
+    "red_m": 114
+   }
+  ],
+  "length_m": 5721,
+  "par": 72
  },
  "fee": {
   "weekday": 155000,
   "weekend": 175000,
   "weekday_text": null,
   "weekend_text": null,
-  "basis": null,
+  "basis": "official",
   "tax_included": null,
   "cart": {
    "value": 100000,
@@ -135,7 +245,7 @@
     "checked_at": "2026-11-02"
    }
   ],
-  "checked_at": "2026-11-02",
+  "checked_at": "2026-11-27",
   "market": {
    "weekday_min": null,
    "weekend_min": 156000.0,
@@ -200,11 +310,12 @@
   }
  },
  "cancel": {
-  "cancel_policy": null,
+  "cancel_policy": "경기 10일전~7일전 변경/취소",
   "open_cycle": null,
   "notes": null,
   "evidence": [
-   "화순 엘리체 컨트리클럽 모바일 이용안내 HOME 클럽소개 인터넷예약 예약서비스 예약확인/취소 회원서비스 이용안내 코스안내 전체 코스안내 코스공략법 정보마당 공지사항 골프자료실 명예의 전당 조인게시판 회원서비스 회원정보변경 이용내역 내장 안내 예약시간 30분 전에는 도착하여 10분전까지는 TEE-OFF를 준비하여 주시기 바랍니다."
+   "화순 엘리체 컨트리클럽 모바일 이용안내 HOME 클럽소개 인터넷예약 예약서비스 예약확인/취소 회원서비스 이용안내 코스안내 전체 코스안내 코스공략법 정보마당 공지사항 골프자료실 명예의 전당 조인게시판 회원서비스 회원정보변경 이용내역 내장 안내 예약시간 30분 전에는 도착하여 10분전까지는 TEE-OFF를 준비하여 주시기 바랍니다.",
+   "경기 10일전~7일전 변경/취소 (출처: https://www.elichecc.co.kr/hwasun/html/guide/guide03.asp, 2026-11-27 확인)"
   ],
   "weather_evidence": [
    "입장요금안내 ※카트비 별도 구 분 정상요금 주중 1부 155,000 2부 155,000 주말/공휴일 175,000 ※1팀 4인기준 1인그린피 카트 대여료 ※ 카트대여료 : 대당 10만원(8/9~시행)(4인티업 기준) ※ 5인플레이는 예약실로 사전문의 9홀 추가 요금 ※ 카트비 별도 구 분 정상요금 주중 91,000 주말/공휴일 101,000 ※ 1팀 4인기준 1인그린피 ※ 카트비:팀당 50,000원(8/9~시행)(4인티업 기준) ※갤러리 입장불가 ※기상악화로 인한 구분정산시 정상그린피에서 적용됩니다.",
@@ -261,9 +372,10 @@
   },
   "checkin": {
    "evidence": [
+    "예약시간 30분 전에는 도착하여 10분전까지는 TEE-OFF를 준비하여 주시기 바랍니다. (출처: https://www.elichecc.co.kr/hwasun/html/guide/guide01.asp, 2026-11-27 확인)",
     "화순 엘리체 컨트리클럽 모바일 이용안내 HOME 클럽소개 인터넷예약 예약서비스 예약확인/취소 회원서비스 이용안내 코스안내 전체 코스안내 코스공략법 정보마당 공지사항 골프자료실 명예의 전당 조인게시판 회원서비스 회원정보변경 이용내역 내장 안내 예약시간 30분 전에는 도착하여 10분전까지는 TEE-OFF를 준비하여 주시기 바랍니다."
    ],
-   "value": null,
+   "value": "티오프 30분 전 도착",
    "third_party": {
     "value": null,
     "source": "그린피가이드",
@@ -304,25 +416,31 @@
   },
   "food": {
    "evidence": [
+    "레스토랑 메뉴 (출처: https://www.elichecc.co.kr/hwasun/html/guide/guide02.asp, 2026-11-27 확인)",
     "레스토랑 : 식사 및 음료를 즐기실 수 있습니다."
    ],
-   "value": null
+   "value": "레스토랑"
   },
   "snack_bar": {
    "value": null,
    "evidence": []
   },
   "locker_sauna": {
-   "value": null,
-   "evidence": []
+   "value": "사우나",
+   "evidence": [
+    "사우나 (출처: https://greenfeeguide.co.kr/course/gc-0466/, 2026-11-27 확인)",
+    "사우나 있음"
+   ]
   },
   "lodging": {
    "value": null,
    "evidence": []
   },
   "other": {
-   "value": null,
-   "evidence": []
+   "value": "프로샵",
+   "evidence": [
+    "프로샵 (출처: https://greenfeeguide.co.kr/course/gc-0466/, 2026-11-27 확인)"
+   ]
   },
   "night": {
    "evidence": [],
@@ -350,16 +468,16 @@
   }
  },
  "rental": {
-  "available": null,
+  "available": true,
   "full_set": 70000,
-  "fee_text": null,
+  "fee_text": "70,000원 · 18홀",
   "brand": null,
   "left_handed": null,
   "shoes": null,
   "nine_hole": null,
   "range_finder": null,
   "reservation": null,
-  "source_url": null,
+  "source_url": "https://greenfeeguide.co.kr/course/gc-0466/",
   "evidence": [],
   "official": null,
   "nearby_delivery": {
@@ -461,7 +579,11 @@
   "recent_notice_text": null,
   "course_notes": null,
   "alert": null,
-  "unconfirmed": [],
+  "unconfirmed": [
+   "복장",
+   "진행 시간",
+   "휴장일"
+  ],
   "sources": []
  },
  "collection": {
@@ -479,12 +601,12 @@
   "browser_pdf": []
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.6,
+  "basic": 0.89,
+  "course": 0.2,
   "fee": 1.0,
-  "ops": 0.14,
-  "facility": 0.0,
-  "briefing": 0.5,
-  "rental": 0.5
+  "ops": 0.21,
+  "facility": 0.3,
+  "briefing": 0.0,
+  "rental": 0.75
  }
 }

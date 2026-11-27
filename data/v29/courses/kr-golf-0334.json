@@ -8,11 +8,173 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "review": {
+   "checks": [
+    {
+     "field": "course.course_names",
+     "received": null,
+     "verified": "[\"MARINE\", \"HEALING\"]",
+     "result": "보완",
+     "url": "https://www.marinecc.co.kr/course/intro",
+     "quote": "MARINE 코스 9홀(1~9번) · HEALING 코스 9홀(10~18번)",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "course.par",
+     "received": null,
+     "verified": 72,
+     "result": "보완",
+     "url": "https://www.marinecc.co.kr/course/intro",
+     "quote": "MARINE PAR 합계 36(1~9번) · HEALING PAR 합계 36(10~18번)",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "course.length_m",
+     "received": null,
+     "verified": 6497,
+     "result": "보완",
+     "url": "https://www.marinecc.co.kr/course/intro",
+     "quote": "BLUE 합계 MARINE 3,225m · HEALING 3,272m",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "ops.checkin.value",
+     "received": null,
+     "verified": "티오프 30분 전 도착, 10분 전 카트 탑승",
+     "result": "보완",
+     "url": "https://www.marinecc.co.kr/guide/club-info",
+     "quote": "TEE-OFF 30분전에 도착하여, 10분 전까지에는 카트에 탑승 부탁 드립니다.",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "cancel.cancel_policy",
+     "received": "{\"value\": \"주중(월~목): 2일 전~3일 전 1개월 정지 또는 팀별 이용요금 10%, 1일 전 2개월 또는 20%, 당일·노쇼 3개월 또는 30%. 주말(금~일·공휴일): 3일 전~2일 전 2개월 또는 10%, 1일 전 4개월 또는 20%, 당일·노쇼 6개월 또는 30%\", \"source\": \"공식(브라우저 수집)\", \"url\": null}",
+     "verified": "주중 3일 전 17:00, 주말·공휴일 4일 전 17:00까지 위약 없이 취소. 이후 2~3일 전 팀별 이용요금 10%, 1일 전 20%, 당일·노쇼 30%(예약·내장 정지 병과)",
+     "result": "보완",
+     "url": "https://www.marinecc.co.kr/guide/guide",
+     "quote": "취소 가능 기한 주중: 예약일 제외 3일전 17:00까지 / 주말 및 공휴일: 예약일 제외 4일전 17:00까지",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.lodging.value",
+     "received": null,
+     "verified": "객실(골프텔)",
+     "result": "보완",
+     "url": "https://www.marinecc.co.kr/club/facil",
+     "quote": "클럽소개 부대시설: 클럽하우스·객실·로비·락커룸·사우나·레스토랑·프로샵",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.other.value",
+     "received": null,
+     "verified": "클럽하우스·락커룸·사우나·레스토랑·프로샵",
+     "result": "보완",
+     "url": "https://www.marinecc.co.kr/club/facil",
+     "quote": "클럽하우스 / 락커룸 / 사우나 / 레스토랑 / 프로샵",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.locker_sauna.value",
+     "received": null,
+     "verified": "락커룸·사우나",
+     "result": "보완",
+     "url": "https://www.marinecc.co.kr/club/facil",
+     "quote": "클럽하우스 / 락커룸 / 클럽하우스 / 사우나",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.food.value",
+     "received": null,
+     "verified": "레스토랑",
+     "result": "보완",
+     "url": "https://www.marinecc.co.kr/club/facil",
+     "quote": "클럽하우스 / 레스토랑",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "fee.cart",
+     "received": null,
+     "verified": "{\"value\": 90000, \"source\": \"오늘골프(공공데이터·공식 요금)\", \"url\": \"https://todaygolfgo.com/golf-courses/master/golf-course-moct-20241231-0315/\"}",
+     "result": "보완",
+     "url": "https://todaygolfgo.com/golf-courses/master/golf-course-moct-20241231-0315/",
+     "quote": "90,000원 카트료 별도, 단위 표기 없음(11월 예약안내 유의사항)",
+     "source_type": "public_info(todaygolfgo)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "fee.weekday",
+     "received": null,
+     "verified": 100000,
+     "result": "보완",
+     "url": "https://todaygolfgo.com/golf-courses/master/golf-course-moct-20241231-0315/",
+     "quote": "주중 1부 07:30이전 90,000원 · 07:30이후 100,000원 · 2부 115,000원",
+     "source_type": "public_info(todaygolfgo)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "fee.weekday_text",
+     "received": null,
+     "verified": "1부 07:30 이전 90,000원 · 07:30 이후 100,000원 · 2부 115,000원",
+     "result": "보완",
+     "url": "https://todaygolfgo.com/golf-courses/master/golf-course-moct-20241231-0315/",
+     "quote": "주중 1부 07:30이전 90,000원 · 07:30이후 100,000원 · 2부 115,000원",
+     "source_type": "public_info(todaygolfgo)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "fee.weekend",
+     "received": null,
+     "verified": 140000,
+     "result": "보완",
+     "url": "https://todaygolfgo.com/golf-courses/master/golf-course-moct-20241231-0315/",
+     "quote": "주말·공휴일 1부 07:30이전 140,000원",
+     "source_type": "public_info(todaygolfgo)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "fee.weekend_text",
+     "received": null,
+     "verified": "1부 07:30 이전 140,000원(이후·2부는 상향)",
+     "result": "보완",
+     "url": "https://todaygolfgo.com/golf-courses/master/golf-course-moct-20241231-0315/",
+     "quote": "주말·공휴일 1부 07:30이전 140,0",
+     "source_type": "public_info(todaygolfgo)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    }
+   ],
+   "checked_at": "2026-11-27"
+  },
+  "batch3_patch": "2026-11-27 배치6(대구·경북) 보완: 9개 항목(공식 홈페이지·그린피가이드 공식 안내 확인 기준, 미확인 값 생성 없음)",
+  "batch6_patch": "2026-11-27 배치6(대구·경북) 보완: 5개 항목(공식 홈페이지·그린피가이드·예약 플랫폼 공개 안내 확인 기준, 미확인 값 생성 없음)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0334",
@@ -58,13 +220,13 @@
    "master": "courses_master.json v2.0 (문체부·KGA·KGBA·티픽·지도)",
    "synced_to": "courses_master.json v2.7 (2026-11-26 단일 스키마 정규화)"
   },
-  "par": null,
+  "par": 72,
   "holes_teepick": 18,
   "course_spec": {
    "holes": 18,
-   "par": null,
+   "par": 72,
    "blocks": [],
-   "length_m": null,
+   "length_m": 6497,
    "kga": {
     "kga_course_code": "438",
     "kga_name": "울진마린",
@@ -144,7 +306,10 @@
  "course": {
   "holes": 18,
   "holes_received": 18,
-  "course_names": null,
+  "course_names": [
+   "MARINE",
+   "HEALING"
+  ],
   "membership_type": "대중제",
   "night_light": null,
   "blocks": [],
@@ -221,20 +386,20 @@
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": null,
-  "par": null
+  "length_m": 6497,
+  "par": 72
  },
  "fee": {
-  "weekday": null,
-  "weekend": null,
-  "weekday_text": null,
-  "weekend_text": null,
+  "weekday": 100000,
+  "weekend": 140000,
+  "weekday_text": "1부 07:30 이전 90,000원 · 07:30 이후 100,000원 · 2부 115,000원",
+  "weekend_text": "1부 07:30 이전 140,000원(이후·2부는 상향)",
   "basis": null,
   "tax_included": null,
   "cart": {
-   "evidence": "TEE-OFF 30분전에 도착하여, 10분 전까지에는 카트에 탑승 부탁 드립니다.",
-   "url": "https://www.marinecc.co.kr/guide/club-info",
-   "source": "공식"
+   "value": 90000,
+   "source": "오늘골프(공공데이터·공식 요금)",
+   "url": "https://todaygolfgo.com/golf-courses/master/golf-course-moct-20241231-0315/"
   },
   "caddie": {
    "value": 150000,
@@ -245,10 +410,41 @@
    "url": "https://www.marinecc.co.kr/guide/club-info"
   },
   "as_of": null,
-  "source_url": null,
+  "source_url": "https://todaygolfgo.com/golf-courses/master/golf-course-moct-20241231-0315/",
   "note": null,
-  "sources": [],
-  "checked_at": null,
+  "sources": [
+   {
+    "source": "공개 안내",
+    "url": "https://todaygolfgo.com/golf-courses/master/golf-course-moct-20241231-0315/",
+    "quote": "90,000원 카트료 별도, 단위 표기 없음(11월 예약안내 유의사항)",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공개 안내",
+    "url": "https://todaygolfgo.com/golf-courses/master/golf-course-moct-20241231-0315/",
+    "quote": "주중 1부 07:30이전 90,000원 · 07:30이후 100,000원 · 2부 115,000원",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공개 안내",
+    "url": "https://todaygolfgo.com/golf-courses/master/golf-course-moct-20241231-0315/",
+    "quote": "주중 1부 07:30이전 90,000원 · 07:30이후 100,000원 · 2부 115,000원",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공개 안내",
+    "url": "https://todaygolfgo.com/golf-courses/master/golf-course-moct-20241231-0315/",
+    "quote": "주말·공휴일 1부 07:30이전 140,000원",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공개 안내",
+    "url": "https://todaygolfgo.com/golf-courses/master/golf-course-moct-20241231-0315/",
+    "quote": "주말·공휴일 1부 07:30이전 140,0",
+    "checked_at": "2026-11-27"
+   }
+  ],
+  "checked_at": "2026-11-27",
   "market": {
    "weekday_min": null,
    "weekend_min": 260000.0,
@@ -298,16 +494,18 @@
  },
  "cancel": {
   "cancel_policy": {
-   "value": "주중(월~목): 2일 전~3일 전 1개월 정지 또는 팀별 이용요금 10%, 1일 전 2개월 또는 20%, 당일·노쇼 3개월 또는 30%. 주말(금~일·공휴일): 3일 전~2일 전 2개월 또는 10%, 1일 전 4개월 또는 20%, 당일·노쇼 6개월 또는 30%",
-   "source": "공식(브라우저 수집)",
-   "url": null
+   "value": "주중 3일 전 17:00, 주말·공휴일 4일 전 17:00까지 위약 없이 취소. 이후 2~3일 전 팀별 이용요금 10%, 1일 전 20%, 당일·노쇼 30%(예약·내장 정지 병과)",
+   "source": "공개 안내",
+   "url": "https://www.marinecc.co.kr/guide/guide",
+   "checked_at": "2026-11-27"
   },
   "open_cycle": null,
   "notes": null,
   "evidence": [
    "울진마린컨트리클럽 예약확인 로그인 회원가입 예약확인 로그아웃 마이페이지 클럽소개 실시간예약 이용안내 코스소개 커뮤니티 클럽소개 부대시설 오시는길 골프예약 예약확인/취소 대기예약 예약·위약 규정안내 클럽 이용안내 객실 이용안내 코스개요 MARINE코스 HEALING코스 공지사항 이벤트 조인 게시판 명예의전당 로그인하세요 회원이 되시면 다양한 혜택을 누릴 수 있습니다.",
    "울진마린컨트리클럽 예약확인 로그인 회원가입 예약확인 로그아웃 마이페이지 클럽소개 실시간예약 이용안내 코스소개 커뮤니티 클럽소개 부대시설 오시는길 골프예약 예약확인/취소 대기예약 예약·위약 규정안내 클럽 이용안내 객실 이용안내 코스개요 MARINE코스 HEALING코스 공지사항 이벤트 조인 게시판 명예의전당 로그인하세요 회원이 되시면 다양한 혜택을 누릴 수 있습니다.",
-   "로그아웃 회원정보관리 클럽소개 클럽소개 부대시설 오시는길 실시간예약 골프예약 예약확인/취소 대기예약 이용안내 예약·위약 규정안내 클럽 이용안내 객실 이용안내 코스소개 코스개요 MARINE코스 HEALING코스 커뮤니티 공지사항이벤트조인 게시판명예의전당 COURSE GUIDE 코스안내 • 코스안내 • 코스개요 코스개요 MARINE 코스 HEALING 코스 전체 코스 마린 코스 MARINE 동해 바다를 품은 마린코스는 9개 홀 내내 탁 트인 해양 전망과 시원한 해풍이 어우러져 특별한 라운딩 경험을 선사한다."
+   "로그아웃 회원정보관리 클럽소개 클럽소개 부대시설 오시는길 실시간예약 골프예약 예약확인/취소 대기예약 이용안내 예약·위약 규정안내 클럽 이용안내 객실 이용안내 코스소개 코스개요 MARINE코스 HEALING코스 커뮤니티 공지사항이벤트조인 게시판명예의전당 COURSE GUIDE 코스안내 • 코스안내 • 코스개요 코스개요 MARINE 코스 HEALING 코스 전체 코스 마린 코스 MARINE 동해 바다를 품은 마린코스는 9개 홀 내내 탁 트인 해양 전망과 시원한 해풍이 어우러져 특별한 라운딩 경험을 선사한다.",
+   "취소 가능 기한 주중: 예약일 제외 3일전 17:00까지 / 주말 및 공휴일: 예약일 제외 4일전 17:00까지"
   ],
   "weather_evidence": [
    "기상악화 및 천재지변으로 경기가 중단될 경우에는, 당사 운영규칙에 정한 이용료를 적용합니다.",
@@ -316,7 +514,15 @@
   "browser_official": {
    "cancel": "주중(월~목): 2일 전~3일 전 1개월 정지 또는 팀별 이용요금 10%, 1일 전 2개월 또는 20%, 당일·노쇼 3개월 또는 30%. 주말(금~일·공휴일): 3일 전~2일 전 2개월 또는 10%, 1일 전 4개월 또는 20%, 당일·노쇼 6개월 또는 30%",
    "penalty_note": "위약 발생 시 예약 불가 등 제약·민사 책임 가능, 위약금 납부 후 예약정지로 변경되며 단순변심 환불 불가"
-  }
+  },
+  "sources": [
+   {
+    "url": "https://www.marinecc.co.kr/guide/guide",
+    "quote": "취소 가능 기한 주중: 예약일 제외 3일전 17:00까지 / 주말 및 공휴일: 예약일 제외 4일전 17:00까지",
+    "checked_at": "2026-11-27",
+    "source_type": "official_site"
+   }
+  ]
  },
  "ops": {
   "nocaddie": {
@@ -365,9 +571,14 @@
   "checkin": {
    "evidence": [
     "TEE-OFF 30분전에 도착하여, 10분 전까지에는 카트에 탑승 부탁 드립니다.",
-    "프런트에서 예약자 명과 예약 시간을 확인 하신 후 체크인 하시길 바랍니다."
+    "프런트에서 예약자 명과 예약 시간을 확인 하신 후 체크인 하시길 바랍니다.",
+    "TEE-OFF 30분전에 도착하여, 10분 전까지에는 카트에 탑승 부탁 드립니다."
    ],
-   "value": null
+   "value": "티오프 30분 전 도착, 10분 전 카트 탑승",
+   "source_url": "https://www.marinecc.co.kr/guide/club-info",
+   "confidence": "high",
+   "source_type": "official_site",
+   "checked_at": "2026-11-27"
   },
   "locker": {
    "evidence": [],
@@ -404,24 +615,48 @@
    "evidence": []
   },
   "food": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "클럽하우스 / 레스토랑"
+   ],
+   "value": "레스토랑",
+   "source_url": "https://www.marinecc.co.kr/club/facil",
+   "confidence": "high",
+   "source_type": "official_site",
+   "checked_at": "2026-11-27"
   },
   "snack_bar": {
    "value": null,
    "evidence": []
   },
   "locker_sauna": {
-   "value": null,
-   "evidence": []
+   "value": "락커룸·사우나",
+   "evidence": [
+    "클럽하우스 / 락커룸 / 클럽하우스 / 사우나"
+   ],
+   "source_url": "https://www.marinecc.co.kr/club/facil",
+   "confidence": "high",
+   "source_type": "official_site",
+   "checked_at": "2026-11-27"
   },
   "lodging": {
-   "value": null,
-   "evidence": []
+   "value": "객실(골프텔)",
+   "evidence": [
+    "클럽소개 부대시설: 클럽하우스·객실·로비·락커룸·사우나·레스토랑·프로샵"
+   ],
+   "source_url": "https://www.marinecc.co.kr/club/facil",
+   "confidence": "high",
+   "source_type": "official_site",
+   "checked_at": "2026-11-27"
   },
   "other": {
-   "value": null,
-   "evidence": []
+   "value": "클럽하우스·락커룸·사우나·레스토랑·프로샵",
+   "evidence": [
+    "클럽하우스 / 락커룸 / 사우나 / 레스토랑 / 프로샵"
+   ],
+   "source_url": "https://www.marinecc.co.kr/club/facil",
+   "confidence": "high",
+   "source_type": "official_site",
+   "checked_at": "2026-11-27"
   },
   "night": {
    "evidence": [],
@@ -518,7 +753,14 @@
   "course_notes": null,
   "alert": null,
   "unconfirmed": [],
-  "sources": []
+  "sources": [
+   "https://www.marinecc.co.kr/course/intro",
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "ok",
@@ -533,12 +775,12 @@
   "browser_batch": true
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.8,
-  "fee": 0.25,
-  "ops": 0.07,
-  "facility": 0.0,
-  "briefing": 0.5,
-  "rental": 0.25
+  "basic": 0.89,
+  "course": 0.4,
+  "fee": 1.0,
+  "ops": 0.14,
+  "facility": 0.4,
+  "briefing": 0.0,
+  "rental": 0.0
  }
 }

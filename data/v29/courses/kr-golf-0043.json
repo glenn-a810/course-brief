@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0043",
@@ -58,11 +59,11 @@
    "master": "courses_master.json v2.0 (문체부·KGA·KGBA·티픽·지도)",
    "synced_to": "courses_master.json v2.7 (2026-11-26 단일 스키마 정규화)"
   },
-  "par": null,
+  "par": 72,
   "holes_teepick": 27,
   "course_spec": {
    "holes": 27,
-   "par": null,
+   "par": 72,
    "blocks": [],
    "length_m": null,
    "kga": {
@@ -203,9 +204,13 @@
  "course": {
   "holes": 27,
   "holes_received": 27,
-  "course_names": null,
+  "course_names": [
+   "지왕봉",
+   "인왕봉",
+   "천왕봉"
+  ],
   "membership_type": "대중제",
-  "night_light": null,
+  "night_light": true,
   "blocks": [],
   "grass": {
    "tee": null,
@@ -340,14 +345,14 @@
   "extra_courses": null,
   "hole_by_hole": null,
   "length_m": null,
-  "par": null
+  "par": 72
  },
  "fee": {
   "weekday": 160000,
   "weekend": 200000,
   "weekday_text": null,
   "weekend_text": null,
-  "basis": null,
+  "basis": "official",
   "tax_included": null,
   "cart": {
    "value": 100000,
@@ -379,7 +384,7 @@
    "url": "https://www.mudeungsancc.com/html/v2_guide02.asp",
    "checked_at": "2026-11-26"
   },
-  "checked_at": "2026-11-02",
+  "checked_at": "2026-11-27",
   "market": {
    "weekday_min": 131000.0,
    "weekend_min": null,
@@ -579,15 +584,16 @@
  },
  "cancel": {
   "cancel_policy": {
-   "value": "평일 3일 전 · 주말 4일 전까지(이용약관 기준)야간(3부) 라운드야간 라운드 운영(공식 홈페이지 안내)정기 휴장일연중무휴부대시설사우나 · 퍼",
-   "source": "그린피가이드(공식 인용)",
+   "value": "위약 없이 취소: 평일 3일 전 · 주말 4일 전까지 (이용약관 기준 — 예약 안내에 더 이른 기한이 따로 있을 수 있으니 함께 확인하세요)",
+   "source": "그린피가이드(공식 안내 인용)",
    "url": "https://greenfeeguide.co.kr/course/gc-0469/"
   },
   "open_cycle": null,
   "notes": null,
   "evidence": [
    "구분 골프장 입장요금 환불 금액 라운드 당일 입장절차를 마친 후 개인적인 사유로 이용자가 이용계약을 중단 또는 취소한 경우에는 다음과 같이 이용요금을 부과 한 다.",
-   "홀별 정산시는 정상요금을 기준으로 환불처리 됩니다."
+   "홀별 정산시는 정상요금을 기준으로 환불처리 됩니다.",
+   "기존 cancel_policy 값이 인접 안내 항목과 뒤섞여 있어(오류) 그린피가이드 원문 인용으로 정정 — 평일 3일 전 · 주말 4일 전까지 (이용약관 기준 — 예약 안내에 더 이른 기한이 따로 있을 수 있으니 함께 확인하세요) (출처: https://greenfeeguide.co.kr/course/gc-0469/, 2026-11 확인)"
   ],
   "weather_evidence": [
    "시설이용료(기본요금) : 골프장 이용시 기본적으로 발생되는 비용으로서 락커, 샤워실 등 클럽하우스 시설 이용에 부과되는 요금 및 제세공과금 (2022년 기준 기본요금 20,000원) 기 이용한 홀수 : 기 이용한 홀수에 대한 요금 부과 판단은 티오프(티샷)을 기준으로 함 홀별 정산은 기상악화로 인한 플레이를 기준하며, 개인 사정으로 인한 홀별정산은 불가합니다."
@@ -623,9 +629,14 @@
   "cart_type": {
    "evidence": [
     "구분 이용요금 부과 이용 요금표 카트사용료 100,000/팀 프리미엄 카트 사용료 150,000/팀 캐디피 150,000원 골프채 대여료 풀세트 50,000원/ 퍼터 20,000원 그린피 160,000원 200,000원 200,000원 계절별,월별,시간대에 따라 탄력적 운영 / 카트비 별도 시설 이용료 20,000원 공정거래 위원회 약관에 의해 골프장 내장시 시설 이용료가 부과됩니다.",
-    "12월 29일 무등산cc 휴장안내문 2026.11.24 12월 그린피 안내 2026.10.27 2027년 신규연단체 모집(마감) 2026.10.27 11월 그린피 안내 2026.09.29 10월 그린피 안내 2026.08.31 9월 그린피 안내 2026.07.30 7~8월 그린피 안내 2026.06.03 6월 그린피 안내 2026.06.03 무등산 프리미엄 카트 2026.05.11 5월 그린피 안내 2026.03.28 제목  1 2 3 4 5 6 7  검색 (주)무등산골프앤리조트 전남광주통합특별시 화순군 화순읍 오성로 292-9"
+    "12월 29일 무등산cc 휴장안내문 2026.11.24 12월 그린피 안내 2026.10.27 2027년 신규연단체 모집(마감) 2026.10.27 11월 그린피 안내 2026.09.29 10월 그린피 안내 2026.08.31 9월 그린피 안내 2026.07.30 7~8월 그린피 안내 2026.06.03 6월 그린피 안내 2026.06.03 무등산 프리미엄 카트 2026.05.11 5월 그린피 안내 2026.03.28 제목  1 2 3 4 5 6 7  검색 (주)무등산골프앤리조트 전남광주통합특별시 화순군 화순읍 오성로 292-9",
+    "캐디만 운전 가능"
    ],
-   "value": null
+   "value": "캐디만 운전 가능",
+   "source_url": "https://www.mudeungsancc.com/html/v2_guide01.asp",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfee guide tables)"
   },
   "cart_entry": {
    "evidence": [],
@@ -655,8 +666,14 @@
    "value": "문구 확인(원문 근거)"
   },
   "sauna": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "사우나: 사우나 있음락카, 사우나"
+   ],
+   "value": "사우나 있음락카, 사우나",
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0469/",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfeeguide)"
   },
   "dress": {
    "evidence": [],
@@ -670,8 +687,14 @@
  },
  "facilities": {
   "practice": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "연습 시설: 퍼팅 연습 그린"
+   ],
+   "value": "퍼팅 연습 그린",
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0469/",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfeeguide)"
   },
   "indoor_range": {
    "value": null,
@@ -694,19 +717,25 @@
    "evidence": []
   },
   "other": {
-   "value": null,
-   "evidence": []
+   "value": "사우나 · 퍼팅 연습 그린",
+   "evidence": [
+    "사우나 · 퍼팅 연습 그린 (출처: https://greenfeeguide.co.kr/course/gc-0469/, 2026-11-27 확인)"
+   ]
   },
   "night": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "야간(3부) 라운드 운영 (출처: https://greenfeeguide.co.kr/course/gc-0469/, 2026-11-27 확인)",
+    "야간 라운드 운영(공식 홈페이지 안내)"
+   ],
+   "value": "야간(3부) 라운드 운영"
   },
   "closed_days": {
    "evidence": [
+    "연중무휴 (출처: https://greenfeeguide.co.kr/course/gc-0469/, 2026-11-27 확인)",
     "12월 29일 무등산cc 휴장안내문 2026.11.24 12월 그린피 안내 2026.10.27 2027년 신규연단체 모집(마감) 2026.10.27 11월 그린피 안내 2026.09.29 10월 그린피 안내 2026.08.31 9월 그린피 안내 2026.07.30 7~8월 그린피 안내 2026.06.03 6월 그린피 안내 2026.06.03 무등산 프리미엄 카트 2026.05.11 5월 그린피 안내 2026.03.28 제목  1 2 3 4 5 6 7  검색 (주)무등산골프앤리조트 전남광주통합특별시 화순군 화순읍 오성로 292-9"
    ],
    "third_party": "연중무휴부대시설사우나",
-   "value": null
+   "value": "연중무휴"
   },
   "shuttle": {
    "evidence": [],
@@ -898,8 +927,19 @@
   "recent_notice_text": null,
   "course_notes": null,
   "alert": null,
-  "unconfirmed": [],
-  "sources": []
+  "unconfirmed": [
+   "체크인",
+   "복장",
+   "진행 시간",
+   "식당"
+  ],
+  "sources": [
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "ok",
@@ -919,12 +959,12 @@
   ]
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.8,
+  "basic": 0.78,
+  "course": 0.4,
   "fee": 1.0,
-  "ops": 0.07,
-  "facility": 0.0,
-  "briefing": 0.5,
-  "rental": 1.0
+  "ops": 0.21,
+  "facility": 0.4,
+  "briefing": 0.0,
+  "rental": 0.75
  }
 }

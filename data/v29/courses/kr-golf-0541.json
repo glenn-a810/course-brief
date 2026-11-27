@@ -5,8 +5,9 @@
   "schema": "stage2c/1.0",
   "batch": null,
   "structure": "master only (구장 JSON 미생성 — 건설중·미착공)",
-  "normalized_at": "2026-11-26T12:20:52+09:00",
-  "has_detail": false
+  "normalized_at": "2026-11-27T14:40:00+09:00",
+  "has_detail": false,
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0541",
@@ -48,11 +49,12 @@
   "facility_id": null,
   "facility_members": null,
   "status": "planned",
-  "expected_open": "미정(2028 목표, 부지 미정)",
+  "expected_open": "미정(2028년 완공 목표로 검토 중, 부지 미확정)",
   "nearest_ic": null,
   "facility_cluster": null,
   "factcheck_2026_11_26": null,
-  "provenance": {}
+  "provenance": {},
+  "status_note": "2026-11 기준 부지·사업방식 미확정. 울산시는 시립 공공골프장(18홀)과 국민체육진흥공단 에콜리안 공모(9홀)를 병행 검토 중이며, 2025-05 중구 성안동 18홀 사업은 백지화됐다. 강동관광단지 복합스포츠지구에는 별도로 27홀 파크골프장 설계용역이 진행 중"
  },
  "course": {
   "holes": null,
@@ -218,7 +220,10 @@
   "fee_change": null,
   "alert": null,
   "unconfirmed": [],
-  "sources": []
+  "sources": [
+   "https://www.iusm.co.kr/news/articleView.html?idxno=1051652",
+   "http://www.ujeil.com/news/articleView.html?idxno=360538"
+  ]
  },
  "collection": {
   "official_site": null,
@@ -229,12 +234,12 @@
   "plan_strategy": null
  },
  "coverage": {
-  "basic": 0,
-  "course": 0,
-  "fee": 0,
-  "ops": 0,
-  "facility": 0,
-  "briefing": 0,
-  "rental": 0
+  "basic": 0.44,
+  "course": 0.0,
+  "fee": 0.0,
+  "ops": 0.0,
+  "facility": 0.0,
+  "briefing": 0.0,
+  "rental": 0.0
  }
 }

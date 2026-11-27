@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0485",
@@ -64,7 +65,7 @@
    "holes": 9,
    "par": null,
    "blocks": [],
-   "length_m": null,
+   "length_m": 3296,
    "kga": null,
    "grass": {
     "evidence": "( 과도한 노출 등 타인에게 불쾌감을 줄 수있는 복장 금지 ) 잔디 보호와 고객님의 안전을 위하여 골프화를 반드시 착용해 주시기 바랍니다.",
@@ -83,7 +84,7 @@
  "course": {
   "holes": 9,
   "holes_received": 9,
-  "course_names": null,
+  "course_names": "9홀 · 파 36",
   "membership_type": "대중제",
   "night_light": null,
   "blocks": [],
@@ -100,7 +101,7 @@
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": null,
+  "length_m": 3296,
   "par": null
  },
  "fee": {
@@ -108,7 +109,7 @@
   "weekend": 140000,
   "weekday_text": null,
   "weekend_text": null,
-  "basis": null,
+  "basis": "official",
   "tax_included": null,
   "cart": null,
   "caddie": {
@@ -136,7 +137,7 @@
    "url": "https://theninegc.co.kr/html/service_info/service_info02.asp",
    "checked_at": "2026-11-26"
   },
-  "checked_at": "2026-11-01",
+  "checked_at": "2026-11-27",
   "market": {
    "weekday_min": null,
    "weekend_min": null,
@@ -450,8 +451,10 @@
  },
  "ops": {
   "nocaddie": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "일부 시간·코스만 노캐디 — 9홀 (출처: https://greenfeeguide.co.kr/course/gc-0431/, 2026-11-27 확인)"
+   ],
+   "value": "일부 시간·코스만 노캐디 — 9홀"
   },
   "two_player": {
    "evidence": [],
@@ -514,8 +517,14 @@
    "value": "문구 확인(원문 근거)"
   },
   "sauna": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "사우나: 사우나 있음락커/사우나"
+   ],
+   "value": "사우나 있음락커/사우나",
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0431/",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfeeguide)"
   },
   "dress": {
    "evidence": [
@@ -532,8 +541,10 @@
  },
  "facilities": {
   "practice": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "퍼팅 연습 그린 (출처: https://greenfeeguide.co.kr/course/gc-0431/, 2026-11-27 확인)"
+   ],
+   "value": "퍼팅 연습 그린"
   },
   "indoor_range": {
    "value": null,
@@ -548,16 +559,21 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": null,
-   "evidence": []
+   "value": "사우나",
+   "evidence": [
+    "사우나 (출처: https://greenfeeguide.co.kr/course/gc-0431/, 2026-11-27 확인)",
+    "사우나 있음"
+   ]
   },
   "lodging": {
    "value": null,
    "evidence": []
   },
   "other": {
-   "value": null,
-   "evidence": []
+   "value": "사우나 · 퍼팅 연습 그린",
+   "evidence": [
+    "사우나 · 퍼팅 연습 그린 (출처: https://greenfeeguide.co.kr/course/gc-0431/, 2026-11-27 확인)"
+   ]
   },
   "night": {
    "evidence": [],
@@ -656,8 +672,19 @@
   "recent_notice_text": null,
   "course_notes": null,
   "alert": null,
-  "unconfirmed": [],
-  "sources": []
+  "unconfirmed": [
+   "취소·위약 규정",
+   "진행 시간",
+   "식당",
+   "휴장일"
+  ],
+  "sources": [
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "ok",
@@ -677,12 +704,12 @@
   ]
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.6,
+  "basic": 0.78,
+  "course": 0.4,
   "fee": 0.75,
-  "ops": 0.21,
-  "facility": 0.0,
-  "briefing": 0.5,
-  "rental": 0.25
+  "ops": 0.36,
+  "facility": 0.3,
+  "briefing": 0.0,
+  "rental": 0.0
  }
 }

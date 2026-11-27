@@ -8,17 +8,21 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0007",
   "name": "에콜리안광산골프장",
   "name_variants": [
-   "에콜리안광산골프장"
+   "에콜리안광산골프장",
+   "광산CC",
+   "광산컨트리클럽",
+   "에콜리안 광산CC"
   ],
   "type": "대중제",
   "holes": {
@@ -43,8 +47,8 @@
    "distance_km": 6.8,
    "source": "최근접 IC 직선거리"
   },
-  "tel": "062-960-1500",
-  "homepage": null,
+  "tel": "062-616-5870",
+  "homepage": "https://www.gwangsancc.kr/",
   "operators": [
    "국민체육진흥공단이사장"
   ],
@@ -96,19 +100,31 @@
   "par": null
  },
  "fee": {
-  "weekday": null,
-  "weekend": null,
+  "weekday": 60000,
+  "weekend": 80000,
   "weekday_text": null,
   "weekend_text": null,
-  "basis": null,
+  "basis": "공식 요금표(공개 요금 정보)",
   "tax_included": null,
-  "cart": null,
+  "cart": {
+   "value": 60000,
+   "raw": "60,000원",
+   "text": "팀당(4인 1대)",
+   "source": "공개 요금 정보",
+   "url": "https://greenfeeguide.co.kr/course/gc-0182/"
+  },
   "caddie": null,
-  "as_of": null,
+  "as_of": "2026-11-01",
   "source_url": null,
   "note": null,
-  "sources": [],
-  "checked_at": null,
+  "sources": [
+   {
+    "source": "공개 요금 정보(그린피가이드)",
+    "url": "https://greenfeeguide.co.kr/course/gc-0182/",
+    "checked_at": "2026-11-27"
+   }
+  ],
+  "checked_at": "2026-11-27",
   "market": {
    "weekday_min": null,
    "weekend_min": null,
@@ -120,24 +136,32 @@
   }
  },
  "cancel": {
-  "cancel_policy": null,
-  "open_cycle": null,
+  "cancel_policy": "위약 없이 취소 기한은 두지 않고 위약제도로 운영: 4~10일 전 취소(월 5회 이상) 2개월 예약정지, 3일 전 3개월, 2일 전 4개월, 1일 전 5개월, 당일 취소·노쇼 6개월 예약정지. 우천·강설로 인한 취소는 당일 유선 취소 시 패널티 없음. (공식 예약안내, 2026-11-27 확인)",
+  "open_cycle": "이용예정일로부터 1개월 전 지정 일시에 오픈, 1인 월 4회까지 예약 가능(9홀·18홀 구분 없음) (공식 예약안내)",
   "notes": null,
-  "evidence": [],
+  "evidence": [
+   "위약기준 — 3일 전 취소 3개월 예약정지, 2일 전 4개월, 1일 전 5개월, 당일 취소 및 No-Show 6개월 예약정지 / 우천·강설 등으로 인한 예약 취소는 당일 유선 취소로 진행(패널티 부여 없음) (출처: https://www.gwangsancc.kr/cotents/guide/reserGuide.do, 2026-11-27 확인)"
+  ],
   "weather_evidence": []
  },
  "ops": {
   "nocaddie": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "캐디를 운영하지 않으며 경기 진행요원이 진행을 조정한다. (출처: https://gwangju.grandculture.net/gwangju/toc/GC60000634, 디지털광주문화대전)"
+   ],
+   "value": "전면 노캐디(캐디 미운영·진행요원 운영)"
   },
   "two_player": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "3인 이상 4인 이하를 원칙으로 합니다. (출처: https://www.gwangsancc.kr/cotents/guide/reserGuide.do, 2026-11-27 확인)"
+   ],
+   "value": "불가(3인 이상 4인 이하 원칙)"
   },
   "three_player": {
-   "value": null,
-   "evidence": []
+   "value": "가능(3~4인 예약)",
+   "evidence": [
+    "3인 이상 4인 이하를 원칙으로 합니다. (출처: https://www.gwangsancc.kr/cotents/guide/reserGuide.do, 2026-11-27 확인)"
+   ]
   },
   "five_player": {
    "value": null,
@@ -180,8 +204,14 @@
    "value": null
   },
   "pace": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "진행 비협조 → 예약 정지 (2개월 정지)"
+   ],
+   "value": "진행 비협조 → 예약 정지 (2개월 정지)",
+   "source_url": "https://www.gwangsancc.kr/cotents/guide/reserGuide.do",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfee guide tables)"
   }
  },
  "facilities": {
@@ -210,17 +240,29 @@
    "evidence": []
   },
   "other": {
-   "value": null,
-   "evidence": []
+   "value": "프로샵",
+   "evidence": [
+    "그 밖의 시설: 프로샵"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0182/",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfeeguide)"
   },
   "night": {
    "evidence": [],
    "value": null
   },
   "closed_days": {
-   "evidence": [],
+   "evidence": [
+    "정기 휴장일: 1월 1일·설날·추석"
+   ],
    "third_party": null,
-   "value": null
+   "value": "1월 1일·설날·추석",
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0182/",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfeeguide)"
   },
   "shuttle": {
    "evidence": [],
@@ -237,16 +279,16 @@
   }
  },
  "rental": {
-  "available": null,
-  "full_set": null,
-  "fee_text": null,
+  "available": true,
+  "full_set": 30000,
+  "fee_text": "30,000원 · 18홀",
   "brand": null,
   "left_handed": null,
   "shoes": null,
   "nine_hole": null,
   "range_finder": null,
   "reservation": null,
-  "source_url": null,
+  "source_url": "https://greenfeeguide.co.kr/course/gc-0182/",
   "evidence": [],
   "official": null,
   "nearby_delivery": {
@@ -305,10 +347,21 @@
   "fee_change": null,
   "collected_at": "2026-11-26T10:25:40+09:00",
   "recent_notice_text": null,
-  "course_notes": null,
+  "course_notes": "9홀 코스(1H 영산강~9H 떡갈비)로 홀마다 지역 명칭을 붙였고, 3~4인 예약·1인 월 4회 제한·인터넷 예약 전용으로 운영한다. (광산CC 공식 홈페이지, 2026-11-27 확인)",
   "alert": null,
-  "unconfirmed": [],
-  "sources": []
+  "unconfirmed": [
+   "체크인",
+   "복장",
+   "진행 시간",
+   "식당"
+  ],
+  "sources": [
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "unavailable",
@@ -316,7 +369,7 @@
   "pages_collected": 0,
   "third_party": {
    "teepick": true,
-   "greenfeeguide": false
+   "greenfeeguide": true
   },
   "render_hint": "",
   "plan_strategy": "no_homepage(지도·예약앱 대체)",
@@ -326,11 +379,11 @@
  },
  "coverage": {
   "basic": 0.89,
-  "course": 0.6,
-  "fee": 0.0,
-  "ops": 0.0,
-  "facility": 0.0,
-  "briefing": 0.5,
-  "rental": 0.25
+  "course": 0.2,
+  "fee": 0.75,
+  "ops": 0.29,
+  "facility": 0.2,
+  "briefing": 0.25,
+  "rental": 0.75
  }
 }

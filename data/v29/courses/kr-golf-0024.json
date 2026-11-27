@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0024",
@@ -63,11 +64,11 @@
    "source": "그린피가이드",
    "url": "https://greenfeeguide.co.kr/course/gc-0448/"
   },
-  "par": null,
+  "par": 72,
   "holes_teepick": 27,
   "course_spec": {
    "holes": 27,
-   "par": null,
+   "par": 72,
    "blocks": [],
    "length_m": null,
    "kga": {
@@ -243,7 +244,11 @@
  "course": {
   "holes": 27,
   "holes_received": 27,
-  "course_names": null,
+  "course_names": [
+   "힐스",
+   "파인",
+   "레이크"
+  ],
   "membership_type": "대중제",
   "night_light": null,
   "blocks": [],
@@ -410,14 +415,14 @@
   "extra_courses": null,
   "hole_by_hole": null,
   "length_m": null,
-  "par": null
+  "par": 72
  },
  "fee": {
   "weekday": 135000,
   "weekend": 175000,
   "weekday_text": null,
   "weekend_text": null,
-  "basis": null,
+  "basis": "official",
   "tax_included": null,
   "cart": {
    "value": 100000,
@@ -453,7 +458,7 @@
    "url": "https://www.pinehills.co.kr/pinehills/pagesite/use/charge.asp",
    "checked_at": "2026-11-26"
   },
-  "checked_at": "2026-11-01",
+  "checked_at": "2026-11-27",
   "market": {
    "weekday_min": null,
    "weekend_min": null,
@@ -645,9 +650,10 @@
   },
   "cart_type": {
    "evidence": [
+    "리무진 카트 140,000원/팀(4인기준) (출처: https://greenfeeguide.co.kr/course/gc-0448/, 2026-11-27 확인)",
     "[ 인터넷예약 ] 골프장 호텔 골프 이용요금 안내 구분 주중 주말(공휴일) 그린피 135,000원 175,000원 카트이용료 100,000원/팀(4인기준) 리무진 카트이용료 140,000원/팀(4인기준) 기본요금(시설이용료) 20,000원 CHARGE 바로예약 단체예약 예약조회/변경 조인오픈채팅방 이용요금 이용가이드 파인비치 솔라시도CC 파인파크 로그인 회원가입 파인힐스 클럽소개 클럽소식 코스안내 인터넷예약 MYPAGE 골프대회안내 월별 운영요금은 홈페이지 클럽소식 \"공지사항\"을 참조하시기 바랍니다."
    ],
-   "value": null
+   "value": "리무진 카트 140,000원/팀(4인기준)"
   },
   "cart_entry": {
    "evidence": [],
@@ -683,8 +689,14 @@
    "value": null
   },
   "pace": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "티오프 7~8분 간격"
+   ],
+   "value": "티오프 7~8분 간격",
+   "source_url": "https://www.pinehills.co.kr/pinehills/pagesite/course/intro.asp",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfee guide tables)"
   },
   "grass": null
  },
@@ -710,12 +722,17 @@
    "evidence": []
   },
   "lodging": {
-   "value": null,
-   "evidence": []
+   "value": "호텔 (객실 36실)",
+   "evidence": [
+    "호텔 (객실 36실) (출처: https://greenfeeguide.co.kr/course/gc-0448/, 2026-11-27 확인)",
+    "파인힐스 호텔 · 객실 36실"
+   ]
   },
   "other": {
-   "value": null,
-   "evidence": []
+   "value": "프로샵",
+   "evidence": [
+    "프로샵 (출처: https://greenfeeguide.co.kr/course/gc-0448/, 2026-11-27 확인)"
+   ]
   },
   "night": {
    "evidence": [],
@@ -743,16 +760,16 @@
   }
  },
  "rental": {
-  "available": null,
+  "available": true,
   "full_set": 50000,
-  "fee_text": null,
+  "fee_text": "50,000원 · 18홀",
   "brand": null,
   "left_handed": null,
   "shoes": null,
   "nine_hole": null,
   "range_finder": null,
   "reservation": null,
-  "source_url": null,
+  "source_url": "https://greenfeeguide.co.kr/course/gc-0448/",
   "evidence": [],
   "official": null,
   "nearby_delivery": {
@@ -924,8 +941,20 @@
   "recent_notice_text": null,
   "course_notes": null,
   "alert": null,
-  "unconfirmed": [],
-  "sources": []
+  "unconfirmed": [
+   "취소·위약 규정",
+   "복장",
+   "진행 시간",
+   "식당",
+   "휴장일"
+  ],
+  "sources": [
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "ok",
@@ -945,12 +974,12 @@
   ]
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.8,
+  "basic": 0.78,
+  "course": 0.4,
   "fee": 1.0,
-  "ops": 0.07,
-  "facility": 0.0,
-  "briefing": 0.5,
-  "rental": 0.5
+  "ops": 0.21,
+  "facility": 0.2,
+  "briefing": 0.0,
+  "rental": 0.75
  }
 }

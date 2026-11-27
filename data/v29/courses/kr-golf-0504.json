@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0504",
@@ -58,13 +59,13 @@
    "master": "courses_master.json v2.0 (문체부·KGA·KGBA·티픽·지도)",
    "synced_to": "courses_master.json v2.7 (2026-11-26 단일 스키마 정규화)"
   },
-  "par": null,
+  "par": 72,
   "holes_teepick": 18,
   "course_spec": {
    "holes": 27,
-   "par": null,
+   "par": 72,
    "blocks": [],
-   "length_m": null,
+   "length_m": 5921,
    "kga": {
     "kga_course_code": "205",
     "kga_name": "태인",
@@ -144,7 +145,10 @@
  "course": {
   "holes": 27,
   "holes_received": 18,
-  "course_names": null,
+  "course_names": [
+   "레이크",
+   "마운틴"
+  ],
   "membership_type": "대중제",
   "night_light": null,
   "blocks": [],
@@ -221,8 +225,8 @@
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": null,
-  "par": null,
+  "length_m": 5921,
+  "par": 72,
   "holes_note": "등록(문체부) 27홀 · 수집 18홀 — 등록 기준과 수집처(티픽·조사) 표기 차이다. 등록 27홀을 정본으로 두고 집계에는 master.holes를 쓴다. 복합단지 합산 여부는 미확정."
  },
  "fee": {
@@ -230,7 +234,7 @@
   "weekend": 200000,
   "weekday_text": null,
   "weekend_text": null,
-  "basis": null,
+  "basis": "official",
   "tax_included": null,
   "cart": {
    "value": 80000,
@@ -253,7 +257,7 @@
     "checked_at": "2026-11-01"
    }
   ],
-  "checked_at": "2026-11-01",
+  "checked_at": "2026-11-27",
   "market": {
    "weekday_min": 110000.0,
    "weekend_min": null,
@@ -389,8 +393,8 @@
  },
  "cancel": {
   "cancel_policy": {
-   "value": "평일 3일 전 · 주말 4일 전까지개장·설계1997년 개장부대시설사우나요금표에서 읽히는 점팀당 카트비·캐디피 합계는 230,000원으로, 전국",
-   "source": "그린피가이드(공식 인용)",
+   "value": "위약 없이 취소: 평일 3일 전 · 주말 4일 전까지 / 기한 이후: 위약 규정에 위약금과 예약 제한(예약 정지·이용 제한·벌점 가운데 하나 이상)이 적혀 있습니다",
+   "source": "그린피가이드(공식 안내 인용)",
    "url": "https://greenfeeguide.co.kr/course/gc-0422/"
   },
   "open_cycle": null,
@@ -398,7 +402,8 @@
   "evidence": [
    "위약규정(페널티) 위약규정 구분 페널티 취소일 기준 주말 / 공휴일(4일전 취소가능) 평일 (3일전 취소가능) 3일전 4주 예약정지 또는 팀당 4인 이용요금의 10% 해당없음 2일전 8주 예약정지 또는 팀당 4인 이용요금의 10% 1일전 12주 예약정지 또는 팀당 4인 이용요금의 20% 무통보 결장(NO SHOW) 1년 예약정지 또는 팀당 4인 이용요금의 30%NO SHOW 발생일 이후 예약된 예약일 자동취소 예약취소 횟수제한 월 6회초과시 60일 예약정지 퇴장규정 고객분들의 편의를 위하여 다음과 같은 행위를 하는 플레이어에게는 퇴",
    "태인 컨트리클럽 ID/PW찾기 회원가입 로그인 날씨 2026년 11월 26일 목요일 10℃ 구름 많음 클럽소개이용안내실시간예약코스소개시설안내9홀코스소개커뮤니티마이페이지 클럽소개 CEO인사말 오시는 길 이용안내 요금안내 예약안내 위약규정 18홀코스 예약 9홀코스 예약 확인 및 취소 단체팀신청 코스안내 Lake Mountain 클럽하우스 내부시설 포토갤러리 9홀코스소개 요금및안내 오시는 길 공지사항 명예의 전당 조인공간 나의스코어 정보변경 회원탈퇴 코스안내 Lake Mountain COURSE INFO 코스안내 LAKE COURSE 코",
-   "태인 컨트리클럽 ID/PW찾기 회원가입 로그인 날씨 2026년 11월 26일 목요일 10℃ 구름 많음 클럽소개이용안내실시간예약코스소개시설안내9홀코스소개커뮤니티마이페이지 클럽소개 CEO인사말 오시는 길 이용안내 요금안내 예약안내 위약규정 18홀코스 예약 9홀코스 예약 확인 및 취소 단체팀신청 코스안내 Lake Mountain 클럽하우스 내부시설 포토갤러리 9홀코스소개 요금및안내 오시는 길 공지사항 명예의 전당 조인공간 나의스코어 정보변경 회원탈퇴 9홀코스소개 요금및안내 오시는 길 ABOUT 9HOLE 9홀 소개 1996년 2월에 오픈"
+   "태인 컨트리클럽 ID/PW찾기 회원가입 로그인 날씨 2026년 11월 26일 목요일 10℃ 구름 많음 클럽소개이용안내실시간예약코스소개시설안내9홀코스소개커뮤니티마이페이지 클럽소개 CEO인사말 오시는 길 이용안내 요금안내 예약안내 위약규정 18홀코스 예약 9홀코스 예약 확인 및 취소 단체팀신청 코스안내 Lake Mountain 클럽하우스 내부시설 포토갤러리 9홀코스소개 요금및안내 오시는 길 공지사항 명예의 전당 조인공간 나의스코어 정보변경 회원탈퇴 9홀코스소개 요금및안내 오시는 길 ABOUT 9HOLE 9홀 소개 1996년 2월에 오픈",
+   "기존 cancel_policy 값이 인접 안내 항목과 뒤섞여 있어(오류) 그린피가이드 원문 인용으로 정정 — 평일 3일 전 · 주말 4일 전까지 (출처: https://greenfeeguide.co.kr/course/gc-0422/, 2026-11 확인)"
   ],
   "weather_evidence": []
  },
@@ -409,11 +414,12 @@
   },
   "two_player": {
    "evidence": [
+    "1팀당 3~4인 플레이로 2인 또는 5인 플레이는 불가 합니다. (출처: https://www.taeincc.co.kr/Guide/Guide.aspx, 2026-11-27 확인)",
     "태인 컨트리클럽 ID/PW찾기 회원가입 로그인 날씨 2026년 11월 26일 목요일 10℃ 구름 많음 클럽소개이용안내실시간예약코스소개시설안내9홀코스소개커뮤니티마이페이지 클럽소개 CEO인사말 오시는 길 이용안내 요금안내 예약안내 위약규정 18홀코스 예약 9홀코스 예약 확인 및 취소 단체팀신청 코스안내 Lake Mountain 클럽하우스 내부시설 포토갤러리 9홀코스소개 요금및안내 오시는 길 공지사항 명예의 전당 조인공간 나의스코어 정보변경 회원탈퇴 코스안내 Lake Mountain COURSE INFO 코스안내 LAKE COURSE 코",
     "태인 컨트리클럽 ID/PW찾기 회원가입 로그인 날씨 2026년 11월 26일 목요일 10℃ 구름 많음 클럽소개이용안내실시간예약코스소개시설안내9홀코스소개커뮤니티마이페이지 클럽소개 CEO인사말 오시는 길 이용안내 요금안내 예약안내 위약규정 18홀코스 예약 9홀코스 예약 확인 및 취소 단체팀신청 코스안내 Lake Mountain 클럽하우스 내부시설 포토갤러리 9홀코스소개 요금및안내 오시는 길 공지사항 명예의 전당 조인공간 나의스코어 정보변경 회원탈퇴 9홀코스소개 요금및안내 오시는 길 ABOUT 9HOLE 9홀 소개 1996년 2월에 오픈",
     "태인 컨트리클럽 ID/PW찾기 회원가입 로그인 날씨 2026년 11월 26일 목요일 10℃ 구름 많음 클럽소개이용안내실시간예약코스소개시설안내9홀코스소개커뮤니티마이페이지 클럽소개 CEO인사말 오시는 길 이용안내 요금안내 예약안내 위약규정 18홀코스 예약 9홀코스 예약 확인 및 취소 단체팀신청 코스안내 Lake Mountain 클럽하우스 내부시설 포토갤러리 9홀코스소개 요금및안내 오시는 길 공지사항 명예의 전당 조인공간 나의스코어 정보변경 회원탈퇴 이용안내 요금안내 예약안내 위약규정 BOOKING GUIDE 예약안내 18홀코스는 전화와"
    ],
-   "value": null,
+   "value": "1팀당 3~4인 플레이로 2인 또는 5인 플레이는 불가 합니다.",
    "third_party": {
     "two": null,
     "three": null,
@@ -436,9 +442,14 @@
   "cart_type": {
    "evidence": [
     "(앞, 뒷팀과의 타구사고 포함) 골프카트는 자동 유도로 운행을 합니다.",
-    "(퇴장 시 홀별 정산) 리모컨 작동으로 카트가 움직이지 않는 구간은 핸들 좌측에 있는 발진 버튼을 눌러주시면 이동합니다."
+    "(퇴장 시 홀별 정산) 리모컨 작동으로 카트가 움직이지 않는 구간은 핸들 좌측에 있는 발진 버튼을 눌러주시면 이동합니다.",
+    "캐디가 운전 · 고객 카트 운전 시 발생 사고는 클럽이 책임지지 않음"
    ],
-   "value": null
+   "value": "캐디가 운전 · 고객 카트 운전 시 발생 사고는 클럽이 책임지지 않음",
+   "source_url": "https://www.taeincc.co.kr/Guide/Guide.aspx",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfee guide tables)"
   },
   "cart_entry": {
    "evidence": [],
@@ -456,10 +467,11 @@
   },
   "checkin": {
    "evidence": [
+    "예약시간 30분 전 도착하여 프론트 접수 후 여유 있는 플레이 준비 부탁 드립니다. (출처: https://www.taeincc.co.kr/Guide/Guide.aspx, 2026-11-27 확인)",
     "태인 컨트리클럽 ID/PW찾기 회원가입 로그인 날씨 2026년 11월 26일 목요일 10℃ 구름 많음 클럽소개이용안내실시간예약코스소개시설안내9홀코스소개커뮤니티마이페이지 클럽소개 CEO인사말 오시는 길 이용안내 요금안내 예약안내 위약규정 18홀코스 예약 9홀코스 예약 확인 및 취소 단체팀신청 코스안내 Lake Mountain 클럽하우스 내부시설 포토갤러리 9홀코스소개 요금및안내 오시는 길 공지사항 명예의 전당 조인공간 나의스코어 정보변경 회원탈퇴 이용안내 요금안내 예약안내 위약규정 RULES 이용규정 프론트 예약시간 30분 전 도착하",
     "호남고속도로와 서해안고속도로에서의 빠르고 안전한 진입, 전주에서 30분 이내 도착하는 입지조건, 원칙에 입각한 상식이 통하는 코스 운영과 적절하고 편안한 서비스를 약속하는 태인컨트리클럽입니다."
    ],
-   "value": null,
+   "value": "티오프 30분 전 도착",
    "third_party": {
     "value": null,
     "source": "그린피가이드",
@@ -502,26 +514,39 @@
   },
   "food": {
    "evidence": [
+    "레스토랑 (출처: https://www.taeincc.co.kr/Facilities/Facilities.aspx, 2026-11-27 확인)",
     "부대시설로는 레스토랑, 락카룸(샤워시설구비)이 있습니다.",
     "태인 컨트리클럽 ID/PW찾기 회원가입 로그인 날씨 2026년 11월 26일 목요일 10℃ 구름 많음 클럽소개이용안내실시간예약코스소개시설안내9홀코스소개커뮤니티마이페이지 클럽소개 CEO인사말 오시는 길 이용안내 요금안내 예약안내 위약규정 18홀코스 예약 9홀코스 예약 확인 및 취소 단체팀신청 코스안내 Lake Mountain 클럽하우스 내부시설 포토갤러리 9홀코스소개 요금및안내 오시는 길 공지사항 명예의 전당 조인공간 나의스코어 정보변경 회원탈퇴 클럽하우스 내부시설 포토갤러리 RESTAURANT 레스토랑 전라도의 맛과 멋을 추구하며 "
    ],
-   "value": null
+   "value": "레스토랑"
   },
   "snack_bar": {
-   "value": null,
-   "evidence": []
+   "value": "그늘집",
+   "evidence": [
+    "그늘집 (출처: https://greenfeeguide.co.kr/course/gc-0422/, 2026-11-27 확인)",
+    "사골 해장국 · 13,000원 · 메뉴 원문"
+   ]
   },
   "locker_sauna": {
-   "value": null,
-   "evidence": []
+   "value": "사우나",
+   "evidence": [
+    "사우나 (출처: https://greenfeeguide.co.kr/course/gc-0422/, 2026-11-27 확인)",
+    "사우나 있음"
+   ]
   },
   "lodging": {
    "value": null,
    "evidence": []
   },
   "other": {
-   "value": null,
-   "evidence": []
+   "value": "사우나 있음",
+   "evidence": [
+    "사우나 있음"
+   ],
+   "source_url": "https://www.taeincc.co.kr/Guide/Guide.aspx",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfee guide tables)"
   },
   "night": {
    "evidence": [],
@@ -738,8 +763,17 @@
   "recent_notice_text": null,
   "course_notes": null,
   "alert": null,
-  "unconfirmed": [],
-  "sources": []
+  "unconfirmed": [
+   "진행 시간",
+   "휴장일"
+  ],
+  "sources": [
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "ok",
@@ -756,12 +790,12 @@
   "browser_pdf": []
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.8,
+  "basic": 0.89,
+  "course": 0.4,
   "fee": 1.0,
-  "ops": 0.29,
-  "facility": 0.0,
-  "briefing": 0.5,
-  "rental": 1.0
+  "ops": 0.5,
+  "facility": 0.4,
+  "briefing": 0.0,
+  "rental": 0.75
  }
 }

@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0486",
@@ -138,7 +139,7 @@
    "url": "https://www.anesville.co.kr/html/guide04.asp",
    "checked_at": "2026-11-26"
   },
-  "checked_at": null,
+  "checked_at": "2026-11-27",
   "market": {
    "weekday_min": null,
    "weekend_min": null,
@@ -278,7 +279,11 @@
   "weekend_basis": "max"
  },
  "cancel": {
-  "cancel_policy": null,
+  "cancel_policy": {
+   "value": "평일 3일 전 · 주말 4일 전까지 (이용약관 기준 — 예약 안내에 더 이른 기한이 따로 있을 수 있으니 함께 확인하세요)",
+   "source": "공개 정보(그린피가이드)",
+   "url": "https://greenfeeguide.co.kr/course/gc-0428/"
+  },
   "open_cycle": null,
   "notes": null,
   "evidence": [],
@@ -352,8 +357,14 @@
  },
  "facilities": {
   "practice": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "연습 시설: 드라이빙 레인지골프연습장"
+   ],
+   "value": "드라이빙 레인지골프연습장",
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0428/",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfeeguide)"
   },
   "indoor_range": {
    "value": null,
@@ -376,8 +387,14 @@
    "evidence": []
   },
   "other": {
-   "value": null,
-   "evidence": []
+   "value": "드라이빙 레인지",
+   "evidence": [
+    "드라이빙 레인지"
+   ],
+   "source_url": "https://www.anesville.co.kr/html/footmenu.asp",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfee guide tables)"
   },
   "night": {
    "evidence": [],
@@ -602,12 +619,17 @@
   "unconfirmed": [
    "공식 홈페이지 주소",
    "동계 휴장 공지(2026-27)",
-   "11/16 이후·12월 그린피"
+   "체크인"
   ],
   "sources": [
    "https://papahun.com/agnesvillcc-greenfee/",
    "https://parkgolfinfo.co.kr/%ec%95%84%eb%84%a4%ec%8a%a4%eb%b9%8ccc-%ec%98%88%ec%95%bd%eb%b0%a9%eb%b2%95-%ec%83%81%ec%84%b8-%ea%b3%a8%ed%94%84%ec%9e%a5-9%e2%86%9218-%ec%9a%b4%ec%98%81-%ed%95%9c%eb%88%88-%ea%b0%80%ec%9d%b4/",
-   "https://beomstory.co.kr/%ec%95%84%eb%84%a4%ec%8a%a4%eb%b9%8ccc-%ec%98%88%ec%95%bd%eb%b0%a9%eb%b2%95-%ec%83%81%ec%84%b8-%ea%b3%a8%ed%94%84%ec%9e%a5-%ec%98%88%ec%95%bd-%ea%b7%9c%ec%b9%99-%ec%a3%bc%ec%a4%91%c2%b7%ec%a3%bc/"
+   "https://beomstory.co.kr/%ec%95%84%eb%84%a4%ec%8a%a4%eb%b9%8ccc-%ec%98%88%ec%95%bd%eb%b0%a9%eb%b2%95-%ec%83%81%ec%84%b8-%ea%b3%a8%ed%94%84%ec%9e%a5-%ec%98%88%ec%95%bd-%ea%b7%9c%ec%b9%99-%ec%a3%bc%ec%a4%91%c2%b7%ec%a3%bc/",
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
   ]
  },
  "collection": {
@@ -616,7 +638,7 @@
   "pages_collected": 2,
   "third_party": {
    "teepick": true,
-   "greenfeeguide": false
+   "greenfeeguide": true
   },
   "render_hint": "thin",
   "plan_strategy": "blocked(헤드리스·UA 우회)",
@@ -628,12 +650,12 @@
   ]
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.6,
+  "basic": 0.89,
+  "course": 0.2,
   "fee": 1.0,
   "ops": 0.07,
-  "facility": 0.0,
-  "briefing": 1.0,
-  "rental": 0.25
+  "facility": 0.2,
+  "briefing": 0.5,
+  "rental": 0.0
  }
 }

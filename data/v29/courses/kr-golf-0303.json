@@ -8,11 +8,106 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "review": {
+   "checks": [
+    {
+     "field": "course.par",
+     "received": null,
+     "verified": 108,
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0333/",
+     "quote": "코스 구성: 회원제 27홀 · 파 108",
+     "source_type": "official_summary(greenfeeguide)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "course.length_m",
+     "received": null,
+     "verified": 9747,
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0333/",
+     "quote": "전장: 9,747m(10,659yds)",
+     "source_type": "official_summary(greenfeeguide)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "course.night_light",
+     "received": null,
+     "verified": "야간 라운드 운영(공식 홈페이지 안내)",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0333/",
+     "quote": "야간 운영: 야간 라운드 운영(공식 홈페이지 안내)",
+     "source_type": "official_summary(greenfeeguide)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.night.value",
+     "received": null,
+     "verified": "야간 라운드 운영(공식 홈페이지 안내)",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0333/",
+     "quote": "야간 운영: 야간 라운드 운영(공식 홈페이지 안내)",
+     "source_type": "official_summary(greenfeeguide)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "ops.pace.value",
+     "received": null,
+     "verified": "앞 팀과 한 홀 이상 비우고 고의로 지연 플레이를 하면 경기 중단, 위반 시 2개월 예약금지",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0333/",
+     "quote": "진행이 늦으면: 앞 팀과 한 홀 이상 비우고 고의로 지연 플레이를 하면 경기 중단, 위반 시 2개월 예약금지",
+     "source_type": "official_summary(greenfeeguide)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "ops.cart_type.value",
+     "received": null,
+     "verified": "5인승 승용식 골프카",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0333/",
+     "quote": "카트: 5인승 승용식 골프카",
+     "source_type": "official_summary(greenfeeguide)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.lodging.value",
+     "received": null,
+     "verified": "강동 리조트 · 콘도",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0333/",
+     "quote": "숙박 시설: 강동 리조트 · 콘도",
+     "source_type": "official_summary(greenfeeguide)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.other.value",
+     "received": null,
+     "verified": "프로샵",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0333/",
+     "quote": "그 밖의 시설: 프로샵",
+     "source_type": "official_summary(greenfeeguide)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    }
+   ],
+   "checked_at": "2026-11-27"
+  },
+  "batch3_patch": "2026-11-27 배치6(대구·경북) 보완: 8개 항목(공식 홈페이지·그린피가이드 공식 안내 확인 기준, 미확인 값 생성 없음)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0303",
@@ -49,7 +144,7 @@
    "㈜강동씨앤엘 구희택 강대완"
   ],
   "area_sqm": 1258239,
-  "opened": null,
+  "opened": "2006-09",
   "course_blocks": [],
   "facility_id": null,
   "provenance": {
@@ -61,13 +156,13 @@
    "source": "그린피가이드",
    "url": "https://greenfeeguide.co.kr/course/gc-0333/"
   },
-  "par": null,
+  "par": 72,
   "holes_teepick": 27,
   "course_spec": {
    "holes": 27,
-   "par": null,
+   "par": 72,
    "blocks": [],
-   "length_m": null,
+   "length_m": 9747,
    "kga": {
     "kga_course_code": "79",
     "kga_name": "강동 디아너스",
@@ -279,10 +374,10 @@
   "holes_received": 27,
   "course_names": null,
   "membership_type": "회원제",
-  "night_light": null,
+  "night_light": "야간 라운드 운영(공식 홈페이지 안내)",
   "blocks": [],
   "grass": {
-   "tee": null,
+   "tee": "Kentucky bluegrass",
    "fairway": {
     "evidence": "(공휴일/휴일 1일 전 주말 요금 적용) 비회원 이용요금 (단위 : 원) 요금표 구분 그린피 사치성개별소비세 합계 비회원 주중 218,880 21,120 240,000 주말/공휴일/휴일 248,880 21,120 270,000 ※ 21,120원 = 개별소비세(12,000원) + 농특세(3,600원) + 교육세(3,600원) + 부가세(1,920원) ※ 스마트 예약(홈페이지)를 통해 예약하시면 예약시점, 예약률, 시즌별, 요일별, 시간대별 다양한 이벤트 요금으로 예약이 가능합니다.",
     "source": "공식",
@@ -477,8 +572,8 @@
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": null,
-  "par": null
+  "length_m": 9747,
+  "par": 72
  },
  "fee": {
   "weekday": 240000,
@@ -866,9 +961,14 @@
   "cart_type": {
    "evidence": [
     "이벤트 요금 보기 스마트 예약 바로가기 카트사용료 카트사용료 구분 요금 비고 일반 요금 100,000원 1대 4인 기준 프리미엄 리무진 카트(준비중) 200,000원 ※ 5인 라운드 필수 사항 : 일반 카트 2대 20만원 캐디(4BAG 1캐디 기준) 저희 클럽은 캐디의 프로의식 함양과 고객의 부담을 덜어 드리기 위해 정해진 캐디피 이외의 'No Tip' 제도를 운영하고, 개장 10주년을 맞이하여 보다 차별화된 캐디 서비스 제공을 위해 캐디 등급을 3단계(셀프라운드(노캐디), S등급, A등급)로 세분화하여 운영하고 있습니다.",
-    "골프코스 이용에 따른 요금 시설이용에 부과되는 요금(락카, 샤워실 등 클럽하우스 시설) 제세공과금(부과가치세, 개별소비세, 농어촌특별세, 교육세 등) 골프장 사업협회가 정한 부과금 및 공동 징수금 카트이용요금 등 기타 본 클럽이 별도로 정한 요금 이용요금의 조정 회사는 이용요금을 조정하고자 할 경우 클럽 회칙이 정한 바에 따라 운영위원회와 미리 협의를 거쳐야 한다."
+    "골프코스 이용에 따른 요금 시설이용에 부과되는 요금(락카, 샤워실 등 클럽하우스 시설) 제세공과금(부과가치세, 개별소비세, 농어촌특별세, 교육세 등) 골프장 사업협회가 정한 부과금 및 공동 징수금 카트이용요금 등 기타 본 클럽이 별도로 정한 요금 이용요금의 조정 회사는 이용요금을 조정하고자 할 경우 클럽 회칙이 정한 바에 따라 운영위원회와 미리 협의를 거쳐야 한다.",
+    "카트: 5인승 승용식 골프카"
    ],
-   "value": null
+   "value": "5인승 승용식 골프카",
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0333/",
+   "confidence": "medium",
+   "source_type": "official_summary(greenfeeguide)",
+   "checked_at": "2026-11-27"
   },
   "cart_entry": {
    "evidence": [],
@@ -910,8 +1010,14 @@
    "value": null
   },
   "pace": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "진행이 늦으면: 앞 팀과 한 홀 이상 비우고 고의로 지연 플레이를 하면 경기 중단, 위반 시 2개월 예약금지"
+   ],
+   "value": "앞 팀과 한 홀 이상 비우고 고의로 지연 플레이를 하면 경기 중단, 위반 시 2개월 예약금지",
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0333/",
+   "confidence": "medium",
+   "source_type": "official_summary(greenfeeguide)",
+   "checked_at": "2026-11-27"
   },
   "grass": null
  },
@@ -941,16 +1047,34 @@
    "evidence": []
   },
   "lodging": {
-   "value": null,
-   "evidence": []
+   "value": "강동 리조트 · 콘도",
+   "evidence": [
+    "숙박 시설: 강동 리조트 · 콘도"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0333/",
+   "confidence": "medium",
+   "source_type": "official_summary(greenfeeguide)",
+   "checked_at": "2026-11-27"
   },
   "other": {
-   "value": null,
-   "evidence": []
+   "value": "프로샵",
+   "evidence": [
+    "그 밖의 시설: 프로샵"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0333/",
+   "confidence": "medium",
+   "source_type": "official_summary(greenfeeguide)",
+   "checked_at": "2026-11-27"
   },
   "night": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "야간 운영: 야간 라운드 운영(공식 홈페이지 안내)"
+   ],
+   "value": "야간 라운드 운영(공식 홈페이지 안내)",
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0333/",
+   "confidence": "medium",
+   "source_type": "official_summary(greenfeeguide)",
+   "checked_at": "2026-11-27"
   },
   "closed_days": {
    "evidence": [
@@ -962,9 +1086,14 @@
   },
   "shuttle": {
    "evidence": [
-    "강동 디아너스C.C 강동 디아너스 콘도 워터파크 웨딩컨벤션 로그인 회원가입 즐겨찾기 소개 전화번호안내 오시는길 리조트 가이드맵 코스소개 Lake Course Valley Course Hills Course 스코어 카드 이용방법 예약안내 캐디&셀프라운드 Tip 바로입장 Tip 이용요금 단체문의 위약규정 로컬룰 회원권안내 회원특전 인터넷 회원 혜택 클럽하우스 레스토랑 티하우스 프로샵 연회장 락커&사우나 공지사항 이벤트 조인게시판 명예의전당 자료실 강동 스케치 분양안내 소개 전화번호안내 오시는길 오시는길 리조트 가이드맵 소개 전화번호안내"
+    "강동 디아너스C.C 강동 디아너스 콘도 워터파크 웨딩컨벤션 로그인 회원가입 즐겨찾기 소개 전화번호안내 오시는길 리조트 가이드맵 코스소개 Lake Course Valley Course Hills Course 스코어 카드 이용방법 예약안내 캐디&셀프라운드 Tip 바로입장 Tip 이용요금 단체문의 위약규정 로컬룰 회원권안내 회원특전 인터넷 회원 혜택 클럽하우스 레스토랑 티하우스 프로샵 연회장 락커&사우나 공지사항 이벤트 조인게시판 명예의전당 자료실 강동 스케치 분양안내 소개 전화번호안내 오시는길 오시는길 리조트 가이드맵 소개 전화번호안내",
+    "대중교통: 경주 시외·고속버스터미널·경주역10·11·150·100·18번 버스(경주월드·엑스포공원 하차) 후 도보 약 20분, 16번(강동 리조트 입구) 후 도보 약 5분"
    ],
-   "value": null
+   "value": "경주 시외·고속버스터미널·경주역10·11·150·100·18번 버스(경주월드·엑스포공원 하차) 후 도보 약 20분, 16번(강동 리조트 입구) 후 도보 약 5분",
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0333/",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfeeguide)"
   },
   "ev_charge": {
    "evidence": [],
@@ -1159,7 +1288,14 @@
   "course_notes": null,
   "alert": null,
   "unconfirmed": [],
-  "sources": []
+  "sources": [
+   "https://greenfeeguide.co.kr/course/gc-0333/",
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "ok",
@@ -1174,12 +1310,12 @@
   "browser_batch": false
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.8,
+  "basic": 0.89,
+  "course": 0.2,
   "fee": 1.0,
-  "ops": 0.21,
-  "facility": 0.0,
-  "briefing": 0.5,
-  "rental": 1.0
+  "ops": 0.36,
+  "facility": 0.4,
+  "briefing": 0.0,
+  "rental": 0.75
  }
 }

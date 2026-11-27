@@ -8,11 +8,73 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "review": {
+   "checks": [
+    {
+     "field": "ops.checkin.value",
+     "received": null,
+     "verified": "티오프 30분 전 프런트 등록, 10분 전 스타트·카트 대기",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0369/",
+     "quote": "도착: 티오프 30분 전 프런트 등록, 10분 전 스타트·카트 대기",
+     "source_type": "official_summary(greenfeeguide)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "ops.dress.value",
+     "received": null,
+     "verified": "남녀 모두 칼라 있는 상의·모자, 반바지 허용(여성은 치마·반바지·바지 중 선택)",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0369/",
+     "quote": "복장: 남녀 모두 칼라 있는 상의·모자, 반바지 허용(여성은 치마·반바지·바지 중 선택)",
+     "source_type": "official_summary(greenfeeguide)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "ops.pace.value",
+     "received": null,
+     "verified": "1개 홀 이상을 비우는 지연플레이를 하는 경우 입장을 불허",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0369/",
+     "quote": "진행이 늦으면: 1개 홀 이상을 비우는 지연플레이를 하는 경우 입장을 불허",
+     "source_type": "official_summary(greenfeeguide)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "ops.cart_type.value",
+     "received": null,
+     "verified": "5인승 전자 유도식 골프카(남코스, 동코스)",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0369/",
+     "quote": "카트: 5인승 전자 유도식 골프카(남코스, 동코스)",
+     "source_type": "official_summary(greenfeeguide)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.other.value",
+     "received": null,
+     "verified": "프로샵",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0369/",
+     "quote": "그 밖의 시설: 프로샵",
+     "source_type": "official_summary(greenfeeguide)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    }
+   ],
+   "checked_at": "2026-11-27"
+  },
+  "batch3_patch": "2026-11-27 배치6(대구·경북) 보완: 5개 항목(공식 홈페이지·그린피가이드 공식 안내 확인 기준, 미확인 값 생성 없음)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0343",
@@ -207,8 +269,14 @@
    "evidence": []
   },
   "cart_type": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "카트: 5인승 전자 유도식 골프카(남코스, 동코스)"
+   ],
+   "value": "5인승 전자 유도식 골프카(남코스, 동코스)",
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0369/",
+   "confidence": "medium",
+   "source_type": "official_summary(greenfeeguide)",
+   "checked_at": "2026-11-27"
   },
   "cart_entry": {
    "evidence": [],
@@ -223,29 +291,53 @@
    "value": null
   },
   "checkin": {
-   "evidence": [],
-   "value": null,
+   "evidence": [
+    "도착: 티오프 30분 전 프런트 등록, 10분 전 스타트·카트 대기"
+   ],
+   "value": "티오프 30분 전 프런트 등록, 10분 전 스타트·카트 대기",
    "third_party": {
     "value": "30분 전",
     "source": "그린피가이드",
     "url": "https://greenfeeguide.co.kr/course/gc-0369/"
-   }
+   },
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0369/",
+   "confidence": "medium",
+   "source_type": "official_summary(greenfeeguide)",
+   "checked_at": "2026-11-27"
   },
   "locker": {
    "evidence": [],
    "value": null
   },
   "sauna": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "사우나: 사우나 있음락커룸&사우나"
+   ],
+   "value": "사우나 있음락커룸&사우나",
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0369/",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfeeguide)"
   },
   "dress": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "복장: 남녀 모두 칼라 있는 상의·모자, 반바지 허용(여성은 치마·반바지·바지 중 선택)"
+   ],
+   "value": "남녀 모두 칼라 있는 상의·모자, 반바지 허용(여성은 치마·반바지·바지 중 선택)",
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0369/",
+   "confidence": "medium",
+   "source_type": "official_summary(greenfeeguide)",
+   "checked_at": "2026-11-27"
   },
   "pace": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "진행이 늦으면: 1개 홀 이상을 비우는 지연플레이를 하는 경우 입장을 불허"
+   ],
+   "value": "1개 홀 이상을 비우는 지연플레이를 하는 경우 입장을 불허",
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0369/",
+   "confidence": "medium",
+   "source_type": "official_summary(greenfeeguide)",
+   "checked_at": "2026-11-27"
   },
   "browser_official": {
    "cancel": "기상 임의취소: 경기 전 정상요금 50% 환불, 1~9홀 (이용요금-시설이용료-제세공과금)×25% 환불, 10~18홀 환불 없음. 캐디피 경기 전 미징수·1~9홀 70,000·10~18홀 140,000",
@@ -272,16 +364,28 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": null,
-   "evidence": []
+   "value": "사우나 있음락커룸&사우나",
+   "evidence": [
+    "사우나: 사우나 있음락커룸&사우나"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0369/",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfeeguide)"
   },
   "lodging": {
    "value": null,
    "evidence": []
   },
   "other": {
-   "value": null,
-   "evidence": []
+   "value": "프로샵",
+   "evidence": [
+    "그 밖의 시설: 프로샵"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0369/",
+   "confidence": "medium",
+   "source_type": "official_summary(greenfeeguide)",
+   "checked_at": "2026-11-27"
   },
   "night": {
    "evidence": [],
@@ -311,14 +415,14 @@
  "rental": {
   "available": "가능",
   "full_set": 30000,
-  "fee_text": null,
+  "fee_text": "30,000원 · 18홀",
   "brand": "데이비드",
   "left_handed": null,
   "shoes": 10000,
   "nine_hole": null,
   "range_finder": null,
   "reservation": null,
-  "source_url": null,
+  "source_url": "https://greenfeeguide.co.kr/course/gc-0369/",
   "evidence": [],
   "official": {
    "full_set": 30000,
@@ -385,7 +489,13 @@
   "course_notes": null,
   "alert": null,
   "unconfirmed": [],
-  "sources": []
+  "sources": [
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "unavailable",
@@ -400,12 +510,12 @@
   "browser_batch": true
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.6,
+  "basic": 0.78,
+  "course": 0.2,
   "fee": 1.0,
-  "ops": 0.0,
-  "facility": 0.0,
-  "briefing": 0.5,
-  "rental": 1.0
+  "ops": 0.36,
+  "facility": 0.2,
+  "briefing": 0.0,
+  "rental": 0.75
  }
 }

@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0123",
@@ -49,20 +50,20 @@
    "㈜골프존카운티"
   ],
   "area_sqm": 1106489,
-  "opened": null,
+  "opened": "2013-08",
   "course_blocks": [],
   "facility_id": null,
   "provenance": {
    "master": "courses_master.json v2.0 (문체부·KGA·KGBA·티픽·지도)",
    "synced_to": "courses_master.json v2.7 (2026-11-26 단일 스키마 정규화)"
   },
-  "par": null,
+  "par": 72,
   "holes_teepick": 18,
   "course_spec": {
    "holes": 18,
-   "par": null,
+   "par": 72,
    "blocks": [],
-   "length_m": null,
+   "length_m": 6351,
    "kga": {
     "kga_course_code": "371",
     "kga_name": "골프존카운티 안성 H",
@@ -126,12 +127,13 @@
   ],
   "status": "operating",
   "facility_cluster": null,
-  "factcheck_2026_11_26": null
+  "factcheck_2026_11_26": null,
+  "opened_note": "공개 예약 채널 골프장 히스토리 '개장' 표기"
  },
  "course": {
   "holes": 18,
   "holes_received": 18,
-  "course_names": null,
+  "course_names": "힐·레이크 각 9홀",
   "membership_type": "대중제",
   "night_light": null,
   "blocks": [],
@@ -198,15 +200,15 @@
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": null,
-  "par": null
+  "length_m": 6351,
+  "par": 72
  },
  "fee": {
-  "weekday": null,
-  "weekend": null,
-  "weekday_text": null,
-  "weekend_text": null,
-  "basis": null,
+  "weekday": 180000,
+  "weekend": 230000,
+  "weekday_text": "180,000원 ~ 200,000원",
+  "weekend_text": "230,000원 ~ 270,000원",
+  "basis": "official",
   "tax_included": null,
   "cart": {
    "value": 100000,
@@ -223,11 +225,18 @@
    "source": "공식 요금표",
    "none": false
   },
-  "as_of": null,
-  "source_url": null,
+  "as_of": "2026-11-01",
+  "source_url": "https://greenfeeguide.co.kr/course/gc-0094/",
   "note": null,
-  "sources": [],
-  "checked_at": null,
+  "sources": [
+   {
+    "source": "그린피가이드 — 골프장 공식 요금표 인용",
+    "url": "https://greenfeeguide.co.kr/course/gc-0094/",
+    "checked_at": "2026-11-27",
+    "note": "주중 180000원 / 주말 230000원 (비회원 18홀 기준, 2026-11-01 확인)"
+   }
+  ],
+  "checked_at": "2026-11-27",
   "market": {
    "weekday_min": 100000.0,
    "weekend_min": 180000.0,
@@ -235,7 +244,8 @@
    "part2": null,
    "source": "티픽골프장(실거래 관측)",
    "url": "https://teepickgolf.com/course/%EC%95%88%EC%84%B1Hcc",
-   "note": "공시가 아닌 최근 관측 실거래 최저가"
+   "note": "공시가 아닌 최근 관측 실거래 최저가",
+   "checked_at": "2026-11-27"
   },
   "official_green": {
    "value": 20000,
@@ -362,12 +372,13 @@
  },
  "cancel": {
   "cancel_policy": null,
-  "open_cycle": null,
-  "notes": null,
+  "open_cycle": "매주 월요일 오전 9시, 오픈 주 포함 4주 뒤 월~일요일 티타임 오픈",
+  "notes": "입장 절차 후 임의 취소 시 그린피 50%+카트비, 1~9홀 중단 시 시설이용료+{(그린피-시설이용료)×75%}+카트비, 10~18홀 중단 시 이용요금 100% 정산",
   "evidence": [
    "요금안내 예약안내 취소/위약규정 이용 안내표 카트 사용료 100,000원/팀 캐디피 150,000원/팀 골프채 대여료 풀세트 50,000원 / 퍼터 20,000원 시설 이용료 20,000원 공정거래위원회 약관에 의해 골프장 내장 시 시설 이용료가 부과됩니다.",
    "경기중단 요금안내 라운드일 기준으로 취소 수수료는 아래와 같다.",
-   "경기 전 입장절차를 마친 후 임의로 취소한 경우 그린피의 50%+카트비 경기 중 1홀~9홀 라운드 중 임의로 중단한 경우 시설이용료+{(그린피-시설이용료)x75%}+카트비 10홀~18홀 라운드 중 임의로 중단한 경우 이용요금의 100% 강설, 폭우, 안개 등 천재지변 또는 그 밖의 불가항력적인 사유로 입장에 관한 절차를 마친 이용객 팀 전원이 경기를 마치지 못하게 된 경우에는 다음과 같이 이용요금을 부과한다."
+   "경기 전 입장절차를 마친 후 임의로 취소한 경우 그린피의 50%+카트비 경기 중 1홀~9홀 라운드 중 임의로 중단한 경우 시설이용료+{(그린피-시설이용료)x75%}+카트비 10홀~18홀 라운드 중 임의로 중단한 경우 이용요금의 100% 강설, 폭우, 안개 등 천재지변 또는 그 밖의 불가항력적인 사유로 입장에 관한 절차를 마친 이용객 팀 전원이 경기를 마치지 못하게 된 경우에는 다음과 같이 이용요금을 부과한다.",
+   "예약 오픈 주기: 매주 월요일 오전 9시, 오픈 주 포함 4주 뒤 월~일요일 티타임 오픈 (https://www.golfzoncounty.com/golfclub/resvGuide)"
   ],
   "weather_evidence": [
    "경기중단 요금안내 라운드일 기준으로 취소 수수료는 아래와 같다."
@@ -382,10 +393,12 @@
   },
   "two_player": {
    "evidence": [
-    "상세검색 골프장선택 경기 전체 이글몬트 안성H 안성W 송도 충청 전체 천안 진천 화랑 경상 전체 경남 사천 더골프 감포 구미 청통 선산 이든 전라 전체 영암45 드래곤 순천 선운 무주 제주 전체 오라 날짜 선택 < > 기타 옵션 홀 18홀 27홀 인원 4인 3인 이상 2인 시간 새벽 오전 오후 야간 캐디여부 캐디 셀프 스마일캐디 닫기 검색 > 보안키패드 보안숫자 3회 입력 실패 보안 숫자를 3회 잘못 입력하셨습니다.아래 시간동안 예약이 불가합니다.",
-    "상세검색 골프장선택 경기 전체 이글몬트 안성H 안성W 송도 충청 전체 천안 진천 화랑 경상 전체 경남 사천 더골프 감포 구미 청통 선산 이든 전라 전체 영암45 드래곤 순천 선운 무주 제주 전체 오라 날짜 선택 < > 기타 옵션 홀 18홀 27홀 인원 4인 3인 이상 2인 시간 새벽 오전 오후 야간 캐디여부 캐디 셀프 스마일캐디 닫기 검색 > 보안키패드 보안숫자 3회 입력 실패 보안 숫자를 3회 잘못 입력하셨습니다.아래 시간동안 예약이 불가합니다."
+    "골프존카운티 안성H 불가"
    ],
-   "value": null
+   "value": "불가",
+   "source_url": "https://greenfeeguide.co.kr/guides/two-player-golf-guide/",
+   "source_type": "official_site",
+   "checked_at": "2026-11-27"
   },
   "three_player": {
    "value": null,
@@ -608,8 +621,22 @@
   "recent_notice_text": null,
   "course_notes": null,
   "alert": null,
-  "unconfirmed": [],
-  "sources": []
+  "unconfirmed": [
+   "취소·위약 규정 미확인",
+   "야간(3부) 운영 여부 미확인"
+  ],
+  "sources": [
+   {
+    "source": "그린피가이드 코스 페이지",
+    "url": "https://greenfeeguide.co.kr/course/gc-0094/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "ok",
@@ -617,19 +644,19 @@
   "pages_collected": 13,
   "third_party": {
    "teepick": true,
-   "greenfeeguide": false
+   "greenfeeguide": true
   },
   "render_hint": "static",
   "plan_strategy": "static(직접 파싱)",
   "browser_batch": false
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.8,
-  "fee": 0.5,
-  "ops": 0.14,
+  "basic": 0.89,
+  "course": 0.4,
+  "fee": 1.0,
+  "ops": 0.21,
   "facility": 0.1,
-  "briefing": 0.5,
-  "rental": 1.0
+  "briefing": 0.0,
+  "rental": 0.75
  }
 }

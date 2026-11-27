@@ -8,11 +8,73 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "review": {
+   "checks": [
+    {
+     "field": "course.course_names",
+     "received": null,
+     "verified": "[\"오션\", \"힐\", \"파인\"]",
+     "result": "보완",
+     "url": "https://aigolflab.co.kr/cc/%EC%98%A4%EC%85%98%ED%9E%90%EC%8A%A4-%ED%8F%AC%ED%95%ADCC",
+     "quote": "코스는 9홀짜리 3개 — 오션(파36), 힐(파36), 파인(파36) — 로 모두 27홀",
+     "source_type": "public_info",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "course.par",
+     "received": 72,
+     "verified": 108,
+     "result": "수정",
+     "url": "https://aigolflab.co.kr/cc/%EC%98%A4%EC%85%98%ED%9E%90%EC%8A%A4-%ED%8F%AC%ED%95%ADCC",
+     "quote": "오션(파36), 힐(파36), 파인(파36) — 모두 27홀",
+     "source_type": "public_info",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "master.opened",
+     "received": null,
+     "verified": "2005-11",
+     "result": "보완",
+     "url": "https://www.oceanhills.com/ph/club-introduction",
+     "quote": "오픈일자 2005.11",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "course.grass.fairway",
+     "received": null,
+     "verified": "Dominant",
+     "result": "보완",
+     "url": "https://www.oceanhills.com/ph/club-introduction",
+     "quote": "잔디 FW - Dominant G- Creeping Bentgrass",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "course.grass.green",
+     "received": null,
+     "verified": "Creeping Bentgrass",
+     "result": "보완",
+     "url": "https://www.oceanhills.com/ph/club-introduction",
+     "quote": "잔디 FW - Dominant G- Creeping Bentgrass",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    }
+   ],
+   "checked_at": "2026-11-27"
+  },
+  "batch6_patch": "2026-11-27 배치6(대구·경북) 보완: 5개 항목(공식 홈페이지·그린피가이드·예약 플랫폼 공개 안내 확인 기준, 미확인 값 생성 없음)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0346",
@@ -51,7 +113,7 @@
    "오션힐스골프앤리조트㈜ 이승도"
   ],
   "area_sqm": 918977,
-  "opened": null,
+  "opened": "2005-11",
   "course_blocks": [],
   "facility_id": null,
   "provenance": {
@@ -81,7 +143,11 @@
  "course": {
   "holes": 27,
   "holes_received": 27,
-  "course_names": null,
+  "course_names": [
+   "오션",
+   "힐",
+   "파인"
+  ],
   "membership_type": "회원제",
   "night_light": null,
   "blocks": [
@@ -89,8 +155,8 @@
   ],
   "grass": {
    "tee": null,
-   "fairway": null,
-   "green": null
+   "fairway": "Dominant",
+   "green": "Creeping Bentgrass"
   },
   "kga": null,
   "kga_hole_est": null,
@@ -356,7 +422,15 @@
   "course_notes": null,
   "alert": null,
   "unconfirmed": [],
-  "sources": []
+  "sources": [
+   "https://aigolflab.co.kr/cc/%EC%98%A4%EC%85%98%ED%9E%90%EC%8A%A4-%ED%8F%AC%ED%95%ADCC",
+   "https://www.oceanhills.com/ph/club-introduction",
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "ok",
@@ -364,19 +438,19 @@
   "pages_collected": 1,
   "third_party": {
    "teepick": true,
-   "greenfeeguide": false
+   "greenfeeguide": true
   },
   "render_hint": "spa",
   "plan_strategy": "spa(헤드리스)",
   "browser_batch": true
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.8,
+  "basic": 0.89,
+  "course": 0.6,
   "fee": 1.0,
   "ops": 0.0,
   "facility": 0.0,
-  "briefing": 0.5,
-  "rental": 0.25
+  "briefing": 0.0,
+  "rental": 0.0
  }
 }

@@ -44,11 +44,12 @@
   "schema_previous": "stage2b/1.0",
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "restructured_from_7key": false,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0371",
@@ -109,7 +110,7 @@
    "신세계개발㈜문성필"
   ],
   "area_sqm": 920431,
-  "opened": null,
+  "opened": "2006-05",
   "course_blocks": [],
   "facility_id": null,
   "facility_members": null,
@@ -126,7 +127,8 @@
   "facility_cluster": null,
   "factcheck_2026_11_26": null,
   "tel_former": "055-379-8000",
-  "address_original": "양산시 원동면 어실로 910"
+  "address_original": "양산시 원동면 어실로 910",
+  "par": 72
  },
  "course": {
   "holes": 18,
@@ -152,14 +154,16 @@
    ]
   },
   "kga_hole_est": 18,
-  "extra_courses": null
+  "extra_courses": null,
+  "par": 72,
+  "length_m": 6584
  },
  "fee": {
-  "weekday": null,
-  "weekend": null,
-  "weekday_text": "189,000원은 회원제 시절(2026-09) 값 — 전환 후 예약 플랫폼 공개가 61,000~81,000원",
-  "weekend_text": "223,000원은 회원제 시절 값 — 전환 후 공개가 61,000~81,000원",
-  "basis": "2026-05 대중제 전환 후 공식 고정 요금표 없음. 기존 회원제 요금은 과거 자료이며 예약 화면 실시간 가격 기준",
+  "weekday": 124000,
+  "weekend": 154000,
+  "weekday_text": "124,000~161,000원 (18홀 1·2부 일반캐디, 2026년 10월)",
+  "weekend_text": "154,000~174,000원 (토·공휴일)",
+  "basis": "1인·18홀 비회원, 공식 요금표에서 원더골프가 수집한 2026년 10월 적용가(최저~최고 범위의 하한을 값으로 기재)",
   "tax_included": null,
   "cart": {
    "value": 96000,
@@ -170,22 +174,30 @@
    "text": "140,000원/팀(1·2·3부), 3부 인턴캐디 80,000원, 설당일 160,000원",
    "none": false
   },
-  "as_of": "2026-11(예약 플랫폼 공개가) / 2026-09(기존 공개 요금)",
-  "source_url": "https://inwon.kr/c/k302",
+  "as_of": "2026-10",
+  "source_url": "https://wondergolf.co.kr/courses/kr-kakao-12490693",
   "note": "전환 후 가격은 예약 플랫폼(인원) 공개가 기준. 표시 숫자를 대표가로 쓰지 않는다(마스터/앱에서는 실시간 예약가로 안내).",
   "sources": [
    {
     "source": "수신 조사(공개 요금정보 3자)",
     "url": "https://inwon.kr/c/k302",
     "checked_at": "2026-11(예약 플랫폼 공개가) / 2026-09(기존 공개 요금)"
+   },
+   {
+    "source": "원더골프 공식 요금표 수집분",
+    "url": "https://wondergolf.co.kr/courses/kr-kakao-12490693",
+    "checked_at": "2026-10"
    }
-  ]
+  ],
+  "checked_at": "2026-11-27"
  },
  "cancel": {
   "cancel_policy": null,
-  "open_cycle": null,
+  "open_cycle": "인터넷 예약: 매주 월요일 오전 9시, 오픈 주 포함 4주 뒤 월~일요일 오픈. 전화예약 055-379-9000(업무시간 09:00~17:00)",
   "notes": null,
-  "evidence": [],
+  "evidence": [
+   "https://wondergolf.co.kr/courses/kr-kakao-12490693"
+  ],
   "weather_evidence": []
  },
  "ops": {
@@ -226,8 +238,10 @@
    "evidence": []
   },
   "checkin": {
-   "value": null,
-   "evidence": []
+   "value": "티오프 40분 전 도착(골프존카운티 공통 안내)",
+   "evidence": [
+    "https://www.golfzoncounty.com/golfclub/useGuide"
+   ]
   },
   "locker": {
    "value": null,
@@ -256,8 +270,14 @@
    "evidence": []
   },
   "food": {
-   "value": null,
-   "evidence": []
+   "value": "카페·라운지·편의점·스파·찜질",
+   "evidence": [
+    "카페·라운지·편의점·스파·찜질"
+   ],
+   "source_url": "https://golf.edenvalley.co.kr/Facilities/Restaurant.asp",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfee guide tables)"
   },
   "snack_bar": {
    "value": null,
@@ -371,9 +391,6 @@
    "raw": "2026-05 운영주체·명칭·이용형태가 바뀌었습니다. 요금은 예약 화면에서 확인하세요."
   },
   "unconfirmed": [
-   "잔디(티)",
-   "잔디(그린)",
-   "예약 오픈 주기",
    "취소·위약 규정",
    "2인 플레이",
    "5인 플레이",
@@ -392,8 +409,7 @@
    "클럽 렌탈 요금",
    "좌타용 클럽",
    "골프화 대여",
-   "제세금",
-   "예약 비고"
+   "제세금"
   ],
   "unconfirmed_labels_added": [
    "제세금",
@@ -404,7 +420,14 @@
    "https://greenfeeguide.co.kr/course/gc-0396/",
    "https://www.rankue.co.kr/golf/course/에덴밸리컨트리클럽",
    "https://inwon.kr/c/k302",
-   "https://teepickgolf.com/course/에덴밸리CC"
+   "https://teepickgolf.com/course/에덴밸리CC",
+   "https://www.golfzoncounty.com/golfclub/useGuide",
+   "https://wondergolf.co.kr/courses/kr-kakao-12490693",
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
   ],
   "collected_at": "2026-11-26T10:33:21+09:00"
  },
@@ -413,18 +436,20 @@
   "official_reason": "운영 변경 — 2026년 5월부터 골프존카운티가 임차 운영하며 '골프존카운티 이든'으로 명칭 변경·대중제 전환(공개 보도). 기존 회원제 요금표는 과거 자료",
   "pages_collected": 0,
   "third_party": {
-   "received_report": true
+   "received_report": true,
+   "teepick": true,
+   "greenfeeguide": true
   },
   "render_hint": "report",
   "plan_strategy": "subagent_report(2026-11-26)"
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 1.0,
-  "fee": 0.5,
-  "ops": 0.07,
-  "facility": 0.3,
-  "briefing": 0.75,
-  "rental": 0.25
+  "basic": 0.89,
+  "course": 0.4,
+  "fee": 1.0,
+  "ops": 0.14,
+  "facility": 0.4,
+  "briefing": 0.5,
+  "rental": 0.0
  }
 }

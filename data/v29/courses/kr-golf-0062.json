@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0062",
@@ -106,19 +107,37 @@
   "par": null
  },
  "fee": {
-  "weekday": null,
-  "weekend": null,
+  "weekday": 70000,
+  "weekend": 90000,
   "weekday_text": null,
   "weekend_text": null,
-  "basis": null,
+  "basis": "official",
   "tax_included": null,
-  "cart": null,
-  "caddie": null,
-  "as_of": null,
-  "source_url": null,
-  "note": null,
-  "sources": [],
-  "checked_at": null,
+  "cart": {
+   "value": 8000,
+   "note": "1인용 배터리 카트, 1인당",
+   "source": "공식 홈페이지 요금표",
+   "url": "https://www.gakorea.com/wellbeing/guide/fee.asp"
+  },
+  "caddie": {
+   "value": null,
+   "none": true,
+   "note": "No 캐디 운영",
+   "source": "공식 홈페이지 요금표",
+   "url": "https://www.gakorea.com/wellbeing/guide/fee.asp"
+  },
+  "as_of": "2026-11-27",
+  "source_url": "https://www.gakorea.com/wellbeing/guide/fee.asp",
+  "note": "9홀 전용 구장(요금표 9홀 기준)",
+  "sources": [
+   {
+    "source": "공식 홈페이지 요금표",
+    "url": "https://www.gakorea.com/wellbeing/guide/fee.asp",
+    "checked_at": "2026-11-27",
+    "note": "주중 70,000원 / 주말 90,000원 (9홀 기준)"
+   }
+  ],
+  "checked_at": "2026-11-27",
   "market": {
    "weekday_min": null,
    "weekend_min": null,
@@ -132,10 +151,21 @@
   "official_rental": null
  },
  "cancel": {
-  "cancel_policy": null,
-  "open_cycle": null,
+  "cancel_policy": {
+   "value": "당일 취소·No-show 6개월 예약정지, 1일 전 3개월, 2일 전 2개월, 3일 전 1개월 예약정지",
+   "source": "공식 홈페이지",
+   "url": "https://www.gakorea.com/wellbeing/guide/penalty.asp"
+  },
+  "open_cycle": "이용일 기준 3주 전 같은 요일부터 오픈",
   "notes": null,
-  "evidence": [],
+  "evidence": [
+   "예약 당일 취소(No-show) 6개월 예약정지 / 1일전 취소 3개월 / 2일전 취소 2개월 / 3일전 취소 1개월",
+   "예약 오픈 주기: 이용일 기준 3주 전 같은 요일부터 오픈 (https://www.gakorea.com/wellbeing/guide/resGuide.asp)",
+   "예약 · 당일 취소(No-show) · 6개월 예약정지",
+   "1일전 취소 · 3개월 예약정지",
+   "2일전 취소 · 2개월 예약정지",
+   "3일전 취소 · 1개월 예약정지"
+  ],
   "weather_evidence": []
  },
  "ops": {
@@ -381,8 +411,22 @@
   "recent_notice_text": null,
   "course_notes": null,
   "alert": null,
-  "unconfirmed": [],
-  "sources": []
+  "unconfirmed": [
+   "야간(3부) 운영 여부 미확인",
+   "잔디 종류 미확인"
+  ],
+  "sources": [
+   {
+    "source": "그린피가이드 코스 페이지",
+    "url": "https://greenfeeguide.co.kr/course/gc-0180/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "ok",
@@ -390,19 +434,19 @@
   "pages_collected": 1,
   "third_party": {
    "teepick": true,
-   "greenfeeguide": false
+   "greenfeeguide": true
   },
   "render_hint": "static",
   "plan_strategy": "static(직접 파싱)",
   "browser_batch": false
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.6,
-  "fee": 0.0,
+  "basic": 0.89,
+  "course": 0.2,
+  "fee": 0.75,
   "ops": 0.29,
   "facility": 0.2,
-  "briefing": 0.5,
-  "rental": 0.25
+  "briefing": 0.0,
+  "rental": 0.0
  }
 }

@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0228",
@@ -53,7 +54,7 @@
    "신창기업㈜"
   ],
   "area_sqm": 782451,
-  "opened": null,
+  "opened": "1992-08",
   "course_blocks": [],
   "facility_id": null,
   "provenance": {
@@ -62,9 +63,9 @@
   },
   "course_spec": {
    "holes": 27,
-   "par": null,
+   "par": 72,
    "blocks": [],
-   "length_m": null,
+   "length_m": 6095,
    "kga": {
     "kga_course_code": "100",
     "kga_name": "발리오스",
@@ -227,12 +228,19 @@
   ],
   "status": "operating",
   "facility_cluster": null,
-  "factcheck_2026_11_26": null
+  "factcheck_2026_11_26": null,
+  "opened_note": "공개 요금 정보(공식 홈페이지 소개 인용)",
+  "par": 72,
+  "designer": {
+   "value": "(주)필드컨설턴트",
+   "source": "공개 정보(그린피가이드)",
+   "url": "https://greenfeeguide.co.kr/course/gc-0040/"
+  }
  },
  "course": {
   "holes": 27,
   "holes_received": null,
-  "course_names": null,
+  "course_names": "서·남·동 각 9홀",
   "membership_type": "회원제",
   "night_light": null,
   "blocks": [],
@@ -398,26 +406,27 @@
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": null,
-  "par": null
+  "length_m": 6095,
+  "par": 72
  },
  "fee": {
   "weekday": 230000,
   "weekend": 300000,
   "weekday_text": null,
   "weekend_text": null,
-  "basis": null,
+  "basis": "official",
   "tax_included": null,
   "cart": {
    "value": 100000,
-   "source": "그린피가이드",
-   "url": "https://greenfeeguide.co.kr/course/gc-0040/"
+   "source": "그린피가이드(공식 요금표)",
+   "url": "https://greenfeeguide.com/course/gc-0040/",
+   "note": "팀당(4인 1대)"
   },
   "caddie": {
    "value": 150000,
-   "source": "그린피가이드",
-   "url": "https://greenfeeguide.co.kr/course/gc-0040/",
-   "none": false
+   "none": false,
+   "source": "그린피가이드(공식 요금표)",
+   "url": "https://greenfeeguide.com/course/gc-0040/"
   },
   "as_of": "2026-11-01",
   "source_url": null,
@@ -425,14 +434,14 @@
   "sources": [
    {
     "source": "그린피가이드(공식 요금표 확인)",
-    "url": "https://greenfeeguide.co.kr/course/gc-0040/",
+    "url": "https://greenfeeguide.com/course/gc-0040/",
     "checked_at": "2026-11-01"
    }
   ],
-  "checked_at": "2026-11-01",
+  "checked_at": "2026-11-27",
   "market": {
    "weekday_min": null,
-   "weekend_min": 310000.0,
+   "weekend_min": 310000,
    "part1": null,
    "part2": null,
    "source": "티픽골프장(실거래 관측)",
@@ -442,13 +451,15 @@
  },
  "cancel": {
   "cancel_policy": {
-   "value": "5일 전 17:00까지개장·설계1992",
-   "source": "그린피가이드(공식 인용)",
-   "url": "https://greenfeeguide.co.kr/course/gc-0040/"
+   "value": "주중·주말·공휴일 모두 예약일 5일 전 17:00까지 홈페이지·전화로 취소 가능, 이후 취소는 위약규정 적용",
+   "source": "공식 홈페이지",
+   "url": "https://baliosgc.com/reserve/reserve_info.asp"
   },
-  "open_cycle": null,
+  "open_cycle": "이용일 4주 전 월요일 09:00부터 예약(홈페이지·전화)",
   "notes": null,
-  "evidence": [],
+  "evidence": [
+   "- 주중 주말 및 공휴일 예약취소는 예약일 5일전 17:00까지 홈페이지 및 전화로 가능하며, 이후 취소시 위약규정에 의한"
+  ],
   "weather_evidence": []
  },
  "ops": {
@@ -569,8 +580,15 @@
    "evidence": []
   },
   "other": {
-   "value": null,
-   "evidence": []
+   "value": "프로샵",
+   "evidence": [
+    "other: 프로샵"
+   ],
+   "source_url": "https://greenfeeguide.com/course/gc-0040/",
+   "source_type": "greenfee_guide",
+   "confidence": "medium",
+   "checked_at": "2026-11-27",
+   "value_from": "batch2_supplement"
   },
   "night": {
    "evidence": [],
@@ -702,7 +720,18 @@
   "course_notes": null,
   "alert": null,
   "unconfirmed": [],
-  "sources": []
+  "sources": [
+   {
+    "source": "그린피가이드 코스 페이지",
+    "url": "https://greenfeeguide.co.kr/course/gc-0040/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "unavailable",
@@ -717,12 +746,12 @@
   "browser_batch": false
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.8,
+  "basic": 0.89,
+  "course": 0.4,
   "fee": 1.0,
   "ops": 0.07,
-  "facility": 0.2,
-  "briefing": 0.5,
-  "rental": 0.25
+  "facility": 0.3,
+  "briefing": 0.0,
+  "rental": 0.0
  }
 }

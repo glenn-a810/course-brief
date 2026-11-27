@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0153",
@@ -60,13 +61,13 @@
    "master": "courses_master.json v2.0 (문체부·KGA·KGBA·티픽·지도)",
    "synced_to": "courses_master.json v2.7 (2026-11-26 단일 스키마 정규화)"
   },
-  "par": null,
+  "par": 72,
   "holes_teepick": 36,
   "course_spec": {
    "holes": 36,
-   "par": null,
+   "par": 72,
    "blocks": [],
-   "length_m": null,
+   "length_m": 6301,
    "kga": {
     "kga_course_code": "132",
     "kga_name": "스카이밸리",
@@ -173,7 +174,7 @@
  "course": {
   "holes": 36,
   "holes_received": 36,
-  "course_names": null,
+  "course_names": "레이크·마운틴·스카이·밸리 각 9홀",
   "membership_type": "회원제",
   "night_light": null,
   "blocks": [],
@@ -278,8 +279,8 @@
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": null,
-  "par": null
+  "length_m": 6301,
+  "par": 72
  },
  "fee": {
   "weekday": null,
@@ -294,7 +295,7 @@
   "source_url": null,
   "note": null,
   "sources": [],
-  "checked_at": null,
+  "checked_at": "2026-11-27",
   "market": {
    "weekday_min": 100000.0,
    "weekend_min": 160000.0,
@@ -302,17 +303,24 @@
    "part2": null,
    "source": "티픽골프장(실거래 관측)",
    "url": "https://teepickgolf.com/course/%EC%8A%A4%EC%B9%B4%EC%9D%B4%EB%B0%B8%EB%A6%ACcc",
-   "note": "공시가 아닌 최근 관측 실거래 최저가"
+   "note": "공시가 아닌 최근 관측 실거래 최저가",
+   "checked_at": "2026-11-27"
   },
   "official_green_evidence": [],
   "official_rental": null
  },
  "cancel": {
-  "cancel_policy": null,
-  "open_cycle": null,
+  "cancel_policy": {
+   "value": "골프장 이용 표준약관(표준약관 제10033호) 제6조 예약불이행 위약금 기준 적용 — 3~2일 전 10%, 1일 전 20%, 당일·No-show 30%",
+   "source": "공식 홈페이지",
+   "url": "https://greenfeeguide.co.kr/guides/golf-course-cancellation-guide/"
+  },
+  "open_cycle": "대중제(레이크·마운틴 코스)는 4주 전 해당일 09:00 실시간 오픈, 선착순 확정",
   "notes": null,
   "evidence": [
-   "스파 프로샵 가든하임 인포메이션 스카이빌리지 밸리빌리지 A 밸리빌리지 B 이용가이드 이용안내 요금안내 예약안내 고객센터 공지사항 이벤트 자료실 포토갤러리 입찰정보 대표번호 : 031)880-8800 실시간 예약 메뉴 레이어 닫기 본문 내용 영역 home 이용가이드 예약안내 예약안내 이용안내 요금안내 예약안내 예약 유의 사항 안내 ▪ 예약실 운영 : 09:00 ~ 17:00 까지 | 예약 및 취소는 인터넷 또는 모바일 가능 ▪ 골프, 가든하임-객실 예약 문의 : 031."
+   "스파 프로샵 가든하임 인포메이션 스카이빌리지 밸리빌리지 A 밸리빌리지 B 이용가이드 이용안내 요금안내 예약안내 고객센터 공지사항 이벤트 자료실 포토갤러리 입찰정보 대표번호 : 031)880-8800 실시간 예약 메뉴 레이어 닫기 본문 내용 영역 home 이용가이드 예약안내 예약안내 이용안내 요금안내 예약안내 예약 유의 사항 안내 ▪ 예약실 운영 : 09:00 ~ 17:00 까지 | 예약 및 취소는 인터넷 또는 모바일 가능 ▪ 골프, 가든하임-객실 예약 문의 : 031.",
+   "스카이밸리CC 게시본 — 제5조 예약 · 제6조 예약불이행 위약금",
+   "예약 오픈 주기: 대중제(레이크·마운틴 코스)는 4주 전 해당일 09:00 실시간 오픈, 선착순 확정 (https://greenfeeguide.co.kr/guides/golf-course-booking-guide/)"
   ],
   "weather_evidence": [
    "스카이밸리 컨트리클럽 주요 메뉴 바로가기 컨텐트 바로가기 메뉴열기 메뉴CLOSE 주 메뉴 영역 Today 날씨 그린 스피드 전체메뉴 로그인 회원가입 스카이밸리 스카이밸리 소개 인사말 윤리헌장 및 강령 오시는길 기상정보 코스소개 코스개요 스카이 코스 밸리 코스 레이크 코스 마운틴 코스 명예의전당 클럽하우스 프론트 ·",
@@ -406,8 +414,14 @@
    "value_from": "capital_supplement(official_site)"
   },
   "pace": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "앞 팀과 1홀 이상 벌어짐·지나친 지연 → 경고·예약 정지·입장 정지 (3개월 정지)"
+   ],
+   "value": "앞 팀과 1홀 이상 벌어짐·지나친 지연 → 경고·예약 정지·입장 정지 (3개월 정지)",
+   "source_url": "https://www.skyvalley.co.kr/skyvalley/swp/reserve_guide",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfee guide tables)"
   }
  },
  "facilities": {
@@ -438,8 +452,14 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": null,
-   "evidence": []
+   "value": "사우나 있음",
+   "evidence": [
+    "사우나 있음 — https://greenfeeguide.co.kr/course/gc-0136/"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0136/",
+   "confidence": "medium",
+   "checked_at": "2026-11-27",
+   "value_from": "pass2_third_party"
   },
   "lodging": {
    "value": "가든하임 · 숙박동",
@@ -454,8 +474,14 @@
    "value_from": "capital_supplement(greenfee_guide)"
   },
   "other": {
-   "value": null,
-   "evidence": []
+   "value": "프로샵",
+   "evidence": [
+    "그 밖의 시설: 프로샵"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0136/",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfeeguide)"
   },
   "night": {
    "evidence": [],
@@ -590,8 +616,24 @@
   "recent_notice_text": null,
   "course_notes": null,
   "alert": null,
-  "unconfirmed": [],
-  "sources": []
+  "unconfirmed": [
+   "카트비 미확인",
+   "캐디피 미확인",
+   "야간(3부) 운영 여부 미확인",
+   "수집 한계(2026-11-27): 공식 홈페이지 본문을 HTTP 수집으로 확보하지 못함(접속 오류)"
+  ],
+  "sources": [
+   {
+    "source": "그린피가이드 코스 페이지",
+    "url": "https://greenfeeguide.co.kr/course/gc-0136/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "ok",
@@ -599,19 +641,19 @@
   "pages_collected": 12,
   "third_party": {
    "teepick": true,
-   "greenfeeguide": false
+   "greenfeeguide": true
   },
   "render_hint": "thin",
   "plan_strategy": "unreachable(브라우저 재시도)",
   "browser_batch": false
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.8,
+  "basic": 0.89,
+  "course": 0.4,
   "fee": 0.0,
-  "ops": 0.29,
-  "facility": 0.2,
-  "briefing": 0.5,
-  "rental": 0.25
+  "ops": 0.36,
+  "facility": 0.4,
+  "briefing": 0.0,
+  "rental": 0.0
  }
 }

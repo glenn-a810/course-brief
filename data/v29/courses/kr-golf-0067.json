@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0067",
@@ -64,7 +65,7 @@
    "holes": 18,
    "par": null,
    "blocks": [],
-   "length_m": null,
+   "length_m": 5770,
    "kga": null,
    "grass": {
     "evidence": "인천그랜드CC GNB 바로가기 본문 바로가기 하단 바로가기 홈 로그인 회원가입 오시는길 인터넷예약 실시간예약 조인게시판 단체팀예약 일반단체예약 이용안내 이용요금 예약가이드 이용 및 위약규정 날씨안내 오시는길 공지&이벤트 공지사항 이벤트 명예의전당 분실물센터 코스정보 코스안내 코스공략 코스갤러리 클럽안내 인천그랜드소개 회사CI 부대시설 메뉴안내 MY그랜드 예약조회/변경 스코어 포인트/쿠폰함 위약현황 고객의소리 회원정보관리 코스정보 COURSE 코스안내 코스공략 코스갤러리 코스안내 HOME > 코스정보 > 코스안내 섬세하면서도 정교한 ",
@@ -86,7 +87,7 @@
   "holes_received": 18,
   "course_names": null,
   "membership_type": "대중제",
-  "night_light": null,
+  "night_light": "야간 라운드 운영(공식 홈페이지 안내)",
   "blocks": [],
   "grass": {
    "tee": null,
@@ -101,38 +102,50 @@
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": null,
+  "length_m": 5770,
   "par": null
  },
  "fee": {
   "weekday": 130000,
   "weekend": 120000,
-  "weekday_text": null,
-  "weekend_text": null,
+  "weekday_text": "11월 주중 1부 13만~19만 · 2부 19만~22만 · 3부 14만~19만(공식 요금표)",
+  "weekend_text": "11월 토·공휴일 1부 22만~28만 · 일요일 1부 22만~26만 / 3부 최저 12만(공식 요금표)",
   "basis": null,
   "tax_included": null,
   "cart": {
    "value": 100000,
-   "source": "그린피가이드",
-   "url": "https://greenfeeguide.co.kr/course/gc-0172/"
+   "note": "팀당",
+   "source": "공식 홈페이지 요금표",
+   "url": "https://www.incheongrand.cc/pagesite/use/charge.asp"
   },
   "caddie": {
    "value": 160000,
-   "source": "그린피가이드",
-   "url": "https://greenfeeguide.co.kr/course/gc-0172/",
-   "none": false
+   "note": "팀당(일반 캐디 180,000원, 외국어 캐디 별도)",
+   "source": "공식 홈페이지 요금표",
+   "url": "https://www.incheongrand.cc/pagesite/use/charge.asp"
   },
   "as_of": "2026-11-01",
   "source_url": null,
-  "note": null,
+  "note": "표시 값은 공식 요금표의 시간대별 최저가(주중 3부 13만·주말 일요일 3부 12만)입니다. 1부 기준으로는 주중 13만·주말 22만부터 시작합니다.",
   "sources": [
    {
     "source": "그린피가이드(공식 요금표 확인)",
     "url": "https://greenfeeguide.co.kr/course/gc-0172/",
     "checked_at": "2026-11-01"
+   },
+   {
+    "source": "공식 홈페이지 요금표",
+    "url": "https://www.incheongrand.cc/pagesite/use/charge.asp",
+    "checked_at": "2026-11-27",
+    "note": "카트비 100,000원(팀) / 캐디피 160,000원(팀), 일반·외국어 지정 180,000원(팀)"
+   },
+   {
+    "source": "인천그랜드 공식 이용요금",
+    "url": "https://www.incheongrand.cc/pagesite/use/charge.asp",
+    "checked_at": "2026-11-27"
    }
   ],
-  "checked_at": "2026-11-01",
+  "checked_at": "2026-11-27",
   "market": {
    "weekday_min": 140000.0,
    "weekend_min": 199000.0,
@@ -191,16 +204,19 @@
  },
  "cancel": {
   "cancel_policy": {
-   "value": "평일 3일 전 · 주말 4일 전까지(이용약관 기준)야간(3부) 라운드야간 라운드 운영(공식 홈페이지 안내)부대시설사우나요금표에서 읽히는 점주말·",
-   "source": "그린피가이드(공식 인용)",
-   "url": "https://greenfeeguide.co.kr/course/gc-0172/"
+   "value": "주중 5일 전·주말 10일 전까지 취소해야 위약 없음. 월 누적취소 2회 초과 시 3개월, 연 누적 9회 초과 시 1년 예약정지",
+   "source": "공식 홈페이지",
+   "url": "https://www.incheongrand.cc/pagesite/use/guide.asp"
   },
   "open_cycle": null,
   "notes": null,
   "evidence": [
    "예약페이지 바로가기 패널티 요금 부과안내 1.",
    "3인 플레이시 인당 패널티요금 2만원이 추가로 부과됩니다.",
-   "인천그랜드CC GNB 바로가기 본문 바로가기 하단 바로가기 홈 로그인 회원가입 오시는길 인터넷예약 실시간예약 조인게시판 단체팀예약 일반단체예약 이용안내 이용요금 예약가이드 이용 및 위약규정 날씨안내 오시는길 공지&이벤트 공지사항 이벤트 명예의전당 분실물센터 코스정보 코스안내 코스공략 코스갤러리 클럽안내 인천그랜드소개 회사CI 부대시설 메뉴안내 MY그랜드 예약조회/변경 스코어 포인트/쿠폰함 위약현황 고객의소리 회원정보관리 코스정보 COURSE 코스안내 코스공략 코스갤러리 코스안내 HOME > 코스정보 > 코스안내 섬세하면서도 정교한 "
+   "인천그랜드CC GNB 바로가기 본문 바로가기 하단 바로가기 홈 로그인 회원가입 오시는길 인터넷예약 실시간예약 조인게시판 단체팀예약 일반단체예약 이용안내 이용요금 예약가이드 이용 및 위약규정 날씨안내 오시는길 공지&이벤트 공지사항 이벤트 명예의전당 분실물센터 코스정보 코스안내 코스공략 코스갤러리 클럽안내 인천그랜드소개 회사CI 부대시설 메뉴안내 MY그랜드 예약조회/변경 스코어 포인트/쿠폰함 위약현황 고객의소리 회원정보관리 코스정보 COURSE 코스안내 코스공략 코스갤러리 코스안내 HOME > 코스정보 > 코스안내 섬세하면서도 정교한 ",
+   "모든 예약의 취소는 해당 일자의 주중5일전, 주말10일전까지 해야 위약없이 가능합니다.",
+   "월 누적취소 2회 초과시 3개월 예약정지",
+   "연누적 취소횟수 9회 초과시 1년 예약정지"
   ],
   "weather_evidence": []
  },
@@ -311,8 +327,14 @@
    "value": null
   },
   "pace": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "도박성 내기 → 퇴장"
+   ],
+   "value": "도박성 내기 → 퇴장",
+   "source_url": "https://www.incheongrand.cc/pagesite/use/guide.asp",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfee guide tables)"
   },
   "grass": null
  },
@@ -344,16 +366,28 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": null,
-   "evidence": []
+   "value": "사우나 있음",
+   "evidence": [
+    "사우나 있음 — https://greenfeeguide.co.kr/course/gc-0172/"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0172/",
+   "confidence": "medium",
+   "checked_at": "2026-11-27",
+   "value_from": "pass2_third_party"
   },
   "lodging": {
    "value": null,
    "evidence": []
   },
   "other": {
-   "value": null,
-   "evidence": []
+   "value": "프로샵",
+   "evidence": [
+    "그 밖의 시설: 프로샵"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0172/",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfeeguide)"
   },
   "night": {
    "evidence": [
@@ -400,16 +434,16 @@
   }
  },
  "rental": {
-  "available": null,
+  "available": true,
   "full_set": 50000,
-  "fee_text": null,
+  "fee_text": "50,000원 · 18홀",
   "brand": null,
   "left_handed": null,
   "shoes": null,
   "nine_hole": null,
   "range_finder": null,
   "reservation": null,
-  "source_url": null,
+  "source_url": "https://greenfeeguide.co.kr/course/gc-0172/",
   "evidence": [],
   "official": null,
   "nearby_delivery": {
@@ -628,8 +662,21 @@
   "recent_notice_text": null,
   "course_notes": null,
   "alert": null,
-  "unconfirmed": [],
-  "sources": []
+  "unconfirmed": [
+   "예약 오픈 주기 미확인"
+  ],
+  "sources": [
+   {
+    "source": "그린피가이드 코스 페이지",
+    "url": "https://greenfeeguide.co.kr/course/gc-0172/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "ok",
@@ -644,12 +691,12 @@
   "browser_batch": false
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.6,
+  "basic": 0.78,
+  "course": 0.2,
   "fee": 1.0,
-  "ops": 0.29,
-  "facility": 0.2,
-  "briefing": 0.5,
-  "rental": 0.5
+  "ops": 0.36,
+  "facility": 0.4,
+  "briefing": 0.0,
+  "rental": 0.75
  }
 }

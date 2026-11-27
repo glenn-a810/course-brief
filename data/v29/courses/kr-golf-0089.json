@@ -8,17 +8,20 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0089",
   "name": "마이다스밸리 청평 골프클럽",
   "name_variants": [
-   "마이다스밸리 청평 골프클럽"
+   "마이다스밸리 청평 골프클럽",
+   "청평마이다스GC",
+   "청평 마이다스 골프클럽"
   ],
   "type": "회원제",
   "holes": {
@@ -49,20 +52,20 @@
    "(주)대교디앤에스"
   ],
   "area_sqm": 1078729,
-  "opened": null,
+  "opened": "2002-04",
   "course_blocks": [],
   "facility_id": null,
   "provenance": {
    "master": "courses_master.json v2.0 (문체부·KGA·KGBA·티픽·지도)",
    "synced_to": "courses_master.json v2.7 (2026-11-26 단일 스키마 정규화)"
   },
-  "par": null,
+  "par": 72,
   "holes_teepick": 18,
   "course_spec": {
    "holes": 18,
-   "par": null,
+   "par": 72,
    "blocks": [],
-   "length_m": null,
+   "length_m": 6456,
    "kga": {
     "kga_course_code": "96",
     "kga_name": "마이다스밸리 청평",
@@ -152,12 +155,13 @@
   ],
   "status": "operating",
   "facility_cluster": null,
-  "factcheck_2026_11_26": null
+  "factcheck_2026_11_26": null,
+  "opened_note": "공개 예약 채널 골프장 히스토리 '개장' 표기"
  },
  "course": {
   "holes": 18,
   "holes_received": 18,
-  "course_names": null,
+  "course_names": "밸리·마이다스 각 9홀",
   "membership_type": "회원제",
   "night_light": null,
   "blocks": [],
@@ -250,23 +254,40 @@
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": null,
-  "par": null
+  "length_m": 6456,
+  "par": 72
  },
  "fee": {
-  "weekday": null,
-  "weekend": null,
+  "weekday": 230000,
+  "weekend": 290000,
   "weekday_text": null,
   "weekend_text": null,
-  "basis": null,
+  "basis": "official",
   "tax_included": null,
-  "cart": null,
-  "caddie": null,
-  "as_of": null,
-  "source_url": null,
-  "note": null,
-  "sources": [],
-  "checked_at": null,
+  "cart": {
+   "value": 100000,
+   "note": "1팀 기준",
+   "source": "공식 홈페이지 요금표",
+   "url": "https://www.midasgolf.co.kr/Reservation/ReservPrice"
+  },
+  "caddie": {
+   "value": 150000,
+   "note": "1팀 기준",
+   "source": "공식 홈페이지 요금표",
+   "url": "https://www.midasgolf.co.kr/Reservation/ReservPrice"
+  },
+  "as_of": "2026-11-27",
+  "source_url": "https://www.midasgolf.co.kr/Reservation/ReservPrice",
+  "note": "월별·시간대별 정상 그린피와 다를 수 있는 가이드 요금",
+  "sources": [
+   {
+    "source": "공식 홈페이지 요금표",
+    "url": "https://www.midasgolf.co.kr/Reservation/ReservPrice",
+    "checked_at": "2026-11-27",
+    "note": "18홀 그린피(1인) 주중 230,000원 / 주말·공휴일 290,000원, 카트료 100,000원(1팀), 캐디피 150,000원"
+   }
+  ],
+  "checked_at": "2026-11-27",
   "market": {
    "weekday_min": null,
    "weekend_min": null,
@@ -280,10 +301,19 @@
   "official_rental": null
  },
  "cancel": {
-  "cancel_policy": null,
-  "open_cycle": null,
+  "cancel_policy": {
+   "value": "주말·공휴일은 이용예정일 4일 전 17시까지, 평일은 3일 전 17시까지 위약 없이 취소. 당일 취소·미내장은 팀 이용요금 30% 위약 또는 6개월 예약정지(1일 전 20%·4개월, 2일 전 10%·3개월, 3일 전 무위약)",
+   "source": "공식 홈페이지",
+   "url": "https://www.midasgolf.co.kr/Reservation/ReservInfo2?lgubun=113"
+  },
+  "open_cycle": "주중은 3주 전 월요일 오전 9시, 주말은 3주 전 금요일 오전 9시 일괄 오픈",
   "notes": null,
-  "evidence": [],
+  "evidence": [
+   "주말이나 공휴일은 이용 예정일로부터 4일 전 17시까지, 평일은 이용 예정일로부터 3일 전 17시까지 별도의 위약 없이 예약을 취소할 수 있습니다.",
+   "당일취소, 미 내장 [팀별 이용요금의 30% 위약금] 또는 [6개월 예약정지]",
+   "1일 전 취소 [팀별 이용요금의 20% 위약금] 또는 [4개월 예약정지]",
+   "예약 오픈 주기: 주중은 3주 전 월요일 오전 9시, 주말은 3주 전 금요일 오전 9시 일괄 오픈 (https://www.midasgolf.co.kr/Reservation/ReservInfo2?lgubun=113)"
+  ],
   "weather_evidence": []
  },
  "ops": {
@@ -423,8 +453,14 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": null,
-   "evidence": []
+   "value": "사우나 있음",
+   "evidence": [
+    "사우나 있음 — https://greenfeeguide.co.kr/course/gc-0148/"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0148/",
+   "confidence": "medium",
+   "checked_at": "2026-11-27",
+   "value_from": "pass2_third_party"
   },
   "lodging": {
    "value": null,
@@ -481,17 +517,19 @@
   }
  },
  "rental": {
-  "available": null,
-  "full_set": null,
-  "fee_text": null,
+  "available": true,
+  "full_set": 50000,
+  "fee_text": "50,000원 · 18홀",
   "brand": null,
   "left_handed": null,
   "shoes": null,
   "nine_hole": null,
   "range_finder": null,
   "reservation": null,
-  "source_url": null,
-  "evidence": [],
+  "source_url": "https://greenfeeguide.co.kr/course/gc-0148/",
+  "evidence": [
+   "풀세트 대여 50,000원 · 18홀 — https://greenfeeguide.co.kr/course/gc-0148/"
+  ],
   "official": null,
   "nearby_delivery": {
    "region": "수도권",
@@ -564,8 +602,22 @@
   "recent_notice_text": null,
   "course_notes": null,
   "alert": null,
-  "unconfirmed": [],
-  "sources": []
+  "unconfirmed": [
+   "야간(3부) 운영 여부 미확인",
+   "잔디 종류 미확인"
+  ],
+  "sources": [
+   {
+    "source": "그린피가이드 코스 페이지",
+    "url": "https://greenfeeguide.co.kr/course/gc-0148/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "ok",
@@ -573,19 +625,19 @@
   "pages_collected": 1,
   "third_party": {
    "teepick": true,
-   "greenfeeguide": false
+   "greenfeeguide": true
   },
   "render_hint": "thin",
   "plan_strategy": "thin(상세페이지 탐색)",
   "browser_batch": false
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.8,
-  "fee": 0.0,
+  "basic": 0.89,
+  "course": 0.4,
+  "fee": 1.0,
   "ops": 0.5,
-  "facility": 0.3,
-  "briefing": 0.5,
-  "rental": 0.25
+  "facility": 0.4,
+  "briefing": 0.0,
+  "rental": 0.75
  }
 }

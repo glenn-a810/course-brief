@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0187",
@@ -66,7 +67,7 @@
    "blocks": [
     "해코스솔코스리아코스"
    ],
-   "length_m": null,
+   "length_m": 5529,
    "kga": null,
    "grass": null,
    "hole_by_hole": null
@@ -81,9 +82,9 @@
  "course": {
   "holes": 27,
   "holes_received": 27,
-  "course_names": null,
+  "course_names": "해코스·솔코스·리아코스 각 9홀",
   "membership_type": "대중제",
-  "night_light": null,
+  "night_light": "3부(야간) 티타임 판매 관측(티픽, 최근 27건)",
   "blocks": [
    "해코스솔코스리아코스"
   ],
@@ -96,7 +97,7 @@
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": null,
+  "length_m": 5529,
   "par": 72
  },
  "fee": {
@@ -104,37 +105,44 @@
   "weekend": 259000,
   "weekday_text": null,
   "weekend_text": null,
-  "basis": null,
+  "basis": "official",
   "tax_included": null,
   "cart": {
    "value": 100000,
-   "source": "공식(브라우저 수집)",
-   "url": "https://www.haesoliacc.co.kr/guide/fee.asp"
+   "source": "그린피가이드(공식 요금표)",
+   "url": "https://greenfeeguide.com/course/gc-0035/",
+   "note": "팀당(4인 1대)"
   },
   "caddie": {
    "value": 150000,
-   "source": "공식(브라우저 수집)",
-   "url": "https://www.haesoliacc.co.kr/guide/fee.asp",
-   "none": false
+   "none": false,
+   "source": "그린피가이드(공식 요금표)",
+   "url": "https://greenfeeguide.com/course/gc-0035/"
   },
-  "as_of": "2026-11-26",
+  "as_of": "2026-10-06",
   "source_url": null,
   "note": null,
   "sources": [
    {
     "source": "공식 홈페이지(브라우저 수집)",
     "url": "https://www.haesoliacc.co.kr/guide/fee.asp"
+   },
+   {
+    "source": "그린피가이드(공식 요금표 확인)",
+    "url": "https://greenfeeguide.com/course/gc-0035/",
+    "checked_at": "2026-10-06"
    }
   ],
-  "checked_at": "2026-11-26",
+  "checked_at": "2026-11-27",
   "market": {
-   "weekday_min": 105000.0,
-   "weekend_min": 140000.0,
+   "weekday_min": 105000,
+   "weekend_min": 140000,
    "part1": null,
    "part2": null,
    "source": "티픽골프장(실거래 관측)",
    "url": "https://teepickgolf.com/course/%ED%95%B4%EC%86%94%EB%A6%AC%EC%95%84cc",
-   "note": "공시가 아닌 최근 관측 실거래 최저가"
+   "note": "공시가 아닌 최근 관측 실거래 최저가",
+   "checked_at": "2026-11-27"
   },
   "official_browser": {
    "green": {
@@ -253,20 +261,38 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": null,
-   "evidence": []
+   "value": "사우나 있음",
+   "evidence": [
+    "사우나 있음 — https://greenfeeguide.co.kr/course/gc-0035/"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0035/",
+   "confidence": "medium",
+   "checked_at": "2026-11-27",
+   "value_from": "pass2_third_party"
   },
   "lodging": {
    "value": null,
    "evidence": []
   },
   "other": {
-   "value": null,
-   "evidence": []
+   "value": "사우나 있음",
+   "evidence": [
+    "사우나 있음"
+   ],
+   "source_url": "https://www.haesoliacc.co.kr/guide/guide.asp",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfee guide tables)"
   },
   "night": {
-   "evidence": [],
-   "value": null
+   "value": "3부(야간) 티타임 판매 관측(티픽, 최근 27건)",
+   "evidence": [
+    "3부(야간) 티타임 판매 관측(티픽, 최근 27건) — https://teepickgolf.com/course/%ED%95%B4%EC%86%94%EB%A6%AC%EC%95%84cc"
+   ],
+   "source_url": "https://teepickgolf.com/course/%ED%95%B4%EC%86%94%EB%A6%AC%EC%95%84cc",
+   "confidence": "medium",
+   "checked_at": "2026-11-27",
+   "value_from": "pass2_third_party"
   },
   "closed_days": {
    "evidence": [],
@@ -387,8 +413,21 @@
   "recent_notice_text": null,
   "course_notes": null,
   "alert": null,
-  "unconfirmed": [],
-  "sources": []
+  "unconfirmed": [
+   "취소·위약 규정 미확인: 공식 도메인 접속 불가(2026-11-27 기준 응답 없음)"
+  ],
+  "sources": [
+   {
+    "source": "그린피가이드 코스 페이지",
+    "url": "https://greenfeeguide.co.kr/course/gc-0035/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "unavailable",
@@ -396,19 +435,19 @@
   "pages_collected": 0,
   "third_party": {
    "teepick": true,
-   "greenfeeguide": false
+   "greenfeeguide": true
   },
   "render_hint": "thin",
   "plan_strategy": "unreachable(브라우저 재시도)",
   "browser_batch": true
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.8,
+  "basic": 0.89,
+  "course": 0.6,
   "fee": 1.0,
   "ops": 0.07,
-  "facility": 0.0,
-  "briefing": 0.5,
-  "rental": 0.25
+  "facility": 0.3,
+  "briefing": 0.0,
+  "rental": 0.0
  }
 }

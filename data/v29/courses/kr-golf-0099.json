@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0099",
@@ -60,9 +61,9 @@
   },
   "course_spec": {
    "holes": 36,
-   "par": null,
+   "par": 72,
    "blocks": [],
-   "length_m": null,
+   "length_m": 5934,
    "kga": {
     "kga_course_code": "224",
     "kga_name": "한양",
@@ -162,12 +163,13 @@
   ],
   "status": "operating",
   "facility_cluster": null,
-  "factcheck_2026_11_26": null
+  "factcheck_2026_11_26": null,
+  "par": 72
  },
  "course": {
   "holes": 36,
   "holes_received": null,
-  "course_names": null,
+  "course_names": "구·신 코스",
   "membership_type": "회원제",
   "night_light": null,
   "blocks": [],
@@ -270,8 +272,8 @@
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": null,
-  "par": null
+  "length_m": 5934,
+  "par": 72
  },
  "fee": {
   "weekday": 230000,
@@ -336,7 +338,8 @@
     "nine": 15000
    },
    "note": "OLD/NEW 코스 요금 동일, 계절·시간대별 할인은 공지사항 게재"
-  }
+  },
+  "market": {}
  },
  "cancel": {
   "cancel_policy": null,
@@ -397,8 +400,14 @@
    "evidence": []
   },
   "cart_type": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "리모컨 카트 · 전동카트 대여품(리모컨.테블릿) 훼손 또는 분실 시 손해배상 청구(리모컨 250,000원)"
+   ],
+   "value": "리모컨 카트 · 전동카트 대여품(리모컨.테블릿) 훼손 또는 분실 시 손해배상 청구(리모컨 250,000원)",
+   "source_url": "https://www.hypine.co.kr/reservation/reservation.asp",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfee guide tables)"
   },
   "cart_entry": {
    "evidence": [],
@@ -497,8 +506,14 @@
    "evidence": []
   },
   "other": {
-   "value": null,
-   "evidence": []
+   "value": "프로샵",
+   "evidence": [
+    "그 밖의 시설: 프로샵"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0001/",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfeeguide)"
   },
   "night": {
    "evidence": [],
@@ -534,16 +549,16 @@
   }
  },
  "rental": {
-  "available": null,
+  "available": true,
   "full_set": 30000,
-  "fee_text": null,
+  "fee_text": "30,000원 · 18홀",
   "brand": null,
   "left_handed": null,
   "shoes": null,
   "nine_hole": 15000,
   "range_finder": null,
   "reservation": null,
-  "source_url": null,
+  "source_url": "https://greenfeeguide.co.kr/course/gc-0001/",
   "evidence": [],
   "official": null,
   "nearby_delivery": {
@@ -612,15 +627,31 @@
   "recent_notice_text": null,
   "course_notes": null,
   "alert": null,
-  "unconfirmed": [],
-  "sources": []
+  "unconfirmed": [
+   "취소·위약 규정 미확인",
+   "예약 오픈 주기 미확인",
+   "야간(3부) 운영 여부 미확인",
+   "수집 한계(2026-11-27): 공식 홈페이지가 자동 수집을 차단(HTTP 403/406 — WAF·Incapsula·국가 차단)"
+  ],
+  "sources": [
+   {
+    "source": "그린피가이드 코스 페이지",
+    "url": "https://greenfeeguide.co.kr/course/gc-0001/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "unavailable",
   "official_reason": "HTTP403",
   "pages_collected": 0,
   "third_party": {
-   "teepick": false,
+   "teepick": true,
    "greenfeeguide": true
   },
   "render_hint": "thin",
@@ -628,12 +659,12 @@
   "browser_batch": true
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.8,
+  "basic": 0.89,
+  "course": 0.4,
   "fee": 1.0,
-  "ops": 0.36,
-  "facility": 0.2,
-  "briefing": 0.25,
-  "rental": 0.5
+  "ops": 0.43,
+  "facility": 0.3,
+  "briefing": 0.0,
+  "rental": 0.75
  }
 }

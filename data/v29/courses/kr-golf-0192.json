@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0192",
@@ -44,7 +45,7 @@
    "source": "최근접 IC 직선거리"
   },
   "tel": "031-640-0123",
-  "homepage": "http://icmidas.com/home.asp",
+  "homepage": "https://www.midasgolf.co.kr/",
   "operators": [
    "(주)대교디앤에스"
   ],
@@ -64,7 +65,7 @@
    "blocks": [
     "올림푸스타이탄마이다스"
    ],
-   "length_m": null,
+   "length_m": 5754,
    "kga": {
     "kga_course_code": "387",
     "kga_name": "마이다스레이크 이천",
@@ -172,9 +173,9 @@
  "course": {
   "holes": 27,
   "holes_received": 27,
-  "course_names": null,
+  "course_names": "타이탄·마이다스·올림푸스 각 9홀",
   "membership_type": "대중제",
-  "night_light": null,
+  "night_light": "3부(야간) 티타임 판매 관측(티픽, 최근 1건)",
   "blocks": [
    "올림푸스타이탄마이다스"
   ],
@@ -280,7 +281,7 @@
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": null,
+  "length_m": 5754,
   "par": 72
  },
  "fee": {
@@ -296,15 +297,16 @@
   "source_url": null,
   "note": null,
   "sources": [],
-  "checked_at": null,
+  "checked_at": "2026-11-27",
   "market": {
-   "weekday_min": 110000.0,
-   "weekend_min": 170000.0,
-   "part1": null,
-   "part2": null,
+   "weekday_min": 110000,
+   "weekend_min": 160000,
+   "part1": "6.9만 ~ 28만",
+   "part2": "7.9만 ~ 26만",
    "source": "티픽골프장(실거래 관측)",
-   "url": "https://teepickgolf.com/course/%EB%A7%88%EC%9D%B4%EB%8B%A4%EC%8A%A4%EB%A0%88%EC%9D%B4%ED%81%AC%EC%9D%B4%EC%B2%9C",
-   "note": "공시가 아닌 최근 관측 실거래 최저가"
+   "url": "https://teepickgolf.com/course/마이다스레이크이천",
+   "note": "공시가 아닌 최근 관측 실거래 최저가",
+   "checked_at": "2026-11-27"
   }
  },
  "cancel": {
@@ -438,8 +440,14 @@
    "evidence": []
   },
   "night": {
-   "evidence": [],
-   "value": null
+   "value": "3부(야간) 티타임 판매 관측(티픽, 최근 1건)",
+   "evidence": [
+    "3부(야간) 티타임 판매 관측(티픽, 최근 1건) — https://teepickgolf.com/course/마이다스레이크이천"
+   ],
+   "source_url": "https://teepickgolf.com/course/마이다스레이크이천",
+   "confidence": "medium",
+   "checked_at": "2026-11-27",
+   "value_from": "pass2_third_party"
   },
   "closed_days": {
    "evidence": [],
@@ -544,8 +552,21 @@
   "recent_notice_text": null,
   "course_notes": null,
   "alert": null,
-  "unconfirmed": [],
-  "sources": []
+  "unconfirmed": [
+   "취소·위약 규정 미확인: 공식 홈페이지에 위약 규정 게시를 확인하지 못함"
+  ],
+  "sources": [
+   {
+    "source": "그린피가이드 코스 페이지",
+    "url": "https://greenfeeguide.co.kr/course/gc-0089/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "unavailable",
@@ -553,19 +574,19 @@
   "pages_collected": 0,
   "third_party": {
    "teepick": true,
-   "greenfeeguide": false
+   "greenfeeguide": true
   },
   "render_hint": "thin",
   "plan_strategy": "unreachable(브라우저 재시도)",
   "browser_batch": false
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 1.0,
+  "basic": 0.89,
+  "course": 0.6,
   "fee": 0.0,
   "ops": 0.21,
-  "facility": 0.0,
-  "briefing": 0.5,
-  "rental": 0.25
+  "facility": 0.1,
+  "briefing": 0.0,
+  "rental": 0.0
  }
 }

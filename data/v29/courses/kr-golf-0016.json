@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0016",
@@ -78,7 +79,7 @@
   "holes_received": null,
   "course_names": null,
   "membership_type": "대중제",
-  "night_light": null,
+  "night_light": true,
   "blocks": [],
   "grass": {
    "tee": null,
@@ -97,7 +98,7 @@
   "weekend": 105000,
   "weekday_text": null,
   "weekend_text": null,
-  "basis": null,
+  "basis": "official",
   "tax_included": null,
   "cart": {
    "value": 60000,
@@ -115,19 +116,21 @@
     "checked_at": "2026-11-01"
    }
   ],
-  "checked_at": "2026-11-01",
+  "checked_at": "2026-11-27",
   "official_green_evidence": [],
   "official_rental": null
  },
  "cancel": {
   "cancel_policy": {
-   "value": "평일 3일 전 · 주말 4일 전까지(이용약관 기준)야간(3부) 라운드야간 라운드 운영(공식 홈페이지 안내)014인 1팀 기준 예상 비용(18홀",
-   "source": "그린피가이드(공식 인용)",
+   "value": "위약 없이 취소: 평일 3일 전 · 주말 4일 전까지 (이용약관 기준 — 예약 안내에 더 이른 기한이 따로 있을 수 있으니 함께 확인하세요)",
+   "source": "그린피가이드(공식 안내 인용)",
    "url": "https://greenfeeguide.co.kr/course/gc-0459/"
   },
   "open_cycle": null,
   "notes": null,
-  "evidence": [],
+  "evidence": [
+   "기존 cancel_policy 값이 인접 안내 항목과 뒤섞여 있어(오류) 그린피가이드 원문 인용으로 정정 — 평일 3일 전 · 주말 4일 전까지 (이용약관 기준 — 예약 안내에 더 이른 기한이 따로 있을 수 있으니 함께 확인하세요) (출처: https://greenfeeguide.co.kr/course/gc-0459/, 2026-11 확인)"
+  ],
   "weather_evidence": []
  },
  "ops": {
@@ -210,12 +213,17 @@
    "evidence": []
   },
   "food": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "- 레스토랑 이용료 (출처: https://cppc.co.kr/about/index02.asp, 2026-11-27 확인)"
+   ],
+   "value": "레스토랑"
   },
   "snack_bar": {
-   "value": null,
-   "evidence": []
+   "value": "그늘집",
+   "evidence": [
+    "그늘집 (출처: https://greenfeeguide.co.kr/course/gc-0459/, 2026-11-27 확인)",
+    "커피 · 4,000원 · 5,000원 · 생막걸리 · 5,000원 · 메뉴 원문"
+   ]
   },
   "locker_sauna": {
    "value": null,
@@ -230,8 +238,11 @@
    "evidence": []
   },
   "night": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "야간(3부) 라운드 운영 (출처: https://greenfeeguide.co.kr/course/gc-0459/, 2026-11-27 확인)",
+    "야간 라운드 운영(공식 홈페이지 안내)"
+   ],
+   "value": "야간(3부) 라운드 운영"
   },
   "closed_days": {
    "evidence": [],
@@ -318,7 +329,12 @@
   "recent_notice_text": null,
   "course_notes": null,
   "alert": null,
-  "unconfirmed": [],
+  "unconfirmed": [
+   "체크인",
+   "복장",
+   "진행 시간",
+   "휴장일"
+  ],
   "sources": []
  },
  "collection": {
@@ -336,12 +352,12 @@
   "browser_pdf": []
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.6,
+  "basic": 0.78,
+  "course": 0.2,
   "fee": 0.75,
   "ops": 0.0,
-  "facility": 0.0,
-  "briefing": 0.25,
-  "rental": 0.25
+  "facility": 0.3,
+  "briefing": 0.0,
+  "rental": 0.0
  }
 }

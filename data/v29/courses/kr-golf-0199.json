@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0199",
@@ -58,13 +59,13 @@
    "master": "courses_master.json v2.0 (문체부·KGA·KGBA·티픽·지도)",
    "synced_to": "courses_master.json v2.7 (2026-11-26 단일 스키마 정규화)"
   },
-  "par": null,
+  "par": 72,
   "holes_teepick": 27,
   "course_spec": {
    "holes": 27,
-   "par": null,
+   "par": 72,
    "blocks": [],
-   "length_m": null,
+   "length_m": 6557,
    "kga": {
     "kga_course_code": "425",
     "kga_name": "실크밸리",
@@ -292,7 +293,7 @@
  "course": {
   "holes": 27,
   "holes_received": 27,
-  "course_names": null,
+  "course_names": "레이크·실크·밸리 각 9홀",
   "membership_type": "대중제",
   "night_light": null,
   "blocks": [],
@@ -518,8 +519,8 @@
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": null,
-  "par": null
+  "length_m": 6557,
+  "par": 72
  },
  "fee": {
   "weekday": null,
@@ -540,8 +541,8 @@
   "sources": [],
   "checked_at": null,
   "market": {
-   "weekday_min": 80000.0,
-   "weekend_min": 150000.0,
+   "weekday_min": 80000,
+   "weekend_min": 150000,
    "part1": null,
    "part2": null,
    "source": "티픽골프장(실거래 관측)",
@@ -554,13 +555,18 @@
   "official_rental": null
  },
  "cancel": {
-  "cancel_policy": null,
+  "cancel_policy": {
+   "value": "비회원 기준 주말·공휴일 4일 전, 평일 3일 전까지 취소 시 예약금 전액 환불. 당일 취소는 팀별 이용요금 30%(납부 시까지 예약정지)",
+   "source": "공식 홈페이지",
+   "url": "https://www.silkvalleygc.co.kr/clause/guide.asp"
+  },
   "open_cycle": null,
   "notes": null,
   "evidence": [
    "비회원 이용자가 주말, 공휴일인 이용예정일의 4일전, 평일인 3일전까지 예약을 취소한 경우에 예약금의 전액을 환불하여야 한다.",
    "이용자가 개인사정의 변경이나 단순 변심 등 정당한 사유없이 예약을 취소하는 경우에는 취소일을 기준으로 다음과 같이 손해를 배상한다.",
-   "① 이용예정일 4일전 : 1개월 예약정지 ② 이용예정일 3일전 : 평일 2개월 예약정지, 주말/공휴일 2개월 예약정지 또는 팀별이용요금의 10%(납부시 까지 예약 정지) ③ 이용예정일 2일전 : 팀별이용요금의 10%(납부시 까지 예약 정지) ④ 이용예정일 1일전 : 팀별이용요금의 20%(납부시 까지 예약 정지) ⑤ 이용예정일 당일취소 : 팀별이용요금의 30%(납부시 까지 예약 정지) 3."
+   "① 이용예정일 4일전 : 1개월 예약정지 ② 이용예정일 3일전 : 평일 2개월 예약정지, 주말/공휴일 2개월 예약정지 또는 팀별이용요금의 10%(납부시 까지 예약 정지) ③ 이용예정일 2일전 : 팀별이용요금의 10%(납부시 까지 예약 정지) ④ 이용예정일 1일전 : 팀별이용요금의 20%(납부시 까지 예약 정지) ⑤ 이용예정일 당일취소 : 팀별이용요금의 30%(납부시 까지 예약 정지) 3.",
+   "⑤ 이용예정일 당일취소 : 팀별이용요금의 30%(납부시 까지 예약 정지)"
   ],
   "weather_evidence": []
  },
@@ -663,8 +669,15 @@
    "evidence": []
   },
   "other": {
-   "value": null,
-   "evidence": []
+   "value": "프로샵",
+   "evidence": [
+    "other: 프로샵"
+   ],
+   "source_url": "https://greenfeeguide.com/course/gc-0088/",
+   "source_type": "greenfee_guide",
+   "confidence": "medium",
+   "checked_at": "2026-11-27",
+   "value_from": "batch2_supplement"
   },
   "night": {
    "evidence": [],
@@ -853,7 +866,18 @@
   "course_notes": null,
   "alert": null,
   "unconfirmed": [],
-  "sources": []
+  "sources": [
+   {
+    "source": "그린피가이드 코스 페이지",
+    "url": "https://greenfeeguide.co.kr/course/gc-0088/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "ok",
@@ -861,19 +885,19 @@
   "pages_collected": 14,
   "third_party": {
    "teepick": true,
-   "greenfeeguide": false
+   "greenfeeguide": true
   },
   "render_hint": "",
   "plan_strategy": "unreachable(브라우저 재시도)",
   "browser_batch": false
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.8,
+  "basic": 0.89,
+  "course": 0.4,
   "fee": 0.0,
   "ops": 0.14,
-  "facility": 0.0,
-  "briefing": 0.5,
-  "rental": 0.25
+  "facility": 0.1,
+  "briefing": 0.0,
+  "rental": 0.0
  }
 }

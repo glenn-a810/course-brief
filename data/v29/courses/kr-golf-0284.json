@@ -12,9 +12,65 @@
   ],
   "source": "raw/received_chungcheong_77.json (외부 데이터 수신, 2026-11-26)",
   "review": {
-   "checked_at": null,
+   "checked_at": "2026-11-27",
    "status": "not_crosschecked",
-   "checks": []
+   "checks": [
+    {
+     "field": "fee.checked_at",
+     "received": null,
+     "verified": "2026-11-27",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0304/",
+     "quote": "요금 확인일 2026-11-01 (그린피가이드 2026-11-27 조회)",
+     "source_type": "third_party",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "master.opened",
+     "received": null,
+     "verified": "1975-10",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0304/",
+     "quote": "개장 1975년 10월 20일",
+     "source_type": "third_party",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "ops.pace",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "고의적인 경기 지연은 에티켓 위반 위약 대상이고, 경기 능력이 현저히 부족해 진행에 심대한 지장을 주면 퇴장",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0304/",
+     "quote": "진행/경기시간 고의적인 경기 지연은 에티켓 위반 위약 대상이고, 경기 능력이 현저히 부족해 진행에 심대한 지장을 주면 퇴장",
+     "source_type": "third_party",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "ops.checkin",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "티오프 40분 전 프런트 도착",
+     "result": "보완",
+     "url": "http://www.dogocc.co.kr/Guide/Use",
+     "quote": "갤러리 이용안내 USE GUIDE 이용안내 이용요금 위약규정 이용안내 내장과 프론트 이용안내 프론트 도착은 티오프시간 40분전에는 도착하여 예약자명, 시간, 코스확인 및 방명록 등록하시고 락카키를 받으시기 바랍니다. 귀중품은 프론트에 보관하시면 안전합니다. 유료락커 이용하실 고",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.food",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "식당",
+     "result": "보완",
+     "url": "http://www.dogocc.co.kr/Guide/Use",
+     "quote": "서는 프론트에 문의하시기 바랍니다. 요금정산 방법 그린피, 카트비, 대여료는 후불로 프론트에서 정산합니다. 식당 및 그늘집 이용료는 후불로 프론트에서 정산합니다. 캐디피는 동반캐디에게 직접 현금 계산합니다. 원할한 경기진행 협조 15분전까지는 티오프 준비를 하여 주시기 바",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    }
+   ]
   },
   "data_checks": [
    "미확인 목록 누락 라벨 보완: 제세금"
@@ -22,11 +78,14 @@
   "schema_previous": "stage2b/1.0",
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "restructured_from_7key": false,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "checked_at": "2026-11-27",
+  "pass2_patch": "2026-11-27 2차 보완 패스: 4개 항목(그린피가이드·1박2일골프·원더골프·공식 홈페이지 대조, 미확인 값 생성 없음)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0284",
@@ -81,7 +140,7 @@
   ],
   "operators_note": null,
   "area_sqm": 904536,
-  "opened": null,
+  "opened": "1975-10",
   "course_blocks": [],
   "facility_id": null,
   "facility_members": null,
@@ -125,7 +184,8 @@
    ]
   },
   "kga_hole_est": 18,
-  "extra_courses": null
+  "extra_courses": null,
+  "length_m": 6556
  },
  "fee": {
   "weekday": 165000,
@@ -151,14 +211,23 @@
     "source": "수신 조사(공식·공개 예약정보)",
     "url": "http://www.dogocc.co.kr",
     "checked_at": "2026-11-26 (공식 11월 요금표 확인, 12/7~12/31 요금은 2026-11-20 공지)"
+   },
+   {
+    "source": "third_party",
+    "url": "https://greenfeeguide.co.kr/course/gc-0304/",
+    "quote": "요금 확인일 2026-11-01 (그린피가이드 2026-11-27 조회)",
+    "checked_at": "2026-11-27"
    }
-  ]
+  ],
+  "checked_at": "2026-11-27"
  },
  "cancel": {
-  "cancel_policy": null,
+  "cancel_policy": "예약 취소는 예약일 3일 전 16시까지. 위약은 주중 당일 3개월 정지 또는 40만원·1일 전 15일·2일 전 10일, 주말·공휴일 당일 및 1일 전 3개월 또는 50만원·2일 전 30일.",
   "open_cycle": "홈페이지 인터넷예약(11월 달력형 예약), 예약확인·취소 게시판 운영",
   "notes": "3인 내장 시 1인당 1만원 추가(2020-12-01부터)",
-  "evidence": [],
+  "evidence": [
+   "https://www.dogocc.co.kr/Guide/PenaltyInfo"
+  ],
   "weather_evidence": []
  },
  "ops": {
@@ -199,8 +268,14 @@
    "evidence": []
   },
   "checkin": {
-   "value": null,
-   "evidence": []
+   "value": "티오프 40분 전 프런트 도착",
+   "evidence": [
+    "갤러리 이용안내 USE GUIDE 이용안내 이용요금 위약규정 이용안내 내장과 프론트 이용안내 프론트 도착은 티오프시간 40분전에는 도착하여 예약자명, 시간, 코스확인 및 방명록 등록하시고 락카키를 받으시기 바랍니다. 귀중품은 프론트에 보관하시면 안전합니다. 유료락커 이용하실 고"
+   ],
+   "source_url": "http://www.dogocc.co.kr/Guide/Use",
+   "confidence": "high",
+   "source_type": "official_site",
+   "checked_at": "2026-11-27"
   },
   "locker": {
    "value": "유료 락커룸",
@@ -215,8 +290,14 @@
    "evidence": []
   },
   "pace": {
-   "value": null,
-   "evidence": []
+   "value": "고의적인 경기 지연은 에티켓 위반 위약 대상이고, 경기 능력이 현저히 부족해 진행에 심대한 지장을 주면 퇴장",
+   "evidence": [
+    "진행/경기시간 고의적인 경기 지연은 에티켓 위반 위약 대상이고, 경기 능력이 현저히 부족해 진행에 심대한 지장을 주면 퇴장"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0304/",
+   "confidence": "high",
+   "source_type": "third_party",
+   "checked_at": "2026-11-27"
   }
  },
  "facilities": {
@@ -229,8 +310,14 @@
    "evidence": []
   },
   "food": {
-   "value": null,
-   "evidence": []
+   "value": "식당",
+   "evidence": [
+    "서는 프론트에 문의하시기 바랍니다. 요금정산 방법 그린피, 카트비, 대여료는 후불로 프론트에서 정산합니다. 식당 및 그늘집 이용료는 후불로 프론트에서 정산합니다. 캐디피는 동반캐디에게 직접 현금 계산합니다. 원할한 경기진행 협조 15분전까지는 티오프 준비를 하여 주시기 바"
+   ],
+   "source_url": "http://www.dogocc.co.kr/Guide/Use",
+   "confidence": "high",
+   "source_type": "official_site",
+   "checked_at": "2026-11-27"
   },
   "snack_bar": {
    "value": "그늘집",
@@ -272,7 +359,7 @@
   "nine_hole": null,
   "range_finder": null,
   "reservation": null,
-  "source_url": null,
+  "source_url": "https://greenfeeguide.co.kr/course/gc-0304/",
   "nearby_delivery": {
    "region": "충청",
    "sido": "충청남도",
@@ -330,7 +417,6 @@
    "잔디(티)",
    "잔디(페어웨이)",
    "잔디(그린)",
-   "취소·위약 규정",
    "2인 플레이",
    "5인 플레이",
    "노캐디",
@@ -362,18 +448,19 @@
   "official_reason": "운영 중(공식 홈페이지 정상, 12월 그린피 공지 게시)",
   "pages_collected": 0,
   "third_party": {
-   "received_report": true
+   "received_report": true,
+   "greenfeeguide": true
   },
   "render_hint": "report",
   "plan_strategy": "subagent_report(2026-11-26)"
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 1.0,
+  "basic": 0.89,
+  "course": 0.4,
   "fee": 1.0,
-  "ops": 0.21,
-  "facility": 0.3,
-  "briefing": 0.75,
-  "rental": 1.0
+  "ops": 0.36,
+  "facility": 0.4,
+  "briefing": 0.5,
+  "rental": 0.75
  }
 }

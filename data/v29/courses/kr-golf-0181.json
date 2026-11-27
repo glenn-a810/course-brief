@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0181",
@@ -60,9 +61,9 @@
   },
   "course_spec": {
    "holes": 27,
-   "par": null,
+   "par": 72,
    "blocks": [],
-   "length_m": null,
+   "length_m": 6315,
    "kga": {
     "kga_course_code": "188",
     "kga_name": "지산",
@@ -229,12 +230,13 @@
   ],
   "status": "operating",
   "facility_cluster": null,
-  "factcheck_2026_11_26": null
+  "factcheck_2026_11_26": null,
+  "par": 72
  },
  "course": {
   "holes": 27,
   "holes_received": null,
-  "course_names": null,
+  "course_names": "서·동·남 각 9홀",
   "membership_type": "회원제",
   "night_light": null,
   "blocks": [],
@@ -404,42 +406,45 @@
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": null,
-  "par": null
+  "length_m": 6315,
+  "par": 72
  },
  "fee": {
-  "weekday": 50000,
-  "weekend": 65000,
-  "weekday_text": null,
-  "weekend_text": null,
-  "basis": null,
+  "weekday": 180000,
+  "weekend": 230000,
+  "weekday_text": "180,000원 ~ 220,000원",
+  "weekend_text": "230,000원 ~ 280,000원",
+  "basis": "official",
   "tax_included": null,
   "cart": {
-   "value": 8000,
-   "raw": "전동카트 1인 8,000원, 수동카트 무료",
-   "label": "상세안내 / 노캐디제 / 카트이용료(1인용)",
-   "url": "https://www.jisanresort.co.kr/w/golf/public/price.asp",
-   "source": "공식 요금표"
+   "value": 100000,
+   "source": "공식 홈페이지 요금안내",
+   "url": "https://www.jisanresort.co.kr/w/golf/member/price.asp",
+   "note": "5인승 100,000원 / 6인승 200,000원 (팀당)"
   },
   "caddie": {
    "value": 150000,
-   "raw": "- 1팀당 150,000원(현장 지급 4Bag 1 캐디)",
-   "label": "200,000 / 선착순 유선 예약, 예약실(031-334-9342) / 캐디피",
+   "none": false,
+   "source": "공식 홈페이지 요금안내",
    "url": "https://www.jisanresort.co.kr/w/golf/member/price.asp",
-   "source": "공식 요금표",
-   "none": false
+   "note": "1팀당 150,000원(4백 1캐디), 우천 시 80,000원"
   },
-  "as_of": "2026-10-09",
+  "as_of": "2026-11-03",
   "source_url": null,
-  "note": null,
+  "note": "주중/주말 그린피는 시간대·시즌별 최저~최고 범위(최저값을 대표값으로 기재)",
   "sources": [
    {
     "source": "그린피가이드(공식 요금표 확인)",
-    "url": "https://greenfeeguide.co.kr/course/gc-0028/",
-    "checked_at": "2026-10-09"
+    "url": "https://greenfeeguide.com/course/gc-0027/",
+    "checked_at": "2026-11-03"
+   },
+   {
+    "source": "지산리조트 공식 홈페이지 요금안내",
+    "url": "https://www.jisanresort.co.kr/w/golf/member/price.asp",
+    "checked_at": "2026-11-27"
    }
   ],
-  "checked_at": "2026-10-09",
+  "checked_at": "2026-11-27",
   "official_green": {
    "value": 65000,
    "raw": "주중 2인플레이 가능(1인 65,000원/중복불가)",
@@ -493,16 +498,21 @@
     }
    ],
    "url": "https://www.jisanresort.co.kr/w/golf/member/price.asp"
-  }
+  },
+  "market": {}
  },
  "cancel": {
-  "cancel_policy": null,
-  "open_cycle": null,
+  "cancel_policy": {
+   "value": "무단결장(당일 취소 포함) 1회 3개월·1년 내 2회 영구 예약정지, 임박취소(3일 전 17시 이후~1일 전 17시) 1회 1개월·6개월 내 2회 3개월·3회 영구 정지",
+   "source": "공식 홈페이지 예약취소 안내",
+   "url": "https://www.jisanresort.co.kr/w/reservation/golfResv/public_reserv_list.asp"
+  },
+  "open_cycle": "라운드희망일 3주 전 월요일 11:00부터 예약 가능",
   "notes": null,
   "evidence": [
-   "지산 리조트 메뉴 바로가기 본문 바로가기 스키 슬로프 정보 이용안내 부대시설 지산 아카데미 대회 일정 골프 회원제 퍼블릭/연습장 회원제 예약하기 퍼블릭 예약하기 콘도 메이플 콘도 안내 부대시설 이용요금 단체예약 공지사항/이벤트 공지사항 이벤트 지산가이드 회원제 회원제 코스 안내 요금/예약 안내 회원제 골프장 예약 조회 및 취소 조인 방 식/음료 안내 프로샵 명예의 전당 퍼블릭/연습장 퍼블릭 코스 안내 요금/예약 안내 퍼블릭 골프장 예약 조회 및 취소 안내사항 조인방 식/음료 안내 골프 연습장 골프 아카데미 로그인 회원가입 회원권 고",
-   "지산 리조트 메뉴 바로가기 본문 바로가기 스키 슬로프 정보 이용안내 부대시설 지산 아카데미 대회 일정 골프 회원제 퍼블릭/연습장 회원제 예약하기 퍼블릭 예약하기 콘도 메이플 콘도 안내 부대시설 이용요금 단체예약 공지사항/이벤트 공지사항 이벤트 지산가이드 회원제 회원제 코스 안내 요금/예약 안내 회원제 골프장 예약 조회 및 취소 조인 방 식/음료 안내 프로샵 명예의 전당 퍼블릭/연습장 퍼블릭 코스 안내 요금/예약 안내 퍼블릭 골프장 예약 조회 및 취소 안내사항 조인방 식/음료 안내 골프 연습장 골프 아카데미 로그인 회원가입 회원권 고",
-   "회원님의 부득이한 사정에 따른 취소에 대하여는 다음과 같은 취소 규정을 두고 있사오니 양지하시기 바랍니다."
+   "무단결장(당일취소 포함) 1회 3개월 / 1년 내 2회 영구",
+   "임박취소,매너불량,예약자 미내장 등 1회 1개월 / 6개월 내 2회 3개월 / 6개월 내 3회 영구",
+   "임박취소란? : 3일전 17시 이후 ~ 1일전 17시전 취소분"
   ],
   "weather_evidence": []
  },
@@ -517,7 +527,6 @@
   },
   "two_player": {
    "evidence": [
-    "지산 리조트 메뉴 바로가기 본문 바로가기 스키 슬로프 정보 이용안내 부대시설 지산 아카데미 대회 일정 골프 회원제 퍼블릭/연습장 회원제 예약하기 퍼블릭 예약하기 콘도 메이플 콘도 안내 부대시설 이용요금 단체예약 공지사항/이벤트 공지사항 이벤트 지산가이드 회원제 회원제 코스 안내 요금/예약 안내 회원제 골프장 예약 조회 및 취소 조인 방 식/음료 안내 프로샵 명예의 전당 퍼블릭/연습장 퍼블릭 코스 안내 요금/예약 안내 퍼블릭 골프장 예약 조회 및 취소 안내사항 조인방 식/음료 안내 골프 연습장 골프 아카데미 로그인 회원가입 회원권 고",
     "그린피 (9홀 기준) (단위 : 원, 명) 대중 골프장 이용요금 안내 내용 주중 주말(공휴일) 비고 정상 요금 50,000 65,000 3~4인 기준 꼭 읽어보세요 주말,공휴일 예약은 3인 이상부터 가능합니다.(2인예약시 3인요금 적용) 상기 요금은 운영중 변동될 수 있습니다.",
     "주중 2인플레이 가능(1인 65,000원/중복불가) 노캐디,개인카트 셀프운영 입니다.",
     "주중 2인플레이 가능(1인 65,000원/중복불가)"
@@ -649,9 +658,6 @@
   },
   "food": {
    "evidence": [
-    "지산 리조트 메뉴 바로가기 본문 바로가기 스키 슬로프 정보 이용안내 부대시설 지산 아카데미 대회 일정 골프 회원제 퍼블릭/연습장 회원제 예약하기 퍼블릭 예약하기 콘도 메이플 콘도 안내 부대시설 이용요금 단체예약 공지사항/이벤트 공지사항 이벤트 지산가이드 메이플 콘도 안내 콘도 호텔 부대시설 요금 안내/예약 객실 요금 객실 예약 단체예약 단체 예약 안내 단체 요금 안내 단체 견적 의뢰서 로그인 회원가입 회원권 고객센터 language KR EN CN TOP 객실 요금 지산 리조트는 합리적인 가격으로 최고의 경험을 드릴 수 있도록 최선",
-    "지산 리조트 메뉴 바로가기 본문 바로가기 스키 슬로프 정보 이용안내 부대시설 지산 아카데미 대회 일정 골프 회원제 퍼블릭/연습장 회원제 예약하기 퍼블릭 예약하기 콘도 메이플 콘도 안내 부대시설 이용요금 단체예약 공지사항/이벤트 공지사항 이벤트 지산가이드 회원제 회원제 코스 안내 요금/예약 안내 회원제 골프장 예약 조회 및 취소 조인 방 식/음료 안내 프로샵 명예의 전당 퍼블릭/연습장 퍼블릭 코스 안내 요금/예약 안내 퍼블릭 골프장 예약 조회 및 취소 안내사항 조인방 식/음료 안내 골프 연습장 골프 아카데미 로그인 회원가입 회원권 고",
-    "지산 리조트 메뉴 바로가기 본문 바로가기 스키 슬로프 정보 이용안내 부대시설 지산 아카데미 대회 일정 골프 회원제 퍼블릭/연습장 회원제 예약하기 퍼블릭 예약하기 콘도 메이플 콘도 안내 부대시설 이용요금 단체예약 공지사항/이벤트 공지사항 이벤트 지산가이드 회원제 회원제 코스 안내 요금/예약 안내 회원제 골프장 예약 조회 및 취소 조인 방 식/음료 안내 프로샵 명예의 전당 퍼블릭/연습장 퍼블릭 코스 안내 요금/예약 안내 퍼블릭 골프장 예약 조회 및 취소 안내사항 조인방 식/음료 안내 골프 연습장 골프 아카데미 로그인 회원가입 회원권 고",
     "레스토랑 · 프런트 데스크 · 편의점"
    ],
    "value": "레스토랑",
@@ -681,8 +687,14 @@
    "value_from": "capital_supplement(official_site)"
   },
   "other": {
-   "value": null,
-   "evidence": []
+   "value": "전기차 충전 가능 · 어프로치 연습·드라이빙 레인지 · 프로샵",
+   "evidence": [
+    "전기차 충전 가능 · 어프로치 연습·드라이빙 레인지 · 프로샵"
+   ],
+   "source_url": "https://www.jisanresort.co.kr/w/golf/",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfee guide tables)"
   },
   "night": {
    "evidence": [],
@@ -702,14 +714,12 @@
   },
   "shuttle": {
    "evidence": [
-    "다만, 골프장 예약, 셔틀버스 예약 등 서비스이용을 위해 필수불가결한 정보의 전송은 회원의 동의여부와 상관없이 전송됩니다.",
     "다만, 골프장 예약, 셔틀버스 예약 등 서비스이용을 위해 필수불가결한 정보의 전송은 회원의 동의여부와 상관없이 전송됩니다."
    ],
    "value": null
   },
   "ev_charge": {
    "evidence": [
-    "지산 리조트 메뉴 바로가기 본문 바로가기 스키 슬로프 정보 이용안내 부대시설 지산 아카데미 대회 일정 골프 회원제 퍼블릭/연습장 회원제 예약하기 퍼블릭 예약하기 콘도 메이플 콘도 안내 부대시설 이용요금 단체예약 공지사항/이벤트 공지사항 이벤트 지산가이드 지산 리조트 소개 골프장 소개 스키장 소개 주변관광지 오시는 길 골프/스키 통합 스키장 주차장 안내 대중교통 안내 스키장 전기차 충전 안내 골프장 스키장 로그인 회원가입 회원권 고객센터 language KR EN CN TOP 골프장 소개 골프의 진수를 완벽하게 느낄 수 있는 지산의 ",
     "전기차 충전이 가능한 지산에서 여유있는 품격을 느껴보실 수 있습니다."
    ],
    "value": "전기차 충전소 운영",
@@ -851,14 +861,25 @@
   "course_notes": null,
   "alert": null,
   "unconfirmed": [],
-  "sources": []
+  "sources": [
+   {
+    "source": "그린피가이드 코스 페이지",
+    "url": "https://greenfeeguide.co.kr/course/gc-0027/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "ok",
   "official_reason": null,
   "pages_collected": 14,
   "third_party": {
-   "teepick": false,
+   "teepick": true,
    "greenfeeguide": true
   },
   "render_hint": "static",
@@ -866,12 +887,12 @@
   "browser_batch": false
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.8,
+  "basic": 0.78,
+  "course": 0.4,
   "fee": 1.0,
   "ops": 0.5,
-  "facility": 0.4,
-  "briefing": 0.25,
-  "rental": 0.25
+  "facility": 0.5,
+  "briefing": 0.0,
+  "rental": 0.0
  }
 }

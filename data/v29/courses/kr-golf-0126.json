@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0126",
@@ -58,13 +59,13 @@
    "master": "courses_master.json v2.0 (문체부·KGA·KGBA·티픽·지도)",
    "synced_to": "courses_master.json v2.7 (2026-11-26 단일 스키마 정규화)"
   },
-  "par": null,
+  "par": 72,
   "holes_teepick": 18,
   "course_spec": {
    "holes": 18,
-   "par": null,
+   "par": 72,
    "blocks": [],
-   "length_m": null,
+   "length_m": 6530,
    "kga": null,
    "grass": null,
    "hole_by_hole": null
@@ -92,8 +93,8 @@
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": null,
-  "par": null
+  "length_m": 6530,
+  "par": 72
  },
  "fee": {
   "weekday": null,
@@ -112,7 +113,7 @@
   "source_url": null,
   "note": null,
   "sources": [],
-  "checked_at": null,
+  "checked_at": "2026-11-27",
   "market": {
    "weekday_min": 120000.0,
    "weekend_min": 170000.0,
@@ -150,13 +151,20 @@
   }
  },
  "cancel": {
-  "cancel_policy": null,
-  "open_cycle": null,
+  "cancel_policy": {
+   "value": "8일 전까지 인터넷·유선으로 취소 가능(이후 위약 규정 적용). 입장 후 경기 전 임의 취소는 이용요금 50% 환불",
+   "source": "공식 홈페이지",
+   "url": "https://www.maestrocc.co.kr/pagesite/use/reservation.asp"
+  },
+  "open_cycle": "같은 요일 기준 3주 전 오전 8시 30분부터 예약 전일 18시까지 인터넷 예약",
   "notes": null,
   "evidence": [
    "당 호텔은 숙박예약 신청자가 숙박예약의 전부 또는 일부를 취소했을 경우에는 다음에 열거하는 바에 의하여 위약금을 받습니다.",
    "(1) 사용예정일 10일전 취소 및 계약체결 당일 취소 : 계약금 환급 (2) 사용예정일 7일전 취소 : 총 요금의 10% 적용 및 환급 (3) 사용예정일 5일전 취소 : 총 요금의 30% 적용 및 환급 (4) 사용예정일 3일전 취소 : 총 요금의 50% 적용 및 환급 (5) 사용예정일 1일전 : 총요금의 80%적용 및 환급 (6) 입실일 당일 변경, 최소 및 노쇼 : 100%위약금 적용 2.",
-   "당 호텔에서는 숙박자가 연락 없이 숙박일 당일 오후 6시 (사전에 예정 도착 시간이 명시되어 있는 경우에는 기 시간을 1시간 경과한 시간)가 되어서도 도착하지 않을 경우에는 숙박예약은 신청서에 의거하여 취소된 것으로 간주, 처리합니다."
+   "당 호텔에서는 숙박자가 연락 없이 숙박일 당일 오후 6시 (사전에 예정 도착 시간이 명시되어 있는 경우에는 기 시간을 1시간 경과한 시간)가 되어서도 도착하지 않을 경우에는 숙박예약은 신청서에 의거하여 취소된 것으로 간주, 처리합니다.",
+   "8일전 인터넷 및 유선취소",
+   "① 입장절차를 마친 이용자가 경기 전 임의로 이용계약을 취소한 경우에는 이용요금의 50%를 환불하고",
+   "예약 오픈 주기: 같은 요일 기준 3주 전 오전 8시 30분부터 예약 전일 18시까지 인터넷 예약 (https://www.maestrocc.co.kr/pagesite/use/reservation.asp)"
   ],
   "weather_evidence": []
  },
@@ -292,8 +300,14 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": null,
-   "evidence": []
+   "value": "사우나 있음",
+   "evidence": [
+    "사우나 있음 — https://greenfeeguide.co.kr/course/gc-0095/"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0095/",
+   "confidence": "medium",
+   "checked_at": "2026-11-27",
+   "value_from": "pass2_third_party"
   },
   "lodging": {
    "value": "호텔",
@@ -532,8 +546,24 @@
   "recent_notice_text": null,
   "course_notes": null,
   "alert": null,
-  "unconfirmed": [],
-  "sources": []
+  "unconfirmed": [
+   "카트비 미확인",
+   "캐디피 미확인",
+   "야간(3부) 운영 여부 미확인",
+   "잔디 종류 미확인"
+  ],
+  "sources": [
+   {
+    "source": "그린피가이드 코스 페이지",
+    "url": "https://greenfeeguide.co.kr/course/gc-0095/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "ok",
@@ -541,19 +571,19 @@
   "pages_collected": 14,
   "third_party": {
    "teepick": true,
-   "greenfeeguide": false
+   "greenfeeguide": true
   },
   "render_hint": "",
   "plan_strategy": "unreachable(브라우저 재시도)",
   "browser_batch": false
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.6,
+  "basic": 0.78,
+  "course": 0.2,
   "fee": 0.0,
   "ops": 0.36,
-  "facility": 0.3,
-  "briefing": 0.5,
-  "rental": 0.25
+  "facility": 0.4,
+  "briefing": 0.0,
+  "rental": 0.0
  }
 }

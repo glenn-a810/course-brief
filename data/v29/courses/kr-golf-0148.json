@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0148",
@@ -56,13 +57,13 @@
    "master": "courses_master.json v2.0 (문체부·KGA·KGBA·티픽·지도)",
    "synced_to": "courses_master.json v2.7 (2026-11-26 단일 스키마 정규화)"
   },
-  "par": null,
+  "par": 72,
   "holes_teepick": 18,
   "course_spec": {
    "holes": 18,
-   "par": null,
+   "par": 72,
    "blocks": [],
-   "length_m": null,
+   "length_m": 6413,
    "kga": {
     "kga_course_code": "112",
     "kga_name": "블루헤런",
@@ -136,12 +137,17 @@
   ],
   "status": "operating",
   "facility_cluster": null,
-  "factcheck_2026_11_26": null
+  "factcheck_2026_11_26": null,
+  "designer": {
+   "value": "데이비드 레인빌",
+   "source": "공개 정보(그린피가이드)",
+   "url": "https://greenfeeguide.co.kr/course/gc-0134/"
+  }
  },
  "course": {
   "holes": 18,
   "holes_received": 18,
-  "course_names": null,
+  "course_names": "서·동 각 9홀",
   "membership_type": "회원제",
   "night_light": null,
   "blocks": [],
@@ -152,7 +158,11 @@
     "source": "공식",
     "url": "https://www.blueheron.co.kr/swp/information/use/use"
    },
-   "green": null
+   "green": {
+    "value": "벤트그라스",
+    "source": "공식 홈페이지",
+    "url": "https://www.blueheron.co.kr/swp/course/outline"
+   }
   },
   "kga": {
    "kga_course_code": "112",
@@ -218,38 +228,45 @@
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": null,
-  "par": null
+  "length_m": 6413,
+  "par": 72
  },
  "fee": {
   "weekday": 200000,
   "weekend": 270000,
   "weekday_text": null,
   "weekend_text": null,
-  "basis": null,
+  "basis": "official",
   "tax_included": null,
   "cart": {
    "value": 120000,
-   "source": "그린피가이드",
-   "url": "https://greenfeeguide.co.kr/course/gc-0134/"
+   "note": "18홀 이하 대당(9홀 이하 60,000원)",
+   "source": "공식 홈페이지 요금표",
+   "url": "https://www.blueheron.co.kr/swp/information/use/rates"
   },
   "caddie": {
    "value": 150000,
-   "source": "그린피가이드",
-   "url": "https://greenfeeguide.co.kr/course/gc-0134/",
-   "none": false
+   "note": "18홀 이하 팀당(9홀 이하 80,000원)",
+   "source": "공식 홈페이지 요금표",
+   "url": "https://www.blueheron.co.kr/swp/information/use/rates"
   },
-  "as_of": "2026-11-01",
-  "source_url": null,
+  "as_of": "2026-11-27",
+  "source_url": "https://www.blueheron.co.kr/swp/information/use/rates",
   "note": null,
   "sources": [
    {
     "source": "그린피가이드(공식 요금표 확인)",
     "url": "https://greenfeeguide.co.kr/course/gc-0134/",
     "checked_at": "2026-11-01"
+   },
+   {
+    "source": "공식 홈페이지 요금표",
+    "url": "https://www.blueheron.co.kr/swp/information/use/rates",
+    "checked_at": "2026-11-27",
+    "note": "비회원 18홀 합계 주중 200,000원 / 주말 270,000원, 카트비 120,000원(18홀 이하·대당), 캐디피 150,000원(18홀 이하·팀당)"
    }
   ],
-  "checked_at": "2026-11-01",
+  "checked_at": "2026-11-27",
   "market": {
    "weekday_min": null,
    "weekend_min": null,
@@ -263,13 +280,18 @@
   "official_rental": null
  },
  "cancel": {
-  "cancel_policy": null,
+  "cancel_policy": {
+   "value": "예약일 포함 5일 전 16시까지 취소해야 위약 없음(이후 취소는 위약 적용, 주중·주말 동일)",
+   "source": "공식 홈페이지",
+   "url": "https://www.blueheron.co.kr/swp/information/use/reservation"
+  },
   "open_cycle": null,
   "notes": null,
   "evidence": [
    "블루헤런 주요 메뉴 바로가기 컨텐트 바로가기 블루헤런 메뉴 Hitejinro Championship Job Opening 코스 예약 로그인 닫기 블루헤런 로그인 회원가입 아이디/비밀번호 찾기 About 인사말 정도경영선언문 클럽개요 부대시설 오시는길 Course 코스개요 코스안내 reservation 예약방법 실시간예약 주말추첨신청 예약확인 및 변경/취소 Info 공지사항 이용안내 포토갤러리 자료실 Magazine 하이트진로 챔피언십 하이트진로 소속프로 Recruit 채용절차 채용공고 닫기 코스소개 전략성이 풍부한 블루헤런의 코스를",
    "블루헤런 주요 메뉴 바로가기 컨텐트 바로가기 블루헤런 메뉴 Hitejinro Championship Job Opening 코스 예약 로그인 닫기 블루헤런 로그인 회원가입 아이디/비밀번호 찾기 About 인사말 정도경영선언문 클럽개요 부대시설 오시는길 Course 코스개요 코스안내 reservation 예약방법 실시간예약 주말추첨신청 예약확인 및 변경/취소 Info 공지사항 이용안내 포토갤러리 자료실 Magazine 하이트진로 챔피언십 하이트진로 소속프로 Recruit 채용절차 채용공고 닫기 코스소개 전략성이 풍부한 블루헤런의 코스를",
-   "블루헤런 주요 메뉴 바로가기 컨텐트 바로가기 블루헤런 메뉴 Hitejinro Championship Job Opening 코스 예약 로그인 닫기 블루헤런 로그인 회원가입 아이디/비밀번호 찾기 About 인사말 정도경영선언문 클럽개요 부대시설 오시는길 Course 코스개요 코스안내 reservation 예약방법 실시간예약 주말추첨신청 예약확인 및 변경/취소 Info 공지사항 이용안내 포토갤러리 자료실 Magazine 하이트진로 챔피언십 하이트진로 소속프로 Recruit 채용절차 채용공고 닫기 코스소개 전략성이 풍부한 블루헤런의 코스를"
+   "블루헤런 주요 메뉴 바로가기 컨텐트 바로가기 블루헤런 메뉴 Hitejinro Championship Job Opening 코스 예약 로그인 닫기 블루헤런 로그인 회원가입 아이디/비밀번호 찾기 About 인사말 정도경영선언문 클럽개요 부대시설 오시는길 Course 코스개요 코스안내 reservation 예약방법 실시간예약 주말추첨신청 예약확인 및 변경/취소 Info 공지사항 이용안내 포토갤러리 자료실 Magazine 하이트진로 챔피언십 하이트진로 소속프로 Recruit 채용절차 채용공고 닫기 코스소개 전략성이 풍부한 블루헤런의 코스를",
+   "* 예약일 포함 5일전 16시 까지, 이후 취소시 위약적용 (주중, 주말 구분없이 모두 적용)"
   ],
   "weather_evidence": []
  },
@@ -509,8 +531,22 @@
   "recent_notice_text": null,
   "course_notes": null,
   "alert": null,
-  "unconfirmed": [],
-  "sources": []
+  "unconfirmed": [
+   "예약 오픈 주기 미확인",
+   "야간(3부) 운영 여부 미확인"
+  ],
+  "sources": [
+   {
+    "source": "그린피가이드 코스 페이지",
+    "url": "https://greenfeeguide.co.kr/course/gc-0134/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "ok",
@@ -525,12 +561,12 @@
   "browser_batch": false
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.8,
+  "basic": 0.89,
+  "course": 0.4,
   "fee": 1.0,
   "ops": 0.21,
   "facility": 0.0,
-  "briefing": 0.5,
-  "rental": 0.25
+  "briefing": 0.0,
+  "rental": 0.0
  }
 }

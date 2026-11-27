@@ -12,7 +12,7 @@
   ],
   "source": "raw/received_chungcheong_77.json (외부 데이터 수신, 2026-11-26)",
   "review": {
-   "checked_at": "2026-11-26",
+   "checked_at": "2026-11-27",
    "status": "partial_official",
    "checks": [
     {
@@ -21,6 +21,50 @@
      "verified": "1코스와 동일(단지 공통). 공식 표기는 기업도시 6길 43",
      "result": "일치(주소 표기 차이)",
      "url": "http://royallinks.co.kr"
+    },
+    {
+     "field": "fee.checked_at",
+     "received": null,
+     "verified": "2026-11-27",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0317/",
+     "quote": "요금 확인일 2026-11-01 (그린피가이드 2026-11-27 조회)",
+     "source_type": "third_party",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "ops.cart_type",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "자동 주행 카트",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0317/",
+     "quote": "카트 종류 자동 주행 카트",
+     "source_type": "third_party",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.other",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "프로샵",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0317/",
+     "quote": "그 밖의 시설 프로샵",
+     "source_type": "third_party",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "ops.checkin",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "티오프 30분 전까지 내장 등록, 20분 전 카트",
+     "result": "보완",
+     "url": "http://royallinks.co.kr/guide/guide.asp",
+     "quote": "간 Tee Off 간격 : 7분 내장 • 내장 시에는 신분증 제시 후 본인 실명 확인을 하셔야 합니다. • Tee Off시간 30분 전까지 내장하시어 안내데스크에서 내장 등록을 하시고 20분 전까지 Tee Off 준비를 해주시기 바랍니다. • 귀중품은 미리 안내데스크에 보관하여 주시기",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
     }
    ]
   },
@@ -30,11 +74,13 @@
   "schema_previous": "stage2b/1.0",
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "restructured_from_7key": false,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "pass2_patch": "2026-11-27 2차 보완 패스: 3개 항목(그린피가이드·1박2일골프·원더골프·공식 홈페이지 대조, 미확인 값 생성 없음)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0293",
@@ -120,7 +166,8 @@
    "note": null
   },
   "factcheck_2026_11_26": null,
-  "address_original": "태안군 태안읍 반곡길 284"
+  "address_original": "태안군 태안읍 반곡길 284",
+  "par": 70
  },
  "course": {
   "holes": 18,
@@ -136,7 +183,8 @@
   },
   "kga": null,
   "kga_hole_est": null,
-  "extra_courses": null
+  "extra_courses": null,
+  "par": 70
  },
  "fee": {
   "weekday": 180000,
@@ -162,8 +210,15 @@
     "source": "수신 조사(공식·공개 예약정보)",
     "url": "http://royallinks.co.kr",
     "checked_at": "2026-11-26 (공식·공개 요금표 확인)"
+   },
+   {
+    "source": "third_party",
+    "url": "https://greenfeeguide.co.kr/course/gc-0317/",
+    "quote": "요금 확인일 2026-11-01 (그린피가이드 2026-11-27 조회)",
+    "checked_at": "2026-11-27"
    }
-  ]
+  ],
+  "checked_at": "2026-11-27"
  },
  "cancel": {
   "cancel_policy": "평일 3일 전·주말 4일 전까지(이용약관 기준)",
@@ -194,8 +249,14 @@
    "evidence": []
   },
   "cart_type": {
-   "value": null,
-   "evidence": []
+   "value": "자동 주행 카트",
+   "evidence": [
+    "카트 종류 자동 주행 카트"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0317/",
+   "confidence": "high",
+   "source_type": "third_party",
+   "checked_at": "2026-11-27"
   },
   "cart_entry": {
    "value": null,
@@ -210,8 +271,14 @@
    "evidence": []
   },
   "checkin": {
-   "value": null,
-   "evidence": []
+   "value": "티오프 30분 전까지 내장 등록, 20분 전 카트",
+   "evidence": [
+    "간 Tee Off 간격 : 7분 내장 • 내장 시에는 신분증 제시 후 본인 실명 확인을 하셔야 합니다. • Tee Off시간 30분 전까지 내장하시어 안내데스크에서 내장 등록을 하시고 20분 전까지 Tee Off 준비를 해주시기 바랍니다. • 귀중품은 미리 안내데스크에 보관하여 주시기"
+   ],
+   "source_url": "http://royallinks.co.kr/guide/guide.asp",
+   "confidence": "high",
+   "source_type": "official_site",
+   "checked_at": "2026-11-27"
   },
   "locker": {
    "value": "락카",
@@ -240,8 +307,10 @@
    "evidence": []
   },
   "food": {
-   "value": null,
-   "evidence": []
+   "value": "레스토랑 운영",
+   "evidence": [
+    "https://royallinks.co.kr/guide/guide.asp"
+   ]
   },
   "snack_bar": {
    "value": "그늘집",
@@ -252,12 +321,20 @@
    "evidence": []
   },
   "lodging": {
-   "value": null,
-   "evidence": []
+   "value": "객실 패키지 운영",
+   "evidence": [
+    "https://royallinks.co.kr/reservation/package.asp"
+   ]
   },
   "other": {
-   "value": null,
-   "evidence": []
+   "value": "프로샵",
+   "evidence": [
+    "그 밖의 시설 프로샵"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0317/",
+   "confidence": "high",
+   "source_type": "third_party",
+   "checked_at": "2026-11-27"
   },
   "night": {
    "value": "야간 라운드 운영(단지 공통 안내)",
@@ -349,8 +426,6 @@
    "셀프 백드롭",
    "매트 티샷",
    "인도어 연습장",
-   "식당·조식",
-   "숙박",
    "기타 시설",
    "클럽 렌탈 요금",
    "좌타용 클럽",
@@ -372,18 +447,19 @@
   "official_reason": "운영 중(로얄링스 단지 내 2코스)",
   "pages_collected": 0,
   "third_party": {
-   "received_report": true
+   "received_report": true,
+   "greenfeeguide": true
   },
   "render_hint": "report",
   "plan_strategy": "subagent_report(2026-11-26)"
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.8,
+  "basic": 0.78,
+  "course": 0.4,
   "fee": 1.0,
-  "ops": 0.21,
-  "facility": 0.4,
-  "briefing": 0.75,
-  "rental": 0.5
+  "ops": 0.36,
+  "facility": 0.7,
+  "briefing": 0.5,
+  "rental": 0.25
  }
 }

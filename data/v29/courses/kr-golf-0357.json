@@ -22,11 +22,12 @@
   "schema_previous": "stage2b/1.0",
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "restructured_from_7key": false,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0357",
@@ -123,7 +124,8 @@
    ]
   },
   "kga_hole_est": 18,
-  "extra_courses": null
+  "extra_courses": null,
+  "length_m": 5902
  },
  "fee": {
   "weekday": 410000,
@@ -150,13 +152,16 @@
     "url": "https://greenfeeguide.co.kr/course/gc-0409/",
     "checked_at": "2026-11-01"
    }
-  ]
+  ],
+  "checked_at": "2026-11-27"
  },
  "cancel": {
   "cancel_policy": null,
-  "open_cycle": null,
+  "open_cycle": "매월 1일 09:00 다음 한달 예약이 모바일로 오픈(예: 6월 1일 오픈 → 온라인 7월 1일~31일 접수). 예약실 유선 예약은 해당 월(6월 1일~30일) 접수",
   "notes": null,
-  "evidence": [],
+  "evidence": [
+   "https://wondergolf.co.kr/courses/kr-kakao-19975143"
+  ],
   "weather_evidence": []
  },
  "ops": {
@@ -213,8 +218,10 @@
    "evidence": []
   },
   "pace": {
-   "value": null,
-   "evidence": []
+   "value": "다른 팀 플레이에 지장을 주는 슬로 플레이 시 퇴장",
+   "evidence": [
+    "https://greenfeeguide.co.kr/course/gc-0409/"
+   ]
   }
  },
  "facilities": {
@@ -270,7 +277,7 @@
   "nine_hole": null,
   "range_finder": null,
   "reservation": null,
-  "source_url": null,
+  "source_url": "https://greenfeeguide.co.kr/course/gc-0409/",
   "nearby_delivery": {
    "region": "영남",
    "sido": "경상남도",
@@ -325,9 +332,6 @@
   "alert": null,
   "unconfirmed": [
    "야간 라이트",
-   "잔디(티)",
-   "잔디(그린)",
-   "예약 오픈 주기",
    "취소·위약 규정",
    "2인 플레이",
    "5인 플레이",
@@ -344,8 +348,7 @@
    "락커·사우나",
    "숙박",
    "좌타용 클럽",
-   "제세금",
-   "예약 비고"
+   "제세금"
   ],
   "unconfirmed_labels_added": [
    "제세금",
@@ -354,7 +357,13 @@
   "sources": [
    "https://greenfeeguide.co.kr/course/gc-0409/",
    "https://www.rankue.co.kr/golf/course/사우스케이프CC",
-   "https://www.southcape.co.kr/golf.asp"
+   "https://www.southcape.co.kr/golf.asp",
+   "https://wondergolf.co.kr/courses/kr-kakao-19975143",
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
   ],
   "collected_at": "2026-11-26T10:33:21+09:00"
  },
@@ -363,18 +372,20 @@
   "official_reason": "운영 중(공식 홈페이지는 스크립트 기반으로 본문 수집 제한, 유선·온라인 예약)",
   "pages_collected": 0,
   "third_party": {
-   "received_report": true
+   "received_report": true,
+   "teepick": true,
+   "greenfeeguide": true
   },
   "render_hint": "report",
   "plan_strategy": "subagent_report(2026-11-26)"
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 1.0,
+  "basic": 0.89,
+  "course": 0.4,
   "fee": 1.0,
-  "ops": 0.07,
+  "ops": 0.14,
   "facility": 0.1,
-  "briefing": 0.75,
-  "rental": 1.0
+  "briefing": 0.5,
+  "rental": 0.75
  }
 }

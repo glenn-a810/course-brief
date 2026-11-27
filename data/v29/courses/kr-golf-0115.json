@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0115",
@@ -60,9 +61,9 @@
   },
   "course_spec": {
    "holes": 18,
-   "par": null,
+   "par": 72,
    "blocks": [],
-   "length_m": null,
+   "length_m": 6292,
    "kga": {
     "kga_course_code": "149",
     "kga_name": "양주",
@@ -137,12 +138,13 @@
   "status": "operating",
   "facility_cluster": null,
   "factcheck_2026_11_26": null,
-  "tel_note": "대표번호 범위 031-592-6060~4 (끝번호 6·4·9 등은 내선/추가 회선)."
+  "tel_note": "대표번호 범위 031-592-6060~4 (끝번호 6·4·9 등은 내선/추가 회선).",
+  "par": 72
  },
  "course": {
   "holes": 18,
   "holes_received": null,
-  "course_names": null,
+  "course_names": "동·서 각 9홀",
   "membership_type": "회원제",
   "night_light": null,
   "blocks": [],
@@ -219,32 +221,47 @@
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": null,
-  "par": null
+  "length_m": 6292,
+  "par": 72
  },
  "fee": {
-  "weekday": null,
-  "weekend": null,
+  "weekday": 240000,
+  "weekend": 300000,
   "weekday_text": null,
   "weekend_text": null,
-  "basis": null,
+  "basis": "official",
   "tax_included": null,
   "cart": {
-   "evidence": "카트이용료는 1~9홀이용시 1/2, 10홀~18홀이용시 전액계산 ④ 강설, 폭우, 기타 천재지변 등의 불가항력적인 경우를 제외하고 임시휴장을 할 경우에는 사업자는 사전에 이를 일간지 또는 인터넷 홈페이지 등에 게시하고 당해 기간에 이용하기로 예약한 이용자에게 고지하여야 한다.",
-   "url": "https://www.yangjucc.co.kr/clause/guide.asp",
-   "source": "공식"
+   "value": 80000,
+   "raw": "80,000원",
+   "text": "팀당(4인 1대)",
+   "source": "공개 요금 정보",
+   "url": "https://greenfeeguide.co.kr/course/gc-0048/"
   },
-  "caddie": null,
-  "as_of": null,
-  "source_url": null,
+  "caddie": {
+   "value": 120000,
+   "note": "팀당(4인 기준)",
+   "source": "그린피가이드(골프장 공식 요금표 인용)",
+   "url": "https://greenfeeguide.co.kr/course/gc-0048/"
+  },
+  "as_of": "2026-11-02",
+  "source_url": "https://greenfeeguide.co.kr/course/gc-0048/",
   "note": null,
-  "sources": [],
-  "checked_at": null,
+  "sources": [
+   {
+    "source": "그린피가이드 — 골프장 공식 요금표 인용",
+    "url": "https://greenfeeguide.co.kr/course/gc-0048/",
+    "checked_at": "2026-11-27",
+    "note": "주중 240000원 / 주말 300000원 (비회원 18홀 기준, 2026-11-02 확인)"
+   }
+  ],
+  "checked_at": "2026-11-27",
   "official_green_evidence": [
    "양주 컨트리클럽 본문 바로가기 하단 바로가기 홈 로그인 회원가입 사이트맵 CLUB 클럽소개 인사말 연혁 시설안내 오시는길 COURSE 코스소개 서코스 동코스 코스갤러리 USE 이용안내 이용요금 예약안내 위약금안내 RESERVATION 실시간예약 대기예약 예약확인/취소 조인게시판 LOUNGE 내장현황 위약현황 스코어현황 고객의소리 회원정보 INFORMATION 공지사항 이벤트 자료실 포토갤러리 명예의전당 날씨정보 레스토랑메뉴 이전 다음 동계휴장안내 2026.11.19 그린피 할인 안내 2026.11.06 2027년 연단체 모집합니다.",
    "양주 컨트리클럽 본문 바로가기 하단 바로가기 홈 로그인 회원가입 사이트맵 CLUB 클럽소개 인사말 연혁 시설안내 오시는길 COURSE 코스소개 서코스 동코스 코스갤러리 USE 이용안내 이용요금 예약안내 위약금안내 RESERVATION 실시간예약 대기예약 예약확인/취소 조인게시판 LOUNGE 내장현황 위약현황 스코어현황 고객의소리 회원정보 INFORMATION 공지사항 이벤트 자료실 포토갤러리 명예의전당 날씨정보 레스토랑메뉴 공지사항 이벤트 자료실 포토갤러리 명예의전당 날씨정보 레스토랑메뉴 홈 - 정보마당 - 공지사항 게시글 읽기 그"
   ],
-  "official_rental": null
+  "official_rental": null,
+  "market": {}
  },
  "cancel": {
   "cancel_policy": null,
@@ -371,16 +388,28 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": null,
-   "evidence": []
+   "value": "사우나 있음",
+   "evidence": [
+    "사우나 있음 — https://greenfeeguide.co.kr/course/gc-0048/"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0048/",
+   "confidence": "medium",
+   "checked_at": "2026-11-27",
+   "value_from": "pass2_third_party"
   },
   "lodging": {
    "value": null,
    "evidence": []
   },
   "other": {
-   "value": null,
-   "evidence": []
+   "value": "프로샵",
+   "evidence": [
+    "그 밖의 시설: 프로샵"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0048/",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfeeguide)"
   },
   "night": {
    "evidence": [],
@@ -618,28 +647,44 @@
   "recent_notice_text": null,
   "course_notes": null,
   "alert": null,
-  "unconfirmed": [],
-  "sources": []
+  "unconfirmed": [
+   "카트비 미확인",
+   "취소·위약 규정 미확인",
+   "예약 오픈 주기 미확인",
+   "야간(3부) 운영 여부 미확인"
+  ],
+  "sources": [
+   {
+    "source": "그린피가이드 코스 페이지",
+    "url": "https://greenfeeguide.co.kr/course/gc-0048/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "ok",
   "official_reason": null,
   "pages_collected": 14,
   "third_party": {
-   "teepick": false,
-   "greenfeeguide": false
+   "teepick": true,
+   "greenfeeguide": true
   },
   "render_hint": "",
   "plan_strategy": "unreachable(브라우저 재시도)",
   "browser_batch": false
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.8,
-  "fee": 0.0,
+  "basic": 0.78,
+  "course": 0.4,
+  "fee": 1.0,
   "ops": 0.21,
-  "facility": 0.2,
-  "briefing": 0.25,
-  "rental": 0.25
+  "facility": 0.4,
+  "briefing": 0.0,
+  "rental": 0.0
  }
 }

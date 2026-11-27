@@ -58,11 +58,12 @@
   "schema_previous": "stage2b/1.0",
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "restructured_from_7key": false,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0356",
@@ -141,7 +142,13 @@
   "holes_conflict": false,
   "facility_cluster": null,
   "factcheck_2026_11_26": null,
-  "address_original": "김해시 진례면 고모로 134번길 54-49"
+  "address_original": "김해시 진례면 고모로 134번길 54-49",
+  "course_spec": {
+   "length_m": 3246,
+   "par": 72,
+   "holes": 18
+  },
+  "par": 72
  },
  "course": {
   "holes": 18,
@@ -167,7 +174,9 @@
    ]
   },
   "kga_hole_est": 18,
-  "extra_courses": null
+  "extra_courses": null,
+  "length_m": 3246,
+  "par": 72
  },
  "fee": {
   "weekday": 200000,
@@ -194,7 +203,15 @@
     "url": "http://www.4wellcc.com/information/fee.asp",
     "checked_at": "2026-11-26"
    }
-  ]
+  ],
+  "checked_at": "2026-11-27",
+  "market": {
+   "weekday_min": 100000,
+   "weekend_min": 170000,
+   "source": "공개 예약 채널 실거래 관측(티픽)",
+   "url": "https://teepickgolf.com/",
+   "note": "공시가 아닌 최근 관측 실거래 최저가"
+  }
  },
  "cancel": {
   "cancel_policy": "악천후로 인한 사전 취소 불가(공식 안내). 개인사정 홀아웃 시 홀별 정산 불가, 18홀 그린피·카트비 기준 적용",
@@ -241,8 +258,10 @@
    "evidence": []
   },
   "checkin": {
-   "value": null,
-   "evidence": []
+   "value": "현관에서 캐디백 인계 후 티오프 15분 전까지 스타트홀 도착",
+   "evidence": [
+    "https://www.4wellcc.com/information/reserInfo.asp"
+   ]
   },
   "locker": {
    "value": "VIP 사우나(A 300,000원·B 200,000원), 락카 판매 시 카트 커피 서비스",
@@ -253,12 +272,20 @@
    "evidence": []
   },
   "dress": {
-   "value": null,
-   "evidence": []
+   "value": "내장·플레이 복장 규정 운영(품격 있는 클럽 분위기 유지)",
+   "evidence": [
+    "https://www.4wellcc.com/information/reserInfo.asp"
+   ]
   },
   "pace": {
-   "value": null,
-   "evidence": []
+   "value": "18홀 4시간 30분~4시간 50분",
+   "evidence": [
+    "경기 시간: 18홀 4시간 30분~4시간 50분"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0387/",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfeeguide)"
   }
  },
  "facilities": {
@@ -295,9 +322,15 @@
    "evidence": []
   },
   "closed_days": {
-   "value": null,
+   "value": "연중무휴",
    "third_party": null,
-   "evidence": []
+   "evidence": [
+    "정기 휴장일: 연중무휴"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0387/",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfeeguide)"
   },
   "shuttle": {
    "value": null,
@@ -314,7 +347,7 @@
   "nine_hole": null,
   "range_finder": null,
   "reservation": null,
-  "source_url": null,
+  "source_url": "https://greenfeeguide.co.kr/course/gc-0387/",
   "nearby_delivery": {
    "region": "영남",
    "sido": "경상남도",
@@ -376,8 +409,6 @@
   "alert": null,
   "unconfirmed": [
    "야간 라이트",
-   "잔디(티)",
-   "잔디(그린)",
    "5인 플레이",
    "노캐디",
    "마샬캐디",
@@ -399,7 +430,13 @@
    "http://www.4wellcc.com/information/fee.asp",
    "http://www.4wellcc.com/information/reserInfo.asp",
    "https://greenfeeguide.co.kr/course/gc-0387/",
-   "https://www.rankue.co.kr/golf/course/롯데스카이힐김해컨트리클럽"
+   "https://www.rankue.co.kr/golf/course/롯데스카이힐김해컨트리클럽",
+   "https://www.4wellcc.com/information/reserInfo.asp",
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
   ],
   "collected_at": "2026-11-26T10:33:21+09:00"
  },
@@ -408,18 +445,20 @@
   "official_reason": "운영 중(포웰CC 공식 홈페이지 정상, 이용안내·예약·위약안내 게시)",
   "pages_collected": 0,
   "third_party": {
-   "received_report": true
+   "received_report": true,
+   "teepick": true,
+   "greenfeeguide": true
   },
   "render_hint": "report",
   "plan_strategy": "subagent_report(2026-11-26)"
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 1.0,
+  "basic": 0.89,
+  "course": 0.4,
   "fee": 1.0,
-  "ops": 0.29,
-  "facility": 0.3,
-  "briefing": 0.75,
-  "rental": 1.0
+  "ops": 0.5,
+  "facility": 0.4,
+  "briefing": 0.5,
+  "rental": 0.75
  }
 }

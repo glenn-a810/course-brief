@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0023",
@@ -105,7 +106,7 @@
   "weekend": 170000,
   "weekday_text": null,
   "weekend_text": null,
-  "basis": null,
+  "basis": "official",
   "tax_included": null,
   "cart": {
    "value": 90000,
@@ -132,7 +133,7 @@
     "checked_at": "2026-11-01"
    }
   ],
-  "checked_at": "2026-11-01",
+  "checked_at": "2026-11-27",
   "official_green_evidence": [
    "순천부영컨트리클럽 클럽소개 클럽소개 인사말 CI소개 시설안내 오시는길 코스소개 코스소개 우정코스 사랑코스 코스갤러리 이용안내 골프장 호텔 골프연습장 인터넷예약 골프실시간예약 골프대기신청 호텔예약 골프단체예약 회원라운지 조인게시판 내장현황 위약현황 골프예약현황 호텔예약현황 회원정보변경 정보마당 공지사항 그린피 및 이벤트 자료실 포토갤러리 인재채용 날씨정보 입찰계약공고 오늘 허루 보지 않기 닫기 Login 아이디 비밀번호 아이디 저장 아이디/비밀번호 찾기 로그인 회원가입을 하시면더욱 다양한 혜택을 누리실 수 있습니다.",
    "순천부영컨트리클럽 클럽소개 클럽소개 인사말 CI소개 시설안내 오시는길 코스소개 코스소개 우정코스 사랑코스 코스갤러리 이용안내 골프장 호텔 골프연습장 인터넷예약 골프실시간예약 골프대기신청 호텔예약 골프단체예약 회원라운지 조인게시판 내장현황 위약현황 골프예약현황 호텔예약현황 회원정보변경 정보마당 공지사항 그린피 및 이벤트 자료실 포토갤러리 인재채용 날씨정보 입찰계약공고 정보마당 공지사항 그린피 및 이벤트 자료실 포토갤러리 인재채용 날씨정보 입찰계약공고 공지사항 > 정보마당 > 공지사항 게시글 읽기 2027년 연단체 모집 안내(마감) 관"
@@ -240,11 +241,12 @@
  "facilities": {
   "practice": {
    "evidence": [
+    "드라이빙 레인지 (출처: https://greenfeeguide.co.kr/course/gc-0451/, 2026-11-27 확인)",
     "순천부영컨트리클럽 클럽소개 클럽소개 인사말 CI소개 시설안내 오시는길 코스소개 코스소개 우정코스 사랑코스 코스갤러리 이용안내 골프장 호텔 골프연습장 인터넷예약 골프실시간예약 골프대기신청 호텔예약 골프단체예약 회원라운지 조인게시판 내장현황 위약현황 골프예약현황 호텔예약현황 회원정보변경 정보마당 공지사항 그린피 및 이벤트 자료실 포토갤러리 인재채용 날씨정보 입찰계약공고 오늘 허루 보지 않기 닫기 Login 아이디 비밀번호 아이디 저장 아이디/비밀번호 찾기 로그인 회원가입을 하시면더욱 다양한 혜택을 누리실 수 있습니다.",
     "인터넷 회원 우대 요금 관리자 884 2025/07/21 14 신년 맞이 감사 이벤트 인터넷 회원 우대 요금 관리자 771 2025/01/10 13 2025년 연단체 모집 마감 안내(마감) 관리자 541 2024/11/01 12 순천부영CC X 골프연습장만의 특별한 혜택!!!",
     "순천부영컨트리클럽 클럽소개 클럽소개 인사말 CI소개 시설안내 오시는길 코스소개 코스소개 우정코스 사랑코스 코스갤러리 이용안내 골프장 호텔 골프연습장 인터넷예약 골프실시간예약 골프대기신청 호텔예약 골프단체예약 회원라운지 조인게시판 내장현황 위약현황 골프예약현황 호텔예약현황 회원정보변경 정보마당 공지사항 그린피 및 이벤트 자료실 포토갤러리 인재채용 날씨정보 입찰계약공고 정보마당 공지사항 그린피 및 이벤트 자료실 포토갤러리 인재채용 날씨정보 입찰계약공고 공지사항 > 정보마당 > 공지사항 게시글 읽기 2027년 연단체 모집 안내(마감) 관"
    ],
-   "value": null
+   "value": "드라이빙 레인지"
   },
   "indoor_range": {
    "value": null,
@@ -263,12 +265,20 @@
    "evidence": []
   },
   "lodging": {
-   "value": null,
-   "evidence": []
+   "value": "호텔",
+   "evidence": [
+    "숙박 시설: 호텔"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0451/",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfeeguide)"
   },
   "other": {
-   "value": null,
-   "evidence": []
+   "value": "드라이빙 레인지",
+   "evidence": [
+    "드라이빙 레인지 (출처: https://greenfeeguide.co.kr/course/gc-0451/, 2026-11-27 확인)"
+   ]
   },
   "night": {
    "evidence": [],
@@ -276,11 +286,12 @@
   },
   "closed_days": {
    "evidence": [
+    "정기 휴장일 없음 (출처: https://greenfeeguide.co.kr/course/gc-0451/, 2026-11-27 확인)",
     "이용자가 이용예정일 당일 예약을 취소하거나 아무런 통보 없이 이용예정일에 골프장을 이용하지 않을 경우 : 팀별 이용요금의 30% ③ 강설, 폭우, 안개 기타 천재지변 등의 불가항력적인 사유로, 사업자가 이용예정일에 골프장 이용이 불가능하다고 판단되어 임시휴장을 하는 경우에는 예약금을 환불하여야 한다.",
     "② 이 골프장의 정기 휴장일은 다음과 같다."
    ],
    "third_party": "정기 휴장일 없음숙박호텔부대시설드라이빙",
-   "value": null
+   "value": "정기 휴장일 없음"
   },
   "shuttle": {
    "evidence": [],
@@ -622,7 +633,13 @@
   "recent_notice_text": null,
   "course_notes": null,
   "alert": null,
-  "unconfirmed": [],
+  "unconfirmed": [
+   "취소·위약 규정",
+   "체크인",
+   "복장",
+   "진행 시간",
+   "식당"
+  ],
   "sources": []
  },
  "collection": {
@@ -630,7 +647,7 @@
   "official_reason": null,
   "pages_collected": 14,
   "third_party": {
-   "teepick": false,
+   "teepick": true,
    "greenfeeguide": true
   },
   "render_hint": "",
@@ -640,12 +657,12 @@
   "browser_pdf": []
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.6,
+  "basic": 0.78,
+  "course": 0.2,
   "fee": 1.0,
   "ops": 0.07,
-  "facility": 0.0,
-  "briefing": 0.25,
-  "rental": 0.25
+  "facility": 0.4,
+  "briefing": 0.0,
+  "rental": 0.0
  }
 }

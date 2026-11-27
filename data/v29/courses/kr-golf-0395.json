@@ -12,9 +12,32 @@
   ],
   "source": "raw/received_jeju_31.json (외부 데이터 수신, 2026-11-26)",
   "review": {
-   "checked_at": null,
+   "checked_at": "2026-11-27",
    "status": "not_crosschecked",
-   "checks": []
+   "checks": [
+    {
+     "field": "fee.checked_at",
+     "received": null,
+     "verified": "2026-11-27",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0523/",
+     "quote": "요금 확인일 2026-11-02 (그린피가이드 2026-11-27 조회)",
+     "source_type": "third_party",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "ops.pace",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "18홀 4시간 20분",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0523/",
+     "quote": "진행/경기시간 18홀 4시간 20분",
+     "source_type": "third_party",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    }
+   ]
   },
   "data_checks": [
    "제주 권역은 고속도로 IC가 없어 마스터의 최근접 IC 값(도외 130~160km)이 유효하지 않음"
@@ -22,11 +45,13 @@
   "schema_previous": "stage2b/1.0",
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "restructured_from_7key": false,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "pass2_patch": "2026-11-27 2차 보완 패스: 1개 항목(그린피가이드·1박2일골프·원더골프·공식 홈페이지 대조, 미확인 값 생성 없음)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0395",
@@ -84,7 +109,8 @@
   "holes_received": 18,
   "holes_conflict": false,
   "facility_cluster": null,
-  "factcheck_2026_11_26": null
+  "factcheck_2026_11_26": null,
+  "par": 72
  },
  "course": {
   "holes": 18,
@@ -110,7 +136,9 @@
    ]
   },
   "kga_hole_est": 18,
-  "extra_courses": null
+  "extra_courses": null,
+  "par": 72,
+  "length_m": 5899
  },
  "fee": {
   "weekday": 124000,
@@ -136,9 +164,23 @@
     "source": "수신 조사(공식·공개 예약정보)",
     "url": "http://www.springdale.co.kr/",
     "checked_at": "2026-11-02 공식 요금표 확인"
+   },
+   {
+    "source": "third_party",
+    "url": "https://greenfeeguide.co.kr/course/gc-0523/",
+    "quote": "요금 확인일 2026-11-02 (그린피가이드 2026-11-27 조회)",
+    "checked_at": "2026-11-27"
    }
   ],
-  "resident": null
+  "resident": null,
+  "checked_at": "2026-11-27",
+  "market": {
+   "weekday_min": 100000,
+   "weekend_min": 120000,
+   "source": "공개 예약 채널 실거래 관측(티픽)",
+   "url": "https://teepickgolf.com/",
+   "note": "공시가 아닌 최근 관측 실거래 최저가"
+  }
  },
  "cancel": {
   "cancel_policy": "평일 3일 전·주말 4일 전까지 무료(이용약관), 예약 안내상 평일 5일 전 17:00·주말 7일 전 17:00(회원권 자료)",
@@ -201,8 +243,14 @@
    "evidence": []
   },
   "pace": {
-   "value": null,
-   "evidence": []
+   "value": "18홀 4시간 20분",
+   "evidence": [
+    "진행/경기시간 18홀 4시간 20분"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0523/",
+   "confidence": "high",
+   "source_type": "third_party",
+   "checked_at": "2026-11-27"
   }
  },
  "facilities": {
@@ -258,7 +306,7 @@
   "nine_hole": null,
   "range_finder": null,
   "reservation": null,
-  "source_url": null,
+  "source_url": "https://greenfeeguide.co.kr/course/gc-0523/",
   "nearby_delivery": {
    "region": "제주",
    "sido": "제주특별자치도",
@@ -360,8 +408,6 @@
   "alert": null,
   "unconfirmed": [
    "야간 라이트",
-   "잔디(티)",
-   "잔디(페어웨이)",
    "5인 플레이",
    "노캐디",
    "마샬캐디",
@@ -382,7 +428,12 @@
    "https://greenfeeguide.co.kr/course/gc-0523/",
    "https://wondergolf.co.kr/courses/kr-kakao-13057106",
    "https://www.ks-membership.co.kr/html/sub11_view.php?agubun=&level_state22=&mode=2&no=127",
-   "https://jejukimpro.co.kr/ko/golf/springdale"
+   "https://jejukimpro.co.kr/ko/golf/springdale",
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
   ],
   "collected_at": "2026-11-26T09:35:01+09:00"
  },
@@ -391,18 +442,20 @@
   "official_reason": "운영 중(홈페이지 정상)",
   "pages_collected": 0,
   "third_party": {
-   "received_report": true
+   "received_report": true,
+   "teepick": true,
+   "greenfeeguide": true
   },
   "render_hint": "report",
   "plan_strategy": "subagent_report(2026-11-26)"
  },
  "coverage": {
   "basic": 0.89,
-  "course": 0.8,
+  "course": 0.2,
   "fee": 1.0,
-  "ops": 0.14,
+  "ops": 0.21,
   "facility": 0.1,
-  "briefing": 0.75,
-  "rental": 1.0
+  "briefing": 0.5,
+  "rental": 0.75
  }
 }

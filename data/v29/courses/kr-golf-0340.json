@@ -8,11 +8,51 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "review": {
+   "checks": [
+    {
+     "field": "cancel.cancel_policy",
+     "received": null,
+     "verified": "주말·공휴일 4일 전 17시, 평일 3일 전 17시까지 위약 없이 취소. 이후 당일·노쇼 팀별 이용요금 30%, 1일 전 20%, 2일 전 10%, 주말 3일 전 10%(예약정지 병과). 월 6회 취소 시 2개월 예약정지",
+     "result": "보완",
+     "url": "https://www.gasancc.com/Reservation/ReservationInfo",
+     "quote": "주말이나 공휴일인 이용 예정일로부터 4일전 17시까지, 평일인 이용예정일로부터 3일전 17시까지는 별도의 위약금 없이 예약을 취소할 수 있습니다.",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "cancel.open_cycle",
+     "received": null,
+     "verified": "매주 월요일 10:00, 2주 후 월~일요일분 오픈(1인 1일 1팀까지)",
+     "result": "보완",
+     "url": "https://www.gasancc.com/Reservation/ReservationInfo",
+     "quote": "타임오픈 일시 매주 월요일 오전 10:00 / 예약오픈 주기 2주후 일주일분(월~일)",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "ops.pace.value",
+     "received": null,
+     "verified": "매너불량·경기지연 등 퇴장규정 해당 시 3개월 예약정지",
+     "result": "보완",
+     "url": "https://www.gasancc.com/Reservation/ReservationInfo",
+     "quote": "퇴장규정(매너불량, 경기지연 등)에 해당되는 경우 3개월 예약 정지",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    }
+   ],
+   "checked_at": "2026-11-27"
+  },
+  "batch3_patch": "2026-11-27 배치6(대구·경북) 보완: 3개 항목(공식 홈페이지·그린피가이드 공식 안내 확인 기준, 미확인 값 생성 없음)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0340",
@@ -128,7 +168,7 @@
     "note": "공식 요금표(이미지 포함) 판독 + 공개 요금 사이트 보조"
    }
   ],
-  "checked_at": null,
+  "checked_at": "2026-11-27",
   "research_2026_11_26": {
    "no": 16,
    "green_fee_weekday": "70,000~90,000원 (12월, 1부·2부)",
@@ -158,12 +198,34 @@
   "weekday_basis": "max"
  },
  "cancel": {
-  "cancel_policy": null,
-  "open_cycle": null,
+  "cancel_policy": {
+   "value": "주말·공휴일 4일 전 17시, 평일 3일 전 17시까지 위약 없이 취소. 이후 당일·노쇼 팀별 이용요금 30%, 1일 전 20%, 2일 전 10%, 주말 3일 전 10%(예약정지 병과). 월 6회 취소 시 2개월 예약정지",
+   "source": "공개 안내",
+   "url": "https://www.gasancc.com/Reservation/ReservationInfo",
+   "checked_at": "2026-11-27"
+  },
+  "open_cycle": "매주 월요일 10:00, 2주 후 월~일요일분 오픈(1인 1일 1팀까지)",
   "notes": null,
-  "evidence": [],
+  "evidence": [
+   "주말이나 공휴일인 이용 예정일로부터 4일전 17시까지, 평일인 이용예정일로부터 3일전 17시까지는 별도의 위약금 없이 예약을 취소할 수 있습니다.",
+   "타임오픈 일시 매주 월요일 오전 10:00 / 예약오픈 주기 2주후 일주일분(월~일)"
+  ],
   "weather_evidence": [],
-  "browser_official": null
+  "browser_official": null,
+  "sources": [
+   {
+    "url": "https://www.gasancc.com/Reservation/ReservationInfo",
+    "quote": "주말이나 공휴일인 이용 예정일로부터 4일전 17시까지, 평일인 이용예정일로부터 3일전 17시까지는 별도의 위약금 없이 예약을 취소할 수 있습니다.",
+    "checked_at": "2026-11-27",
+    "source_type": "official_site"
+   },
+   {
+    "url": "https://www.gasancc.com/Reservation/ReservationInfo",
+    "quote": "타임오픈 일시 매주 월요일 오전 10:00 / 예약오픈 주기 2주후 일주일분(월~일)",
+    "checked_at": "2026-11-27",
+    "source_type": "official_site"
+   }
+  ]
  },
  "ops": {
   "nocaddie": {
@@ -219,8 +281,14 @@
    "value": null
   },
   "pace": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "퇴장규정(매너불량, 경기지연 등)에 해당되는 경우 3개월 예약 정지"
+   ],
+   "value": "매너불량·경기지연 등 퇴장규정 해당 시 3개월 예약정지",
+   "source_url": "https://www.gasancc.com/Reservation/ReservationInfo",
+   "confidence": "high",
+   "source_type": "official_site",
+   "checked_at": "2026-11-27"
   }
  },
  "facilities": {
@@ -392,7 +460,6 @@
    "source_file": "2-golf_16_courses_fees_notices.json"
   },
   "unconfirmed": [
-   "12월 주말 그린피(이미지에 미표기)",
    "12월 3부 요금",
    "동계 휴장 공지(2026-27)"
   ],
@@ -401,7 +468,12 @@
    "https://www.gasancc.com/Board/Details/100?page=1",
    "https://www.gasancc.com/Board/Details/99?page=1",
    "https://www.gasancc.com/Reservation/ReservationPrice",
-   "https://papahun.com/gasancc-greenfee/"
+   "https://papahun.com/gasancc-greenfee/",
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
   ]
  },
  "collection": {
@@ -409,20 +481,20 @@
   "official_reason": "HTTP0",
   "pages_collected": 0,
   "third_party": {
-   "teepick": false,
-   "greenfeeguide": false
+   "teepick": true,
+   "greenfeeguide": true
   },
   "render_hint": "thin",
   "plan_strategy": "unreachable(브라우저 재시도)",
   "browser_batch": true
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.6,
+  "basic": 0.78,
+  "course": 0.2,
   "fee": 0.75,
-  "ops": 0.0,
+  "ops": 0.07,
   "facility": 0.0,
-  "briefing": 0.75,
-  "rental": 0.25
+  "briefing": 0.5,
+  "rental": 0.0
  }
 }

@@ -12,9 +12,43 @@
   ],
   "source": "raw/received_gangwon_65.json (외부 데이터 수신, 2026-11-26)",
   "review": {
-   "checked_at": null,
-   "status": "not_crosschecked",
-   "checks": []
+   "checked_at": "2026-11-27",
+   "status": "supplemented(공개 요약·조사자료)",
+   "checks": [
+    {
+     "field": "ops.dress",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "클럽하우스는 단정하고 격식에 맞는 복장, 슬리퍼·반바지 차림은 출입이 제한될 수 있음, 라운드 때 노카라 티셔츠 삼가, 소프트 스파이크 골프화",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0200/",
+     "quote": "복장: 클럽하우스는 단정하고 격식에 맞는 복장, 슬리퍼·반바지 차림은 출입이 제한될 수 있음, 라운드 때 노카라 티셔츠 삼가, 소프트 스파이크 골프화",
+     "source_type": "official_summary(greenfeeguide)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "fee.checked_at",
+     "received": null,
+     "verified": "2026-11-27",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0200/",
+     "quote": "요금 확인일 2026-10-05 (그린피가이드 2026-11-27 조회)",
+     "source_type": "third_party",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.closed_days",
+     "received": "{\"value\": null, \"third_party\": null, \"evidence\": []}",
+     "verified": "매주 월요일",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0200/",
+     "quote": "정기 휴장일 매주 월요일",
+     "source_type": "third_party",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    }
+   ]
   },
   "data_checks": [
    "대표전화 표기 차이: 마스터 070-8121-0100 / 수신 033-269-2101",
@@ -24,11 +58,14 @@
   "schema_previous": "stage2b/1.0",
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "restructured_from_7key": false,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "batch3_patch": "2026-11-27 배치3 보완: 1개 항목(공식 홈페이지·공개 요금 안내 기준, 미확인 값 생성 없음)",
+  "pass2_patch": "2026-11-27 2차 보완 패스: 1개 항목(그린피가이드·1박2일골프·원더골프·공식 홈페이지 대조, 미확인 값 생성 없음)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0453",
@@ -125,7 +162,8 @@
    ]
   },
   "kga_hole_est": 27,
-  "extra_courses": null
+  "extra_courses": null,
+  "length_m": 5349
  },
  "fee": {
   "weekday": 300000,
@@ -151,8 +189,15 @@
     "source": "수신 조사(공식·공개 예약정보)",
     "url": "https://greenfeeguide.co.kr/course/gc-0200/",
     "checked_at": "2026-10-05(공식 요금표 확인)"
+   },
+   {
+    "source": "third_party",
+    "url": "https://greenfeeguide.co.kr/course/gc-0200/",
+    "quote": "요금 확인일 2026-10-05 (그린피가이드 2026-11-27 조회)",
+    "checked_at": "2026-11-27"
    }
-  ]
+  ],
+  "checked_at": "2026-11-27"
  },
  "cancel": {
   "cancel_policy": null,
@@ -211,12 +256,25 @@
    "evidence": []
   },
   "dress": {
-   "value": null,
-   "evidence": []
+   "value": "클럽하우스는 단정하고 격식에 맞는 복장, 슬리퍼·반바지 차림은 출입이 제한될 수 있음, 라운드 때 노카라 티셔츠 삼가, 소프트 스파이크 골프화",
+   "evidence": [
+    "복장: 클럽하우스는 단정하고 격식에 맞는 복장, 슬리퍼·반바지 차림은 출입이 제한될 수 있음, 라운드 때 노카라 티셔츠 삼가, 소프트 스파이크 골프화"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0200/",
+   "confidence": "medium",
+   "source_type": "official_summary(greenfeeguide)",
+   "checked_at": "2026-11-27",
+   "note": "공개 요금 정보가 골프장 공식 안내를 정리한 값(확인일 페이지 표기)"
   },
   "pace": {
-   "value": null,
-   "evidence": []
+   "value": "티오프 9분 간격",
+   "evidence": [
+    "티오프 9분 간격"
+   ],
+   "source_url": "https://www.whistlingrockcc.com/Booking/Guide",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfee guide tables)"
   }
  },
  "facilities": {
@@ -253,9 +311,15 @@
    "evidence": []
   },
   "closed_days": {
-   "value": null,
+   "value": "매주 월요일",
    "third_party": null,
-   "evidence": []
+   "evidence": [
+    "정기 휴장일 매주 월요일"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0200/",
+   "confidence": "high",
+   "source_type": "third_party",
+   "checked_at": "2026-11-27"
   },
   "shuttle": {
    "value": null,
@@ -362,7 +426,12 @@
   "sources": [
    "https://greenfeeguide.co.kr/course/gc-0200/",
    "https://parkgolfinfo.co.kr/휘슬링락cc춘천-골프장-이용요금·코스구성·예약-포/",
-   "https://www.mk.co.kr/news/sports/11493433"
+   "https://www.mk.co.kr/news/sports/11493433",
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
   ],
   "collected_at": "2026-11-26T09:55:48+09:00"
  },
@@ -371,18 +440,20 @@
   "official_reason": "운영 중(공식 홈페이지 정상)",
   "pages_collected": 0,
   "third_party": {
-   "received_report": true
+   "received_report": true,
+   "teepick": true,
+   "greenfeeguide": true
   },
   "render_hint": "report",
   "plan_strategy": "subagent_report(2026-11-26)"
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.8,
+  "basic": 0.89,
+  "course": 0.2,
   "fee": 1.0,
-  "ops": 0.14,
-  "facility": 0.2,
-  "briefing": 0.75,
-  "rental": 0.25
+  "ops": 0.29,
+  "facility": 0.3,
+  "briefing": 0.5,
+  "rental": 0.0
  }
 }

@@ -5,8 +5,9 @@
   "schema": "stage2c/1.0",
   "batch": null,
   "structure": "master only (구장 JSON 미생성 — 건설중·미착공)",
-  "normalized_at": "2026-11-26T12:20:52+09:00",
-  "has_detail": false
+  "normalized_at": "2026-11-27T14:40:00+09:00",
+  "has_detail": false,
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0522",
@@ -48,17 +49,18 @@
   "facility_id": null,
   "facility_members": null,
   "status": "under_construction",
-  "expected_open": "2027-상반기",
+  "expected_open": "2027-상반기(임시사용 승인 시 조기 개장 가능)",
   "nearest_ic": null,
   "facility_cluster": null,
   "factcheck_2026_11_26": null,
   "holes_note": "계획 홀수 27홀. 회원제/대중제 구성(내역)은 확정되지 않아 member/public/non_member를 0으로 두었다(master.holes.total만 유효).",
-  "provenance": {}
+  "provenance": {},
+  "status_note": "토목공사 공정률 약 80%(2026-08), 코스시설 2026-12 완료(야간조명 제외)·클럽하우스 2027-02 사용승인 예정. 2026-11-19 제일건설이 우선협상대상자로 선정(2,260억원), 전체 사업 준공은 2028-12 목표. 매수자가 체육시설업 등록·임시사용 허가 후 잔금 전 임시운영 가능"
  },
  "course": {
   "holes": null,
   "holes_received": null,
-  "course_names": null,
+  "course_names": "9홀 3개 코스 27홀(각 파36, 9홀 약 3,500야드, 홀마다 그린 2개)",
   "membership_type": null,
   "night_light": null,
   "blocks": [],
@@ -219,7 +221,10 @@
   "fee_change": null,
   "alert": null,
   "unconfirmed": [],
-  "sources": []
+  "sources": [
+   "http://www.gimhaenews.co.kr/news/articleView.html?idxno=53879",
+   "https://biz.chosun.com/stock/market_trend/2026/11/19/4OOSGQQUDFDYHPIMGT5EHYRXMY/"
+  ]
  },
  "collection": {
   "official_site": null,
@@ -230,12 +235,12 @@
   "plan_strategy": null
  },
  "coverage": {
-  "basic": 0,
-  "course": 0,
-  "fee": 0,
-  "ops": 0,
-  "facility": 0,
-  "briefing": 0,
-  "rental": 0
+  "basic": 0.56,
+  "course": 0.2,
+  "fee": 0.0,
+  "ops": 0.0,
+  "facility": 0.0,
+  "briefing": 0.0,
+  "rental": 0.0
  }
 }

@@ -12,9 +12,120 @@
   ],
   "source": "raw/received_gangwon_65.json (외부 데이터 수신, 2026-11-26)",
   "review": {
-   "checked_at": null,
-   "status": "not_crosschecked",
-   "checks": []
+   "checked_at": "2026-11-27",
+   "status": "supplemented(공개 요약·조사자료)",
+   "checks": [
+    {
+     "field": "course.grass.green",
+     "received": null,
+     "verified": "벤트그래스",
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/wellihilli/course/",
+     "quote": "코스 개요 — 잔디: 켄터키블루그래스 (페어웨이), 벤트그래스 (그린)",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "course.grass.fairway",
+     "received": null,
+     "verified": "켄터키블루그래스",
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/wellihilli/course/",
+     "quote": "코스 개요 — 잔디: 켄터키블루그래스 (페어웨이), 벤트그래스 (그린)",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "master.opened",
+     "received": null,
+     "verified": "1995",
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/wellihilli/course/",
+     "quote": "코스 개요 — 개장: 1995",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.food",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "클럽하우스 레스토랑 (한식·양식·뷔페), 그늘집 2동",
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/wellihilli/info/",
+     "quote": "레스토랑: 클럽하우스 레스토랑 (한식·양식·뷔페), 그늘집 2동",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.snack_bar",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "그늘집 운영",
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/wellihilli/info/",
+     "quote": "레스토랑: 클럽하우스 레스토랑 (한식·양식·뷔페), 그늘집 2동",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "ops.locker",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "남녀 분리 라커룸, 사우나, 스파, 샤워실",
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/wellihilli/info/",
+     "quote": "라커/사우나: 남녀 분리 라커룸, 사우나, 스파, 샤워실",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "ops.sauna",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "남녀 분리 라커룸, 사우나, 스파, 샤워실",
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/wellihilli/info/",
+     "quote": "라커/사우나: 남녀 분리 라커룸, 사우나, 스파, 샤워실",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.locker_sauna",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "남녀 분리 라커룸, 사우나, 스파, 샤워실",
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/wellihilli/info/",
+     "quote": "라커/사우나: 남녀 분리 라커룸, 사우나, 스파, 샤워실",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.proshop",
+     "received": null,
+     "verified": "프로샵",
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/wellihilli/info/",
+     "quote": "프로샵: 프로샵 (골프용품·의류·기념품)",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.practice",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "드라이빙 레인지 (40타석), 퍼팅 그린, 벙커 연습장",
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/wellihilli/info/",
+     "quote": "연습 시설: 드라이빙 레인지 (40타석), 퍼팅 그린, 벙커 연습장",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    }
+   ]
   },
   "data_checks": [
    "미확인 목록 누락 라벨 보완: 제세금, 예약 비고"
@@ -22,11 +133,14 @@
   "schema_previous": "stage2b/1.0",
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "restructured_from_7key": false,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "batch3_patch": "2026-11-27 배치3 보완: 1개 항목(공식 홈페이지·공개 요금 안내 기준, 미확인 값 생성 없음)",
+  "pass2_patch": "2026-11-27 2차 보완 패스: 10개 항목(그린피가이드·1박2일골프·원더골프·공식 홈페이지 대조, 미확인 값 생성 없음)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0478",
@@ -81,7 +195,7 @@
    "신안종합리조트㈜(민영민)"
   ],
   "area_sqm": 1899828,
-  "opened": null,
+  "opened": "1995",
   "course_blocks": [],
   "facility_id": "F019",
   "facility_members": [
@@ -121,8 +235,8 @@
   "blocks": [],
   "grass": {
    "tee": null,
-   "fairway": null,
-   "green": null
+   "fairway": "켄터키블루그래스",
+   "green": "벤트그래스"
   },
   "kga": null,
   "kga_hole_est": null,
@@ -148,8 +262,22 @@
     "source": "수신 조사(공식·공개 예약정보)",
     "url": "https://todaygolfgo.com/regions/gangwon/",
     "checked_at": "2026-11-26"
+   },
+   {
+    "source": "공식·공개 안내",
+    "url": "https://greenfeeguide.co.kr/course/gc-0233/",
+    "quote": "캐디피: 0/4",
+    "checked_at": "2026-11-27"
    }
-  ]
+  ],
+  "checked_at": "2026-11-27",
+  "market": {
+   "weekday_min": 130000,
+   "weekend_min": 140000,
+   "source": "공개 예약 채널 실거래 관측(티픽)",
+   "url": "https://teepickgolf.com/",
+   "note": "공시가 아닌 최근 관측 실거래 최저가"
+  }
  },
  "cancel": {
   "cancel_policy": null,
@@ -200,12 +328,26 @@
    "evidence": []
   },
   "locker": {
-   "value": null,
-   "evidence": []
+   "value": "남녀 분리 라커룸, 사우나, 스파, 샤워실",
+   "evidence": [
+    "라커/사우나: 남녀 분리 라커룸, 사우나, 스파, 샤워실"
+   ],
+   "source_url": "https://1n2d-golf.co.kr/wellihilli/info/",
+   "confidence": "medium",
+   "source_type": "public_info(1n2d-golf)",
+   "checked_at": "2026-11-27",
+   "note": "1박2일골프 시설·기타 요약(2차 공개자료, 2026-11-27 조회) — 예약 전 공식 채널 재확인 권장"
   },
   "sauna": {
-   "value": null,
-   "evidence": []
+   "value": "남녀 분리 라커룸, 사우나, 스파, 샤워실",
+   "evidence": [
+    "라커/사우나: 남녀 분리 라커룸, 사우나, 스파, 샤워실"
+   ],
+   "source_url": "https://1n2d-golf.co.kr/wellihilli/info/",
+   "confidence": "medium",
+   "source_type": "public_info(1n2d-golf)",
+   "checked_at": "2026-11-27",
+   "note": "1박2일골프 시설·기타 요약(2차 공개자료, 2026-11-27 조회) — 예약 전 공식 채널 재확인 권장"
   },
   "dress": {
    "value": null,
@@ -218,24 +360,52 @@
  },
  "facilities": {
   "practice": {
-   "value": null,
-   "evidence": []
+   "value": "드라이빙 레인지 (40타석), 퍼팅 그린, 벙커 연습장",
+   "evidence": [
+    "연습 시설: 드라이빙 레인지 (40타석), 퍼팅 그린, 벙커 연습장"
+   ],
+   "source_url": "https://1n2d-golf.co.kr/wellihilli/info/",
+   "confidence": "medium",
+   "source_type": "public_info(1n2d-golf)",
+   "checked_at": "2026-11-27",
+   "note": "1박2일골프 시설·기타 요약(2차 공개자료, 2026-11-27 조회) — 예약 전 공식 채널 재확인 권장"
   },
   "indoor_range": {
    "value": null,
    "evidence": []
   },
   "food": {
-   "value": null,
-   "evidence": []
+   "value": "클럽하우스 레스토랑 (한식·양식·뷔페), 그늘집 2동",
+   "evidence": [
+    "레스토랑: 클럽하우스 레스토랑 (한식·양식·뷔페), 그늘집 2동"
+   ],
+   "source_url": "https://1n2d-golf.co.kr/wellihilli/info/",
+   "confidence": "medium",
+   "source_type": "public_info(1n2d-golf)",
+   "checked_at": "2026-11-27",
+   "note": "1박2일골프 시설·기타 요약(2차 공개자료, 2026-11-27 조회) — 예약 전 공식 채널 재확인 권장"
   },
   "snack_bar": {
-   "value": null,
-   "evidence": []
+   "value": "그늘집 운영",
+   "evidence": [
+    "레스토랑: 클럽하우스 레스토랑 (한식·양식·뷔페), 그늘집 2동"
+   ],
+   "source_url": "https://1n2d-golf.co.kr/wellihilli/info/",
+   "confidence": "medium",
+   "source_type": "public_info(1n2d-golf)",
+   "checked_at": "2026-11-27",
+   "note": "1박2일골프 시설·기타 요약(2차 공개자료, 2026-11-27 조회) — 예약 전 공식 채널 재확인 권장"
   },
   "locker_sauna": {
-   "value": null,
-   "evidence": []
+   "value": "남녀 분리 라커룸, 사우나, 스파, 샤워실",
+   "evidence": [
+    "라커/사우나: 남녀 분리 라커룸, 사우나, 스파, 샤워실"
+   ],
+   "source_url": "https://1n2d-golf.co.kr/wellihilli/info/",
+   "confidence": "medium",
+   "source_type": "public_info(1n2d-golf)",
+   "checked_at": "2026-11-27",
+   "note": "1박2일골프 시설·기타 요약(2차 공개자료, 2026-11-27 조회) — 예약 전 공식 채널 재확인 권장"
   },
   "lodging": {
    "value": "웰리힐리파크(콘도)",
@@ -257,6 +427,17 @@
   "shuttle": {
    "value": null,
    "evidence": []
+  },
+  "proshop": {
+   "value": "프로샵",
+   "evidence": [
+    "프로샵: 프로샵 (골프용품·의류·기념품)"
+   ],
+   "source_url": "https://1n2d-golf.co.kr/wellihilli/info/",
+   "confidence": "medium",
+   "source_type": "public_info(1n2d-golf)",
+   "checked_at": "2026-11-27",
+   "note": "1박2일골프 시설·기타 요약(2차 공개자료, 2026-11-27 조회) — 예약 전 공식 채널 재확인 권장"
   }
  },
  "rental": {
@@ -323,11 +504,7 @@
   "fee_change": null,
   "alert": null,
   "unconfirmed": [
-   "대표 전화",
    "야간 라이트",
-   "잔디(티)",
-   "잔디(페어웨이)",
-   "잔디(그린)",
    "캐디피",
    "예약 오픈 주기",
    "취소·위약 규정",
@@ -360,7 +537,13 @@
   "sources": [
    "https://todaygolfgo.com/regions/gangwon/",
    "https://greenfeeguide.co.kr/course/gc-0233/",
-   "https://parkgolfinfo.co.kr/웰리힐리cc-예약이용요금-상세-안내-골프장-남·북코/"
+   "https://parkgolfinfo.co.kr/웰리힐리cc-예약이용요금-상세-안내-골프장-남·북코/",
+   "https://1n2d-golf.co.kr/wellihilli/course/",
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
   ],
   "collected_at": "2026-11-26T09:55:48+09:00"
  },
@@ -369,18 +552,20 @@
   "official_reason": "운영 중(웰리힐리파크 공식 홈페이지)",
   "pages_collected": 0,
   "third_party": {
-   "received_report": true
+   "received_report": true,
+   "teepick": true,
+   "greenfeeguide": true
   },
   "render_hint": "report",
   "plan_strategy": "subagent_report(2026-11-26)"
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.8,
+  "basic": 0.89,
+  "course": 0.4,
   "fee": 0.75,
-  "ops": 0.0,
-  "facility": 0.1,
-  "briefing": 0.75,
-  "rental": 0.25
+  "ops": 0.14,
+  "facility": 0.5,
+  "briefing": 0.5,
+  "rental": 0.0
  }
 }

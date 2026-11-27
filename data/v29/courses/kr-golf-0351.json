@@ -22,11 +22,12 @@
   "schema_previous": "stage2b/1.0",
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "restructured_from_7key": false,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0351",
@@ -152,13 +153,16 @@
     "url": "https://greenfeeguide.co.kr/course/gc-0405/",
     "checked_at": "2026-11-01"
    }
-  ]
+  ],
+  "checked_at": "2026-11-27"
  },
  "cancel": {
   "cancel_policy": "평일 5일 전·주말 7일 전 17:00까지 위약 없이 취소",
-  "open_cycle": null,
+  "open_cycle": "주중: 정회원 4주전(오전 10시), 가족회원 4주전(오후 14시), 비회원 3주전(오전 10시). 주말·공휴일: 정회원 3주전 수요일 14시(실시간), 가족회원 3주전 수요일 16시, 비회원 2주전(오전 10시). 인터넷/전화.",
   "notes": "27홀 예약 불가(18홀만 접수). 3~5인 플레이 가능하며 5인은 예약실 문의",
-  "evidence": [],
+  "evidence": [
+   "https://wondergolf.co.kr/courses/kr-kakao-25047985"
+  ],
   "weather_evidence": []
  },
  "ops": {
@@ -229,8 +233,10 @@
    "evidence": []
   },
   "food": {
-   "value": null,
-   "evidence": []
+   "value": "레스토랑",
+   "evidence": [
+    "http://www.nobelcc.co.kr/"
+   ]
   },
   "snack_bar": {
    "value": null,
@@ -253,9 +259,15 @@
    "evidence": []
   },
   "closed_days": {
-   "value": null,
+   "value": "겨울 휴장 동계 정규휴장(일정 별도 공지)",
    "third_party": null,
-   "evidence": []
+   "evidence": [
+    "2026년 영업 기간: — · 겨울 휴장 동계 정규휴장(일정 별도 공지)"
+   ],
+   "source_url": "https://www.nobelcc.co.kr/html/guide/guide_01.asp",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfee guide tables)"
   },
   "shuttle": {
    "value": null,
@@ -272,7 +284,7 @@
   "nine_hole": null,
   "range_finder": null,
   "reservation": null,
-  "source_url": null,
+  "source_url": "https://greenfeeguide.co.kr/course/gc-0405/",
   "nearby_delivery": {
    "region": "영남",
    "sido": "경상남도",
@@ -327,16 +339,11 @@
   "alert": null,
   "unconfirmed": [
    "야간 라이트",
-   "잔디(티)",
-   "잔디(그린)",
-   "예약 오픈 주기",
    "마샬캐디",
    "카트 종류",
    "카트 페어웨이 진입",
    "셀프 백드롭",
    "매트 티샷",
-   "인도어 연습장",
-   "식당·조식",
    "그늘집",
    "좌타용 클럽",
    "골프화 대여",
@@ -348,7 +355,8 @@
   "sources": [
    "http://www.nobelcc.co.kr/",
    "https://greenfeeguide.co.kr/course/gc-0405/",
-   "https://www.rankue.co.kr/golf/course/고성노벨CC"
+   "https://www.rankue.co.kr/golf/course/고성노벨CC",
+   "https://wondergolf.co.kr/courses/kr-kakao-25047985"
   ],
   "collected_at": "2026-11-26T10:33:21+09:00"
  },
@@ -357,18 +365,19 @@
   "official_reason": "운영 중(공식 홈페이지, 3~5인·노캐디·요금 안내 게시)",
   "pages_collected": 0,
   "third_party": {
-   "received_report": true
+   "received_report": true,
+   "greenfeeguide": true
   },
   "render_hint": "report",
   "plan_strategy": "subagent_report(2026-11-26)"
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 1.0,
+  "basic": 0.78,
+  "course": 0.4,
   "fee": 1.0,
   "ops": 0.43,
-  "facility": 0.4,
-  "briefing": 0.75,
-  "rental": 1.0
+  "facility": 0.6,
+  "briefing": 0.5,
+  "rental": 0.75
  }
 }

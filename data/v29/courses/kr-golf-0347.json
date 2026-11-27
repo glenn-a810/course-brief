@@ -63,11 +63,12 @@
   "schema_previous": "stage2b/1.0",
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "restructured_from_7key": false,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0347",
@@ -138,7 +139,8 @@
   "facility_cluster": null,
   "factcheck_2026_11_26": null,
   "tel_former": "055-635-8575",
-  "address_original": "거제시 장목면 거제북로 1573"
+  "address_original": "거제시 장목면 거제북로 1573",
+  "par": 72
  },
  "course": {
   "holes": 18,
@@ -154,7 +156,9 @@
   },
   "kga": null,
   "kga_hole_est": null,
-  "extra_courses": null
+  "extra_courses": null,
+  "par": 72,
+  "length_m": 6805
  },
  "fee": {
   "weekday": 210000,
@@ -181,12 +185,20 @@
     "url": "https://www.debeach.co.kr/booking/use-guide",
     "checked_at": "2026-11-26"
    }
-  ]
+  ],
+  "checked_at": "2026-11-27",
+  "market": {
+   "weekday_min": 405000,
+   "weekend_min": 235000,
+   "source": "공개 예약 채널 실거래 관측(티픽)",
+   "url": "https://teepickgolf.com/",
+   "note": "공시가 아닌 최근 관측 실거래 최저가"
+  }
  },
  "cancel": {
   "cancel_policy": "고객 사정에 따른 경기 취소 시 그린피·카트비·캐디비 전액 부담. 변경·취소는 예약확인/취소 메뉴 또는 예약실 유선.",
-  "open_cycle": "미확인(공식 홈페이지 실시간예약·대기예약 운영, 오픈 주기 미게시)",
-  "notes": "2인·5인 라운드 불가(공식 공지). 주중 연단체팀 모집 별도",
+  "open_cycle": null,
+  "notes": "2인·5인 라운드 불가(공식 공지). 주중 연단체팀 모집 별도 미확인(공식 홈페이지 실시간예약·대기예약 운영, 오픈 주기 미게시)",
   "evidence": [],
   "weather_evidence": []
  },
@@ -228,8 +240,11 @@
    "evidence": []
   },
   "checkin": {
-   "value": null,
-   "evidence": []
+   "value": "티오프 40분 전 도착·프론트 등록, 15분 전 스타트·카트 대기",
+   "evidence": [
+    "https://greenfeeguide.co.kr/course/gc-0391/",
+    "https://www.debeach.co.kr/booking/use-guide"
+   ]
   },
   "locker": {
    "value": "사우나·락카실(욕탕)",
@@ -240,8 +255,11 @@
    "evidence": []
   },
   "dress": {
-   "value": null,
-   "evidence": []
+   "value": "청바지·칼라 없는 상의·노출이 심한 복장으로 클럽 입장 불가, 고무징 골프화 의무",
+   "evidence": [
+    "https://greenfeeguide.co.kr/course/gc-0391/",
+    "https://www.debeach.co.kr/booking/use-guide"
+   ]
   },
   "pace": {
    "value": null,
@@ -356,8 +374,6 @@
   "alert": null,
   "unconfirmed": [
    "야간 라이트",
-   "잔디(티)",
-   "예약 오픈 주기",
    "3인 플레이",
    "노캐디",
    "마샬캐디",
@@ -368,8 +384,7 @@
    "인도어 연습장",
    "그늘집",
    "숙박",
-   "좌타용 클럽",
-   "골프화 대여"
+   "좌타용 클럽"
   ],
   "unconfirmed_labels_added": [],
   "sources": [
@@ -378,7 +393,13 @@
    "https://greenfeeguide.co.kr/course/gc-0391/",
    "https://www.rankue.co.kr/golf/course/드비치GC",
    "http://www.gjn.kr/news/articleView.html?idxno=60741",
-   "http://www.golfin.co.kr/news/articleView.html?idxno=7397"
+   "http://www.golfin.co.kr/news/articleView.html?idxno=7397",
+   "https://www.debeach.co.kr/course",
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
   ],
   "collected_at": "2026-11-26T10:33:21+09:00"
  },
@@ -387,18 +408,20 @@
   "official_reason": "운영 중(공식 홈페이지 정상, 11·12월 그린피 공지 게시)",
   "pages_collected": 0,
   "third_party": {
-   "received_report": true
+   "received_report": true,
+   "teepick": true,
+   "greenfeeguide": true
   },
   "render_hint": "report",
   "plan_strategy": "subagent_report(2026-11-26)"
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.8,
+  "basic": 0.78,
+  "course": 0.4,
   "fee": 1.0,
-  "ops": 0.36,
+  "ops": 0.5,
   "facility": 0.3,
-  "briefing": 0.75,
-  "rental": 1.0
+  "briefing": 0.5,
+  "rental": 0.75
  }
 }

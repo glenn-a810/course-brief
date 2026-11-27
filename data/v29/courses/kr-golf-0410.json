@@ -12,9 +12,43 @@
   ],
   "source": "raw/received_jeju_31.json (외부 데이터 수신, 2026-11-26)",
   "review": {
-   "checked_at": null,
-   "status": "not_crosschecked",
-   "checks": []
+   "checked_at": "2026-11-27",
+   "status": "supplemented(공개 요약·조사자료)",
+   "checks": [
+    {
+     "field": "ops.pace",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "고의적인 경기 진행 지연: 1차 경고, 2차 퇴장 및 1개월 입장 정지 / 볼2개씩 놓고 치면서 경기진행 지연: 1차경고, 2차퇴장",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0524/",
+     "quote": "진행이 늦으면: 고의적인 경기 진행 지연: 1차 경고, 2차 퇴장 및 1개월 입장 정지 / 볼2개씩 놓고 치면서 경기진행 지연: 1차경고, 2차퇴장",
+     "source_type": "official_summary(greenfeeguide)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "fee.checked_at",
+     "received": null,
+     "verified": "2026-11-27",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0524/",
+     "quote": "요금 확인일 2026-11-02 (그린피가이드 2026-11-27 조회)",
+     "source_type": "third_party",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.closed_days",
+     "received": "{\"value\": null, \"third_party\": null, \"evidence\": []}",
+     "verified": "정기 휴장일 없음",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0524/",
+     "quote": "정기 휴장일 정기 휴장일 없음",
+     "source_type": "third_party",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    }
+   ]
   },
   "data_checks": [
    "대표전화 불일치: 마스터 064-802-8020 / 수신 064-802-8000",
@@ -23,11 +57,14 @@
   "schema_previous": "stage2b/1.0",
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "restructured_from_7key": false,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "batch3_patch": "2026-11-27 배치3 보완: 1개 항목(공식 홈페이지·공개 요금 안내 기준, 미확인 값 생성 없음)",
+  "pass2_patch": "2026-11-27 2차 보완 패스: 1개 항목(그린피가이드·1박2일골프·원더골프·공식 홈페이지 대조, 미확인 값 생성 없음)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0410",
@@ -86,7 +123,8 @@
   "holes_conflict": false,
   "facility_cluster": null,
   "factcheck_2026_11_26": null,
-  "tel_former": "064-802-8020"
+  "tel_former": "064-802-8020",
+  "par": 72
  },
  "course": {
   "holes": 27,
@@ -115,7 +153,9 @@
    ]
   },
   "kga_hole_est": 27,
-  "extra_courses": null
+  "extra_courses": null,
+  "par": 72,
+  "length_m": 5942
  },
  "fee": {
   "weekday": 135000,
@@ -141,9 +181,23 @@
     "source": "수신 조사(공식·공개 예약정보)",
     "url": "https://www.ecolandjeju.co.kr/",
     "checked_at": "2026-10-01~12-31 요금 기준"
+   },
+   {
+    "source": "third_party",
+    "url": "https://greenfeeguide.co.kr/course/gc-0524/",
+    "quote": "요금 확인일 2026-11-02 (그린피가이드 2026-11-27 조회)",
+    "checked_at": "2026-11-27"
    }
   ],
-  "resident": null
+  "resident": null,
+  "checked_at": "2026-11-27",
+  "market": {
+   "weekday_min": 130000,
+   "weekend_min": null,
+   "source": "공개 예약 채널 실거래 관측(티픽)",
+   "url": "https://teepickgolf.com/",
+   "note": "공시가 아닌 최근 관측 실거래 최저가"
+  }
  },
  "cancel": {
   "cancel_policy": "주말·공휴일 4일 전·평일 3일 전까지 예약금 전액 환불, 이후 취소 시 10~30% 위약. 당일 취소·노쇼 30%",
@@ -206,8 +260,15 @@
    "evidence": []
   },
   "pace": {
-   "value": null,
-   "evidence": []
+   "value": "고의적인 경기 진행 지연: 1차 경고, 2차 퇴장 및 1개월 입장 정지 / 볼2개씩 놓고 치면서 경기진행 지연: 1차경고, 2차퇴장",
+   "evidence": [
+    "진행이 늦으면: 고의적인 경기 진행 지연: 1차 경고, 2차 퇴장 및 1개월 입장 정지 / 볼2개씩 놓고 치면서 경기진행 지연: 1차경고, 2차퇴장"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0524/",
+   "confidence": "medium",
+   "source_type": "official_summary(greenfeeguide)",
+   "checked_at": "2026-11-27",
+   "note": "공개 요금 정보가 골프장 공식 안내를 정리한 값(확인일 페이지 표기)"
   }
  },
  "facilities": {
@@ -244,9 +305,15 @@
    "evidence": []
   },
   "closed_days": {
-   "value": null,
+   "value": "정기 휴장일 없음",
    "third_party": null,
-   "evidence": []
+   "evidence": [
+    "정기 휴장일 정기 휴장일 없음"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0524/",
+   "confidence": "high",
+   "source_type": "third_party",
+   "checked_at": "2026-11-27"
   },
   "shuttle": {
    "value": null,
@@ -365,8 +432,6 @@
   "alert": null,
   "unconfirmed": [
    "야간 라이트",
-   "잔디(티)",
-   "잔디(페어웨이)",
    "5인 플레이",
    "마샬캐디",
    "셀프 백드롭",
@@ -382,7 +447,12 @@
    "https://www.ecolandjeju.co.kr/view/viewLink.do?page=homepage/KOR/guide/useTheProcedure",
    "https://www.ecolandjeju.co.kr/view/index.do",
    "https://inwon.kr/c/k424",
-   "https://jejukimpro.co.kr/ko/golf/ecoland"
+   "https://jejukimpro.co.kr/ko/golf/ecoland",
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
   ],
   "collected_at": "2026-11-26T09:35:01+09:00"
  },
@@ -391,18 +461,20 @@
   "official_reason": "운영 중(홈페이지 정상)",
   "pages_collected": 0,
   "third_party": {
-   "received_report": true
+   "received_report": true,
+   "teepick": true,
+   "greenfeeguide": true
   },
   "render_hint": "report",
   "plan_strategy": "subagent_report(2026-11-26)"
  },
  "coverage": {
-  "basic": 0.89,
-  "course": 0.8,
+  "basic": 0.78,
+  "course": 0.2,
   "fee": 1.0,
-  "ops": 0.5,
-  "facility": 0.5,
-  "briefing": 0.75,
-  "rental": 0.25
+  "ops": 0.57,
+  "facility": 0.6,
+  "briefing": 0.5,
+  "rental": 0.0
  }
 }

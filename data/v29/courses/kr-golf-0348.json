@@ -22,11 +22,12 @@
   "schema_previous": "stage2b/1.0",
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "restructured_from_7key": false,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0348",
@@ -141,7 +142,15 @@
     "url": "https://www.geojeview.co.kr/customer/notice/17326",
     "checked_at": "2026-11-12(12월 요금 공지)"
    }
-  ]
+  ],
+  "checked_at": "2026-11-27",
+  "market": {
+   "weekday_min": 290000,
+   "weekend_min": 390000,
+   "source": "공개 예약 채널 실거래 관측(티픽)",
+   "url": "https://teepickgolf.com/",
+   "note": "공시가 아닌 최근 관측 실거래 최저가"
+  }
  },
  "cancel": {
   "cancel_policy": "5인 플레이는 7일 전까지 취소 가능. 우천 시 소량의 비·예보만으로는 취소 불가, 경기 1~2시간 전 팀 판단으로 취소(이벤트·할인티는 정상요금 기준 환불). 강설·폭우(30분 이상·10mm 이상)·안개 등 천재지변 중단 시 홀별 정산",
@@ -176,8 +185,14 @@
    "evidence": []
   },
   "cart_entry": {
-   "value": null,
-   "evidence": []
+   "value": "페어웨이 진입 불가카트는 페어웨이 내 진입 금지",
+   "evidence": [
+    "페어웨이 진입: 페어웨이 진입 불가카트는 페어웨이 내 진입 금지"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0392/",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfeeguide)"
   },
   "bagdrop": {
    "value": null,
@@ -188,8 +203,10 @@
    "evidence": []
   },
   "checkin": {
-   "value": null,
-   "evidence": []
+   "value": "팀 전원 플레이 40분 전 도착, 티업 15분 전 코스로 이동",
+   "evidence": [
+    "https://www.geojeview.co.kr/golf-tel/use"
+   ]
   },
   "locker": {
    "value": null,
@@ -226,8 +243,10 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": null,
-   "evidence": []
+   "value": "락커·샤워실",
+   "evidence": [
+    "https://www.geojeview.co.kr/golf-tel/use"
+   ]
   },
   "lodging": {
    "value": "골프텔(36홀+숙박+조식 패키지 운영)",
@@ -242,9 +261,15 @@
    "evidence": []
   },
   "closed_days": {
-   "value": null,
+   "value": "연중무휴",
    "third_party": null,
-   "evidence": []
+   "evidence": [
+    "정기 휴장일: 연중무휴"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0392/",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfeeguide)"
   },
   "shuttle": {
    "value": null,
@@ -327,7 +352,6 @@
    "연습그린",
    "인도어 연습장",
    "그늘집",
-   "락커·사우나",
    "클럽 렌탈 여부",
    "클럽 렌탈 요금",
    "좌타용 클럽",
@@ -341,7 +365,13 @@
    "https://www.geojeview.co.kr/guide-info/guide",
    "https://www.geojeview.co.kr/customer/notice/17326",
    "https://greenfeeguide.co.kr/course/gc-0392/",
-   "https://www.rankue.co.kr/golf/course/거제뷰CC"
+   "https://www.rankue.co.kr/golf/course/거제뷰CC",
+   "https://www.geojeview.co.kr/golf-tel/use",
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
   ],
   "collected_at": "2026-11-26T10:33:21+09:00"
  },
@@ -350,18 +380,20 @@
   "official_reason": "운영 중(공식 홈페이지 정상, 12월 운영시간·이용요금 공지 2026-11-12)",
   "pages_collected": 0,
   "third_party": {
-   "received_report": true
+   "received_report": true,
+   "teepick": true,
+   "greenfeeguide": true
   },
   "render_hint": "report",
   "plan_strategy": "subagent_report(2026-11-26)"
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.8,
+  "basic": 0.78,
+  "course": 0.4,
   "fee": 1.0,
-  "ops": 0.21,
-  "facility": 0.4,
-  "briefing": 0.75,
-  "rental": 0.25
+  "ops": 0.36,
+  "facility": 0.6,
+  "briefing": 0.5,
+  "rental": 0.0
  }
 }

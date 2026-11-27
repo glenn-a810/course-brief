@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0209",
@@ -56,13 +57,13 @@
    "master": "courses_master.json v2.0 (문체부·KGA·KGBA·티픽·지도)",
    "synced_to": "courses_master.json v2.7 (2026-11-26 단일 스키마 정규화)"
   },
-  "par": null,
+  "par": 72,
   "holes_teepick": 27,
   "course_spec": {
    "holes": 27,
-   "par": null,
+   "par": 72,
    "blocks": [],
-   "length_m": null,
+   "length_m": 6158,
    "kga": {
     "kga_course_code": "327",
     "kga_name": "라싸",
@@ -214,9 +215,9 @@
  "course": {
   "holes": 27,
   "holes_received": 27,
-  "course_names": null,
+  "course_names": "밸리·마운틴·레이크 각 9홀",
   "membership_type": "대중제",
-  "night_light": null,
+  "night_light": true,
   "blocks": [],
   "grass": {
    "tee": null,
@@ -364,8 +365,8 @@
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": null,
-  "par": null
+  "length_m": 6158,
+  "par": 72
  },
  "fee": {
   "weekday": null,
@@ -390,15 +391,16 @@
   "source_url": null,
   "note": null,
   "sources": [],
-  "checked_at": null,
+  "checked_at": "2026-11-27",
   "market": {
-   "weekday_min": 80000.0,
-   "weekend_min": 134000.0,
-   "part1": null,
-   "part2": null,
+   "weekday_min": 80000,
+   "weekend_min": 134000,
+   "part1": "3.9만 ~ 27.9만",
+   "part2": "4만 ~ 26.9만",
    "source": "티픽골프장(실거래 관측)",
-   "url": "https://teepickgolf.com/course/%EB%9D%BC%EC%8B%B8",
-   "note": "공시가 아닌 최근 관측 실거래 최저가"
+   "url": "https://teepickgolf.com/course/라싸",
+   "note": "공시가 아닌 최근 관측 실거래 최저가",
+   "checked_at": "2026-11-27"
   },
   "official_green": {
    "value": 10000,
@@ -429,13 +431,19 @@
   }
  },
  "cancel": {
-  "cancel_policy": null,
-  "open_cycle": null,
+  "cancel_policy": {
+   "value": "비회원 기준 주말·공휴일 4일 전, 평일 3일 전까지 취소 시 예약금 전액 환불. 당일 취소·무단 미내장은 팀별 이용요금 30%, 위약금 미납 시 영구 자격정지",
+   "source": "공식 홈페이지",
+   "url": "http://www.lassagc.com/reservation/terms"
+  },
+  "open_cycle": "홈페이지(PC/모바일) 예약: 한달 전 동일 날짜 10:00 오픈",
   "notes": null,
   "evidence": [
    "예약취소 안내 구분 내용 월 5회 초과 취소 취소 가능 횟수 (취소 총량제) 월 5회까지 가능 30일 자격정지 위약안내 구분 주중 주말 및 공휴일 비고 4일전 취소 정상취소(주중/주말 17시 이전) - 3일전 정상취소(주중/주말 17시 이전) [팀 그린피 + 카트비] * 10% 위약금 납부 전까지영구 자격정지 2일전 [팀 그린피 + 카트비] * 10% 1일전 [팀 그린피 + 카트비] * 20% 당일취소 및 미내장 [팀 그린피 + 카트비] * 30% - 본인 및 직계존비속의 사고 / 갑작스러운 병변의 발생 시 관련 증빙서류로 패널티 ",
    "- 위약에 따른 위약금 미납부 시 영구 자격정지가 적용되며, 위약 이전에 부여되었던 모든 혜택도 무효처리됩니다.",
-   "- 위약에 따른 위약금 미납부 시 위약 이전에 예약되었던 예약 건도 모두 자동 취소됩니다."
+   "- 위약에 따른 위약금 미납부 시 위약 이전에 예약되었던 예약 건도 모두 자동 취소됩니다.",
+   "① 비회원 이용자가 주말이나 공휴일인 이용예정일로부터 4일전까지, 평일인 이용예정일로부터 3일전까지 예약을 취소한 경우에는 예약금의 전액을 환불하여야 한다.",
+   "- 위약에 따른 위약금 미납부 시 영구 자격정지가 적용되며"
   ],
   "weather_evidence": [
    "악천후에 의한 취소(눈,비,낙뢰 등) 위약기간 내 악천후 예보에 의한 취소 및 예약변경은 패널티가 적용됩니다.",
@@ -473,7 +481,6 @@
    "evidence": [
     "1팀 3~4인 기준이며, 2인 내장 시 3인 그린피가 적용됩니다.",
     "※ 3부 셀프라운드는 라싸 홈페이지 예약 시 3인 플레이 가능합니다.",
-    "1팀 3~4인 기준이며, 2인 내장 시 3인 그린피가 적용됩니다.",
     "2인 플레이: 3인 그린피"
    ],
    "value": "2인 — 3인 그린피",
@@ -588,8 +595,15 @@
    "evidence": []
   },
   "other": {
-   "value": null,
-   "evidence": []
+   "value": "프로샵",
+   "evidence": [
+    "other: 프로샵"
+   ],
+   "source_url": "https://greenfeeguide.com/course/gc-0119/",
+   "source_type": "greenfee_guide",
+   "confidence": "medium",
+   "checked_at": "2026-11-27",
+   "value_from": "batch2_supplement"
   },
   "night": {
    "evidence": [
@@ -642,16 +656,16 @@
   }
  },
  "rental": {
-  "available": null,
-  "full_set": null,
-  "fee_text": null,
+  "available": true,
+  "full_set": 60000,
+  "fee_text": "60,000원 · 18홀",
   "brand": null,
   "left_handed": null,
   "shoes": null,
   "nine_hole": null,
   "range_finder": null,
   "reservation": null,
-  "source_url": null,
+  "source_url": "https://greenfeeguide.co.kr/course/gc-0119/",
   "evidence": [],
   "official": null,
   "nearby_delivery": {
@@ -726,7 +740,13 @@
   "course_notes": null,
   "alert": null,
   "unconfirmed": [],
-  "sources": []
+  "sources": [
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "ok",
@@ -734,19 +754,19 @@
   "pages_collected": 14,
   "third_party": {
    "teepick": true,
-   "greenfeeguide": false
+   "greenfeeguide": true
   },
   "render_hint": "static",
   "plan_strategy": "static(직접 파싱)",
   "browser_batch": false
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.8,
+  "basic": 0.89,
+  "course": 0.4,
   "fee": 0.0,
   "ops": 0.29,
-  "facility": 0.3,
-  "briefing": 0.5,
-  "rental": 0.25
+  "facility": 0.4,
+  "briefing": 0.0,
+  "rental": 0.75
  }
 }

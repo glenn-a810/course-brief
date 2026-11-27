@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0030",
@@ -46,7 +47,7 @@
    "straight_name": "영광IC"
   },
   "tel": "061-350-2000",
-  "homepage": null,
+  "homepage": "https://www.westoceancc.co.kr/",
   "operators": [
    "대호관광개발㈜(윤오중)"
   ],
@@ -58,13 +59,13 @@
    "master": "courses_master.json v2.0 (문체부·KGA·KGBA·티픽·지도)",
    "synced_to": "courses_master.json v2.7 (2026-11-26 단일 스키마 정규화)"
   },
-  "par": null,
+  "par": 72,
   "holes_teepick": 18,
   "course_spec": {
    "holes": 18,
-   "par": null,
+   "par": 72,
    "blocks": [],
-   "length_m": null,
+   "length_m": 5691,
    "kga": null,
    "grass": null,
    "hole_by_hole": null
@@ -92,18 +93,133 @@
   "kga": null,
   "kga_hole_est": null,
   "extra_courses": null,
-  "hole_by_hole": null,
-  "length_m": null,
-  "par": null
+  "hole_by_hole": [
+   {
+    "hole": 1,
+    "par": 4,
+    "white_m": 350,
+    "red_m": 265
+   },
+   {
+    "hole": 2,
+    "par": 4,
+    "white_m": 360,
+    "red_m": 295
+   },
+   {
+    "hole": 3,
+    "par": 5,
+    "white_m": 445,
+    "red_m": 380
+   },
+   {
+    "hole": 4,
+    "par": 3,
+    "white_m": 145,
+    "red_m": 110
+   },
+   {
+    "hole": 5,
+    "par": 4,
+    "white_m": 335,
+    "red_m": 290
+   },
+   {
+    "hole": 6,
+    "par": 5,
+    "white_m": 465,
+    "red_m": 395
+   },
+   {
+    "hole": 7,
+    "par": 3,
+    "white_m": 121,
+    "red_m": 117
+   },
+   {
+    "hole": 8,
+    "par": 4,
+    "white_m": 310,
+    "red_m": 255
+   },
+   {
+    "hole": 9,
+    "par": 4,
+    "white_m": 360,
+    "red_m": 275
+   },
+   {
+    "hole": 10,
+    "par": 5,
+    "white_m": 445,
+    "red_m": 390
+   },
+   {
+    "hole": 11,
+    "par": 4,
+    "white_m": 330,
+    "red_m": 208
+   },
+   {
+    "hole": 12,
+    "par": 4,
+    "white_m": 335,
+    "red_m": 285
+   },
+   {
+    "hole": 13,
+    "par": 3,
+    "white_m": 135,
+    "red_m": 110
+   },
+   {
+    "hole": 14,
+    "par": 4,
+    "white_m": 335,
+    "red_m": 265
+   },
+   {
+    "hole": 15,
+    "par": 3,
+    "white_m": 115,
+    "red_m": 105
+   },
+   {
+    "hole": 16,
+    "par": 5,
+    "white_m": 480,
+    "red_m": 340
+   },
+   {
+    "hole": 17,
+    "par": 4,
+    "white_m": 310,
+    "red_m": 200
+   },
+   {
+    "hole": 18,
+    "par": 4,
+    "white_m": 315,
+    "red_m": 255
+   }
+  ],
+  "length_m": 5691,
+  "par": 72
  },
  "fee": {
   "weekday": 145000,
   "weekend": 195000,
-  "weekday_text": null,
+  "weekday_text": "145,000원 ~ 175,000원",
   "weekend_text": null,
-  "basis": null,
+  "basis": "official",
   "tax_included": null,
-  "cart": null,
+  "cart": {
+   "value": 80000,
+   "raw": "80,000원",
+   "text": "팀당(공식 홈페이지 안내)",
+   "source": "공식 홈페이지",
+   "url": "https://www.westoceancc.co.kr/html/guide/guide02.asp"
+  },
   "caddie": null,
   "as_of": "2026-11-01",
   "source_url": null,
@@ -115,7 +231,7 @@
     "checked_at": "2026-11-01"
    }
   ],
-  "checked_at": "2026-11-01",
+  "checked_at": "2026-11-27",
   "market": {
    "weekday_min": 86000.0,
    "weekend_min": 136000.0,
@@ -128,13 +244,15 @@
  },
  "cancel": {
   "cancel_policy": {
-   "value": "평일 3일 전 · 주말 4일 전까지(이용약관 기준)할인지역주민 · 여성카트리무진카트 200,000원숙박골프텔개장·설계2008년 개장014인 1팀",
-   "source": "그린피가이드(공식 인용)",
+   "value": "위약 없이 취소: 평일 3일 전 · 주말 4일 전까지 (이용약관 기준 — 예약 안내에 더 이른 기한이 따로 있을 수 있으니 함께 확인하세요)",
+   "source": "그린피가이드(공식 안내 인용)",
    "url": "https://greenfeeguide.co.kr/course/gc-0481/"
   },
   "open_cycle": null,
   "notes": null,
-  "evidence": [],
+  "evidence": [
+   "기존 cancel_policy 값이 인접 안내 항목과 뒤섞여 있어(오류) 그린피가이드 원문 인용으로 정정 — 평일 3일 전 · 주말 4일 전까지 (이용약관 기준 — 예약 안내에 더 이른 기한이 따로 있을 수 있으니 함께 확인하세요) (출처: https://greenfeeguide.co.kr/course/gc-0481/, 2026-11 확인)"
+  ],
   "weather_evidence": []
  },
  "ops": {
@@ -165,8 +283,10 @@
    "evidence": []
   },
   "cart_type": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "리무진카트 200,000원 (출처: https://greenfeeguide.co.kr/course/gc-0481/, 2026-11-27 확인)"
+   ],
+   "value": "리무진카트 200,000원"
   },
   "cart_entry": {
    "evidence": [],
@@ -217,8 +337,10 @@
    "evidence": []
   },
   "food": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "레스토랑 (출처: https://westoceancc.co.kr/html/course/course04.asp, 2026-11-27 확인)"
+   ],
+   "value": "레스토랑"
   },
   "snack_bar": {
    "value": null,
@@ -229,12 +351,16 @@
    "evidence": []
   },
   "lodging": {
-   "value": null,
-   "evidence": []
+   "value": "골프텔",
+   "evidence": [
+    "골프텔 (출처: https://greenfeeguide.co.kr/course/gc-0481/, 2026-11-27 확인)"
+   ]
   },
   "other": {
-   "value": null,
-   "evidence": []
+   "value": "프로샵",
+   "evidence": [
+    "프로샵 (출처: https://greenfeeguide.co.kr/course/gc-0481/, 2026-11-27 확인)"
+   ]
   },
   "night": {
    "evidence": [],
@@ -332,8 +458,19 @@
   "recent_notice_text": null,
   "course_notes": null,
   "alert": null,
-  "unconfirmed": [],
-  "sources": []
+  "unconfirmed": [
+   "체크인",
+   "복장",
+   "진행 시간",
+   "휴장일"
+  ],
+  "sources": [
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "unavailable",
@@ -351,11 +488,11 @@
  },
  "coverage": {
   "basic": 0.89,
-  "course": 0.6,
-  "fee": 0.5,
-  "ops": 0.0,
-  "facility": 0.0,
-  "briefing": 0.5,
-  "rental": 0.25
+  "course": 0.2,
+  "fee": 0.75,
+  "ops": 0.07,
+  "facility": 0.3,
+  "briefing": 0.0,
+  "rental": 0.0
  }
 }

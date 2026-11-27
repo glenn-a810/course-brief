@@ -5,9 +5,10 @@
   "schema": "stage2c/1.0",
   "batch": null,
   "structure": "master only (군 체력단련장 — 공개 상세정보 없음)",
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "has_detail": false,
-  "v29_patch": "v2.9 N-08 신규 수록"
+  "v29_patch": "v2.9 N-08 신규 수록",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0545",
@@ -266,7 +267,13 @@
    "currently_closed": false,
    "planned_closure": "2027년 상반기"
   },
-  "unconfirmed": [],
+  "unconfirmed": [
+   "취소·위약 규정",
+   "체크인",
+   "복장",
+   "진행 시간",
+   "식당"
+  ],
   "sources": []
  },
  "collection": {
@@ -278,12 +285,12 @@
   "plan_strategy": null
  },
  "coverage": {
-  "basic": 0,
-  "course": 0,
-  "fee": 0,
-  "ops": 0,
-  "facility": 0,
-  "briefing": 0,
-  "rental": 0
+  "basic": 0.67,
+  "course": 0.0,
+  "fee": 0.0,
+  "ops": 0.0,
+  "facility": 0.0,
+  "briefing": 0.0,
+  "rental": 0.0
  }
 }

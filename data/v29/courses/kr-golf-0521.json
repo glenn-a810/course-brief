@@ -5,8 +5,10 @@
   "schema": "stage2c/1.0",
   "batch": null,
   "structure": "master only (구장 JSON 미생성 — 건설중·미착공)",
-  "normalized_at": "2026-11-26T12:20:52+09:00",
-  "has_detail": false
+  "normalized_at": "2026-11-27T14:40:00+09:00",
+  "has_detail": false,
+  "checked_at": "2026-11-27",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0521",
@@ -39,7 +41,7 @@
   "lat": 36.866925,
   "lng": 127.29421,
   "tel": null,
-  "homepage": null,
+  "homepage": "http://terracc.kr/",
   "operators": [
    "㈜테라컨트리클럽"
   ],
@@ -49,11 +51,12 @@
   "facility_id": null,
   "facility_members": null,
   "status": "under_construction",
-  "expected_open": "2026-하반기 시범라운딩 → 2027-상반기 정식 개장(추정)",
+  "expected_open": "2026-10 개장 목표(2026-11-27 기준 미개장)",
   "nearest_ic": null,
   "facility_cluster": null,
   "factcheck_2026_11_26": null,
-  "provenance": {}
+  "provenance": {},
+  "project_stage": "2025년 착공(6월 예정 보도), 27홀 대중제+콘도 조성. 2026-10 개장 목표로 공사 중이며 2026-11-27 기준 티타임 판매·개장 공지 미확인"
  },
  "course": {
   "holes": null,
@@ -214,12 +217,16 @@
    "tags": {}
   },
   "recent_notice_text": null,
-  "course_notes": null,
+  "course_notes": "",
   "review": null,
   "fee_change": null,
   "alert": null,
   "unconfirmed": [],
-  "sources": []
+  "sources": [
+   "http://terracc.kr/",
+   "https://www.ksilbo.co.kr/news/articleView.html?idxno=1025323"
+  ],
+  "collected_at": "2026-11-27"
  },
  "collection": {
   "official_site": null,
@@ -230,12 +237,12 @@
   "plan_strategy": null
  },
  "coverage": {
-  "basic": 0,
-  "course": 0,
-  "fee": 0,
-  "ops": 0,
-  "facility": 0,
-  "briefing": 0,
-  "rental": 0
+  "basic": 0.67,
+  "course": 0.0,
+  "fee": 0.0,
+  "ops": 0.0,
+  "facility": 0.0,
+  "briefing": 0.0,
+  "rental": 0.0
  }
 }

@@ -8,11 +8,51 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "review": {
+   "checks": [
+    {
+     "field": "ops.checkin.value",
+     "received": null,
+     "verified": "티오프 40분 전 도착, 20분 전 스타트·카트 대기",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0348/",
+     "quote": "도착: 티오프 40분 전 도착, 20분 전 스타트·카트 대기",
+     "source_type": "official_summary(greenfeeguide)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "ops.dress.value",
+     "received": null,
+     "verified": "별도 복장 규정 없음, 속내의가 드러나는 복장 삼가, 소프트 스파이크 착용",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0348/",
+     "quote": "복장: 별도 복장 규정 없음, 속내의가 드러나는 복장 삼가, 소프트 스파이크 착용",
+     "source_type": "official_summary(greenfeeguide)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "cancel.open_cycle",
+     "received": null,
+     "verified": "2주 전 월요일부터 인터넷·전화 접수 가능(예약가능 시간 09:00~17:00)",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0348/",
+     "quote": "예약 오픈: 2주 전 월요일부터 인터넷·전화 접수 가능(예약가능 시간 09:00~17:00)",
+     "source_type": "official_summary(greenfeeguide)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    }
+   ],
+   "checked_at": "2026-11-27"
+  },
+  "batch3_patch": "2026-11-27 배치6(대구·경북) 보완: 3개 항목(공식 홈페이지·그린피가이드 공식 안내 확인 기준, 미확인 값 생성 없음)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0329",
@@ -195,16 +235,26 @@
    "source": "공식(브라우저 수집)",
    "url": "https://www.cielgolf.com/html/guide/guide02.asp"
   },
-  "open_cycle": null,
+  "open_cycle": "2주 전 월요일부터 인터넷·전화 접수 가능(예약가능 시간 09:00~17:00)",
   "notes": null,
-  "evidence": [],
+  "evidence": [
+   "예약 오픈: 2주 전 월요일부터 인터넷·전화 접수 가능(예약가능 시간 09:00~17:00)"
+  ],
   "weather_evidence": [],
   "browser_official": {
    "cancel_rain": "악천후 취소는 당일 티업 1시간 전 현장 상황에 따라 가능(시간당 2mm 이상 강우·낙뢰·강설·안개 등)",
    "cancel": "평일 5일 전 17:00까지 인터넷·전화 취소. 17:00 이후는 다음날로 간주, 동절기(12·1·2월)는 평일·주말·공휴일 모두 5일 전 17:00까지. 이후 취소 위약: 4일 전 20일 예약정지, 3일 전 1개월, 2일 전 2개월+팀 이용요금 10%, 1일 전 3개월+20%, 당일·무단결장 4개월+30%",
    "booking": "2주 전 월요일부터 인터넷·전화 접수(09:00~17:00), 홈페이지 고객등록 필수, 본인 내장 필수(동반자만 입장 불가), 대리예약 적발 시 위약",
    "arbitrary_stop": "입장절차 후 임의 취소는 시설이용료+(이용요금-시설이용료)×50%, 1~9홀 중 임의 중단 75%, 10~18홀 중 임의 중단 이용요금 100%"
-  }
+  },
+  "sources": [
+   {
+    "url": "https://greenfeeguide.co.kr/course/gc-0348/",
+    "quote": "예약 오픈: 2주 전 월요일부터 인터넷·전화 접수 가능(예약가능 시간 09:00~17:00)",
+    "checked_at": "2026-11-27",
+    "source_type": "official_summary(greenfeeguide)"
+   }
+  ]
  },
  "ops": {
   "nocaddie": {
@@ -244,8 +294,14 @@
    "value": null
   },
   "checkin": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "도착: 티오프 40분 전 도착, 20분 전 스타트·카트 대기"
+   ],
+   "value": "티오프 40분 전 도착, 20분 전 스타트·카트 대기",
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0348/",
+   "confidence": "medium",
+   "source_type": "official_summary(greenfeeguide)",
+   "checked_at": "2026-11-27"
   },
   "locker": {
    "evidence": [],
@@ -256,8 +312,14 @@
    "value": null
   },
   "dress": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "복장: 별도 복장 규정 없음, 속내의가 드러나는 복장 삼가, 소프트 스파이크 착용"
+   ],
+   "value": "별도 복장 규정 없음, 속내의가 드러나는 복장 삼가, 소프트 스파이크 착용",
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0348/",
+   "confidence": "medium",
+   "source_type": "official_summary(greenfeeguide)",
+   "checked_at": "2026-11-27"
   },
   "pace": {
    "evidence": [],
@@ -431,7 +493,6 @@
    "source_file": "2-golf_16_courses_fees_notices.json"
   },
   "unconfirmed": [
-   "공식 월별 그린피 요금표 원문",
    "동계 휴장 공지(2026-27)",
    "캐디 운영(노캐디 확인)"
   ],
@@ -439,7 +500,12 @@
    "http://www.cielgolf.com",
    "https://parkgolfinfo.co.kr/%ec%98%81%ec%b2%9c-%ec%8b%9c%ec%97%98gc-%ea%b3%a8%ed%94%84%ec%9e%a5-%ec%98%88%ec%95%bd%eb%b0%a9%eb%b2%95%c2%b7%ec%9a%94%ea%b8%88%c2%b7%ec%b9%b4%ed%8a%b8%eb%b9%84%c2%b7%ec%9c%84%ec%95%bd%ea%b7%9c/",
    "https://inwon.kr/c/k482",
-   "https://todaygolfgo.com/golf-courses/master/golf-course-moct-20241231-0292/"
+   "https://todaygolfgo.com/golf-courses/master/golf-course-moct-20241231-0292/",
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
   ]
  },
  "collection": {
@@ -448,19 +514,19 @@
   "pages_collected": 0,
   "third_party": {
    "teepick": true,
-   "greenfeeguide": false
+   "greenfeeguide": true
   },
   "render_hint": "thin",
   "plan_strategy": "blocked(헤드리스·UA 우회)",
   "browser_batch": true
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.6,
+  "basic": 0.89,
+  "course": 0.2,
   "fee": 0.75,
-  "ops": 0.0,
+  "ops": 0.14,
   "facility": 0.0,
-  "briefing": 1.0,
-  "rental": 0.25
+  "briefing": 0.5,
+  "rental": 0.0
  }
 }

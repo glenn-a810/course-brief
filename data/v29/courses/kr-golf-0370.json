@@ -22,11 +22,12 @@
   "schema_previous": "stage2b/1.0",
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "restructured_from_7key": false,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0370",
@@ -98,7 +99,12 @@
   "holes_conflict": false,
   "facility_cluster": null,
   "factcheck_2026_11_26": null,
-  "address_original": "양산시 상북면 충렬로 687"
+  "address_original": "양산시 상북면 충렬로 687",
+  "designer": {
+   "value": "골프플랜社 (미국)",
+   "source": "공개 정보(그린피가이드)",
+   "url": "https://greenfeeguide.co.kr/course/gc-0397/"
+  }
  },
  "course": {
   "holes": 27,
@@ -141,7 +147,15 @@
     "url": "https://greenfeeguide.co.kr/course/gc-0397/",
     "checked_at": "2026-10-05"
    }
-  ]
+  ],
+  "checked_at": "2026-11-27",
+  "market": {
+   "weekday_min": 96000,
+   "weekend_min": 166000,
+   "source": "공개 예약 채널 실거래 관측(티픽)",
+   "url": "https://teepickgolf.com/",
+   "note": "공시가 아닌 최근 관측 실거래 최저가"
+  }
  },
  "cancel": {
   "cancel_policy": "평일 3일 전·주말 4일 전 17:00까지 위약 없이 취소",
@@ -160,8 +174,10 @@
    "evidence": []
   },
   "three_player": {
-   "value": null,
-   "evidence": []
+   "value": "3인 팀은 단체할인 적용 불가",
+   "evidence": [
+    "https://yangsancc.co.kr/pagesite/use/rule.asp"
+   ]
   },
   "five_player": {
    "value": null,
@@ -172,8 +188,10 @@
    "evidence": []
   },
   "cart_type": {
-   "value": null,
-   "evidence": []
+   "value": "리무진카트",
+   "evidence": [
+    "https://yangsancc.co.kr/pagesite/use/charge.asp"
+   ]
   },
   "cart_entry": {
    "value": null,
@@ -196,12 +214,20 @@
    "evidence": []
   },
   "sauna": {
-   "value": null,
-   "evidence": []
+   "value": "사우나 있음락커룸/사우나",
+   "evidence": [
+    "사우나: 사우나 있음락커룸/사우나"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0397/",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfeeguide)"
   },
   "dress": {
-   "value": null,
-   "evidence": []
+   "value": "지나친 내기·타인에게 불편을 주는 복장은 이용 제한",
+   "evidence": [
+    "https://yangsancc.co.kr/pagesite/use/rule.asp"
+   ]
   },
   "pace": {
    "value": null,
@@ -210,32 +236,43 @@
  },
  "facilities": {
   "practice": {
-   "value": null,
-   "evidence": []
+   "value": "골프연습장",
+   "evidence": [
+    "https://yangsancc.co.kr/pagesite/club/facilities/house.asp"
+   ]
   },
   "indoor_range": {
    "value": null,
    "evidence": []
   },
   "food": {
-   "value": null,
-   "evidence": []
+   "value": "레스토랑",
+   "evidence": [
+    "https://yangsancc.co.kr/pagesite/club/facilities/house.asp"
+   ]
   },
   "snack_bar": {
    "value": null,
    "evidence": []
   },
   "locker_sauna": {
-   "value": null,
-   "evidence": []
+   "value": "락커룸·사우나",
+   "evidence": [
+    "https://greenfeeguide.co.kr/course/gc-0397/",
+    "https://yangsancc.co.kr/pagesite/club/facilities/house.asp"
+   ]
   },
   "lodging": {
-   "value": null,
-   "evidence": []
+   "value": "베니키아 양산 호텔 숙박 할인(60~40%)",
+   "evidence": [
+    "https://yangsancc.co.kr/pagesite/use/rule.asp"
+   ]
   },
   "other": {
-   "value": null,
-   "evidence": []
+   "value": "프로샵",
+   "evidence": [
+    "https://greenfeeguide.co.kr/course/gc-0397/"
+   ]
   },
   "night": {
    "value": "27개 전 홀 조명 시설, 야간 라운드 운영(2026년 11월에도 운영)",
@@ -315,30 +352,19 @@
   "fee_change": null,
   "alert": null,
   "unconfirmed": [
-   "잔디(티)",
-   "잔디(그린)",
    "2인 플레이",
-   "3인 플레이",
    "5인 플레이",
    "노캐디",
    "마샬캐디",
-   "카트 종류",
    "카트 페어웨이 진입",
    "셀프 백드롭",
    "매트 티샷",
-   "연습그린",
-   "인도어 연습장",
-   "식당·조식",
    "그늘집",
-   "락커·사우나",
-   "숙박",
-   "기타 시설",
    "클럽 렌탈 여부",
    "클럽 렌탈 요금",
    "좌타용 클럽",
    "골프화 대여",
-   "제세금",
-   "예약 비고"
+   "제세금"
   ],
   "unconfirmed_labels_added": [
    "제세금",
@@ -347,7 +373,15 @@
   "sources": [
    "https://yangsancc.co.kr/",
    "https://greenfeeguide.co.kr/course/gc-0397/",
-   "https://www.rankue.co.kr/golf/course/양산CC"
+   "https://www.rankue.co.kr/golf/course/양산CC",
+   "https://yangsancc.co.kr/pagesite/club/facilities/house.asp",
+   "https://yangsancc.co.kr/pagesite/use/rule.asp",
+   "https://yangsancc.co.kr/pagesite/use/charge.asp",
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
   ],
   "collected_at": "2026-11-26T10:33:21+09:00"
  },
@@ -356,18 +390,20 @@
   "official_reason": "운영 중(공식 홈페이지·실시간 예약)",
   "pages_collected": 0,
   "third_party": {
-   "received_report": true
+   "received_report": true,
+   "teepick": true,
+   "greenfeeguide": true
   },
   "render_hint": "report",
   "plan_strategy": "subagent_report(2026-11-26)"
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.8,
+  "basic": 0.89,
+  "course": 0.4,
   "fee": 1.0,
-  "ops": 0.0,
-  "facility": 0.1,
-  "briefing": 0.75,
-  "rental": 0.25
+  "ops": 0.29,
+  "facility": 0.6,
+  "briefing": 0.5,
+  "rental": 0.0
  }
 }

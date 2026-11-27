@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0131",
@@ -60,9 +61,9 @@
   },
   "course_spec": {
    "holes": 18,
-   "par": null,
+   "par": 72,
    "blocks": [],
-   "length_m": null,
+   "length_m": 6032,
    "kga": {
     "kga_course_code": "143",
     "kga_name": "안성",
@@ -121,23 +122,24 @@
    "evidence": "1992년",
    "source": "그린피가이드",
    "url": "https://greenfeeguide.co.kr/course/gc-0096/"
-  }
+  },
+  "par": 72
  },
  "course": {
   "holes": 18,
   "holes_received": null,
-  "course_names": null,
+  "course_names": "Out·In 각 9홀",
   "membership_type": "회원제",
   "night_light": null,
   "blocks": [],
   "grass": {
-   "tee": null,
+   "tee": "Kentucky blue grass",
    "fairway": {
     "value": "페어웨이 야지",
     "source": "그린피가이드(공식 코스소개 인용)",
     "url": "https://greenfeeguide.co.kr/course/gc-0096/"
    },
-   "green": null
+   "green": "Bentglass(Pen A-1"
   },
   "kga": {
    "kga_course_code": "143",
@@ -183,38 +185,45 @@
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": null,
-  "par": null
+  "length_m": 6032,
+  "par": 72
  },
  "fee": {
   "weekday": 220000,
   "weekend": 280000,
   "weekday_text": null,
   "weekend_text": null,
-  "basis": null,
+  "basis": "official",
   "tax_included": null,
   "cart": {
    "value": 100000,
-   "source": "그린피가이드",
-   "url": "https://greenfeeguide.co.kr/course/gc-0096/"
+   "note": "10~18홀 팀당(1~9홀 50,000원)",
+   "source": "공식 홈페이지 요금표",
+   "url": "https://www.ansungcc.co.kr/Guide/Fees.aspx"
   },
   "caddie": {
    "value": 150000,
-   "source": "그린피가이드",
-   "url": "https://greenfeeguide.co.kr/course/gc-0096/",
-   "none": false
+   "note": "15~18홀 팀당",
+   "source": "공식 홈페이지 요금표",
+   "url": "https://www.ansungcc.co.kr/Guide/Fees.aspx"
   },
-  "as_of": "2026-10-06",
-  "source_url": null,
+  "as_of": "2026-11-27",
+  "source_url": "https://www.ansungcc.co.kr/Guide/Fees.aspx",
   "note": null,
   "sources": [
    {
     "source": "그린피가이드(공식 요금표 확인)",
     "url": "https://greenfeeguide.co.kr/course/gc-0096/",
     "checked_at": "2026-10-06"
+   },
+   {
+    "source": "공식 홈페이지 요금표",
+    "url": "https://www.ansungcc.co.kr/Guide/Fees.aspx",
+    "checked_at": "2026-11-27",
+    "note": "비회원 그린피 평일 220,000원 / 주말·공휴일 280,000원, 캐디피 15~18홀 150,000원(팀), 카트비 10~18홀 100,000원(팀)"
    }
   ],
-  "checked_at": "2026-10-06",
+  "checked_at": "2026-11-27",
   "official_green": {
    "value": 50000,
    "raw": "1~5홀 50,000원6~9홀 80,000원10~14홀 120,000원15~18홀 150,000원",
@@ -404,20 +413,30 @@
     }
    ],
    "url": "https://www.ansungcc.co.kr/Guide/Fees.aspx"
+  },
+  "market": {
+   "weekday_min": 69000,
+   "weekend_min": 119000,
+   "source": "티픽골프장(실거래 관측)",
+   "note": "공시가 아닌 최근 관측 실거래 최저가",
+   "url": "https://teepickgolf.com/course/%EC%95%88%EC%84%B1",
+   "checked_at": "2026-11-27"
   }
  },
  "cancel": {
   "cancel_policy": {
-   "value": "비회원 7일 전 17:00까지개장·설계1992년 4월 7일 개장잔디페어웨이 야지, 중지(한국잔디) · 그린 Bentglass(Pen A-1, P",
-   "source": "그린피가이드(공식 인용)",
-   "url": "https://greenfeeguide.co.kr/course/gc-0096/"
+   "value": "정회원은 4일 전, 비회원(사이버회원·배우자 포함)은 7일 전까지 취소·이동·변경 시 위약 없음(17시 이후는 익일 처리)",
+   "source": "공식 홈페이지",
+   "url": "https://www.ansungcc.co.kr/Guide/PenaltyRule.aspx"
   },
-  "open_cycle": null,
+  "open_cycle": "4주 전 월요일 오전 9시~16시 선착순 접수",
   "notes": null,
   "evidence": [
    "클럽소개 클럽안내 주요연락처 연혁 오시는 길 안성CC 사계 인터넷예약 예약안내 인터넷예약 예약확인취소 코스소개 코스소개 코스공략도 코스갤러리 스코어카드 시설안내 락커 및 파우더룸 호반식당 프로샵 스타트하우스 그늘집 이용안내 이용안내 이용요금안내 위약규정 로컬룰 고객센터 공지사항 명예의전당 고객의말씀 조인게시판 포토갤러리 분실물센터 자주묻는질문 코스소개 코스공략도 코스갤러리 스코어카드 Home 코스소개 코스소개 코스안내 시간은 변하고 안성 컨트리클럽도 영원한 클래식으로 변하다… 안성 컨트리클럽은 기술력이 매우 뛰어난 골퍼들에게는 더 ",
    "클럽소개 클럽안내 주요연락처 연혁 오시는 길 안성CC 사계 인터넷예약 예약안내 인터넷예약 예약확인취소 코스소개 코스소개 코스공략도 코스갤러리 스코어카드 시설안내 락커 및 파우더룸 호반식당 프로샵 스타트하우스 그늘집 이용안내 이용안내 이용요금안내 위약규정 로컬룰 고객센터 공지사항 명예의전당 고객의말씀 조인게시판 포토갤러리 분실물센터 자주묻는질문 예약안내 인터넷예약 예약확인취소 Home 인터넷예약 예약안내 예약안내 전반적인 운영에 대하여 당 클럽 운영목표를 첫째 공정한 예약관리, 둘째 아늑한 코-스 조성, 셋째 접객예절의 확립으로 정하",
-   "예약 취소는 경기당일 4일전 11시까지 하셔야 합니다."
+   "예약 취소는 경기당일 4일전 11시까지 하셔야 합니다.",
+   "① 주중/주말 및 공휴일 정회원4일전까지, 비회원(사이버회원,배우자포함)7일전까지 취소 및 이동 또는 변경시 위약처리 없음",
+   "예약 오픈 주기: 4주 전 월요일 오전 9시~16시 선착순 접수 (https://www.ansungcc.co.kr/Reservation/Guide.aspx)"
   ],
   "weather_evidence": []
  },
@@ -575,8 +594,14 @@
    "evidence": []
   },
   "other": {
-   "value": null,
-   "evidence": []
+   "value": "프로샵",
+   "evidence": [
+    "그 밖의 시설: 프로샵"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0096/",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfeeguide)"
   },
   "night": {
    "evidence": [],
@@ -870,15 +895,23 @@
   "recent_notice_text": null,
   "course_notes": null,
   "alert": null,
-  "unconfirmed": [],
-  "sources": []
+  "unconfirmed": [
+   "야간(3부) 운영 여부 미확인"
+  ],
+  "sources": [
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "ok",
   "official_reason": null,
   "pages_collected": 14,
   "third_party": {
-   "teepick": false,
+   "teepick": true,
    "greenfeeguide": true
   },
   "render_hint": "static",
@@ -886,12 +919,12 @@
   "browser_batch": false
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.8,
+  "basic": 0.89,
+  "course": 0.4,
   "fee": 1.0,
   "ops": 0.36,
-  "facility": 0.2,
-  "briefing": 0.25,
-  "rental": 0.25
+  "facility": 0.3,
+  "briefing": 0.0,
+  "rental": 0.0
  }
 }

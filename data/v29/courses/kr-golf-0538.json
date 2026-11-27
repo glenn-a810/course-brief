@@ -5,8 +5,9 @@
   "schema": "stage2c/1.0",
   "batch": null,
   "structure": "master only (구장 JSON 미생성 — 건설중·미착공)",
-  "normalized_at": "2026-11-26T12:20:52+09:00",
-  "has_detail": false
+  "normalized_at": "2026-11-27T14:40:00+09:00",
+  "has_detail": false,
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0538",
@@ -48,11 +49,17 @@
   "facility_id": null,
   "facility_members": null,
   "status": "planned",
-  "expected_open": "미정(2030년 이후)",
+  "expected_open": "미정(사업기간 2030년까지 연장 확정)",
   "nearest_ic": null,
   "facility_cluster": null,
   "factcheck_2026_11_26": null,
-  "provenance": {}
+  "provenance": {},
+  "status_note": "왕징면 북삼리 약 240만㎡에 대중제 36홀+콘도·워터파크, 총사업비 2,611억원(전액 민간자본). 2023-08 주한미군 발전종합계획 반영, 2025-11 사업기간 2030년까지 연장 확정. 시행자 지정을 위한 토지 확보·군계획시설 해제·민통선 통제보호구역 저촉 문제로 협의 중(2026-11-16 연천군수 답변).",
+  "factcheck_2026_11_27": {
+   "checked_at": "2026-11-27",
+   "source": "https://www.yeoncheonnews.com/news/articleView.html?idxno=4832",
+   "status_unchanged": true
+  }
  },
  "course": {
   "holes": null,
@@ -212,13 +219,24 @@
    "items": [],
    "tags": {}
   },
-  "recent_notice_text": null,
+  "recent_notice_text": "왕징면 북삼리 약 240만㎡에 대중제 36홀+콘도·워터파크, 총사업비 2,611억원(전액 민간자본). 2023-08 주한미군 발전종합계획 반영, 2025-11 사업기간 2030년까지 연장 확정. 시행자 지정을 위한 토지 확보·군계획시설 해제·민통선 통제보호구역 저촉 문제로 협의 중(2026-11-16 연천군수 답변).",
   "course_notes": null,
   "review": null,
   "fee_change": null,
   "alert": null,
-  "unconfirmed": [],
-  "sources": []
+  "unconfirmed": [
+   "착공·준공 시점은 사업자 인허가 진행에 따라 변동",
+   "그린피(주중/주말) 미확인: 공식 채널에서 비회원 요금표를 확인하지 못함",
+   "취소·위약 규정 미확인: 공식 홈페이지에 위약 규정 게시를 확인하지 못함"
+  ],
+  "sources": [
+   {
+    "source": "공개 보도·지자체 고시",
+    "url": "https://www.yeoncheonnews.com/news/articleView.html?idxno=4832",
+    "checked_at": "2026-11-27"
+   }
+  ],
+  "collected_at": "2026-11-27T12:00:00+09:00"
  },
  "collection": {
   "official_site": null,
@@ -229,12 +247,12 @@
   "plan_strategy": null
  },
  "coverage": {
-  "basic": 0,
-  "course": 0,
-  "fee": 0,
-  "ops": 0,
-  "facility": 0,
-  "briefing": 0,
-  "rental": 0
+  "basic": 0.56,
+  "course": 0.0,
+  "fee": 0.0,
+  "ops": 0.0,
+  "facility": 0.0,
+  "briefing": 0.25,
+  "rental": 0.0
  }
 }

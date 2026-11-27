@@ -12,8 +12,8 @@
   ],
   "source": "raw/received_gangwon_65.json (외부 데이터 수신, 2026-11-26)",
   "review": {
-   "checked_at": "2026-11-26",
-   "status": "verified_official",
+   "checked_at": "2026-11-27",
+   "status": "supplemented(공식+공개 요약)",
    "checks": [
     {
      "field": "9홀 전용 요금",
@@ -28,6 +28,83 @@
      "verified": "공식 홈페이지는 27홀 3코스(함백·태백·백두 SKY)만 안내, 퍼블릭 별도 표기 없음",
      "result": "근거 보강 필요",
      "url": "https://www.o2resort.com/GLF/ccGuide.jsp"
+    },
+    {
+     "field": "facilities.food",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "레스토랑·그늘집",
+     "result": "보완",
+     "url": "https://www.o2resort.com/GLF/ccGuide.jsp",
+     "quote": "클럽하우스, 레스토랑, 그늘집",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.lodging",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "리조트 숙박시설",
+     "result": "보완",
+     "url": "https://www.o2resort.com/GLF/ccGuide.jsp",
+     "quote": "숙박시설",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "fee.weekday",
+     "received": null,
+     "verified": 80000,
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0220/",
+     "quote": "주중 그린피 80,000원 ~ 100,000원",
+     "source_type": "third_party",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "fee.weekend",
+     "received": null,
+     "verified": 130000,
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0220/",
+     "quote": "주말·공휴일 그린피 130,000원 ~ 150,000원",
+     "source_type": "third_party",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.closed_days",
+     "received": "{\"value\": null, \"third_party\": null, \"evidence\": []}",
+     "verified": "정기 휴장일 없음",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0220/",
+     "quote": "정기 휴장일 정기 휴장일 없음",
+     "source_type": "third_party",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "fee.weekday",
+     "received": null,
+     "verified": 80000,
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0220/",
+     "quote": "주중 그린피 80,000원 ~ 100,000원",
+     "source_type": "third_party",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "fee.weekend",
+     "received": null,
+     "verified": 130000,
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0220/",
+     "quote": "주말·공휴일 그린피 130,000원 ~ 150,000원",
+     "source_type": "third_party",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
     }
    ]
   },
@@ -39,11 +116,14 @@
   "schema_previous": "stage2b/1.0",
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "restructured_from_7key": false,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "batch3_patch": "2026-11-27 배치3 보완: 2개 항목(공식 홈페이지·공개 요금 안내 기준, 미확인 값 생성 없음)",
+  "pass2_patch": "2026-11-27 2차 보완 패스: 3개 항목(그린피가이드·1박2일골프·원더골프·공식 홈페이지 대조, 미확인 값 생성 없음)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0455",
@@ -143,10 +223,10 @@
   "extra_courses": null
  },
  "fee": {
-  "weekday": null,
-  "weekend": null,
-  "weekday_text": "미확인(9홀 전용 요금표 미게시) — O2리조트 18홀 기준 주중 80,000원(11/9~폐장)·100,000원(11/1~11/8)",
-  "weekend_text": "미확인 — 18홀 기준 주말·공휴일 130,000원(11/9~폐장)·150,000원(11/1~11/8)",
+  "weekday": 80000,
+  "weekend": 130000,
+  "weekday_text": null,
+  "weekend_text": null,
   "basis": "O2리조트 공식 요금표는 18홀 기준으로만 게시(2026-11-01). 9홀 퍼블릭 전용 요금은 공식 홈페이지에서 확인되지 않아 미확인 처리",
   "tax_included": "VAT 포함(공식 요금표, 18홀 기준)",
   "cart": {
@@ -166,11 +246,40 @@
     "source": "수신 조사(공식·공개 예약정보)",
     "url": "https://greenfeeguide.co.kr/course/gc-0220/",
     "checked_at": "2026-11-01(공식 요금표 확인)"
+   },
+   {
+    "source": "third_party",
+    "url": "https://greenfeeguide.co.kr/course/gc-0220/",
+    "quote": "주중 그린피 80,000원 ~ 100,000원",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "third_party",
+    "url": "https://greenfeeguide.co.kr/course/gc-0220/",
+    "quote": "주말·공휴일 그린피 130,000원 ~ 150,000원",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "third_party",
+    "url": "https://greenfeeguide.co.kr/course/gc-0220/",
+    "quote": "주중 그린피 80,000원 ~ 100,000원",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "third_party",
+    "url": "https://greenfeeguide.co.kr/course/gc-0220/",
+    "quote": "주말·공휴일 그린피 130,000원 ~ 150,000원",
+    "checked_at": "2026-11-27"
    }
-  ]
+  ],
+  "checked_at": "2026-11-27"
  },
  "cancel": {
-  "cancel_policy": null,
+  "cancel_policy": {
+   "value": "* 준ㆍ성수기 7일전 취소 100%환불, 6일~3일전 50%환불, 2일~1일전 30%환불, 당일 취소 또는 No-Show 객실료 100% 부과됩니다.",
+   "source": "공식 홈페이지",
+   "url": "https://www.o2resort.com/RSV/feeCondo.jsp"
+  },
   "open_cycle": "이용예정일 8주 전 월요일 09:00에 해당 주 일요일까지 예약 오픈",
   "notes": "성수기는 2인도 3인 요금 적용",
   "evidence": [],
@@ -244,8 +353,14 @@
    "evidence": []
   },
   "food": {
-   "value": null,
-   "evidence": []
+   "value": "레스토랑·그늘집",
+   "evidence": [
+    "클럽하우스, 레스토랑, 그늘집"
+   ],
+   "source_url": "https://www.o2resort.com/GLF/ccGuide.jsp",
+   "confidence": "high",
+   "source_type": "official_site",
+   "checked_at": "2026-11-27"
   },
   "snack_bar": {
    "value": null,
@@ -256,8 +371,14 @@
    "evidence": []
   },
   "lodging": {
-   "value": null,
-   "evidence": []
+   "value": "리조트 숙박시설",
+   "evidence": [
+    "숙박시설"
+   ],
+   "source_url": "https://www.o2resort.com/GLF/ccGuide.jsp",
+   "confidence": "high",
+   "source_type": "official_site",
+   "checked_at": "2026-11-27"
   },
   "other": {
    "value": "카페·라운지·편의점",
@@ -268,9 +389,15 @@
    "evidence": []
   },
   "closed_days": {
-   "value": null,
+   "value": "정기 휴장일 없음",
    "third_party": null,
-   "evidence": []
+   "evidence": [
+    "정기 휴장일 정기 휴장일 없음"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0220/",
+   "confidence": "high",
+   "source_type": "third_party",
+   "checked_at": "2026-11-27"
   },
   "shuttle": {
    "value": null,
@@ -356,9 +483,6 @@
    "잔디(티)",
    "잔디(페어웨이)",
    "잔디(그린)",
-   "그린피(주중)",
-   "그린피(주말)",
-   "취소·위약 규정",
    "5인 플레이",
    "노캐디",
    "마샬캐디",
@@ -397,12 +521,12 @@
   "plan_strategy": "subagent_report(2026-11-26)"
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.8,
-  "fee": 0.5,
+  "basic": 0.78,
+  "course": 0.4,
+  "fee": 1.0,
   "ops": 0.29,
-  "facility": 0.2,
-  "briefing": 0.75,
-  "rental": 0.25
+  "facility": 0.5,
+  "briefing": 0.5,
+  "rental": 0.0
  }
 }

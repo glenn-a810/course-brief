@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0171",
@@ -46,25 +47,25 @@
    "straight_name": "마성IC"
   },
   "tel": "031-320-9601",
-  "homepage": null,
+  "homepage": "https://rnc.samsungcnt.com/business/golf/glen/index.html",
   "operators": [
    "삼성물산㈜"
   ],
   "area_sqm": 465916,
-  "opened": null,
+  "opened": "1999-09",
   "course_blocks": [],
   "facility_id": null,
   "provenance": {
    "master": "courses_master.json v2.0 (문체부·KGA·KGBA·티픽·지도)",
    "synced_to": "courses_master.json v2.7 (2026-11-26 단일 스키마 정규화)"
   },
-  "par": null,
+  "par": 36,
   "holes_teepick": 18,
   "course_spec": {
    "holes": 9,
-   "par": null,
+   "par": 36,
    "blocks": [],
-   "length_m": null,
+   "length_m": 5733,
    "kga": {
     "kga_course_code": "378",
     "kga_name": "글렌로스",
@@ -114,12 +115,13 @@
   "status": "operating",
   "facility_cluster": null,
   "factcheck_2026_11_26": null,
-  "holes_note": "등록(문체부) 9홀 · 수집 18홀 — 등록 기준과 수집처(티픽·조사) 표기 차이다. 등록 9홀을 정본으로 두고 집계에는 master.holes를 쓴다. 복합단지 합산 여부는 미확정."
+  "holes_note": "등록(문체부) 9홀 · 수집 18홀 — 등록 기준과 수집처(티픽·조사) 표기 차이다. 등록 9홀을 정본으로 두고 집계에는 master.holes를 쓴다. 복합단지 합산 여부는 미확정.",
+  "opened_note": "삼성물산 글렌로스 공식 페이지 개장 1999년 9월"
  },
  "course": {
   "holes": 9,
   "holes_received": 18,
-  "course_names": null,
+  "course_names": "9홀",
   "membership_type": "대중제",
   "night_light": null,
   "blocks": [],
@@ -171,8 +173,8 @@
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": null,
-  "par": null,
+  "length_m": 5733,
+  "par": 36,
   "holes_note": "등록(문체부) 9홀 · 수집 18홀 — 등록 기준과 수집처(티픽·조사) 표기 차이다. 등록 9홀을 정본으로 두고 집계에는 master.holes를 쓴다. 복합단지 합산 여부는 미확정."
  },
  "fee": {
@@ -195,7 +197,7 @@
   },
   "as_of": "2026-11-26",
   "source_url": null,
-  "note": null,
+  "note": "9홀 1회(또는 9홀×2) 기준 요금",
   "sources": [
    {
     "source": "공식 홈페이지(브라우저 수집)",
@@ -484,8 +486,21 @@
   "recent_notice_text": null,
   "course_notes": null,
   "alert": null,
-  "unconfirmed": [],
-  "sources": []
+  "unconfirmed": [
+   "취소·위약 규정 미확인: 공식 홈페이지 미확인, 9홀 대중제로 요금표 공개 없음"
+  ],
+  "sources": [
+   {
+    "source": "그린피가이드 코스 페이지",
+    "url": "https://greenfeeguide.co.kr/course/gc-0031/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "unavailable",
@@ -493,7 +508,7 @@
   "pages_collected": 0,
   "third_party": {
    "teepick": true,
-   "greenfeeguide": false
+   "greenfeeguide": true
   },
   "render_hint": "",
   "plan_strategy": "no_homepage(지도·예약앱 대체)",
@@ -501,11 +516,11 @@
  },
  "coverage": {
   "basic": 0.89,
-  "course": 0.8,
+  "course": 0.4,
   "fee": 1.0,
   "ops": 0.0,
   "facility": 0.0,
-  "briefing": 0.5,
-  "rental": 0.25
+  "briefing": 0.0,
+  "rental": 0.0
  }
 }

@@ -8,11 +8,150 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "review": {
+   "checks": [
+    {
+     "field": "fee.cart",
+     "received": null,
+     "verified": "{\"value\": 100000, \"source\": \"오늘골프(공공데이터·공식 요금)\", \"url\": \"https://todaygolfgo.com/golf-courses/master/golf-course-moct-20241231-0303/\"}",
+     "result": "보완",
+     "url": "https://todaygolfgo.com/golf-courses/master/golf-course-moct-20241231-0303/",
+     "quote": "100,000원/팀 5인승 전동카트 · 셀프라운드120,000원/팀",
+     "source_type": "public_info(todaygolfgo)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "fee.caddie",
+     "received": null,
+     "verified": "{\"value\": 150000, \"none\": false, \"source\": \"오늘골프(공공데이터·공식 요금)\", \"url\": \"https://todaygolfgo.com/golf-courses/master/golf-course-moct-20241231-0303/\"}",
+     "result": "보완",
+     "url": "https://todaygolfgo.com/golf-courses/master/golf-course-moct-20241231-0303/",
+     "quote": "150,000원 1·2·3부 공통 · 단위 미표기",
+     "source_type": "public_info(todaygolfgo)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "fee.weekday",
+     "received": null,
+     "verified": 150000,
+     "result": "보완",
+     "url": "https://todaygolfgo.com/golf-courses/master/golf-course-moct-20241231-0303/",
+     "quote": "주중 1부(7시 이후) 130,000원 · 2부 150,000원 · 주말(토·공휴일·일) 1·2부 170,000원",
+     "source_type": "public_info(todaygolfgo)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "fee.weekday_text",
+     "received": null,
+     "verified": "1부(7시 이후) 130,000원 · 2부 150,000원",
+     "result": "보완",
+     "url": "https://todaygolfgo.com/golf-courses/master/golf-course-moct-20241231-0303/",
+     "quote": "주중 1부(7시 이후) 130,000원 · 2부 150,000원",
+     "source_type": "public_info(todaygolfgo)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "fee.weekend",
+     "received": null,
+     "verified": 170000,
+     "result": "보완",
+     "url": "https://todaygolfgo.com/golf-courses/master/golf-course-moct-20241231-0303/",
+     "quote": "주말(토·공휴일·일) 1·2부 170,000원",
+     "source_type": "public_info(todaygolfgo)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "course.par",
+     "received": null,
+     "verified": 108,
+     "result": "보완",
+     "url": "https://parkgolfinfo.co.kr/%ec%b2%ad%eb%8f%84-%ea%b7%b8%eb%a0%88%ec%9d%b4%ec%8a%a4%ec%bb%a8%ed%8a%b8%eb%a6%ac%ed%81%b4%eb%9f%bd-27%ed%99%80-%ea%b3%a8%ed%94%84%ec%9e%a5-%eb%9d%bc%ec%9a%b4%eb%94%a9-%ea%b0%80%ec%9d%b4%eb%93%9c/",
+     "quote": "밸리·레이크·마운틴 27홀(Par108) 퍼블릭 골프장",
+     "source_type": "public_info",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "course.course_names",
+     "received": null,
+     "verified": "[\"VALLEY\", \"LAKE\", \"MOUNTAIN\"]",
+     "result": "보완",
+     "url": "https://papahun.com/cheongdograce-cc-course/",
+     "quote": "LAKE, MOUNTAIN, VALLEY 세 코스는 각기 다른 지형과 전략적 설계",
+     "source_type": "public_info",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "course.length_m",
+     "received": null,
+     "verified": 9668,
+     "result": "보완",
+     "url": "https://papahun.com/cheongdograce-cc-course/",
+     "quote": "27홀 전체 전장은 약 9,668m(10,573야드)",
+     "source_type": "public_info",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "course.grass.fairway",
+     "received": null,
+     "verified": "한국잔디(중지)",
+     "result": "보완",
+     "url": "https://parkgolfinfo.co.kr/%ec%b2%ad%eb%8f%84-%ea%b7%b8%eb%a0%88%ec%9d%b4%ec%8a%a4%ec%bb%a8%ed%8a%b8%eb%a6%ac%ed%81%b4%eb%9f%bd-27%ed%99%80-%ea%b3%a8%ed%94%84%ec%9e%a5-%eb%9d%bc%ec%9a%b4%eb%94%a9-%ea%b0%80%ec%9d%b4%eb%93%9c/",
+     "quote": "잔디(클럽 소개): 그린 벤트그라스, 페어웨이 중지(한국잔디)",
+     "source_type": "public_info",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "course.grass.green",
+     "received": null,
+     "verified": "벤트그라스",
+     "result": "보완",
+     "url": "https://parkgolfinfo.co.kr/%ec%b2%ad%eb%8f%84-%ea%b7%b8%eb%a0%88%ec%9d%b4%ec%8a%a4%ec%bb%a8%ed%8a%b8%eb%a6%ac%ed%81%b4%eb%9f%bd-27%ed%99%80-%ea%b3%a8%ed%94%84%ec%9e%a5-%eb%9d%bc%ec%9a%b4%eb%94%a9-%ea%b0%80%ec%9d%b4%eb%93%9c/",
+     "quote": "잔디(클럽 소개): 그린 벤트그라스, 페어웨이 중지(한국잔디)",
+     "source_type": "public_info",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "cancel.cancel_policy",
+     "received": null,
+     "verified": "주중 3일 전, 주말·공휴일 4일 전 17시까지 위약 없이 취소(마감 이후 위약)",
+     "result": "보완",
+     "url": "https://parkgolfinfo.co.kr/%ec%b2%ad%eb%8f%84-%ea%b7%b8%eb%a0%88%ec%9d%b4%ec%8a%a4%ec%bb%a8%ed%8a%b8%eb%a6%ac%ed%81%b4%eb%9f%bd-27%ed%99%80-%ea%b3%a8%ed%94%84%ec%9e%a5-%eb%9d%bc%ec%9a%b4%eb%94%a9-%ea%b0%80%ec%9d%b4%eb%93%9c/",
+     "quote": "취소 가능 시점(예약일 제외) 주중: 3일 전 17:00까지 / 주말·공휴일: 4일 전 17:00까지",
+     "source_type": "public_info",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "cancel.open_cycle",
+     "received": null,
+     "verified": "주중·주말 모두 21일 전 09:00 오픈",
+     "result": "보완",
+     "url": "https://parkgolfinfo.co.kr/%ec%b2%ad%eb%8f%84-%ea%b7%b8%eb%a0%88%ec%9d%b4%ec%8a%a4%ec%bb%a8%ed%8a%b8%eb%a6%ac%ed%81%b4%eb%9f%bd-27%ed%99%80-%ea%b3%a8%ed%94%84%ec%9e%a5-%eb%9d%bc%ec%9a%b4%eb%94%a9-%ea%b0%80%ec%9d%b4%eb%93%9c/",
+     "quote": "예약 오픈: 주중 / 주말·공휴일 모두 21일 전 오전 9시",
+     "source_type": "public_info",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    }
+   ],
+   "checked_at": "2026-11-27"
+  },
+  "batch6_patch": "2026-11-27 배치6(대구·경북) 보완: 12개 항목(공식 홈페이지·그린피가이드·예약 플랫폼 공개 안내 확인 기준, 미확인 값 생성 없음)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0337",
@@ -60,9 +199,9 @@
   },
   "course_spec": {
    "holes": 27,
-   "par": null,
+   "par": 72,
    "blocks": [],
-   "length_m": null,
+   "length_m": 9668,
    "kga": null,
    "grass": null,
    "hole_by_hole": null
@@ -72,49 +211,111 @@
   ],
   "status": "operating",
   "facility_cluster": null,
-  "factcheck_2026_11_26": null
+  "factcheck_2026_11_26": null,
+  "par": 72
  },
  "course": {
   "holes": 27,
   "holes_received": null,
-  "course_names": null,
+  "course_names": [
+   "VALLEY",
+   "LAKE",
+   "MOUNTAIN"
+  ],
   "membership_type": "대중제",
   "night_light": null,
   "blocks": [],
   "grass": {
    "tee": null,
-   "fairway": null,
-   "green": null
+   "fairway": "한국잔디(중지)",
+   "green": "벤트그라스"
   },
   "kga": null,
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": null,
-  "par": null
+  "length_m": 9668,
+  "par": 72
  },
  "fee": {
-  "weekday": null,
-  "weekend": null,
-  "weekday_text": null,
+  "weekday": 150000,
+  "weekend": 170000,
+  "weekday_text": "1부(7시 이후) 130,000원 · 2부 150,000원",
   "weekend_text": null,
   "basis": null,
   "tax_included": null,
-  "cart": null,
-  "caddie": null,
+  "cart": {
+   "value": 100000,
+   "source": "오늘골프(공공데이터·공식 요금)",
+   "url": "https://todaygolfgo.com/golf-courses/master/golf-course-moct-20241231-0303/"
+  },
+  "caddie": {
+   "value": 150000,
+   "none": false,
+   "source": "오늘골프(공공데이터·공식 요금)",
+   "url": "https://todaygolfgo.com/golf-courses/master/golf-course-moct-20241231-0303/"
+  },
   "as_of": null,
-  "source_url": null,
+  "source_url": "https://todaygolfgo.com/golf-courses/master/golf-course-moct-20241231-0303/",
   "note": null,
-  "sources": [],
-  "checked_at": null
+  "sources": [
+   {
+    "source": "공개 안내",
+    "url": "https://todaygolfgo.com/golf-courses/master/golf-course-moct-20241231-0303/",
+    "quote": "100,000원/팀 5인승 전동카트 · 셀프라운드120,000원/팀",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공개 안내",
+    "url": "https://todaygolfgo.com/golf-courses/master/golf-course-moct-20241231-0303/",
+    "quote": "150,000원 1·2·3부 공통 · 단위 미표기",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공개 안내",
+    "url": "https://todaygolfgo.com/golf-courses/master/golf-course-moct-20241231-0303/",
+    "quote": "주중 1부(7시 이후) 130,000원 · 2부 150,000원 · 주말(토·공휴일·일) 1·2부 170,000원",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공개 안내",
+    "url": "https://todaygolfgo.com/golf-courses/master/golf-course-moct-20241231-0303/",
+    "quote": "주중 1부(7시 이후) 130,000원 · 2부 150,000원",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공개 안내",
+    "url": "https://todaygolfgo.com/golf-courses/master/golf-course-moct-20241231-0303/",
+    "quote": "주말(토·공휴일·일) 1·2부 170,000원",
+    "checked_at": "2026-11-27"
+   }
+  ],
+  "checked_at": "2026-11-27"
  },
  "cancel": {
-  "cancel_policy": null,
-  "open_cycle": null,
+  "cancel_policy": "주중 3일 전, 주말·공휴일 4일 전 17시까지 위약 없이 취소(마감 이후 위약)",
+  "open_cycle": "주중·주말 모두 21일 전 09:00 오픈",
   "notes": null,
-  "evidence": [],
+  "evidence": [
+   "취소 가능 시점(예약일 제외) 주중: 3일 전 17:00까지 / 주말·공휴일: 4일 전 17:00까지",
+   "예약 오픈: 주중 / 주말·공휴일 모두 21일 전 오전 9시"
+  ],
   "weather_evidence": [],
-  "browser_official": null
+  "browser_official": null,
+  "sources": [
+   {
+    "url": "https://parkgolfinfo.co.kr/%ec%b2%ad%eb%8f%84-%ea%b7%b8%eb%a0%88%ec%9d%b4%ec%8a%a4%ec%bb%a8%ed%8a%b8%eb%a6%ac%ed%81%b4%eb%9f%bd-27%ed%99%80-%ea%b3%a8%ed%94%84%ec%9e%a5-%eb%9d%bc%ec%9a%b4%eb%94%a9-%ea%b0%80%ec%9d%b4%eb%93%9c/",
+    "quote": "취소 가능 시점(예약일 제외) 주중: 3일 전 17:00까지 / 주말·공휴일: 4일 전 17:00까지",
+    "checked_at": "2026-11-27",
+    "source_type": "public_info"
+   },
+   {
+    "url": "https://parkgolfinfo.co.kr/%ec%b2%ad%eb%8f%84-%ea%b7%b8%eb%a0%88%ec%9d%b4%ec%8a%a4%ec%bb%a8%ed%8a%b8%eb%a6%ac%ed%81%b4%eb%9f%bd-27%ed%99%80-%ea%b3%a8%ed%94%84%ec%9e%a5-%eb%9d%bc%ec%9a%b4%eb%94%a9-%ea%b0%80%ec%9d%b4%eb%93%9c/",
+    "quote": "예약 오픈: 주중 / 주말·공휴일 모두 21일 전 오전 9시",
+    "checked_at": "2026-11-27",
+    "source_type": "public_info"
+   }
+  ]
  },
  "ops": {
   "nocaddie": {
@@ -293,27 +494,35 @@
   "course_notes": null,
   "alert": null,
   "unconfirmed": [],
-  "sources": []
+  "sources": [
+   "https://parkgolfinfo.co.kr/%ec%b2%ad%eb%8f%84-%ea%b7%b8%eb%a0%88%ec%9d%b4%ec%8a%a4%ec%bb%a8%ed%8a%b8%eb%a6%ac%ed%81%b4%eb%9f%bd-27%ed%99%80-%ea%b3%a8%ed%94%84%ec%9e%a5-%eb%9d%bc%ec%9a%b4%eb%94%a9-%ea%b0%80%ec%9d%b4%eb%93%9c/",
+   "https://papahun.com/cheongdograce-cc-course/",
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "unavailable",
   "official_reason": "no_homepage",
   "pages_collected": 0,
   "third_party": {
-   "teepick": false,
-   "greenfeeguide": false
+   "teepick": true,
+   "greenfeeguide": true
   },
   "render_hint": "",
   "plan_strategy": "no_homepage(지도·예약앱 대체)",
   "browser_batch": true
  },
  "coverage": {
-  "basic": 0.89,
-  "course": 0.6,
-  "fee": 0.0,
+  "basic": 0.67,
+  "course": 0.4,
+  "fee": 1.0,
   "ops": 0.0,
   "facility": 0.0,
-  "briefing": 0.25,
-  "rental": 0.25
+  "briefing": 0.0,
+  "rental": 0.0
  }
 }

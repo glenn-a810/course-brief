@@ -22,11 +22,12 @@
   "schema_previous": "stage2b/1.0",
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "restructured_from_7key": false,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0374",
@@ -96,7 +97,8 @@
   "holes_conflict": false,
   "facility_cluster": null,
   "factcheck_2026_11_26": null,
-  "address_original": "의령군 칠곡면 지굴산로 101-33"
+  "address_original": "의령군 칠곡면 지굴산로 101-33",
+  "par": 72
  },
  "course": {
   "holes": 27,
@@ -112,7 +114,8 @@
   },
   "kga": null,
   "kga_hole_est": null,
-  "extra_courses": null
+  "extra_courses": null,
+  "par": 72
  },
  "fee": {
   "weekday": 120000,
@@ -139,13 +142,23 @@
     "url": "https://todaygolfgo.com/golf-courses/master/golf-course-moct-20241231-0249/",
     "checked_at": "2026-11(11월 그린피 공지)"
    }
-  ]
+  ],
+  "checked_at": "2026-11-27",
+  "market": {
+   "weekday_min": 210000,
+   "weekend_min": 250000,
+   "source": "공개 예약 채널 실거래 관측(티픽)",
+   "url": "https://teepickgolf.com/",
+   "note": "공시가 아닌 최근 관측 실거래 최저가"
+  }
  },
  "cancel": {
   "cancel_policy": null,
-  "open_cycle": null,
+  "open_cycle": "개인: 라운드일 28일 전(해당일 4주 전 오전 10시), 단체: 라운드일 35일 전(5주 전). 홈페이지 또는 카카오골프예약, 예약실 055-570-7002~7003",
   "notes": "캐디 동반 필수. 회원가입 시 그린피 할인, 1박2일 패키지 운영",
-  "evidence": [],
+  "evidence": [
+   "https://wondergolf.co.kr/courses/kr-kakao-221678040"
+  ],
   "weather_evidence": []
  },
  "ops": {
@@ -316,7 +329,6 @@
    "잔디(티)",
    "잔디(페어웨이)",
    "잔디(그린)",
-   "예약 오픈 주기",
    "취소·위약 규정",
    "2인 플레이",
    "3인 플레이",
@@ -347,7 +359,13 @@
    "https://www.rieoncc.co.kr/",
    "https://todaygolfgo.com/golf-courses/master/golf-course-moct-20241231-0249/",
    "https://inwon.kr/c/k418",
-   "https://papahun.com/uiryeonglioncc-greenfee/"
+   "https://papahun.com/uiryeonglioncc-greenfee/",
+   "https://wondergolf.co.kr/courses/kr-kakao-221678040",
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
   ],
   "collected_at": "2026-11-26T10:33:21+09:00"
  },
@@ -356,18 +374,20 @@
   "official_reason": "운영 중(공식 홈페이지 접속 제한, 월별 그린피 공지·예약 운영)",
   "pages_collected": 0,
   "third_party": {
-   "received_report": true
+   "received_report": true,
+   "teepick": true,
+   "greenfeeguide": true
   },
   "render_hint": "report",
   "plan_strategy": "subagent_report(2026-11-26)"
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.8,
+  "basic": 0.78,
+  "course": 0.4,
   "fee": 1.0,
   "ops": 0.0,
   "facility": 0.1,
-  "briefing": 0.75,
-  "rental": 0.25
+  "briefing": 0.5,
+  "rental": 0.0
  }
 }

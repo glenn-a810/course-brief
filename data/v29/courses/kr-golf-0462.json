@@ -12,9 +12,21 @@
   ],
   "source": "raw/received_gangwon_65.json (외부 데이터 수신, 2026-11-26)",
   "review": {
-   "checked_at": null,
-   "status": "not_crosschecked",
-   "checks": []
+   "checked_at": "2026-11-27",
+   "status": "supplemented(공개 요약·조사자료)",
+   "checks": [
+    {
+     "field": "ops.dress",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "노출이 심한 옷·청바지·트레이닝복·등산복은 이용 불가",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0244/",
+     "quote": "복장: 노출이 심한 옷·청바지·트레이닝복·등산복은 이용 불가",
+     "source_type": "official_summary(greenfeeguide)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    }
+   ]
   },
   "data_checks": [
    "미확인 목록 누락 라벨 보완: 제세금"
@@ -22,11 +34,13 @@
   "schema_previous": "stage2b/1.0",
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "restructured_from_7key": false,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "batch3_patch": "2026-11-27 배치3 보완: 2개 항목(공식 홈페이지·공개 요금 안내 기준, 미확인 값 생성 없음)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0462",
@@ -145,8 +159,15 @@
     "source": "수신 조사(공식·공개 예약정보)",
     "url": "https://todaygolfgo.com/regions/gangwon/",
     "checked_at": "2026-11-26"
+   },
+   {
+    "source": "공식·공개 안내",
+    "url": "https://greenfeeguide.co.kr/course/gc-0244/",
+    "quote": "캐디피: 0/4",
+    "checked_at": "2026-11-27"
    }
-  ]
+  ],
+  "checked_at": "2026-11-27"
  },
  "cancel": {
   "cancel_policy": null,
@@ -205,8 +226,15 @@
    "evidence": []
   },
   "dress": {
-   "value": null,
-   "evidence": []
+   "value": "노출이 심한 옷·청바지·트레이닝복·등산복은 이용 불가",
+   "evidence": [
+    "복장: 노출이 심한 옷·청바지·트레이닝복·등산복은 이용 불가"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0244/",
+   "confidence": "medium",
+   "source_type": "official_summary(greenfeeguide)",
+   "checked_at": "2026-11-27",
+   "note": "공개 요금 정보가 골프장 공식 안내를 정리한 값(확인일 페이지 표기)"
   },
   "pace": {
    "value": null,
@@ -252,8 +280,14 @@
    "evidence": []
   },
   "shuttle": {
-   "value": null,
-   "evidence": []
+   "value": "KTX 평창역·장평터미널서울에서 KTX 약 1시간 30분, 동서울터미널에서 장평터미널행 시외버스",
+   "evidence": [
+    "대중교통: KTX 평창역·장평터미널서울에서 KTX 약 1시간 30분, 동서울터미널에서 장평터미널행 시외버스"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0244/",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfeeguide)"
   }
  },
  "rental": {
@@ -320,10 +354,7 @@
   "fee_change": null,
   "alert": null,
   "unconfirmed": [
-   "대표 전화",
    "야간 라이트",
-   "잔디(티)",
-   "잔디(그린)",
    "캐디피",
    "예약 오픈 주기",
    "취소·위약 규정",
@@ -360,18 +391,19 @@
   "official_reason": "운영 중(휘닉스 평창 부속 6홀 대중 골프장)",
   "pages_collected": 0,
   "third_party": {
-   "received_report": true
+   "received_report": true,
+   "greenfeeguide": true
   },
   "render_hint": "report",
   "plan_strategy": "subagent_report(2026-11-26)"
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.8,
+  "basic": 0.78,
+  "course": 0.4,
   "fee": 0.75,
-  "ops": 0.14,
-  "facility": 0.1,
-  "briefing": 0.75,
-  "rental": 0.25
+  "ops": 0.21,
+  "facility": 0.2,
+  "briefing": 0.5,
+  "rental": 0.0
  }
 }

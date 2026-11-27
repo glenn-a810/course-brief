@@ -5,8 +5,9 @@
   "schema": "stage2c/1.0",
   "batch": null,
   "structure": "master only (구장 JSON 미생성 — 건설중·미착공)",
-  "normalized_at": "2026-11-26T12:20:52+09:00",
-  "has_detail": false
+  "normalized_at": "2026-11-27T14:40:00+09:00",
+  "has_detail": false,
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0542",
@@ -52,7 +53,8 @@
   "nearest_ic": null,
   "facility_cluster": null,
   "factcheck_2026_11_26": null,
-  "provenance": {}
+  "provenance": {},
+  "status_note": "모나용평 18홀 대중제+콘도 471실+700석 컨벤션, 골프장 조성공사는 2027년 6월 착수·2028년 말 준공 목표. 2026-10-29 부지 정비 완료 후 착공 앞둠(2026-11-27 기준 미착공)."
  },
  "course": {
   "holes": null,
@@ -218,7 +220,18 @@
   "fee_change": null,
   "alert": null,
   "unconfirmed": [],
-  "sources": []
+  "sources": [
+   {
+    "name": "뉴스핌(2026-10-29)",
+    "url": "https://www.newspim.com/news/view/20261029000135",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "name": "고창군의회 회의록(2025-12-08)",
+    "url": "https://assembly.gochang.go.kr/assem/viewer.do?cdUid=7376",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": null,
@@ -229,12 +242,12 @@
   "plan_strategy": null
  },
  "coverage": {
-  "basic": 0,
-  "course": 0,
-  "fee": 0,
-  "ops": 0,
-  "facility": 0,
-  "briefing": 0,
-  "rental": 0
+  "basic": 0.56,
+  "course": 0.0,
+  "fee": 0.0,
+  "ops": 0.0,
+  "facility": 0.0,
+  "briefing": 0.0,
+  "rental": 0.0
  }
 }

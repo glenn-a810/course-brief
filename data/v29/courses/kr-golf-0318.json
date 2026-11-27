@@ -8,11 +8,63 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "review": {
+   "checks": [
+    {
+     "field": "course.par",
+     "received": null,
+     "verified": 72,
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0343/",
+     "quote": "코스 구성: 파 72",
+     "source_type": "official_summary(greenfeeguide)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "course.length_m",
+     "received": null,
+     "verified": 7127,
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0343/",
+     "quote": "전장: 7,127yard(6,517m)",
+     "source_type": "official_summary(greenfeeguide)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "ops.pace.value",
+     "received": null,
+     "verified": "지연되는 플레이 등으로 뒤팀의 방해가 되는 진행지연 시 Over된 소요시간 만큼 홀 패스",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0343/",
+     "quote": "진행이 늦으면: 지연되는 플레이 등으로 뒤팀의 방해가 되는 진행지연 시 Over된 소요시간 만큼 홀 패스",
+     "source_type": "official_summary(greenfeeguide)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "course.length_m",
+     "received": 7127,
+     "verified": 6517,
+     "result": "수정",
+     "url": "https://parkgolfinfo.co.kr/골프존카운티-선산cc-빠른-예약방법-상세-안내/",
+     "quote": "18홀 / Par 72 / 6,517m(7,127yd)",
+     "source_type": "public_info",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    }
+   ],
+   "checked_at": "2026-11-27"
+  },
+  "batch3_patch": "2026-11-27 배치6(대구·경북) 보완: 3개 항목(공식 홈페이지·그린피가이드 공식 안내 확인 기준, 미확인 값 생성 없음)",
+  "batch6_patch": "2026-11-27 배치6(대구·경북) 보완: 1개 항목(공식 홈페이지·그린피가이드·예약 플랫폼 공개 안내 확인 기준, 미확인 값 생성 없음)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0318",
@@ -56,13 +108,13 @@
    "master": "courses_master.json v2.0 (문체부·KGA·KGBA·티픽·지도)",
    "synced_to": "courses_master.json v2.7 (2026-11-26 단일 스키마 정규화)"
   },
-  "par": null,
+  "par": 72,
   "holes_teepick": 18,
   "course_spec": {
    "holes": 18,
-   "par": null,
+   "par": 72,
    "blocks": [],
-   "length_m": null,
+   "length_m": 6517,
    "kga": {
     "kga_course_code": "121",
     "kga_name": "골프존카운티 선산",
@@ -205,8 +257,8 @@
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": null,
-  "par": null
+  "length_m": 6517,
+  "par": 72
  },
  "fee": {
   "weekday": 172000,
@@ -326,8 +378,14 @@
    "value": null
   },
   "pace": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "진행이 늦으면: 지연되는 플레이 등으로 뒤팀의 방해가 되는 진행지연 시 Over된 소요시간 만큼 홀 패스"
+   ],
+   "value": "지연되는 플레이 등으로 뒤팀의 방해가 되는 진행지연 시 Over된 소요시간 만큼 홀 패스",
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0343/",
+   "confidence": "medium",
+   "source_type": "official_summary(greenfeeguide)",
+   "checked_at": "2026-11-27"
   },
   "grass": null
  },
@@ -388,16 +446,16 @@
   }
  },
  "rental": {
-  "available": null,
+  "available": true,
   "full_set": 50000,
-  "fee_text": null,
+  "fee_text": "50,000원 · 18홀",
   "brand": null,
   "left_handed": null,
   "shoes": null,
   "nine_hole": null,
   "range_finder": null,
   "reservation": null,
-  "source_url": null,
+  "source_url": "https://greenfeeguide.co.kr/course/gc-0343/",
   "evidence": [],
   "official": null,
   "nearby_delivery": {
@@ -470,7 +528,10 @@
   "course_notes": null,
   "alert": null,
   "unconfirmed": [],
-  "sources": []
+  "sources": [
+   "https://greenfeeguide.co.kr/course/gc-0343/",
+   "https://parkgolfinfo.co.kr/골프존카운티-선산cc-빠른-예약방법-상세-안내/"
+  ]
  },
  "collection": {
   "official_site": "ok",
@@ -485,12 +546,12 @@
   "browser_batch": false
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.8,
+  "basic": 0.78,
+  "course": 0.2,
   "fee": 1.0,
-  "ops": 0.0,
+  "ops": 0.07,
   "facility": 0.0,
-  "briefing": 0.5,
-  "rental": 0.5
+  "briefing": 0.0,
+  "rental": 0.75
  }
 }

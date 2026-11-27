@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0074",
@@ -62,17 +63,17 @@
    "master": "courses_master.json v2.0 (문체부·KGA·KGBA·티픽·지도)",
    "synced_to": "courses_master.json v2.7 (2026-11-26 단일 스키마 정규화)"
   },
-  "par": null,
+  "par": 71,
   "holes_teepick": 18,
   "course_spec": {
    "holes": 18,
-   "par": null,
+   "par": 71,
    "blocks": [
     "바다코스(오션·듄스)",
     "하늘코스",
     "레이크·클래식코스"
    ],
-   "length_m": null,
+   "length_m": 6495,
    "kga": null,
    "grass": {
     "evidence": "파주CC 서울에서 50분 거리, 우수한 접근성의 파주CC 신라CC 최상의 코스와 차별화된 프리미엄 서비스의 신라CC 클럽72CC 대중 골프문화 선두주자, 수도권 최대 규모 골프장 클럽72 일본 토조노모리 %nbsp; [제휴] 하이원CC [제휴] 해피니스CC [제휴] 파인힐스CC [제휴] 세이지우드CC [제휴] 사우스스프링스CC [제휴] 크리스밸리CC [제휴] 제주 아덴힐 이벤트&소식 원더클럽의 골프장 새로운 이벤트와 공지사항을 안내합니다.",
@@ -108,7 +109,7 @@
   "holes_received": 18,
   "course_names": null,
   "membership_type": "대중제",
-  "night_light": null,
+  "night_light": "3부(야간) 티타임 판매 관측(티픽, 최근 43건)",
   "blocks": [
    "바다코스(오션·듄스)",
    "하늘코스",
@@ -127,8 +128,8 @@
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": null,
-  "par": null
+  "length_m": 6495,
+  "par": 71
  },
  "fee": {
   "weekday": null,
@@ -143,17 +144,18 @@
    "source": "공식"
   },
   "caddie": {
-   "value": null,
-   "none": false,
-   "evidence": "라운드가 레슨이 되는 순간 파주CC [파주CC] 3부 캐디피 인상안내 통합 원더클럽 앱으로 더 빠르고 더 스마트하게!",
-   "source": "공식",
-   "url": "https://www.onetheclub.com/"
+   "value": 250000,
+   "raw": "250,000원",
+   "text": "팀당(공식 홈페이지 안내)",
+   "source": "공식 홈페이지",
+   "url": "https://www.onetheclub.com/reservation/golf",
+   "none": false
   },
   "as_of": null,
   "source_url": null,
   "note": null,
   "sources": [],
-  "checked_at": null,
+  "checked_at": "2026-11-27",
   "market": {
    "weekday_min": 70000.0,
    "weekend_min": 130000.0,
@@ -171,13 +173,18 @@
   "official_rental": null
  },
  "cancel": {
-  "cancel_policy": null,
+  "cancel_policy": {
+   "value": "평일 이용일 2일 전~당일, 주말·공휴일 3일 전~당일 취소 시 예약금 환불 불가",
+   "source": "CLUB72 공식 예약 페이지",
+   "url": "http://www.onetheclub.com/club72/reserve"
+  },
   "open_cycle": null,
   "notes": null,
   "evidence": [
    "원더클럽 주요 메뉴 바로가기 컨텐트 바로가기 원더클럽 예약하기 실시간예약 제휴골프장예약 조인하기 조인예약 조인예약확인 설정 골프장정보 클럽72CC 신라CC 파주CC 듄스코스 [제휴] 하이원 [제휴] 해피니스 [제휴] 파인힐스 [제휴] 세이지우드 [제휴] 아덴힐 [제휴] 사우스스프링스 해외 골프투어 이벤트/공지 진행중인 이벤트 공지사항 원더몰 일본 회원권 고객라운지 FAQ 고객의소리 전화번호 및 기타 안내 갤러리 My페이지 마이원더클럽 쿠폰함 예약조회/수정 연단체/임시단체 클럽72 VIP 리워드 스코어조회 내정보관리 멤버십안내 클럽7",
    "예 아니오 확인 Close 예약안내 확인 Close 예약안내 확인 Close 예약안내 확인 Close 알펜시아CC 예약안내 확인 Close 위약기간으로 예약취소 시 위약금이 발생합니다.",
-   "위약금은 예약보증금에서 차감되며, 보유한 예약보증금이 500,000 원 이하인 경우 회원제 골프장 예약이 제한됩니다."
+   "위약금은 예약보증금에서 차감되며, 보유한 예약보증금이 500,000 원 이하인 경우 회원제 골프장 예약이 제한됩니다.",
+   "평일 이용일 2일 전~당일, 주말·공휴일 3일 전~당일 취소 시 예약금 환불 불가 — http://www.onetheclub.com/club72/reserve"
   ],
   "weather_evidence": []
  },
@@ -325,8 +332,14 @@
    "evidence": []
   },
   "night": {
-   "evidence": [],
-   "value": null
+   "value": "3부(야간) 티타임 판매 관측(티픽, 최근 43건)",
+   "evidence": [
+    "3부(야간) 티타임 판매 관측(티픽, 최근 43건) — https://teepickgolf.com/course/%ED%81%B4%EB%9F%BD72(%ED%95%98%EB%8A%98)"
+   ],
+   "source_url": "https://teepickgolf.com/course/%ED%81%B4%EB%9F%BD72(%ED%95%98%EB%8A%98)",
+   "confidence": "medium",
+   "checked_at": "2026-11-27",
+   "value_from": "pass2_third_party"
   },
   "closed_days": {
    "evidence": [],
@@ -465,8 +478,23 @@
   "recent_notice_text": null,
   "course_notes": null,
   "alert": null,
-  "unconfirmed": [],
-  "sources": []
+  "unconfirmed": [
+   "카트비 미확인",
+   "캐디피 미확인",
+   "예약 오픈 주기 미확인"
+  ],
+  "sources": [
+   {
+    "source": "그린피가이드 코스 페이지",
+    "url": "https://greenfeeguide.co.kr/course/gc-0174/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "티픽골프장 코스 페이지",
+    "url": "https://teepickgolf.com/course/%ED%81%B4%EB%9F%BD72(%ED%95%98%EB%8A%98)",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "ok",
@@ -474,19 +502,19 @@
   "pages_collected": 14,
   "third_party": {
    "teepick": true,
-   "greenfeeguide": false
+   "greenfeeguide": true
   },
   "render_hint": "static",
   "plan_strategy": "static(직접 파싱)",
   "browser_batch": false
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.6,
-  "fee": 0.0,
+  "basic": 0.89,
+  "course": 0.4,
+  "fee": 0.25,
   "ops": 0.21,
-  "facility": 0.1,
-  "briefing": 0.5,
-  "rental": 0.25
+  "facility": 0.2,
+  "briefing": 0.0,
+  "rental": 0.0
  }
 }

@@ -8,11 +8,106 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "review": {
+   "checks": [
+    {
+     "field": "course.course_names",
+     "received": null,
+     "verified": "[\"천마\", \"화랑\"]",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0324/",
+     "quote": "코스 구성: 천마 18홀·화랑 18홀",
+     "source_type": "official_summary(greenfeeguide)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "course.night_light",
+     "received": null,
+     "verified": "야간 라운드 운영(공식 홈페이지 안내)",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0324/",
+     "quote": "야간 운영: 야간 라운드 운영(공식 홈페이지 안내)",
+     "source_type": "official_summary(greenfeeguide)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.night.value",
+     "received": null,
+     "verified": "야간 라운드 운영(공식 홈페이지 안내)",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0324/",
+     "quote": "야간 운영: 야간 라운드 운영(공식 홈페이지 안내)",
+     "source_type": "official_summary(greenfeeguide)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "ops.cart_type.value",
+     "received": null,
+     "verified": "5인승 유도카트(야마하)",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0324/",
+     "quote": "카트: 5인승 유도카트(야마하)",
+     "source_type": "official_summary(greenfeeguide)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.closed_days.value",
+     "received": null,
+     "verified": "매월 마지막 월요일",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0324/",
+     "quote": "정기 휴장일: 매월 마지막 월요일",
+     "source_type": "official_summary(greenfeeguide)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.practice.value",
+     "received": null,
+     "verified": "드라이빙 레인지",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0324/",
+     "quote": "연습 시설: 드라이빙 레인지",
+     "source_type": "official_summary(greenfeeguide)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.other.value",
+     "received": null,
+     "verified": "프로샵",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0324/",
+     "quote": "그 밖의 시설: 프로샵",
+     "source_type": "official_summary(greenfeeguide)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "rental.full_set",
+     "received": null,
+     "verified": 30000,
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0324/",
+     "quote": "골프채(풀세트): 30,000~60,000원 · 신형·구형별 · 18홀",
+     "source_type": "official_summary(greenfeeguide)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    }
+   ],
+   "checked_at": "2026-11-27"
+  },
+  "batch3_patch": "2026-11-27 배치6(대구·경북) 보완: 8개 항목(공식 홈페이지·그린피가이드 공식 안내 확인 기준, 미확인 값 생성 없음)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0301",
@@ -62,7 +157,7 @@
    "holes": 36,
    "par": null,
    "blocks": [],
-   "length_m": null,
+   "length_m": 6524,
    "kga": {
     "kga_course_code": "45",
     "kga_name": "경주신라",
@@ -165,9 +260,12 @@
  "course": {
   "holes": 36,
   "holes_received": null,
-  "course_names": null,
+  "course_names": [
+   "천마",
+   "화랑"
+  ],
   "membership_type": "회원제",
-  "night_light": null,
+  "night_light": "야간 라운드 운영(공식 홈페이지 안내)",
   "blocks": [],
   "grass": {
    "tee": null,
@@ -266,7 +364,7 @@
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": null,
+  "length_m": 6524,
   "par": null
  },
  "fee": {
@@ -285,7 +383,8 @@
    "value": 140000,
    "source": "그린피가이드",
    "url": "https://greenfeeguide.co.kr/course/gc-0324/",
-   "none": false
+   "none": false,
+   "note": "3부 야간은 노캐디 셀프 라운드(예약 시간 30분 전 입장)"
   },
   "as_of": "2026-11-01",
   "source_url": null,
@@ -488,9 +587,14 @@
   "cart_type": {
    "evidence": [
     "입장요금 구분 주주회원 지정회원 비회원 18홀 평일 30,000 70,000 160,000 주말(공휴일) 30,000 110,000 190,000 9홀 평일 30,000 45,000 90,000 주말(공휴일) 30,000 65,000 105,000 유도카트 대여료 팀당 80,000 별도 계산(2021년 3월 27일부터 시행), 1팀 기준은 3~4인 구성이 원칙(2인, 5인 플레이 불가능) 셀프카트 대여료 청소비 포함 1,2부(12만원),3부(10만원) 별도 계산 비회원그린피는 공지사항 참조바랍니다.",
-    "대여료 구 분 금 액 비 고 5인승 유도카트 80,000원 노캐디 선택 시 추가 비용 (공지사항 그린피 안내 참조) 골프채 남성신형 60,000원 테일러메이드(스틸&그라파이트) 풀세트 남성구형 30,000원 캘러웨이(그라파이트) 풀세트 여성신형 60,000원 엘로드 풀세트 퍼터 10,000원 골프화 5,000원 4."
+    "대여료 구 분 금 액 비 고 5인승 유도카트 80,000원 노캐디 선택 시 추가 비용 (공지사항 그린피 안내 참조) 골프채 남성신형 60,000원 테일러메이드(스틸&그라파이트) 풀세트 남성구형 30,000원 캘러웨이(그라파이트) 풀세트 여성신형 60,000원 엘로드 풀세트 퍼터 10,000원 골프화 5,000원 4.",
+    "카트: 5인승 유도카트(야마하)"
    ],
-   "value": null
+   "value": "5인승 유도카트(야마하)",
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0324/",
+   "confidence": "medium",
+   "source_type": "official_summary(greenfeeguide)",
+   "checked_at": "2026-11-27"
   },
   "cart_entry": {
    "evidence": [],
@@ -518,8 +622,14 @@
    "value": null
   },
   "sauna": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "사우나: 사우나 있음"
+   ],
+   "value": "사우나 있음",
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0324/",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfeeguide)"
   },
   "dress": {
    "evidence": [],
@@ -534,9 +644,14 @@
  "facilities": {
   "practice": {
    "evidence": [
-    "골프연습장일반 골프 실내연습장과는 달리 일체의 시설물없이 탁 트인 자연을 배경으로 마음껏 티샷을 할수있는 경주신라CC 특유의 골프연습장입니다."
+    "골프연습장일반 골프 실내연습장과는 달리 일체의 시설물없이 탁 트인 자연을 배경으로 마음껏 티샷을 할수있는 경주신라CC 특유의 골프연습장입니다.",
+    "연습 시설: 드라이빙 레인지"
    ],
-   "value": null
+   "value": "드라이빙 레인지",
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0324/",
+   "confidence": "medium",
+   "source_type": "official_summary(greenfeeguide)",
+   "checked_at": "2026-11-27"
   },
   "indoor_range": {
    "value": null,
@@ -562,20 +677,37 @@
    "evidence": []
   },
   "other": {
-   "value": null,
-   "evidence": []
+   "value": "프로샵",
+   "evidence": [
+    "그 밖의 시설: 프로샵"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0324/",
+   "confidence": "medium",
+   "source_type": "official_summary(greenfeeguide)",
+   "checked_at": "2026-11-27"
   },
   "night": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "야간 운영: 야간 라운드 운영(공식 홈페이지 안내)"
+   ],
+   "value": "야간 라운드 운영(공식 홈페이지 안내)",
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0324/",
+   "confidence": "medium",
+   "source_type": "official_summary(greenfeeguide)",
+   "checked_at": "2026-11-27"
   },
   "closed_days": {
    "evidence": [
     "조인게시판조인게시판 이용안내요금 및 이용안내 GYEONGJU SILLA CC 아이디 저장 비밀번호 저장 Login 회원가입 아이디/비밀번호 찾기 공지사항 동절기 휴장일 안내 New 2026-11-24 2027년도 공인서클 등록 접수 안내문 New 2026-11-23 12월 그린피 안내 2026-11-09 비회원 3부 그린피 특별할인 2026-10-31 대한민국 권역 베스트10 코스선정 2026-10-24 VIEW MORE 게시물이 없습니다.",
-    "③ 강설, 폭우, 안개, 기타 천재지변 등의 불가항력적인 사유로 본 회사가 골프장 이용이 불가능하다고 판단되어 임시 휴장을 하는 경우에는 예약금을 환불한다."
+    "③ 강설, 폭우, 안개, 기타 천재지변 등의 불가항력적인 사유로 본 회사가 골프장 이용이 불가능하다고 판단되어 임시 휴장을 하는 경우에는 예약금을 환불한다.",
+    "정기 휴장일: 매월 마지막 월요일"
    ],
    "third_party": "매월 마지막 월요일개장",
-   "value": null
+   "value": "매월 마지막 월요일",
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0324/",
+   "confidence": "medium",
+   "source_type": "official_summary(greenfeeguide)",
+   "checked_at": "2026-11-27"
   },
   "shuttle": {
    "evidence": [],
@@ -594,16 +726,16 @@
   }
  },
  "rental": {
-  "available": null,
-  "full_set": null,
-  "fee_text": null,
+  "available": true,
+  "full_set": 30000,
+  "fee_text": "30,000~60,000원 · 신형·구형별 · 18홀",
   "brand": null,
   "left_handed": null,
-  "shoes": null,
+  "shoes": "5,000원",
   "nine_hole": null,
   "range_finder": null,
   "reservation": null,
-  "source_url": null,
+  "source_url": "https://greenfeeguide.co.kr/course/gc-0324/",
   "evidence": [],
   "official": null,
   "nearby_delivery": {
@@ -681,7 +813,9 @@
   "course_notes": null,
   "alert": null,
   "unconfirmed": [],
-  "sources": []
+  "sources": [
+   "https://greenfeeguide.co.kr/course/gc-0324/"
+  ]
  },
  "collection": {
   "official_site": "ok",
@@ -696,12 +830,12 @@
   "browser_batch": false
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.8,
+  "basic": 0.89,
+  "course": 0.4,
   "fee": 1.0,
-  "ops": 0.07,
-  "facility": 0.0,
-  "briefing": 0.25,
-  "rental": 0.25
+  "ops": 0.21,
+  "facility": 0.4,
+  "briefing": 0.0,
+  "rental": 0.75
  }
 }

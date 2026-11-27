@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0491",
@@ -103,9 +104,9 @@
  "fee": {
   "weekday": 100000,
   "weekend": 160000,
-  "weekday_text": null,
+  "weekday_text": "100,000원 ~ 130,000원",
   "weekend_text": null,
-  "basis": null,
+  "basis": "official",
   "tax_included": null,
   "cart": {
    "value": 100000,
@@ -132,7 +133,7 @@
     "checked_at": "2026-11-01"
    }
   ],
-  "checked_at": "2026-11-01",
+  "checked_at": "2026-11-27",
   "market": {
    "weekday_min": null,
    "weekend_min": 161000.0,
@@ -156,13 +157,14 @@
   }
  },
  "cancel": {
-  "cancel_policy": null,
+  "cancel_policy": "입실 4일전 변경 및 취소: 100% 환불",
   "open_cycle": null,
   "notes": null,
   "evidence": [
    "NO 내용 점수 비고 1 예약부도(NO-SHOW) 및 당일 취소 감점 30점 4주 예약 정지 2 회원 예약 후 비회원들만 내방한 경우 감점 30점 입장 불가 및 예약 부도 처리 3 회원 예약 후 비회원으로 변경 시 감점 15점 4 3일전 취소 감점 5점 2일전 취소 감점 10점 1일전 취소 감점 20점 5 주말 및 공휴일 라운드 감점 5점 6 주중 라운드 감점 2점 ※ 주중 위임 예약도 위약내용은 위 사항에 동일하게 적용 됩니다.",
    "패널티 규정 내용 적용 비고 회원예약 후 미 동반 NO-SHOW 처리 및 4주 예약 정지 주말 예약 시벌점 30점 부과 NO-SHOW 4주 예약 정지 입장 불가 및 예약부도 처리 티오프 시간 이후 도착 NO-SHOW 처리 및 4주 예약 정지 골프장 내 비신사적 행위 퇴장 조치 및 4주 예약 정지(운영위원회 통보 후 게시판 공지) 지연 플레이 ·",
-   "2회 이상 위반 시 4주 예약 정지 제세공과금을 제회한나머지 금액 환불 내기 골프로 물의를 일으킨 때 공지 (게시판) 고의로 그린 및 기물 파손 시 변상 조치, 퇴장 및 2개월 예약 정지 공정위 환불규정 적용 골프 정회원 특별 혜택 ·"
+   "2회 이상 위반 시 4주 예약 정지 제세공과금을 제회한나머지 금액 환불 내기 골프로 물의를 일으킨 때 공지 (게시판) 고의로 그린 및 기물 파손 시 변상 조치, 퇴장 및 2개월 예약 정지 공정위 환불규정 적용 골프 정회원 특별 혜택 ·",
+   "- 입실 4일전 변경 및 취소: 100% 환불 (출처: https://www.mdysresort.com/accom/family_hotel.asp, 2026-11-27 확인)"
   ],
   "weather_evidence": [
    "중봉주면을 평평한 넓은 밭과 같다하여 덕유평전이라 부르는데 남한 지대에서는 찾아보기 힘든 아고산대(해발 1천5백~2천5백미터의 고산지대로 기상변화가 심하고 강우량이 많아 습한 지대) 특유의 영향으로 키가 자라지 않은 관목과 철쭉, 산죽 등 고산식물들이 강풍을 견디면서 군락을 이루어 서식하고 있는 모습이 장관이다."
@@ -219,10 +221,11 @@
   },
   "checkin": {
    "evidence": [
+    "티오프 30분 전 도착 (출처: https://greenfeeguide.co.kr/course/gc-0435/, 2026-11-27 확인)",
     "중봉에 도착하면 길이 두 갈래로 갈라지는데 오른쪽 길은 남덕유산으로 가는 종주산행로이고 왼쪽은 오수자굴을 거쳐 백련사로 내려가는 길이다.",
     "약 50분 정도면 오수자굴에 도착하는데 고려시대 오수자 스님이 수도를 하며 득도를 했다는 유래가 있다."
    ],
-   "value": null,
+   "value": "티오프 30분 전 도착",
    "third_party": {
     "value": "30분 전",
     "source": "그린피가이드",
@@ -245,8 +248,14 @@
    "value": null
   },
   "pace": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "지나친 지연·경기 능력 부족 → 퇴장"
+   ],
+   "value": "지나친 지연·경기 능력 부족 → 퇴장",
+   "source_url": "https://www.mdysresort.com/golf/golf_use.asp",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfee guide tables)"
   },
   "grass": null
  },
@@ -262,37 +271,49 @@
    "evidence": []
   },
   "food": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "식당안내 (출처: https://www.mdysresort.com/golf/golf_use.asp, 2026-11-27 확인)"
+   ],
+   "value": "식당"
   },
   "snack_bar": {
-   "value": null,
-   "evidence": []
+   "value": "그늘집",
+   "evidence": [
+    "그늘집 (출처: https://www.mdysresort.com/facility/food.asp, 2026-11-27 확인)"
+   ]
   },
   "locker_sauna": {
-   "value": null,
-   "evidence": []
+   "value": "사우나",
+   "evidence": [
+    "사우나 (출처: https://www.mdysresort.com/golf/golf_use.asp, 2026-11-27 확인)"
+   ]
   },
   "lodging": {
    "value": null,
    "evidence": []
   },
   "other": {
-   "value": null,
-   "evidence": []
+   "value": "편의점 · 수영장",
+   "evidence": [
+    "편의점 · 수영장 (출처: https://greenfeeguide.co.kr/course/gc-0435/, 2026-11-27 확인)"
+   ]
   },
   "night": {
    "evidence": [],
    "value": null
   },
   "closed_days": {
-   "evidence": [],
+   "evidence": [
+    "- 정기 휴장일 : 수요일 (출처: https://www.mdysresort.com/facility/amenity.asp, 2026-11-27 확인)"
+   ],
    "third_party": null,
-   "value": null
+   "value": "매주 수요일"
   },
   "shuttle": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "무주터미널 (출처: https://greenfeeguide.co.kr/course/gc-0435/, 2026-11-27 확인)"
+   ],
+   "value": "무주터미널"
   },
   "ev_charge": {
    "evidence": [],
@@ -307,16 +328,16 @@
   }
  },
  "rental": {
-  "available": null,
+  "available": true,
   "full_set": 50000,
-  "fee_text": null,
+  "fee_text": "50,000원 · 18홀",
   "brand": null,
   "left_handed": null,
   "shoes": null,
   "nine_hole": null,
   "range_finder": null,
   "reservation": null,
-  "source_url": null,
+  "source_url": "https://greenfeeguide.co.kr/course/gc-0435/",
   "evidence": [],
   "official": null,
   "nearby_delivery": {
@@ -456,8 +477,17 @@
   "recent_notice_text": null,
   "course_notes": null,
   "alert": null,
-  "unconfirmed": [],
-  "sources": []
+  "unconfirmed": [
+   "복장",
+   "진행 시간"
+  ],
+  "sources": [
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "ok",
@@ -474,12 +504,12 @@
   "browser_pdf": []
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.6,
+  "basic": 0.78,
+  "course": 0.2,
   "fee": 1.0,
-  "ops": 0.07,
-  "facility": 0.0,
-  "briefing": 0.5,
-  "rental": 0.5
+  "ops": 0.21,
+  "facility": 0.6,
+  "briefing": 0.0,
+  "rental": 0.75
  }
 }

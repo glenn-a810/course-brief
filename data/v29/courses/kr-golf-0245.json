@@ -12,9 +12,21 @@
   ],
   "source": "raw/received_chungcheong_77.json (외부 데이터 수신, 2026-11-26)",
   "review": {
-   "checked_at": null,
+   "checked_at": "2026-11-27",
    "status": "not_crosschecked",
-   "checks": []
+   "checks": [
+    {
+     "field": "fee.checked_at",
+     "received": null,
+     "verified": "2026-11-27",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0294/",
+     "quote": "요금 확인일 2026-11-01 (그린피가이드 2026-11-27 조회)",
+     "source_type": "third_party",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    }
+   ]
   },
   "data_checks": [
    "대표전화 표기 차이: 마스터 043-926-1000 / 수신 1566-0162",
@@ -23,11 +35,14 @@
   "schema_previous": "stage2b/1.0",
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "restructured_from_7key": false,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "checked_at": "2026-11-27",
+  "pass2_patch": "2026-11-27 2차 보완 패스: 요금 확인일·출처 기록 갱신(값 변경 없음)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0245",
@@ -110,7 +125,8 @@
   "factcheck_2026_11_26": null,
   "address_original": "증평군 도안면 벼루재길 334",
   "homepage_former": "https://www.blackstoneresort.com/",
-  "homepage_source": "official"
+  "homepage_source": "official",
+  "par": 72
  },
  "course": {
   "holes": 18,
@@ -126,7 +142,8 @@
   },
   "kga": null,
   "kga_hole_est": null,
-  "extra_courses": null
+  "extra_courses": null,
+  "par": 72
  },
  "fee": {
   "weekday": 197000,
@@ -142,7 +159,8 @@
   "caddie": {
    "value": 150000,
    "text": "150,000원/팀",
-   "none": false
+   "none": false,
+   "note": "야간 캐디피 경력자 1·2부 150,000원 · 3부 야간 160,000원 · 3부 운영 때 3부에만 교육캐디 배치"
   },
   "as_of": "2026-11-01 (공식 요금표)",
   "source_url": "https://www.blackstoneresort.com/",
@@ -152,14 +170,30 @@
     "source": "수신 조사(공식·공개 예약정보)",
     "url": "https://www.blackstoneresort.com/",
     "checked_at": "2026-11-01 (공식 요금표)"
+   },
+   {
+    "source": "third_party",
+    "url": "https://greenfeeguide.co.kr/course/gc-0294/",
+    "quote": "요금 확인일 2026-11-01 (그린피가이드 2026-11-27 조회)",
+    "checked_at": "2026-11-27"
    }
-  ]
+  ],
+  "checked_at": "2026-11-27",
+  "market": {
+   "weekday_min": 30000,
+   "weekend_min": 60000,
+   "source": "공개 예약 채널 실거래 관측(티픽)",
+   "url": "https://teepickgolf.com/",
+   "note": "공시가 아닌 최근 관측 실거래 최저가"
+  }
  },
  "cancel": {
-  "cancel_policy": "평일 3일 전·주말 4일 전까지(이용약관 기준)",
+  "cancel_policy": "주말·공휴일 4일 전, 평일 3일 전까지 취소하면 예약금 전액 환불(이용약관). 이후 주말 3~2일 전·평일 2일 전 10%, 1일 전 20%, 당일·노쇼 30%. 예보만으로 취소 불가.",
   "open_cycle": "이용약관상 이용 예정일 3주 전부터 인터넷·전화 예약 신청 가능",
   "notes": "수시단체는 3팀 이상·팀당 4인 1팀 필수, 단체 변경·취소는 이용일 2주 전까지 유선",
-  "evidence": [],
+  "evidence": [
+   "https://belleforetresort.com/content/golf_fee"
+  ],
   "weather_evidence": []
  },
  "ops": {
@@ -230,8 +264,10 @@
    "evidence": []
   },
   "food": {
-   "value": null,
-   "evidence": []
+   "value": "클럽 레스토랑 운영",
+   "evidence": [
+    "https://belleforetresort.com/community_notice/544"
+   ]
   },
   "snack_bar": {
    "value": null,
@@ -259,8 +295,16 @@
    "evidence": []
   },
   "shuttle": {
-   "value": null,
-   "evidence": []
+   "value": false,
+   "evidence": [
+    "https://belleforetresort.com/community_notice/544"
+   ]
+  },
+  "proshop": {
+   "value": "프로샵 운영",
+   "evidence": [
+    "https://belleforetresort.com/community_notice/544"
+   ]
   }
  },
  "rental": {
@@ -338,7 +382,6 @@
    "매트 티샷",
    "연습그린",
    "인도어 연습장",
-   "식당·조식",
    "그늘집",
    "락커·사우나",
    "클럽 렌탈 여부",
@@ -353,7 +396,12 @@
   "sources": [
    "https://www.blackstoneresort.com/",
    "https://greenfeeguide.co.kr/course/gc-0294/",
-   "https://wondergolf.co.kr/courses/kr-kakao-1965155405"
+   "https://wondergolf.co.kr/courses/kr-kakao-1965155405",
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
   ],
   "collected_at": "2026-11-26T10:24:29+09:00"
  },
@@ -362,18 +410,20 @@
   "official_reason": "운영 중(블랙스톤 벨포레 리조트, 공식 홈페이지 정상)",
   "pages_collected": 0,
   "third_party": {
-   "received_report": true
+   "received_report": true,
+   "teepick": true,
+   "greenfeeguide": true
   },
   "render_hint": "report",
   "plan_strategy": "subagent_report(2026-11-26)"
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.8,
+  "basic": 0.78,
+  "course": 0.4,
   "fee": 1.0,
   "ops": 0.0,
-  "facility": 0.3,
-  "briefing": 0.75,
-  "rental": 0.25
+  "facility": 0.5,
+  "briefing": 0.5,
+  "rental": 0.0
  }
 }

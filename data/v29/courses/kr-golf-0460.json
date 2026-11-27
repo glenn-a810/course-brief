@@ -12,8 +12,8 @@
   ],
   "source": "raw/received_gangwon_65.json (외부 데이터 수신, 2026-11-26)",
   "review": {
-   "checked_at": "2026-11-26",
-   "status": "verified_official",
+   "checked_at": "2026-11-27",
+   "status": "supplemented(공식+공개 요약)",
    "checks": [
     {
      "field": "그린피",
@@ -49,6 +49,140 @@
      "verified": "월 2회 화요일(법정공휴일·하계시즌 제외)",
      "result": "누락 보완",
      "url": "https://www.yongpyong.co.kr/kor/golf/appointment/appointmentInfo.do"
+    },
+    {
+     "field": "course.par",
+     "received": null,
+     "verified": 72,
+     "result": "보완",
+     "url": "https://www.yongpyong.co.kr/",
+     "quote": "힐·버치 각 9홀, 파72",
+     "source_type": "official_research",
+     "confidence": "medium",
+     "checked_at": "2026-11-27",
+     "note": "2026-11-26 공식 홈페이지 조사자료에서 이관한 값(문구는 요약·환산일 수 있음)"
+    },
+    {
+     "field": "master.opened",
+     "received": null,
+     "verified": "2004-07",
+     "result": "보완",
+     "url": "https://www.yongpyong.co.kr/",
+     "quote": "2004년 7월 개장",
+     "source_type": "official_research",
+     "confidence": "medium",
+     "checked_at": "2026-11-27",
+     "note": "2026-11-26 공식 홈페이지 조사자료에서 이관한 값(문구는 요약·환산일 수 있음)"
+    },
+    {
+     "field": "master.homepage",
+     "received": "https://www.yongpyong.co.kr/kor/golf/clubGuide/yongpyong9Intro.do",
+     "verified": "https://www.yongpyong.co.kr/",
+     "result": "수정",
+     "url": "https://www.yongpyong.co.kr/",
+     "quote": "기존 URL은 9홀 대중골프장 소개 페이지로 버치힐과 불일치 → 리조트 골프 대표 페이지로 정정",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "fee.checked_at",
+     "received": null,
+     "verified": "2026-11-27",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0241/",
+     "quote": "요금 확인일 2026-11-01 (그린피가이드 2026-11-27 조회)",
+     "source_type": "third_party",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "ops.cart_type",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "5인승",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0241/",
+     "quote": "카트 종류 5인승",
+     "source_type": "third_party",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "course.length_m",
+     "received": null,
+     "verified": 6250,
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/yongpyong-birchhill/course/",
+     "quote": "코스 개요 — 거리: 6,250m",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.food",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "클럽하우스 레스토랑 (한식·양식), 간식 코너",
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/yongpyong-birchhill/info/",
+     "quote": "레스토랑: 클럽하우스 레스토랑 (한식·양식), 간식 코너",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "ops.locker",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "남녀 분리 라커룸, 사우나, 샤워실",
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/yongpyong-birchhill/info/",
+     "quote": "라커/사우나: 남녀 분리 라커룸, 사우나, 샤워실",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "ops.sauna",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "남녀 분리 라커룸, 사우나, 샤워실",
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/yongpyong-birchhill/info/",
+     "quote": "라커/사우나: 남녀 분리 라커룸, 사우나, 샤워실",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.locker_sauna",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "남녀 분리 라커룸, 사우나, 샤워실",
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/yongpyong-birchhill/info/",
+     "quote": "라커/사우나: 남녀 분리 라커룸, 사우나, 샤워실",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.proshop",
+     "received": null,
+     "verified": "프로샵",
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/yongpyong-birchhill/info/",
+     "quote": "프로샵: 프로샵 (골프용품·의류·기념품)",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.practice",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "드라이빙 레인지, 퍼팅 그린, 어프로치 연습장",
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/yongpyong-birchhill/info/",
+     "quote": "연습 시설: 드라이빙 레인지, 퍼팅 그린, 어프로치 연습장",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
     }
    ]
   },
@@ -59,11 +193,14 @@
   "schema_previous": "stage2b/1.0",
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "restructured_from_7key": false,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "batch3_patch": "2026-11-27 배치3 보완: 1개 항목(공식 홈페이지·공개 요금 안내 기준, 미확인 값 생성 없음)",
+  "pass2_patch": "2026-11-27 2차 보완 패스: 8개 항목(그린피가이드·1박2일골프·원더골프·공식 홈페이지 대조, 미확인 값 생성 없음)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0460",
@@ -112,13 +249,13 @@
   "tel_conflict": true,
   "tel_source": "KGA",
   "tel_note": "마스터 033-330-8235는 버치힐 사무실 회선, 예약은 1522-3111.",
-  "homepage": "https://www.yongpyong.co.kr/kor/golf/clubGuide/yongpyong9Intro.do",
+  "homepage": "https://www.yongpyong.co.kr/",
   "homepage_master": "https://www.yongpyong.co.kr/kor/golf/clubGuide/yongpyong9Intro.do",
   "operators": [
    "모나용평㈜(신달순 임학운)"
   ],
   "area_sqm": 983642,
-  "opened": null,
+  "opened": "2004-07",
   "course_blocks": [
    "버치·힐"
   ],
@@ -150,7 +287,13 @@
    "note": null
   },
   "factcheck_2026_11_26": null,
-  "address_original": "평창군 대관령면 올림픽로 715"
+  "address_original": "평창군 대관령면 올림픽로 715",
+  "designer": {
+   "value": "Ronald W.Fream로널드 프림(골프플랜) 설계 다른 골프장: 용평리조트대중골프장 · 파인힐스CC · 함평엘리체CC · 김해정산컨트리클럽",
+   "source": "공개 정보(그린피가이드)",
+   "url": "https://greenfeeguide.co.kr/course/gc-0241/"
+  },
+  "par": 72
  },
  "course": {
   "holes": 18,
@@ -178,7 +321,9 @@
    ]
   },
   "kga_hole_est": 18,
-  "extra_courses": null
+  "extra_courses": null,
+  "par": 72,
+  "length_m": 6250
  },
  "fee": {
   "weekday": 198000,
@@ -204,11 +349,29 @@
     "source": "수신 조사(공식·공개 예약정보)",
     "url": "https://greenfeeguide.co.kr/course/gc-0241/",
     "checked_at": "2026-11-01(공식 요금표 확인)"
+   },
+   {
+    "source": "third_party",
+    "url": "https://greenfeeguide.co.kr/course/gc-0241/",
+    "quote": "요금 확인일 2026-11-01 (그린피가이드 2026-11-27 조회)",
+    "checked_at": "2026-11-27"
    }
-  ]
+  ],
+  "checked_at": "2026-11-27",
+  "market": {
+   "weekday_min": 60000,
+   "weekend_min": 110000,
+   "source": "공개 예약 채널 실거래 관측(티픽)",
+   "url": "https://teepickgolf.com/",
+   "note": "공시가 아닌 최근 관측 실거래 최저가"
+  }
  },
  "cancel": {
-  "cancel_policy": null,
+  "cancel_policy": {
+   "value": "그린시즌 예약 변경이나 취소는 예약실 운영시간 내 가능합니다.(운영시간 이후 취소분은 익일로 처리) - 용평•버치힐CC : 예약일 미포함 주중 7일 전, 주말/공휴일/여름성수기 10일 전까지 취소가능 - 용평9 : 주중/주말 예약일 미포함 7일 전까지 취소가능 위약 시 벌점 또는 위약금이 징수됩니다.",
+   "source": "공식 홈페이지",
+   "url": "https://www.yongpyong.co.kr/kor/golf/appointment/priceInfo.do"
+  },
   "open_cycle": null,
   "notes": "노캐디 팀당 20,000원 추가",
   "evidence": [],
@@ -236,8 +399,14 @@
    "evidence": []
   },
   "cart_type": {
-   "value": null,
-   "evidence": []
+   "value": "5인승",
+   "evidence": [
+    "카트 종류 5인승"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0241/",
+   "confidence": "high",
+   "source_type": "third_party",
+   "checked_at": "2026-11-27"
   },
   "cart_entry": {
    "value": null,
@@ -256,12 +425,26 @@
    "evidence": []
   },
   "locker": {
-   "value": null,
-   "evidence": []
+   "value": "남녀 분리 라커룸, 사우나, 샤워실",
+   "evidence": [
+    "라커/사우나: 남녀 분리 라커룸, 사우나, 샤워실"
+   ],
+   "source_url": "https://1n2d-golf.co.kr/yongpyong-birchhill/info/",
+   "confidence": "medium",
+   "source_type": "public_info(1n2d-golf)",
+   "checked_at": "2026-11-27",
+   "note": "1박2일골프 시설·기타 요약(2차 공개자료, 2026-11-27 조회) — 예약 전 공식 채널 재확인 권장"
   },
   "sauna": {
-   "value": null,
-   "evidence": []
+   "value": "남녀 분리 라커룸, 사우나, 샤워실",
+   "evidence": [
+    "라커/사우나: 남녀 분리 라커룸, 사우나, 샤워실"
+   ],
+   "source_url": "https://1n2d-golf.co.kr/yongpyong-birchhill/info/",
+   "confidence": "medium",
+   "source_type": "public_info(1n2d-golf)",
+   "checked_at": "2026-11-27",
+   "note": "1박2일골프 시설·기타 요약(2차 공개자료, 2026-11-27 조회) — 예약 전 공식 채널 재확인 권장"
   },
   "dress": {
    "value": null,
@@ -274,24 +457,45 @@
  },
  "facilities": {
   "practice": {
-   "value": null,
-   "evidence": []
+   "value": "드라이빙 레인지, 퍼팅 그린, 어프로치 연습장",
+   "evidence": [
+    "연습 시설: 드라이빙 레인지, 퍼팅 그린, 어프로치 연습장"
+   ],
+   "source_url": "https://1n2d-golf.co.kr/yongpyong-birchhill/info/",
+   "confidence": "medium",
+   "source_type": "public_info(1n2d-golf)",
+   "checked_at": "2026-11-27",
+   "note": "1박2일골프 시설·기타 요약(2차 공개자료, 2026-11-27 조회) — 예약 전 공식 채널 재확인 권장"
   },
   "indoor_range": {
    "value": null,
    "evidence": []
   },
   "food": {
-   "value": null,
-   "evidence": []
+   "value": "클럽하우스 레스토랑 (한식·양식), 간식 코너",
+   "evidence": [
+    "레스토랑: 클럽하우스 레스토랑 (한식·양식), 간식 코너"
+   ],
+   "source_url": "https://1n2d-golf.co.kr/yongpyong-birchhill/info/",
+   "confidence": "medium",
+   "source_type": "public_info(1n2d-golf)",
+   "checked_at": "2026-11-27",
+   "note": "1박2일골프 시설·기타 요약(2차 공개자료, 2026-11-27 조회) — 예약 전 공식 채널 재확인 권장"
   },
   "snack_bar": {
    "value": null,
    "evidence": []
   },
   "locker_sauna": {
-   "value": null,
-   "evidence": []
+   "value": "남녀 분리 라커룸, 사우나, 샤워실",
+   "evidence": [
+    "라커/사우나: 남녀 분리 라커룸, 사우나, 샤워실"
+   ],
+   "source_url": "https://1n2d-golf.co.kr/yongpyong-birchhill/info/",
+   "confidence": "medium",
+   "source_type": "public_info(1n2d-golf)",
+   "checked_at": "2026-11-27",
+   "note": "1박2일골프 시설·기타 요약(2차 공개자료, 2026-11-27 조회) — 예약 전 공식 채널 재확인 권장"
   },
   "lodging": {
    "value": "용평리조트(모나용평)",
@@ -311,8 +515,25 @@
    "evidence": []
   },
   "shuttle": {
-   "value": null,
-   "evidence": []
+   "value": "KTX 진부역택시 약 20분(모나용평까지 약 16km)",
+   "evidence": [
+    "대중교통: KTX 진부역택시 약 20분(모나용평까지 약 16km)"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0241/",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfeeguide)"
+  },
+  "proshop": {
+   "value": "프로샵",
+   "evidence": [
+    "프로샵: 프로샵 (골프용품·의류·기념품)"
+   ],
+   "source_url": "https://1n2d-golf.co.kr/yongpyong-birchhill/info/",
+   "confidence": "medium",
+   "source_type": "public_info(1n2d-golf)",
+   "checked_at": "2026-11-27",
+   "note": "1박2일골프 시설·기타 요약(2차 공개자료, 2026-11-27 조회) — 예약 전 공식 채널 재확인 권장"
   }
  },
  "rental": {
@@ -405,9 +626,7 @@
   },
   "unconfirmed": [
    "야간 라이트",
-   "잔디(티)",
    "예약 오픈 주기",
-   "취소·위약 규정",
    "2인 플레이",
    "3인 플레이",
    "5인 플레이",
@@ -434,7 +653,14 @@
   "sources": [
    "https://greenfeeguide.co.kr/course/gc-0241/",
    "https://www.mk.co.kr/news/sports/11493433",
-   "https://todaygolfgo.com/regions/gangwon/"
+   "https://todaygolfgo.com/regions/gangwon/",
+   "https://www.yongpyong.co.kr/",
+   "https://1n2d-golf.co.kr/yongpyong-birchhill/course/",
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
   ],
   "collected_at": "2026-11-26T09:55:48+09:00"
  },
@@ -443,18 +669,20 @@
   "official_reason": "운영 중(용평리조트 계열 18홀)",
   "pages_collected": 0,
   "third_party": {
-   "received_report": true
+   "received_report": true,
+   "teepick": true,
+   "greenfeeguide": true
   },
   "render_hint": "report",
   "plan_strategy": "subagent_report(2026-11-26)"
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 1.0,
+  "basic": 0.89,
+  "course": 0.6,
   "fee": 1.0,
-  "ops": 0.07,
-  "facility": 0.2,
-  "briefing": 0.75,
-  "rental": 0.25
+  "ops": 0.29,
+  "facility": 0.6,
+  "briefing": 0.5,
+  "rental": 0.0
  }
 }

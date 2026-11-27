@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0194",
@@ -67,7 +68,7 @@
    "blocks": [
     "비스타라고보나호박몬티벨라"
    ],
-   "length_m": null,
+   "length_m": 5606,
    "kga": {
     "kga_course_code": "101",
     "kga_name": "비에이비스타",
@@ -137,7 +138,7 @@
  "course": {
   "holes": 41,
   "holes_received": 54,
-  "course_names": null,
+  "course_names": "비스타·라고 코스",
   "membership_type": "회원제",
   "night_light": null,
   "blocks": [
@@ -192,7 +193,7 @@
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": null,
+  "length_m": 5606,
   "par": 72,
   "holes_note": "등록(문체부) 41홀 · 수집 54홀 — 등록 기준과 수집처(티픽·조사) 표기 차이다. 등록 41홀을 정본으로 두고 집계에는 master.holes를 쓴다. 복합단지 합산 여부는 미확정."
  },
@@ -209,10 +210,10 @@
   "source_url": null,
   "note": null,
   "sources": [],
-  "checked_at": null,
+  "checked_at": "2026-11-27",
   "market": {
-   "weekday_min": 80000.0,
-   "weekend_min": 100000.0,
+   "weekday_min": 80000,
+   "weekend_min": 100000,
    "part1": null,
    "part2": null,
    "source": "티픽골프장(실거래 관측)",
@@ -224,7 +225,7 @@
  },
  "cancel": {
   "cancel_policy": null,
-  "open_cycle": null,
+  "open_cycle": "매주 수요일 09:00 인터넷 예약 오픈",
   "notes": null,
   "evidence": [],
   "weather_evidence": []
@@ -370,16 +371,29 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": null,
-   "evidence": []
+   "value": "사우나 있음",
+   "evidence": [
+    "사우나 있음 — https://greenfeeguide.co.kr/course/gc-0082/"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0082/",
+   "confidence": "medium",
+   "checked_at": "2026-11-27",
+   "value_from": "pass2_third_party"
   },
   "lodging": {
    "value": null,
    "evidence": []
   },
   "other": {
-   "value": null,
-   "evidence": []
+   "value": "프로샵",
+   "evidence": [
+    "other: 프로샵"
+   ],
+   "source_url": "https://greenfeeguide.com/course/gc-0082/",
+   "source_type": "greenfee_guide",
+   "confidence": "medium",
+   "checked_at": "2026-11-27",
+   "value_from": "batch2_supplement"
   },
   "night": {
    "evidence": [],
@@ -508,8 +522,21 @@
   "recent_notice_text": null,
   "course_notes": null,
   "alert": null,
-  "unconfirmed": [],
-  "sources": []
+  "unconfirmed": [
+   "취소·위약 규정 미확인: 공식 홈페이지에 위약 규정 게시를 확인하지 못함"
+  ],
+  "sources": [
+   {
+    "source": "그린피가이드 코스 페이지",
+    "url": "https://greenfeeguide.co.kr/course/gc-0082/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "티픽골프장 코스 페이지",
+    "url": "https://teepickgolf.com/course/%EB%B9%84%EC%97%90%EC%9D%B4%EB%B9%84%EC%8A%A4%ED%83%80cc",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "ok",
@@ -517,19 +544,19 @@
   "pages_collected": 2,
   "third_party": {
    "teepick": true,
-   "greenfeeguide": false
+   "greenfeeguide": true
   },
   "render_hint": "thin",
   "plan_strategy": "thin(상세페이지 탐색)",
   "browser_batch": false
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 1.0,
+  "basic": 0.78,
+  "course": 0.6,
   "fee": 0.0,
   "ops": 0.5,
-  "facility": 0.2,
-  "briefing": 0.5,
-  "rental": 0.25
+  "facility": 0.4,
+  "briefing": 0.0,
+  "rental": 0.0
  }
 }

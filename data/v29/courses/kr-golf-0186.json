@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0186",
@@ -66,7 +67,7 @@
    "blocks": [
     "고구려백제신라"
    ],
-   "length_m": null,
+   "length_m": 5545,
    "kga": null,
    "grass": null,
    "hole_by_hole": null
@@ -81,9 +82,9 @@
  "course": {
   "holes": 27,
   "holes_received": 27,
-  "course_names": null,
+  "course_names": "고구려·백제·신라 각 9홀",
   "membership_type": "회원제",
-  "night_light": null,
+  "night_light": "3부(야간) 티타임 판매 관측(티픽, 최근 2건)",
   "blocks": [
    "고구려백제신라"
   ],
@@ -96,40 +97,64 @@
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": null,
+  "length_m": 5545,
   "par": 72
  },
  "fee": {
-  "weekday": null,
-  "weekend": null,
+  "weekday": 220000,
+  "weekend": 280000,
   "weekday_text": null,
   "weekend_text": null,
-  "basis": null,
+  "basis": "official",
   "tax_included": null,
-  "cart": null,
-  "caddie": null,
-  "as_of": null,
+  "cart": {
+   "value": 100000,
+   "source": "그린피가이드(공식 요금표)",
+   "url": "https://greenfeeguide.com/course/gc-0008/",
+   "note": "팀당(4인 1대)"
+  },
+  "caddie": {
+   "value": 150000,
+   "none": false,
+   "source": "그린피가이드(공식 요금표)",
+   "url": "https://greenfeeguide.com/course/gc-0008/"
+  },
+  "as_of": "2026-08-22",
   "source_url": null,
   "note": null,
-  "sources": [],
-  "checked_at": null,
+  "sources": [
+   {
+    "source": "그린피가이드(공식 요금표 확인)",
+    "url": "https://greenfeeguide.com/course/gc-0008/",
+    "checked_at": "2026-08-22"
+   }
+  ],
+  "checked_at": "2026-11-27",
   "market": {
-   "weekday_min": 109000.0,
-   "weekend_min": 160000.0,
+   "weekday_min": 109000,
+   "weekend_min": 160000,
    "part1": null,
    "part2": null,
    "source": "티픽골프장(실거래 관측)",
    "url": "https://teepickgolf.com/course/%ED%95%9C%EC%9B%90",
-   "note": "공시가 아닌 최근 관측 실거래 최저가"
+   "note": "공시가 아닌 최근 관측 실거래 최저가",
+   "checked_at": "2026-11-27"
   },
   "official_green_evidence": [],
   "official_rental": null
  },
  "cancel": {
-  "cancel_policy": null,
+  "cancel_policy": {
+   "value": "위약 없이 취소: 7일 전까지 / 기한 경과 시 위약금·예약 제한 적용",
+   "source": "그린피가이드(공식 안내 인용)",
+   "url": "https://greenfeeguide.com/course/gc-0008/"
+  },
   "open_cycle": null,
-  "notes": null,
-  "evidence": [],
+  "notes": "최종 취소·위약 조건은 예약 채널 공지와 다를 수 있으니 예약 전 확인 필요",
+  "evidence": [
+   "“1일전 예약취소 예약정지 60일 2일전 예약취소 예약정지 50일 3일전 에약취소 예약정지 40일 4일전 예약취소 예약정지 30일 5일전 예약취소 예약정지 20일 6일전 예약취소 예약정지 10일 7일전 예약취소 없음”",
+   "골프장 공식 홈페이지 안내(비회원 예약 기준) · 2026.11.25 확인 ·"
+  ],
   "weather_evidence": []
  },
  "ops": {
@@ -193,8 +218,14 @@
    "value": null
   },
   "pace": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "지나친 지연 → 퇴장·입장 정지 (30일 정지)"
+   ],
+   "value": "지나친 지연 → 퇴장·입장 정지 (30일 정지)",
+   "source_url": "https://www.hanwoncc.co.kr/privacy/agree.asp",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfee guide tables)"
   }
  },
  "facilities": {
@@ -248,8 +279,14 @@
    "value_from": "capital_supplement(greenfee_guide)"
   },
   "night": {
-   "evidence": [],
-   "value": null
+   "value": "3부(야간) 티타임 판매 관측(티픽, 최근 2건)",
+   "evidence": [
+    "3부(야간) 티타임 판매 관측(티픽, 최근 2건) — https://teepickgolf.com/course/%ED%95%9C%EC%9B%90"
+   ],
+   "source_url": "https://teepickgolf.com/course/%ED%95%9C%EC%9B%90",
+   "confidence": "medium",
+   "checked_at": "2026-11-27",
+   "value_from": "pass2_third_party"
   },
   "closed_days": {
    "evidence": [
@@ -287,17 +324,19 @@
   }
  },
  "rental": {
-  "available": null,
-  "full_set": null,
-  "fee_text": null,
+  "available": true,
+  "full_set": 55000,
+  "fee_text": "55,000원 · 18홀",
   "brand": null,
   "left_handed": null,
-  "shoes": null,
+  "shoes": 10000,
   "nine_hole": null,
   "range_finder": null,
   "reservation": null,
-  "source_url": null,
-  "evidence": [],
+  "source_url": "https://greenfeeguide.co.kr/course/gc-0008/",
+  "evidence": [
+   "풀세트 대여 55,000원 · 18홀 — https://greenfeeguide.co.kr/course/gc-0008/"
+  ],
   "official": null,
   "nearby_delivery": {
    "region": "수도권",
@@ -371,7 +410,18 @@
   "course_notes": null,
   "alert": null,
   "unconfirmed": [],
-  "sources": []
+  "sources": [
+   {
+    "source": "그린피가이드 코스 페이지",
+    "url": "https://greenfeeguide.co.kr/course/gc-0008/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "ok",
@@ -379,19 +429,19 @@
   "pages_collected": 1,
   "third_party": {
    "teepick": true,
-   "greenfeeguide": false
+   "greenfeeguide": true
   },
   "render_hint": "thin",
   "plan_strategy": "thin(상세페이지 탐색)",
   "browser_batch": false
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.8,
-  "fee": 0.0,
-  "ops": 0.07,
-  "facility": 0.4,
-  "briefing": 0.5,
-  "rental": 0.25
+  "basic": 0.89,
+  "course": 0.6,
+  "fee": 1.0,
+  "ops": 0.14,
+  "facility": 0.5,
+  "briefing": 0.0,
+  "rental": 0.75
  }
 }

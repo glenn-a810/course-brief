@@ -12,9 +12,43 @@
   ],
   "source": "raw/received_chungcheong_77.json (외부 데이터 수신, 2026-11-26)",
   "review": {
-   "checked_at": null,
+   "checked_at": "2026-11-27",
    "status": "not_crosschecked",
-   "checks": []
+   "checks": [
+    {
+     "field": "ops.pace",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "18홀 4시간 이내",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0272/",
+     "quote": "진행/경기시간 18홀 4시간 이내",
+     "source_type": "third_party",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "ops.sauna",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "사우나 있음 락카(사우나)",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0272/",
+     "quote": "사우나 사우나 있음 락카(사우나)",
+     "source_type": "third_party",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.lodging",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "루시다호텔",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0272/",
+     "quote": "숙박 루시다호텔",
+     "source_type": "third_party",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    }
+   ]
   },
   "data_checks": [
    "미확인 목록 누락 라벨 보완: 제세금, 예약 비고"
@@ -22,11 +56,14 @@
   "schema_previous": "stage2b/1.0",
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "restructured_from_7key": false,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "checked_at": "2026-11-27",
+  "pass2_patch": "2026-11-27 2차 보완 패스: 3개 항목(그린피가이드·1박2일골프·원더골프·공식 홈페이지 대조, 미확인 값 생성 없음)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0231",
@@ -101,7 +138,13 @@
   "holes_conflict": false,
   "facility_cluster": null,
   "factcheck_2026_11_26": null,
-  "address_original": "단양군 매포읍 고양5길 43"
+  "address_original": "단양군 매포읍 고양5길 43",
+  "designer": {
+   "value": "오렌지엔지니어링",
+   "source": "공개 정보(그린피가이드)",
+   "url": "https://greenfeeguide.co.kr/course/gc-0272/"
+  },
+  "par": 72
  },
  "course": {
   "holes": 18,
@@ -117,7 +160,9 @@
   },
   "kga": null,
   "kga_hole_est": null,
-  "extra_courses": null
+  "extra_courses": null,
+  "par": 72,
+  "length_m": 6609
  },
  "fee": {
   "weekday": 159000,
@@ -144,13 +189,23 @@
     "url": "http://www.daehocc.co.kr/",
     "checked_at": "2026-11-26 (공식 요금 안내 확인)"
    }
-  ]
+  ],
+  "checked_at": "2026-11-27",
+  "market": {
+   "weekday_min": 60000,
+   "weekend_min": 110000,
+   "source": "공개 예약 채널 실거래 관측(티픽)",
+   "url": "https://teepickgolf.com/",
+   "note": "공시가 아닌 최근 관측 실거래 최저가"
+  }
  },
  "cancel": {
-  "cancel_policy": null,
+  "cancel_policy": "주말·공휴일은 4일 전, 평일은 3일 전까지 취소하면 예약금 전액 환불. 이후 주말 3~2일 전·평일 2일 전 10%, 1일 전 20%, 당일·노쇼 30%(팀별 이용요금 기준).",
   "open_cycle": "예약기간 이용 예정일 5주 전 09:00 ~ 티오프 3시간 전까지",
   "notes": null,
-  "evidence": [],
+  "evidence": [
+   "https://www.daehocc.co.kr/pagesite/use/penalty.asp"
+  ],
   "weather_evidence": []
  },
  "ops": {
@@ -163,8 +218,10 @@
    "evidence": []
   },
   "three_player": {
-   "value": null,
-   "evidence": []
+   "value": "3인 이상 내장 가능, 5인 플레이는 예약실 문의",
+   "evidence": [
+    "https://www.daehocc.co.kr/GolfRes/onepage/real_reservation.asp"
+   ]
   },
   "five_player": {
    "value": null,
@@ -175,8 +232,14 @@
    "evidence": []
   },
   "cart_type": {
-   "value": null,
-   "evidence": []
+   "value": "캐디 이외의 골프카트 운전 삼가",
+   "evidence": [
+    "캐디 이외의 골프카트 운전 삼가"
+   ],
+   "source_url": "https://www.daehocc.co.kr/pagesite/use/guide.asp",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfee guide tables)"
   },
   "cart_entry": {
    "value": null,
@@ -199,16 +262,28 @@
    "evidence": []
   },
   "sauna": {
-   "value": null,
-   "evidence": []
+   "value": "사우나 있음 락카(사우나)",
+   "evidence": [
+    "사우나 사우나 있음 락카(사우나)"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0272/",
+   "confidence": "high",
+   "source_type": "third_party",
+   "checked_at": "2026-11-27"
   },
   "dress": {
    "value": null,
    "evidence": []
   },
   "pace": {
-   "value": null,
-   "evidence": []
+   "value": "18홀 4시간 이내",
+   "evidence": [
+    "진행/경기시간 18홀 4시간 이내"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0272/",
+   "confidence": "high",
+   "source_type": "third_party",
+   "checked_at": "2026-11-27"
   }
  },
  "facilities": {
@@ -221,24 +296,36 @@
    "evidence": []
   },
   "food": {
-   "value": null,
-   "evidence": []
+   "value": "대식당 운영",
+   "evidence": [
+    "https://www.daehocc.co.kr/pagesite/reservation/guide.asp"
+   ]
   },
   "snack_bar": {
    "value": null,
    "evidence": []
   },
   "locker_sauna": {
-   "value": null,
-   "evidence": []
+   "value": "락커·샤워실 운영",
+   "evidence": [
+    "https://www.daehocc.co.kr/pagesite/reservation/guide.asp"
+   ]
   },
   "lodging": {
-   "value": null,
-   "evidence": []
+   "value": "루시다호텔",
+   "evidence": [
+    "숙박 루시다호텔"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0272/",
+   "confidence": "high",
+   "source_type": "third_party",
+   "checked_at": "2026-11-27"
   },
   "other": {
-   "value": null,
-   "evidence": []
+   "value": "세미나룸",
+   "evidence": [
+    "https://www.daehocc.co.kr/pagesite/reservation/guide.asp"
+   ]
   },
   "night": {
    "value": "3부(야간) 운영 — 캐디피 3부 170,000원",
@@ -321,10 +408,7 @@
    "잔디(티)",
    "잔디(페어웨이)",
    "잔디(그린)",
-   "취소·위약 규정",
    "2인 플레이",
-   "3인 플레이",
-   "5인 플레이",
    "노캐디",
    "마샬캐디",
    "카트 종류",
@@ -333,17 +417,13 @@
    "매트 티샷",
    "연습그린",
    "인도어 연습장",
-   "식당·조식",
    "그늘집",
-   "락커·사우나",
    "숙박",
-   "기타 시설",
    "클럽 렌탈 여부",
    "클럽 렌탈 요금",
    "좌타용 클럽",
    "골프화 대여",
-   "제세금",
-   "예약 비고"
+   "제세금"
   ],
   "unconfirmed_labels_added": [
    "제세금",
@@ -352,7 +432,12 @@
   "sources": [
    "http://www.daehocc.co.kr/",
    "https://wondergolf.co.kr/courses/kr-kakao-10626191",
-   "https://todaygolfgo.com/golf-courses/master/golf-course-moct-20241231-0516/"
+   "https://todaygolfgo.com/golf-courses/master/golf-course-moct-20241231-0516/",
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
   ],
   "collected_at": "2026-11-26T10:24:29+09:00"
  },
@@ -361,18 +446,20 @@
   "official_reason": "운영 중(공식 홈페이지 정상)",
   "pages_collected": 0,
   "third_party": {
-   "received_report": true
+   "received_report": true,
+   "teepick": true,
+   "greenfeeguide": true
   },
   "render_hint": "report",
   "plan_strategy": "subagent_report(2026-11-26)"
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.8,
+  "basic": 0.89,
+  "course": 0.4,
   "fee": 1.0,
-  "ops": 0.0,
-  "facility": 0.1,
-  "briefing": 0.75,
-  "rental": 0.25
+  "ops": 0.29,
+  "facility": 0.5,
+  "briefing": 0.5,
+  "rental": 0.0
  }
 }

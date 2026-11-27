@@ -83,6 +83,7 @@ export const STATUS: Record<CourseStatus, StatusMeta> = {
   closed: { label: "폐업", tone: "danger" },
   under_construction: { label: "건설중", tone: "info" },
   planned: { label: "미착공", tone: "neutral" },
+  cancelled: { label: "사업 취소", tone: "neutral" },
 };
 
 const STATUS_IDS = Object.keys(STATUS) as CourseStatus[];

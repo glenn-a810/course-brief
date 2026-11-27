@@ -12,9 +12,43 @@
   ],
   "source": "raw/received_jeju_31.json (외부 데이터 수신, 2026-11-26)",
   "review": {
-   "checked_at": null,
-   "status": "not_crosschecked",
-   "checks": []
+   "checked_at": "2026-11-27",
+   "status": "verified_official",
+   "checks": [
+    {
+     "field": "ops.dress",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "반바지·청바지·카라 없는 상의·노출이 심한 복장 불가",
+     "result": "보완",
+     "url": "https://spgr.co.kr/swp/penalty",
+     "quote": "반바지, 청바지, 카라 없는 상의 노출이 심한 복장 등",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.food",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "레스토랑",
+     "result": "보완",
+     "url": "https://spgr.co.kr/swp/facilities",
+     "quote": "레스토랑",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "master.homepage",
+     "received": "http://wooridulresort.com/",
+     "verified": "https://spgr.co.kr/",
+     "result": "수정",
+     "url": "https://spgr.co.kr/",
+     "quote": "기존 wooridulresort.com → spgr.co.kr 로 리다이렉트(2026-11-27 확인)",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    }
+   ]
   },
   "data_checks": [
    "대표전화 불일치: 마스터 01577-0064 / 수신 064-766-7777",
@@ -23,11 +57,13 @@
   "schema_previous": "stage2b/1.0",
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "restructured_from_7key": false,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "batch3_patch": "2026-11-27 배치3 보완: 1개 항목(공식 홈페이지·공개 요금 안내 기준, 미확인 값 생성 없음)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0394",
@@ -66,7 +102,7 @@
   "tel_master": "01577-0064",
   "tel_official": "064-766-7777",
   "tel_conflict": true,
-  "homepage": "http://wooridulresort.com/",
+  "homepage": "https://spgr.co.kr/",
   "homepage_master": "http://wooridulresort.com/",
   "operators": [
    "서귀포팬텀골프앤리조트(이재학)"
@@ -140,7 +176,8 @@
     "checked_at": "2026-11-02 공식 요금표 확인"
    }
   ],
-  "resident": null
+  "resident": null,
+  "checked_at": "2026-11-27"
  },
  "cancel": {
   "cancel_policy": "경기 전 임의 취소 시 이용요금 50% 환불, 9홀까지 중단 시 기본요금 제외 25% 환불. 악천후 시 홀별 정산(풍속 11m/s, 안개·침수 기준)",
@@ -199,8 +236,14 @@
    "evidence": []
   },
   "dress": {
-   "value": null,
-   "evidence": []
+   "value": "반바지·청바지·카라 없는 상의·노출이 심한 복장 불가",
+   "evidence": [
+    "반바지, 청바지, 카라 없는 상의 노출이 심한 복장 등"
+   ],
+   "source_url": "https://spgr.co.kr/swp/penalty",
+   "confidence": "high",
+   "source_type": "official_site",
+   "checked_at": "2026-11-27"
   },
   "pace": {
    "value": null,
@@ -217,8 +260,14 @@
    "evidence": []
   },
   "food": {
-   "value": null,
-   "evidence": []
+   "value": "레스토랑",
+   "evidence": [
+    "레스토랑"
+   ],
+   "source_url": "https://spgr.co.kr/swp/facilities",
+   "confidence": "high",
+   "source_type": "official_site",
+   "checked_at": "2026-11-27"
   },
   "snack_bar": {
    "value": "카페·라운지",
@@ -362,7 +411,6 @@
   "alert": null,
   "unconfirmed": [
    "야간 라이트",
-   "잔디(그린)",
    "예약 오픈 주기",
    "3인 플레이",
    "5인 플레이",
@@ -383,7 +431,13 @@
    "https://spgr.co.kr/swp/charge",
    "https://greenfeeguide.co.kr/course/gc-0502/",
    "https://www.rankue.co.kr/golf/course/우리들리조트-제주",
-   "https://www.golfbiz.co.kr/news/articleView.html?idxno=28800"
+   "https://www.golfbiz.co.kr/news/articleView.html?idxno=28800",
+   "https://spgr.co.kr/",
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
   ],
   "collected_at": "2026-11-26T09:35:01+09:00"
  },
@@ -392,18 +446,20 @@
   "official_reason": "운영 중(구 우리들CC·우리들리조트 제주)",
   "pages_collected": 0,
   "third_party": {
-   "received_report": true
+   "received_report": true,
+   "teepick": true,
+   "greenfeeguide": true
   },
   "render_hint": "report",
   "plan_strategy": "subagent_report(2026-11-26)"
  },
  "coverage": {
   "basic": 0.89,
-  "course": 1.0,
+  "course": 0.4,
   "fee": 1.0,
-  "ops": 0.21,
-  "facility": 0.5,
-  "briefing": 0.75,
-  "rental": 0.25
+  "ops": 0.29,
+  "facility": 0.6,
+  "briefing": 0.5,
+  "rental": 0.0
  }
 }

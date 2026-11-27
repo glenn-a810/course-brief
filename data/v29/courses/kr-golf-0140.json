@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0140",
@@ -63,9 +64,9 @@
   },
   "course_spec": {
    "holes": 18,
-   "par": null,
+   "par": 72,
    "blocks": [],
-   "length_m": null,
+   "length_m": 6596,
    "kga": {
     "kga_course_code": "385",
     "kga_name": "더스타휴",
@@ -154,12 +155,13 @@
    "evidence": "『더 스타 휴 골프앤리조트』는 개장한지 2년만에 대한민국 10대 골프장에 등극하였고 대외적으로 MBN골프대회 개최와 SK핀크스 골프클럽과의 업무제휴 등을 성공적으로 진행하였음은 물론, 스포츠와 문화의 만남인 SNC 등 품격있는 행사를 기획·운영함으로서 클럽의 명예를 높이는 순조로운 항해를 하고 있습니다.",
    "source": "공식",
    "url": "https://www.thestarhue.com/index.asp"
-  }
+  },
+  "par": 72
  },
  "course": {
   "holes": 18,
   "holes_received": null,
-  "course_names": null,
+  "course_names": "스타·휴 각 9홀",
   "membership_type": "회원제",
   "night_light": null,
   "blocks": [],
@@ -170,7 +172,11 @@
     "source": "그린피가이드(공식 코스소개 인용)",
     "url": "https://greenfeeguide.co.kr/course/gc-0120/"
    },
-   "green": null
+   "green": {
+    "value": "양잔디",
+    "source": "공식 홈페이지",
+    "url": "https://www.thestarhue.com/index.asp"
+   }
   },
   "kga": {
    "kga_course_code": "385",
@@ -246,8 +252,8 @@
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": null,
-  "par": null
+  "length_m": 6596,
+  "par": 72
  },
  "fee": {
   "weekday": 250000,
@@ -403,16 +409,24 @@
     }
    ],
    "url": "https://www.thestarhue.com/sginfo.asp"
-  }
+  },
+  "market": {}
  },
  "cancel": {
-  "cancel_policy": null,
-  "open_cycle": null,
+  "cancel_policy": {
+   "value": "예약 변경·취소는 예약 접수 당일 및 이용일 7일 전까지 가능. 이후 취소는 위약 점수 부과, 당일 취소는 1개월 예약정지(2개월 합산 6점 이상 시 신규예약 정지)",
+   "source": "공식 홈페이지",
+   "url": "https://www.thestarhue.com/sginfo.asp"
+  },
+  "open_cycle": "4주 전 월요일 오전 9시~17시 인터넷 접수, 결과는 익일 화요일 13시 이후 홈페이지 확인",
   "notes": null,
   "evidence": [
    "※ 기타 예약과 이용에 관련하여 위약 규정을 참고해 주시기 바랍니다.",
    "예약취소 취소 기준 구분 내용 예약 접수일&익일 취소 가능 ~1일 전 위약 점수 부과 당일 취소 예약정지 1개월 ※ 2개월 합산 위약 점수 6점 이상 발생시, 발생 시점부터 위약종료일까지 신규예약이 정지됩니다.※ 기타 예약과 이용에 관련하여 위약 규정을 참고해 주시기 바랍니다.",
-   "예약 변경 및 취소는 예약접수 당일 및 이용일 7일전까지 가능합니다."
+   "예약 변경 및 취소는 예약접수 당일 및 이용일 7일전까지 가능합니다.",
+   "예약 오픈 주기: 4주 전 월요일 오전 9시~17시 인터넷 접수, 결과는 익일 화요일 13시 이후 홈페이지 확인 (https://www.thestarhue.com/sginfo.asp)",
+   "당일 취소 예약정지 1개월",
+   "2개월 합산 위약 점수 6점 이상 발생시, 발생 시점부터 위약종료일까지 신규예약이 정지됩니다."
   ],
   "weather_evidence": [
    "요금안내 구분 회원 그린피 비회원 골프카 캐디피 정회원 주중/지정 회원 주중 23,000원 50,000원 250,000원 120,000원 170,000원 주말(토/일/공휴일) 160,000원 320,000원 악천후시 이용요금 안내 구분 그린피 카트비 캐디피 1홀~9홀 홀별정산 60,000원 90,000원 10홀~18홀 홀별정산 120,000원 170,000원 ※ 고객 사정으로 인한 경기종료시 그린피, 카트비, 캐디피는 전액 징수합니다.",
@@ -789,8 +803,16 @@
   "recent_notice_text": null,
   "course_notes": null,
   "alert": null,
-  "unconfirmed": [],
-  "sources": []
+  "unconfirmed": [
+   "야간(3부) 운영 여부 미확인"
+  ],
+  "sources": [
+   {
+    "source": "그린피가이드 코스 페이지",
+    "url": "https://greenfeeguide.co.kr/course/gc-0120/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "ok",
@@ -805,12 +827,12 @@
   "browser_batch": false
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.8,
+  "basic": 0.78,
+  "course": 0.4,
   "fee": 1.0,
   "ops": 0.29,
   "facility": 0.4,
-  "briefing": 0.25,
-  "rental": 0.25
+  "briefing": 0.0,
+  "rental": 0.0
  }
 }

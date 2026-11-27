@@ -12,9 +12,76 @@
   ],
   "source": "raw/received_chungcheong_77.json (외부 데이터 수신, 2026-11-26)",
   "review": {
-   "checked_at": null,
+   "checked_at": "2026-11-27",
    "status": "not_crosschecked",
-   "checks": []
+   "checks": [
+    {
+     "field": "fee.checked_at",
+     "received": null,
+     "verified": "2026-11-27",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0297/",
+     "quote": "요금 확인일 2026-11-01 (그린피가이드 2026-11-27 조회)",
+     "source_type": "third_party",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "course.length_m",
+     "received": null,
+     "verified": 6475,
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0297/",
+     "quote": "전장 6,475m",
+     "source_type": "third_party",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "course.grass.tee",
+     "received": null,
+     "verified": "켄터키",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0297/",
+     "quote": "잔디 페어웨이 안양중지(한국잔디) · 그린 L-93 and Pen A-1 · 티 켄터키 블루 그래스",
+     "source_type": "third_party",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "course.par",
+     "received": null,
+     "verified": 72,
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/golfzon-cheonan/course/",
+     "quote": "코스 개요 — 파: Par 72",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "ops.checkin",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "티오프 40분 전 도착",
+     "result": "보완",
+     "url": "https://www.golfzoncounty.com/golfclub/useGuide",
+     "quote": "COPYRIGHT BY GOLFZON COUNTY. ALL RIGHTS RESERVED. 이용안내 로컬룰 티오프 40분전 도착 시간 약속은 골퍼의 기본 매너입니다. 차키 소지 라운드 종료 후 캐디백을 편하게 실을 수 있습니다. 골프 에티켓 휴대폰은 진동으로 바꿔주세요",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.food",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "클럽하우스 레스토랑 — 조식 우거지 장터국밥·시래기 들깨탕·소고기 미역국, 중·석식 해물순두부·주꾸미 비빔밥 등 (2026년 11월 공식 메뉴판 기준)",
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/golfzon-cheonan/info/",
+     "quote": "레스토랑: 클럽하우스 레스토랑 — 조식 우거지 장터국밥·시래기 들깨탕·소고기 미역국, 중·석식 해물순두부·주꾸미 비빔밥 등 (2026년 11월 공식 메뉴판 기준)",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    }
+   ]
   },
   "data_checks": [
    "미확인 목록 누락 라벨 보완: 제세금"
@@ -22,11 +89,14 @@
   "schema_previous": "stage2b/1.0",
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "restructured_from_7key": false,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "checked_at": "2026-11-27",
+  "pass2_patch": "2026-11-27 2차 보완 패스: 5개 항목(그린피가이드·1박2일골프·원더골프·공식 홈페이지 대조, 미확인 값 생성 없음)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0287",
@@ -69,7 +139,7 @@
    "source": "최근접 IC 직선거리"
   },
   "nearest_ic_note": null,
-  "tel": null,
+  "tel": "041-558-9900",
   "tel_official": "041-558-9900",
   "tel_conflict": false,
   "tel_source": null,
@@ -99,7 +169,8 @@
   "holes_conflict": false,
   "facility_cluster": null,
   "factcheck_2026_11_26": null,
-  "address_original": "병천면 매성2길 103"
+  "address_original": "병천면 매성2길 103",
+  "par": 72
  },
  "course": {
   "holes": 18,
@@ -109,7 +180,7 @@
   "night_light": "3부 오픈 공지(2026-11-04~11-29)",
   "blocks": [],
   "grass": {
-   "tee": null,
+   "tee": "켄터키",
    "fairway": "안양중지(한국잔디)",
    "green": "L-93 및 Pen A-1"
   },
@@ -125,7 +196,9 @@
    ]
   },
   "kga_hole_est": 18,
-  "extra_courses": null
+  "extra_courses": null,
+  "length_m": 6475,
+  "par": 72
  },
  "fee": {
   "weekday": 182000,
@@ -151,11 +224,18 @@
     "source": "수신 조사(공식·공개 예약정보)",
     "url": "https://www.golfzoncounty.com/",
     "checked_at": "2026-11-26 (공식 11월 그린피 공지 확인)"
+   },
+   {
+    "source": "third_party",
+    "url": "https://greenfeeguide.co.kr/course/gc-0297/",
+    "quote": "요금 확인일 2026-11-01 (그린피가이드 2026-11-27 조회)",
+    "checked_at": "2026-11-27"
    }
-  ]
+  ],
+  "checked_at": "2026-11-27"
  },
  "cancel": {
-  "cancel_policy": "취소·위약 규정 페이지 별도 게시(라운드일 기준 취소 수수료표)",
+  "cancel_policy": null,
   "open_cycle": "인터넷 예약 매일 오전 9시, 해당 일자 4주 뒤 오픈",
   "notes": "5인 플레이 가능 골프장(하루 팀 한정). 3인 이상",
   "evidence": [],
@@ -199,8 +279,14 @@
    "evidence": []
   },
   "checkin": {
-   "value": null,
-   "evidence": []
+   "value": "티오프 40분 전 도착",
+   "evidence": [
+    "COPYRIGHT BY GOLFZON COUNTY. ALL RIGHTS RESERVED. 이용안내 로컬룰 티오프 40분전 도착 시간 약속은 골퍼의 기본 매너입니다. 차키 소지 라운드 종료 후 캐디백을 편하게 실을 수 있습니다. 골프 에티켓 휴대폰은 진동으로 바꿔주세요"
+   ],
+   "source_url": "https://www.golfzoncounty.com/golfclub/useGuide",
+   "confidence": "high",
+   "source_type": "official_site",
+   "checked_at": "2026-11-27"
   },
   "locker": {
    "value": null,
@@ -229,8 +315,15 @@
    "evidence": []
   },
   "food": {
-   "value": null,
-   "evidence": []
+   "value": "클럽하우스 레스토랑 — 조식 우거지 장터국밥·시래기 들깨탕·소고기 미역국, 중·석식 해물순두부·주꾸미 비빔밥 등 (2026년 11월 공식 메뉴판 기준)",
+   "evidence": [
+    "레스토랑: 클럽하우스 레스토랑 — 조식 우거지 장터국밥·시래기 들깨탕·소고기 미역국, 중·석식 해물순두부·주꾸미 비빔밥 등 (2026년 11월 공식 메뉴판 기준)"
+   ],
+   "source_url": "https://1n2d-golf.co.kr/golfzon-cheonan/info/",
+   "confidence": "medium",
+   "source_type": "public_info(1n2d-golf)",
+   "checked_at": "2026-11-27",
+   "note": "1박2일골프 시설·기타 요약(2차 공개자료, 2026-11-27 조회) — 예약 전 공식 채널 재확인 권장"
   },
   "snack_bar": {
    "value": null,
@@ -326,7 +419,6 @@
   "fee_change": null,
   "alert": null,
   "unconfirmed": [
-   "잔디(티)",
    "2인 플레이",
    "노캐디",
    "마샬캐디",
@@ -350,7 +442,14 @@
   "sources": [
    "https://www.golfzoncounty.com/",
    "https://greenfeeguide.co.kr/course/gc-0297/",
-   "https://inwon.kr/c/k669"
+   "https://inwon.kr/c/k669",
+   "https://wondergolf.co.kr/courses/kr-kakao-1442088829",
+   "https://1n2d-golf.co.kr/golfzon-cheonan/course/",
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
   ],
   "collected_at": "2026-11-26T10:24:30+09:00"
  },
@@ -359,18 +458,20 @@
   "official_reason": "운영 중(골프존카운티, 공식 홈페이지 정상)",
   "pages_collected": 0,
   "third_party": {
-   "received_report": true
+   "received_report": true,
+   "teepick": true,
+   "greenfeeguide": true
   },
   "render_hint": "report",
   "plan_strategy": "subagent_report(2026-11-26)"
  },
  "coverage": {
   "basic": 0.89,
-  "course": 1.0,
+  "course": 0.4,
   "fee": 1.0,
-  "ops": 0.14,
-  "facility": 0.3,
-  "briefing": 0.75,
-  "rental": 0.75
+  "ops": 0.21,
+  "facility": 0.4,
+  "briefing": 0.5,
+  "rental": 0.5
  }
 }

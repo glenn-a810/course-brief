@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0166",
@@ -58,9 +59,9 @@
   },
   "course_spec": {
    "holes": 18,
-   "par": null,
+   "par": 72,
    "blocks": [],
-   "length_m": null,
+   "length_m": 6480,
    "kga": {
     "kga_course_code": "61",
     "kga_name": "남부",
@@ -149,12 +150,13 @@
    "evidence": "예약 클럽개요 구분 신청요일 신청기간 비고 주중 회원 4주전 해당요일 09시~ 실시간예약 주말 회원 4주전 화요일 09시~ 예약접수후 추첨배정 09시~ 목요일부터 잔여시간 실시간예약 주중공휴일 회원 4주전 화요일 09시~ 예약접수후 추첨배정 09시~ 목요일부터 잔여시간 실시간예약 2026년 예약 일정 안내 ∙ 1월: 전일 휴장 ∙ 2월: 2/14일부터 개장 ∙ 3월 ~ 8월: 전일 개장 ∙ 9월: 추석 당일 휴장 (9/25 금요일) ∙ 10월 ~ 11월: 전일 개장 ∙ 12월: 28일부터 휴장 예정 ※ 위 일정은 클럽 사정에 따라 ",
    "source": "공식",
    "url": "https://www.namboocc.co.kr/reservation/guide/reservation.do"
-  }
+  },
+  "par": 72
  },
  "course": {
   "holes": 18,
   "holes_received": null,
-  "course_names": null,
+  "course_names": "Out·In 각 9홀",
   "membership_type": "회원제",
   "night_light": null,
   "blocks": [],
@@ -241,26 +243,27 @@
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": null,
-  "par": null
+  "length_m": 6480,
+  "par": 72
  },
  "fee": {
   "weekday": 260000,
   "weekend": 320000,
   "weekday_text": null,
   "weekend_text": null,
-  "basis": null,
+  "basis": "official",
   "tax_included": null,
   "cart": {
    "value": 120000,
-   "source": "그린피가이드",
-   "url": "https://greenfeeguide.co.kr/course/gc-0019/"
+   "source": "그린피가이드(공식 요금표)",
+   "url": "https://greenfeeguide.com/course/gc-0019/",
+   "note": "팀당(4인 1대)"
   },
   "caddie": {
    "value": 170000,
-   "source": "그린피가이드",
-   "url": "https://greenfeeguide.co.kr/course/gc-0019/",
-   "none": false
+   "none": false,
+   "source": "그린피가이드(공식 요금표)",
+   "url": "https://greenfeeguide.com/course/gc-0019/"
   },
   "as_of": "2026-11-02",
   "source_url": null,
@@ -268,11 +271,11 @@
   "sources": [
    {
     "source": "그린피가이드(공식 요금표 확인)",
-    "url": "https://greenfeeguide.co.kr/course/gc-0019/",
+    "url": "https://greenfeeguide.com/course/gc-0019/",
     "checked_at": "2026-11-02"
    }
   ],
-  "checked_at": "2026-11-02",
+  "checked_at": "2026-11-27",
   "market": {
    "weekday_min": null,
    "weekend_min": null,
@@ -384,11 +387,7 @@
   "cancel_policy": null,
   "open_cycle": null,
   "notes": null,
-  "evidence": [
-   "GNB 바로가기 본문 바로가기 하단 바로가기 LOGIN JOIN 클럽소개 회사소개 인사말 오시는길 날씨안내 코스소개 전체코스 코스공략법 코스갤러리 부대시설 클럽하우스 프런트 락커룸 연회장 연회실 그늘집 이용가이드 클럽이용안내 온라인예약 요금안내 예약안내 예약확인및취소 클럽소식 공지사항 자료실 아름다움과 리듬이 조화된 환상의 코스 NAMBOO COUNTRY CLUB 남부컨트리클럽 홈페이지에 오신 것을 환영합니다!",
-   "GNB 바로가기 본문 바로가기 하단 바로가기 LOGIN JOIN 클럽소개 회사소개 인사말 오시는길 날씨안내 코스소개 전체코스 코스공략법 코스갤러리 부대시설 클럽하우스 프런트 락커룸 연회장 연회실 그늘집 이용가이드 클럽이용안내 온라인예약 요금안내 예약안내 예약확인및취소 클럽소식 공지사항 자료실 이용가이드 클럽이용안내 온라인 예약 요금안내 예약안내 예약확인 및 취소 친절한 서비스로 보답하겠습니다.",
-   "GNB 바로가기 본문 바로가기 하단 바로가기 LOGIN JOIN 클럽소개 회사소개 인사말 오시는길 날씨안내 코스소개 전체코스 코스공략법 코스갤러리 부대시설 클럽하우스 프런트 락커룸 연회장 연회실 그늘집 이용가이드 클럽이용안내 온라인예약 요금안내 예약안내 예약확인및취소 클럽소식 공지사항 자료실 코스소개 전체코스 코스공략법 코스갤러리 NAMBOO COURSE 18HOLE 자연림과 환상적인 조화가 극치를 이루는 남부컨트리클럽의 코스 이전 다음 클럽하우스를 중심으로 양쪽으로 펼쳐진 18홀 중 비슷한 홀이 하나도 없습니다."
-  ],
+  "evidence": [],
   "weather_evidence": []
  },
  "ops": {
@@ -447,8 +446,6 @@
   },
   "locker": {
    "evidence": [
-    "GNB 바로가기 본문 바로가기 하단 바로가기 LOGIN JOIN 클럽소개 회사소개 인사말 오시는길 날씨안내 코스소개 전체코스 코스공략법 코스갤러리 부대시설 클럽하우스 프런트 락커룸 연회장 연회실 그늘집 이용가이드 클럽이용안내 온라인예약 요금안내 예약안내 예약확인및취소 클럽소식 공지사항 자료실 아름다움과 리듬이 조화된 환상의 코스 NAMBOO COUNTRY CLUB 남부컨트리클럽 홈페이지에 오신 것을 환영합니다!",
-    "GNB 바로가기 본문 바로가기 하단 바로가기 LOGIN JOIN 클럽소개 회사소개 인사말 오시는길 날씨안내 코스소개 전체코스 코스공략법 코스갤러리 부대시설 클럽하우스 프런트 락커룸 연회장 연회실 그늘집 이용가이드 클럽이용안내 온라인예약 요금안내 예약안내 예약확인및취소 클럽소식 공지사항 자료실 이용가이드 클럽이용안내 온라인 예약 요금안내 예약안내 예약확인 및 취소 친절한 서비스로 보답하겠습니다.",
     "문의처 I 남자락카룸 : 031-280-4153 여자락카룸 : 031-280-4154"
    ],
    "value": "락커 운영",
@@ -492,8 +489,6 @@
  "facilities": {
   "practice": {
    "evidence": [
-    "패밀리사이트 + 한국민속촌 남부골프연습장 에코랜드리조트 Orakai hotels & Resorts 나우테크",
-    "패밀리사이트 + 한국민속촌 남부골프연습장 에코랜드리조트 Orakai hotels & Resorts 나우테크",
     "패밀리사이트 + 한국민속촌 남부골프연습장 에코랜드리조트 Orakai hotels & Resorts 나우테크"
    ],
    "value": null
@@ -504,9 +499,6 @@
   },
   "food": {
    "evidence": [
-    "GNB 바로가기 본문 바로가기 하단 바로가기 LOGIN JOIN 클럽소개 회사소개 인사말 오시는길 날씨안내 코스소개 전체코스 코스공략법 코스갤러리 부대시설 클럽하우스 프런트 락커룸 연회장 연회실 그늘집 이용가이드 클럽이용안내 온라인예약 요금안내 예약안내 예약확인및취소 클럽소식 공지사항 자료실 아름다움과 리듬이 조화된 환상의 코스 NAMBOO COUNTRY CLUB 남부컨트리클럽 홈페이지에 오신 것을 환영합니다!",
-    "GNB 바로가기 본문 바로가기 하단 바로가기 LOGIN JOIN 클럽소개 회사소개 인사말 오시는길 날씨안내 코스소개 전체코스 코스공략법 코스갤러리 부대시설 클럽하우스 프런트 락커룸 연회장 연회실 그늘집 이용가이드 클럽이용안내 온라인예약 요금안내 예약안내 예약확인및취소 클럽소식 공지사항 자료실 이용가이드 클럽이용안내 온라인 예약 요금안내 예약안내 예약확인 및 취소 친절한 서비스로 보답하겠습니다.",
-    "GNB 바로가기 본문 바로가기 하단 바로가기 LOGIN JOIN 클럽소개 회사소개 인사말 오시는길 날씨안내 코스소개 전체코스 코스공략법 코스갤러리 부대시설 클럽하우스 프런트 락커룸 연회장 연회실 그늘집 이용가이드 클럽이용안내 온라인예약 요금안내 예약안내 예약확인및취소 클럽소식 공지사항 자료실 코스소개 전체코스 코스공략법 코스갤러리 NAMBOO COURSE 18HOLE 자연림과 환상적인 조화가 극치를 이루는 남부컨트리클럽의 코스 이전 다음 클럽하우스를 중심으로 양쪽으로 펼쳐진 18홀 중 비슷한 홀이 하나도 없습니다.",
     "연회장(홀) 안쪽은 아늑한 분위기를 만끽하실 수 있는 느낌으로 연출하였습니다."
    ],
    "value": "연회장",
@@ -577,7 +569,7 @@
   "fee_text": "15,000원",
   "brand": null,
   "left_handed": null,
-  "shoes": null,
+  "shoes": 15000,
   "nine_hole": null,
   "range_finder": null,
   "reservation": null,
@@ -801,8 +793,21 @@
   "recent_notice_text": null,
   "course_notes": null,
   "alert": null,
-  "unconfirmed": [],
-  "sources": []
+  "unconfirmed": [
+   "취소·위약 규정 미확인: 공식 사이트가 SPA(자바스크립트)로 요금·취소 페이지 수집 불가"
+  ],
+  "sources": [
+   {
+    "source": "그린피가이드 코스 페이지",
+    "url": "https://greenfeeguide.co.kr/course/gc-0019/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "ok",
@@ -817,12 +822,12 @@
   "browser_batch": false
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.8,
+  "basic": 0.78,
+  "course": 0.4,
   "fee": 1.0,
   "ops": 0.21,
   "facility": 0.2,
-  "briefing": 0.5,
-  "rental": 1.0
+  "briefing": 0.0,
+  "rental": 0.75
  }
 }

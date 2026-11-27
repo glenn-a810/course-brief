@@ -12,8 +12,8 @@
   ],
   "source": "raw/received_gangwon_65.json (외부 데이터 수신, 2026-11-26)",
   "review": {
-   "checked_at": "2026-11-26",
-   "status": "partial_official",
+   "checked_at": "2026-11-27",
+   "status": "supplemented(공개 요약·조사자료)",
    "checks": [
     {
      "field": "단지 구성",
@@ -35,6 +35,117 @@
      "verified": "공식 예약 1588-7676, 마스터 01588-7676(선행 0 오류) 정정",
      "result": "정정",
      "url": "http://www.oakvalley.co.kr/"
+    },
+    {
+     "field": "master.opened",
+     "received": null,
+     "verified": "1998-06",
+     "result": "보완",
+     "url": "https://hdcgolf.com/",
+     "quote": "1998년 6월 개장",
+     "source_type": "official_research",
+     "confidence": "medium",
+     "checked_at": "2026-11-27",
+     "note": "2026-11-26 공식 홈페이지 조사자료에서 이관한 값(문구는 요약·환산일 수 있음)"
+    },
+    {
+     "field": "course.par",
+     "received": null,
+     "verified": 72,
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/oak-valley/course/",
+     "quote": "코스 개요 — 파: Par 72",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "course.length_m",
+     "received": null,
+     "verified": 6374,
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/oak-valley/course/",
+     "quote": "코스 개요 — 거리: 6,971야드 (18홀 기준) (야드→m 환산)",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.food",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "클럽하우스 레스토랑 — 한식·양식·일식, 코스요리 제공",
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/oak-valley/info/",
+     "quote": "레스토랑: 클럽하우스 레스토랑 — 한식·양식·일식, 코스요리 제공",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "ops.locker",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "남녀 분리 라커룸, 프리미엄 사우나 완비",
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/oak-valley/info/",
+     "quote": "라커/사우나: 남녀 분리 라커룸, 프리미엄 사우나 완비",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "ops.sauna",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "남녀 분리 라커룸, 프리미엄 사우나 완비",
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/oak-valley/info/",
+     "quote": "라커/사우나: 남녀 분리 라커룸, 프리미엄 사우나 완비",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.locker_sauna",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "남녀 분리 라커룸, 프리미엄 사우나 완비",
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/oak-valley/info/",
+     "quote": "라커/사우나: 남녀 분리 라커룸, 프리미엄 사우나 완비",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.proshop",
+     "received": null,
+     "verified": "프로샵",
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/oak-valley/info/",
+     "quote": "프로샵: 골프 용품 프로샵 운영 (최신 클럽 대여 가능)",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.practice",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "드라이빙 레인지 (250야드), 퍼팅 그린, 어프로치 연습장",
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/oak-valley/info/",
+     "quote": "연습 시설: 드라이빙 레인지 (250야드), 퍼팅 그린, 어프로치 연습장",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.lodging",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "오크밸리 리조트 (골프빌리지 + 스키빌리지)",
+     "result": "보완",
+     "url": "https://1n2d-golf.co.kr/oak-valley/info/",
+     "quote": "숙박 시설: 오크밸리 리조트 (골프빌리지 + 스키빌리지)",
+     "source_type": "public_info(1n2d-golf)",
+     "confidence": "medium",
+     "checked_at": "2026-11-27"
     }
    ]
   },
@@ -45,11 +156,14 @@
   "schema_previous": "stage2b/1.0",
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "restructured_from_7key": false,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "batch3_patch": "2026-11-27 배치3 보완: 1개 항목(공식 홈페이지·공개 요금 안내 기준, 미확인 값 생성 없음)",
+  "pass2_patch": "2026-11-27 2차 보완 패스: 9개 항목(그린피가이드·1박2일골프·원더골프·공식 홈페이지 대조, 미확인 값 생성 없음)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0435",
@@ -102,7 +216,7 @@
    "에이치디씨리조트주식회사(조영환)"
   ],
   "area_sqm": 1828880,
-  "opened": null,
+  "opened": "1998-06",
   "course_blocks": [
    "오크밸리 CC(노스·이스트·웨스트·사우스)",
    "오크힐스 CC"
@@ -136,7 +250,8 @@
   },
   "factcheck_2026_11_26": null,
   "tel_former": "01588-7676",
-  "address_original": "원주시 지정면 오크밸리1길 66"
+  "address_original": "원주시 지정면 오크밸리1길 66",
+  "par": 72
  },
  "course": {
   "holes": 36,
@@ -168,7 +283,9 @@
    ]
   },
   "kga_hole_est": 36,
-  "extra_courses": null
+  "extra_courses": null,
+  "par": 72,
+  "length_m": 6374
  },
  "fee": {
   "weekday": 250000,
@@ -195,7 +312,8 @@
     "url": "https://todaygolfgo.com/regions/gangwon/",
     "checked_at": "2026-11-26(비회원 정상가 확인)"
    }
-  ]
+  ],
+  "checked_at": "2026-11-27"
  },
  "cancel": {
   "cancel_policy": null,
@@ -246,12 +364,26 @@
    "evidence": []
   },
   "locker": {
-   "value": null,
-   "evidence": []
+   "value": "남녀 분리 라커룸, 프리미엄 사우나 완비",
+   "evidence": [
+    "라커/사우나: 남녀 분리 라커룸, 프리미엄 사우나 완비"
+   ],
+   "source_url": "https://1n2d-golf.co.kr/oak-valley/info/",
+   "confidence": "medium",
+   "source_type": "public_info(1n2d-golf)",
+   "checked_at": "2026-11-27",
+   "note": "1박2일골프 시설·기타 요약(2차 공개자료, 2026-11-27 조회) — 예약 전 공식 채널 재확인 권장"
   },
   "sauna": {
-   "value": null,
-   "evidence": []
+   "value": "남녀 분리 라커룸, 프리미엄 사우나 완비",
+   "evidence": [
+    "라커/사우나: 남녀 분리 라커룸, 프리미엄 사우나 완비"
+   ],
+   "source_url": "https://1n2d-golf.co.kr/oak-valley/info/",
+   "confidence": "medium",
+   "source_type": "public_info(1n2d-golf)",
+   "checked_at": "2026-11-27",
+   "note": "1박2일골프 시설·기타 요약(2차 공개자료, 2026-11-27 조회) — 예약 전 공식 채널 재확인 권장"
   },
   "dress": {
    "value": null,
@@ -264,28 +396,56 @@
  },
  "facilities": {
   "practice": {
-   "value": null,
-   "evidence": []
+   "value": "드라이빙 레인지 (250야드), 퍼팅 그린, 어프로치 연습장",
+   "evidence": [
+    "연습 시설: 드라이빙 레인지 (250야드), 퍼팅 그린, 어프로치 연습장"
+   ],
+   "source_url": "https://1n2d-golf.co.kr/oak-valley/info/",
+   "confidence": "medium",
+   "source_type": "public_info(1n2d-golf)",
+   "checked_at": "2026-11-27",
+   "note": "1박2일골프 시설·기타 요약(2차 공개자료, 2026-11-27 조회) — 예약 전 공식 채널 재확인 권장"
   },
   "indoor_range": {
    "value": null,
    "evidence": []
   },
   "food": {
-   "value": null,
-   "evidence": []
+   "value": "클럽하우스 레스토랑 — 한식·양식·일식, 코스요리 제공",
+   "evidence": [
+    "레스토랑: 클럽하우스 레스토랑 — 한식·양식·일식, 코스요리 제공"
+   ],
+   "source_url": "https://1n2d-golf.co.kr/oak-valley/info/",
+   "confidence": "medium",
+   "source_type": "public_info(1n2d-golf)",
+   "checked_at": "2026-11-27",
+   "note": "1박2일골프 시설·기타 요약(2차 공개자료, 2026-11-27 조회) — 예약 전 공식 채널 재확인 권장"
   },
   "snack_bar": {
    "value": null,
    "evidence": []
   },
   "locker_sauna": {
-   "value": null,
-   "evidence": []
+   "value": "남녀 분리 라커룸, 프리미엄 사우나 완비",
+   "evidence": [
+    "라커/사우나: 남녀 분리 라커룸, 프리미엄 사우나 완비"
+   ],
+   "source_url": "https://1n2d-golf.co.kr/oak-valley/info/",
+   "confidence": "medium",
+   "source_type": "public_info(1n2d-golf)",
+   "checked_at": "2026-11-27",
+   "note": "1박2일골프 시설·기타 요약(2차 공개자료, 2026-11-27 조회) — 예약 전 공식 채널 재확인 권장"
   },
   "lodging": {
-   "value": null,
-   "evidence": []
+   "value": "오크밸리 리조트 (골프빌리지 + 스키빌리지)",
+   "evidence": [
+    "숙박 시설: 오크밸리 리조트 (골프빌리지 + 스키빌리지)"
+   ],
+   "source_url": "https://1n2d-golf.co.kr/oak-valley/info/",
+   "confidence": "medium",
+   "source_type": "public_info(1n2d-golf)",
+   "checked_at": "2026-11-27",
+   "note": "1박2일골프 시설·기타 요약(2차 공개자료, 2026-11-27 조회) — 예약 전 공식 채널 재확인 권장"
   },
   "other": {
    "value": null,
@@ -303,6 +463,17 @@
   "shuttle": {
    "value": null,
    "evidence": []
+  },
+  "proshop": {
+   "value": "프로샵",
+   "evidence": [
+    "프로샵: 골프 용품 프로샵 운영 (최신 클럽 대여 가능)"
+   ],
+   "source_url": "https://1n2d-golf.co.kr/oak-valley/info/",
+   "confidence": "medium",
+   "source_type": "public_info(1n2d-golf)",
+   "checked_at": "2026-11-27",
+   "note": "1박2일골프 시설·기타 요약(2차 공개자료, 2026-11-27 조회) — 예약 전 공식 채널 재확인 권장"
   }
  },
  "rental": {
@@ -403,7 +574,14 @@
   "sources": [
    "https://todaygolfgo.com/regions/gangwon/",
    "https://www.hngolf.co.kr/program/view?bid=146&idx=118",
-   "https://greenfeeguide.co.kr/course/gc-0208/"
+   "https://greenfeeguide.co.kr/course/gc-0208/",
+   "https://hdcgolf.com/",
+   "https://1n2d-golf.co.kr/oak-valley/course/",
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
   ],
   "collected_at": "2026-11-26T09:55:47+09:00"
  },
@@ -412,18 +590,20 @@
   "official_reason": "운영 중(HDC골프 통합 운영)",
   "pages_collected": 0,
   "third_party": {
-   "received_report": true
+   "received_report": true,
+   "teepick": true,
+   "greenfeeguide": true
   },
   "render_hint": "report",
   "plan_strategy": "subagent_report(2026-11-26)"
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 1.0,
+  "basic": 0.89,
+  "course": 0.6,
   "fee": 1.0,
-  "ops": 0.0,
-  "facility": 0.0,
-  "briefing": 0.75,
-  "rental": 0.25
+  "ops": 0.14,
+  "facility": 0.4,
+  "briefing": 0.5,
+  "rental": 0.0
  }
 }

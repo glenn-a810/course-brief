@@ -12,7 +12,7 @@
   ],
   "source": "raw/received_chungcheong_77.json (외부 데이터 수신, 2026-11-26)",
   "review": {
-   "checked_at": "2026-11-26",
+   "checked_at": "2026-11-27",
    "status": "partial_official",
    "checks": [
     {
@@ -35,6 +35,50 @@
      "verified": "공지에 11월·12월 그린피 안내 게시(상세 금액은 공지 이미지)",
      "result": "수신 유지",
      "url": "https://www.boryeongbase.co.kr/"
+    },
+    {
+     "field": "fee.checked_at",
+     "received": null,
+     "verified": "2026-11-27",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0302/",
+     "quote": "요금 확인일 2026-11-01 (그린피가이드 2026-11-27 조회)",
+     "source_type": "third_party",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "ops.pace",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "셀프(노캐디) 라운드에서 경기 지연 등으로 경기 흐름을 방해하면 2회 경고 시 퇴장",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0302/",
+     "quote": "진행/경기시간 셀프(노캐디) 라운드에서 경기 지연 등으로 경기 흐름을 방해하면 2회 경고 시 퇴장",
+     "source_type": "third_party",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "ops.cart_entry",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "페어웨이 진입 불가 카트도로 이탈 및 역주행 금지",
+     "result": "보완",
+     "url": "https://greenfeeguide.co.kr/course/gc-0302/",
+     "quote": "페어웨이 진입 페어웨이 진입 불가 카트도로 이탈 및 역주행 금지",
+     "source_type": "third_party",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "ops.checkin",
+     "received": "{\"value\": null, \"evidence\": []}",
+     "verified": "티업 30분 전 도착",
+     "result": "보완",
+     "url": "https://www.boryeongbase.co.kr/Golf/UseInfo.aspx",
+     "quote": "off 간격은 7분입니다. 원활한 경기진행과 고객님의 안전을 위해 캐디안내에 적극 협조 바랍니다. 준수사항 티업시간 30분전에 도착하셔야 여유롭게 라운딩을 준비하실 수 있습니다. 원활한 경기진행을 위하여 Tee-off 10분전까지 담당캐디를 만나주시기 바랍니다. 귀중품은 반",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
     }
    ]
   },
@@ -45,11 +89,13 @@
   "schema_previous": "stage2b/1.0",
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "restructured_from_7key": false,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "pass2_patch": "2026-11-27 2차 보완 패스: 3개 항목(그린피가이드·1박2일골프·원더골프·공식 홈페이지 대조, 미확인 값 생성 없음)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0279",
@@ -156,7 +202,8 @@
   "caddie": {
    "value": 150000,
    "text": "하우스캐디 150,000원/팀(1·2·3부 공통, 5인 220,000원) / 시니어캐디 100,000원 / 셀프(노캐디) 120,000원",
-   "none": false
+   "none": false,
+   "note": "야간 캐디피 하우스캐디 1·2부·3부(야간) 모두 150,000원"
   },
   "as_of": "2026-11(2026-11-26 조회 기준 적용 월 정상가)",
   "source_url": "https://www.boryeongbase.co.kr/Board/View.aspx?cfgid=notice&page=1&postidx=3152",
@@ -172,6 +219,12 @@
     "url": "https://www.boryeongbase.co.kr/Board/View.aspx?cfgid=notice&page=1&postidx=3152",
     "checked_at": "2026-11-26",
     "note": "공식 요금표(이미지 포함) 판독 + 공개 요금 사이트 보조"
+   },
+   {
+    "source": "third_party",
+    "url": "https://greenfeeguide.co.kr/course/gc-0302/",
+    "quote": "요금 확인일 2026-11-01 (그린피가이드 2026-11-27 조회)",
+    "checked_at": "2026-11-27"
    }
   ],
   "previous": {
@@ -253,12 +306,13 @@
    "source_url": "https://www.boryeongbase.co.kr/Board/View.aspx?cfgid=notice&page=1&postidx=3152"
   },
   "weekday_basis": "max",
-  "weekend_basis": "max"
+  "weekend_basis": "max",
+  "checked_at": "2026-11-27"
  },
  "cancel": {
   "cancel_policy": "예약일 제외 4일 전 17:00까지 인터넷·전화 취소 시 위약 없음. 3일 전부터 위약 규정 적용",
-  "open_cycle": "미확인(공식 예약 오픈 주기 미게시 — 홈페이지·예약처 실시간 예약)",
-  "notes": "캐디 1팀(4명) 1캐디. 5인 플레이는 전화 문의 필수. 3인 플레이 주중 1만원·주말 1만5천원 추가",
+  "open_cycle": null,
+  "notes": "캐디 1팀(4명) 1캐디. 5인 플레이는 전화 문의 필수. 3인 플레이 주중 1만원·주말 1만5천원 추가 미확인(공식 예약 오픈 주기 미게시 — 홈페이지·예약처 실시간 예약)",
   "evidence": [],
   "weather_evidence": []
  },
@@ -288,8 +342,14 @@
    "evidence": []
   },
   "cart_entry": {
-   "value": null,
-   "evidence": []
+   "value": "페어웨이 진입 불가 카트도로 이탈 및 역주행 금지",
+   "evidence": [
+    "페어웨이 진입 페어웨이 진입 불가 카트도로 이탈 및 역주행 금지"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0302/",
+   "confidence": "high",
+   "source_type": "third_party",
+   "checked_at": "2026-11-27"
   },
   "bagdrop": {
    "value": null,
@@ -300,8 +360,14 @@
    "evidence": []
   },
   "checkin": {
-   "value": null,
-   "evidence": []
+   "value": "티업 30분 전 도착",
+   "evidence": [
+    "off 간격은 7분입니다. 원활한 경기진행과 고객님의 안전을 위해 캐디안내에 적극 협조 바랍니다. 준수사항 티업시간 30분전에 도착하셔야 여유롭게 라운딩을 준비하실 수 있습니다. 원활한 경기진행을 위하여 Tee-off 10분전까지 담당캐디를 만나주시기 바랍니다. 귀중품은 반"
+   ],
+   "source_url": "https://www.boryeongbase.co.kr/Golf/UseInfo.aspx",
+   "confidence": "high",
+   "source_type": "official_site",
+   "checked_at": "2026-11-27"
   },
   "locker": {
    "value": "사우나(남자 냉탕 보수공사 공지)",
@@ -316,8 +382,14 @@
    "evidence": []
   },
   "pace": {
-   "value": null,
-   "evidence": []
+   "value": "셀프(노캐디) 라운드에서 경기 지연 등으로 경기 흐름을 방해하면 2회 경고 시 퇴장",
+   "evidence": [
+    "진행/경기시간 셀프(노캐디) 라운드에서 경기 지연 등으로 경기 흐름을 방해하면 2회 경고 시 퇴장"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0302/",
+   "confidence": "high",
+   "source_type": "third_party",
+   "checked_at": "2026-11-27"
   }
  },
  "facilities": {
@@ -422,7 +494,7 @@
    "tags": {}
   },
   "recent_notice_text": "2026-11-20 클럽하우스 프로샵 운영자 모집, 2026-10-19 '2026년 12월 그린피 안내', 남자 사우나 냉탕 보수공사 안내 게시. 동계 휴장 공지는 미확인.",
-  "course_notes": "보령 옥마산 자락의 9홀 2그린 코스로 18홀 라운드(공식 패밀리 안내는 18홀로, 그린피가이드·인원은 9홀로 표기 — 9홀 시설 2그린 운영). 대영베이스 계열(모카CC·대영힐스·알프스대영과 같은 그룹).",
+  "course_notes": "보령 옥마산 자락의 9홀 2그린 코스로 18홀 라운드(공식 패밀리 안내는 18홀로, 공개 요금 정보·인원은 9홀로 표기 — 9홀 시설 2그린 운영). 대영베이스 계열(모카CC·대영힐스·알프스대영과 같은 그룹).",
   "review": null,
   "fee_change": null,
   "alert": {
@@ -440,7 +512,6 @@
    "잔디(티)",
    "잔디(페어웨이)",
    "잔디(그린)",
-   "예약 오픈 주기",
    "2인 플레이",
    "마샬캐디",
    "카트 페어웨이 진입",
@@ -455,8 +526,7 @@
    "골프화 대여",
    "제세금",
    "동계 휴장 공지(2026-27)",
-   "9홀 단독 요금",
-   "야간(3부) 12월 요금"
+   "9홀 단독 요금"
   ],
   "unconfirmed_labels_added": [
    "제세금"
@@ -476,18 +546,19 @@
   "official_reason": "운영 중(대영베이스 계열, 공식 홈페이지 정상)",
   "pages_collected": 0,
   "third_party": {
-   "received_report": true
+   "received_report": true,
+   "greenfeeguide": true
   },
   "render_hint": "report",
   "plan_strategy": "subagent_report(2026-11-26)"
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.8,
+  "basic": 0.78,
+  "course": 0.4,
   "fee": 1.0,
-  "ops": 0.43,
+  "ops": 0.64,
   "facility": 0.5,
-  "briefing": 0.75,
-  "rental": 0.25
+  "briefing": 0.5,
+  "rental": 0.0
  }
 }

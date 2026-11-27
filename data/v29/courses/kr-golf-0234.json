@@ -22,11 +22,12 @@
   "schema_previous": "stage2b/1.0",
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "restructured_from_7key": false,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0234",
@@ -127,7 +128,8 @@
    ]
   },
   "kga_hole_est": 18,
-  "extra_courses": null
+  "extra_courses": null,
+  "length_m": 5655
  },
  "fee": {
   "weekday": 160000,
@@ -154,7 +156,15 @@
     "url": "https://illitegolfnresort.co.kr/golf/main",
     "checked_at": "2026-11-26 (공식 그린피 안내 확인)"
    }
-  ]
+  ],
+  "checked_at": "2026-11-27",
+  "market": {
+   "weekday_min": 100000,
+   "weekend_min": 119000,
+   "source": "공개 예약 채널 실거래 관측(티픽)",
+   "url": "https://teepickgolf.com/",
+   "note": "공시가 아닌 최근 관측 실거래 최저가"
+  }
  },
  "cancel": {
   "cancel_policy": "공식 '위약 안내' 페이지 게시(예약금 공제·기간별 위약)",
@@ -349,8 +359,7 @@
    "클럽 렌탈 여부",
    "클럽 렌탈 요금",
    "좌타용 클럽",
-   "골프화 대여",
-   "예약 비고"
+   "골프화 대여"
   ],
   "unconfirmed_labels_added": [
    "예약 비고"
@@ -358,7 +367,12 @@
   "sources": [
    "https://illitegolfnresort.co.kr/golf/main",
    "https://wondergolf.co.kr/courses/kr-kakao-367294935",
-   "https://todaygolfgo.com/golf-courses/master/golf-course-moct-20241231-0535/"
+   "https://todaygolfgo.com/golf-courses/master/golf-course-moct-20241231-0535/",
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
   ],
   "collected_at": "2026-11-26T10:24:29+09:00"
  },
@@ -367,18 +381,20 @@
   "official_reason": "운영 중(공식 홈페이지 정상, 위약안내 게시)",
   "pages_collected": 0,
   "third_party": {
-   "received_report": true
+   "received_report": true,
+   "teepick": true,
+   "greenfeeguide": true
   },
   "render_hint": "report",
   "plan_strategy": "subagent_report(2026-11-26)"
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 1.0,
+  "basic": 0.78,
+  "course": 0.4,
   "fee": 1.0,
   "ops": 0.0,
   "facility": 0.2,
-  "briefing": 0.75,
-  "rental": 0.25
+  "briefing": 0.5,
+  "rental": 0.0
  }
 }

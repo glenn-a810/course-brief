@@ -39,6 +39,7 @@ STATUS_LABEL = {
     "closed": "폐업",
     "under_construction": "건설중",
     "planned": "미착공",
+    "cancelled": "사업 취소",
 }
 
 
@@ -282,7 +283,7 @@ def build(src: str, out_root: str) -> dict:
                 "name": "대표 명칭",
                 "aliases": "이명·구 명칭(검색 보조)",
                 "sido / sido_code / sigungu": "시도(약칭)·행정표준코드·시군구",
-                "status": "operating | suspended | closed | under_construction | planned",
+                "status": "operating | suspended | closed | under_construction | planned | cancelled",
                 "holes": "총 홀수",
                 "type": "회원제 | 대중제 | 비회원제",
                 "cluster": "시설 클러스터 ID(F001~, 같은 부지 복수 코스). clusters.json 참조",

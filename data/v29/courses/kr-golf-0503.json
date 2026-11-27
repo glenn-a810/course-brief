@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0503",
@@ -58,13 +59,13 @@
    "master": "courses_master.json v2.0 (문체부·KGA·KGBA·티픽·지도)",
    "synced_to": "courses_master.json v2.7 (2026-11-26 단일 스키마 정규화)"
   },
-  "par": null,
+  "par": 72,
   "holes_teepick": 18,
   "course_spec": {
    "holes": 18,
-   "par": null,
+   "par": 72,
    "blocks": [],
-   "length_m": null,
+   "length_m": 6222,
    "kga": {
     "kga_course_code": "337",
     "kga_name": "내장산 골프앤리조트",
@@ -138,7 +139,10 @@
  "course": {
   "holes": 18,
   "holes_received": 18,
-  "course_names": null,
+  "course_names": [
+   "홍단풍",
+   "청단풍"
+  ],
   "membership_type": "대중제",
   "night_light": null,
   "blocks": [],
@@ -205,15 +209,15 @@
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": null,
-  "par": null
+  "length_m": 6222,
+  "par": 72
  },
  "fee": {
   "weekday": 170000,
   "weekend": 200000,
   "weekday_text": null,
   "weekend_text": null,
-  "basis": null,
+  "basis": "official",
   "tax_included": null,
   "cart": {
    "value": 100000,
@@ -236,7 +240,7 @@
     "checked_at": "2026-11-01"
    }
   ],
-  "checked_at": "2026-11-01",
+  "checked_at": "2026-11-27",
   "market": {
    "weekday_min": 130000.0,
    "weekend_min": 180000.0,
@@ -480,16 +484,17 @@
  },
  "cancel": {
   "cancel_policy": {
-   "value": "4일 전 17:00까지숙박빌라교통셔틀버스·픽업 정읍역(KTX·SRT) 왕복 픽업부대시설사우나요금표에서 읽히는 점4인 1팀 주중 1인 부담은 23",
-   "source": "그린피가이드(공식 인용)",
+   "value": "위약 없이 취소: 4일 전 17:00까지 / 기한 이후: 위약 규정에 위약금과 예약 제한(예약 정지·이용 제한·벌점 가운데 하나 이상)이 적혀 있습니다",
+   "source": "그린피가이드(공식 안내 인용)",
    "url": "https://greenfeeguide.co.kr/course/gc-0424/"
   },
-  "open_cycle": null,
+  "open_cycle": "예약 오픈일: 3주 전 월요일 AM09:00 / 월요일~일요일 일주일 오픈",
   "notes": null,
   "evidence": [
    "우천취소 규정 •당일 유선취소 또는 현장취소 가능합니다.",
    "(티오프 시간 2시간 전 기준)예보기관 : 기상청 동네예보 (정읍시 신정동) •취소기준1) 시간당 2mm 이상 강수량2) 4시간 이상의 예보3) 70% 이상 강수확률 •위 기준에 부합되지 않는 예보로 취소 및 미내장 시 당일 no-show로 처리됨을 알려드립니다.",
-   "(오후 5시 이후 취소분은 익일 취소로 처리) •1일 전 오후 17:00 이후 취소 및 당일취소(미내장)은 [당일취소(No-Show)]로 동일하게 처리됩니다."
+   "(오후 5시 이후 취소분은 익일 취소로 처리) •1일 전 오후 17:00 이후 취소 및 당일취소(미내장)은 [당일취소(No-Show)]로 동일하게 처리됩니다.",
+   "기존 cancel_policy 값이 인접 안내 항목과 뒤섞여 있어(오류) 그린피가이드 원문 인용으로 정정 — 4일 전 17:00까지 (출처: https://greenfeeguide.co.kr/course/gc-0424/, 2026-11 확인)"
   ],
   "weather_evidence": [
    "우천취소 규정 •당일 유선취소 또는 현장취소 가능합니다.",
@@ -544,9 +549,10 @@
   },
   "checkin": {
    "evidence": [
+    "Tee off시간 15분 전까지 해당 코스 스타트 지점에 준비하여 주시기 바랍니다. (출처: https://www.naejangsancc.com/guide/golfInfo, 2026-11-27 확인)",
     "063-570-7700) •퇴실 11:00 이전 •체크인/아웃은 클럽하우스 프론트에서만 가능합니다."
    ],
-   "value": null,
+   "value": "티오프 15분 전 준비",
    "third_party": {
     "value": null,
     "source": "그린피가이드",
@@ -560,8 +566,14 @@
    "value": "문구 확인(원문 근거)"
   },
   "sauna": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "사우나: 사우나 있음사우나&파우더룸"
+   ],
+   "value": "사우나 있음사우나&파우더룸",
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0424/",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfeeguide)"
   },
   "dress": {
    "evidence": [
@@ -587,25 +599,39 @@
   },
   "food": {
    "evidence": [
+    "레스토랑 (출처: https://www.naejangsancc.com/, 2026-11-27 확인)",
     "•클럽하우스 레스토랑(T."
    ],
-   "value": null
+   "value": "레스토랑"
   },
   "snack_bar": {
-   "value": null,
-   "evidence": []
+   "value": "그늘집",
+   "evidence": [
+    "레스토랑, 그늘집, 프로샵 : 업장 계산 및 프론트 계산 (출처: https://www.naejangsancc.com/guide/golfInfo, 2026-11-27 확인)"
+   ]
   },
   "locker_sauna": {
-   "value": null,
-   "evidence": []
+   "value": "사우나",
+   "evidence": [
+    "사우나 (출처: https://greenfeeguide.co.kr/course/gc-0424/, 2026-11-27 확인)",
+    "사우나 있음"
+   ]
   },
   "lodging": {
-   "value": null,
-   "evidence": []
+   "value": "빌라",
+   "evidence": [
+    "숙박 시설: 빌라"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0424/",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfeeguide)"
   },
   "other": {
-   "value": null,
-   "evidence": []
+   "value": "프로샵 · 카페·라운지",
+   "evidence": [
+    "프로샵 · 카페·라운지 (출처: https://greenfeeguide.co.kr/course/gc-0424/, 2026-11-27 확인)"
+   ]
   },
   "night": {
    "evidence": [],
@@ -617,8 +643,14 @@
    "value": null
   },
   "shuttle": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "셔틀: 정읍역(KTX·SRT) 왕복 픽업 · 무료 · 4인 이상, 예약실 사전 예약(063-570-7777) · 단체는 별도 문의"
+   ],
+   "value": "정읍역(KTX·SRT) 왕복 픽업 · 무료 · 4인 이상, 예약실 사전 예약(063-570-7777) · 단체는 별도 문의",
+   "source_url": "https://www.naejangsancc.com/club/map",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfee guide tables)"
   },
   "ev_charge": {
    "evidence": [
@@ -719,8 +751,17 @@
   "recent_notice_text": null,
   "course_notes": null,
   "alert": null,
-  "unconfirmed": [],
-  "sources": []
+  "unconfirmed": [
+   "진행 시간",
+   "휴장일"
+  ],
+  "sources": [
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "ok",
@@ -737,12 +778,12 @@
   "browser_pdf": []
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.8,
+  "basic": 0.78,
+  "course": 0.4,
   "fee": 1.0,
-  "ops": 0.14,
-  "facility": 0.0,
-  "briefing": 0.5,
-  "rental": 1.0
+  "ops": 0.29,
+  "facility": 0.6,
+  "briefing": 0.0,
+  "rental": 0.75
  }
 }

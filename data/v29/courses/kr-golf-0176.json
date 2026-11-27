@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0176",
@@ -58,13 +59,13 @@
    "master": "courses_master.json v2.0 (문체부·KGA·KGBA·티픽·지도)",
    "synced_to": "courses_master.json v2.7 (2026-11-26 단일 스키마 정규화)"
   },
-  "par": null,
+  "par": 72,
   "holes_teepick": 18,
   "course_spec": {
    "holes": 18,
-   "par": null,
+   "par": 72,
    "blocks": [],
-   "length_m": null,
+   "length_m": 6595,
    "kga": {
     "kga_course_code": "402",
     "kga_name": "써닝포인트",
@@ -163,18 +164,18 @@
  "course": {
   "holes": 18,
   "holes_received": 18,
-  "course_names": null,
+  "course_names": "썬·포인트 각 9홀",
   "membership_type": "대중제",
-  "night_light": null,
+  "night_light": "3부(야간) 운영 — 2026년 10·11월 요금표 기준, 인터넷 회원가입 조건 요금(미가입 시 1만원 추가)",
   "blocks": [],
   "grass": {
-   "tee": null,
+   "tee": "켄터키 블루그라스",
    "fairway": {
     "value": "페어웨이 한국잔디",
     "source": "그린피가이드(공식 코스소개 인용)",
     "url": "https://greenfeeguide.co.kr/course/gc-0034/"
    },
-   "green": null
+   "green": "벤틀그라스"
   },
   "kga": {
    "kga_course_code": "402",
@@ -260,46 +261,49 @@
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": null,
-  "par": null
+  "length_m": 6595,
+  "par": 72
  },
  "fee": {
   "weekday": 145000,
   "weekend": 165000,
-  "weekday_text": null,
-  "weekend_text": null,
-  "basis": null,
+  "weekday_text": "145,000원 ~ 210,000원",
+  "weekend_text": "165,000원 ~ 285,000원",
+  "basis": "official",
   "tax_included": null,
   "cart": {
    "value": 100000,
-   "source": "그린피가이드",
-   "url": "https://greenfeeguide.co.kr/course/gc-0034/"
+   "source": "그린피가이드(공식 요금표)",
+   "url": "https://greenfeeguide.com/course/gc-0034/",
+   "note": "팀당(4인 1대)"
   },
   "caddie": {
    "value": 150000,
-   "source": "그린피가이드",
-   "url": "https://greenfeeguide.co.kr/course/gc-0034/",
-   "none": false
+   "none": false,
+   "source": "그린피가이드(공식 요금표)",
+   "url": "https://greenfeeguide.com/course/gc-0034/",
+   "note": "2026년 11월에도 운영 · 3부 16시 이후 · 야간 그린피 3부 주중 135,000~175,000원 · 토 165,000~185,000원 · 일·공휴일 155,000~175,000원 · 야간 캐디피 주간 150,000원 · 야간 160,000원 · 2026년 10·11월 요금표 기준, 인터넷 회원가입 조건 요금(미가"
   },
   "as_of": "2026-11-03",
   "source_url": null,
-  "note": null,
+  "note": "주중/주말 그린피는 시간대·시즌별 최저~최고 범위(최저값을 대표값으로 기재)",
   "sources": [
    {
     "source": "그린피가이드(공식 요금표 확인)",
-    "url": "https://greenfeeguide.co.kr/course/gc-0034/",
+    "url": "https://greenfeeguide.com/course/gc-0034/",
     "checked_at": "2026-11-03"
    }
   ],
-  "checked_at": "2026-11-03",
+  "checked_at": "2026-11-27",
   "market": {
-   "weekday_min": 105000.0,
-   "weekend_min": 185000.0,
+   "weekday_min": 105000,
+   "weekend_min": 185000,
    "part1": null,
    "part2": null,
    "source": "티픽골프장(실거래 관측)",
    "url": "https://teepickgolf.com/course/%EC%8D%A8%EB%8B%9D%ED%8F%AC%EC%9D%B8%ED%8A%B8cc",
-   "note": "공시가 아닌 최근 관측 실거래 최저가"
+   "note": "공시가 아닌 최근 관측 실거래 최저가",
+   "checked_at": "2026-11-27"
   },
   "official_green_evidence": [
    "이용요금 (2026년 12월) 구분 주중 주말 카트이용료 캐디피 토요일 일요일, 공휴일 일반 리무진 주간 야간 이용료(원) 이용료(원) 이용료(원) 1부(7시~9시대) 125,000~155,000 215,000~245,000 195,000~215,000 100,000 150,000 150,000 160,000 2부(11시~14시대) 125,000~155,000 215,000~245,000 195,000~215,000 유의사항 ※ 외국어 가능 캐디: 200,000원※ 이용 요금은 인터넷 회원가입 조건으로, 미가입 시 1만원 추가됩니다",
@@ -323,13 +327,17 @@
   }
  },
  "cancel": {
-  "cancel_policy": null,
+  "cancel_policy": {
+   "value": "라운드일 8일 전 17:00까지 정상 취소. 이후 취소는 6~7일 전 1개월, 5~4일 전 2개월, 3일 전 3개월 예약정지. 월 3회·연 8회 누적 취소 시 3개월 예약정지",
+   "source": "공식 홈페이지",
+   "url": "https://sunningpoint.com/guide/penalty.asp"
+  },
   "open_cycle": null,
   "notes": null,
   "evidence": [
-   "당신이 꿈꾸는 낙원, Sunning Point Country Club 클럽소개 클럽소개 편의시설 안내 대회 안내 위치 안내 예약하기 예약하기 예약 내역 확인 모바일 예약안내 코스정보 코스안내 코스 MAP -SUN코스 -POINT코스 실시간영상 이용가이드 이용요금 준수사항 위약/퇴장 규정 주간날씨안내 고객센터 공지사항 이벤트 FAQ 1:1문의 연락처안내 회원가입 아이디/비밀번호 찾기 로그인 11월 26일 기온 1.0℃ / 16.0℃ 강수확률 0% / 0% 미세먼지 26㎍/㎥ 초미세먼지 17㎍/㎥ 실시간영상 바로가기 Online Mem",
-   "당신이 꿈꾸는 낙원, Sunning Point Country Club 클럽소개 클럽소개 편의시설 안내 대회 안내 위치 안내 예약하기 예약하기 예약 내역 확인 모바일 예약안내 코스정보 코스안내 코스 MAP -SUN코스 -POINT코스 실시간영상 이용가이드 이용요금 준수사항 위약/퇴장 규정 주간날씨안내 고객센터 공지사항 이벤트 FAQ 1:1문의 연락처안내 회원가입 아이디/비밀번호 찾기 로그인 이용요금 이용요금을 안내드립니다.",
-   "당신이 꿈꾸는 낙원, Sunning Point Country Club 클럽소개 클럽소개 편의시설 안내 대회 안내 위치 안내 예약하기 예약하기 예약 내역 확인 모바일 예약안내 코스정보 코스안내 코스 MAP -SUN코스 -POINT코스 실시간영상 이용가이드 이용요금 준수사항 위약/퇴장 규정 주간날씨안내 고객센터 공지사항 이벤트 FAQ 1:1문의 연락처안내 회원가입 아이디/비밀번호 찾기 로그인 코스정보 썬(SUN)코스와 포인트(POINT)코스를 소개합니다."
+   "- 예약자가 라운드일로 부터 8일 전 오후 5시 이전까지 예약을 취소하는 경우 정상 취소 가능합니다.",
+   "이용 예정일 제외 7일~6일 전 취소 : 1개월 예약 정지 / 5일~4일 전 취소 : 2개월 예약 정지 / 3일 전 취소 : 3개월 예약 정지",
+   "- 건전한 예약 문화 정착을 위해 월 3회 이상, 년 8회 이상 누적 취소 시 3개월 예약 정지 적용됩니다."
   ],
   "weather_evidence": [
    "- 고객님 사정으로 인한 경기 중단은 18홀 그린피가 적용 됩니다."
@@ -485,16 +493,29 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": null,
-   "evidence": []
+   "value": "사우나 있음",
+   "evidence": [
+    "사우나 있음 — https://greenfeeguide.co.kr/course/gc-0034/"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0034/",
+   "confidence": "medium",
+   "checked_at": "2026-11-27",
+   "value_from": "pass2_third_party"
   },
   "lodging": {
    "value": null,
    "evidence": []
   },
   "other": {
-   "value": null,
-   "evidence": []
+   "value": "프로샵",
+   "evidence": [
+    "other: 프로샵"
+   ],
+   "source_url": "https://greenfeeguide.com/course/gc-0034/",
+   "source_type": "greenfee_guide",
+   "confidence": "medium",
+   "checked_at": "2026-11-27",
+   "value_from": "batch2_supplement"
   },
   "night": {
    "evidence": [
@@ -542,16 +563,16 @@
   }
  },
  "rental": {
-  "available": null,
+  "available": true,
   "full_set": 50000,
-  "fee_text": null,
+  "fee_text": "50,000원 · 18홀",
   "brand": null,
   "left_handed": null,
   "shoes": null,
   "nine_hole": null,
   "range_finder": null,
   "reservation": null,
-  "source_url": null,
+  "source_url": "https://greenfeeguide.co.kr/course/gc-0034/",
   "evidence": [],
   "official": null,
   "nearby_delivery": {
@@ -699,7 +720,18 @@
   "course_notes": null,
   "alert": null,
   "unconfirmed": [],
-  "sources": []
+  "sources": [
+   {
+    "source": "그린피가이드 코스 페이지",
+    "url": "https://greenfeeguide.co.kr/course/gc-0034/",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "ok",
@@ -714,12 +746,12 @@
   "browser_batch": false
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.8,
+  "basic": 0.89,
+  "course": 0.4,
   "fee": 1.0,
   "ops": 0.29,
-  "facility": 0.2,
-  "briefing": 0.5,
-  "rental": 0.5
+  "facility": 0.4,
+  "briefing": 0.0,
+  "rental": 0.75
  }
 }

@@ -23,11 +23,12 @@
   "schema_previous": "stage2b/1.0",
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "restructured_from_7key": false,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0368",
@@ -142,13 +143,16 @@
     "url": "https://greenfeeguide.co.kr/course/gc-0394/",
     "checked_at": "2026-11-01"
    }
-  ]
+  ],
+  "checked_at": "2026-11-27"
  },
  "cancel": {
   "cancel_policy": null,
-  "open_cycle": null,
+  "open_cycle": "평일: 정회원 해당 요일 2주전 10시, 지정/플러스회원 해당일 제외 13일전 10시, 준회원·비회원 해당일 제외 12일전 10시. 주말: 정회원 예약일 전주 화요일 14~16시, 지정/플러스·준·비회원 예약주 월요일 16시부터(정회원 주말 취소 접수 마감 후). 공휴일: 정회원 해당 요일 2주전 10시, 그 외 해당일 제외 10일전 10시부터. 우선예약(정회원) 16일전 14~16시, 긴급예약 전주 수요일 14시~금요일 12시",
   "notes": null,
-  "evidence": [],
+  "evidence": [
+   "https://wondergolf.co.kr/courses/kr-kakao-16975978"
+  ],
   "weather_evidence": []
  },
  "ops": {
@@ -235,8 +239,10 @@
    "evidence": []
   },
   "other": {
-   "value": null,
-   "evidence": []
+   "value": "프로샵",
+   "evidence": [
+    "https://greenfeeguide.co.kr/course/gc-0394/"
+   ]
   },
   "night": {
    "value": null,
@@ -317,9 +323,6 @@
   "alert": null,
   "unconfirmed": [
    "야간 라이트",
-   "잔디(티)",
-   "잔디(그린)",
-   "예약 오픈 주기",
    "취소·위약 규정",
    "2인 플레이",
    "3인 플레이",
@@ -336,13 +339,11 @@
    "그늘집",
    "락커·사우나",
    "숙박",
-   "기타 시설",
    "클럽 렌탈 여부",
    "클럽 렌탈 요금",
    "좌타용 클럽",
    "골프화 대여",
-   "제세금",
-   "예약 비고"
+   "제세금"
   ],
   "unconfirmed_labels_added": [
    "제세금",
@@ -350,7 +351,13 @@
   ],
   "sources": [
    "https://greenfeeguide.co.kr/course/gc-0394/",
-   "https://www.rankue.co.kr/golf/course/동부산CC"
+   "https://www.rankue.co.kr/golf/course/동부산CC",
+   "https://wondergolf.co.kr/courses/kr-kakao-16975978",
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
   ],
   "collected_at": "2026-11-26T10:33:21+09:00"
  },
@@ -359,18 +366,20 @@
   "official_reason": "공식 홈페이지 접속 불가(2026-11-26). 요금·코스 정보는 공개 요금 정보로 확인",
   "pages_collected": 0,
   "third_party": {
-   "received_report": true
+   "received_report": true,
+   "teepick": true,
+   "greenfeeguide": true
   },
   "render_hint": "report",
   "plan_strategy": "subagent_report(2026-11-26)"
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.8,
+  "basic": 0.89,
+  "course": 0.4,
   "fee": 1.0,
   "ops": 0.0,
-  "facility": 0.0,
-  "briefing": 0.75,
-  "rental": 0.25
+  "facility": 0.1,
+  "briefing": 0.5,
+  "rental": 0.0
  }
 }

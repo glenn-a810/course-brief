@@ -8,11 +8,12 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0168",
@@ -44,7 +45,7 @@
    "source": "최근접 IC 직선거리"
   },
   "tel": "031-286-9500",
-  "homepage": "https://www.gakorea.com/",
+  "homepage": "https://gakorea.com/public/index.asp",
   "operators": [
    "㈜지에이코리아"
   ],
@@ -63,9 +64,9 @@
   },
   "course_spec": {
    "holes": 9,
-   "par": null,
+   "par": 36,
    "blocks": [],
-   "length_m": null,
+   "length_m": 2510,
    "kga": null,
    "grass": {
     "value": "야지, 벤트그라스",
@@ -84,14 +85,15 @@
    "evidence": "1994년",
    "source": "그린피가이드",
    "url": "https://greenfeeguide.co.kr/course/gc-0025/"
-  }
+  },
+  "par": 36
  },
  "course": {
   "holes": 9,
   "holes_received": null,
-  "course_names": null,
+  "course_names": "9홀 · 파 36",
   "membership_type": "대중제",
-  "night_light": null,
+  "night_light": true,
   "blocks": [],
   "grass": {
    "tee": null,
@@ -106,20 +108,21 @@
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": null,
-  "par": null
+  "length_m": 2510,
+  "par": 36
  },
  "fee": {
-  "weekday": 230000,
-  "weekend": 300000,
+  "weekday": 75000,
+  "weekend": 95000,
   "weekday_text": null,
   "weekend_text": null,
-  "basis": null,
+  "basis": "official",
   "tax_included": null,
   "cart": {
-   "value": 100000,
-   "source": "그린피가이드",
-   "url": "https://greenfeeguide.co.kr/course/gc-0025/"
+   "value": 50000,
+   "source": "그린피가이드(공식 요금표)",
+   "url": "https://greenfeeguide.com/course/gc-0026/",
+   "note": "팀당(4인 1대) · 9홀 기준"
   },
   "caddie": {
    "value": 150000,
@@ -127,31 +130,43 @@
    "url": "https://greenfeeguide.co.kr/course/gc-0025/",
    "none": false
   },
-  "as_of": "2026-11-02",
+  "as_of": "2026-08-18",
   "source_url": null,
-  "note": null,
+  "note": "9홀 1회 기준 요금",
   "sources": [
    {
     "source": "그린피가이드(공식 요금표 확인)",
-    "url": "https://greenfeeguide.co.kr/course/gc-0025/",
-    "checked_at": "2026-11-02"
+    "url": "https://greenfeeguide.com/course/gc-0026/",
+    "checked_at": "2026-08-18"
    }
   ],
-  "checked_at": "2026-11-02",
+  "checked_at": "2026-11-27",
   "official_green_evidence": [],
-  "official_rental": null
+  "official_rental": null,
+  "market": {}
  },
  "cancel": {
-  "cancel_policy": null,
-  "open_cycle": null,
+  "cancel_policy": {
+   "value": "※ 예약취소 3일전까지 취소 가능(인터넷 및 전화 취소는 17시 전까지 가능) ※ 노캐디 라운드 고객은 당 골프장 전동카트 외 개인용 카트 사용 불가 ※ 4인/팀 미내장 시 4인/팀 그린피 결제됩니다.",
+   "source": "공식 홈페이지",
+   "url": "https://gakorea.com/reservation/golf/reservation.asp"
+  },
+  "open_cycle": "이용일 3주 전부터 예약 가능",
   "notes": null,
   "evidence": [],
   "weather_evidence": []
  },
  "ops": {
   "nocaddie": {
-   "evidence": [],
-   "value": null
+   "value": "일부 시간·코스만 노캐디 — 야간",
+   "evidence": [
+    "nocaddie: 일부 시간·코스만 노캐디 — 야간"
+   ],
+   "source_url": "https://greenfeeguide.com/course/gc-0026/",
+   "source_type": "greenfee_guide",
+   "confidence": "medium",
+   "checked_at": "2026-11-27",
+   "value_from": "batch2_supplement"
   },
   "two_player": {
    "evidence": [],
@@ -183,8 +198,15 @@
    "evidence": []
   },
   "cart_type": {
-   "evidence": [],
-   "value": null
+   "value": "5인승 전동 카트",
+   "evidence": [
+    "cart_type: 5인승 전동 카트"
+   ],
+   "source_url": "https://greenfeeguide.com/course/gc-0026/",
+   "source_type": "greenfee_guide",
+   "confidence": "medium",
+   "checked_at": "2026-11-27",
+   "value_from": "batch2_supplement"
   },
   "cart_entry": {
    "evidence": [],
@@ -226,8 +248,14 @@
    "value_from": "capital_supplement(official_site)"
   },
   "sauna": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "사우나: 사우나 있음"
+   ],
+   "value": "사우나 있음",
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0026/",
+   "source_type": "public_info(greenfeeguide)",
+   "confidence": "medium",
+   "value_from": "final_pass_2026-11-27(greenfeeguide)"
   },
   "dress": {
    "evidence": [
@@ -271,16 +299,29 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": null,
-   "evidence": []
+   "value": "사우나 있음",
+   "evidence": [
+    "사우나 있음 — https://greenfeeguide.co.kr/course/gc-0026/"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/course/gc-0026/",
+   "confidence": "medium",
+   "checked_at": "2026-11-27",
+   "value_from": "pass2_third_party"
   },
   "lodging": {
    "value": null,
    "evidence": []
   },
   "other": {
-   "value": null,
-   "evidence": []
+   "value": "프로샵 · 카페·라운지",
+   "evidence": [
+    "other: 프로샵 · 카페·라운지"
+   ],
+   "source_url": "https://greenfeeguide.com/course/gc-0026/",
+   "source_type": "greenfee_guide",
+   "confidence": "medium",
+   "checked_at": "2026-11-27",
+   "value_from": "batch2_supplement"
   },
   "night": {
    "evidence": [
@@ -401,7 +442,13 @@
   "course_notes": null,
   "alert": null,
   "unconfirmed": [],
-  "sources": []
+  "sources": [
+   {
+    "source": "그린피가이드 코스 페이지",
+    "url": "https://greenfeeguide.co.kr/course/gc-0026/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "ok",
@@ -416,12 +463,12 @@
   "browser_batch": false
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.6,
+  "basic": 0.89,
+  "course": 0.4,
   "fee": 1.0,
-  "ops": 0.29,
-  "facility": 0.2,
-  "briefing": 0.25,
-  "rental": 0.25
+  "ops": 0.5,
+  "facility": 0.4,
+  "briefing": 0.0,
+  "rental": 0.0
  }
 }

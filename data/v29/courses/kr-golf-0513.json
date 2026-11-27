@@ -8,11 +8,183 @@
   "structure": "course_id / meta / master / course / fee / cancel / ops / facilities / rental / briefing / collection / coverage",
   "schema_previous": "stage2b/1.0",
   "restructured_from_7key": true,
-  "normalized_at": "2026-11-26T12:20:52+09:00",
+  "normalized_at": "2026-11-27T14:40:00+09:00",
   "coverage_metric": "stage2c/1.0 채움률: basic(9항목) course(5) fee(4) ops(정규 14필드) facility(정규 10필드) briefing(4) rental(4)의 비어있지 않은 비율",
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
-  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)"
+  "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
+  "review": {
+   "checks": [
+    {
+     "field": "fee.weekday",
+     "received": null,
+     "verified": 170000,
+     "result": "보완",
+     "url": "https://suseogolfresort.co.kr/info/price",
+     "quote": "18홀 1인 주중 170,000원 / 주말 200,000원 (정상 주중 요금)",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "fee.weekend",
+     "received": null,
+     "verified": 200000,
+     "result": "보완",
+     "url": "https://suseogolfresort.co.kr/info/price",
+     "quote": "18홀 1인 주중 170,000원 / 주말 200,000원 (정상 주말 요금)",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "fee.basis",
+     "received": null,
+     "verified": "official",
+     "result": "보완",
+     "url": "https://suseogolfresort.co.kr/info/price",
+     "quote": "이용요금표: 18홀 1인 주중 170,000원·주말 200,000원",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "fee.as_of",
+     "received": null,
+     "verified": "2026-11-27",
+     "result": "보완",
+     "url": "https://suseogolfresort.co.kr/info/price",
+     "quote": "공식 이용요금 페이지 확인(2026-11-27)",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "fee.cart",
+     "received": null,
+     "verified": "{\"value\": 100000, \"source\": \"공식(브라우저 수집)\", \"url\": \"https://suseogolfresort.co.kr/info/price\", \"note\": \"팀당(5인승 카트 100,000원, 3열 카트 160,000원, 리무진 200,000원)\"}",
+     "result": "보완",
+     "url": "https://suseogolfresort.co.kr/info/price",
+     "quote": "카트 5인승 100,000원 / 3열 160,000원 / 리무진 200,000원",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "fee.caddie",
+     "received": null,
+     "verified": "{\"value\": 150000, \"none\": false, \"source\": \"공식(브라우저 수집)\", \"url\": \"https://suseogolfresort.co.kr/info/price\", \"note\": \"팀당(5인 플레이 200,000원)\"}",
+     "result": "보완",
+     "url": "https://suseogolfresort.co.kr/info/price",
+     "quote": "캐디 150,000원(5인 플레이 200,000원)",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "course.par",
+     "received": null,
+     "verified": 72,
+     "result": "보완",
+     "url": "https://suseogolfresort.co.kr/course/intro",
+     "quote": "18홀 = 성공 6홀(파24) + 비전 6홀(파24) + 힐링 6홀(파24), 합계 파72",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "course.course_names",
+     "received": null,
+     "verified": "[\"SUCCESS\", \"VISION\", \"HEALING\"]",
+     "result": "보완",
+     "url": "https://suseogolfresort.co.kr/course/intro",
+     "quote": "SUCCESS · VISION · HEALING 각 6홀, 6·6·6 구성",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "ops.checkin.value",
+     "received": null,
+     "verified": "티오프 40분 전 도착, 15분 전 카트 탑승",
+     "result": "보완",
+     "url": "https://suseogolfresort.co.kr/info/penalty",
+     "quote": "Tee-Off 40분 전 도착 · Tee-Off 15분 전 카트 탑승",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "ops.dress.value",
+     "received": null,
+     "verified": "청바지·카라 없는 상의·노출 복장·트레이닝복·슬리퍼 입장 불가",
+     "result": "보완",
+     "url": "https://suseogolfresort.co.kr/info/penalty",
+     "quote": "청바지, 카라 없는 상의, 노출 복장, 트레이닝복, 슬리퍼 입장 불가",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "ops.two_player.value",
+     "received": null,
+     "verified": "불가(1팀 3인 이상)",
+     "result": "보완",
+     "url": "https://suseogolfresort.co.kr/info/penalty",
+     "quote": "1팀 3인이상 플레이 가능(2인 불가)",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.closed_days.value",
+     "received": null,
+     "verified": "정기 휴장일 없음",
+     "result": "보완",
+     "url": "https://suseogolfresort.co.kr/info/penalty",
+     "quote": "정기휴장일 없음",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "facilities.other.value",
+     "received": null,
+     "verified": "셀프 주차·현관 백 드롭·레스토랑(그늘집 미운영)",
+     "result": "보완",
+     "url": "https://suseogolfresort.co.kr/info/penalty",
+     "quote": "셀프 주차 · 현관 백 드롭 · 그늘집 미운영, 레스토랑 이용",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "cancel.cancel_policy",
+     "received": null,
+     "verified": "주중 3일 전 17시까지 위약 없이 취소. 이후 2일 전 10%, 1일 전 20%, 당일·노쇼 30%",
+     "result": "보완",
+     "url": "https://suseogolfresort.co.kr/info/agreement",
+     "quote": "당일취소·노쇼 30% / 1일 전 20% / 2일 전 10% / 3일 전 취소 0% (17시까지)",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    },
+    {
+     "field": "cancel.open_cycle",
+     "received": null,
+     "verified": "인터넷 예약 4주 전 월요일 09:00 오픈",
+     "result": "보완",
+     "url": "https://suseogolfresort.co.kr/info/booking",
+     "quote": "인터넷 예약은 4주 전 월요일 09:00에 오픈",
+     "source_type": "official_site",
+     "confidence": "high",
+     "checked_at": "2026-11-27"
+    }
+   ],
+   "checked_at": "2026-11-27"
+  },
+  "batch3_patch": "2026-11-27 배치6(대구·경북) 보완: 15개 항목(공식 홈페이지·그린피가이드 공식 안내 확인 기준, 미확인 값 생성 없음)",
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
  },
  "master": {
   "course_id": "kr-golf-0513",
@@ -61,7 +233,7 @@
   },
   "course_spec": {
    "holes": 18,
-   "par": null,
+   "par": 72,
    "blocks": [],
    "length_m": null,
    "kga": null,
@@ -73,12 +245,17 @@
   ],
   "status": "operating",
   "facility_cluster": null,
-  "factcheck_2026_11_26": null
+  "factcheck_2026_11_26": null,
+  "par": 72
  },
  "course": {
   "holes": 18,
   "holes_received": null,
-  "course_names": null,
+  "course_names": [
+   "SUCCESS",
+   "VISION",
+   "HEALING"
+  ],
   "membership_type": "대중제",
   "night_light": null,
   "blocks": [],
@@ -92,32 +269,109 @@
   "extra_courses": null,
   "hole_by_hole": null,
   "length_m": null,
-  "par": null
+  "par": 72
  },
  "fee": {
-  "weekday": null,
-  "weekend": null,
+  "weekday": 170000,
+  "weekend": 200000,
   "weekday_text": null,
   "weekend_text": null,
-  "basis": null,
+  "basis": "official",
   "tax_included": null,
-  "cart": null,
-  "caddie": null,
-  "as_of": null,
-  "source_url": null,
+  "cart": {
+   "value": 100000,
+   "source": "공식(브라우저 수집)",
+   "url": "https://suseogolfresort.co.kr/info/price",
+   "note": "팀당(5인승 카트 100,000원, 3열 카트 160,000원, 리무진 200,000원)"
+  },
+  "caddie": {
+   "value": 150000,
+   "none": false,
+   "source": "공식(브라우저 수집)",
+   "url": "https://suseogolfresort.co.kr/info/price",
+   "note": "팀당(5인 플레이 200,000원)"
+  },
+  "as_of": "2026-11-27",
+  "source_url": "https://suseogolfresort.co.kr/info/price",
   "note": null,
-  "sources": [],
-  "checked_at": null,
+  "sources": [
+   {
+    "source": "공식·공개 안내",
+    "url": "https://suseogolfresort.co.kr/info/price",
+    "quote": "18홀 1인 주중 170,000원 / 주말 200,000원 (정상 주중 요금)",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공식·공개 안내",
+    "url": "https://suseogolfresort.co.kr/info/price",
+    "quote": "18홀 1인 주중 170,000원 / 주말 200,000원 (정상 주말 요금)",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공식·공개 안내",
+    "url": "https://suseogolfresort.co.kr/info/price",
+    "quote": "이용요금표: 18홀 1인 주중 170,000원·주말 200,000원",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공식·공개 안내",
+    "url": "https://suseogolfresort.co.kr/info/price",
+    "quote": "공식 이용요금 페이지 확인(2026-11-27)",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공식·공개 안내",
+    "url": "https://suseogolfresort.co.kr/info/price",
+    "quote": "카트 5인승 100,000원 / 3열 160,000원 / 리무진 200,000원",
+    "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공식·공개 안내",
+    "url": "https://suseogolfresort.co.kr/info/price",
+    "quote": "캐디 150,000원(5인 플레이 200,000원)",
+    "checked_at": "2026-11-27"
+   }
+  ],
+  "checked_at": "2026-11-27",
   "official_green_evidence": [],
-  "official_rental": null
+  "official_rental": null,
+  "market": {
+   "weekday_min": 66000,
+   "weekend_min": 101000,
+   "source": "공개 예약 채널 실거래 관측(티픽)",
+   "url": "https://teepickgolf.com/",
+   "note": "공시가 아닌 최근 관측 실거래 최저가"
+  }
  },
  "cancel": {
-  "cancel_policy": null,
-  "open_cycle": null,
+  "cancel_policy": {
+   "value": "주중 3일 전 17시까지 위약 없이 취소. 이후 2일 전 10%, 1일 전 20%, 당일·노쇼 30%",
+   "source": "공개 안내",
+   "url": "https://suseogolfresort.co.kr/info/booking",
+   "checked_at": "2026-11-27"
+  },
+  "open_cycle": "인터넷 예약 4주 전 월요일 09:00 오픈",
   "notes": null,
-  "evidence": [],
+  "evidence": [
+   "당일취소·노쇼 30% / 1일 전 20% / 2일 전 10% / 3일 전 취소 0% (17시까지)",
+   "인터넷 예약은 4주 전 월요일 09:00에 오픈"
+  ],
   "weather_evidence": [],
-  "browser_official": null
+  "browser_official": null,
+  "sources": [
+   {
+    "url": "https://suseogolfresort.co.kr/info/agreement",
+    "quote": "당일취소·노쇼 30% / 1일 전 20% / 2일 전 10% / 3일 전 취소 0% (17시까지)",
+    "checked_at": "2026-11-27",
+    "source_type": "official_site"
+   },
+   {
+    "url": "https://suseogolfresort.co.kr/info/booking",
+    "quote": "인터넷 예약은 4주 전 월요일 09:00에 오픈",
+    "checked_at": "2026-11-27",
+    "source_type": "official_site"
+   }
+  ]
  },
  "ops": {
   "nocaddie": {
@@ -125,8 +379,14 @@
    "value": null
   },
   "two_player": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "1팀 3인이상 플레이 가능(2인 불가)"
+   ],
+   "value": "불가(1팀 3인 이상)",
+   "source_url": "https://suseogolfresort.co.kr/info/penalty",
+   "confidence": "high",
+   "source_type": "official_site",
+   "checked_at": "2026-11-27"
   },
   "three_player": {
    "value": null,
@@ -157,8 +417,14 @@
    "value": null
   },
   "checkin": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "Tee-Off 40분 전 도착 · Tee-Off 15분 전 카트 탑승"
+   ],
+   "value": "티오프 40분 전 도착, 15분 전 카트 탑승",
+   "source_url": "https://suseogolfresort.co.kr/info/penalty",
+   "confidence": "high",
+   "source_type": "official_site",
+   "checked_at": "2026-11-27"
   },
   "locker": {
    "evidence": [],
@@ -169,8 +435,14 @@
    "value": null
   },
   "dress": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "청바지, 카라 없는 상의, 노출 복장, 트레이닝복, 슬리퍼 입장 불가"
+   ],
+   "value": "청바지·카라 없는 상의·노출 복장·트레이닝복·슬리퍼 입장 불가",
+   "source_url": "https://suseogolfresort.co.kr/info/penalty",
+   "confidence": "high",
+   "source_type": "official_site",
+   "checked_at": "2026-11-27"
   },
   "pace": {
    "evidence": [],
@@ -203,17 +475,29 @@
    "evidence": []
   },
   "other": {
-   "value": null,
-   "evidence": []
+   "value": "셀프 주차·현관 백 드롭·레스토랑(그늘집 미운영)",
+   "evidence": [
+    "셀프 주차 · 현관 백 드롭 · 그늘집 미운영, 레스토랑 이용"
+   ],
+   "source_url": "https://suseogolfresort.co.kr/info/penalty",
+   "confidence": "high",
+   "source_type": "official_site",
+   "checked_at": "2026-11-27"
   },
   "night": {
    "evidence": [],
    "value": null
   },
   "closed_days": {
-   "evidence": [],
+   "evidence": [
+    "정기휴장일 없음"
+   ],
    "third_party": null,
-   "value": null
+   "value": "정기 휴장일 없음",
+   "source_url": "https://suseogolfresort.co.kr/info/penalty",
+   "confidence": "high",
+   "source_type": "official_site",
+   "checked_at": "2026-11-27"
   },
   "shuttle": {
    "evidence": [],
@@ -296,14 +580,21 @@
   "course_notes": null,
   "alert": null,
   "unconfirmed": [],
-  "sources": []
+  "sources": [
+   "https://suseogolfresort.co.kr/course/intro",
+   {
+    "source": "티픽골프장 코스·스코어카드",
+    "url": "https://teepickgolf.com/",
+    "checked_at": "2026-11-27"
+   }
+  ]
  },
  "collection": {
   "official_site": "ok",
   "official_reason": null,
   "pages_collected": 1,
   "third_party": {
-   "teepick": false,
+   "teepick": true,
    "greenfeeguide": false
   },
   "render_hint": "static",
@@ -311,12 +602,12 @@
   "browser_batch": false
  },
  "coverage": {
-  "basic": 1.0,
-  "course": 0.6,
-  "fee": 0.0,
-  "ops": 0.0,
-  "facility": 0.0,
-  "briefing": 0.25,
-  "rental": 0.25
+  "basic": 0.78,
+  "course": 0.4,
+  "fee": 1.0,
+  "ops": 0.21,
+  "facility": 0.2,
+  "briefing": 0.0,
+  "rental": 0.0
  }
 }
