@@ -818,8 +818,8 @@ function sections(d: CourseDetail, c: CourseIndexItem): string {
     <div class="section-body">
       ${unavailable ? `<div class="callout warn"><strong>현재 이용 불가 구장입니다</strong>아래 요금은 마지막으로 확인된 값이며 예약·결제할 수 없습니다.</div>` : ""}
       <div class="fee-grid">
-        <div class="fee-box"><div class="label">주중</div><div class="value">${fmtWon(fee.weekday)}</div>${fee.weekday_text ? `<div class="note">${esc(fee.weekday_text)}</div>` : ""}</div>
-        <div class="fee-box"><div class="label">주말·공휴일</div><div class="value">${fmtWon(fee.weekend)}</div>${fee.weekend_text ? `<div class="note">${esc(fee.weekend_text)}</div>` : ""}</div>
+        ${fee.weekday != null || isAdmin() ? `<div class="fee-box"><div class="label">주중</div><div class="value">${fmtWon(fee.weekday)}</div>${fee.weekday_text ? `<div class="note">${esc(fee.weekday_text)}</div>` : ""}</div>` : ""}
+        ${fee.weekend != null || isAdmin() ? `<div class="fee-box"><div class="label">주말·공휴일</div><div class="value">${fmtWon(fee.weekend)}</div>${fee.weekend_text ? `<div class="note">${esc(fee.weekend_text)}</div>` : ""}</div>` : ""}
         ${fee.cart?.value != null || isAdmin() ? `<div class="fee-box"><div class="label">카트</div><div class="value">${fee.cart?.value != null ? fmtWon(fee.cart.value) : "미확인"}</div><div class="note">${esc(fee.cart?.text || "")}</div></div>` : ""}
         ${fee.caddie?.none || fee.caddie?.value != null || isAdmin() ? `<div class="fee-box"><div class="label">캐디피</div><div class="value">${fee.caddie?.none ? "노캐디" : fee.caddie?.value != null ? fmtWon(fee.caddie.value) : "미확인"}</div><div class="note">${esc(fee.caddie?.text || "")}</div></div>` : ""}
       </div>
@@ -917,7 +917,7 @@ function sections(d: CourseDetail, c: CourseIndexItem): string {
         `<span class="tag">${esc(tag)} ${Array.isArray(arr) ? arr.length : ""}</span>`).join("")}</div>` : ""}
       ${isAdmin() && noticeUrl ? `<p class="section-desc">공지 게시판: ${/^https?:/.test(noticeUrl) ? `<a href="${esc(noticeUrl)}" target="_blank" rel="noopener noreferrer">${esc(shortUrl(noticeUrl))}</a>` : "수집 아카이브"}</p>` : ""}
       ${isAdmin() && (br.unconfirmed ?? []).length ? unconfirmedList((br.unconfirmed ?? []).slice(0, 14)) : ""}
-      ${br.collected_at ? `<p class="section-desc">${isAdmin() ? `수집 ${fmtDate(br.collected_at)}` : `업데이트 ${esc(fmtDate(br.collected_at))}`}</p>` : ""}
+      ${br.collected_at ? `<p class="section-desc">${isAdmin() ? `수집 ${fmtDate(br.collected_at)}` : `공지 확인 ${esc(fmtDate(br.collected_at))}`}</p>` : ""}
       ${isAdmin() && (br.sources ?? []).length ? `<p class="section-desc">출처: ${(br.sources ?? []).slice(0, 5).map((u) => /^https?:/.test(u) ? `<a href="${esc(u)}" target="_blank" rel="noopener noreferrer">${esc(shortUrl(u))}</a>` : esc(u)).join(" · ")}</p>` : ""}
     </div>
   </section>`;
