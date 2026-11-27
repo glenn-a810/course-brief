@@ -869,7 +869,7 @@ function sectionNav(c: CourseIndexItem, hasCluster: boolean): string {
   const items: Array<[string, string]> = [
     ["s1", "요금·예약"], ["s2", "코스 스펙"], ["s3", "현장 운영"], ["s4", "부대시설"],
     ["s5", "공지·브리핑"], ...(hasCluster ? [["s6", "동일 부지"] as [string, string]] : []),
-    ["s7", "클럽 렌탈"],
+    ["s7", "클럽 렌탈"], ["s8", "데이터"],
   ];
   return `<nav class="section-nav" aria-label="상세 영역">
     <div class="section-nav-inner">
@@ -1415,13 +1415,13 @@ function sections(d: CourseDetail, c: CourseIndexItem, others: Array<{ name: str
   }).join("");
   const updated = updatedAt(d.meta?.normalized_at, d.meta?.generated_at);
   const dataInfo = isAdmin()
-    ? `<section class="section" aria-labelledby="s8-h">
+    ? `<section class="section" id="s8" aria-labelledby="s8-h">
         <div class="section-head"><h2 id="s8-h"><span class="sec-num">08</span>데이터 정보</h2>
         <p class="section-desc">7개 영역 채움률. 비어 있는 값은 '미확인'이며 '없음'과 다릅니다.</p></div>
         <div class="section-body"><div class="cov-list">${covRows}</div>
         <p class="source-line">수집 ${esc(updated)} · 스키마 ${esc(d.meta?.schema || "")} · <a class="link" href="${REPO_URL}/blob/main/data/v29/schema.md" target="_blank" rel="noopener noreferrer">스키마 문서</a></p></div>
       </section>`
-    : `<section class="section" aria-labelledby="s8-h">
+    : `<section class="section" id="s8" aria-labelledby="s8-h">
         <div class="section-head"><h2 id="s8-h"><span class="sec-num">08</span>데이터 기준</h2>
         <p class="section-desc">${esc(updated || "—")} 기준 · 공개 자료에서 확인된 값만 표시합니다. 확인하지 못한 항목은 위 영역의 '확인 안 됨'으로 남깁니다.</p></div>
       </section>`;
