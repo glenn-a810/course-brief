@@ -13,7 +13,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch5_supplement_2026_11_27": "누락 필드 보완 배치5(호남권) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0046",
@@ -648,7 +649,7 @@
  },
  "cancel": {
   "cancel_policy": "2일전취소",
-  "open_cycle": null,
+  "open_cycle": "비회원 4주 전, 주중회원 3주 전부터 인터넷·전화 예약",
   "notes": null,
   "evidence": [
    "화순CC 클럽소개 코스정보 부대시설 이용안내 인터넷예약 고객센터 로그인 회원가입 클럽소개 윤리경영 인사말 오시는길 코스특징 코스공략도 스코어카드 로컬룰 클럽하우스 레스토랑 연회실 그늘집 세미나실 이용안내 이용요금안내 예약기간안내 인터넷예약안내 단체팀예약안내 위약처리규정 예약신청 주말예약접수 예약확인 공지사항 자료실 관련사이트 갤러리(코스별) 갤러리(계절별) 갤러리(기타) 고객 한분한분 최고의 VIP 로 품격이 있는 화순 컨트리 클럽입니다.",
@@ -678,8 +679,15 @@
    "evidence": []
   },
   "five_player": {
-   "value": null,
-   "evidence": []
+   "value": "2팀 이상 5인 플레이는 불가",
+   "evidence": [
+    "2팀이상 5인플레이는 불가합니다"
+   ],
+   "source_url": "https://www.hwasuncc.co.kr/guide/group.asp",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch5_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "marshal_caddie": {
    "value": null,
@@ -900,7 +908,7 @@
   "basic": 0.89,
   "course": 0.6,
   "fee": 1.0,
-  "ops": 0.14,
+  "ops": 0.21,
   "facility": 0.5,
   "briefing": 0.0,
   "rental": 0.0

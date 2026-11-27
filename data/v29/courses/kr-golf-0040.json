@@ -13,7 +13,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch5_supplement_2026_11_27": "누락 필드 보완 배치5(호남권) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0040",
@@ -346,8 +347,15 @@
    "evidence": []
   },
   "five_player": {
-   "value": null,
-   "evidence": []
+   "value": "5인 플레이 가능(전동카트 5인 125,000원/팀, 캐디피 5bag 220,000원)",
+   "evidence": [
+    "전동카트 4인 100,000/team 5인 125,000/team 캐디피 4bag 150,000 5bag 220,000"
+   ],
+   "source_url": "http://web.archive.org/web/20250429143946/https://www.solaseadocc.com/sub/guide.asp",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch5_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "marshal_caddie": {
    "value": null,
@@ -558,7 +566,7 @@
   "basic": 0.89,
   "course": 0.4,
   "fee": 1.0,
-  "ops": 0.07,
+  "ops": 0.14,
   "facility": 0.1,
   "briefing": 0.0,
   "rental": 0.75

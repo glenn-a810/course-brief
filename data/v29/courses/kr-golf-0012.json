@@ -13,7 +13,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch5_supplement_2026_11_27": "누락 필드 보완 배치5(호남권) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0012",
@@ -144,7 +145,7 @@
    "해피"
   ],
   "membership_type": "회원제",
-  "night_light": null,
+  "night_light": "3부(야간) 라운드 운영",
   "blocks": [
    "HIDDENHEALING"
   ],
@@ -254,7 +255,7 @@
  },
  "cancel": {
   "cancel_policy": "① 이용자가 주말이나 공휴일인 경우 이용예정일로부터 4일전까지, 평일인 경우 이용예정일로부터 3일전까지 예약을 취소한 경우에는 예약금의 전액을 환불한다.",
-  "open_cycle": null,
+  "open_cycle": "회원제 정회원 30일 전, 비회원 25일 전 / 대중제 30일 전부터 인터넷 예약(모든 예약은 인터넷만 가능)",
   "notes": null,
   "evidence": [
    "로그인 회원가입 클럽소개 인사말 클럽소개 부대시설 오시는길 인터넷예약 골프예약 골프호텔예약 예약조회/취소 예약규정 조인게시판 대기예약 코스안내 코스소개 코스공략 골프호텔 골프호텔소개 이용안내 객실안내 요금안내 이용안내 이용요금 위약안내 분양안내 로컬룰 정보마당 공지사항 자료실 명예의전당 포토갤러리 해피니스 뉴스 오픈채팅방 1부,2부 조인방 3부(야간) 조인방 패키지 조인방 골프대회 아마추어 대회 KLPGA 대회 자연과 하나 되는 45홀 골프 천국 울창한 숲과 호수로 이루어진 45홀에서 골프의 진정한 품격을 경험하세요.",
@@ -290,8 +291,15 @@
    "evidence": []
   },
   "five_player": {
-   "value": null,
-   "evidence": []
+   "value": "주말·공휴일 5인 플레이 사전예약 가능(리무진카트 또는 2카트 2캐디)",
+   "evidence": [
+    "주말 및 공휴일에는 5인 플레이시 사전예약으로 가능하오니 예약실로 문의 부탁드립니다"
+   ],
+   "source_url": "https://www.happinesscc.com/html/guide01.asp",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch5_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "marshal_caddie": {
    "value": null,
@@ -559,7 +567,7 @@
   "basic": 0.78,
   "course": 0.6,
   "fee": 1.0,
-  "ops": 0.36,
+  "ops": 0.43,
   "facility": 0.6,
   "briefing": 0.0,
   "rental": 0.0

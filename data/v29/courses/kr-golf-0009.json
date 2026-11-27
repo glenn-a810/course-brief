@@ -13,7 +13,9 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch5_supplement_2026_11_27": "누락 필드 보완 배치5(호남권) 검수 반영",
+  "data_correction_2026_11_27": "홈페이지 정정: goldlakecc.co.kr(접속 불가) → goldlake.co.kr, 전화 061-339-3000 일치"
  },
  "master": {
   "course_id": "kr-golf-0009",
@@ -47,7 +49,7 @@
    "straight_name": "능주IC"
   },
   "tel": "061-339-3000",
-  "homepage": "http://www.goldlakecc.co.kr/",
+  "homepage": "https://www.goldlake.co.kr/",
   "operators": [
    "임대형"
   ],
@@ -402,8 +404,13 @@
   }
  },
  "cancel": {
-  "cancel_policy": null,
-  "open_cycle": null,
+  "cancel_policy": {
+   "value": "주중·주말 모두 10일 이전까지 정상 취소, 9일 전부터 위약(9~6일 전 1주, 5~3일 전 2주, 2일 전 3주, 1일 전 4주 예약정지, 당일·무단결장 시 정상그린피 30~50% 위약금)",
+   "source": "공식 홈페이지",
+   "url": "https://www.goldlake.co.kr/guide/penalty",
+   "checked_at": "2026-11-27"
+  },
+  "open_cycle": "회원제 정회원 28일·준회원 27일·주중회원 27일·비회원 25일 / 대중제 28일 전부터, 매일 09:00 실시간 선착순",
   "notes": null,
   "evidence": [],
   "weather_evidence": []

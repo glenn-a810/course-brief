@@ -13,7 +13,9 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch5_supplement_2026_11_27": "누락 필드 보완 배치5(호남권) 검수 반영",
+  "data_correction_2026_11_27": "홈페이지 보완: gygc.kr(광양컨트리클럽) 확인, 전화 061-817-0707 일치"
  },
  "master": {
   "course_id": "kr-golf-0008",
@@ -47,7 +49,7 @@
    "straight_name": "만흥IC"
   },
   "tel": "061-817-0707",
-  "homepage": null,
+  "homepage": "http://www.gygc.kr/",
   "operators": [
    "반재경"
   ],
@@ -122,7 +124,12 @@
   }
  },
  "cancel": {
-  "cancel_policy": null,
+  "cancel_policy": {
+   "value": "평일 이용 3일 전, 주말·공휴일 4일 전까지 취소 시 예약금 전액 환불. 이후 2일 전 10%, 1일 전 20%, 당일 취소·노쇼 30% 위약금(표준약관 제10033호)",
+   "source": "공식 홈페이지",
+   "url": "http://www.gygc.kr/04guide/guide02.asp",
+   "checked_at": "2026-11-27"
+  },
   "open_cycle": null,
   "notes": null,
   "evidence": [],

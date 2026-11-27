@@ -13,7 +13,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch5_supplement_2026_11_27": "누락 필드 보완 배치5(호남권) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0017",
@@ -287,8 +288,18 @@
   ],
   "grass": {
    "tee": null,
-   "fairway": null,
-   "green": null
+   "fairway": {
+    "value": "중지",
+    "evidence": "페어웨이 : 중지",
+    "source": "공식 홈페이지",
+    "url": "http://www.muangc.co.kr/bbs/board.php?bo_table=main&wr_id=3"
+   },
+   "green": {
+    "value": "펜크로스벤트그라스",
+    "evidence": "그린 : 펜크로스벤트그라스",
+    "source": "공식 홈페이지",
+    "url": "http://www.muangc.co.kr/bbs/board.php?bo_table=main&wr_id=3"
+   }
   },
   "kga": {
    "kga_course_code": "98",
@@ -690,8 +701,15 @@
    "value": "문구 확인(원문 근거)"
   },
   "sauna": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "최신 설비의 사우나실을 갖춘 락커는 최첨단 전자키를 도입하여"
+   ],
+   "value": "최신 설비 사우나실 운영",
+   "source_url": "http://www.muangc.co.kr/facility/facility03.php",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch5_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "dress": {
    "evidence": [],
@@ -882,7 +900,7 @@
   "basic": 0.78,
   "course": 0.6,
   "fee": 1.0,
-  "ops": 0.21,
+  "ops": 0.29,
   "facility": 0.3,
   "briefing": 0.0,
   "rental": 0.25

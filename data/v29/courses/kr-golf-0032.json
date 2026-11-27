@@ -13,7 +13,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch5_supplement_2026_11_27": "누락 필드 보완 배치5(호남권) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0032",
@@ -616,7 +617,12 @@
   }
  },
  "cancel": {
-  "cancel_policy": null,
+  "cancel_policy": {
+   "value": "주중은 3일 전까지, 주말·공휴일은 4일 전까지 취소해야 위약 없음(주중 2일 전부터, 주말·공휴일 3일 전부터 위약)",
+   "source": "공개 예약 플랫폼",
+   "url": "https://www.golfzoncounty.com/golfclub/resvGuide?golfclubSeq=59",
+   "checked_at": "2026-11-27"
+  },
   "open_cycle": "매주 월요일 오전 9시, 오픈 주 포함 5주 뒤 월~일요일 예약 오픈",
   "notes": null,
   "evidence": [

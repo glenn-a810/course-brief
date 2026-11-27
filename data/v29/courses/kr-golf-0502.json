@@ -13,7 +13,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch5_supplement_2026_11_27": "누락 필드 보완 배치5(호남권) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0502",
@@ -139,8 +140,13 @@
   "official_rental": null
  },
  "cancel": {
-  "cancel_policy": null,
-  "open_cycle": null,
+  "cancel_policy": {
+   "value": "1일 전 취소 1개월, 예약자 불참 2개월, 당일 취소 4개월, 무단불참 6개월 예약정지",
+   "source": "공식 홈페이지",
+   "url": "https://golf.jjss.or.kr/reservation_guide.jsp",
+   "checked_at": "2026-11-27"
+  },
+  "open_cycle": "해당 주 2~3주 전(14~21일 전): 평일은 월요일 10:00부터 2주치(10일), 주말은 월요일 11:00부터 2주치(4일) 물량 예약",
   "notes": null,
   "evidence": [],
   "weather_evidence": [],

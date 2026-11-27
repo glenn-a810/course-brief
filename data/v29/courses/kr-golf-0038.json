@@ -13,7 +13,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch5_supplement_2026_11_27": "누락 필드 보완 배치5(호남권) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0038",
@@ -166,7 +167,7 @@
  },
  "cancel": {
   "cancel_policy": "1일전 예약취소",
-  "open_cycle": null,
+  "open_cycle": "예약 희망일 4주 전 예약",
   "notes": null,
   "evidence": [
    "함평 엘리체 컨트리클럽 로그인 회원가입 CEO 인사말 클럽소개 골프장개요 코스개요 찾아오시는길 예약하기 예약확인/취소 회원서비스 이용안내 이용요금 예약안내 Local Rule 골프텔 이용안내 회원약관 코스공략법 클럽하우스 소개 클럽하우스 메뉴 공지사항 조인예약 골프자료실 분실물센터 포토갤러리 회원정보변경 이용내역 정보마당 공지사항 조인예약 골프자료실 분실물센터 포토갤러리 > 정보마당 > 공지사항 게시물 내용 26년12월그린피 등록일2026.11.12 11:43|조회수256 .",
@@ -200,8 +201,15 @@
    "evidence": []
   },
   "five_player": {
-   "value": null,
-   "evidence": []
+   "value": "5인 플레이는 2캐디·2카트 원칙, 예약실 사전 문의",
+   "evidence": [
+    "5인플레이는 2캐디 2카트 원칙이며 예약실로 사전 문의"
+   ],
+   "source_url": "https://www.hpelichecc.co.kr/hampyeong/html/guide/guide02.asp",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch5_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "marshal_caddie": {
    "value": null,
@@ -407,7 +415,7 @@
   "basic": 0.89,
   "course": 0.2,
   "fee": 0.75,
-  "ops": 0.0,
+  "ops": 0.07,
   "facility": 0.3,
   "briefing": 0.0,
   "rental": 0.75
