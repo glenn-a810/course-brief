@@ -157,8 +157,11 @@ function getAdapter(): SearchAdapter {
  * JSON 경계. 원격 데이터는 스키마(`data/v29/schema.md`)를 따르며,
  * 여기서는 T 로 좁혀서 넘긴다(필드 단위 검증은 data:check 담당).
  */
-async function loadJSON<T>(name: string): Promise<T> {
-  const res = await fetch(`${CONFIG.dataBase}${name}`, { cache: "no-cache" });
+async function loadJSON<T>(name: string, version?: string): Promise<T> {
+  // 구장 상세 JSON 은 CDN·브라우저에 하루 캐시된다. 데이터가 갱신되면 URL 의 v 가 바뀌어
+  // 이전 방문자가 옛 상세를 보지 않게 한다(값 자체는 정적 파일이라 no-cache 로 매번 확인).
+  const q = version ? `${name.includes("?") ? "&" : "?"}v=${encodeURIComponent(version)}` : "";
+  const res = await fetch(`${CONFIG.dataBase}${name}${q}`, { cache: "no-cache" });
   if (!res.ok) throw new Error(`${name} ${res.status}`);
   return (await res.json()) as T;
 }
@@ -500,7 +503,7 @@ async function renderDetail(id: string): Promise<void> {
   let detail: CourseDetail | null = null;
   if (course.detail) {
     try {
-      detail = await loadJSON<CourseDetail>(`courses/${id}.json`);
+      detail = await loadJSON<CourseDetail>(`courses/${id}.json`, getIndex().dataset.built_at);
     } catch (e) {
       console.warn(e);
     }
