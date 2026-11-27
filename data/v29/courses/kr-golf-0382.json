@@ -27,7 +27,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "user_supplement_batch7_2026_11_27": "2차(일반 사용자 자료) 배치7(부울경) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0382",
@@ -107,7 +108,7 @@
   "holes_received": 18,
   "course_names": "미륵 9홀 + 한려 9홀, 6,534m(7,142yd)",
   "membership_type": "대중제",
-  "night_light": null,
+  "night_light": "3부 야간 라운드 운영(2026-11 최저가티)",
   "blocks": [],
   "grass": {
    "tee": "켄터키블루그래스",
@@ -149,11 +150,17 @@
   "checked_at": "2026-11-27"
  },
  "cancel": {
-  "cancel_policy": null,
+  "cancel_policy": {
+   "value": "경기일 제외 7일 전 17:00까지 취소 가능, 이후 구간은 위약금·예약정지 적용",
+   "source": "블로그(공개 정리글)",
+   "url": "https://parkgolfinfo.co.kr/%ed%86%b5%ec%98%81-%eb%8f%99%ec%9b%90%eb%a1%9c%ec%96%84cc-%ea%b3%a8%ed%94%84%ec%9e%a5-%ec%98%88%ec%95%bd-%eb%b0%8f-%ec%9d%b4%ec%9a%a9%eb%b0%a9%eb%b2%95-%ec%83%81%ec%84%b8-%ec%95%88%eb%82%b4/",
+   "checked_at": "2026-11-27"
+  },
   "open_cycle": "일반예약: 3주전부터 매주 월요일(9시)~1주일 분에 대한 실시간 예약신청. 인터넷 홈페이지·모바일 웹·전화 예약. 예약 마감 해당일 1일전 17시.",
   "notes": null,
   "evidence": [
-   "https://wondergolf.co.kr/courses/kr-kakao-1493127856"
+   "https://wondergolf.co.kr/courses/kr-kakao-1493127856",
+   "정상 취소(안내): 경기일 제외 7일 전 17:00까지 취소 가능 안내 … 이후 구간은 위약금/예약정지가 적용되는 표가 별도로 안내됩니다"
   ],
   "weather_evidence": []
  },

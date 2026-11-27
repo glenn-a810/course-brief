@@ -44,7 +44,8 @@
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
   "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
-  "batch7_supplement_2026_11_27": "누락 필드 보완 배치7(부산·울산·경남) 검수 반영"
+  "batch7_supplement_2026_11_27": "누락 필드 보완 배치7(부산·울산·경남) 검수 반영",
+  "user_supplement_batch7_2026_11_27": "2차(일반 사용자 자료) 배치7(부울경) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0049",
@@ -128,7 +129,12 @@
   "grass": {
    "tee": null,
    "fairway": "한국잔디",
-   "green": null
+   "green": {
+    "value": "고려지(금잔디)에 라이그래스 덧파종",
+    "evidence": "금잔디로도 불리는 고려지로 조성된 국내 유일의 코스",
+    "source": "블로그(공개 정리글)",
+    "url": "https://write84675.tistory.com/94"
+   }
   },
   "kga": {
    "code": "77",
@@ -224,8 +230,15 @@
    "evidence": []
   },
   "mat": {
-   "value": null,
-   "evidence": []
+   "value": "불가 — 매트 티박스 없음(티박스 잔디 운영)",
+   "evidence": [
+    "티박스 good과soso사이 : 매트티박스는 없었고 겨울치곤 좋은상태였다"
+   ],
+   "source_url": "https://m.blog.naver.com/kin1584/223744896080",
+   "source_type": "blog",
+   "confidence": "low",
+   "value_from": "user_batch7_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "checkin": {
    "value": null,

@@ -27,7 +27,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "user_supplement_batch7_2026_11_27": "2차(일반 사용자 자료) 배치7(부울경) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0362",
@@ -222,16 +223,30 @@
    "evidence": []
   },
   "two_player": {
-   "value": null,
-   "evidence": []
+   "value": "4인 플레이 원칙 — 인원 미달 시에도 4인 요금 적용(2인 단독 가능 여부는 미확인)",
+   "evidence": [
+    "4인 플레이 원칙(미달 시에도 4인 요금 적용)"
+   ],
+   "source_url": "https://todaygolfgo.com/golf-courses/master/golf-course-moct-20241231-0238/",
+   "source_type": "greenfee_guide",
+   "confidence": "medium",
+   "value_from": "user_batch7_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "three_player": {
    "value": null,
    "evidence": []
   },
   "five_player": {
-   "value": null,
-   "evidence": []
+   "value": "가능 — 5백 플레이 시 캐디 2명 배치(5bag 200,000원/팀)",
+   "evidence": [
+    "캐디피 4bag 150,000원 · 5bag 200,000원 (팀)"
+   ],
+   "source_url": "https://todaygolfgo.com/golf-courses/master/golf-course-moct-20241231-0238/",
+   "source_type": "greenfee_guide",
+   "confidence": "medium",
+   "value_from": "user_batch7_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "marshal_caddie": {
    "value": null,

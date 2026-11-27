@@ -50,7 +50,8 @@
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
   "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
-  "batch7_supplement_2026_11_27": "누락 필드 보완 배치7(부산·울산·경남) 검수 반영"
+  "batch7_supplement_2026_11_27": "누락 필드 보완 배치7(부산·울산·경남) 검수 반영",
+  "user_supplement_batch7_2026_11_27": "2차(일반 사용자 자료) 배치7(부울경) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0081",
@@ -132,7 +133,7 @@
   "holes_received": 9,
   "course_names": "9홀(파36), 2그린(땅콩형·길이 63.3m)",
   "membership_type": "대중제",
-  "night_light": null,
+  "night_light": "야간 라운드 운영(LED 조명, 2026)",
   "blocks": [],
   "grass": {
    "tee": null,
@@ -141,7 +142,9 @@
   },
   "kga": null,
   "kga_hole_est": null,
-  "extra_courses": null
+  "extra_courses": null,
+  "length_m": 2897,
+  "par": 36
  },
  "fee": {
   "weekday": null,
@@ -168,9 +171,11 @@
  },
  "cancel": {
   "cancel_policy": "3일 전 18:00까지 위약 없이 취소",
-  "open_cycle": null,
+  "open_cycle": "이용일 14일 전 09:00 오픈(인터넷·전화, 선착순)",
   "notes": "7~8월 '2인라운드가능' 이벤트 공지, 시즌별 그린피 할인 이벤트 운영",
-  "evidence": [],
+  "evidence": [
+   "주중 인터넷: 해당일 14일 전 09:00 전화: 해당일 14일 전 09:00 – 17:00 / 주말 및 공휴일 인터넷: 해당일 14일 전 (https://parkgolfinfo.com/%ea%b3%a8%eb%93%9c%ea%b7%b8%eb%a6%b0cc-%ea%b7%b8%eb%a6%b0%ed%94%bc/)"
+  ],
   "weather_evidence": []
  },
  "ops": {

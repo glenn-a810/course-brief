@@ -28,7 +28,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "user_supplement_batch7_2026_11_27": "2차(일반 사용자 자료) 배치7(부울경) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0363",
@@ -165,8 +166,15 @@
    "evidence": []
   },
   "five_player": {
-   "value": null,
-   "evidence": []
+   "value": "가능 — 5인 플레이 허용",
+   "evidence": [
+    "요즘 보기 드문 5인 플레이가 허용돼 가족 단위나 초보 동반 라운드에 활용도가 높습니다"
+   ],
+   "source_url": "https://golfjoin.co.kr/golf-courses/millyangcountryclub",
+   "source_type": "review_aggregator",
+   "confidence": "low",
+   "value_from": "user_batch7_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "marshal_caddie": {
    "value": null,
@@ -185,8 +193,15 @@
    "evidence": []
   },
   "mat": {
-   "value": null,
-   "evidence": []
+   "value": "운영 — 티잉 구역 인조잔디 매트",
+   "evidence": [
+    "티잉 구역이 천연잔디가 아닌 인조잔디 매트이고 일부 홀은 매트 관리가 필요해 보인다는 지적이 있습니다"
+   ],
+   "source_url": "https://golfjoin.co.kr/golf-courses/millyangcountryclub",
+   "source_type": "review_aggregator",
+   "confidence": "low",
+   "value_from": "user_batch7_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "checkin": {
    "value": null,

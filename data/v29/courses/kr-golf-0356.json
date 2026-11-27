@@ -63,7 +63,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "user_supplement_batch7_2026_11_27": "2차(일반 사용자 자료) 배치7(부울경) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0356",
@@ -155,12 +156,17 @@
   "holes_received": 18,
   "course_names": "스카이 9홀 + 힐 9홀(3,246m·3,157m)",
   "membership_type": "회원제(비회원 예약 가능)",
-  "night_light": null,
+  "night_light": "3부 야간 라운드 운영(2023-08 후기)",
   "blocks": [],
   "grass": {
    "tee": null,
    "fairway": "한국잔디",
-   "green": null
+   "green": {
+    "value": "벤트그라스",
+    "evidence": "페어웨이는 한국잔디, 그린은 벤트그라스로 관리되어 있으며",
+    "source": "블로그(공개 정리글)",
+    "url": "https://papahun.com/%ea%b2%bd%eb%82%a8-%ea%b9%80%ed%95%b4%ed%8f%ac%ec%9b%b0cc-%ed%95%9c%eb%88%88%ec%97%90-%ec%a0%95%eb%a6%ac-%ea%b0%80%ec%84%b1%eb%b9%84%ec%bd%94%ec%8a%a4%ec%98%88%ec%95%bd/"
+   }
   },
   "kga": {
    "code": "237",
@@ -234,8 +240,15 @@
    "evidence": []
   },
   "five_player": {
-   "value": null,
-   "evidence": []
+   "value": "가능 — 5인 플레이 가능(캐디 2명 배치, 사전예약 필수)",
+   "evidence": [
+    "캐디피 1-2부 5인 280,000원 1팀당 2명배치 (사전예약필수)"
+   ],
+   "source_url": "https://m.blog.naver.com/lucky_bravo/224084761167",
+   "source_type": "blog",
+   "confidence": "low",
+   "value_from": "user_batch7_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "marshal_caddie": {
    "value": null,
@@ -250,8 +263,15 @@
    "evidence": []
   },
   "bagdrop": {
-   "value": null,
-   "evidence": []
+   "value": "있음 — 야간은 클럽하우스 입구에 캐디백 하차",
+   "evidence": [
+    "야간은 캐디백을 클럽하우스 입구에 두고 갑니다"
+   ],
+   "source_url": "https://m.blog.naver.com/lucky_bravo/224084761167",
+   "source_type": "blog",
+   "confidence": "low",
+   "value_from": "user_batch7_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "mat": {
    "value": null,

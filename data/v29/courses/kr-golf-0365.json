@@ -28,7 +28,8 @@
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
   "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
-  "batch7_supplement_2026_11_27": "누락 필드 보완 배치7(부산·울산·경남) 검수 반영"
+  "batch7_supplement_2026_11_27": "누락 필드 보완 배치7(부산·울산·경남) 검수 반영",
+  "user_supplement_batch7_2026_11_27": "2차(일반 사용자 자료) 배치7(부울경) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0365",
@@ -113,7 +114,12 @@
   "grass": {
    "tee": null,
    "fairway": "한국잔디",
-   "green": null
+   "green": {
+    "value": "벤트그라스",
+    "evidence": "잔디정보 : 페어웨이 켄터키블루그라스 / 그린 벤트클라스",
+    "source": "블로그(공개 정리글)",
+    "url": "https://powershin.co.kr/%ec%82%bc%ec%82%bccc-%eb%85%b8%ec%ba%90%eb%94%94-%eb%a7%88%ec%83%ac%ec%ba%90%eb%94%94-%ec%ba%90%eb%94%94%ec%9d%98-%ec%97%ad%ed%95%a0-%eb%b0%8f-%ec%82%bc%ec%82%bccc-%ec%98%88%ec%95%bd-3%ec%a3%bc/"
+   }
   },
   "kga": null,
   "kga_hole_est": null,
@@ -154,10 +160,17 @@
   "checked_at": "2026-11-27"
  },
  "cancel": {
-  "cancel_policy": null,
+  "cancel_policy": {
+   "value": "경기일 제외 5일 전 18시까지 인터넷·전화로 위약 없이 취소(이후 취소는 익일 취소로 간주·패널티)",
+   "source": "블로그(공개 정리글)",
+   "url": "https://powershin.co.kr/%ec%82%bc%ec%82%bccc-%eb%85%b8%ec%ba%90%eb%94%94-%eb%a7%88%ec%83%ac%ec%ba%90%eb%94%94-%ec%ba%90%eb%94%94%ec%9d%98-%ec%97%ad%ed%95%a0-%eb%b0%8f-%ec%82%bc%ec%82%bccc-%ec%98%88%ec%95%bd-3%ec%a3%bc/",
+   "checked_at": "2026-11-27"
+  },
   "open_cycle": "주중·주말·공휴일 모두 경기일 21일 전 09:00 예약 오픈",
   "notes": null,
-  "evidence": [],
+  "evidence": [
+   "예약취소는 경기일을 제외하고 5일전 18시까지는 인터넷 전화로 자유로이 취소가능 / 경기일 제외하 5일전 18시 이후 취소는 익일취소로 간주"
+  ],
   "weather_evidence": []
  },
  "ops": {
@@ -178,8 +191,15 @@
    "evidence": []
   },
   "marshal_caddie": {
-   "value": null,
-   "evidence": []
+   "value": "있음 — 마샬캐디 90,000원(일반 캐디피 140,000원)",
+   "evidence": [
+    "캐디피 140,000 / 마샬캐디 90,000 3인 라운딩 가능"
+   ],
+   "source_url": "https://powershin.co.kr/%ec%82%bc%ec%82%bccc-%eb%85%b8%ec%ba%90%eb%94%94-%eb%a7%88%ec%83%ac%ec%ba%90%eb%94%94-%ec%ba%90%eb%94%94%ec%9d%98-%ec%97%ad%ed%95%a0-%eb%b0%8f-%ec%82%bc%ec%82%bccc-%ec%98%88%ec%95%bd-3%ec%a3%bc/",
+   "source_type": "blog",
+   "confidence": "low",
+   "value_from": "user_batch7_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "cart_type": {
    "value": "5인승 전자유도식(야마하)",
@@ -190,12 +210,26 @@
    "evidence": []
   },
   "bagdrop": {
-   "value": null,
-   "evidence": []
+   "value": "있음 — 캐디가 골프백 직접 하차",
+   "evidence": [
+    "골프백 하차는 캐디가 직접 하차함"
+   ],
+   "source_url": "https://powershin.co.kr/%ec%82%bc%ec%82%bccc-%eb%85%b8%ec%ba%90%eb%94%94-%eb%a7%88%ec%83%ac%ec%ba%90%eb%94%94-%ec%ba%90%eb%94%94%ec%9d%98-%ec%97%ad%ed%95%a0-%eb%b0%8f-%ec%82%bc%ec%82%bccc-%ec%98%88%ec%95%bd-3%ec%a3%bc/",
+   "source_type": "blog",
+   "confidence": "low",
+   "value_from": "user_batch7_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "mat": {
-   "value": null,
-   "evidence": []
+   "value": "운영 — 매트 티샷",
+   "evidence": [
+    "그린이 느리고 매트 티샷이라는 점은 반복되는 아쉬움입니다"
+   ],
+   "source_url": "https://golfjoin.co.kr/golf-courses/samsamcountryclub",
+   "source_type": "review_aggregator",
+   "confidence": "low",
+   "value_from": "user_batch7_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "checkin": {
    "value": "티오프 40분 전 도착, 10분 전 스타트·카트 대기",

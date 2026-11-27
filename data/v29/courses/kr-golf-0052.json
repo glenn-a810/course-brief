@@ -70,7 +70,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "user_supplement_batch7_2026_11_27": "2차(일반 사용자 자료) 배치7(부울경) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0052",
@@ -157,7 +158,8 @@
   },
   "kga": null,
   "kga_hole_est": null,
-  "extra_courses": null
+  "extra_courses": null,
+  "par": 72
  },
  "fee": {
   "weekday": 210000,
@@ -230,12 +232,26 @@
    "evidence": []
   },
   "bagdrop": {
-   "value": null,
-   "evidence": []
+   "value": "있음 — 차키를 맡기면 라운드 후 캐디가 차에 백을 실어줌",
+   "evidence": [
+    "차키는 맡기는시스템. 라운딩끝나면 캐디가차에 백을 실어준다."
+   ],
+   "source_url": "https://m.blog.naver.com/kin1584/223737340456",
+   "source_type": "blog",
+   "confidence": "low",
+   "value_from": "user_batch7_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "mat": {
-   "value": null,
-   "evidence": []
+   "value": "운영 — 일부 홀 매트 티박스",
+   "evidence": [
+    "티박스 soso : 매트티박스가 몇곳있었고"
+   ],
+   "source_url": "https://m.blog.naver.com/kin1584/223737340456",
+   "source_type": "blog",
+   "confidence": "low",
+   "value_from": "user_batch7_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "checkin": {
    "value": null,

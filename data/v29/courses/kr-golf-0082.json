@@ -27,7 +27,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "user_supplement_batch7_2026_11_27": "2차(일반 사용자 자료) 배치7(부울경) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0082",
@@ -105,7 +106,7 @@
   "holes_received": 18,
   "course_names": "OUT 9홀 + IN 9홀(OUT 물 중심, IN 숲 속 넓은 루트)",
   "membership_type": "대중제",
-  "night_light": null,
+  "night_light": "전 홀 야간 조명(2026)",
   "blocks": [],
   "grass": {
    "tee": "켄터키블루그래스",
@@ -152,9 +153,11 @@
  },
  "cancel": {
   "cancel_policy": "고객 임의 중단 시 1~18홀 정상 요금. 악천후 시 홀별 정산(그린피 기본요금 20,000원, 카트 1홀 1만원·10홀 6만원, 캐디피 1~3홀 5만원·4~9홀 8만원·10~12홀 15만원)",
-  "open_cycle": null,
+  "open_cycle": "2주 전 월요일 09:00부터 예약 오픈(인터넷·모바일)",
   "notes": null,
-  "evidence": [],
+  "evidence": [
+   "예약은 주 중/주말별로 조금씩 다르지만 2주 전 월요일 오전 9시부터 예약을 할 수 있습니다 (https://howwiki.net/orbis-cc-membership-registration-reservation)"
+  ],
   "weather_evidence": []
  },
  "ops": {
@@ -163,20 +166,41 @@
    "evidence": []
   },
   "two_player": {
-   "value": null,
-   "evidence": []
+   "value": "불가 — 1팀당 3~4인만 내장 가능",
+   "evidence": [
+    "내장 인원은 1팀당 3~4인 가능합니다."
+   ],
+   "source_url": "https://orvis.club/swp/useGuide",
+   "source_type": "official_site",
+   "confidence": "high",
+   "value_from": "user_batch7_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "three_player": {
    "value": "가능",
    "evidence": []
   },
   "five_player": {
-   "value": null,
-   "evidence": []
+   "value": "불가 — 1팀당 3~4인만 내장 가능",
+   "evidence": [
+    "내장 인원은 1팀당 3~4인 가능합니다."
+   ],
+   "source_url": "https://orvis.club/swp/useGuide",
+   "source_type": "official_site",
+   "confidence": "high",
+   "value_from": "user_batch7_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "marshal_caddie": {
-   "value": null,
-   "evidence": []
+   "value": "있음 — 경기 지연 시 진행요원이 3회 이상 협조 요청",
+   "evidence": [
+    "진행요원을 통한 3회 이상 경기진행 협조 요청 후 미개선 시"
+   ],
+   "source_url": "https://orvis.club/swp/useGuide",
+   "source_type": "official_site",
+   "confidence": "high",
+   "value_from": "user_batch7_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "cart_type": {
    "value": "전동카트·6인승 리무진카트",
@@ -191,8 +215,15 @@
    "evidence": []
   },
   "mat": {
-   "value": null,
-   "evidence": []
+   "value": "대부분 홀 잔디 티박스, 일부 매트 티박스",
+   "evidence": [
+    "모든 홀 잔디 티박스 37 · 매트 티박스 2 (최근 90일 후기 태그 집계)"
+   ],
+   "source_url": "https://www.kakao.golf/golf/696",
+   "source_type": "booking_review",
+   "confidence": "low",
+   "value_from": "user_batch7_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "checkin": {
    "value": "티오프 시간 경과 후 도착한 팀은 홀 패스 원칙",

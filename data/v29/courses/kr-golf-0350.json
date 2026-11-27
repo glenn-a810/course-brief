@@ -27,7 +27,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "user_supplement_batch7_2026_11_27": "2차(일반 사용자 자료) 배치7(부울경) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0350",
@@ -174,12 +175,26 @@
  },
  "ops": {
   "nocaddie": {
-   "value": null,
-   "evidence": []
+   "value": "일부 — 11월 주중 등 지정 기간 노캐디 셀프라운드 운영",
+   "evidence": [
+    "11월 주중에는 캐디 없이 도는 노캐디 셀프라운드도 있습니다"
+   ],
+   "source_url": "https://golf.tjinmoney.com/clubd-geochang-cc-review/",
+   "source_type": "blog",
+   "confidence": "medium",
+   "value_from": "user_batch7_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "two_player": {
-   "value": null,
-   "evidence": []
+   "value": "불가 — 1팀 3인 이상만 플레이 가능",
+   "evidence": [
+    "이용 조건 | 대중제 · 1팀 3인 이상 플레이"
+   ],
+   "source_url": "https://golf.tjinmoney.com/clubd-geochang-cc-review/",
+   "source_type": "blog",
+   "confidence": "medium",
+   "value_from": "user_batch7_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "three_player": {
    "value": "1팀 3인 이상 플레이 가능",

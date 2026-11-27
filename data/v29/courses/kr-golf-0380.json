@@ -71,7 +71,8 @@
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
   "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
-  "batch7_supplement_2026_11_27": "누락 필드 보완 배치7(부산·울산·경남) 검수 반영"
+  "batch7_supplement_2026_11_27": "누락 필드 보완 배치7(부산·울산·경남) 검수 반영",
+  "user_supplement_batch7_2026_11_27": "2차(일반 사용자 자료) 배치7(부울경) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0380",
@@ -259,8 +260,15 @@
    "checked_at": "2026-11-27"
   },
   "five_player": {
-   "value": null,
-   "evidence": []
+   "value": "가능 — 5인 플레이 운영(인터넷 예약 불가, 전화 문의·팀당 추가요금)",
+   "evidence": [
+    "5인 플레이: 인터넷 예약 불가 → 전화 문의"
+   ],
+   "source_url": "https://beomstory.co.kr/%ec%95%84%eb%9d%bc%eb%af%b8%eb%a5%b4cc-%ea%b3%a8%ed%94%84%ec%9e%a5-%ec%b4%88%ed%96%89%ec%9e%90-%eb%a3%a8%ed%8b%b4%e2%9b%b3-%ec%98%88%ec%95%bd-%eb%b0%8f-%ec%9d%b4%ec%9a%a9%eb%b0%a9%eb%b2%95-%ec%95%88/",
+   "source_type": "blog",
+   "confidence": "medium",
+   "value_from": "user_batch7_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "marshal_caddie": {
    "value": null,
@@ -279,8 +287,15 @@
    "evidence": []
   },
   "mat": {
-   "value": null,
-   "evidence": []
+   "value": "운영 — 티박스 상당수 매트·인조잔디",
+   "evidence": [
+    "티박스 상당수가 매트·인조잔디라 아쉽다는 지적이 반복되고"
+   ],
+   "source_url": "https://golfjang.kr/courses/dbegl-663-%EC%A7%84%ED%95%B4%EC%8B%A0%ED%95%AD-%EA%B5%AC-%EC%95%84%EB%9D%BC%EB%AF%B8%EB%A5%B4/",
+   "source_type": "user_review",
+   "confidence": "low",
+   "value_from": "user_batch7_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "checkin": {
    "value": null,

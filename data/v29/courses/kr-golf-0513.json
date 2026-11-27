@@ -184,7 +184,8 @@
    "checked_at": "2026-11-27"
   },
   "batch3_patch": "2026-11-27 배치6(대구·경북) 보완: 15개 항목(공식 홈페이지·그린피가이드 공식 안내 확인 기준, 미확인 값 생성 없음)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "user_supplement_batch6_2026_11_27": "2차(일반 사용자 자료) 배치6(대구·경북) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0513",
@@ -413,8 +414,15 @@
    "value": null
   },
   "mat": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "일반적으로는 매트에서 드라이브 티샷을 하는게 보통인데, 티박스에 매트는 전혀 보이질 않았으며, 캐디에게 물어봐도 티박스에 매트 깔 계획은 없다고 했어요."
+   ],
+   "value": "티박스 매트 없음(18홀 전 타석 잔디 티샷)",
+   "source_url": "https://m.blog.naver.com/bubudate/224335409047",
+   "source_type": "blog",
+   "confidence": "medium",
+   "value_from": "user_batch6_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "checkin": {
    "evidence": [

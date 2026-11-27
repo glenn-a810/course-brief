@@ -28,7 +28,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "user_supplement_batch7_2026_11_27": "2차(일반 사용자 자료) 배치7(부울경) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0083",
@@ -106,7 +107,7 @@
   "holes_received": 27,
   "course_names": "남·동·서 각 9홀",
   "membership_type": "회원제(비회원 예약 가능)",
-  "night_light": null,
+  "night_light": "3부 야간 라운드 운영(2026)",
   "blocks": [],
   "grass": {
    "tee": null,
@@ -150,18 +151,31 @@
   "checked_at": "2026-11-27"
  },
  "cancel": {
-  "cancel_policy": null,
+  "cancel_policy": {
+   "value": "예약 취소는 경기일 제외 7일 전 17:00까지 ARS 접수",
+   "source": "블로그(공개 정리글)",
+   "url": "https://m.blog.naver.com/nice3274/224257846867",
+   "checked_at": "2026-11-27"
+  },
   "open_cycle": "평일(화~금) 경기일 2주전 월요일 10:00부터 ARS, 토요일 전주 월요일 14:00부터 ARS, 일요일 경기일 12일 전(화) 11:00~13:00 문자 접수",
   "notes": null,
   "evidence": [
-   "https://wondergolf.co.kr/courses/kr-kakao-8034159"
+   "https://wondergolf.co.kr/courses/kr-kakao-8034159",
+   "예약 취소: 경기일 제외 7일전 17:00까지 ARS"
   ],
   "weather_evidence": []
  },
  "ops": {
   "nocaddie": {
-   "value": null,
-   "evidence": []
+   "value": "가능 — 노캐디 셀프 라운드 운영(카트비 1만 원 추가)",
+   "evidence": [
+    "노캐디 시 10,000 부과"
+   ],
+   "source_url": "https://m.blog.naver.com/nice3274/224257846867",
+   "source_type": "blog",
+   "confidence": "medium",
+   "value_from": "user_batch7_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "two_player": {
    "value": null,

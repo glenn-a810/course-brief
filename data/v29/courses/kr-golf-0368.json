@@ -28,7 +28,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "user_supplement_batch7_2026_11_27": "2차(일반 사용자 자료) 배치7(부울경) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0368",
@@ -147,11 +148,17 @@
   "checked_at": "2026-11-27"
  },
  "cancel": {
-  "cancel_policy": null,
+  "cancel_policy": {
+   "value": "이용일 제외 7일 전 16시까지 취소 가능(평일·주말 동일)",
+   "source": "예약 플랫폼(공개 정보)",
+   "url": "https://www.ks-membership.co.kr/html/sub11_view.php?agubun=&level_state22=&mode=2&no=86&page=&sword=",
+   "checked_at": "2026-11-27"
+  },
   "open_cycle": "평일: 정회원 해당 요일 2주전 10시, 지정/플러스회원 해당일 제외 13일전 10시, 준회원·비회원 해당일 제외 12일전 10시. 주말: 정회원 예약일 전주 화요일 14~16시, 지정/플러스·준·비회원 예약주 월요일 16시부터(정회원 주말 취소 접수 마감 후). 공휴일: 정회원 해당 요일 2주전 10시, 그 외 해당일 제외 10일전 10시부터. 우선예약(정회원) 16일전 14~16시, 긴급예약 전주 수요일 14시~금요일 12시",
   "notes": null,
   "evidence": [
-   "https://wondergolf.co.kr/courses/kr-kakao-16975978"
+   "https://wondergolf.co.kr/courses/kr-kakao-16975978",
+   "예약취소 : 해당일 제외한 7일전 오후 4시까지"
   ],
   "weather_evidence": []
  },

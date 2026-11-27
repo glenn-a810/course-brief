@@ -27,7 +27,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "user_supplement_batch7_2026_11_27": "2차(일반 사용자 자료) 배치7(부울경) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0372",
@@ -109,7 +110,12 @@
   "grass": {
    "tee": null,
    "fairway": "한국잔디",
-   "green": null
+   "green": {
+    "value": "벤트그래스",
+    "evidence": "중지로 조성된 페어웨이와 러프, 벤트그래스 그린이 연중 최상의 컨디션을 유지했다",
+    "source": "언론 보도",
+    "url": "https://www.mk.co.kr/news/sports/12063225"
+   }
   },
   "kga": {
    "code": "154",
@@ -126,7 +132,8 @@
    ]
   },
   "kga_hole_est": 27,
-  "extra_courses": null
+  "extra_courses": null,
+  "par": 72
  },
  "fee": {
   "weekday": 210000,
@@ -157,11 +164,17 @@
   "checked_at": "2026-11-27"
  },
  "cancel": {
-  "cancel_policy": null,
+  "cancel_policy": {
+   "value": "이용일 7일 전 16시까지 취소 가능, 이후 위약금(평일 7~5일 전 250,000원·5~3일 전 300,000원·3~1일 전 400,000원·당일/노쇼 500,000원, 주말은 더 높음)",
+   "source": "블로그(공개 정리글)",
+   "url": "https://write84675.tistory.com/78",
+   "checked_at": "2026-11-27"
+  },
   "open_cycle": "회원: 주중·주중 공휴일 해당 요일 3주 전 10시, 주말 2주 전 화요일 14시 접수. 비회원: 잔여타임에 한해 주중 2주 전부터, 주말 잔여타임 예약 가능. 실시간 인터넷 예약",
   "notes": null,
   "evidence": [
-   "https://wondergolf.co.kr/courses/kr-kakao-8004090"
+   "https://wondergolf.co.kr/courses/kr-kakao-8004090",
+   "취소 가능 기간 | 이용일 7일 전 16시까지 (2026. 7. 1 이용일부터 시행) … 평일 기준 7~5일 전 250,000원, 5~3일 전 300,000원, 3~1일 전 400,000원, 당일 취소·노쇼 500,000원"
   ],
   "weather_evidence": []
  },

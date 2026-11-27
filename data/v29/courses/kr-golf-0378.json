@@ -49,7 +49,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "user_supplement_batch7_2026_11_27": "2차(일반 사용자 자료) 배치7(부울경) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0378",
@@ -144,12 +145,17 @@
   "holes_received": 36,
   "course_names": "회원제 18홀(마루코스, 7,322yd) + 대중제 18홀(7,092yd), 남·동·북·서 각 9홀",
   "membership_type": "회원제 18홀 + 대중제 18홀",
-  "night_light": null,
+  "night_light": "3부 야간 라운드 운영(2026-11 후기)",
   "blocks": [],
   "grass": {
    "tee": null,
    "fairway": "한국잔디",
-   "green": null
+   "green": {
+    "value": "벤트그래스",
+    "evidence": "그린은 벤트그래스, 페어웨이는 한국잔디이고 디봇이 적고 관리가 잘 돼 있다는 후기가 많습니다",
+    "source": "블로그(공개 정리글)",
+    "url": "https://golf.tjinmoney.com/changnyeong-hillmaru-cc-review/"
+   }
   },
   "kga": {
    "code": "416",
@@ -330,16 +336,30 @@
    "evidence": []
   },
   "two_player": {
-   "value": null,
-   "evidence": []
+   "value": "불가 — 2인 플레이 불가(4인 1팀)",
+   "evidence": [
+    "이용 조건 2인·5인 플레이 불가 · 4인 팀"
+   ],
+   "source_url": "https://golf.tjinmoney.com/changnyeong-hillmaru-cc-review/",
+   "source_type": "blog",
+   "confidence": "medium",
+   "value_from": "user_batch7_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "three_player": {
    "value": null,
    "evidence": []
   },
   "five_player": {
-   "value": null,
-   "evidence": []
+   "value": "불가 — 5인 플레이 불가(4인 1팀)",
+   "evidence": [
+    "2인·5인 플레이는 받지 않아 4명이 모이지 않는 팀에는 맞지 않습니다"
+   ],
+   "source_url": "https://golf.tjinmoney.com/changnyeong-hillmaru-cc-review/",
+   "source_type": "blog",
+   "confidence": "medium",
+   "value_from": "user_batch7_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "marshal_caddie": {
    "value": null,

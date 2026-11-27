@@ -28,7 +28,8 @@
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
   "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
-  "batch7_supplement_2026_11_27": "누락 필드 보완 배치7(부산·울산·경남) 검수 반영"
+  "batch7_supplement_2026_11_27": "누락 필드 보완 배치7(부산·울산·경남) 검수 반영",
+  "user_supplement_batch7_2026_11_27": "2차(일반 사용자 자료) 배치7(부울경) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0364",
@@ -169,8 +170,15 @@
  },
  "ops": {
   "nocaddie": {
-   "value": null,
-   "evidence": []
+   "value": "가능 — 셀프(노캐디) 라운드 운영, 예약 시 캐디 동반 여부 선택",
+   "evidence": [
+    "#셀프 캐디의 도움 없이, 카트 운전과 골프채 선택 등을 스스로 경기 진행하는 골프 라운드"
+   ],
+   "source_url": "https://www.golfzoncounty.com/golfclub/main?golfclubSeq=56",
+   "source_type": "official_site",
+   "confidence": "high",
+   "value_from": "user_batch7_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "two_player": {
    "value": "가능",

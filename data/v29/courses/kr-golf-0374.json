@@ -27,7 +27,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "user_supplement_batch7_2026_11_27": "2차(일반 사용자 자료) 배치7(부울경) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0374",
@@ -110,7 +111,12 @@
   "grass": {
    "tee": null,
    "fairway": null,
-   "green": null
+   "green": {
+    "value": "벤트그라스",
+    "evidence": "그린은 벤트그라스(Bent grass)로 관리되고 있으며",
+    "source": "블로그(공개 정리글)",
+    "url": "https://papahun.com/%ec%9d%98%eb%a0%b9-%eb%a6%ac%ec%98%a8cc-%eb%9d%bc%ec%9a%b4%eb%94%a9-%ed%9b%84%ea%b8%b0-%ec%bd%94%ec%8a%a4-%eb%a6%ac%eb%b7%b0-%ed%99%80%eb%b3%84-%ea%b3%b5%eb%9e%b5%eb%b2%95-%ea%b7%b8%eb%a6%b0%ed%94%bc/"
+   }
   },
   "kga": null,
   "kga_hole_est": null,
@@ -163,8 +169,15 @@
  },
  "ops": {
   "nocaddie": {
-   "value": null,
-   "evidence": []
+   "value": "가능 — 일부 티타임 노캐디 운영(카카오골프, 라이선스 소지자 조건)",
+   "evidence": [
+    "06:44마운틴 91,000원 카카오골프노캐디 91,000원 라이센스 소지자 예약가능"
+   ],
+   "source_url": "https://inwon.kr/c/k418",
+   "source_type": "booking_platform",
+   "confidence": "medium",
+   "value_from": "user_batch7_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "two_player": {
    "value": null,
@@ -195,8 +208,15 @@
    "evidence": []
   },
   "mat": {
-   "value": null,
-   "evidence": []
+   "value": "일부 — 일부 홀 매트 티박스",
+   "evidence": [
+    "몇몇 홀에서 티박스의 매트 상태가 아쉬운 부분이 있어 개선이 필요해 보였습니다"
+   ],
+   "source_url": "https://papahun.com/%ec%9d%98%eb%a0%b9-%eb%a6%ac%ec%98%a8cc-%eb%9d%bc%ec%9a%b4%eb%94%a9-%ed%9b%84%ea%b8%b0-%ec%bd%94%ec%8a%a4-%eb%a6%ac%eb%b7%b0-%ed%99%80%eb%b3%84-%ea%b3%b5%eb%9e%b5%eb%b2%95-%ea%b7%b8%eb%a6%b0%ed%94%bc/",
+   "source_type": "blog",
+   "confidence": "low",
+   "value_from": "user_batch7_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "checkin": {
    "value": null,

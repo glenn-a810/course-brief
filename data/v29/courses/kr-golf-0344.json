@@ -86,7 +86,8 @@
   },
   "batch3_patch": "2026-11-27 배치6(대구·경북) 보완: 6개 항목(공식 홈페이지·그린피가이드 공식 안내 확인 기준, 미확인 값 생성 없음)",
   "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
-  "batch6_supplement_2026_11_27": "누락 필드 보완 배치6(대구·경북) 검수 반영"
+  "batch6_supplement_2026_11_27": "누락 필드 보완 배치6(대구·경북) 검수 반영",
+  "user_supplement_batch6_2026_11_27": "2차(일반 사용자 자료) 배치6(대구·경북) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0344",
@@ -120,7 +121,7 @@
    "straight_name": "안강IC"
   },
   "tel": "054-253-0070",
-  "homepage": null,
+  "homepage": "https://www.easterncc.co.kr/",
   "operators": [
    "㈜이스턴 이일선"
   ],
@@ -158,7 +159,7 @@
   "holes_received": 9,
   "course_names": null,
   "membership_type": "대중제",
-  "night_light": null,
+  "night_light": "3부 야간 라운드 운영(3부 그린피 별도, 2026-03 요금표)",
   "blocks": [],
   "grass": {
    "tee": null,
@@ -169,8 +170,8 @@
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": null,
-  "par": null
+  "length_m": 2800,
+  "par": 36
  },
  "fee": {
   "weekday": 80000,
@@ -275,10 +276,18 @@
   "weekend_basis": "min"
  },
  "cancel": {
-  "cancel_policy": null,
-  "open_cycle": null,
+  "cancel_policy": {
+   "value": "3일 전까지 온라인 취소, 2일 전~당일은 전화 취소",
+   "source": "골프장 정보 사이트(파크골프인포)",
+   "url": "https://parkgolfinfo.co.kr/포항-이스턴cc-골프장-초행자-루틴⛳-예약-및-이용방법/",
+   "checked_at": "2026-11-27"
+  },
+  "open_cycle": "예약일 기준 2주까지 예약 가능(당일은 전화만)",
   "notes": null,
-  "evidence": [],
+  "evidence": [
+   "취소는 3일 전까지 온라인 , 2일 전~당일은 전화 로 처리해야 해요",
+   "예약 가능 기간: “예약일로부터 2주까지 예약 가능” (https://parkgolfinfo.co.kr/포항-이스턴cc-골프장-초행자-루틴⛳-예약-및-이용방법/)"
+  ],
   "weather_evidence": [],
   "browser_official": {
    "no_caddie": "1·2·3부 전면 노캐디제",

@@ -87,7 +87,8 @@
   },
   "batch3_patch": "2026-11-27 배치6(대구·경북) 보완: 6개 항목(공식 홈페이지·그린피가이드 공식 안내 확인 기준, 미확인 값 생성 없음)",
   "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
-  "batch6_supplement_2026_11_27": "누락 필드 보완 배치6(대구·경북) 검수 반영"
+  "batch6_supplement_2026_11_27": "누락 필드 보완 배치6(대구·경북) 검수 반영",
+  "user_supplement_batch6_2026_11_27": "2차(일반 사용자 자료) 배치6(대구·경북) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0298",
@@ -353,7 +354,7 @@
   "holes_received": null,
   "course_names": null,
   "membership_type": "회원제",
-  "night_light": null,
+  "night_light": "3부 야간 라운드 운영(2026-11 후기)",
   "blocks": [
    "스카이마운틴밸리"
   ],
@@ -599,9 +600,11 @@
    "source": "그린피가이드(공식 인용)",
    "url": "https://greenfeeguide.co.kr/course/gc-0354/"
   },
-  "open_cycle": null,
+  "open_cycle": "비회원은 정회원 위임 예약으로 전주 수요일 10:00부터 잔여타임 오픈",
   "notes": null,
-  "evidence": [],
+  "evidence": [
+   "비회원 위임예약(정회원 위임): 전주 수요일 10:00부터(잔여타임) (https://parkgolfinfo.co.kr/경산-해내다cc-골프장-예약방법·요금-상세-안내/)"
+  ],
   "weather_evidence": [],
   "browser_official": null
  },

@@ -28,7 +28,8 @@
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
   "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
-  "batch7_supplement_2026_11_27": "누락 필드 보완 배치7(부산·울산·경남) 검수 반영"
+  "batch7_supplement_2026_11_27": "누락 필드 보완 배치7(부산·울산·경남) 검수 반영",
+  "user_supplement_batch7_2026_11_27": "2차(일반 사용자 자료) 배치7(부울경) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0352",
@@ -108,7 +109,7 @@
   "holes_received": 9,
   "course_names": "9홀 파36, 2,842m",
   "membership_type": "대중제",
-  "night_light": null,
+  "night_light": "3부 야간 라운드 운영(2026)",
   "blocks": [],
   "grass": {
    "tee": null,
@@ -185,8 +186,15 @@
    "evidence": []
   },
   "bagdrop": {
-   "value": null,
-   "evidence": []
+   "value": "있음 — 클럽하우스 앞에서 골프백 하차(직원이 꺼내줌)",
+   "evidence": [
+    "건물 앞에 차를 세우고 트렁크 열면 골프백을 꺼내주시고, 교차로를 돌아 주차장으로 가서 주차하시면 됩니다"
+   ],
+   "source_url": "https://m.blog.naver.com/gpql1521/223292827868",
+   "source_type": "blog",
+   "confidence": "low",
+   "value_from": "user_batch7_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "mat": {
    "value": null,

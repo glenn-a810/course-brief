@@ -28,7 +28,8 @@
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
   "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
-  "batch7_supplement_2026_11_27": "누락 필드 보완 배치7(부산·울산·경남) 검수 반영"
+  "batch7_supplement_2026_11_27": "누락 필드 보완 배치7(부산·울산·경남) 검수 반영",
+  "user_supplement_batch7_2026_11_27": "2차(일반 사용자 자료) 배치7(부울경) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0056",
@@ -167,20 +168,41 @@
  },
  "ops": {
   "nocaddie": {
-   "value": null,
-   "evidence": []
+   "value": "가능 — 토요일 제외 일~금 야간(3부) 노캐디 선택 가능",
+   "evidence": [
+    "토요일을 제외한 일요일부터 금요일까지는 야간 캐디, 노캐디 선택도 가능해요."
+   ],
+   "source_url": "https://m.blog.naver.com/smallcoco/223109680240",
+   "source_type": "blog",
+   "confidence": "low",
+   "value_from": "user_batch7_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "two_player": {
-   "value": null,
-   "evidence": []
+   "value": "가능 — 2인 라운드 가능(사전 문의 필수)",
+   "evidence": [
+    "2인, 5인 라운드도 가능하다고 나와 있었는데 사전 문의 필수랍니다!"
+   ],
+   "source_url": "https://m.blog.naver.com/smallcoco/223109680240",
+   "source_type": "blog",
+   "confidence": "low",
+   "value_from": "user_batch7_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "three_player": {
    "value": null,
    "evidence": []
   },
   "five_player": {
-   "value": null,
-   "evidence": []
+   "value": "가능 — 5인 라운드 가능(사전 문의 필수)",
+   "evidence": [
+    "2인, 5인 라운드도 가능하다고 나와 있었는데 사전 문의 필수랍니다!"
+   ],
+   "source_url": "https://m.blog.naver.com/smallcoco/223109680240",
+   "source_type": "blog",
+   "confidence": "low",
+   "value_from": "user_batch7_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "marshal_caddie": {
    "value": null,
@@ -195,12 +217,26 @@
    "evidence": []
   },
   "bagdrop": {
-   "value": null,
-   "evidence": []
+   "value": "있음 — 클럽하우스 앞에서 골프백 하차",
+   "evidence": [
+    "입구로 오면 채를 내려주세요. 이후로 주차장으로 가서 주차를 하고"
+   ],
+   "source_url": "https://m.blog.naver.com/boomen/223618511065",
+   "source_type": "blog",
+   "confidence": "low",
+   "value_from": "user_batch7_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "mat": {
-   "value": null,
-   "evidence": []
+   "value": "일부 홀 매트 티박스 운영",
+   "evidence": [
+    "후기에서는 일부 홀의 매트 티박스 운영과 티박스 관리 미흡"
+   ],
+   "source_url": "https://golfjoin.co.kr/golf-courses/haeundaecountryclub",
+   "source_type": "review_aggregator",
+   "confidence": "low",
+   "value_from": "user_batch7_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "checkin": {
    "value": "Tee-off 20분 전까지 팀 구성 완료(지각 시 라운드 불가)",

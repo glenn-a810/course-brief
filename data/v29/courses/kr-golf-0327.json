@@ -97,7 +97,8 @@
   },
   "batch3_patch": "2026-11-27 배치6(대구·경북) 보완: 6개 항목(공식 홈페이지·그린피가이드 공식 안내 확인 기준, 미확인 값 생성 없음)",
   "batch6_patch": "2026-11-27 배치6(대구·경북) 보완: 1개 항목(공식 홈페이지·그린피가이드·예약 플랫폼 공개 안내 확인 기준, 미확인 값 생성 없음)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "user_supplement_batch6_2026_11_27": "2차(일반 사용자 자료) 배치6(대구·경북) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0327",
@@ -131,7 +132,7 @@
    "straight_name": "남안동IC"
   },
   "tel": "054-843-0000",
-  "homepage": null,
+  "homepage": "http://www.xn--2q1bm4ioscnwnx4w.com/",
   "operators": [
    "오이코스산업㈜ 이옥춘"
   ],
@@ -178,7 +179,7 @@
   "extra_courses": null,
   "hole_by_hole": null,
   "length_m": null,
-  "par": null
+  "par": 72
  },
  "fee": {
   "weekday": 160000,
@@ -258,10 +259,17 @@
   }
  },
  "cancel": {
-  "cancel_policy": null,
+  "cancel_policy": {
+   "value": "3~2일 전 취소 시 위약금(주중 30만·주말 40만)+1개월 예약정지, 1일 전 2개월 정지",
+   "source": "골프장 정보 사이트(파크골프인포)",
+   "url": "https://parkgolfinfo.co.kr/안동리버힐컨트리클럽-골프장-예약·그린피·카트/",
+   "checked_at": "2026-11-27"
+  },
   "open_cycle": null,
   "notes": null,
-  "evidence": [],
+  "evidence": [
+   "3~2일 전 취소: 주중 30만 / 주말(공휴일) 40만 + 1개월 예약정지(표기)"
+  ],
   "weather_evidence": [],
   "browser_official": null
  },

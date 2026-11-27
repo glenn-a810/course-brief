@@ -27,7 +27,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "user_supplement_batch7_2026_11_27": "2차(일반 사용자 자료) 배치7(부울경) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0080",
@@ -107,7 +108,7 @@
   "holes_received": 27,
   "course_names": "EDWARD·HENRY·WILLIAM 각 9홀",
   "membership_type": "회원제(비회원 예약 가능)",
-  "night_light": null,
+  "night_light": "야간 라운드 운영(2026)",
   "blocks": [],
   "grass": {
    "tee": null,
@@ -172,18 +173,31 @@
   }
  },
  "cancel": {
-  "cancel_policy": null,
+  "cancel_policy": {
+   "value": "이용일 5일 전 17시까지 인터넷·팩스·전화로 취소 가능",
+   "source": "예약 플랫폼(공개 정보)",
+   "url": "https://www.ks-membership.co.kr/html/sub11_view.php?agubun=&level_state22=&mode=2&no=115&page=&sword=",
+   "checked_at": "2026-11-27"
+  },
   "open_cycle": "주중 1·2부 해당일 21일전(정회원 09:00~, 가족·지정회원 14:00~), 주말 토요일 기준 17일전(전전주 수요일) 09:00부터. 홈페이지 인터넷 예약",
   "notes": null,
   "evidence": [
-   "https://wondergolf.co.kr/courses/bora-cc"
+   "https://wondergolf.co.kr/courses/bora-cc",
+   "예약취소 : 해당일 5일전 17시까지 인터넷,팩스,전화 이용"
   ],
   "weather_evidence": []
  },
  "ops": {
   "nocaddie": {
-   "value": null,
-   "evidence": []
+   "value": "가능 — 노캐디 선택 운영(캐디피 절감)",
+   "evidence": [
+    "운영 방식 | 노캐디선택 … 노캐디 선택 시 캐디피 전액 절감이 가능하며, 전동 카트 이용 시 카트료가 별도 청구됩니다."
+   ],
+   "source_url": "https://papahun.com/boracc/",
+   "source_type": "blog",
+   "confidence": "medium",
+   "value_from": "user_batch7_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "two_player": {
    "value": "가능",

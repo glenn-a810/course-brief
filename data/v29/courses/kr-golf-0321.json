@@ -63,7 +63,8 @@
    "checked_at": "2026-11-27"
   },
   "batch3_patch": "2026-11-27 배치6(대구·경북) 보완: 4개 항목(공식 홈페이지·그린피가이드 공식 안내 확인 기준, 미확인 값 생성 없음)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "user_supplement_batch6_2026_11_27": "2차(일반 사용자 자료) 배치6(대구·경북) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0321",
@@ -195,7 +196,7 @@
   "holes_received": 27,
   "course_names": null,
   "membership_type": "대중제",
-  "night_light": null,
+  "night_light": "3부까지 운영(캐디피 1~3부 동일, 2026-02 요금표)",
   "blocks": [
    "샤인포도자두"
   ],
@@ -381,9 +382,11 @@
    "source": "공식(브라우저 수집)",
    "url": "https://www.podocc.com/guide/fee.asp"
   },
-  "open_cycle": null,
+  "open_cycle": "매주 화요일 09:00, 3주 후(화~월) 1주 단위 오픈",
   "notes": null,
-  "evidence": [],
+  "evidence": [
+   "예약 오픈: 매주 화요일 09:00 , 오픈일 기준 3주 후 “화~월” 1주 단위 로 오픈 (https://parkgolfinfo.co.kr/김천-포도cc-골프장-예약오픈매주-화-9시-예약방법-상/)"
+  ],
   "weather_evidence": [],
   "browser_official": {
    "cancel": "라운드 3일 전 17:00까지 정상취소. 이후: 3일 전 17:00~2일 전 17:00 팀 정상요금(카트 포함) 10%+2개월 정지, 2일 전 17:00~1일 전 17:00 20%+3개월, 1일 전 17:00 이후·당일 노쇼 30%+위약금 납부 시까지 영구 정지",

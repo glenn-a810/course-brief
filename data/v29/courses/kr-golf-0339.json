@@ -41,7 +41,8 @@
    "checked_at": "2026-11-27"
   },
   "batch3_patch": "2026-11-27 배치6(대구·경북) 보완: 2개 항목(공식 홈페이지·그린피가이드 공식 안내 확인 기준, 미확인 값 생성 없음)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "user_supplement_batch6_2026_11_27": "2차(일반 사용자 자료) 배치6(대구·경북) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0339",
@@ -126,7 +127,7 @@
   "extra_courses": null,
   "hole_by_hole": null,
   "length_m": null,
-  "par": null
+  "par": 36
  },
  "fee": {
   "weekday": 90000,
@@ -240,9 +241,11 @@
    "source": "공식(브라우저 수집)",
    "url": "https://www.pentaview.co.kr/guide/fee"
   },
-  "open_cycle": null,
+  "open_cycle": "이용 예정일 2주 전부터 예약 가능",
   "notes": null,
-  "evidence": [],
+  "evidence": [
+   "예약 오픈: 이용 예정일 2주 전부터 가능 (https://parkgolfinfo.co.kr/펜타뷰-골프클럽청도-9홀-골프장-라운드-가이드-예약/)"
+  ],
   "weather_evidence": [],
   "browser_official": {
    "cancel_rain": "악천후 취소는 당일 취소만 가능(당일 출발 전 프런트 1644-8053 문의). 당일 70% 이상 확률로 시간당 5mm 이상 강수 3시간 이상 예보 시 전화취소 가능, 라운드 5시간 내 누적 20mm 이상 예보 시 홀별 환불",

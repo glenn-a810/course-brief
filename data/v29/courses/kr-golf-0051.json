@@ -28,7 +28,8 @@
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
   "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
-  "batch7_supplement_2026_11_27": "누락 필드 보완 배치7(부산·울산·경남) 검수 반영"
+  "batch7_supplement_2026_11_27": "누락 필드 보완 배치7(부산·울산·경남) 검수 반영",
+  "user_supplement_batch7_2026_11_27": "2차(일반 사용자 자료) 배치7(부울경) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0051",
@@ -112,7 +113,12 @@
   "grass": {
    "tee": null,
    "fairway": null,
-   "green": null
+   "green": {
+    "value": "벤트그라스",
+    "evidence": "페어웨이는 한국잔디, 그린은 벤트그라스로 좌·우 2그린을 운영해",
+    "source": "후기 집계 사이트",
+    "url": "https://golfjoin.co.kr/golf-courses/gijangdongwonroyalcountryclub"
+   }
   },
   "kga": null,
   "kga_hole_est": null,
@@ -158,12 +164,26 @@
  },
  "ops": {
   "nocaddie": {
-   "value": null,
-   "evidence": []
+   "value": "불가 — 캐디 동반, 카트 운전은 캐디만 가능",
+   "evidence": [
+    "기장동원로얄컨트리클럽 | 골프카트 운전은 캐디만 가능"
+   ],
+   "source_url": "https://greenfeeguide.co.kr/guides/golf-cart-limousine-fairway-guide/",
+   "source_type": "official_guide",
+   "confidence": "high",
+   "value_from": "user_batch7_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "two_player": {
-   "value": null,
-   "evidence": []
+   "value": "가능 — 1·2인 조인 예약 지원",
+   "evidence": [
+    "기장동원로얄cc는 1인, 2인이 조인이 가능하도록 홈페이지에서 예약할 수 있도록 도와주더라고요"
+   ],
+   "source_url": "https://corevalue01.com/128",
+   "source_type": "blog",
+   "confidence": "low",
+   "value_from": "user_batch7_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "three_player": {
    "value": "3인 이상 플레이 원칙, 조인예약은 예약일 10일 전 9시부터(인터넷회원 1~2인)",
@@ -199,12 +219,26 @@
    "evidence": []
   },
   "bagdrop": {
-   "value": null,
-   "evidence": []
+   "value": "있음 — 주차장에서 캐디백 하차 후 로비 진입",
+   "evidence": [
+    "주차장에서 캐디백을 내리고 로비로 들어가면 깨끗하게 관리되어 보이는 로비가 있습니다"
+   ],
+   "source_url": "https://corevalue01.com/128",
+   "source_type": "blog",
+   "confidence": "low",
+   "value_from": "user_batch7_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "mat": {
-   "value": null,
-   "evidence": []
+   "value": "운영 — 매트 티박스(1번홀 등)",
+   "evidence": [
+    "아쉬운 매트 티박스 … 1홀은 매트티샷이었고"
+   ],
+   "source_url": "https://corevalue01.com/128",
+   "source_type": "blog",
+   "confidence": "low",
+   "value_from": "user_batch7_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "checkin": {
    "value": null,

@@ -28,7 +28,8 @@
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
   "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
-  "batch7_supplement_2026_11_27": "누락 필드 보완 배치7(부산·울산·경남) 검수 반영"
+  "batch7_supplement_2026_11_27": "누락 필드 보완 배치7(부산·울산·경남) 검수 반영",
+  "user_supplement_batch7_2026_11_27": "2차(일반 사용자 자료) 배치7(부울경) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0369",
@@ -118,7 +119,12 @@
   "grass": {
    "tee": null,
    "fairway": "한국잔디",
-   "green": null
+   "green": {
+    "value": "벤트그라스(Bent grass)",
+    "evidence": "잔디 정보 - 페어웨이 한국잔디 그린 Bent grass",
+    "source": "블로그(공개 정리글)",
+    "url": "https://m.blog.naver.com/jjoyu_/223507912722"
+   }
   },
   "kga": null,
   "kga_hole_est": null,
@@ -211,8 +217,15 @@
    "evidence": []
   },
   "mat": {
-   "value": null,
-   "evidence": []
+   "value": "운영 — 일부 홀 매트 티박스",
+   "evidence": [
+    "몇몇 홀들에서 티박스의 매트만 아니었다면 점수를 더 주었을 것이다"
+   ],
+   "source_url": "https://mad4golf.tistory.com/660",
+   "source_type": "blog",
+   "confidence": "low",
+   "value_from": "user_batch7_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "checkin": {
    "value": "여유 있게 도착, 티오프 10분 전까지 스타트지역 도착(늦으면 해당 홀로 점프)",
