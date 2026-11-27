@@ -21,6 +21,9 @@ import re
 import sys
 from datetime import datetime, timezone, timedelta
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import coverage_metric  # noqa: E402  (같은 디렉터리의 지표 정의)
+
 KST = timezone(timedelta(hours=9))
 
 # 공개 저장소에 남기면 안 되는 문자열 치환 (내부 워크스페이스 경로·협업자 이름)
@@ -191,23 +194,13 @@ def summary_fields(course: dict) -> dict:
 
 
 def coverage_averages(courses: list[dict]) -> dict:
-    """영역별 평균 충실도 — 데이터 소개 페이지의 인포그래피가 쓴다."""
-    areas = ["basic", "course", "fee", "ops", "facility", "briefing", "rental"]
-    sums = {a: 0.0 for a in areas}
-    n = 0
-    for c in courses:
-        cov = c.get("coverage") or {}
-        vals = [cov.get(a) for a in areas]
-        if not any(isinstance(v, (int, float)) for v in vals):
-            continue
-        n += 1
-        for a in areas:
-            v = cov.get(a)
-            if isinstance(v, (int, float)) and not isinstance(v, bool):
-                sums[a] += float(v)
-    if not n:
-        return {}
-    return {a: round(sums[a] / n, 3) for a in areas}
+    """영역별 평균 충실도 — 데이터 소개 페이지의 인포그래피가 쓴다.
+
+    원본에 저장된 coverage 값을 믿지 않고 현재 필드 값에서 매번 다시 계산한다
+    (`scripts/coverage_metric.py`). 병합 스크립트가 coverage 를 갱신하지 않아도
+    `npm run data:build` 한 번이면 지표가 데이터와 일치한다.
+    """
+    return coverage_metric.averages(courses)
 
 
 def index_record(course: dict) -> dict:
@@ -347,6 +340,10 @@ def build(src: str, out_root: str) -> dict:
 
     raw_courses = data["courses"]
     courses = [sanitize(c) for c in raw_courses]
+
+    # 0) 충실도 지표를 현재 필드 값에서 재계산한다(원본의 coverage 블록이 낡았을 수 있다).
+    for c in courses:
+        c["coverage"] = coverage_metric.coverage_for(c)
 
     v29 = os.path.join(out_root, "data", "v29")
     course_dir = os.path.join(v29, "courses")
@@ -506,6 +503,24 @@ def check(out_root: str) -> int:
             m = bad.search(txt)
             if m:
                 errors.append(f"{p}: 금지 문자열 '{m.group(0)}'")
+
+    # coverage 지표가 현재 필드 값과 일치하는지(낡은 값이 남지 않았는지) 확인
+    for cid in detail:
+        p = os.path.join(v29, "courses", f"{cid}.json")
+        if not os.path.exists(p):
+            continue
+        obj = json.load(open(p, encoding="utf-8"))
+        stored = obj.get("coverage") or {}
+        fresh = coverage_metric.coverage_for(obj)
+        stale = [a for a in coverage_metric.AREAS if stored.get(a) != fresh[a]]
+        if stale:
+            errors.append(f"{cid}: coverage 불일치 {stale} (저장 {stored.get(stale[0])} ≠ 재계산 {fresh[stale[0]]})")
+    all_courses = [json.load(open(os.path.join(v29, "courses", f), encoding="utf-8")) for f in sorted(files)]
+    expected = coverage_metric.averages(all_courses)
+    got = idx["dataset"].get("coverage") or {}
+    if got != expected:
+        errors.append(f"index.dataset.coverage 불일치: {got} ≠ {expected}")
+    print("coverage 평균 " + " · ".join(f"{a} {got.get(a, 0) * 100:.1f}%" for a in coverage_metric.AREAS))
 
     size_kb = os.path.getsize(os.path.join(v29, "index.json")) / 1024
     print(f"index.json {size_kb:.1f} KB / courses {len(files)}개 / total {len(courses)}")

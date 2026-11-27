@@ -927,12 +927,12 @@
   "browser_batch": true
  },
  "coverage": {
-  "basic": 0.78,
-  "course": 0.4,
+  "basic": 0.89,
+  "course": 0.8,
   "fee": 0.5,
-  "ops": 0.36,
+  "ops": 0.43,
   "facility": 0.3,
-  "briefing": 0.0,
-  "rental": 0.0
+  "briefing": 0.5,
+  "rental": 0.25
  }
 }

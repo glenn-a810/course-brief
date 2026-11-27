@@ -879,12 +879,12 @@
   ]
  },
  "coverage": {
-  "basic": 0.89,
-  "course": 0.6,
+  "basic": 1.0,
+  "course": 0.8,
   "fee": 1.0,
   "ops": 0.21,
   "facility": 0.1,
-  "briefing": 0.0,
-  "rental": 0.75
+  "briefing": 0.5,
+  "rental": 1.0
  }
 }

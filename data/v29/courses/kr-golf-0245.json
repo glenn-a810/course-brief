@@ -427,12 +427,12 @@
   "plan_strategy": "subagent_report(2026-11-26)"
  },
  "coverage": {
-  "basic": 0.78,
-  "course": 0.4,
+  "basic": 0.89,
+  "course": 0.6,
   "fee": 1.0,
-  "ops": 0.0,
+  "ops": 0.07,
   "facility": 0.5,
   "briefing": 0.5,
-  "rental": 0.0
+  "rental": 0.25
  }
 }

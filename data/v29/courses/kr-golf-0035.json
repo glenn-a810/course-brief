@@ -677,12 +677,12 @@
   "browser_pdf": []
  },
  "coverage": {
-  "basic": 0.78,
-  "course": 0.6,
+  "basic": 0.89,
+  "course": 1.0,
   "fee": 0.75,
   "ops": 0.21,
   "facility": 0.3,
-  "briefing": 0.0,
-  "rental": 0.75
+  "briefing": 0.5,
+  "rental": 1.0
  }
 }

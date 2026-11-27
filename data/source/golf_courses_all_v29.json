@@ -133,7 +133,7 @@
     "applied": 11
    }
   ],
-  "coverage_metric": "stage2c/1.0 채움률 — basic: 이름·주소·전화·홈페이지·좌표·IC·형태·홀수(9) / course: 홀수·코스명·블록·잔디·KGA(5) / fee: 주중·주말·카트·캐디(4) / ops: 정규 14필드 / facility: 정규 10필드 / briefing: 공지·후기·공지문·코스설명(4) / rental: 지원여부·풀세트·요금·권역배송(4) 중 값이 있는 비율",
+  "coverage_metric": "stage2c/1.0 채움률 — basic: 이름·주소·전화·홈페이지·좌표·최단 IC·형태·홀수·개장(9) / course: 홀수·코스명·블록·잔디·KGA(5) / fee: 주중·주말·카트·캐디(4) / ops: 정규 14필드 / facility: 정규 10필드 / briefing: 공지·후기·공지문·코스설명(4) / rental: 지원여부·풀세트·요금·권역배송(4) 중 값이 있는 비율. 값은 구조({name, distance_km}·{items}·{providers} 등) 안의 실제 내용으로 판단하고, 출처·확인일 같은 메타데이터만 있는 항목은 비어 있는 것으로 센다. `npm run data:build`가 매번 다시 계산한다.",
   "license_note": "문체부_전국 골프장 현황: 이용허락범위 제한 없음(공공데이터포털). KGA 코스레이팅: KGA 공개 조회 페이지에서 수집.",
   "verification_file": "raw/v29_patch_audit.json",
   "merge_audit_file": "raw/stage2c_merge_audit.json",
@@ -145,7 +145,8 @@
    "planned",
    "under_construction",
    "closed"
-  ]
+  ],
+  "coverage_recomputed_at": "2026-11-27"
  },
  "facility_clusters": [
   {
@@ -1063,13 +1064,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
+    "basic": 1.0,
     "course": 0.6,
     "fee": 0.5,
     "ops": 0.5,
     "facility": 0.4,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.5,
+    "rental": 0.25
    }
   },
   {
@@ -1953,13 +1954,13 @@
     ]
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.6,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 1.0,
     "ops": 0.21,
     "facility": 0.1,
-    "briefing": 0.0,
-    "rental": 0.75
+    "briefing": 0.5,
+    "rental": 1.0
    }
   },
   {
@@ -2790,13 +2791,13 @@
     "browser_pdf": []
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
-    "fee": 0.5,
+    "basic": 0.89,
+    "course": 0.6,
+    "fee": 0.75,
     "ops": 0.29,
     "facility": 0.4,
-    "briefing": 0.0,
-    "rental": 0.75
+    "briefing": 0.25,
+    "rental": 1.0
    }
   },
   {
@@ -3413,13 +3414,13 @@
     "browser_pdf": []
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.2,
+    "basic": 1.0,
+    "course": 0.4,
     "fee": 1.0,
     "ops": 0.14,
     "facility": 0.0,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -3795,13 +3796,13 @@
     "browser_pdf": []
    },
    "coverage": {
-    "basic": 0.89,
+    "basic": 1.0,
     "course": 0.2,
     "fee": 0.75,
     "ops": 0.29,
     "facility": 0.1,
     "briefing": 0.0,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -4386,13 +4387,13 @@
     ]
    },
    "coverage": {
-    "basic": 0.89,
+    "basic": 1.0,
     "course": 0.6,
     "fee": 1.0,
     "ops": 0.14,
     "facility": 0.0,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -4776,13 +4777,13 @@
     "browser_pdf": []
    },
    "coverage": {
-    "basic": 0.89,
+    "basic": 1.0,
     "course": 0.2,
     "fee": 0.75,
     "ops": 0.29,
     "facility": 0.2,
     "briefing": 0.25,
-    "rental": 0.75
+    "rental": 1.0
    }
   },
   {
@@ -5133,13 +5134,13 @@
     "browser_pdf": []
    },
    "coverage": {
-    "basic": 0.67,
+    "basic": 0.89,
     "course": 0.2,
     "fee": 0.0,
     "ops": 0.0,
     "facility": 0.0,
     "briefing": 0.0,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -5796,13 +5797,13 @@
     "browser_pdf": []
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.07,
     "facility": 0.4,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -6164,13 +6165,13 @@
     "browser_pdf": []
    },
    "coverage": {
-    "basic": 0.78,
+    "basic": 0.89,
     "course": 0.2,
     "fee": 0.0,
     "ops": 0.0,
     "facility": 0.0,
     "briefing": 0.0,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -6731,13 +6732,13 @@
     "browser_pdf": []
    },
    "coverage": {
-    "basic": 0.78,
+    "basic": 0.89,
     "course": 0.2,
     "fee": 0.75,
     "ops": 0.5,
     "facility": 0.0,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -7306,13 +7307,13 @@
     "browser_pdf": []
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.6,
+    "basic": 0.89,
+    "course": 0.8,
     "fee": 1.0,
     "ops": 0.43,
     "facility": 0.6,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.5,
+    "rental": 0.25
    }
   },
   {
@@ -7716,13 +7717,13 @@
     "browser_pdf": []
    },
    "coverage": {
-    "basic": 0.89,
+    "basic": 1.0,
     "course": 0.2,
     "fee": 0.5,
-    "ops": 0.14,
+    "ops": 0.21,
     "facility": 0.6,
     "briefing": 0.0,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -8103,13 +8104,13 @@
     "browser_pdf": []
    },
    "coverage": {
-    "basic": 0.89,
+    "basic": 1.0,
     "course": 0.2,
     "fee": 1.0,
     "ops": 0.07,
     "facility": 0.1,
-    "briefing": 0.0,
-    "rental": 0.75
+    "briefing": 0.25,
+    "rental": 1.0
    }
   },
   {
@@ -8969,13 +8970,13 @@
     "browser_pdf": []
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.2,
+    "basic": 1.0,
+    "course": 0.4,
     "fee": 0.75,
     "ops": 0.43,
     "facility": 0.2,
-    "briefing": 0.0,
-    "rental": 0.75
+    "briefing": 0.5,
+    "rental": 1.0
    }
   },
   {
@@ -9340,13 +9341,13 @@
     "browser_pdf": []
    },
    "coverage": {
-    "basic": 0.78,
+    "basic": 0.89,
     "course": 0.2,
     "fee": 0.75,
-    "ops": 0.0,
+    "ops": 0.07,
     "facility": 0.3,
     "briefing": 0.0,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -10248,13 +10249,13 @@
     "browser_pdf": []
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.6,
+    "basic": 0.89,
+    "course": 1.0,
     "fee": 1.0,
     "ops": 0.29,
     "facility": 0.3,
-    "briefing": 0.0,
-    "rental": 0.25
+    "briefing": 0.5,
+    "rental": 0.5
    }
   },
   {
@@ -10715,13 +10716,13 @@
     "browser_pdf": []
    },
    "coverage": {
-    "basic": 0.67,
+    "basic": 0.78,
     "course": 0.2,
     "fee": 0.0,
-    "ops": 0.0,
+    "ops": 0.07,
     "facility": 0.0,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -11717,13 +11718,13 @@
     "browser_pdf": []
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.5,
     "facility": 0.6,
-    "briefing": 0.0,
-    "rental": 0.75
+    "briefing": 0.5,
+    "rental": 1.0
    }
   },
   {
@@ -12143,13 +12144,13 @@
     "browser_pdf": []
    },
    "coverage": {
-    "basic": 0.78,
+    "basic": 0.89,
     "course": 0.2,
     "fee": 0.75,
-    "ops": 0.14,
+    "ops": 0.21,
     "facility": 0.0,
     "briefing": 0.0,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -12909,13 +12910,13 @@
     "browser_pdf": []
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.14,
     "facility": 0.0,
-    "briefing": 0.0,
-    "rental": 0.75
+    "briefing": 0.25,
+    "rental": 1.0
    }
   },
   {
@@ -13252,13 +13253,13 @@
     "browser_pdf": []
    },
    "coverage": {
-    "basic": 0.78,
+    "basic": 0.89,
     "course": 0.2,
     "fee": 0.0,
-    "ops": 0.0,
+    "ops": 0.14,
     "facility": 0.0,
     "briefing": 0.0,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -13926,13 +13927,13 @@
     "browser_pdf": []
    },
    "coverage": {
-    "basic": 0.78,
+    "basic": 0.89,
     "course": 0.2,
     "fee": 1.0,
     "ops": 0.07,
     "facility": 0.4,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -14919,13 +14920,13 @@
     ]
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.21,
     "facility": 0.2,
-    "briefing": 0.0,
-    "rental": 0.75
+    "briefing": 0.5,
+    "rental": 1.0
    }
   },
   {
@@ -15694,13 +15695,13 @@
     "browser_pdf": []
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.6,
-    "fee": 0.0,
-    "ops": 0.21,
+    "basic": 0.89,
+    "course": 0.8,
+    "fee": 0.25,
+    "ops": 0.36,
     "facility": 0.0,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -16368,13 +16369,13 @@
     "browser_pdf": []
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.14,
     "facility": 0.6,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -17230,13 +17231,13 @@
     "browser_pdf": []
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.43,
     "facility": 0.3,
-    "briefing": 0.5,
-    "rental": 0.0
+    "briefing": 0.75,
+    "rental": 0.25
    }
   },
   {
@@ -17609,13 +17610,13 @@
     "browser_pdf": []
    },
    "coverage": {
-    "basic": 0.78,
+    "basic": 0.89,
     "course": 0.2,
     "fee": 0.5,
-    "ops": 0.0,
+    "ops": 0.14,
     "facility": 0.3,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -18003,13 +18004,13 @@
     "browser_pdf": []
    },
    "coverage": {
-    "basic": 0.89,
+    "basic": 1.0,
     "course": 0.2,
     "fee": 0.75,
-    "ops": 0.0,
+    "ops": 0.21,
     "facility": 0.0,
     "briefing": 0.0,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -18501,13 +18502,13 @@
     "browser_pdf": []
    },
    "coverage": {
-    "basic": 0.89,
+    "basic": 1.0,
     "course": 0.2,
     "fee": 0.75,
     "ops": 0.07,
     "facility": 0.3,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -18866,13 +18867,13 @@
     "browser_pdf": []
    },
    "coverage": {
-    "basic": 0.78,
+    "basic": 0.89,
     "course": 0.2,
     "fee": 0.0,
     "ops": 0.0,
     "facility": 0.0,
     "briefing": 0.0,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -19762,13 +19763,13 @@
     "browser_pdf": []
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.2,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.29,
     "facility": 0.2,
-    "briefing": 0.0,
-    "rental": 0.75
+    "briefing": 0.25,
+    "rental": 1.0
    }
   },
   {
@@ -20582,13 +20583,13 @@
     "browser_pdf": []
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 1.0,
-    "ops": 0.07,
+    "ops": 0.14,
     "facility": 0.6,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -20969,13 +20970,13 @@
     "browser_pdf": []
    },
    "coverage": {
-    "basic": 0.78,
+    "basic": 0.89,
     "course": 0.2,
     "fee": 0.75,
-    "ops": 0.14,
+    "ops": 0.21,
     "facility": 0.1,
     "briefing": 0.0,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -21657,13 +21658,13 @@
     "browser_pdf": []
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.6,
+    "basic": 0.89,
+    "course": 1.0,
     "fee": 0.75,
     "ops": 0.21,
     "facility": 0.3,
-    "briefing": 0.0,
-    "rental": 0.75
+    "briefing": 0.5,
+    "rental": 1.0
    }
   },
   {
@@ -22113,13 +22114,13 @@
     "browser_pdf": []
    },
    "coverage": {
-    "basic": 0.78,
+    "basic": 0.89,
     "course": 0.6,
     "fee": 1.0,
-    "ops": 0.29,
+    "ops": 0.36,
     "facility": 0.4,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -22758,13 +22759,13 @@
     "browser_pdf": []
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.6,
     "fee": 0.0,
     "ops": 0.0,
     "facility": 0.0,
     "briefing": 0.0,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -23181,13 +23182,13 @@
     "browser_pdf": []
    },
    "coverage": {
-    "basic": 0.89,
+    "basic": 1.0,
     "course": 0.2,
     "fee": 0.75,
     "ops": 0.07,
     "facility": 0.3,
     "briefing": 0.0,
-    "rental": 0.75
+    "rental": 1.0
    }
   },
   {
@@ -23584,13 +23585,13 @@
     "browser_pdf": []
    },
    "coverage": {
-    "basic": 0.78,
+    "basic": 0.89,
     "course": 0.2,
     "fee": 0.75,
-    "ops": 0.14,
+    "ops": 0.29,
     "facility": 0.1,
-    "briefing": 0.0,
-    "rental": 0.75
+    "briefing": 0.25,
+    "rental": 1.0
    }
   },
   {
@@ -24166,13 +24167,13 @@
     "browser_pdf": []
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 1.0,
-    "ops": 0.14,
+    "ops": 0.21,
     "facility": 0.1,
-    "briefing": 0.0,
-    "rental": 0.75
+    "briefing": 0.25,
+    "rental": 1.0
    }
   },
   {
@@ -24602,13 +24603,13 @@
     "browser_pdf": []
    },
    "coverage": {
-    "basic": 0.78,
+    "basic": 0.89,
     "course": 0.2,
     "fee": 0.75,
     "ops": 0.5,
     "facility": 0.2,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -25426,13 +25427,13 @@
     "browser_pdf": []
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
-    "fee": 0.0,
+    "basic": 0.89,
+    "course": 0.6,
+    "fee": 0.25,
     "ops": 0.07,
     "facility": 0.0,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -26396,13 +26397,13 @@
     ]
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.21,
     "facility": 0.4,
-    "briefing": 0.0,
-    "rental": 0.75
+    "briefing": 0.25,
+    "rental": 1.0
    }
   },
   {
@@ -27010,13 +27011,13 @@
     "browser_pdf": []
    },
    "coverage": {
-    "basic": 0.89,
+    "basic": 1.0,
     "course": 0.2,
     "fee": 1.0,
     "ops": 0.21,
     "facility": 0.3,
-    "briefing": 0.0,
-    "rental": 0.75
+    "briefing": 0.25,
+    "rental": 1.0
    }
   },
   {
@@ -27659,13 +27660,13 @@
     "browser_pdf": []
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.2,
+    "basic": 0.89,
+    "course": 0.4,
     "fee": 1.0,
     "ops": 0.14,
     "facility": 0.2,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -28588,13 +28589,13 @@
     "browser_pdf": []
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.6,
+    "basic": 1.0,
+    "course": 1.0,
     "fee": 1.0,
-    "ops": 0.21,
+    "ops": 0.29,
     "facility": 0.5,
     "briefing": 0.0,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -28994,13 +28995,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 1.0,
-    "ops": 0.36,
+    "ops": 0.5,
     "facility": 0.6,
     "briefing": 0.5,
-    "rental": 0.75
+    "rental": 1.0
    }
   },
   {
@@ -29386,13 +29387,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
+    "basic": 1.0,
     "course": 0.4,
     "fee": 0.75,
-    "ops": 0.43,
+    "ops": 0.5,
     "facility": 0.4,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -29817,13 +29818,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 1.0,
-    "ops": 0.14,
+    "ops": 0.21,
     "facility": 0.0,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -30221,13 +30222,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 1.0,
-    "ops": 0.21,
+    "ops": 0.29,
     "facility": 0.3,
     "briefing": 0.5,
-    "rental": 0.75
+    "rental": 1.0
    }
   },
   {
@@ -30666,13 +30667,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 1.0,
-    "ops": 0.29,
+    "ops": 0.57,
     "facility": 0.4,
     "briefing": 0.5,
-    "rental": 0.75
+    "rental": 1.0
    }
   },
   {
@@ -31115,13 +31116,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 1.0,
-    "ops": 0.0,
+    "ops": 0.14,
     "facility": 0.2,
-    "briefing": 0.5,
-    "rental": 0.75
+    "briefing": 0.75,
+    "rental": 1.0
    }
   },
   {
@@ -31587,13 +31588,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 1.0,
-    "ops": 0.43,
+    "ops": 0.57,
     "facility": 0.4,
     "briefing": 0.5,
-    "rental": 0.75
+    "rental": 1.0
    }
   },
   {
@@ -32005,13 +32006,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.36,
     "facility": 0.5,
     "briefing": 0.5,
-    "rental": 0.75
+    "rental": 1.0
    }
   },
   {
@@ -32403,13 +32404,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
+    "basic": 1.0,
     "course": 0.4,
     "fee": 1.0,
-    "ops": 0.07,
+    "ops": 0.14,
     "facility": 0.2,
     "briefing": 0.5,
-    "rental": 0.75
+    "rental": 1.0
    }
   },
   {
@@ -32841,13 +32842,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 0.75,
-    "ops": 0.29,
+    "ops": 0.64,
     "facility": 0.4,
     "briefing": 0.5,
-    "rental": 0.75
+    "rental": 1.0
    }
   },
   {
@@ -33418,13 +33419,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.2,
+    "basic": 0.89,
+    "course": 0.4,
     "fee": 1.0,
     "ops": 0.21,
     "facility": 0.2,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -33908,13 +33909,13 @@
     "browser_batch": true
    },
    "coverage": {
-    "basic": 0.78,
+    "basic": 0.89,
     "course": 0.2,
     "fee": 1.0,
     "ops": 0.07,
     "facility": 0.3,
     "briefing": 0.0,
-    "rental": 0.75
+    "rental": 1.0
    }
   },
   {
@@ -34449,13 +34450,13 @@
     "browser_batch": true
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 1.0,
-    "ops": 0.07,
+    "ops": 0.14,
     "facility": 0.0,
-    "briefing": 0.0,
-    "rental": 0.75
+    "briefing": 0.25,
+    "rental": 1.0
    }
   },
   {
@@ -35006,13 +35007,13 @@
     "browser_batch": true
    },
    "coverage": {
-    "basic": 0.89,
+    "basic": 1.0,
     "course": 0.2,
     "fee": 0.75,
     "ops": 0.29,
     "facility": 0.3,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -35555,13 +35556,13 @@
     "browser_batch": true
    },
    "coverage": {
-    "basic": 0.89,
+    "basic": 1.0,
     "course": 0.4,
     "fee": 1.0,
     "ops": 0.21,
     "facility": 0.0,
-    "briefing": 0.0,
-    "rental": 0.5
+    "briefing": 0.25,
+    "rental": 0.75
    }
   },
   {
@@ -36030,13 +36031,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
+    "basic": 1.0,
     "course": 0.2,
     "fee": 0.75,
-    "ops": 0.43,
+    "ops": 0.5,
     "facility": 0.2,
     "briefing": 0.0,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -36540,13 +36541,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.2,
+    "basic": 1.0,
+    "course": 0.4,
     "fee": 0.5,
-    "ops": 0.71,
+    "ops": 0.79,
     "facility": 0.2,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -37189,13 +37190,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
-    "fee": 0.0,
-    "ops": 0.0,
+    "basic": 1.0,
+    "course": 0.8,
+    "fee": 0.25,
+    "ops": 0.07,
     "facility": 0.0,
     "briefing": 0.0,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -38127,13 +38128,13 @@
     "browser_batch": true
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.8,
     "fee": 0.5,
-    "ops": 0.36,
+    "ops": 0.43,
     "facility": 0.3,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.5,
+    "rental": 0.25
    }
   },
   {
@@ -38655,13 +38656,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.6,
     "fee": 0.75,
     "ops": 0.0,
     "facility": 0.2,
     "briefing": 0.0,
-    "rental": 0.75
+    "rental": 1.0
    }
   },
   {
@@ -39366,13 +39367,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.78,
+    "basic": 0.89,
     "course": 0.2,
     "fee": 1.0,
     "ops": 0.43,
     "facility": 0.4,
-    "briefing": 0.0,
-    "rental": 0.75
+    "briefing": 0.5,
+    "rental": 1.0
    }
   },
   {
@@ -40092,13 +40093,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
-    "fee": 0.5,
+    "basic": 1.0,
+    "course": 0.8,
+    "fee": 0.75,
     "ops": 0.14,
     "facility": 0.1,
-    "briefing": 0.0,
-    "rental": 0.75
+    "briefing": 0.25,
+    "rental": 1.0
    }
   },
   {
@@ -40697,13 +40698,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
+    "basic": 1.0,
     "course": 0.2,
     "fee": 1.0,
-    "ops": 0.5,
+    "ops": 0.57,
     "facility": 0.5,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -41297,13 +41298,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 1.0,
     "ops": 0.0,
     "facility": 0.2,
     "briefing": 0.0,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -41908,13 +41909,13 @@
     "browser_batch": true
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.6,
     "fee": 0.0,
     "ops": 0.0,
     "facility": 0.0,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.5,
+    "rental": 0.25
    }
   },
   {
@@ -42301,13 +42302,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
+    "basic": 1.0,
     "course": 0.2,
-    "fee": 0.0,
+    "fee": 0.25,
     "ops": 0.0,
     "facility": 0.2,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -43119,13 +43120,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.6,
+    "basic": 0.89,
+    "course": 0.8,
     "fee": 0.25,
     "ops": 0.57,
     "facility": 0.2,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.5,
+    "rental": 0.25
    }
   },
   {
@@ -43675,13 +43676,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
+    "basic": 1.0,
     "course": 0.4,
     "fee": 0.25,
     "ops": 0.5,
     "facility": 0.3,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -44180,13 +44181,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
+    "basic": 1.0,
     "course": 0.4,
     "fee": 0.5,
     "ops": 0.43,
     "facility": 0.5,
-    "briefing": 0.5,
-    "rental": 0.5
+    "briefing": 0.75,
+    "rental": 0.75
    }
   },
   {
@@ -44656,13 +44657,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
+    "basic": 1.0,
     "course": 0.4,
     "fee": 0.75,
-    "ops": 0.07,
+    "ops": 0.14,
     "facility": 0.0,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -45162,13 +45163,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.14,
     "facility": 0.2,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -45580,13 +45581,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.6,
     "fee": 1.0,
-    "ops": 0.14,
+    "ops": 0.21,
     "facility": 0.2,
     "briefing": 0.5,
-    "rental": 0.75
+    "rental": 1.0
    }
   },
   {
@@ -46021,13 +46022,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 1.0,
-    "ops": 0.14,
+    "ops": 0.29,
     "facility": 0.2,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -46456,13 +46457,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 1.0,
-    "ops": 0.36,
+    "ops": 0.43,
     "facility": 0.2,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -46894,13 +46895,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.78,
+    "basic": 0.89,
     "course": 0.4,
     "fee": 0.0,
     "ops": 0.36,
     "facility": 0.4,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -47309,13 +47310,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.6,
     "fee": 1.0,
-    "ops": 0.43,
+    "ops": 0.71,
     "facility": 0.4,
     "briefing": 0.5,
-    "rental": 0.75
+    "rental": 1.0
    }
   },
   {
@@ -47714,13 +47715,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.78,
+    "basic": 0.89,
     "course": 0.4,
     "fee": 1.0,
-    "ops": 0.0,
+    "ops": 0.07,
     "facility": 0.0,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -48236,13 +48237,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
+    "basic": 1.0,
     "course": 0.4,
     "fee": 1.0,
     "ops": 0.29,
     "facility": 0.3,
     "briefing": 0.5,
-    "rental": 0.75
+    "rental": 1.0
    }
   },
   {
@@ -48682,13 +48683,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
+    "basic": 1.0,
     "course": 0.4,
     "fee": 1.0,
-    "ops": 0.07,
+    "ops": 0.14,
     "facility": 0.1,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -49151,13 +49152,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 1.0,
-    "ops": 0.14,
+    "ops": 0.29,
     "facility": 0.1,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -49958,13 +49959,13 @@
     "browser_batch": true
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.6,
+    "basic": 1.0,
+    "course": 1.0,
     "fee": 1.0,
     "ops": 0.07,
     "facility": 0.0,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -50448,13 +50449,13 @@
     "browser_batch": true
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.2,
+    "basic": 1.0,
+    "course": 0.4,
     "fee": 1.0,
-    "ops": 0.07,
+    "ops": 0.14,
     "facility": 0.0,
-    "briefing": 0.0,
-    "rental": 0.75
+    "briefing": 0.5,
+    "rental": 1.0
    }
   },
   {
@@ -51104,13 +51105,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 1.0,
-    "ops": 0.5,
+    "ops": 0.57,
     "facility": 0.4,
     "briefing": 0.0,
-    "rental": 0.75
+    "rental": 1.0
    }
   },
   {
@@ -52000,13 +52001,13 @@
     "browser_batch": true
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.6,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 1.0,
-    "ops": 0.07,
+    "ops": 0.21,
     "facility": 0.2,
-    "briefing": 0.0,
-    "rental": 0.75
+    "briefing": 0.5,
+    "rental": 1.0
    }
   },
   {
@@ -52619,13 +52620,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.78,
+    "basic": 0.89,
     "course": 0.2,
     "fee": 1.0,
     "ops": 0.29,
     "facility": 0.3,
-    "briefing": 0.0,
-    "rental": 0.75
+    "briefing": 0.5,
+    "rental": 1.0
    }
   },
   {
@@ -53250,13 +53251,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.6,
     "fee": 1.0,
-    "ops": 0.64,
+    "ops": 0.71,
     "facility": 0.4,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -53916,13 +53917,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.8,
     "fee": 1.0,
     "ops": 0.5,
     "facility": 0.3,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -54461,13 +54462,13 @@
     "browser_batch": true
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.0,
     "facility": 0.0,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.5,
+    "rental": 0.25
    }
   },
   {
@@ -55073,13 +55074,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.2,
+    "basic": 1.0,
+    "course": 0.4,
     "fee": 1.0,
-    "ops": 0.36,
+    "ops": 0.43,
     "facility": 0.3,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -55574,13 +55575,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.78,
+    "basic": 0.89,
     "course": 0.2,
     "fee": 0.0,
-    "ops": 0.71,
+    "ops": 0.79,
     "facility": 0.5,
     "briefing": 0.0,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -56186,13 +56187,13 @@
     "browser_batch": true
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 1.0,
     "ops": 0.0,
     "facility": 0.0,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -56554,13 +56555,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.78,
+    "basic": 0.89,
     "course": 0.2,
     "fee": 0.0,
-    "ops": 0.0,
+    "ops": 0.07,
     "facility": 0.0,
     "briefing": 0.0,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -57232,13 +57233,13 @@
     "browser_batch": true
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 1.0,
     "ops": 0.43,
     "facility": 0.3,
     "briefing": 0.0,
-    "rental": 0.75
+    "rental": 1.0
    }
   },
   {
@@ -57675,13 +57676,13 @@
     "browser_batch": true
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.2,
+    "basic": 0.89,
+    "course": 0.4,
     "fee": 1.0,
     "ops": 0.21,
     "facility": 0.3,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -58207,13 +58208,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.78,
+    "basic": 0.89,
     "course": 0.2,
     "fee": 1.0,
     "ops": 0.5,
     "facility": 0.4,
     "briefing": 0.0,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -58726,13 +58727,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.2,
+    "basic": 1.0,
+    "course": 0.4,
     "fee": 1.0,
     "ops": 0.64,
     "facility": 0.3,
-    "briefing": 0.0,
-    "rental": 0.75
+    "briefing": 0.25,
+    "rental": 1.0
    }
   },
   {
@@ -59793,13 +59794,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.8,
     "fee": 1.0,
-    "ops": 0.29,
+    "ops": 0.36,
     "facility": 0.5,
-    "briefing": 0.0,
-    "rental": 0.75
+    "briefing": 0.25,
+    "rental": 1.0
    }
   },
   {
@@ -60183,13 +60184,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.2,
-    "fee": 0.0,
+    "basic": 1.0,
+    "course": 0.4,
+    "fee": 0.25,
     "ops": 0.0,
     "facility": 0.0,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -60986,13 +60987,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 1.0,
-    "ops": 0.14,
+    "ops": 0.21,
     "facility": 0.2,
-    "briefing": 0.0,
-    "rental": 0.75
+    "briefing": 0.25,
+    "rental": 1.0
    }
   },
   {
@@ -62042,13 +62043,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 1.0,
-    "ops": 0.43,
+    "ops": 0.5,
     "facility": 0.6,
-    "briefing": 0.0,
-    "rental": 0.75
+    "briefing": 0.5,
+    "rental": 1.0
    }
   },
   {
@@ -63264,13 +63265,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.36,
     "facility": 0.5,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.5,
+    "rental": 0.25
    }
   },
   {
@@ -64185,13 +64186,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 1.0,
-    "ops": 0.29,
+    "ops": 0.36,
     "facility": 0.2,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.5,
+    "rental": 0.25
    }
   },
   {
@@ -64638,13 +64639,13 @@
     "browser_batch": true
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.2,
+    "basic": 1.0,
+    "course": 0.4,
     "fee": 1.0,
-    "ops": 0.0,
+    "ops": 0.07,
     "facility": 0.0,
     "briefing": 0.0,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -65255,13 +65256,13 @@
     "browser_batch": true
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 0.5,
     "ops": 0.07,
     "facility": 0.0,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.5,
+    "rental": 0.25
    }
   },
   {
@@ -66065,13 +66066,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.43,
     "facility": 0.2,
     "briefing": 0.0,
-    "rental": 0.75
+    "rental": 1.0
    }
   },
   {
@@ -66586,13 +66587,13 @@
     "browser_batch": true
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.2,
+    "basic": 0.89,
+    "course": 0.4,
     "fee": 1.0,
-    "ops": 0.14,
+    "ops": 0.29,
     "facility": 0.2,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.5,
+    "rental": 0.25
    }
   },
   {
@@ -67168,13 +67169,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.43,
     "facility": 0.4,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -67823,13 +67824,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.2,
+    "basic": 0.89,
+    "course": 0.4,
     "fee": 1.0,
     "ops": 0.21,
     "facility": 0.3,
-    "briefing": 0.0,
-    "rental": 0.75
+    "briefing": 0.25,
+    "rental": 1.0
    }
   },
   {
@@ -68520,13 +68521,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.21,
     "facility": 0.4,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -69061,13 +69062,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.6,
     "fee": 0.0,
     "ops": 0.21,
     "facility": 0.0,
     "briefing": 0.0,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -69969,13 +69970,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 1.0,
     "ops": 0.5,
     "facility": 0.3,
-    "briefing": 0.0,
-    "rental": 0.75
+    "briefing": 0.25,
+    "rental": 1.0
    }
   },
   {
@@ -70545,13 +70546,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 1.0,
     "ops": 0.14,
     "facility": 0.3,
-    "briefing": 0.0,
-    "rental": 0.75
+    "briefing": 0.25,
+    "rental": 1.0
    }
   },
   {
@@ -70969,13 +70970,13 @@
     "browser_batch": true
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.2,
+    "basic": 1.0,
+    "course": 0.4,
     "fee": 1.0,
     "ops": 0.0,
     "facility": 0.1,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -71348,13 +71349,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.78,
+    "basic": 0.89,
     "course": 0.2,
     "fee": 0.0,
     "ops": 0.0,
     "facility": 0.1,
     "briefing": 0.0,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -72104,13 +72105,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.6,
     "fee": 0.0,
     "ops": 0.0,
     "facility": 0.0,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -72847,13 +72848,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.36,
     "facility": 0.2,
     "briefing": 0.0,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -73509,13 +73510,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.21,
     "facility": 0.1,
-    "briefing": 0.0,
-    "rental": 0.75
+    "briefing": 0.5,
+    "rental": 1.0
    }
   },
   {
@@ -74226,13 +74227,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.8,
     "fee": 1.0,
     "ops": 0.14,
     "facility": 0.2,
-    "briefing": 0.0,
-    "rental": 0.75
+    "briefing": 0.25,
+    "rental": 1.0
    }
   },
   {
@@ -74843,13 +74844,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
+    "basic": 1.0,
     "course": 0.4,
     "fee": 0.5,
-    "ops": 0.57,
+    "ops": 0.64,
     "facility": 0.6,
-    "briefing": 0.0,
-    "rental": 0.75
+    "briefing": 0.5,
+    "rental": 1.0
    }
   },
   {
@@ -75445,13 +75446,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.2,
+    "basic": 0.89,
+    "course": 0.4,
     "fee": 0.25,
     "ops": 0.36,
     "facility": 0.4,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.5,
+    "rental": 0.25
    }
   },
   {
@@ -75829,13 +75830,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
+    "basic": 1.0,
     "course": 0.2,
     "fee": 0.0,
     "ops": 0.0,
     "facility": 0.0,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -76236,13 +76237,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.78,
+    "basic": 0.89,
     "course": 0.2,
     "fee": 1.0,
-    "ops": 0.0,
+    "ops": 0.07,
     "facility": 0.0,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -76938,13 +76939,13 @@
     "browser_batch": true
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 1.0,
     "ops": 0.14,
     "facility": 0.1,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.5,
+    "rental": 0.25
    }
   },
   {
@@ -77427,13 +77428,13 @@
     "browser_batch": true
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.2,
+    "basic": 1.0,
+    "course": 0.4,
     "fee": 1.0,
     "ops": 0.0,
     "facility": 0.0,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -78365,13 +78366,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 1.0,
     "ops": 0.43,
     "facility": 0.3,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -79020,13 +79021,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
+    "basic": 1.0,
     "course": 0.2,
     "fee": 1.0,
     "ops": 0.29,
     "facility": 0.5,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.5,
+    "rental": 0.25
    }
   },
   {
@@ -79575,13 +79576,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
+    "basic": 1.0,
     "course": 0.2,
     "fee": 0.5,
     "ops": 0.36,
     "facility": 0.5,
     "briefing": 0.0,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -80249,13 +80250,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.6,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 0.5,
     "ops": 0.43,
     "facility": 0.0,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -80624,13 +80625,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
+    "basic": 1.0,
     "course": 0.2,
     "fee": 0.0,
     "ops": 0.0,
     "facility": 0.0,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -81188,13 +81189,13 @@
     "browser_batch": true
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.0,
     "facility": 0.0,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.5,
+    "rental": 0.25
    }
   },
   {
@@ -81552,13 +81553,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.78,
+    "basic": 0.89,
     "course": 0.2,
     "fee": 0.75,
     "ops": 0.0,
     "facility": 0.0,
     "briefing": 0.0,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -82341,13 +82342,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 1.0,
     "ops": 0.29,
     "facility": 0.4,
-    "briefing": 0.0,
-    "rental": 0.75
+    "briefing": 0.25,
+    "rental": 1.0
    }
   },
   {
@@ -82829,13 +82830,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.8,
     "fee": 1.0,
     "ops": 0.0,
     "facility": 0.0,
     "briefing": 0.0,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -83675,13 +83676,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.8,
     "fee": 1.0,
     "ops": 0.36,
     "facility": 0.4,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -84550,13 +84551,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.6,
+    "basic": 1.0,
+    "course": 1.0,
     "fee": 0.0,
     "ops": 0.43,
     "facility": 0.4,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.5,
+    "rental": 0.25
    }
   },
   {
@@ -85271,13 +85272,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 0.25,
     "ops": 0.57,
     "facility": 0.1,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.5,
+    "rental": 0.25
    }
   },
   {
@@ -85827,13 +85828,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 0.0,
     "ops": 0.29,
     "facility": 0.3,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -86237,13 +86238,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
+    "basic": 1.0,
     "course": 0.2,
     "fee": 0.0,
     "ops": 0.21,
     "facility": 0.2,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -87435,13 +87436,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.21,
     "facility": 0.5,
-    "briefing": 0.0,
-    "rental": 0.75
+    "briefing": 0.25,
+    "rental": 1.0
    }
   },
   {
@@ -88119,13 +88120,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.8,
     "fee": 0.5,
     "ops": 0.14,
     "facility": 0.2,
-    "briefing": 0.0,
-    "rental": 0.75
+    "briefing": 0.25,
+    "rental": 1.0
    }
   },
   {
@@ -88896,13 +88897,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.21,
     "facility": 0.2,
     "briefing": 0.0,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -89490,13 +89491,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 1.0,
     "ops": 0.29,
     "facility": 0.2,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -89965,13 +89966,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.6,
     "fee": 0.0,
     "ops": 0.21,
     "facility": 0.1,
     "briefing": 0.0,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -90519,13 +90520,13 @@
     "browser_batch": true
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.0,
     "facility": 0.0,
     "briefing": 0.0,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -90988,13 +90989,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.6,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 0.5,
     "ops": 0.43,
     "facility": 0.2,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -91520,13 +91521,13 @@
     "browser_batch": true
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.14,
     "facility": 0.1,
-    "briefing": 0.0,
-    "rental": 0.75
+    "briefing": 0.5,
+    "rental": 1.0
    }
   },
   {
@@ -92193,13 +92194,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 0.0,
-    "ops": 0.36,
+    "ops": 0.43,
     "facility": 0.4,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.5,
+    "rental": 0.25
    }
   },
   {
@@ -93036,13 +93037,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.6,
     "fee": 0.5,
-    "ops": 0.36,
+    "ops": 0.5,
     "facility": 0.3,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.5,
+    "rental": 0.25
    }
   },
   {
@@ -93453,13 +93454,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.6,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 0.5,
     "ops": 0.21,
     "facility": 0.0,
-    "briefing": 0.0,
-    "rental": 0.25
+    "briefing": 0.25,
+    "rental": 0.5
    }
   },
   {
@@ -93897,13 +93898,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 1.0,
-    "ops": 0.29,
+    "ops": 0.36,
     "facility": 0.2,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -94419,13 +94420,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 0.5,
-    "ops": 0.07,
+    "ops": 0.14,
     "facility": 0.1,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -94945,13 +94946,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 1.0,
-    "ops": 0.0,
+    "ops": 0.14,
     "facility": 0.0,
     "briefing": 0.0,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -95828,13 +95829,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.2,
+    "basic": 1.0,
+    "course": 0.4,
     "fee": 1.0,
-    "ops": 0.71,
+    "ops": 0.79,
     "facility": 0.6,
-    "briefing": 0.0,
-    "rental": 0.75
+    "briefing": 0.5,
+    "rental": 1.0
    }
   },
   {
@@ -96551,13 +96552,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
-    "fee": 0.0,
-    "ops": 0.36,
+    "basic": 1.0,
+    "course": 0.8,
+    "fee": 0.25,
+    "ops": 0.43,
     "facility": 0.1,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.5,
+    "rental": 0.25
    }
   },
   {
@@ -97071,13 +97072,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 0.0,
     "ops": 0.0,
     "facility": 0.0,
     "briefing": 0.0,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -98001,13 +98002,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.6,
+    "basic": 0.89,
+    "course": 1.0,
     "fee": 0.0,
-    "ops": 0.43,
+    "ops": 0.5,
     "facility": 0.2,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.5,
+    "rental": 0.25
    }
   },
   {
@@ -99014,13 +99015,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.6,
+    "basic": 1.0,
+    "course": 1.0,
     "fee": 1.0,
     "ops": 0.71,
     "facility": 0.5,
-    "briefing": 0.0,
-    "rental": 0.75
+    "briefing": 0.25,
+    "rental": 1.0
    }
   },
   {
@@ -99531,13 +99532,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.2,
+    "basic": 1.0,
+    "course": 0.4,
     "fee": 1.0,
-    "ops": 0.57,
+    "ops": 0.64,
     "facility": 0.4,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -100353,13 +100354,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 1.0,
     "ops": 0.5,
     "facility": 0.3,
-    "briefing": 0.0,
-    "rental": 0.75
+    "briefing": 0.5,
+    "rental": 1.0
    }
   },
   {
@@ -101198,13 +101199,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.8,
     "fee": 1.0,
     "ops": 0.21,
     "facility": 0.2,
-    "briefing": 0.0,
-    "rental": 0.75
+    "briefing": 0.25,
+    "rental": 1.0
    }
   },
   {
@@ -101869,13 +101870,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.8,
     "fee": 1.0,
-    "ops": 0.21,
+    "ops": 0.29,
     "facility": 0.0,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -102351,13 +102352,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.5,
     "facility": 0.5,
     "briefing": 0.0,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -103283,13 +103284,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 1.0,
-    "ops": 0.57,
+    "ops": 0.64,
     "facility": 0.4,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -104068,13 +104069,13 @@
     "browser_batch": true
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 1.0,
-    "ops": 0.0,
+    "ops": 0.07,
     "facility": 0.1,
     "briefing": 0.0,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -104614,13 +104615,13 @@
     "browser_batch": true
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 1.0,
-    "ops": 0.0,
+    "ops": 0.14,
     "facility": 0.0,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.5,
+    "rental": 0.25
    }
   },
   {
@@ -105382,13 +105383,13 @@
     "browser_batch": true
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.29,
     "facility": 0.3,
-    "briefing": 0.0,
-    "rental": 0.75
+    "briefing": 0.25,
+    "rental": 1.0
    }
   },
   {
@@ -106145,13 +106146,13 @@
     "browser_batch": true
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.6,
+    "basic": 0.89,
+    "course": 1.0,
     "fee": 0.75,
     "ops": 0.14,
     "facility": 0.0,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.5,
+    "rental": 0.25
    }
   },
   {
@@ -106916,13 +106917,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.78,
+    "basic": 0.89,
     "course": 0.4,
     "fee": 1.0,
-    "ops": 0.29,
+    "ops": 0.36,
     "facility": 0.4,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.5,
+    "rental": 0.25
    }
   },
   {
@@ -107376,13 +107377,13 @@
     "browser_batch": true
    },
    "coverage": {
-    "basic": 0.89,
+    "basic": 1.0,
     "course": 0.2,
-    "fee": 0.5,
-    "ops": 0.0,
+    "fee": 0.75,
+    "ops": 0.07,
     "facility": 0.1,
-    "briefing": 0.0,
-    "rental": 0.75
+    "briefing": 0.5,
+    "rental": 1.0
    }
   },
   {
@@ -108142,13 +108143,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 1.0,
-    "ops": 0.29,
+    "ops": 0.36,
     "facility": 0.4,
-    "briefing": 0.0,
-    "rental": 0.75
+    "briefing": 0.5,
+    "rental": 1.0
    }
   },
   {
@@ -108823,13 +108824,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.29,
     "facility": 0.0,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -109482,13 +109483,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
+    "basic": 1.0,
     "course": 0.4,
     "fee": 1.0,
-    "ops": 0.5,
+    "ops": 0.57,
     "facility": 0.7,
-    "briefing": 0.0,
-    "rental": 0.25
+    "briefing": 0.5,
+    "rental": 0.5
    }
   },
   {
@@ -110257,13 +110258,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.78,
+    "basic": 0.89,
     "course": 0.2,
     "fee": 1.0,
     "ops": 0.36,
     "facility": 0.5,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.5,
+    "rental": 0.25
    }
   },
   {
@@ -110869,13 +110870,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 1.0,
-    "ops": 0.5,
+    "ops": 0.64,
     "facility": 0.4,
-    "briefing": 0.0,
-    "rental": 0.75
+    "briefing": 0.5,
+    "rental": 1.0
    }
   },
   {
@@ -111773,13 +111774,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.8,
     "fee": 1.0,
     "ops": 0.5,
     "facility": 0.5,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -112223,13 +112224,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
+    "basic": 1.0,
     "course": 0.2,
     "fee": 0.75,
     "ops": 0.36,
     "facility": 0.4,
     "briefing": 0.0,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -112996,13 +112997,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 1.0,
-    "ops": 0.57,
+    "ops": 0.64,
     "facility": 0.4,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -113695,13 +113696,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.8,
     "fee": 1.0,
-    "ops": 0.29,
+    "ops": 0.36,
     "facility": 0.2,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -114124,13 +114125,13 @@
     "browser_batch": true
    },
    "coverage": {
-    "basic": 0.89,
+    "basic": 1.0,
     "course": 0.6,
     "fee": 0.75,
-    "ops": 0.07,
+    "ops": 0.21,
     "facility": 0.1,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.5,
+    "rental": 0.25
    }
   },
   {
@@ -114620,13 +114621,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.6,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 1.0,
-    "ops": 0.43,
+    "ops": 0.57,
     "facility": 0.5,
-    "briefing": 0.0,
-    "rental": 0.75
+    "briefing": 0.25,
+    "rental": 1.0
    }
   },
   {
@@ -115088,13 +115089,13 @@
     "browser_batch": true
    },
    "coverage": {
-    "basic": 0.89,
+    "basic": 1.0,
     "course": 0.6,
     "fee": 1.0,
-    "ops": 0.07,
+    "ops": 0.21,
     "facility": 0.3,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.5,
+    "rental": 0.25
    }
   },
   {
@@ -115620,13 +115621,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
-    "fee": 0.5,
-    "ops": 0.14,
+    "basic": 0.89,
+    "course": 0.8,
+    "fee": 0.75,
+    "ops": 0.21,
     "facility": 0.0,
     "briefing": 0.0,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -116068,13 +116069,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
+    "basic": 1.0,
     "course": 0.2,
     "fee": 1.0,
-    "ops": 0.14,
+    "ops": 0.29,
     "facility": 0.2,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -116567,13 +116568,13 @@
     "browser_batch": true
    },
    "coverage": {
-    "basic": 0.78,
+    "basic": 0.89,
     "course": 0.2,
     "fee": 1.0,
-    "ops": 0.21,
+    "ops": 0.29,
     "facility": 0.3,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.5,
+    "rental": 0.25
    }
   },
   {
@@ -117496,13 +117497,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.6,
+    "basic": 1.0,
+    "course": 1.0,
     "fee": 1.0,
-    "ops": 0.43,
+    "ops": 0.5,
     "facility": 0.3,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.5,
+    "rental": 0.25
    }
   },
   {
@@ -118108,13 +118109,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.6,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 0.0,
     "ops": 0.29,
     "facility": 0.2,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -118988,13 +118989,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.6,
     "fee": 1.0,
-    "ops": 0.43,
+    "ops": 0.5,
     "facility": 0.7,
     "briefing": 0.0,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -119558,13 +119559,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.6,
+    "basic": 0.89,
+    "course": 0.8,
     "fee": 0.0,
-    "ops": 0.5,
+    "ops": 0.57,
     "facility": 0.4,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -120007,13 +120008,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.78,
+    "basic": 0.89,
     "course": 0.2,
     "fee": 1.0,
     "ops": 0.36,
     "facility": 0.3,
     "briefing": 0.0,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -120570,13 +120571,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 0.0,
     "ops": 0.0,
     "facility": 0.1,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -121004,13 +121005,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.2,
+    "basic": 1.0,
+    "course": 0.4,
     "fee": 1.0,
     "ops": 0.21,
     "facility": 0.0,
-    "briefing": 0.0,
-    "rental": 0.75
+    "briefing": 0.25,
+    "rental": 1.0
    }
   },
   {
@@ -121891,13 +121892,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.67,
-    "course": 0.4,
+    "basic": 0.78,
+    "course": 0.8,
     "fee": 0.0,
     "ops": 0.14,
     "facility": 0.2,
     "briefing": 0.0,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -122809,13 +122810,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 0.0,
-    "ops": 0.14,
+    "ops": 0.21,
     "facility": 0.2,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -123426,13 +123427,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 1.0,
-    "ops": 0.36,
+    "ops": 0.43,
     "facility": 0.3,
-    "briefing": 0.0,
-    "rental": 0.75
+    "briefing": 0.25,
+    "rental": 1.0
    }
   },
   {
@@ -124032,13 +124033,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.8,
     "fee": 1.0,
-    "ops": 0.29,
+    "ops": 0.36,
     "facility": 0.4,
     "briefing": 0.0,
-    "rental": 0.75
+    "rental": 1.0
    }
   },
   {
@@ -124948,13 +124949,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 1.0,
-    "ops": 0.36,
+    "ops": 0.43,
     "facility": 0.5,
-    "briefing": 0.0,
-    "rental": 0.75
+    "briefing": 0.25,
+    "rental": 1.0
    }
   },
   {
@@ -125665,13 +125666,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.8,
     "fee": 1.0,
     "ops": 0.21,
     "facility": 0.4,
-    "briefing": 0.0,
-    "rental": 0.75
+    "briefing": 0.25,
+    "rental": 1.0
    }
   },
   {
@@ -126476,13 +126477,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.6,
-    "fee": 0.0,
-    "ops": 0.07,
+    "basic": 0.89,
+    "course": 1.0,
+    "fee": 0.25,
+    "ops": 0.14,
     "facility": 0.4,
-    "briefing": 0.0,
-    "rental": 0.75
+    "briefing": 0.25,
+    "rental": 1.0
    }
   },
   {
@@ -126980,13 +126981,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.6,
     "fee": 0.0,
-    "ops": 0.0,
+    "ops": 0.14,
     "facility": 0.0,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -127514,13 +127515,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.2,
+    "basic": 1.0,
+    "course": 0.4,
     "fee": 0.5,
-    "ops": 0.5,
+    "ops": 0.57,
     "facility": 0.2,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -127856,13 +127857,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.78,
+    "basic": 0.89,
     "course": 0.2,
     "fee": 0.0,
     "ops": 0.0,
     "facility": 0.0,
     "briefing": 0.0,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -128385,13 +128386,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.78,
+    "basic": 0.89,
     "course": 0.2,
     "fee": 0.25,
     "ops": 0.43,
     "facility": 0.3,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.5,
+    "rental": 0.25
    }
   },
   {
@@ -129184,13 +129185,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 0.0,
-    "ops": 0.29,
+    "ops": 0.5,
     "facility": 0.4,
-    "briefing": 0.0,
-    "rental": 0.75
+    "briefing": 0.25,
+    "rental": 1.0
    }
   },
   {
@@ -129890,13 +129891,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.6,
     "fee": 1.0,
-    "ops": 0.57,
+    "ops": 0.64,
     "facility": 0.4,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -130601,13 +130602,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
-    "fee": 0.0,
-    "ops": 0.14,
+    "basic": 0.89,
+    "course": 0.6,
+    "fee": 0.25,
+    "ops": 0.21,
     "facility": 0.0,
     "briefing": 0.0,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -131171,13 +131172,13 @@
     "browser_batch": true
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 1.0,
-    "ops": 0.07,
+    "ops": 0.14,
     "facility": 0.0,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.5,
+    "rental": 0.25
    }
   },
   {
@@ -131649,13 +131650,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.0,
     "facility": 0.0,
     "briefing": 0.0,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -132018,13 +132019,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.78,
+    "basic": 0.89,
     "course": 0.2,
     "fee": 0.0,
     "ops": 0.0,
     "facility": 0.0,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -132401,13 +132402,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.78,
+    "basic": 0.89,
     "course": 0.2,
-    "fee": 0.0,
-    "ops": 0.0,
+    "fee": 0.25,
+    "ops": 0.07,
     "facility": 0.0,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -133264,13 +133265,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
+    "basic": 1.0,
     "course": 0.2,
     "fee": 1.0,
-    "ops": 0.71,
+    "ops": 0.79,
     "facility": 0.5,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.5,
+    "rental": 0.25
    }
   },
   {
@@ -134048,13 +134049,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.8,
     "fee": 1.0,
-    "ops": 0.29,
+    "ops": 0.36,
     "facility": 0.2,
-    "briefing": 0.0,
-    "rental": 0.75
+    "briefing": 0.25,
+    "rental": 1.0
    }
   },
   {
@@ -134652,13 +134653,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.78,
+    "basic": 0.89,
     "course": 0.2,
     "fee": 0.25,
     "ops": 0.21,
     "facility": 0.2,
-    "briefing": 0.0,
-    "rental": 0.75
+    "briefing": 0.25,
+    "rental": 1.0
    }
   },
   {
@@ -135402,13 +135403,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.8,
     "fee": 0.0,
     "ops": 0.21,
     "facility": 0.3,
-    "briefing": 0.0,
-    "rental": 0.75
+    "briefing": 0.25,
+    "rental": 1.0
    }
   },
   {
@@ -136181,13 +136182,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 0.0,
     "ops": 0.21,
     "facility": 0.4,
-    "briefing": 0.0,
-    "rental": 0.75
+    "briefing": 0.5,
+    "rental": 1.0
    }
   },
   {
@@ -136793,13 +136794,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
+    "basic": 1.0,
     "course": 0.6,
     "fee": 1.0,
     "ops": 0.5,
     "facility": 0.4,
-    "briefing": 0.0,
-    "rental": 0.75
+    "briefing": 0.5,
+    "rental": 1.0
    }
   },
   {
@@ -137634,13 +137635,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 0.25,
     "ops": 0.29,
     "facility": 0.2,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.5,
+    "rental": 0.25
    }
   },
   {
@@ -138233,13 +138234,13 @@
     "browser_batch": true
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.8,
     "fee": 1.0,
-    "ops": 0.14,
+    "ops": 0.21,
     "facility": 0.1,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.5,
+    "rental": 0.25
    }
   },
   {
@@ -138697,13 +138698,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
+    "basic": 1.0,
     "course": 0.2,
     "fee": 1.0,
-    "ops": 0.36,
+    "ops": 0.5,
     "facility": 0.2,
-    "briefing": 0.0,
-    "rental": 0.75
+    "briefing": 0.25,
+    "rental": 1.0
    }
   },
   {
@@ -139150,13 +139151,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.2,
+    "basic": 1.0,
+    "course": 0.4,
     "fee": 0.0,
-    "ops": 0.14,
+    "ops": 0.29,
     "facility": 0.5,
     "briefing": 0.0,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -139538,13 +139539,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
+    "basic": 1.0,
     "course": 0.6,
     "fee": 0.75,
-    "ops": 0.0,
+    "ops": 0.07,
     "facility": 0.0,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -140052,13 +140053,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
+    "basic": 1.0,
     "course": 0.2,
     "fee": 1.0,
-    "ops": 0.57,
+    "ops": 0.79,
     "facility": 0.4,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -140817,13 +140818,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 1.0,
-    "ops": 0.07,
+    "ops": 0.14,
     "facility": 0.3,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -141805,13 +141806,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.14,
     "facility": 0.5,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -142227,13 +142228,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.2,
+    "basic": 0.89,
+    "course": 0.4,
     "fee": 1.0,
-    "ops": 0.0,
+    "ops": 0.07,
     "facility": 0.2,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -142708,13 +142709,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
+    "basic": 1.0,
     "course": 0.4,
     "fee": 1.0,
-    "ops": 0.36,
+    "ops": 0.43,
     "facility": 0.5,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -143250,13 +143251,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 1.0,
     "ops": 0.29,
     "facility": 0.3,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -143686,13 +143687,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 1.0,
-    "ops": 0.21,
+    "ops": 0.36,
     "facility": 0.1,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -144086,13 +144087,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.0,
     "facility": 0.2,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -144522,13 +144523,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 1.0,
-    "ops": 0.21,
+    "ops": 0.29,
     "facility": 0.0,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -144973,13 +144974,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 1.0,
     "ops": 0.14,
     "facility": 0.0,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -145400,13 +145401,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
+    "basic": 1.0,
     "course": 0.4,
     "fee": 1.0,
-    "ops": 0.14,
+    "ops": 0.36,
     "facility": 0.0,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -145904,13 +145905,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.21,
     "facility": 0.5,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -146318,13 +146319,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.78,
+    "basic": 0.89,
     "course": 0.4,
     "fee": 0.5,
-    "ops": 0.14,
+    "ops": 0.21,
     "facility": 0.0,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -146811,13 +146812,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.36,
     "facility": 0.1,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -147267,13 +147268,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.78,
+    "basic": 0.89,
     "course": 0.4,
     "fee": 1.0,
     "ops": 0.07,
     "facility": 0.1,
     "briefing": 0.5,
-    "rental": 0.75
+    "rental": 1.0
    }
   },
   {
@@ -147834,13 +147835,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 1.0,
-    "ops": 0.29,
+    "ops": 0.36,
     "facility": 0.3,
     "briefing": 0.5,
-    "rental": 0.75
+    "rental": 1.0
    }
   },
   {
@@ -148270,13 +148271,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 0.75,
-    "ops": 0.29,
+    "ops": 0.43,
     "facility": 0.1,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -148692,13 +148693,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.6,
     "fee": 0.5,
-    "ops": 0.07,
+    "ops": 0.14,
     "facility": 0.3,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -149130,13 +149131,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.6,
     "fee": 1.0,
-    "ops": 0.0,
+    "ops": 0.07,
     "facility": 0.5,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -149600,13 +149601,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 1.0,
-    "ops": 0.21,
+    "ops": 0.29,
     "facility": 0.2,
     "briefing": 0.5,
-    "rental": 0.5
+    "rental": 0.75
    }
   },
   {
@@ -150094,13 +150095,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 1.0,
-    "ops": 0.14,
+    "ops": 0.29,
     "facility": 0.3,
     "briefing": 0.5,
-    "rental": 0.5
+    "rental": 0.75
    }
   },
   {
@@ -150549,13 +150550,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.78,
+    "basic": 0.89,
     "course": 0.4,
     "fee": 1.0,
-    "ops": 0.57,
+    "ops": 0.64,
     "facility": 0.2,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -151064,13 +151065,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.29,
     "facility": 0.4,
-    "briefing": 0.5,
-    "rental": 0.0
+    "briefing": 0.75,
+    "rental": 0.25
    }
   },
   {
@@ -151473,13 +151474,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
+    "basic": 1.0,
     "course": 0.4,
     "fee": 1.0,
     "ops": 0.07,
     "facility": 0.0,
     "briefing": 0.5,
-    "rental": 0.75
+    "rental": 1.0
    }
   },
   {
@@ -151982,13 +151983,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 1.0,
-    "ops": 0.36,
+    "ops": 0.57,
     "facility": 0.4,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -152500,13 +152501,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 1.0,
-    "ops": 0.29,
+    "ops": 0.43,
     "facility": 0.5,
     "briefing": 0.5,
-    "rental": 0.75
+    "rental": 1.0
    }
   },
   {
@@ -153029,13 +153030,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.36,
     "facility": 0.3,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -153557,13 +153558,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
+    "basic": 1.0,
     "course": 0.4,
     "fee": 1.0,
     "ops": 0.29,
     "facility": 0.3,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -153982,13 +153983,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.57,
     "facility": 0.4,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -154460,13 +154461,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
+    "basic": 1.0,
     "course": 0.4,
     "fee": 1.0,
-    "ops": 0.14,
+    "ops": 0.21,
     "facility": 0.0,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -154948,13 +154949,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
+    "basic": 1.0,
     "course": 0.4,
     "fee": 1.0,
-    "ops": 0.14,
+    "ops": 0.21,
     "facility": 0.4,
     "briefing": 0.5,
-    "rental": 0.75
+    "rental": 1.0
    }
   },
   {
@@ -155374,13 +155375,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.78,
+    "basic": 0.89,
     "course": 0.4,
     "fee": 1.0,
-    "ops": 0.0,
+    "ops": 0.07,
     "facility": 0.2,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -155786,13 +155787,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 1.0,
     "ops": 0.07,
     "facility": 0.3,
     "briefing": 0.5,
-    "rental": 0.5
+    "rental": 0.75
    }
   },
   {
@@ -156209,13 +156210,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.6,
     "fee": 1.0,
-    "ops": 0.21,
+    "ops": 0.29,
     "facility": 0.2,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -156662,13 +156663,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
+    "basic": 1.0,
     "course": 0.4,
     "fee": 1.0,
     "ops": 0.14,
     "facility": 0.1,
-    "briefing": 0.5,
-    "rental": 0.0
+    "briefing": 0.75,
+    "rental": 0.25
    }
   },
   {
@@ -157263,13 +157264,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 1.0,
-    "ops": 0.43,
+    "ops": 0.5,
     "facility": 0.5,
     "briefing": 0.5,
-    "rental": 0.75
+    "rental": 1.0
    }
   },
   {
@@ -157783,13 +157784,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
+    "basic": 1.0,
     "course": 0.4,
     "fee": 1.0,
     "ops": 0.29,
     "facility": 0.4,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -158209,13 +158210,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 1.0,
-    "ops": 0.07,
+    "ops": 0.14,
     "facility": 0.0,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -158632,13 +158633,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.6,
     "fee": 1.0,
-    "ops": 0.14,
+    "ops": 0.21,
     "facility": 0.2,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -159120,13 +159121,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
+    "basic": 1.0,
     "course": 0.4,
     "fee": 1.0,
-    "ops": 0.36,
+    "ops": 0.57,
     "facility": 0.3,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -159552,13 +159553,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.8,
     "fee": 1.0,
-    "ops": 0.14,
+    "ops": 0.29,
     "facility": 0.2,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -159963,13 +159964,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
+    "basic": 1.0,
     "course": 0.4,
     "fee": 1.0,
     "ops": 0.0,
     "facility": 0.0,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -160400,13 +160401,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 1.0,
-    "ops": 0.0,
+    "ops": 0.07,
     "facility": 0.0,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -160781,13 +160782,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.67,
+    "basic": 0.78,
     "course": 0.4,
     "fee": 0.5,
     "ops": 0.43,
     "facility": 0.3,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -161177,13 +161178,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.78,
+    "basic": 0.89,
     "course": 0.4,
     "fee": 1.0,
     "ops": 0.21,
     "facility": 0.1,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -161587,13 +161588,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.14,
     "facility": 0.1,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -162032,13 +162033,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 1.0,
-    "ops": 0.29,
+    "ops": 0.36,
     "facility": 0.4,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -162523,13 +162524,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.78,
+    "basic": 0.89,
     "course": 0.4,
     "fee": 1.0,
     "ops": 0.36,
     "facility": 0.2,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -162935,13 +162936,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 1.0,
-    "ops": 0.07,
+    "ops": 0.14,
     "facility": 0.1,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -163369,13 +163370,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.6,
     "fee": 1.0,
-    "ops": 0.0,
+    "ops": 0.14,
     "facility": 0.0,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -163787,13 +163788,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 1.0,
-    "ops": 0.14,
+    "ops": 0.21,
     "facility": 0.0,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -164280,13 +164281,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 1.0,
-    "ops": 0.29,
+    "ops": 0.36,
     "facility": 0.4,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -164844,13 +164845,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.78,
+    "basic": 0.89,
     "course": 0.4,
     "fee": 1.0,
     "ops": 0.64,
     "facility": 0.5,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -165300,13 +165301,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.8,
     "fee": 1.0,
-    "ops": 0.07,
+    "ops": 0.21,
     "facility": 0.1,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -165792,13 +165793,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.8,
     "fee": 1.0,
     "ops": 0.5,
     "facility": 0.6,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -166318,13 +166319,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.6,
     "fee": 1.0,
-    "ops": 0.36,
+    "ops": 0.43,
     "facility": 0.6,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -166765,13 +166766,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.07,
     "facility": 0.1,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -167239,13 +167240,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 1.0,
-    "ops": 0.36,
+    "ops": 0.43,
     "facility": 0.4,
     "briefing": 0.5,
-    "rental": 0.75
+    "rental": 1.0
    }
   },
   {
@@ -167719,13 +167720,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 1.0,
-    "ops": 0.43,
+    "ops": 0.5,
     "facility": 0.6,
     "briefing": 0.5,
-    "rental": 0.75
+    "rental": 1.0
    }
   },
   {
@@ -168101,13 +168102,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.78,
+    "basic": 0.89,
     "course": 0.4,
     "fee": 1.0,
     "ops": 0.14,
     "facility": 0.1,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -168593,13 +168594,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 1.0,
-    "ops": 0.21,
+    "ops": 0.36,
     "facility": 0.4,
     "briefing": 0.5,
-    "rental": 0.5
+    "rental": 0.75
    }
   },
   {
@@ -169066,13 +169067,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.29,
     "facility": 0.4,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -169614,13 +169615,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.36,
     "facility": 0.3,
     "briefing": 0.5,
-    "rental": 0.75
+    "rental": 1.0
    }
   },
   {
@@ -170103,13 +170104,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 1.0,
-    "ops": 0.21,
+    "ops": 0.36,
     "facility": 0.5,
-    "briefing": 0.5,
-    "rental": 0.75
+    "briefing": 0.75,
+    "rental": 1.0
    }
   },
   {
@@ -170621,13 +170622,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 1.0,
     "ops": 0.64,
     "facility": 0.5,
     "briefing": 0.5,
-    "rental": 0.75
+    "rental": 1.0
    }
   },
   {
@@ -171088,13 +171089,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.78,
+    "basic": 0.89,
     "course": 0.4,
     "fee": 1.0,
     "ops": 0.43,
     "facility": 0.7,
     "briefing": 0.5,
-    "rental": 0.5
+    "rental": 0.75
    }
   },
   {
@@ -171553,13 +171554,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.78,
+    "basic": 0.89,
     "course": 0.4,
     "fee": 1.0,
     "ops": 0.36,
     "facility": 0.7,
     "briefing": 0.5,
-    "rental": 0.25
+    "rental": 0.5
    }
   },
   {
@@ -172052,13 +172053,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.6,
     "fee": 1.0,
-    "ops": 0.36,
+    "ops": 0.43,
     "facility": 0.8,
     "briefing": 0.5,
-    "rental": 0.75
+    "rental": 1.0
    }
   },
   {
@@ -172525,13 +172526,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.78,
+    "basic": 0.89,
     "course": 0.4,
     "fee": 1.0,
-    "ops": 0.36,
+    "ops": 0.43,
     "facility": 0.8,
     "briefing": 0.5,
-    "rental": 0.75
+    "rental": 1.0
    }
   },
   {
@@ -173127,13 +173128,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 1.0,
     "ops": 0.29,
     "facility": 0.5,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -173920,13 +173921,13 @@
     "browser_batch": true
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.2,
+    "basic": 0.89,
+    "course": 0.4,
     "fee": 1.0,
-    "ops": 0.0,
+    "ops": 0.07,
     "facility": 0.3,
     "briefing": 0.0,
-    "rental": 0.5
+    "rental": 0.75
    }
   },
   {
@@ -174815,13 +174816,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.43,
     "facility": 0.3,
-    "briefing": 0.0,
-    "rental": 0.75
+    "briefing": 0.25,
+    "rental": 1.0
    }
   },
   {
@@ -175450,13 +175451,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
+    "basic": 1.0,
     "course": 0.4,
-    "fee": 0.25,
+    "fee": 0.5,
     "ops": 0.64,
     "facility": 0.5,
     "briefing": 0.0,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -176023,13 +176024,13 @@
     "browser_batch": true
    },
    "coverage": {
-    "basic": 0.89,
+    "basic": 1.0,
     "course": 0.2,
     "fee": 1.0,
     "ops": 0.07,
     "facility": 0.2,
-    "briefing": 0.5,
-    "rental": 0.5
+    "briefing": 1.0,
+    "rental": 0.75
    }
   },
   {
@@ -176911,13 +176912,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.64,
     "facility": 0.4,
-    "briefing": 0.0,
-    "rental": 0.75
+    "briefing": 0.25,
+    "rental": 1.0
    }
   },
   {
@@ -177700,13 +177701,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.2,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.21,
     "facility": 0.5,
-    "briefing": 0.0,
-    "rental": 0.75
+    "briefing": 0.25,
+    "rental": 1.0
    }
   },
   {
@@ -179069,13 +179070,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.2,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.71,
     "facility": 0.5,
-    "briefing": 0.0,
-    "rental": 0.75
+    "briefing": 0.5,
+    "rental": 1.0
    }
   },
   {
@@ -180127,13 +180128,13 @@
     "browser_batch": true
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.43,
     "facility": 0.4,
-    "briefing": 0.0,
-    "rental": 0.75
+    "briefing": 0.25,
+    "rental": 1.0
    }
   },
   {
@@ -180805,13 +180806,13 @@
     "browser_batch": true
    },
    "coverage": {
-    "basic": 0.78,
+    "basic": 0.89,
     "course": 0.2,
     "fee": 1.0,
     "ops": 0.43,
     "facility": 0.3,
     "briefing": 0.0,
-    "rental": 0.75
+    "rental": 1.0
    }
   },
   {
@@ -181294,13 +181295,13 @@
     "browser_batch": true
    },
    "coverage": {
-    "basic": 0.89,
+    "basic": 1.0,
     "course": 0.2,
     "fee": 1.0,
     "ops": 0.29,
     "facility": 0.1,
-    "briefing": 0.0,
-    "rental": 0.5
+    "briefing": 0.25,
+    "rental": 0.75
    }
   },
   {
@@ -181847,13 +181848,13 @@
     "browser_batch": true
    },
    "coverage": {
-    "basic": 0.67,
+    "basic": 0.78,
     "course": 0.4,
     "fee": 1.0,
     "ops": 0.0,
     "facility": 0.0,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -182519,13 +182520,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
+    "basic": 1.0,
     "course": 0.2,
     "fee": 1.0,
     "ops": 0.29,
     "facility": 0.3,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -183076,13 +183077,13 @@
     "browser_batch": true
    },
    "coverage": {
-    "basic": 0.89,
+    "basic": 1.0,
     "course": 0.4,
     "fee": 1.0,
     "ops": 0.07,
     "facility": 0.0,
-    "briefing": 0.5,
-    "rental": 0.0
+    "briefing": 0.75,
+    "rental": 0.25
    }
   },
   {
@@ -184034,13 +184035,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.43,
     "facility": 0.3,
-    "briefing": 0.0,
-    "rental": 0.75
+    "briefing": 0.25,
+    "rental": 1.0
    }
   },
   {
@@ -184469,13 +184470,13 @@
     "browser_batch": true
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.2,
+    "basic": 0.89,
+    "course": 0.4,
     "fee": 1.0,
     "ops": 0.14,
     "facility": 0.1,
     "briefing": 0.0,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -184987,13 +184988,13 @@
     "browser_batch": true
    },
    "coverage": {
-    "basic": 0.89,
+    "basic": 1.0,
     "course": 0.4,
     "fee": 0.75,
-    "ops": 0.14,
+    "ops": 0.21,
     "facility": 0.4,
     "briefing": 0.0,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -185408,13 +185409,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.56,
+    "basic": 0.67,
     "course": 0.2,
     "fee": 1.0,
     "ops": 0.0,
     "facility": 0.0,
     "briefing": 0.0,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -186282,13 +186283,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.2,
+    "basic": 1.0,
+    "course": 0.4,
     "fee": 1.0,
     "ops": 0.21,
     "facility": 0.2,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -186977,13 +186978,13 @@
     "browser_batch": true
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.0,
     "facility": 0.0,
-    "briefing": 0.5,
-    "rental": 0.5
+    "briefing": 0.75,
+    "rental": 0.75
    }
   },
   {
@@ -187502,13 +187503,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
+    "basic": 1.0,
     "course": 0.4,
     "fee": 1.0,
     "ops": 0.21,
     "facility": 0.1,
     "briefing": 0.0,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -188230,13 +188231,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.2,
+    "basic": 0.89,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.21,
     "facility": 0.2,
-    "briefing": 0.0,
-    "rental": 0.75
+    "briefing": 0.25,
+    "rental": 1.0
    }
   },
   {
@@ -188809,13 +188810,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.2,
+    "basic": 0.89,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.07,
     "facility": 0.0,
-    "briefing": 0.0,
-    "rental": 0.75
+    "briefing": 0.25,
+    "rental": 1.0
    }
   },
   {
@@ -189776,13 +189777,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.36,
     "facility": 0.2,
-    "briefing": 0.0,
-    "rental": 0.75
+    "briefing": 0.5,
+    "rental": 1.0
    }
   },
   {
@@ -190427,13 +190428,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
+    "basic": 1.0,
     "course": 0.2,
     "fee": 1.0,
     "ops": 0.29,
     "facility": 0.0,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.5,
+    "rental": 0.25
    }
   },
   {
@@ -191128,13 +191129,13 @@
     "browser_batch": true
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.29,
     "facility": 0.1,
-    "briefing": 0.5,
-    "rental": 0.0
+    "briefing": 0.75,
+    "rental": 0.25
    }
   },
   {
@@ -191747,13 +191748,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.2,
+    "basic": 1.0,
+    "course": 0.4,
     "fee": 1.0,
     "ops": 0.0,
     "facility": 0.1,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -192257,13 +192258,13 @@
     "browser_batch": true
    },
    "coverage": {
-    "basic": 0.78,
+    "basic": 0.89,
     "course": 0.2,
     "fee": 1.0,
     "ops": 0.14,
     "facility": 0.1,
-    "briefing": 0.0,
-    "rental": 0.75
+    "briefing": 0.25,
+    "rental": 1.0
    }
   },
   {
@@ -192846,13 +192847,13 @@
     "browser_batch": true
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.2,
+    "basic": 1.0,
+    "course": 0.4,
     "fee": 1.0,
     "ops": 0.0,
     "facility": 0.0,
-    "briefing": 0.0,
-    "rental": 0.5
+    "briefing": 0.5,
+    "rental": 0.75
    }
   },
   {
@@ -193298,13 +193299,13 @@
     "browser_batch": true
    },
    "coverage": {
-    "basic": 0.89,
+    "basic": 1.0,
     "course": 0.2,
     "fee": 1.0,
     "ops": 0.0,
     "facility": 0.2,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -193777,13 +193778,13 @@
     "browser_batch": true
    },
    "coverage": {
-    "basic": 0.78,
+    "basic": 0.89,
     "course": 0.2,
     "fee": 1.0,
     "ops": 0.07,
     "facility": 0.1,
-    "briefing": 0.0,
-    "rental": 0.75
+    "briefing": 0.25,
+    "rental": 1.0
    }
   },
   {
@@ -194264,13 +194265,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.78,
+    "basic": 1.0,
     "course": 0.2,
     "fee": 1.0,
     "ops": 0.0,
     "facility": 0.0,
     "briefing": 0.0,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -195067,13 +195068,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
+    "basic": 1.0,
     "course": 0.4,
     "fee": 1.0,
     "ops": 0.43,
     "facility": 0.6,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.5,
+    "rental": 0.25
    }
   },
   {
@@ -195600,13 +195601,13 @@
     "browser_batch": true
    },
    "coverage": {
-    "basic": 0.89,
+    "basic": 1.0,
     "course": 0.2,
     "fee": 0.75,
     "ops": 0.14,
     "facility": 0.0,
-    "briefing": 0.5,
-    "rental": 0.0
+    "briefing": 0.75,
+    "rental": 0.25
    }
   },
   {
@@ -196067,13 +196068,13 @@
     "browser_batch": true
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.6,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 1.0,
     "ops": 0.0,
     "facility": 0.0,
     "briefing": 0.0,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -196525,13 +196526,13 @@
     "browser_batch": true
    },
    "coverage": {
-    "basic": 0.78,
+    "basic": 0.89,
     "course": 0.2,
     "fee": 1.0,
     "ops": 0.07,
     "facility": 0.1,
-    "briefing": 0.0,
-    "rental": 0.75
+    "briefing": 0.25,
+    "rental": 1.0
    }
   },
   {
@@ -197110,13 +197111,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.67,
-    "course": 0.2,
+    "basic": 0.89,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.07,
     "facility": 0.3,
     "briefing": 0.0,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -198088,13 +198089,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.2,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.29,
     "facility": 0.5,
-    "briefing": 0.5,
-    "rental": 0.0
+    "briefing": 1.0,
+    "rental": 0.25
    }
   },
   {
@@ -198874,13 +198875,13 @@
     "browser_batch": true
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.14,
     "facility": 0.4,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -199715,13 +199716,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.5,
     "facility": 0.4,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -200359,13 +200360,13 @@
     "browser_batch": true
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 1.0,
     "ops": 0.0,
     "facility": 0.0,
     "briefing": 0.0,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -200888,13 +200889,13 @@
     "browser_batch": true
    },
    "coverage": {
-    "basic": 0.67,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.0,
     "facility": 0.0,
     "briefing": 0.0,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -201304,13 +201305,13 @@
     "browser_batch": true
    },
    "coverage": {
-    "basic": 0.89,
+    "basic": 1.0,
     "course": 0.4,
     "fee": 1.0,
     "ops": 0.0,
     "facility": 0.0,
     "briefing": 0.0,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -201848,13 +201849,13 @@
     "browser_batch": true
    },
    "coverage": {
-    "basic": 0.89,
+    "basic": 1.0,
     "course": 0.2,
     "fee": 1.0,
     "ops": 0.07,
     "facility": 0.1,
-    "briefing": 0.5,
-    "rental": 0.0
+    "briefing": 1.0,
+    "rental": 0.25
    }
   },
   {
@@ -202349,13 +202350,13 @@
     "browser_batch": true
    },
    "coverage": {
-    "basic": 0.78,
+    "basic": 0.89,
     "course": 0.2,
     "fee": 0.75,
     "ops": 0.07,
     "facility": 0.0,
-    "briefing": 0.5,
-    "rental": 0.0
+    "briefing": 0.75,
+    "rental": 0.25
    }
   },
   {
@@ -202900,13 +202901,13 @@
     "browser_batch": true
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.2,
+    "basic": 1.0,
+    "course": 0.4,
     "fee": 1.0,
     "ops": 0.0,
     "facility": 0.1,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.5,
+    "rental": 0.25
    }
   },
   {
@@ -203310,13 +203311,13 @@
     "browser_batch": true
    },
    "coverage": {
-    "basic": 0.89,
+    "basic": 1.0,
     "course": 0.2,
     "fee": 1.0,
     "ops": 0.0,
     "facility": 0.0,
     "briefing": 0.0,
-    "rental": 0.5
+    "rental": 0.75
    }
   },
   {
@@ -203831,13 +203832,13 @@
     "browser_batch": true
    },
    "coverage": {
-    "basic": 0.78,
+    "basic": 0.89,
     "course": 0.2,
     "fee": 1.0,
     "ops": 0.36,
     "facility": 0.2,
     "briefing": 0.0,
-    "rental": 0.75
+    "rental": 1.0
    }
   },
   {
@@ -204462,13 +204463,13 @@
     "browser_batch": true
    },
    "coverage": {
-    "basic": 0.67,
+    "basic": 0.89,
     "course": 0.2,
     "fee": 0.75,
     "ops": 0.36,
     "facility": 0.4,
-    "briefing": 0.5,
-    "rental": 0.0
+    "briefing": 0.75,
+    "rental": 0.25
    }
   },
   {
@@ -205137,13 +205138,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.78,
+    "basic": 0.89,
     "course": 0.2,
     "fee": 0.75,
     "ops": 0.29,
     "facility": 0.2,
-    "briefing": 0.0,
-    "rental": 0.75
+    "briefing": 0.25,
+    "rental": 1.0
    }
   },
   {
@@ -205593,13 +205594,13 @@
     "browser_batch": true
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.6,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 1.0,
     "ops": 0.0,
     "facility": 0.0,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -206029,13 +206030,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.6,
     "fee": 1.0,
-    "ops": 0.5,
+    "ops": 0.57,
     "facility": 0.3,
     "briefing": 0.5,
-    "rental": 0.75
+    "rental": 1.0
    }
   },
   {
@@ -206449,13 +206450,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.5,
     "facility": 0.6,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -206852,13 +206853,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 0.75,
-    "ops": 0.5,
+    "ops": 0.64,
     "facility": 0.0,
     "briefing": 0.5,
-    "rental": 0.75
+    "rental": 1.0
    }
   },
   {
@@ -207273,13 +207274,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.6,
     "fee": 1.0,
-    "ops": 0.43,
+    "ops": 0.57,
     "facility": 0.4,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -207673,13 +207674,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.8,
     "fee": 1.0,
-    "ops": 0.5,
+    "ops": 0.57,
     "facility": 0.6,
     "briefing": 0.5,
-    "rental": 0.75
+    "rental": 1.0
    }
   },
   {
@@ -208068,13 +208069,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.78,
+    "basic": 0.89,
     "course": 0.4,
     "fee": 0.75,
-    "ops": 0.21,
+    "ops": 0.29,
     "facility": 0.2,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -208489,13 +208490,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 1.0,
-    "ops": 0.07,
+    "ops": 0.14,
     "facility": 0.1,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -208886,13 +208887,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 1.0,
     "ops": 0.14,
     "facility": 0.5,
     "briefing": 0.5,
-    "rental": 0.75
+    "rental": 1.0
    }
   },
   {
@@ -209345,13 +209346,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 1.0,
     "ops": 0.21,
     "facility": 0.3,
     "briefing": 0.5,
-    "rental": 0.75
+    "rental": 1.0
    }
   },
   {
@@ -209829,13 +209830,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 1.0,
-    "ops": 0.5,
+    "ops": 0.64,
     "facility": 0.4,
-    "briefing": 0.5,
-    "rental": 0.75
+    "briefing": 0.75,
+    "rental": 1.0
    }
   },
   {
@@ -210254,13 +210255,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 1.0,
     "ops": 0.21,
     "facility": 0.3,
     "briefing": 0.5,
-    "rental": 0.75
+    "rental": 1.0
    }
   },
   {
@@ -210730,13 +210731,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.36,
     "facility": 0.5,
-    "briefing": 0.5,
-    "rental": 0.75
+    "briefing": 0.75,
+    "rental": 1.0
    }
   },
   {
@@ -211134,13 +211135,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.21,
     "facility": 0.1,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -211574,13 +211575,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.5,
     "facility": 0.5,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -212050,13 +212051,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.6,
     "fee": 1.0,
-    "ops": 0.0,
+    "ops": 0.14,
     "facility": 0.0,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -212448,13 +212449,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.78,
+    "basic": 0.89,
     "course": 0.4,
     "fee": 1.0,
-    "ops": 0.07,
+    "ops": 0.21,
     "facility": 0.2,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -212850,13 +212851,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 1.0,
-    "ops": 0.21,
+    "ops": 0.29,
     "facility": 0.0,
     "briefing": 0.5,
-    "rental": 0.5
+    "rental": 0.75
    }
   },
   {
@@ -213272,13 +213273,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.6,
     "fee": 0.5,
-    "ops": 0.43,
+    "ops": 0.64,
     "facility": 0.5,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -213680,13 +213681,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.5,
     "facility": 0.5,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -214113,13 +214114,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.8,
     "fee": 1.0,
     "ops": 0.43,
     "facility": 0.4,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -214505,13 +214506,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.0,
     "facility": 0.1,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -214946,13 +214947,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 1.0,
-    "ops": 0.57,
+    "ops": 0.64,
     "facility": 0.5,
     "briefing": 0.5,
-    "rental": 0.75
+    "rental": 1.0
    }
   },
   {
@@ -215380,13 +215381,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 1.0,
-    "ops": 0.43,
+    "ops": 0.5,
     "facility": 0.6,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -215862,13 +215863,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 1.0,
-    "ops": 0.21,
+    "ops": 0.29,
     "facility": 0.4,
-    "briefing": 0.5,
-    "rental": 0.0
+    "briefing": 0.75,
+    "rental": 0.25
    }
   },
   {
@@ -216270,13 +216271,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.8,
     "fee": 1.0,
     "ops": 0.21,
     "facility": 0.2,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -216692,13 +216693,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 1.0,
-    "ops": 0.21,
+    "ops": 0.29,
     "facility": 0.5,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -217105,13 +217106,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.6,
     "fee": 1.0,
-    "ops": 0.0,
+    "ops": 0.14,
     "facility": 0.1,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -217518,13 +217519,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 0.75,
-    "ops": 0.43,
+    "ops": 0.5,
     "facility": 0.6,
-    "briefing": 0.5,
-    "rental": 0.75
+    "briefing": 0.75,
+    "rental": 1.0
    }
   },
   {
@@ -217970,13 +217971,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 1.0,
-    "ops": 0.21,
+    "ops": 0.29,
     "facility": 0.5,
     "briefing": 0.25,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -218389,13 +218390,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 0.75,
-    "ops": 0.07,
+    "ops": 0.21,
     "facility": 0.2,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -218985,13 +218986,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 1.0,
-    "ops": 0.21,
+    "ops": 0.36,
     "facility": 0.7,
     "briefing": 0.5,
-    "rental": 0.75
+    "rental": 1.0
    }
   },
   {
@@ -219407,13 +219408,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 1.0,
     "ops": 0.43,
     "facility": 0.6,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -219927,13 +219928,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 1.0,
-    "ops": 0.29,
+    "ops": 0.43,
     "facility": 0.4,
-    "briefing": 0.5,
-    "rental": 0.75
+    "briefing": 0.75,
+    "rental": 1.0
    }
   },
   {
@@ -220348,13 +220349,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.8,
     "fee": 1.0,
-    "ops": 0.14,
+    "ops": 0.21,
     "facility": 0.1,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -220743,13 +220744,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.07,
     "facility": 0.2,
     "briefing": 0.5,
-    "rental": 0.75
+    "rental": 1.0
    }
   },
   {
@@ -221146,13 +221147,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.8,
     "fee": 1.0,
-    "ops": 0.14,
+    "ops": 0.21,
     "facility": 0.0,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -221625,13 +221626,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 1.0,
-    "ops": 0.57,
+    "ops": 0.64,
     "facility": 0.4,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -222030,13 +222031,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 1.0,
-    "ops": 0.21,
+    "ops": 0.29,
     "facility": 0.2,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -222545,12 +222546,12 @@
    },
    "coverage": {
     "basic": 0.89,
-    "course": 0.4,
+    "course": 0.8,
     "fee": 1.0,
     "ops": 0.36,
     "facility": 0.2,
     "briefing": 0.5,
-    "rental": 0.75
+    "rental": 1.0
    }
   },
   {
@@ -223083,12 +223084,12 @@
    },
    "coverage": {
     "basic": 0.89,
-    "course": 0.4,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.21,
     "facility": 0.5,
     "briefing": 0.5,
-    "rental": 0.75
+    "rental": 1.0
    }
   },
   {
@@ -223620,12 +223621,12 @@
    },
    "coverage": {
     "basic": 0.89,
-    "course": 0.4,
+    "course": 0.6,
     "fee": 1.0,
-    "ops": 0.29,
+    "ops": 0.36,
     "facility": 0.6,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -224178,13 +224179,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 1.0,
     "ops": 0.5,
     "facility": 0.5,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -224687,13 +224688,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.6,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 1.0,
     "ops": 0.43,
     "facility": 0.5,
     "briefing": 0.5,
-    "rental": 0.75
+    "rental": 1.0
    }
   },
   {
@@ -225181,12 +225182,12 @@
    },
    "coverage": {
     "basic": 0.78,
-    "course": 0.2,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.14,
     "facility": 0.6,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -225729,12 +225730,12 @@
    },
    "coverage": {
     "basic": 0.89,
-    "course": 0.4,
+    "course": 0.8,
     "fee": 1.0,
     "ops": 0.36,
     "facility": 0.5,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -226202,12 +226203,12 @@
    },
    "coverage": {
     "basic": 0.89,
-    "course": 0.4,
+    "course": 0.8,
     "fee": 1.0,
     "ops": 0.43,
     "facility": 0.2,
     "briefing": 0.5,
-    "rental": 0.75
+    "rental": 1.0
    }
   },
   {
@@ -226670,12 +226671,12 @@
    },
    "coverage": {
     "basic": 0.89,
-    "course": 0.4,
+    "course": 0.8,
     "fee": 1.0,
     "ops": 0.29,
     "facility": 0.6,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -227131,12 +227132,12 @@
    },
    "coverage": {
     "basic": 0.89,
-    "course": 0.2,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.21,
     "facility": 0.1,
     "briefing": 0.5,
-    "rental": 0.75
+    "rental": 1.0
    }
   },
   {
@@ -227658,13 +227659,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 1.0,
     "ops": 0.29,
     "facility": 0.4,
     "briefing": 0.5,
-    "rental": 0.75
+    "rental": 1.0
    }
   },
   {
@@ -228146,13 +228147,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.5,
     "facility": 0.3,
     "briefing": 0.5,
-    "rental": 0.75
+    "rental": 1.0
    }
   },
   {
@@ -228629,13 +228630,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.2,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.5,
     "facility": 0.5,
     "briefing": 0.5,
-    "rental": 0.75
+    "rental": 1.0
    }
   },
   {
@@ -229137,12 +229138,12 @@
    },
    "coverage": {
     "basic": 0.89,
-    "course": 0.4,
+    "course": 0.8,
     "fee": 1.0,
     "ops": 0.36,
     "facility": 0.1,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -229584,7 +229585,7 @@
     "ops": 0.0,
     "facility": 0.0,
     "briefing": 0.25,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -230236,12 +230237,12 @@
    },
    "coverage": {
     "basic": 0.89,
-    "course": 0.4,
+    "course": 0.8,
     "fee": 1.0,
     "ops": 0.43,
     "facility": 0.6,
     "briefing": 0.5,
-    "rental": 0.75
+    "rental": 1.0
    }
   },
   {
@@ -230754,12 +230755,12 @@
    },
    "coverage": {
     "basic": 0.78,
-    "course": 0.4,
+    "course": 0.6,
     "fee": 1.0,
-    "ops": 0.29,
+    "ops": 0.36,
     "facility": 0.3,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -231219,12 +231220,12 @@
    },
    "coverage": {
     "basic": 0.89,
-    "course": 0.2,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.14,
     "facility": 0.0,
     "briefing": 0.5,
-    "rental": 0.75
+    "rental": 1.0
    }
   },
   {
@@ -231729,13 +231730,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 1.0,
-    "ops": 0.36,
+    "ops": 0.5,
     "facility": 0.7,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -232170,12 +232171,12 @@
    },
    "coverage": {
     "basic": 0.89,
-    "course": 0.2,
+    "course": 0.4,
     "fee": 1.0,
     "ops": 0.21,
     "facility": 0.2,
     "briefing": 0.5,
-    "rental": 0.75
+    "rental": 1.0
    }
   },
   {
@@ -232787,12 +232788,12 @@
    },
    "coverage": {
     "basic": 0.89,
-    "course": 0.4,
+    "course": 0.8,
     "fee": 1.0,
     "ops": 0.5,
     "facility": 0.5,
     "briefing": 0.5,
-    "rental": 0.75
+    "rental": 1.0
    }
   },
   {
@@ -233345,12 +233346,12 @@
    },
    "coverage": {
     "basic": 0.78,
-    "course": 0.4,
+    "course": 0.8,
     "fee": 1.0,
     "ops": 0.5,
     "facility": 0.2,
     "briefing": 0.5,
-    "rental": 0.75
+    "rental": 1.0
    }
   },
   {
@@ -233863,13 +233864,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.8,
     "fee": 1.0,
-    "ops": 0.5,
+    "ops": 0.57,
     "facility": 0.5,
     "briefing": 0.5,
-    "rental": 0.75
+    "rental": 1.0
    }
   },
   {
@@ -234305,13 +234306,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.21,
     "facility": 0.0,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -234786,12 +234787,12 @@
    },
    "coverage": {
     "basic": 0.78,
-    "course": 0.2,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.57,
     "facility": 0.6,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -235235,13 +235236,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.8,
     "fee": 1.0,
-    "ops": 0.21,
+    "ops": 0.29,
     "facility": 0.2,
     "briefing": 0.5,
-    "rental": 0.75
+    "rental": 1.0
    }
   },
   {
@@ -235752,12 +235753,12 @@
    },
    "coverage": {
     "basic": 0.89,
-    "course": 0.2,
+    "course": 0.4,
     "fee": 1.0,
     "ops": 0.14,
     "facility": 0.5,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -236208,13 +236209,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 1.0,
     "ops": 0.0,
     "facility": 0.2,
     "briefing": 0.5,
-    "rental": 0.75
+    "rental": 1.0
    }
   },
   {
@@ -236644,12 +236645,12 @@
    },
    "coverage": {
     "basic": 0.78,
-    "course": 0.4,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.29,
     "facility": 0.3,
     "briefing": 0.5,
-    "rental": 0.75
+    "rental": 1.0
    }
   },
   {
@@ -237059,12 +237060,12 @@
    },
    "coverage": {
     "basic": 0.78,
-    "course": 0.2,
+    "course": 0.4,
     "fee": 1.0,
     "ops": 0.07,
     "facility": 0.1,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -237588,13 +237589,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.29,
     "facility": 0.5,
     "briefing": 0.5,
-    "rental": 0.75
+    "rental": 1.0
    }
   },
   {
@@ -238146,13 +238147,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 1.0,
     "ops": 0.21,
     "facility": 0.7,
     "briefing": 0.5,
-    "rental": 0.75
+    "rental": 1.0
    }
   },
   {
@@ -238724,13 +238725,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.36,
     "facility": 0.5,
     "briefing": 0.5,
-    "rental": 0.75
+    "rental": 1.0
    }
   },
   {
@@ -239335,13 +239336,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.2,
+    "basic": 1.0,
+    "course": 0.4,
     "fee": 1.0,
     "ops": 0.36,
     "facility": 0.6,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -239791,13 +239792,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.2,
+    "basic": 1.0,
+    "course": 0.4,
     "fee": 1.0,
     "ops": 0.36,
     "facility": 0.3,
     "briefing": 0.5,
-    "rental": 0.75
+    "rental": 1.0
    }
   },
   {
@@ -240319,13 +240320,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.8,
     "fee": 1.0,
     "ops": 0.29,
     "facility": 0.3,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -240889,13 +240890,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.2,
+    "basic": 1.0,
+    "course": 0.4,
     "fee": 1.0,
     "ops": 0.29,
     "facility": 0.5,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -241480,13 +241481,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.2,
+    "basic": 1.0,
+    "course": 0.4,
     "fee": 1.0,
     "ops": 0.21,
     "facility": 0.6,
     "briefing": 0.5,
-    "rental": 0.75
+    "rental": 1.0
    }
   },
   {
@@ -241917,13 +241918,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.6,
     "fee": 1.0,
-    "ops": 0.0,
+    "ops": 0.14,
     "facility": 0.2,
     "briefing": 0.5,
-    "rental": 0.75
+    "rental": 1.0
    }
   },
   {
@@ -242571,13 +242572,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 1.0,
     "ops": 0.43,
     "facility": 0.5,
     "briefing": 0.5,
-    "rental": 0.75
+    "rental": 1.0
    }
   },
   {
@@ -243102,13 +243103,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.78,
+    "basic": 0.89,
     "course": 0.4,
     "fee": 1.0,
     "ops": 0.36,
     "facility": 0.3,
     "briefing": 0.5,
-    "rental": 0.75
+    "rental": 1.0
    }
   },
   {
@@ -243637,13 +243638,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.78,
+    "basic": 0.89,
     "course": 0.4,
     "fee": 1.0,
     "ops": 0.57,
     "facility": 0.5,
     "briefing": 0.5,
-    "rental": 0.75
+    "rental": 1.0
    }
   },
   {
@@ -244064,13 +244065,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.6,
+    "basic": 0.89,
+    "course": 0.8,
     "fee": 1.0,
     "ops": 0.0,
     "facility": 0.0,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -244493,13 +244494,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.78,
+    "basic": 0.89,
     "course": 0.4,
     "fee": 1.0,
     "ops": 0.14,
     "facility": 0.0,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -245095,13 +245096,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 1.0,
     "ops": 0.29,
     "facility": 0.5,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -245690,13 +245691,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.6,
+    "basic": 0.89,
+    "course": 0.8,
     "fee": 1.0,
     "ops": 0.64,
     "facility": 0.5,
     "briefing": 0.5,
-    "rental": 0.75
+    "rental": 1.0
    }
   },
   {
@@ -246209,13 +246210,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.78,
+    "basic": 0.89,
     "course": 0.6,
     "fee": 1.0,
     "ops": 0.57,
     "facility": 0.5,
     "briefing": 0.5,
-    "rental": 0.75
+    "rental": 1.0
    }
   },
   {
@@ -246735,13 +246736,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.78,
+    "basic": 0.89,
     "course": 0.6,
     "fee": 1.0,
     "ops": 0.57,
     "facility": 0.5,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -247298,13 +247299,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.2,
+    "basic": 0.89,
+    "course": 0.4,
     "fee": 0.75,
     "ops": 0.36,
     "facility": 0.3,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -247917,13 +247918,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.6,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 1.0,
     "ops": 0.14,
     "facility": 0.4,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -248349,13 +248350,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 0.75,
     "ops": 0.14,
     "facility": 0.1,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -248805,13 +248806,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.78,
+    "basic": 0.89,
     "course": 0.4,
     "fee": 0.5,
     "ops": 0.36,
     "facility": 0.2,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -249243,13 +249244,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.2,
+    "basic": 1.0,
+    "course": 0.4,
     "fee": 1.0,
     "ops": 0.07,
     "facility": 0.1,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -249660,13 +249661,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 0.75,
-    "ops": 0.07,
+    "ops": 0.14,
     "facility": 0.1,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -250195,13 +250196,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 1.0,
-    "ops": 0.14,
+    "ops": 0.21,
     "facility": 0.6,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -250677,13 +250678,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
+    "basic": 1.0,
     "course": 0.4,
     "fee": 0.5,
     "ops": 0.29,
     "facility": 0.4,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -251121,13 +251122,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.2,
+    "basic": 1.0,
+    "course": 0.4,
     "fee": 1.0,
     "ops": 0.07,
     "facility": 0.0,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -251658,13 +251659,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.2,
+    "basic": 1.0,
+    "course": 0.4,
     "fee": 1.0,
     "ops": 0.36,
     "facility": 0.3,
     "briefing": 0.5,
-    "rental": 0.75
+    "rental": 1.0
    }
   },
   {
@@ -252076,13 +252077,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.2,
+    "basic": 1.0,
+    "course": 0.4,
     "fee": 1.0,
     "ops": 0.0,
     "facility": 0.0,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -252536,13 +252537,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.6,
+    "basic": 0.89,
+    "course": 0.8,
     "fee": 1.0,
     "ops": 0.0,
     "facility": 0.2,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -252974,13 +252975,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
+    "basic": 1.0,
     "course": 0.2,
     "fee": 1.0,
     "ops": 0.36,
     "facility": 0.3,
     "briefing": 0.5,
-    "rental": 0.75
+    "rental": 1.0
    }
   },
   {
@@ -253381,13 +253382,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.2,
+    "basic": 0.89,
+    "course": 0.4,
     "fee": 1.0,
     "ops": 0.14,
     "facility": 0.1,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -253826,13 +253827,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.78,
+    "basic": 0.89,
     "course": 0.2,
     "fee": 0.75,
     "ops": 0.36,
     "facility": 0.2,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -254266,13 +254267,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.2,
+    "basic": 0.89,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.0,
     "facility": 0.0,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -254713,13 +254714,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 1.0,
-    "ops": 0.36,
+    "ops": 0.43,
     "facility": 0.3,
     "briefing": 0.5,
-    "rental": 0.75
+    "rental": 1.0
    }
   },
   {
@@ -255160,13 +255161,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.2,
+    "basic": 1.0,
+    "course": 0.4,
     "fee": 1.0,
     "ops": 0.21,
     "facility": 0.3,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -255615,13 +255616,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 1.0,
-    "ops": 0.14,
+    "ops": 0.21,
     "facility": 0.0,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -256082,13 +256083,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.2,
+    "basic": 1.0,
+    "course": 0.4,
     "fee": 1.0,
     "ops": 0.36,
     "facility": 0.3,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -256686,13 +256687,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.2,
+    "basic": 1.0,
+    "course": 0.4,
     "fee": 1.0,
     "ops": 0.36,
     "facility": 0.7,
-    "briefing": 0.5,
-    "rental": 0.0
+    "briefing": 0.75,
+    "rental": 0.25
    }
   },
   {
@@ -257218,13 +257219,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.78,
+    "basic": 0.89,
     "course": 0.4,
     "fee": 1.0,
     "ops": 0.29,
     "facility": 0.5,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -257771,13 +257772,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.78,
+    "basic": 0.89,
     "course": 0.4,
     "fee": 0.5,
     "ops": 0.71,
     "facility": 0.5,
-    "briefing": 0.5,
-    "rental": 0.75
+    "briefing": 0.75,
+    "rental": 1.0
    }
   },
   {
@@ -258457,13 +258458,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.6,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 1.0,
     "ops": 0.64,
     "facility": 0.6,
-    "briefing": 0.5,
-    "rental": 0.75
+    "briefing": 0.75,
+    "rental": 1.0
    }
   },
   {
@@ -259055,13 +259056,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.6,
+    "basic": 1.0,
+    "course": 1.0,
     "fee": 1.0,
     "ops": 0.21,
     "facility": 0.6,
-    "briefing": 0.5,
-    "rental": 0.0
+    "briefing": 0.75,
+    "rental": 0.25
    }
   },
   {
@@ -259632,13 +259633,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.6,
+    "basic": 1.0,
+    "course": 1.0,
     "fee": 1.0,
     "ops": 0.21,
     "facility": 0.6,
-    "briefing": 0.5,
-    "rental": 0.0
+    "briefing": 0.75,
+    "rental": 0.25
    }
   },
   {
@@ -260328,13 +260329,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.6,
+    "basic": 1.0,
+    "course": 1.0,
     "fee": 1.0,
     "ops": 0.36,
     "facility": 0.6,
-    "briefing": 0.5,
-    "rental": 0.0
+    "briefing": 0.75,
+    "rental": 0.25
    }
   },
   {
@@ -261051,13 +261052,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.6,
+    "basic": 1.0,
+    "course": 1.0,
     "fee": 1.0,
-    "ops": 0.36,
+    "ops": 0.43,
     "facility": 0.6,
-    "briefing": 0.5,
-    "rental": 0.75
+    "briefing": 0.75,
+    "rental": 1.0
    }
   },
   {
@@ -261460,13 +261461,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.6,
     "fee": 0.75,
     "ops": 0.21,
     "facility": 0.2,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -261885,13 +261886,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.2,
+    "basic": 0.89,
+    "course": 0.4,
     "fee": 1.0,
-    "ops": 0.0,
+    "ops": 0.07,
     "facility": 0.0,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -262349,13 +262350,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
+    "basic": 1.0,
     "course": 0.2,
     "fee": 1.0,
-    "ops": 0.36,
+    "ops": 0.43,
     "facility": 0.3,
     "briefing": 0.5,
-    "rental": 0.75
+    "rental": 1.0
    }
   },
   {
@@ -262960,13 +262961,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.64,
     "facility": 0.5,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -263426,13 +263427,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.78,
+    "basic": 0.89,
     "course": 0.4,
     "fee": 0.75,
     "ops": 0.29,
     "facility": 0.2,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -264012,13 +264013,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.2,
+    "basic": 1.0,
+    "course": 0.4,
     "fee": 1.0,
     "ops": 0.29,
     "facility": 0.5,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -264592,13 +264593,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.29,
     "facility": 0.5,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -265151,13 +265152,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 1.0,
     "ops": 0.14,
     "facility": 0.5,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -265580,13 +265581,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.78,
+    "basic": 0.89,
     "course": 0.2,
     "fee": 1.0,
     "ops": 0.0,
     "facility": 0.0,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -266007,13 +266008,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.2,
+    "basic": 1.0,
+    "course": 0.4,
     "fee": 1.0,
-    "ops": 0.0,
+    "ops": 0.07,
     "facility": 0.0,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -266527,13 +266528,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.78,
+    "basic": 0.89,
     "course": 0.2,
     "fee": 1.0,
     "ops": 0.36,
     "facility": 0.4,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -266967,13 +266968,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.14,
     "facility": 0.0,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -267399,13 +267400,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.6,
     "fee": 1.0,
-    "ops": 0.14,
+    "ops": 0.21,
     "facility": 0.1,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -267960,13 +267961,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.2,
+    "basic": 1.0,
+    "course": 0.4,
     "fee": 1.0,
-    "ops": 0.21,
+    "ops": 0.36,
     "facility": 0.3,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -268485,13 +268486,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.2,
+    "basic": 1.0,
+    "course": 0.4,
     "fee": 1.0,
-    "ops": 0.29,
+    "ops": 0.36,
     "facility": 0.4,
     "briefing": 0.5,
-    "rental": 0.75
+    "rental": 1.0
    }
   },
   {
@@ -268935,13 +268936,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 0.75,
-    "ops": 0.07,
+    "ops": 0.14,
     "facility": 0.1,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -269506,13 +269507,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 0.75,
     "ops": 0.14,
     "facility": 0.5,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -269938,13 +269939,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.78,
+    "basic": 0.89,
     "course": 0.4,
     "fee": 0.0,
     "ops": 0.0,
     "facility": 0.2,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -270512,13 +270513,13 @@
     "browser_pdf": []
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 1.0,
-    "ops": 0.29,
+    "ops": 0.43,
     "facility": 0.3,
-    "briefing": 0.0,
-    "rental": 0.75
+    "briefing": 0.25,
+    "rental": 1.0
    }
   },
   {
@@ -271293,13 +271294,13 @@
     "browser_pdf": []
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.21,
     "facility": 0.1,
-    "briefing": 0.0,
-    "rental": 0.75
+    "briefing": 0.5,
+    "rental": 1.0
    }
   },
   {
@@ -271843,13 +271844,13 @@
     "browser_pdf": []
    },
    "coverage": {
-    "basic": 0.89,
+    "basic": 1.0,
     "course": 0.2,
     "fee": 0.75,
     "ops": 0.14,
     "facility": 0.4,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.5,
+    "rental": 0.25
    }
   },
   {
@@ -272788,13 +272789,13 @@
     "browser_pdf": []
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.2,
+    "basic": 1.0,
+    "course": 0.4,
     "fee": 1.0,
     "ops": 0.14,
     "facility": 0.4,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -273248,13 +273249,13 @@
     "browser_pdf": []
    },
    "coverage": {
-    "basic": 0.78,
+    "basic": 0.89,
     "course": 0.2,
     "fee": 0.0,
     "ops": 0.0,
     "facility": 0.0,
     "briefing": 0.0,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -273971,13 +273972,13 @@
     ]
    },
    "coverage": {
-    "basic": 0.78,
+    "basic": 0.89,
     "course": 0.4,
     "fee": 0.75,
     "ops": 0.36,
     "facility": 0.3,
     "briefing": 0.0,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -274642,13 +274643,13 @@
     ]
    },
    "coverage": {
-    "basic": 0.89,
+    "basic": 1.0,
     "course": 0.2,
     "fee": 1.0,
-    "ops": 0.07,
+    "ops": 0.14,
     "facility": 0.2,
-    "briefing": 0.5,
-    "rental": 0.0
+    "briefing": 0.75,
+    "rental": 0.25
    }
   },
   {
@@ -274993,13 +274994,13 @@
     "browser_pdf": []
    },
    "coverage": {
-    "basic": 0.89,
+    "basic": 1.0,
     "course": 0.2,
     "fee": 0.0,
     "ops": 0.0,
     "facility": 0.0,
     "briefing": 0.0,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -275651,13 +275652,13 @@
     "browser_pdf": []
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.8,
     "fee": 1.0,
     "ops": 0.0,
     "facility": 0.3,
     "briefing": 0.0,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -276473,13 +276474,13 @@
     "browser_pdf": []
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.14,
     "facility": 0.4,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -277324,13 +277325,13 @@
     "browser_pdf": []
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.8,
     "fee": 1.0,
     "ops": 0.29,
     "facility": 0.3,
-    "briefing": 0.0,
-    "rental": 0.75
+    "briefing": 0.25,
+    "rental": 1.0
    }
   },
   {
@@ -277840,13 +277841,13 @@
     "browser_pdf": []
    },
    "coverage": {
-    "basic": 0.78,
+    "basic": 0.89,
     "course": 0.2,
     "fee": 1.0,
     "ops": 0.21,
     "facility": 0.6,
-    "briefing": 0.0,
-    "rental": 0.75
+    "briefing": 0.5,
+    "rental": 1.0
    }
   },
   {
@@ -278192,13 +278193,13 @@
     "browser_pdf": []
    },
    "coverage": {
-    "basic": 0.67,
+    "basic": 0.78,
     "course": 0.2,
     "fee": 0.0,
     "ops": 0.0,
     "facility": 0.0,
     "briefing": 0.0,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -278559,13 +278560,13 @@
     "browser_pdf": []
    },
    "coverage": {
-    "basic": 0.78,
+    "basic": 0.89,
     "course": 0.2,
     "fee": 0.0,
-    "ops": 0.0,
+    "ops": 0.14,
     "facility": 0.0,
     "briefing": 0.0,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -279151,13 +279152,13 @@
     "browser_pdf": []
    },
    "coverage": {
-    "basic": 0.89,
+    "basic": 1.0,
     "course": 0.4,
     "fee": 0.75,
     "ops": 0.64,
     "facility": 0.4,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -279539,13 +279540,13 @@
     "browser_pdf": []
    },
    "coverage": {
-    "basic": 0.78,
+    "basic": 0.89,
     "course": 0.2,
     "fee": 0.75,
     "ops": 0.21,
     "facility": 0.2,
     "briefing": 0.0,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -280107,13 +280108,13 @@
     "browser_pdf": []
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.2,
+    "basic": 1.0,
+    "course": 0.4,
     "fee": 0.0,
     "ops": 0.07,
     "facility": 0.3,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -280859,13 +280860,13 @@
     "browser_pdf": []
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 0.5,
     "ops": 0.14,
     "facility": 0.1,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -281479,13 +281480,13 @@
     "browser_pdf": []
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.2,
+    "basic": 1.0,
+    "course": 0.4,
     "fee": 1.0,
     "ops": 0.07,
     "facility": 0.3,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -282027,13 +282028,13 @@
     "browser_pdf": []
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.14,
     "facility": 0.1,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -282920,13 +282921,13 @@
     "browser_pdf": []
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.6,
     "fee": 1.0,
     "ops": 0.21,
     "facility": 0.6,
     "briefing": 0.0,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -283448,13 +283449,13 @@
     ]
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.6,
     "fee": 0.0,
     "ops": 0.43,
     "facility": 0.1,
-    "briefing": 0.0,
-    "rental": 0.0
+    "briefing": 0.25,
+    "rental": 0.25
    }
   },
   {
@@ -283840,13 +283841,13 @@
     ]
    },
    "coverage": {
-    "basic": 0.89,
+    "basic": 1.0,
     "course": 0.2,
     "fee": 0.0,
-    "ops": 0.07,
+    "ops": 0.14,
     "facility": 0.0,
     "briefing": 0.0,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -284637,13 +284638,13 @@
     "browser_pdf": []
    },
    "coverage": {
-    "basic": 0.78,
-    "course": 0.4,
+    "basic": 0.89,
+    "course": 0.6,
     "fee": 1.0,
-    "ops": 0.29,
+    "ops": 0.36,
     "facility": 0.6,
-    "briefing": 0.0,
-    "rental": 0.75
+    "briefing": 0.25,
+    "rental": 1.0
    }
   },
   {
@@ -285446,13 +285447,13 @@
     "browser_pdf": []
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.4,
+    "basic": 1.0,
+    "course": 0.6,
     "fee": 1.0,
-    "ops": 0.5,
+    "ops": 0.57,
     "facility": 0.4,
-    "briefing": 0.0,
-    "rental": 0.75
+    "briefing": 0.25,
+    "rental": 1.0
    }
   },
   {
@@ -285894,13 +285895,13 @@
     ]
    },
    "coverage": {
-    "basic": 0.78,
+    "basic": 0.89,
     "course": 0.6,
     "fee": 1.0,
-    "ops": 0.14,
+    "ops": 0.21,
     "facility": 0.1,
     "briefing": 0.0,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -286297,13 +286298,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.78,
+    "basic": 0.89,
     "course": 0.4,
     "fee": 0.5,
-    "ops": 0.0,
+    "ops": 0.07,
     "facility": 0.0,
-    "briefing": 0.0,
-    "rental": 0.75
+    "briefing": 0.25,
+    "rental": 1.0
    }
   },
   {
@@ -286793,13 +286794,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
+    "basic": 1.0,
     "course": 0.6,
     "fee": 1.0,
     "ops": 0.14,
     "facility": 0.3,
-    "briefing": 0.5,
-    "rental": 0.0
+    "briefing": 0.75,
+    "rental": 0.25
    }
   },
   {
@@ -287226,13 +287227,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.89,
+    "basic": 1.0,
     "course": 0.6,
     "fee": 1.0,
     "ops": 0.14,
     "facility": 0.0,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -287618,13 +287619,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.2,
-    "fee": 0.0,
+    "basic": 1.0,
+    "course": 0.4,
+    "fee": 0.25,
     "ops": 0.07,
     "facility": 0.1,
     "briefing": 0.0,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -288008,13 +288009,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.67,
+    "basic": 0.78,
     "course": 0.2,
     "fee": 0.0,
     "ops": 0.0,
     "facility": 0.0,
     "briefing": 0.25,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -288396,13 +288397,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.67,
+    "basic": 0.78,
     "course": 0.4,
     "fee": 0.0,
     "ops": 0.0,
     "facility": 0.2,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -289017,13 +289018,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.78,
+    "basic": 0.89,
     "course": 0.4,
     "fee": 1.0,
-    "ops": 0.21,
+    "ops": 0.29,
     "facility": 0.2,
     "briefing": 0.0,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -289455,13 +289456,13 @@
     "browser_batch": true
    },
    "coverage": {
-    "basic": 0.89,
-    "course": 0.2,
+    "basic": 1.0,
+    "course": 0.4,
     "fee": 1.0,
     "ops": 0.07,
     "facility": 0.1,
     "briefing": 0.0,
-    "rental": 0.25
+    "rental": 0.5
    }
   },
   {
@@ -289871,13 +289872,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.78,
+    "basic": 0.89,
     "course": 0.4,
     "fee": 1.0,
     "ops": 0.07,
     "facility": 0.1,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -290295,13 +290296,13 @@
     "plan_strategy": "subagent_report(2026-11-26)"
    },
    "coverage": {
-    "basic": 0.78,
+    "basic": 0.89,
     "course": 0.4,
     "fee": 1.0,
     "ops": 0.07,
     "facility": 0.1,
     "briefing": 0.5,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -290669,13 +290670,13 @@
     "browser_batch": false
    },
    "coverage": {
-    "basic": 0.67,
-    "course": 0.2,
-    "fee": 0.0,
-    "ops": 0.0,
+    "basic": 0.78,
+    "course": 0.4,
+    "fee": 0.25,
+    "ops": 0.07,
     "facility": 0.0,
     "briefing": 0.0,
-    "rental": 0.0
+    "rental": 0.25
    }
   },
   {
@@ -291163,7 +291164,7 @@
     "plan_strategy": null
    },
    "coverage": {
-    "basic": 0.56,
+    "basic": 0.44,
     "course": 0.2,
     "fee": 0.0,
     "ops": 0.0,
@@ -292661,7 +292662,7 @@
     "plan_strategy": null
    },
    "coverage": {
-    "basic": 0.56,
+    "basic": 0.44,
     "course": 0.0,
     "fee": 0.0,
     "ops": 0.0,
@@ -293164,7 +293165,7 @@
     "plan_strategy": null
    },
    "coverage": {
-    "basic": 0.56,
+    "basic": 0.44,
     "course": 0.0,
     "fee": 0.0,
     "ops": 0.0,
@@ -295472,7 +295473,7 @@
     "plan_strategy": null
    },
    "coverage": {
-    "basic": 0.56,
+    "basic": 0.44,
     "course": 0.0,
     "fee": 0.0,
     "ops": 0.0,
@@ -296766,7 +296767,7 @@
     "plan_strategy": null
    },
    "coverage": {
-    "basic": 0.56,
+    "basic": 0.44,
     "course": 0.0,
     "fee": 0.0,
     "ops": 0.0,
@@ -297080,10 +297081,10 @@
     "plan_strategy": null
    },
    "coverage": {
-    "basic": 0.67,
+    "basic": 0.56,
     "course": 0.0,
-    "fee": 0.0,
-    "ops": 0.0,
+    "fee": 0.25,
+    "ops": 0.07,
     "facility": 0.0,
     "briefing": 0.0,
     "rental": 0.0

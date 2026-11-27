@@ -712,12 +712,12 @@
   ]
  },
  "coverage": {
-  "basic": 0.78,
+  "basic": 0.89,
   "course": 0.4,
   "fee": 0.75,
   "ops": 0.36,
   "facility": 0.3,
   "briefing": 0.0,
-  "rental": 0.0
+  "rental": 0.25
  }
 }

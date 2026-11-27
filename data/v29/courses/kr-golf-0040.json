@@ -571,12 +571,12 @@
   "browser_pdf": []
  },
  "coverage": {
-  "basic": 0.89,
-  "course": 0.4,
+  "basic": 1.0,
+  "course": 0.6,
   "fee": 1.0,
-  "ops": 0.14,
+  "ops": 0.21,
   "facility": 0.1,
-  "briefing": 0.0,
-  "rental": 0.75
+  "briefing": 0.25,
+  "rental": 1.0
  }
 }

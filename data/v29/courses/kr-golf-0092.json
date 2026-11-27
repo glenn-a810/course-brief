@@ -620,12 +620,12 @@
   "browser_batch": false
  },
  "coverage": {
-  "basic": 0.78,
-  "course": 0.4,
+  "basic": 0.89,
+  "course": 0.6,
   "fee": 1.0,
-  "ops": 0.64,
+  "ops": 0.71,
   "facility": 0.4,
-  "briefing": 0.0,
-  "rental": 0.0
+  "briefing": 0.25,
+  "rental": 0.25
  }
 }

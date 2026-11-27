@@ -453,12 +453,12 @@
   "browser_batch": false
  },
  "coverage": {
-  "basic": 0.89,
+  "basic": 1.0,
   "course": 0.2,
   "fee": 1.0,
-  "ops": 0.36,
+  "ops": 0.5,
   "facility": 0.2,
-  "briefing": 0.0,
-  "rental": 0.75
+  "briefing": 0.25,
+  "rental": 1.0
  }
 }

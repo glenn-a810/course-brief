@@ -919,12 +919,12 @@
   "browser_batch": false
  },
  "coverage": {
-  "basic": 0.78,
-  "course": 0.6,
+  "basic": 0.89,
+  "course": 1.0,
   "fee": 0.0,
-  "ops": 0.43,
+  "ops": 0.5,
   "facility": 0.2,
-  "briefing": 0.0,
-  "rental": 0.0
+  "briefing": 0.5,
+  "rental": 0.25
  }
 }

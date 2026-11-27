@@ -897,12 +897,12 @@
   "browser_pdf": []
  },
  "coverage": {
-  "basic": 0.78,
-  "course": 0.6,
+  "basic": 0.89,
+  "course": 1.0,
   "fee": 1.0,
   "ops": 0.29,
   "facility": 0.3,
-  "briefing": 0.0,
-  "rental": 0.25
+  "briefing": 0.5,
+  "rental": 0.5
  }
 }

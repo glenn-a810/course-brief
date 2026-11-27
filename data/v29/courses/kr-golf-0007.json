@@ -379,12 +379,12 @@
   "browser_pdf": []
  },
  "coverage": {
-  "basic": 0.89,
+  "basic": 1.0,
   "course": 0.2,
   "fee": 0.75,
   "ops": 0.29,
   "facility": 0.2,
   "briefing": 0.25,
-  "rental": 0.75
+  "rental": 1.0
  }
 }

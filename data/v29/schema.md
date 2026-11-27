@@ -125,6 +125,8 @@ data/v29/
 - 거리: km, 면적: ㎡, 길이: m·yd(필드별 표기)
 - 좌표: WGS84, 시간대: Asia/Seoul
 - `coverage` 는 7개 영역별 채움률입니다. 낮은 값은 "정보가 없다"는 뜻이며, 그 자체로 유용한 신호입니다.
+  `npm run data:build` 가 현재 필드 값에서 매번 다시 계산합니다(`scripts/coverage_metric.py`, 정의는 `dataset.coverage_metric`).
+  값은 `{name, distance_km}`·`{items}`·`{providers}` 처럼 구조로 담긴 값도 내용이 있으면 채워진 것으로 세고, 출처·확인일만 있는 항목은 비어 있는 것으로 봅니다.
 
 ---
 

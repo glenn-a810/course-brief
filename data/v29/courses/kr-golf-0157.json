@@ -511,12 +511,12 @@
   "browser_batch": false
  },
  "coverage": {
-  "basic": 0.89,
-  "course": 0.4,
+  "basic": 1.0,
+  "course": 0.8,
   "fee": 0.5,
-  "ops": 0.07,
+  "ops": 0.14,
   "facility": 0.1,
-  "briefing": 0.0,
-  "rental": 0.0
+  "briefing": 0.25,
+  "rental": 0.25
  }
 }
