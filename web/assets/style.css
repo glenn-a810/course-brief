@@ -1013,6 +1013,14 @@ tbody tr:last-child td { border-bottom: 0; }
 
 /* ---------------- 반응형 ---------------- */
 
+/* 넓은 화면: 필터 카드가 두 줄로 끝나도록 초기화 버튼을 상태 칩 줄 오른쪽에 붙인다 */
+@media (min-width: 900px) {
+  .filterbox-body { grid-template-columns: minmax(0, 1fr) auto; align-items: end; }
+  .filter-grid { grid-column: 1 / -1; }
+  .status-line { grid-column: 1; }
+  .filter-actions { grid-column: 2; padding-bottom: 2px; }
+}
+
 /* 넓은 화면: 필터는 항상 펼치고, 모바일 탭바는 숨긴다 */
 @media (min-width: 900px) {
   .filterbox-summary { display: none; }
