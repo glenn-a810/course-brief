@@ -31602,9 +31602,8 @@
      "url": "https://www.bayside.co.kr/swp/charge",
      "items": [
       {
-       "type": "요금",
-       "text": "비회원 그린피 평일 210,000·주말 258,000(제세공과금·기본시설 포함)",
-       "as_of": "2026-11-26",
+       "date": "2026-11-26",
+       "title": "비회원 그린피 평일 210,000·주말 258,000(제세공과금·기본시설 포함)",
        "url": "https://www.bayside.co.kr/swp/charge"
       }
      ],
@@ -44876,15 +44875,13 @@
      "url": "http://www.hanmircc.com/",
      "items": [
       {
-       "type": "요금",
-       "text": "11월 그린피 안내(11/16~11/30) 게시",
-       "as_of": "2026-11-15",
+       "date": "2026-11-15",
+       "title": "11월 그린피 안내(11/16~11/30) 게시",
        "url": "http://www.hanmircc.com/"
       },
       {
-       "type": "이벤트",
-       "text": "크리스마스 포토이벤트(~12/31)",
-       "as_of": "2026-11-23",
+       "date": "2026-11-23",
+       "title": "크리스마스 포토이벤트(~12/31)",
        "url": "http://www.hanmircc.com/"
       }
      ],
@@ -152901,15 +152898,13 @@
      "url": "https://www.crcc.co.kr/",
      "items": [
       {
-       "type": "동계휴장",
-       "text": "동계 휴장 안내(겨울 1~2월 혹한기 운영 중단, 추석 당일 휴장)",
-       "as_of": "2026-11-16",
+       "date": "2026-11-16",
+       "title": "동계 휴장 안내(겨울 1~2월 혹한기 운영 중단, 추석 당일 휴장)",
        "url": "https://www.crcc.co.kr/"
       },
       {
-       "type": "요금",
-       "text": "동계 비회원 그린피 안내",
-       "as_of": "2026-11-23",
+       "date": "2026-11-23",
+       "title": "동계 비회원 그린피 안내",
        "url": "https://www.crcc.co.kr/"
       }
      ],
@@ -158499,15 +158494,13 @@
      "url": "https://www.mokacc.co.kr/info/fees.aspx",
      "items": [
       {
-       "type": "요금",
-       "text": "26년 11월 요금안내(일반 189,000·토·공휴일 249,000·일요일 239,000)",
-       "as_of": "2026-10-02",
+       "date": "2026-10-02",
+       "title": "26년 11월 요금안내(일반 189,000·토·공휴일 249,000·일요일 239,000)",
        "url": "https://www.mokacc.co.kr/info/fees.aspx"
       },
       {
-       "type": "이벤트",
-       "text": "26년 12월 블랙프라이스 패키지 안내",
-       "as_of": "2026-11-25",
+       "date": "2026-11-25",
+       "title": "26년 12월 블랙프라이스 패키지 안내",
        "url": "https://www.mokacc.co.kr/"
       }
      ],
@@ -171953,9 +171946,8 @@
      "url": "https://www.sangnokresort.com/board/event/eventBoardView.do?cat=&code=&grp=&companyCd=S06&bbsno=593&seq=8344",
      "items": [
       {
-       "type": "시설공사",
-       "text": "천안상록골프장 클럽하우스 환경개선 공사 안내",
-       "as_of": "2026-09-13",
+       "date": "2026-09-13",
+       "title": "천안상록골프장 클럽하우스 환경개선 공사 안내",
        "url": "https://www.sangnokresort.com/board/event/eventBoardView.do?cat=&code=&grp=&companyCd=S06&bbsno=593&seq=8344"
       }
      ],
@@ -212195,9 +212187,8 @@
      "url": "http://www.4wellcc.com/information/fee.asp",
      "items": [
       {
-       "type": "요금",
-       "text": "비회원 정상가 주중 200,000·주말 240,000(제세공과금 별도)",
-       "as_of": "2026-11-26",
+       "date": "2026-11-26",
+       "title": "비회원 정상가 주중 200,000·주말 240,000(제세공과금 별도)",
        "url": "http://www.4wellcc.com/information/fee.asp"
       }
      ],
@@ -213089,15 +213080,13 @@
      "url": "https://ananti.kr/ko/namhae/golfclub/information",
      "items": [
       {
-       "type": "요금",
-       "text": "그린피 주중 180,000·주말 240,000 (2026-04-01부터 적용)",
-       "as_of": "2026-11-26",
+       "date": "2026-11-26",
+       "title": "그린피 주중 180,000·주말 240,000 (2026-04-01부터 적용)",
        "url": "https://ananti.kr/ko/namhae/golfclub/information"
       },
       {
-       "type": "운영",
-       "text": "골프 예약은 카드 등록 후 완료, 라운드 종료 후 결제",
-       "as_of": "2026-11-26",
+       "date": "2026-11-26",
+       "title": "골프 예약은 카드 등록 후 완료, 라운드 종료 후 결제",
        "url": "https://ananti.kr/ko/namhae/golfclub/information"
       }
      ],
@@ -218256,9 +218245,8 @@
      "url": "https://www.golfzoncounty.com/golfclub/main?golfclubSeq=70",
      "items": [
       {
-       "type": "운영변경",
-       "text": "2026-05 골프존카운티 임차 운영·명칭 변경(골프존카운티 이든)·대중제 전환",
-       "as_of": "2026-11-26",
+       "date": "2026-11-26",
+       "title": "2026-05 골프존카운티 임차 운영·명칭 변경(골프존카운티 이든)·대중제 전환",
        "url": "https://www.golfzoncounty.com/golfclub/main?golfclubSeq=70"
       }
      ],
@@ -219967,9 +219955,8 @@
      "url": "https://xn--289a6cv80bnhpdlav75a4vlwrc.kr/",
      "items": [
       {
-       "type": "예약",
-       "text": "12월 예약타임지 공개(2026-11-23), 매월 셋째 월요일 휴장",
-       "as_of": "2026-11-23",
+       "date": "2026-11-23",
+       "title": "12월 예약타임지 공개(2026-11-23), 매월 셋째 월요일 휴장",
        "url": "https://xn--289a6cv80bnhpdlav75a4vlwrc.kr/"
       }
      ],
@@ -222362,15 +222349,13 @@
      "url": "https://www.jhnpcc.co.kr/Guide/Fees.aspx",
      "items": [
       {
-       "type": "요금",
-       "text": "11월 그린피 적용 2026-11-01~11-30 / 12월 그린피 2026-12-01~12-13, 12-14~12-31 별도 게시",
-       "as_of": "2026-10-09",
+       "date": "2026-10-09",
+       "title": "11월 그린피 적용 2026-11-01~11-30 / 12월 그린피 2026-12-01~12-13, 12-14~12-31 별도 게시",
        "url": "https://www.jhnpcc.co.kr/Guide/Fees.aspx"
       },
       {
-       "type": "개칭",
-       "text": "2026-04-01 진해신항CC로 명칭 변경·경남개발공사 직영 전환",
-       "as_of": "2026-11-26",
+       "date": "2026-11-26",
+       "title": "2026-04-01 진해신항CC로 명칭 변경·경남개발공사 직영 전환",
        "url": "https://www.jhnpcc.co.kr/Guide/Fees.aspx"
       }
      ],
@@ -259210,9 +259195,8 @@
      "url": "https://www.o2resort.com/GLF/totalfeeGuide_golf.jsp",
      "items": [
       {
-       "type": "동계요금",
-       "text": "11/9~폐장일 일반 주중 80,000·주말 130,000(동계 인하)",
-       "as_of": "2026-11-26",
+       "date": "2026-11-26",
+       "title": "11/9~폐장일 일반 주중 80,000·주말 130,000(동계 인하)",
        "url": "https://www.o2resort.com/GLF/totalfeeGuide_golf.jsp"
       }
      ],
@@ -260278,9 +260262,8 @@
      "url": "https://www.alpensia.com/golf/gc700/use-info.do",
      "items": [
       {
-       "type": "영업기간",
-       "text": "2026 운영 3/20~12/5, 이후 겨울 휴장(기상에 따라 변동)",
-       "as_of": "2026-11-26",
+       "date": "2026-11-26",
+       "title": "2026 운영 3/20~12/5, 이후 겨울 휴장(기상에 따라 변동)",
        "url": "https://www.alpensia.com/golf/gc700/use-info.do"
       }
      ],
@@ -260958,9 +260941,8 @@
      "url": "https://www.alpensia.com/golf/trooncc/use-info.do",
      "items": [
       {
-       "type": "영업기간",
-       "text": "2026 운영 3/20~12/13, 이후 겨울 휴장(기상에 따라 변동)",
-       "as_of": "2026-11-26",
+       "date": "2026-11-26",
+       "title": "2026 운영 3/20~12/13, 이후 겨울 휴장(기상에 따라 변동)",
        "url": "https://www.alpensia.com/golf/trooncc/use-info.do"
       }
      ],
@@ -261550,15 +261532,13 @@
      "url": "https://www.yongpyong.co.kr/kor/guide/notice/read.do?moveYn=Y&noticeId=1711",
      "items": [
       {
-       "type": "동계휴장",
-       "text": "용평CC 동계휴장 2026-11-16 ~ 2027-03-31 (2026 시즌 영업 종료 11/15)",
-       "as_of": "2026-11-24",
+       "date": "2026-11-24",
+       "title": "용평CC 동계휴장 2026-11-16 ~ 2027-03-31 (2026 시즌 영업 종료 11/15)",
        "url": "https://www.yongpyong.co.kr/kor/guide/notice/read.do?moveYn=Y&noticeId=1711"
       },
       {
-       "type": "운영",
-       "text": "골프예약센터 동계 운영 2026-11-30~2027-03-14, 평일 09:00~15:00, 토·공휴일·일요일 미운영",
-       "as_of": "2026-11-24",
+       "date": "2026-11-24",
+       "title": "골프예약센터 동계 운영 2026-11-30~2027-03-14, 평일 09:00~15:00, 토·공휴일·일요일 미운영",
        "url": "https://www.yongpyong.co.kr/kor/guide/notice/read.do?moveYn=Y&noticeId=1711"
       }
      ],
@@ -262139,9 +262119,8 @@
      "url": "https://www.yongpyong.co.kr/kor/guide/notice/read.do?moveYn=Y&noticeId=1711",
      "items": [
       {
-       "type": "동계휴장",
-       "text": "용평9 동계휴장 2026-11-16 ~ 2027-03-31",
-       "as_of": "2026-11-24",
+       "date": "2026-11-24",
+       "title": "용평9 동계휴장 2026-11-16 ~ 2027-03-31",
        "url": "https://www.yongpyong.co.kr/kor/guide/notice/read.do?moveYn=Y&noticeId=1711"
       }
      ],
@@ -262825,9 +262804,8 @@
      "url": "https://www.yongpyong.co.kr/kor/guide/notice/read.do?moveYn=Y&noticeId=1711",
      "items": [
       {
-       "type": "동계휴장",
-       "text": "버치힐CC 동계휴장 2026-11-30 ~ 2027-03-18",
-       "as_of": "2026-11-24",
+       "date": "2026-11-24",
+       "title": "버치힐CC 동계휴장 2026-11-30 ~ 2027-03-18",
        "url": "https://www.yongpyong.co.kr/kor/guide/notice/read.do?moveYn=Y&noticeId=1711"
       }
      ],
@@ -263554,9 +263532,8 @@
      "url": "https://www.phoenixhnr.co.kr/static/pyeongchang/golf/phoenix-reservation",
      "items": [
       {
-       "type": "겨울휴장",
-       "text": "2026 영업 3/6~12/6, 겨울 휴장 12/7~",
-       "as_of": "2026-11-26",
+       "date": "2026-11-26",
+       "title": "2026 영업 3/6~12/6, 겨울 휴장 12/7~",
        "url": "https://www.phoenixhnr.co.kr/static/pyeongchang/golf/phoenix-reservation"
       }
      ],
@@ -289607,9 +289584,8 @@
      "url": "https://nhg.s-parkcc.kr/Board/BoardView?lgubun=109&page=1&limit=10&bd_main_seq=1477&search_key=&search_value=&board_idx=1",
      "items": [
       {
-       "type": "요금",
-       "text": "12월 이용요금 공지(2026-11-02) — 기준요금 주중 199,000·주말 259,000",
-       "as_of": "2026-11-02",
+       "date": "2026-11-02",
+       "title": "12월 이용요금 공지(2026-11-02) — 기준요금 주중 199,000·주말 259,000",
        "url": "https://nhg.s-parkcc.kr/Board/BoardView?lgubun=109&page=1&limit=10&bd_main_seq=1477&search_key=&search_value=&board_idx=1"
       }
      ],

@@ -393,9 +393,8 @@
    "url": "https://www.golfzoncounty.com/golfclub/main?golfclubSeq=70",
    "items": [
     {
-     "type": "운영변경",
-     "text": "2026-05 골프존카운티 임차 운영·명칭 변경(골프존카운티 이든)·대중제 전환",
-     "as_of": "2026-11-26",
+     "date": "2026-11-26",
+     "title": "2026-05 골프존카운티 임차 운영·명칭 변경(골프존카운티 이든)·대중제 전환",
      "url": "https://www.golfzoncounty.com/golfclub/main?golfclubSeq=70"
     }
    ],

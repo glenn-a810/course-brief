@@ -601,9 +601,8 @@
    "url": "https://www.yongpyong.co.kr/kor/guide/notice/read.do?moveYn=Y&noticeId=1711",
    "items": [
     {
-     "type": "동계휴장",
-     "text": "버치힐CC 동계휴장 2026-11-30 ~ 2027-03-18",
-     "as_of": "2026-11-24",
+     "date": "2026-11-24",
+     "title": "버치힐CC 동계휴장 2026-11-30 ~ 2027-03-18",
      "url": "https://www.yongpyong.co.kr/kor/guide/notice/read.do?moveYn=Y&noticeId=1711"
     }
    ],

@@ -419,9 +419,8 @@
    "url": "https://nhg.s-parkcc.kr/Board/BoardView?lgubun=109&page=1&limit=10&bd_main_seq=1477&search_key=&search_value=&board_idx=1",
    "items": [
     {
-     "type": "요금",
-     "text": "12월 이용요금 공지(2026-11-02) — 기준요금 주중 199,000·주말 259,000",
-     "as_of": "2026-11-02",
+     "date": "2026-11-02",
+     "title": "12월 이용요금 공지(2026-11-02) — 기준요금 주중 199,000·주말 259,000",
      "url": "https://nhg.s-parkcc.kr/Board/BoardView?lgubun=109&page=1&limit=10&bd_main_seq=1477&search_key=&search_value=&board_idx=1"
     }
    ],

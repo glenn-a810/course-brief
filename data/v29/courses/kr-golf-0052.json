@@ -378,9 +378,8 @@
    "url": "https://www.bayside.co.kr/swp/charge",
    "items": [
     {
-     "type": "요금",
-     "text": "비회원 그린피 평일 210,000·주말 258,000(제세공과금·기본시설 포함)",
-     "as_of": "2026-11-26",
+     "date": "2026-11-26",
+     "title": "비회원 그린피 평일 210,000·주말 258,000(제세공과금·기본시설 포함)",
      "url": "https://www.bayside.co.kr/swp/charge"
     }
    ],

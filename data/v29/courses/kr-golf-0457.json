@@ -595,9 +595,8 @@
    "url": "https://www.alpensia.com/golf/trooncc/use-info.do",
    "items": [
     {
-     "type": "영업기간",
-     "text": "2026 운영 3/20~12/13, 이후 겨울 휴장(기상에 따라 변동)",
-     "as_of": "2026-11-26",
+     "date": "2026-11-26",
+     "title": "2026 운영 3/20~12/13, 이후 겨울 휴장(기상에 따라 변동)",
      "url": "https://www.alpensia.com/golf/trooncc/use-info.do"
     }
    ],

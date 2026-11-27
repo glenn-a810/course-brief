@@ -414,9 +414,8 @@
    "url": "http://www.4wellcc.com/information/fee.asp",
    "items": [
     {
-     "type": "요금",
-     "text": "비회원 정상가 주중 200,000·주말 240,000(제세공과금 별도)",
-     "as_of": "2026-11-26",
+     "date": "2026-11-26",
+     "title": "비회원 정상가 주중 200,000·주말 240,000(제세공과금 별도)",
      "url": "http://www.4wellcc.com/information/fee.asp"
     }
    ],

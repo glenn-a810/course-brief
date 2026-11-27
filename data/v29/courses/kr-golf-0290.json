@@ -418,9 +418,8 @@
    "url": "https://www.sangnokresort.com/board/event/eventBoardView.do?cat=&code=&grp=&companyCd=S06&bbsno=593&seq=8344",
    "items": [
     {
-     "type": "시설공사",
-     "text": "천안상록골프장 클럽하우스 환경개선 공사 안내",
-     "as_of": "2026-09-13",
+     "date": "2026-09-13",
+     "title": "천안상록골프장 클럽하우스 환경개선 공사 안내",
      "url": "https://www.sangnokresort.com/board/event/eventBoardView.do?cat=&code=&grp=&companyCd=S06&bbsno=593&seq=8344"
     }
    ],

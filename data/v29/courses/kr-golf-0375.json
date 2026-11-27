@@ -348,9 +348,8 @@
    "url": "https://xn--289a6cv80bnhpdlav75a4vlwrc.kr/",
    "items": [
     {
-     "type": "예약",
-     "text": "12월 예약타임지 공개(2026-11-23), 매월 셋째 월요일 휴장",
-     "as_of": "2026-11-23",
+     "date": "2026-11-23",
+     "title": "12월 예약타임지 공개(2026-11-23), 매월 셋째 월요일 휴장",
      "url": "https://xn--289a6cv80bnhpdlav75a4vlwrc.kr/"
     }
    ],

@@ -399,15 +399,13 @@
    "url": "https://ananti.kr/ko/namhae/golfclub/information",
    "items": [
     {
-     "type": "요금",
-     "text": "그린피 주중 180,000·주말 240,000 (2026-04-01부터 적용)",
-     "as_of": "2026-11-26",
+     "date": "2026-11-26",
+     "title": "그린피 주중 180,000·주말 240,000 (2026-04-01부터 적용)",
      "url": "https://ananti.kr/ko/namhae/golfclub/information"
     },
     {
-     "type": "운영",
-     "text": "골프 예약은 카드 등록 후 완료, 라운드 종료 후 결제",
-     "as_of": "2026-11-26",
+     "date": "2026-11-26",
+     "title": "골프 예약은 카드 등록 후 완료, 라운드 종료 후 결제",
      "url": "https://ananti.kr/ko/namhae/golfclub/information"
     }
    ],

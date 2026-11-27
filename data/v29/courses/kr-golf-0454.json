@@ -536,9 +536,8 @@
    "url": "https://www.o2resort.com/GLF/totalfeeGuide_golf.jsp",
    "items": [
     {
-     "type": "동계요금",
-     "text": "11/9~폐장일 일반 주중 80,000·주말 130,000(동계 인하)",
-     "as_of": "2026-11-26",
+     "date": "2026-11-26",
+     "title": "11/9~폐장일 일반 주중 80,000·주말 130,000(동계 인하)",
      "url": "https://www.o2resort.com/GLF/totalfeeGuide_golf.jsp"
     }
    ],
