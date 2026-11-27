@@ -155,9 +155,30 @@
   <div class="footer-inner">
     <p><strong>CourseBrief</strong> · 전국 골프장 실전 브리핑</p>
     <p class="footer-meta" id="footer-meta"></p>
-    <p class="footer-note">요금·운영 정보는 골프장 공식 공지와 공개 정보를 수집·대조한 참고값입니다. 예약 전 공식 채널에서 최종 확인하세요. 정보 오류·누락 제보는 언제나 환영합니다.</p>
+    <p class="footer-note">요금·운영 정보는 참고값입니다. 예약 전 공식 채널에서 최종 확인하세요. 정보 오류·누락 제보는 언제나 환영합니다.</p>
+    <p class="footer-admin">
+      <button id="admin-open" class="admin-open" type="button">관리자</button>
+      <span id="admin-badge" class="admin-badge" hidden>관리자 모드<button id="admin-exit" class="admin-exit" type="button">해제</button></span>
+      <span id="admin-status" class="sr-only" role="status"></span>
+    </p>
   </div>
 </footer>
+
+<dialog id="admin-dialog" class="admin-dialog" aria-labelledby="admin-title">
+  <form id="admin-form" class="admin-form">
+    <h2 id="admin-title">관리자 모드</h2>
+    <p class="admin-desc">출처·수집 정보를 함께 표시합니다. 비밀번호를 입력하세요.</p>
+    <label class="admin-field">
+      <span>비밀번호</span>
+      <input id="admin-password" type="password" autocomplete="current-password" enterkeyhint="go" aria-describedby="admin-error">
+    </label>
+    <p id="admin-error" class="admin-error" role="alert" hidden></p>
+    <div class="admin-actions">
+      <button id="admin-cancel" class="btn-ghost" type="button">취소</button>
+      <button id="admin-submit" class="btn" type="submit">확인</button>
+    </div>
+  </form>
+</dialog>
 
 <script type="module" src="assets/app.js"></script>
 </body>

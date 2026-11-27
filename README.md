@@ -26,7 +26,7 @@
 | 06 | **브리핑·공지** | 휴장·에어레이션·요금 변경 공지, 라운더 평가, 확인 필요 알림 | `briefing.notices`, `alert`, `review` |
 | 07 | **클럽 렌탈** | 골프장 자체 대여 + 해외 골퍼용 렌탈·딜리버리 업체 8곳 | `rental.*`, `rental_providers.json` |
 
-각 값에는 **출처와 확인 시점**이 붙고, 확인하지 못한 값은 `null` + 화면에서 **"미확인"** 으로 표시합니다.
+각 값에는 **출처와 확인 시점**이 데이터로 붙어 있고, 확인하지 못한 값은 `null` + 화면에서 **"미확인"** 으로 표시합니다.
 "정보 없음"을 "없음"으로 해석하지 않는 것이 이 데이터의 기본 규칙입니다.
 
 ## 2. 주요 기능
@@ -38,6 +38,7 @@
 - **7개 영역 상세** — 영역별 앵커 내비게이션, 값별 근거 접기, 영역별 정보 충실도(coverage)
 - **렌탈 탭** — 권역별 배송 가능 업체, 요금·브랜드·언어·연락처
 - **테마** — 기본은 OS·브라우저 설정을 따르는 시스템 자동. 헤더 오른쪽 버튼으로 `시스템 → 라이트 → 다크`를 돌려 선택하면 `localStorage`(`coursebrief-theme`)에 저장돼 새로고침·재방문에도 유지된다. 선택은 `html[data-theme]`로 적용되고, 첫 페인트 전 `index.html` 인라인 스크립트가 먼저 칠해 깜빡임이 없다.
+- **출처는 관리자 모드 전용** — 일반 화면에는 구장별 **업데이트 날짜**(`YYYY.MM.DD`)만 보이고, 출처·근거 원문·채움률·스키마 같은 수집 정보는 **렌더링되지 않는다(DOM 에도 없음)**. 푸터의 작은 `관리자` 버튼 → 비밀번호를 넣으면 관리자 모드가 켜져 출처가 보이고, 배지의 `해제` 로 되돌린다(상태는 `localStorage.coursebrief-admin`). 비밀번호는 평문 없이 SHA-256 해시만 코드에 두고 `crypto.subtle` 로 비교한다(`web/assets/admin.ts`).
 - **접근성·디자인** — Apple HIG / Material 기본 중성 배경, `prefers-color-scheme` 자동, 키보드 포커스, 44px 터치 타깃
 
 ## 3. 데이터
@@ -93,6 +94,7 @@ npm run check      # build + verify
 
 ```
 web/assets/app.ts     화면·라우터·렌더링
+web/assets/admin.ts   관리자 모드(출처 노출 분기·비밀번호 해시 비교)
 web/assets/search.ts  SearchAdapter 구현(LocalSearchAdapter / EsSearchAdapter)
 web/assets/util.ts    포맷·초성·이스케이프
 shared/types/         웹·RN 공용 타입 (12키 상세·인덱스·클러스터·렌탈·검색 계약)

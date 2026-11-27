@@ -30,6 +30,7 @@ ok(tsconfig.compilerOptions?.skipLibCheck === true, "tsconfig skipLibCheck: true
 ok(await exists(path.join(root, "shared/types/index.ts")), "shared/types/index.ts 존재");
 
 for (const f of ["web/assets/app.ts", "web/assets/search.ts", "web/assets/util.ts", "web/assets/theme.ts",
+                 "web/assets/admin.ts",
                  "functions/api/search.ts", "functions/tsconfig.json", "package-lock.json"]) {
   ok(await exists(path.join(root, f)), `${f} 존재`);
 }
@@ -76,6 +77,20 @@ ok(
   !csp || /'unsafe-inline'/.test(csp) || /script-src[^;]*'sha256-/.test(csp),
   csp ? `CSP 가 인라인 테마 초기화 스크립트를 허용 — ${csp.trim().slice(0, 72)}` : "_headers 에 CSP 없음 — 인라인 테마 초기화 스크립트 허용",
 );
+
+/* 1-3) 관리자 모드 — 출처는 관리자에게만. 진입은 비밀번호 입력이고 평문은 산출물에 없다 */
+ok(html.includes('id="admin-password"') && html.includes('type="password"'), "index.html 관리자 비밀번호 입력 필드");
+ok(html.includes('id="admin-open"') && html.includes('id="admin-badge"'), "index.html 관리자 진입 버튼·배지");
+ok(bundle.includes("coursebrief-admin"), "app.js 에 관리자 상태 저장 키");
+ok(/[0-9a-f]{64}/.test(bundle), "app.js 에 SHA-256 해시 상수(64hex)");
+ok(/subtle\.digest\(\s*"SHA-256"/.test(bundle), "app.js 에서 Web Crypto SHA-256 비교");
+ok(!bundle.includes("admin=1"), "URL 파라미터(?admin=1) 진입 제거");
+const webSourceText = (await Promise.all(
+  (await listFiles(path.join(root, "web")))
+    .filter((f) => f.endsWith(".ts") || f.endsWith(".html"))
+    .map((f) => readFile(f, "utf8")),
+)).join("\n");
+ok(!/A810Labs/.test(bundle) && !/A810Labs/.test(webSourceText), "관리자 비밀번호 평문이 소스·산출물에 없음");
 
 const css = await readFile(path.join(dist, "assets/style.css"), "utf8");
 ok(/:root\[data-theme="light"\]\s*\{/.test(css) && /:root\[data-theme="dark"\]\s*\{/.test(css), "style.css data-theme 변수 블록");

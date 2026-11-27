@@ -441,3 +441,39 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 .fee-table td.num { font-variant-numeric: tabular-nums; white-space: nowrap; text-align: right; }
 .fee-table td { font-size: 13.5px; }
 .fee-table td:first-child { color: var(--text-2); }
+
+/* 관리자 모드 — 푸터의 작은 진입 버튼·배지, 비밀번호 대화상자.
+   일반 화면에서는 이 버튼 하나만 보이고 출처·수집 정보는 렌더링되지 않는다. */
+.footer-admin { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; min-height: 28px; }
+.admin-open {
+  border: 0; background: none; padding: 4px 8px; margin-left: -8px;
+  color: var(--text-3); font-size: 12px; border-radius: 8px; cursor: pointer; min-height: 32px;
+}
+.admin-open:hover { color: var(--text-2); background: var(--bg-inset); }
+.admin-badge {
+  display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 600;
+  color: var(--warn); background: var(--warn-soft);
+  border: 1px solid color-mix(in srgb, var(--warn) 26%, transparent);
+  border-radius: 999px; padding: 3px 5px 3px 10px;
+}
+.admin-exit {
+  border: 0; background: var(--bg-elev); color: var(--text-2); border-radius: 999px;
+  padding: 3px 9px; font-size: 11.5px; font-weight: 500; cursor: pointer; min-height: 24px;
+}
+.admin-exit:hover { color: var(--text); background: var(--bg-inset); }
+.admin-dialog {
+  border: 1px solid var(--line); border-radius: var(--radius); background: var(--bg-elev);
+  color: var(--text); padding: 0; width: min(92vw, 360px); box-shadow: var(--shadow);
+}
+.admin-dialog::backdrop { background: rgba(0, 0, 0, .38); }
+.admin-form { display: grid; gap: 12px; padding: 20px; }
+.admin-form h2 { font-size: 16px; font-weight: 650; }
+.admin-desc { font-size: 12.5px; color: var(--text-2); }
+.admin-field { display: grid; gap: 6px; font-size: 12.5px; color: var(--text-2); }
+.admin-field input {
+  width: 100%; min-height: var(--tap); padding: 10px 12px; font-size: 15px;
+  border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--bg); color: var(--text);
+}
+.admin-field input:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.admin-error { font-size: 12.5px; color: var(--danger); }
+.admin-actions { display: flex; justify-content: flex-end; gap: 8px; }
