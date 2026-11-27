@@ -108,7 +108,8 @@
   },
   "batch3_patch": "2026-11-27 배치6(대구·경북) 보완: 7개 항목(공식 홈페이지·그린피가이드 공식 안내 확인 기준, 미확인 값 생성 없음)",
   "batch6_patch": "2026-11-27 배치6(대구·경북) 보완: 1개 항목(공식 홈페이지·그린피가이드·예약 플랫폼 공개 안내 확인 기준, 미확인 값 생성 없음)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch6_supplement_2026_11_27": "누락 필드 보완 배치6(대구·경북) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0328",
@@ -360,8 +361,15 @@
    "evidence": []
   },
   "marshal_caddie": {
-   "value": null,
-   "evidence": []
+   "value": "경기보조원(캐디) 운영",
+   "evidence": [
+    "비거리는 경기보조원의 조언에 관계없이 이용자 자신의 판단으로 선행조에 맞추지 않을 정도로 타구하여야 한다."
+   ],
+   "source_url": "https://oceanbeachcc.com/mobile/member/Agreement.asp",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch6_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "cart_type": {
    "evidence": [
@@ -394,8 +402,16 @@
    }
   },
   "locker": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "라운딩 후 피로를 지하 702미터에서 끌어올린 지하암반 천연온천으로 날려버리실 수 있습니다.",
+    "락카&사우나"
+   ],
+   "value": "락카·사우나 운영(지하암반 천연온천)",
+   "source_url": "https://oceanbeachcc.com/Facilities/Sauna.asp",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch6_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "sauna": {
    "evidence": [
@@ -440,9 +456,15 @@
   },
   "food": {
    "evidence": [
-    "클럽하우스는 특별히 외관이 웅장한 배 모양으로 디자인 되어 있으며 스타트 로비에서 대식당에 이르기까지 탁트인 유리 커튼월로 장식되어 있어 틀럽아우스에서 바라본 코스와 바다는 오션비치만의 멋진 황홀경을 연출하고 있습니다."
+    "클럽하우스는 특별히 외관이 웅장한 배 모양으로 디자인 되어 있으며 스타트 로비에서 대식당에 이르기까지 탁트인 유리 커튼월로 장식되어 있어 틀럽아우스에서 바라본 코스와 바다는 오션비치만의 멋진 황홀경을 연출하고 있습니다.",
+    "Ocean 코스 6번홀, Valley 코스 4번홀, Beach 코스 4번홀에 각각 위치한 그늘집은 라운드 도중 간단한 음료 및 식사와 함께 휴식을 취하실 수 있는 편안한 쉼터가 되어드릴 것입니다."
    ],
-   "value": null
+   "value": "Ocean·Valley·Beach 코스에 그늘집 각 1곳 운영",
+   "source_url": "https://oceanbeachcc.com/Facilities/ShadowHouse.asp",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch6_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "snack_bar": {
    "value": null,
@@ -773,8 +795,8 @@
   "basic": 0.89,
   "course": 0.4,
   "fee": 1.0,
-  "ops": 0.29,
-  "facility": 0.5,
+  "ops": 0.43,
+  "facility": 0.6,
   "briefing": 0.0,
   "rental": 0.0
  }

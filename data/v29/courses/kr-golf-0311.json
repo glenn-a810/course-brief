@@ -30,7 +30,8 @@
    "checked_at": "2026-11-27"
   },
   "batch3_patch": "2026-11-27 배치6(대구·경북) 보완: 1개 항목(공식 홈페이지·그린피가이드 공식 안내 확인 기준, 미확인 값 생성 없음)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch6_supplement_2026_11_27": "누락 필드 보완 배치6(대구·경북) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0311",
@@ -203,8 +204,15 @@
    "evidence": []
   },
   "marshal_caddie": {
-   "value": null,
-   "evidence": []
+   "value": "경기보조자·진행안내원 운영",
+   "evidence": [
+    "경기보조자, 진행안내원 등의 조언이 있더라도 안전한 비거리는 경기자 자신이 확인하여야 한다."
+   ],
+   "source_url": "https://www.easthills.co.kr/Guide/Clause.aspx",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch6_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "cart_type": {
    "evidence": [],
@@ -227,8 +235,15 @@
    "value": null
   },
   "locker": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "이용자는 경기 시 또는 락커실 및 목욕탕 이용 시 금전 또는 귀중품등을 가능한 한 프론트에 별도 보관하거나 사용 보관함에 보관하여 분실을 예방하여야 한다."
+   ],
+   "value": "락커실·목욕탕 운영",
+   "source_url": "https://www.easthills.co.kr/Guide/Clause.aspx",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch6_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "sauna": {
    "evidence": [],
@@ -404,7 +419,7 @@
   "basic": 0.78,
   "course": 0.2,
   "fee": 1.0,
-  "ops": 0.0,
+  "ops": 0.14,
   "facility": 0.1,
   "briefing": 0.0,
   "rental": 0.0

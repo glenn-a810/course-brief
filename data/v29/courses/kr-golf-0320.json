@@ -41,7 +41,8 @@
    "checked_at": "2026-11-27"
   },
   "batch3_patch": "2026-11-27 배치6(대구·경북) 보완: 2개 항목(공식 홈페이지·그린피가이드 공식 안내 확인 기준, 미확인 값 생성 없음)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch6_supplement_2026_11_27": "누락 필드 보완 배치6(대구·경북) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0320",
@@ -283,8 +284,15 @@
    }
   },
   "three_player": {
-   "value": null,
-   "evidence": []
+   "value": "플레이 인원은 3인 또는 4인 기준 원칙",
+   "evidence": [
+    "플레이 인원은 3인 또는 4인 기준을 원칙으로 합니다."
+   ],
+   "source_url": "https://applevalley.co.kr/use/reservation.asp",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch6_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "five_player": {
    "value": null,
@@ -305,8 +313,15 @@
    "value": null
   },
   "bagdrop": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "라운드 준비시에 자동차 키를 소지하여 주셔야 하며 골프백을 자동차에 싣지 않고 현관 앞에 보관하다"
+   ],
+   "value": "골프백은 차에 싣지 않고 현관 앞에 보관",
+   "source_url": "https://www.applevalley.co.kr/use/guide.asp",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch6_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "mat": {
    "evidence": [],
@@ -627,7 +642,7 @@
   "basic": 0.89,
   "course": 0.2,
   "fee": 1.0,
-  "ops": 0.14,
+  "ops": 0.29,
   "facility": 0.0,
   "briefing": 0.0,
   "rental": 0.0

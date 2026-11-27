@@ -64,7 +64,8 @@
   },
   "batch3_patch": "2026-11-27 배치6(대구·경북) 보완: 3개 항목(공식 홈페이지·그린피가이드 공식 안내 확인 기준, 미확인 값 생성 없음)",
   "batch6_patch": "2026-11-27 배치6(대구·경북) 보완: 1개 항목(공식 홈페이지·그린피가이드·예약 플랫폼 공개 안내 확인 기준, 미확인 값 생성 없음)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch6_supplement_2026_11_27": "누락 필드 보완 배치6(대구·경북) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0318",
@@ -199,9 +200,24 @@
   "night_light": null,
   "blocks": [],
   "grass": {
-   "tee": null,
-   "fairway": null,
-   "green": null
+   "tee": {
+    "value": "켄터키 블루 그래스",
+    "evidence": "티박스 - 켄터키 블루 그래스",
+    "source": "공식 홈페이지",
+    "url": "https://www.golfzoncounty.com/golfclub/intro?golfclubSeq=28"
+   },
+   "fairway": {
+    "value": "삼덕중지",
+    "evidence": "페어웨이 - 삼덕중지",
+    "source": "공식 홈페이지",
+    "url": "https://www.golfzoncounty.com/golfclub/intro?golfclubSeq=28"
+   },
+   "green": {
+    "value": "Pencross/Penn A-1",
+    "evidence": "그린 - Pencross/Penn A-1",
+    "source": "공식 홈페이지",
+    "url": "https://www.golfzoncounty.com/golfclub/intro?golfclubSeq=28"
+   }
   },
   "kga": {
    "kga_course_code": "121",
@@ -302,8 +318,13 @@
   "official_rental": null
  },
  "cancel": {
-  "cancel_policy": null,
-  "open_cycle": null,
+  "cancel_policy": {
+   "value": "주말·공휴일 이용일 4일 전까지 위약금 없음, 3~2일 전 10%, 1일 전 20%, 당일 30%(평일은 3일 전까지 위약 없음)",
+   "source": "공식 홈페이지",
+   "url": "https://sunsan.golfzoncounty.com/info/how_to_resv",
+   "checked_at": "2026-11-27"
+  },
+  "open_cycle": "비회원은 매주 화요일 10시에 1주 후 토요일~2주 후 금요일분 예약 오픈(회원은 월요일 10~11시)",
   "notes": null,
   "evidence": [
    "오늘 하루 보지 않기 닫기 2026 클럽챔피언대회 안내 오늘 하루 보지 않기 닫기 캐디피 변경 안내 오늘 하루 보지 않기 닫기 로그인을 해주세요.로그인 골프존카운티 선산 클럽소개 오시는길 코스소개 코스소개 코스공략도 클럽정보 예약 및 요금안내 공지사항 예약 실시간 예약 예약확인/취소 대기예약 등록/취소 마이페이지 내장현황 위약현황 회원정보 모바일메뉴 골프존카운티 선산 로그인 회원인증 골프존카운티 선산 클럽소개 갤러리 오시는길 코스소개 코스소개 코스공략도 클럽정보 클럽 에티켓 예약 및 요금안내 제휴 골프장 공지사항 자료실 예약 실시간",

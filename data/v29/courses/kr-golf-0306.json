@@ -41,7 +41,8 @@
    "checked_at": "2026-11-27"
   },
   "batch3_patch": "2026-11-27 배치6(대구·경북) 보완: 2개 항목(공식 홈페이지·그린피가이드 공식 안내 확인 기준, 미확인 값 생성 없음)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch6_supplement_2026_11_27": "누락 필드 보완 배치6(대구·경북) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0306",
@@ -205,7 +206,7 @@
    "source": "공식(브라우저 수집)",
    "url": "https://golf.gtc.co.kr/content/info-greenfee.asp"
   },
-  "open_cycle": null,
+  "open_cycle": "매주 월요일 오전 09시에 2주 후 월~일요일(1주일분) 예약 오픈",
   "notes": null,
   "evidence": [],
   "weather_evidence": [],
@@ -266,17 +267,31 @@
    "value": null
   },
   "checkin": {
-   "evidence": [],
-   "value": null,
+   "evidence": [
+    "예약시간 30분 이전에 도착하여 주시기 바랍니다."
+   ],
+   "value": "예약시간 30분 이전 도착, 티오프 10분 전 스타트 대기",
    "third_party": {
     "value": null,
     "source": "그린피가이드",
     "url": "https://greenfeeguide.co.kr/course/gc-0325/"
-   }
+   },
+   "source_url": "https://golf.gtc.co.kr/content/info-use.asp",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch6_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "locker": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "락카이용시"
+   ],
+   "value": "락카 운영(귀중품은 프론트 보관)",
+   "source_url": "https://golf.gtc.co.kr/content/info-use.asp",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch6_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "sauna": {
    "evidence": [],
@@ -465,7 +480,7 @@
   "basic": 0.89,
   "course": 0.2,
   "fee": 1.0,
-  "ops": 0.14,
+  "ops": 0.29,
   "facility": 0.1,
   "briefing": 0.0,
   "rental": 0.5

@@ -107,7 +107,8 @@
    "checked_at": "2026-11-27"
   },
   "batch6_patch": "2026-11-27 배치6(대구·경북) 보완: 8개 항목(공식 홈페이지·그린피가이드·예약 플랫폼 공개 안내 확인 기준, 미확인 값 생성 없음)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch6_supplement_2026_11_27": "누락 필드 보완 배치6(대구·경북) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0316",
@@ -259,7 +260,12 @@
   "official_rental": null
  },
  "cancel": {
-  "cancel_policy": null,
+  "cancel_policy": {
+   "value": "주중·주말 모두 3일 전까지 취소 가능, 이후 2일 전 10%·1일 전 20%·당일 취소·미내장 30% 위약",
+   "source": "공식 홈페이지",
+   "url": "https://www.univalley.co.kr/guide/penalty",
+   "checked_at": "2026-11-27"
+  },
   "open_cycle": "평일 2주 전 13:00, 주말·공휴일 2주 전 목요일 14:00",
   "notes": null,
   "evidence": [
@@ -286,8 +292,15 @@
    "value": null
   },
   "three_player": {
-   "value": null,
-   "evidence": []
+   "value": "4인 원칙, 3인 내장 시 조인 대기자 1인 의무 매칭(조인 예약 시 3인 경기 가능)",
+   "evidence": [
+    "3인 내장 시 당클럽에서 Join 대기자 1인을 의무적으로 매칭해야 합니다.(단, 당클럽을 통한 전화 또는 홈페이지 조인 예약 시 Join 대기자가 없을 경우 3인 경기가 가능합니다.)"
+   ],
+   "source_url": "https://www.univalley.co.kr/guide/reservation",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch6_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "five_player": {
    "value": null,
@@ -314,12 +327,26 @@
    "value": null
   },
   "checkin": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "예약시간 30분 이전에 도착하여 주시기 바랍니다."
+   ],
+   "value": "예약시간 30분 전 도착, 티오프 10분 전 스타트 대기",
+   "source_url": "https://www.univalley.co.kr/guide/policy",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch6_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "locker": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "락카 이용시"
+   ],
+   "value": "락카 운영(귀중품은 프론트 보관)",
+   "source_url": "https://www.univalley.co.kr/guide/policy",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch6_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "sauna": {
    "evidence": [],
@@ -344,8 +371,15 @@
    "evidence": []
   },
   "food": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "음식물을 절대로 반입하여서는 안됩니다."
+   ],
+   "value": "코스 내 그늘집 운영(외부 음식물 반입 금지)",
+   "source_url": "https://www.univalley.co.kr/guide/policy",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch6_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "snack_bar": {
    "value": null,
@@ -483,8 +517,8 @@
   "basic": 0.89,
   "course": 0.4,
   "fee": 1.0,
-  "ops": 0.0,
-  "facility": 0.0,
+  "ops": 0.21,
+  "facility": 0.1,
   "briefing": 0.0,
   "rental": 0.0
  }

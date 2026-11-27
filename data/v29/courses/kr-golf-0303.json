@@ -107,7 +107,8 @@
    "checked_at": "2026-11-27"
   },
   "batch3_patch": "2026-11-27 배치6(대구·경북) 보완: 8개 항목(공식 홈페이지·그린피가이드 공식 안내 확인 기준, 미확인 값 생성 없음)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch6_supplement_2026_11_27": "누락 필드 보완 배치6(대구·경북) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0303",
@@ -379,9 +380,10 @@
   "grass": {
    "tee": "Kentucky bluegrass",
    "fairway": {
-    "evidence": "(공휴일/휴일 1일 전 주말 요금 적용) 비회원 이용요금 (단위 : 원) 요금표 구분 그린피 사치성개별소비세 합계 비회원 주중 218,880 21,120 240,000 주말/공휴일/휴일 248,880 21,120 270,000 ※ 21,120원 = 개별소비세(12,000원) + 농특세(3,600원) + 교육세(3,600원) + 부가세(1,920원) ※ 스마트 예약(홈페이지)를 통해 예약하시면 예약시점, 예약률, 시즌별, 요일별, 시간대별 다양한 이벤트 요금으로 예약이 가능합니다.",
-    "source": "공식",
-    "url": "http://gj.kangdongcnl.com/content/03use/03_01.jsp"
+    "evidence": "페어웨이 중지(한국잔디)",
+    "source": "그린피가이드(공식 요금표·코스소개)",
+    "url": "https://greenfeeguide.co.kr/course/gc-0333/",
+    "value": "페어웨이 중지(한국잔디)"
    },
    "green": null
   },
@@ -909,7 +911,12 @@
   }
  },
  "cancel": {
-  "cancel_policy": null,
+  "cancel_policy": {
+   "value": "취소는 이용일 5일 전 17시까지 가능하며 이후 위약. 비회원 주중 4일 전 10만원·3일 전 20만원·1일 전 30만원, 주말 4일 전 10만원·3일 전 20만원·2일 전 30만원·1일 전 40만원 위약금(회원은 예약정지)",
+   "source": "공식 홈페이지",
+   "url": "http://gj.kangdongcnl.com/content/03use/05_01.jsp",
+   "checked_at": "2026-11-27"
+  },
   "open_cycle": null,
   "notes": null,
   "evidence": [
@@ -951,12 +958,26 @@
    "evidence": []
   },
   "five_player": {
-   "value": null,
-   "evidence": []
+   "value": "5인 라운드 가능(일반 카트 2대 20만원)",
+   "evidence": [
+    "5인 라운드 필수 사항 : 일반 카트 2대 20만원"
+   ],
+   "source_url": "http://gj.kangdongcnl.com/content/03use/03_01.jsp",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch6_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "marshal_caddie": {
-   "value": null,
-   "evidence": []
+   "value": "코스 내 마샬 직원 배치",
+   "evidence": [
+    "또는 코스 내의 마샬 직원에게 문의 하시면 요금 및 경기 중단과 관련하여 자세한 안내를 해드립니다."
+   ],
+   "source_url": "http://gj.kangdongcnl.com/content/03use/11_01.jsp",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch6_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "cart_type": {
    "evidence": [
@@ -971,8 +992,15 @@
    "checked_at": "2026-11-27"
   },
   "cart_entry": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "골프 카트 도로만 운행 가능, 코스 내로 진입 불가"
+   ],
+   "value": "카트는 도로만 운행, 코스 내 진입 불가",
+   "source_url": "http://gj.kangdongcnl.com/content/03use/11_01.jsp",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch6_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "bagdrop": {
    "evidence": [],
@@ -983,13 +1011,20 @@
    "value": null
   },
   "checkin": {
-   "evidence": [],
-   "value": null,
+   "evidence": [
+    "스마트체크인 기능으로 프론트 접수 없이 락카룸 바로 입장 가능 (동반자 관리 기능)"
+   ],
+   "value": "스마트체크인으로 프론트 접수 없이 락카룸 바로 입장 가능",
    "third_party": {
     "value": null,
     "source": "그린피가이드",
     "url": "https://greenfeeguide.co.kr/course/gc-0333/"
-   }
+   },
+   "source_url": "http://gj.kangdongcnl.com/content/03use/10_01.jsp",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch6_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "locker": {
    "evidence": [
@@ -1006,8 +1041,15 @@
    "value": "문구 확인(원문 근거)"
   },
   "dress": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "남성분의 경우 반바지, 슬리퍼 / 여성분은 노출이 심한 복장을 삼가 바라며, 클럽 분위기에 맞는 단정한 복장의 착용을 권장하여 드립니다."
+   ],
+   "value": "라운드 복장으로 출입 가능(남성 반바지·슬리퍼, 여성 과다 노출은 자제)",
+   "source_url": "http://gj.kangdongcnl.com/content/03use/01_01.jsp",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch6_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "pace": {
    "evidence": [
@@ -1034,9 +1076,15 @@
    "evidence": [
     "강동 디아너스C.C 강동 디아너스 콘도 워터파크 웨딩컨벤션 로그인 회원가입 즐겨찾기 소개 전화번호안내 오시는길 리조트 가이드맵 코스소개 Lake Course Valley Course Hills Course 스코어 카드 이용방법 예약안내 캐디&셀프라운드 Tip 바로입장 Tip 이용요금 단체문의 위약규정 로컬룰 회원권안내 회원특전 인터넷 회원 혜택 클럽하우스 레스토랑 티하우스 프로샵 연회장 락커&사우나 공지사항 이벤트 조인게시판 명예의전당 자료실 강동 스케치 분양안내 클럽하우스 레스토랑 티하우스 프로샵 연회장 락커&사우나 클럽하우스 레",
     "한식, 중식, 양식, 일식 등 다양한 메뉴와 함께 보문호 전경을 조망할 수 있는 홀은 더 큰 감동으로 회원님들께 다가갈 것입니다.",
-    "레스토랑은 총 96석과 룸 2개로 이루어져 있으며, 다양한 모임이나 각종 행사를 가지실 수 있는 연회실을 갖추고 있습니다."
+    "레스토랑은 총 96석과 룸 2개로 이루어져 있으며, 다양한 모임이나 각종 행사를 가지실 수 있는 연회실을 갖추고 있습니다.",
+    "9홀 티잉구역에서 태블릿 PC로 주문 가능하며, 054)778-9151 유선 주문도 가능합니다."
    ],
-   "value": null
+   "value": "코스 내 그늘집 운영(9홀 티잉구역 태블릿·유선 주문)",
+   "source_url": "http://gj.kangdongcnl.com/content/03use/11_01.jsp",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch6_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "snack_bar": {
    "value": null,
@@ -1313,8 +1361,8 @@
   "basic": 0.89,
   "course": 0.2,
   "fee": 1.0,
-  "ops": 0.36,
-  "facility": 0.4,
+  "ops": 0.71,
+  "facility": 0.5,
   "briefing": 0.0,
   "rental": 0.75
  }

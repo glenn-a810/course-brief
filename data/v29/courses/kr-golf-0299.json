@@ -185,7 +185,8 @@
   },
   "batch3_patch": "2026-11-27 배치6(대구·경북) 보완: 2개 항목(공식 홈페이지·그린피가이드 공식 안내 확인 기준, 미확인 값 생성 없음)",
   "batch6_patch": "2026-11-27 배치6(대구·경북) 보완: 2개 항목(공식 홈페이지·그린피가이드·예약 플랫폼 공개 안내 확인 기준, 미확인 값 생성 없음)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch6_supplement_2026_11_27": "누락 필드 보완 배치6(대구·경북) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0299",
@@ -319,7 +320,7 @@
    "url": "https://parkgolfinfo.co.kr/경주-코오롱호텔-가든-골프장코오롱-가든-예약방법/",
    "checked_at": "2026-11-27"
   },
-  "open_cycle": null,
+  "open_cycle": "인터넷은 이용일 15일 전 17시부터, 전화는 7일 전 08시부터 예약 접수",
   "notes": null,
   "evidence": [
    "위약 없이 취소/시간변경: 2일 전 17:00까지"
@@ -357,8 +358,15 @@
    "checked_at": "2026-11-27"
   },
   "three_player": {
-   "value": null,
-   "evidence": []
+   "value": "1인 예약은 3인이 예약된 티업 시간에만 가능(2·3인 예약은 라운딩 당일 현장 조인)",
+   "evidence": [
+    "인터넷 1인 예약의 경우 3인이 예약된 티업시간에 가능합니다."
+   ],
+   "source_url": "https://www.kolongolf.com/swp/useReserv",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch6_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "five_player": {
    "value": null,
@@ -407,8 +415,15 @@
    "checked_at": "2026-11-27"
   },
   "locker": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "락커룸 및 티 오프 시간안내 개인별 지정 락커가 아닙니다."
+   ],
+   "value": "지정 락커 없이 열려 있는 락커를 선택해 이용",
+   "source_url": "https://www.kolongolf.com/swp/useGuide",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch6_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "sauna": {
    "evidence": [
@@ -605,7 +620,7 @@
   "basic": 0.89,
   "course": 0.4,
   "fee": 0.25,
-  "ops": 0.5,
+  "ops": 0.64,
   "facility": 0.5,
   "briefing": 0.0,
   "rental": 0.0

@@ -107,7 +107,8 @@
    "checked_at": "2026-11-27"
   },
   "batch3_patch": "2026-11-27 배치6(대구·경북) 보완: 8개 항목(공식 홈페이지·그린피가이드 공식 안내 확인 기준, 미확인 값 생성 없음)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch6_supplement_2026_11_27": "누락 필드 보완 배치6(대구·경북) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0301",
@@ -541,7 +542,12 @@
   }
  },
  "cancel": {
-  "cancel_policy": null,
+  "cancel_policy": {
+   "value": "비회원 예약은 이용예정일 4일 전 12:00까지 취소 시 예약금 전액 환불, 이후 취소·무통보 미이용 시 예약금 미환불 또는 위약금 청구",
+   "source": "공식 홈페이지",
+   "url": "https://sillacc.co.kr/swp/terms_use",
+   "checked_at": "2026-11-27"
+  },
   "open_cycle": null,
   "notes": null,
   "evidence": [
@@ -562,27 +568,47 @@
   "two_player": {
    "evidence": [
     "조인게시판조인게시판 이용안내요금 및 이용안내 GYEONGJU SILLA CC 아이디 저장 비밀번호 저장 Login 회원가입 아이디/비밀번호 찾기 공지사항 동절기 휴장일 안내 New 2026-11-24 2027년도 공인서클 등록 접수 안내문 New 2026-11-23 12월 그린피 안내 2026-11-09 비회원 3부 그린피 특별할인 2026-10-31 대한민국 권역 베스트10 코스선정 2026-10-24 VIEW MORE 게시물이 없습니다.",
-    "입장요금 구분 주주회원 지정회원 비회원 18홀 평일 30,000 70,000 160,000 주말(공휴일) 30,000 110,000 190,000 9홀 평일 30,000 45,000 90,000 주말(공휴일) 30,000 65,000 105,000 유도카트 대여료 팀당 80,000 별도 계산(2021년 3월 27일부터 시행), 1팀 기준은 3~4인 구성이 원칙(2인, 5인 플레이 불가능) 셀프카트 대여료 청소비 포함 1,2부(12만원),3부(10만원) 별도 계산 비회원그린피는 공지사항 참조바랍니다."
+    "입장요금 구분 주주회원 지정회원 비회원 18홀 평일 30,000 70,000 160,000 주말(공휴일) 30,000 110,000 190,000 9홀 평일 30,000 45,000 90,000 주말(공휴일) 30,000 65,000 105,000 유도카트 대여료 팀당 80,000 별도 계산(2021년 3월 27일부터 시행), 1팀 기준은 3~4인 구성이 원칙(2인, 5인 플레이 불가능) 셀프카트 대여료 청소비 포함 1,2부(12만원),3부(10만원) 별도 계산 비회원그린피는 공지사항 참조바랍니다.",
+    "1팀 기준은 3~4인 구성이 원칙(2인, 5인 플레이 불가능)"
    ],
-   "value": null,
+   "value": "2인 플레이 불가(3~4인 구성 원칙)",
    "third_party": {
     "two": null,
     "three": null,
     "source": "그린피가이드",
     "url": "https://greenfeeguide.co.kr/course/gc-0324/"
-   }
+   },
+   "source_url": "https://sillacc.co.kr/swp/charge",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch6_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "three_player": {
    "value": null,
    "evidence": []
   },
   "five_player": {
-   "value": null,
-   "evidence": []
+   "value": "5인 플레이 불가(3~4인 구성 원칙)",
+   "evidence": [
+    "1팀 기준은 3~4인 구성이 원칙(2인, 5인 플레이 불가능)"
+   ],
+   "source_url": "https://sillacc.co.kr/swp/charge",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch6_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "marshal_caddie": {
-   "value": null,
-   "evidence": []
+   "value": "경기보조원(캐디) 운영",
+   "evidence": [
+    "① 타구는 경기보조원의 조언에 관계없이 자신판단으로 선행이용자에 맞지 않도록 하여야 한다."
+   ],
+   "source_url": "https://sillacc.co.kr/swp/terms_use",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch6_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "cart_type": {
    "evidence": [
@@ -597,8 +623,15 @@
    "checked_at": "2026-11-27"
   },
   "cart_entry": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "카트 페어웨이 진입 시 3개월 셀프카트 운행정지(팀원 전체)"
+   ],
+   "value": "카트 페어웨이 진입 금지(위반 시 3개월 셀프카트 운행정지)",
+   "source_url": "https://sillacc.co.kr/swp/selfCart_info",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch6_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "bagdrop": {
    "evidence": [],
@@ -618,8 +651,15 @@
    }
   },
   "locker": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "시설이용료: 클럽하우스 시설(락커, 샤워실 등)"
+   ],
+   "value": "락커·샤워실 등 클럽하우스 시설 운영",
+   "source_url": "https://sillacc.co.kr/swp/charge",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch6_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "sauna": {
    "evidence": [
@@ -636,8 +676,15 @@
    "value": null
   },
   "pace": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "경기 진행 경기진행 소요 시간은 9홀 기준 2시간 이내를 원칙으로 합니다."
+   ],
+   "value": "경기 진행 소요 시간 9홀 기준 2시간 이내 원칙",
+   "source_url": "https://sillacc.co.kr/swp/selfCart_info",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch6_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "grass": null
  },
@@ -833,7 +880,7 @@
   "basic": 0.89,
   "course": 0.4,
   "fee": 1.0,
-  "ops": 0.21,
+  "ops": 0.64,
   "facility": 0.4,
   "briefing": 0.0,
   "rental": 0.75
