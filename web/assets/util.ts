@@ -56,7 +56,9 @@ export function fmtNum(n: number | string | null | undefined, digits = 0): strin
 
 export function fmtDate(d: string | null | undefined): string {
   if (!d) return "";
-  return String(d).slice(0, 10).replaceAll("-", ".");
+  const s = String(d).trim();
+  if (!s) return "";
+  return s.slice(0, 10).replaceAll("-", ".");
 }
 
 export function fmtPct(x: number | null | undefined): string {

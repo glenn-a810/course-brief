@@ -614,8 +614,10 @@ function cardHTML(g: CourseGroup): string {
     ? `<div class="card-tags">${tags.map((t) => `<span class="tag">${esc(TAG_LABEL[t])}</span>`).join("")}</div>`
     : "";
 
-  const noticeBadge = single?.notice
-    ? `<span class="notice-dot" title="최근 공지 ${fmtDate(single.notice)}"><span aria-hidden="true">●</span>공지</span>`
+  // 공지 날짜가 비어 있으면 꼬리표에 날짜 칸을 만들지 않는다
+  const noticeDate = fmtDate(single?.notice);
+  const noticeBadge = single?.notice?.trim()
+    ? `<span class="notice-dot" title="최근 공지${noticeDate ? ` ${noticeDate}` : ""}"><span aria-hidden="true">●</span>공지</span>`
     : "";
 
   const head = `<div class="card-head">
@@ -1399,9 +1401,13 @@ function sections(d: CourseDetail, c: CourseIndexItem, others: Array<{ name: str
   const alert: BriefingAlert | null | undefined = br.alert;
   const items = br.notices?.items ?? [];
   const { real, products } = splitNotices(items);
+  // 게시일이 없는 공지는 <time> 자체를 넣지 않는다 — 빈 날짜 칸 대신 제목이 왼쪽부터 시작한다
+  const noticeTime = (date: string): string => date
+    ? `<time datetime="${esc(date.replaceAll(".", "-"))}">${esc(date)}</time>`
+    : "";
   const noticeHTML = real.length
-    ? `<ul class="notice-list">${real.slice(0, 10).map((n) => `<li>
-        <time datetime="${esc(n.date.replaceAll(".", "-"))}">${esc(n.date)}</time>
+    ? `<ul class="notice-list">${real.slice(0, 10).map((n) => `<li${n.date ? "" : ' class="is-undated"'}>
+        ${noticeTime(n.date)}
         <span class="notice-title">${n.url
           ? `<a class="link" href="${esc(n.url)}" target="_blank" rel="noopener noreferrer">${esc(n.title)}</a>`
           : esc(n.title)}</span>
@@ -1434,7 +1440,7 @@ function sections(d: CourseDetail, c: CourseIndexItem, others: Array<{ name: str
         <h3 class="card-title">최근 공지</h3>
         ${noticeHTML}
         ${products.length ? `<details class="more-box"><summary>클럽·장비 상품 소식 ${products.length}건 (공지 아님)</summary>
-          <ul class="notice-list is-product">${products.slice(0, 10).map((n) => `<li><time>${esc(n.date)}</time><span class="notice-title">${esc(n.title)}</span></li>`).join("")}</ul>
+          <ul class="notice-list is-product">${products.slice(0, 10).map((n) => `<li${n.date ? "" : ' class="is-undated"'}>${noticeTime(n.date)}<span class="notice-title">${esc(n.title)}</span></li>`).join("")}</ul>
         </details>` : ""}
         ${br.collected_at ? `<p class="source-line">${isAdmin() ? `수집 ${fmtDate(br.collected_at)}` : `공지 확인 ${esc(fmtDate(br.collected_at))}`}</p>` : ""}
       </div>
