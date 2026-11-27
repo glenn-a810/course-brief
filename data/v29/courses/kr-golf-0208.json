@@ -13,7 +13,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0208",
@@ -160,7 +161,7 @@
    "source": "공식 홈페이지",
    "url": "https://www.onetheclub.com/reservation/golfPartner"
   },
-  "open_cycle": null,
+  "open_cycle": "예약일 기준 4주전 월요일 오전 9시부터 선착순 예약(원더클럽 통합회원)",
   "notes": null,
   "evidence": [
    "예 아니오 확인 Close 예약안내 확인 Close 예약안내 확인 Close 예약안내 확인 Close 알펜시아CC 예약안내 확인 Close 위약기간으로 예약취소 시 위약금이 발생합니다.",
@@ -244,8 +245,15 @@
    "value": null
   },
   "mat": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "티박스가 매트라는 점, 홀 사이 나무로 OB가 잦다는 점이 아쉬운 부분으로 꼽혀요."
+   ],
+   "value": "티박스 매트 운영(이용 후기 기준)",
+   "source_url": "https://teepickgolf.com/course/파주cc",
+   "source_type": "teepick_review",
+   "confidence": "low",
+   "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "checkin": {
    "evidence": [],
@@ -256,8 +264,15 @@
    "value": null
   },
   "sauna": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "2021년에는 진입로 조경과 포토존 광장, 사우나 개선 같은 손질로 '명품 퍼블릭'이라는 소개를 받았습니다."
+   ],
+   "value": "사우나 있음",
+   "source_url": "https://teepickgolf.com/course/파주cc",
+   "source_type": "teepick",
+   "confidence": "low",
+   "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "dress": {
    "evidence": [],
@@ -505,7 +520,7 @@
   "basic": 0.78,
   "course": 0.2,
   "fee": 0.25,
-  "ops": 0.29,
+  "ops": 0.43,
   "facility": 0.3,
   "briefing": 0.0,
   "rental": 0.0

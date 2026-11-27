@@ -13,7 +13,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0222",
@@ -480,7 +481,7 @@
  },
  "cancel": {
   "cancel_policy": null,
-  "open_cycle": null,
+  "open_cycle": "3주 전 월요일 9시 선착순 온라인 예약, 주간단위(월~일) 오픈",
   "notes": null,
   "evidence": [],
   "weather_evidence": []
@@ -491,12 +492,26 @@
    "value": null
   },
   "two_player": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "팀 구성: 팀당 3~4인 플레이 가능, 3인 내장 시 3인 그린피 적용(2인 플레이는 진행 어려움)"
+   ],
+   "value": "팀당 3~4인 플레이 가능, 3인 내장 시 3인 그린피 적용(2인 플레이는 진행 어려움)",
+   "source_url": "https://wondergolf.co.kr/courses/kr-kakao-1641460654",
+   "source_type": "aggregator_wondergolf",
+   "confidence": "medium",
+   "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "three_player": {
-   "value": null,
-   "evidence": []
+   "value": "팀당 3~4인 플레이 가능, 3인 내장 시 3인 그린피 적용(2인 플레이는 진행 어려움)",
+   "evidence": [
+    "팀 구성: 팀당 3~4인 플레이 가능, 3인 내장 시 3인 그린피 적용(2인 플레이는 진행 어려움)"
+   ],
+   "source_url": "https://wondergolf.co.kr/courses/kr-kakao-1641460654",
+   "source_type": "aggregator_wondergolf",
+   "confidence": "medium",
+   "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "five_player": {
    "value": null,
@@ -818,7 +833,7 @@
   "basic": 0.89,
   "course": 0.4,
   "fee": 0.25,
-  "ops": 0.14,
+  "ops": 0.29,
   "facility": 0.2,
   "briefing": 0.0,
   "rental": 0.0

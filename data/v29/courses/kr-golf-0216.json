@@ -13,7 +13,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0216",
@@ -355,7 +356,7 @@
    "source": "공식 홈페이지",
    "url": "https://www.foresthill.kr/html/guide03_5.asp"
   },
-  "open_cycle": null,
+  "open_cycle": "매주 화요일 17:30에 4주 후 해당 주(월~일) 예약분을 실시간 오픈(포레스트 6홀 코스 기준)",
   "notes": null,
   "evidence": [
    "② 이용자가 개인 사정의 변경이나 단순 변심 등 정당한 사유없이 예약을 취소하는 경우에는 취소일을 기준으로 다음과 같이 손해를 배상한다.",

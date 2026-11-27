@@ -13,7 +13,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0202",
@@ -141,13 +142,24 @@
   "night_light": "야간 라운드 운영(공식 홈페이지 안내)",
   "blocks": [],
   "grass": {
-   "tee": null,
-   "fairway": {
-    "evidence": "화단, 배수로, 카트도로, 맨홀 등 인공물 또는 수목 보호를 위하여 수목하단부 잔디채취지에 떨어진 볼은 1클럽 길이 이내에서 드롭하여야 한다.",
-    "source": "공식",
-    "url": "http://www.seoseoul.co.kr/html/course/course_04.asp"
+   "tee": {
+    "value": "켄터키블루그라스(Kentucky Blue Grass)",
+    "evidence": "잔디종류 그린 : 벤트그라스(Bent Grass) 티 : 켄터키블루그라스(Kentucky Blue Grass) 페어웨이 : 한국잔디(Zoysia Japonica)",
+    "source": "공식 홈페이지",
+    "url": "https://www.seoseoul.co.kr/html/introduce/introduce_01.asp"
    },
-   "green": null
+   "fairway": {
+    "evidence": "잔디종류 그린 : 벤트그라스(Bent Grass) 티 : 켄터키블루그라스(Kentucky Blue Grass) 페어웨이 : 한국잔디(Zoysia Japonica)",
+    "source": "공식 홈페이지",
+    "url": "https://www.seoseoul.co.kr/html/introduce/introduce_01.asp",
+    "value": "한국잔디(Zoysia Japonica)"
+   },
+   "green": {
+    "value": "벤트그라스(Bent Grass)",
+    "evidence": "잔디종류 그린 : 벤트그라스(Bent Grass) 티 : 켄터키블루그라스(Kentucky Blue Grass)",
+    "source": "공식 홈페이지",
+    "url": "https://www.seoseoul.co.kr/html/introduce/introduce_01.asp"
+   }
   },
   "kga": {
    "kga_course_code": "118",
@@ -429,7 +441,7 @@
    "source": "공식 홈페이지",
    "url": "https://www.seoseoul.co.kr/html/guide/guide_01.asp"
   },
-  "open_cycle": null,
+  "open_cycle": "정회원 6주 전 해당요일 9시, 주중회원 5주 전 해당요일 9시 실시간 예약(주중). 주말·공휴일은 6주 전 월요일 9시~화요일 17시 온라인 배정 신청, 수요일 15시 확정. 온라인회원은 4주 전 해당요일 9시 실시간 예약",
   "notes": "최종 취소·위약 조건은 예약 채널 공지와 다를 수 있으니 예약 전 확인 필요",
   "evidence": [
    "주중, 주말 7일전 무위약 취소 가능하며 이후 취소는 위약제재 기준에 준함",
@@ -453,8 +465,15 @@
    }
   },
   "three_player": {
-   "value": null,
-   "evidence": []
+   "value": "주중/주말 4인 플레이 원칙(3인 플레이 가능). 예약 이용일 1일 1팀",
+   "evidence": [
+    "팀 구성: 주중/주말 4인 플레이 원칙(3인 플레이 가능). 예약 이용일 1일 1팀"
+   ],
+   "source_url": "https://wondergolf.co.kr/courses/kr-kakao-8366517",
+   "source_type": "aggregator_wondergolf",
+   "confidence": "medium",
+   "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "five_player": {
    "value": null,
@@ -509,8 +528,15 @@
    }
   },
   "locker": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "부대시설 락커룸, 레스토랑, 연회룸, 프로샵, 퍼팅 연습그린"
+   ],
+   "value": "락커룸 운영",
+   "source_url": "https://www.seoseoul.co.kr/html/introduce/introduce_01.asp",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "sauna": {
    "evidence": [],
@@ -552,8 +578,15 @@
    "evidence": []
   },
   "food": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "부대시설 락커룸, 레스토랑, 연회룸, 프로샵, 퍼팅 연습그린"
+   ],
+   "value": "레스토랑·연회룸 운영",
+   "source_url": "https://www.seoseoul.co.kr/html/introduce/introduce_01.asp",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "snack_bar": {
    "value": null,
@@ -867,8 +900,8 @@
   "basic": 0.89,
   "course": 0.4,
   "fee": 1.0,
-  "ops": 0.21,
-  "facility": 0.4,
+  "ops": 0.36,
+  "facility": 0.5,
   "briefing": 0.0,
   "rental": 0.75
  }

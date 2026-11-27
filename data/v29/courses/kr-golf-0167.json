@@ -13,7 +13,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0167",
@@ -391,8 +392,13 @@
   "official_rental": null
  },
  "cancel": {
-  "cancel_policy": null,
-  "open_cycle": null,
+  "cancel_policy": {
+   "value": "주중은 라운드 전날까지, 주말·공휴일은 라운드 7일 전까지 취소 가능하며 이후 취소 시 취소 수수료 발생",
+   "source": "블로그(공개 정리)",
+   "url": "https://papahun.com/suwoncc-reservation/",
+   "checked_at": "2026-11-27"
+  },
+  "open_cycle": "평일 3주 전 해당요일 9시~ 인터넷 예약. 주말·공휴일은 토요일·1/3/5주 일요일 2주 전 화요일 추첨 접수, 2/4주 일요일 3주 전 월요일 9시~ 실시간",
   "notes": null,
   "evidence": [],
   "weather_evidence": []
@@ -403,24 +409,45 @@
    "value": null
   },
   "two_player": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "팀 구성 2인 또는 5인 플레이 불가"
+   ],
+   "value": "2인 플레이 불가",
+   "source_url": "https://wondergolf.co.kr/courses/kr-kakao-8456286",
+   "source_type": "aggregator_wondergolf",
+   "confidence": "medium",
+   "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "three_player": {
    "value": null,
    "evidence": []
   },
   "five_player": {
-   "value": null,
-   "evidence": []
+   "value": "5인 플레이 불가",
+   "evidence": [
+    "팀 구성 2인 또는 5인 플레이 불가"
+   ],
+   "source_url": "https://wondergolf.co.kr/courses/kr-kakao-8456286",
+   "source_type": "aggregator_wondergolf",
+   "confidence": "medium",
+   "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "marshal_caddie": {
    "value": null,
    "evidence": []
   },
   "cart_type": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "5인 라운드 시 리무진 카트가 배정되며, 골프장 사정에 따라 제한될 수 있으므로 사전 전화 문의가 권장됩니다."
+   ],
+   "value": "5인 라운드 시 리무진 카트 배정(사전 전화 문의)",
+   "source_url": "https://papahun.com/suwoncc-reservation/",
+   "source_type": "blog",
+   "confidence": "low",
+   "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "cart_entry": {
    "evidence": [],
@@ -623,7 +650,7 @@
   "basic": 0.78,
   "course": 0.4,
   "fee": 1.0,
-  "ops": 0.0,
+  "ops": 0.21,
   "facility": 0.0,
   "briefing": 0.0,
   "rental": 0.0

@@ -13,7 +13,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0230",
@@ -59,11 +60,11 @@
    "master": "courses_master.json v2.0 (문체부·KGA·KGBA·티픽·지도)",
    "synced_to": "courses_master.json v2.7 (2026-11-26 단일 스키마 정규화)"
   },
-  "par": null,
+  "par": 35,
   "holes_teepick": 9,
   "course_spec": {
    "holes": 9,
-   "par": null,
+   "par": 35,
    "blocks": [],
    "length_m": 2840,
    "kga": null,
@@ -94,7 +95,7 @@
   "extra_courses": null,
   "hole_by_hole": null,
   "length_m": 2840,
-  "par": null
+  "par": 35
  },
  "fee": {
   "weekday": 130000,

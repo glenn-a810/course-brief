@@ -13,7 +13,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0192",
@@ -310,7 +311,12 @@
   }
  },
  "cancel": {
-  "cancel_policy": null,
+  "cancel_policy": {
+   "value": "주말·공휴일 이용일 4일 전, 평일 이용일 3일 전까지 위약금 없이 취소. 이후 주말 3~2일 전·평일 2일 전 10%, 1일 전 20%, 당일 취소·무통보 미이용 30%",
+   "source": "공식 홈페이지",
+   "url": "https://www.midasgolf.co.kr/Terms/SiteUseRule",
+   "checked_at": "2026-11-27"
+  },
   "open_cycle": null,
   "notes": null,
   "evidence": [],
@@ -370,8 +376,15 @@
    "value": null
   },
   "checkin": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "여유 있는 준비를 위해 예약 시간 30분 전에 입장해 주시기 바랍니다."
+   ],
+   "value": "예약 시간 30분 전 입장",
+   "source_url": "https://www.midasgolf.co.kr/IC/UseInfo",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "locker": {
    "evidence": [],
@@ -420,8 +433,15 @@
    "evidence": []
   },
   "food": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "FACILITIES 클럽하우스 프로샵 대식당 그늘집"
+   ],
+   "value": "클럽하우스 대식당·그늘집 운영",
+   "source_url": "https://www.midasgolf.co.kr/",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "snack_bar": {
    "value": null,
@@ -584,8 +604,8 @@
   "basic": 0.89,
   "course": 0.6,
   "fee": 0.0,
-  "ops": 0.21,
-  "facility": 0.1,
+  "ops": 0.29,
+  "facility": 0.2,
   "briefing": 0.0,
   "rental": 0.0
  }

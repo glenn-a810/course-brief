@@ -13,7 +13,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0203",
@@ -223,9 +224,10 @@
   "grass": {
    "tee": "Kentucky bluegrass",
    "fairway": {
-    "evidence": "서원밸리 닫기 로고 파주시 광탄면 reservation - 예약현황 건 - 대기예약 건 - 베스트 스코어 타 정보수정 닫기 About Seowon 스토리 토너먼트 ESG 서원에세이 클럽하우스 오시는길 Course 코스소개 서원코스 밸리코스 Reservation 실시간예약 이용안내 이용요금 Our Special 서원 인레인지(연습장) 서원 아트리움(웨딩,모임) 서원정/서원더뷰 Membership 공지사항 이벤트 Q&A 자료실 My Page 예약현황 쿠폰함 나의 활동 고객의 소리 회원정보수정 LOGIN 아이디 저장하기 로그인 유지 로그",
-    "source": "공식",
-    "url": "https://www.seowongolf.co.kr/valley/main"
+    "evidence": "잔디: 페어웨이 Zoysia grass(한국잔디) · 그린 Peen-A4 + Shark · 티 Kentucky bluegrass · 러프 Zoysia grass",
+    "source": "그린피가이드(공식 요금표·코스소개)",
+    "url": "https://greenfeeguide.com/course/gc-0057/",
+    "value": "Zoysia grass(한국잔디)"
    },
    "green": "Peen-A4 + Shark"
   },
@@ -395,7 +397,12 @@
   "official_rental": null
  },
  "cancel": {
-  "cancel_policy": null,
+  "cancel_policy": {
+   "value": "평일 취소: 해당요일 제외 5일 전 17시까지 / 주말 취소: 해당요일 제외 7일 전 17시까지(주말·공휴일) / 위약: 위약금 주중 4~2일전 10만·1일전 30만·당일취소/미내장 40만원, 주말 6~5일전 10만·4~2일전 30만·1일전~당일 50만원 + 예약정지(4~6일전 2주, 2·3일전 3주, 1일전·당일 1개월)",
+   "source": "칠까말까(공식 홈페이지 정리)",
+   "url": "https://chilkka.kr/c/seowonvalley/",
+   "checked_at": "2026-11-27"
+  },
   "open_cycle": null,
   "notes": null,
   "evidence": [],

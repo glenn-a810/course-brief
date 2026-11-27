@@ -13,7 +13,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0157",
@@ -217,18 +218,24 @@
   "par": 72
  },
  "fee": {
-  "weekday": null,
-  "weekend": null,
+  "weekday": 230000,
+  "weekend": 290000,
   "weekday_text": null,
   "weekend_text": null,
-  "basis": null,
+  "basis": "공식 요금표(공개 요금 정보)",
   "tax_included": null,
   "cart": null,
   "caddie": null,
-  "as_of": null,
+  "as_of": "2026-11-27",
   "source_url": null,
   "note": null,
-  "sources": [],
+  "sources": [
+   {
+    "source": "회원권 정보 포털",
+    "url": "https://www.ks-membership.co.kr/html/sub11_view.php?agubun=&level_state22=&mode=2&no=63",
+    "checked_at": "2026-11-27"
+   }
+  ],
   "checked_at": "2026-11-27",
   "market": {
    "weekday_min": 110000,
@@ -244,8 +251,13 @@
   "official_rental": null
  },
  "cancel": {
-  "cancel_policy": null,
-  "open_cycle": null,
+  "cancel_policy": {
+   "value": "당일 취소·무단 결장 시 위약금 팀당 70만원",
+   "source": "공개 예약 플랫폼",
+   "url": "https://vgolf.xgolf.com/booking/booking_calendar.asp?club_code=330",
+   "checked_at": "2026-11-27"
+  },
+  "open_cycle": "평일 회원 전월 10일 9시~, 비회원 14일 전부터. 주말 회원 전월 5~10일 신청 후 15일 배정, 비회원 12일 전부터",
   "notes": null,
   "evidence": [],
   "weather_evidence": []
@@ -288,8 +300,15 @@
    "value": null
   },
   "checkin": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "● 당일 내장시 프론트 30분 이전 티그라운드 10분 전 반드시 도착 요망"
+   ],
+   "value": "프론트 30분 이전, 티그라운드 10분 전 도착",
+   "source_url": "https://vgolf.xgolf.com/booking/booking_calendar.asp?club_code=330",
+   "source_type": "booking_platform",
+   "confidence": "medium",
+   "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "locker": {
    "evidence": [],
@@ -481,8 +500,8 @@
  "coverage": {
   "basic": 0.89,
   "course": 0.4,
-  "fee": 0.0,
-  "ops": 0.0,
+  "fee": 0.5,
+  "ops": 0.07,
   "facility": 0.1,
   "briefing": 0.0,
   "rental": 0.0

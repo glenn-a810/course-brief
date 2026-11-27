@@ -13,7 +13,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0164",
@@ -59,13 +60,13 @@
    "master": "courses_master.json v2.0 (문체부·KGA·KGBA·티픽·지도)",
    "synced_to": "courses_master.json v2.7 (2026-11-26 단일 스키마 정규화)"
   },
-  "par": null,
+  "par": 72,
   "holes_teepick": 36,
   "course_spec": {
    "holes": 36,
-   "par": null,
+   "par": 72,
    "blocks": [],
-   "length_m": null,
+   "length_m": 6182,
    "kga": null,
    "grass": {
     "value": "중지, 벤트그라스",
@@ -106,8 +107,8 @@
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": null,
-  "par": null
+  "length_m": 6182,
+  "par": 72
  },
  "fee": {
   "weekday": 220000,
@@ -262,8 +263,15 @@
    "value_from": "capital_supplement(official_site)"
   },
   "sauna": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "고객님들을 위한 최고의 편의 시설을 갖춘 국내 유일의 골프클럽 사우나"
+   ],
+   "value": "사우나 있음",
+   "source_url": "https://www.gakorea.com/wellbeing/index.asp",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "dress": {
    "evidence": [
@@ -488,7 +496,7 @@
   "basic": 0.89,
   "course": 0.2,
   "fee": 1.0,
-  "ops": 0.5,
+  "ops": 0.57,
   "facility": 0.4,
   "briefing": 0.0,
   "rental": 0.0

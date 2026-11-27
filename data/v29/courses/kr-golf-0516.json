@@ -13,7 +13,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0516",
@@ -266,8 +267,15 @@
  },
  "facilities": {
   "practice": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "2018 60타석 연습장 신설 2026.06 신축 클럽하우스 준공식"
+   ],
+   "value": "60타석 연습장(2018년 신설)",
+   "source_url": "https://teepickgolf.com/course/서울",
+   "source_type": "teepick",
+   "confidence": "low",
+   "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "indoor_range": {
    "value": null,
@@ -423,7 +431,7 @@
   "course": 0.2,
   "fee": 1.0,
   "ops": 0.07,
-  "facility": 0.0,
+  "facility": 0.1,
   "briefing": 0.0,
   "rental": 0.25
  }

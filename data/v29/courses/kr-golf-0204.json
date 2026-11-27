@@ -13,7 +13,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0204",
@@ -285,16 +286,17 @@
   "holes_received": 27,
   "course_names": "남·동·서 각 9홀",
   "membership_type": "대중제",
-  "night_light": null,
+  "night_light": true,
   "blocks": [
    "EASTWESTSOUTH"
   ],
   "grass": {
    "tee": null,
    "fairway": {
-    "evidence": "서원밸리 닫기 로고 파주시 광탄면 reservation - 예약현황 건 - 대기예약 건 - 베스트 스코어 타 정보수정 닫기 About Seowon 스토리 토너먼트 ESG 서원에세이 클럽하우스 오시는길 Course 코스소개 서원코스 밸리코스 Reservation 실시간예약 이용안내 이용요금 Our Special 서원 인레인지(연습장) 서원 아트리움(웨딩,모임) 서원정/서원더뷰 Membership 공지사항 이벤트 Q&A 자료실 My Page 예약현황 쿠폰함 나의 활동 고객의 소리 회원정보수정 LOGIN 아이디 저장하기 로그인 유지 로그",
-    "source": "공식",
-    "url": "https://www.seowongolf.co.kr/valley/main"
+    "evidence": "이스트는 한국잔디, 웨스트는 양잔디로 조성되어 있었고, 최근에는 페어웨이를 중지로 전면 교체했으며",
+    "source": "티픽골프장(공개 정보)",
+    "url": "https://teepickgolf.com/course/서원힐스",
+    "value": "중지(한국잔디)"
    },
    "green": null
   },

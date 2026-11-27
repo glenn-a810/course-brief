@@ -13,7 +13,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0173",
@@ -461,20 +462,39 @@
   "official_rental": null
  },
  "cancel": {
-  "cancel_policy": null,
-  "open_cycle": null,
+  "cancel_policy": {
+   "value": "주말 예약 취소는 8일 전(전주 금요일) 17시까지 취소해야 불이가 없음",
+   "source": "공식 홈페이지",
+   "url": "https://homepage-yi.blueone.com/files/2026%EB%85%84%EC%A3%BC%EB%A7%90%EB%B0%8F%EA%B3%B5%ED%9C%B4%EC%9D%BC%EC%98%88%EC%95%BD%EC%9D%BC%EC%A0%95%ED%91%9C.pdf",
+   "checked_at": "2026-11-27"
+  },
+  "open_cycle": "평일 정회원 희망일 40일 전, 준회원·주중회원 30일 전 9시부터 1일 전 17시까지. 주말·공휴일은 5주 전 월요일 9시~4주 전 금요일 17시 인터넷 신청 후 배정",
   "notes": null,
   "evidence": [],
   "weather_evidence": []
  },
  "ops": {
   "nocaddie": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "운영 방식 | 노캐디선택 ... 노캐디 East 퍼블릭 코스는 2인 예약도 가능합니다."
+   ],
+   "value": "노캐디 선택 가능(이스트 퍼블릭 코스)",
+   "source_url": "https://papahun.com/blueoneyongincc-reservation/",
+   "source_type": "blog",
+   "confidence": "low",
+   "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "two_player": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "팀 구성: 대중형: 2인부터 예약 가능, 2인은 다른 2인과 조인될 수 있음. 주말(공휴일)은 18홀로만 운영"
+   ],
+   "value": "대중형: 2인부터 예약 가능, 2인은 다른 2인과 조인될 수 있음. 주말(공휴일)은 18홀로만 운영",
+   "source_url": "https://wondergolf.co.kr/courses/kr-kakao-19392775",
+   "source_type": "aggregator_wondergolf",
+   "confidence": "medium",
+   "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "three_player": {
    "value": null,
@@ -729,7 +749,7 @@
   "basic": 0.78,
   "course": 0.6,
   "fee": 0.75,
-  "ops": 0.0,
+  "ops": 0.14,
   "facility": 0.0,
   "briefing": 0.0,
   "rental": 0.0

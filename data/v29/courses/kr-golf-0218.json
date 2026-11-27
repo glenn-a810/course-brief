@@ -13,7 +13,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0218",
@@ -96,7 +97,7 @@
   "holes_received": null,
   "course_names": null,
   "membership_type": "대중제",
-  "night_light": null,
+  "night_light": false,
   "blocks": [],
   "grass": {
    "tee": null,
@@ -195,7 +196,7 @@
    "source": "공식 홈페이지",
    "url": "https://www.adoniscc.co.kr/public/booking/guide"
   },
-  "open_cycle": null,
+  "open_cycle": "라운드일 3주 전 같은 요일 00시부터 예약 가능(2인·9홀 예약은 2주 전 동일 요일 00시부터)",
   "notes": null,
   "evidence": [
    "예약 날짜 및 취소, 시간 변경은 3일 전까지 가능하며 인원 변경은 1일 전까지 가능합니다.",
@@ -214,9 +215,15 @@
   },
   "two_player": {
    "evidence": [
-    "(단, 온라인상으로 사전에 예약 조인이 안 될 경우 라운딩 당일날 전화 예약으로 오신 고객님 및 선착순(walk-in) 고객님들과 조인되므로 예약시간이 재조정될 수 있습니다.) 3인, 4인 18홀 예약은 3주 전 동일한 요일 자정 00시부터 하루 전 24:00분까지 실시간으로 예약 가능합니다.ex) 7월 01일 월요일에 예약할 경우 3주 전 6월 10일 월요일 00시부터 예약 가능."
+    "(단, 온라인상으로 사전에 예약 조인이 안 될 경우 라운딩 당일날 전화 예약으로 오신 고객님 및 선착순(walk-in) 고객님들과 조인되므로 예약시간이 재조정될 수 있습니다.) 3인, 4인 18홀 예약은 3주 전 동일한 요일 자정 00시부터 하루 전 24:00분까지 실시간으로 예약 가능합니다.ex) 7월 01일 월요일에 예약할 경우 3주 전 6월 10일 월요일 00시부터 예약 가능.",
+    "평일, 주말 및 공휴일 국경일 예약은 2인~4인 모두 가능하며 1인 예약은 하루 전부터 전화 예약으로만 가능합니다."
    ],
-   "value": null
+   "value": "2인 가능(평일·주말·공휴일 2~4인 예약, 1인은 하루 전 전화 예약만)",
+   "source_url": "https://www.adoniscc.co.kr/public/booking/guide",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "three_player": {
    "value": null,
@@ -589,7 +596,7 @@
   "basic": 0.78,
   "course": 0.2,
   "fee": 0.25,
-  "ops": 0.14,
+  "ops": 0.21,
   "facility": 0.2,
   "briefing": 0.0,
   "rental": 0.75

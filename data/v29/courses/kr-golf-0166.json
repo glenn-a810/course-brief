@@ -13,7 +13,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0166",
@@ -384,8 +385,13 @@
   }
  },
  "cancel": {
-  "cancel_policy": null,
-  "open_cycle": null,
+  "cancel_policy": {
+   "value": "예약일 7일 전 16시까지 취소 가능. 6~5일 전 취소 시 예약 1개월 정지 또는 마일리지 200점, 4일 전 400점, 3일 전 600점, 2일 전 800점, 1일 전 1,000점, 당일 1,400점, 무연락 미내장 1,500점",
+   "source": "공식 홈페이지",
+   "url": "https://www.namboocc.co.kr/reservation/guide/reservation.do",
+   "checked_at": "2026-11-27"
+  },
+  "open_cycle": "주중 회원 4주 전 해당요일 9시~ 실시간예약, 주말·주중공휴일 회원 4주 전 화요일 9시~ 접수 후 추첨배정(목요일부터 잔여시간 실시간)",
   "notes": null,
   "evidence": [],
   "weather_evidence": []

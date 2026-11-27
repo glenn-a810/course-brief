@@ -13,7 +13,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0225",
@@ -86,8 +87,18 @@
   "blocks": [],
   "grass": {
    "tee": null,
-   "fairway": null,
-   "green": null
+   "fairway": {
+    "value": "야지",
+    "evidence": "완벽한 코스 조성을 위해 정성을 다해 가꾸어진 잔디(야지)와 그린(펜타그리스)은 최상의 상태를 유지하기에 충분합니다",
+    "source": "공식 홈페이지",
+    "url": "https://www.laviedor.com/la_cc1.asp"
+   },
+   "green": {
+    "value": "펜타그리스",
+    "evidence": "완벽한 코스 조성을 위해 정성을 다해 가꾸어진 잔디(야지)와 그린(펜타그리스)은 최상의 상태를 유지하기에 충분합니다",
+    "source": "공식 홈페이지",
+    "url": "https://www.laviedor.com/la_cc1.asp"
+   }
   },
   "kga": null,
   "kga_hole_est": null,
@@ -142,8 +153,15 @@
    "value": null
   },
   "three_player": {
-   "value": null,
-   "evidence": []
+   "value": "4인 플레이 원칙, 조인 거부 불가. 조인예약은 2명 예약. 3인 예약 시 1인 조인 가능, 1인은 당일 전화예약 가능(2026년 9·10월 요금안내).",
+   "evidence": [
+    "팀 구성: 4인 플레이 원칙, 조인 거부 불가. 조인예약은 2명 예약. 3인 예약 시 1인 조인 가능, 1인은 당일 전화예약 가능(2026년 9·10월 요금안내)."
+   ],
+   "source_url": "https://wondergolf.co.kr/courses/kr-kakao-9778512",
+   "source_type": "aggregator_wondergolf",
+   "confidence": "medium",
+   "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "five_player": {
    "value": null,
@@ -203,8 +221,15 @@
  },
  "facilities": {
   "practice": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "약 10만 평 부지에 40타석 연습장과 클럽하우스, 객실 241실 규모의 숙박시설을 함께 갖춘 복합 휴양지입니다."
+   ],
+   "value": "40타석 연습장",
+   "source_url": "https://teepickgolf.com/course/라비돌cc",
+   "source_type": "teepick",
+   "confidence": "low",
+   "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "indoor_range": {
    "value": null,
@@ -268,9 +293,15 @@
   "shuttle": {
    "evidence": [
     "수원역 수원역 6-3번 (화성시 소망교통 마을버스) ·",
-    "배차간격 45분 위치 : 수원역 AK플라자 앞 (03-022) 노선 : 수원역 AK플라자 → 기안동 입구 → 기안중 → 수원대학교 → 그린피아호텔 → 남산공단입구 → 수원과학대학 병점역 병점역 35-1번 (오산시 부광운수 마을버스) ·"
+    "배차간격 45분 위치 : 수원역 AK플라자 앞 (03-022) 노선 : 수원역 AK플라자 → 기안동 입구 → 기안중 → 수원대학교 → 그린피아호텔 → 남산공단입구 → 수원과학대학 병점역 병점역 35-1번 (오산시 부광운수 마을버스) ·",
+    "제목 : 2025 셔틀버스 운행안내 이름 : 라비돌 조회 : 7851 셔틀버스운행안내"
    ],
-   "value": null
+   "value": "셔틀버스 운행(공지 안내)",
+   "source_url": "https://www.laviedor.com/community/event/content.asp?idx=134&GotoPage=1",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "ev_charge": {
    "evidence": [],
@@ -399,8 +430,8 @@
   "basic": 0.89,
   "course": 0.2,
   "fee": 0.0,
-  "ops": 0.07,
-  "facility": 0.3,
+  "ops": 0.14,
+  "facility": 0.5,
   "briefing": 0.0,
   "rental": 0.0
  }

@@ -13,7 +13,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0186",
@@ -149,7 +150,7 @@
    "source": "그린피가이드(공식 안내 인용)",
    "url": "https://greenfeeguide.com/course/gc-0008/"
   },
-  "open_cycle": null,
+  "open_cycle": "주말·공휴일: 매 4주전 화요일 10:00(특별/정/우대), 준·가족회원 4주전 수요일, 사이버회원 3주전 화요일. 주중: 4주전 월요일 월~금 동시 오픈(준·가족 4주전 화요일, 사이버 3주전 월요일). 모바일·인터넷·전화 접수.",
   "notes": "최종 취소·위약 조건은 예약 채널 공지와 다를 수 있으니 예약 전 확인 필요",
   "evidence": [
    "“1일전 예약취소 예약정지 60일 2일전 예약취소 예약정지 50일 3일전 에약취소 예약정지 40일 4일전 예약취소 예약정지 30일 5일전 예약취소 예약정지 20일 6일전 예약취소 예약정지 10일 7일전 예약취소 없음”",
@@ -163,16 +164,37 @@
    "value": null
   },
   "two_player": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "팀 구성: 3~4인 라운딩 필수(2인·5인 플레이 및 갤러리 입장 불가). 3인 플레이 시 비회원 1만원 추가."
+   ],
+   "value": "3~4인 라운딩 필수(2인·5인 플레이 및 갤러리 입장 불가). 3인 플레이 시 비회원 1만원 추가.",
+   "source_url": "https://wondergolf.co.kr/courses/kr-kakao-17110811",
+   "source_type": "aggregator_wondergolf",
+   "confidence": "medium",
+   "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "three_player": {
-   "value": null,
-   "evidence": []
+   "value": "3~4인 라운딩 필수(2인·5인 플레이 및 갤러리 입장 불가). 3인 플레이 시 비회원 1만원 추가.",
+   "evidence": [
+    "팀 구성: 3~4인 라운딩 필수(2인·5인 플레이 및 갤러리 입장 불가). 3인 플레이 시 비회원 1만원 추가."
+   ],
+   "source_url": "https://wondergolf.co.kr/courses/kr-kakao-17110811",
+   "source_type": "aggregator_wondergolf",
+   "confidence": "medium",
+   "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "five_player": {
-   "value": null,
-   "evidence": []
+   "value": "3~4인 라운딩 필수(2인·5인 플레이 및 갤러리 입장 불가). 3인 플레이 시 비회원 1만원 추가.",
+   "evidence": [
+    "팀 구성: 3~4인 라운딩 필수(2인·5인 플레이 및 갤러리 입장 불가). 3인 플레이 시 비회원 1만원 추가."
+   ],
+   "source_url": "https://wondergolf.co.kr/courses/kr-kakao-17110811",
+   "source_type": "aggregator_wondergolf",
+   "confidence": "medium",
+   "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "marshal_caddie": {
    "value": null,
@@ -206,8 +228,15 @@
    "value": null
   },
   "locker": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "시설안내 클럽하우스 로비&프론트 락커 스타트카페&스낵바 프로샵 대식당&연회실 그늘집"
+   ],
+   "value": "락커실 운영",
+   "source_url": "https://www.hanwoncc.co.kr/info/info.asp",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "sauna": {
    "evidence": [],
@@ -439,7 +468,7 @@
   "basic": 0.89,
   "course": 0.6,
   "fee": 1.0,
-  "ops": 0.14,
+  "ops": 0.43,
   "facility": 0.5,
   "briefing": 0.0,
   "rental": 0.75

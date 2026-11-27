@@ -13,7 +13,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0155",
@@ -90,8 +91,18 @@
   ],
   "grass": {
    "tee": null,
-   "fairway": null,
-   "green": null
+   "fairway": {
+    "value": "중지 잔디",
+    "evidence": "한국관광공사 안내에 따르면 2007년 문을 열었고, 페어웨이는 중지 잔디, 그린은 벤트 계열 잔디를 사용합니다.",
+    "source": "티픽골프장(공개 정보)",
+    "url": "https://teepickgolf.com/course/아리지"
+   },
+   "green": {
+    "value": "벤트 계열 잔디",
+    "evidence": "한국관광공사 안내에 따르면 2007년 문을 열었고, 페어웨이는 중지 잔디, 그린은 벤트 계열 잔디를 사용합니다.",
+    "source": "티픽골프장(공개 정보)",
+    "url": "https://teepickgolf.com/course/아리지"
+   }
   },
   "kga": null,
   "kga_hole_est": null,

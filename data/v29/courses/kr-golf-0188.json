@@ -13,7 +13,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0188",
@@ -220,8 +221,19 @@
   "weekend_text": null,
   "basis": null,
   "tax_included": null,
-  "cart": null,
-  "caddie": null,
+  "cart": {
+   "value": 100000,
+   "raw": "100,000원",
+   "source": "공개 예약 플랫폼",
+   "url": "https://www.premiumgolf.co.kr/product/view.html?idx=137"
+  },
+  "caddie": {
+   "value": 150000,
+   "raw": "150,000원",
+   "source": "공개 예약 플랫폼",
+   "url": "https://www.premiumgolf.co.kr/product/view.html?idx=137",
+   "none": false
+  },
   "as_of": null,
   "source_url": null,
   "note": null,
@@ -240,8 +252,13 @@
   "official_rental": null
  },
  "cancel": {
-  "cancel_policy": null,
-  "open_cycle": null,
+  "cancel_policy": {
+   "value": "주중 예약은 이용일 6일 전까지(수요일 예약은 전주 목요일까지), 주말 예약은 이용일 9일 전까지(토요일은 전주 목요일, 일요일은 전주 금요일까지) 취소. 이후 주중 5~4일 전 15일·3~2일 전 1개월·1일 전 3개월 예약불가, 주말 8~6일 전 15일·5~3일 전 1개월·2~1일 전 2개월 예약불가, 노쇼 3개월 예약불가",
+   "source": "공개 예약 플랫폼",
+   "url": "https://www.premiumgolf.co.kr/product/view.html?idx=137",
+   "checked_at": "2026-11-27"
+  },
+  "open_cycle": "주중 정회원 4주 전 같은 요일부터, 준회원·지정회원은 다음날부터. 주말은 4주 전 화요일부터 예약 가능",
   "notes": null,
   "evidence": [],
   "weather_evidence": []
@@ -252,8 +269,15 @@
    "value": null
   },
   "two_player": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "▶ 2인플레이 주중/주말/공휴일 예약규정 11시이후 팀만가능 ※준회원, 지정회원은 토요일, 일요일, 주중공휴일에 2인 플레이 불가"
+   ],
+   "value": "2인 플레이 가능(11시 이후 팀만), 준회원·지정회원은 토·일·주중공휴일 2인 불가",
+   "source_url": "https://www.premiumgolf.co.kr/product/view.html?idx=137",
+   "source_type": "booking_platform",
+   "confidence": "medium",
+   "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "three_player": {
    "value": null,
@@ -268,8 +292,15 @@
    "evidence": []
   },
   "cart_type": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "카트 : 4Bag 1Cart (5인승 승용카트)"
+   ],
+   "value": "4Bag 1Cart(5인승 승용카트)",
+   "source_url": "https://www.premiumgolf.co.kr/product/view.html?idx=137",
+   "source_type": "booking_platform",
+   "confidence": "medium",
+   "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "cart_entry": {
    "evidence": [],
@@ -472,8 +503,8 @@
  "coverage": {
   "basic": 0.78,
   "course": 0.4,
-  "fee": 0.0,
-  "ops": 0.0,
+  "fee": 0.5,
+  "ops": 0.14,
   "facility": 0.0,
   "briefing": 0.0,
   "rental": 0.0

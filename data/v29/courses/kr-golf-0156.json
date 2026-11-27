@@ -13,7 +13,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0156",
@@ -135,8 +136,13 @@
   }
  },
  "cancel": {
-  "cancel_policy": null,
-  "open_cycle": null,
+  "cancel_policy": {
+   "value": "평일 이용일 3일 전·주말·공휴일 4일 전까지 위약금 없음. 평일 2일 전·주말 3~2일 전 10%, 1일 전 20%, 당일 30%. 30일간 8회 취소 시 1개월 이용 정지",
+   "source": "공식 홈페이지",
+   "url": "https://www.sunvalley.co.kr/yeoju/golf/golf_use03",
+   "checked_at": "2026-11-27"
+  },
+  "open_cycle": "라운드일 기준 2주 전 월요일 오전 10시 30분부터 홈페이지·모바일 실시간 예약",
   "notes": "(*) 입장 전 이용요금 미결제시에는, 이용요금에서 상기 환불금액이 공제된 금액을 별도 징수 천재지변 등에 따른 취소 시 요금 및 환불 규정 (입장 후) 폭우, 낙뢰, 강설, 안개 등 불가항력적인 천재지변으로 인하여 경기를 계속 할 수 없다고 골프장에서 선언한 경우에 적용됩니다.",
   "evidence": [],
   "weather_evidence": []
@@ -185,13 +191,20 @@
    "value": null
   },
   "checkin": {
-   "evidence": [],
-   "value": null,
+   "evidence": [
+    "클럽 방문시 TEE-OFF 최소 30분 전까지 입장 완료하여 쾌적하고 여유로운 플레이를 하실수 있도록 협조 바랍니다."
+   ],
+   "value": "티오프 최소 30분 전까지 입장 완료",
    "third_party": {
     "value": null,
     "source": "그린피가이드",
     "url": "https://greenfeeguide.co.kr/course/gc-0142/"
-   }
+   },
+   "source_url": "https://www.sunvalley.co.kr/yeoju/golf/golf_use01",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "locker": {
    "evidence": [
@@ -410,7 +423,7 @@
   "basic": 0.89,
   "course": 0.4,
   "fee": 1.0,
-  "ops": 0.21,
+  "ops": 0.29,
   "facility": 0.2,
   "briefing": 0.0,
   "rental": 0.0

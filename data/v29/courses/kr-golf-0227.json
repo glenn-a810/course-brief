@@ -13,7 +13,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0227",
@@ -137,8 +138,13 @@
   }
  },
  "cancel": {
-  "cancel_policy": null,
-  "open_cycle": null,
+  "cancel_policy": {
+   "value": "예약일로부터 4일 전 17시까지 위약 없이 취소. 3일 전 1개월·2일 전 2개월·1일 전 3개월 예약정지(이용요금 10·20%), 당일 6개월 정지+30%, 노쇼 영구정지",
+   "source": "공식 홈페이지",
+   "url": "https://www.linknine.co.kr/html/reserve/reserve05.asp",
+   "checked_at": "2026-11-27"
+  },
+  "open_cycle": "인터넷 회원 가입 고객에 한해 홈페이지 예약. 매월 20일 13시부터 다음 달 전 타임 예약 가능. 9홀 예약은 예약실 문의.",
   "notes": null,
   "evidence": [],
   "weather_evidence": []
@@ -149,14 +155,21 @@
    "value": null
   },
   "two_player": {
-   "evidence": [],
-   "value": null,
+   "evidence": [
+    "4. 2인 예약 시에는 3인 그린피 적용한다."
+   ],
+   "value": "2인 가능(3인 그린피 적용)",
    "third_party": {
     "two": null,
     "three": null,
     "source": "그린피가이드",
     "url": "https://greenfeeguide.co.kr/course/gc-0045/"
-   }
+   },
+   "source_url": "https://www.linknine.co.kr/mobile/join_rule01.asp",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "three_player": {
    "value": "3인 가능",
@@ -170,8 +183,15 @@
    "value_from": "capital_supplement(official_site)"
   },
   "five_player": {
-   "value": null,
-   "evidence": []
+   "value": "5인 가능(주중에 한하며 2카트 2캐디 원칙)",
+   "evidence": [
+    "6. 5인 플레이는 주중에 한하며, 2카트 2캐디를 원칙으로 한다."
+   ],
+   "source_url": "https://www.linknine.co.kr/mobile/join_rule01.asp",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "marshal_caddie": {
    "value": null,
@@ -194,13 +214,20 @@
    "value": null
   },
   "checkin": {
-   "evidence": [],
-   "value": null,
+   "evidence": [
+    "티오프 1시간 전까지 골프장 도착 필수 안내"
+   ],
+   "value": "티오프 1시간 전까지 도착",
    "third_party": {
     "value": null,
     "source": "그린피가이드",
     "url": "https://greenfeeguide.co.kr/course/gc-0045/"
-   }
+   },
+   "source_url": "https://parkgolfinfo.co.kr/%ea%b2%bd%ea%b8%b0-%ed%99%94%ec%84%b1-%eb%a7%81%ed%81%ac%eb%82%98%ec%9d%b8cc-%ea%b3%a8%ed%94%84-%ec%98%88%ec%95%bd%eb%b0%a9%eb%b2%95-9%ed%99%80-%ed%8d%bc%eb%b8%94%eb%a6%ad-%ec%9c%84/",
+   "source_type": "blog",
+   "confidence": "low",
+   "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "locker": {
    "evidence": [
@@ -457,7 +484,7 @@
   "basic": 0.89,
   "course": 0.2,
   "fee": 1.0,
-  "ops": 0.36,
+  "ops": 0.57,
   "facility": 0.4,
   "briefing": 0.0,
   "rental": 0.0

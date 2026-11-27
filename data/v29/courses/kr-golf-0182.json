@@ -13,7 +13,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0182",
@@ -61,7 +62,7 @@
    "holes": 9,
    "par": 36,
    "blocks": [],
-   "length_m": null,
+   "length_m": 2255,
    "kga": null,
    "grass": null,
    "hole_by_hole": null
@@ -91,7 +92,7 @@
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": null,
+  "length_m": 2255,
   "par": 36
  },
  "fee": {
@@ -258,8 +259,15 @@
    "evidence": []
   },
   "food": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "회원제 프론트 031-330-1411 ~ 2 회원제 대식당 031-330-1430 ~ 1 퍼블릭 프론트/예약실"
+   ],
+   "value": "회원제 대식당 운영",
+   "source_url": "https://www.jisanresort.co.kr/w/golf/public/info.asp",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "snack_bar": {
    "value": null,
@@ -270,8 +278,15 @@
    "evidence": []
   },
   "lodging": {
-   "value": null,
-   "evidence": []
+   "value": "리조트 내 메이플 콘도 운영",
+   "evidence": [
+    "골프 회원제 퍼블릭/연습장 회원제 예약하기 퍼블릭 예약하기 콘도 메이플 콘도 안내 부대시설"
+   ],
+   "source_url": "https://www.jisanresort.co.kr/w/golf/public/info.asp",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "other": {
    "value": "프로샵",
@@ -428,7 +443,7 @@
   "course": 0.2,
   "fee": 0.75,
   "ops": 0.36,
-  "facility": 0.2,
+  "facility": 0.4,
   "briefing": 0.0,
   "rental": 0.0
  }

@@ -1,10 +1,10 @@
 {
  "dataset": {
   "name": "전국 골프장 통합 데이터셋",
-  "version": "2.9.1",
+  "version": "2.9.2",
   "schema": "stage2c/1.0 (단일 12키)",
-  "built_at": "2026-11-27T14:40:00+09:00",
-  "master_version": "2.9.1 (2026-11-27 최종 보완 — 공개 웹 재수집·표기 통일)",
+  "built_at": "2026-11-27T17:20:00+09:00",
+  "master_version": "2.9.2 (2026-11-27 누락 필드 보완 배치2 — 수도권 B 58곳)",
   "scope": "마스터 540행 중 구장 상세 JSON 515곳 전체 + 상세 미생성 25곳(건설중·미착공·군 체력단련장) 마스터 요약",
   "top_level_keys": [
    "course_id",
@@ -90164,7 +90164,8 @@
     "has_detail": true,
     "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
     "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+    "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
    },
    "master": {
     "course_id": "kr-golf-0154",
@@ -90575,8 +90576,10 @@
     "tax_included": null,
     "cart": {
      "evidence": "클럽72 [클럽72] 2027년 연단체 모집안내 클럽72 [클럽72] 하늘코스 X 연습장 패키지 이용안내 신라CC [신라CC] 크리스마스 이벤트 신라CC [신라CC] 아침 점심 잘 챙겨먹는 모범 팀 이벤트 클럽72 [클럽72 오션] 프리미엄 오션 따뜻한 신형카트 클럽72 [클럽72] 하늘코스 동절기 예약 오픈일자 변경 안내 파주CC [파주CC] 2027년 파주 연단체 모집 안내 신라CC [신라CC] 27년 연단체 모집 안내 클럽72 [클럽72바다] 원더 홈커밍 패스 클럽72 [클럽72] 레이크/클래식/오션코스 생애 첫내장 웰컴 패스",
-     "url": "https://www.onetheclub.com/",
-     "source": "공식"
+     "url": "https://wondergolf.co.kr/courses/kr-kakao-8412181",
+     "source": "원더골프(공개 예약 정보)",
+     "value": 100000,
+     "raw": "100,000원"
     },
     "caddie": {
      "value": 250000,
@@ -90613,7 +90616,7 @@
      "source": "공식 홈페이지",
      "url": "https://www.onetheclub.com/reservation/golf"
     },
-    "open_cycle": null,
+    "open_cycle": "라운드일 기준 4주 전 월요일 오전 9시부터 선착순 예약(1인 1일 1팀)",
     "notes": null,
     "evidence": [
      "원더클럽 주요 메뉴 바로가기 컨텐트 바로가기 원더클럽 예약하기 실시간예약 제휴골프장예약 조인하기 조인예약 조인예약확인 설정 골프장정보 클럽72CC 신라CC 파주CC 듄스코스 [제휴] 하이원 [제휴] 해피니스 [제휴] 파인힐스 [제휴] 세이지우드 [제휴] 아덴힐 [제휴] 사우스스프링스 해외 골프투어 이벤트/공지 진행중인 이벤트 공지사항 원더몰 일본 회원권 고객라운지 FAQ 고객의소리 전화번호 및 기타 안내 갤러리 My페이지 마이원더클럽 쿠폰함 예약조회/수정 연단체/임시단체 클럽72 VIP 리워드 스코어조회 내정보관리 멤버십안내 클럽7",
@@ -90702,8 +90705,15 @@
      "value": null
     },
     "checkin": {
-     "evidence": [],
-     "value": null
+     "evidence": [
+      "원활한 경기 진행을 위하여 Tee-off 30분 전까지 시작 코스에 도착하셔야 합니다"
+     ],
+     "value": "티오프 30분 전까지 시작 코스 도착",
+     "source_url": "https://www.onetheclub.com/static/J53/NOTICE/20261008150518_17637.pdf",
+     "source_type": "official_site",
+     "confidence": "medium",
+     "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+     "checked_at": "2026-11-27"
     },
     "locker": {
      "evidence": [],
@@ -90714,8 +90724,15 @@
      "value": null
     },
     "dress": {
-     "evidence": [],
-     "value": null
+     "evidence": [
+      "단정치 못한 용모와 복장은 입장불가(문신자 입욕금지) - 반바지 카라없는 티셔츠 샌들 등은 입장 금지조치 됩니다."
+     ],
+     "value": "반바지·카라 없는 티셔츠·샌들 등 입장 금지, 단정치 못한 복장 입장 불가",
+     "source_url": "http://vgolf.xgolf.com/booking/booking_calendar.asp?club_code=108",
+     "source_type": "booking_platform",
+     "confidence": "medium",
+     "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+     "checked_at": "2026-11-27"
     },
     "pace": {
      "evidence": [],
@@ -90745,9 +90762,15 @@
      "evidence": [
       "원더클럽 주요 메뉴 바로가기 컨텐트 바로가기 원더클럽 예약하기 실시간예약 제휴골프장예약 조인하기 조인예약 조인예약확인 설정 골프장정보 클럽72CC 신라CC 파주CC 듄스코스 [제휴] 하이원 [제휴] 해피니스 [제휴] 파인힐스 [제휴] 세이지우드 [제휴] 아덴힐 [제휴] 사우스스프링스 해외 골프투어 이벤트/공지 진행중인 이벤트 공지사항 원더몰 일본 회원권 고객라운지 FAQ 고객의소리 전화번호 및 기타 안내 갤러리 My페이지 마이원더클럽 쿠폰함 예약조회/수정 연단체/임시단체 클럽72 VIP 리워드 스코어조회 내정보관리 멤버십안내 클럽7",
       "원더클럽 주요 메뉴 바로가기 컨텐트 바로가기 원더클럽 예약하기 실시간예약 제휴골프장예약 조인하기 조인예약 조인예약확인 설정 골프장정보 클럽72CC 신라CC 파주CC 듄스코스 [제휴] 하이원 [제휴] 해피니스 [제휴] 파인힐스 [제휴] 세이지우드 [제휴] 아덴힐 [제휴] 사우스스프링스 해외 골프투어 이벤트/공지 진행중인 이벤트 공지사항 원더몰 일본 회원권 고객라운지 FAQ 고객의소리 전화번호 및 기타 안내 갤러리 My페이지 마이원더클럽 쿠폰함 예약조회/수정 연단체/임시단체 클럽72 VIP 리워드 스코어조회 내정보관리 멤버십안내 클럽7",
-      "원더클럽 주요 메뉴 바로가기 컨텐트 바로가기 원더클럽 예약하기 실시간예약 제휴골프장예약 조인하기 조인예약 조인예약확인 설정 골프장정보 클럽72CC 신라CC 파주CC 듄스코스 [제휴] 하이원 [제휴] 해피니스 [제휴] 파인힐스 [제휴] 세이지우드 [제휴] 아덴힐 [제휴] 사우스스프링스 해외 골프투어 이벤트/공지 진행중인 이벤트 공지사항 원더몰 일본 회원권 고객라운지 FAQ 고객의소리 전화번호 및 기타 안내 갤러리 My페이지 마이원더클럽 쿠폰함 예약조회/수정 연단체/임시단체 클럽72 VIP 리워드 스코어조회 내정보관리 멤버십안내 클럽7"
+      "원더클럽 주요 메뉴 바로가기 컨텐트 바로가기 원더클럽 예약하기 실시간예약 제휴골프장예약 조인하기 조인예약 조인예약확인 설정 골프장정보 클럽72CC 신라CC 파주CC 듄스코스 [제휴] 하이원 [제휴] 해피니스 [제휴] 파인힐스 [제휴] 세이지우드 [제휴] 아덴힐 [제휴] 사우스스프링스 해외 골프투어 이벤트/공지 진행중인 이벤트 공지사항 원더몰 일본 회원권 고객라운지 FAQ 고객의소리 전화번호 및 기타 안내 갤러리 My페이지 마이원더클럽 쿠폰함 예약조회/수정 연단체/임시단체 클럽72 VIP 리워드 스코어조회 내정보관리 멤버십안내 클럽7",
+      "레스토랑 혜택 전 · 후 식사 시 커피 무료(리필 포함)"
      ],
-     "value": null
+     "value": "레스토랑 운영(라운드 전·후 식사, 커피 무료 혜택)",
+     "source_url": "https://www.onetheclub.com/static/J53/NOTICE/20261008150518_17637.pdf",
+     "source_type": "official_site",
+     "confidence": "medium",
+     "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+     "checked_at": "2026-11-27"
     },
     "snack_bar": {
      "value": null,
@@ -90947,9 +90970,9 @@
    "coverage": {
     "basic": 0.78,
     "course": 0.4,
-    "fee": 0.25,
-    "ops": 0.21,
-    "facility": 0.2,
+    "fee": 0.5,
+    "ops": 0.36,
+    "facility": 0.3,
     "briefing": 0.0,
     "rental": 0.0
    }
@@ -90969,7 +90992,8 @@
     "has_detail": true,
     "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
     "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+    "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
    },
    "master": {
     "course_id": "kr-golf-0155",
@@ -91046,8 +91070,18 @@
     ],
     "grass": {
      "tee": null,
-     "fairway": null,
-     "green": null
+     "fairway": {
+      "value": "중지 잔디",
+      "evidence": "한국관광공사 안내에 따르면 2007년 문을 열었고, 페어웨이는 중지 잔디, 그린은 벤트 계열 잔디를 사용합니다.",
+      "source": "티픽골프장(공개 정보)",
+      "url": "https://teepickgolf.com/course/아리지"
+     },
+     "green": {
+      "value": "벤트 계열 잔디",
+      "evidence": "한국관광공사 안내에 따르면 2007년 문을 열었고, 페어웨이는 중지 잔디, 그린은 벤트 계열 잔디를 사용합니다.",
+      "source": "티픽골프장(공개 정보)",
+      "url": "https://teepickgolf.com/course/아리지"
+     }
     },
     "kga": null,
     "kga_hole_est": null,
@@ -91375,7 +91409,8 @@
     "has_detail": true,
     "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
     "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+    "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
    },
    "master": {
     "course_id": "kr-golf-0156",
@@ -91497,8 +91532,13 @@
     }
    },
    "cancel": {
-    "cancel_policy": null,
-    "open_cycle": null,
+    "cancel_policy": {
+     "value": "평일 이용일 3일 전·주말·공휴일 4일 전까지 위약금 없음. 평일 2일 전·주말 3~2일 전 10%, 1일 전 20%, 당일 30%. 30일간 8회 취소 시 1개월 이용 정지",
+     "source": "공식 홈페이지",
+     "url": "https://www.sunvalley.co.kr/yeoju/golf/golf_use03",
+     "checked_at": "2026-11-27"
+    },
+    "open_cycle": "라운드일 기준 2주 전 월요일 오전 10시 30분부터 홈페이지·모바일 실시간 예약",
     "notes": "(*) 입장 전 이용요금 미결제시에는, 이용요금에서 상기 환불금액이 공제된 금액을 별도 징수 천재지변 등에 따른 취소 시 요금 및 환불 규정 (입장 후) 폭우, 낙뢰, 강설, 안개 등 불가항력적인 천재지변으로 인하여 경기를 계속 할 수 없다고 골프장에서 선언한 경우에 적용됩니다.",
     "evidence": [],
     "weather_evidence": []
@@ -91547,13 +91587,20 @@
      "value": null
     },
     "checkin": {
-     "evidence": [],
-     "value": null,
+     "evidence": [
+      "클럽 방문시 TEE-OFF 최소 30분 전까지 입장 완료하여 쾌적하고 여유로운 플레이를 하실수 있도록 협조 바랍니다."
+     ],
+     "value": "티오프 최소 30분 전까지 입장 완료",
      "third_party": {
       "value": null,
       "source": "그린피가이드",
       "url": "https://greenfeeguide.co.kr/course/gc-0142/"
-     }
+     },
+     "source_url": "https://www.sunvalley.co.kr/yeoju/golf/golf_use01",
+     "source_type": "official_site",
+     "confidence": "medium",
+     "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+     "checked_at": "2026-11-27"
     },
     "locker": {
      "evidence": [
@@ -91772,7 +91819,7 @@
     "basic": 0.89,
     "course": 0.4,
     "fee": 1.0,
-    "ops": 0.21,
+    "ops": 0.29,
     "facility": 0.2,
     "briefing": 0.0,
     "rental": 0.0
@@ -91793,7 +91840,8 @@
     "has_detail": true,
     "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
     "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+    "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
    },
    "master": {
     "course_id": "kr-golf-0157",
@@ -91997,18 +92045,24 @@
     "par": 72
    },
    "fee": {
-    "weekday": null,
-    "weekend": null,
+    "weekday": 230000,
+    "weekend": 290000,
     "weekday_text": null,
     "weekend_text": null,
-    "basis": null,
+    "basis": "공식 요금표(공개 요금 정보)",
     "tax_included": null,
     "cart": null,
     "caddie": null,
-    "as_of": null,
+    "as_of": "2026-11-27",
     "source_url": null,
     "note": null,
-    "sources": [],
+    "sources": [
+     {
+      "source": "회원권 정보 포털",
+      "url": "https://www.ks-membership.co.kr/html/sub11_view.php?agubun=&level_state22=&mode=2&no=63",
+      "checked_at": "2026-11-27"
+     }
+    ],
     "checked_at": "2026-11-27",
     "market": {
      "weekday_min": 110000,
@@ -92024,8 +92078,13 @@
     "official_rental": null
    },
    "cancel": {
-    "cancel_policy": null,
-    "open_cycle": null,
+    "cancel_policy": {
+     "value": "당일 취소·무단 결장 시 위약금 팀당 70만원",
+     "source": "공개 예약 플랫폼",
+     "url": "https://vgolf.xgolf.com/booking/booking_calendar.asp?club_code=330",
+     "checked_at": "2026-11-27"
+    },
+    "open_cycle": "평일 회원 전월 10일 9시~, 비회원 14일 전부터. 주말 회원 전월 5~10일 신청 후 15일 배정, 비회원 12일 전부터",
     "notes": null,
     "evidence": [],
     "weather_evidence": []
@@ -92068,8 +92127,15 @@
      "value": null
     },
     "checkin": {
-     "evidence": [],
-     "value": null
+     "evidence": [
+      "● 당일 내장시 프론트 30분 이전 티그라운드 10분 전 반드시 도착 요망"
+     ],
+     "value": "프론트 30분 이전, 티그라운드 10분 전 도착",
+     "source_url": "https://vgolf.xgolf.com/booking/booking_calendar.asp?club_code=330",
+     "source_type": "booking_platform",
+     "confidence": "medium",
+     "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+     "checked_at": "2026-11-27"
     },
     "locker": {
      "evidence": [],
@@ -92261,8 +92327,8 @@
    "coverage": {
     "basic": 0.89,
     "course": 0.4,
-    "fee": 0.0,
-    "ops": 0.0,
+    "fee": 0.5,
+    "ops": 0.07,
     "facility": 0.1,
     "briefing": 0.0,
     "rental": 0.0
@@ -92283,7 +92349,8 @@
     "has_detail": true,
     "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
     "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+    "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
    },
    "master": {
     "course_id": "kr-golf-0158",
@@ -92541,7 +92608,7 @@
    },
    "cancel": {
     "cancel_policy": null,
-    "open_cycle": null,
+    "open_cycle": "주중: 정회원 전월 1일, 가족·CF 전월 5일, 지명 전월 7일, 웹회원(비회원) 전월 10일 오픈. 주말: 정회원·가족 전월 2~3일 접수 후 7일 배정, 비회원은 배정 후 잔여타임",
     "notes": null,
     "evidence": [],
     "weather_evidence": []
@@ -92788,7 +92855,8 @@
     "has_detail": true,
     "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
     "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+    "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
    },
    "master": {
     "course_id": "kr-golf-0159",
@@ -92866,9 +92934,10 @@
     "grass": {
      "tee": null,
      "fairway": {
-      "evidence": "캐슬파인 골프클럽 GNB 바로가기 본문 바로가기 하단 바로가기 클럽소개 클럽소개 분실물 센터 오시는길 코스소개 코스소개 VALLEY LAKE 이용안내 이용안내 이용요금 예약안내 위약안내 마일리지제도 로컬룰 모바일웹 인터넷예약 실시간예약 대기예약 예약확인/취소 회원라운지 회원정보 My 마일리지 정보마당 공지사항/이벤트 자료실 포토갤러리 명예의전당 날씨정보 로그인 아이디 비밀번호 아이디 저장 회원가입 *원하시는 날짜를 누르시면 예약이 가능합니다.",
-      "source": "공식",
-      "url": "https://www.castlepine.co.kr/index.asp"
+      "evidence": "잔디종류 그린 - 벤트그라스 (Dominant) 페어웨이 - 중지",
+      "source": "공식 홈페이지",
+      "url": "https://www.castlepine.co.kr/pagesite/club/intro.asp",
+      "value": "중지(한국잔디)"
      },
      "green": "벤트그라스 (Dominant)"
     },
@@ -93214,7 +93283,7 @@
      "source": "공식 홈페이지",
      "url": "https://www.castlepine.co.kr/pagesite/clause/guide.asp"
     },
-    "open_cycle": null,
+    "open_cycle": "인터넷회원 대상 주중 3주전 월요일, 주말 3주전 금요일 09시부터 선착순 예약",
     "notes": "최종 취소·위약 조건은 예약 채널 공지와 다를 수 있으니 예약 전 확인 필요",
     "evidence": [
      "“예약일을 제외한 3일전 17:00이전까지 홈페이지에서 취소가 가능합니다. (17:00이후 취소분은 익일로 취소처리 됨)”",
@@ -93661,7 +93730,8 @@
     "has_detail": true,
     "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
     "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+    "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
    },
    "master": {
     "course_id": "kr-golf-0160",
@@ -93937,8 +94007,13 @@
     "official_rental": null
    },
    "cancel": {
-    "cancel_policy": null,
-    "open_cycle": null,
+    "cancel_policy": {
+     "value": "취소 기한: 예약일 제외 7일 전 17시까지 (이후 취소건은 익일로 처리) / 위약: 예약정지(구제금액): 6~4일전 1~3개월, 3일전 4개월(주말만 이용요금 10%), 2일전 5개월(10%), 1일전 6개월(20%), 당일 1년(30%), 노쇼 영구정지. 이용요금=4인 그린피",
+     "source": "칠까말까(공식 홈페이지 정리)",
+     "url": "https://chilkka.kr/c/ferrum/",
+     "checked_at": "2026-11-27"
+    },
+    "open_cycle": "예약은 3주 전 화요일 오전 9시부터 선착순(월~일 주 단위 오픈). 예: 2024년 9월 23일(월)~9월 29일(일) 예약은 9월 3일(화) 오전 9시부터",
     "notes": null,
     "evidence": [],
     "weather_evidence": []
@@ -93971,12 +94046,26 @@
      "evidence": []
     },
     "marshal_caddie": {
-     "value": null,
-     "evidence": []
+     "value": "경기진행 직원·진행 보조원 운영",
+     "evidence": [
+      "안전사고 방지를 위하여 경기진행 직원, 진행 보조원 등의 요청에 적극적으로 협조해야 하며"
+     ],
+     "source_url": "https://www.ferrumclub.com/lounge/join.asp",
+     "source_type": "official_site",
+     "confidence": "medium",
+     "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+     "checked_at": "2026-11-27"
     },
     "cart_type": {
-     "evidence": [],
-     "value": null
+     "evidence": [
+      "전동 골프카 운전은 경기보조원 또는 직원이 운전함을 원칙으로 하며"
+     ],
+     "value": "전동 골프카(경기보조원 또는 직원이 운전)",
+     "source_url": "https://www.ferrumclub.com/lounge/join.asp",
+     "source_type": "official_site",
+     "confidence": "medium",
+     "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+     "checked_at": "2026-11-27"
     },
     "cart_entry": {
      "evidence": [],
@@ -93995,16 +94084,30 @@
      "value": null
     },
     "locker": {
-     "evidence": [],
-     "value": null
+     "evidence": [
+      "이용자는 락커룸 번호를 본인이 책임지고 인지 하여야 하며"
+     ],
+     "value": "락커룸 운영(번호 본인 관리)",
+     "source_url": "https://www.ferrumclub.com/lounge/join.asp",
+     "source_type": "official_site",
+     "confidence": "medium",
+     "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+     "checked_at": "2026-11-27"
     },
     "sauna": {
      "evidence": [],
      "value": null
     },
     "dress": {
-     "evidence": [],
-     "value": null
+     "evidence": [
+      "당 클럽이 정한 복장 및 용모를 위반하였을 때 - ㄱ) 반바지, 청바지, 카라 없는 상의 노출이 심한 복장 등"
+     ],
+     "value": "반바지·청바지·카라 없는 상의·노출이 심한 복장 입장 제한",
+     "source_url": "https://www.ferrumclub.com/lounge/join.asp",
+     "source_type": "official_site",
+     "confidence": "medium",
+     "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+     "checked_at": "2026-11-27"
     },
     "pace": {
      "evidence": [],
@@ -94309,7 +94412,7 @@
     "basic": 0.89,
     "course": 0.4,
     "fee": 0.0,
-    "ops": 0.07,
+    "ops": 0.36,
     "facility": 0.1,
     "briefing": 0.0,
     "rental": 0.0
@@ -94850,7 +94953,8 @@
     "has_detail": true,
     "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
     "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+    "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
    },
    "master": {
     "course_id": "kr-golf-0162",
@@ -95344,7 +95448,7 @@
      "source": "공식 홈페이지",
      "url": "https://www.jayurocc.com/View?ID=guide05"
     },
-    "open_cycle": null,
+    "open_cycle": "인터넷 예약은 3주 전 해당 요일 오전 10시 오픈, 전화 예약은 2주 전 해당 요일 오전 10시부터 접수. 인터넷 예약은 하루 전 24시까지, 전화 예약은 하루 전 오후 6시까지",
     "notes": null,
     "evidence": [
      "모바일에서 로그인 후 간편하게 예약 / 변경 / 취소가 가능합니다.",
@@ -95766,7 +95870,8 @@
     "has_detail": true,
     "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
     "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+    "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
    },
    "master": {
     "course_id": "kr-golf-0163",
@@ -96004,9 +96109,10 @@
     "grass": {
      "tee": "켄터키 블루그래스 Kentucky Bluegrass",
      "fairway": {
-      "evidence": "신원 컨트리클럽 주요 메뉴 바로가기 컨텐트 바로가기 LOGO 클럽소개 회사소개 CEO인사말 찾아오시는길 이용안내 예약안내 요금안내 모바일예약 회원권안내 코스소개 코스소개 솔로몬 에벤에셀 데이비드 멤버십 예약등록 예약조회 위약현황 회원정보 My신원 Q&A 회원관련규정 조별공지 이사회 회원친선대회 부대시설 프론트 로비라운지 락커실및사우나 클럽하우스대식당 메뉴안내 고객광장 연부킹 단체팀 명의개서 공지사항 뉴스&이벤트 자료실 실시간 웹캠 LOGIN SITEMAP 요금안내 최고의 가치와 품격을 지닌 신원컨트리클럽이 있습니다.",
-      "source": "공식",
-      "url": "https://www.swcc.co.kr/swp/charge"
+      "evidence": "잔디: 페어웨이 중지 Zoysia grass(한국잔디) · 그린 펜크로스 Penncross, Penn A-1 · 티 켄터키 블루그래스 Kentucky Bluegrass · 러프 중지 Zoysia grass · 프린지 : 켄터키 블루그래스 Kentucky Bluegrass",
+      "source": "그린피가이드(공식 요금표·코스소개)",
+      "url": "https://greenfeeguide.co.kr/guides/golf-course-turf-one-green-guide/",
+      "value": "중지 Zoysia grass(한국잔디)"
      },
      "green": "펜크로스 Penncross"
     },
@@ -96375,7 +96481,7 @@
      "source": "공식 홈페이지",
      "url": "https://www.swcc.co.kr/swp/reserve_guide"
     },
-    "open_cycle": null,
+    "open_cycle": "주말·공휴일은 2개월 전, 주중은 1개월 전부터 선착순 실시간 예약(주말 1회 선점)",
     "notes": null,
     "evidence": [
      "회원이 주말 · 휴일 예약 후 취소하고자 할 때에는 취소일에 따라 차등 된 벌점이 부과된다.",
@@ -96425,8 +96531,15 @@
      "value_from": "batch2_supplement"
     },
     "marshal_caddie": {
-     "value": null,
-     "evidence": []
+     "value": "1팀당 도우미(캐디) 1명 배치 원칙",
+     "evidence": [
+      "원활한 경기 진행을 위하여 1팀당 도우미 1명을 배치하는 것을 원칙으로 한다."
+     ],
+     "source_url": "https://www.swcc.co.kr/swp/reserve_guide",
+     "source_type": "official_site",
+     "confidence": "medium",
+     "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+     "checked_at": "2026-11-27"
     },
     "cart_type": {
      "value": "5인승 카트(카트비 100,000원)",
@@ -96749,7 +96862,7 @@
     "basic": 0.89,
     "course": 0.6,
     "fee": 1.0,
-    "ops": 0.64,
+    "ops": 0.71,
     "facility": 0.5,
     "briefing": 0.0,
     "rental": 0.75
@@ -96770,7 +96883,8 @@
     "has_detail": true,
     "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
     "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+    "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
    },
    "master": {
     "course_id": "kr-golf-0164",
@@ -96816,13 +96930,13 @@
      "master": "courses_master.json v2.0 (문체부·KGA·KGBA·티픽·지도)",
      "synced_to": "courses_master.json v2.7 (2026-11-26 단일 스키마 정규화)"
     },
-    "par": null,
+    "par": 72,
     "holes_teepick": 36,
     "course_spec": {
      "holes": 36,
-     "par": null,
+     "par": 72,
      "blocks": [],
-     "length_m": null,
+     "length_m": 6182,
      "kga": null,
      "grass": {
       "value": "중지, 벤트그라스",
@@ -96863,8 +96977,8 @@
     "kga_hole_est": null,
     "extra_courses": null,
     "hole_by_hole": null,
-    "length_m": null,
-    "par": null
+    "length_m": 6182,
+    "par": 72
    },
    "fee": {
     "weekday": 220000,
@@ -97019,8 +97133,15 @@
      "value_from": "capital_supplement(official_site)"
     },
     "sauna": {
-     "evidence": [],
-     "value": null
+     "evidence": [
+      "고객님들을 위한 최고의 편의 시설을 갖춘 국내 유일의 골프클럽 사우나"
+     ],
+     "value": "사우나 있음",
+     "source_url": "https://www.gakorea.com/wellbeing/index.asp",
+     "source_type": "official_site",
+     "confidence": "medium",
+     "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+     "checked_at": "2026-11-27"
     },
     "dress": {
      "evidence": [
@@ -97245,7 +97366,7 @@
     "basic": 0.89,
     "course": 0.2,
     "fee": 1.0,
-    "ops": 0.5,
+    "ops": 0.57,
     "facility": 0.4,
     "briefing": 0.0,
     "rental": 0.0
@@ -98082,7 +98203,8 @@
     "has_detail": true,
     "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
     "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+    "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
    },
    "master": {
     "course_id": "kr-golf-0166",
@@ -98453,8 +98575,13 @@
     }
    },
    "cancel": {
-    "cancel_policy": null,
-    "open_cycle": null,
+    "cancel_policy": {
+     "value": "예약일 7일 전 16시까지 취소 가능. 6~5일 전 취소 시 예약 1개월 정지 또는 마일리지 200점, 4일 전 400점, 3일 전 600점, 2일 전 800점, 1일 전 1,000점, 당일 1,400점, 무연락 미내장 1,500점",
+     "source": "공식 홈페이지",
+     "url": "https://www.namboocc.co.kr/reservation/guide/reservation.do",
+     "checked_at": "2026-11-27"
+    },
+    "open_cycle": "주중 회원 4주 전 해당요일 9시~ 실시간예약, 주말·주중공휴일 회원 4주 전 화요일 9시~ 접수 후 추첨배정(목요일부터 잔여시간 실시간)",
     "notes": null,
     "evidence": [],
     "weather_evidence": []
@@ -98915,7 +99042,8 @@
     "has_detail": true,
     "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
     "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+    "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
    },
    "master": {
     "course_id": "kr-golf-0167",
@@ -99293,8 +99421,13 @@
     "official_rental": null
    },
    "cancel": {
-    "cancel_policy": null,
-    "open_cycle": null,
+    "cancel_policy": {
+     "value": "주중은 라운드 전날까지, 주말·공휴일은 라운드 7일 전까지 취소 가능하며 이후 취소 시 취소 수수료 발생",
+     "source": "블로그(공개 정리)",
+     "url": "https://papahun.com/suwoncc-reservation/",
+     "checked_at": "2026-11-27"
+    },
+    "open_cycle": "평일 3주 전 해당요일 9시~ 인터넷 예약. 주말·공휴일은 토요일·1/3/5주 일요일 2주 전 화요일 추첨 접수, 2/4주 일요일 3주 전 월요일 9시~ 실시간",
     "notes": null,
     "evidence": [],
     "weather_evidence": []
@@ -99305,24 +99438,45 @@
      "value": null
     },
     "two_player": {
-     "evidence": [],
-     "value": null
+     "evidence": [
+      "팀 구성 2인 또는 5인 플레이 불가"
+     ],
+     "value": "2인 플레이 불가",
+     "source_url": "https://wondergolf.co.kr/courses/kr-kakao-8456286",
+     "source_type": "aggregator_wondergolf",
+     "confidence": "medium",
+     "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+     "checked_at": "2026-11-27"
     },
     "three_player": {
      "value": null,
      "evidence": []
     },
     "five_player": {
-     "value": null,
-     "evidence": []
+     "value": "5인 플레이 불가",
+     "evidence": [
+      "팀 구성 2인 또는 5인 플레이 불가"
+     ],
+     "source_url": "https://wondergolf.co.kr/courses/kr-kakao-8456286",
+     "source_type": "aggregator_wondergolf",
+     "confidence": "medium",
+     "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+     "checked_at": "2026-11-27"
     },
     "marshal_caddie": {
      "value": null,
      "evidence": []
     },
     "cart_type": {
-     "evidence": [],
-     "value": null
+     "evidence": [
+      "5인 라운드 시 리무진 카트가 배정되며, 골프장 사정에 따라 제한될 수 있으므로 사전 전화 문의가 권장됩니다."
+     ],
+     "value": "5인 라운드 시 리무진 카트 배정(사전 전화 문의)",
+     "source_url": "https://papahun.com/suwoncc-reservation/",
+     "source_type": "blog",
+     "confidence": "low",
+     "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+     "checked_at": "2026-11-27"
     },
     "cart_entry": {
      "evidence": [],
@@ -99525,7 +99679,7 @@
     "basic": 0.78,
     "course": 0.4,
     "fee": 1.0,
-    "ops": 0.0,
+    "ops": 0.21,
     "facility": 0.0,
     "briefing": 0.0,
     "rental": 0.0
@@ -99546,7 +99700,8 @@
     "has_detail": true,
     "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
     "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+    "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
    },
    "master": {
     "course_id": "kr-golf-0168",
@@ -99842,8 +99997,15 @@
      "value_from": "pass2_third_party"
     },
     "lodging": {
-     "value": null,
-     "evidence": []
+     "value": "계열 골드 훼미리콘도 운영(객실 30·40 TYPE)",
+     "evidence": [
+      "골드 훼미리콘도 콘도소개 부대시설 ... 객실 30 TYPE 40 TYPE"
+     ],
+     "source_url": "https://gakorea.com/public/index.asp",
+     "source_type": "official_site",
+     "confidence": "medium",
+     "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+     "checked_at": "2026-11-27"
     },
     "other": {
      "value": "프로샵 · 카페·라운지",
@@ -100000,7 +100162,7 @@
     "course": 0.4,
     "fee": 1.0,
     "ops": 0.5,
-    "facility": 0.4,
+    "facility": 0.5,
     "briefing": 0.0,
     "rental": 0.0
    }
@@ -100020,7 +100182,8 @@
     "has_detail": true,
     "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
     "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+    "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
    },
    "master": {
     "course_id": "kr-golf-0169",
@@ -100569,7 +100732,7 @@
      "source": "공식 홈페이지",
      "url": "https://taekwangcc.co.kr/standard-terms"
     },
-    "open_cycle": null,
+    "open_cycle": "회원제 정회원·평일회원 4주 전 추첨 신청(수요일 12시 이전 배정), 잔여타임은 정회원 4주 전 목요일·사이버 등급별 3주 전 월·수·목 8시부터",
     "notes": null,
     "evidence": [
      "① 이용자가 주말이나 공휴일인 이용예정일로부터 7일전까지, 평일인 이용예정일로부터 7일전까지 예약을 취소한 경우에는 예약금의 전액을 환불하여야 한다.",
@@ -102241,7 +102404,8 @@
     "has_detail": true,
     "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
     "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+    "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
    },
    "master": {
     "course_id": "kr-golf-0172",
@@ -102652,7 +102816,12 @@
     }
    },
    "cancel": {
-    "cancel_policy": null,
+    "cancel_policy": {
+     "value": "취소 기한: 이용일 7일 전 17:00까지(웹회원 기준, 서코스 회원제회원은 4일 전 17:00) / 위약: 웹회원 기한 후 취소 시 예약정지(주중 1~3개월, 주말 2~7개월), 당일취소·본인미내장 주중 6·주말 8개월, 노쇼 영구정지. 당일취소·노쇼는 정지 대신 팀 이용요금 30% 선택 가능",
+     "source": "칠까말까(공식 홈페이지 정리)",
+     "url": "https://chilkka.kr/c/lakeside/",
+     "checked_at": "2026-11-27"
+    },
     "open_cycle": null,
     "notes": null,
     "evidence": [],
@@ -103000,7 +103169,8 @@
     "has_detail": true,
     "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
     "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+    "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
    },
    "master": {
     "course_id": "kr-golf-0173",
@@ -103448,20 +103618,39 @@
     "official_rental": null
    },
    "cancel": {
-    "cancel_policy": null,
-    "open_cycle": null,
+    "cancel_policy": {
+     "value": "주말 예약 취소는 8일 전(전주 금요일) 17시까지 취소해야 불이가 없음",
+     "source": "공식 홈페이지",
+     "url": "https://homepage-yi.blueone.com/files/2026%EB%85%84%EC%A3%BC%EB%A7%90%EB%B0%8F%EA%B3%B5%ED%9C%B4%EC%9D%BC%EC%98%88%EC%95%BD%EC%9D%BC%EC%A0%95%ED%91%9C.pdf",
+     "checked_at": "2026-11-27"
+    },
+    "open_cycle": "평일 정회원 희망일 40일 전, 준회원·주중회원 30일 전 9시부터 1일 전 17시까지. 주말·공휴일은 5주 전 월요일 9시~4주 전 금요일 17시 인터넷 신청 후 배정",
     "notes": null,
     "evidence": [],
     "weather_evidence": []
    },
    "ops": {
     "nocaddie": {
-     "evidence": [],
-     "value": null
+     "evidence": [
+      "운영 방식 | 노캐디선택 ... 노캐디 East 퍼블릭 코스는 2인 예약도 가능합니다."
+     ],
+     "value": "노캐디 선택 가능(이스트 퍼블릭 코스)",
+     "source_url": "https://papahun.com/blueoneyongincc-reservation/",
+     "source_type": "blog",
+     "confidence": "low",
+     "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+     "checked_at": "2026-11-27"
     },
     "two_player": {
-     "evidence": [],
-     "value": null
+     "evidence": [
+      "팀 구성: 대중형: 2인부터 예약 가능, 2인은 다른 2인과 조인될 수 있음. 주말(공휴일)은 18홀로만 운영"
+     ],
+     "value": "대중형: 2인부터 예약 가능, 2인은 다른 2인과 조인될 수 있음. 주말(공휴일)은 18홀로만 운영",
+     "source_url": "https://wondergolf.co.kr/courses/kr-kakao-19392775",
+     "source_type": "aggregator_wondergolf",
+     "confidence": "medium",
+     "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+     "checked_at": "2026-11-27"
     },
     "three_player": {
      "value": null,
@@ -103716,7 +103905,7 @@
     "basic": 0.78,
     "course": 0.6,
     "fee": 0.75,
-    "ops": 0.0,
+    "ops": 0.14,
     "facility": 0.0,
     "briefing": 0.0,
     "rental": 0.0
@@ -103737,7 +103926,8 @@
     "has_detail": true,
     "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
     "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+    "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
    },
    "master": {
     "course_id": "kr-golf-0174",
@@ -103833,7 +104023,7 @@
     "holes_received": 18,
     "course_names": null,
     "membership_type": "대중제",
-    "night_light": null,
+    "night_light": true,
     "blocks": [
      "TIGERLION"
     ],
@@ -104945,7 +105135,8 @@
     "has_detail": true,
     "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
     "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+    "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
    },
    "master": {
     "course_id": "kr-golf-0176",
@@ -105264,7 +105455,7 @@
      "source": "공식 홈페이지",
      "url": "https://sunningpoint.com/guide/penalty.asp"
     },
-    "open_cycle": null,
+    "open_cycle": "이용자는 이용 예정일로부터 30일 전까지 예약할 수 있음(이용약관 제5조)",
     "notes": null,
     "evidence": [
      "- 예약자가 라운드일로 부터 8일 전 오후 5시 이전까지 예약을 취소하는 경우 정상 취소 가능합니다.",
@@ -105702,7 +105893,8 @@
     "has_detail": true,
     "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
     "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+    "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
    },
    "master": {
     "course_id": "kr-golf-0177",
@@ -106080,7 +106272,12 @@
     "official_rental": null
    },
    "cancel": {
-    "cancel_policy": null,
+    "cancel_policy": {
+     "value": "입장 후 경기 전 임의 취소 시 기본요금과 그린피 50% 징수, 경기 개시 후 중단·취소 시 그린피 100% 징수",
+     "source": "공식 홈페이지",
+     "url": "https://www.asianacc.co.kr/about_us/information2.asp",
+     "checked_at": "2026-11-27"
+    },
     "open_cycle": null,
     "notes": null,
     "evidence": [],
@@ -106104,8 +106301,15 @@
      "evidence": []
     },
     "marshal_caddie": {
-     "value": null,
-     "evidence": []
+     "value": "경기보조원(캐디)이 카트 운전, 진행 안내원 운영",
+     "evidence": [
+      "골프카트는 경기보조원만이 운전할 수 있으며, 이용자는 어떠한 사유로도 골프카트를 운전해서는 아니된다."
+     ],
+     "source_url": "https://www.asianacc.co.kr/about_us/information2.asp",
+     "source_type": "official_site",
+     "confidence": "medium",
+     "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+     "checked_at": "2026-11-27"
     },
     "cart_type": {
      "evidence": [
@@ -106155,8 +106359,15 @@
      "value_from": "capital_supplement(official_site)"
     },
     "pace": {
-     "evidence": [],
-     "value": null
+     "evidence": [
+      "경기 능력이 현저히 부족하여 타인의 경기에 큰 방해가 된다고 객관적으로 판단될 때. (앞 팀과 1홀 이상 진행이 되지 않을때 벌점 20점 부과)"
+     ],
+     "value": "앞 팀과 1홀 이상 진행이 되지 않으면 벌점 20점 부과(진행 지연 제재)",
+     "source_url": "https://www.asianacc.co.kr/about_us/information2.asp",
+     "source_type": "official_site",
+     "confidence": "medium",
+     "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+     "checked_at": "2026-11-27"
     },
     "cart_limousine": {
      "value": "리무진카트",
@@ -106339,7 +106550,7 @@
     "basic": 0.89,
     "course": 0.4,
     "fee": 1.0,
-    "ops": 0.14,
+    "ops": 0.29,
     "facility": 0.0,
     "briefing": 0.0,
     "rental": 0.0
@@ -106360,7 +106571,8 @@
     "has_detail": true,
     "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
     "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+    "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
    },
    "master": {
     "course_id": "kr-golf-0178",
@@ -106565,7 +106777,7 @@
      "source": "공식 홈페이지",
      "url": "https://www.pineresort.com/Reservation/Reservation.aspx"
     },
-    "open_cycle": null,
+    "open_cycle": "주중 및 주말 한 달 전 예약 가능(예약실 031-329-9500~3)",
     "notes": "최종 취소·위약 조건은 예약 채널 공지와 다를 수 있으니 예약 전 확인 필요",
     "evidence": [
      "4일전 취소 2개월 예약정지 2개월 예약정지 3일전 취소 3개월 예약정지 3개월 예약정지 또는이용요금 10% 2일전 취소 4개월 예약정지 또는이용요금 10% 4개월 예약정지 또는이용요금 10% 1일전 취소 6개월 예약정지 또는이용요금 20% 6개월 예약정지 또는이용요금 20% 당일취소(미내장) 1년 예약정지 또는이용요금 30% 1년 예약정지이용요금 30% ※ 7일전(17시) 까지 정상취소 가능합니다.",
@@ -106613,9 +106825,15 @@
     "cart_type": {
      "evidence": [
       "[예약실 TEL 031-329-9500~3] 골프장 이용요금 : 계절별 / 시간대별 탄력적용 (부가세 포함) 구분 그린피 카트비 캐디피 주중 11만원 ~ 23만원 팀당 100,000원 9홀 80,000원(1캐디 4bags) 18홀 150,000원(1캐디 4bags) ※10홀 이상 진행시는 15만원 적용 주말 18만원 ~ 27만원 ※ 골프대여물품(골프채, 골프화)없음.",
-      "퇴장 규정 경고 후 퇴장처리 (최대 무기한 예약 및 내장정지) 퇴장 내용 고의적인 경기 지연 및 도박행위 경기능력이 현저히 부족하여 진행에 심대한 지장을 초래하는 경우 코스 내 수목, 시설물, 그린을 고의로 훼손하는 경우 근무자에 대한 폭행, 성희롱, 언어폭력 및 직원의 정당한 요구에 불응하는 경우 금연구역 위반행위(코스 내 흡연 절대금지, 정지된 카트 및 지정된 장소에서만 흡연가능) 음주 등으로 정상적인 이용이 곤란한 경우 분실물 규정 당 클럽에서 습득된 분실물은 아래와 같이 처리되오니 반드시 확인하여 주시기 바랍니다."
+      "퇴장 규정 경고 후 퇴장처리 (최대 무기한 예약 및 내장정지) 퇴장 내용 고의적인 경기 지연 및 도박행위 경기능력이 현저히 부족하여 진행에 심대한 지장을 초래하는 경우 코스 내 수목, 시설물, 그린을 고의로 훼손하는 경우 근무자에 대한 폭행, 성희롱, 언어폭력 및 직원의 정당한 요구에 불응하는 경우 금연구역 위반행위(코스 내 흡연 절대금지, 정지된 카트 및 지정된 장소에서만 흡연가능) 음주 등으로 정상적인 이용이 곤란한 경우 분실물 규정 당 클럽에서 습득된 분실물은 아래와 같이 처리되오니 반드시 확인하여 주시기 바랍니다.",
+      "서비스명 카트 운전 경기진행 지원 카트 종류 요금 ⓒ 경기보조(캐디) 서비스 ● ● 5인승 150,000원 ⓓ 운전지원 서비스 ● X 5인승 80,000원 ⓢ 셀프 라운드 ● 고객직접 자동 운전"
      ],
-     "value": null
+     "value": "5인승 카트(경기보조 캐디 서비스 150,000원 / 운전지원 80,000원, 셀프 라운드는 고객직접 운전)",
+     "source_url": "https://www.pineresort.com/Reservation/Reservation.aspx",
+     "source_type": "official_site",
+     "confidence": "medium",
+     "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+     "checked_at": "2026-11-27"
     },
     "cart_entry": {
      "evidence": [],
@@ -106983,7 +107201,7 @@
     "basic": 0.89,
     "course": 0.4,
     "fee": 1.0,
-    "ops": 0.43,
+    "ops": 0.5,
     "facility": 0.7,
     "briefing": 0.0,
     "rental": 0.25
@@ -107779,7 +107997,8 @@
     "has_detail": true,
     "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
     "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+    "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
    },
    "master": {
     "course_id": "kr-golf-0180",
@@ -107919,7 +108138,7 @@
      "source": "공식 홈페이지",
      "url": "https://www.ehscc.co.kr/Privacy/UseTerm"
     },
-    "open_cycle": null,
+    "open_cycle": "주중: 매주 월요일 09:00 3주 후 1주 단위(월~금) 예약. 정회원 주말: 매월 첫째 화요일 09~17시 다음 달 1개월분 인터넷 접수, 차주 금요일 10시 배정결과 문자",
     "notes": null,
     "evidence": [
      "※4인 내장 및 예약자본인 내장 필수 → 사전 클럽 유선승인 후 정회원 월1회 비회원 위임가능(비회원가 적용) 예약변경 및 취소기한 구분 주중 주말 정회원 예약일 기준 1주일(7일)전 17:00까지 주중회원 인터넷회원 ※ 비,눈 등 날씨로 인한 취소는 기상예보만으로 사전취소는불가하며, 티업시간 2시간전 현장날씨 기준으로 결정됩니다.",
@@ -108067,9 +108286,15 @@
     },
     "food": {
      "evidence": [
-      "2팀(연팀) 이상의 단체 예약 ※ 2팀(연팀) 이상의 단체 예약은 전화예약만 가능 ※ 1팀 예약의 회원이 우선하며, 선호(골든)타임 예약 불가 - 주중 : 7:50 ~ 1부 막팀, 2부 첫팀 ~ 12:30을 제외한 시간 예약 가능 - 주말 : 1팀 예약신청 회원 배정후 잔여타임에서 예약가능 ※ 3팀 이상 예약시 클럽하우스 식당 및 부대시설을 반드시 이용하셔야 합니다."
+      "2팀(연팀) 이상의 단체 예약 ※ 2팀(연팀) 이상의 단체 예약은 전화예약만 가능 ※ 1팀 예약의 회원이 우선하며, 선호(골든)타임 예약 불가 - 주중 : 7:50 ~ 1부 막팀, 2부 첫팀 ~ 12:30을 제외한 시간 예약 가능 - 주말 : 1팀 예약신청 회원 배정후 잔여타임에서 예약가능 ※ 3팀 이상 예약시 클럽하우스 식당 및 부대시설을 반드시 이용하셔야 합니다.",
+      "특급호텔 출신 쉐프가 최상급 재료로 정성스럽게 준비한 다양한 메뉴들을 탁 트인 코스 전경이 한눈에 바라보이는 은화삼 레스토랑에서"
      ],
-     "value": null
+     "value": "레스토랑 운영(특급호텔 출신 셰프)",
+     "source_url": "https://www.ehscc.co.kr/Facility/Restaurant",
+     "source_type": "official_site",
+     "confidence": "medium",
+     "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+     "checked_at": "2026-11-27"
     },
     "snack_bar": {
      "value": null,
@@ -108344,7 +108569,7 @@
     "course": 0.4,
     "fee": 1.0,
     "ops": 0.5,
-    "facility": 0.3,
+    "facility": 0.4,
     "briefing": 0.0,
     "rental": 0.75
    }
@@ -109262,7 +109487,8 @@
     "has_detail": true,
     "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
     "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+    "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
    },
    "master": {
     "course_id": "kr-golf-0182",
@@ -109310,7 +109536,7 @@
      "holes": 9,
      "par": 36,
      "blocks": [],
-     "length_m": null,
+     "length_m": 2255,
      "kga": null,
      "grass": null,
      "hole_by_hole": null
@@ -109340,7 +109566,7 @@
     "kga_hole_est": null,
     "extra_courses": null,
     "hole_by_hole": null,
-    "length_m": null,
+    "length_m": 2255,
     "par": 36
    },
    "fee": {
@@ -109507,8 +109733,15 @@
      "evidence": []
     },
     "food": {
-     "evidence": [],
-     "value": null
+     "evidence": [
+      "회원제 프론트 031-330-1411 ~ 2 회원제 대식당 031-330-1430 ~ 1 퍼블릭 프론트/예약실"
+     ],
+     "value": "회원제 대식당 운영",
+     "source_url": "https://www.jisanresort.co.kr/w/golf/public/info.asp",
+     "source_type": "official_site",
+     "confidence": "medium",
+     "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+     "checked_at": "2026-11-27"
     },
     "snack_bar": {
      "value": null,
@@ -109519,8 +109752,15 @@
      "evidence": []
     },
     "lodging": {
-     "value": null,
-     "evidence": []
+     "value": "리조트 내 메이플 콘도 운영",
+     "evidence": [
+      "골프 회원제 퍼블릭/연습장 회원제 예약하기 퍼블릭 예약하기 콘도 메이플 콘도 안내 부대시설"
+     ],
+     "source_url": "https://www.jisanresort.co.kr/w/golf/public/info.asp",
+     "source_type": "official_site",
+     "confidence": "medium",
+     "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+     "checked_at": "2026-11-27"
     },
     "other": {
      "value": "프로샵",
@@ -109677,7 +109917,7 @@
     "course": 0.2,
     "fee": 0.75,
     "ops": 0.36,
-    "facility": 0.2,
+    "facility": 0.4,
     "briefing": 0.0,
     "rental": 0.0
    }
@@ -109697,7 +109937,8 @@
     "has_detail": true,
     "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
     "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+    "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
    },
    "master": {
     "course_id": "kr-golf-0183",
@@ -110259,8 +110500,15 @@
      "evidence": []
     },
     "lodging": {
-     "value": null,
-     "evidence": []
+     "value": "계열 골드 훼미리콘도 운영(객실 30·40 TYPE)",
+     "evidence": [
+      "골드 훼미리콘도 콘도소개 부대시설 ... 객실 30 TYPE 40 TYPE"
+     ],
+     "source_url": "https://www.gakorea.com/korea/index.asp",
+     "source_type": "official_site",
+     "confidence": "medium",
+     "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+     "checked_at": "2026-11-27"
     },
     "other": {
      "value": "프로샵",
@@ -110429,7 +110677,7 @@
     "course": 0.4,
     "fee": 1.0,
     "ops": 0.57,
-    "facility": 0.3,
+    "facility": 0.4,
     "briefing": 0.0,
     "rental": 0.0
    }
@@ -110449,7 +110697,8 @@
     "has_detail": true,
     "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
     "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+    "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
    },
    "master": {
     "course_id": "kr-golf-0184",
@@ -110806,8 +111055,13 @@
     }
    },
    "cancel": {
-    "cancel_policy": null,
-    "open_cycle": null,
+    "cancel_policy": {
+     "value": "예약 취소는 주중 4일 전, 주말 7일 전까지 가능",
+     "source": "공식 홈페이지",
+     "url": "http://www.plazacc.co.kr/plzcc/irsweb/golf2/guideline/yongin/operationGuide_tab1.do",
+     "checked_at": "2026-11-27"
+    },
+    "open_cycle": "매월 일요일 기준 2·4번째 일요일은 1개월 전 동일 일자 오픈, 그 외 주말·공휴일은 해당일 3주 전 월요일, 3대 국경일은 1개월 전 오픈(예약접수 오전 10시)",
     "notes": null,
     "evidence": [],
     "weather_evidence": []
@@ -111129,7 +111383,8 @@
     "has_detail": true,
     "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
     "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+    "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
    },
    "master": {
     "course_id": "kr-golf-0185",
@@ -111265,8 +111520,15 @@
      "value": null
     },
     "two_player": {
-     "evidence": [],
-     "value": null
+     "evidence": [
+      "팀 구성: 팀별 이용요금은 4인 기준. 10월 그린피 공지: 2인플레이 시 추가요금(3인요금) 발생."
+     ],
+     "value": "팀별 이용요금은 4인 기준. 10월 그린피 공지: 2인플레이 시 추가요금(3인요금) 발생.",
+     "source_url": "https://wondergolf.co.kr/courses/kr-kakao-1812042126",
+     "source_type": "aggregator_wondergolf",
+     "confidence": "medium",
+     "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+     "checked_at": "2026-11-27"
     },
     "three_player": {
      "value": null,
@@ -111514,7 +111776,7 @@
     "basic": 0.89,
     "course": 0.6,
     "fee": 0.75,
-    "ops": 0.0,
+    "ops": 0.07,
     "facility": 0.1,
     "briefing": 0.0,
     "rental": 0.0
@@ -111535,7 +111797,8 @@
     "has_detail": true,
     "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
     "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+    "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
    },
    "master": {
     "course_id": "kr-golf-0186",
@@ -111671,7 +111934,7 @@
      "source": "그린피가이드(공식 안내 인용)",
      "url": "https://greenfeeguide.com/course/gc-0008/"
     },
-    "open_cycle": null,
+    "open_cycle": "주말·공휴일: 매 4주전 화요일 10:00(특별/정/우대), 준·가족회원 4주전 수요일, 사이버회원 3주전 화요일. 주중: 4주전 월요일 월~금 동시 오픈(준·가족 4주전 화요일, 사이버 3주전 월요일). 모바일·인터넷·전화 접수.",
     "notes": "최종 취소·위약 조건은 예약 채널 공지와 다를 수 있으니 예약 전 확인 필요",
     "evidence": [
      "“1일전 예약취소 예약정지 60일 2일전 예약취소 예약정지 50일 3일전 에약취소 예약정지 40일 4일전 예약취소 예약정지 30일 5일전 예약취소 예약정지 20일 6일전 예약취소 예약정지 10일 7일전 예약취소 없음”",
@@ -111685,16 +111948,37 @@
      "value": null
     },
     "two_player": {
-     "evidence": [],
-     "value": null
+     "evidence": [
+      "팀 구성: 3~4인 라운딩 필수(2인·5인 플레이 및 갤러리 입장 불가). 3인 플레이 시 비회원 1만원 추가."
+     ],
+     "value": "3~4인 라운딩 필수(2인·5인 플레이 및 갤러리 입장 불가). 3인 플레이 시 비회원 1만원 추가.",
+     "source_url": "https://wondergolf.co.kr/courses/kr-kakao-17110811",
+     "source_type": "aggregator_wondergolf",
+     "confidence": "medium",
+     "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+     "checked_at": "2026-11-27"
     },
     "three_player": {
-     "value": null,
-     "evidence": []
+     "value": "3~4인 라운딩 필수(2인·5인 플레이 및 갤러리 입장 불가). 3인 플레이 시 비회원 1만원 추가.",
+     "evidence": [
+      "팀 구성: 3~4인 라운딩 필수(2인·5인 플레이 및 갤러리 입장 불가). 3인 플레이 시 비회원 1만원 추가."
+     ],
+     "source_url": "https://wondergolf.co.kr/courses/kr-kakao-17110811",
+     "source_type": "aggregator_wondergolf",
+     "confidence": "medium",
+     "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+     "checked_at": "2026-11-27"
     },
     "five_player": {
-     "value": null,
-     "evidence": []
+     "value": "3~4인 라운딩 필수(2인·5인 플레이 및 갤러리 입장 불가). 3인 플레이 시 비회원 1만원 추가.",
+     "evidence": [
+      "팀 구성: 3~4인 라운딩 필수(2인·5인 플레이 및 갤러리 입장 불가). 3인 플레이 시 비회원 1만원 추가."
+     ],
+     "source_url": "https://wondergolf.co.kr/courses/kr-kakao-17110811",
+     "source_type": "aggregator_wondergolf",
+     "confidence": "medium",
+     "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+     "checked_at": "2026-11-27"
     },
     "marshal_caddie": {
      "value": null,
@@ -111728,8 +112012,15 @@
      "value": null
     },
     "locker": {
-     "evidence": [],
-     "value": null
+     "evidence": [
+      "시설안내 클럽하우스 로비&프론트 락커 스타트카페&스낵바 프로샵 대식당&연회실 그늘집"
+     ],
+     "value": "락커실 운영",
+     "source_url": "https://www.hanwoncc.co.kr/info/info.asp",
+     "source_type": "official_site",
+     "confidence": "medium",
+     "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+     "checked_at": "2026-11-27"
     },
     "sauna": {
      "evidence": [],
@@ -111961,7 +112252,7 @@
     "basic": 0.89,
     "course": 0.6,
     "fee": 1.0,
-    "ops": 0.14,
+    "ops": 0.43,
     "facility": 0.5,
     "briefing": 0.0,
     "rental": 0.75
@@ -112435,7 +112726,8 @@
     "has_detail": true,
     "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
     "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+    "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
    },
    "master": {
     "course_id": "kr-golf-0188",
@@ -112642,8 +112934,19 @@
     "weekend_text": null,
     "basis": null,
     "tax_included": null,
-    "cart": null,
-    "caddie": null,
+    "cart": {
+     "value": 100000,
+     "raw": "100,000원",
+     "source": "공개 예약 플랫폼",
+     "url": "https://www.premiumgolf.co.kr/product/view.html?idx=137"
+    },
+    "caddie": {
+     "value": 150000,
+     "raw": "150,000원",
+     "source": "공개 예약 플랫폼",
+     "url": "https://www.premiumgolf.co.kr/product/view.html?idx=137",
+     "none": false
+    },
     "as_of": null,
     "source_url": null,
     "note": null,
@@ -112662,8 +112965,13 @@
     "official_rental": null
    },
    "cancel": {
-    "cancel_policy": null,
-    "open_cycle": null,
+    "cancel_policy": {
+     "value": "주중 예약은 이용일 6일 전까지(수요일 예약은 전주 목요일까지), 주말 예약은 이용일 9일 전까지(토요일은 전주 목요일, 일요일은 전주 금요일까지) 취소. 이후 주중 5~4일 전 15일·3~2일 전 1개월·1일 전 3개월 예약불가, 주말 8~6일 전 15일·5~3일 전 1개월·2~1일 전 2개월 예약불가, 노쇼 3개월 예약불가",
+     "source": "공개 예약 플랫폼",
+     "url": "https://www.premiumgolf.co.kr/product/view.html?idx=137",
+     "checked_at": "2026-11-27"
+    },
+    "open_cycle": "주중 정회원 4주 전 같은 요일부터, 준회원·지정회원은 다음날부터. 주말은 4주 전 화요일부터 예약 가능",
     "notes": null,
     "evidence": [],
     "weather_evidence": []
@@ -112674,8 +112982,15 @@
      "value": null
     },
     "two_player": {
-     "evidence": [],
-     "value": null
+     "evidence": [
+      "▶ 2인플레이 주중/주말/공휴일 예약규정 11시이후 팀만가능 ※준회원, 지정회원은 토요일, 일요일, 주중공휴일에 2인 플레이 불가"
+     ],
+     "value": "2인 플레이 가능(11시 이후 팀만), 준회원·지정회원은 토·일·주중공휴일 2인 불가",
+     "source_url": "https://www.premiumgolf.co.kr/product/view.html?idx=137",
+     "source_type": "booking_platform",
+     "confidence": "medium",
+     "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+     "checked_at": "2026-11-27"
     },
     "three_player": {
      "value": null,
@@ -112690,8 +113005,15 @@
      "evidence": []
     },
     "cart_type": {
-     "evidence": [],
-     "value": null
+     "evidence": [
+      "카트 : 4Bag 1Cart (5인승 승용카트)"
+     ],
+     "value": "4Bag 1Cart(5인승 승용카트)",
+     "source_url": "https://www.premiumgolf.co.kr/product/view.html?idx=137",
+     "source_type": "booking_platform",
+     "confidence": "medium",
+     "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+     "checked_at": "2026-11-27"
     },
     "cart_entry": {
      "evidence": [],
@@ -112894,8 +113216,8 @@
    "coverage": {
     "basic": 0.78,
     "course": 0.4,
-    "fee": 0.0,
-    "ops": 0.0,
+    "fee": 0.5,
+    "ops": 0.14,
     "facility": 0.0,
     "briefing": 0.0,
     "rental": 0.0
@@ -113342,7 +113664,8 @@
     "has_detail": true,
     "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
     "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+    "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
    },
    "master": {
     "course_id": "kr-golf-0190",
@@ -113497,7 +113820,7 @@
      "source": "그린피가이드(공식 안내 인용)",
      "url": "https://greenfeeguide.com/course/gc-0084/"
     },
-    "open_cycle": null,
+    "open_cycle": "주중·주말 3주 전 화요일 9:00부터. 전화예약 불가. 개인은 더반 홈페이지 또는 카카오골프예약, 1일 1팀. 단체(3팀 이상)는 프런트 문의",
     "notes": "최종 취소·위약 조건은 예약 채널 공지와 다를 수 있으니 예약 전 확인 필요",
     "evidence": [
      "“이용자가 주말이나 공휴일인 이용예정일로부터 3일전까지, 평일인 이용예정일로부터 3일전까지 예약을 취소한 경우에 는 예약금의 전액을 환불 하여야 한다.”",
@@ -113832,7 +114155,8 @@
     "has_detail": true,
     "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
     "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+    "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
    },
    "master": {
     "course_id": "kr-golf-0191",
@@ -114319,7 +114643,7 @@
      "source": "공식 홈페이지",
      "url": "http://www.thecrosbygc.co.kr/Guide/ReservationInfo.aspx"
     },
-    "open_cycle": null,
+    "open_cycle": "3주 전 월요일 9시, 월요일~일요일 일괄 오픈. 홈페이지 무료회원가입 후 인터넷 실시간 예약 및 전화예약, 당일예약은 예약실 전화",
     "notes": "최종 취소·위약 조건은 예약 채널 공지와 다를 수 있으니 예약 전 확인 필요",
     "evidence": [
      "QUICK MENU 실시간예약 예약확인/취소 앱 다운로드 TOP 휴대폰번호 입력하고 SMS로 App설치 URL받기 안드로이드 아이폰 010 011 016 017 018 019 전송 닫기 현재 처리 중 입니다.잠시만 기다려주시기 바랍니다.",
@@ -114747,7 +115071,8 @@
     "has_detail": true,
     "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
     "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+    "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
    },
    "master": {
     "course_id": "kr-golf-0192",
@@ -115044,7 +115369,12 @@
     }
    },
    "cancel": {
-    "cancel_policy": null,
+    "cancel_policy": {
+     "value": "주말·공휴일 이용일 4일 전, 평일 이용일 3일 전까지 위약금 없이 취소. 이후 주말 3~2일 전·평일 2일 전 10%, 1일 전 20%, 당일 취소·무통보 미이용 30%",
+     "source": "공식 홈페이지",
+     "url": "https://www.midasgolf.co.kr/Terms/SiteUseRule",
+     "checked_at": "2026-11-27"
+    },
     "open_cycle": null,
     "notes": null,
     "evidence": [],
@@ -115104,8 +115434,15 @@
      "value": null
     },
     "checkin": {
-     "evidence": [],
-     "value": null
+     "evidence": [
+      "여유 있는 준비를 위해 예약 시간 30분 전에 입장해 주시기 바랍니다."
+     ],
+     "value": "예약 시간 30분 전 입장",
+     "source_url": "https://www.midasgolf.co.kr/IC/UseInfo",
+     "source_type": "official_site",
+     "confidence": "medium",
+     "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+     "checked_at": "2026-11-27"
     },
     "locker": {
      "evidence": [],
@@ -115154,8 +115491,15 @@
      "evidence": []
     },
     "food": {
-     "evidence": [],
-     "value": null
+     "evidence": [
+      "FACILITIES 클럽하우스 프로샵 대식당 그늘집"
+     ],
+     "value": "클럽하우스 대식당·그늘집 운영",
+     "source_url": "https://www.midasgolf.co.kr/",
+     "source_type": "official_site",
+     "confidence": "medium",
+     "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+     "checked_at": "2026-11-27"
     },
     "snack_bar": {
      "value": null,
@@ -115318,8 +115662,8 @@
     "basic": 0.89,
     "course": 0.6,
     "fee": 0.0,
-    "ops": 0.21,
-    "facility": 0.1,
+    "ops": 0.29,
+    "facility": 0.2,
     "briefing": 0.0,
     "rental": 0.0
    }
@@ -115339,7 +115683,8 @@
     "has_detail": true,
     "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
     "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+    "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
    },
    "master": {
     "course_id": "kr-golf-0193",
@@ -115829,7 +116174,7 @@
      "source": "그린피가이드(공식 안내 인용)",
      "url": "https://greenfeeguide.com/course/gc-0086/"
     },
-    "open_cycle": null,
+    "open_cycle": "주중은 4주 전 해당요일 14:00부터, 주말·공휴일은 4주 전 월요일 09:00부터 전화·팩스 예약",
     "notes": "최종 취소·위약 조건은 예약 채널 공지와 다를 수 있으니 예약 전 확인 필요",
     "evidence": [
      "“본 예약은 해당일 기준 주중의 경우 3일, 주말(공휴일)의 경우 4일 전까지 취소하셔야 별도 위약금(2인 정상 그린피)이 부과되지 않습니다.”",
@@ -116772,7 +117117,8 @@
     "has_detail": true,
     "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
     "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+    "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
    },
    "master": {
     "course_id": "kr-golf-0195",
@@ -116904,7 +117250,7 @@
    },
    "cancel": {
     "cancel_policy": null,
-    "open_cycle": null,
+    "open_cycle": "회원제 실시간 인터넷 예약: 주중 한달 전 같은 날짜 오전 9시 오픈(회원·사이버회원). 주말 사이버회원은 토요일 기준 2주 전 수요일 오전 9시 오픈, 회원은 2주 전 화요일(09:00~15:00) 인터넷 접수",
     "notes": null,
     "evidence": [],
     "weather_evidence": []
@@ -117013,8 +117359,15 @@
      "evidence": []
     },
     "food": {
-     "evidence": [],
-     "value": null
+     "evidence": [
+      "시설안내 클럽하우스 로비프론트 레스토랑 연회장 락커사우나 프로샵"
+     ],
+     "value": "클럽하우스 레스토랑·연회장 운영",
+     "source_url": "https://www.bavista.co.kr/Public/Main",
+     "source_type": "official_site",
+     "confidence": "medium",
+     "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+     "checked_at": "2026-11-27"
     },
     "snack_bar": {
      "value": null,
@@ -117185,7 +117538,7 @@
     "course": 0.2,
     "fee": 1.0,
     "ops": 0.36,
-    "facility": 0.2,
+    "facility": 0.3,
     "briefing": 0.0,
     "rental": 0.0
    }
@@ -117205,7 +117558,8 @@
     "has_detail": true,
     "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
     "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+    "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
    },
    "master": {
     "course_id": "kr-golf-0196",
@@ -117498,7 +117852,12 @@
     "official_rental": null
    },
    "cancel": {
-    "cancel_policy": null,
+    "cancel_policy": {
+     "value": "평일 취소: 예약일 미포함 4일 전 17시까지 (17시 이후 취소는 1일 전 취소로 간주) / 주말 취소: 예약일 미포함 7일 전 17시까지 (주말·공휴일, 17시 이후는 1일 전 간주) / 위약: 예약정지(위약구제금=4인 그린피%): 주중 3일전 1개월, 2일전 2개월(10%), 1일전 3개월(20%); 주말 4~6일전 1개월, 2~3일전 3개월(10%), 1일전 6개월(20%); 당일·노쇼 영구정지(30%)",
+     "source": "칠까말까(공식 홈페이지 정리)",
+     "url": "https://chilkka.kr/c/southsprings/",
+     "checked_at": "2026-11-27"
+    },
     "open_cycle": null,
     "notes": null,
     "evidence": [],
@@ -117759,7 +118118,8 @@
     "has_detail": true,
     "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
     "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+    "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
    },
    "master": {
     "course_id": "kr-golf-0197",
@@ -117892,7 +118252,7 @@
    },
    "cancel": {
     "cancel_policy": null,
-    "open_cycle": null,
+    "open_cycle": "정회원 주중: 4주 전 해당 요일 9시 실시간 예약. 정회원 주말·공휴일: 4주 전 화요일 9~17시 온라인 배정 신청, 수요일 15시 확정. 온라인회원: 3주 전 해당 요일 9시 실시간 예약",
     "notes": null,
     "evidence": [],
     "weather_evidence": []
@@ -117913,8 +118273,15 @@
      }
     },
     "three_player": {
-     "value": null,
-     "evidence": []
+     "value": "주중/주말 4인 플레이 원칙(3인 플레이 가능). 예약 이용일 1일 1팀",
+     "evidence": [
+      "팀 구성: 주중/주말 4인 플레이 원칙(3인 플레이 가능). 예약 이용일 1일 1팀"
+     ],
+     "source_url": "https://wondergolf.co.kr/courses/kr-kakao-2038715571",
+     "source_type": "aggregator_wondergolf",
+     "confidence": "medium",
+     "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+     "checked_at": "2026-11-27"
     },
     "five_player": {
      "value": null,
@@ -118151,7 +118518,7 @@
     "basic": 0.89,
     "course": 0.2,
     "fee": 1.0,
-    "ops": 0.14,
+    "ops": 0.21,
     "facility": 0.0,
     "briefing": 0.0,
     "rental": 0.75
@@ -119053,7 +119420,8 @@
     "has_detail": true,
     "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
     "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+    "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
    },
    "master": {
     "course_id": "kr-golf-0199",
@@ -119692,9 +120060,15 @@
     },
     "food": {
      "evidence": [
-      "♡ 레스토랑 식사메뉴 안내 공지사항 ★ 셀프라운드시 주의사항 안내 ★ 2026-03-01 일자별 그린피 안내 2026-03-01 2026년 회원등급제 운영안내 2026-02-22 제10회 클럽챔피언쉽 파이널..."
+      "♡ 레스토랑 식사메뉴 안내 공지사항 ★ 셀프라운드시 주의사항 안내 ★ 2026-03-01 일자별 그린피 안내 2026-03-01 2026년 회원등급제 운영안내 2026-02-22 제10회 클럽챔피언쉽 파이널...",
+      "이용안내 이용요금 위약안내 위약예치금 레스토랑 메뉴안내 인터넷예약 실시간예약"
      ],
-     "value": null
+     "value": "레스토랑 운영(메뉴안내 게시)",
+     "source_url": "https://www.silkvalleygc.co.kr/index.asp",
+     "source_type": "official_site",
+     "confidence": "medium",
+     "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+     "checked_at": "2026-11-27"
     },
     "snack_bar": {
      "value": null,
@@ -119936,7 +120310,7 @@
     "course": 0.4,
     "fee": 0.0,
     "ops": 0.14,
-    "facility": 0.1,
+    "facility": 0.2,
     "briefing": 0.0,
     "rental": 0.0
    }
@@ -120565,7 +120939,8 @@
     "has_detail": true,
     "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
     "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+    "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
    },
    "master": {
     "course_id": "kr-golf-0201",
@@ -120812,7 +121187,7 @@
      "source": "공식 홈페이지",
      "url": "https://www.bestvalleygc.com/Info/ReservationInfo"
     },
-    "open_cycle": null,
+    "open_cycle": "인터넷 홈페이지·모바일 앱·전화(09:00~17:30). 3주 전 예약 가능(자정 0시 오픈)",
     "notes": null,
     "evidence": [],
     "weather_evidence": []
@@ -121157,7 +121532,8 @@
     "has_detail": true,
     "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
     "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+    "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
    },
    "master": {
     "course_id": "kr-golf-0202",
@@ -121285,13 +121661,24 @@
     "night_light": "야간 라운드 운영(공식 홈페이지 안내)",
     "blocks": [],
     "grass": {
-     "tee": null,
-     "fairway": {
-      "evidence": "화단, 배수로, 카트도로, 맨홀 등 인공물 또는 수목 보호를 위하여 수목하단부 잔디채취지에 떨어진 볼은 1클럽 길이 이내에서 드롭하여야 한다.",
-      "source": "공식",
-      "url": "http://www.seoseoul.co.kr/html/course/course_04.asp"
+     "tee": {
+      "value": "켄터키블루그라스(Kentucky Blue Grass)",
+      "evidence": "잔디종류 그린 : 벤트그라스(Bent Grass) 티 : 켄터키블루그라스(Kentucky Blue Grass) 페어웨이 : 한국잔디(Zoysia Japonica)",
+      "source": "공식 홈페이지",
+      "url": "https://www.seoseoul.co.kr/html/introduce/introduce_01.asp"
      },
-     "green": null
+     "fairway": {
+      "evidence": "잔디종류 그린 : 벤트그라스(Bent Grass) 티 : 켄터키블루그라스(Kentucky Blue Grass) 페어웨이 : 한국잔디(Zoysia Japonica)",
+      "source": "공식 홈페이지",
+      "url": "https://www.seoseoul.co.kr/html/introduce/introduce_01.asp",
+      "value": "한국잔디(Zoysia Japonica)"
+     },
+     "green": {
+      "value": "벤트그라스(Bent Grass)",
+      "evidence": "잔디종류 그린 : 벤트그라스(Bent Grass) 티 : 켄터키블루그라스(Kentucky Blue Grass)",
+      "source": "공식 홈페이지",
+      "url": "https://www.seoseoul.co.kr/html/introduce/introduce_01.asp"
+     }
     },
     "kga": {
      "kga_course_code": "118",
@@ -121573,7 +121960,7 @@
      "source": "공식 홈페이지",
      "url": "https://www.seoseoul.co.kr/html/guide/guide_01.asp"
     },
-    "open_cycle": null,
+    "open_cycle": "정회원 6주 전 해당요일 9시, 주중회원 5주 전 해당요일 9시 실시간 예약(주중). 주말·공휴일은 6주 전 월요일 9시~화요일 17시 온라인 배정 신청, 수요일 15시 확정. 온라인회원은 4주 전 해당요일 9시 실시간 예약",
     "notes": "최종 취소·위약 조건은 예약 채널 공지와 다를 수 있으니 예약 전 확인 필요",
     "evidence": [
      "주중, 주말 7일전 무위약 취소 가능하며 이후 취소는 위약제재 기준에 준함",
@@ -121597,8 +121984,15 @@
      }
     },
     "three_player": {
-     "value": null,
-     "evidence": []
+     "value": "주중/주말 4인 플레이 원칙(3인 플레이 가능). 예약 이용일 1일 1팀",
+     "evidence": [
+      "팀 구성: 주중/주말 4인 플레이 원칙(3인 플레이 가능). 예약 이용일 1일 1팀"
+     ],
+     "source_url": "https://wondergolf.co.kr/courses/kr-kakao-8366517",
+     "source_type": "aggregator_wondergolf",
+     "confidence": "medium",
+     "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+     "checked_at": "2026-11-27"
     },
     "five_player": {
      "value": null,
@@ -121653,8 +122047,15 @@
      }
     },
     "locker": {
-     "evidence": [],
-     "value": null
+     "evidence": [
+      "부대시설 락커룸, 레스토랑, 연회룸, 프로샵, 퍼팅 연습그린"
+     ],
+     "value": "락커룸 운영",
+     "source_url": "https://www.seoseoul.co.kr/html/introduce/introduce_01.asp",
+     "source_type": "official_site",
+     "confidence": "medium",
+     "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+     "checked_at": "2026-11-27"
     },
     "sauna": {
      "evidence": [],
@@ -121696,8 +122097,15 @@
      "evidence": []
     },
     "food": {
-     "evidence": [],
-     "value": null
+     "evidence": [
+      "부대시설 락커룸, 레스토랑, 연회룸, 프로샵, 퍼팅 연습그린"
+     ],
+     "value": "레스토랑·연회룸 운영",
+     "source_url": "https://www.seoseoul.co.kr/html/introduce/introduce_01.asp",
+     "source_type": "official_site",
+     "confidence": "medium",
+     "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+     "checked_at": "2026-11-27"
     },
     "snack_bar": {
      "value": null,
@@ -122011,8 +122419,8 @@
     "basic": 0.89,
     "course": 0.4,
     "fee": 1.0,
-    "ops": 0.21,
-    "facility": 0.4,
+    "ops": 0.36,
+    "facility": 0.5,
     "briefing": 0.0,
     "rental": 0.75
    }
@@ -122032,7 +122440,8 @@
     "has_detail": true,
     "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
     "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+    "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
    },
    "master": {
     "course_id": "kr-golf-0203",
@@ -122242,9 +122651,10 @@
     "grass": {
      "tee": "Kentucky bluegrass",
      "fairway": {
-      "evidence": "서원밸리 닫기 로고 파주시 광탄면 reservation - 예약현황 건 - 대기예약 건 - 베스트 스코어 타 정보수정 닫기 About Seowon 스토리 토너먼트 ESG 서원에세이 클럽하우스 오시는길 Course 코스소개 서원코스 밸리코스 Reservation 실시간예약 이용안내 이용요금 Our Special 서원 인레인지(연습장) 서원 아트리움(웨딩,모임) 서원정/서원더뷰 Membership 공지사항 이벤트 Q&A 자료실 My Page 예약현황 쿠폰함 나의 활동 고객의 소리 회원정보수정 LOGIN 아이디 저장하기 로그인 유지 로그",
-      "source": "공식",
-      "url": "https://www.seowongolf.co.kr/valley/main"
+      "evidence": "잔디: 페어웨이 Zoysia grass(한국잔디) · 그린 Peen-A4 + Shark · 티 Kentucky bluegrass · 러프 Zoysia grass",
+      "source": "그린피가이드(공식 요금표·코스소개)",
+      "url": "https://greenfeeguide.com/course/gc-0057/",
+      "value": "Zoysia grass(한국잔디)"
      },
      "green": "Peen-A4 + Shark"
     },
@@ -122414,7 +122824,12 @@
     "official_rental": null
    },
    "cancel": {
-    "cancel_policy": null,
+    "cancel_policy": {
+     "value": "평일 취소: 해당요일 제외 5일 전 17시까지 / 주말 취소: 해당요일 제외 7일 전 17시까지(주말·공휴일) / 위약: 위약금 주중 4~2일전 10만·1일전 30만·당일취소/미내장 40만원, 주말 6~5일전 10만·4~2일전 30만·1일전~당일 50만원 + 예약정지(4~6일전 2주, 2·3일전 3주, 1일전·당일 1개월)",
+     "source": "칠까말까(공식 홈페이지 정리)",
+     "url": "https://chilkka.kr/c/seowonvalley/",
+     "checked_at": "2026-11-27"
+    },
     "open_cycle": null,
     "notes": null,
     "evidence": [],
@@ -122742,7 +123157,8 @@
     "has_detail": true,
     "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
     "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+    "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
    },
    "master": {
     "course_id": "kr-golf-0204",
@@ -123014,16 +123430,17 @@
     "holes_received": 27,
     "course_names": "남·동·서 각 9홀",
     "membership_type": "대중제",
-    "night_light": null,
+    "night_light": true,
     "blocks": [
      "EASTWESTSOUTH"
     ],
     "grass": {
      "tee": null,
      "fairway": {
-      "evidence": "서원밸리 닫기 로고 파주시 광탄면 reservation - 예약현황 건 - 대기예약 건 - 베스트 스코어 타 정보수정 닫기 About Seowon 스토리 토너먼트 ESG 서원에세이 클럽하우스 오시는길 Course 코스소개 서원코스 밸리코스 Reservation 실시간예약 이용안내 이용요금 Our Special 서원 인레인지(연습장) 서원 아트리움(웨딩,모임) 서원정/서원더뷰 Membership 공지사항 이벤트 Q&A 자료실 My Page 예약현황 쿠폰함 나의 활동 고객의 소리 회원정보수정 LOGIN 아이디 저장하기 로그인 유지 로그",
-      "source": "공식",
-      "url": "https://www.seowongolf.co.kr/valley/main"
+      "evidence": "이스트는 한국잔디, 웨스트는 양잔디로 조성되어 있었고, 최근에는 페어웨이를 중지로 전면 교체했으며",
+      "source": "티픽골프장(공개 정보)",
+      "url": "https://teepickgolf.com/course/서원힐스",
+      "value": "중지(한국잔디)"
      },
      "green": null
     },
@@ -123536,7 +123953,8 @@
     "has_detail": true,
     "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
     "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+    "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
    },
    "master": {
     "course_id": "kr-golf-0205",
@@ -123772,7 +124190,7 @@
    },
    "cancel": {
     "cancel_policy": null,
-    "open_cycle": null,
+    "open_cycle": "해당일 3주 전 10시 예약 오픈. 전화예약 가능 시간 10시~18시",
     "notes": null,
     "evidence": [],
     "weather_evidence": []
@@ -124887,7 +125305,8 @@
     "has_detail": true,
     "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
     "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+    "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
    },
    "master": {
     "course_id": "kr-golf-0208",
@@ -125034,7 +125453,7 @@
      "source": "공식 홈페이지",
      "url": "https://www.onetheclub.com/reservation/golfPartner"
     },
-    "open_cycle": null,
+    "open_cycle": "예약일 기준 4주전 월요일 오전 9시부터 선착순 예약(원더클럽 통합회원)",
     "notes": null,
     "evidence": [
      "예 아니오 확인 Close 예약안내 확인 Close 예약안내 확인 Close 예약안내 확인 Close 알펜시아CC 예약안내 확인 Close 위약기간으로 예약취소 시 위약금이 발생합니다.",
@@ -125118,8 +125537,15 @@
      "value": null
     },
     "mat": {
-     "evidence": [],
-     "value": null
+     "evidence": [
+      "티박스가 매트라는 점, 홀 사이 나무로 OB가 잦다는 점이 아쉬운 부분으로 꼽혀요."
+     ],
+     "value": "티박스 매트 운영(이용 후기 기준)",
+     "source_url": "https://teepickgolf.com/course/파주cc",
+     "source_type": "teepick_review",
+     "confidence": "low",
+     "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+     "checked_at": "2026-11-27"
     },
     "checkin": {
      "evidence": [],
@@ -125130,8 +125556,15 @@
      "value": null
     },
     "sauna": {
-     "evidence": [],
-     "value": null
+     "evidence": [
+      "2021년에는 진입로 조경과 포토존 광장, 사우나 개선 같은 손질로 '명품 퍼블릭'이라는 소개를 받았습니다."
+     ],
+     "value": "사우나 있음",
+     "source_url": "https://teepickgolf.com/course/파주cc",
+     "source_type": "teepick",
+     "confidence": "low",
+     "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+     "checked_at": "2026-11-27"
     },
     "dress": {
      "evidence": [],
@@ -125379,7 +125812,7 @@
     "basic": 0.78,
     "course": 0.2,
     "fee": 0.25,
-    "ops": 0.29,
+    "ops": 0.43,
     "facility": 0.3,
     "briefing": 0.0,
     "rental": 0.0
@@ -126870,7 +127303,8 @@
     "has_detail": true,
     "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
     "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+    "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
    },
    "master": {
     "course_id": "kr-golf-0211",
@@ -127291,7 +127725,7 @@
    },
    "cancel": {
     "cancel_policy": null,
-    "open_cycle": null,
+    "open_cycle": "포천: 매주 화요일 오전 10시에 3주 후 일주일(월~일)분 예약 오픈. 회원 가입 후 예치금 납입(유료회원) 시 예약 가능",
     "notes": null,
     "evidence": [],
     "weather_evidence": []
@@ -127302,12 +127736,26 @@
      "value": null
     },
     "two_player": {
-     "evidence": [],
-     "value": null
+     "evidence": [
+      "팀 구성: 1팀 기준인원 4~3인, 2인 라운드 시 3인 그린피 적용(비수기 예외). 1일 1팀까지 예약"
+     ],
+     "value": "1팀 기준인원 4~3인, 2인 라운드 시 3인 그린피 적용(비수기 예외). 1일 1팀까지 예약",
+     "source_url": "https://wondergolf.co.kr/courses/kr-kakao-10380824",
+     "source_type": "aggregator_wondergolf",
+     "confidence": "medium",
+     "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+     "checked_at": "2026-11-27"
     },
     "three_player": {
-     "value": null,
-     "evidence": []
+     "value": "1팀 기준인원 4~3인, 2인 라운드 시 3인 그린피 적용(비수기 예외). 1일 1팀까지 예약",
+     "evidence": [
+      "팀 구성: 1팀 기준인원 4~3인, 2인 라운드 시 3인 그린피 적용(비수기 예외). 1일 1팀까지 예약"
+     ],
+     "source_url": "https://wondergolf.co.kr/courses/kr-kakao-10380824",
+     "source_type": "aggregator_wondergolf",
+     "confidence": "medium",
+     "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+     "checked_at": "2026-11-27"
     },
     "five_player": {
      "value": null,
@@ -127523,7 +127971,7 @@
     "basic": 0.78,
     "course": 0.4,
     "fee": 0.0,
-    "ops": 0.0,
+    "ops": 0.14,
     "facility": 0.0,
     "briefing": 0.0,
     "rental": 0.0
@@ -128101,7 +128549,8 @@
     "has_detail": true,
     "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
     "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+    "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
    },
    "master": {
     "course_id": "kr-golf-0213",
@@ -128330,7 +128779,12 @@
     "market": {}
    },
    "cancel": {
-    "cancel_policy": null,
+    "cancel_policy": {
+     "value": "취소 기한: 라운드 7일 전까지 (인터넷·전화) / 위약: 평일 5~6일전 21일·3~4일전 30일 예약불가, 2일전 30일+10만, 1일전 60일+20만, 당일 90일+30만원. 주말 6일전 21일·4~5일전 30일, 2~3일전 +12만, 1일전 +24만, 당일 +36만원",
+     "source": "칠까말까(공식 홈페이지 정리)",
+     "url": "https://chilkka.kr/c/ildonglake/",
+     "checked_at": "2026-11-27"
+    },
     "open_cycle": null,
     "notes": null,
     "evidence": [],
@@ -129310,7 +129764,8 @@
     "has_detail": true,
     "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
     "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+    "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
    },
    "master": {
     "course_id": "kr-golf-0216",
@@ -129652,7 +130107,7 @@
      "source": "공식 홈페이지",
      "url": "https://www.foresthill.kr/html/guide03_5.asp"
     },
-    "open_cycle": null,
+    "open_cycle": "매주 화요일 17:30에 4주 후 해당 주(월~일) 예약분을 실시간 오픈(포레스트 6홀 코스 기준)",
     "notes": null,
     "evidence": [
      "② 이용자가 개인 사정의 변경이나 단순 변심 등 정당한 사유없이 예약을 취소하는 경우에는 취소일을 기준으로 다음과 같이 손해를 배상한다.",
@@ -130164,7 +130619,8 @@
     "has_detail": true,
     "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
     "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+    "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
    },
    "master": {
     "course_id": "kr-golf-0217",
@@ -130607,8 +131063,13 @@
     "official_rental": null
    },
    "cancel": {
-    "cancel_policy": null,
-    "open_cycle": null,
+    "cancel_policy": {
+     "value": "개인팀 예약 취소는 라운드 4일 전 오후 5시까지 가능",
+     "source": "공식 홈페이지",
+     "url": "https://www.adoniscc.co.kr/intro/notice",
+     "checked_at": "2026-11-27"
+    },
+    "open_cycle": "라운드일 3주 전 같은 요일 오전 9시부터 예약 시작(정회원 우선, 17일 전 2차 접수)",
     "notes": null,
     "evidence": [],
     "weather_evidence": []
@@ -130637,8 +131098,15 @@
      "evidence": []
     },
     "marshal_caddie": {
-     "value": null,
-     "evidence": []
+     "value": "경기운영팀이 경기 진행과 캐디 교육·관리 담당",
+     "evidence": [
+      "경기운영팀 경기 진행 플레이 중인 고객에 대한 서비스를 담당합니다. 전체 고객의 경기 진행을 원활하게 하여 고객 불편을 최소화하고, 캐디들을 교육·관리하여"
+     ],
+     "source_url": "https://www.adoniscc.co.kr/intro/recruitment",
+     "source_type": "official_site",
+     "confidence": "medium",
+     "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+     "checked_at": "2026-11-27"
     },
     "cart_type": {
      "evidence": [
@@ -130689,8 +131157,15 @@
      "value": null
     },
     "dress": {
-     "evidence": [],
-     "value": null
+     "evidence": [
+      "복장 불량(반바지 라운드 불가) 내장 및 라운드 불가 주말 및 주중"
+     ],
+     "value": "복장 불량(반바지) 시 라운드 불가",
+     "source_url": "https://www.adoniscc.co.kr/intro/notice",
+     "source_type": "official_site",
+     "confidence": "medium",
+     "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+     "checked_at": "2026-11-27"
     },
     "pace": {
      "evidence": [],
@@ -130894,7 +131369,7 @@
     "basic": 0.78,
     "course": 0.4,
     "fee": 1.0,
-    "ops": 0.14,
+    "ops": 0.29,
     "facility": 0.2,
     "briefing": 0.0,
     "rental": 0.75
@@ -130915,7 +131390,8 @@
     "has_detail": true,
     "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
     "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+    "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
    },
    "master": {
     "course_id": "kr-golf-0218",
@@ -130998,7 +131474,7 @@
     "holes_received": null,
     "course_names": null,
     "membership_type": "대중제",
-    "night_light": null,
+    "night_light": false,
     "blocks": [],
     "grass": {
      "tee": null,
@@ -131097,7 +131573,7 @@
      "source": "공식 홈페이지",
      "url": "https://www.adoniscc.co.kr/public/booking/guide"
     },
-    "open_cycle": null,
+    "open_cycle": "라운드일 3주 전 같은 요일 00시부터 예약 가능(2인·9홀 예약은 2주 전 동일 요일 00시부터)",
     "notes": null,
     "evidence": [
      "예약 날짜 및 취소, 시간 변경은 3일 전까지 가능하며 인원 변경은 1일 전까지 가능합니다.",
@@ -131116,9 +131592,15 @@
     },
     "two_player": {
      "evidence": [
-      "(단, 온라인상으로 사전에 예약 조인이 안 될 경우 라운딩 당일날 전화 예약으로 오신 고객님 및 선착순(walk-in) 고객님들과 조인되므로 예약시간이 재조정될 수 있습니다.) 3인, 4인 18홀 예약은 3주 전 동일한 요일 자정 00시부터 하루 전 24:00분까지 실시간으로 예약 가능합니다.ex) 7월 01일 월요일에 예약할 경우 3주 전 6월 10일 월요일 00시부터 예약 가능."
+      "(단, 온라인상으로 사전에 예약 조인이 안 될 경우 라운딩 당일날 전화 예약으로 오신 고객님 및 선착순(walk-in) 고객님들과 조인되므로 예약시간이 재조정될 수 있습니다.) 3인, 4인 18홀 예약은 3주 전 동일한 요일 자정 00시부터 하루 전 24:00분까지 실시간으로 예약 가능합니다.ex) 7월 01일 월요일에 예약할 경우 3주 전 6월 10일 월요일 00시부터 예약 가능.",
+      "평일, 주말 및 공휴일 국경일 예약은 2인~4인 모두 가능하며 1인 예약은 하루 전부터 전화 예약으로만 가능합니다."
      ],
-     "value": null
+     "value": "2인 가능(평일·주말·공휴일 2~4인 예약, 1인은 하루 전 전화 예약만)",
+     "source_url": "https://www.adoniscc.co.kr/public/booking/guide",
+     "source_type": "official_site",
+     "confidence": "medium",
+     "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+     "checked_at": "2026-11-27"
     },
     "three_player": {
      "value": null,
@@ -131491,7 +131973,7 @@
     "basic": 0.78,
     "course": 0.2,
     "fee": 0.25,
-    "ops": 0.14,
+    "ops": 0.21,
     "facility": 0.2,
     "briefing": 0.0,
     "rental": 0.75
@@ -132256,7 +132738,8 @@
     "has_detail": true,
     "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
     "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+    "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
    },
    "master": {
     "course_id": "kr-golf-0220",
@@ -132673,8 +133156,13 @@
     "official_rental": null
    },
    "cancel": {
-    "cancel_policy": null,
-    "open_cycle": null,
+    "cancel_policy": {
+     "value": "경기일 제외 주중 5일 전·주말 7일 전까지(예약실 18시, 인터넷 24시) 취소해야 위약 없음. 이후 주중 4일 전 1개월·3일 전 2개월·2일 전 3개월(또는 10%)·1일 전 4개월(20%)·당일 1년(30%) 정지, 주말 5~6일 전 3개월·4일 전 4개월·3~2일 전 5개월(10%)·1일 전 6개월(20%)·당일 1년(30%). 월 3회·연 10회 취소 시 3개월 정지",
+     "source": "공식 홈페이지",
+     "url": "https://www.purunsol.co.kr/Guide/PenaltyInfo.aspx",
+     "checked_at": "2026-11-27"
+    },
+    "open_cycle": "3주 전 화요일 09:00부터 인터넷·모바일 및 전화 실시간 예약",
     "notes": null,
     "evidence": [],
     "weather_evidence": []
@@ -133029,7 +133517,8 @@
     "has_detail": true,
     "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
     "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+    "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
    },
    "master": {
     "course_id": "kr-golf-0221",
@@ -133270,7 +133759,7 @@
      "source": "공식 홈페이지",
      "url": "https://www.philosgc.com/Reservation/Reservation.aspx"
     },
-    "open_cycle": null,
+    "open_cycle": "주중은 라운드일 4주 전, 주말·공휴일은 3주 전 목요일 오전 9시 온라인 오픈",
     "notes": "최종 취소·위약 조건은 예약 채널 공지와 다를 수 있으니 예약 전 확인 필요",
     "evidence": [
      "“예약취소는 주중,주말 6일전 17:00 이전까지 취소하셔야 패널티가 적용되지 않습니다.”",
@@ -133285,8 +133774,15 @@
    },
    "ops": {
     "nocaddie": {
-     "evidence": [],
-     "value": null
+     "evidence": [
+      "노캐디 가능 6건 야간 라운드 9건"
+     ],
+     "value": "노캐디 가능",
+     "source_url": "https://teepickgolf.com/course/필로스cc",
+     "source_type": "teepick",
+     "confidence": "low",
+     "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+     "checked_at": "2026-11-27"
     },
     "two_player": {
      "evidence": [],
@@ -133299,8 +133795,15 @@
      }
     },
     "three_player": {
-     "value": null,
-     "evidence": []
+     "value": "3인 가능(1인당 3만원 추가)",
+     "evidence": [
+      "인원수는 3, 4인 플레이 가능 합니다. Q2 : 3인 라운드 진행 시 요금 적용은 어떻게 되나요? A : 주중,주말 상관없이 가능하며 예약 그린피에서 1인당 3만원씩 추가됩니다."
+     ],
+     "source_url": "https://www.philosgc.com/Board/Faq.aspx",
+     "source_type": "official_site",
+     "confidence": "medium",
+     "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+     "checked_at": "2026-11-27"
     },
     "five_player": {
      "value": null,
@@ -133605,7 +134108,7 @@
     "basic": 0.89,
     "course": 0.6,
     "fee": 1.0,
-    "ops": 0.36,
+    "ops": 0.5,
     "facility": 0.4,
     "briefing": 0.0,
     "rental": 0.75
@@ -133626,7 +134129,8 @@
     "has_detail": true,
     "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
     "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+    "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
    },
    "master": {
     "course_id": "kr-golf-0222",
@@ -134093,7 +134597,7 @@
    },
    "cancel": {
     "cancel_policy": null,
-    "open_cycle": null,
+    "open_cycle": "3주 전 월요일 9시 선착순 온라인 예약, 주간단위(월~일) 오픈",
     "notes": null,
     "evidence": [],
     "weather_evidence": []
@@ -134104,12 +134608,26 @@
      "value": null
     },
     "two_player": {
-     "evidence": [],
-     "value": null
+     "evidence": [
+      "팀 구성: 팀당 3~4인 플레이 가능, 3인 내장 시 3인 그린피 적용(2인 플레이는 진행 어려움)"
+     ],
+     "value": "팀당 3~4인 플레이 가능, 3인 내장 시 3인 그린피 적용(2인 플레이는 진행 어려움)",
+     "source_url": "https://wondergolf.co.kr/courses/kr-kakao-1641460654",
+     "source_type": "aggregator_wondergolf",
+     "confidence": "medium",
+     "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+     "checked_at": "2026-11-27"
     },
     "three_player": {
-     "value": null,
-     "evidence": []
+     "value": "팀당 3~4인 플레이 가능, 3인 내장 시 3인 그린피 적용(2인 플레이는 진행 어려움)",
+     "evidence": [
+      "팀 구성: 팀당 3~4인 플레이 가능, 3인 내장 시 3인 그린피 적용(2인 플레이는 진행 어려움)"
+     ],
+     "source_url": "https://wondergolf.co.kr/courses/kr-kakao-1641460654",
+     "source_type": "aggregator_wondergolf",
+     "confidence": "medium",
+     "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+     "checked_at": "2026-11-27"
     },
     "five_player": {
      "value": null,
@@ -134431,7 +134949,7 @@
     "basic": 0.89,
     "course": 0.4,
     "fee": 0.25,
-    "ops": 0.14,
+    "ops": 0.29,
     "facility": 0.2,
     "briefing": 0.0,
     "rental": 0.0
@@ -135038,7 +135556,8 @@
     "has_detail": true,
     "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
     "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+    "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
    },
    "master": {
     "course_id": "kr-golf-0224",
@@ -135165,7 +135684,7 @@
    },
    "cancel": {
     "cancel_policy": null,
-    "open_cycle": null,
+    "open_cycle": "주말 및 공휴일(회원의날·월 1회 예약팀): 8주 전 월요일 오전 9시 오픈. 평일: 매월 1일·16일에 익월 보름치씩 오전 9시 오픈(5일·20일 2차 재예약).",
     "notes": null,
     "evidence": [],
     "weather_evidence": []
@@ -135486,7 +136005,8 @@
     "has_detail": true,
     "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
     "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+    "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
    },
    "master": {
     "course_id": "kr-golf-0225",
@@ -135559,8 +136079,18 @@
     "blocks": [],
     "grass": {
      "tee": null,
-     "fairway": null,
-     "green": null
+     "fairway": {
+      "value": "야지",
+      "evidence": "완벽한 코스 조성을 위해 정성을 다해 가꾸어진 잔디(야지)와 그린(펜타그리스)은 최상의 상태를 유지하기에 충분합니다",
+      "source": "공식 홈페이지",
+      "url": "https://www.laviedor.com/la_cc1.asp"
+     },
+     "green": {
+      "value": "펜타그리스",
+      "evidence": "완벽한 코스 조성을 위해 정성을 다해 가꾸어진 잔디(야지)와 그린(펜타그리스)은 최상의 상태를 유지하기에 충분합니다",
+      "source": "공식 홈페이지",
+      "url": "https://www.laviedor.com/la_cc1.asp"
+     }
     },
     "kga": null,
     "kga_hole_est": null,
@@ -135615,8 +136145,15 @@
      "value": null
     },
     "three_player": {
-     "value": null,
-     "evidence": []
+     "value": "4인 플레이 원칙, 조인 거부 불가. 조인예약은 2명 예약. 3인 예약 시 1인 조인 가능, 1인은 당일 전화예약 가능(2026년 9·10월 요금안내).",
+     "evidence": [
+      "팀 구성: 4인 플레이 원칙, 조인 거부 불가. 조인예약은 2명 예약. 3인 예약 시 1인 조인 가능, 1인은 당일 전화예약 가능(2026년 9·10월 요금안내)."
+     ],
+     "source_url": "https://wondergolf.co.kr/courses/kr-kakao-9778512",
+     "source_type": "aggregator_wondergolf",
+     "confidence": "medium",
+     "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+     "checked_at": "2026-11-27"
     },
     "five_player": {
      "value": null,
@@ -135676,8 +136213,15 @@
    },
    "facilities": {
     "practice": {
-     "evidence": [],
-     "value": null
+     "evidence": [
+      "약 10만 평 부지에 40타석 연습장과 클럽하우스, 객실 241실 규모의 숙박시설을 함께 갖춘 복합 휴양지입니다."
+     ],
+     "value": "40타석 연습장",
+     "source_url": "https://teepickgolf.com/course/라비돌cc",
+     "source_type": "teepick",
+     "confidence": "low",
+     "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+     "checked_at": "2026-11-27"
     },
     "indoor_range": {
      "value": null,
@@ -135741,9 +136285,15 @@
     "shuttle": {
      "evidence": [
       "수원역 수원역 6-3번 (화성시 소망교통 마을버스) ·",
-      "배차간격 45분 위치 : 수원역 AK플라자 앞 (03-022) 노선 : 수원역 AK플라자 → 기안동 입구 → 기안중 → 수원대학교 → 그린피아호텔 → 남산공단입구 → 수원과학대학 병점역 병점역 35-1번 (오산시 부광운수 마을버스) ·"
+      "배차간격 45분 위치 : 수원역 AK플라자 앞 (03-022) 노선 : 수원역 AK플라자 → 기안동 입구 → 기안중 → 수원대학교 → 그린피아호텔 → 남산공단입구 → 수원과학대학 병점역 병점역 35-1번 (오산시 부광운수 마을버스) ·",
+      "제목 : 2025 셔틀버스 운행안내 이름 : 라비돌 조회 : 7851 셔틀버스운행안내"
      ],
-     "value": null
+     "value": "셔틀버스 운행(공지 안내)",
+     "source_url": "https://www.laviedor.com/community/event/content.asp?idx=134&GotoPage=1",
+     "source_type": "official_site",
+     "confidence": "medium",
+     "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+     "checked_at": "2026-11-27"
     },
     "ev_charge": {
      "evidence": [],
@@ -135872,8 +136422,8 @@
     "basic": 0.89,
     "course": 0.2,
     "fee": 0.0,
-    "ops": 0.07,
-    "facility": 0.3,
+    "ops": 0.14,
+    "facility": 0.5,
     "briefing": 0.0,
     "rental": 0.0
    }
@@ -135893,7 +136443,8 @@
     "has_detail": true,
     "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
     "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+    "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
    },
    "master": {
     "course_id": "kr-golf-0226",
@@ -136020,7 +136571,7 @@
    },
    "cancel": {
     "cancel_policy": null,
-    "open_cycle": null,
+    "open_cycle": "인터넷 접수(09:00~15:00). 평일·공휴일 예약희망일 4주 전 같은 요일(28일 전), 주말 3주 전 화요일(25일 전). 익일 17시경 카카오알림톡/SMS 통보",
     "notes": null,
     "evidence": [],
     "weather_evidence": []
@@ -136272,7 +136823,8 @@
     "has_detail": true,
     "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
     "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+    "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
    },
    "master": {
     "course_id": "kr-golf-0227",
@@ -136396,8 +136948,13 @@
     }
    },
    "cancel": {
-    "cancel_policy": null,
-    "open_cycle": null,
+    "cancel_policy": {
+     "value": "예약일로부터 4일 전 17시까지 위약 없이 취소. 3일 전 1개월·2일 전 2개월·1일 전 3개월 예약정지(이용요금 10·20%), 당일 6개월 정지+30%, 노쇼 영구정지",
+     "source": "공식 홈페이지",
+     "url": "https://www.linknine.co.kr/html/reserve/reserve05.asp",
+     "checked_at": "2026-11-27"
+    },
+    "open_cycle": "인터넷 회원 가입 고객에 한해 홈페이지 예약. 매월 20일 13시부터 다음 달 전 타임 예약 가능. 9홀 예약은 예약실 문의.",
     "notes": null,
     "evidence": [],
     "weather_evidence": []
@@ -136408,14 +136965,21 @@
      "value": null
     },
     "two_player": {
-     "evidence": [],
-     "value": null,
+     "evidence": [
+      "4. 2인 예약 시에는 3인 그린피 적용한다."
+     ],
+     "value": "2인 가능(3인 그린피 적용)",
      "third_party": {
       "two": null,
       "three": null,
       "source": "그린피가이드",
       "url": "https://greenfeeguide.co.kr/course/gc-0045/"
-     }
+     },
+     "source_url": "https://www.linknine.co.kr/mobile/join_rule01.asp",
+     "source_type": "official_site",
+     "confidence": "medium",
+     "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+     "checked_at": "2026-11-27"
     },
     "three_player": {
      "value": "3인 가능",
@@ -136429,8 +136993,15 @@
      "value_from": "capital_supplement(official_site)"
     },
     "five_player": {
-     "value": null,
-     "evidence": []
+     "value": "5인 가능(주중에 한하며 2카트 2캐디 원칙)",
+     "evidence": [
+      "6. 5인 플레이는 주중에 한하며, 2카트 2캐디를 원칙으로 한다."
+     ],
+     "source_url": "https://www.linknine.co.kr/mobile/join_rule01.asp",
+     "source_type": "official_site",
+     "confidence": "medium",
+     "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+     "checked_at": "2026-11-27"
     },
     "marshal_caddie": {
      "value": null,
@@ -136453,13 +137024,20 @@
      "value": null
     },
     "checkin": {
-     "evidence": [],
-     "value": null,
+     "evidence": [
+      "티오프 1시간 전까지 골프장 도착 필수 안내"
+     ],
+     "value": "티오프 1시간 전까지 도착",
      "third_party": {
       "value": null,
       "source": "그린피가이드",
       "url": "https://greenfeeguide.co.kr/course/gc-0045/"
-     }
+     },
+     "source_url": "https://parkgolfinfo.co.kr/%ea%b2%bd%ea%b8%b0-%ed%99%94%ec%84%b1-%eb%a7%81%ed%81%ac%eb%82%98%ec%9d%b8cc-%ea%b3%a8%ed%94%84-%ec%98%88%ec%95%bd%eb%b0%a9%eb%b2%95-9%ed%99%80-%ed%8d%bc%eb%b8%94%eb%a6%ad-%ec%9c%84/",
+     "source_type": "blog",
+     "confidence": "low",
+     "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+     "checked_at": "2026-11-27"
     },
     "locker": {
      "evidence": [
@@ -136716,7 +137294,7 @@
     "basic": 0.89,
     "course": 0.2,
     "fee": 1.0,
-    "ops": 0.36,
+    "ops": 0.57,
     "facility": 0.4,
     "briefing": 0.0,
     "rental": 0.0
@@ -138482,7 +139060,8 @@
     "has_detail": true,
     "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
     "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+    "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
    },
    "master": {
     "course_id": "kr-golf-0230",
@@ -138528,11 +139107,11 @@
      "master": "courses_master.json v2.0 (문체부·KGA·KGBA·티픽·지도)",
      "synced_to": "courses_master.json v2.7 (2026-11-26 단일 스키마 정규화)"
     },
-    "par": null,
+    "par": 35,
     "holes_teepick": 9,
     "course_spec": {
      "holes": 9,
-     "par": null,
+     "par": 35,
      "blocks": [],
      "length_m": 2840,
      "kga": null,
@@ -138563,7 +139142,7 @@
     "extra_courses": null,
     "hole_by_hole": null,
     "length_m": 2840,
-    "par": null
+    "par": 35
    },
    "fee": {
     "weekday": 130000,
@@ -281111,7 +281690,8 @@
     "has_detail": true,
     "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
     "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+    "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
    },
    "master": {
     "course_id": "kr-golf-0509",
@@ -281305,8 +281885,15 @@
      "evidence": []
     },
     "food": {
-     "evidence": [],
-     "value": null
+     "evidence": [
+      "clubhouse 설계철학 로비&라운지 레스토랑 골프샵 사우나&스파 클럽하우스 갤러리"
+     ],
+     "value": "레스토랑 운영",
+     "source_url": "https://www.trinityclub.co.kr/main",
+     "source_type": "official_site",
+     "confidence": "medium",
+     "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+     "checked_at": "2026-11-27"
     },
     "snack_bar": {
      "value": null,
@@ -281460,7 +282047,7 @@
     "course": 0.2,
     "fee": 0.0,
     "ops": 0.07,
-    "facility": 0.0,
+    "facility": 0.1,
     "briefing": 0.0,
     "rental": 0.0
    }
@@ -282871,7 +283458,8 @@
     "has_detail": true,
     "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
     "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+    "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+    "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
    },
    "master": {
     "course_id": "kr-golf-0516",
@@ -283124,8 +283712,15 @@
    },
    "facilities": {
     "practice": {
-     "evidence": [],
-     "value": null
+     "evidence": [
+      "2018 60타석 연습장 신설 2026.06 신축 클럽하우스 준공식"
+     ],
+     "value": "60타석 연습장(2018년 신설)",
+     "source_url": "https://teepickgolf.com/course/서울",
+     "source_type": "teepick",
+     "confidence": "low",
+     "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+     "checked_at": "2026-11-27"
     },
     "indoor_range": {
      "value": null,
@@ -283281,7 +283876,7 @@
     "course": 0.2,
     "fee": 1.0,
     "ops": 0.07,
-    "facility": 0.0,
+    "facility": 0.1,
     "briefing": 0.0,
     "rental": 0.25
    }

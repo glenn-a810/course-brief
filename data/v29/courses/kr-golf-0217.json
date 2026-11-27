@@ -13,7 +13,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
  },
  "master": {
   "course_id": "kr-golf-0217",
@@ -456,8 +457,13 @@
   "official_rental": null
  },
  "cancel": {
-  "cancel_policy": null,
-  "open_cycle": null,
+  "cancel_policy": {
+   "value": "개인팀 예약 취소는 라운드 4일 전 오후 5시까지 가능",
+   "source": "공식 홈페이지",
+   "url": "https://www.adoniscc.co.kr/intro/notice",
+   "checked_at": "2026-11-27"
+  },
+  "open_cycle": "라운드일 3주 전 같은 요일 오전 9시부터 예약 시작(정회원 우선, 17일 전 2차 접수)",
   "notes": null,
   "evidence": [],
   "weather_evidence": []
@@ -486,8 +492,15 @@
    "evidence": []
   },
   "marshal_caddie": {
-   "value": null,
-   "evidence": []
+   "value": "경기운영팀이 경기 진행과 캐디 교육·관리 담당",
+   "evidence": [
+    "경기운영팀 경기 진행 플레이 중인 고객에 대한 서비스를 담당합니다. 전체 고객의 경기 진행을 원활하게 하여 고객 불편을 최소화하고, 캐디들을 교육·관리하여"
+   ],
+   "source_url": "https://www.adoniscc.co.kr/intro/recruitment",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "cart_type": {
    "evidence": [
@@ -538,8 +551,15 @@
    "value": null
   },
   "dress": {
-   "evidence": [],
-   "value": null
+   "evidence": [
+    "복장 불량(반바지 라운드 불가) 내장 및 라운드 불가 주말 및 주중"
+   ],
+   "value": "복장 불량(반바지) 시 라운드 불가",
+   "source_url": "https://www.adoniscc.co.kr/intro/notice",
+   "source_type": "official_site",
+   "confidence": "medium",
+   "value_from": "batch2_2026_11_27(외부 검수본 재확인)",
+   "checked_at": "2026-11-27"
   },
   "pace": {
    "evidence": [],
@@ -743,7 +763,7 @@
   "basic": 0.78,
   "course": 0.4,
   "fee": 1.0,
-  "ops": 0.14,
+  "ops": 0.29,
   "facility": 0.2,
   "briefing": 0.0,
   "rental": 0.75
