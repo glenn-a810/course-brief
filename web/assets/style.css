@@ -446,8 +446,8 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
    일반 화면에서는 이 버튼 하나만 보이고 출처·수집 정보는 렌더링되지 않는다. */
 .footer-admin { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; min-height: 28px; }
 .admin-open {
-  border: 0; background: none; padding: 4px 8px; margin-left: -8px;
-  color: var(--text-3); font-size: 12px; border-radius: 8px; cursor: pointer; min-height: 32px;
+  border: 0; background: none; padding: 4px 10px; margin-left: -10px;
+  color: var(--text-3); font-size: 12px; border-radius: 8px; cursor: pointer; min-height: var(--tap);
 }
 .admin-open:hover { color: var(--text-2); background: var(--bg-inset); }
 .admin-badge {
@@ -458,7 +458,7 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 }
 .admin-exit {
   border: 0; background: var(--bg-elev); color: var(--text-2); border-radius: 999px;
-  padding: 3px 9px; font-size: 11.5px; font-weight: 500; cursor: pointer; min-height: 24px;
+  padding: 3px 10px; font-size: 11.5px; font-weight: 500; cursor: pointer; min-height: 32px;
 }
 .admin-exit:hover { color: var(--text); background: var(--bg-inset); }
 .admin-dialog {
