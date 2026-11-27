@@ -394,8 +394,29 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
-   "items": [],
+   "url": "https://thesiena.co.kr/news?bn=%EB%8D%94+%EC%8B%9C%EC%97%90%EB%82%98+%EC%84%9C%EC%9A%B8+%EC%BB%A8%ED%8A%B8%EB%A6%AC%ED%81%B4%EB%9F%BD",
+   "items": [
+    {
+     "title": "[안내] 동계 휴장 안내",
+     "date": "2026-11-24",
+     "url": "https://thesiena.co.kr/news/203?bn=%EB%8D%94+%EC%8B%9C%EC%97%90%EB%82%98+%EC%84%9C%EC%9A%B8+%EC%BB%A8%ED%8A%B8%EB%A6%AC%ED%81%B4%EB%9F%BD"
+    },
+    {
+     "title": "[안내] 매크로 등 불법 예약 프로그램 사용 금지 안내",
+     "date": "2026-10-13",
+     "url": "https://thesiena.co.kr/news?bn=%EB%8D%94+%EC%8B%9C%EC%97%90%EB%82%98+%EC%84%9C%EC%9A%B8+%EC%BB%A8%ED%8A%B8%EB%A6%AC%ED%81%B4%EB%9F%BD"
+    },
+    {
+     "title": "[공지] 캐디피 인상 안내",
+     "date": "2026-07-28",
+     "url": "https://thesiena.co.kr/news?bn=%EB%8D%94+%EC%8B%9C%EC%97%90%EB%82%98+%EC%84%9C%EC%9A%B8+%EC%BB%A8%ED%8A%B8%EB%A6%AC%ED%81%B4%EB%9F%BD"
+    },
+    {
+     "title": "[안내] 4인 1조 운영 기준 및 요금 적용 안내",
+     "date": "2026-02-18",
+     "url": "https://thesiena.co.kr/news?bn=%EB%8D%94+%EC%8B%9C%EC%97%90%EB%82%98+%EC%84%9C%EC%9A%B8+%EC%BB%A8%ED%8A%B8%EB%A6%AC%ED%81%B4%EB%9F%BD"
+    }
+   ],
    "tags": {}
   },
   "review": {
@@ -405,8 +426,8 @@
    "url": "https://teepickgolf.com/course/%EB%8D%94%EC%8B%9C%EC%97%90%EB%82%98%20%EC%84%9C%EC%9A%B8(%EA%B5%AC%2C%EC%A4%91%EB%B6%80)"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T09:51:51+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T21:20:00+09:00",
+  "recent_notice_text": "2026-11-24 동계 휴장 안내 — 휴장 2027-01-01(금)~2027-02-11(목), 개장 예정 2027-02-12(금), 기상 상황에 따라 변동될 수 있고 예약 오픈일은 추후 문자·홈페이지로 안내. 2026-10-13 매크로 등 불법 예약 프로그램 사용 금지 안내, 2026-07-28 캐디피 인상 안내, 2026-02-18 4인 1조 운영 기준·요금 적용 안내. 12월 요금 공지는 아직 없음.",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [
@@ -426,19 +447,24 @@
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
     "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공식 공지사항(브라우저 확인)",
+    "url": "https://thesiena.co.kr/news?bn=%EB%8D%94+%EC%8B%9C%EC%97%90%EB%82%98+%EC%84%9C%EC%9A%B8+%EC%BB%A8%ED%8A%B8%EB%A6%AC%ED%81%B4%EB%9F%BD",
+    "checked_at": "2026-11-27"
    }
   ]
  },
  "collection": {
-  "official_site": "unavailable",
-  "official_reason": "HTTP403",
-  "pages_collected": 0,
+  "official_site": "ok",
+  "official_reason": "공식 홈페이지 확인(2026-11-27, 브라우저 직접 접속)",
+  "pages_collected": 2,
   "third_party": {
    "teepick": true,
    "greenfeeguide": true
   },
-  "render_hint": "thin",
-  "plan_strategy": "blocked(헤드리스·UA 우회)",
+  "render_hint": "browser",
+  "plan_strategy": "browser_check(2026-11-27)",
   "browser_batch": true
  },
  "coverage": {
@@ -447,7 +473,7 @@
   "fee": 1.0,
   "ops": 0.07,
   "facility": 0.0,
-  "briefing": 0.0,
+  "briefing": 0.5,
   "rental": 0.25
  }
 }

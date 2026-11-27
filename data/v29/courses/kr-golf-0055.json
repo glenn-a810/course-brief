@@ -325,11 +325,42 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
-   "items": [],
+   "url": "https://www.haeundaebeachcc.com/board/boardList.do?groupcode=NOTICE",
+   "items": [
+    {
+     "title": "12월 9~10일 (수~목) 2부 영업안내",
+     "date": "2026-11-18",
+     "url": "https://www.haeundaebeachcc.com/board/boardView.do?groupcode=NOTICE&bbsno=721&seq=0&depth=0&kind=1"
+    },
+    {
+     "title": "[공지] 동계특별이벤트",
+     "date": "2026-11-11",
+     "url": "https://www.haeundaebeachcc.com/board/boardView.do?groupcode=NOTICE&bbsno=717&seq=0&depth=0&kind=1"
+    },
+    {
+     "title": "12월 14일 ~ 31일 운영안내",
+     "date": "2026-11-05",
+     "url": "https://www.haeundaebeachcc.com/board/boardView.do?groupcode=NOTICE&bbsno=716&seq=0&depth=0&kind=1"
+    },
+    {
+     "title": "12월 1일 ~ 12월 13일 운영안내",
+     "date": "2026-10-29",
+     "url": "https://www.haeundaebeachcc.com/board/boardView.do?groupcode=NOTICE&bbsno=715&seq=0&depth=0&kind=1"
+    },
+    {
+     "title": "11월 9~10일 (월~화) 2부 영업안내",
+     "date": "2026-10-23",
+     "url": "https://www.haeundaebeachcc.com/board/boardList.do?groupcode=NOTICE"
+    },
+    {
+     "title": "2027년 연간단체 모집 안내",
+     "date": "2026-10-16",
+     "url": "https://www.haeundaebeachcc.com/board/boardList.do?groupcode=NOTICE"
+    }
+   ],
    "tags": {}
   },
-  "recent_notice_text": "지난 시즌 2월 운영안내(2026-01-13) 게시. 2026-10~11 공지 미확인(2026-11-26, 홈페이지 접속 불가)",
+  "recent_notice_text": "2026-11-18 12월 9~10일(수·목) 2부 영업안내, 2026-11-11 동계특별이벤트(조회 1,694), 2026-11-05 12월 14~31일 운영안내, 2026-10-29 12월 1~13일 운영안내, 2026-10-23 11월 9~10일 2부 영업안내. 2027년 연간단체 모집 안내(2026-10-16)는 홈 팝업으로 게시 중. 12월 잔여타임은 마운틴·오션코스 별로 홈에서 확인.",
   "course_notes": "2014년 11월 개장. 18홀 중 12개 홀에서 바다가 보이고 연못 16개가 물길로 연결된 친환경 설계. 페어웨이가 좁아 방향성이 중요하다는 평가와 평균 폭 60m라는 소개가 함께 있음. 수준별 티박스 분리",
   "review": null,
   "fee_change": null,
@@ -370,21 +401,26 @@
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
     "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공식 공지사항(브라우저 확인)",
+    "url": "https://www.haeundaebeachcc.com/board/boardList.do?groupcode=NOTICE",
+    "checked_at": "2026-11-27"
    }
   ],
-  "collected_at": "2026-11-26T10:33:22+09:00"
+  "collected_at": "2026-11-27T21:20:00+09:00"
  },
  "collection": {
   "official_site": "ok",
-  "official_reason": "공식 홈페이지 접속 불가(2026-11-26). 요금·예약 정보는 공개 정보로 확인",
-  "pages_collected": 0,
+  "official_reason": "공식 홈페이지 확인(2026-11-27, 브라우저 직접 접속)",
+  "pages_collected": 2,
   "third_party": {
    "received_report": true,
    "teepick": true,
    "greenfeeguide": true
   },
-  "render_hint": "report",
-  "plan_strategy": "subagent_report(2026-11-26)"
+  "render_hint": "browser",
+  "plan_strategy": "browser_check(2026-11-27)"
  },
  "coverage": {
   "basic": 1.0,
@@ -392,7 +428,7 @@
   "fee": 1.0,
   "ops": 0.14,
   "facility": 0.2,
-  "briefing": 0.5,
+  "briefing": 0.75,
   "rental": 1.0
  }
 }

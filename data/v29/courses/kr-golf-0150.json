@@ -495,8 +495,34 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
-   "items": [],
+   "url": "https://thesiena.co.kr/news?bn=%EB%8D%94+%EC%8B%9C%EC%97%90%EB%82%98+%EB%B2%A8%EB%A3%A8%ED%86%A0+%EC%BB%A8%ED%8A%B8%EB%A6%AC%ED%81%B4%EB%9F%BD",
+   "items": [
+    {
+     "title": "2026년 12월 요금 안내",
+     "date": "2026-10-27",
+     "url": "https://thesiena.co.kr/news/202?bn=%EB%8D%94+%EC%8B%9C%EC%97%90%EB%82%98+%EB%B2%A8%EB%A3%A8%ED%86%A0+%EC%BB%A8%ED%8A%B8%EB%A6%AC%ED%81%B4%EB%9F%BD"
+    },
+    {
+     "title": "[공지] 2027년 연단체 모집 안내",
+     "date": "2026-10-12",
+     "url": "https://thesiena.co.kr/news?bn=%EB%8D%94+%EC%8B%9C%EC%97%90%EB%82%98+%EB%B2%A8%EB%A3%A8%ED%86%A0+%EC%BB%A8%ED%8A%B8%EB%A6%AC%ED%81%B4%EB%9F%BD"
+    },
+    {
+     "title": "2026년 11월 요금 안내",
+     "date": "2026-10-01",
+     "url": "https://thesiena.co.kr/news?bn=%EB%8D%94+%EC%8B%9C%EC%97%90%EB%82%98+%EB%B2%A8%EB%A3%A8%ED%86%A0+%EC%BB%A8%ED%8A%B8%EB%A6%AC%ED%81%B4%EB%9F%BD"
+    },
+    {
+     "title": "1박 2일 골프 패키지 이용약관",
+     "date": "2026-08-13",
+     "url": "https://thesiena.co.kr/news?bn=%EB%8D%94+%EC%8B%9C%EC%97%90%EB%82%98+%EB%B2%A8%EB%A3%A8%ED%86%A0+%EC%BB%A8%ED%8A%B8%EB%A6%AC%ED%81%B4%EB%9F%BD"
+    },
+    {
+     "title": "[공지] 예약시스템 변경 안내",
+     "date": "2026-03-30",
+     "url": "https://thesiena.co.kr/news?bn=%EB%8D%94+%EC%8B%9C%EC%97%90%EB%82%98+%EB%B2%A8%EB%A3%A8%ED%86%A0+%EC%BB%A8%ED%8A%B8%EB%A6%AC%ED%81%B4%EB%9F%BD"
+    }
+   ],
    "tags": {}
   },
   "review": {
@@ -506,8 +532,8 @@
    "url": "https://teepickgolf.com/course/%EB%8D%94%EC%8B%9C%EC%97%90%EB%82%98%20%EB%B2%A8%EB%A3%A8%ED%86%A0CC"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T09:51:54+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T21:20:00+09:00",
+  "recent_notice_text": "2026-10-27 12월 요금 안내, 2026-10-12 2027년 연단체 모집 안내, 2026-10-01 11월 요금 안내, 2026-08-13 1박 2일 골프 패키지 이용약관, 2026-03-30 예약시스템 변경 안내. 월별 요금표는 공지 본문에서 확인.",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [
@@ -527,19 +553,24 @@
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
     "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공식 공지사항(브라우저 확인)",
+    "url": "https://thesiena.co.kr/news?bn=%EB%8D%94+%EC%8B%9C%EC%97%90%EB%82%98+%EB%B2%A8%EB%A3%A8%ED%86%A0+%EC%BB%A8%ED%8A%B8%EB%A6%AC%ED%81%B4%EB%9F%BD",
+    "checked_at": "2026-11-27"
    }
   ]
  },
  "collection": {
-  "official_site": "unavailable",
-  "official_reason": "HTTP403",
-  "pages_collected": 0,
+  "official_site": "ok",
+  "official_reason": "공식 홈페이지 확인(2026-11-27, 브라우저 직접 접속)",
+  "pages_collected": 2,
   "third_party": {
    "teepick": true,
    "greenfeeguide": true
   },
-  "render_hint": "thin",
-  "plan_strategy": "blocked(헤드리스·UA 우회)",
+  "render_hint": "browser",
+  "plan_strategy": "browser_check(2026-11-27)",
   "browser_batch": true
  },
  "coverage": {
@@ -548,7 +579,7 @@
   "fee": 1.0,
   "ops": 0.0,
   "facility": 0.0,
-  "briefing": 0.0,
+  "briefing": 0.5,
   "rental": 0.25
  }
 }

@@ -348,8 +348,29 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
-   "items": [],
+   "url": "https://www.hpnabicc.co.kr/html/customer/customer_01_list.asp",
+   "items": [
+    {
+     "title": "12월 21일~ 그린피 할인 안내",
+     "date": "2026-11-26",
+     "url": "https://www.hpnabicc.co.kr/html/customer/customer_01_view.asp?b_idx=122"
+    },
+    {
+     "title": "11월 30일~ 그린피 할인 안내",
+     "date": "2026-11-02",
+     "url": "https://www.hpnabicc.co.kr/html/customer/customer_01_view.asp?b_idx=121"
+    },
+    {
+     "title": "10월 31일~ 그린피 할인",
+     "date": "2026-10-02",
+     "url": "https://www.hpnabicc.co.kr/html/customer/customer_01_view.asp?b_idx=120"
+    },
+    {
+     "title": "10월 3일~ 그린피 할인 안내",
+     "date": "2026-09-03",
+     "url": "https://www.hpnabicc.co.kr/html/customer/customer_01_view.asp?b_idx=119"
+    }
+   ],
    "tags": {}
   },
   "review": {
@@ -359,8 +380,8 @@
    "url": "https://teepickgolf.com/course/%EC%B2%9C%EC%A7%80CC"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T10:25:42+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T21:20:00+09:00",
+  "recent_notice_text": "2026-11-26 12월 21일~ 그린피 할인 안내, 2026-11-02 11월 30일~ 그린피 할인, 2026-10-02 10월 31일~ 그린피 할인. 홈 팝업에 규정 변경·레스토랑 운영·5인 플레이·2026년 연단체·예약 오픈일 변경 안내를 함께 게시.",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [
@@ -374,19 +395,24 @@
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
     "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공식 공지사항(브라우저 확인)",
+    "url": "https://www.hpnabicc.co.kr/html/customer/customer_01_list.asp",
+    "checked_at": "2026-11-27"
    }
   ]
  },
  "collection": {
-  "official_site": "unavailable",
-  "official_reason": "HTTP403",
-  "pages_collected": 0,
+  "official_site": "ok",
+  "official_reason": "공식 홈페이지 확인(2026-11-27, 브라우저 직접 접속)",
+  "pages_collected": 2,
   "third_party": {
    "teepick": true,
    "greenfeeguide": true
   },
-  "render_hint": "thin",
-  "plan_strategy": "blocked(헤드리스·UA 우회)",
+  "render_hint": "browser",
+  "plan_strategy": "browser_check(2026-11-27)",
   "browser_batch": false,
   "browser_pages": 0,
   "browser_pdf": []
@@ -397,7 +423,7 @@
   "fee": 0.75,
   "ops": 0.29,
   "facility": 0.1,
-  "briefing": 0.25,
+  "briefing": 0.75,
   "rental": 1.0
  }
 }

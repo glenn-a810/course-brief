@@ -625,14 +625,50 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
-   "items": [],
+   "url": "https://www.hanyangcc.com/board/list.asp?type=1",
+   "items": [
+    {
+     "title": "현관(경비) 및 사내단순업무용역 통합 관리업체 선정 입찰공고",
+     "date": "2026-11-27",
+     "url": "https://www.hanyangcc.com/board/view.asp?type=1&idx=16899"
+    },
+    {
+     "title": "사내 세탁물 처리 용역업체 선정 입찰공고",
+     "date": "2026-11-27",
+     "url": "https://www.hanyangcc.com/board/view.asp?type=1&idx=16898"
+    },
+    {
+     "title": "한양CC 전기차 충전시설 이설 및 증설 공사 입찰공고",
+     "date": "2026-11-13",
+     "url": "https://www.hanyangcc.com/board/view.asp?type=1&idx=16896"
+    },
+    {
+     "title": "(마감) 2027 동남아 4개국 친선대회 및 푸켓 골프투어 참가자 모집",
+     "date": "2026-11-12",
+     "url": "https://www.hanyangcc.com/board/view.asp?type=1&idx=16895"
+    },
+    {
+     "title": "클럽하우스 재건축 준공 및 사용승인 완료 안내",
+     "date": "2026-11-09",
+     "url": "https://www.hanyangcc.com/board/view.asp?type=1&idx=16894"
+    },
+    {
+     "title": "12월 예약 안내",
+     "date": "2026-11-04",
+     "url": "https://www.hanyangcc.com/board/view.asp?type=1&idx=16893"
+    },
+    {
+     "title": "2027년 한양컨트리클럽 신규 연단체 신청 안내",
+     "date": "2026-10-26",
+     "url": "https://www.hanyangcc.com/board/view.asp?type=1&idx=16891"
+    }
+   ],
    "tags": {}
   },
   "review": null,
   "fee_change": null,
-  "collected_at": "2026-11-26T09:51:50+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T21:20:00+09:00",
+  "recent_notice_text": "2026-11-27 현관(경비)·사내단순업무용역 통합관리업체 선정 입찰공고와 사내 세탁물 처리 용역업체 입찰공고, 2026-11-13 전기차 충전시설 이설·증설 공사 입찰공고, 2026-11-09 클럽하우스 재건축 준공·사용승인 완료 안내, 2026-11-04 12월 예약 안내, 2026-10-26 2027년 신규 연단체 신청 안내. 2026-11-12 2027 동남아 4개국 친선대회·푸켓 골프투어 참가자 모집은 마감.",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [
@@ -651,19 +687,24 @@
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
     "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공식 공지사항(브라우저 확인)",
+    "url": "https://www.hanyangcc.com/board/list.asp?type=1",
+    "checked_at": "2026-11-27"
    }
   ]
  },
  "collection": {
-  "official_site": "unavailable",
-  "official_reason": "HTTP403",
-  "pages_collected": 0,
+  "official_site": "ok",
+  "official_reason": "공식 홈페이지 확인(2026-11-27, 브라우저 직접 접속)",
+  "pages_collected": 2,
   "third_party": {
    "teepick": true,
    "greenfeeguide": true
   },
-  "render_hint": "thin",
-  "plan_strategy": "blocked(헤드리스·UA 우회)",
+  "render_hint": "browser",
+  "plan_strategy": "browser_check(2026-11-27)",
   "browser_batch": true
  },
  "coverage": {
@@ -672,7 +713,7 @@
   "fee": 1.0,
   "ops": 0.43,
   "facility": 0.3,
-  "briefing": 0.0,
+  "briefing": 0.5,
   "rental": 1.0
  }
 }

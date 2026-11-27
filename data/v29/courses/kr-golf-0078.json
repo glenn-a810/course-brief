@@ -345,11 +345,37 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
-   "items": [],
+   "url": "https://www.baystars.co.kr/html/service/service01_list.asp",
+   "items": [
+    {
+     "title": "2026.12.14~12.31 그린피 안내",
+     "date": "2026-11-13",
+     "url": "https://www.baystars.co.kr/html/service/service01_view.asp?b_idx=105"
+    },
+    {
+     "title": "2026.12.01~12.13 그린피 안내",
+     "date": "2026-11-04",
+     "url": "https://www.baystars.co.kr/html/service/service01_view.asp?b_idx=104"
+    },
+    {
+     "title": "27년도 연단체 모집",
+     "date": "2026-10-20",
+     "url": "https://www.baystars.co.kr/html/service/service01_view.asp?b_idx=103"
+    },
+    {
+     "title": "2026.11.01~11.30 그린피 안내",
+     "date": "2026-10-06",
+     "url": "https://www.baystars.co.kr/html/service/service01_view.asp?b_idx=102"
+    },
+    {
+     "title": "캐디피 인상 안내",
+     "date": "2026-10-05",
+     "url": "https://www.baystars.co.kr/html/service/service01_view.asp?b_idx=101"
+    }
+   ],
    "tags": {}
   },
-  "recent_notice_text": "2026-10~11 공지 미확인(2026-11-26, 홈페이지 접속 차단)",
+  "recent_notice_text": "2026-11-13 12월 14~31일 그린피 안내, 2026-11-04 12월 1~13일 그린피 안내, 2026-10-20 2027년 연단체 모집, 2026-10-06 11월 그린피 안내, 2026-10-05 캐디피 인상 안내. 그린피표는 공지 본문 이미지로 게시되며 홈 팝업으로도 11월·12월 그린피·VIP리무진카트·캐디피 변경 안내 중.",
   "course_notes": "울산 북구 해안 인접 18홀. 3부 야간 라운드 운영, 지역 할인과 시즌별 요금 폭이 큼",
   "review": null,
   "fee_change": null,
@@ -390,21 +416,26 @@
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
     "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공식 공지사항(브라우저 확인)",
+    "url": "https://www.baystars.co.kr/html/service/service01_list.asp",
+    "checked_at": "2026-11-27"
    }
   ],
-  "collected_at": "2026-11-26T10:33:22+09:00"
+  "collected_at": "2026-11-27T21:20:00+09:00"
  },
  "collection": {
   "official_site": "ok",
-  "official_reason": "공식 홈페이지 접속 차단(403, 2026-11-26). 요금·코스 정보는 공개 요금 정보로 확인",
-  "pages_collected": 0,
+  "official_reason": "공식 홈페이지 확인(2026-11-27, 브라우저 직접 접속)",
+  "pages_collected": 2,
   "third_party": {
    "received_report": true,
    "teepick": true,
    "greenfeeguide": true
   },
-  "render_hint": "report",
-  "plan_strategy": "subagent_report(2026-11-26)"
+  "render_hint": "browser",
+  "plan_strategy": "browser_check(2026-11-27)"
  },
  "coverage": {
   "basic": 0.89,
@@ -412,7 +443,7 @@
   "fee": 1.0,
   "ops": 0.21,
   "facility": 0.2,
-  "briefing": 0.5,
+  "briefing": 0.75,
   "rental": 1.0
  }
 }

@@ -331,11 +331,27 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
-   "items": [],
+   "url": "http://www.miryangcc.co.kr/Board/BoardList.aspx?cfgid=notice",
+   "items": [
+    {
+     "title": "12월 그린피 안내",
+     "date": "2026-11-23",
+     "url": "http://www.miryangcc.co.kr/Board/BoardView.aspx?post=2844&cfgid=notice"
+    },
+    {
+     "title": "11월 이벤트 안내",
+     "date": "2026-10-27",
+     "url": "http://www.miryangcc.co.kr/Board/BoardView.aspx?post=2843&cfgid=notice"
+    },
+    {
+     "title": "10월 그린피 안내",
+     "date": "2026-09-28",
+     "url": "http://www.miryangcc.co.kr/Board/BoardView.aspx?post=2841&cfgid=notice"
+    }
+   ],
    "tags": {}
   },
-  "recent_notice_text": "2026-10~11 공지 미확인(2026-11-26)",
+  "recent_notice_text": "2026-11-23 12월 그린피 안내, 2026-10-27 11월 이벤트 안내, 2026-09-28 10월 그린피 안내. 홈 팝업에 12월 그린피·연단체 수지모집·음식물 반입금지·레스토랑 메뉴 안내를 게시.",
   "course_notes": "지역주민·여성 할인 운영",
   "review": null,
   "fee_change": null,
@@ -371,20 +387,25 @@
   ],
   "sources": [
    "https://greenfeeguide.co.kr/course/gc-0390/",
-   "https://www.rankue.co.kr/golf/course/밀양CC"
+   "https://www.rankue.co.kr/golf/course/밀양CC",
+   {
+    "source": "공식 공지사항(브라우저 확인)",
+    "url": "http://www.miryangcc.co.kr/Board/BoardList.aspx?cfgid=notice",
+    "checked_at": "2026-11-27"
+   }
   ],
-  "collected_at": "2026-11-26T10:33:21+09:00"
+  "collected_at": "2026-11-27T21:20:00+09:00"
  },
  "collection": {
   "official_site": "ok",
-  "official_reason": "공식 홈페이지 접속 불가(2026-11-26). 요금·예약 정보는 공개 요금 정보로 확인",
-  "pages_collected": 0,
+  "official_reason": "공식 홈페이지 확인(2026-11-27, 브라우저 직접 접속)",
+  "pages_collected": 2,
   "third_party": {
    "received_report": true,
    "greenfeeguide": true
   },
-  "render_hint": "report",
-  "plan_strategy": "subagent_report(2026-11-26)"
+  "render_hint": "browser",
+  "plan_strategy": "browser_check(2026-11-27)"
  },
  "coverage": {
   "basic": 0.89,
@@ -392,7 +413,7 @@
   "fee": 1.0,
   "ops": 0.21,
   "facility": 0.2,
-  "briefing": 0.5,
+  "briefing": 0.75,
   "rental": 0.25
  }
 }

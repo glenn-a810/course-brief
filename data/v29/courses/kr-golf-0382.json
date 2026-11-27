@@ -325,11 +325,42 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
-   "items": [],
+   "url": "https://dongwonresort.co.kr/_mobile/multi_board/site/board/list.asp?groupcode=NOTICE",
+   "items": [
+    {
+     "title": "그린피 안내(2026년 12월 21일~31일)",
+     "date": "2026-11-06",
+     "url": "https://dongwonresort.co.kr/_mobile/multi_board/site/board/list.asp?groupcode=NOTICE"
+    },
+    {
+     "title": "그린피 안내(2026년 12월 1일~20일)",
+     "date": "2026-11-06",
+     "url": "https://dongwonresort.co.kr/_mobile/multi_board/site/board/list.asp?groupcode=NOTICE"
+    },
+    {
+     "title": "동계시즌 서울-통영 리무진 운행",
+     "date": "2026-10-28",
+     "url": "https://dongwonresort.co.kr/_mobile/multi_board/site/board/list.asp?groupcode=NOTICE"
+    },
+    {
+     "title": "스탬프 이벤트",
+     "date": "2026-10-13",
+     "url": "https://dongwonresort.co.kr/_mobile/multi_board/site/board/list.asp?groupcode=NOTICE"
+    },
+    {
+     "title": "교통통제 협조 안내 [2026 통영 그란폰도]",
+     "date": "2026-10-02",
+     "url": "https://dongwonresort.co.kr/_mobile/multi_board/site/board/list.asp?groupcode=NOTICE"
+    },
+    {
+     "title": "교통통제 협조 안내 [2026 통영 월드 트라이애슬론컵 대회]",
+     "date": "2026-10-02",
+     "url": "https://dongwonresort.co.kr/_mobile/multi_board/site/board/list.asp?groupcode=NOTICE"
+    }
+   ],
    "tags": {}
   },
-  "recent_notice_text": "2026-10~11 공지 미확인(2026-11-26)",
+  "recent_notice_text": "2026-11-06 12월 1~20일·12월 21~31일 그린피 안내, 2026-10-28 동계시즌 서울-통영 리무진 운행, 2026-10-13 스탬프 이벤트, 2026-10-02 통영 그란폰도·월드 트라이애슬론컵 교통통제 협조 안내. 같은 게시판에 리조트 공지(카라반·조식뷔페)도 함께 올라옴.",
   "course_notes": "IP 부근 페어웨이 폭 60~80m, 높낮이 변화가 적절히 섞여 있고 그린 난이도가 높은 편. 원그린 시스템에 홀마다 티잉 구역 4~5개",
   "review": null,
   "fee_change": null,
@@ -367,21 +398,26 @@
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
     "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공식 공지사항(브라우저 확인)",
+    "url": "https://dongwonresort.co.kr/_mobile/multi_board/site/board/list.asp?groupcode=NOTICE",
+    "checked_at": "2026-11-27"
    }
   ],
-  "collected_at": "2026-11-26T10:33:21+09:00"
+  "collected_at": "2026-11-27T21:20:00+09:00"
  },
  "collection": {
   "official_site": "ok",
-  "official_reason": "공식 홈페이지 접속 불가(2026-11-26). 요금·코스 정보는 공개 요금 정보로 확인",
-  "pages_collected": 0,
+  "official_reason": "공식 홈페이지 확인(2026-11-27, 브라우저 직접 접속)",
+  "pages_collected": 2,
   "third_party": {
    "received_report": true,
    "teepick": true,
    "greenfeeguide": true
   },
-  "render_hint": "report",
-  "plan_strategy": "subagent_report(2026-11-26)"
+  "render_hint": "browser",
+  "plan_strategy": "browser_check(2026-11-27)"
  },
  "coverage": {
   "basic": 0.89,
@@ -389,7 +425,7 @@
   "fee": 1.0,
   "ops": 0.07,
   "facility": 0.2,
-  "briefing": 0.5,
+  "briefing": 0.75,
   "rental": 1.0
  }
 }

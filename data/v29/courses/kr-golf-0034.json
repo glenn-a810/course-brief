@@ -331,8 +331,24 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
-   "items": [],
+   "url": "https://www.woori-cc.co.kr/board/notice",
+   "items": [
+    {
+     "title": "패밀리카드 출시",
+     "date": "2026-09-16",
+     "url": "https://www.woori-cc.co.kr/board/notice"
+    },
+    {
+     "title": "2026 여름 그린피 할인 이벤트",
+     "date": "2026-07-13",
+     "url": "https://www.woori-cc.co.kr/board/notice"
+    },
+    {
+     "title": "26년 2인 플레이 운영안내",
+     "date": "2026-07-05",
+     "url": "https://www.woori-cc.co.kr/board/notice"
+    }
+   ],
    "tags": {}
   },
   "review": {
@@ -342,8 +358,8 @@
    "url": "https://teepickgolf.com/course/%EB%B0%B1%EC%96%91%EC%9A%B0%EB%A6%ACCC"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T10:25:41+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T21:20:00+09:00",
+  "recent_notice_text": "2026년 10~11월 신규 공지 없음. 게시판 최신은 2026-09-16 '패밀리카드 출시', 2026-07-13 '2026 여름 그린피 할인 이벤트', 2026-07-05 '26년 2인 플레이 운영안내'. 2인 플레이 안내는 홈 팝업으로도 게시 중.",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [
@@ -358,19 +374,24 @@
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
     "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공식 공지사항(브라우저 확인)",
+    "url": "https://www.woori-cc.co.kr/board/notice",
+    "checked_at": "2026-11-27"
    }
   ]
  },
  "collection": {
-  "official_site": "unavailable",
-  "official_reason": "HTTP403",
-  "pages_collected": 0,
+  "official_site": "ok",
+  "official_reason": "공식 홈페이지 확인(2026-11-27, 브라우저 직접 접속)",
+  "pages_collected": 2,
   "third_party": {
    "teepick": true,
    "greenfeeguide": true
   },
-  "render_hint": "",
-  "plan_strategy": "unreachable(브라우저 재시도)",
+  "render_hint": "browser",
+  "plan_strategy": "browser_check(2026-11-27)",
   "browser_batch": false,
   "browser_pages": 0,
   "browser_pdf": []
@@ -381,7 +402,7 @@
   "fee": 0.75,
   "ops": 0.21,
   "facility": 0.1,
-  "briefing": 0.0,
+  "briefing": 0.5,
   "rental": 0.25
  }
 }

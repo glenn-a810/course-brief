@@ -713,8 +713,34 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
-   "items": [],
+   "url": "https://www.lakeside.kr/board/boardList.do?groupcode=NOTICE",
+   "items": [
+    {
+     "title": "PAR3홀 홀인원 광고주 모집 안내",
+     "date": "2026-10-19",
+     "url": "https://www.lakeside.kr/board/boardList.do?groupcode=NOTICE"
+    },
+    {
+     "title": "꼭 알아야 할 2026 로컬룰 변경 및 신설",
+     "date": "2026-04-28",
+     "url": "https://www.lakeside.kr/board/boardList.do?groupcode=NOTICE"
+    },
+    {
+     "title": "제40기 결산공고",
+     "date": "2026-03-26",
+     "url": "https://www.lakeside.kr/board/boardList.do?groupcode=NOTICE"
+    },
+    {
+     "title": "클럽하우스 처마 보수공사 안내",
+     "date": "2026-01-16",
+     "url": "https://www.lakeside.kr/board/boardList.do?groupcode=NOTICE"
+    },
+    {
+     "title": "명의개서수수료 변경 안내 (2026.02.15 시행)",
+     "date": "2026-01-16",
+     "url": "https://www.lakeside.kr/board/boardList.do?groupcode=NOTICE"
+    }
+   ],
    "tags": {}
   },
   "review": {
@@ -724,8 +750,8 @@
    "url": "https://teepickgolf.com/course/%EB%A0%88%EC%9D%B4%ED%81%AC%EC%82%AC%EC%9D%B4%EB%93%9C"
   },
   "fee_change": null,
-  "collected_at": "2026-11-26T09:51:55+09:00",
-  "recent_notice_text": null,
+  "collected_at": "2026-11-27T21:20:00+09:00",
+  "recent_notice_text": "2026-10-19 PAR3홀 홀인원 광고주 모집 안내, 2026-04-28 2026 로컬룰 변경·신설, 2026-03-26 제40기 결산공고, 2026-01-16 클럽하우스 처마 보수공사·명의개서수수료 변경 안내. 11월 팝업은 예약 미이행(No-show) 회원 웹예약 영구정지 안내.",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [
@@ -741,19 +767,24 @@
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
     "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공식 공지사항(브라우저 확인)",
+    "url": "https://www.lakeside.kr/board/boardList.do?groupcode=NOTICE",
+    "checked_at": "2026-11-27"
    }
   ]
  },
  "collection": {
-  "official_site": "unavailable",
-  "official_reason": "HTTP403",
-  "pages_collected": 0,
+  "official_site": "ok",
+  "official_reason": "공식 홈페이지 확인(2026-11-27, 브라우저 직접 접속)",
+  "pages_collected": 2,
   "third_party": {
    "teepick": true,
    "greenfeeguide": true
   },
-  "render_hint": "thin",
-  "plan_strategy": "blocked(헤드리스·UA 우회)",
+  "render_hint": "browser",
+  "plan_strategy": "browser_check(2026-11-27)",
   "browser_batch": true
  },
  "coverage": {
@@ -762,7 +793,7 @@
   "fee": 1.0,
   "ops": 0.29,
   "facility": 0.3,
-  "briefing": 0.25,
+  "briefing": 0.75,
   "rental": 1.0
  }
 }

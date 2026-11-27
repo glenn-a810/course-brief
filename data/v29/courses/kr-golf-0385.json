@@ -334,11 +334,37 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
-   "items": [],
+   "url": "https://www.adelscott.co.kr/multi_board/site/board/list.asp?groupcode=NOTICE",
+   "items": [
+    {
+     "title": "핫한 동계 챌린지",
+     "date": "2026-11-24",
+     "url": "https://www.adelscott.co.kr/multi_board/site/board/view.asp?groupcode=NOTICE&kind=0&bbsno=392&seq=0&depth=0&open_state=1"
+    },
+    {
+     "title": "12월 그린피 안내",
+     "date": "2026-10-31",
+     "url": "https://www.adelscott.co.kr/multi_board/site/board/list.asp?groupcode=NOTICE"
+    },
+    {
+     "title": "단풍사진 콘테스트",
+     "date": "2026-10-09",
+     "url": "https://www.adelscott.co.kr/multi_board/site/board/list.asp?groupcode=NOTICE"
+    },
+    {
+     "title": "2027 연단체 모집",
+     "date": "2026-09-30",
+     "url": "https://www.adelscott.co.kr/multi_board/site/board/view.asp?groupcode=NOTICE&kind=0&bbsno=387&seq=0&depth=0&open_state=1"
+    },
+    {
+     "title": "11월 그린피 안내",
+     "date": "2026-09-30",
+     "url": "https://www.adelscott.co.kr/multi_board/site/board/list.asp?groupcode=NOTICE"
+    }
+   ],
    "tags": {}
   },
-  "recent_notice_text": "2026-10~11 공지 미확인(2026-11-26)",
+  "recent_notice_text": "2026-11-24 핫한 동계 챌린지 — 이벤트 기간 12/14~2/28, 1박 2일 패키지 36홀(18+18) 일~목 22만·금~토 24만·토~일 26만원, 45홀 28만~32만원, 54홀 34만~38만원, 그린피·카트비·숙박(라운지)·조식 포함(캐디피·식음료 별도), 2일 이상 진행 시 조식 무료, 노캐디·2인 플레이 가능·중복할인 불가. 2026-10-31 12월 그린피 안내, 2026-09-30 2027 연단체 모집·11월 그린피 안내.",
   "course_notes": "2007년 9월 개장. 티·페어웨이·그린의 높낮이 차이를 눈높이에 맞게 설계, 코스 중앙 클럽하우스에서 전경이 내려다보임. 블라인드 그린 없이 기량에 맞춰 공략 경로를 고를 수 있게 조성",
   "review": null,
   "fee_change": null,
@@ -377,21 +403,26 @@
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
     "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공식 공지사항(브라우저 확인)",
+    "url": "https://www.adelscott.co.kr/multi_board/site/board/list.asp?groupcode=NOTICE",
+    "checked_at": "2026-11-27"
    }
   ],
-  "collected_at": "2026-11-26T10:33:22+09:00"
+  "collected_at": "2026-11-27T21:20:00+09:00"
  },
  "collection": {
   "official_site": "ok",
-  "official_reason": "공식 홈페이지 접속 불가(2026-11-26). 요금·코스 정보는 공개 요금 정보로 확인",
-  "pages_collected": 0,
+  "official_reason": "공식 홈페이지 확인(2026-11-27, 브라우저 직접 접속)",
+  "pages_collected": 2,
   "third_party": {
    "received_report": true,
    "teepick": true,
    "greenfeeguide": true
   },
-  "render_hint": "report",
-  "plan_strategy": "subagent_report(2026-11-26)"
+  "render_hint": "browser",
+  "plan_strategy": "browser_check(2026-11-27)"
  },
  "coverage": {
   "basic": 1.0,
@@ -399,7 +430,7 @@
   "fee": 1.0,
   "ops": 0.29,
   "facility": 0.2,
-  "briefing": 0.5,
+  "briefing": 0.75,
   "rental": 0.25
  }
 }

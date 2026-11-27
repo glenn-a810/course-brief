@@ -324,11 +324,27 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
-   "items": [],
+   "url": "https://www.gosungcc.com/07member/notice.asp",
+   "items": [
+    {
+     "title": "12월 1일 ~ 13일 그린피 안내",
+     "date": "2026-11-16",
+     "url": "https://www.gosungcc.com/07member/noticeView.asp?idx=113&PageNum=1&Column=&SearchString="
+    },
+    {
+     "title": "11월 3부 할인이벤트",
+     "date": "2026-11-02",
+     "url": "https://www.gosungcc.com/07member/noticeView.asp?idx=112&PageNum=1&Column=&SearchString="
+    },
+    {
+     "title": "11월 1일 ~ 30일 그린피 안내",
+     "date": "2026-10-16",
+     "url": "https://www.gosungcc.com/07member/noticeView.asp?idx=111&PageNum=1&Column=&SearchString="
+    }
+   ],
    "tags": {}
   },
-  "recent_notice_text": "2026-10~11 공지 미확인(2026-11-26, 홈페이지 접속 불가)",
+  "recent_notice_text": "2026-11-16 12월 1~13일 그린피 안내, 2026-11-02 11월 3부 할인 이벤트 — 11/4~11/30 3부(16:30~18:36) 팀당 월~목 22만·금 26만·토·공휴일 30만·일 26만원(카트비 포함), 기존 예약 자동 적용·타 할인 중복 불가, 18홀 기준, 3팀 미만이면 9홀 진행 또는 환불, 무료취소는 3일 전 17시까지. 2026-10-16 11월 1~30일 그린피 안내.",
   "course_notes": "9개 홀이 산과 어우러진 코스. 4번(462m)·7번(495m)이 길고 2번(167m)·6번(180m)이 짧음",
   "review": null,
   "fee_change": null,
@@ -367,21 +383,26 @@
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
     "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공식 공지사항(브라우저 확인)",
+    "url": "https://www.gosungcc.com/07member/notice.asp",
+    "checked_at": "2026-11-27"
    }
   ],
-  "collected_at": "2026-11-26T10:33:21+09:00"
+  "collected_at": "2026-11-27T21:20:00+09:00"
  },
  "collection": {
   "official_site": "ok",
-  "official_reason": "공식 홈페이지 접속 불가(2026-11-26 확인). 코스·요금은 공개 요금 정보로 확인",
-  "pages_collected": 0,
+  "official_reason": "공식 홈페이지 확인(2026-11-27, 브라우저 직접 접속)",
+  "pages_collected": 2,
   "third_party": {
    "received_report": true,
    "teepick": true,
    "greenfeeguide": true
   },
-  "render_hint": "report",
-  "plan_strategy": "subagent_report(2026-11-26)"
+  "render_hint": "browser",
+  "plan_strategy": "browser_check(2026-11-27)"
  },
  "coverage": {
   "basic": 0.89,
@@ -389,7 +410,7 @@
   "fee": 0.75,
   "ops": 0.29,
   "facility": 0.2,
-  "briefing": 0.5,
+  "briefing": 0.75,
   "rental": 0.25
  }
 }

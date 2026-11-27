@@ -319,11 +319,32 @@
  },
  "briefing": {
   "notices": {
-   "url": null,
-   "items": [],
+   "url": "https://www.dongpusancc.co.kr/community/notice.asp",
+   "items": [
+    {
+     "title": "(주)국제식품배 제24회 부산MBC 골프대회 선발전 경기결과",
+     "date": "2026-08-10",
+     "url": "https://www.dongpusancc.co.kr/community/notice.asp"
+    },
+    {
+     "title": "(주)국제식품배 제24회 부산MBC 골프대회 선발전 조편성",
+     "date": "2026-08-07",
+     "url": "https://www.dongpusancc.co.kr/community/notice.asp"
+    },
+    {
+     "title": "2026년도 클럽챔피언 선발 선수권대회 안내",
+     "date": "2026-07-27",
+     "url": "https://www.dongpusancc.co.kr/community/notice.asp"
+    },
+    {
+     "title": "2026년 경남도지사배 아마추어골프 선수권대회 안내",
+     "date": "2026-07-24",
+     "url": "https://www.dongpusancc.co.kr/community/notice.asp"
+    }
+   ],
    "tags": {}
   },
-  "recent_notice_text": "2026-10~11 공지 미확인(2026-11-26)",
+  "recent_notice_text": "2026년 10~11월 신규 공지 없음. 게시판 최신은 2026-08-10 (주)국제식품배 제24회 부산MBC 골프대회 선발전 경기결과, 2026-08-07 선발전 조편성, 2026-07-27 클럽챔피언 선발 선수권대회 안내. 2026-06-08 캐디피 인상 안내 이후 요금 관련 공지 없음.",
   "course_notes": "1998년 개장. 자연 지형을 따라 인공 폭포와 연못을 조성했고 티잉 구역마다 시야가 달라 전략적인 플레이를 유도. 벙커가 많은 편이라는 이용 후기",
   "review": null,
   "fee_change": null,
@@ -364,21 +385,26 @@
     "source": "티픽골프장 코스·스코어카드",
     "url": "https://teepickgolf.com/",
     "checked_at": "2026-11-27"
+   },
+   {
+    "source": "공식 공지사항(브라우저 확인)",
+    "url": "https://www.dongpusancc.co.kr/community/notice.asp",
+    "checked_at": "2026-11-27"
    }
   ],
-  "collected_at": "2026-11-26T10:33:21+09:00"
+  "collected_at": "2026-11-27T21:20:00+09:00"
  },
  "collection": {
   "official_site": "ok",
-  "official_reason": "공식 홈페이지 접속 불가(2026-11-26). 요금·코스 정보는 공개 요금 정보로 확인",
-  "pages_collected": 0,
+  "official_reason": "공식 홈페이지 확인(2026-11-27, 브라우저 직접 접속)",
+  "pages_collected": 2,
   "third_party": {
    "received_report": true,
    "teepick": true,
    "greenfeeguide": true
   },
-  "render_hint": "report",
-  "plan_strategy": "subagent_report(2026-11-26)"
+  "render_hint": "browser",
+  "plan_strategy": "browser_check(2026-11-27)"
  },
  "coverage": {
   "basic": 1.0,
@@ -386,7 +412,7 @@
   "fee": 1.0,
   "ops": 0.0,
   "facility": 0.1,
-  "briefing": 0.5,
+  "briefing": 0.75,
   "rental": 0.25
  }
 }
