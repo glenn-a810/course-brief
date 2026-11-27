@@ -22,6 +22,7 @@ import type {
   SiteConfig,
 } from "../../shared/types";
 import { createSearchAdapter } from "./search.js";
+import { initTheme } from "./theme.js";
 import {
   STATUS, badge, debounce, esc, fmtDate, fmtKB, fmtNum, fmtPct, fmtWon, isCourseStatus, isMissing, statusOf, textOf,
 } from "./util.js";
@@ -1156,5 +1157,6 @@ function resetFilters(): void {
   void renderList({ reset: true });
 }
 
+initTheme();
 wire();
 void boot();

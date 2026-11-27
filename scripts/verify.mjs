@@ -29,7 +29,7 @@ ok(tsconfig.compilerOptions?.noImplicitAny === true, "tsconfig noImplicitAny: tr
 ok(tsconfig.compilerOptions?.skipLibCheck === true, "tsconfig skipLibCheck: true");
 ok(await exists(path.join(root, "shared/types/index.ts")), "shared/types/index.ts 존재");
 
-for (const f of ["web/assets/app.ts", "web/assets/search.ts", "web/assets/util.ts",
+for (const f of ["web/assets/app.ts", "web/assets/search.ts", "web/assets/util.ts", "web/assets/theme.ts",
                  "functions/api/search.ts", "functions/tsconfig.json", "package-lock.json"]) {
   ok(await exists(path.join(root, f)), `${f} 존재`);
 }
@@ -60,6 +60,38 @@ ok(bundle.includes("LocalSearchAdapter") && bundle.includes("EsSearchAdapter"), 
 ok(!/\/workspace\/|memory\/clones|99239e1f|ehyunmin|glenn\.nullanswer|@glenn/.test(bundle), "app.js 에 내부 경로·개인정보 없음");
 const distAssets = await readdir(path.join(dist, "assets"));
 ok(!distAssets.some((f) => f.endsWith(".ts")), "dist/assets 에 .ts 없음");
+
+// 1-2) 테마 전환 (라이트/다크) — 첫 페인트 전 초기화 · 토글 · 팔레트 중복 여부
+const html = await readFile(path.join(dist, "index.html"), "utf8");
+ok(html.includes('id="theme-toggle"'), "index.html 테마 전환 버튼");
+ok(html.includes('localStorage.getItem("coursebrief-theme")'), "index.html 테마 초기화 스크립트");
+ok(
+  html.indexOf('localStorage.getItem("coursebrief-theme")') < html.indexOf('rel="stylesheet"'),
+  "테마 초기화가 스타일시트보다 먼저 실행(첫 페인트 전 적용)",
+);
+ok(bundle.includes("coursebrief-theme"), "app.js 에 테마 전환 로직 포함");
+const headers = await readFile(path.join(dist, "_headers"), "utf8");
+const csp = headers.match(/Content-Security-Policy:[^\n]*/i)?.[0] ?? "";
+ok(
+  !csp || /'unsafe-inline'/.test(csp) || /script-src[^;]*'sha256-/.test(csp),
+  csp ? `CSP 가 인라인 테마 초기화 스크립트를 허용 — ${csp.trim().slice(0, 72)}` : "_headers 에 CSP 없음 — 인라인 테마 초기화 스크립트 허용",
+);
+
+const css = await readFile(path.join(dist, "assets/style.css"), "utf8");
+ok(/:root\[data-theme="light"\]\s*\{/.test(css) && /:root\[data-theme="dark"\]\s*\{/.test(css), "style.css data-theme 변수 블록");
+ok(
+  !/@media \(prefers-color-scheme: dark\)\s*\{\s*:root\s*\{/.test(css),
+  '시스템 다크 블록이 수동 라이트 선택을 덮지 않음(:not([data-theme="light"]))',
+);
+// 시스템 다크 블록과 수동 다크 블록의 팔레트 값이 같아야 한다(한쪽만 고쳐 생기는 불일치 방지)
+const darkPalettes = [...css.matchAll(/:root:not\(\[data-theme="light"\]\)\s*\{([^}]*)\}|:root\[data-theme="dark"\]\s*\{([^}]*)\}/g)]
+  .map((m) => m[1] ?? m[2] ?? "")
+  .filter((body) => body.includes("--bg:"))
+  .map((body) => body.split(";").map((d) => d.replace(/\s+/g, " ").trim()).filter(Boolean).sort().join(";"));
+ok(
+  darkPalettes.length === 2 && darkPalettes[0] === darkPalettes[1],
+  `다크 팔레트 두 블록(시스템·수동) 값 일치 (${darkPalettes.length}개 블록)`,
+);
 
 // 2) 인덱스
 const index = JSON.parse(await readFile(path.join(dist, "data/v29/index.json"), "utf8"));
