@@ -105,6 +105,13 @@ const TAG_ORDER = ["n", "2", "y", "s", "l", "h", "p", "f"];
 
 /** 데이터 원문이 값 대신 남긴 '미확인' 표기 — 일반 화면에서는 확인된 값이 아니다 */
 const UNKNOWN_TEXT = /미확인|확인\s*안\s*됨|확인하지\s*못한/;
+/**
+ * 수집·크롤링 상태 메모. 값이 아니라 수집 흔적이므로 일반 화면에서는 값으로 쓰지 않는다.
+ * (예: "2026-10~11 공지 미확인(2026-11-26, 홈페이지 접속 차단)")
+ */
+const COLLECTION_NOTE = /접속\s*차단|접속\s*불가|접속\s*실패|페이지\s*차단|수집\s*실패|수집\s*불가|차단됨|타임\s*아웃|타임아웃|응답\s*없음|로그인\s*필요|HTTP\s*[45]\d\d/;
+/** 일반 화면에서 값으로 내보내면 안 되는 표기(미확인 + 수집 상태 메모) */
+const INTERNAL_NOTE = new RegExp(`(?:${UNKNOWN_TEXT.source})|(?:${COLLECTION_NOTE.source})`);
 
 const COVERAGE_LABELS: Array<[CoverageArea, string, string]> = [
   ["basic", "기본·입지", "소재·규모·개장·운영사·최단 IC"],
@@ -960,30 +967,64 @@ function valCell(v: unknown): string | null {
   if (typeof v === "boolean") return v ? "가능" : "불가";
   const t = textOf(v).trim();
   if (!t || t === "미확인") return null;
-  if (!isAdmin() && UNKNOWN_TEXT.test(t)) return null;
+  if (!isAdmin() && INTERNAL_NOTE.test(t)) return null;
   return isAdmin() ? t : publicNote(t);
 }
 
 /**
  * '미확인'이 섞인 문장에서 확인된 조각만 남긴다.
- * - 괄호 안이 미확인이면 괄호째 빼고("Mountain 코스 등(코스명 일부 미확인)" → "Mountain 코스 등")
- * - 긴 문장은 구분자( — · , → )로 나눠 미확인이 섞인 조각만 버린다
+ * - 괄호 안이 미확인이거나 수집 상태 메모(접속 차단·수집 실패 등)면 괄호째 빼고
+ *   ("Mountain 코스 등(코스명 일부 미확인)" → "Mountain 코스 등")
+ * - 남은 문장은 괄호 밖 구분자( — · , → )에서만 나눠 미확인이 섞인 조각을 버린다.
+ *   괄호 안 쉼표로 쪼개면 "홈페이지 접속 차단)" 같은 뒷조각이 남으므로, 괄호 깊이를 보고 자른다.
  */
+function stripInternalParens(text: string): string {
+  let out = text;
+  for (let i = 0; i < 3; i += 1) {
+    const next = out.replace(/\s*\(([^()]*)\)/g, (m: string, inner: string) => (INTERNAL_NOTE.test(inner) ? "" : m));
+    if (next === out) break;
+    out = next;
+  }
+  return out.trim();
+}
+
+/** 괄호 밖에서만 구분자로 나눈다 */
+function splitTopLevel(text: string): string[] {
+  const parts: string[] = [];
+  let buf = "";
+  let depth = 0;
+  for (let i = 0; i < text.length; i += 1) {
+    const ch = text[i];
+    if (ch === "(" || ch === "（") depth += 1;
+    const isSep = depth === 0 && (ch === "," || ch === "·" || ch === "—" || ch === "–" || ch === "→");
+    if (isSep) {
+      parts.push(buf);
+      buf = "";
+      while (text[i + 1] === " ") i += 1;
+      continue;
+    }
+    if (ch === ")" || ch === "）") depth = Math.max(0, depth - 1);
+    buf += ch;
+  }
+  parts.push(buf);
+  return parts.map((s) => s.trim()).filter(Boolean);
+}
+
 function confirmedSegments(text: string): string {
-  const withoutParen = text.replace(/\s*\(([^()]*)\)/g, (m: string, inner: string) => (UNKNOWN_TEXT.test(inner) ? "" : m));
-  if (!UNKNOWN_TEXT.test(withoutParen)) return withoutParen.trim();
-  return withoutParen
-    .split(/\s*[—–→]\s*|\s*·\s*|,\s+/)
-    .map((s) => s.trim())
-    .filter((s) => s && !UNKNOWN_TEXT.test(s))
+  const withoutParen = stripInternalParens(text);
+  if (!INTERNAL_NOTE.test(withoutParen)) return withoutParen;
+  // 괄호 안 수집 메모를 걷어낸 뒤에도 미확인·수집 메모가 남으면, 값으로 쓸 수 있는 조각만 남긴다.
+  // 남는 조각이 없으면 빈 문자열 — 호출부가 그 문장을 통째로 숨긴다.
+  return splitTopLevel(withoutParen)
+    .filter((s) => !INTERNAL_NOTE.test(s))
     .join(" · ");
 }
 
-/** 문장형 값(공지 요약·메모 등) — 일반 화면에서는 '미확인'이 섞인 문장을 통째로 버린다 */
+/** 문장형 값(공지 요약·메모 등) — 일반 화면에서는 미확인·수집 상태 메모가 섞인 문장을 값으로 쓰지 않는다 */
 function visibleText(text: string | null | undefined): string {
   if (!text || !text.trim()) return "";
   if (!isAdmin()) {
-    const kept = UNKNOWN_TEXT.test(text) ? confirmedSegments(text) : text.trim();
+    const kept = INTERNAL_NOTE.test(text) ? confirmedSegments(text) : text.trim();
     return kept ? publicNote(kept) : "";
   }
   return text;
