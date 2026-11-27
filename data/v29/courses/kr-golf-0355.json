@@ -128,7 +128,7 @@
    "url": "https://greenfeeguide.co.kr/course/gc-0386/"
   },
   "course_spec": {
-   "length_m": 3245,
+   "length_m": 6490,
    "holes": 27
   }
  },
@@ -160,7 +160,7 @@
   },
   "kga_hole_est": 27,
   "extra_courses": null,
-  "length_m": 3245
+  "length_m": 6490
  },
  "fee": {
   "weekday": 210000,

@@ -116,7 +116,7 @@
    "holes": 27,
    "par": 73,
    "blocks": [],
-   "length_m": 10136,
+   "length_m": 6757,
    "kga": {
     "kga_course_code": "427",
     "kga_name": "엠스클럽의성",
@@ -462,7 +462,7 @@
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": 10136,
+  "length_m": 6757,
   "par": 73
  },
  "fee": {

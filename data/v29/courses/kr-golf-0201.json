@@ -63,7 +63,7 @@
    "holes": 9,
    "par": 36,
    "blocks": [],
-   "length_m": 6468,
+   "length_m": 3234,
    "kga": {
     "kga_course_code": "312",
     "kga_name": "베스트밸리",
@@ -209,7 +209,7 @@
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": 6468,
+  "length_m": 3234,
   "par": 36
  },
  "fee": {

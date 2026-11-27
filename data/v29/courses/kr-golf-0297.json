@@ -135,7 +135,7 @@
    "holes": 27,
    "par": 72,
    "blocks": [],
-   "length_m": 9325,
+   "length_m": 6217,
    "kga": {
     "kga_course_code": "73",
     "kga_name": "대구",
@@ -450,7 +450,7 @@
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": 9325,
+  "length_m": 6217,
   "par": 72
  },
  "fee": {

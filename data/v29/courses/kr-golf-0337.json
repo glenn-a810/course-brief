@@ -201,7 +201,7 @@
    "holes": 27,
    "par": 72,
    "blocks": [],
-   "length_m": 9668,
+   "length_m": 6445,
    "kga": null,
    "grass": null,
    "hole_by_hole": null
@@ -234,7 +234,7 @@
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": 9668,
+  "length_m": 6445,
   "par": 72
  },
  "fee": {

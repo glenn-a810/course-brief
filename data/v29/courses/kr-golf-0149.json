@@ -61,7 +61,7 @@
    "holes": 9,
    "par": 36,
    "blocks": [],
-   "length_m": 5587,
+   "length_m": 2794,
    "kga": {
     "kga_course_code": "445",
     "kga_name": "빅토리아",
@@ -188,7 +188,7 @@
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": 5587,
+  "length_m": 2794,
   "par": 36
  },
  "fee": {

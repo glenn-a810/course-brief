@@ -61,7 +61,7 @@
    "holes": 9,
    "par": 36,
    "blocks": [],
-   "length_m": 5464,
+   "length_m": 2732,
    "kga": {
     "kga_course_code": "426",
     "kga_name": "남양주",
@@ -198,7 +198,7 @@
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": 5464,
+  "length_m": 2732,
   "par": 36
  },
  "fee": {

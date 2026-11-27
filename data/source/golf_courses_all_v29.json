@@ -65046,7 +65046,7 @@
      "holes": 9,
      "par": 36,
      "blocks": [],
-     "length_m": 5464,
+     "length_m": 2732,
      "kga": {
       "kga_course_code": "426",
       "kga_name": "남양주",
@@ -65183,7 +65183,7 @@
     "kga_hole_est": null,
     "extra_courses": null,
     "hole_by_hole": null,
-    "length_m": 5464,
+    "length_m": 2732,
     "par": 36
    },
    "fee": {
@@ -87567,7 +87567,7 @@
      "holes": 9,
      "par": 36,
      "blocks": [],
-     "length_m": 5587,
+     "length_m": 2794,
      "kga": {
       "kga_course_code": "445",
       "kga_name": "빅토리아",
@@ -87694,7 +87694,7 @@
     "kga_hole_est": null,
     "extra_courses": null,
     "hole_by_hole": null,
-    "length_m": 5587,
+    "length_m": 2794,
     "par": 36
    },
    "fee": {
@@ -101767,7 +101767,7 @@
      "holes": 9,
      "par": 36,
      "blocks": [],
-     "length_m": 5733,
+     "length_m": 2866,
      "kga": {
       "kga_course_code": "378",
       "kga_name": "글렌로스",
@@ -101875,7 +101875,7 @@
     "kga_hole_est": null,
     "extra_courses": null,
     "hole_by_hole": null,
-    "length_m": 5733,
+    "length_m": 2866,
     "par": 36,
     "holes_note": "등록(문체부) 9홀 · 수집 18홀 — 등록 기준과 수집처(티픽·조사) 표기 차이다. 등록 9홀을 정본으로 두고 집계에는 master.holes를 쓴다. 복합단지 합산 여부는 미확정."
    },
@@ -113394,7 +113394,7 @@
      "holes": 9,
      "par": null,
      "blocks": [],
-     "length_m": 6010,
+     "length_m": 3005,
      "kga": null,
      "grass": null,
      "hole_by_hole": null
@@ -113422,7 +113422,7 @@
     "kga_hole_est": null,
     "extra_courses": null,
     "hole_by_hole": null,
-    "length_m": 6010,
+    "length_m": 3005,
     "par": null
    },
    "fee": {
@@ -120615,7 +120615,7 @@
      "holes": 9,
      "par": 36,
      "blocks": [],
-     "length_m": 6468,
+     "length_m": 3234,
      "kga": {
       "kga_course_code": "312",
       "kga_name": "베스트밸리",
@@ -120761,7 +120761,7 @@
     "kga_hole_est": null,
     "extra_courses": null,
     "hole_by_hole": null,
-    "length_m": 6468,
+    "length_m": 3234,
     "par": 36
    },
    "fee": {
@@ -169205,7 +169205,7 @@
      "holes": 27,
      "par": 72,
      "blocks": [],
-     "length_m": 9325,
+     "length_m": 6217,
      "kga": {
       "kga_course_code": "73",
       "kga_name": "대구",
@@ -169520,7 +169520,7 @@
     "kga_hole_est": null,
     "extra_courses": null,
     "hole_by_hole": null,
-    "length_m": 9325,
+    "length_m": 6217,
     "par": 72
    },
    "fee": {
@@ -173689,7 +173689,7 @@
      "holes": 27,
      "par": 72,
      "blocks": [],
-     "length_m": 9747,
+     "length_m": 6498,
      "kga": {
       "kga_course_code": "79",
       "kga_name": "강동 디아너스",
@@ -174099,7 +174099,7 @@
     "kga_hole_est": null,
     "extra_courses": null,
     "hole_by_hole": null,
-    "length_m": 9747,
+    "length_m": 6498,
     "par": 72
    },
    "fee": {
@@ -191270,7 +191270,7 @@
      "blocks": [
       "해별달"
      ],
-     "length_m": 10105,
+     "length_m": 6737,
      "kga": null,
      "grass": null,
      "hole_by_hole": null
@@ -191307,7 +191307,7 @@
     "kga_hole_est": null,
     "extra_courses": null,
     "hole_by_hole": null,
-    "length_m": 10105,
+    "length_m": 6737,
     "par": 72
    },
    "fee": {
@@ -194502,7 +194502,7 @@
      "holes": 27,
      "par": 73,
      "blocks": [],
-     "length_m": 10136,
+     "length_m": 6757,
      "kga": {
       "kga_course_code": "427",
       "kga_name": "엠스클럽의성",
@@ -194848,7 +194848,7 @@
     "kga_hole_est": null,
     "extra_courses": null,
     "hole_by_hole": null,
-    "length_m": 10136,
+    "length_m": 6757,
     "par": 73
    },
    "fee": {
@@ -196047,7 +196047,7 @@
      "holes": 27,
      "par": 72,
      "blocks": [],
-     "length_m": 9668,
+     "length_m": 6445,
      "kga": null,
      "grass": null,
      "hole_by_hole": null
@@ -196080,7 +196080,7 @@
     "kga_hole_est": null,
     "extra_courses": null,
     "hole_by_hole": null,
-    "length_m": 9668,
+    "length_m": 6445,
     "par": 72
    },
    "fee": {
@@ -204349,7 +204349,7 @@
      "url": "https://greenfeeguide.co.kr/course/gc-0386/"
     },
     "course_spec": {
-     "length_m": 3245,
+     "length_m": 6490,
      "holes": 27
     }
    },
@@ -204381,7 +204381,7 @@
     },
     "kga_hole_est": 27,
     "extra_courses": null,
-    "length_m": 3245
+    "length_m": 6490
    },
    "fee": {
     "weekday": 210000,
@@ -204797,7 +204797,7 @@
     "factcheck_2026_11_26": null,
     "address_original": "김해시 진례면 고모로 134번길 54-49",
     "course_spec": {
-     "length_m": 3246,
+     "length_m": 6492,
      "par": 72,
      "holes": 18
     },
@@ -204828,7 +204828,7 @@
     },
     "kga_hole_est": 18,
     "extra_courses": null,
-    "length_m": 3246,
+    "length_m": 6492,
     "par": 72
    },
    "fee": {
@@ -230830,7 +230830,7 @@
     },
     "kga_hole_est": 9,
     "extra_courses": null,
-    "length_m": 5627
+    "length_m": 2814
    },
    "fee": {
     "weekday": 120000,
@@ -243735,7 +243735,7 @@
     },
     "kga_hole_est": 9,
     "extra_courses": null,
-    "length_m": 5144
+    "length_m": 2572
    },
    "fee": {
     "weekday": 65000,
@@ -246956,7 +246956,7 @@
     "factcheck_2026_11_26": null,
     "address_original": "춘천시 동산면 종자리로 148-16",
     "course_spec": {
-     "length_m": 3260,
+     "length_m": 6520,
      "par": 72,
      "holes": 27
     },
@@ -246977,7 +246977,7 @@
     "kga": null,
     "kga_hole_est": null,
     "extra_courses": null,
-    "length_m": 3260,
+    "length_m": 6520,
     "par": 72
    },
    "fee": {
@@ -253504,7 +253504,7 @@
     "kga_hole_est": 18,
     "extra_courses": null,
     "par": 36,
-    "length_m": 4705
+    "length_m": 2352
    },
    "fee": {
     "weekday": 60000,

@@ -65,7 +65,7 @@
    "holes": 9,
    "par": 36,
    "blocks": [],
-   "length_m": 5733,
+   "length_m": 2866,
    "kga": {
     "kga_course_code": "378",
     "kga_name": "글렌로스",
@@ -173,7 +173,7 @@
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": 5733,
+  "length_m": 2866,
   "par": 36,
   "holes_note": "등록(문체부) 9홀 · 수집 18홀 — 등록 기준과 수집처(티픽·조사) 표기 차이다. 등록 9홀을 정본으로 두고 집계에는 master.holes를 쓴다. 복합단지 합산 여부는 미확정."
  },

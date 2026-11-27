@@ -162,7 +162,7 @@
    "holes": 27,
    "par": 72,
    "blocks": [],
-   "length_m": 9747,
+   "length_m": 6498,
    "kga": {
     "kga_course_code": "79",
     "kga_name": "강동 디아너스",
@@ -572,7 +572,7 @@
   "kga_hole_est": null,
   "extra_courses": null,
   "hole_by_hole": null,
-  "length_m": 9747,
+  "length_m": 6498,
   "par": 72
  },
  "fee": {
