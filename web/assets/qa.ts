@@ -301,7 +301,7 @@ export async function renderQa(host: HTMLElement, dataBase: string): Promise<voi
     const list = filtered();
     const shown = list.slice(0, st.shown);
     body.innerHTML = shown.map(rowHTML).join("") || `<tr><td colspan="${AREAS.length + 3}" class="qa-empty">조건에 맞는 구장이 없습니다.</td></tr>`;
-    count.textContent = `${list.length}곳 중 ${shown.length}곳 표시${st.only.size ? ` · 필터 ${[...st.only].length}개` : ""}`;
+    count.textContent = `${list.length}곳 중 ${shown.length}곳 표시${st.only.size ? ` · 필터 ${[...st.only].length}개` : ""} · 표 안에서 스크롤`;
     more.hidden = list.length <= shown.length;
     for (const btn of host.querySelectorAll<HTMLElement>("[data-only]")) {
       const on = btn.dataset.only ? st.only.has(btn.dataset.only) : false;

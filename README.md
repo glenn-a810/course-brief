@@ -155,7 +155,14 @@ dist/
 (`<base href="/">` + `history.replaceState('/#/c/{id}')`). 그래서 클라이언트 렌더와 같은 셸·같은 데이터
 포맷을 쓰고, 해시 라우팅(`#/c/{id}`)은 그대로 동작한다.
 
-롤백: `git checkout pre-stage3` (또는 `git reset --hard backup/pre-stage3`) — 3단계 직전 커밋이다.
+롤백(3단계 직전 = `pre-stage3` 태그 `d0f2fcc`):
+
+```bash
+git reset --hard pre-stage3 && git push --force-with-lease origin main   # 배포 되돌리기
+```
+
+Cloudflare Pages 대시보드 → Deployments → 직전 배포 → **Rollback** 으로도 즉시 되돌릴 수 있다
+(빌드를 다시 돌리지 않는다).
 
 ## 5. 배포 — Cloudflare Pages (무료)
 
