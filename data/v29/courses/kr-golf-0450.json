@@ -262,11 +262,11 @@
    "evidence": []
   },
   "locker": {
-   "value": "사우나 있음",
+   "value": null,
    "evidence": []
   },
   "sauna": {
-   "value": "사우나 있음",
+   "value": "운영",
    "evidence": []
   },
   "dress": {
@@ -295,7 +295,7 @@
    "evidence": []
   },
   "food": {
-   "value": "식당(해장국 20,000원)",
+   "value": "운영(해장국 20,000원)",
    "evidence": []
   },
   "snack_bar": {
@@ -303,7 +303,7 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": "사우나 있음",
+   "value": null,
    "evidence": []
   },
   "lodging": {
@@ -441,8 +441,8 @@
   "basic": 1.0,
   "course": 0.6,
   "fee": 1.0,
-  "ops": 0.43,
-  "facility": 0.3,
+  "ops": 0.36,
+  "facility": 0.2,
   "briefing": 0.5,
   "rental": 1.0
  }

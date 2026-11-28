@@ -597,7 +597,7 @@
    "evidence": [
     "사우나: 사우나 있음온탕과 샤워시설"
    ],
-   "value": "사우나 있음온탕과 샤워시설",
+   "value": "운영 · 온탕과 샤워시설",
    "source_url": "https://greenfeeguide.co.kr/course/gc-0058/",
    "source_type": "public_info(greenfeeguide)",
    "confidence": "medium",
@@ -619,7 +619,7 @@
     "서원힐스 닫기 로고 파주시 광탄면 reservation KO EN - 예약현황 건 - 쿠폰현황 건 - 대기예약 건 - 베스트 스코어 타 정보수정 닫기 About Seowon 스토리 토너먼트 ESG 서원에세이 클럽하우스 오시는길 Course 코스소개 코스제원 웨스트 사우스 이스트 Reservation 실시간예약 일반단체 신청 이용안내 이용요금 Our Special 서원 인레인지(연습장) 서원 아트리움(웨딩,모임) 서원정/서원더뷰 CONTACT 공지사항 이벤트 Q&A My Page 예약현황 쿠폰함 나의활동 고객의 소리 회원정보 수정 L",
     "서원 인레인지(연습장)"
    ],
-   "value": "드라이빙레인지 · 연습장",
+   "value": "드라이빙 레인지",
    "source_url": "https://www.seowongolf.co.kr/valley/main",
    "confidence": "medium",
    "source_type": "official_site",
@@ -646,7 +646,7 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": "사우나 있음온탕과 샤워시설",
+   "value": null,
    "evidence": [
     "사우나: 사우나 있음온탕과 샤워시설"
    ],
@@ -688,7 +688,7 @@
   },
   "gf_facilities": null,
   "proshop": {
-   "value": "프로샵",
+   "value": "운영",
    "evidence": [
     "other: 프로샵"
    ],
@@ -815,7 +815,7 @@
   "course": 1.0,
   "fee": 0.25,
   "ops": 0.14,
-  "facility": 0.4,
+  "facility": 0.3,
   "briefing": 0.5,
   "rental": 1.0
  }

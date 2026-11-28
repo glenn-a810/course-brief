@@ -297,7 +297,7 @@
    "checked_at": "2026-11-27"
   },
   "cart_entry": {
-   "value": "카트 페어웨이 진입 불가",
+   "value": "불가",
    "evidence": [
     "- 카트 페어웨이 진입 불가"
    ],
@@ -327,11 +327,11 @@
    "note": "공개 요금 정보가 골프장 공식 안내를 정리한 값(확인일 페이지 표기)"
   },
   "locker": {
-   "value": "사우나 있음",
+   "value": null,
    "evidence": []
   },
   "sauna": {
-   "value": "사우나 있음",
+   "value": "운영",
    "evidence": []
   },
   "dress": {
@@ -382,7 +382,7 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": "사우나 있음",
+   "value": null,
    "evidence": []
   },
   "lodging": {
@@ -546,8 +546,8 @@
   "basic": 0.89,
   "course": 0.4,
   "fee": 0.5,
-  "ops": 0.71,
-  "facility": 0.5,
+  "ops": 0.64,
+  "facility": 0.4,
   "briefing": 0.75,
   "rental": 1.0
  }

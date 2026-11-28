@@ -254,11 +254,11 @@
    "evidence": []
   },
   "locker": {
-   "value": "사우나",
+   "value": null,
    "evidence": []
   },
   "sauna": {
-   "value": "사우나",
+   "value": "운영",
    "evidence": []
   },
   "dress": {
@@ -288,7 +288,7 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": "사우나",
+   "value": null,
    "evidence": []
   },
   "lodging": {
@@ -466,8 +466,8 @@
   "basic": 0.89,
   "course": 0.8,
   "fee": 1.0,
-  "ops": 0.43,
-  "facility": 0.2,
+  "ops": 0.36,
+  "facility": 0.1,
   "briefing": 0.25,
   "rental": 1.0
  }

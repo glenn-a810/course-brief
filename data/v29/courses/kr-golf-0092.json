@@ -120,7 +120,7 @@
   "weekend": 290000,
   "weekday_text": null,
   "weekend_text": null,
-  "basis": "official",
+  "basis": "공식 요금표",
   "tax_included": null,
   "cart": {
    "value": 110000,
@@ -252,7 +252,7 @@
     "카트 운행은 회사가 전 항의 자격 등을 확인한 후 승낙한 경우에만 가능하다.",
     "경기자는 카트 운행 시 좌석에 앉아야 하며 안전 손잡이를 반드시 잡아야 한다."
    ],
-   "value": "문구 확인(원문 근거)"
+   "value": null
   },
   "bagdrop": {
    "evidence": [],
@@ -290,7 +290,7 @@
     "프론트에서 예약자 존함 및 예약 시간을 확인하시고 방명록에 서명하신 후 락커 배정표를 수령하시기 바랍니다."
    ],
    "value": "락커 운영",
-   "value_previous": "문구 확인(원문 근거)",
+   "value_previous": null,
    "source_url": "https://ananti.kr/ko/chord/golfclub/information",
    "confidence": "low",
    "source_type": "official_site",
@@ -303,8 +303,8 @@
     "A SPIRIT OF JOURNEY CLUB A SPIRIT OF JOURNEY CLUB A SPIRIT OF JOURNEY CLUB 아난티 앳 부산 코브, 맥퀸즈 클럽사계절 내내 바다를 바라보며 운동하는 최고의 경험 피트니스, 맥퀸즈 풀, 사우나가 있는 아난티 앳 부산 코브의 맥퀸즈 클럽은 압도적인 야외 경관과 눈앞에 펼쳐진 이국적인 바다 풍경을 바라보며 온전한 휴식을 취할 수 있는 공간입니다.",
     "피트니스, 맥퀸즈 풀, 사우나가 있는 아난티 앳 부산 코브의 맥퀸즈 클럽은 압도적인 야외 경관과 눈앞에 펼쳐진 이국적인 바다 풍경을 바라보며 온전한 휴식을 취할 수 있는 공간입니다."
    ],
-   "value": "사우나 운영",
-   "value_previous": "문구 확인(원문 근거)",
+   "value": "운영",
+   "value_previous": null,
    "source_url": "https://ananti.kr/ko/board/membership/PA0301",
    "confidence": "medium",
    "source_type": "official_site",
@@ -318,7 +318,7 @@
     "반바지·슬리퍼·민소매·노출이 심한 옷 차림으로 내장하면 예약자 페널티, 소프트 스파이크(고무징) 착용"
    ],
    "value": "반바지·슬리퍼·민소매·노출이 심한 옷 차림으로 내장하면 예약자 페널티, 소프트 스파이크(고무징) 착용",
-   "value_previous": "문구 확인(원문 근거)",
+   "value_previous": null,
    "source_url": "https://ananti.kr/ko/chord/golfclub/information",
    "confidence": "high",
    "checked_at": "2026-10-16",
@@ -393,7 +393,7 @@
    "value_from": "capital_supplement(greenfee_guide)"
   },
   "other": {
-   "value": "카페·라운지 · 수영장",
+   "value": "라운지 · 수영장",
    "evidence": [
     "카페·라운지·수영장 — 골프 코스 옆 숲속 카페"
    ],
@@ -624,7 +624,7 @@
   "basic": 0.89,
   "course": 0.6,
   "fee": 1.0,
-  "ops": 0.71,
+  "ops": 0.64,
   "facility": 0.4,
   "briefing": 0.25,
   "rental": 0.25

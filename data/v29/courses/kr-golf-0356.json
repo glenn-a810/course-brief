@@ -289,7 +289,7 @@
    "evidence": []
   },
   "sauna": {
-   "value": "VIP 사우나(A 300,000원·B 200,000원), 락카 판매 시 카트 커피 서비스",
+   "value": null,
    "evidence": []
   },
   "dress": {
@@ -335,7 +335,7 @@
    "evidence": []
   },
   "other": {
-   "value": "프로샵·카페·라운지, VIP 락카룸",
+   "value": "프로샵 · 라운지 · VIP 락카룸",
    "evidence": []
   },
   "night": {
@@ -476,7 +476,7 @@
   "basic": 1.0,
   "course": 0.8,
   "fee": 1.0,
-  "ops": 0.64,
+  "ops": 0.57,
   "facility": 0.4,
   "briefing": 0.5,
   "rental": 1.0

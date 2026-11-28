@@ -444,7 +444,7 @@
    "evidence": [
     "2인 플레이 입장 2 추가 요금 과징"
    ],
-   "value": "2인 플레이 가능(추가요금 부과)",
+   "value": "가능(추가요금 부과)",
    "third_party": {
     "two": null,
     "three": null,
@@ -527,7 +527,7 @@
     "칼라 없는 상의·민소매·찢어진 청바지·트레이닝복·등산복·샌들 삼가, 타투 노출 시 시설 이용 제한"
    ],
    "value": "칼라 없는 상의·민소매·찢어진 청바지·트레이닝복·등산복·샌들 삼가, 타투 노출 시 시설 이용 제한",
-   "value_previous": "문구 확인(원문 근거)",
+   "value_previous": null,
    "source_url": "https://www.thestarhue.com/sginfo.asp",
    "confidence": "high",
    "checked_at": "2026-10-16",

@@ -426,7 +426,7 @@
   "weekend": 280000,
   "weekday_text": null,
   "weekend_text": null,
-  "basis": "official",
+  "basis": "공식 요금표",
   "tax_included": null,
   "cart": {
    "value": 100000,
@@ -723,7 +723,7 @@
     "연면적 약 5,400m2(1,630여평), 지상 3층, Private Room, 대형프론트, 락카룸, 대식당, 휴게실 등"
    ],
    "value": "락커 운영",
-   "value_previous": "문구 확인(원문 근거)",
+   "value_previous": null,
    "source_url": "https://www.swcc.co.kr/swp/club",
    "confidence": "medium",
    "source_type": "official_site",
@@ -734,8 +734,8 @@
    "evidence": [
     "사우나 있음 · 퍼팅 연습 그린·드라이빙 레인지 · 프로샵"
    ],
-   "value": "사우나 운영",
-   "value_previous": "문구 확인(원문 근거)",
+   "value": "운영",
+   "value_previous": null,
    "source_url": "https://www.swcc.co.kr/swp/club",
    "confidence": "high",
    "checked_at": "2026-10-20",
@@ -788,7 +788,7 @@
    "evidence": [
     "식당은 클럽하우스를 이용하고 프로샵에서 시상품 등 필요한 물품을 구입하는 것을 원칙으로 하고 외부에서 시상품을 반입하는 것을 금한다."
    ],
-   "value": "식당",
+   "value": "운영",
    "source_url": "https://www.swcc.co.kr/swp/reserve_guide",
    "confidence": "low",
    "source_type": "official_site",
@@ -800,7 +800,7 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": "사우나 있음",
+   "value": null,
    "evidence": [
     "locker_sauna: 사우나 있음"
    ],
@@ -856,7 +856,7 @@
    "evidence": [
     "사우나 있음 · 퍼팅 연습 그린·드라이빙 레인지 · 프로샵"
    ],
-   "value": "프로샵 운영",
+   "value": "운영",
    "source_url": "https://www.swcc.co.kr/swp/club",
    "confidence": "high",
    "checked_at": "2026-10-20",
@@ -992,7 +992,7 @@
   "course": 1.0,
   "fee": 1.0,
   "ops": 0.71,
-  "facility": 0.5,
+  "facility": 0.4,
   "briefing": 0.0,
   "rental": 1.0
  }

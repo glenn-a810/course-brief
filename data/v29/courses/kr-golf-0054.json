@@ -235,7 +235,7 @@
    "evidence": []
   },
   "sauna": {
-   "value": "사우나·락커룸",
+   "value": "운영 · 락커룸",
    "evidence": []
   },
   "dress": {
@@ -251,7 +251,7 @@
  },
  "facilities": {
   "practice": {
-   "value": "골프연습장",
+   "value": "운영",
    "evidence": [
     "https://www.asiadcc.co.kr/html/company/company_03_01.asp"
    ]
@@ -267,7 +267,7 @@
    ]
   },
   "snack_bar": {
-   "value": "그늘집",
+   "value": "운영",
    "evidence": [
     "https://www.asiadcc.co.kr/html/company/company_03_01.asp"
    ]

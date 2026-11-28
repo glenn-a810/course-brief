@@ -353,7 +353,7 @@
   "weekend": 200000,
   "weekday_text": null,
   "weekend_text": null,
-  "basis": "official",
+  "basis": "공식 요금표",
   "tax_included": null,
   "cart": {
    "value": 100000,
@@ -664,13 +664,13 @@
    "evidence": [
     "시설이용료(기본요금) : 골프장 이용시 기본적으로 발생되는 비용으로서 락커, 샤워실 등 클럽하우스 시설 이용에 부과되는 요금 및 제세공과금 (2022년 기준 기본요금 20,000원) 기 이용한 홀수 : 기 이용한 홀수에 대한 요금 부과 판단은 티오프(티샷)을 기준으로 함 홀별 정산은 기상악화로 인한 플레이를 기준하며, 개인 사정으로 인한 홀별정산은 불가합니다."
    ],
-   "value": "문구 확인(원문 근거)"
+   "value": null
   },
   "sauna": {
    "evidence": [
     "사우나: 사우나 있음락카, 사우나"
    ],
-   "value": "사우나 있음 · 락카, 사우나",
+   "value": "운영 · 락카, 사우나",
    "source_url": "https://greenfeeguide.co.kr/course/gc-0469/",
    "source_type": "public_info(greenfeeguide)",
    "confidence": "medium",
@@ -718,7 +718,7 @@
    "evidence": []
   },
   "other": {
-   "value": "사우나 · 퍼팅 연습 그린",
+   "value": "퍼팅 연습 그린",
    "evidence": [
     "사우나 · 퍼팅 연습 그린 (출처: https://greenfeeguide.co.kr/course/gc-0469/, 2026-11-27 확인)"
    ]
@@ -963,7 +963,7 @@
   "basic": 0.89,
   "course": 0.6,
   "fee": 1.0,
-  "ops": 0.21,
+  "ops": 0.14,
   "facility": 0.4,
   "briefing": 0.25,
   "rental": 1.0

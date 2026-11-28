@@ -224,7 +224,7 @@
   "weekend": 175000,
   "weekday_text": null,
   "weekend_text": null,
-  "basis": "official",
+  "basis": "공식 요금표",
   "tax_included": null,
   "cart": {
    "value": 100000,
@@ -390,13 +390,13 @@
     "방명록을 작성하시고, 회원님께서는 락카번호표를 받으시기 바랍니다.",
     "락카 이용안내 청결한 락카룸과 사우나 시설이 준비되어 있습니다."
    ],
-   "value": "문구 확인(원문 근거)"
+   "value": null
   },
   "sauna": {
    "evidence": [
     "락카 이용안내 청결한 락카룸과 사우나 시설이 준비되어 있습니다."
    ],
-   "value": "문구 확인(원문 근거)"
+   "value": null
   },
   "dress": {
    "evidence": [],
@@ -429,7 +429,7 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": "사우나",
+   "value": "운영",
    "evidence": [
     "사우나 (출처: https://greenfeeguide.co.kr/course/gc-0466/, 2026-11-27 확인)",
     "사우나 있음"
@@ -607,7 +607,7 @@
   "basic": 1.0,
   "course": 0.2,
   "fee": 1.0,
-  "ops": 0.21,
+  "ops": 0.07,
   "facility": 0.3,
   "briefing": 0.25,
   "rental": 1.0

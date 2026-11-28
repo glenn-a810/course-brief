@@ -384,7 +384,7 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": "사우나",
+   "value": "운영",
    "evidence": [
     "인피니티 풀과 사우나 시설을 갖춘 전 객실에서"
    ],
@@ -421,7 +421,7 @@
    "evidence": []
   },
   "proshop": {
-   "value": "프로샵",
+   "value": "운영",
    "evidence": [
     "프로샵: 프리미엄 프로샵 (국내외 럭셔리 골프 브랜드)"
    ],

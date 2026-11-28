@@ -268,7 +268,7 @@
   "weekend": 175000,
   "weekday_text": null,
   "weekend_text": null,
-  "basis": "official",
+  "basis": "공식 요금표",
   "tax_included": null,
   "cart": {
    "value": 100000,
@@ -356,7 +356,7 @@
    "evidence": []
   },
   "five_player": {
-   "value": "5인 플레이 가능(전동카트 5인 125,000원/팀, 캐디피 5bag 220,000원)",
+   "value": "가능(전동카트 5인 125,000원/팀, 캐디피 5bag 220,000원)",
    "evidence": [
     "전동카트 4인 100,000/team 5인 125,000/team 캐디피 4bag 150,000 5bag 220,000"
    ],

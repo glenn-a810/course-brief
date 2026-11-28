@@ -342,7 +342,7 @@
   "weekend": 290000,
   "weekday_text": null,
   "weekend_text": null,
-  "basis": "official",
+  "basis": "공식 요금표",
   "tax_included": null,
   "cart": {
    "value": 100000,
@@ -429,7 +429,7 @@
    "evidence": []
   },
   "marshal_caddie": {
-   "value": "마샬 캐디 100,000원(오후·야간 시간대)",
+   "value": "100,000원(오후·야간 시간대)",
    "evidence": [
     "마샬 캐디 100,000원(오후·야간 시간대)"
    ],

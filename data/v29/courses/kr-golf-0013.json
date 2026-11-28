@@ -111,7 +111,7 @@
   "weekend": 105000,
   "weekday_text": null,
   "weekend_text": null,
-  "basis": "official",
+  "basis": "공식 요금표",
   "tax_included": null,
   "cart": null,
   "caddie": null,
@@ -218,7 +218,7 @@
    "evidence": [
     "사우나: 사우나 있음"
    ],
-   "value": "사우나 있음",
+   "value": "운영",
    "source_url": "https://greenfeeguide.co.kr/course/gc-0181/",
    "source_type": "public_info(greenfeeguide)",
    "confidence": "medium",
@@ -239,7 +239,7 @@
    "evidence": [
     "골프연습장 안내 (출처: https://www.bitgoeulcc.co.kr/web/index.do, 2026-11-27 확인)"
    ],
-   "value": "골프연습장 안내"
+   "value": "운영"
   },
   "indoor_range": {
    "value": null,
@@ -256,7 +256,7 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": "사우나",
+   "value": null,
    "evidence": [
     "사우나 (출처: https://greenfeeguide.co.kr/course/gc-0181/, 2026-11-27 확인)",
     "사우나 있음"
@@ -436,7 +436,7 @@
   "course": 0.2,
   "fee": 0.5,
   "ops": 0.21,
-  "facility": 0.6,
+  "facility": 0.5,
   "briefing": 0.5,
   "rental": 0.25
  }

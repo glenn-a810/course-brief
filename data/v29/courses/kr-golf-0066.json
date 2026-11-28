@@ -226,7 +226,7 @@
   "weekend": 240000,
   "weekday_text": null,
   "weekend_text": null,
-  "basis": "official",
+  "basis": "공식 요금표",
   "tax_included": null,
   "cart": null,
   "caddie": {
@@ -389,7 +389,7 @@
    "evidence": [
     "드라이빙 레인지 · 프로샵"
    ],
-   "value": "프로샵 운영",
+   "value": "운영",
    "source_url": "https://www.incheoncc.com/",
    "confidence": "high",
    "checked_at": "2026-10-20",

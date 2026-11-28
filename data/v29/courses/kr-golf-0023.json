@@ -108,7 +108,7 @@
   "weekend": 170000,
   "weekday_text": null,
   "weekend_text": null,
-  "basis": "official",
+  "basis": "공식 요금표",
   "tax_included": null,
   "cart": {
    "value": 90000,
@@ -229,7 +229,7 @@
    "evidence": [
     "락커, 샤워실 등 클럽하우스 시설 이용에 부과되는 요금 3."
    ],
-   "value": "문구 확인(원문 근거)"
+   "value": null
   },
   "sauna": {
    "evidence": [],
@@ -298,7 +298,7 @@
     "② 이 골프장의 정기 휴장일은 다음과 같다."
    ],
    "third_party": "정기 휴장일 없음숙박호텔부대시설드라이빙",
-   "value": "정기 휴장일 없음"
+   "value": "없음"
   },
   "shuttle": {
    "evidence": [],
@@ -662,7 +662,7 @@
   "basic": 0.89,
   "course": 0.2,
   "fee": 1.0,
-  "ops": 0.07,
+  "ops": 0.0,
   "facility": 0.4,
   "briefing": 0.25,
   "rental": 0.25

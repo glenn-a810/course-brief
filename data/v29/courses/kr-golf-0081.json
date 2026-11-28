@@ -277,11 +277,11 @@
    ]
   },
   "snack_bar": {
-   "value": "그늘집(5번홀)",
+   "value": "운영(5번홀)",
    "evidence": []
   },
   "locker_sauna": {
-   "value": "락카룸",
+   "value": "운영",
    "evidence": [
     "http://www.goldgreen.co.kr/swp/facil_house"
    ]

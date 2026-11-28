@@ -108,7 +108,7 @@
   "weekend": 220000,
   "weekday_text": null,
   "weekend_text": null,
-  "basis": "official",
+  "basis": "공식 요금표",
   "tax_included": null,
   "cart": {
    "value": 100000,
@@ -236,7 +236,7 @@
    "evidence": [
     "사우나 있음"
    ],
-   "value": "사우나 운영",
+   "value": "운영",
    "source_url": "https://www.sunvalley.co.kr/yeoju/golf/club_spa",
    "confidence": "high",
    "checked_at": "2026-10-20",
@@ -278,7 +278,7 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": "사우나 있음",
+   "value": null,
    "evidence": [
     "사우나 있음 — https://greenfeeguide.co.kr/course/gc-0142/"
    ],
@@ -292,7 +292,7 @@
    "evidence": []
   },
   "other": {
-   "value": "사우나 있음",
+   "value": null,
    "evidence": [
     "사우나 있음"
    ],
@@ -455,7 +455,7 @@
   "course": 0.6,
   "fee": 1.0,
   "ops": 0.36,
-  "facility": 0.2,
+  "facility": 0.0,
   "briefing": 0.5,
   "rental": 0.25
  }

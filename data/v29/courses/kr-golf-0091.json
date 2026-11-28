@@ -305,7 +305,7 @@
     "썬힐골프클럽의 락커룸입니다 럭셔리한 락커룸은 여러분의 품격을 더 높여드립니다."
    ],
    "value": "락커 운영",
-   "value_previous": "문구 확인(원문 근거)",
+   "value_previous": null,
    "source_url": "https://www.sunhillgolf.co.kr/HomePage/views/main",
    "confidence": "medium",
    "source_type": "official_site",
@@ -417,7 +417,7 @@
    "evidence": [
     "프로샵"
    ],
-   "value": "프로샵 운영",
+   "value": "운영",
    "source_url": "https://www.sunhillgolf.co.kr/",
    "confidence": "high",
    "checked_at": "2026-10-20",

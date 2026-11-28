@@ -187,7 +187,7 @@
    "evidence": [
     "노캐디 라운딩 이용 시 고객님의 셀프라운드 세팅, 카트점검, 카트청소 비용 1팀당 20,000원씩 부과됩니다."
    ],
-   "value": "노캐디(셀프) 라운딩 운영, 세팅·카트청소비 1팀당 20,000원",
+   "value": "셀프 라운딩 운영, 세팅·카트청소비 1팀당 20,000원",
    "source_url": "https://www.uniisland.com/guide/use-guide",
    "source_type": "official_site",
    "confidence": "medium",
@@ -201,7 +201,7 @@
     "2024.05.16 공지사항 한시적 3인플레이 가능!!",
     "2인플레이 진행 시 3인그린피 요금이 부과됩니다.(3인플레이와 동일금액)"
    ],
-   "value": "2인 플레이 가능(3인 그린피 적용)",
+   "value": "가능(3인 그린피 적용)",
    "source_url": "https://www.uniisland.com/guide/use-guide",
    "source_type": "official_site",
    "confidence": "medium",
@@ -209,7 +209,7 @@
    "checked_at": "2026-11-27"
   },
   "three_player": {
-   "value": "3인 플레이 가능",
+   "value": "가능",
    "evidence": [
     "1팀 3인 플레이 이상 가능합니다."
    ],
@@ -220,7 +220,7 @@
    "checked_at": "2026-11-27"
   },
   "five_player": {
-   "value": "5인 플레이 가능(리무진 카트), 셀프라운딩 시 불가",
+   "value": "가능(리무진 카트), 셀프라운딩 시 불가",
    "evidence": [
     "4. 셀프라운딩 예약시 5인플레이 및 갤러리입장 불가합니다."
    ],
@@ -286,7 +286,7 @@
    "evidence": [
     "클럽하우스,대식당,프로샵,락카룸,그늘집이 편리하게 배치되어 있으며"
    ],
-   "value": "락카룸·락카장 운영",
+   "value": "운영(락카룸·락카장)",
    "source_url": "https://www.uniisland.com/board/qna",
    "source_type": "official_site",
    "confidence": "medium",
@@ -349,7 +349,7 @@
    "evidence": []
   },
   "lodging": {
-   "value": "숙박 가능(객실 운영, 16시부터 체크인)",
+   "value": "가능(객실 운영, 16시부터 체크인)",
    "evidence": [
     "당일 라운드 이후 객실 체크인. (16:00 부터 체크인 가능)"
    ],

@@ -637,7 +637,7 @@
     "락커는 4자리 번호를 입력하면 잠기고 플레이 후 같은 번호를 입력하시면 열립니다."
    ],
    "value": "락커 운영",
-   "value_previous": "문구 확인(원문 근거)",
+   "value_previous": null,
    "source_url": "https://www.konjiamgolfclub.co.kr/other/infoGuide.dev",
    "confidence": "low",
    "source_type": "official_site",
@@ -766,7 +766,7 @@
    "evidence": [
     "어프로치 연습·벙커 연습 · 주차 발렛 파킹 · 프로샵"
    ],
-   "value": "프로샵 운영",
+   "value": "운영",
    "source_url": "https://www.konjiamgolfclub.co.kr/house/house.dev",
    "confidence": "high",
    "checked_at": "2026-10-20",

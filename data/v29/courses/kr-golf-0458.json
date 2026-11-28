@@ -322,7 +322,7 @@
  },
  "ops": {
   "nocaddie": {
-   "value": "노캐디(셀프) 가능(팀당 20,000원 추가)",
+   "value": "셀프 가능(팀당 20,000원 추가)",
    "evidence": []
   },
   "two_player": {
@@ -409,7 +409,7 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": "사우나",
+   "value": "운영",
    "evidence": [
     "사우나"
    ],

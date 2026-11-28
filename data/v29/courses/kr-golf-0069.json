@@ -145,7 +145,7 @@
  },
  "cancel": {
   "cancel_policy": {
-   "value": "위약 없이 취소: 평일 3일 전 · 주말 4일 전까지(이용약관 기준)\n• 겨울 휴장: 매년 1월 중 5일간\n• 개장: 1991년 개장\n• 부대시설: 사우나·퍼팅 연습 그린",
+   "value": "위약 없이 취소: 평일 3일 전 · 주말 4일 전까지(이용약관 기준)",
    "source": "그린피가이드(공식 인용)",
    "url": "https://greenfeeguide.co.kr/course/gc-0171/"
   },
@@ -246,7 +246,7 @@
     "비거리 250M (전장150M), 총 30개 타석 (1개층 당 15타석), 회원 전용 락카가 있습니다."
    ],
    "value": "락커 운영",
-   "value_previous": "문구 확인(원문 근거)",
+   "value_previous": null,
    "source_url": "http://www.songdogolf.co.kr/_field/field01.php",
    "confidence": "low",
    "source_type": "official_site",
@@ -257,7 +257,7 @@
    "evidence": [
     "사우나 있음 · 퍼팅 연습 그린·드라이빙 레인지 · 프로샵·카페·라운지"
    ],
-   "value": "사우나 운영",
+   "value": "운영",
    "source_url": "https://www.songdogolf.co.kr/_fac/fac01.php",
    "confidence": "high",
    "checked_at": "2026-10-20",
@@ -269,7 +269,7 @@
    "evidence": [
     "02복장 규정 숙지 (복장규정 안내 표지판 참고)"
    ],
-   "value": "복장 규정 안내",
+   "value": "안내",
    "source_url": "http://www.songdogolf.co.kr/_course/course03.php",
    "confidence": "medium",
    "source_type": "official_site",
@@ -340,7 +340,7 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": "사우나 있음",
+   "value": null,
    "evidence": [
     "사우나 있음 — https://greenfeeguide.co.kr/course/gc-0171/"
    ],
@@ -354,7 +354,7 @@
    "evidence": []
   },
   "other": {
-   "value": "카페·라운지",
+   "value": "라운지",
    "evidence": [
     "사우나 있음 · 퍼팅 연습 그린·드라이빙 레인지 · 프로샵·카페·라운지"
    ],
@@ -396,7 +396,7 @@
    "evidence": [
     "사우나 있음 · 퍼팅 연습 그린·드라이빙 레인지 · 프로샵·카페·라운지"
    ],
-   "value": "프로샵 운영",
+   "value": "운영",
    "source_url": "https://www.songdogolf.co.kr/_fac/fac01.php",
    "confidence": "high",
    "checked_at": "2026-10-20",
@@ -600,7 +600,7 @@
   "course": 0.2,
   "fee": 1.0,
   "ops": 0.57,
-  "facility": 0.5,
+  "facility": 0.4,
   "briefing": 0.25,
   "rental": 0.25
  }

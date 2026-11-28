@@ -279,7 +279,7 @@
    "evidence": [
     "- 싱글은 혼자 타고 페어웨이에 진입해 라운딩하는 1인승 카트입니다."
    ],
-   "value": "카트 페어웨이 진입 가능",
+   "value": "가능",
    "source_url": "https://www.bavista.co.kr/Public/Guide/Charge",
    "confidence": "medium",
    "source_type": "official_site",
@@ -327,7 +327,7 @@
    "evidence": [
     "사우나 있음 · 주차 발렛 파킹 · 프로샵"
    ],
-   "value": "사우나 운영",
+   "value": "운영",
    "source_url": "https://www.bavista.co.kr/Public/Facilities/ClubHouse",
    "confidence": "high",
    "checked_at": "2026-10-20",
@@ -391,7 +391,7 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": "사우나 있음",
+   "value": null,
    "evidence": [
     "사우나 있음 — https://greenfeeguide.co.kr/course/gc-0082/"
    ],
@@ -437,7 +437,7 @@
    "evidence": [
     "사우나 있음 · 주차 발렛 파킹 · 프로샵"
    ],
-   "value": "프로샵 운영",
+   "value": "운영",
    "source_url": "https://www.bavista.co.kr/Public/Facilities/ClubHouse",
    "confidence": "high",
    "checked_at": "2026-10-20",
@@ -580,7 +580,7 @@
   "course": 0.8,
   "fee": 0.0,
   "ops": 0.57,
-  "facility": 0.4,
+  "facility": 0.3,
   "briefing": 0.5,
   "rental": 0.25
  }

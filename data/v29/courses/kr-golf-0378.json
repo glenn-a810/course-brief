@@ -388,11 +388,11 @@
    "evidence": []
   },
   "locker": {
-   "value": "사우나",
+   "value": null,
    "evidence": []
   },
   "sauna": {
-   "value": "사우나",
+   "value": "운영",
    "evidence": []
   },
   "dress": {
@@ -424,13 +424,13 @@
    ]
   },
   "snack_bar": {
-   "value": "그늘집·스타트하우스",
+   "value": "운영 · 스타트하우스",
    "evidence": [
     "https://www.hillmaru.com/Reservation/UseGuide.aspx"
    ]
   },
   "locker_sauna": {
-   "value": "사우나",
+   "value": null,
    "evidence": []
   },
   "lodging": {
@@ -590,8 +590,8 @@
   "basic": 1.0,
   "course": 0.8,
   "fee": 1.0,
-  "ops": 0.36,
-  "facility": 0.7,
+  "ops": 0.29,
+  "facility": 0.6,
   "briefing": 0.25,
   "rental": 1.0
  }

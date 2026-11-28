@@ -99,7 +99,7 @@
   "weekend": 120000,
   "weekday_text": "120,000원 ~ 150,000원",
   "weekend_text": "120,000원 ~ 170,000원",
-  "basis": "official",
+  "basis": "공식 요금표",
   "tax_included": null,
   "cart": {
    "value": 90000,
@@ -162,7 +162,7 @@
  },
  "ops": {
   "nocaddie": {
-   "value": "노캐디(셀프) 라운드 가능",
+   "value": "셀프 라운드 가능",
    "evidence": [
     "노캐디(셀프) 라운드 가능 — https://greenfeeguide.co.kr/course/gc-0007/"
    ],
@@ -221,7 +221,7 @@
    "evidence": [
     "사우나: 사우나 있음골프장사우나(2F)"
    ],
-   "value": "사우나 있음 · 골프장 사우나(2F)",
+   "value": "운영 · 골프장 사우나(2F)",
    "source_url": "https://greenfeeguide.co.kr/course/gc-0007/",
    "source_type": "public_info(greenfeeguide)",
    "confidence": "medium",
@@ -241,7 +241,7 @@
    "evidence": [
     "연습 시설: 드라이빙 레인지골프연습장"
    ],
-   "value": "드라이빙 레인지골프연습장",
+   "value": "드라이빙 레인지",
    "source_url": "https://greenfeeguide.co.kr/course/gc-0007/",
    "source_type": "public_info(greenfeeguide)",
    "confidence": "medium",
@@ -260,7 +260,7 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": "사우나 있음",
+   "value": "운영",
    "evidence": [
     "사우나 있음 — https://greenfeeguide.co.kr/course/gc-0007/"
    ],

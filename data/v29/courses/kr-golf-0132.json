@@ -239,7 +239,7 @@
     "회원가입 [ 예약오픈안내 ] 주중: 2번째 화요일 09시 다음달 전 시간 오픈 주말: 3번째 화요일 09시 다음달 전 시간 오픈 * 예약오픈일 전화예약불가 선택한 날짜 마운틴 팀 밸리 팀 레이크 팀 2026년 12월 이용 요금 안내 2026년 11월 이용 요금 안내 에덴블루CC 연단체 모집 안내 내가 선택하는 나만의 “CUSTOM”사전 예약 라운드 이벤트 레스토랑 이벤트 키오스크 정산(check-out)시행 안내 전기차 충전구역 불법행위 안내 26년도 야간 운영 안내 예약하기 예약확인 예약안내 나의쿠폰함 오시는길 조인게시판 모바일 ",
     "1팀4인플레이를 원칙으로 합니다.(2인,5인플레이는 허용되지 않습니다.)"
    ],
-   "value": "2인 플레이 불가(1팀 4인 원칙)",
+   "value": "불가(1팀 4인 원칙)",
    "third_party": {
     "two": null,
     "three": null,
@@ -257,7 +257,7 @@
    "evidence": []
   },
   "five_player": {
-   "value": "5인 플레이 불가(1팀 4인 원칙)",
+   "value": "불가(1팀 4인 원칙)",
    "evidence": [
     "1팀4인플레이를 원칙으로 합니다.(2인,5인플레이는 허용되지 않습니다.)"
    ],
@@ -308,7 +308,7 @@
     "2. 락커, 샤워실 등 클럽하우스 시설 이용에 부과되는 요금"
    ],
    "value": "락커 운영",
-   "value_previous": "문구 확인(원문 근거)",
+   "value_previous": null,
    "source_url": "https://www.edenblue.co.kr/pagesite/use/charge.asp",
    "confidence": "low",
    "source_type": "official_site",
@@ -319,7 +319,7 @@
    "evidence": [
     "사우나 있음 · 전기차 충전 가능 · 프로샵"
    ],
-   "value": "사우나 운영",
+   "value": "운영",
    "source_url": "https://www.edenblue.co.kr/pagesite/club/facilities/house.asp",
    "confidence": "high",
    "checked_at": "2026-10-20",
@@ -363,7 +363,7 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": "사우나 있음",
+   "value": null,
    "evidence": [
     "사우나 있음 — https://greenfeeguide.co.kr/course/gc-0105/"
    ],
@@ -406,7 +406,7 @@
     "정기 휴장일 없음"
    ],
    "third_party": "정기 휴장일 없음부대시설사우나",
-   "value": "정기 휴장일 없음",
+   "value": "없음",
    "source_url": "https://m.edenblue.co.kr/pagesite/clause/guide.asp",
    "confidence": "high",
    "checked_at": "2026-10-11",
@@ -423,7 +423,7 @@
     "회원가입 [ 예약오픈안내 ] 주중: 2번째 화요일 09시 다음달 전 시간 오픈 주말: 3번째 화요일 09시 다음달 전 시간 오픈 * 예약오픈일 전화예약불가 선택한 날짜 마운틴 팀 밸리 팀 레이크 팀 2026년 12월 이용 요금 안내 2026년 11월 이용 요금 안내 에덴블루CC 연단체 모집 안내 내가 선택하는 나만의 “CUSTOM”사전 예약 라운드 이벤트 레스토랑 이벤트 키오스크 정산(check-out)시행 안내 전기차 충전구역 불법행위 안내 26년도 야간 운영 안내 예약하기 예약확인 예약안내 나의쿠폰함 오시는길 조인게시판 모바일 ",
     "전기차 충전구역"
    ],
-   "value": "전기차 충전구역",
+   "value": "운영",
    "source_url": "https://www.edenblue.co.kr/pagesite/club/facilities/house.asp",
    "confidence": "high",
    "checked_at": "2026-10-20",
@@ -438,7 +438,7 @@
    "evidence": [
     "사우나 있음 · 전기차 충전 가능 · 프로샵"
    ],
-   "value": "프로샵 운영",
+   "value": "운영",
    "source_url": "https://www.edenblue.co.kr/pagesite/club/facilities/house.asp",
    "confidence": "high",
    "checked_at": "2026-10-20",
@@ -648,7 +648,7 @@
   "course": 0.2,
   "fee": 1.0,
   "ops": 0.29,
-  "facility": 0.5,
+  "facility": 0.4,
   "briefing": 0.5,
   "rental": 0.25
  }

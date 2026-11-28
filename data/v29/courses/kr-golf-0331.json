@@ -178,7 +178,7 @@
  },
  "cancel": {
   "cancel_policy": {
-   "value": "• 취소: 평일 3일 전·주말 4일 전까지(이용약관 기준)\n• 캐디: 노캐디(셀프) 라운드 가능 · 노캐디 팀당 20,000원 추가\n• 야간(3부) 라운드: 야간 라운드",
+   "value": "• 취소: 평일 3일 전·주말 4일 전까지(이용약관 기준)",
    "source": "그린피가이드(공식 인용)",
    "url": "https://greenfeeguide.co.kr/course/gc-0356/"
   },
@@ -195,7 +195,7 @@
  "ops": {
   "nocaddie": {
    "evidence": [],
-   "value": null
+   "value": "(셀프) 라운드 가능, 팀당 20,000원 추가"
   },
   "two_player": {
    "evidence": [],
@@ -308,7 +308,7 @@
   },
   "night": {
    "evidence": [],
-   "value": null
+   "value": "운영"
   },
   "closed_days": {
    "evidence": [],
@@ -457,8 +457,8 @@
   "basic": 0.89,
   "course": 0.2,
   "fee": 1.0,
-  "ops": 0.07,
-  "facility": 0.1,
+  "ops": 0.14,
+  "facility": 0.2,
   "briefing": 0.25,
   "rental": 1.0
  }

@@ -622,7 +622,7 @@
    "evidence": [
     "예약 인원이 4인 플레이를 기본으로 하며, 3인 플레이까지 가능합니다. 2인 플레이는 불허되고 있습니다."
    ],
-   "value": "2인 플레이 불허(3인까지 가능)",
+   "value": "불허(3인까지 가능)",
    "source_url": "https://camerongchamp.tistory.com/entry/베어즈-베스트-청라CC-정보",
    "source_type": "blog",
    "confidence": "low",
@@ -630,7 +630,7 @@
    "checked_at": "2026-11-27"
   },
   "three_player": {
-   "value": "3인 플레이까지 가능",
+   "value": "3인까지 가능",
    "evidence": [
     "예약 인원이 4인 플레이를 기본으로 하며, 3인 플레이까지 가능합니다."
    ],
@@ -683,7 +683,7 @@
    "evidence": [
     "1 기간제 이용 고객(1·3·6·12개월 등록회원)은 샤워장·사우나실·휘트니스실을 1인 1회(등록기간 중) 무료로 이용할 수 있습니다."
    ],
-   "value": "사우나 운영",
+   "value": "운영",
    "source_url": "https://www.cheongnadrivingrange.com/",
    "confidence": "medium",
    "source_type": "official_site",
@@ -694,7 +694,7 @@
    "evidence": [
     "복장이 불량하다고 판단되는 경우 (남성 반바지, 민소매, 청바지, 군복 등 제한)"
    ],
-   "value": "복장 규정 안내",
+   "value": "안내",
    "source_url": "https://www.cheongnadrivingrange.com/",
    "confidence": "medium",
    "source_type": "official_site",

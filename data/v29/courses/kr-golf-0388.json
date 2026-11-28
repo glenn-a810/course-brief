@@ -292,11 +292,11 @@
    "checked_at": "2026-11-27"
   },
   "locker": {
-   "value": "사우나·노천탕",
+   "value": null,
    "evidence": []
   },
   "sauna": {
-   "value": "사우나·노천탕",
+   "value": "운영 · 노천탕",
    "evidence": []
   },
   "dress": {
@@ -338,11 +338,11 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": "사우나·노천탕",
+   "value": null,
    "evidence": []
   },
   "lodging": {
-   "value": "숙박시설 운영(입실 15:00·퇴실 12:00)",
+   "value": "운영(입실 15:00·퇴실 12:00)",
    "evidence": [
     "[숙박시설]- 입실 15:00- 퇴실 12:00"
    ],
@@ -530,8 +530,8 @@
   "basic": 0.89,
   "course": 0.6,
   "fee": 1.0,
-  "ops": 0.36,
-  "facility": 0.6,
+  "ops": 0.29,
+  "facility": 0.5,
   "briefing": 0.5,
   "rental": 0.25
  }

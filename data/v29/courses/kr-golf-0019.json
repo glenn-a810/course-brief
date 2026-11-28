@@ -346,7 +346,7 @@
   "weekend": 170000,
   "weekday_text": null,
   "weekend_text": null,
-  "basis": "official",
+  "basis": "공식 요금표",
   "tax_included": null,
   "cart": {
    "value": 100000,
@@ -774,13 +774,13 @@
    "evidence": [
     "락카실은 프론트에서 부여받은 번호만 사용하시고 라운딩 종료 후 혼동을 막기 위해 비밀번호를 기억하세요."
    ],
-   "value": "문구 확인(원문 근거)"
+   "value": null
   },
   "sauna": {
    "evidence": [
     "사우나: 사우나 있음사우나/라커"
    ],
-   "value": "사우나 있음 · 사우나/락커",
+   "value": "운영 · 사우나/락커",
    "source_url": "https://greenfeeguide.co.kr/course/gc-0464/",
    "source_type": "public_info(greenfeeguide)",
    "confidence": "medium",
@@ -815,13 +815,13 @@
    "value": "레스토랑"
   },
   "snack_bar": {
-   "value": "그늘집",
+   "value": "운영",
    "evidence": [
     "그늘집 (출처: https://www.bosungcc.co.kr/, 2026-11-27 확인)"
    ]
   },
   "locker_sauna": {
-   "value": "사우나",
+   "value": "운영",
    "evidence": [
     "사우나/라커 (출처: https://www.bosungcc.co.kr/, 2026-11-27 확인)"
    ]
@@ -985,7 +985,7 @@
   "basic": 1.0,
   "course": 0.6,
   "fee": 1.0,
-  "ops": 0.5,
+  "ops": 0.43,
   "facility": 0.6,
   "briefing": 0.25,
   "rental": 1.0

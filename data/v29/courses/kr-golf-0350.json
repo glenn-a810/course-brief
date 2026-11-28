@@ -233,11 +233,11 @@
    ]
   },
   "locker": {
-   "value": "락카(후불 결제)",
+   "value": "운영(후불 결제)",
    "evidence": []
   },
   "sauna": {
-   "value": "락카(후불 결제)",
+   "value": null,
    "evidence": []
   },
   "dress": {
@@ -271,7 +271,7 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": "락카(후불 결제)",
+   "value": "운영(후불 결제)",
    "evidence": []
   },
   "lodging": {
@@ -413,7 +413,7 @@
   "basic": 0.89,
   "course": 0.6,
   "fee": 1.0,
-  "ops": 0.57,
+  "ops": 0.5,
   "facility": 0.4,
   "briefing": 0.25,
   "rental": 0.25

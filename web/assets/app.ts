@@ -1182,11 +1182,14 @@ function toneOf(value: string, invert = false): { tone: "ok" | "warn" | "danger"
 
 function tile(iconName: IconName, label: string, value: string, opts: { tone?: "ok" | "warn" | "danger" | "info"; badgeText?: string } = {}): string {
   const tone = opts.tone ?? "info";
+  // 값이 라벨을 그대로 되풀이하면(`연습장 → 연습장`) 타일 상태 표기로 접는다 — 데이터에서 이미 정리하지만 새 수집분도 같은 규칙으로 보이게
+  const norm = (s: string): string => s.replace(/[\s·]/g, "");
+  const shown = norm(value) === norm(label) ? "운영" : value;
   return `<div class="tile tone-${tone}">
     <span class="tile-icon">${iconDuo(iconName)}</span>
     <div class="tile-body">
       <span class="tile-label">${esc(label)}</span>
-      <span class="tile-value">${esc(value)}</span>
+      <span class="tile-value">${esc(shown)}</span>
     </div>
     ${opts.badgeText ? `<span class="tile-badge tone-${tone}">${esc(opts.badgeText)}</span>` : ""}
   </div>`;

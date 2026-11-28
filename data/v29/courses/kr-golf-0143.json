@@ -350,7 +350,7 @@
    "evidence": [
     "- 복장 규칙(슬리퍼 불가 등)"
    ],
-   "value": "복장 규정 안내",
+   "value": "안내",
    "source_url": "https://route52cc.com/guide/companion.asp",
    "confidence": "medium",
    "source_type": "official_site",
@@ -375,7 +375,7 @@
    "evidence": [
     "필드를 향해 넓게 열린 로비와 식당은 자연을 즐길 수 있는 여유로운 공간이며, 따뜻한 백색과 자연스러운 무늬목으로 섬세"
    ],
-   "value": "식당",
+   "value": "운영",
    "source_url": "https://route52cc.com/club/fac01.asp",
    "confidence": "low",
    "source_type": "official_site",
@@ -402,7 +402,7 @@
    "evidence": [
     "2번째 홀 이후 : (이용요금 - 기본요금) × {1-(기 이용한 홀 수/전체 홀 수)} 제9조(이용시간 및 휴장) ① 이 골프장 이용시간은 일출20분전부터 일몰20분전까지 하되, 조명 시설 설치된 골프장은 (일몰 60분 후)까지로 한다."
    ],
-   "value": "야간 라운드 운영",
+   "value": "운영",
    "source_url": "https://route52cc.com/guide/guideTerms.asp"
   },
   "closed_days": {

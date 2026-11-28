@@ -243,7 +243,7 @@
    "evidence": []
   },
   "sauna": {
-   "value": "락커·샤워실",
+   "value": null,
    "evidence": []
   },
   "dress": {
@@ -263,7 +263,7 @@
  },
  "facilities": {
   "practice": {
-   "value": "골프연습장(드라이빙 레인지)",
+   "value": "운영(드라이빙 레인지)",
    "evidence": []
   },
   "indoor_range": {
@@ -295,7 +295,7 @@
    "evidence": []
   },
   "closed_days": {
-   "value": "정기 휴장일 없음",
+   "value": "없음",
    "third_party": null,
    "evidence": [
     "정기 휴장일 정기 휴장일 없음"
@@ -417,7 +417,7 @@
   "basic": 0.89,
   "course": 0.6,
   "fee": 1.0,
-  "ops": 0.57,
+  "ops": 0.5,
   "facility": 0.4,
   "briefing": 0.25,
   "rental": 0.25

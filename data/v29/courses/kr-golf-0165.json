@@ -285,7 +285,7 @@
   "weekend": 260000,
   "weekday_text": null,
   "weekend_text": null,
-  "basis": "official",
+  "basis": "공식 요금표",
   "tax_included": null,
   "cart": {
    "value": 100000,
@@ -458,7 +458,7 @@
    "evidence": [
     "노캐디(셀프) 시범 라운드 운영"
    ],
-   "value": "노캐디 선택 가능",
+   "value": "선택 가능",
    "source_url": "https://88countryclub.co.kr/Board/BoardList.aspx?cfgid=notice",
    "confidence": "medium",
    "source_type": "official_site",
@@ -535,7 +535,7 @@
     "로비라운지에는 프론트, 용품샵, 휴게실, 락커룸이 있습니다."
    ],
    "value": "락커 운영",
-   "value_previous": "문구 확인(원문 근거)",
+   "value_previous": null,
    "source_url": "https://88countryclub.co.kr/Course/Facility.aspx",
    "confidence": "medium",
    "source_type": "official_site",
@@ -550,7 +550,7 @@
    "evidence": [
     "내장하시는 고객께서는 단정한 복장을 착용하여 타인에게 불쾌감을 주는 일이 없도록 하며 특히 로비라운지에서는 정숙하시어 클럽의 품위가 손상되지 않도록 배려바랍니다."
    ],
-   "value": "문구 확인(원문 근거)"
+   "value": null
   },
   "pace": {
    "evidence": [],
@@ -574,7 +574,7 @@
    "evidence": [
     "최장거리 300m의 넓은 시야로 마음껏 기량을 연마할 수 있는 88컨트리클럽 골프연습장에서 타석 연습과 편안한 힐링을 느껴보세요."
    ],
-   "value": "연습장",
+   "value": "운영",
    "source_url": "https://88countryclub.co.kr/Course/RangeInfo.aspx",
    "confidence": "low",
    "source_type": "official_site",
@@ -639,7 +639,7 @@
    "evidence": [
     "전기차 충전시설"
    ],
-   "value": "전기차 충전시설",
+   "value": "운영",
    "source_url": "https://88countryclub.co.kr/Course/Facility.aspx",
    "confidence": "high",
    "checked_at": "2026-10-20",
@@ -652,7 +652,7 @@
    "evidence": [
     "전기차 충전 가능 · 프로샵"
    ],
-   "value": "프로샵 운영",
+   "value": "운영",
    "source_url": "https://88countryclub.co.kr/Course/Facility.aspx",
    "confidence": "high",
    "checked_at": "2026-10-20",
@@ -815,7 +815,7 @@
   "basic": 1.0,
   "course": 0.8,
   "fee": 1.0,
-  "ops": 0.5,
+  "ops": 0.43,
   "facility": 0.3,
   "briefing": 0.5,
   "rental": 1.0

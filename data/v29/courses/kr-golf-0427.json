@@ -328,11 +328,11 @@
    "note": "공개 요금 정보가 골프장 공식 안내를 정리한 값(확인일 페이지 표기)"
   },
   "locker": {
-   "value": "사우나 있음",
+   "value": null,
    "evidence": []
   },
   "sauna": {
-   "value": "사우나 있음",
+   "value": "운영",
    "evidence": []
   },
   "dress": {
@@ -368,7 +368,7 @@
    "evidence": []
   },
   "food": {
-   "value": "사우나 있음, 프로샵·카페·라운지·편의점·수영장·피트니스",
+   "value": "카페 · 라운지 · 피트니스",
    "evidence": [
     "사우나 있음 · 프로샵·카페·라운지·편의점·수영장·피트니스"
    ],
@@ -382,7 +382,7 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": "사우나 있음",
+   "value": null,
    "evidence": []
   },
   "lodging": {
@@ -390,7 +390,7 @@
    "evidence": []
   },
   "other": {
-   "value": "프로샵·카페·라운지·편의점·수영장·피트니스",
+   "value": "프로샵 · 편의점 · 수영장",
    "evidence": []
   },
   "night": {
@@ -398,7 +398,7 @@
    "evidence": []
   },
   "closed_days": {
-   "value": "정기 휴장일 없음",
+   "value": "없음",
    "third_party": null,
    "evidence": [
     "정기 휴장일 없음, 티오프 30분 전 도착"
@@ -528,8 +528,8 @@
   "basic": 0.89,
   "course": 0.4,
   "fee": 1.0,
-  "ops": 0.57,
-  "facility": 0.5,
+  "ops": 0.5,
+  "facility": 0.4,
   "briefing": 0.25,
   "rental": 1.0
  }

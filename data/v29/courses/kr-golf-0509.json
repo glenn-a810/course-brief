@@ -204,7 +204,7 @@
   },
   "sauna": {
    "evidence": [],
-   "value": "문구 확인(원문 근거)"
+   "value": null
   },
   "dress": {
    "evidence": [],
@@ -417,7 +417,7 @@
   "basic": 1.0,
   "course": 0.4,
   "fee": 0.25,
-  "ops": 0.07,
+  "ops": 0.0,
   "facility": 0.1,
   "briefing": 0.5,
   "rental": 0.25

@@ -372,11 +372,11 @@
    "checked_at": "2026-11-27"
   },
   "locker": {
-   "value": "사우나(남자 냉탕 보수공사 공지)",
+   "value": null,
    "evidence": []
   },
   "sauna": {
-   "value": "사우나(남자 냉탕 보수공사 공지)",
+   "value": "운영(남자 냉탕 보수공사 공지)",
    "evidence": []
   },
   "dress": {
@@ -412,7 +412,7 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": "사우나(남자 냉탕 보수공사 공지)",
+   "value": null,
    "evidence": []
   },
   "lodging": {
@@ -558,8 +558,8 @@
   "basic": 0.89,
   "course": 0.4,
   "fee": 1.0,
-  "ops": 0.64,
-  "facility": 0.5,
+  "ops": 0.57,
+  "facility": 0.4,
   "briefing": 0.5,
   "rental": 0.25
  }

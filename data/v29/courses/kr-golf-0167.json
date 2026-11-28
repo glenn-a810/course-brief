@@ -362,7 +362,7 @@
   "weekend": 210000,
   "weekday_text": "150,000원 ~ 240,000원",
   "weekend_text": "210,000원 ~ 290,000원",
-  "basis": "official",
+  "basis": "공식 요금표",
   "tax_included": null,
   "cart": {
    "value": 120000,
@@ -420,7 +420,7 @@
    "evidence": [
     "팀 구성 2인 또는 5인 플레이 불가"
    ],
-   "value": "2인 플레이 불가",
+   "value": "불가",
    "source_url": "https://wondergolf.co.kr/courses/kr-kakao-8456286",
    "source_type": "aggregator_wondergolf",
    "confidence": "medium",
@@ -432,7 +432,7 @@
    "evidence": []
   },
   "five_player": {
-   "value": "5인 플레이 불가",
+   "value": "불가",
    "evidence": [
     "팀 구성 2인 또는 5인 플레이 불가"
    ],

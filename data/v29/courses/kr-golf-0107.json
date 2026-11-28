@@ -832,15 +832,15 @@
    "evidence": [
     "체크인 ▶ 프런트 등록 시 예약자명·코스·시간을 재확인 후 락카키를 받아 주십시오."
    ],
-   "value": "문구 확인(원문 근거)"
+   "value": null
   },
   "sauna": {
    "evidence": [
     "고객님의 동선을 고려하여 남∙녀 라커룸, 사우나, 프로샵, 스타트 광장 출입구를 배치하였고 간단한 오피스 업무 및 회원가입을 위한 비즈니스 센터를 운영합니다.",
     "사우나 있음 · 프로샵"
    ],
-   "value": "사우나 운영",
-   "value_previous": "문구 확인(원문 근거)",
+   "value": "운영",
+   "value_previous": null,
    "source_url": "https://logebiengc.com/html/company/company_04_02.asp",
    "confidence": "high",
    "checked_at": "2026-10-20",
@@ -854,8 +854,8 @@
     "• 복장 규정 위반 시 클럽하우스 출입 제한 및 경기 중단 조치가 취해질 수 있습니다.",
     "품격 있고 전통을 중시하는 클럽 문화를 위하여 슬리퍼 및 등산화, 과도한 노출이 있는 복장은 엄격히 금지하고 있으니, 협조하여 주시면 감사하겠습니다."
    ],
-   "value": "복장 규정 안내",
-   "value_previous": "문구 확인(원문 근거)",
+   "value": "안내",
+   "value_previous": null,
    "source_url": "http://www.logebiengc.com/html/company/company_04_01.asp",
    "confidence": "medium",
    "source_type": "official_site",
@@ -918,7 +918,7 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": "사우나 있음",
+   "value": null,
    "evidence": [
     "사우나 있음 — https://greenfeeguide.co.kr/course/gc-0070/"
    ],
@@ -959,7 +959,7 @@
     "정기 휴장일 없음"
    ],
    "third_party": "정기 휴장일 없음카트프리미엄",
-   "value": "정기 휴장일 없음",
+   "value": "없음",
    "source_url": "https://logebiengc.com/html/member/terms.asp",
    "confidence": "high",
    "checked_at": "2026-10-11",
@@ -982,7 +982,7 @@
    "evidence": [
     "사우나 있음 · 프로샵"
    ],
-   "value": "프로샵 운영",
+   "value": "운영",
    "source_url": "https://logebiengc.com/html/company/company_04_02.asp",
    "confidence": "high",
    "checked_at": "2026-10-20",
@@ -1214,8 +1214,8 @@
   "basic": 0.89,
   "course": 0.6,
   "fee": 1.0,
-  "ops": 0.36,
-  "facility": 0.5,
+  "ops": 0.29,
+  "facility": 0.4,
   "briefing": 0.5,
   "rental": 0.25
  }

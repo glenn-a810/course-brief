@@ -108,7 +108,7 @@
   "weekend": 259000,
   "weekday_text": null,
   "weekend_text": null,
-  "basis": "official",
+  "basis": "공식 요금표",
   "tax_included": null,
   "cart": {
    "value": 100000,
@@ -194,7 +194,7 @@
    "evidence": []
   },
   "five_player": {
-   "value": "5인 플레이 가능(리무진 카트)",
+   "value": "가능(리무진 카트)",
    "evidence": [
     "해솔리아CC 야간골프/5인플레이/리무진카트 라운딩 후기는 이 포스팅을 확인해 주세요"
    ],
@@ -243,7 +243,7 @@
    "evidence": [
     "사우나 있음"
    ],
-   "value": "사우나 운영",
+   "value": "운영",
    "source_url": "https://www.haesoliacc.co.kr/guide/guide.asp",
    "confidence": "high",
    "checked_at": "2026-10-20",
@@ -278,7 +278,7 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": "사우나 있음",
+   "value": null,
    "evidence": [
     "사우나 있음 — https://greenfeeguide.co.kr/course/gc-0035/"
    ],
@@ -292,7 +292,7 @@
    "evidence": []
   },
   "other": {
-   "value": "사우나 있음",
+   "value": null,
    "evidence": [
     "사우나 있음"
    ],
@@ -468,7 +468,7 @@
   "course": 0.6,
   "fee": 1.0,
   "ops": 0.21,
-  "facility": 0.3,
+  "facility": 0.1,
   "briefing": 0.75,
   "rental": 0.25
  }

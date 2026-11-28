@@ -399,7 +399,7 @@
    "evidence": [
     "사우나: 사우나 있음"
    ],
-   "value": "사우나 있음",
+   "value": "운영",
    "source_url": "https://greenfeeguide.co.kr/course/gc-0349/",
    "source_type": "public_info(greenfeeguide)",
    "confidence": "medium",
@@ -448,7 +448,7 @@
    "evidence": []
   },
   "other": {
-   "value": "사우나 있음",
+   "value": null,
    "evidence": [
     "사우나 있음"
    ],
@@ -461,7 +461,7 @@
    "evidence": [
     "야간 운영: 야간 라운드 운영(공식 홈페이지 안내)"
    ],
-   "value": "야간 라운드 운영(공식 홈페이지 안내)",
+   "value": "운영(공식 홈페이지 안내)",
    "source_url": "https://greenfeeguide.co.kr/course/gc-0349/",
    "confidence": "medium",
    "source_type": "official_summary(greenfeeguide)",
@@ -599,7 +599,7 @@
   "course": 0.6,
   "fee": 1.0,
   "ops": 0.07,
-  "facility": 0.3,
+  "facility": 0.2,
   "briefing": 0.5,
   "rental": 0.25
  }

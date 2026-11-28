@@ -234,11 +234,11 @@
    ]
   },
   "locker": {
-   "value": "락카(이용안내)",
+   "value": "운영(이용안내)",
    "evidence": []
   },
   "sauna": {
-   "value": "락카(이용안내)",
+   "value": null,
    "evidence": []
   },
   "dress": {
@@ -270,7 +270,7 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": "락카(이용안내)",
+   "value": "운영(이용안내)",
    "evidence": []
   },
   "lodging": {
@@ -409,7 +409,7 @@
   "basic": 0.89,
   "course": 0.6,
   "fee": 1.0,
-  "ops": 0.71,
+  "ops": 0.64,
   "facility": 0.4,
   "briefing": 0.5,
   "rental": 1.0

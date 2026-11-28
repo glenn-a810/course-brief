@@ -364,11 +364,11 @@
    "evidence": []
   },
   "locker": {
-   "value": "사우나 있음",
+   "value": null,
    "evidence": []
   },
   "sauna": {
-   "value": "사우나 있음",
+   "value": "운영",
    "evidence": []
   },
   "dress": {
@@ -407,7 +407,7 @@
    "checked_at": "2026-11-27"
   },
   "snack_bar": {
-   "value": "그늘집 운영",
+   "value": "운영",
    "evidence": [
     "레스토랑: 클럽하우스 레스토랑 (한식·양식), 그늘집"
    ],
@@ -418,7 +418,7 @@
    "note": "1박2일골프 시설·기타 요약(2차 공개자료, 2026-11-27 조회) — 예약 전 공식 채널 재확인 권장"
   },
   "locker_sauna": {
-   "value": "사우나 있음",
+   "value": null,
    "evidence": []
   },
   "lodging": {
@@ -456,7 +456,7 @@
    "evidence": []
   },
   "proshop": {
-   "value": "프로샵",
+   "value": "운영",
    "evidence": [
     "프로샵: 프로샵 (골프용품·의류)"
    ],
@@ -585,8 +585,8 @@
   "basic": 1.0,
   "course": 0.4,
   "fee": 1.0,
-  "ops": 0.21,
-  "facility": 0.6,
+  "ops": 0.14,
+  "facility": 0.5,
   "briefing": 0.5,
   "rental": 1.0
  }

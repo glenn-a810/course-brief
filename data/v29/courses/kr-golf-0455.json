@@ -369,7 +369,7 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": "스파·찜질",
+   "value": null,
    "evidence": []
   },
   "lodging": {
@@ -391,7 +391,7 @@
    "evidence": []
   },
   "closed_days": {
-   "value": "정기 휴장일 없음",
+   "value": "없음",
    "third_party": null,
    "evidence": [
     "정기 휴장일 정기 휴장일 없음"
@@ -527,7 +527,7 @@
   "course": 0.4,
   "fee": 1.0,
   "ops": 0.29,
-  "facility": 0.5,
+  "facility": 0.4,
   "briefing": 0.25,
   "rental": 0.25
  }

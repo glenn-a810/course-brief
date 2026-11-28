@@ -231,7 +231,7 @@
    "evidence": []
   },
   "five_player": {
-   "value": "5인 플레이 가능(5인 플레이 캐디피 20만원)",
+   "value": "가능(5인 플레이 캐디피 20만원)",
    "evidence": [
     "외국어캐디피 20만원 , 5인플레이 20만원"
    ],
@@ -289,7 +289,7 @@
    "checked_at": "2026-11-27"
   },
   "locker": {
-   "value": "락카·사우나(기본요금 15,000원에 포함)",
+   "value": "운영 · 사우나(기본요금 15,000원에 포함)",
    "evidence": []
   },
   "sauna": {
@@ -325,7 +325,7 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": "락카·사우나(기본요금 15,000원에 포함)",
+   "value": "운영(기본요금 15,000원에 포함)",
    "evidence": []
   },
   "lodging": {
@@ -343,7 +343,7 @@
    "evidence": []
   },
   "closed_days": {
-   "value": "정기 휴장일 없음",
+   "value": "없음",
    "third_party": null,
    "evidence": [
     "https://greenfeeguide.co.kr/course/gc-0165/"

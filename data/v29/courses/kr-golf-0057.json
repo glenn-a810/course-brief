@@ -276,7 +276,8 @@
    "value": 140000,
    "source": "그린피가이드",
    "url": "https://greenfeeguide.co.kr/course/gc-0355/",
-   "none": false
+   "none": false,
+   "note": "캐디피 현금 결제"
   },
   "as_of": "2026-11-01",
   "source_url": null,
@@ -301,7 +302,7 @@
  },
  "cancel": {
   "cancel_policy": {
-   "value": "위약 없이 취소: 평일 3일 전 · 주말 4일 전까지(이용약관 기준)\n• 캐디: 노캐디(셀프) 라운드 가능 · 노캐디 팀당 20,000원 추가\n• 캐디피 결제: 현금",
+   "value": "위약 없이 취소: 평일 3일 전 · 주말 4일 전까지(이용약관 기준)",
    "source": "그린피가이드(공식 인용)",
    "url": "https://greenfeeguide.co.kr/course/gc-0355/"
   },
@@ -326,7 +327,7 @@
    "evidence": [
     "노캐디: 노캐디(셀프) 라운드 가능"
    ],
-   "value": "노캐디(셀프) 라운드 가능",
+   "value": "셀프 라운드 가능 · 팀당 20,000원 추가",
    "source_url": "https://greenfeeguide.co.kr/course/gc-0355/",
    "confidence": "medium",
    "source_type": "official_summary(greenfeeguide)",

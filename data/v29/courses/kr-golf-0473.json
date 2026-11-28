@@ -221,7 +221,7 @@
  },
  "ops": {
   "nocaddie": {
-   "value": "노캐디 미도입(캐디 서비스 중심)",
+   "value": "미도입(캐디 서비스 중심)",
    "evidence": []
   },
   "two_player": {

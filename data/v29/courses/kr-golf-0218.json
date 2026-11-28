@@ -269,7 +269,7 @@
     "락카사용, 락카성별, 카트선택 후 'QR CODE 생성' 클릭해주세요."
    ],
    "value": "락커 운영",
-   "value_previous": "문구 확인(원문 근거)",
+   "value_previous": null,
    "source_url": "https://www.adoniscc.co.kr/public/booking/unmanned-entrance/guide",
    "confidence": "low",
    "source_type": "official_site",
@@ -284,7 +284,7 @@
    "evidence": [
     "청바지, 츄리닝, 슬리퍼, 노출이 심한 복장등으로는 입장하실 수 없습니다."
    ],
-   "value": "문구 확인(원문 근거)"
+   "value": null
   },
   "pace": {
    "evidence": [],
@@ -597,7 +597,7 @@
   "basic": 0.89,
   "course": 0.2,
   "fee": 0.25,
-  "ops": 0.21,
+  "ops": 0.14,
   "facility": 0.2,
   "briefing": 0.25,
   "rental": 1.0

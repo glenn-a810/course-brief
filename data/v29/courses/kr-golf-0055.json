@@ -210,7 +210,7 @@
    "evidence": []
   },
   "sauna": {
-   "value": "사우나 있음",
+   "value": "운영",
    "evidence": [
     "사우나: 사우나 있음"
    ],
@@ -246,7 +246,7 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": "사우나",
+   "value": null,
    "evidence": [
     "https://greenfeeguide.co.kr/course/gc-0163/"
    ]
@@ -429,7 +429,7 @@
   "course": 0.4,
   "fee": 1.0,
   "ops": 0.14,
-  "facility": 0.2,
+  "facility": 0.1,
   "briefing": 0.75,
   "rental": 1.0
  }

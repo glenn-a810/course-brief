@@ -431,7 +431,7 @@
   "weekend": 258000,
   "weekday_text": null,
   "weekend_text": null,
-  "basis": "official",
+  "basis": "공식 요금표",
   "tax_included": null,
   "cart": {
    "value": 100000,
@@ -575,7 +575,7 @@
    "evidence": [
     "움직일 수 없는 장애물 - 카트도로, 살수전, 맨홀, 고무매트, 볼 보호망, 디보트 통, 라이트타워 등 인공물과 수목보호를 위한 지주목 등에 떨어진 볼은 벌타 없이 한 클럽 이내에 드롭하여야 합니다."
    ],
-   "value": "문구 확인(원문 근거)"
+   "value": null
   },
   "checkin": {
    "evidence": [
@@ -600,7 +600,7 @@
     "락커룸 아늑한 분위기의 락커룸은 구획화된 설계로 단체에게 독립공간을 보장해 줍니다."
    ],
    "value": "락커 운영",
-   "value_previous": "문구 확인(원문 근거)",
+   "value_previous": null,
    "source_url": "http://www.thecrosbygc.co.kr/Club/Facility.aspx",
    "confidence": "medium",
    "source_type": "official_site",
@@ -612,8 +612,8 @@
     "사우나편안하게 피로를 풀 수 있도록 넓고 다양한 이벤트 탕이 마련되어 있습니다.",
     "사우나 있음 · 프로샵"
    ],
-   "value": "사우나 운영",
-   "value_previous": "문구 확인(원문 근거)",
+   "value": "운영",
+   "value_previous": null,
    "source_url": "https://www.thecrosbygc.co.kr/Club/Facility.aspx",
    "confidence": "high",
    "checked_at": "2026-10-20",
@@ -626,8 +626,8 @@
     "고객 협조 사항 클럽 내장 시 트레이닝복, 슬리퍼, 노출이 심한 복장은 삼가 하여 골퍼의 품위를 지켜주시기 바랍니다.",
     "클럽 내장 시 트레이닝복, 슬리퍼, 노출이 심한 복장은 삼가 하여 골퍼의 품위를 지켜주시기 바랍니다."
    ],
-   "value": "복장 규정 안내",
-   "value_previous": "문구 확인(원문 근거)",
+   "value": "안내",
+   "value_previous": null,
    "source_url": "http://www.thecrosbygc.co.kr/Guide/UseGuide.aspx",
    "confidence": "medium",
    "source_type": "official_site",
@@ -672,7 +672,7 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": "사우나 있음",
+   "value": null,
    "evidence": [
     "사우나 있음 — https://greenfeeguide.co.kr/course/gc-0091/"
    ],
@@ -722,7 +722,7 @@
    "evidence": [
     "사우나 있음 · 프로샵"
    ],
-   "value": "프로샵 운영",
+   "value": "운영",
    "source_url": "https://www.thecrosbygc.co.kr/Club/Facility.aspx",
    "confidence": "high",
    "checked_at": "2026-10-20",
@@ -918,8 +918,8 @@
   "basic": 1.0,
   "course": 1.0,
   "fee": 1.0,
-  "ops": 0.5,
-  "facility": 0.3,
+  "ops": 0.43,
+  "facility": 0.2,
   "briefing": 0.5,
   "rental": 0.25
  }

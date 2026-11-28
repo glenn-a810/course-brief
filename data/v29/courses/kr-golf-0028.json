@@ -102,7 +102,7 @@
   "weekend": 150000,
   "weekday_text": null,
   "weekend_text": null,
-  "basis": "official",
+  "basis": "공식 요금표",
   "tax_included": null,
   "cart": null,
   "caddie": null,
@@ -226,13 +226,13 @@
    "value": "레스토랑"
   },
   "snack_bar": {
-   "value": "그늘집",
+   "value": "운영",
    "evidence": [
     "그늘집 (출처: http://www.citypark.co.kr/field/member/joinStep1, 2026-11-27 확인)"
    ]
   },
   "locker_sauna": {
-   "value": "사우나",
+   "value": "운영",
    "evidence": [
     "사우나 (출처: http://www.citypark.co.kr/field/member/joinStep1, 2026-11-27 확인)"
    ]

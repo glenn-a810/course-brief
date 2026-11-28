@@ -233,7 +233,7 @@
    "evidence": [
     "당 클럽이 정한 복장 및 용모를 위반하였을 때 -반바지, 청바지, 카라 없는 상의 노출이 심한 복장 등 -입욕 시 신체의 전신문신으로 인하여 다른 내장객에게 위화감을 초래할 때 7."
    ],
-   "value": "문구 확인(원문 근거)"
+   "value": null
   },
   "pace": {
    "evidence": [],
@@ -259,7 +259,7 @@
    "value": "레스토랑"
   },
   "snack_bar": {
-   "value": "그늘집",
+   "value": "운영",
    "evidence": [
     "그늘집 (출처: https://santehill.co.kr/index.asp, 2026-11-27 확인)"
    ]
@@ -561,7 +561,7 @@
   "basic": 1.0,
   "course": 0.4,
   "fee": 0.0,
-  "ops": 0.07,
+  "ops": 0.0,
   "facility": 0.3,
   "briefing": 0.25,
   "rental": 0.25

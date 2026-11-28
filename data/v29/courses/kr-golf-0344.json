@@ -463,7 +463,7 @@
     "정기 휴장일: 정기 휴장일 없음"
    ],
    "third_party": "정기 휴장일 없음카트페어웨이",
-   "value": "정기 휴장일 없음",
+   "value": "없음",
    "source_url": "https://greenfeeguide.co.kr/course/gc-0322/",
    "confidence": "medium",
    "source_type": "official_summary(greenfeeguide)",
@@ -477,7 +477,7 @@
    "evidence": [
     "전기차 충전시설"
    ],
-   "value": "전기차 충전시설",
+   "value": "운영",
    "source_url": "https://www.easterncc.co.kr/guide/guide.asp",
    "source_type": "public_info(greenfeeguide)",
    "confidence": "medium",

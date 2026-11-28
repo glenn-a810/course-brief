@@ -436,11 +436,11 @@
    "note": "공개 요금 정보가 골프장 공식 안내를 정리한 값(확인일 페이지 표기)"
   },
   "locker": {
-   "value": "사우나 있음",
+   "value": null,
    "evidence": []
   },
   "sauna": {
-   "value": "사우나 있음",
+   "value": "운영",
    "evidence": []
   },
   "dress": {
@@ -491,7 +491,7 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": "사우나 있음",
+   "value": null,
    "evidence": []
   },
   "lodging": {
@@ -529,7 +529,7 @@
    "value_from": "final_pass_2026-11-27(greenfeeguide)"
   },
   "proshop": {
-   "value": "프로샵",
+   "value": "운영",
    "evidence": [
     "프로샵: 골프 용품 프로샵 운영"
    ],
@@ -679,8 +679,8 @@
   "basic": 1.0,
   "course": 0.8,
   "fee": 1.0,
-  "ops": 0.64,
-  "facility": 0.6,
+  "ops": 0.57,
+  "facility": 0.5,
   "briefing": 0.5,
   "rental": 1.0
  }

@@ -421,7 +421,7 @@
    "evidence": []
   },
   "marshal_caddie": {
-   "value": "마샬캐디(경기 진행위원) 운영",
+   "value": "경기 진행위원 운영",
    "evidence": [
     "『경기 진행위원(마샬캐디)』운영 안내"
    ],
@@ -548,7 +548,7 @@
    "evidence": [
     "프로샵"
    ],
-   "value": "프로샵 운영",
+   "value": "운영",
    "source_url": "https://www.namyeoju.co.kr/Club/Facility5.aspx",
    "confidence": "high",
    "checked_at": "2026-10-20",

@@ -250,11 +250,11 @@
    "evidence": []
   },
   "locker": {
-   "value": "사우나 있음",
+   "value": null,
    "evidence": []
   },
   "sauna": {
-   "value": "사우나 있음",
+   "value": "운영",
    "evidence": []
   },
   "dress": {
@@ -276,7 +276,7 @@
    "evidence": []
   },
   "food": {
-   "value": "사우나 있음, 카페·라운지",
+   "value": "카페 · 라운지",
    "evidence": [
     "사우나 있음 · 카페·라운지"
    ],
@@ -290,7 +290,7 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": "사우나 있음",
+   "value": null,
    "evidence": []
   },
   "lodging": {
@@ -298,7 +298,7 @@
    "evidence": []
   },
   "other": {
-   "value": "카페·라운지",
+   "value": null,
    "evidence": []
   },
   "night": {
@@ -440,8 +440,8 @@
   "basic": 1.0,
   "course": 0.4,
   "fee": 1.0,
-  "ops": 0.21,
-  "facility": 0.3,
+  "ops": 0.14,
+  "facility": 0.1,
   "briefing": 0.25,
   "rental": 0.25
  }

@@ -463,7 +463,7 @@
    "evidence": [
     "※ 3부 셀프라운드는 라싸 홈페이지 예약 시 3인 플레이 가능합니다."
    ],
-   "value": "노캐디 선택 가능(문구 확인)",
+   "value": "선택 가능",
    "sources_alt": [
     {
      "value": "노캐디 운영 시간 3부",
@@ -512,7 +512,7 @@
    "value_from": "capital_supplement(greenfee_guide)"
   },
   "five_player": {
-   "value": "5인 플레이 가능(리무진 카트)",
+   "value": "가능(리무진 카트)",
    "evidence": [
     "▶5인 플레이 가능 & 리무진 카트 -5인이 가능한 골프장이 몇 안 되는데, 아주 만족"
    ],
@@ -570,7 +570,7 @@
     "- 시설이용료(기본요금) : 골프장 이용시 기본적으로 발생되는 비용으로서 락커, 샤워실 등 클럽하우스 시설이용에 부과되는 요금 및 제세공과금"
    ],
    "value": "락커 운영",
-   "value_previous": "문구 확인(원문 근거)",
+   "value_previous": null,
    "source_url": "http://www.lassagc.com/reservation/fee",
    "confidence": "low",
    "source_type": "official_site",
@@ -675,7 +675,7 @@
    "evidence": [
     "프로샵"
    ],
-   "value": "프로샵 운영",
+   "value": "운영",
    "source_url": "https://www.lassagc.com/club/facil05",
    "confidence": "high",
    "checked_at": "2026-10-20",

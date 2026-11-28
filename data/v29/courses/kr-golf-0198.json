@@ -673,7 +673,7 @@
    "evidence": [
     "사우나 있음 · 프로샵"
    ],
-   "value": "사우나 운영",
+   "value": "운영",
    "source_url": "https://www.wellingtoncc.co.kr/house/amenities.do",
    "confidence": "high",
    "checked_at": "2026-10-20",
@@ -708,7 +708,7 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": "사우나 있음",
+   "value": null,
    "evidence": [
     "사우나 있음 — https://greenfeeguide.co.kr/course/gc-0090/"
    ],
@@ -754,7 +754,7 @@
    "evidence": [
     "사우나 있음 · 프로샵"
    ],
-   "value": "프로샵 운영",
+   "value": "운영",
    "source_url": "https://www.wellingtoncc.co.kr/house/amenities.do",
    "confidence": "high",
    "checked_at": "2026-10-20",
@@ -886,7 +886,7 @@
   "course": 0.8,
   "fee": 0.0,
   "ops": 0.14,
-  "facility": 0.2,
+  "facility": 0.1,
   "briefing": 0.25,
   "rental": 0.25
  }

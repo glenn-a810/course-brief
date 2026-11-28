@@ -471,7 +471,7 @@
   "weekend": 330000,
   "weekday_text": null,
   "weekend_text": null,
-  "basis": "official",
+  "basis": "공식 요금표",
   "tax_included": null,
   "cart": {
    "value": 120000,
@@ -603,7 +603,7 @@
    "evidence": [
     "사우나 있음 · 퍼팅 연습 그린 · 주차 발렛 파킹 · 카페·라운지"
    ],
-   "value": "사우나 운영",
+   "value": "운영",
    "source_url": "https://www.blackstoneresort.com/ic/aboutList?section=fare",
    "confidence": "high",
    "checked_at": "2026-10-20",
@@ -670,7 +670,7 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": "사우나 있음",
+   "value": null,
    "evidence": [
     "locker_sauna: 사우나 있음"
    ],
@@ -743,7 +743,7 @@
    "evidence": [
     "프로샵"
    ],
-   "value": "프로샵 운영",
+   "value": "운영",
    "source_url": "https://belleforetresort.com/content/golf_blackstone",
    "confidence": "high",
    "checked_at": "2026-10-20",
@@ -885,7 +885,7 @@
   "course": 0.6,
   "fee": 1.0,
   "ops": 0.5,
-  "facility": 0.7,
+  "facility": 0.6,
   "briefing": 0.5,
   "rental": 0.25
  }

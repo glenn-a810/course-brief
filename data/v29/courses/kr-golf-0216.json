@@ -113,7 +113,7 @@
   "weekend": 110000,
   "weekday_text": "100,000원 ~ 210,000원",
   "weekend_text": "110,000원 ~ 260,000원",
-  "basis": "official",
+  "basis": "공식 요금표",
   "tax_included": null,
   "cart": {
    "value": 100000,
@@ -377,7 +377,7 @@
    "evidence": [
     "노캐디: FOREST 코스 6홀 / FOREST 코스 6홀"
    ],
-   "value": "노캐디 FOREST 코스 6홀",
+   "value": "FOREST 코스 6홀",
    "source_url": "https://www.foresthill.kr/html/guide02.asp",
    "confidence": "high",
    "checked_at": "2026-10-13",
@@ -493,7 +493,7 @@
     "락카이용-과도한 문신이 있는분들의 입욕을 삼가해 주시기 바랍니다."
    ],
    "value": "락커 운영",
-   "value_previous": "문구 확인(원문 근거)",
+   "value_previous": null,
    "source_url": "https://www.foresthill.kr/html/guide01.asp",
    "confidence": "medium",
    "source_type": "official_site",
@@ -504,7 +504,7 @@
    "evidence": [
     "사우나 있음 · 프로샵"
    ],
-   "value": "사우나 운영",
+   "value": "운영",
    "source_url": "https://www.foresthill.kr/html/company02.asp",
    "confidence": "high",
    "checked_at": "2026-10-20",
@@ -518,8 +518,8 @@
     "기타 복장-클럽의 품위를 위해 정해진 복장을 준수하여 주시기 바랍니다.",
     "복장규정 위반, 음식물 반입, 매너불량등 클럽이용수칙을 위반하는 행동을 삼가하여 주시기 바랍니다."
    ],
-   "value": "복장 규정 안내",
-   "value_previous": "문구 확인(원문 근거)",
+   "value": "안내",
+   "value_previous": null,
    "source_url": "https://www.foresthill.kr/html/guide04.asp",
    "confidence": "medium",
    "source_type": "official_site",
@@ -558,7 +558,7 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": "사우나 있음",
+   "value": null,
    "evidence": [
     "사우나 있음 — https://greenfeeguide.co.kr/course/gc-0116/"
    ],
@@ -601,7 +601,7 @@
     "정기 휴장일 없음"
    ],
    "third_party": "정기 휴장일 없음카트페어웨이",
-   "value": "정기 휴장일 없음",
+   "value": "없음",
    "source_url": "https://www.foresthill.kr/html/guide03.asp",
    "confidence": "high",
    "checked_at": "2026-10-11",
@@ -624,7 +624,7 @@
    "evidence": [
     "사우나 있음 · 프로샵"
    ],
-   "value": "프로샵 운영",
+   "value": "운영",
    "source_url": "https://www.foresthill.kr/html/company02.asp",
    "confidence": "high",
    "checked_at": "2026-10-20",
@@ -858,7 +858,7 @@
   "course": 0.2,
   "fee": 1.0,
   "ops": 0.79,
-  "facility": 0.5,
+  "facility": 0.4,
   "briefing": 0.5,
   "rental": 0.25
  }

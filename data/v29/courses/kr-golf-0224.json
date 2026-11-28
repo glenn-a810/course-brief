@@ -105,7 +105,7 @@
   "weekend": 300000,
   "weekday_text": null,
   "weekend_text": null,
-  "basis": "official",
+  "basis": "공식 요금표",
   "tax_included": null,
   "cart": {
    "value": 100000,
@@ -226,7 +226,7 @@
    "evidence": [
     "파3 3번 홀은 매트 티샷이다. 회원제 골프장인데 메트 티샷은 좀 안 어울린다."
    ],
-   "value": "파3 홀 매트 티샷",
+   "value": "파3 홀",
    "source_url": "https://blog.naver.com/cosman_travel/223977810673",
    "source_type": "blog",
    "confidence": "low",
@@ -279,7 +279,7 @@
    "evidence": [
     "정회원 개인팀의(평일 및 주말) 대식당 + 프로샵 이용실적을 포인트 점수로 합산하여 일정점수이상일 경우(20,000점이상) 주말 및 공휴일, 평일 중 월 1회 1팀을 예약할 수 있는 기회를 부여"
    ],
-   "value": "식당",
+   "value": "운영",
    "source_url": "https://www.ghcc.kr/manage/manage04.asp",
    "confidence": "low",
    "source_type": "official_site",
@@ -333,7 +333,7 @@
    "evidence": [
     "프로샵"
    ],
-   "value": "프로샵 운영",
+   "value": "운영",
    "source_url": "https://www.ghcc.kr/manage/manage04.asp",
    "confidence": "high",
    "checked_at": "2026-10-20",

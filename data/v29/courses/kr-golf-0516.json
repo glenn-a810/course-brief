@@ -180,7 +180,7 @@
  },
  "cancel": {
   "cancel_policy": {
-   "value": "평일 3일 전·주말 4일 전까지(이용약관 기준)\n• 정기 휴장일: 매주 월요일\n• 카트: 리무진카트(6인승) 18홀 220,000원\n• 개장·설계: 1987년 개장",
+   "value": "평일 3일 전·주말 4일 전까지(이용약관 기준)",
    "source": "그린피가이드(공식 인용)",
    "url": "https://greenfeeguide.co.kr/course/gc-0073/"
   },
@@ -226,7 +226,7 @@
   },
   "cart_type": {
    "evidence": [],
-   "value": null
+   "value": "리무진카트(6인승)·18홀 220,000원"
   },
   "cart_entry": {
    "evidence": [],
@@ -272,7 +272,7 @@
    "evidence": [
     "2018 60타석 연습장 신설 2026.06 신축 클럽하우스 준공식"
    ],
-   "value": "60타석 연습장(2018년 신설)",
+   "value": "60타석(2018년 신설)",
    "source_url": "https://teepickgolf.com/course/서울",
    "source_type": "teepick",
    "confidence": "low",
@@ -310,7 +310,7 @@
   "closed_days": {
    "evidence": [],
    "third_party": "매주 월요일카트리무진카트",
-   "value": null
+   "value": "매주 월요일"
   },
   "shuttle": {
    "evidence": [],
@@ -431,7 +431,9 @@
   "fee_change": null,
   "collected_at": "2026-11-27T21:20:00+09:00",
   "recent_notice_text": "클럽하우스 재건축 준공·사용승인 완료\n• 12월 예약 접수 안내, 2027년 신규 연단체 신청\n• 전기차 충전시설 이설·증설 공사",
-  "course_notes": null,
+  "course_notes": {
+   "value": "1987년 개장·설계(2026-11 요금·휴장 안내 원문)"
+  },
   "alert": null,
   "unconfirmed": [],
   "sources": [
@@ -463,9 +465,9 @@
   "basic": 1.0,
   "course": 0.4,
   "fee": 1.0,
-  "ops": 0.07,
-  "facility": 0.1,
-  "briefing": 0.5,
+  "ops": 0.14,
+  "facility": 0.2,
+  "briefing": 0.75,
   "rental": 0.5
  }
 }

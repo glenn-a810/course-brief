@@ -166,7 +166,7 @@
  },
  "ops": {
   "nocaddie": {
-   "value": "노캐디(셀프) 운영",
+   "value": "셀프 운영",
    "evidence": []
   },
   "two_player": {

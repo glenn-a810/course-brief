@@ -206,7 +206,7 @@
  },
  "ops": {
   "nocaddie": {
-   "value": "전 홀 노캐디",
+   "value": "전 홀",
    "evidence": []
   },
   "two_player": {
@@ -306,11 +306,11 @@
    "evidence": []
   },
   "night": {
-   "value": "야간 라운드 운영(공식 홈페이지 안내)",
+   "value": "운영(공식 홈페이지 안내)",
    "evidence": []
   },
   "closed_days": {
-   "value": "정기 휴장일 없음",
+   "value": "없음",
    "third_party": null,
    "evidence": [
     "정기 휴장일 정기 휴장일 없음"

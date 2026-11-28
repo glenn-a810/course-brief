@@ -303,7 +303,7 @@
    "evidence": []
   },
   "sauna": {
-   "value": "숙녀·신사 락커룸",
+   "value": null,
    "evidence": []
   },
   "dress": {
@@ -331,7 +331,7 @@
    "evidence": []
   },
   "food": {
-   "value": "식당·카페",
+   "value": "운영 · 카페",
    "evidence": []
   },
   "snack_bar": {
@@ -370,7 +370,7 @@
    "evidence": []
   },
   "proshop": {
-   "value": "프로샵 운영",
+   "value": "운영",
    "evidence": [
     "https://www.crcc.co.kr/info/info04.asp"
    ]
@@ -507,7 +507,7 @@
   "basic": 0.89,
   "course": 0.6,
   "fee": 1.0,
-  "ops": 0.29,
+  "ops": 0.21,
   "facility": 0.4,
   "briefing": 0.75,
   "rental": 0.25

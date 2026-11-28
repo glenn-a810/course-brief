@@ -250,7 +250,7 @@
  },
  "ops": {
   "nocaddie": {
-   "value": "노캐디(셀프) 운영 가능",
+   "value": "셀프 운영 가능",
    "evidence": [
     "캐디 노캐디(셀프) 운영 가능"
    ],
@@ -304,11 +304,11 @@
    "evidence": []
   },
   "locker": {
-   "value": "사우나(시설이용 요금)",
+   "value": null,
    "evidence": []
   },
   "sauna": {
-   "value": "사우나(시설이용 요금)",
+   "value": "운영(시설이용 요금)",
    "evidence": []
   },
   "dress": {
@@ -338,7 +338,7 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": "사우나(시설이용 요금)",
+   "value": null,
    "evidence": []
   },
   "lodging": {
@@ -482,8 +482,8 @@
   "basic": 1.0,
   "course": 0.6,
   "fee": 1.0,
-  "ops": 0.36,
-  "facility": 0.5,
+  "ops": 0.29,
+  "facility": 0.4,
   "briefing": 0.75,
   "rental": 1.0
  }

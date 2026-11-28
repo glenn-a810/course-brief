@@ -358,7 +358,7 @@
    "evidence": []
   },
   "night": {
-   "value": "야간 라운드 운영 여부 미확인(요금표에 별도 표기 없음)",
+   "value": null,
    "evidence": []
   },
   "closed_days": {
@@ -488,7 +488,7 @@
   "course": 0.6,
   "fee": 1.0,
   "ops": 0.36,
-  "facility": 0.4,
+  "facility": 0.3,
   "briefing": 0.25,
   "rental": 0.25
  }

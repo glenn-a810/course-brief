@@ -238,7 +238,7 @@
    "evidence": []
   },
   "food": {
-   "value": "프로샵·레스토랑",
+   "value": "레스토랑",
    "evidence": [
     "프로샵&레스토랑"
    ],
@@ -261,7 +261,7 @@
    "evidence": []
   },
   "other": {
-   "value": null,
+   "value": "프로샵",
    "evidence": []
   },
   "night": {
@@ -402,7 +402,7 @@
   "course": 0.4,
   "fee": 1.0,
   "ops": 0.14,
-  "facility": 0.1,
+  "facility": 0.2,
   "briefing": 0.5,
   "rental": 0.25
  }

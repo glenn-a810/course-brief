@@ -224,7 +224,7 @@
  },
  "cancel": {
   "cancel_policy": {
-   "value": "취소: 2일 전 17:00까지\n• 캐디: 노캐디(셀프) 라운드 가능\n• 2인 플레이: 주중만 가능, 주말·공휴일은 3인 요금\n• 정기 휴장일: 설날·추석 당일",
+   "value": "취소: 2일 전 17:00까지\n• 2인 플레이: 주중만 가능, 주말·공휴일은 3인 요금",
    "source": "그린피가이드(공식 인용)",
    "url": "https://greenfeeguide.co.kr/course/gc-0168/"
   },
@@ -256,7 +256,7 @@
    "evidence": [
     "노캐디: 노캐디(셀프) 라운드 가능"
    ],
-   "value": "노캐디(셀프) 라운드 가능",
+   "value": "셀프 라운드 가능",
    "source_url": "https://greenfeeguide.co.kr/course/gc-0168/",
    "confidence": "medium",
    "source_type": "official_summary(greenfeeguide)",

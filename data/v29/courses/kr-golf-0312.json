@@ -219,7 +219,7 @@
  },
  "cancel": {
   "cancel_policy": {
-   "value": "• 취소: 평일 3일 전·주말 4일 전 17:00까지\n• 캐디: 전면 노캐디(모든 라운드 셀프)\n• 부대시설: 사우나 · 퍼팅 연습 그린 · 어프로치 연습 · 벙커 연습",
+   "value": "• 취소: 평일 3일 전·주말 4일 전 17:00까지",
    "source": "그린피가이드(공식 인용)",
    "url": "https://greenfeeguide.co.kr/course/gc-0337/"
   },
@@ -265,7 +265,7 @@
    "evidence": []
   },
   "five_player": {
-   "value": "5인 플레이 가능(2·3·4·5인)",
+   "value": "가능(2·3·4·5인)",
    "evidence": [
     "2인 플레이가 가능하고 3인,4인 그리고 5인 플레이까지 가능해요"
    ],
@@ -312,7 +312,7 @@
    "evidence": [
     "사우나: 사우나 있음힐스카이 사우나(3부 샤워만 가능, 탕 이용 불가)"
    ],
-   "value": "사우나 있음힐스카이 사우나(3부 샤워만 가능, 탕 이용 불가)",
+   "value": "운영 · 힐스카이 사우나(3부 샤워만 가능, 탕 이용 불가)",
    "source_url": "https://greenfeeguide.co.kr/course/gc-0337/",
    "source_type": "public_info(greenfeeguide)",
    "confidence": "medium",
@@ -357,7 +357,7 @@
    "evidence": [
     "사우나 있음 · 퍼팅 연습 그린·어프로치 연습·벙커 연습·숏게임 연습장·드라이빙 레인지 · 카페·라운지"
    ],
-   "value": "사우나 있음 · 퍼팅 연습 그린·어프로치 연습·벙커 연습·숏게임 연습장·드라이빙 레인지 · 카페·라운지",
+   "value": "카페 · 라운지",
    "source_url": "https://www.hillskycc.com/main/site/clubhouse/index.do",
    "source_type": "public_info(greenfeeguide)",
    "confidence": "medium",
@@ -368,7 +368,7 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": "사우나 있음힐스카이 사우나(3부 샤워만 가능, 탕 이용 불가)",
+   "value": null,
    "evidence": [
     "사우나: 사우나 있음힐스카이 사우나(3부 샤워만 가능, 탕 이용 불가)"
    ],
@@ -382,7 +382,7 @@
    "evidence": []
   },
   "other": {
-   "value": "카페·라운지",
+   "value": null,
    "evidence": [
     "그 밖의 시설: 카페·라운지"
    ],
@@ -524,7 +524,7 @@
   "course": 0.4,
   "fee": 0.75,
   "ops": 0.21,
-  "facility": 0.4,
+  "facility": 0.2,
   "briefing": 0.5,
   "rental": 0.25
  }

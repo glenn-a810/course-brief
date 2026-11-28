@@ -109,7 +109,7 @@
   "weekend": 32000,
   "weekday_text": null,
   "weekend_text": null,
-  "basis": "official",
+  "basis": "공식 요금표",
   "tax_included": null,
   "cart": {
    "value": 2000,
@@ -292,7 +292,7 @@
     "주요시설 : 프런트, 식당, 락카룸, 사우나 등"
    ],
    "value": "락커 운영",
-   "value_previous": "문구 확인(원문 근거)",
+   "value_previous": null,
    "source_url": "https://123golfclub.co.kr/sub/sub0401.php",
    "confidence": "medium",
    "source_type": "official_site",
@@ -303,7 +303,7 @@
    "evidence": [
     "주요시설 : 프런트, 식당, 락카룸, 사우나 등"
    ],
-   "value": "사우나 운영",
+   "value": "운영",
    "source_url": "https://123golfclub.co.kr/sub/sub0401.php",
    "confidence": "medium",
    "source_type": "official_site",
@@ -341,7 +341,7 @@
     "골프연습장 환불은 당일 발행일분만 가능합니다.",
     "1.2.3 골프클럽 1.2.3 Golf Club Public Course 응봉산 자락에 위치한 국내 최초의 야외 골프연습장이며 시간제가 아닌 박스 당 연습장으로 골퍼들의 만족감을 한층 더해 드릴 것입니다."
    ],
-   "value": "연습장",
+   "value": "운영",
    "source_url": "https://123golfclub.co.kr/sub/sub0406.php",
    "confidence": "low",
    "source_type": "official_site",
@@ -359,7 +359,7 @@
     "1.2.3 골프클럽 LOGIN 클럽소개 골프장개요 연혁 인사말 오시는길 운영안내 이용안내 이용수칙 요금안내 예약안내 코스소개 로컬룰 코스공략도(1~6) 코스갤러리 부대시설 클럽하우스 식당 프런트 매점 락커룸 연습장 고객센터 공지사항 분실물센터 (재) 1 2 3 장학회 연혁 장학금 수혜자 명단 코스소개 HOME 코스소개 로컬룰 로컬룰 로컬룰 상공에서 본 1.2.3 골프클럽 1.2.3 골프클럽 로컬룰 6홀 경기 기준 시간은 1시간 20분입니다.",
     "주요시설 : 프런트, 식당, 락카룸, 사우나 등"
    ],
-   "value": "식당",
+   "value": "운영",
    "source_url": "https://123golfclub.co.kr/sub/sub0401.php",
    "confidence": "low",
    "source_type": "official_site",
@@ -386,7 +386,7 @@
    "evidence": [
     "2번째 홀 이후 : (이용요금 - 기본요금) × {1-(기 이용한 홀 수/전체 홀 수)} 제9조(이용시간 및 휴장) ① 이 골프장 이용시간은 일출 20분전부터 일몰 20분 후까지로 하되, 조명시설이 설치된 골프장은 ( )까지로 한다."
    ],
-   "value": "야간 라운드 운영",
+   "value": "운영",
    "source_url": "https://123golfclub.co.kr/member/policy03.php"
   },
   "closed_days": {

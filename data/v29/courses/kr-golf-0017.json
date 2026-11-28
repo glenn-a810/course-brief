@@ -501,7 +501,7 @@
   "weekend": 140000,
   "weekday_text": "90,000원 ~ 105,000원",
   "weekend_text": null,
-  "basis": "official",
+  "basis": "공식 요금표",
   "tax_included": null,
   "cart": {
    "value": 80000,
@@ -699,7 +699,7 @@
    "evidence": [
     "락커, 샤워실 등 클럽하우스 시설 이용에 부과되는 요금 3."
    ],
-   "value": "문구 확인(원문 근거)"
+   "value": null
   },
   "sauna": {
    "evidence": [
@@ -901,7 +901,7 @@
   "basic": 0.89,
   "course": 1.0,
   "fee": 1.0,
-  "ops": 0.29,
+  "ops": 0.21,
   "facility": 0.3,
   "briefing": 0.5,
   "rental": 0.5

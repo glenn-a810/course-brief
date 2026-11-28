@@ -270,7 +270,7 @@
   "weekend": 290000,
   "weekday_text": null,
   "weekend_text": null,
-  "basis": "official",
+  "basis": "공식 요금표",
   "tax_included": null,
   "cart": {
    "value": 100000,
@@ -410,7 +410,7 @@
    "evidence": [
     "사우나 있음 · 프로샵·카페·라운지"
    ],
-   "value": "사우나 운영",
+   "value": "운영",
    "source_url": "https://www.midasgolf.co.kr/CP/ClubHouse",
    "confidence": "high",
    "checked_at": "2026-10-20",
@@ -468,7 +468,7 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": "사우나 있음",
+   "value": null,
    "evidence": [
     "사우나 있음 — https://greenfeeguide.co.kr/course/gc-0148/"
    ],
@@ -482,7 +482,7 @@
    "evidence": []
   },
   "other": {
-   "value": "카페·라운지",
+   "value": "라운지",
    "evidence": [
     "사우나 있음 · 프로샵·카페·라운지"
    ],
@@ -522,7 +522,7 @@
    "evidence": [
     "사우나 있음 · 프로샵·카페·라운지"
    ],
-   "value": "프로샵 운영",
+   "value": "운영",
    "source_url": "https://www.midasgolf.co.kr/CP/ClubHouse",
    "confidence": "high",
    "checked_at": "2026-10-20",
@@ -662,7 +662,7 @@
   "course": 0.8,
   "fee": 1.0,
   "ops": 0.57,
-  "facility": 0.4,
+  "facility": 0.3,
   "briefing": 0.5,
   "rental": 1.0
  }

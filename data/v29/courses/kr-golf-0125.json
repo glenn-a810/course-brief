@@ -185,7 +185,7 @@
    "evidence": [
     "노캐디: 1,2부 / 1,2부"
    ],
-   "value": "노캐디 운영 시간 1,2부",
+   "value": "운영 · 시간 1,2부",
    "source_url": "https://www.golfclubq.com/",
    "confidence": "high",
    "checked_at": "2026-10-13",
@@ -278,7 +278,7 @@
     "2. 락커, 샤워실 등 클럽하우스 시설 이용에 부과되는 요금"
    ],
    "value": "락커 운영",
-   "value_previous": "문구 확인(원문 근거)",
+   "value_previous": null,
    "source_url": "https://www.golfclubq.com/members/golfterms.asp",
    "confidence": "low",
    "source_type": "official_site",
@@ -289,7 +289,7 @@
    "evidence": [
     "사우나 있음 · 프로샵·카페·라운지"
    ],
-   "value": "사우나 운영",
+   "value": "운영",
    "source_url": "https://www.golfclubq.com/facil/facil01.asp",
    "confidence": "high",
    "checked_at": "2026-10-20",
@@ -304,7 +304,7 @@
     "반바지 조건: 여름철 가능(남성)"
    ],
    "value": "반바지: 여름철 가능(남성)",
-   "value_previous": "문구 확인(원문 근거)",
+   "value_previous": null,
    "source_url": "https://www.golfclubq.com/guide/guide.asp",
    "confidence": "medium",
    "checked_at": "2026-10-16",
@@ -334,7 +334,7 @@
    "evidence": [
     "HOME > 연습장 클럽하우스 그늘집 레스토랑 프로샵"
    ],
-   "value": "연습장 운영",
+   "value": "운영",
    "source_url": "https://www.golfclubq.com/facil/facil01_3.asp",
    "source_type": "official_site",
    "confidence": "medium",
@@ -364,7 +364,7 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": "사우나 있음",
+   "value": null,
    "evidence": [
     "사우나 있음 — https://greenfeeguide.co.kr/course/gc-0093/"
    ],
@@ -405,7 +405,7 @@
     "정기 휴장일 없음"
    ],
    "third_party": null,
-   "value": "정기 휴장일 없음",
+   "value": "없음",
    "source_url": "https://www.golfclubq.com/members/golfterms.asp",
    "confidence": "high",
    "checked_at": "2026-10-11",
@@ -426,7 +426,7 @@
    "evidence": [
     "사우나 있음 · 프로샵·카페·라운지"
    ],
-   "value": "프로샵 운영",
+   "value": "운영",
    "source_url": "https://www.golfclubq.com/facil/facil01.asp",
    "confidence": "high",
    "checked_at": "2026-10-20",
@@ -611,7 +611,7 @@
   "course": 0.4,
   "fee": 0.5,
   "ops": 0.64,
-  "facility": 0.6,
+  "facility": 0.5,
   "briefing": 0.5,
   "rental": 1.0
  }

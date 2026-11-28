@@ -229,7 +229,7 @@
    "evidence": []
   },
   "sauna": {
-   "value": "사우나(남·여), 락카",
+   "value": null,
    "evidence": []
   },
   "dress": {
@@ -253,15 +253,15 @@
    "evidence": []
   },
   "food": {
-   "value": "식당(단체석룸 운영)",
+   "value": "운영(단체석룸 운영)",
    "evidence": []
   },
   "snack_bar": {
-   "value": "그늘집(코스 내 파3홀)",
+   "value": "운영(코스 내 파3홀)",
    "evidence": []
   },
   "locker_sauna": {
-   "value": "사우나(남·여), 락카",
+   "value": "운영(남·여), 락카",
    "evidence": []
   },
   "lodging": {
@@ -400,7 +400,7 @@
   "basic": 1.0,
   "course": 0.6,
   "fee": 1.0,
-  "ops": 0.5,
+  "ops": 0.43,
   "facility": 0.6,
   "briefing": 0.5,
   "rental": 1.0

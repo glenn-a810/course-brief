@@ -301,7 +301,7 @@
    "evidence": []
   },
   "food": {
-   "value": "프로샵·카페·라운지",
+   "value": "카페 · 라운지",
    "evidence": [
     "프로샵·카페·라운지"
    ],
@@ -323,7 +323,7 @@
    "evidence": []
   },
   "other": {
-   "value": "프로샵·카페·라운지",
+   "value": "프로샵",
    "evidence": []
   },
   "night": {

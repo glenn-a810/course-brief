@@ -180,7 +180,7 @@
  },
  "ops": {
   "nocaddie": {
-   "value": "노캐디(수동카트 직접 운반)",
+   "value": "운영(수동카트 직접 운반)",
    "evidence": []
   },
   "two_player": {
@@ -231,7 +231,7 @@
    "evidence": []
   },
   "sauna": {
-   "value": "락커실(클럽하우스 사용료 5,000원 포함)",
+   "value": null,
    "evidence": []
   },
   "dress": {
@@ -245,7 +245,7 @@
  },
  "facilities": {
   "practice": {
-   "value": "골프연습장",
+   "value": "운영",
    "evidence": [
     "https://xn--289a6cv80bnhpdlav75a4vlwrc.kr/Facilities/ClubHouse"
    ]
@@ -255,11 +255,11 @@
    "evidence": []
   },
   "food": {
-   "value": "식당(클럽하우스)",
+   "value": "운영(클럽하우스)",
    "evidence": []
   },
   "snack_bar": {
-   "value": "그늘집(32㎡)",
+   "value": "운영(32㎡)",
    "evidence": [
     "https://xn--289a6cv80bnhpdlav75a4vlwrc.kr/Facilities/ClubHouse"
    ]
@@ -406,7 +406,7 @@
   "basic": 1.0,
   "course": 0.6,
   "fee": 0.75,
-  "ops": 0.5,
+  "ops": 0.43,
   "facility": 0.6,
   "briefing": 0.75,
   "rental": 1.0

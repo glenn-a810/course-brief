@@ -112,7 +112,7 @@
   "weekend": 140000,
   "weekday_text": null,
   "weekend_text": null,
-  "basis": "official",
+  "basis": "공식 요금표",
   "tax_included": null,
   "cart": null,
   "caddie": {
@@ -524,13 +524,13 @@
     "프론트에서 셀프 동의서 서명 및 내장등록, 이용요금 결제 후 락카를 지정해드립니다.",
     "[ 락카이용 ] 발급받은 지정된 락카를 사용하고 귀중품은 본인이 직접 관리해주시기 바랍니다."
    ],
-   "value": "문구 확인(원문 근거)"
+   "value": null
   },
   "sauna": {
    "evidence": [
     "사우나: 사우나 있음락커/사우나"
    ],
-   "value": "사우나 있음(락커·사우나)",
+   "value": "운영(락커·사우나)",
    "source_url": "https://greenfeeguide.co.kr/course/gc-0431/",
    "source_type": "public_info(greenfeeguide)",
    "confidence": "medium",
@@ -541,7 +541,7 @@
     "투볼 플레이 금지 ( 위반시 경고 후 퇴장조치 가능 ) 규정된 복장을 착용해 주시기 바랍니다.",
     "( 과도한 노출 등 타인에게 불쾌감을 줄 수있는 복장 금지 ) 잔디 보호와 고객님의 안전을 위하여 골프화를 반드시 착용해 주시기 바랍니다."
    ],
-   "value": "문구 확인(원문 근거)"
+   "value": null
   },
   "pace": {
    "evidence": [],
@@ -569,7 +569,7 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": "사우나",
+   "value": "운영",
    "evidence": [
     "사우나 (출처: https://greenfeeguide.co.kr/course/gc-0431/, 2026-11-27 확인)",
     "사우나 있음"
@@ -580,7 +580,7 @@
    "evidence": []
   },
   "other": {
-   "value": "사우나·퍼팅 연습 그린",
+   "value": "퍼팅 연습 그린",
    "evidence": [
     "사우나 · 퍼팅 연습 그린 (출처: https://greenfeeguide.co.kr/course/gc-0431/, 2026-11-27 확인)"
    ]
@@ -728,7 +728,7 @@
   "basic": 0.89,
   "course": 0.4,
   "fee": 0.75,
-  "ops": 0.36,
+  "ops": 0.21,
   "facility": 0.3,
   "briefing": 0.5,
   "rental": 0.25

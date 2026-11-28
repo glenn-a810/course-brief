@@ -507,7 +507,7 @@
    "evidence": [
     "사우나 있음"
    ],
-   "value": "사우나 운영",
+   "value": "운영",
    "source_url": "https://www.purunsol.co.kr/Club/Facility.aspx",
    "confidence": "high",
    "checked_at": "2026-10-20",
@@ -561,7 +561,7 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": "사우나 있음",
+   "value": null,
    "evidence": [
     "사우나 있음 — https://greenfeeguide.co.kr/course/gc-0114/"
    ],
@@ -575,7 +575,7 @@
    "evidence": []
   },
   "other": {
-   "value": "사우나 있음",
+   "value": null,
    "evidence": [
     "사우나 있음"
    ],
@@ -593,7 +593,7 @@
     "정기 휴장일 없음"
    ],
    "third_party": null,
-   "value": "정기 휴장일 없음",
+   "value": "없음",
    "source_url": "https://www.purunsol.co.kr/Policy/Service.aspx",
    "confidence": "high",
    "checked_at": "2026-10-11",
@@ -773,7 +773,7 @@
   "course": 0.6,
   "fee": 0.0,
   "ops": 0.21,
-  "facility": 0.4,
+  "facility": 0.2,
   "briefing": 0.5,
   "rental": 1.0
  }

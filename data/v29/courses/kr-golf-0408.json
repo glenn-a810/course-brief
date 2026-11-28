@@ -234,7 +234,7 @@
  },
  "ops": {
   "nocaddie": {
-   "value": "노캐디 라운딩 가능(노캐디 타임 한정, 2026-11-06 여행사 안내 기준)",
+   "value": "라운딩 가능(노캐디 타임 한정, 2026-11-06 여행사 안내 기준)",
    "evidence": [
     "현재 기준으로 라온 · 아덴힐 · 에코랜드 · 해비치 제주 · 롯데스카이힐 제주에서 노캐디로 칠 수 있어요."
    ],
@@ -282,11 +282,11 @@
    "evidence": []
   },
   "locker": {
-   "value": "사우나",
+   "value": null,
    "evidence": []
   },
   "sauna": {
-   "value": "사우나",
+   "value": "운영",
    "evidence": []
   },
   "dress": {
@@ -328,7 +328,7 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": "사우나",
+   "value": null,
    "evidence": []
   },
   "lodging": {
@@ -513,8 +513,8 @@
   "basic": 0.89,
   "course": 0.8,
   "fee": 1.0,
-  "ops": 0.57,
-  "facility": 0.5,
+  "ops": 0.5,
+  "facility": 0.4,
   "briefing": 0.5,
   "rental": 1.0
  }

@@ -632,7 +632,7 @@
   "weekend": 160000,
   "weekday_text": "130,000~180,000원",
   "weekend_text": "160,000~210,000원",
-  "basis": "official",
+  "basis": "공식 요금표",
   "tax_included": null,
   "cart": {
    "value": 80000,
@@ -825,7 +825,7 @@
    "evidence": [
     "전기차 충전소(급속/완속)는 주차장 C구역에 위치해 있습니다. (출처: https://www.gunsancc.net:443/main/directions, 2026-11-27 확인)"
    ],
-   "value": "전기차 충전소(급속·완속) 주차장 C구역"
+   "value": "운영(급속·완속) 주차장 C구역"
   },
   "gf_facilities": [
    "피트니스근거골프장 공식 홈페이지 시설 안내 · 2026"

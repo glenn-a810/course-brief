@@ -382,7 +382,7 @@
  },
  "ops": {
   "nocaddie": {
-   "value": "노캐디(셀프) 가능(팀당 20,000원 추가)",
+   "value": "셀프 가능(팀당 20,000원 추가)",
    "evidence": []
   },
   "two_player": {
@@ -446,7 +446,7 @@
    "note": "1박2일골프 시설·기타 요약(2차 공개자료, 2026-11-27 조회) — 예약 전 공식 채널 재확인 권장"
   },
   "sauna": {
-   "value": "남녀 분리 라커룸, 사우나, 샤워실",
+   "value": null,
    "evidence": [
     "라커/사우나: 남녀 분리 라커룸, 사우나, 샤워실"
    ],
@@ -535,7 +535,7 @@
    "value_from": "final_pass_2026-11-27(greenfeeguide)"
   },
   "proshop": {
-   "value": "프로샵",
+   "value": "운영",
    "evidence": [
     "프로샵: 프로샵 (골프용품·의류·기념품)"
    ],
@@ -689,7 +689,7 @@
   "basic": 1.0,
   "course": 1.0,
   "fee": 1.0,
-  "ops": 0.36,
+  "ops": 0.29,
   "facility": 0.6,
   "briefing": 0.5,
   "rental": 0.25

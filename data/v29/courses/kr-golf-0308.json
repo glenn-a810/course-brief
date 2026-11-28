@@ -255,7 +255,7 @@
  },
  "cancel": {
   "cancel_policy": {
-   "value": "• 취소: 3일 전 18:00까지\n• 야간(3부) 라운드: 야간 라운드 운영(공식 홈페이지 안내)\n• 개장·설계 2007",
+   "value": "• 취소: 3일 전 18:00까지",
    "source": "그린피가이드(공식 인용)",
    "url": "https://greenfeeguide.co.kr/course/gc-0334/"
   },
@@ -349,13 +349,13 @@
    "evidence": [
     "락커, 샤워실 등 클럽하우스 시설 이용에 부과되는 요금 3."
    ],
-   "value": "문구 확인(원문 근거)"
+   "value": null
   },
   "sauna": {
    "evidence": [
     "사우나: 사우나 있음"
    ],
-   "value": "사우나 있음",
+   "value": "운영",
    "source_url": "https://greenfeeguide.co.kr/course/gc-0334/",
    "source_type": "public_info(greenfeeguide)",
    "confidence": "medium",
@@ -379,7 +379,7 @@
     "골프연습장 대표 및 프로, 협력단체 라이센스 소지고객 우대요금 적용.",
     "골프연습장 대표 및 프로, 협력단체 라이센스 소지고객 우대요금 적용."
    ],
-   "value": "골프연습장 운영(연습장 프로 우대요금)",
+   "value": "운영(연습장 프로 우대요금)",
    "source_url": "https://www.sunrichgc.com/guide-info/use-guide",
    "source_type": "official_site",
    "confidence": "medium",
@@ -407,7 +407,7 @@
    "evidence": []
   },
   "other": {
-   "value": "사우나 있음",
+   "value": null,
    "evidence": [
     "사우나 있음"
    ],
@@ -420,7 +420,7 @@
    "evidence": [
     "야간 운영: 야간 라운드 운영(공식 홈페이지 안내)"
    ],
-   "value": "야간 라운드 운영(공식 홈페이지 안내)",
+   "value": "운영(공식 홈페이지 안내)",
    "source_url": "https://greenfeeguide.co.kr/course/gc-0334/",
    "confidence": "medium",
    "source_type": "official_summary(greenfeeguide)",
@@ -665,8 +665,8 @@
   "basic": 1.0,
   "course": 0.2,
   "fee": 1.0,
-  "ops": 0.29,
-  "facility": 0.3,
+  "ops": 0.21,
+  "facility": 0.2,
   "briefing": 0.25,
   "rental": 0.25
  }

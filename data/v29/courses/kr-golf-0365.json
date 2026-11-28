@@ -175,7 +175,7 @@
  },
  "ops": {
   "nocaddie": {
-   "value": "노캐디(셀프) 라운드 가능",
+   "value": "셀프 라운드 가능",
    "evidence": []
   },
   "two_player": {
@@ -221,7 +221,7 @@
    "checked_at": "2026-11-27"
   },
   "mat": {
-   "value": "운영 — 매트 티샷",
+   "value": "운영",
    "evidence": [
     "그린이 느리고 매트 티샷이라는 점은 반복되는 아쉬움입니다"
    ],
@@ -238,11 +238,11 @@
    ]
   },
   "locker": {
-   "value": "남녀 락카시설",
+   "value": "운영(남녀)",
    "evidence": []
   },
   "sauna": {
-   "value": "남녀 락카시설",
+   "value": null,
    "evidence": []
   },
   "dress": {
@@ -270,7 +270,7 @@
    "evidence": []
   },
   "snack_bar": {
-   "value": "그늘집",
+   "value": "운영",
    "evidence": []
   },
   "locker_sauna": {
@@ -414,7 +414,7 @@
   "basic": 0.89,
   "course": 0.6,
   "fee": 0.5,
-  "ops": 0.64,
+  "ops": 0.57,
   "facility": 0.5,
   "briefing": 0.25,
   "rental": 0.25

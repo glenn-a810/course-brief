@@ -438,7 +438,7 @@
    "evidence": [
     "사우나: 사우나 있음"
    ],
-   "value": "사우나 있음",
+   "value": "운영",
    "source_url": "https://greenfeeguide.co.kr/course/gc-0329/",
    "source_type": "public_info(greenfeeguide)",
    "confidence": "medium",
@@ -489,7 +489,7 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": "락카룸·사우나",
+   "value": "운영 · 사우나",
    "evidence": [
     "스타트하우스, 락카룸, 사우나, 주차장"
    ],

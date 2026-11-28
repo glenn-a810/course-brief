@@ -242,7 +242,7 @@
  },
  "ops": {
   "nocaddie": {
-   "value": "2인 노캐디 불가",
+   "value": "2인 불가",
    "evidence": []
   },
   "two_player": {
@@ -254,7 +254,7 @@
    "evidence": []
   },
   "five_player": {
-   "value": "5인 플레이 가능(18홀 210,000원)",
+   "value": "가능(18홀 210,000원)",
    "evidence": [
     "18홀 150,000원 (4인 플레이) · 5인 플레이 210,000원"
    ],
@@ -289,11 +289,11 @@
    "evidence": []
   },
   "locker": {
-   "value": "사우나",
+   "value": null,
    "evidence": []
   },
   "sauna": {
-   "value": "사우나",
+   "value": "운영",
    "evidence": []
   },
   "dress": {
@@ -319,11 +319,11 @@
    "evidence": []
   },
   "snack_bar": {
-   "value": "그늘집·스타트하우스",
+   "value": "운영 · 스타트하우스",
    "evidence": []
   },
   "locker_sauna": {
-   "value": "사우나",
+   "value": null,
    "evidence": []
   },
   "lodging": {
@@ -503,8 +503,8 @@
   "basic": 1.0,
   "course": 0.8,
   "fee": 1.0,
-  "ops": 0.43,
-  "facility": 0.5,
+  "ops": 0.36,
+  "facility": 0.4,
   "briefing": 0.5,
   "rental": 1.0
  }

@@ -179,7 +179,7 @@
   },
   "as_of": "2026-11-01",
   "source_url": null,
-  "note": null,
+  "note": "요금표상 팀당 카트비·캐디피 합계 220,000원",
   "sources": [
    {
     "source": "공식 홈페이지(브라우저 수집)",
@@ -230,7 +230,7 @@
  },
  "cancel": {
   "cancel_policy": {
-   "value": "• 취소: 평일 3일 전·주말 4일 전까지(이용약관 기준)\n• 부대시설: 사우나\n• 요금표상 팀당 카트비·캐디피 합계 220,000원",
+   "value": "• 취소: 평일 3일 전·주말 4일 전까지(이용약관 기준)",
    "source": "그린피가이드(공식 인용)",
    "url": "https://greenfeeguide.co.kr/course/gc-0369/"
   },
@@ -315,7 +315,7 @@
    "evidence": [
     "사우나: 사우나 있음락커룸&사우나"
    ],
-   "value": "사우나 있음락커룸&사우나",
+   "value": null,
    "source_url": "https://greenfeeguide.co.kr/course/gc-0369/",
    "source_type": "public_info(greenfeeguide)",
    "confidence": "medium",
@@ -366,7 +366,7 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": "사우나 있음락커룸&사우나",
+   "value": "운영 · 락커룸&사우나",
    "evidence": [
     "사우나: 사우나 있음락커룸&사우나"
    ],
@@ -546,7 +546,7 @@
   "basic": 0.89,
   "course": 0.2,
   "fee": 1.0,
-  "ops": 0.36,
+  "ops": 0.29,
   "facility": 0.2,
   "briefing": 0.5,
   "rental": 1.0

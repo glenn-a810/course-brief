@@ -558,7 +558,7 @@
   "weekend": 170000,
   "weekday_text": "130,000~150,000원",
   "weekend_text": "170,000~180,000원",
-  "basis": "official",
+  "basis": "공식 요금표",
   "tax_included": null,
   "cart": {
    "value": 80000,
@@ -699,7 +699,7 @@
    "evidence": [
     "사우나: 사우나 있음락커/사우나"
    ],
-   "value": "사우나 있음(락커·사우나)",
+   "value": "운영(락커·사우나)",
    "source_url": "https://greenfeeguide.co.kr/course/gc-0438/",
    "source_type": "public_info(greenfeeguide)",
    "confidence": "medium",
@@ -734,14 +734,14 @@
    "value": "레스토랑"
   },
   "snack_bar": {
-   "value": "그늘집",
+   "value": "운영",
    "evidence": [
     "그늘집 (출처: https://greenfeeguide.co.kr/course/gc-0438/, 2026-11-27 확인)",
     "우거지해장국 · 15,000원 · 7,000원 · 메뉴 원문"
    ]
   },
   "locker_sauna": {
-   "value": "사우나",
+   "value": "운영",
    "evidence": [
     "사우나 (출처: https://greenfeeguide.co.kr/course/gc-0438/, 2026-11-27 확인)",
     "사우나 있음"
@@ -769,7 +769,7 @@
     "휴대폰 단문 문자 메세지 전송시행 예약결과 통지 및 긴급휴장, 기타 이용객연락 사항을 위하여 이용객님의 등록된 휴대폰으로 문자메시지(SMS)를 발송합니다."
    ],
    "third_party": "정기 휴장일 없음숙박골프텔부대시설사우나요",
-   "value": "정기 휴장일 없음"
+   "value": "없음"
   },
   "shuttle": {
    "evidence": [],

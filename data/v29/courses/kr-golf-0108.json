@@ -490,7 +490,7 @@
   "weekend": 290000,
   "weekday_text": null,
   "weekend_text": null,
-  "basis": "official",
+  "basis": "공식 요금표",
   "tax_included": null,
   "cart": {
    "value": 120000,
@@ -654,7 +654,7 @@
     "프론트에 등록하실 때 코스 및 시간을 재확인 하신 후 락카키를 받으시고,"
    ],
    "value": "락커 운영",
-   "value_previous": "문구 확인(원문 근거)",
+   "value_previous": null,
    "source_url": "https://www.eastvalley.co.kr/pagesite/use/guide.asp",
    "confidence": "low",
    "source_type": "official_site",
@@ -665,7 +665,7 @@
    "evidence": [
     "이용자는 경기 시 또는 라커룸 이용 시와 목욕탕 이용 시에는 금전 또는 귀중품을 소지할 수 없으며 프런트, 라커룸의 별도보관 절차를 받거나 사물 보관함에 보관하여 분실을 예방하여야 합니다."
    ],
-   "value": "문구 확인(원문 근거)"
+   "value": null
   },
   "dress": {
    "evidence": [
@@ -673,8 +673,8 @@
     "당 클럽이 정한 복장 및 용모를 위반하였을 때 ㄱ.",
     "입장 시 칼라가 있는 상의 차림의 단정한 복장으로 내장하여 주시고 트레이닝복, 찢어진 청바지, 반바지, 노출이 심한 복장, 샌들, 슬리퍼 착용 시 입장이 제한됩니다."
    ],
-   "value": "복장 규정 안내",
-   "value_previous": "문구 확인(원문 근거)",
+   "value": "안내",
+   "value_previous": null,
    "source_url": "https://www.eastvalley.co.kr/pagesite/use/guide.asp",
    "confidence": "medium",
    "source_type": "official_site",
@@ -756,7 +756,7 @@
    "evidence": [
     "프로샵"
    ],
-   "value": "프로샵 운영",
+   "value": "운영",
    "source_url": "https://www.eastvalley.co.kr/",
    "confidence": "high",
    "checked_at": "2026-10-20",
@@ -914,7 +914,7 @@
   "basic": 1.0,
   "course": 0.8,
   "fee": 1.0,
-  "ops": 0.36,
+  "ops": 0.29,
   "facility": 0.2,
   "briefing": 0.5,
   "rental": 0.25

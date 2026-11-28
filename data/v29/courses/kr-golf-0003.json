@@ -542,7 +542,7 @@
    "evidence": []
   },
   "five_player": {
-   "value": "5인 플레이 가능(카트비 1인 25,000원 추가, 캐디피 5인 210,000원)",
+   "value": "가능(카트비 1인 25,000원 추가, 캐디피 5인 210,000원)",
    "evidence": [
     "캐디피 : 팀당 150,000원 (5인플레이 210,000원)"
    ],
@@ -590,13 +590,13 @@
     "락카실은 프론트에서 부여받을 번호에서 사용하시고 라운드 종료후 혼동을 막기위해 비밀번호와 락카번호를 꼭 기억하시기 바랍니다.",
     "귀중품은 분실 및 도난방지를 위해 락카실에 보관하시기 바랍니다."
    ],
-   "value": "문구 확인(원문 근거)"
+   "value": null
   },
   "sauna": {
    "evidence": [
     "사우나: 사우나 있음남성사우나·여성사우나"
    ],
-   "value": "사우나 있음 · 남성 사우나·여성 사우나",
+   "value": "운영 · 남성 사우나·여성 사우나",
    "source_url": "https://greenfeeguide.co.kr/course/gc-0462/",
    "source_type": "public_info(greenfeeguide)",
    "confidence": "medium",
@@ -641,7 +641,7 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": "사우나",
+   "value": "운영",
    "evidence": [
     "락카·사우나 (출처: https://www.kjcc.co.kr/html/facility.asp, 2026-11-27 확인)"
    ]
@@ -830,7 +830,7 @@
   "basic": 0.89,
   "course": 0.6,
   "fee": 0.75,
-  "ops": 0.29,
+  "ops": 0.21,
   "facility": 0.4,
   "briefing": 0.25,
   "rental": 1.0

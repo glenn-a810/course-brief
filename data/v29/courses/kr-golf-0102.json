@@ -174,7 +174,7 @@
    "evidence": [
     "2인 플레이 금지"
    ],
-   "value": "2인 플레이 금지",
+   "value": "금지",
    "third_party": {
     "two": null,
     "three": null,
@@ -386,7 +386,7 @@
    "evidence": [
     "프로샵"
    ],
-   "value": "프로샵 운영",
+   "value": "운영",
    "source_url": "https://www.kn300.com/Mobile/Club/Facility",
    "confidence": "high",
    "checked_at": "2026-10-20",

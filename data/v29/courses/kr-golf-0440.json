@@ -283,7 +283,7 @@
    "evidence": []
   },
   "five_player": {
-   "value": "5인 플레이 불가(1팀 4인 기준)",
+   "value": "불가(1팀 4인 기준)",
    "evidence": [
     "1팀 4인 (5인 플레이 불가)"
    ],
@@ -319,11 +319,11 @@
    "evidence": []
   },
   "locker": {
-   "value": "사우나 있음",
+   "value": null,
    "evidence": []
   },
   "sauna": {
-   "value": "사우나 있음",
+   "value": "운영",
    "evidence": []
   },
   "dress": {
@@ -345,7 +345,7 @@
    "evidence": []
   },
   "food": {
-   "value": "식당·카페(아메리카노 7,000원)",
+   "value": "운영 · 카페(아메리카노 7,000원)",
    "evidence": []
   },
   "snack_bar": {
@@ -353,7 +353,7 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": "사우나 있음",
+   "value": null,
    "evidence": []
   },
   "lodging": {
@@ -384,7 +384,7 @@
    "checked_at": "2026-11-27"
   },
   "proshop": {
-   "value": "프로샵",
+   "value": "운영",
    "evidence": [
     "프로샵: 골프 용품 프로샵 운영"
    ],
@@ -529,8 +529,8 @@
   "basic": 1.0,
   "course": 0.6,
   "fee": 1.0,
-  "ops": 0.21,
-  "facility": 0.6,
+  "ops": 0.14,
+  "facility": 0.5,
   "briefing": 0.5,
   "rental": 0.25
  }

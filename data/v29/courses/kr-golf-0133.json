@@ -302,7 +302,7 @@
    "evidence": [
     "사우나 있음 · 프로샵"
    ],
-   "value": "사우나 운영",
+   "value": "운영",
    "source_url": "https://www.winchestgc.co.kr/swp/club/facil",
    "confidence": "high",
    "checked_at": "2026-10-20",
@@ -315,8 +315,8 @@
     "복장착용 ※ 타인에게 위화감을 주지 않는 복장으로 착용하여 주시기 바랍니다.",
     "• 라운드시 삼가해주셔야할 복장입니다."
    ],
-   "value": "복장 규정 안내",
-   "value_previous": "문구 확인(원문 근거)",
+   "value": "안내",
+   "value_previous": null,
    "source_url": "https://www.winchestgc.co.kr/swp/guide/etiq",
    "confidence": "medium",
    "source_type": "official_site",
@@ -369,7 +369,7 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": "사우나 있음",
+   "value": null,
    "evidence": [
     "사우나 있음 — https://greenfeeguide.co.kr/course/gc-0099/"
    ],
@@ -425,7 +425,7 @@
    "evidence": [
     "사우나 있음 · 프로샵"
    ],
-   "value": "프로샵 운영",
+   "value": "운영",
    "source_url": "https://www.winchestgc.co.kr/swp/club/facil",
    "confidence": "high",
    "checked_at": "2026-10-20",
@@ -554,7 +554,7 @@
   "course": 0.2,
   "fee": 0.5,
   "ops": 0.36,
-  "facility": 0.5,
+  "facility": 0.4,
   "briefing": 0.25,
   "rental": 0.25
  }

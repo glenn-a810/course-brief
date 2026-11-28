@@ -165,7 +165,7 @@
    "evidence": []
   },
   "marshal_caddie": {
-   "value": "마샬캐디 운영",
+   "value": "운영",
    "evidence": [
     "1 경기진행요원(캐디, 마스터, 직원, 마샬)이 안전을 위해 당부한 내용을 지키지 아니할 때"
    ],
@@ -222,7 +222,7 @@
     "샤워실, 사우나, 락카룸 및 골프장의 모든 공용시설은 모든 회원과 고객이 쾌적하게 이용할 수 있도록 청결 유지에 협조해 주시기 바랍니다."
    ],
    "value": "락커 운영",
-   "value_previous": "문구 확인(원문 근거)",
+   "value_previous": null,
    "source_url": "https://www.goyangcc.com/guide/guide",
    "confidence": "medium",
    "source_type": "official_site",
@@ -234,8 +234,8 @@
     "영업시간 및 휴장일 구분 주중 주말 영업시간 05:00 ~ 24:00(계절에 따라 시간 변동이 있을 수 있습니다.) 휴장일 기상상황 악화 또는 시설물 점검 등 별도공지 기타안내 연습장 이용 종료 후 프론트에 배정표 제출시 사우나 락카 사용가능.(회원 무료 1일 1회 / 일일회원 2,000원) 코스 내장객에 따라 사우나 사용이 제한될 수 있으니 이 점 양지해 주시기 바랍니다.",
     "사우나 있음 · 숏게임 연습장·드라이빙 레인지 · 프로샵"
    ],
-   "value": "사우나 운영",
-   "value_previous": "문구 확인(원문 근거)",
+   "value": "운영",
+   "value_previous": null,
    "source_url": "https://www.goyangcc.com/club/club",
    "confidence": "high",
    "checked_at": "2026-10-20",
@@ -247,7 +247,7 @@
    "evidence": [
     "각골프장 마다 복장 규정이 조금씩 다르긴 하지만 삼가할 복장으로는 소매 및 깃이 없는 상의, 속내의가 많이 보이는 상의, 반바지, 청바지, 샌달 등이다."
    ],
-   "value": "복장 규정 안내",
+   "value": "안내",
    "source_url": "https://www.goyangcc.com/guide/guide",
    "confidence": "medium",
    "source_type": "official_site",
@@ -304,7 +304,7 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": "사우나 있음",
+   "value": null,
    "evidence": [
     "사우나 있음 — https://greenfeeguide.co.kr/course/gc-0003/"
    ],
@@ -360,7 +360,7 @@
    "evidence": [
     "사우나 있음 · 숏게임 연습장·드라이빙 레인지 · 프로샵"
    ],
-   "value": "프로샵 운영",
+   "value": "운영",
    "source_url": "https://www.goyangcc.com/club/club",
    "confidence": "high",
    "checked_at": "2026-10-20",
@@ -521,7 +521,7 @@
   "course": 0.2,
   "fee": 0.0,
   "ops": 0.79,
-  "facility": 0.5,
+  "facility": 0.4,
   "briefing": 0.25,
   "rental": 0.25
  }

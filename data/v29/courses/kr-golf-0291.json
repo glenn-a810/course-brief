@@ -266,7 +266,7 @@
  },
  "ops": {
   "nocaddie": {
-   "value": "노캐디(셀프) 라운드 가능",
+   "value": "셀프 라운드 가능",
    "evidence": [
     "노캐디 노캐디(셀프) 라운드 가능"
    ],
@@ -324,11 +324,11 @@
    "checked_at": "2026-11-27"
   },
   "locker": {
-   "value": "락카(4자리 비밀번호)",
+   "value": "운영(4자리 비밀번호)",
    "evidence": []
   },
   "sauna": {
-   "value": "락카(4자리 비밀번호)",
+   "value": null,
    "evidence": []
   },
   "dress": {
@@ -360,11 +360,11 @@
    "evidence": []
   },
   "snack_bar": {
-   "value": "그늘집",
+   "value": "운영",
    "evidence": []
   },
   "locker_sauna": {
-   "value": "락카(4자리 비밀번호)",
+   "value": "운영(4자리 비밀번호)",
    "evidence": []
   },
   "lodging": {
@@ -511,7 +511,7 @@
   "basic": 1.0,
   "course": 0.8,
   "fee": 1.0,
-  "ops": 0.64,
+  "ops": 0.57,
   "facility": 0.5,
   "briefing": 0.25,
   "rental": 1.0

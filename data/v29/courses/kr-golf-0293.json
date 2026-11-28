@@ -281,11 +281,11 @@
    "checked_at": "2026-11-27"
   },
   "locker": {
-   "value": "락카",
+   "value": "운영",
    "evidence": []
   },
   "sauna": {
-   "value": "락카",
+   "value": null,
    "evidence": []
   },
   "dress": {
@@ -299,7 +299,7 @@
  },
  "facilities": {
   "practice": {
-   "value": "골프연습장",
+   "value": "운영",
    "evidence": []
   },
   "indoor_range": {
@@ -313,11 +313,11 @@
    ]
   },
   "snack_bar": {
-   "value": "그늘집",
+   "value": "운영",
    "evidence": []
   },
   "locker_sauna": {
-   "value": "락카",
+   "value": "운영",
    "evidence": []
   },
   "lodging": {
@@ -337,7 +337,7 @@
    "checked_at": "2026-11-27"
   },
   "night": {
-   "value": "야간 라운드 운영(단지 공통 안내)",
+   "value": "운영(단지 공통 안내)",
    "evidence": []
   },
   "closed_days": {
@@ -457,7 +457,7 @@
   "basic": 0.89,
   "course": 0.4,
   "fee": 1.0,
-  "ops": 0.36,
+  "ops": 0.29,
   "facility": 0.7,
   "briefing": 0.25,
   "rental": 0.5

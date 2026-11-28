@@ -124,7 +124,7 @@
   "weekend": 105000,
   "weekday_text": null,
   "weekend_text": null,
-  "basis": "official",
+  "basis": "공식 요금표",
   "tax_included": null,
   "cart": {
    "value": 80000,
@@ -375,7 +375,7 @@
     "시설이용료(기본요금) : 골프장 이용시 기본적으로 발생되는 비용으로서 락커, 샤워실등 클럽하우스 시설 이용에 부과되는 요금 및 제세공과금.(2023년 기준 기본요금 15,000원) 홀 이용 기준은 티샷으로 간주함.",
     "프론트에서 입장료에 대한 개별 선불 계산 후 락커 번호를 부여합니다."
    ],
-   "value": "문구 확인(원문 근거)"
+   "value": null
   },
   "sauna": {
    "evidence": [],
@@ -642,7 +642,7 @@
   "basic": 0.89,
   "course": 0.4,
   "fee": 1.0,
-  "ops": 0.14,
+  "ops": 0.07,
   "facility": 0.2,
   "briefing": 0.25,
   "rental": 0.25

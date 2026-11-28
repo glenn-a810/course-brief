@@ -194,7 +194,7 @@
    ]
   },
   "five_player": {
-   "value": "5인 플레이 가능(공식 이벤트 공지)",
+   "value": "가능(공식 이벤트 공지)",
    "evidence": [
     "[진행] 5인 플레이 가능 ! | 골프장이벤트 2024.01.30"
    ],
@@ -237,7 +237,7 @@
    "evidence": []
   },
   "sauna": {
-   "value": "사우나 있음아르테지안수로 즐기는 사우나",
+   "value": "운영 · 아르테지안수로 즐기는 사우나",
    "evidence": [
     "사우나: 사우나 있음아르테지안수로 즐기는 사우나"
    ],
@@ -273,7 +273,7 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": "사우나",
+   "value": "운영",
    "evidence": [
     "https://greenfeeguide.co.kr/course/gc-0398/"
    ]
@@ -283,7 +283,7 @@
    "evidence": []
   },
   "other": {
-   "value": "사우나 있음",
+   "value": null,
    "evidence": [
     "사우나 있음"
    ],
@@ -297,7 +297,7 @@
    "evidence": []
   },
   "closed_days": {
-   "value": "정기 휴장일 없음",
+   "value": "없음",
    "third_party": null,
    "evidence": [
     "https://greenfeeguide.co.kr/course/gc-0398/"
@@ -428,7 +428,7 @@
   "course": 0.8,
   "fee": 1.0,
   "ops": 0.43,
-  "facility": 0.4,
+  "facility": 0.3,
   "briefing": 0.25,
   "rental": 0.25
  }

@@ -130,7 +130,7 @@
   "weekend": 247000,
   "weekday_text": null,
   "weekend_text": null,
-  "basis": "official",
+  "basis": "공식 요금표",
   "tax_included": null,
   "cart": null,
   "caddie": {
@@ -200,7 +200,7 @@
    ]
   },
   "five_player": {
-   "value": "5인 플레이 불가",
+   "value": "불가",
    "evidence": [
     "5인 플레이 불가"
    ],
@@ -256,7 +256,7 @@
    "evidence": [
     "사우나: 사우나 있음락카(사우나)"
    ],
-   "value": "사우나 있음 · 락카(사우나)",
+   "value": "운영 · 락카(사우나)",
    "source_url": "https://greenfeeguide.co.kr/course/gc-0472/",
    "source_type": "public_info(greenfeeguide)",
    "confidence": "medium",
@@ -316,7 +316,7 @@
     "정기 휴장일 없음 (출처: https://greenfeeguide.co.kr/course/gc-0472/, 2026-11-27 확인)"
    ],
    "third_party": "정기 휴장일 없음겨울겨울",
-   "value": "정기 휴장일 없음"
+   "value": "없음"
   },
   "shuttle": {
    "evidence": [],

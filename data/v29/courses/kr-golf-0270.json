@@ -160,7 +160,7 @@
  },
  "ops": {
   "nocaddie": {
-   "value": "노캐디(캐디 없음)",
+   "value": "운영(캐디 없음)",
    "evidence": []
   },
   "two_player": {
@@ -204,7 +204,7 @@
    "evidence": []
   },
   "sauna": {
-   "value": "남녀 락커 구비",
+   "value": null,
    "evidence": []
   },
   "dress": {
@@ -375,7 +375,7 @@
   "basic": 0.78,
   "course": 0.4,
   "fee": 0.5,
-  "ops": 0.43,
+  "ops": 0.36,
   "facility": 0.3,
   "briefing": 0.5,
   "rental": 0.25

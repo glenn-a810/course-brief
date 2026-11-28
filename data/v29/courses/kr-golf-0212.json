@@ -211,7 +211,7 @@
   "weekend": 260000,
   "weekday_text": null,
   "weekend_text": "260,000원 ~ 270,000원",
-  "basis": "official",
+  "basis": "공식 요금표",
   "tax_included": null,
   "cart": {
    "value": 100000,

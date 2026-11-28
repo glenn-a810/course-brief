@@ -102,7 +102,7 @@
   "weekend": 65000,
   "weekday_text": null,
   "weekend_text": null,
-  "basis": "official",
+  "basis": "공식 요금표",
   "tax_included": null,
   "cart": {
    "value": 8000,
@@ -150,7 +150,7 @@
    "evidence": [
     "노캐디: 전면 노캐디"
    ],
-   "value": "전면 노캐디",
+   "value": "전면 운영",
    "source_url": "https://www.jisanresort.co.kr/w/golf/public/price.asp",
    "confidence": "high",
    "checked_at": "2026-10-13",
@@ -318,7 +318,7 @@
    "evidence": [
     "전기차 충전 안내(골프장)"
    ],
-   "value": "전기차 충전 안내(골프장)",
+   "value": "안내(골프장)",
    "source_url": "https://www.jisanresort.co.kr/w/golf/",
    "confidence": "high",
    "checked_at": "2026-10-20",
@@ -331,7 +331,7 @@
    "evidence": [
     "전기차 충전 가능 · 어프로치 연습·드라이빙 레인지 · 프로샵"
    ],
-   "value": "프로샵 운영",
+   "value": "운영",
    "source_url": "https://www.jisanresort.co.kr/w/golf/",
    "confidence": "high",
    "checked_at": "2026-10-20",

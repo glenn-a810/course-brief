@@ -249,11 +249,11 @@
    "evidence": []
   },
   "locker": {
-   "value": "사우나",
+   "value": null,
    "evidence": []
   },
   "sauna": {
-   "value": "사우나",
+   "value": "운영",
    "evidence": []
   },
   "dress": {
@@ -290,7 +290,7 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": "사우나",
+   "value": null,
    "evidence": []
   },
   "lodging": {
@@ -306,7 +306,7 @@
    "evidence": []
   },
   "closed_days": {
-   "value": "정기 휴장일 없음",
+   "value": "없음",
    "third_party": null,
    "evidence": [
     "정기 휴장일 정기 휴장일 없음"
@@ -473,8 +473,8 @@
   "basic": 0.78,
   "course": 0.6,
   "fee": 1.0,
-  "ops": 0.57,
-  "facility": 0.6,
+  "ops": 0.5,
+  "facility": 0.5,
   "briefing": 0.5,
   "rental": 0.25
  }

@@ -337,11 +337,11 @@
    "evidence": []
   },
   "locker": {
-   "value": "사우나 있음",
+   "value": null,
    "evidence": []
   },
   "sauna": {
-   "value": "사우나 있음",
+   "value": "운영",
    "evidence": []
   },
   "dress": {
@@ -391,7 +391,7 @@
    "checked_at": "2026-11-27"
   },
   "locker_sauna": {
-   "value": "사우나 있음",
+   "value": null,
    "evidence": []
   },
   "lodging": {
@@ -422,7 +422,7 @@
    "value_from": "final_pass_2026-11-27(greenfeeguide)"
   },
   "proshop": {
-   "value": "프로샵",
+   "value": "운영",
    "evidence": [
     "프로샵: 프로샵 (프리미엄 골프용품·의류)"
    ],
@@ -551,8 +551,8 @@
   "basic": 1.0,
   "course": 0.8,
   "fee": 1.0,
-  "ops": 0.21,
-  "facility": 0.7,
+  "ops": 0.14,
+  "facility": 0.6,
   "briefing": 0.5,
   "rental": 1.0
  }

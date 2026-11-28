@@ -219,11 +219,11 @@
    "evidence": []
   },
   "locker": {
-   "value": "사우나(시설 이용요금 별도)",
+   "value": null,
    "evidence": []
   },
   "sauna": {
-   "value": "사우나(시설 이용요금 별도)",
+   "value": "운영(시설 이용요금 별도)",
    "evidence": []
   },
   "dress": {
@@ -237,7 +237,7 @@
  },
  "facilities": {
   "practice": {
-   "value": "골프연습장(이용요금·일일권/쿠폰제 안내)",
+   "value": "운영(이용요금·일일권/쿠폰제 안내)",
    "evidence": []
   },
   "indoor_range": {
@@ -245,7 +245,7 @@
    "evidence": []
   },
   "food": {
-   "value": "식당(부대시설 안내)",
+   "value": "운영(부대시설 안내)",
    "evidence": []
   },
   "snack_bar": {
@@ -253,7 +253,7 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": "사우나(시설 이용요금 별도)",
+   "value": null,
    "evidence": []
   },
   "lodging": {
@@ -390,8 +390,8 @@
   "basic": 1.0,
   "course": 0.8,
   "fee": 1.0,
-  "ops": 0.14,
-  "facility": 0.5,
+  "ops": 0.07,
+  "facility": 0.4,
   "briefing": 0.25,
   "rental": 1.0
  }

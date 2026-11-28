@@ -284,11 +284,11 @@
    "checked_at": "2026-11-27"
   },
   "locker": {
-   "value": "락카(클럽하우스 2층)",
+   "value": "운영(클럽하우스 2층)",
    "evidence": []
   },
   "sauna": {
-   "value": "락카(클럽하우스 2층)",
+   "value": null,
    "evidence": []
   },
   "dress": {
@@ -308,7 +308,7 @@
  },
  "facilities": {
   "practice": {
-   "value": "골프연습장(스타트광장 옆)",
+   "value": "운영(스타트광장 옆)",
    "evidence": []
   },
   "indoor_range": {
@@ -322,11 +322,11 @@
    ]
   },
   "snack_bar": {
-   "value": "그늘집 6번홀·15번홀 티 옆",
+   "value": "6번홀·15번홀 티 옆",
    "evidence": []
   },
   "locker_sauna": {
-   "value": "락카(클럽하우스 2층)",
+   "value": "운영(클럽하우스 2층)",
    "evidence": []
   },
   "lodging": {
@@ -340,7 +340,7 @@
    "evidence": []
   },
   "night": {
-   "value": "야간 라운드 운영(공식 홈페이지 안내)",
+   "value": "운영(공식 홈페이지 안내)",
    "evidence": []
   },
   "closed_days": {
@@ -459,7 +459,7 @@
   "basic": 0.89,
   "course": 0.4,
   "fee": 1.0,
-  "ops": 0.43,
+  "ops": 0.36,
   "facility": 0.7,
   "briefing": 0.25,
   "rental": 0.75

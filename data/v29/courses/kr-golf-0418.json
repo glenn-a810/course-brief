@@ -356,7 +356,7 @@
    "evidence": []
   },
   "sauna": {
-   "value": "사우나·락커룸",
+   "value": null,
    "evidence": []
   },
   "dress": {
@@ -412,7 +412,7 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": "사우나·락커룸",
+   "value": "운영 · 락커룸",
    "evidence": []
   },
   "lodging": {
@@ -437,7 +437,7 @@
    "evidence": []
   },
   "proshop": {
-   "value": "프로샵",
+   "value": "운영",
    "evidence": [
     "프로샵: 골프 용품 프로샵 운영"
    ],
@@ -451,7 +451,7 @@
    "evidence": [
     "전기차충전소 충전기 5대 (완속충전지원)"
    ],
-   "value": "전기차충전소 충전기 5대 (완속충전지원)",
+   "value": "충전기 5대(완속)",
    "source_url": "https://www.sunvalley.co.kr/seorak/golf/club_spa",
    "source_type": "public_info(greenfeeguide)",
    "confidence": "medium",
@@ -572,7 +572,7 @@
   "basic": 1.0,
   "course": 0.6,
   "fee": 1.0,
-  "ops": 0.36,
+  "ops": 0.29,
   "facility": 0.5,
   "briefing": 0.25,
   "rental": 1.0

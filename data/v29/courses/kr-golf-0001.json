@@ -212,7 +212,7 @@
    "evidence": [
     "노캐디 선택 시범운행 안내"
    ],
-   "value": "노캐디 선택 운영(시범운행)",
+   "value": "선택 운영(시범운행)",
    "source_url": "https://inseoul27.co.kr/board/board.php?bo_table=notice",
    "source_type": "official_site",
    "confidence": "medium",
@@ -287,7 +287,7 @@
     "락커, 샤워실 등 클럽하우스 시설 이용에 부과되는 요금 3."
    ],
    "value": "락커 운영",
-   "value_previous": "문구 확인(원문 근거)",
+   "value_previous": null,
    "source_url": "https://inseoul27.co.kr/m51.php",
    "confidence": "low",
    "source_type": "official_site",
@@ -298,7 +298,7 @@
    "evidence": [
     "사우나 있음 · 프로샵"
    ],
-   "value": "사우나 운영",
+   "value": "운영",
    "source_url": "https://inseoul27.co.kr/m31.php",
    "confidence": "high",
    "checked_at": "2026-10-20",
@@ -349,7 +349,7 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": "사우나 있음 · 락커룸/스파",
+   "value": "운영 · 락커룸/스파",
    "evidence": [
     "사우나: 사우나 있음락커룸/스파"
    ],
@@ -383,7 +383,7 @@
     "2 이 골프장의 정기 휴장일은 다음과 같다.(없음)"
    ],
    "third_party": null,
-   "value": "정기 휴장일 없음",
+   "value": "없음",
    "source_url": "https://inseoul27.co.kr/_terms.php",
    "confidence": "medium",
    "source_type": "official_site",
@@ -403,7 +403,7 @@
    "evidence": [
     "사우나 있음 · 프로샵"
    ],
-   "value": "프로샵 운영",
+   "value": "운영",
    "source_url": "https://inseoul27.co.kr/m31.php",
    "confidence": "high",
    "checked_at": "2026-10-20",

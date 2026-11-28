@@ -232,7 +232,7 @@
   "weekend": 220000,
   "weekday_text": "180,000원 ~ 220,000원",
   "weekend_text": "220,000원 ~ 240,000원",
-  "basis": "official",
+  "basis": "공식 요금표",
   "tax_included": null,
   "cart": {
    "value": 100000,
@@ -378,7 +378,7 @@
     "이용자는 락카번호를 본인이 책임지고 관리하여야 하며, 이에 대해 발생하는 분실 및 훼손 등에 대해서는 골프장에서 책임을 지지 아니한다."
    ],
    "value": "락커 운영",
-   "value_previous": "문구 확인(원문 근거)",
+   "value_previous": null,
    "source_url": "https://www.npcc.co.kr/guide/terms.asp",
    "confidence": "low",
    "source_type": "official_site",
@@ -389,7 +389,7 @@
    "evidence": [
     "사우나 있음 · 프로샵"
    ],
-   "value": "사우나 운영",
+   "value": "운영",
    "source_url": "https://www.npcc.co.kr/mobile/club/facil05.asp",
    "confidence": "high",
    "checked_at": "2026-10-20",
@@ -438,7 +438,7 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": "사우나 있음",
+   "value": null,
    "evidence": [
     "사우나 있음 — https://greenfeeguide.co.kr/course/gc-0062/"
    ],
@@ -486,7 +486,7 @@
    "evidence": [
     "사우나 있음 · 프로샵"
    ],
-   "value": "프로샵 운영",
+   "value": "운영",
    "source_url": "https://www.npcc.co.kr/mobile/club/facil05.asp",
    "confidence": "high",
    "checked_at": "2026-10-20",
@@ -617,7 +617,7 @@
   "course": 0.6,
   "fee": 1.0,
   "ops": 0.43,
-  "facility": 0.3,
+  "facility": 0.2,
   "briefing": 0.5,
   "rental": 1.0
  }

@@ -252,11 +252,11 @@
    "checked_at": "2026-11-27"
   },
   "locker": {
-   "value": "락카·사우나실",
+   "value": "운영 · 사우나실",
    "evidence": []
   },
   "sauna": {
-   "value": "락카·사우나실",
+   "value": "운영 · 락카실",
    "evidence": []
   },
   "dress": {
@@ -280,7 +280,7 @@
    "evidence": []
   },
   "food": {
-   "value": "식당(식당요금안내 게시)",
+   "value": "운영(식당요금안내 게시)",
    "evidence": []
   },
   "snack_bar": {
@@ -288,7 +288,7 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": "락카·사우나실",
+   "value": "운영",
    "evidence": []
   },
   "lodging": {
@@ -303,7 +303,7 @@
    ]
   },
   "night": {
-   "value": "야간 라운드 운영(공식 홈페이지 안내)",
+   "value": "운영(공식 홈페이지 안내)",
    "evidence": []
   },
   "closed_days": {

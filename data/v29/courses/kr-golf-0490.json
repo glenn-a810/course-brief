@@ -375,7 +375,7 @@
   "weekend": 119000,
   "weekday_text": "89,000~129,000원",
   "weekend_text": "119,000~149,000원",
-  "basis": "official",
+  "basis": "공식 요금표",
   "tax_included": null,
   "cart": {
    "value": 100000,
@@ -568,7 +568,7 @@
    "evidence": [
     "셀프라운드 정보가 없습니다."
    ],
-   "value": "노캐디 선택 가능(문구 확인)"
+   "value": "선택 가능"
   },
   "two_player": {
    "evidence": [
@@ -616,7 +616,7 @@
    "evidence": [
     "(볼이 화단 내에 있거나 스탠스나 의도하는 스윙이 거릴 경우 홀에 가깝지 않으며, 볼에 가장 가까운 구제 지점으로 부터 1클럽 이내에 드롭하여야 한다.) 인공 장애물 야디지 스틱을 포함한 아래의 것은 움직일 수 없는 장해물로 1클럽 이내에 드롭하고 플레이한다.(야디지 스틱, 지주목, 고무매트, 골프카트 도로, 배수구, 스프링쿨러 헤드) 티샷 히든 4번홀 티샷 시 우측으로의 타구 사고 위험이 큰홀로 화이트티에서의 드라이버 티샷은 금지한다."
    ],
-   "value": "문구 확인(원문 근거)"
+   "value": null
   },
   "checkin": {
    "evidence": [
@@ -637,7 +637,7 @@
    "evidence": [
     "사우나: 사우나 있음사우나 시설"
    ],
-   "value": "사우나 있음(사우나 시설)",
+   "value": "운영(사우나 시설)",
    "source_url": "https://greenfeeguide.co.kr/course/gc-0436/",
    "source_type": "public_info(greenfeeguide)",
    "confidence": "medium",
@@ -667,14 +667,14 @@
    "value": null
   },
   "snack_bar": {
-   "value": "그늘집",
+   "value": "운영",
    "evidence": [
     "그늘집 (출처: https://greenfeeguide.co.kr/course/gc-0436/, 2026-11-27 확인)",
     "사골 우거지 해장국 · 15,000원 · 8,000원 · 8,000원 · 천설주 막걸리 · 8,000원"
    ]
   },
   "locker_sauna": {
-   "value": "사우나",
+   "value": "운영",
    "evidence": [
     "사우나 (출처: https://greenfeeguide.co.kr/course/gc-0436/, 2026-11-27 확인)",
     "사우나 있음"
@@ -685,7 +685,7 @@
    "evidence": []
   },
   "other": {
-   "value": "사우나 있음",
+   "value": null,
    "evidence": [
     "사우나 있음"
    ],
@@ -844,8 +844,8 @@
   "basic": 0.89,
   "course": 0.8,
   "fee": 1.0,
-  "ops": 0.29,
-  "facility": 0.3,
+  "ops": 0.21,
+  "facility": 0.2,
   "briefing": 0.25,
   "rental": 1.0
  }

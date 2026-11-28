@@ -128,7 +128,7 @@
   "weekend": 125000,
   "weekday_text": "105,000원 ~ 150,000원",
   "weekend_text": "125,000원 ~ 210,000원",
-  "basis": "official",
+  "basis": "공식 요금표",
   "tax_included": null,
   "cart": {
    "value": 100000,
@@ -330,7 +330,7 @@
    "evidence": [
     "11월,12월 노캐디 운영 안내 11/23 ~ 11/29 그린피..."
    ],
-   "value": "노캐디 선택 가능(문구 확인)"
+   "value": "선택 가능"
   },
   "two_player": {
    "evidence": [],
@@ -403,8 +403,8 @@
    "evidence": [
     "사우나 있음"
    ],
-   "value": "사우나 운영",
-   "value_previous": "문구 확인(원문 근거)",
+   "value": "운영",
+   "value_previous": null,
    "source_url": "https://yongincc.com/Facilities/ClubHouse.aspx",
    "confidence": "high",
    "checked_at": "2026-10-20",
@@ -454,7 +454,7 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": "사우나 있음",
+   "value": null,
    "evidence": [
     "사우나 있음 — https://greenfeeguide.co.kr/course/gc-0032/"
    ],
@@ -464,7 +464,7 @@
    "value_from": "pass2_third_party"
   },
   "lodging": {
-   "value": "숙박 가능(객실 운영)",
+   "value": "가능(객실 운영)",
    "evidence": [
     "11월,12월 1박2일패키지 운영안내"
    ],
@@ -475,7 +475,7 @@
    "value_from": "capital_supplement(official_site)"
   },
   "other": {
-   "value": "사우나 있음",
+   "value": null,
    "evidence": [
     "사우나 있음"
    ],
@@ -769,7 +769,7 @@
   "course": 0.2,
   "fee": 1.0,
   "ops": 0.36,
-  "facility": 0.5,
+  "facility": 0.3,
   "briefing": 0.5,
   "rental": 0.25
  }

@@ -243,7 +243,7 @@
     "매끄럽고 부드러운 수질의 스파룸, 하루의 피로를 씻어 주는 웰빙사우나, 세심한 배려와 여유가 있는 락커룸, 최상의 컨디션 유지를 위한 체력측정실, 여성을 위한 최고급 파우더룸은 생활의 활력과 건강을 더 해 드리는 웰빙쉼터 입니다."
    ],
    "value": "락커 운영",
-   "value_previous": "문구 확인(원문 근거)",
+   "value_previous": null,
    "source_url": "https://www.maestrocc.co.kr/pagesite/club/facilities/locker.asp",
    "confidence": "medium",
    "source_type": "official_site",
@@ -254,7 +254,7 @@
    "evidence": [
     "사우나 있음 · 프로샵·편의점"
    ],
-   "value": "사우나 운영",
+   "value": "운영",
    "source_url": "https://www.maestrocc.co.kr/pagesite/club/facilities/locker.asp",
    "confidence": "high",
    "checked_at": "2026-10-20",
@@ -269,7 +269,7 @@
     "내장 때 정장 또는 그에 준하는 깔끔한 복장, 점퍼·청바지·반바지·샌들 지양, 라운드 때 상의는 하의 안에, 여성은 과도하게 짧은 옷 지양"
    ],
    "value": "내장 때 정장 또는 그에 준하는 깔끔한 복장, 점퍼·청바지·반바지·샌들 지양, 라운드 때 상의는 하의 안에, 여성은 과도하게 짧은 옷 지양",
-   "value_previous": "문구 확인(원문 근거)",
+   "value_previous": null,
    "source_url": "https://maestrocc.co.kr/pagesite/use/guide.asp",
    "confidence": "high",
    "checked_at": "2026-10-16",
@@ -303,7 +303,7 @@
    "evidence": [
     "식당 및 그늘집, 프로샵을 이용시에는 성함 또는 락카키 번호를 알려주시기 바랍니다."
    ],
-   "value": "식당 · 그늘집",
+   "value": "운영 · 그늘집",
    "source_url": "https://www.maestrocc.co.kr/pagesite/use/guide.asp",
    "confidence": "medium",
    "source_type": "official_site",
@@ -315,7 +315,7 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": "사우나 있음",
+   "value": null,
    "evidence": [
     "사우나 있음 — https://greenfeeguide.co.kr/course/gc-0095/"
    ],
@@ -369,7 +369,7 @@
    "evidence": [
     "사우나 있음 · 프로샵·편의점"
    ],
-   "value": "프로샵 운영",
+   "value": "운영",
    "source_url": "https://www.maestrocc.co.kr/pagesite/club/facilities/locker.asp",
    "confidence": "high",
    "checked_at": "2026-10-20",
@@ -597,7 +597,7 @@
   "course": 0.4,
   "fee": 0.25,
   "ops": 0.36,
-  "facility": 0.4,
+  "facility": 0.3,
   "briefing": 0.5,
   "rental": 0.25
  }

@@ -206,7 +206,7 @@
   "weekend": 240000,
   "weekday_text": null,
   "weekend_text": "240,000원 ~ 250,000원",
-  "basis": "official",
+  "basis": "공식 요금표",
   "tax_included": null,
   "cart": {
    "value": 100000,
@@ -303,7 +303,7 @@
    "evidence": [
     "양평TPC 국내 유일 TPC, 대회 공식 코스의 품격 남양주CC 서울 30분, 서울 스카이라인이 보이는 도심 속 파노라마 코스 플라밍고CC 매트 없는 천연잔디 36홀, 서해 링크스에서 즐기는 진짜 필드 엠스클럽의성 2,000년 고도의 청정 자연이 품은 명문 코스 속리산CC 왕의 쉼터가 된 비경, 문장대의 전설을 잇는 풍류의 필드 NOTICE & EVENTS CLUB LONGE의 모든 소식이 여기에 담겨 있습니다."
    ],
-   "value": "문구 확인(원문 근거)"
+   "value": null
   },
   "checkin": {
    "evidence": [
@@ -325,7 +325,7 @@
     "품격 있는 락커룸과 프라이빗한 휴식 공간에서 잊지 못할 힐링의 순간을 경험해 보세요."
    ],
    "value": "락커 운영",
-   "value_previous": "문구 확인(원문 근거)",
+   "value_previous": null,
    "source_url": "https://www.clublonge.com/Club/namyangju/ClubHouse",
    "confidence": "medium",
    "source_type": "official_site",
@@ -338,8 +338,8 @@
     "LOCKER ROOMSAUNA 라운딩 후 맞이하는 달콤한 휴식 자연과 함께 하는 사우나...",
     "편안한 휴식과 하루의 피로를 풀어줄 사우나에서 몸의 피로는 덜어내고 마음의 여유를 더해 보십시오."
    ],
-   "value": "사우나 운영",
-   "value_previous": "문구 확인(원문 근거)",
+   "value": "운영",
+   "value_previous": null,
    "source_url": "https://www.clublonge.com/Club/flamingo/ClubHouse",
    "confidence": "medium",
    "source_type": "official_site",
@@ -385,7 +385,7 @@
    "evidence": []
   },
   "lodging": {
-   "value": "숙박 가능(객실 운영)",
+   "value": "가능(객실 운영)",
    "evidence": [
     "가. 객실 예약 서비스(디럭스·온돌·스위트 등 객실 예약 및 객실 패키지)"
    ],
@@ -418,7 +418,7 @@
     "2 이 골프장의 정기 휴장일은 다음과 같다. (연중무휴)"
    ],
    "third_party": null,
-   "value": "정기 휴장일 없음",
+   "value": "없음",
    "source_url": "https://www.clublonge.com/Club/yangpyeong/Information",
    "confidence": "medium",
    "source_type": "official_site",
@@ -438,7 +438,7 @@
    "evidence": [
     "품격과 안목을 고려한 프로샵선택만으로 최고의 멋진 골퍼로 연출시켜 드립니다."
    ],
-   "value": "프로샵 운영",
+   "value": "운영",
    "source_url": "https://www.clublonge.com/Club/yangpyeong/ClubHouse",
    "confidence": "medium",
    "source_type": "official_site",
@@ -574,7 +574,7 @@
   "basic": 0.89,
   "course": 0.6,
   "fee": 1.0,
-  "ops": 0.43,
+  "ops": 0.36,
   "facility": 0.4,
   "briefing": 0.25,
   "rental": 0.25

@@ -266,11 +266,11 @@
    "note": "공개 요금 정보가 골프장 공식 안내를 정리한 값(확인일 페이지 표기)"
   },
   "locker": {
-   "value": "사우나·스파·찜질",
+   "value": null,
    "evidence": []
   },
   "sauna": {
-   "value": "사우나·스파·찜질",
+   "value": "운영 · 스파·찜질",
    "evidence": []
   },
   "dress": {
@@ -300,7 +300,7 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": "사우나·스파·찜질",
+   "value": null,
    "evidence": []
   },
   "lodging": {
@@ -449,8 +449,8 @@
   "basic": 1.0,
   "course": 0.4,
   "fee": 1.0,
-  "ops": 0.36,
-  "facility": 0.3,
+  "ops": 0.29,
+  "facility": 0.2,
   "briefing": 0.25,
   "rental": 1.0
  }

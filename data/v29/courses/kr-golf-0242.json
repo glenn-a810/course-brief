@@ -356,7 +356,7 @@
    "checked_at": "2026-11-27"
   },
   "sauna": {
-   "value": "사우나 있음 락커룸/사우나",
+   "value": null,
    "evidence": [
     "사우나 사우나 있음 락커룸/사우나"
    ],
@@ -392,7 +392,7 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": "사우나 있음 락커룸/사우나",
+   "value": "운영 · 락커룸/사우나",
    "evidence": [
     "사우나 사우나 있음 락커룸/사우나"
    ],
@@ -420,7 +420,7 @@
    "evidence": []
   },
   "closed_days": {
-   "value": "정기 휴장일 없음",
+   "value": "없음",
    "third_party": null,
    "evidence": [
     "정기 휴장일 정기 휴장일 없음"
@@ -560,7 +560,7 @@
   "basic": 1.0,
   "course": 0.8,
   "fee": 1.0,
-  "ops": 0.36,
+  "ops": 0.29,
   "facility": 0.3,
   "briefing": 0.25,
   "rental": 1.0

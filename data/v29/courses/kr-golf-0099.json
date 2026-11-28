@@ -456,7 +456,7 @@
    "evidence": [
     "사우나 있음 · 드라이빙 레인지 · 프로샵"
    ],
-   "value": "사우나 운영",
+   "value": "운영",
    "source_url": "https://www.hypine.co.kr/golf/golfInfo.asp",
    "confidence": "high",
    "checked_at": "2026-10-20",
@@ -549,7 +549,7 @@
    "evidence": [
     "프로샵"
    ],
-   "value": "프로샵 운영",
+   "value": "운영",
    "source_url": "https://www.hanyangcc.com/",
    "confidence": "high",
    "checked_at": "2026-10-20",

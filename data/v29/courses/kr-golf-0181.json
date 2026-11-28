@@ -421,7 +421,7 @@
   "weekend": 230000,
   "weekday_text": "180,000원 ~ 220,000원",
   "weekend_text": "230,000원 ~ 280,000원",
-  "basis": "official",
+  "basis": "공식 요금표",
   "tax_included": null,
   "cart": {
    "value": 100000,
@@ -530,7 +530,7 @@
     "상세안내 노캐디제 카트이용료(1인용) 전동카트 1인 8,000원, 수동카트 무료 전동카트는 선착순 대여 문의 예약실 : 031)330-1441~2 준수사항 ① 9홀 플레이시 2시간 10분을 넘기지 않습니다.",
     "노캐디,개인카트 셀프운영 입니다."
    ],
-   "value": "노캐디 선택 가능(문구 확인)"
+   "value": "선택 가능"
   },
   "two_player": {
    "evidence": [
@@ -683,7 +683,7 @@
    "evidence": []
   },
   "lodging": {
-   "value": "숙박 가능(객실 운영)",
+   "value": "가능(객실 운영)",
    "evidence": [
     "메이플콘도 객실요금"
    ],
@@ -712,7 +712,7 @@
     "정기휴장일 : 매월 첫번째 월요일"
    ],
    "third_party": null,
-   "value": "정기휴장일: 매월 첫번째 월요일",
+   "value": "매월 첫번째 월요일",
    "source_url": "https://www.jisanresort.co.kr/w/golf/public/golfpractice.asp",
    "confidence": "medium",
    "source_type": "official_site",
@@ -729,7 +729,7 @@
    "evidence": [
     "전기차 충전이 가능한 지산에서 여유있는 품격을 느껴보실 수 있습니다."
    ],
-   "value": "전기차 충전소 운영",
+   "value": "운영",
    "source_url": "https://www.jisanresort.co.kr/w/guide/electric01.asp",
    "confidence": "medium",
    "source_type": "official_site",

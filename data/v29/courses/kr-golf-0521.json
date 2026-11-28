@@ -52,12 +52,12 @@
   "facility_id": null,
   "facility_members": null,
   "status": "under_construction",
-  "expected_open": "2026-10 개장 목표(2026-11-27 기준 미개장)",
+  "expected_open": "2026-10 개장 목표(미개장)",
   "nearest_ic": null,
   "facility_cluster": null,
   "factcheck_2026_11_26": null,
   "provenance": {},
-  "project_stage": "2025년 착공(6월 예정 보도), 27홀 대중제+콘도 조성. 2026-10 개장 목표로 공사 중이며 2026-11-27 기준 티타임 판매·개장 공지 미확인"
+  "project_stage": "2025년 착공(6월 예정 보도), 27홀 대중제+콘도 조성. 2026-10 개장 목표로 공사 중이며 티타임 판매·개장 공지 미확인"
  },
  "course": {
   "holes": null,

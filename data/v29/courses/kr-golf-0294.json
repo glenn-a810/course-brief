@@ -314,7 +314,7 @@
    "evidence": []
   },
   "sauna": {
-   "value": "사우나·락커룸",
+   "value": null,
    "evidence": []
   },
   "dress": {
@@ -334,7 +334,7 @@
  },
  "facilities": {
   "practice": {
-   "value": "골프연습장(30분 15,000원·60분 20,000원·90분 25,000원, 주중·주말 동일)",
+   "value": "운영(30분 15,000원·60분 20,000원·90분 25,000원, 주중·주말 동일) · 드라이빙 레인지",
    "evidence": []
   },
   "indoor_range": {
@@ -342,7 +342,7 @@
    "evidence": []
   },
   "food": {
-   "value": "사우나 있음 · 드라이빙 레인지 · 프로샵·카페·라운지·편의점",
+   "value": "카페 · 라운지",
    "evidence": [
     "사우나 있음 · 드라이빙 레인지 · 프로샵·카페·라운지·편의점"
    ],
@@ -356,7 +356,7 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": "사우나·락커룸",
+   "value": "운영 · 락커룸",
    "evidence": []
   },
   "lodging": {
@@ -372,7 +372,7 @@
    "evidence": []
   },
   "closed_days": {
-   "value": "정기 휴장일 없음",
+   "value": "없음",
    "third_party": null,
    "evidence": [
     "정기 휴장일 정기 휴장일 없음"
@@ -493,7 +493,7 @@
   "basic": 0.89,
   "course": 0.6,
   "fee": 1.0,
-  "ops": 0.43,
+  "ops": 0.36,
   "facility": 0.8,
   "briefing": 0.25,
   "rental": 1.0

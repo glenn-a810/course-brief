@@ -370,7 +370,7 @@
   "weekend": 300000,
   "weekday_text": null,
   "weekend_text": null,
-  "basis": "official",
+  "basis": "공식 요금표",
   "tax_included": null,
   "cart": {
    "value": 100000,
@@ -410,7 +410,7 @@
  },
  "cancel": {
   "cancel_policy": {
-   "value": "• 예약 취소: 3일 전까지 가능(인터넷·전화 취소는 17시 전까지)\n• 노캐디 라운드 고객은 당 골프장 전동카트 외 개인용 카트 사용 불가\n• 4인/팀 미내장 시 4인/팀 그린피 결제",
+   "value": "• 예약 취소: 3일 전까지 가능(인터넷·전화 취소는 17시 전까지)\n• 4인/팀 미내장 시 4인/팀 그린피 결제",
    "source": "공식 홈페이지",
    "url": "https://www.gakorea.com/reservation/golf/reservation.asp"
   },
@@ -463,7 +463,7 @@
    "evidence": [
     "VIP카트 120,000원, 리무진카트 200,000원"
    ],
-   "value": "리무진카트",
+   "value": "리무진카트 · 노캐디 라운드는 개인 카트 사용 불가(전동카트만)",
    "source_url": "https://www.gakorea.com/korea/guide/fee.asp",
    "confidence": "high",
    "checked_at": "2026-10-22",
@@ -521,7 +521,7 @@
    "evidence": [
     "사우나 있음 · 프로샵·카페·라운지"
    ],
-   "value": "사우나 있음",
+   "value": "운영",
    "source_url": "https://gakorea.com/public/club/club.asp",
    "source_type": "public_info(greenfeeguide)",
    "confidence": "medium",
@@ -531,7 +531,7 @@
    "evidence": [
     "1. 클럽입장시나 라운드시에 품위있는 복장을 권장하며, 청바지, 민소매, 반바지(남성)차림 등을 삼가하여 주시기 바랍니다."
    ],
-   "value": "복장 규정 안내",
+   "value": "안내",
    "source_url": "https://www.gakorea.com/gold/guide/perGuide.asp",
    "confidence": "medium",
    "source_type": "official_site",
@@ -575,7 +575,7 @@
    "evidence": [
     "2. 부대시설(대식당,그늘집,프로샵) 이용 권장"
    ],
-   "value": "식당 · 그늘집",
+   "value": "운영 · 그늘집",
    "source_url": "https://www.gakorea.com/gold/guide/resGuide.asp",
    "confidence": "medium",
    "source_type": "official_site",
@@ -644,7 +644,7 @@
    "evidence": [
     "프로샵"
    ],
-   "value": "프로샵 운영",
+   "value": "운영",
    "source_url": "https://www.gakorea.com/korea/club/facil01.asp",
    "confidence": "high",
    "checked_at": "2026-10-20",

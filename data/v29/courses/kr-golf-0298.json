@@ -575,7 +575,7 @@
   },
   "as_of": "2026-10-06",
   "source_url": null,
-  "note": null,
+  "note": "요금표상 팀당 카트비·캐디피 합계 240,000원",
   "sources": [
    {
     "source": "그린피가이드(공식 요금표 확인)",
@@ -598,7 +598,7 @@
  },
  "cancel": {
   "cancel_policy": {
-   "value": "• 5일 전까지 취소\n• 2인 플레이: 원칙적으로 불가\n• 정기 휴장일: 연중무휴\n• 경기 시간: 18홀 5시간\n• 요금표상 팀당 카트비·캐디피 합계 240,000원",
+   "value": "• 5일 전까지 취소\n• 2인 플레이: 원칙적으로 불가",
    "source": "그린피가이드(공식 인용)",
    "url": "https://greenfeeguide.co.kr/course/gc-0354/"
   },
@@ -686,7 +686,7 @@
    "evidence": [
     "락카에서 반바지로 환복 후 라운드 가능합니다."
    ],
-   "value": "락카(탈의실) 운영, 락카에서 반바지로 환복 후 라운드 가능",
+   "value": "탈의실 운영, 락카에서 반바지로 환복 후 라운드 가능",
    "source_url": "https://www.interburgocc.com/View/Guide",
    "source_type": "official_site",
    "confidence": "medium",
@@ -711,7 +711,7 @@
    "evidence": [
     "진행이 늦으면: 진행지연 시 Over된 소요시간 만큼 홀 패스조치; 비기너 전반 60타 이상으로 경기진행 문제 시 후반코스 퇴장"
    ],
-   "value": "진행지연 시 Over된 소요시간 만큼 홀 패스조치; 비기너 전반 60타 이상으로 경기진행 문제 시 후반코스 퇴장",
+   "value": "진행지연 시 Over된 소요시간 만큼 홀 패스조치; 비기너 전반 60타 이상으로 경기진행 문제 시 후반코스 퇴장 · 18홀 5시간",
    "source_url": "https://greenfeeguide.co.kr/course/gc-0354/",
    "confidence": "medium",
    "source_type": "official_summary(greenfeeguide)",

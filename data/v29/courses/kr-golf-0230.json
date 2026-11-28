@@ -109,7 +109,7 @@
   "weekend": 170000,
   "weekday_text": null,
   "weekend_text": null,
-  "basis": "official",
+  "basis": "공식 요금표",
   "tax_included": null,
   "cart": {
    "value": 100000,
@@ -201,7 +201,7 @@
    "evidence": [
     "모든 홀이 매트티샷이라 조금.. ㅋㅋ 티가 잘 안들어가요"
    ],
-   "value": "전 홀 매트 티샷",
+   "value": "전 홀",
    "source_url": "https://blog.naver.com/dlsryd7/224483378810",
    "source_type": "blog",
    "confidence": "medium",

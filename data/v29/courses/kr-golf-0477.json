@@ -221,7 +221,7 @@
    "evidence": []
   },
   "two_player": {
-   "value": "2인 플레이 불가(3인은 4인 요금 적용)",
+   "value": "불가(3인은 4인 요금 적용)",
    "evidence": [
     "3명이 가도 4인 요금을 내고, 2인 플레이는 받지 않습니다."
    ],
@@ -311,7 +311,7 @@
    "evidence": []
   },
   "night": {
-   "value": "야간 라운드 운영",
+   "value": "운영",
    "evidence": []
   },
   "closed_days": {

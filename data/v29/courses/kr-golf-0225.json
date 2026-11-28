@@ -151,7 +151,7 @@
    "evidence": [
     "진행방식 : 노캐디 셀프 라운드 또는 카트 운영 방식으로"
    ],
-   "value": "노캐디 셀프 라운드 또는 카트 운영",
+   "value": "셀프 라운드 또는 카트 운영",
    "source_url": "https://blog.naver.com/seo-juni/224384696050",
    "source_type": "blog",
    "confidence": "medium",
@@ -219,7 +219,7 @@
     "수영장·스파·찜질·피트니스 — 라비돌호텔 시설(사우나·실내수영장·헬스장)"
    ],
    "value": "수영장·스파·찜질·피트니스 — 라비돌호텔 시설(사우나·실내수영장·헬스장)",
-   "value_previous": "문구 확인(원문 근거)",
+   "value_previous": null,
    "source_url": "https://www.laviedor.com/facilities01.asp",
    "confidence": "high",
    "checked_at": "2026-10-20",
@@ -241,7 +241,7 @@
    "evidence": [
     "약 10만 평 부지에 40타석 연습장과 클럽하우스, 객실 241실 규모의 숙박시설을 함께 갖춘 복합 휴양지입니다."
    ],
-   "value": "40타석 연습장",
+   "value": "40타석",
    "source_url": "https://teepickgolf.com/course/라비돌cc",
    "source_type": "teepick",
    "confidence": "low",
@@ -258,7 +258,7 @@
     "라비돌 BISTRO 창너머 야외 가든 풍경과 서구식의 심플한 인테리어가 조화를 이루는 Bistro에서는 여유로운 조식 뷔페를 제공합니다.",
     "→ 월드마트 → 공단식당입구 → 수원과학대학"
    ],
-   "value": "식당",
+   "value": "운영",
    "source_url": "https://www.laviedor.com/silver6.asp",
    "confidence": "low",
    "source_type": "official_site",

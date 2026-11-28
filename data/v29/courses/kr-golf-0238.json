@@ -294,7 +294,7 @@
    "checked_at": "2026-11-27"
   },
   "sauna": {
-   "value": "사우나 있음 락커룸/사우나",
+   "value": "운영 · 락커룸/사우나",
    "evidence": [
     "사우나 사우나 있음 락커룸/사우나"
    ],
@@ -344,7 +344,7 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": "락카·사우나 운영(클럽하우스)",
+   "value": "운영(클럽하우스)",
    "evidence": [
     "https://sunvalley.co.kr/seorak/golf/club_house"
    ]
@@ -356,7 +356,7 @@
    ]
   },
   "other": {
-   "value": "사우나 있음",
+   "value": null,
    "evidence": [
     "사우나 있음"
    ],
@@ -498,7 +498,7 @@
   "course": 0.6,
   "fee": 1.0,
   "ops": 0.21,
-  "facility": 0.5,
+  "facility": 0.4,
   "briefing": 0.25,
   "rental": 0.25
  }

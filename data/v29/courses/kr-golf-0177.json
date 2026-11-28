@@ -356,7 +356,7 @@
   "weekend": 290000,
   "weekday_text": "230,000원 ~ 240,000원",
   "weekend_text": "290,000원 ~ 300,000원",
-  "basis": "official",
+  "basis": "공식 요금표",
   "tax_included": null,
   "cart": {
    "value": 120000,
@@ -475,7 +475,7 @@
    "evidence": [
     "하절기 라운드 복장 안내"
    ],
-   "value": "복장 규정 안내",
+   "value": "안내",
    "source_url": "https://www.asianacc.co.kr/about_us/news.asp?code=01",
    "confidence": "medium",
    "source_type": "official_site",

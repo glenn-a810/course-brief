@@ -432,7 +432,7 @@
     "슬리퍼·작업복·과도한 노출 복장은 제한될 수 있음"
    ],
    "value": "슬리퍼·작업복·과도한 노출 복장은 제한될 수 있음",
-   "value_previous": "문구 확인(원문 근거)",
+   "value_previous": null,
    "source_url": "https://crystalvalley.co.kr/html/member/terms1.asp",
    "confidence": "high",
    "checked_at": "2026-10-16",
@@ -469,7 +469,7 @@
    "evidence": [
     "1 내장객은 골프코스, 클럽하우스, 연습장, 레스토랑, 락커룸 및 기타 부대시설을 이용할 수 있다."
    ],
-   "value": "연습장",
+   "value": "운영",
    "source_url": "https://crystalvalley.co.kr/html/member/terms1.asp",
    "confidence": "low",
    "source_type": "official_site",

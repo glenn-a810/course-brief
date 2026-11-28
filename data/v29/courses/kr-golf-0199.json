@@ -578,7 +578,7 @@
    "evidence": [
     "♡ 레스토랑 식사메뉴 안내 공지사항 ★ 셀프라운드시 주의사항 안내 ★ 2026-03-01 일자별 그린피 안내 2026-03-01 2026년 회원등급제 운영안내 2026-02-22 제10회 클럽챔피언쉽 파이널..."
    ],
-   "value": "노캐디 선택 가능(문구 확인)"
+   "value": "선택 가능"
   },
   "two_player": {
    "evidence": [],
@@ -631,7 +631,7 @@
     "2 락커, 샤워실 등 클럽하우스 시설 이용에 부과되는 요금"
    ],
    "value": "락커 운영",
-   "value_previous": "문구 확인(원문 근거)",
+   "value_previous": null,
    "source_url": "https://www.silkvalleygc.co.kr/clause/guide.asp",
    "confidence": "low",
    "source_type": "official_site",
@@ -720,7 +720,7 @@
    "evidence": [
     "프로샵"
    ],
-   "value": "프로샵 운영",
+   "value": "운영",
    "source_url": "https://www.silkvalleygc.co.kr/club/facilities_house.asp",
    "confidence": "high",
    "checked_at": "2026-10-20",

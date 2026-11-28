@@ -228,7 +228,7 @@
    "evidence": [
     "노캐디: 20,000원 / 팀당 +20,000원"
    ],
-   "value": "노캐디 추가요금 20,000원 — 팀당 +20,000원",
+   "value": "추가요금 20,000원 — 팀당 +20,000원",
    "source_url": "https://greenfeeguide.co.kr/guides/no-caddie-golf-course-guide/",
    "confidence": "high",
    "checked_at": "2026-10-13",
@@ -366,7 +366,7 @@
    "evidence": [
     "프로샵"
    ],
-   "value": "프로샵 운영",
+   "value": "운영",
    "source_url": "https://www.solmoro.com/Guide/UsageFee",
    "confidence": "high",
    "checked_at": "2026-10-20",

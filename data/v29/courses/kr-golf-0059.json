@@ -233,7 +233,7 @@
  },
  "cancel": {
   "cancel_policy": {
-   "value": "위약 없이 취소: 평일 3일 전 · 주말 4일 전 18:00까지\n• 경기 시간: 18홀 4시간 30분\n• 잔디: 페어웨이 장성중지(한국잔디) · 그린 벤트그라스 Penn A-1",
+   "value": "위약 없이 취소: 평일 3일 전 · 주말 4일 전 18:00까지",
    "source": "그린피가이드(공식 인용)",
    "url": "https://greenfeeguide.co.kr/course/gc-0357/"
   },
@@ -277,7 +277,7 @@
    "evidence": []
   },
   "five_player": {
-   "value": "5인 플레이 가능(5인 캐디피 200,000원)",
+   "value": "가능(5인 캐디피 200,000원)",
    "evidence": [
     "카트/캐디 : 카트 100,000(4인 기준) , 리무진 200,000(4~5인) / 캐디 140,000(4인) , 5인 200,000"
    ],
@@ -332,7 +332,7 @@
    "evidence": [
     "진행이 늦으면: 티오프 시간 경과·진행 지연 때 지연된 시간만큼 홀 패스"
    ],
-   "value": "티오프 시간 경과·진행 지연 때 지연된 시간만큼 홀 패스",
+   "value": "티오프 시간 경과·진행 지연 때 지연된 시간만큼 홀 패스 · 18홀 4시간 30분",
    "source_url": "https://greenfeeguide.co.kr/course/gc-0357/",
    "confidence": "medium",
    "source_type": "official_summary(greenfeeguide)",

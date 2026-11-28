@@ -390,7 +390,7 @@
   "weekend": 120000,
   "weekday_text": "100,000원 ~ 165,000원",
   "weekend_text": "120,000원 ~ 195,000원",
-  "basis": "official",
+  "basis": "공식 요금표",
   "tax_included": null,
   "cart": {
    "value": 120000,
@@ -486,7 +486,7 @@
    "evidence": [
     "운영 방식 | 노캐디선택 ... 노캐디 East 퍼블릭 코스는 2인 예약도 가능합니다."
    ],
-   "value": "노캐디 선택 가능(이스트 퍼블릭 코스)",
+   "value": "선택 가능(이스트 퍼블릭 코스)",
    "source_url": "https://papahun.com/blueoneyongincc-reservation/",
    "source_type": "blog",
    "confidence": "low",

@@ -341,11 +341,11 @@
    "evidence": []
   },
   "locker": {
-   "value": "사우나",
+   "value": null,
    "evidence": []
   },
   "sauna": {
-   "value": "사우나",
+   "value": "운영",
    "evidence": []
   },
   "dress": {
@@ -387,7 +387,7 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": "사우나",
+   "value": null,
    "evidence": []
   },
   "lodging": {
@@ -412,7 +412,7 @@
    "evidence": []
   },
   "proshop": {
-   "value": "프로샵",
+   "value": "운영",
    "evidence": [
     ") 한국오픈 기념관 연습장 클럽하우스 아늑한 클럽하우스에서 최상의 컨디션을 제공해드립니다. 현관 및 프론트 락커&스파 레스토랑 방켓룸 프로샵 현관 및 프론트 활기찬 분위기와 항상 밝은 미소로 정성을 다하겠습니다. 가장 먼저 미소로 맞이하며 품격이 다른 서비스로 각종 문의 사항을 안내"
    ],
@@ -541,8 +541,8 @@
   "basic": 1.0,
   "course": 0.6,
   "fee": 1.0,
-  "ops": 0.36,
-  "facility": 0.3,
+  "ops": 0.29,
+  "facility": 0.2,
   "briefing": 0.25,
   "rental": 1.0
  }

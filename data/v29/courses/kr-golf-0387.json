@@ -340,7 +340,7 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": "스파(예약제)",
+   "value": null,
    "evidence": []
   },
   "lodging": {
@@ -532,7 +532,7 @@
   "course": 0.6,
   "fee": 1.0,
   "ops": 0.21,
-  "facility": 0.5,
+  "facility": 0.4,
   "briefing": 0.5,
   "rental": 1.0
  }

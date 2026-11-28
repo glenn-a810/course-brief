@@ -272,7 +272,7 @@
   "weekend": 165000,
   "weekday_text": "145,000원 ~ 210,000원",
   "weekend_text": "165,000원 ~ 285,000원",
-  "basis": "official",
+  "basis": "공식 요금표",
   "tax_included": null,
   "cart": {
    "value": 100000,
@@ -431,7 +431,7 @@
     "- 락카룸의 비품은 사용 후, 지정된 위치에 놓아주시기 바랍니다."
    ],
    "value": "락커 운영",
-   "value_previous": "문구 확인(원문 근거)",
+   "value_previous": null,
    "source_url": "https://sunningpoint.com/guide/obey.asp",
    "confidence": "medium",
    "source_type": "official_site",
@@ -444,8 +444,8 @@
     "클럽하우스 레스토랑 메뉴 그늘집 메뉴 로비 락커룸 파우더룸 사우나 레스토랑 연회장 스타트하우스 프로샵 교육시설 써닝리더십센터 레스토랑 Club House 정갈하면서도 맛있는 음식과함께 언제나 최상의 서비스로늘 기분 좋음을 선사합니다.",
     "사우나 있음 · 프로샵"
    ],
-   "value": "사우나 운영",
-   "value_previous": "문구 확인(원문 근거)",
+   "value": "운영",
+   "value_previous": null,
    "source_url": "https://sunningpoint.com/club/facility_0104.asp",
    "confidence": "high",
    "checked_at": "2026-10-20",
@@ -503,7 +503,7 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": "사우나 있음",
+   "value": null,
    "evidence": [
     "사우나 있음 — https://greenfeeguide.co.kr/course/gc-0034/"
    ],
@@ -563,7 +563,7 @@
    "evidence": [
     "사우나 있음 · 프로샵"
    ],
-   "value": "프로샵 운영",
+   "value": "운영",
    "source_url": "https://sunningpoint.com/club/facility_0104.asp",
    "confidence": "high",
    "checked_at": "2026-10-20",
@@ -760,7 +760,7 @@
   "course": 0.8,
   "fee": 1.0,
   "ops": 0.36,
-  "facility": 0.4,
+  "facility": 0.3,
   "briefing": 0.5,
   "rental": 1.0
  }

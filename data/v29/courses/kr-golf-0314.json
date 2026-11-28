@@ -549,7 +549,7 @@
    "evidence": [
     "03.아래의 것은 움직일 수 없는 장애물이다.(나무보호를 위한 자주목,고무매트,카트도로,돌 등) 04.화단은 플레이를 할 수 없는 지역이다."
    ],
-   "value": "문구 확인(원문 근거)"
+   "value": null
   },
   "checkin": {
    "evidence": [],
@@ -617,7 +617,7 @@
    "evidence": []
   },
   "other": {
-   "value": "카페·라운지",
+   "value": null,
    "evidence": [
     "그 밖의 시설: 카페·라운지"
    ],
@@ -858,8 +858,8 @@
   "basic": 1.0,
   "course": 0.4,
   "fee": 1.0,
-  "ops": 0.21,
-  "facility": 0.2,
+  "ops": 0.14,
+  "facility": 0.1,
   "briefing": 0.25,
   "rental": 0.25
  }

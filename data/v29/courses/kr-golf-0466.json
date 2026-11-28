@@ -270,7 +270,7 @@
    "evidence": []
   },
   "sauna": {
-   "value": "사우나 없음(락커 이용만 가능, 샤워시설 없음)",
+   "value": "미운영(락커 이용만 가능, 샤워시설 없음)",
    "evidence": [
     "사우나 사우나 없음 락커 이용만 가능, 샤워시설 없음"
    ],
@@ -306,7 +306,7 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": "사우나 없음",
+   "value": "미운영",
    "evidence": [
     "사우나: 사우나 없음"
    ],
@@ -321,7 +321,7 @@
    "evidence": []
   },
   "other": {
-   "value": "사우나 없음",
+   "value": null,
    "evidence": [
     "사우나 없음"
    ],
@@ -461,7 +461,7 @@
   "course": 0.4,
   "fee": 0.75,
   "ops": 0.29,
-  "facility": 0.2,
+  "facility": 0.1,
   "briefing": 0.25,
   "rental": 0.25
  }

@@ -219,7 +219,7 @@
  },
  "ops": {
   "nocaddie": {
-   "value": "노캐디",
+   "value": "운영",
    "evidence": []
   },
   "two_player": {
@@ -289,7 +289,7 @@
  },
  "facilities": {
   "practice": {
-   "value": "골프연습장(주중 60분 15,000원 — 공개 요금 정보. 운영 시간 17:00 이전 100분·이후 70분)",
+   "value": "운영(주중 60분 15,000원 — 공개 요금 정보. 운영 시간 17:00 이전 100분·이후 70분)",
    "evidence": []
   },
   "indoor_range": {
@@ -317,7 +317,7 @@
    "evidence": []
   },
   "night": {
-   "value": "야간 라운드 운영",
+   "value": "운영",
    "evidence": []
   },
   "closed_days": {

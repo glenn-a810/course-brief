@@ -296,7 +296,7 @@
    "evidence": []
   },
   "night": {
-   "value": "야간 라운드 운영(공식 홈페이지 안내)",
+   "value": "운영(공식 홈페이지 안내)",
    "evidence": []
   },
   "closed_days": {
@@ -311,7 +311,7 @@
    ]
   },
   "proshop": {
-   "value": "프로샵 운영",
+   "value": "운영",
    "evidence": [
     "https://belleforetresort.com/community_notice/544"
    ]

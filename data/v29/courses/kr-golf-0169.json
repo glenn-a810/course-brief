@@ -519,7 +519,7 @@
   "weekend": 300000,
   "weekday_text": null,
   "weekend_text": null,
-  "basis": "official",
+  "basis": "공식 요금표",
   "tax_included": null,
   "cart": {
    "value": 120000,
@@ -661,7 +661,7 @@
     "서명하신 후 락카 키가 지급 됨은 물론 캐디 배치가 이루어지므로 사전에 동반하시는 분들께 팀의 예약자명과 시간을 정확하게 안내해주시기 바랍니다.요금정산안내그린피 및 식대 등 모든 요금은 라운딩 후 일괄 결제로 진행됩니다.요금은 팀별, 개인별 결제가 가능하며, 내장 시 개인별 선불 정산도 가능합니다.경기 진행캐디 : 캐디는 3~4인 팀 기준 1명의 캐디로 운영하고 있습니다."
    ],
    "value": "락커 운영",
-   "value_previous": "문구 확인(원문 근거)",
+   "value_previous": null,
    "source_url": "https://taekwangcc.co.kr/reservation/guide",
    "confidence": "low",
    "source_type": "official_site",
@@ -673,8 +673,8 @@
     "7사우나 이용Step.",
     "사우나 있음 · 프로샵"
    ],
-   "value": "사우나 운영",
-   "value_previous": "문구 확인(원문 근거)",
+   "value": "운영",
+   "value_previous": null,
    "source_url": "https://taekwangcc.co.kr/reservation/guide",
    "confidence": "high",
    "checked_at": "2026-10-20",
@@ -686,7 +686,7 @@
    "evidence": [
     "- 청바지, 슬리퍼, 트레이닝복 또는 노출이 심한 복장 은 입장이 제한될 수 있습니다. (단, 반바지 착용은 가능합니다. )"
    ],
-   "value": "복장 규정 안내",
+   "value": "안내",
    "source_url": "https://taekwangcc.co.kr/reservation/guide",
    "confidence": "medium",
    "source_type": "official_site",
@@ -744,7 +744,7 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": "사우나 있음",
+   "value": null,
    "evidence": [
     "사우나 있음 — https://greenfeeguide.co.kr/course/gc-0012/"
    ],
@@ -802,7 +802,7 @@
    "evidence": [
     "사우나 있음 · 프로샵"
    ],
-   "value": "프로샵 운영",
+   "value": "운영",
    "source_url": "https://taekwangcc.co.kr/reservation/guide",
    "confidence": "high",
    "checked_at": "2026-10-20",
@@ -931,7 +931,7 @@
   "course": 0.6,
   "fee": 1.0,
   "ops": 0.64,
-  "facility": 0.4,
+  "facility": 0.3,
   "briefing": 0.5,
   "rental": 0.25
  }

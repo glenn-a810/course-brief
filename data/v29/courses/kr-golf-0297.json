@@ -556,7 +556,7 @@
    "evidence": []
   },
   "five_player": {
-   "value": "5인 플레이 가능(5인 카트 20만원)",
+   "value": "가능(5인 카트 20만원)",
    "evidence": [
     "대구CC는 5인 플레이 골프장으로 사진에 보시는 것처럼 프리미엄 카트를 이용할 수 있습니다"
    ],
@@ -665,7 +665,7 @@
    "evidence": [
     "야간 운영: 야간 라운드 운영(공식 홈페이지 안내)"
    ],
-   "value": "야간 라운드 운영(공식 홈페이지 안내)",
+   "value": "운영(공식 홈페이지 안내)",
    "source_url": "https://greenfeeguide.co.kr/course/gc-0353/",
    "confidence": "medium",
    "source_type": "official_summary(greenfeeguide)",

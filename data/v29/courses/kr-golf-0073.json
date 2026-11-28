@@ -488,7 +488,7 @@
    "evidence": [
     "일몰까지 라운드를 진행하고, 이용한 홀 수만큼 요금을 지불하는 예약 예약자 핸드폰 - - 예약인원 셀프라운드(노캐디) 셀프타임 예약 시 안내사항 운전면허 소지자 1인 이상 동반 시 셀프라운드 가능(미성년자/학생선수 등 4인 셀프라운드 불가) 플레이어 개인별 핸디 23이하 시 셀프라운드 가능(단, 경기 진행에 협조 시 셀프라운드 가능) 노캐디 타임은 셀프라운드만 가능(노캐디팀 예약 후 캐디동반으로 변경 불가) 선불결제금액 인증번호 ← 화면에 보이는 인증번호 두 자리를 그대로 입력하세요."
    ],
-   "value": "노캐디 선택 가능(문구 확인)",
+   "value": "선택 가능",
    "sources_alt": [
     {
      "value": "셀프(노캐디) 라운드 운영",
@@ -581,7 +581,7 @@
     "2. 락커, 샤워실 등 클럽하우스 시설 이용에 부과되는 요금"
    ],
    "value": "락커 운영",
-   "value_previous": "문구 확인(원문 근거)",
+   "value_previous": null,
    "source_url": "http://www.onetheclub.com/club72/charge",
    "confidence": "low",
    "source_type": "official_site",
@@ -622,7 +622,7 @@
     "제목[클럽72] 하늘코스 X 연습장 패키지 이용안내 2025-03-27 06:03:02 Ⓒ 2023 ONETHECLUB.",
     "천연 잔디로 조성된 칩샷/퍼팅/벙커 연습장에서 숏게임 실전 연습이 가능한 시설"
    ],
-   "value": "연습장 · 벙커연습",
+   "value": "벙커연습 겸비",
    "source_url": "http://www.onetheclub.com/club72/dream_intro",
    "confidence": "medium",
    "source_type": "official_site",

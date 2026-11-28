@@ -237,7 +237,7 @@
   "weekend": 200000,
   "weekday_text": null,
   "weekend_text": null,
-  "basis": "official",
+  "basis": "공식 요금표",
   "tax_included": null,
   "cart": {
    "value": 80000,
@@ -473,7 +473,7 @@
    "evidence": [
     "화단, 배수구, 카트도로, 스프링클러, 고무매트, 방공시설물 등의 인공물과 과수지주물, 잔디 채취지에 떨어진 공은 1클럽길이 이내에서 드롭할 수 있습니다."
    ],
-   "value": "문구 확인(원문 근거)"
+   "value": null
   },
   "checkin": {
    "evidence": [
@@ -493,19 +493,19 @@
     "부대시설로는 레스토랑, 락카룸(샤워시설구비)이 있습니다.",
     "LOCKER ROOM 락카룸 쾌적하고 고급스러운 분위기의 락커룸 편안한 휴식을 제공합니다."
    ],
-   "value": "문구 확인(원문 근거)"
+   "value": null
   },
   "sauna": {
    "evidence": [
     "욕탕 내에서는 정숙하여 주시기 바랍니다."
    ],
-   "value": "문구 확인(원문 근거)"
+   "value": null
   },
   "dress": {
    "evidence": [
     "청바지, 반바지(남), 노출이 심한 복장은 입장이 불가합니다."
    ],
-   "value": "문구 확인(원문 근거)"
+   "value": null
   },
   "pace": {
    "evidence": [],
@@ -531,14 +531,14 @@
    "value": "레스토랑"
   },
   "snack_bar": {
-   "value": "그늘집",
+   "value": "운영",
    "evidence": [
     "그늘집 (출처: https://greenfeeguide.co.kr/course/gc-0422/, 2026-11-27 확인)",
     "사골 해장국 · 13,000원 · 메뉴 원문"
    ]
   },
   "locker_sauna": {
-   "value": "사우나",
+   "value": "운영",
    "evidence": [
     "사우나 (출처: https://greenfeeguide.co.kr/course/gc-0422/, 2026-11-27 확인)",
     "사우나 있음"
@@ -549,7 +549,7 @@
    "evidence": []
   },
   "other": {
-   "value": "사우나 있음",
+   "value": null,
    "evidence": [
     "사우나 있음"
    ],
@@ -758,8 +758,8 @@
   "basic": 1.0,
   "course": 0.6,
   "fee": 1.0,
-  "ops": 0.57,
-  "facility": 0.4,
+  "ops": 0.29,
+  "facility": 0.3,
   "briefing": 0.25,
   "rental": 1.0
  }

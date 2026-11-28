@@ -112,7 +112,7 @@
   "weekend": 90000,
   "weekday_text": "80,000원 ~ 170,000원",
   "weekend_text": "90,000원 ~ 220,000원",
-  "basis": "official",
+  "basis": "공식 요금표",
   "tax_included": null,
   "cart": {
    "value": 100000,
@@ -460,7 +460,7 @@
    "evidence": [
     "노캐디: 17:00 이후 / 17:00 이후"
    ],
-   "value": "노캐디 운영 시간 17:00 이후",
+   "value": "운영 · 시간 17:00 이후",
    "source_url": "https://www.castlepine.co.kr/pagesite/use/charge.asp",
    "confidence": "high",
    "checked_at": "2026-10-13",
@@ -565,7 +565,7 @@
     "2. 락커, 샤워실 등 클럽하우스 시설 이용에 부과되는 요금"
    ],
    "value": "락커 운영",
-   "value_previous": "문구 확인(원문 근거)",
+   "value_previous": null,
    "source_url": "https://www.castlepine.co.kr/pagesite/clause/guide.asp",
    "confidence": "low",
    "source_type": "official_site",
@@ -576,7 +576,7 @@
    "evidence": [
     "사우나 있음"
    ],
-   "value": "사우나 운영",
+   "value": "운영",
    "source_url": "https://castlepine.co.kr/pagesite/use/penalty.asp",
    "confidence": "high",
    "checked_at": "2026-10-20",
@@ -589,7 +589,7 @@
     "통상적인 골프웨어가 아닌 카라가 없은 상의, 속이 훤히 보이는 상의, 찢어진 청바지, 긴 양말을 착용하지 않은 반바지, 트레이닝복, 슬리퍼등은 클럽 입장이 불가하오니 유의 하시기 바랍니다.",
     "골퍼의 품격있는 경기를 위해 복장과 매너를 지켜주시기 바랍니다."
    ],
-   "value": "문구 확인(원문 근거)"
+   "value": null
   },
   "pace": {
    "evidence": [
@@ -636,7 +636,7 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": "사우나 있음",
+   "value": null,
    "evidence": [
     "사우나 있음 — https://greenfeeguide.co.kr/course/gc-0138/"
    ],
@@ -650,7 +650,7 @@
    "evidence": []
   },
   "other": {
-   "value": "사우나 있음",
+   "value": null,
    "evidence": [
     "사우나 있음"
    ],
@@ -678,7 +678,7 @@
     "정기 휴장일 없음"
    ],
    "third_party": "정기 휴장일 없음잔디페어웨이",
-   "value": "정기 휴장일 없음",
+   "value": "없음",
    "source_url": "https://www.castlepine.co.kr/pagesite/clause/guide.asp",
    "confidence": "high",
    "checked_at": "2026-10-11",
@@ -875,8 +875,8 @@
   "basic": 1.0,
   "course": 0.4,
   "fee": 1.0,
-  "ops": 0.79,
-  "facility": 0.6,
+  "ops": 0.71,
+  "facility": 0.4,
   "briefing": 0.5,
   "rental": 1.0
  }

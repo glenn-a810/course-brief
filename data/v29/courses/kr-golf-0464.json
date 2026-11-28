@@ -268,11 +268,11 @@
    "evidence": []
   },
   "locker": {
-   "value": "사우나 있음",
+   "value": null,
    "evidence": []
   },
   "sauna": {
-   "value": "사우나 있음",
+   "value": "운영",
    "evidence": []
   },
   "dress": {
@@ -315,7 +315,7 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": "사우나 있음",
+   "value": null,
    "evidence": []
   },
   "lodging": {
@@ -327,7 +327,7 @@
    "evidence": []
   },
   "night": {
-   "value": "야간 라운드 운영(공식 홈페이지 안내)",
+   "value": "운영(공식 홈페이지 안내)",
    "evidence": []
   },
   "closed_days": {
@@ -458,8 +458,8 @@
   "basic": 1.0,
   "course": 0.2,
   "fee": 1.0,
-  "ops": 0.43,
-  "facility": 0.3,
+  "ops": 0.36,
+  "facility": 0.2,
   "briefing": 0.5,
   "rental": 1.0
  }

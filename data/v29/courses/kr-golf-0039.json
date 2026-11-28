@@ -105,7 +105,7 @@
   "weekend": 105000,
   "weekday_text": "70,000원 ~ 80,000원",
   "weekend_text": null,
-  "basis": "official",
+  "basis": "공식 요금표",
   "tax_included": null,
   "cart": {
    "value": 80000,
@@ -278,7 +278,7 @@
     "정기 휴장일 없음 (출처: https://greenfeeguide.co.kr/course/gc-0480/, 2026-11-27 확인)"
    ],
    "third_party": "정기 휴장일 없음",
-   "value": "정기 휴장일 없음"
+   "value": "없음"
   },
   "shuttle": {
    "evidence": [],

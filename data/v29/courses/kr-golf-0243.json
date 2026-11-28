@@ -191,7 +191,7 @@
  },
  "ops": {
   "nocaddie": {
-   "value": "노캐디(캐디 없음)",
+   "value": "운영(캐디 없음)",
    "evidence": []
   },
   "two_player": {

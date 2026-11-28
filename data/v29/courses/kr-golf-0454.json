@@ -428,7 +428,7 @@
    "checked_at": "2026-11-27"
   },
   "snack_bar": {
-   "value": "그늘집 운영",
+   "value": "운영",
    "evidence": [
     "레스토랑: 클럽하우스 레스토랑 (한식·양식·뷔페), 그늘집 3동"
    ],
@@ -439,7 +439,7 @@
    "note": "1박2일골프 시설·기타 요약(2차 공개자료, 2026-11-27 조회) — 예약 전 공식 채널 재확인 권장"
   },
   "locker_sauna": {
-   "value": "스파·찜질(O₂사우나)",
+   "value": null,
    "evidence": []
   },
   "lodging": {
@@ -455,7 +455,7 @@
    "evidence": []
   },
   "closed_days": {
-   "value": "정기 휴장일 없음",
+   "value": "없음",
    "third_party": null,
    "evidence": [
     "정기 휴장일 정기 휴장일 없음"
@@ -470,7 +470,7 @@
    "evidence": []
   },
   "proshop": {
-   "value": "프로샵",
+   "value": "운영",
    "evidence": [
     "프로샵: 프로샵 (골프용품·의류)"
    ],
@@ -598,7 +598,7 @@
   "course": 0.4,
   "fee": 1.0,
   "ops": 0.36,
-  "facility": 0.7,
+  "facility": 0.6,
   "briefing": 0.75,
   "rental": 0.25
  }

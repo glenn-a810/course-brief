@@ -194,7 +194,7 @@
   "weekend": 280000,
   "weekday_text": null,
   "weekend_text": null,
-  "basis": "official",
+  "basis": "공식 요금표",
   "tax_included": null,
   "cart": {
    "value": 100000,
@@ -527,7 +527,7 @@
     "락카 이용"
    ],
    "value": "락커 운영",
-   "value_previous": "문구 확인(원문 근거)",
+   "value_previous": null,
    "source_url": "https://www.ansungcc.co.kr/Guide/Guide.aspx",
    "confidence": "medium",
    "source_type": "official_site",
@@ -538,7 +538,7 @@
    "evidence": [
     "사우나 있음 · 전기차 충전 가능 · 프로샵"
    ],
-   "value": "사우나 운영",
+   "value": "운영",
    "source_url": "https://www.ansungcc.co.kr/Facilities/Sauna.aspx",
    "confidence": "high",
    "checked_at": "2026-10-20",
@@ -551,7 +551,7 @@
     "클럽소개 클럽안내 주요연락처 연혁 오시는 길 안성CC 사계 인터넷예약 예약안내 인터넷예약 예약확인취소 코스소개 코스소개 코스공략도 코스갤러리 스코어카드 시설안내 락커 및 파우더룸 호반식당 프로샵 스타트하우스 그늘집 이용안내 이용안내 이용요금안내 위약규정 로컬룰 고객센터 공지사항 명예의전당 고객의말씀 조인게시판 포토갤러리 분실물센터 자주묻는질문 이용안내 이용요금안내 위약규정 로컬룰 Home 이용안내 이용안내 이용안내 내장 및 복장 Tee Off시간 40분 전까지 내장하여 프론트에서 내장 등록을 해주시고 15분 전까지 카트탑승준비완료를",
     "(보관하지 않은 물품 분실 시 당 클럽에서는 일절 책임지지 않습니다.) 복장은 타인에게 혐오감을 주지 않는 복장으로 착용하여 주시기 바랍니다."
    ],
-   "value": "문구 확인(원문 근거)"
+   "value": null
   },
   "pace": {
    "evidence": [],
@@ -564,7 +564,7 @@
    "evidence": [
     "클럽하우스, 스타트하우스, 그늘집, 퍼팅연습장 등"
    ],
-   "value": "연습장 · 퍼팅연습그린",
+   "value": "퍼팅연습그린 겸비",
    "source_url": "https://www.ansungcc.co.kr/About/Info.aspx",
    "confidence": "medium",
    "source_type": "official_site",
@@ -628,7 +628,7 @@
    "evidence": [
     "전기차 충전시설 설치"
    ],
-   "value": "전기차 충전시설 설치",
+   "value": "설치",
    "source_url": "https://www.ansungcc.co.kr/Facilities/Sauna.aspx",
    "confidence": "high",
    "checked_at": "2026-10-20",
@@ -643,7 +643,7 @@
    "evidence": [
     "사우나 있음 · 전기차 충전 가능 · 프로샵"
    ],
-   "value": "프로샵 운영",
+   "value": "운영",
    "source_url": "https://www.ansungcc.co.kr/Facilities/Sauna.aspx",
    "confidence": "high",
    "checked_at": "2026-10-20",
@@ -930,7 +930,7 @@
   "basic": 1.0,
   "course": 0.8,
   "fee": 1.0,
-  "ops": 0.43,
+  "ops": 0.36,
   "facility": 0.3,
   "briefing": 0.25,
   "rental": 0.25

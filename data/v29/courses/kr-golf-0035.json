@@ -367,7 +367,7 @@
   "weekend": 200000,
   "weekday_text": "160,000원 ~ 170,000원",
   "weekend_text": null,
-  "basis": "official",
+  "basis": "공식 요금표",
   "tax_included": null,
   "cart": {
    "value": 100000,
@@ -469,7 +469,7 @@
    "evidence": [
     "사우나: 사우나 있음사우나/락커"
    ],
-   "value": "사우나 있음 · 사우나/락커",
+   "value": "운영 · 사우나/락커",
    "source_url": "https://greenfeeguide.co.kr/course/gc-0483/",
    "source_type": "public_info(greenfeeguide)",
    "confidence": "medium",
@@ -511,7 +511,7 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": "사우나",
+   "value": "운영",
    "evidence": [
     "사우나 (출처: https://greenfeeguide.co.kr/course/gc-0483/, 2026-11-27 확인)",
     "사우나 있음"
@@ -522,7 +522,7 @@
    "evidence": []
   },
   "other": {
-   "value": "사우나 있음",
+   "value": null,
    "evidence": [
     "사우나 있음"
    ],
@@ -686,7 +686,7 @@
   "course": 1.0,
   "fee": 0.75,
   "ops": 0.21,
-  "facility": 0.3,
+  "facility": 0.2,
   "briefing": 0.5,
   "rental": 1.0
  }

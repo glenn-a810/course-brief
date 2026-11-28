@@ -490,7 +490,7 @@
   "weekend": 190000,
   "weekday_text": null,
   "weekend_text": null,
-  "basis": "official",
+  "basis": "공식 요금표",
   "tax_included": null,
   "cart": {
    "value": 100000,
@@ -723,7 +723,7 @@
    "evidence": [
     "매트에서 티샷하는 홀이 간간이 있다는 글도 있어요."
    ],
-   "value": "일부 홀 매트 티샷",
+   "value": "일부 홀",
    "source_url": "https://everysearch.store/golf/화순cc",
    "source_type": "review_aggregator",
    "confidence": "low",
@@ -747,7 +747,7 @@
    "evidence": [
     "특급호텔을 능가하는 화려한 로비라운지, 유럽풍의 깊은 멋이 느껴지는 고급 레스토랑, 사교와 휴식을 위한 VIP룸, 라운딩 후 피로를 말끔이 씻어줄 이국적 분위기의 사우나 등 최고의 휴식과 서비스를 누릴 수 있는 차원높은 시설은 오직 귀한분만을 위해 존재하는 저희 화순컨트리클럽만의 자랑입니다."
    ],
-   "value": "문구 확인(원문 근거)"
+   "value": null
   },
   "dress": {
    "evidence": [],
@@ -780,13 +780,13 @@
    "value": "레스토랑"
   },
   "snack_bar": {
-   "value": "그늘집",
+   "value": "운영",
    "evidence": [
     "그늘집 (출처: https://www.hwasuncc.co.kr/, 2026-11-27 확인)"
    ]
   },
   "locker_sauna": {
-   "value": "사우나",
+   "value": "운영",
    "evidence": [
     "이국적 분위기의 사우나 등 최고의 휴식과 서비스를 누릴 수 있는 (출처: https://www.hwasuncc.co.kr/facility/facility01.asp, 2026-11-27 확인)"
    ]
@@ -948,7 +948,7 @@
   "basic": 1.0,
   "course": 1.0,
   "fee": 1.0,
-  "ops": 0.29,
+  "ops": 0.21,
   "facility": 0.5,
   "briefing": 0.5,
   "rental": 0.25

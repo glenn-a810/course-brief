@@ -172,7 +172,7 @@
  },
  "ops": {
   "nocaddie": {
-   "value": "노캐디(셀프) 라운드 가능, 팀당 10,000원 추가",
+   "value": "셀프 라운드 가능, 팀당 10,000원 추가",
    "evidence": []
   },
   "two_player": {
@@ -226,11 +226,11 @@
    "evidence": []
   },
   "locker": {
-   "value": "사우나",
+   "value": null,
    "evidence": []
   },
   "sauna": {
-   "value": "사우나",
+   "value": "운영",
    "evidence": []
   },
   "dress": {
@@ -262,7 +262,7 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": "사우나",
+   "value": null,
    "evidence": []
   },
   "lodging": {
@@ -394,8 +394,8 @@
   "basic": 0.89,
   "course": 0.8,
   "fee": 1.0,
-  "ops": 0.57,
-  "facility": 0.6,
+  "ops": 0.5,
+  "facility": 0.5,
   "briefing": 0.5,
   "rental": 1.0
  }

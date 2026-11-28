@@ -414,7 +414,7 @@
     "프런트에서 락카 키를 수령하여 준비를 마친 후, tee-off 10분 전에 스타트하우스 앞 배정카트에서 대기하시면 됩니다."
    ],
    "value": "락커 운영",
-   "value_previous": "문구 확인(원문 근거)",
+   "value_previous": null,
    "source_url": "https://www.360cc.co.kr/mobile/subContents/use/guide_01.do",
    "confidence": "low",
    "source_type": "official_site",
@@ -429,8 +429,8 @@
    "evidence": [
     "청바지, 카라 없는 상의, 노출이 심한 복장으로 클럽입장은 불가능합니다."
    ],
-   "value": "복장 규정 안내",
-   "value_previous": "문구 확인(원문 근거)",
+   "value": "안내",
+   "value_previous": null,
    "source_url": "https://www.360cc.co.kr/mobile/subContents/use/guide_01.do",
    "confidence": "medium",
    "source_type": "official_site",
@@ -519,7 +519,7 @@
     "웹관리자 2023-09-28 8 론드리백 (Laundry Bag) 제공 중단 안내 수퍼관리자 2020-08-07 7 그늘집 무인 자판기 운영안내 수퍼관리자 2021-01-19 6 외부음식물 반입금지 안내 수퍼관리자 2021-04-19 5 셀프체크인 안내 수퍼관리자 2022-05-13 4 전기차 충전 운영안내 수퍼관리자 2023-04-14 3 예약 및 내장규정사항 안내 수퍼관리자 2023-04-25 2 셀프 체크인 이용방법 웹관리자 2021-01-06 1 예치금 반환 탈퇴 신청서 관리자 2018-12-21 1 COPYRIGHT ⓒ 3",
     "전기차 충전 운영안내"
    ],
-   "value": "전기차 충전소 운영",
+   "value": "운영",
    "source_url": "https://www.360cc.co.kr/mobile/board/boardList.do?groupcode=NOTICE&mainMenuCd=reservation&subMenuCd=%2Fboard%2FboardView.do",
    "confidence": "medium",
    "source_type": "official_site",

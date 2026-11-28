@@ -590,7 +590,7 @@
    "evidence": [
     "홀내 잔디보호를 위해 설치된 잔디보호 매트 등 카트 도로는 수리지로 간주합니다."
    ],
-   "value": "문구 확인(원문 근거)"
+   "value": null
   },
   "checkin": {
    "evidence": [
@@ -612,7 +612,7 @@
    "evidence": [
     "(위약 시 내장횟수 등록 불가) 락커가 협소하여 이용 시 복잡할 수 있으니 양해 부탁드립니다."
    ],
-   "value": "문구 확인(원문 근거)"
+   "value": null
   },
   "sauna": {
    "evidence": [],
@@ -951,7 +951,7 @@
   "basic": 1.0,
   "course": 0.6,
   "fee": 1.0,
-  "ops": 0.43,
+  "ops": 0.29,
   "facility": 0.3,
   "briefing": 0.25,
   "rental": 1.0

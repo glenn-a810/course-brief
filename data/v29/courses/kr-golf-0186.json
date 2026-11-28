@@ -114,7 +114,7 @@
   "weekend": 280000,
   "weekday_text": null,
   "weekend_text": null,
-  "basis": "official",
+  "basis": "공식 요금표",
   "tax_included": null,
   "cart": {
    "value": 100000,
@@ -171,7 +171,7 @@
    "evidence": [
     "이번에는 조금 특별하게 3인 플레이에 노캐디, 오후 5시 20분 티업으로 다녀왔어요."
    ],
-   "value": "노캐디 라운드 가능(3인)",
+   "value": "라운드 가능(3인)",
    "source_url": "https://blog.naver.com/aaallzz/224482408574",
    "source_type": "blog",
    "confidence": "medium",
@@ -319,7 +319,7 @@
    "evidence": []
   },
   "other": {
-   "value": "카페·라운지",
+   "value": "라운지",
    "evidence": [
     "프로샵·카페·라운지"
    ],
@@ -365,7 +365,7 @@
    "evidence": [
     "프로샵·카페·라운지"
    ],
-   "value": "프로샵 운영",
+   "value": "운영",
    "source_url": "https://www.hanwoncc.co.kr/facility/shop.asp",
    "confidence": "high",
    "checked_at": "2026-10-20",

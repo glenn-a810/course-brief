@@ -173,7 +173,7 @@
  },
  "ops": {
   "nocaddie": {
-   "value": "노캐디(셀프) 라운드 가능",
+   "value": "셀프 라운드 가능",
    "evidence": []
   },
   "two_player": {
@@ -220,11 +220,11 @@
    "evidence": []
   },
   "locker": {
-   "value": "사우나",
+   "value": null,
    "evidence": []
   },
   "sauna": {
-   "value": "사우나",
+   "value": "운영",
    "evidence": []
   },
   "dress": {
@@ -254,7 +254,7 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": "사우나",
+   "value": null,
    "evidence": []
   },
   "lodging": {
@@ -429,8 +429,8 @@
   "basic": 1.0,
   "course": 0.6,
   "fee": 1.0,
-  "ops": 0.29,
-  "facility": 0.2,
+  "ops": 0.21,
+  "facility": 0.1,
   "briefing": 0.75,
   "rental": 0.25
  }

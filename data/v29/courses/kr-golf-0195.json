@@ -118,7 +118,7 @@
   "weekend": 270000,
   "weekday_text": null,
   "weekend_text": "270,000원 ~ 280,000원",
-  "basis": "official",
+  "basis": "공식 요금표",
   "tax_included": null,
   "cart": {
    "value": 100000,
@@ -231,7 +231,7 @@
    "evidence": [
     "락커사우나"
    ],
-   "value": "사우나 운영",
+   "value": "운영",
    "source_url": "https://www.bavista.co.kr/Member/Main",
    "confidence": "medium",
    "source_type": "official_site",
@@ -280,7 +280,7 @@
    "evidence": []
   },
   "locker_sauna": {
-   "value": "사우나 있음",
+   "value": null,
    "evidence": [
     "사우나 있음 — https://greenfeeguide.co.kr/course/gc-0083/"
    ],
@@ -322,7 +322,7 @@
   },
   "gf_facilities": null,
   "proshop": {
-   "value": "프로샵",
+   "value": "운영",
    "evidence": [
     "other: 프로샵"
    ],
@@ -449,7 +449,7 @@
   "course": 0.2,
   "fee": 1.0,
   "ops": 0.36,
-  "facility": 0.3,
+  "facility": 0.2,
   "briefing": 0.25,
   "rental": 0.25
  }

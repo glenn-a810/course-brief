@@ -264,7 +264,7 @@
  },
  "ops": {
   "nocaddie": {
-   "value": "노캐디(셀프) 라운드 가능",
+   "value": "셀프 라운드 가능",
    "evidence": []
   },
   "two_player": {
@@ -315,7 +315,7 @@
    "evidence": []
   },
   "sauna": {
-   "value": "온천 사우나 있음",
+   "value": "운영(온천)",
    "evidence": [
     "제철 음식을 선보이는 레스토랑과 솔향을 맡으며 걸을 수 있는 설해 둘레길, 온천 사우나를 이용할 수 있어요."
    ],
@@ -350,7 +350,7 @@
  },
  "facilities": {
   "practice": {
-   "value": "골프 연습장 운영",
+   "value": "운영",
    "evidence": [
     "골프 연습장"
    ],
