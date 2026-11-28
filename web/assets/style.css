@@ -1857,12 +1857,19 @@ tbody tr:last-child td { border-bottom: 0; }
 .qa-chips .chip:hover { background: var(--surface-2); border-color: var(--line-strong); }
 .qa-chips .chip.is-on { background: var(--accent-soft); border-color: transparent; color: var(--accent-ink); }
 .qa-count { font-size: 12.5px; color: var(--text-3); }
-.qa-table-wrap { background: var(--surface); border-radius: var(--radius-sm); }
-.qa-table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+.qa-table-wrap {
+  background: var(--surface); border-radius: var(--radius-sm);
+  /* 540행을 페이지 길이로 늘리지 않고 표 안에서 스크롤한다 — 머리글·구장 열이 고정된다 */
+  max-height: min(72vh, 760px); overflow: auto;
+}
+.qa-table { width: 100%; border-collapse: collapse; table-layout: fixed; font-size: 12.5px; }
+.qa-col-name { width: 200px; }
+.qa-col-num { width: 52px; }
+.qa-col-age { width: 104px; }
 .qa-table th, .qa-table td { padding: 9px 8px; border-bottom: 1px solid var(--line); text-align: left; }
 .qa-table thead th {
-  /* 상단 바(sticky) 아래에 붙는다 — top:0 이면 바 밑으로 들어가 가려진다 */
-  position: sticky; top: var(--topbar-h); z-index: 3; background: var(--surface);
+  /* 표 스크롤 영역의 맨 위에 고정된다(영역 안에서 스크롤하므로 top:0 이 맞다) */
+  position: sticky; top: 0; z-index: 3; background: var(--surface);
   font-size: 11.5px; color: var(--text-3); font-weight: 600; white-space: nowrap;
 }
 .qa-table tbody th {
@@ -1924,5 +1931,15 @@ tbody tr:last-child td { border-bottom: 0; }
   .loc-map b { font-size: 12.5px; }
   .qa-tools { width: 100%; }
   .searchbox-sm { flex: 1 1 160px; max-width: none; }
-  .qa-table tbody th { min-width: 132px; }
+  .qa-col-name { width: 108px; }
+  .qa-col-num { width: 40px; }
+  /* 모바일에서는 마지막 열(값 신선도)을 접어 7개 영역이 한 화면에 들어오게 한다 */
+  .qa-col-age { display: none; }
+  .hm { height: 18px; }
+}
+@media (max-width: 560px) {
+  .qa-page .stat-row { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .qa-page .stat { padding: 12px; }
+  .qa-page .stat-n { font-size: 20px; }
+  .qa-page .stat-l { font-size: 11.5px; }
 }

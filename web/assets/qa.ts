@@ -55,6 +55,11 @@ const AREAS: Array<[AreaKey, string]> = [
   ["rental", "클럽 렌탈"],
 ];
 
+/** 표 머리글용 짧은 이름 — 모바일에서 7개 열이 한 화면에 들어오도록 2글자로 줄인다 */
+const SHORT: Record<AreaKey, string> = {
+  basic: "기본", course: "코스", fee: "요금", ops: "운영", facility: "시설", briefing: "공지", rental: "렌탈",
+};
+
 const PAGE_STEP = 60;
 
 interface QaState {
@@ -239,7 +244,7 @@ export async function renderQa(host: HTMLElement, dataBase: string): Promise<voi
       <div class="table-wrap qa-table-wrap">
         <table class="qa-table">
           <thead>
-            <tr><th scope="col">구장</th>${AREAS.map(([, l]) => `<th scope="col">${esc(l)}</th>`).join("")}<th scope="col">평균</th><th scope="col">값 신선도</th></tr>
+            <tr><th scope="col" class="qa-col-name">구장</th>${AREAS.map(([k, l]) => `<th scope="col" title="${esc(l)}"><span aria-hidden="true">${esc(SHORT[k])}</span><span class="sr-only">${esc(l)}</span></th>`).join("")}<th scope="col" class="qa-col-num">평균</th><th scope="col" class="qa-col-age">값 신선도</th></tr>
           </thead>
           <tbody id="qa-body"></tbody>
         </table>
@@ -281,14 +286,14 @@ export async function renderQa(host: HTMLElement, dataBase: string): Promise<voi
     const notice = ageText(r.notice_latest ?? r.notice_at);
     const stale = (fee.days ?? 999) > 90 || (notice.days ?? 999) > 90;
     return `<tr>
-      <th scope="row"><a class="link" href="#/c/${esc(r.id)}">${esc(r.name)}</a>
+      <th scope="row" class="qa-col-name"><a class="link" href="#/c/${esc(r.id)}">${esc(r.name)}</a>
         <span class="qa-sub">${esc([r.sido, r.sigungu].filter(Boolean).join(" "))}</span>
         ${r.parking ? "" : `<span class="qa-flag" title="주차 미확인">주차</span>`}
         ${r.transit ? "" : `<span class="qa-flag" title="셔틀·대중교통 미확인">교통</span>`}
       </th>
       ${AREAS.map(([k, label]) => heatCell(r, k, label)).join("")}
-      <td class="num">${r.avg == null ? "—" : Math.round(r.avg * 100)}</td>
-      <td class="qa-age${stale ? " is-stale" : ""}">${esc(fee.text)}<span class="qa-sub">요금</span></td>
+      <td class="num qa-col-num">${r.avg == null ? "—" : Math.round(r.avg * 100)}</td>
+      <td class="qa-age qa-col-age${stale ? " is-stale" : ""}">${esc(fee.text)}<span class="qa-sub">요금</span></td>
     </tr>`;
   };
 
