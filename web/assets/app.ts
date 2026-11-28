@@ -499,7 +499,7 @@ function paintFilterOptions(): void {
   const feeSel = $<HTMLSelectElement>("#f-fee");
   const keepFee = feeSel.value;
   feeSel.innerHTML = `<option value="">${esc(t("common.all"))}</option>` +
-    [10, 15, 20, 30].map((m) => `<option value="${m * 10000}">${esc(t("filter.feeUnder", { n: m }))}</option>`).join("");
+    [10, 15, 20, 30].map((m) => `<option value="${m * 10000}">${esc(t("filter.feeUnder", { amount: (m * 10000).toLocaleString("en-US") }))}</option>`).join("");
   feeSel.value = keepFee;
 
   const sortSel = $<HTMLSelectElement>("#f-sort");
@@ -886,7 +886,7 @@ function renderActiveFilters(): void {
   }
   if (f.type) add(membership(f.type), "type");
   if (f.holes) add(f.holes === "36" ? t("filter.holesOver") : t("filter.holesValue", { n: f.holes }), "holes");
-  if (f.fee) add(t("filter.feeUnder", { n: Number(f.fee) / 10000 }), "fee");
+  if (f.fee) add(t("filter.feeUnder", { amount: Number(f.fee).toLocaleString("en-US") }), "fee");
   for (const code of f.tags) add(TAG_LABEL[code] ?? code, `tag:${code}`);
   if (f.sort !== "name") add(SORT_LABELS[f.sort], "sort");
   if (f.status.size !== 1 || !f.status.has("operating")) add(t("filter.statusCount", { n: f.status.size }), "status");

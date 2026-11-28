@@ -157,7 +157,7 @@ const DICT: Record<string, Tuple> = {
     "確認済みのゴルフ場のみ表示します。条件が未確認のゴルフ場は結果から外れます。",
   ],
   "filter.clearAria": ["{label} 필터 해제", "Remove {label} filter", "{label} フィルターを解除"],
-  "filter.feeUnder": ["{n}만원 이하", "≤ ₩{n},000", "{n}万ウォン以下"],
+  "filter.feeUnder": ["{amount}원 이하", "≤ ₩{amount}", "{amount}ウォン以下"],
   "filter.holesOver": ["36홀 이상", "36+ holes", "36ホール以上"],
   "filter.statusCount": ["상태 {n}종", "{n} statuses", "ステータス {n}種"],
   "filter.holesValue": ["{n}홀", "{n} holes", "{n}ホール"],
@@ -198,7 +198,7 @@ const DICT: Record<string, Tuple> = {
   /* ---------------- 카드 ---------------- */
   "card.holesUnit": ["홀", " holes", "ホール"],
   "card.sameSite": ["같은 부지 {n}개 코스", "{n} courses on the same site", "同じ敷地に {n}コース"],
-  "card.holesSum": ["{n}홀 합산", "{n} holes total", "{n}ホール合計"],
+  "card.holesSum": ["홀 합산", " holes total", "ホール合計"],
   "card.chooseCourse": ["코스 선택", "Choose course", "コースを選択"],
   "card.compare": ["비교", "Compare", "比較"],
   "card.compared": ["담김", "Added", "追加済み"],
