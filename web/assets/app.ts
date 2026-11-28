@@ -33,6 +33,23 @@ import { createSearchAdapter } from "./search.js";
 import { initTheme } from "./theme.js";
 import { coverageBar, gauge, icon, iconDuo, iconTile, ratingBar } from "./icons.js";
 import type { IconName, IconTone } from "./icons.js";
+import { costModelFrom, mountCostCard } from "./cost.js";
+import type { CostModel, PlayerCount, PlayerInfo } from "./cost.js";
+import {
+  compareHref,
+  comparePageHTML,
+  initCompare,
+  isCompared,
+  syncCompareToggles,
+  updateCompareBar,
+  wireComparePage,
+} from "./compare.js";
+import type { CompareColumn } from "./compare.js";
+import { createMap } from "./maps.js";
+import type { MapController, MapPoint } from "./maps.js";
+import { bookingChannels, channelBlockHTML, wireBookingActions } from "./channels.js";
+import type { Channel } from "./channels.js";
+import { cleanNote } from "./text.js";
 import {
   STATUS,
   badge,
@@ -130,8 +147,27 @@ const COVERAGE_LABELS: Array<[CoverageArea, string, string]> = [
   ["rental", "클럽 렌탈", "자체 대여·권역 배송 업체"],
 ];
 
-const SORT_KEYS = ["name", "fee-asc", "fee-desc", "holes-desc"] as const;
+const SORT_KEYS = [
+  "name",
+  "fee-asc",
+  "fee-desc",
+  "holes-desc",
+  "total-asc",
+  "total-desc",
+  "rating-desc",
+] as const;
 type SortKey = (typeof SORT_KEYS)[number];
+
+/** 정렬 이름표 — 활성 필터 칩·결과 요약이 같은 문구를 쓴다 */
+const SORT_LABELS: Record<SortKey, string> = {
+  name: "이름순",
+  "fee-asc": "그린피 낮은순",
+  "fee-desc": "그린피 높은순",
+  "holes-desc": "홀수 많은순",
+  "total-asc": "4인 총액 낮은순",
+  "total-desc": "4인 총액 높은순",
+  "rating-desc": "평점 높은순",
+};
 
 function isSortKey(v: string | null | undefined): v is SortKey {
   return typeof v === "string" && (SORT_KEYS as readonly string[]).includes(v);
@@ -145,6 +181,8 @@ interface Filters {
   holes: string;
   fee: string;
   sort: SortKey;
+  /** 플레이 조건 태그(n·2·y·s·l·h·p·f) — 모두 만족하는 구장만 남긴다 */
+  tags: Set<string>;
   status: Set<CourseStatus>;
 }
 
@@ -158,6 +196,10 @@ interface CourseGroup {
   members: CourseIndexItem[];
   holes: number;
   fee: number | null;
+  /** 4인 · 18홀 총액(그린피×4 + 카트 + 캐디). 값이 없으면 null */
+  total: number | null;
+  /** 라운더 평가(10점) — 그룹에서 가장 높은 값 */
+  rating: number | null;
   feeKind: FeeKind | null;
   sido: string;
   sigungu: string;
@@ -174,6 +216,8 @@ interface AppState {
   filters: Filters;
   shown: number;
   groups: CourseGroup[];
+  /** 목록 / 지도 */
+  view: "list" | "map";
   /** 목록을 떠날 때의 스크롤 위치 — 상세에서 돌아오면 그 자리로 */
   pendingScroll: number | null;
   /** 마지막 목록 해시(검색·필터 포함) — 상세의 '목록' 링크가 그 조건으로 돌아간다 */
@@ -181,7 +225,15 @@ interface AppState {
 }
 
 function defaultFilters(): Filters {
-  return { sido: "", type: "", holes: "", fee: "", sort: "name", status: new Set<CourseStatus>(["operating"]) };
+  return {
+    sido: "",
+    type: "",
+    holes: "",
+    fee: "",
+    sort: "name",
+    tags: new Set<string>(),
+    status: new Set<CourseStatus>(["operating"]),
+  };
 }
 
 const state: AppState = {
@@ -194,6 +246,7 @@ const state: AppState = {
   filters: defaultFilters(),
   shown: CONFIG.pageSize,
   groups: [],
+  view: "list",
   pendingScroll: null,
   lastListHash: "#/",
 };
@@ -252,6 +305,10 @@ async function boot(): Promise<void> {
     state.sido = sido.sido ?? index.sido ?? [];
     state.adapter = await createSearchAdapter(CONFIG, { courses: index.courses });
     buildStaticUI();
+    initCompare(() => {
+      syncCompareToggles(document);
+      updateCompareBar();
+    });
     await route();
     window.addEventListener("hashchange", () => {
       state.shown = CONFIG.pageSize;
@@ -324,6 +381,37 @@ function buildStaticUI(): void {
     return `<button class="chip" type="button" data-status="${st}" aria-pressed="${state.filters.status.has(st)}"
       aria-label="${esc(meta.label)} ${n}곳"><span>${esc(meta.label)}</span><span class="chip-n">${n}</span></button>`;
   }).join("");
+
+  // 플레이 조건 칩(8종) — 카드 배지로만 있던 조건을 필터로 끌어올린다
+  const tagRow = $<HTMLElement>("#tag-chips");
+  tagRow.innerHTML = TAG_ORDER.map((t) => `<button class="chip" type="button" data-tag="${t}"
+      aria-pressed="false" aria-label="${esc(TAG_LABEL[t])}"><span class="chip-ic" aria-hidden="true">${
+      iconDuo(TAG_ICON[t] ?? "sparkle", "chip-ic-svg")}</span><span>${esc(TAG_LABEL[t])}</span><span class="chip-n">—</span></button>`).join("");
+  paintTagChips();
+}
+
+/**
+ * 조건 칩의 숫자는 지금 걸린 다른 필터(상태·지역·형태·홀수·요금)까지 반영한다.
+ * 조건 태그는 데이터에 '확인된 값'만 담기므로, 숫자가 없으면 0이 아니라 — 로 둔다.
+ */
+function paintTagChips(): void {
+  const row = $<HTMLElement>("#tag-chips");
+  const courses = state.index?.courses ?? [];
+  const base = courses.filter((c) => passesFilters(c, false, true));
+  const counts = new Map<string, number>();
+  for (const c of base) {
+    for (const t of c.tags ?? "") if (TAG_LABEL[t]) counts.set(t, (counts.get(t) ?? 0) + 1);
+  }
+  for (const btn of row.querySelectorAll<HTMLButtonElement>(".chip[data-tag]")) {
+    const t = btn.dataset.tag ?? "";
+    const on = state.filters.tags.has(t);
+    btn.classList.toggle("is-on", on);
+    btn.setAttribute("aria-pressed", on ? "true" : "false");
+    const n = counts.get(t) ?? 0;
+    btn.setAttribute("aria-label", `${TAG_LABEL[t] ?? t} ${n}곳`);
+    const num = btn.querySelector<HTMLElement>(".chip-n");
+    if (num) num.textContent = String(n);
+  }
 }
 
 /* ---------------- 상태·URL ---------------- */
@@ -348,7 +436,9 @@ function hashQueryFromState(): string {
   if (f.type) p.set("type", f.type);
   if (f.holes) p.set("holes", f.holes);
   if (f.fee) p.set("fee", f.fee);
+  if (f.tags.size) p.set("tags", [...f.tags].join(","));
   if (f.sort !== "name") p.set("sort", f.sort);
+  if (state.view === "map") p.set("view", "map");
   const st = [...f.status];
   if (st.length !== 1 || st[0] !== "operating") p.set("status", st.join(","));
   const qs = p.toString();
@@ -371,6 +461,9 @@ function applyHashQuery(params: URLSearchParams): void {
   f.fee = params.get("fee") ?? "";
   const sort = params.get("sort") ?? "name";
   f.sort = isSortKey(sort) ? sort : "name";
+  const tagParam = params.get("tags") ?? "";
+  f.tags = new Set<string>(tagParam.split(",").filter((t) => Boolean(TAG_LABEL[t])));
+  state.view = params.get("view") === "map" ? "map" : "list";
   const st = params.get("status");
   f.status = new Set<CourseStatus>(st ? st.split(",").filter((s) => isCourseStatus(s)) : ["operating"]);
   $<HTMLSelectElement>("#f-sido").value = f.sido;
@@ -379,6 +472,7 @@ function applyHashQuery(params: URLSearchParams): void {
   $<HTMLSelectElement>("#f-fee").value = f.fee;
   $<HTMLSelectElement>("#f-sort").value = f.sort;
   paintChips();
+  paintTagChips();
 }
 
 function paintChips(): void {
@@ -405,6 +499,8 @@ function buildGroups(courses: CourseIndexItem[]): CourseGroup[] {
     const cluster = key.startsWith("id:") ? null : state.clusters.get(key) ?? null;
     const holes = members.reduce((a, m) => a + (m.holes ?? 0), 0);
     const cheapest = cheapestFee(members);
+    const totals = members.map(totalFour).filter((v): v is number => v != null);
+    const ratings = members.map((m) => m.rating).filter((v): v is number => typeof v === "number");
     groups.push({
       key,
       name: cluster?.name || members[0].name,
@@ -412,6 +508,8 @@ function buildGroups(courses: CourseIndexItem[]): CourseGroup[] {
       members: [...members].sort((a, b) => (b.holes ?? 0) - (a.holes ?? 0)),
       holes,
       fee: cheapest?.value ?? null,
+      total: totals.length ? Math.min(...totals) : null,
+      rating: ratings.length ? Math.max(...ratings) : null,
       feeKind: cheapest?.kind ?? null,
       sido: members[0].sido,
       sigungu: [...new Set(members.map((m) => m.sigungu).filter(Boolean))].join(", "),
@@ -435,11 +533,22 @@ function cheapestFee(members: CourseIndexItem[]): { value: number; kind: FeeKind
   return best;
 }
 
-function passesFilters(c: CourseIndexItem, skipStatus = false): boolean {
+/** 4인 18홀 총액 — 그린피 4인분 + 카트·캐디(팀 1회). 그린피가 없으면 null */
+function totalFour(m: CourseIndexItem): number | null {
+  const green = m.green_fee?.weekend ?? m.green_fee?.weekday;
+  if (green == null) return null;
+  return green * 4 + (m.cart ?? 0) + (m.caddie ?? 0);
+}
+
+function passesFilters(c: CourseIndexItem, skipStatus = false, skipTags = false): boolean {
   const f = state.filters;
   if (!skipStatus && f.status.size && !f.status.has(c.status)) return false;
   if (f.sido && c.sido_code !== f.sido) return false;
   if (f.type && c.type !== f.type) return false;
+  if (!skipTags && f.tags.size) {
+    const have = c.tags ?? "";
+    for (const t of f.tags) if (!have.includes(t)) return false;
+  }
   if (f.holes) {
     const h = c.holes ?? 0;
     if (f.holes === "36" ? h < 36 : h !== Number(f.holes)) return false;
@@ -454,10 +563,14 @@ function passesFilters(c: CourseIndexItem, skipStatus = false): boolean {
 function sortGroups(groups: CourseGroup[]): CourseGroup[] {
   const s = state.filters.sort;
   const arr = [...groups];
-  if (s === "fee-asc") arr.sort((a, b) => (a.fee ?? Infinity) - (b.fee ?? Infinity) || a.name.localeCompare(b.name, "ko"));
-  else if (s === "fee-desc") arr.sort((a, b) => (b.fee ?? -1) - (a.fee ?? -1) || a.name.localeCompare(b.name, "ko"));
-  else if (s === "holes-desc") arr.sort((a, b) => b.holes - a.holes || a.name.localeCompare(b.name, "ko"));
-  else arr.sort((a, b) => a.name.localeCompare(b.name, "ko"));
+  const byName = (a: CourseGroup, b: CourseGroup): number => a.name.localeCompare(b.name, "ko");
+  if (s === "fee-asc") arr.sort((a, b) => (a.fee ?? Infinity) - (b.fee ?? Infinity) || byName(a, b));
+  else if (s === "fee-desc") arr.sort((a, b) => (b.fee ?? -1) - (a.fee ?? -1) || byName(a, b));
+  else if (s === "holes-desc") arr.sort((a, b) => b.holes - a.holes || byName(a, b));
+  else if (s === "total-asc") arr.sort((a, b) => (a.total ?? Infinity) - (b.total ?? Infinity) || byName(a, b));
+  else if (s === "total-desc") arr.sort((a, b) => (b.total ?? -1) - (a.total ?? -1) || byName(a, b));
+  else if (s === "rating-desc") arr.sort((a, b) => (b.rating ?? -1) - (a.rating ?? -1) || byName(a, b));
+  else arr.sort(byName);
   return arr;
 }
 
@@ -542,6 +655,73 @@ async function renderList({ reset = false }: { reset?: boolean } = {}): Promise<
   more.hidden = n <= state.shown;
   more.innerHTML = `더 보기 <span class="more-count">${state.shown} / ${n}</span>`;
 
+  paintTagChips();
+  syncCompareToggles(resultsEl);
+  updateCompareBar();
+  applyViewMode();
+}
+
+/* ---------------- 보기 전환 · 지도 ---------------- */
+
+let mapController: MapController | null = null;
+
+function ensureMap(): MapController | null {
+  if (mapController) return mapController;
+  const canvas = document.querySelector<HTMLElement>("#map-canvas");
+  const shell = document.querySelector<HTMLElement>("#map-shell");
+  const fallback = document.querySelector<HTMLElement>("#map-fallback");
+  if (!canvas || !shell || !fallback) return null;
+  mapController = createMap({ canvas, shell, fallback, onFallback: () => undefined });
+  return mapController;
+}
+
+/** 필터 결과(그룹) → 지도 핀. 좌표가 없는 구장은 지도에서 빠진다 */
+function mapPointsFromGroups(groups: CourseGroup[]): MapPoint[] {
+  const points: MapPoint[] = [];
+  for (const g of groups) {
+    const head = g.members.find((m) => m.lat != null && m.lng != null);
+    if (!head || head.lat == null || head.lng == null) continue;
+    points.push({
+      id: head.id,
+      name: g.name,
+      lat: head.lat,
+      lng: head.lng,
+      fee: g.fee,
+      region: [g.sido, g.sigungu].filter(Boolean).join(" "),
+      members: g.members.length > 1 ? g.members.map((m) => ({ id: m.id, name: m.name })) : [],
+    });
+  }
+  return points;
+}
+
+/** 목록/지도 상태를 화면과 URL 에 맞춘다 */
+function applyViewMode(): void {
+  const onMap = state.view === "map";
+  $<HTMLElement>("#map-panel").hidden = !onMap;
+  $<HTMLElement>("#results").hidden = onMap;
+  $<HTMLElement>("#empty").hidden = onMap || state.groups.length > 0;
+  const more = $<HTMLButtonElement>("#more");
+  more.hidden = onMap || state.groups.length <= state.shown;
+  for (const btn of document.querySelectorAll<HTMLButtonElement>(".view-btn")) {
+    const on = btn.dataset.view === state.view;
+    btn.classList.toggle("is-on", on);
+    btn.setAttribute("aria-pressed", on ? "true" : "false");
+  }
+  if (onMap) {
+    const ctrl = ensureMap();
+    ctrl?.update(mapPointsFromGroups(state.groups));
+    ctrl?.invalidate();
+  }
+}
+
+function setViewMode(mode: "list" | "map"): void {
+  if (state.view === mode) {
+    if (mode === "map") mapController?.invalidate();
+    return;
+  }
+  state.view = mode;
+  syncHash();
+  applyViewMode();
 }
 
 function emptyDescription(): string {
@@ -551,6 +731,7 @@ function emptyDescription(): string {
   if (state.filters.type) parts.push("이용형태");
   if (state.filters.holes) parts.push("홀수");
   if (state.filters.fee) parts.push("그린피");
+  if (state.filters.tags.size) parts.push(`플레이 조건 ${[...state.filters.tags].map((t) => TAG_LABEL[t] ?? t).join("·")}`);
   if (!parts.length) return "다른 조건으로 다시 찾아보세요.";
   if (parts.length === 1 && state.q) {
     return `‘${state.q}’와 일치하는 골프장이 없습니다. 다른 이름·지역이나 초성(ㅇㅅ)으로 찾아보세요.`;
@@ -573,10 +754,8 @@ function renderActiveFilters(): void {
   if (f.type) add(f.type, "type");
   if (f.holes) add(f.holes === "36" ? "36홀 이상" : `${f.holes}홀`, "holes");
   if (f.fee) add(`주말 ${Number(f.fee) / 10000}만원 이하`, "fee");
-  if (f.sort !== "name") {
-    const label = { "fee-asc": "그린피 낮은순", "fee-desc": "그린피 높은순", "holes-desc": "홀수 많은순" }[f.sort];
-    add(label, "sort");
-  }
+  for (const t of f.tags) add(TAG_LABEL[t] ?? t, `tag:${t}`);
+  if (f.sort !== "name") add(SORT_LABELS[f.sort], "sort");
   if (f.status.size !== 1 || !f.status.has("operating")) add(`상태 ${f.status.size}종`, "status");
   const box = $<HTMLElement>("#active-filters");
   box.innerHTML = parts.join("");
@@ -628,7 +807,7 @@ function cardHTML(g: CourseGroup): string {
     ? `<span class="notice-dot" title="최근 공지${noticeDate ? ` ${noticeDate}` : ""}">${icon("bell")}공지</span>`
     : "";
 
-  const head = `<div class="card-head">
+  const body = (footRight: string): string => `<div class="card-head">
       <div class="card-id">
         <h3 class="card-name">${highlight(single ? single.name : g.name, state.q)}</h3>
         <p class="card-sub">${esc(sub)}</p>
@@ -637,10 +816,20 @@ function cardHTML(g: CourseGroup): string {
     </div>
     ${statsHTML}
     ${tagHTML}
-    <div class="card-foot">${feeBlock}<span class="card-foot-right"><span class="card-cta">상세 보기${icon("chevron")}</span>${noticeBadge}</span></div>`;
+    <div class="card-foot">${feeBlock}<span class="card-foot-right">${footRight}${noticeBadge}</span></div>`;
 
   if (single) {
-    return `<a class="card" href="#/c/${esc(single.id)}" data-card="${esc(single.id)}">${head}</a>`;
+    // 카드 전체가 상세 링크다. 비교 버튼은 링크 위에 올려 따로 눌리게 한다(중첩 링크·버튼 회피)
+    const on = isCompared(single.id);
+    const label = on ? "비교에서 빼기" : "비교에 담기";
+    const cmp = `<button type="button" class="cmp-toggle${on ? " is-on" : ""}" data-cmp="${esc(single.id)}"
+        data-cmp-name="${esc(single.name)}" aria-pressed="${on}" aria-label="${esc(single.name)} ${label}" title="${label}">
+        <span class="cmp-toggle-ic" aria-hidden="true">${icon("check")}</span><span class="cmp-toggle-text">${on ? "담김" : "비교"}</span>
+      </button>`;
+    return `<div class="card is-link">
+      <a class="card-hit" href="#/c/${esc(single.id)}" data-card="${esc(single.id)}" aria-label="${esc(single.name)} 상세 보기"></a>
+      ${body(cmp)}
+    </div>`;
   }
   return `<div class="card card-group">
       <div class="card-head">
@@ -717,6 +906,52 @@ function sourceTag(source: FeeSlot["source"]): string {
   return "";
 }
 
+/**
+ * 인원별 플레이 가능 여부 — 데이터 원문을 보수적으로만 읽는다.
+ * "불가(3인 이상 가능)"처럼 앞이 불가인 문장은 불가로 두고, 원문을 그대로 병기한다.
+ */
+function playerInfoOf(raw: unknown, tagYes = false): PlayerInfo {
+  const text = cleanNote(textOf(raw));
+  if (!text) {
+    return tagYes ? { state: "yes", text: "확인된 조건 태그: 2인 플레이" } : { state: "unknown", text: "" };
+  }
+  if (/^(불가|불허|금지)/.test(text) || /^원칙적으로\s*불가/.test(text)) return { state: "no", text };
+  if (/가능|허용|운영|문의|협의|조인/.test(text)) {
+    return { state: text.replace(/\s/g, "") === "가능" ? "yes" : "conditional", text };
+  }
+  return { state: "unknown", text };
+}
+
+/** 요금·운영 규칙에서 총비용 계산기 모델을 만든다(같은 feeView 결과를 그대로 쓴다) */
+function buildCostModel(c: CourseIndexItem, d: CourseDetail, fees: FeeView): CostModel {
+  const ops: CourseOps = d.ops ?? {};
+  const tags = c.tags ?? "";
+  const od = d.fee?.official_detail ?? {};
+  const source = fees.weekend.value != null ? fees.weekend.source : fees.weekday.source;
+  return costModelFrom({
+    id: c.id,
+    name: c.name,
+    weekday: fees.weekday.value,
+    weekend: fees.weekend.value,
+    greenSource: source,
+    cart: fees.cart,
+    cartNote: d.fee?.cart?.note ?? "",
+    caddie: fees.caddie,
+    caddieNote: d.fee?.caddie?.note ?? "",
+    caddieNone: fees.caddieNone,
+    asOf: fmtDate(d.fee?.as_of ?? d.fee?.checked_at),
+    players: {
+      2: playerInfoOf(ops.two_player?.value, tags.includes("2")),
+      3: playerInfoOf(ops.three_player?.value),
+      4: { state: "yes", text: "" },
+      5: playerInfoOf(ops.five_player?.value),
+    },
+    greenDetail: od.green_detail ?? null,
+    cartDetail: od.cart_detail ?? null,
+    note: visibleText(d.fee?.note),
+  });
+}
+
 async function renderDetail(id: string): Promise<void> {
   const index = getIndex();
   const course = index.courses.find((c) => c.id === id);
@@ -772,6 +1007,10 @@ async function renderDetail(id: string): Promise<void> {
   if (fees.caddieNone) feeExtras.push("노캐디");
   else if (fees.caddie != null) feeExtras.push(`캐디 ${won(fees.caddie)}`);
   const hasAnyFee = feeCheapest != null || feeExtras.length > 0;
+  // 총비용 계산기·예약 채널은 상세 데이터가 있을 때만 만든다
+  const costModel = detail && !detailError ? buildCostModel(course, detail, fees) : null;
+  const channels: Channel[] = bookingChannels(course, detail?.fee?.market?.url ?? null);
+  const cmpOn = isCompared(course.id);
 
   const hero = `
     <div class="detail-crumbs">
@@ -810,11 +1049,17 @@ async function renderDetail(id: string): Promise<void> {
         </dl>
 
         <div class="hero-actions">
-          ${course.tel ? `<a class="btn btn-primary" href="tel:${esc(course.tel.replace(/[^\d+]/g, ""))}">${icon("phone")}전화 걸기</a>` : ""}
+          <button class="btn btn-primary" type="button" data-booking-open>${icon("external")}예약하기</button>
+          ${course.tel ? `<a class="btn btn-ghost" href="tel:${esc(course.tel.replace(/[^\d+]/g, ""))}">${icon("phone")}전화 걸기</a>` : ""}
           ${course.homepage ? `<a class="btn btn-ghost" href="${esc(course.homepage)}" target="_blank" rel="noopener noreferrer">${icon("globe")}홈페이지</a>` : ""}
           ${course.lat != null && course.lng != null
             ? `<a class="btn btn-ghost" href="https://www.google.com/maps?q=${course.lat},${course.lng}" target="_blank" rel="noopener noreferrer">${icon("pin")}지도</a>`
             : ""}
+          <button class="btn btn-ghost${cmpOn ? " is-on" : ""}" type="button" data-cmp="${esc(course.id)}"
+            data-cmp-name="${esc(course.name)}" data-cmp-long="1" aria-pressed="${cmpOn}"
+            aria-label="${esc(course.name)} ${cmpOn ? "비교에서 빼기" : "비교에 담기"}">
+            <span class="cmp-toggle-ic" aria-hidden="true">${icon("check")}</span><span class="cmp-toggle-text">${cmpOn ? "비교 담김" : "비교 담기"}</span>
+          </button>
         </div>
       </div>
 
@@ -851,11 +1096,16 @@ async function renderDetail(id: string): Promise<void> {
       </div>
     </section>` : ""}`;
 
-  const built = detail && !detailError ? sections(detail, course, others) : null;
+  const built = detail && !detailError ? sections(detail, course, others, { costModel, channels }) : null;
   const nav = built ? sectionNav(course, built.visible) : "";
   view.innerHTML = `<div class="detail">${hero}${nav}${built?.html ?? ""}</div>`;
   renderedDetailId = id;
   setTitle(`${course.name} — CourseBrief`);
+
+  const calcSlot = view.querySelector<HTMLElement>("#cost-calc");
+  if (calcSlot && costModel) mountCostCard(calcSlot, costModel);
+  wireBookingActions(view, course, channels);
+  syncCompareToggles(view);
 
   document.querySelector<HTMLButtonElement>("#detail-retry")?.addEventListener("click", () => {
     renderedDetailId = null;
@@ -1247,7 +1497,7 @@ function cancelTimeline(text: string): string {
   </div>`;
 }
 
-function sections(d: CourseDetail, c: CourseIndexItem, others: Array<{ name: string; id?: string; holes?: number | null; item?: CourseIndexItem }>): { html: string; visible: { s3: boolean; s4: boolean; s6: boolean } } {
+function sections(d: CourseDetail, c: CourseIndexItem, others: Array<{ name: string; id?: string; holes?: number | null; item?: CourseIndexItem }>, extra: { costModel: CostModel | null; channels: Channel[] }): { html: string; visible: { s3: boolean; s4: boolean; s6: boolean } } {
   const m = d.master ?? {};
   const co: CourseSpec = d.course ?? {};
   const fee = d.fee ?? {};
@@ -1339,6 +1589,7 @@ function sections(d: CourseDetail, c: CourseIndexItem, others: Array<{ name: str
     <div class="section-body">
       ${unavailable ? `<div class="callout warn"><strong>${icon("alert")}현재 이용 불가 구장입니다</strong>아래 요금은 마지막으로 확인된 값이며 예약·결제할 수 없습니다.</div>` : ""}
       ${feeCardsHTML}
+      ${extra.costModel ? `<div id="cost-calc" class="calc-slot"></div>` : ""}
       ${asOf ? `<p class="source-line">${isAdmin() ? `요금 기준 ${esc(fee.basis || "")} · 확인 ${fmtDate(asOf)}` : `요금 업데이트 ${esc(fmtDate(asOf))}`}</p>` : ""}
       ${market && (market.weekday_min || market.weekend_min) ? `<div class="inline-fact">
         <span class="inline-fact-label">관측 최저가</span>
@@ -1370,6 +1621,7 @@ function sections(d: CourseDetail, c: CourseIndexItem, others: Array<{ name: str
           ${evidenceDetails(cancel.weather_evidence, "악천후 정산 근거")}
         </div>
       </div>
+      ${channelBlockHTML(c, extra.channels)}
       ${fee.note && visibleText(fee.note) ? `<p class="source-line">${esc(visibleText(fee.note))}</p>` : ""}
       ${isAdmin() && (fee.sources ?? []).length ? `<p class="source-line">출처: ${(fee.sources ?? []).slice(0, 4).map((s) => s.url ? `<a class="link" href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.source || shortUrl(s.url))}</a>` : esc(s.source || "")).join(" · ")}</p>` : ""}
     </div>
@@ -1699,6 +1951,100 @@ function extraCoursesHTML(list: Array<ExtraCourse | string>): string {
   }).join("")}</div>`;
 }
 
+/* ---------------- 비교 화면 ---------------- */
+
+function clip(text: string, max: number): string {
+  return text.length > max ? `${text.slice(0, Math.max(0, max - 1))}…` : text;
+}
+
+/** 비교표 한 열 — 값이 없는 항목은 빈 문자열로 두고 화면이 '미확인'으로 적는다 */
+function compareColumn(c: CourseIndexItem, d: CourseDetail | null): CompareColumn {
+  const fees = feeView(d?.fee, c);
+  const ops = d?.ops ?? {};
+  const fac = d?.facilities ?? {};
+  const val = (x: unknown): string => visibleText(textOf(x));
+  const green = fees.weekend.value ?? fees.weekday.value;
+  let total4 = "";
+  if (green != null) {
+    const sum = green * 4 + (fees.cart ?? 0) + (fees.caddie ?? 0);
+    const missing: string[] = [];
+    if (fees.cart == null) missing.push("카트");
+    if (fees.caddie == null && !fees.caddieNone) missing.push("캐디");
+    total4 = `${won(sum)}${missing.length ? ` (${missing.join("·")} 제외)` : ""}`;
+  }
+  const cancelPolicy = d?.cancel?.cancel_policy;
+  const cancelText = visibleText(typeof cancelPolicy === "string" ? cancelPolicy : cancelPolicy ? textOf(cancelPolicy) : "");
+  const place = [c.sido, c.sigungu].filter(Boolean).join(" ");
+  const ic = d?.master?.nearest_ic?.name ? ` · ${d.master.nearest_ic.name}` : "";
+
+  return {
+    id: c.id,
+    name: c.name,
+    sub: `${place}${c.holes ? ` · ${c.holes}홀` : ""}`,
+    values: {
+      weekend: fees.weekend.value != null
+        ? `${won(fees.weekend.value)}${fees.weekend.source === "market" ? " (관측 최저)" : ""}`
+        : "",
+      weekday: fees.weekday.value != null
+        ? `${won(fees.weekday.value)}${fees.weekday.source === "market" ? " (관측 최저)" : ""}`
+        : "",
+      total4,
+      cart: fees.cart != null ? `${won(fees.cart)}/팀` : "",
+      caddie: fees.caddieNone ? "노캐디" : fees.caddie != null ? `${won(fees.caddie)}/팀` : "",
+      players2: val(ops.two_player?.value),
+      players3: val(ops.three_player?.value),
+      players5: val(ops.five_player?.value),
+      nocaddie: val(ops.nocaddie?.value),
+      night: val(fac.night?.value),
+      lodging: val(fac.lodging?.value),
+      cancel: cancelText ? clip(cancelText, 120) : "",
+      open: d?.cancel?.open_cycle ? clip(visibleText(d.cancel.open_cycle), 80) : "",
+      holes: [c.holes ? `${c.holes}홀` : "", c.type && !UNKNOWN_TEXT.test(c.type) ? c.type : ""].filter(Boolean).join(" · "),
+      rating: c.rating != null ? `${c.rating.toFixed(1)} / 10${c.reviews ? ` (${c.reviews}건)` : ""}` : "",
+      place: `${place}${ic}`,
+      rental: val(d?.rental?.available),
+      phone: c.tel ?? "",
+    },
+  };
+}
+
+async function renderCompare(idsParam: string): Promise<void> {
+  const index = getIndex();
+  const view = $<HTMLElement>("#view-page");
+  const wanted = idsParam.split(",").map((s) => decodeURIComponent(s.trim())).filter(Boolean);
+  const items: CourseIndexItem[] = [];
+  for (const id of wanted) {
+    const item = index.courses.find((c) => c.id === id);
+    if (item && !items.some((x) => x.id === id)) items.push(item);
+    if (items.length >= 4) break;
+  }
+
+  if (!items.length) {
+    view.innerHTML = comparePageHTML([]);
+    wireComparePage(view);
+    updateCompareBar();
+    setTitle("후보 비교 — CourseBrief");
+    return;
+  }
+
+  view.innerHTML = `<div class="page"><p class="section-desc" role="status">비교표를 만드는 중…</p></div>`;
+  const details = await Promise.all(items.map(async (item) => {
+    if (!item.detail) return null;
+    try {
+      return await loadJSON<CourseDetail>(`courses/${item.id}.json`, index.dataset.built_at);
+    } catch (err) {
+      console.warn(err);
+      return null;
+    }
+  }));
+
+  view.innerHTML = comparePageHTML(items.map((item, i) => compareColumn(item, details[i] ?? null)));
+  wireComparePage(view);
+  updateCompareBar();
+  setTitle("후보 비교 — CourseBrief");
+  window.scrollTo({ top: 0 });
+}
+
 /* ---------------- 렌탈 페이지 ---------------- */
 
 function dayPrice(text?: string | null): number | null {
@@ -1970,10 +2316,20 @@ async function route(): Promise<void> {
   renderedDetailId = null;
   sectionObserver?.disconnect();
 
+  if (path === "/compare") {
+    showView("page");
+    setNav("list");
+    await renderCompare(readHashQuery().get("ids") ?? "");
+    if (!firstRoute) focusHeading(".page-title");
+    firstRoute = false;
+    return;
+  }
+
   if (path === "/rental") {
     showView("page");
     setNav("rental");
     renderRental();
+    updateCompareBar();
     if (!firstRoute) focusHeading(".page-title");
     firstRoute = false;
     return;
@@ -1982,6 +2338,7 @@ async function route(): Promise<void> {
     showView("page");
     setNav("about");
     renderAbout();
+    updateCompareBar();
     if (!firstRoute) focusHeading(".page-title");
     firstRoute = false;
     return;
@@ -2081,6 +2438,29 @@ function wire(): void {
     const target = ev.target;
     if (!(target instanceof Element)) return;
 
+    // 목록 / 지도 전환
+    const viewBtn = target.closest<HTMLElement>("[data-view]");
+    if (viewBtn) {
+      const mode = viewBtn.dataset.view;
+      if (mode === "list" || mode === "map") setViewMode(mode);
+      return;
+    }
+    if (target.closest("#map-to-list")) {
+      setViewMode("list");
+      return;
+    }
+    // 플레이 조건 칩 — 여러 개를 고르면 모두 만족하는 구장만 남긴다
+    const tagBtn = target.closest<HTMLElement>("[data-tag]");
+    if (tagBtn) {
+      const tag = tagBtn.dataset.tag;
+      if (!tag) return;
+      if (state.filters.tags.has(tag)) state.filters.tags.delete(tag);
+      else state.filters.tags.add(tag);
+      paintTagChips();
+      rerenderList();
+      return;
+    }
+
     if (target.closest("#show-hidden")) {
       state.filters.status = new Set<CourseStatus>(Object.keys(STATUS) as CourseStatus[]);
       paintChips();
@@ -2127,6 +2507,9 @@ function wire(): void {
       } else if (key === "status") {
         state.filters.status = new Set<CourseStatus>(["operating"]);
         paintChips();
+      } else if (key && key.startsWith("tag:")) {
+        state.filters.tags.delete(key.slice(4));
+        paintTagChips();
       }
       rerenderList();
       return;

@@ -149,6 +149,9 @@
               <option value="name">이름순</option>
               <option value="fee-asc">그린피 낮은순</option>
               <option value="fee-desc">그린피 높은순</option>
+              <option value="total-asc">4인 총액 낮은순</option>
+              <option value="total-desc">4인 총액 높은순</option>
+              <option value="rating-desc">평점 높은순</option>
               <option value="holes-desc">홀수 많은순</option>
             </select>
           </label>
@@ -163,6 +166,16 @@
             <span class="chip is-placeholder" aria-hidden="true"></span>
             <span class="chip is-placeholder" aria-hidden="true"></span>
           </div>
+        </div>
+        <div class="status-line status-line-tags">
+          <span class="status-line-label">플레이 조건</span>
+          <div class="chip-row chip-row-scroll" id="tag-chips" role="group" aria-label="플레이 조건 필터">
+            <span class="chip is-placeholder" aria-hidden="true"></span>
+            <span class="chip is-placeholder" aria-hidden="true"></span>
+            <span class="chip is-placeholder" aria-hidden="true"></span>
+            <span class="chip is-placeholder" aria-hidden="true"></span>
+          </div>
+          <p class="filter-hint">확인된 구장만 표시합니다 — 조건이 확인되지 않은 구장은 결과에서 빠집니다.</p>
         </div>
         <div class="filter-actions">
           <button id="f-reset" class="btn-ghost" type="button">필터 초기화</button>
@@ -187,9 +200,26 @@
         <p id="result-count" class="result-count"></p>
         <p id="filter-note" class="filter-note" hidden></p>
       </div>
-      <div id="active-filters" class="active-filters" aria-label="적용된 필터"></div>
+      <div class="results-tools">
+        <div class="view-toggle" role="group" aria-label="보기 방식">
+          <button type="button" class="view-btn is-on" data-view="list" aria-pressed="true">목록</button>
+          <button type="button" class="view-btn" data-view="map" aria-pressed="false">지도</button>
+        </div>
+        <div id="active-filters" class="active-filters" aria-label="적용된 필터"></div>
+      </div>
     </div>
     <p id="result-status" class="sr-only" role="status" aria-live="polite"></p>
+    <div id="map-panel" class="map-panel" hidden>
+      <p class="map-note" id="map-note">확인된 좌표가 있는 구장만 표시합니다. 핀을 누르면 요약 카드가 열리고, 카드를 누르면 상세로 이동합니다.</p>
+      <div class="map-shell" id="map-shell" data-map-theme="light">
+        <div id="map-canvas" class="map-canvas"></div>
+        <div id="map-fallback" class="map-fallback" role="status" hidden>
+          <strong>지도를 불러오지 못했습니다</strong>
+          <span>네트워크에서 지도 타일을 받을 수 없습니다. 목록 보기에서 같은 조건의 구장을 확인해 주세요.</span>
+          <button type="button" class="btn btn-sm" id="map-to-list">목록 보기</button>
+        </div>
+      </div>
+    </div>
     <div id="results" class="cards" aria-busy="true">
       <div class="card card-skel" aria-hidden="true"><span class="skel-line w40"></span><span class="skel-line w70"></span><span class="skel-line w55"></span><span class="skel-line w30"></span></div>
       <div class="card card-skel" aria-hidden="true"><span class="skel-line w40"></span><span class="skel-line w70"></span><span class="skel-line w55"></span><span class="skel-line w30"></span></div>
@@ -212,6 +242,14 @@
 <div id="view-detail" hidden></div>
 <div id="view-page" hidden></div>
 </main>
+
+<div id="compare-bar" class="compare-bar" hidden>
+  <div class="compare-bar-inner">
+    <span class="compare-bar-count"><b id="compare-n">0</b>곳 담김<span class="compare-bar-hint">최대 4곳</span></span>
+    <button type="button" class="compare-bar-clear" id="compare-clear">비우기</button>
+    <a class="btn btn-sm" id="compare-go" href="#/compare">비교표 보기</a>
+  </div>
+</div>
 
 <nav class="tabbar" aria-label="주요 메뉴">
   <a href="#/" data-nav="list">
