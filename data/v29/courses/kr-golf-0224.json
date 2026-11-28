@@ -158,7 +158,7 @@
    "evidence": [
     "※팀기준 : 3 ~ 4인 라운딩 필수 ( 2인 또는 5인 플레이 및 갤러리 불가 )"
    ],
-   "value": "2인 불가",
+   "value": "불가",
    "third_party": {
     "two": "불가",
     "three": "가능",
@@ -182,7 +182,7 @@
    "value_from": "final_pass_2026-11-27(greenfeeguide)"
   },
   "five_player": {
-   "value": "5인 불가",
+   "value": "불가",
    "evidence": [
     "※팀기준 : 3 ~ 4인 라운딩 필수 ( 2인 또는 5인 플레이 및 갤러리 불가 )"
    ],

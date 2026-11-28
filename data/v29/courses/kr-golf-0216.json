@@ -417,7 +417,7 @@
    "value_from": "capital_supplement(greenfee_guide)"
   },
   "five_player": {
-   "value": "5인 불가",
+   "value": "불가",
    "evidence": [
     "셀프라운딩 예약시 5인플레이 및 갤러리입장 불가합니다."
    ],
@@ -492,7 +492,7 @@
     "락커, 샤워실 등 클럽하우스 시설 이용에 부과되는 요금 3.",
     "락카이용-과도한 문신이 있는분들의 입욕을 삼가해 주시기 바랍니다."
    ],
-   "value": "락커 운영",
+   "value": "운영",
    "value_previous": null,
    "source_url": "https://www.foresthill.kr/html/guide01.asp",
    "confidence": "medium",

@@ -185,7 +185,7 @@
     "(2인,3인,5인 플레이 불가 / 1팀 4인 그린피 적용 / 미성년자는 보호자 동반 필수) 2.",
     "1. 예약자본인내장 및 4인내장 기준입니다. (2인,3인,5인 플레이 불가 / 1팀 4인 그린피 적용 / 미성년자는 보호자 동반 필수)"
    ],
-   "value": "2인 불가",
+   "value": "불가",
    "third_party": {
     "two": null,
     "three": null,
@@ -199,7 +199,7 @@
    "value_from": "capital_supplement(official_site)"
   },
   "three_player": {
-   "value": "3인 불가",
+   "value": "불가",
    "evidence": [
     "1. 예약자본인내장 및 4인내장 기준입니다. (2인,3인,5인 플레이 불가 / 1팀 4인 그린피 적용 / 미성년자는 보호자 동반 필수)"
    ],
@@ -210,7 +210,7 @@
    "value_from": "capital_supplement(official_site)"
   },
   "five_player": {
-   "value": "5인 불가",
+   "value": "불가",
    "evidence": [
     "1. 예약자본인내장 및 4인내장 기준입니다. (2인,3인,5인 플레이 불가 / 1팀 4인 그린피 적용 / 미성년자는 보호자 동반 필수)"
    ],
@@ -276,7 +276,7 @@
    "evidence": [
     "- 락커 및 욕실 내 비품은 다음 이용하시는 분을 위해 제자리에 놓아 주시기 바랍니다."
    ],
-   "value": "락커 운영",
+   "value": "운영",
    "source_url": "https://www.ehscc.co.kr/Guide/UseInfo",
    "confidence": "low",
    "source_type": "official_site",

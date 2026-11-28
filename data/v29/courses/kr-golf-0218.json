@@ -268,7 +268,7 @@
     "락카, 카트 선택 락카사용, 락카성별, 카트선택 후 'QR CODE 생성' 클릭해주세요.",
     "락카사용, 락카성별, 카트선택 후 'QR CODE 생성' 클릭해주세요."
    ],
-   "value": "락커 운영",
+   "value": "운영",
    "value_previous": null,
    "source_url": "https://www.adoniscc.co.kr/public/booking/unmanned-entrance/guide",
    "confidence": "low",

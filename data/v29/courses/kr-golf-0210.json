@@ -389,7 +389,7 @@
    "value_from": "capital_supplement(greenfee_guide)"
   },
   "five_player": {
-   "value": "5인 불가",
+   "value": "불가",
    "evidence": [
     "2인, 5인 플레이는 불가능합니다."
    ],
@@ -455,7 +455,7 @@
    "evidence": [
     "락커, 샤워실 등 클럽하우스 시설 이용에 부과되는 요금"
    ],
-   "value": "락커 운영",
+   "value": "운영",
    "source_url": "https://www.montvertcc.com/static/pc/agreeform/agreeform-guide.html",
    "confidence": "low",
    "source_type": "official_site",

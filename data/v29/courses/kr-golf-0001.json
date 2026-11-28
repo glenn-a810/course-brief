@@ -234,7 +234,7 @@
    "checked_at": "2026-11-27"
   },
   "three_player": {
-   "value": "3인 가능",
+   "value": "가능",
    "evidence": [
     "동계기간 3인 플레이 가능 안내"
    ],
@@ -286,7 +286,7 @@
     "지정된 락카번호표는 본인이 보관해야 하며, 귀중품은 반드시 프론트에 맡기시기 바라며, 맡기지 않은 귀중품의 분실은 고객에게 책임이 있습니다.",
     "락커, 샤워실 등 클럽하우스 시설 이용에 부과되는 요금 3."
    ],
-   "value": "락커 운영",
+   "value": "운영",
    "value_previous": null,
    "source_url": "https://inseoul27.co.kr/m51.php",
    "confidence": "low",

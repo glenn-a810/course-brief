@@ -474,7 +474,7 @@
     "1팀 2인플레이 & 5인플레이는 허용되지 않습니다.",
     "· 1팀 2인플레이 & 5인플레이는 허용되지 않습니다."
    ],
-   "value": "2인 불가",
+   "value": "불가",
    "third_party": {
     "two": null,
     "three": null,
@@ -499,7 +499,7 @@
    "value_from": "capital_supplement(official_site)"
   },
   "five_player": {
-   "value": "5인 불가",
+   "value": "불가",
    "evidence": [
     "· 1팀 2인플레이 & 5인플레이는 허용되지 않습니다."
    ],
@@ -564,7 +564,7 @@
     "락커, 샤워실 등 클럽하우스 시설 이용에 부과되는 요금 3.",
     "2. 락커, 샤워실 등 클럽하우스 시설 이용에 부과되는 요금"
    ],
-   "value": "락커 운영",
+   "value": "운영",
    "value_previous": null,
    "source_url": "https://www.castlepine.co.kr/pagesite/clause/guide.asp",
    "confidence": "low",

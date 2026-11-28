@@ -666,7 +666,7 @@
    "evidence": []
   },
   "five_player": {
-   "value": "5인 불가",
+   "value": "불가",
    "evidence": [
     "2인 이하 또는 5인 이상의 플레이는 금지합니다."
    ],
@@ -722,7 +722,7 @@
    "evidence": [
     "연면적 약 5,400m2(1,630여평), 지상 3층, Private Room, 대형프론트, 락카룸, 대식당, 휴게실 등"
    ],
-   "value": "락커 운영",
+   "value": "운영",
    "value_previous": null,
    "source_url": "https://www.swcc.co.kr/swp/club",
    "confidence": "medium",

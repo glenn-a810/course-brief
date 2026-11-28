@@ -322,7 +322,7 @@
     "락카 이용 - 락카에 입장하셔서 배정 받은 락카 번호를 확인한 후 비밀번호를 설정하여 안전하게 이용해 주시기 바랍니다.",
     "- 락카에 입장하셔서 배정 받은 락카 번호를 확인한 후 비밀번호를 설정하여 안전하게 이용해 주시기 바랍니다."
    ],
-   "value": "락커 운영",
+   "value": "운영",
    "value_previous": null,
    "source_url": "https://www.tigercc.co.kr/reservation/reserUser.asp",
    "confidence": "low",

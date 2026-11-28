@@ -246,7 +246,7 @@
    }
   },
   "three_player": {
-   "value": "3인 불가",
+   "value": "불가",
    "evidence": [
     "* 3인 내장시 이벤트 불가 및 그린피 인당 5만원 추가"
    ],
@@ -304,7 +304,7 @@
     "락커, 샤워실 등 클럽하우스 시설 이용에 부과되는 요금 제세공과금 : 부가가치세와 회원제골프장의 경우에는 개별소비세와 농어촌특별세, 교육세를 포함한다.",
     "썬힐골프클럽의 락커룸입니다 럭셔리한 락커룸은 여러분의 품격을 더 높여드립니다."
    ],
-   "value": "락커 운영",
+   "value": "운영",
    "value_previous": null,
    "source_url": "https://www.sunhillgolf.co.kr/HomePage/views/main",
    "confidence": "medium",

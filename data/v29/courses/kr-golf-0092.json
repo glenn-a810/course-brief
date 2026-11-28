@@ -289,7 +289,7 @@
     "이용자는 지정된 락카를 본인 책임 하에 관리하여야 한다.",
     "프론트에서 예약자 존함 및 예약 시간을 확인하시고 방명록에 서명하신 후 락커 배정표를 수령하시기 바랍니다."
    ],
-   "value": "락커 운영",
+   "value": "운영",
    "value_previous": null,
    "source_url": "https://ananti.kr/ko/chord/golfclub/information",
    "confidence": "low",

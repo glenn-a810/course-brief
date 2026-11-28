@@ -569,7 +569,7 @@
     "락커, 샤워실 등 클럽하우스 시설 이용에 부과되는 요금 3.",
     "- 시설이용료(기본요금) : 골프장 이용시 기본적으로 발생되는 비용으로서 락커, 샤워실 등 클럽하우스 시설이용에 부과되는 요금 및 제세공과금"
    ],
-   "value": "락커 운영",
+   "value": "운영",
    "value_previous": null,
    "source_url": "http://www.lassagc.com/reservation/fee",
    "confidence": "low",

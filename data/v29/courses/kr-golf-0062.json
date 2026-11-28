@@ -200,7 +200,7 @@
    "evidence": []
   },
   "five_player": {
-   "value": "5인 가능",
+   "value": "가능",
    "evidence": [
     "5. 회원의 날 예약 또는 조인 이용시 5인 플레이 가능."
    ],
@@ -252,7 +252,7 @@
    "evidence": [
     "4. 락커룸이나 욕실의 비품은 사용 후 정 위치에 놓아 주시기 바랍니다."
    ],
-   "value": "락커 운영",
+   "value": "운영",
    "source_url": "https://www.gakorea.com/gold/guide/perGuide.asp",
    "confidence": "medium",
    "source_type": "official_site",

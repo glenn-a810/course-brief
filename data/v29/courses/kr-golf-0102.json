@@ -192,7 +192,7 @@
    "evidence": []
   },
   "five_player": {
-   "value": "5인 가능",
+   "value": "가능",
    "evidence": [
     "5인 플레이 가능(핸디 5인 총 50이하)"
    ],
@@ -257,7 +257,7 @@
    "evidence": [
     "2) 기본요금 : 락커, 샤워실 등 클럽하우스 시설 이용에 부과되는 요금 및 부가가치세와 회원제 골프장의 경우에는 개별소비세等"
    ],
-   "value": "락커 운영",
+   "value": "운영",
    "source_url": "https://www.kn300.com/Mobile/Club/UseRule",
    "confidence": "low",
    "source_type": "official_site",

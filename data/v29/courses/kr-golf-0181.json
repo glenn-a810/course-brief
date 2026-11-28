@@ -538,7 +538,7 @@
     "주중 2인플레이 가능(1인 65,000원/중복불가) 노캐디,개인카트 셀프운영 입니다.",
     "주중 2인플레이 가능(1인 65,000원/중복불가)"
    ],
-   "value": "2인 가능",
+   "value": "가능",
    "third_party": {
     "two": null,
     "three": "가능",
@@ -552,7 +552,7 @@
    "value_from": "capital_supplement(official_site)"
   },
   "three_player": {
-   "value": "3인 가능",
+   "value": "가능",
    "evidence": [
     "주말 2인 플레이시 3인예약 현장3인결제시 가능합니다."
    ],
@@ -617,7 +617,7 @@
    "evidence": [
     "장비보관소, 개인락카 이용에 따른 본인식별, 고지사항 전달 및 확인, 고객불만사항 및 A/S처리, 본인의사 확인, 장비 불출/보관"
    ],
-   "value": "락커 운영",
+   "value": "운영",
    "source_url": "https://www.jisanresort.co.kr/w/golf/",
    "confidence": "medium",
    "source_type": "official_site",

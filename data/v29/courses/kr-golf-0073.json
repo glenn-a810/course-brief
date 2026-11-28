@@ -521,7 +521,7 @@
    "value_from": "pass2_third_party"
   },
   "three_player": {
-   "value": "3인 가능",
+   "value": "가능",
    "evidence": [
     "2인 내장시 2인 요금, 3인 내장시 3인 요금, 4인 내장시 4인 요금 정산이 가능한 티타임입니다."
    ],
@@ -580,7 +580,7 @@
     "락커, 샤워실 등 클럽하우스 시설 이용에 부과되는 요금 3.",
     "2. 락커, 샤워실 등 클럽하우스 시설 이용에 부과되는 요금"
    ],
-   "value": "락커 운영",
+   "value": "운영",
    "value_previous": null,
    "source_url": "http://www.onetheclub.com/club72/charge",
    "confidence": "low",

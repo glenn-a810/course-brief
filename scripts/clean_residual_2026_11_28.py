@@ -274,6 +274,13 @@ NON_CANCEL_LINE = re.compile(
     r"^(?:캐디|노캐디|부대시설|부대\s*시설|정기\s*휴장일|휴장일|겨울\s*휴장|야간|개장|설계|경기\s*시간|요금표상|카트|그린피|입장료|잔디)"
 )
 
+POST_RE: list[tuple[tuple[str, str], re.Pattern, str]] = [
+    (("ops", "two_player"), re.compile(r"^2인 (가능|불가|허용|금지)$"), r"\1"),
+    (("ops", "three_player"), re.compile(r"^3인 (가능|불가|허용|금지)$"), r"\1"),
+    (("ops", "five_player"), re.compile(r"^5인 (가능|불가|허용|금지)$"), r"\1"),
+    (("ops", "locker"), re.compile(r"^락[커카] 운영$"), "운영"),
+]
+
 SAUNA_TOKEN = re.compile(r"^사우나(?:\s*(?:있음|없음))?$|^사우나\)$|^사우나\(.*\)$")
 
 # 규칙을 다 돌린 뒤에도 라벨을 되풀이하는 짧은 값 — 화면에 남는 정보만 남긴다
@@ -504,6 +511,16 @@ def main() -> int:
                 if fix:
                     note(f"{cid} {sec}.{key}.value 마무리: {val!r} → {fix!r}")
                     h["value"] = fix
+
+        # ---------- 라벨을 되풀이하는 짧은 값(정규식) — `2인 플레이 / 2인 불가` → `2인 플레이 / 불가`
+        for (sec, key), pattern, repl in POST_RE:
+            h = (c.get(sec) or {}).get(key)
+            val = h.get("value") if isinstance(h, dict) else None
+            if isinstance(val, str) and pattern.match(val):
+                new = pattern.sub(repl, val)
+                if new != val:
+                    note(f"{cid} {sec}.{key}.value 마무리: {val!r} → {new!r}")
+                    h["value"] = new
 
         # ---------- 같은 문구가 '현장 운영'·'부대시설' 두 타일에 찍히는 경우 하나만 남긴다
         sauna_v = (c["ops"].get("sauna") or {}).get("value")

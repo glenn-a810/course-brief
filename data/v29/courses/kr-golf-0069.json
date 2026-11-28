@@ -175,7 +175,7 @@
     "2/3인 플레이 가능 ·",
     "2인부터 실시간예약 이 가능합니다."
    ],
-   "value": "2인 가능",
+   "value": "가능",
    "third_party": {
     "two": null,
     "three": null,
@@ -189,7 +189,7 @@
    "value_from": "capital_supplement(official_site)"
   },
   "three_player": {
-   "value": "3인 가능",
+   "value": "가능",
    "evidence": [
     "30분 전 내장 필수 · 2/3인 플레이 가능 · 3라운드 이상 예약 시 전화 예약 바랍니다."
    ],
@@ -245,7 +245,7 @@
     "송도골프클럽 예약문의 032-833-0500 예약 페이지 바로가기 이벤트 페이지 바로가기 이용안내 이용안내 도심 속 편안하고 안락한 최신식 오토티업 시스템 골프연습장 비거리 250M(전장150M), 총 30개 타석(1개층 당 15타석), 회원 전용 락카가 있습니다.",
     "비거리 250M (전장150M), 총 30개 타석 (1개층 당 15타석), 회원 전용 락카가 있습니다."
    ],
-   "value": "락커 운영",
+   "value": "운영",
    "value_previous": null,
    "source_url": "http://www.songdogolf.co.kr/_field/field01.php",
    "confidence": "low",
