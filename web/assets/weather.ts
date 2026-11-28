@@ -126,7 +126,10 @@ export function suitability(w: DailyWeather | null): SuitResult | null {
     raise(w.tMax >= 35 ? "hard" : "caution");
     reasons.push(`최고 ${Math.round(w.tMax)}℃`);
   }
-  if (w.tMin != null && w.tMin <= -7) {
+  if (w.tMin != null && w.tMin <= -10) {
+    raise("hard");
+    reasons.push(`최저 ${Math.round(w.tMin)}℃ 한파`);
+  } else if (w.tMin != null && w.tMin <= -3) {
     raise("caution");
     reasons.push(`최저 ${Math.round(w.tMin)}℃`);
   }
