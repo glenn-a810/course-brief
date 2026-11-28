@@ -1082,8 +1082,11 @@ const SOURCE_META: RegExp[] = [
   /\d{4}-\d{2}-\d{2}\s*(?:확인|기준)/g,
 ];
 
+/** 제목·문장에 남는 장식용 기호(공지 원문의 ★ ▣ ※ 등) — 데이터 단계에서 지우고 한 번 더 방어한다 */
+const DECOR_CHARS = /[★☆♥♡■□◆◇▶◀●○◎※▤▥▦▧▨▩♣♠]/g;
+
 function publicNote(text: string): string {
-  let out = text;
+  let out = text.replace(DECOR_CHARS, " ");
   for (const re of SOURCE_META) out = out.replace(re, "");
   for (const [re, to] of SOURCE_NAMES) out = out.replace(re, to);
   return out.replace(/[ \t]{2,}/g, " ").replace(/\(\s*\)/g, "").trim();
@@ -1096,6 +1099,62 @@ function evidenceDetails(evidence: unknown, label = "근거"): string {
   if (!arr.length) return "";
   return `<details class="ev"><summary>${esc(label)} ${arr.length}건</summary><ul>${arr
     .map((e) => `<li>${esc(String(e).slice(0, 220))}</li>`).join("")}</ul></details>`;
+}
+
+interface BriefLines { lead: string; items: string[] }
+
+/**
+ * 공지 요약·알림 본문은 "• 항목"이 줄바꿈으로 이어진 형태다.
+ * esc() 만 하면 줄바꿈이 사라져 한 덩어리 줄글로 붙으므로, 첫 줄은 리드 문장,
+ * "•"로 시작하는 줄은 목록 항목으로 나눈다(첫 줄이 불릿이면 전부 목록).
+ */
+function briefLines(text: string): BriefLines {
+  const lead: string[] = [];
+  const items: string[] = [];
+  for (const raw of text.split(/\r?\n/)) {
+    const line = raw.trim();
+    if (!line) continue;
+    const isBullet = /^[•·▪●○\u2022]\s*/.test(line);
+    const body = line.replace(/^[•·▪●○\u2022]\s*/, "").trim();
+    if (!body) continue;
+    if (isBullet || items.length) items.push(body);
+    else lead.push(body);
+  }
+  return { lead: lead.join(" "), items };
+}
+
+function briefBodyHTML(text: string): string {
+  const { lead, items } = briefLines(text);
+  if (!lead && !items.length) return "";
+  return `${lead ? `<p class="brief-lead">${esc(lead)}</p>` : ""}${
+    items.length ? `<ul class="brief-list" role="list">${items.map((i) => `<li>${esc(i)}</li>`).join("")}</ul>` : ""}`;
+}
+
+/** 문장 안의 "12-28"·"12/28"·"12월 28일" 표기를 월-일 집합으로 뽑는다 */
+function monthDayTokens(text: string): Set<string> {
+  const out = new Set<string>();
+  const add = (m: string, d: string) => out.add(`${Number(m)}-${Number(d)}`);
+  // "2026.12.28" 같은 전체 날짜를 먼저 소비해야 "26-12" 같은 엉뚱한 토큰이 생기지 않는다
+  const rest = text.replace(/(\d{4})\s*[.\-/년]\s*(\d{1,2})\s*[.\-/월]\s*(\d{1,2})/g,
+    (_m: string, _y: string, mo: string, d: string) => { add(mo, d); return " "; });
+  for (const m of rest.matchAll(/(\d{1,2})\s*[./-]\s*(\d{1,2})/g)) add(m[1], m[2]);
+  for (const m of rest.matchAll(/(\d{1,2})\s*월\s*(\d{1,2})\s*일/g)) add(m[1], m[2]);
+  return out;
+}
+
+/**
+ * alert.period 가 본문(summary·detail)에 이미 적힌 기간을 한 번 더 찍지 않는다.
+ * 예: summary "동계휴장 확정 (2026.12.21~2027.02.25)" + period 2026-12-21~2027-02-25 → 중복
+ */
+function periodAlreadyIn(period: AlertPeriod | string | null | undefined, text: string): boolean {
+  if (!period || typeof period === "string") return false;
+  const bounds = [period.from, period.to, period.reopen].filter((v): v is string => Boolean(v));
+  if (!bounds.length) return false;
+  const have = monthDayTokens(text);
+  return bounds.every((b) => {
+    const m = /(\d{1,2})\s*[./-]\s*(\d{1,2})\s*$/.exec(b.replaceAll("-", "."));
+    return m ? have.has(`${Number(m[1])}-${Number(m[2])}`) : false;
+  });
 }
 
 function periodText(period: AlertPeriod | string | null | undefined): string {
@@ -1464,6 +1523,9 @@ function sections(d: CourseDetail, c: CourseIndexItem, others: Array<{ name: str
   const period = alert ? periodText(alert.period) : "";
   const alertSummary = alert ? visibleText(alert.summary) : "";
   const alertDetail = alert ? visibleText(alert.detail) : "";
+  // 공지 요약·코스 메모는 불릿 목록으로 나눠 렌더링한다(빈 값이면 카드 자체를 그리지 않는다)
+  const noticeSummaryBody = br.recent_notice_text ? briefBodyHTML(visibleText(br.recent_notice_text)) : "";
+  const courseNotesBody = br.course_notes ? briefBodyHTML(visibleText(br.course_notes)) : "";
   const review = br.review;
   const s5 = `<section class="section" id="s5" aria-labelledby="s5-h">
     <div class="section-head">
@@ -1471,10 +1533,10 @@ function sections(d: CourseDetail, c: CourseIndexItem, others: Array<{ name: str
       <p class="section-desc">휴장·에어레이션·요금 변경 같은 최근 공지와 라운더 평가. 예약 전에 가장 먼저 볼 영역입니다.</p>
     </div>
     <div class="section-body">
-      ${alert ? `<div class="callout ${(alert.level ? LEVEL[alert.level] : undefined) ?? "info"}">
+      ${alert ? `<div class="callout alert-card ${(alert.level ? LEVEL[alert.level] : undefined) ?? "info"}">
         <strong>${icon(alert.level === "closure" ? "alert" : "info")}${esc(alertSummary || (alert.confirmed ? "확인된 공지" : "안내"))}</strong>
-        ${alertDetail && alertDetail !== alertSummary ? esc(alertDetail) : ""}
-        ${period ? `<div class="sub">기간: ${esc(period)}</div>` : ""}
+        ${alertDetail && alertDetail !== alertSummary ? `<div class="alert-detail">${briefBodyHTML(alertDetail)}</div>` : ""}
+        ${period && !periodAlreadyIn(alert.period, `${alertSummary} ${alertDetail}`) ? `<div class="sub">기간: ${esc(period)}</div>` : ""}
         ${isAdmin() && alert.source_url ? `<div class="sub"><a class="link" href="${esc(alert.source_url)}" target="_blank" rel="noopener noreferrer">근거 보기</a></div>` : ""}
       </div>` : ""}
       ${review && review.score_10 != null ? `<div class="review-card">
@@ -1482,8 +1544,14 @@ function sections(d: CourseDetail, c: CourseIndexItem, others: Array<{ name: str
         ${ratingBar(review.score_10)}
         ${review.note && visibleText(review.note) ? `<p class="source-line">${esc(visibleText(review.note))}</p>` : ""}
       </div>` : ""}
-      ${br.recent_notice_text && visibleText(br.recent_notice_text) ? `<div class="inline-fact"><span class="inline-fact-label">공지 요약</span><span>${esc(visibleText(br.recent_notice_text))}</span></div>` : ""}
-      ${br.course_notes && visibleText(br.course_notes) ? `<div class="inline-fact"><span class="inline-fact-label">코스 메모</span><span>${esc(visibleText(br.course_notes))}</span></div>` : ""}
+      ${noticeSummaryBody ? `<div class="brief-block">
+        <span class="inline-fact-label">공지 요약</span>
+        <div class="brief-body">${noticeSummaryBody}</div>
+      </div>` : ""}
+      ${courseNotesBody ? `<div class="brief-block is-note">
+        <span class="inline-fact-label">코스 메모</span>
+        <div class="brief-body">${courseNotesBody}</div>
+      </div>` : ""}
       <div class="notice-block">
         <h3 class="card-title">${icon("bell")}최근 공지</h3>
         ${noticeHTML}

@@ -716,6 +716,38 @@ a.card:hover { box-shadow: var(--shadow); transform: translateY(-2px); text-deco
   font-size: 14px; color: var(--text);
 }
 .inline-fact-label { font-size: 12px; color: var(--text-3); font-weight: 600; }
+
+/* 05 브리핑 — 공지 요약·코스 메모: 라벨(아이브로우) → 리드 문장 → 불릿 목록 */
+.brief-block {
+  display: grid; gap: 9px; padding: 16px 18px;
+  background: var(--surface-2); border-radius: var(--radius-sm);
+}
+.brief-block .inline-fact-label { display: block; }
+.brief-body { display: grid; gap: 9px; }
+.brief-lead { margin: 0; font-size: 14px; line-height: 1.6; color: var(--text); }
+.brief-list { margin: 0; padding: 0; list-style: none; display: grid; gap: 8px; }
+.brief-list li {
+  position: relative; padding-left: 16px;
+  font-size: 13.5px; line-height: 1.58; color: var(--text-2);
+}
+.brief-list li::before {
+  content: ""; position: absolute; left: 3px; top: .58em;
+  width: 5px; height: 5px; border-radius: 50%;
+  background: var(--accent); opacity: .7;
+}
+.brief-block.is-note .brief-lead { color: var(--text-2); font-size: 13.5px; line-height: 1.62; }
+.brief-block.is-note .brief-list li { font-size: 13px; color: var(--text-3); }
+
+/* alert 카드 — 제목(상태 한 줄) → 본문 → 기간 순으로 위계를 고정한다 */
+.callout.alert-card { display: grid; gap: 6px; }
+.callout.alert-card > strong { margin-bottom: 0; font-size: 15px; line-height: 1.45; align-items: flex-start; }
+.callout.alert-card > strong .ic { margin-top: 1px; }
+.callout .alert-detail { font-size: 14px; line-height: 1.65; }
+.callout .alert-detail .brief-lead { color: inherit; font-size: 14px; }
+.callout .alert-detail .brief-list { gap: 6px; }
+.callout .alert-detail .brief-list li { font-size: 13.5px; color: inherit; opacity: .92; }
+.callout .alert-detail .brief-list li::before { background: currentColor; opacity: .45; }
+.callout.alert-card .sub { margin-top: 0; }
 .fact-list { display: grid; gap: 0; margin: 0; border-radius: var(--radius-sm); background: var(--surface-2); overflow: hidden; }
 .fact-list > div { display: flex; gap: 12px; padding: 12px 16px; border-bottom: 1px solid var(--line); }
 .fact-list > div:last-child { border-bottom: 0; }
@@ -1103,6 +1135,8 @@ tbody tr:last-child td { border-bottom: 0; }
   .tile-icon .ic { width: 20px; height: 20px; }
   .tile-badge { display: none; }
   .review-card, .policy-card, .fee-card, .cluster-card, .provider, .cov-list { padding: 16px; }
+  .brief-block { padding: 15px 16px; }
+  .brief-list li { font-size: 13.5px; line-height: 1.6; }
   .mini-fact span, .spec-facts dt { width: 66px; }
   .rental-card { border-radius: 18px; padding: 18px; }
 }
