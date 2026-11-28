@@ -484,7 +484,29 @@
   "open_cycle": "3주 전 월요일 9시 선착순 온라인 예약, 주간단위(월~일) 오픈",
   "notes": null,
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 3,
+     "weekday": "월",
+     "time": "09:00",
+     "member": null,
+     "text": "3주 전 월요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "fcfs",
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "high",
+   "text": "3주 전 월요일 9시 선착순 온라인 예약, 주간단위(월~일) 오픈"
+  }
  },
  "ops": {
   "nocaddie": {

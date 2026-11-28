@@ -166,7 +166,60 @@
    "순천부영컨트리클럽 클럽소개 클럽소개 인사말 CI소개 시설안내 오시는길 코스소개 코스소개 우정코스 사랑코스 코스갤러리 이용안내 골프장 호텔 골프연습장 인터넷예약 골프실시간예약 골프대기신청 호텔예약 골프단체예약 회원라운지 조인게시판 내장현황 위약현황 골프예약현황 호텔예약현황 회원정보변경 정보마당 공지사항 그린피 및 이벤트 자료실 포토갤러리 인재채용 날씨정보 입찰계약공고 정보마당 공지사항 그린피 및 이벤트 자료실 포토갤러리 인재채용 날씨정보 입찰계약공고 공지사항 > 정보마당 > 공지사항 게시글 읽기 2027년 연단체 모집 안내(마감) 관",
    "② 이용자가 개인 사정의 변경이나 단순 변심 등 정당한 사유없이 예약을 취소하는 경우에는 취소일을 기준으로 다음과 같이 손해를 배상한다."
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3
+    },
+    "weekend": {
+     "days_before": 4
+    }
+   },
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 1,
+     "to_days": 1,
+     "pct": 20.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "1일 전 20%"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "평일 이용 3일 전",
+    "주말·공휴일 4일 전까지 취소하면 예약금 전액 환불. 이후 2일 전 10%"
+   ],
+   "penalty_text": [
+    "1일 전 20%"
+   ]
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "day",
+     "before": 21,
+     "weekday": null,
+     "time": null,
+     "member": null,
+     "text": "21일 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "이용예정일 21일 전(3주 전)부터 예약 가능"
+  }
  },
  "ops": {
   "nocaddie": {

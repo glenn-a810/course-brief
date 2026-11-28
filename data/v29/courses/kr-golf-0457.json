@@ -378,7 +378,25 @@
   "open_cycle": null,
   "notes": "티오프 1시간 전 도착, 15분 전 스타트·카트 대기",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 10
+    },
+    "weekend": {
+     "days_before": 10
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "예약일 기준 10일 전까지"
+   ],
+   "penalty_text": []
+  }
  },
  "ops": {
   "nocaddie": {

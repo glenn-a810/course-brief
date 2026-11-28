@@ -221,7 +221,74 @@
   "open_cycle": "매주 월요일 10:00에 3주 후(월~일) 1주 단위 티타임 오픈. 3팀 이상은 전화 예약",
   "notes": "결제는 그린피·카트비 프런트 후불, 캐디피는 캐디에게 직접. 악천후(시간당 3mm 이상 1시간 지속 등) 홀별 정산",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3,
+     "time": "17:00"
+    },
+    "weekend": {
+     "days_before": 3,
+     "time": "17:00"
+    }
+   },
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 2,
+     "to_days": 2,
+     "pct": 20.0,
+     "suspend_months": 3,
+     "suspend_days": null,
+     "text": "2일 전 3개월 정지+20% 등 위약"
+    },
+    {
+     "day": null,
+     "from_days": 3,
+     "to_days": 3,
+     "pct": 10.0,
+     "suspend_months": 2,
+     "suspend_days": null,
+     "text": "이후: 3일 전 2개월 정지+10%"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "high",
+   "basis_text": [
+    "라운드 3일 전 17:00까지 정상 취소"
+   ],
+   "penalty_text": [
+    "이후: 3일 전 2개월 정지+10%",
+    "2일 전 3개월 정지+20% 등 위약"
+   ]
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 3,
+     "weekday": null,
+     "time": null,
+     "member": null,
+     "text": "3주 후"
+    }
+   ],
+   "monthly": [],
+   "weekly": {
+    "weekday": "월",
+    "time": "10:00"
+   },
+   "method": "phone",
+   "recurring": true,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "매주 월요일 10:00에 3주 후(월~일) 1주 단위 티타임 오픈. 3팀 이상은 전화 예약"
+  }
  },
  "ops": {
   "nocaddie": {

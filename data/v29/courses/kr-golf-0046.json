@@ -669,7 +669,29 @@
    "- 예약, 예약확인.취소를 모두 온라인상에서 하실 수 있습니다.",
    "2일전취소 (출처: https://www.hwasuncc.co.kr/mobile/guide/penalty.asp, 2026-11-27 확인)"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 4,
+     "weekday": null,
+     "time": null,
+     "member": "비회원",
+     "text": "4주 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "online",
+   "recurring": false,
+   "member_only": false,
+   "scope": "non_member",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "비회원 4주 전, 주중회원 3주 전부터 인터넷·전화 예약"
+  }
  },
  "ops": {
   "nocaddie": {

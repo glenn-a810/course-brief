@@ -201,7 +201,29 @@
   "open_cycle": "2개월 전 매월 첫 평일 선착순 오픈. 도민·제휴 할인은 전화예약 및 증빙 필요",
   "notes": "7분 간격, 연중무휴. 2인 플레이 별도 문의",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "month",
+     "before": 2,
+     "weekday": null,
+     "time": null,
+     "member": null,
+     "text": "2개월 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "fcfs",
+   "recurring": true,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "2개월 전 매월 첫 평일 선착순 오픈. 도민·제휴 할인은 전화예약 및 증빙 필요"
+  }
  },
  "ops": {
   "nocaddie": {

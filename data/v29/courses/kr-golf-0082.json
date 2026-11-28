@@ -160,7 +160,29 @@
   "evidence": [
    "예약은 주 중/주말별로 조금씩 다르지만 2주 전 월요일 오전 9시부터 예약을 할 수 있습니다 (https://howwiki.net/orbis-cc-membership-registration-reservation)"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 2,
+     "weekday": "월",
+     "time": "09:00",
+     "member": null,
+     "text": "2주 전 월요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "online",
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "high",
+   "text": "2주 전 월요일 09:00부터 예약 오픈(인터넷·모바일)"
+  }
  },
  "ops": {
   "nocaddie": {

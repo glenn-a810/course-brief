@@ -441,7 +441,125 @@
   "open_cycle": "3주 전 화요일 09:00부터 인터넷·모바일 및 전화 실시간 예약",
   "notes": null,
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 5
+    },
+    "weekend": {
+     "days_before": 7
+    }
+   },
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 1,
+     "to_days": 1,
+     "pct": null,
+     "suspend_months": 4,
+     "suspend_days": null,
+     "text": "위약 주중 : 4일 전 1개월 · 3일 전 2개월 · 2일 전 3개월 · 1일 전 4개월 · 당일 1년"
+    },
+    {
+     "day": null,
+     "from_days": 1,
+     "to_days": 1,
+     "pct": null,
+     "suspend_months": 6,
+     "suspend_days": null,
+     "text": "위약 주말 : 5~6일 전 3개월 · 4일 전 4개월 · 3~2일 전 5개월 · 1일 전 6개월 · 당일 1년"
+    },
+    {
+     "day": null,
+     "from_days": 2,
+     "to_days": 2,
+     "pct": null,
+     "suspend_months": 3,
+     "suspend_days": null,
+     "text": "위약 주중 : 4일 전 1개월 · 3일 전 2개월 · 2일 전 3개월 · 1일 전 4개월 · 당일 1년"
+    },
+    {
+     "day": null,
+     "from_days": 3,
+     "to_days": 2,
+     "pct": null,
+     "suspend_months": 5,
+     "suspend_days": null,
+     "text": "위약 주말 : 5~6일 전 3개월 · 4일 전 4개월 · 3~2일 전 5개월 · 1일 전 6개월 · 당일 1년"
+    },
+    {
+     "day": "weekday",
+     "from_days": 3,
+     "to_days": 3,
+     "pct": null,
+     "suspend_months": 2,
+     "suspend_days": null,
+     "text": "위약 주중 : 4일 전 1개월 · 3일 전 2개월 · 2일 전 3개월 · 1일 전 4개월 · 당일 1년"
+    },
+    {
+     "day": "weekday",
+     "from_days": 4,
+     "to_days": 4,
+     "pct": null,
+     "suspend_months": 1,
+     "suspend_days": null,
+     "text": "위약 주중 : 4일 전 1개월 · 3일 전 2개월 · 2일 전 3개월 · 1일 전 4개월 · 당일 1년"
+    },
+    {
+     "day": null,
+     "from_days": 4,
+     "to_days": 4,
+     "pct": null,
+     "suspend_months": 4,
+     "suspend_days": null,
+     "text": "위약 주말 : 5~6일 전 3개월 · 4일 전 4개월 · 3~2일 전 5개월 · 1일 전 6개월 · 당일 1년"
+    },
+    {
+     "day": "weekend",
+     "from_days": 5,
+     "to_days": 6,
+     "pct": null,
+     "suspend_months": 3,
+     "suspend_days": null,
+     "text": "위약 주말 : 5~6일 전 3개월 · 4일 전 4개월 · 3~2일 전 5개월 · 1일 전 6개월 · 당일 1년"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "취소 기한 : 주중 5일 전·주말 7일 전까지 — 예약실 18시",
+    "취소 기한 : 주중 5일 전·주말 7일 전까지 — 예약실 18시"
+   ],
+   "penalty_text": [
+    "위약 주중 : 4일 전 1개월 · 3일 전 2개월 · 2일 전 3개월 · 1일 전 4개월 · 당일 1년",
+    "위약 주중 : 4일 전 1개월 · 3일 전 2개월 · 2일 전 3개월 · 1일 전 4개월 · 당일 1년",
+    "위약 주중 : 4일 전 1개월 · 3일 전 2개월 · 2일 전 3개월 · 1일 전 4개월 · 당일 1년"
+   ]
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 3,
+     "weekday": "화",
+     "time": "09:00",
+     "member": null,
+     "text": "3주 전 화요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "online",
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "high",
+   "text": "3주 전 화요일 09:00부터 인터넷·모바일 및 전화 실시간 예약"
+  }
  },
  "ops": {
   "nocaddie": {

@@ -454,7 +454,52 @@
   "evidence": [
    "공식 안내상 위약 없이 취소하려면 주중 3일 전, 주말·공휴일 4일 전 오후 6시까지 취소해야 합니다."
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3
+    },
+    "weekend": {
+     "days_before": 4,
+     "time": "18:00"
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "주중 3일 전",
+    "주말·공휴일 4일 전 18:00까지 취소 시 위약 없음"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 3,
+     "weekday": "일",
+     "time": null,
+     "member": null,
+     "text": "3주 후 일"
+    }
+   ],
+   "monthly": [],
+   "weekly": {
+    "weekday": "화",
+    "time": "10:00"
+   },
+   "method": null,
+   "recurring": true,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "포천: 매주 화요일 오전 10시에 3주 후 일주일(월~일)분 예약 오픈. 회원 가입 후 예치금 납입(유료회원) 시 예약 가능"
+  }
  },
  "ops": {
   "nocaddie": {

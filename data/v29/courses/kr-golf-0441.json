@@ -237,7 +237,47 @@
   "open_cycle": "인터넷·전화 3주 전 월요일 09시부터 예약(주중·주말)",
   "notes": "홀별 정산 규정 있음(1~9홀 카트 50,000원, 10홀 이후 100,000원)",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 10
+    },
+    "weekend": {
+     "days_before": 10
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "예약일 기준 10일 전까지 취소 가능"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 3,
+     "weekday": "월",
+     "time": "09:00",
+     "member": null,
+     "text": "3주 전 월요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "online",
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "high",
+   "text": "인터넷·전화 3주 전 월요일 09시부터 예약(주중·주말)"
+  }
  },
  "ops": {
   "nocaddie": {

@@ -185,6 +185,47 @@
    "weather_cancel": "악천후 취소는 당일 티업 2시간 전 현장 상황에 따라 취소 가능",
    "arbitrary_stop": "경기 전 임의취소 시설이용료+{(이용요금-시설이용료)×50%}, 1~9홀 중단 75%, 10~18홀 100%",
    "note": "예약자 미내장 시 사이버 회원 할인 불가(4인)"
+  },
+  "parsed_cancel": {
+   "free": {},
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 1,
+     "to_days": 1,
+     "pct": 20.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "위약 : 당일·노쇼 30% · 1일 전 20% · 2일 전 10% · 주말·공휴일 3일 전 10%"
+    },
+    {
+     "day": null,
+     "from_days": 2,
+     "to_days": 2,
+     "pct": 10.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "위약 : 당일·노쇼 30% · 1일 전 20% · 2일 전 10% · 주말·공휴일 3일 전 10%"
+    },
+    {
+     "day": "weekend",
+     "from_days": 3,
+     "to_days": 3,
+     "pct": 10.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "위약 : 당일·노쇼 30% · 1일 전 20% · 2일 전 10% · 주말·공휴일 3일 전 10%"
+    }
+   ],
+   "basis": "team",
+   "scope": "unknown",
+   "confidence": "low",
+   "basis_text": [],
+   "penalty_text": [
+    "위약 : 당일·노쇼 30% · 1일 전 20% · 2일 전 10% · 주말·공휴일 3일 전 10%",
+    "위약 : 당일·노쇼 30% · 1일 전 20% · 2일 전 10% · 주말·공휴일 3일 전 10%",
+    "위약 : 당일·노쇼 30% · 1일 전 20% · 2일 전 10% · 주말·공휴일 3일 전 10%"
+   ]
   }
  },
  "ops": {

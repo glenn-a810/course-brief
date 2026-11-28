@@ -225,7 +225,56 @@
   "open_cycle": "매월 1일 익월분 오픈(1일이 주말·공휴일이면 다음 날). 인터넷 09:00, 전화 10:00, 1인 월 2팀",
   "notes": "그린피·카트·클럽·신발 선불, 캐디피만 현장 지급",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 4
+    },
+    "weekend": {
+     "days_before": 4
+    }
+   },
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 1,
+     "to_days": 1,
+     "pct": null,
+     "suspend_months": 2,
+     "suspend_days": null,
+     "text": "3일~1일 전: 전화만 가능하며 2개월 예약정지"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "예약일 4일 전까지 인터넷·전화 취소 시 불이익 없음"
+   ],
+   "penalty_text": [
+    "3일~1일 전: 전화만 가능하며 2개월 예약정지"
+   ]
+  },
+  "parsed_open": {
+   "rules": [],
+   "monthly": [
+    {
+     "day": 1,
+     "weekday": null,
+     "time": null,
+     "scope": "both"
+    }
+   ],
+   "weekly": null,
+   "method": "online",
+   "recurring": true,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "low",
+   "text": "매월 1일 익월분 오픈(1일이 주말·공휴일이면 다음 날). 인터넷 09:00, 전화 10:00, 1인 월 2팀"
+  }
  },
  "ops": {
   "nocaddie": {

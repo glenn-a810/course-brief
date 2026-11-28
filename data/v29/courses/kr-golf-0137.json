@@ -135,7 +135,59 @@
   "evidence": [
    "한림안성 | 주중 취소·변경 시한 05일 전 17:00 | 주말 05일 전 17:00 | 주중 위약 3~4일전 : 1개월 예약정지 1~2일전 : 2개월 예약정지 취소 및 노쇼 : 5개월 예약 정지 *(2인 플레이시 추가 요금 발생) | 주말 위약 3~4일전 : 1개월 예약정지 1~2일전 : 2개월 예약정지 취소 및 노쇼 : 5개월 예약 정지 *(2인 플레이시 추가 요금 발생)"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 5,
+     "time": "17:00"
+    },
+    "weekend": {
+     "days_before": 5,
+     "time": "17:00"
+    }
+   },
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 1,
+     "to_days": 2,
+     "pct": null,
+     "suspend_months": 2,
+     "suspend_days": null,
+     "text": "평일: 3~4일 전 1개월 예약정지 · 1~2일 전 2개월 예약정지 · 취소 및 노쇼 5개월 예약정지"
+    },
+    {
+     "day": "weekday",
+     "from_days": 3,
+     "to_days": 4,
+     "pct": null,
+     "suspend_months": 1,
+     "suspend_days": null,
+     "text": "평일: 3~4일 전 1개월 예약정지 · 1~2일 전 2개월 예약정지 · 취소 및 노쇼 5개월 예약정지"
+    },
+    {
+     "day": "weekend",
+     "from_days": 3,
+     "to_days": 4,
+     "pct": null,
+     "suspend_months": 1,
+     "suspend_days": null,
+     "text": "주말: 3~4일 전 1개월 예약정지 · 1~2일 전 2개월 예약정지 · 취소 및 노쇼 5개월 예약정지"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "high",
+   "basis_text": [
+    "평일·주말 모두 5일 전 17:00까지 취소 시 위약 없음"
+   ],
+   "penalty_text": [
+    "평일: 3~4일 전 1개월 예약정지 · 1~2일 전 2개월 예약정지 · 취소 및 노쇼 5개월 예약정지",
+    "평일: 3~4일 전 1개월 예약정지 · 1~2일 전 2개월 예약정지 · 취소 및 노쇼 5개월 예약정지",
+    "주말: 3~4일 전 1개월 예약정지 · 1~2일 전 2개월 예약정지 · 취소 및 노쇼 5개월 예약정지"
+   ]
+  }
  },
  "ops": {
   "nocaddie": {

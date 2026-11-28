@@ -155,7 +155,47 @@
   "open_cycle": "• 12일 전 월요일 09:00: 우선예약(VIP·로얄 등)\n• 11일 전 화·10일 전 수 09:00: 골프회원\n• 10:00: 리조트·지정회원\n• 11:00: 전체 오픈\n• 토요일~금요일 7일간 예약",
   "notes": null,
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "day",
+     "before": 12,
+     "weekday": "월",
+     "time": "09:00",
+     "member": null,
+     "text": "12일 전 월요일"
+    },
+    {
+     "scope": "both",
+     "unit": "day",
+     "before": 11,
+     "weekday": "화",
+     "time": null,
+     "member": null,
+     "text": "11일 전 화"
+    },
+    {
+     "scope": "both",
+     "unit": "day",
+     "before": 10,
+     "weekday": "수",
+     "time": "09:00",
+     "member": null,
+     "text": "10일 전 수"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": true,
+   "confidence": "low",
+   "text": "• 12일 전 월요일 09:00: 우선예약(VIP·로얄 등)\n• 11일 전 화·10일 전 수 09:00: 골프회원\n• 10:00: 리조트·지정회원\n• 11:00: 전체 오픈\n• 토요일~금요일 7일간 예약"
+  }
  },
  "ops": {
   "nocaddie": {

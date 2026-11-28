@@ -254,7 +254,29 @@
   "open_cycle": "회원만 예약 가능. 최소 1일 전까지 클럽이 정한 방법으로 예약하고 승인 필요",
   "notes": "정통 회원제로 비회원은 이용 불가(공식 FAQ)",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "day",
+     "before": 1,
+     "weekday": null,
+     "time": null,
+     "member": "회원",
+     "text": "1일 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": true,
+   "scope": "member",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "회원만 예약 가능. 최소 1일 전까지 클럽이 정한 방법으로 예약하고 승인 필요"
+  }
  },
  "ops": {
   "nocaddie": {

@@ -462,7 +462,49 @@
   "evidence": [
    "- 주중 주말 및 공휴일 예약취소는 예약일 5일전 17:00까지 홈페이지 및 전화로 가능하며, 이후 취소시 위약규정에 의한"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 5,
+     "time": "17:00"
+    },
+    "weekend": {
+     "days_before": 5,
+     "time": "17:00"
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "high",
+   "basis_text": [
+    "주중·주말·공휴일 모두 예약일 5일 전 17:00까지 홈페이지·전화로 취소 가능"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 4,
+     "weekday": "월",
+     "time": "09:00",
+     "member": null,
+     "text": "4주 전 월요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "phone",
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "high",
+   "text": "이용일 4주 전 월요일 09:00부터 예약(홈페이지·전화)"
+  }
  },
  "ops": {
   "nocaddie": {

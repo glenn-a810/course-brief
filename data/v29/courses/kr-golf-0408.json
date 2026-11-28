@@ -230,7 +230,25 @@
   "open_cycle": null,
   "notes": "1팀 3~4인 원칙, 2인·5인 불가",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 7
+    },
+    "weekend": {
+     "days_before": 7
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "조인 상품 기준 주중·주말 7일 전까지 취소"
+   ],
+   "penalty_text": []
+  }
  },
  "ops": {
   "nocaddie": {

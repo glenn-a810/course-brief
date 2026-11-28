@@ -333,7 +333,60 @@
   "weather_evidence": [
    "스카이밸리 컨트리클럽 주요 메뉴 바로가기 컨텐트 바로가기 메뉴열기 메뉴CLOSE 주 메뉴 영역 Today 날씨 그린 스피드 전체메뉴 로그인 회원가입 스카이밸리 스카이밸리 소개 인사말 윤리헌장 및 강령 오시는길 기상정보 코스소개 코스개요 스카이 코스 밸리 코스 레이크 코스 마운틴 코스 명예의전당 클럽하우스 프론트 ·",
    "스카이밸리 컨트리클럽 주요 메뉴 바로가기 컨텐트 바로가기 메뉴열기 메뉴CLOSE 주 메뉴 영역 Today 날씨 그린 스피드 전체메뉴 로그인 회원가입 스카이밸리 스카이밸리 소개 인사말 윤리헌장 및 강령 오시는길 기상정보 코스소개 코스개요 스카이 코스 밸리 코스 레이크 코스 마운틴 코스 명예의전당 클럽하우스 프론트 ·"
-  ]
+  ],
+  "parsed_cancel": {
+   "free": {},
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 1,
+     "to_days": 1,
+     "pct": 20.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "1일 전 20%"
+    },
+    {
+     "day": null,
+     "from_days": 3,
+     "to_days": 2,
+     "pct": 10.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "골프장 이용 표준약관 제6조 예약불이행 위약금 기준 적용 — 3~2일 전 10%"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "low",
+   "basis_text": [],
+   "penalty_text": [
+    "골프장 이용 표준약관 제6조 예약불이행 위약금 기준 적용 — 3~2일 전 10%",
+    "1일 전 20%"
+   ]
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 4,
+     "weekday": null,
+     "time": "09:00",
+     "member": null,
+     "text": "4주 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "fcfs",
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "대중제(레이크·마운틴 코스)는 4주 전 해당일 09:00 실시간 오픈, 선착순 확정"
+  }
  },
  "ops": {
   "nocaddie": {

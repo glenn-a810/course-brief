@@ -325,7 +325,83 @@
   "open_cycle": "• 회원: 매월 15일 09:00, 45일 이후 1개월분\n• 인터넷: 매월 20일 09:00 다다음달 말일까지\n• 전화 09:00~18:00",
   "notes": "정기휴장 없음. 경기중단 시 홀별 정산, 캐디피 홀별 30,000~150,000원",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3
+    },
+    "weekend": {
+     "days_before": 4
+    }
+   },
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 1,
+     "to_days": 1,
+     "pct": 20.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "1일 전 20%"
+    },
+    {
+     "day": "weekday",
+     "from_days": 3,
+     "to_days": 2,
+     "pct": 10.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "3~2일 전 평일 10%"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "주말·공휴일 4일 전·평일 3일 전까지 위약 없음",
+    "주말·공휴일 4일 전·평일 3일 전까지 위약 없음"
+   ],
+   "penalty_text": [
+    "3~2일 전 평일 10%",
+    "1일 전 20%"
+   ]
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "day",
+     "before": 45,
+     "weekday": null,
+     "time": null,
+     "member": null,
+     "text": "45일 이후"
+    }
+   ],
+   "monthly": [
+    {
+     "day": 15,
+     "weekday": null,
+     "time": "09:00",
+     "scope": "both"
+    },
+    {
+     "day": 20,
+     "weekday": null,
+     "time": "09:00",
+     "scope": "both"
+    }
+   ],
+   "weekly": null,
+   "method": "online",
+   "recurring": true,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "• 회원: 매월 15일 09:00, 45일 이후 1개월분\n• 인터넷: 매월 20일 09:00 다다음달 말일까지\n• 전화 09:00~18:00"
+  }
  },
  "ops": {
   "nocaddie": {

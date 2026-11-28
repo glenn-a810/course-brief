@@ -194,7 +194,67 @@
   "evidence": [
    "https://wondergolf.co.kr/courses/dongrae-benest-gc"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 5,
+     "time": "17:00"
+    },
+    "weekend": {
+     "days_before": 5,
+     "time": "17:00"
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "non_member",
+   "confidence": "high",
+   "basis_text": [
+    "정상 취소: 5일 전 17시까지"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "weekday",
+     "unit": "week",
+     "before": 3,
+     "weekday": null,
+     "time": "14:00",
+     "member": "회원",
+     "text": "3주 전"
+    },
+    {
+     "scope": "weekend",
+     "unit": "week",
+     "before": 3,
+     "weekday": "화",
+     "time": "14:00",
+     "member": null,
+     "text": "3주 전 화요일"
+    },
+    {
+     "scope": "both",
+     "unit": "day",
+     "before": 5,
+     "weekday": null,
+     "time": "17:00",
+     "member": null,
+     "text": "5일 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": true,
+   "scope": "member",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "• 회원 평일: 3주 전 해당 요일 14시(화요일은 16시)\n• 휴일: 해당 주 포함 3주 전 화요일 14시\n• 비회원: 회원 오픈일 +3일 9시 30분, 잔여 시간에 한함(미오픈될 수 있음)\n• 정상 취소: 5일…"
+  }
  },
  "ops": {
   "nocaddie": {

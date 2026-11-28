@@ -151,7 +151,49 @@
   "open_cycle": "해당일 2주 전 09:00부터 예약 오픈",
   "notes": null,
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 4,
+     "time": "17:00"
+    },
+    "weekend": {
+     "days_before": 4,
+     "time": "17:00"
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "high",
+   "basis_text": [
+    "4일 전 17:00까지 위약 없이 취소"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 2,
+     "weekday": null,
+     "time": "09:00",
+     "member": null,
+     "text": "2주 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "해당일 2주 전 09:00부터 예약 오픈"
+  }
  },
  "ops": {
   "nocaddie": {

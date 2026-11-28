@@ -179,7 +179,82 @@
   "evidence": [
    "https://wondergolf.co.kr/courses/kr-kakao-1075851923"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3
+    },
+    "weekend": {
+     "days_before": 4
+    }
+   },
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 1,
+     "to_days": 1,
+     "pct": 20.0,
+     "suspend_months": 3,
+     "suspend_days": null,
+     "text": "1일 전: 3개월·20% · 당일·잔존예약 취소: 6개월·30%"
+    },
+    {
+     "day": null,
+     "from_days": 2,
+     "to_days": 3,
+     "pct": 10.0,
+     "suspend_months": 2,
+     "suspend_days": null,
+     "text": "2~3일 전: 2개월 예약금지·이용요금 10%"
+    }
+   ],
+   "basis": "team",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "18홀 예약취소: 평일 3일 전·주말·공휴일 4일 전까지",
+    "18홀 예약취소: 평일 3일 전·주말·공휴일 4일 전까지"
+   ],
+   "penalty_text": [
+    "2~3일 전: 2개월 예약금지·이용요금 10%",
+    "1일 전: 3개월·20% · 당일·잔존예약 취소: 6개월·30%"
+   ]
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 6,
+     "weekday": null,
+     "time": "09:00",
+     "member": null,
+     "text": "6주전"
+    },
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 6,
+     "weekday": "월",
+     "time": null,
+     "member": null,
+     "text": "6주후 월요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": {
+    "weekday": "월",
+    "time": "09:00"
+   },
+   "method": "online",
+   "recurring": true,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "인터넷 예약 연중 24시간. 6주전 매주 월요일 오전 9시부터 6주후 월요일~일요일 1주일 오픈."
+  }
  },
  "ops": {
   "nocaddie": {

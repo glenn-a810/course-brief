@@ -479,7 +479,81 @@
   "open_cycle": "• 평일: 정회원 희망일 40일 전, 준회원·주중회원 30일 전 9시부터 1일 전 17시까지\n• 주말·공휴일: 5주 전 월요일 9시~4주 전 금요일 17시 인터넷 신청 후 배정",
   "notes": null,
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekend": {
+     "days_before": 8,
+     "time": "17:00"
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "주말 예약 취소는 8일 전 17시까지 취소해야 불이가 없음"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "weekday",
+     "unit": "day",
+     "before": 40,
+     "weekday": null,
+     "time": null,
+     "member": "정회원",
+     "text": "40일 전"
+    },
+    {
+     "scope": "weekday",
+     "unit": "day",
+     "before": 30,
+     "weekday": null,
+     "time": "09:00",
+     "member": "주중회원",
+     "text": "30일 전"
+    },
+    {
+     "scope": "weekday",
+     "unit": "day",
+     "before": 1,
+     "weekday": null,
+     "time": "17:00",
+     "member": "주중회원",
+     "text": "1일 전"
+    },
+    {
+     "scope": "weekend",
+     "unit": "week",
+     "before": 5,
+     "weekday": "월",
+     "time": "09:00",
+     "member": null,
+     "text": "5주 전 월요일"
+    },
+    {
+     "scope": "weekend",
+     "unit": "week",
+     "before": 4,
+     "weekday": "금",
+     "time": "17:00",
+     "member": null,
+     "text": "4주 전 금요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "online",
+   "recurring": false,
+   "member_only": true,
+   "scope": "member",
+   "ambiguous": true,
+   "confidence": "low",
+   "text": "• 평일: 정회원 희망일 40일 전, 준회원·주중회원 30일 전 9시부터 1일 전 17시까지\n• 주말·공휴일: 5주 전 월요일 9시~4주 전 금요일 17시 인터넷 신청 후 배정"
+  }
  },
  "ops": {
   "nocaddie": {

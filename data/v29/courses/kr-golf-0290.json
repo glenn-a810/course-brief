@@ -246,7 +246,96 @@
   "open_cycle": "추첨예약\n• 주중: 5주 전 월요일 09:00~목요일 17:00 신청 → 5주 전 금요일 10:00 추첨\n• 주말·공휴일: 4주 전 월~목 신청 → 4주 전 금요일 10:00 추첨",
   "notes": "추첨 후 마이페이지에서 예약확정. 리조트 시설(호텔·사우나) 별도",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 6
+    },
+    "weekend": {
+     "days_before": 6
+    }
+   },
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 1,
+     "to_days": 1,
+     "pct": null,
+     "suspend_months": 3,
+     "suspend_days": null,
+     "text": "1일 전 3개월"
+    },
+    {
+     "day": null,
+     "from_days": 2,
+     "to_days": 2,
+     "pct": null,
+     "suspend_months": 1,
+     "suspend_days": null,
+     "text": "2일 전 1개월 예약 제한"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "이용예정일 6일 전까지 취소 가능 . 당일 취소·노쇼 6개월"
+   ],
+   "penalty_text": [
+    "1일 전 3개월",
+    "2일 전 1개월 예약 제한"
+   ]
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "weekday",
+     "unit": "week",
+     "before": 5,
+     "weekday": "월",
+     "time": "09:00",
+     "member": null,
+     "text": "5주 전 월요일"
+    },
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 5,
+     "weekday": "금",
+     "time": "10:00",
+     "member": null,
+     "text": "5주 전 금요일"
+    },
+    {
+     "scope": "weekend",
+     "unit": "week",
+     "before": 4,
+     "weekday": "월",
+     "time": null,
+     "member": null,
+     "text": "4주 전 월"
+    },
+    {
+     "scope": "weekend",
+     "unit": "week",
+     "before": 4,
+     "weekday": "금",
+     "time": "10:00",
+     "member": null,
+     "text": "4주 전 금요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "lottery",
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": true,
+   "confidence": "low",
+   "text": "추첨예약\n• 주중: 5주 전 월요일 09:00~목요일 17:00 신청 → 5주 전 금요일 10:00 추첨\n• 주말·공휴일: 4주 전 월~목 신청 → 4주 전 금요일 10:00 추첨"
+  }
  },
  "ops": {
   "nocaddie": {

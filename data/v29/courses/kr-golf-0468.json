@@ -296,7 +296,48 @@
   "open_cycle": "4주 전 월요일 09시부터 일주일 단위(월~일) 일괄 오픈",
   "notes": null,
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3
+    },
+    "weekend": {
+     "days_before": 4
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "평일 3일 전·주말 4일 전까지",
+    "평일 3일 전·주말 4일 전까지"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 4,
+     "weekday": "월",
+     "time": "09:00",
+     "member": null,
+     "text": "4주 전 월요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "high",
+   "text": "4주 전 월요일 09시부터 일주일 단위(월~일) 일괄 오픈"
+  }
  },
  "ops": {
   "nocaddie": {

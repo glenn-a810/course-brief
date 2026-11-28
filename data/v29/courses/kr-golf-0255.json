@@ -195,7 +195,49 @@
   "open_cycle": "해당월 1일 오전 10시 → 3주 후 해당일 오전 10시 오픈(예: 1월 1일에 1월 22일 오픈, 31일까지 있는 달은 30·31일 동시 오픈)",
   "notes": "18홀은 최소 3인(2인은 3인 그린피 적용), 9홀은 2인 가능",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 4,
+     "time": "17:00"
+    },
+    "weekend": {
+     "days_before": 4,
+     "time": "17:00"
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "4일 전 17:00까지"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 3,
+     "weekday": null,
+     "time": "10:00",
+     "member": null,
+     "text": "3주 후"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "해당월 1일 오전 10시 → 3주 후 해당일 오전 10시 오픈(예: 1월 1일에 1월 22일 오픈, 31일까지 있는 달은 30·31일 동시 오픈)"
+  }
  },
  "ops": {
   "nocaddie": {

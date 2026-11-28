@@ -188,7 +188,58 @@
   "evidence": [
    "https://wondergolf.co.kr/courses/new-gaya-cc"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 4,
+     "time": "12:00"
+    },
+    "weekend": {
+     "days_before": 4,
+     "time": "12:00"
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "member",
+   "confidence": "medium",
+   "basis_text": [
+    "정규홀 예약 취소: 경기일 4일 전 12시까지 인터넷 주중"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "weekday",
+     "unit": "day",
+     "before": 13,
+     "weekday": null,
+     "time": null,
+     "member": "비회원",
+     "text": "13일 전"
+    },
+    {
+     "scope": "weekend",
+     "unit": "day",
+     "before": 1,
+     "weekday": null,
+     "time": "24:00",
+     "member": null,
+     "text": "1일 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "online",
+   "recurring": false,
+   "member_only": false,
+   "scope": "non_member",
+   "ambiguous": true,
+   "confidence": "low",
+   "text": "• 회원제: 우대회원/정회원 경기일 15일 전 08:30 · 주중회원 14일 전 08:30\n• 비회원: 평일 13일 전·주말 14일 전 08:30 ~ 1일 전 24:00, 인터넷"
+  }
  },
  "ops": {
   "nocaddie": {

@@ -282,7 +282,48 @@
   "evidence": [
    "이용안내 이용안내 요금안내 위약규정 시설안내 로그인안내 바로가기안내 \u0000 코스 코스 내 잔디 보호에 방해가 되는 신발 착용을 삼가 해주시기 바랍니다."
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3
+    },
+    "weekend": {
+     "days_before": 4
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "평일 3일 전·주말 4일 전까지",
+    "평일 3일 전·주말 4일 전까지"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 4,
+     "weekday": null,
+     "time": "09:00",
+     "member": null,
+     "text": "4주 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "online",
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "4주 전 오전 09:00부터 인터넷 예약 접수(비회원·단체는 전화 접수)"
+  }
  },
  "ops": {
   "nocaddie": {

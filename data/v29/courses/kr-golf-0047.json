@@ -165,7 +165,69 @@
   "evidence": [
    "https://wondergolf.co.kr/courses/kr-kakao-11218347"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 4
+    },
+    "weekend": {
+     "days_before": 4
+    }
+   },
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 1,
+     "to_days": 1,
+     "pct": 0.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "1일 전·당일 취소는 100%"
+    },
+    {
+     "day": null,
+     "from_days": 2,
+     "to_days": 2,
+     "pct": 50.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "2일 전 취소는 그린피+카트비 팀합계의 50%"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "예약일 포함 4일 전까지 위약 없이 취소 가능"
+   ],
+   "penalty_text": [
+    "2일 전 취소는 그린피+카트비 팀합계의 50%",
+    "1일 전·당일 취소는 100%"
+   ]
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 2,
+     "weekday": null,
+     "time": null,
+     "member": null,
+     "text": "2주 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "online",
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "예약은 2주 전부터 가능. 인터넷 예약 24시간(14일 전 예약은 09시부터), 전화 예약 09~18시. 인터넷 회원가입 후 예약"
+  }
  },
  "ops": {
   "nocaddie": {

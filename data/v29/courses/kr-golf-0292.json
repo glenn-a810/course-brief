@@ -228,7 +228,26 @@
   "open_cycle": null,
   "notes": "주말·공휴일 4인 필수. 로얄링스2와 같은 단지(36홀) 미확인(공식 오픈 주기 미게시 — 인터넷 실시간예약·패키지예약)",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3
+    },
+    "weekend": {
+     "days_before": 4
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "평일 3일 전·주말 4일 전까지",
+    "평일 3일 전·주말 4일 전까지"
+   ],
+   "penalty_text": []
+  }
  },
  "ops": {
   "nocaddie": {

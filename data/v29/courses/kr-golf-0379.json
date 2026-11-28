@@ -174,7 +174,53 @@
   "open_cycle": "비회원 13일 전 10:00부터. 회원은 주중 14일 전 09:00, 주말·공휴일은 전전주 금요일 09:00부터",
   "notes": "정기 휴장은 매월 첫째 월요일(공휴일이면 화요일)",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 6
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "non_member",
+   "confidence": "medium",
+   "basis_text": [
+    "주중 6일 전까지·주말은 전주 일요일까지 취소 가능. 당일 미입장 시 위약금 250"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "day",
+     "before": 13,
+     "weekday": null,
+     "time": "10:00",
+     "member": "비회원",
+     "text": "13일 전"
+    },
+    {
+     "scope": "weekend",
+     "unit": "week",
+     "before": 2,
+     "weekday": "금",
+     "time": "09:00",
+     "member": null,
+     "text": "전전주 금요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "non_member",
+   "ambiguous": false,
+   "confidence": "high",
+   "text": "비회원 13일 전 10:00부터. 회원은 주중 14일 전 09:00, 주말·공휴일은 전전주 금요일 09:00부터"
+  }
  },
  "ops": {
   "nocaddie": {

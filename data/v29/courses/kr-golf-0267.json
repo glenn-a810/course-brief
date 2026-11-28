@@ -190,7 +190,60 @@
   "evidence": [
    "취소 | 당일 30%, 1일 전 20%, 2·3일 전과 주말 10%. 우천은 시간당 3mm 이상이면 취소됩니다"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {},
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 1,
+     "to_days": 1,
+     "pct": 20.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "1일 전 20%"
+    },
+    {
+     "day": null,
+     "from_days": 3,
+     "to_days": 3,
+     "pct": 10.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "2·3일 전 및 주말 10% . 예약은 평일·휴일 모두 31일 전 오픈"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "low",
+   "basis_text": [],
+   "penalty_text": [
+    "1일 전 20%",
+    "2·3일 전 및 주말 10% . 예약은 평일·휴일 모두 31일 전 오픈"
+   ]
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "day",
+     "before": 31,
+     "weekday": null,
+     "time": null,
+     "member": null,
+     "text": "31일 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "평일·휴일 모두 31일 전 오픈(예약실 043-853-5555)"
+  }
  },
  "ops": {
   "nocaddie": {

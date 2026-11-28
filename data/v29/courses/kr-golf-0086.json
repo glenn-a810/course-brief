@@ -218,7 +218,58 @@
    "취소 기한: 이용일 5일 전 16시 이전 (이후 취소 시 2주 예약정지) / 위약: 5일 전 16시 이후~2일 전 취소 2주, 1일 전 취소·노쇼 8주 예약정지(8주는 위약금 평일 661,000원/주말·공휴일 744,000원으로 대체 가능). 월 3회↑·동일일자 2회↑ 취소 4주",
    "평 일 | 경기일이 속한 해당주를 제외한 2주전 화요일 오전 10시에 예약오픈 → 해당 5일분 (월~금) 동시오픈 / 주말 및 공휴일 | 경기일이 속한 해당주를 제외한 2주전 수요일 오전 10시에 예약오픈 → 해당 2일분 (토,일) 동시오픈 (https://www.premiumgolf.co.kr/product/view.html?idx=5)"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 5,
+     "time": "16:00"
+    },
+    "weekend": {
+     "days_before": 5,
+     "time": "16:00"
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "high",
+   "basis_text": [
+    "이용일 5일 전 16시 이전까지 취소 가능"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 2,
+     "weekday": "화",
+     "time": "10:00",
+     "member": null,
+     "text": "2주 전 화요일"
+    },
+    {
+     "scope": "weekend",
+     "unit": "week",
+     "before": 2,
+     "weekday": "수",
+     "time": "10:00",
+     "member": null,
+     "text": "2주 전 수요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "high",
+   "text": "평일은 경기일이 속한 주를 제외한 2주 전 화요일 10:00(월~금 동시 오픈), 주말·공휴일은 2주 전 수요일 10:00(토·일 동시 오픈)"
+  }
  },
  "ops": {
   "nocaddie": {

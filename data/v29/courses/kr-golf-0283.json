@@ -215,7 +215,50 @@
   "open_cycle": "• 평일·주말 모두 4주 전 화요일 09:00부터 인터넷·전화 접수\n• 일요일은 예약실 휴무\n• 패키지는 4주 전 화요일 09:00 전화예약",
   "notes": "골프+객실 패키지 4인 1팀 기준, 3인 1팀은 3만7천~5만7천원 추가(2026-10 공지)",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 6,
+     "time": "17:00"
+    },
+    "weekend": {
+     "days_before": 6,
+     "time": "17:00"
+    }
+   },
+   "penalty": [],
+   "basis": "person",
+   "scope": "unknown",
+   "confidence": "high",
+   "basis_text": [
+    "정상 취소: 주중 6일 전 17:00·주말 6일 전 17:00까지",
+    "정상 취소: 주중 6일 전 17:00·주말 6일 전 17:00까지"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 4,
+     "weekday": "화",
+     "time": "09:00",
+     "member": null,
+     "text": "4주 전 화요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "online",
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "high",
+   "text": "• 평일·주말 모두 4주 전 화요일 09:00부터 인터넷·전화 접수\n• 일요일은 예약실 휴무\n• 패키지는 4주 전 화요일 09:00 전화예약"
+  }
  },
  "ops": {
   "nocaddie": {

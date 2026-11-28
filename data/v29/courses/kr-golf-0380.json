@@ -232,7 +232,29 @@
   "evidence": [
    "https://wondergolf.co.kr/courses/kr-mcst-223"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 3,
+     "weekday": null,
+     "time": "09:00",
+     "member": null,
+     "text": "3주 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "online",
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "주중·주말 3주 전 해당 요일 9시 오픈. 홈페이지 실시간 예약(PC·모바일), 전화 055-548-9999"
+  }
  },
  "ops": {
   "nocaddie": {

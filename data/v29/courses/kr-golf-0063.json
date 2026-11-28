@@ -180,7 +180,90 @@
   "open_cycle": "3주 전 월요일 9시 오픈",
   "notes": null,
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 5,
+     "time": "17:00"
+    },
+    "weekend": {
+     "days_before": 5,
+     "time": "17:00"
+    }
+   },
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 1,
+     "to_days": 1,
+     "pct": null,
+     "suspend_months": 6,
+     "suspend_days": null,
+     "text": "예약정지: 4일 전 1개월·3일 전 2개월·2일 전 4개월·1일 전 6개월"
+    },
+    {
+     "day": null,
+     "from_days": 2,
+     "to_days": 2,
+     "pct": null,
+     "suspend_months": 4,
+     "suspend_days": null,
+     "text": "예약정지: 4일 전 1개월·3일 전 2개월·2일 전 4개월·1일 전 6개월"
+    },
+    {
+     "day": null,
+     "from_days": 3,
+     "to_days": 3,
+     "pct": null,
+     "suspend_months": 2,
+     "suspend_days": null,
+     "text": "예약정지: 4일 전 1개월·3일 전 2개월·2일 전 4개월·1일 전 6개월"
+    },
+    {
+     "day": null,
+     "from_days": 4,
+     "to_days": 4,
+     "pct": null,
+     "suspend_months": 1,
+     "suspend_days": null,
+     "text": "예약정지: 4일 전 1개월·3일 전 2개월·2일 전 4개월·1일 전 6개월"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "high",
+   "basis_text": [
+    "위약 없이: 예약일 기준 주중·주말 5일 전 17시까지"
+   ],
+   "penalty_text": [
+    "예약정지: 4일 전 1개월·3일 전 2개월·2일 전 4개월·1일 전 6개월",
+    "예약정지: 4일 전 1개월·3일 전 2개월·2일 전 4개월·1일 전 6개월",
+    "예약정지: 4일 전 1개월·3일 전 2개월·2일 전 4개월·1일 전 6개월"
+   ]
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 3,
+     "weekday": "월",
+     "time": "09:00",
+     "member": null,
+     "text": "3주 전 월요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "high",
+   "text": "3주 전 월요일 9시 오픈"
+  }
  },
  "ops": {
   "nocaddie": {

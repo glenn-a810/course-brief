@@ -281,7 +281,78 @@
     "checked_at": "2026-11-27",
     "source_type": "public_info"
    }
-  ]
+  ],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3
+    },
+    "weekend": {
+     "days_before": 3
+    }
+   },
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 1,
+     "to_days": 1,
+     "pct": 20.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "이후 2일 전 10%·1일 전 20%·당일 취소·미내장 30% 위약"
+    },
+    {
+     "day": null,
+     "from_days": 2,
+     "to_days": 2,
+     "pct": 10.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "이후 2일 전 10%·1일 전 20%·당일 취소·미내장 30% 위약"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "주중·주말 모두 3일 전까지 취소 가능"
+   ],
+   "penalty_text": [
+    "이후 2일 전 10%·1일 전 20%·당일 취소·미내장 30% 위약",
+    "이후 2일 전 10%·1일 전 20%·당일 취소·미내장 30% 위약"
+   ]
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "weekday",
+     "unit": "week",
+     "before": 2,
+     "weekday": null,
+     "time": "13:00",
+     "member": null,
+     "text": "2주 전"
+    },
+    {
+     "scope": "weekend",
+     "unit": "week",
+     "before": 2,
+     "weekday": "목",
+     "time": "14:00",
+     "member": null,
+     "text": "2주 전 목요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "high",
+   "text": "평일 2주 전 13:00, 주말·공휴일 2주 전 목요일 14:00"
+  }
  },
  "ops": {
   "nocaddie": {

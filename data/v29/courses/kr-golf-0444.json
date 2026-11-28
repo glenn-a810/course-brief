@@ -181,7 +181,56 @@
    "정회원 주중 4주 전 화요일 09:00 / 주말 3주 전 추첨 접수 (https://blog.naver.com/gangnamgolfme/224478929873)",
    "5일 전까지 취소 가능 / 이후 벌점"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 5
+    },
+    "weekend": {
+     "days_before": 5
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "member",
+   "confidence": "medium",
+   "basis_text": [
+    "이용일 5일 전까지 취소 가능"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "weekday",
+     "unit": "week",
+     "before": 4,
+     "weekday": "화",
+     "time": "09:00",
+     "member": "정회원",
+     "text": "4주 전 화요일"
+    },
+    {
+     "scope": "weekend",
+     "unit": "week",
+     "before": 3,
+     "weekday": null,
+     "time": null,
+     "member": null,
+     "text": "3주 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "lottery",
+   "recurring": false,
+   "member_only": true,
+   "scope": "member",
+   "ambiguous": true,
+   "confidence": "low",
+   "text": "정회원 주중 4주 전 화요일 09:00 선착순, 주말 3주 전 추첨 접수 — 회원 기준"
+  }
  },
  "ops": {
   "nocaddie": {

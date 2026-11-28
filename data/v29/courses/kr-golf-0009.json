@@ -415,7 +415,47 @@
   "open_cycle": "• 회원제: 정회원 28일·준회원 27일·주중회원 27일·비회원 25일 전\n• 대중제: 28일 전부터\n• 매일 09:00 실시간 선착순",
   "notes": null,
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 10
+    },
+    "weekend": {
+     "days_before": 10
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "정상 취소: 주중·주말 모두 10일 이전까지"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "weekday",
+     "unit": "day",
+     "before": 25,
+     "weekday": null,
+     "time": null,
+     "member": "비회원",
+     "text": "25일 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "fcfs",
+   "recurring": true,
+   "member_only": false,
+   "scope": "non_member",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "• 회원제: 정회원 28일·준회원 27일·주중회원 27일·비회원 25일 전\n• 대중제: 28일 전부터\n• 매일 09:00 실시간 선착순"
+  }
  },
  "ops": {
   "nocaddie": {

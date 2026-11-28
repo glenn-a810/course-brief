@@ -405,7 +405,38 @@
   "evidence": [
    "정회원은 희망일 기준 6주 전 금요일 오전 9시부터 예약할 수 있으며, 주중회원은 5주 전 화요일부터 평일 티타임을 신청할 수 있습니다. (https://blog.naver.com/happy_hhk_/224399379833)"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 6,
+     "weekday": "금",
+     "time": "09:00",
+     "member": "정회원",
+     "text": "6주 전 금요일"
+    },
+    {
+     "scope": "weekday",
+     "unit": "week",
+     "before": 5,
+     "weekday": "화",
+     "time": null,
+     "member": "주중회원",
+     "text": "5주 전 화요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": true,
+   "scope": "member",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "[회원 예약 기준] 정회원은 희망일 기준 6주 전 금요일 09:00, 주중회원은 5주 전 화요일부터 평일 티타임 신청"
+  }
  },
  "ops": {
   "nocaddie": {

@@ -241,6 +241,25 @@
   "browser_official": {
    "cancel": "기상 임의취소: 경기 전 정상요금 50% 환불, 1~9홀 (이용요금-시설이용료-제세공과금)×25% 환불, 10~18홀 환불 없음. 캐디피 경기 전 미징수·1~9홀 70,000·10~18홀 140,000",
    "refund_unit": "팀 단위로만 취소·환불 가능, 팀원 일부 취소 불가"
+  },
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3
+    },
+    "weekend": {
+     "days_before": 4
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "취소: 평일 3일 전·주말 4일 전까지",
+    "취소: 평일 3일 전·주말 4일 전까지"
+   ],
+   "penalty_text": []
   }
  },
  "ops": {

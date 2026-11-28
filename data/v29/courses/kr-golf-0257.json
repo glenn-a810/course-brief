@@ -230,7 +230,48 @@
     "checked_at": "2026-11-27",
     "source_type": "third_party"
    }
-  ]
+  ],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3
+    },
+    "weekend": {
+     "days_before": 4
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "평일 3일 전 · 주말 4일 전까지",
+    "평일 3일 전 · 주말 4일 전까지"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 7,
+     "weekday": null,
+     "time": "09:00",
+     "member": null,
+     "text": "7주 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "online",
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "예약은 7주 전 해당 요일 09시 오픈, 홈페이지·모바일·전화"
+  }
  },
  "ops": {
   "nocaddie": {

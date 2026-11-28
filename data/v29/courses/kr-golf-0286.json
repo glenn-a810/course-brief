@@ -153,7 +153,32 @@
   "open_cycle": "매주 화요일 오전 10:00, 4주 전 화요일 기준 1주일 단위 오픈(공휴일에도 오픈). 예약선점 주중 2·토 1·일 1",
   "notes": "2인·5인 플레이 불가",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 4,
+     "weekday": "화",
+     "time": null,
+     "member": null,
+     "text": "4주 전 화요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": {
+    "weekday": "화",
+    "time": "10:00"
+   },
+   "method": null,
+   "recurring": true,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "매주 화요일 오전 10:00, 4주 전 화요일 기준 1주일 단위 오픈(공휴일에도 오픈). 예약선점 주중 2·토 1·일 1"
+  }
  },
  "ops": {
   "nocaddie": {

@@ -278,7 +278,53 @@
   "evidence": [
    "주말·공휴일: 4일 전 18:00까지 취소 시 예약금 전액 환불 평일: 3일 전 18:00까지 취소 시 예약금 전액 환불 이후 취소는 팀 이용요금의 10%→20%→30% (시점별) 손해배상 규정 안내"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3,
+     "time": "18:00"
+    },
+    "weekend": {
+     "days_before": 4,
+     "time": "18:00"
+    }
+   },
+   "penalty": [],
+   "basis": "team",
+   "scope": "unknown",
+   "confidence": "high",
+   "basis_text": [
+    "주말·공휴일 4일 전 18:00",
+    "평일 3일 전 18:00까지 취소 시 예약금 전액 환불"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 4,
+     "weekday": null,
+     "time": null,
+     "member": null,
+     "text": "4주 뒤"
+    }
+   ],
+   "monthly": [],
+   "weekly": {
+    "weekday": "월",
+    "time": "09:00"
+   },
+   "method": null,
+   "recurring": true,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "매주 월요일 09:00에 약 4주 뒤 1주분 오픈(일반 예약 기준)"
+  }
  },
  "ops": {
   "nocaddie": {

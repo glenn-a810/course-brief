@@ -318,7 +318,48 @@
   "open_cycle": "회원제\n• 정회원: 2개월 전 2번째 수요일 09:00(주중), 주말 추첨(접수마감 17:00)\n• 지정회원 10:00, 주중회원 1개월 단위 동시 오픈\n• 비회원은 인터넷 예약(월별 일정 공지), 예약 1522-3111",
   "notes": "노캐디 팀당 20,000원 추가. 정기 휴장 월 2회 월요일(법정공휴일·하계시즌 제외)",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 7
+    },
+    "weekend": {
+     "days_before": 10
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "버치힐CC: 예약일 미포함 주중 7일 전",
+    "주말·공휴일·여름성수기 10일 전까지 취소 가능"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "month",
+     "before": 2,
+     "weekday": null,
+     "time": null,
+     "member": "정회원",
+     "text": "2개월 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "lottery",
+   "recurring": false,
+   "member_only": true,
+   "scope": "member",
+   "ambiguous": false,
+   "confidence": "low",
+   "text": "회원제\n• 정회원: 2개월 전 2번째 수요일 09:00(주중), 주말 추첨(접수마감 17:00)\n• 지정회원 10:00, 주중회원 1개월 단위 동시 오픈\n• 비회원은 인터넷 예약(월별 일정 공지), 예약 1522-…"
+  }
  },
  "ops": {
   "nocaddie": {

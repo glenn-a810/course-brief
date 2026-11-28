@@ -193,7 +193,76 @@
   "open_cycle": "경기일 15일 전 ~ 9일 전 24:00까지 홈페이지 신청(계룡대 선택), 8일 전 편성, 7일 전 오전 확정 확인",
   "notes": "정회원·정회원대우·준회원·준회원대우·비회원으로 구분. 군 자격이 없어도 비회원으로 가입해 추첨 예약 가능하며, 확정되면 사전 명단 등록·신분증 제출 필요",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3,
+     "time": "13:00"
+    },
+    "weekend": {
+     "days_before": 3,
+     "time": "13:00"
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "high",
+   "basis_text": [
+    "경기일 3일 전 13:00까지 무료 취소"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "day",
+     "before": 15,
+     "weekday": null,
+     "time": null,
+     "member": null,
+     "text": "15일 전"
+    },
+    {
+     "scope": "both",
+     "unit": "day",
+     "before": 9,
+     "weekday": null,
+     "time": "24:00",
+     "member": null,
+     "text": "9일 전"
+    },
+    {
+     "scope": "both",
+     "unit": "day",
+     "before": 8,
+     "weekday": null,
+     "time": null,
+     "member": null,
+     "text": "8일 전"
+    },
+    {
+     "scope": "both",
+     "unit": "day",
+     "before": 7,
+     "weekday": null,
+     "time": null,
+     "member": null,
+     "text": "7일 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": true,
+   "confidence": "low",
+   "text": "경기일 15일 전 ~ 9일 전 24:00까지 홈페이지 신청(계룡대 선택), 8일 전 편성, 7일 전 오전 확정 확인"
+  }
  },
  "ops": {
   "nocaddie": {

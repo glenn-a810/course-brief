@@ -181,7 +181,70 @@
   "open_cycle": "희망일 기준 8주 전 오전 10시부터 실시간 예약(홈페이지 로그인). 예약실 041-851-6320",
   "notes": "4인 필수(3인 플레이 시 추가요금)",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {},
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 1,
+     "to_days": 1,
+     "pct": 30.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "1일 전·당일·노쇼·미내장: 30%"
+    },
+    {
+     "day": null,
+     "from_days": 2,
+     "to_days": 2,
+     "pct": 20.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "2일 전: 20%"
+    },
+    {
+     "day": null,
+     "from_days": 3,
+     "to_days": 3,
+     "pct": 10.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "3일 전: 10%"
+    }
+   ],
+   "basis": "team",
+   "scope": "unknown",
+   "confidence": "low",
+   "basis_text": [],
+   "penalty_text": [
+    "3일 전: 10%",
+    "2일 전: 20%",
+    "1일 전·당일·노쇼·미내장: 30%"
+   ]
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 8,
+     "weekday": null,
+     "time": "10:00",
+     "member": null,
+     "text": "8주 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "희망일 기준 8주 전 오전 10시부터 실시간 예약(홈페이지 로그인). 예약실 041-851-6320"
+  }
  },
  "ops": {
   "nocaddie": {

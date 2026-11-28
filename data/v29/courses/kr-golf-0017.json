@@ -630,6 +630,47 @@
   ],
   "weather_evidence": [
    "기상악화 예보에 따른 예약취소는 위약 처리하며, 라운드 당일 회사가 라운드 불가로 판단한 경우에는 위약처리 하지 않습니다."
+  ],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3
+    },
+    "weekend": {
+     "days_before": 4
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "주말·공휴일 이용예정일 4일 전",
+    "평일 이용예정일 3일 전까지 취소 시 예약금 전액 환불"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [],
+   "monthly": [
+    {
+     "day": 1,
+     "weekday": null,
+     "time": null,
+     "scope": "weekday"
+    }
+   ],
+   "weekly": null,
+   "method": null,
+   "recurring": true,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "low",
+   "text": "평일: 매월 1일부터 다음 달 말일까지 예약 가능"
+  },
+  "weather_summary": [
+   "기상악화 예보에 따른 예약취소는 위약 처리하며, 라운드 당일 회사가 라운드 불가로 판단한 경우에는 위약처리 하지 않습니다."
   ]
  },
  "ops": {

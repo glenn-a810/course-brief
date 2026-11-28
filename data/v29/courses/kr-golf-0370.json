@@ -166,7 +166,50 @@
   "open_cycle": "경기일 3주 전 해당 요일(21일 전) 09:00 오픈 — 월~일·공휴일 동일",
   "notes": null,
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3,
+     "time": "17:00"
+    },
+    "weekend": {
+     "days_before": 4,
+     "time": "17:00"
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "high",
+   "basis_text": [
+    "평일 3일 전·주말 4일 전 17:00까지 위약 없이 취소",
+    "평일 3일 전·주말 4일 전 17:00까지 위약 없이 취소"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 3,
+     "weekday": null,
+     "time": "09:00",
+     "member": null,
+     "text": "3주 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "경기일 3주 전 해당 요일(21일 전) 09:00 오픈 — 월~일·공휴일 동일"
+  }
  },
  "ops": {
   "nocaddie": {

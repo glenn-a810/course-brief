@@ -137,7 +137,47 @@
   "evidence": [
    "위약 없이 취소: 6일 전까지 · 이용약관상 휴장·경기 중단 기준 — 순간 강우 20mm 이상의 폭우로 경기가 불가하다고 클럽이 판단한 경우 — https://greenfeeguide.co.kr/course/gc-0122/"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 6
+    },
+    "weekend": {
+     "days_before": 6
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "위약 없이 취소: 6일 전까지"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "weekend",
+     "unit": "week",
+     "before": 3,
+     "weekday": "월",
+     "time": null,
+     "member": null,
+     "text": "3주 전 월요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "online",
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "주말·공휴일 인터넷 예약은 3주 전 월요일 접수"
+  }
  },
  "ops": {
   "nocaddie": {

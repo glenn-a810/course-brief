@@ -286,7 +286,50 @@
   "open_cycle": "이용일 8주 전부터 예약",
   "notes": "캐디 지정 폐지(2021-08-01~ 순번 배치). 5인 플레이 9홀 2시간 내",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {},
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 1,
+     "to_days": 1,
+     "pct": null,
+     "suspend_months": 1,
+     "suspend_days": null,
+     "text": "6일~1일 전 예약 1개월 정지"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "low",
+   "basis_text": [],
+   "penalty_text": [
+    "6일~1일 전 예약 1개월 정지"
+   ]
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 8,
+     "weekday": null,
+     "time": null,
+     "member": null,
+     "text": "8주 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "이용일 8주 전부터 예약"
+  }
  },
  "ops": {
   "nocaddie": {

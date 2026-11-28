@@ -190,7 +190,47 @@
   "open_cycle": "홈페이지 실시간예약(로그인), 전화·팩스. 조인예약 메뉴 운영",
   "notes": "객실은 8일 전까지 취소(1박 요금). 연중무휴",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 7
+    },
+    "weekend": {
+     "days_before": 7
+    }
+   },
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 3,
+     "to_days": 1,
+     "pct": null,
+     "suspend_months": 3,
+     "suspend_days": null,
+     "text": "3~1일 전: 3인 그린피 또는 3개월"
+    },
+    {
+     "day": null,
+     "from_days": 7,
+     "to_days": 4,
+     "pct": null,
+     "suspend_months": 2,
+     "suspend_days": null,
+     "text": "7~4일 전: 동반자 2인 그린피 위약 또는 2개월 정지"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "7일 전까지 취소 권장"
+   ],
+   "penalty_text": [
+    "7~4일 전: 동반자 2인 그린피 위약 또는 2개월 정지",
+    "3~1일 전: 3인 그린피 또는 3개월"
+   ]
+  }
  },
  "ops": {
   "nocaddie": {

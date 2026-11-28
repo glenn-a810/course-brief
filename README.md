@@ -35,6 +35,11 @@
 - **필터** — 지역(17개 시도) · 이용형태 · 홀수 · 주말 그린피 상한 · **플레이 조건 8종**(노캐디·2인·야간·사우나·숙박·셔틀·연습장·식당, 다중 AND) · 정렬(이름/그린피/홀수/**4인 총액**/**평점**) · 조건·정렬·보기 상태가 URL 해시에 남는다
 - **지도 뷰** — 목록/지도 전환. Leaflet + OpenStreetMap 타일(키 없음)을 처음 열 때만 내려받고, 국가 배율은 묶음→확대하면 개별 그린피 핀. 라이트/다크 대응, 좌표 539곳
 - **총비용 계산기(상세)** — 인원 2·3·4·5 / 주중·주말 / 18·9홀 / 카트·캐디 → 팀 합계·1인당. 없는 값은 `미확인`으로 빼고 "미확인 항목 제외 합계"로 표기. 정산 문구 복사·공유
+- **라운드 플래너(상세)** — 라운드 예정일 하나로 **취소 마감·위약**(H2) · **예약 오픈일**(H3) · **날씨**(M1)를 함께 계산. 공휴일은 주중/주말을 직접 바꿀 수 있고, 취소 마감·오픈 일정은 `.ics`(오픈 30분 전·취소 2시간 전 알림)로 내려받는다
+- **휴장·정비 캘린더** — 확인된 운영 알림(`alert` 38곳)과 공지 제목에서 기간을 읽은 항목을 한 화면에. 진행 중/예정/일정 미상/지난 일정으로 나누고 권역·종류·내 구장 필터
+- **내 구장** — 카드·상세의 ★로 저장(브라우저 localStorage) + 최근 본 20곳. 저장한 구장의 다음 토요일 라운드 예약 오픈일과 휴장 일정을 한 화면에, JSON 내보내기·전체 삭제
+- **라운드 준비 카드** — 전날/당일 확인용 한 장(일정·장소·4인 정산·현장·시설·날씨). `인쇄`(print CSS)·`링크 복사`·캘린더 저장
+- **값 신선도(90일)** — 요금·공지 확인일이 90일을 넘으면 카드·상세에 `90일+`·`n일 전 확인 · 재확인 권장`을 절제해 표시
 - **후보 비교** — 최대 4곳 담기(하단 바) → `#/compare?ids=…` 표(그린피·4인 총액·카트/캐디·2인/노캐디/야간·취소·예약 오픈). 링크 복사로 동반자와 공유
 - **예약 채널** — 공식 홈페이지·전화 외 카카오골프예약·골프존 티스캐너·스마트스코어·티픽·네이버 검색으로 바로 이동(예약 대행 아님)
 - **상태 배지·필터** — 영업중 / **휴업(영업중단)** / 건설중 / 미착공 / **사업 취소** / 폐업
@@ -52,6 +57,8 @@ data/v29/
 ├── index.json              540곳 경량 인덱스 (약 200KB)
 ├── courses/{id}.json       구장별 상세 12키 JSON 540개 (상세 515 + 요약 25)
 ├── clusters.json           시설 클러스터 28개
+├── alerts.json             휴장·에어레이션·요금 변경 통합 캘린더 99건(기간 확인 28)
+├── booking_rules.json      취소 마감·예약 오픈 계산용 경량 요약 454곳
 ├── sido.json               시도 코드·건수
 ├── rental_providers.json   렌탈·딜리버리 업체 8곳
 ├── rental_deliveries.md    렌탈 시장 조사 원문
@@ -98,6 +105,12 @@ npm run check      # build + verify
 
 ```
 web/assets/app.ts     화면·라우터·렌더링
+web/assets/rules.ts   취소 마감·예약 오픈 날짜 계산 + .ics 생성
+web/assets/roundplan.ts 상세 라운드 플래너(H2·H3·M1)
+web/assets/weather.ts Open-Meteo 예보·적합도(실패 시 조용히 숨김)
+web/assets/alerts.ts  휴장·정비 캘린더(M3)
+web/assets/saved.ts   즐겨찾기·최근 본(M4, localStorage)
+web/assets/prep.ts    라운드 준비 카드(M5, 인쇄)
 web/assets/admin.ts   관리자 모드(출처 노출 분기·비밀번호 해시 비교)
 web/assets/search.ts  SearchAdapter 구현(LocalSearchAdapter / EsSearchAdapter)
 web/assets/util.ts    포맷·초성·이스케이프
@@ -111,6 +124,7 @@ functions/api/search.ts  Cloudflare Pages Function (ES 프록시, PagesFunction<
 
 ```bash
 npm run data:build   # data/v29/* 재생성 (Python 3)
+npm run data:rules   # 취소·예약 오픈 문장 파싱 → parsed_cancel·parsed_open, alerts.json·booking_rules.json
 npm run data:check   # 12키·개수·금지 문자열·인덱스 300KB 검증
 ```
 

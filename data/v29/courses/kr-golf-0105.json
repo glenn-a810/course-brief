@@ -482,7 +482,48 @@
   ],
   "weather_evidence": [
    "이용요금 안내 구분 비회원 그린피 카트비 캐디피 주중 260,000원 120,000원 170,000원 주말(토/일/공휴일) 310,000원 * 9홀 추가 시 카트비 60,000원, 캐디피 80,000원 추가 발생 전문 캐디피 구분 18홀 9홀 베스트 / 외국어캐디 200,000 110,000 대여료 구분 골프채 골프화 1set 50,000원 10,000원 악천후 시 이용요금 구분 그린피 카트비 캐디피 1~9홀 홀별정산 60,000원 90,000원 10홀 이상 홀별정산 120,000원 170,000원 * 고객사정으로 인한 경기 종료 "
-  ]
+  ],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 7
+    },
+    "weekend": {
+     "days_before": 7
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "예약일 기준 7일 전까지 위약 없이 취소. 6~2일 전 취소는 위약금 주중 60만원·주말 및 공휴일 80만원",
+    "예약일 기준 7일 전까지 위약 없이 취소. 6~2일 전 취소는 위약금 주중 60만원·주말 및 공휴일 80만원"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 6,
+     "weekday": "월",
+     "time": null,
+     "member": null,
+     "text": "6주 전 월요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "6주 전 월요일 접수, 화요일 마감, 수요일 배정"
+  }
  },
  "ops": {
   "nocaddie": {

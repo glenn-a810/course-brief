@@ -596,7 +596,61 @@
    "공식 이용안내 기준 예약 오픈은 해당일로부터 21일 전 인터넷 오픈입니다. (https://parkgolfinfo.co.kr/가기-전에-꼭-확인하세요-파인비치cc-골프강습-및-예약/)",
    "6일전~1일전 취소 : 1개월 예약 / 내장 불가 or 팀당 20만원(위약금) 당일취소 및 NO SHOW : 3개월 예약 / 내장 불가 or 팀당 20만원(위약금)"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 7,
+     "time": "18:00"
+    },
+    "weekend": {
+     "days_before": 7,
+     "time": "18:00"
+    }
+   },
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 1,
+     "to_days": 1,
+     "pct": null,
+     "suspend_months": 1,
+     "suspend_days": null,
+     "text": "이후 6일~1일 전: 1개월 예약·내장 불가 또는 팀당 20만원"
+    }
+   ],
+   "basis": "team",
+   "scope": "unknown",
+   "confidence": "high",
+   "basis_text": [
+    "위약 없이: 주중·주말 7일 전 18:00까지"
+   ],
+   "penalty_text": [
+    "이후 6일~1일 전: 1개월 예약·내장 불가 또는 팀당 20만원"
+   ]
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "day",
+     "before": 21,
+     "weekday": null,
+     "time": null,
+     "member": null,
+     "text": "21일 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "online",
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "21일 전 인터넷 오픈"
+  }
  },
  "ops": {
   "nocaddie": {

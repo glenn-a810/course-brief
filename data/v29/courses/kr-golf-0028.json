@@ -136,7 +136,29 @@
   "evidence": [
    "개인예약은 희망일 28일 전 오전 7시 티오프 오픈 , 1인 1일 1팀 한정 으로 운영됩니다. (https://parkgolfinfo.co.kr/여수시티파크리조트골프장-예약-전-꼭-확인-18홀-요금/)"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "day",
+     "before": 28,
+     "weekday": null,
+     "time": "07:00",
+     "member": null,
+     "text": "28일 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "희망일 28일 전 오전 7시부터(1인 1일 1팀)"
+  }
  },
  "ops": {
   "nocaddie": {

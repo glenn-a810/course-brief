@@ -165,7 +165,68 @@
   "evidence": [
    "주중·주말 모두 7일 전까지 무위약 취소가 가능하며 이후에는 공식 위약 규정이 적용됩니다."
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {},
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 7,
+     "to_days": 7,
+     "pct": null,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "주중·주말 모두 7일 전까지 무위약 취소"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "low",
+   "basis_text": [],
+   "penalty_text": [
+    "주중·주말 모두 7일 전까지 무위약 취소"
+   ]
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "weekday",
+     "unit": "week",
+     "before": 4,
+     "weekday": null,
+     "time": "09:00",
+     "member": "정회원",
+     "text": "4주 전"
+    },
+    {
+     "scope": "weekend",
+     "unit": "week",
+     "before": 4,
+     "weekday": "화",
+     "time": null,
+     "member": "정회원",
+     "text": "4주 전 화요일"
+    },
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 3,
+     "weekday": null,
+     "time": "09:00",
+     "member": "회원",
+     "text": "3주 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "online",
+   "recurring": false,
+   "member_only": true,
+   "scope": "member",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "• 정회원 주중: 4주 전 해당 요일 9시 실시간 예약\n• 정회원 주말·공휴일: 4주 전 화요일 9~17시 온라인 배정 신청, 수요일 15시 확정\n• 온라인회원: 3주 전 해당 요일 9시 실시간 예약"
+  }
  },
  "ops": {
   "nocaddie": {

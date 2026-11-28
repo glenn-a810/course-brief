@@ -213,7 +213,45 @@
   "open_cycle": "주중·주말 모두 5주 전 화요일 09시부터 선착순 예약",
   "notes": null,
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 7,
+     "time": "17:00"
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "주중 7일 전 17:00까지 취소 가능"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 5,
+     "weekday": "화",
+     "time": "09:00",
+     "member": null,
+     "text": "5주 전 화요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "fcfs",
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "high",
+   "text": "주중·주말 모두 5주 전 화요일 09시부터 선착순 예약"
+  }
  },
  "ops": {
   "nocaddie": {

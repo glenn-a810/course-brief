@@ -266,7 +266,99 @@
   "evidence": [
    "https://www.gold-9.co.kr/guide/guide.asp"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 6,
+     "time": "17:00"
+    },
+    "weekend": {
+     "days_before": 6,
+     "time": "17:00"
+    }
+   },
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 1,
+     "to_days": 1,
+     "pct": null,
+     "suspend_months": 5,
+     "suspend_days": null,
+     "text": "5일 전 1개월 · 4일 전 2개월 · 3일 전 3개월 · 2일 전 4개월 · 1일 전 5개월·내장금지 · 당일 6개월·내장…"
+    },
+    {
+     "day": null,
+     "from_days": 2,
+     "to_days": 2,
+     "pct": null,
+     "suspend_months": 4,
+     "suspend_days": null,
+     "text": "5일 전 1개월 · 4일 전 2개월 · 3일 전 3개월 · 2일 전 4개월 · 1일 전 5개월·내장금지 · 당일 6개월·내장…"
+    },
+    {
+     "day": null,
+     "from_days": 3,
+     "to_days": 3,
+     "pct": null,
+     "suspend_months": 3,
+     "suspend_days": null,
+     "text": "5일 전 1개월 · 4일 전 2개월 · 3일 전 3개월 · 2일 전 4개월 · 1일 전 5개월·내장금지 · 당일 6개월·내장…"
+    },
+    {
+     "day": null,
+     "from_days": 4,
+     "to_days": 4,
+     "pct": null,
+     "suspend_months": 2,
+     "suspend_days": null,
+     "text": "5일 전 1개월 · 4일 전 2개월 · 3일 전 3개월 · 2일 전 4개월 · 1일 전 5개월·내장금지 · 당일 6개월·내장…"
+    },
+    {
+     "day": null,
+     "from_days": 5,
+     "to_days": 5,
+     "pct": null,
+     "suspend_months": 1,
+     "suspend_days": null,
+     "text": "5일 전 1개월 · 4일 전 2개월 · 3일 전 3개월 · 2일 전 4개월 · 1일 전 5개월·내장금지 · 당일 6개월·내장…"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "high",
+   "basis_text": [
+    "6일 전 17:00까지 홈페이지·전화로 취소 가능"
+   ],
+   "penalty_text": [
+    "5일 전 1개월 · 4일 전 2개월 · 3일 전 3개월 · 2일 전 4개월 · 1일 전 5개월·내장금지 · 당일 6개월·내장금지 예약정지",
+    "5일 전 1개월 · 4일 전 2개월 · 3일 전 3개월 · 2일 전 4개월 · 1일 전 5개월·내장금지 · 당일 6개월·내장금지 예약정지",
+    "5일 전 1개월 · 4일 전 2개월 · 3일 전 3개월 · 2일 전 4개월 · 1일 전 5개월·내장금지 · 당일 6개월·내장금지 예약정지"
+   ]
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 4,
+     "weekday": "월",
+     "time": "09:00",
+     "member": "회원",
+     "text": "4주 전 월요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "online",
+   "recurring": false,
+   "member_only": true,
+   "scope": "member",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "인터넷 회원은 4주 전 월요일 09:00부터 전일 17:00까지 인터넷 접수, 전화예약은 예약실(3주 전)"
+  }
  },
  "ops": {
   "nocaddie": {

@@ -209,7 +209,70 @@
   "evidence": [
    "https://www.daehocc.co.kr/pagesite/use/penalty.asp"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3
+    },
+    "weekend": {
+     "days_before": 4
+    }
+   },
+   "penalty": [
+    {
+     "day": "weekday",
+     "from_days": 1,
+     "to_days": 1,
+     "pct": 20.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "이후 : 주말 3~2일 전·평일 2일 전 10% · 1일 전 20% · 당일·노쇼 30%"
+    },
+    {
+     "day": "weekday",
+     "from_days": 2,
+     "to_days": 2,
+     "pct": 10.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "이후 : 주말 3~2일 전·평일 2일 전 10% · 1일 전 20% · 당일·노쇼 30%"
+    }
+   ],
+   "basis": "team",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "주말·공휴일 4일 전·평일 3일 전까지 취소 시 예약금 전액 환불",
+    "주말·공휴일 4일 전·평일 3일 전까지 취소 시 예약금 전액 환불"
+   ],
+   "penalty_text": [
+    "이후 : 주말 3~2일 전·평일 2일 전 10% · 1일 전 20% · 당일·노쇼 30%",
+    "이후 : 주말 3~2일 전·평일 2일 전 10% · 1일 전 20% · 당일·노쇼 30%"
+   ]
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 5,
+     "weekday": null,
+     "time": "09:00",
+     "member": null,
+     "text": "5주 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "예약기간 이용 예정일 5주 전 09:00 ~ 티오프 3시간 전까지"
+  }
  },
  "ops": {
   "nocaddie": {

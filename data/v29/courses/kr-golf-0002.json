@@ -559,7 +559,59 @@
    "예약안내 이용요금 준수사항 패널티규정 이용안내 이용요금 구분 그린피 카트료 18홀 주중(월~목) 1부 135,000 대당 : 100,000 2부 145,000 금요일 1부 135,000 2부 165,000 주말/공휴일 1부 185,000 2부 185,000 9홀(추가) 주중(월~목) 1부 62,500 대당 : 50,000 2부 67,500 금요일 1부 62,500 2부 77,500 주말/공휴일 1부 87,500 2부 87,500 시설이용료 : 10,000원 (공정거래위원회[제10033호]약관에 의거 시설이용료는 골프장 내장등록시 부",
    "취소 규정 안내 페이지에는 골프 예약 기준으로 1일 전 취소 시 4개월 예약정지와 팀당 이용요금 20%가 안내돼 있습니다."
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {},
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 1,
+     "to_days": 1,
+     "pct": 20.0,
+     "suspend_months": 4,
+     "suspend_days": null,
+     "text": "1일 전 취소 시 4개월 예약정지 및 팀당 이용요금 20% 위약"
+    }
+   ],
+   "basis": "team",
+   "scope": "unknown",
+   "confidence": "low",
+   "basis_text": [],
+   "penalty_text": [
+    "1일 전 취소 시 4개월 예약정지 및 팀당 이용요금 20% 위약"
+   ]
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "weekday",
+     "unit": "week",
+     "before": 4,
+     "weekday": "월",
+     "time": "09:00",
+     "member": null,
+     "text": "4주 전 월요일"
+    },
+    {
+     "scope": "weekend",
+     "unit": "week",
+     "before": 4,
+     "weekday": "금",
+     "time": "09:00",
+     "member": null,
+     "text": "4주 전 금요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "high",
+   "text": "주중 4주 전 월요일 09:00, 주말 4주 전 금요일 09:00 오픈(회원권 안내 기준)"
+  }
  },
  "ops": {
   "nocaddie": {

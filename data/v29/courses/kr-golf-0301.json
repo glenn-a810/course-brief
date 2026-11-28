@@ -558,7 +558,27 @@
    "명의변경 : 1부, 2부 예약 주주회원 명의변경 불가 예약위규 제재조치 단체팀 결장 - 1 팀당 위약금 200,000원 부과 (미 납부시 서클행사 시간 미 배정) 단체팀 전체 취소 - 예약당일을 제외한 12일전 12:00까지 단체팀 1팀 취소 - 예약당일을 제외한 4일전 12:00까지 개인팀 결장 - 위약금 200,000 원 부과 (미 납부시 예약정지 3개월) 예약당일 예약주주의 미 입장시, 입장은 허용하되 예약주주는 예약정지 3개월(위규한 다음날부터 바로 적용)또는 위약금 200,000원 중 선택 주주의 경우 주중(월~금요일) 중"
   ],
   "weather_evidence": [],
-  "browser_official": null
+  "browser_official": null,
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 4,
+     "time": "12:00"
+    },
+    "weekend": {
+     "days_before": 4,
+     "time": "12:00"
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "high",
+   "basis_text": [
+    "이용예정일 4일 전 12:00까지 취소: 예약금 전액 환불"
+   ],
+   "penalty_text": []
+  }
  },
  "ops": {
   "nocaddie": {

@@ -187,7 +187,67 @@
   "evidence": [
    "평일 3일 전 위약 없음 주말 4일 전 위약 없음 주말 3일 전·2일 전 팀 이용요금의 10% 1일 전 팀 이용요금의 20% 당일 취소·노쇼 팀 이용요금의 30%"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3
+    },
+    "weekend": {
+     "days_before": 4
+    }
+   },
+   "penalty": [
+    {
+     "day": "weekend",
+     "from_days": 1,
+     "to_days": 1,
+     "pct": 20.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "주말 3~2일 전 10%·1일 전 20%·당일·노쇼 30% 위약금"
+    },
+    {
+     "day": "weekend",
+     "from_days": 3,
+     "to_days": 2,
+     "pct": 10.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "주말 3~2일 전 10%·1일 전 20%·당일·노쇼 30% 위약금"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "평일 3일 전·주말 4일 전까지 위약 없이 취소",
+    "평일 3일 전·주말 4일 전까지 위약 없이 취소"
+   ],
+   "penalty_text": [
+    "주말 3~2일 전 10%·1일 전 20%·당일·노쇼 30% 위약금",
+    "주말 3~2일 전 10%·1일 전 20%·당일·노쇼 30% 위약금"
+   ]
+  },
+  "parsed_open": {
+   "rules": [],
+   "monthly": [
+    {
+     "day": 1,
+     "weekday": null,
+     "time": null,
+     "scope": "both"
+    }
+   ],
+   "weekly": null,
+   "method": "online",
+   "recurring": true,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "low",
+   "text": "매월 1일 익월 전체 오픈(온라인 09:00, 유선 10:00)"
+  }
  },
  "ops": {
   "nocaddie": {

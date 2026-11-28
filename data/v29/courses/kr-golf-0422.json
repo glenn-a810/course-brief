@@ -285,7 +285,48 @@
   "open_cycle": "매월 첫 번째 월요일 09:00부터 다음 달 예약 일괄 오픈",
   "notes": "2인은 5일 전 잔여 티에 한해 전화 예약(3인 요금 적용). 3인 플레이 가능",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3,
+     "time": "17:00"
+    },
+    "weekend": {
+     "days_before": 4,
+     "time": "17:00"
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "평일 3일 전·주말 4일 전 17:00까지",
+    "평일 3일 전·주말 4일 전 17:00까지"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [],
+   "monthly": [
+    {
+     "day": null,
+     "weekday": "월",
+     "time": "09:00",
+     "scope": "both",
+     "ordinal": "first"
+    }
+   ],
+   "weekly": null,
+   "method": null,
+   "recurring": true,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "low",
+   "text": "매월 첫 번째 월요일 09:00부터 다음 달 예약 일괄 오픈"
+  }
  },
  "ops": {
   "nocaddie": {

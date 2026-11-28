@@ -169,7 +169,32 @@
   "evidence": [
    "https://wondergolf.co.kr/courses/kr-kakao-10593450"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 3,
+     "weekday": "월",
+     "time": null,
+     "member": null,
+     "text": "3주 후 월요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": {
+    "weekday": "월",
+    "time": "10:00"
+   },
+   "method": "online",
+   "recurring": true,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "매주 월요일 10시 인터넷예약 일괄 오픈, 3주 후 월요일~일요일 예약 접수. 전화예약은 월요일 11시부터"
+  }
  },
  "ops": {
   "nocaddie": {

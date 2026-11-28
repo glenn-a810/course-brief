@@ -162,7 +162,67 @@
    "https://wondergolf.co.kr/courses/kr-kakao-16975978",
    "예약취소 : 해당일 제외한 7일전 오후 4시까지"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 7,
+     "time": "16:00"
+    },
+    "weekend": {
+     "days_before": 7,
+     "time": "16:00"
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "high",
+   "basis_text": [
+    "이용일 제외 7일 전 16시까지 취소 가능 평일"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "day",
+     "before": 12,
+     "weekday": null,
+     "time": "10:00",
+     "member": "비회원",
+     "text": "12일 전"
+    },
+    {
+     "scope": "both",
+     "unit": "day",
+     "before": 10,
+     "weekday": null,
+     "time": "10:00",
+     "member": null,
+     "text": "10일 전"
+    },
+    {
+     "scope": "both",
+     "unit": "day",
+     "before": 16,
+     "weekday": null,
+     "time": null,
+     "member": null,
+     "text": "16일 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "non_member",
+   "ambiguous": true,
+   "confidence": "low",
+   "text": "• 평일 — 정회원: 해당 요일 2주 전 10시 / 지정·플러스회원: 해당일 제외 13일 전 10시 / 준회원·비회원: 해당일 제외 12일 전 10시\n• 주말 — 정회원: 예약일 전주 화요일 14~16시 / 지정·…"
+  }
  },
  "ops": {
   "nocaddie": {

@@ -225,7 +225,45 @@
   "open_cycle": "라운드 3주 전 월요일 09:00 선착순 오픈",
   "notes": "미확인(공식 오픈 주기 미게시 — 홈페이지 실시간 예약)",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3,
+     "time": "16:00"
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "평일은 3일 전 16:00까지 취소"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 3,
+     "weekday": "월",
+     "time": "09:00",
+     "member": null,
+     "text": "3주 전 월요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "fcfs",
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "high",
+   "text": "라운드 3주 전 월요일 09:00 선착순 오픈"
+  }
  },
  "ops": {
   "nocaddie": {

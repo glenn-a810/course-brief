@@ -213,7 +213,32 @@
    "https://wondergolf.co.kr/courses/kr-kakao-12490693",
    "한 달 3번 넘게 취소하면 3개월 예약이 막히며 … 예약 당일 미내장(노쇼) 팀 이용요금의 30% … 입장 후 경기 전 임의 취소 그린피 50% + 카트비"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 4,
+     "weekday": "월",
+     "time": null,
+     "member": null,
+     "text": "4주 뒤 월"
+    }
+   ],
+   "monthly": [],
+   "weekly": {
+    "weekday": "월",
+    "time": "09:00"
+   },
+   "method": "online",
+   "recurring": true,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "• 인터넷 예약: 매주 월요일 오전 9시, 오픈 주 포함 4주 뒤 월~일요일 오픈\n• 전화예약 055-379-9000(업무시간 09:00~17:00)"
+  }
  },
  "ops": {
   "nocaddie": {

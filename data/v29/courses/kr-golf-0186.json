@@ -164,7 +164,74 @@
    "“1일전 예약취소 예약정지 60일 2일전 예약취소 예약정지 50일 3일전 에약취소 예약정지 40일 4일전 예약취소 예약정지 30일 5일전 예약취소 예약정지 20일 6일전 예약취소 예약정지 10일 7일전 예약취소 없음”",
    "골프장 공식 홈페이지 안내(비회원 예약 기준) · 2026.11.25 확인 ·"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 7
+    },
+    "weekend": {
+     "days_before": 7
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "위약 없이 취소: 7일 전까지 / 기한 경과 시 위약금·예약 제한 적용"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "weekend",
+     "unit": "week",
+     "before": 4,
+     "weekday": "화",
+     "time": "10:00",
+     "member": null,
+     "text": "4주 전 화요일"
+    },
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 4,
+     "weekday": "수",
+     "time": null,
+     "member": "회원",
+     "text": "4주 전 수요일"
+    },
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 3,
+     "weekday": "화",
+     "time": null,
+     "member": "회원",
+     "text": "3주 전 화요일"
+    },
+    {
+     "scope": "weekday",
+     "unit": "week",
+     "before": 4,
+     "weekday": "월",
+     "time": null,
+     "member": null,
+     "text": "4주 전 월요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "online",
+   "recurring": false,
+   "member_only": true,
+   "scope": "member",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "• 주말·공휴일: 매 4주 전 화요일 10:00(특별/정/우대) · 준·가족회원 4주 전 수요일 · 사이버회원 3주 전 화요일\n• 주중: 4주 전 월요일 월~금 동시 오픈(준·가족 4주 전 화요일, 사이버 3주 전…"
+  }
  },
  "ops": {
   "nocaddie": {

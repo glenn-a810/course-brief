@@ -225,7 +225,47 @@
   "open_cycle": "• 주중·주말·공휴일 모두 21일 전 오전 08시부터(인터넷 VIP·사이버고객, 전화)\n• 인터넷 24시간, 전화 08:00~17:00",
   "notes": "3인 플레이 1인당 1만원 추가, 2인 플레이는 3인 요금 지불 시 이용",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 4
+    },
+    "weekend": {
+     "days_before": 4
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "4일 전까지 예약취소 가능"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "day",
+     "before": 21,
+     "weekday": null,
+     "time": "08:00",
+     "member": null,
+     "text": "21일 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "online",
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "• 주중·주말·공휴일 모두 21일 전 오전 08시부터(인터넷 VIP·사이버고객, 전화)\n• 인터넷 24시간, 전화 08:00~17:00"
+  }
  },
  "ops": {
   "nocaddie": {

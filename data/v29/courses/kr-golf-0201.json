@@ -272,7 +272,50 @@
   "open_cycle": "인터넷 홈페이지·모바일 앱·전화(09:00~17:30). 3주 전 예약 가능(자정 0시 오픈)",
   "notes": null,
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 4,
+     "time": "17:00"
+    },
+    "weekend": {
+     "days_before": 4,
+     "time": "17:00"
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "취소: 4일 전 17시까지 인터넷으로 가능",
+    "변경: 4일 전 17시까지 1회 가능"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 3,
+     "weekday": null,
+     "time": null,
+     "member": null,
+     "text": "3주 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "online",
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "인터넷 홈페이지·모바일 앱·전화(09:00~17:30). 3주 전 예약 가능(자정 0시 오픈)"
+  }
  },
  "ops": {
   "nocaddie": {

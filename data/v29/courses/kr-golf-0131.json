@@ -439,7 +439,48 @@
    "① 주중/주말 및 공휴일 정회원4일전까지, 비회원(사이버회원,배우자포함)7일전까지 취소 및 이동 또는 변경시 위약처리 없음",
    "예약 오픈 주기: 4주 전 월요일 오전 9시~16시 선착순 접수 (https://www.ansungcc.co.kr/Reservation/Guide.aspx)"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 7
+    },
+    "weekend": {
+     "days_before": 7
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "non_member",
+   "confidence": "medium",
+   "basis_text": [
+    "정회원은 4일 전",
+    "비회원 은 7일 전까지 취소·이동·변경 시 위약 없음"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 4,
+     "weekday": "월",
+     "time": "09:00",
+     "member": null,
+     "text": "4주 전 월요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "fcfs",
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "high",
+   "text": "4주 전 월요일 오전 9시~16시 선착순 접수"
+  }
  },
  "ops": {
   "nocaddie": {

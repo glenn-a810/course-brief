@@ -167,7 +167,66 @@
    "5일 전 취소 : 1개월 예약 정지",
    "*무분별한 예약 선점 방지를 위하여 예약 취소는 월 1회만 가능합니다."
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {},
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 1,
+     "to_days": 1,
+     "pct": 20.0,
+     "suspend_months": 5,
+     "suspend_days": null,
+     "text": "1일 전 5개월·20%"
+    },
+    {
+     "day": null,
+     "from_days": 2,
+     "to_days": 2,
+     "pct": 10.0,
+     "suspend_months": 4,
+     "suspend_days": null,
+     "text": "2일 전 4개월·10%"
+    },
+    {
+     "day": null,
+     "from_days": 3,
+     "to_days": 3,
+     "pct": null,
+     "suspend_months": 3,
+     "suspend_days": null,
+     "text": "3일 전 3개월 주말"
+    },
+    {
+     "day": null,
+     "from_days": 4,
+     "to_days": 4,
+     "pct": null,
+     "suspend_months": 2,
+     "suspend_days": null,
+     "text": "4일 전 2개월"
+    },
+    {
+     "day": null,
+     "from_days": 5,
+     "to_days": 5,
+     "pct": null,
+     "suspend_months": 1,
+     "suspend_days": null,
+     "text": "5일 전 1개월 예약정지"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "low",
+   "basis_text": [],
+   "penalty_text": [
+    "1일 전 5개월·20%",
+    "2일 전 4개월·10%",
+    "3일 전 3개월 주말"
+   ]
+  }
  },
  "ops": {
   "nocaddie": {

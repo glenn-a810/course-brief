@@ -297,6 +297,24 @@
    "annual_booking_discount": "연부킹 3팀(12명) 이상 4인 기준 인당 요금 혜택, 6팀 이상 별도 협의. 비수기(1·2·7·8월) 2만원·성수기 1만원 할인(4인 기준), 회장·총무 내장 시 각각 할인",
    "refund_note": "할인은 18홀 정상 라운딩 완료 시 적용, 우천 홀별 환불 시 정상금액 기준 환불",
    "id_check": "예약자 본인 내장 필수, 직원 요구 시 본인 증명"
+  },
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3
+    },
+    "weekend": {
+     "days_before": 3
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "3일 전까지 온라인 취소"
+   ],
+   "penalty_text": []
   }
  },
  "ops": {

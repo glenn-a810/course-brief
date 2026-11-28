@@ -186,7 +186,48 @@
   "open_cycle": "평일·휴일 모두 31일 전 오픈(올데이 통합 예약안내 표기)",
   "notes": "할인공시가는 1팀 4인 조건, 3인은 4인 요금, 2인 플레이 불가",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3
+    },
+    "weekend": {
+     "days_before": 4
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "주중 3일 전",
+    "주말·공휴일 4일 전까지 위약 없이 취소"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "day",
+     "before": 31,
+     "weekday": null,
+     "time": null,
+     "member": null,
+     "text": "31일 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "평일·휴일 모두 31일 전 오픈(올데이 통합 예약안내 표기)"
+  }
  },
  "ops": {
   "nocaddie": {

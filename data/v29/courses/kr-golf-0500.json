@@ -634,7 +634,51 @@
    "예약시각 확인 : 인터넷은 실시간으로 확인가능, 기타는 접수시간대를 참고하여(1,2,3순위시각) 예약직원이 입력 후 예약시각을 문자메세지로 통지 예약취소 주말이나 공휴일은 이용예정일로부터 4일전까지, 평일은 이용예정일로부터 3일전까지 예약 취소 가능합니다.",
    "기존 cancel_policy 값이 인접 안내 항목과 뒤섞여 있어(오류) 그린피가이드 원문 인용으로 정정 — 평일 3일 전 · 주말 4일 전까지 (이용약관 기준 — 예약 안내에 더 이른 기한이 따로 있을 수 있으니 함께 확인하세요) (출처: https://greenfeeguide.co.kr/course/gc-0438/, 2026-11 확인)"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3
+    },
+    "weekend": {
+     "days_before": 4
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "평일 3일 전·주말 4일 전까지",
+    "평일 3일 전·주말 4일 전까지"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 4,
+     "weekday": null,
+     "time": null,
+     "member": null,
+     "text": "4주 후"
+    }
+   ],
+   "monthly": [],
+   "weekly": {
+    "weekday": "화",
+    "time": "10:00"
+   },
+   "method": null,
+   "recurring": true,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "평일팀 예약: 매주 화요일 10:00부터 4주 후 평일(5일간) 예약"
+  }
  },
  "ops": {
   "nocaddie": {

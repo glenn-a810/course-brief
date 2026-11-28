@@ -374,7 +374,62 @@
     "checked_at": "2026-11-27",
     "source_type": "official_site"
    }
-  ]
+  ],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3,
+     "time": "17:00"
+    },
+    "weekend": {
+     "days_before": 2,
+     "time": "17:00"
+    }
+   },
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 1,
+     "to_days": 1,
+     "pct": 20.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "1일 전 20%"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "high",
+   "basis_text": [
+    "주중 3일 전 17:00까지 위약 없이 취소. 이후 2일 전 10%",
+    "주중 3일 전 17:00까지 위약 없이 취소. 이후 2일 전 10%"
+   ],
+   "penalty_text": [
+    "1일 전 20%"
+   ]
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 4,
+     "weekday": "월",
+     "time": "09:00",
+     "member": null,
+     "text": "4주 전 월요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "online",
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "high",
+   "text": "인터넷 예약 4주 전 월요일 09:00 오픈"
+  }
  },
  "ops": {
   "nocaddie": {

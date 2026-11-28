@@ -176,7 +176,50 @@
   "open_cycle": "이용일 10일 전 10:00부터 인터넷 홈페이지 예약",
   "notes": "• 정기 휴장은 매월 셋째 월요일(설·추석이 있는 달은 당일)\n• 2인은 부족 인원 이용료 추가\n• 3인은 평일 가능, 주말·공휴일은 1인 이용료 추가",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3,
+     "time": "24:00"
+    },
+    "weekend": {
+     "days_before": 4,
+     "time": "24:00"
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "high",
+   "basis_text": [
+    "평일 3일 전·주말 4일 전 24:00까지 위약 없이 취소",
+    "평일 3일 전·주말 4일 전 24:00까지 위약 없이 취소"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "day",
+     "before": 10,
+     "weekday": null,
+     "time": "10:00",
+     "member": null,
+     "text": "10일 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "online",
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "이용일 10일 전 10:00부터 인터넷 홈페이지 예약"
+  }
  },
  "ops": {
   "nocaddie": {

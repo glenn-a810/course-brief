@@ -137,7 +137,38 @@
   "evidence": [
    "평일 : 이용일 15~9일 전 14:00까지 신청 → 7일 전 14:00 확정 (https://parkgolfinfo.co.kr/광주체력단련장-골프장공군-예약상세-한눈-가이드/)"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "weekday",
+     "unit": "day",
+     "before": 9,
+     "weekday": null,
+     "time": "14:00",
+     "member": null,
+     "text": "9일 전"
+    },
+    {
+     "scope": "both",
+     "unit": "day",
+     "before": 7,
+     "weekday": null,
+     "time": "14:00",
+     "member": null,
+     "text": "7일 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "평일 이용일 15~9일 전 14:00까지 신청, 7일 전 14:00 확정"
+  }
  },
  "ops": {
   "nocaddie": {

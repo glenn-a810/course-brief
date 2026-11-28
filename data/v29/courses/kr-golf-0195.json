@@ -159,7 +159,58 @@
   "evidence": [
    "취소는 예약일을 제외한 4일 전 15:00까지가 기본이며 세부 위약 규정을 확인해야 합니다."
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 4,
+     "time": "15:00"
+    },
+    "weekend": {
+     "days_before": 4,
+     "time": "15:00"
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "예약일을 제외한 4일 전 15:00까지 취소"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "weekend",
+     "unit": "week",
+     "before": 2,
+     "weekday": "수",
+     "time": "09:00",
+     "member": null,
+     "text": "2주 전 수요일"
+    },
+    {
+     "scope": "weekend",
+     "unit": "week",
+     "before": 2,
+     "weekday": "화",
+     "time": "09:00",
+     "member": null,
+     "text": "2주 전 화요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "online",
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "high",
+   "text": "• 주중: 한 달 전 같은 날짜 오전 9시 오픈(회원·사이버회원, 실시간 인터넷 예약)\n• 주말(사이버회원): 토요일 기준 2주 전 수요일 오전 9시 오픈\n• 주말(회원): 2주 전 화요일 09:00~15:00 인…"
+  }
  },
  "ops": {
   "nocaddie": {

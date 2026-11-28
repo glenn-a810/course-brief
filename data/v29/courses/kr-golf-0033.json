@@ -559,7 +559,29 @@
   "evidence": [
    "공식 예약안내에는 주중·주말 모두 예약 희망일 30일 전부터 인터넷 실시간 선착순으로 접수한다고 나와 있습니다. (https://parkgolfinfo.co.kr/지금-예약-전에-꼭-확인하세요-영암-아크로컨트리클/)"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "day",
+     "before": 30,
+     "weekday": null,
+     "time": null,
+     "member": null,
+     "text": "30일 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "fcfs",
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "예약 희망일 30일 전부터 인터넷 실시간 선착순"
+  }
  },
  "ops": {
   "nocaddie": {

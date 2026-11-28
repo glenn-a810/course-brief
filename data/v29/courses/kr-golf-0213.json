@@ -253,7 +253,66 @@
   "open_cycle": null,
   "notes": null,
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 7
+    },
+    "weekend": {
+     "days_before": 7
+    }
+   },
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 3,
+     "to_days": 4,
+     "pct": null,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "위약 평일 : 5~6일 전 21일 · 3~4일 전 30일 예약불가"
+    },
+    {
+     "day": "weekend",
+     "from_days": 4,
+     "to_days": 5,
+     "pct": null,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "위약 주말 : 6일 전 21일 · 4~5일 전 30일"
+    },
+    {
+     "day": "weekday",
+     "from_days": 5,
+     "to_days": 6,
+     "pct": null,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "위약 평일 : 5~6일 전 21일 · 3~4일 전 30일 예약불가"
+    },
+    {
+     "day": "weekend",
+     "from_days": 6,
+     "to_days": 6,
+     "pct": null,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "위약 주말 : 6일 전 21일 · 4~5일 전 30일"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "취소 기한: 라운드 7일 전까지"
+   ],
+   "penalty_text": [
+    "위약 평일 : 5~6일 전 21일 · 3~4일 전 30일 예약불가",
+    "위약 평일 : 5~6일 전 21일 · 3~4일 전 30일 예약불가",
+    "위약 주말 : 6일 전 21일 · 4~5일 전 30일"
+   ]
+  }
  },
  "ops": {
   "nocaddie": {

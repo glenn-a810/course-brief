@@ -1,5 +1,8 @@
 import type {
+  AlertFile,
+  AlertItem,
   AlertPeriod,
+  BookingRulesFile,
   BriefingAlert,
   CancelInfo,
   ClusterFile,
@@ -19,6 +22,8 @@ import type {
   FeeTableRow,
   NearbyDeliveryProvider,
   OpsKey,
+  ParsedCancel,
+  ParsedOpen,
   RentalProvider,
   RentalProvidersFile,
   RentalRegion,
@@ -49,7 +54,23 @@ import { createMap } from "./maps.js";
 import type { MapController, MapPoint } from "./maps.js";
 import { bookingChannels, channelBlockHTML, wireBookingActions } from "./channels.js";
 import type { Channel } from "./channels.js";
-import { cleanNote } from "./text.js";
+import { cleanNote, copyText } from "./text.js";
+import { mountRoundPlan } from "./roundplan.js";
+import type { RoundPlanModel } from "./roundplan.js";
+import { renderPrep } from "./prep.js";
+import type { PrepFact, PrepModel } from "./prep.js";
+import {
+  clearAll as clearSavedAll,
+  exportSaved,
+  favoriteIds,
+  isFavorite,
+  pushRecent,
+  recentIds,
+  syncFavToggles,
+  toggleFavorite,
+} from "./saved.js";
+import { alertsFailed, loadAlerts, renderAlerts, resetAlertsFilter, upcomingClosure } from "./alerts.js";
+import { daysBetween, daysSince, dayTypeOf, fmtDay, openInfo, parseISO, today } from "./rules.js";
 import {
   STATUS,
   badge,
@@ -304,6 +325,8 @@ async function boot(): Promise<void> {
     for (const c of index.clusters ?? clusters.clusters ?? []) state.clusters.set(c.id, c);
     state.sido = sido.sido ?? index.sido ?? [];
     state.adapter = await createSearchAdapter(CONFIG, { courses: index.courses });
+    // 휴장·정비 일정은 목록 배지·캘린더 화면이 함께 쓴다. 실패해도 목록은 정상 동작한다.
+    await loadAlerts(CONFIG.dataBase);
     buildStaticUI();
     initCompare(() => {
       syncCompareToggles(document);
@@ -657,6 +680,7 @@ async function renderList({ reset = false }: { reset?: boolean } = {}): Promise<
 
   paintTagChips();
   syncCompareToggles(resultsEl);
+  syncFavToggles(resultsEl);
   updateCompareBar();
   applyViewMode();
 }
@@ -776,10 +800,12 @@ function cardHTML(g: CourseGroup): string {
   const rating = single?.rating;
 
   // 값이 없으면 가격 영역을 비운다 — 자리표시자 대신 하단 '상세 보기'만 남긴다
+  const feeAge = daysSince(single?.green_fee?.as_of);
+  const feeStale = feeAge != null && feeAge > 90;
   const feeBlock = fee == null
     ? ""
     : `<span class="card-fee${stale ? " is-stale" : ""}">
-        <span class="fee-label">${stale ? "마지막 확인" : feeLabel}</span>
+        <span class="fee-label">${stale ? "마지막 확인" : feeLabel}${feeStale ? ` <span class="stale-dot" title="요금 확인일로부터 90일 이상 지났습니다">90일+</span>` : ""}</span>
         <span class="fee-value">${won(fee)}</span><span class="fee-tilde">~</span>
       </span>`;
 
@@ -801,10 +827,22 @@ function cardHTML(g: CourseGroup): string {
       iconDuo(TAG_ICON[t] ?? "sparkle")}${esc(TAG_LABEL[t])}</span>`).join("")}</div>`
     : "";
 
-  // 공지 날짜가 비어 있으면 꼬리표에 날짜 칸을 만들지 않는다
+  // 공지 날짜가 비어 있으면 꼬리표에 날짜 칸을 만들지 않는다. 90일이 지난 공지는 '오래됨'으로 구분한다(M9)
   const noticeDate = fmtDate(single?.notice);
+  const noticeAge = daysSince(single?.notice);
+  const noticeStale = noticeAge != null && noticeAge > 90;
   const noticeBadge = single?.notice?.trim()
-    ? `<span class="notice-dot" title="최근 공지${noticeDate ? ` ${noticeDate}` : ""}">${icon("bell")}공지</span>`
+    ? `<span class="notice-dot${noticeStale ? " is-stale" : ""}" title="최근 공지${noticeDate ? ` ${noticeDate}` : ""}${noticeStale ? " · 90일 이상 지남" : ""}">${icon("bell")}공지</span>`
+    : "";
+  // 휴장·정비 일정이 잡혀 있으면 카드에서 바로 보인다(M3)
+  const closure = single ? upcomingClosure(single.id) : null;
+  const alertBadge = closure ? `<span class="alert-tag" title="휴장 일정: ${esc(closure.title)}">${icon("alert")}휴장</span>` : "";
+  // 카드에서는 자리를 아끼려 아이콘만 — 상태는 색·aria-pressed 로 읽는다
+  const fav = single
+    ? `<button type="button" class="fav-toggle is-icon${isFavorite(single.id) ? " is-on" : ""}" data-fav="${esc(single.id)}"
+        data-fav-name="${esc(single.name)}" aria-pressed="${isFavorite(single.id)}" aria-label="${esc(single.name)} ${isFavorite(single.id) ? "내 구장에서 빼기" : "내 구장에 저장"}" title="${isFavorite(single.id) ? "내 구장에서 빼기" : "내 구장에 저장"}">
+        <span class="fav-toggle-ic" aria-hidden="true">${icon("star")}</span>
+      </button>`
     : "";
 
   const body = (footRight: string): string => `<div class="card-head">
@@ -816,7 +854,8 @@ function cardHTML(g: CourseGroup): string {
     </div>
     ${statsHTML}
     ${tagHTML}
-    <div class="card-foot">${feeBlock}<span class="card-foot-right">${footRight}${noticeBadge}</span></div>`;
+    ${alertBadge || noticeBadge ? `<div class="card-flags">${alertBadge}${noticeBadge}</div>` : ""}
+    <div class="card-foot">${feeBlock}<span class="card-foot-right">${footRight}</span></div>`;
 
   if (single) {
     // 카드 전체가 상세 링크다. 비교 버튼은 링크 위에 올려 따로 눌리게 한다(중첩 링크·버튼 회피)
@@ -828,7 +867,7 @@ function cardHTML(g: CourseGroup): string {
       </button>`;
     return `<div class="card is-link">
       <a class="card-hit" href="#/c/${esc(single.id)}" data-card="${esc(single.id)}" aria-label="${esc(single.name)} 상세 보기"></a>
-      ${body(cmp)}
+      ${body(`${fav}${cmp}`)}
     </div>`;
   }
   return `<div class="card card-group">
@@ -1007,10 +1046,31 @@ async function renderDetail(id: string): Promise<void> {
   if (fees.caddieNone) feeExtras.push("노캐디");
   else if (fees.caddie != null) feeExtras.push(`캐디 ${won(fees.caddie)}`);
   const hasAnyFee = feeCheapest != null || feeExtras.length > 0;
-  // 총비용 계산기·예약 채널은 상세 데이터가 있을 때만 만든다
+  // 총비용 계산기·예약 채널·라운드 플래너는 상세 데이터가 있을 때만 만든다
   const costModel = detail && !detailError ? buildCostModel(course, detail, fees) : null;
   const channels: Channel[] = bookingChannels(course, detail?.fee?.market?.url ?? null);
   const cmpOn = isCompared(course.id);
+  const favOn = isFavorite(course.id);
+  // H2·H3·M1 — 취소 마감·예약 오픈·날씨 계산에 쓰는 값만 추린다(원문은 sections 가 다시 보여 준다)
+  const planModel: RoundPlanModel | null = detail && !detailError ? {
+    id: course.id,
+    name: course.name,
+    lat: course.lat ?? detail.master?.lat ?? null,
+    lng: course.lng ?? detail.master?.lng ?? null,
+    cancel: (detail.cancel?.parsed_cancel ?? null) as ParsedCancel | null,
+    open: (detail.cancel?.parsed_open ?? null) as ParsedOpen | null,
+    cancelRaw: (() => {
+      const cp = detail.cancel?.cancel_policy;
+      return visibleText(typeof cp === "string" ? cp : cp ? textOf(cp) : "");
+    })(),
+    openRaw: detail.cancel?.open_cycle
+      ? (isAdmin() ? detail.cancel.open_cycle : publicNote(detail.cancel.open_cycle))
+      : "",
+    weatherSummary: (detail.cancel?.weather_summary ?? []).slice(0, 2),
+    weekdayFee: fees.weekday.value,
+    weekendFee: fees.weekend.value,
+    asOf: fmtDate(detail.fee?.as_of ?? detail.fee?.checked_at),
+  } : null;
 
   const hero = `
     <div class="detail-crumbs">
@@ -1060,6 +1120,10 @@ async function renderDetail(id: string): Promise<void> {
             aria-label="${esc(course.name)} ${cmpOn ? "비교에서 빼기" : "비교에 담기"}">
             <span class="cmp-toggle-ic" aria-hidden="true">${icon("check")}</span><span class="cmp-toggle-text">${cmpOn ? "비교 담김" : "비교 담기"}</span>
           </button>
+          <button class="btn btn-ghost fav-btn${favOn ? " is-on" : ""}" type="button" data-fav="${esc(course.id)}"
+            data-fav-name="${esc(course.name)}" aria-pressed="${favOn}">
+            <span class="fav-toggle-ic" aria-hidden="true">${icon("star")}</span><span class="fav-toggle-text">${favOn ? "저장됨" : "내 구장"}</span>
+          </button>
         </div>
       </div>
 
@@ -1096,16 +1160,20 @@ async function renderDetail(id: string): Promise<void> {
       </div>
     </section>` : ""}`;
 
-  const built = detail && !detailError ? sections(detail, course, others, { costModel, channels }) : null;
+  const built = detail && !detailError ? sections(detail, course, others, { costModel, channels, planModel }) : null;
   const nav = built ? sectionNav(course, built.visible) : "";
   view.innerHTML = `<div class="detail">${hero}${nav}${built?.html ?? ""}</div>`;
   renderedDetailId = id;
+  pushRecent(id);
   setTitle(`${course.name} — CourseBrief`);
 
   const calcSlot = view.querySelector<HTMLElement>("#cost-calc");
   if (calcSlot && costModel) mountCostCard(calcSlot, costModel);
+  const planSlot = view.querySelector<HTMLElement>("#round-plan");
+  if (planSlot && planModel) mountRoundPlan(planSlot, planModel);
   wireBookingActions(view, course, channels);
   syncCompareToggles(view);
+  syncFavToggles(view);
 
   document.querySelector<HTMLButtonElement>("#detail-retry")?.addEventListener("click", () => {
     renderedDetailId = null;
@@ -1497,7 +1565,7 @@ function cancelTimeline(text: string): string {
   </div>`;
 }
 
-function sections(d: CourseDetail, c: CourseIndexItem, others: Array<{ name: string; id?: string; holes?: number | null; item?: CourseIndexItem }>, extra: { costModel: CostModel | null; channels: Channel[] }): { html: string; visible: { s3: boolean; s4: boolean; s6: boolean } } {
+function sections(d: CourseDetail, c: CourseIndexItem, others: Array<{ name: string; id?: string; holes?: number | null; item?: CourseIndexItem }>, extra: { costModel: CostModel | null; channels: Channel[]; planModel: RoundPlanModel | null }): { html: string; visible: { s3: boolean; s4: boolean; s6: boolean } } {
   const m = d.master ?? {};
   const co: CourseSpec = d.course ?? {};
   const fee = d.fee ?? {};
@@ -1512,6 +1580,9 @@ function sections(d: CourseDetail, c: CourseIndexItem, others: Array<{ name: str
   /* 01 요금 & 예약 — 값이 있는 요금 항목만 카드로 만든다 */
   const unavailable = c.status === "closed" || c.status === "suspended";
   const asOf = fee.as_of || fee.checked_at;
+  const asOfAge = daysSince(asOf);
+  const asOfStale = asOfAge != null && asOfAge > 90;
+  const staleNote = asOfStale ? `<span class="stale-inline">${asOfAge}일 전 확인 · 재확인 권장</span>` : "";
   const cancelPolicy = cancel.cancel_policy;
   const cancelText = visibleText(typeof cancelPolicy === "string" ? cancelPolicy : cancelPolicy ? textOf(cancelPolicy) : "");
   const timeline = cancelText ? cancelTimeline(cancelText) : "";
@@ -1590,7 +1661,8 @@ function sections(d: CourseDetail, c: CourseIndexItem, others: Array<{ name: str
       ${unavailable ? `<div class="callout warn"><strong>${icon("alert")}현재 이용 불가 구장입니다</strong>아래 요금은 마지막으로 확인된 값이며 예약·결제할 수 없습니다.</div>` : ""}
       ${feeCardsHTML}
       ${extra.costModel ? `<div id="cost-calc" class="calc-slot"></div>` : ""}
-      ${asOf ? `<p class="source-line">${isAdmin() ? `요금 기준 ${esc(fee.basis || "")} · 확인 ${fmtDate(asOf)}` : `요금 업데이트 ${esc(fmtDate(asOf))}`}</p>` : ""}
+      ${extra.planModel ? `<div id="round-plan" class="plan-slot"></div>` : ""}
+      ${asOf ? `<p class="source-line">${isAdmin() ? `요금 기준 ${esc(fee.basis || "")} · 확인 ${fmtDate(asOf)}` : `요금 업데이트 ${esc(fmtDate(asOf))}`} ${staleNote}</p>` : ""}
       ${market && (market.weekday_min || market.weekend_min) ? `<div class="inline-fact">
         <span class="inline-fact-label">관측 최저가</span>
         <span>${market.weekday_min ? `주중 ${won(market.weekday_min)}` : ""}${market.weekday_min && market.weekend_min ? " · " : ""}${market.weekend_min ? `주말 ${won(market.weekend_min)}` : ""}</span>
@@ -1906,16 +1978,31 @@ function sections(d: CourseDetail, c: CourseIndexItem, others: Array<{ name: str
     return typeof v === "number" ? coverageBar(label, v) : "";
   }).join("");
   const updated = updatedAt(d.meta?.normalized_at, d.meta?.generated_at);
+  // M9 — 값마다 확인일이 다르므로 한 줄로 모아 보여 준다. 90일이 지난 값만 덧붙인다
+  const feeAsOf = fmtDate(fee.as_of || fee.checked_at);
+  const noticeAsOf = fmtDate(br.collected_at);
+  const staleParts: string[] = [];
+  for (const [label, iso] of [["요금", fee.as_of || fee.checked_at], ["공지", br.collected_at]] as Array<[string, string | null | undefined]>) {
+    const age = daysSince(iso);
+    if (age != null && age > 90) staleParts.push(`${label} ${age}일 경과`);
+  }
+  const dataSummary = `<p class="data-summary">이 구장 데이터: ${[
+    feeAsOf ? `요금 ${feeAsOf}` : "",
+    noticeAsOf ? `공지 ${noticeAsOf}` : "",
+    updated ? `수집 ${updated}` : "",
+  ].filter(Boolean).join(" · ")}${staleParts.length ? ` — <span class="stale-inline">${staleParts.join(" · ")} · 확인 권장</span>` : ""}</p>`;
   const dataInfo = isAdmin()
     ? `<section class="section" id="s8" aria-labelledby="s8-h">
         <div class="section-head"><h2 id="s8-h">${iconTile("chart", "grey", "sm")}데이터 정보</h2>
         <p class="section-desc">7개 영역 채움률. 비어 있는 값은 '미확인'이며 '없음'과 다릅니다.</p></div>
         <div class="section-body"><div class="cov-list">${covRows}</div>
+        ${dataSummary}
         <p class="source-line">수집 ${esc(updated)} · 스키마 ${esc(d.meta?.schema || "")} · <a class="link" href="${REPO_URL}/blob/main/data/v29/schema.md" target="_blank" rel="noopener noreferrer">스키마 문서</a></p></div>
       </section>`
     : `<section class="section" id="s8" aria-labelledby="s8-h">
         <div class="section-head"><h2 id="s8-h">${iconTile("chart", "grey", "sm")}데이터 기준</h2>
         <p class="section-desc">${esc(updated || "—")} 기준 · 공개 자료에서 확인된 값만 표시합니다.</p></div>
+        <div class="section-body">${dataSummary}</div>
       </section>`;
 
   return {
@@ -2256,15 +2343,222 @@ function renderAbout(): void {
   window.scrollTo({ top: 0 });
 }
 
+/* ---------------- 내 구장(M4) ---------------- */
+
+let bookingRules: BookingRulesFile | null = null;
+let bookingRulesTried = false;
+
+async function loadBookingRules(): Promise<BookingRulesFile | null> {
+  if (bookingRules) return bookingRules;
+  if (bookingRulesTried) return null;
+  bookingRulesTried = true;
+  try {
+    const res = await fetch(`${CONFIG.dataBase}booking_rules.json`, { cache: "no-cache" });
+    if (!res.ok) return null;
+    bookingRules = (await res.json()) as BookingRulesFile;
+    return bookingRules;
+  } catch {
+    return null;
+  }
+}
+
+function nextSaturday(): Date {
+  const base = today();
+  const diff = (6 - base.getDay() + 7) % 7;
+  return new Date(base.getFullYear(), base.getMonth(), base.getDate() + (diff === 0 ? 7 : diff), 12);
+}
+
+function savedRow(item: CourseIndexItem, rules: BookingRulesFile | null): string {
+  const st = statusOf(item.status);
+  const fee = item.green_fee?.weekend ?? item.green_fee?.weekday;
+  const kind = item.green_fee?.weekend != null ? "주말" : "주중";
+  const age = daysSince(item.green_fee?.as_of);
+  const stale = age != null && age > 90 ? ` <span class="stale-inline">요금 ${age}일 전</span>` : "";
+  const rule = rules?.rules[item.id]?.open ?? null;
+  const round = nextSaturday();
+  const info = rule ? openInfo(rule, round, dayTypeOf(round)) : null;
+  const od = info ? daysBetween(today(), info.date) : 0;
+  const openLine = info
+    ? `다음 토요일 라운드 예약 오픈 · ${fmtDay(info.date)}${info.time ? ` ${info.time}` : ""} · ${od === 0 ? "오늘" : od > 0 ? `D-${od}` : `오픈 ${-od}일 지남`}`
+    : "예약 오픈 규칙 미확인";
+  const closure = upcomingClosure(item.id);
+  return `<article class="saved-row">
+    <div class="saved-main">
+      <h3 class="saved-name"><a class="link" href="#/c/${esc(item.id)}">${esc(item.name)}</a>
+        <span class="badge ${st.tone}">${esc(st.label)}</span>${closure ? `<span class="alert-tag">${icon("alert")}휴장</span>` : ""}</h3>
+      <p class="saved-meta">${esc([item.sido, item.sigungu].filter(Boolean).join(" "))}${item.holes ? ` · ${item.holes}홀` : ""}${
+        fee != null ? ` · ${kind} ${won(fee)}` : ""}${stale}</p>
+      <p class="saved-open">${icon("calendar")}${esc(openLine)}</p>
+    </div>
+    <div class="saved-actions">
+      <button type="button" class="btn btn-ghost btn-sm${isFavorite(item.id) ? " is-on" : ""}" data-fav="${esc(item.id)}" data-fav-name="${esc(item.name)}" aria-pressed="${isFavorite(item.id)}">
+        <span class="fav-toggle-ic" aria-hidden="true">${icon("star")}</span><span class="fav-toggle-text">${isFavorite(item.id) ? "저장됨" : "저장"}</span>
+      </button>
+      <a class="btn btn-sm" href="#/c/${esc(item.id)}">상세</a>
+    </div>
+  </article>`;
+}
+
+async function renderSaved(): Promise<void> {
+  const index = getIndex();
+  const view = $<HTMLElement>("#view-page");
+  view.innerHTML = `<div class="page"><p class="section-desc" role="status">내 구장을 불러오는 중…</p></div>`;
+  const rules = await loadBookingRules();
+  const byId = new Map(index.courses.map((c) => [c.id, c]));
+  const favs = favoriteIds().map((id) => byId.get(id)).filter((c): c is CourseIndexItem => Boolean(c));
+  const recents = recentIds().map((id) => byId.get(id)).filter((c): c is CourseIndexItem => Boolean(c)).slice(0, 20);
+  if (!favs.length && !recents.length) {
+    view.innerHTML = `<div class="page">
+      <header class="page-head">${iconTile("star", "yellow", "lg")}
+        <div class="page-head-text"><h1 class="page-title" tabindex="-1">내 구장</h1>
+        <p class="page-lead">목록·상세의 ★ 버튼으로 저장한 구장과 최근 본 구장을 모아 봅니다. 저장은 이 브라우저에만 남습니다.</p></div></header>
+      <div class="state-box"><h2 class="state-title">아직 저장한 구장이 없습니다</h2>
+      <p class="state-desc">골프장 카드·상세 화면의 <b>★ 저장</b>을 누르면 여기에 모입니다.</p>
+      <a class="btn" href="#/">골프장 목록으로</a></div></div>`;
+    setTitle("내 구장 — CourseBrief");
+    window.scrollTo({ top: 0 });
+    return;
+  }
+  const favHTML = favs.length
+    ? `<section class="saved-section"><h2 class="saved-h">저장한 구장<span>${favs.length}</span></h2><div class="saved-list">${favs.map((c) => savedRow(c, rules)).join("")}</div></section>`
+    : `<div class="callout">아직 저장한 구장이 없습니다. 카드·상세의 ★ 버튼을 눌러 보세요.</div>`;
+  const recentHTML = recents.length
+    ? `<section class="saved-section"><h2 class="saved-h">최근 본 구장<span>${recents.length}</span></h2>
+        <div class="saved-list is-recent">${recents.map((c) => `<a class="recent-row" href="#/c/${esc(c.id)}">
+          <span class="recent-name">${esc(c.name)}</span>
+          <span class="recent-meta">${esc([c.sido, c.sigungu].filter(Boolean).join(" "))}${c.holes ? ` · ${c.holes}홀` : ""}</span>
+          <span class="recent-fee">${c.green_fee?.weekend != null ? won(c.green_fee.weekend) : c.green_fee?.weekday != null ? won(c.green_fee.weekday) : ""}</span>
+        </a>`).join("")}</div></section>`
+    : "";
+  view.innerHTML = `<div class="page saved-page">
+    <header class="page-head">${iconTile("star", "yellow", "lg")}
+      <div class="page-head-text"><h1 class="page-title" tabindex="-1">내 구장</h1>
+      <p class="page-lead">저장한 구장의 다음 토요일 라운드 예약 오픈일과 휴장 일정을 함께 봅니다. 저장은 이 브라우저에만 남습니다.</p></div>
+    </header>
+    ${favHTML}
+    ${recentHTML}
+    <div class="saved-tools">
+      <button type="button" class="btn btn-ghost btn-sm" id="saved-export">${icon("copy")}목록 복사(JSON)</button>
+      <button type="button" class="btn btn-ghost btn-sm" id="saved-clear">${icon("close")}전체 삭제</button>
+      <span class="saved-status" role="status"></span>
+    </div>
+    <p class="source-line">예약 오픈일은 규정 문구에서 자동 계산한 참고값입니다. 정확한 오픈은 골프장 공식 채널에서 확인하세요.</p>
+  </div>`;
+  syncFavToggles(view);
+  const status = (text: string): void => {
+    const node = view.querySelector<HTMLElement>(".saved-status");
+    if (node) node.textContent = text;
+  };
+  view.querySelector("#saved-export")?.addEventListener("click", () => {
+    void copyText(exportSaved()).then((ok) => status(ok ? "저장 목록을 JSON으로 복사했습니다." : "복사하지 못했습니다."));
+  });
+  view.querySelector("#saved-clear")?.addEventListener("click", () => {
+    if (!window.confirm("저장한 구장과 최근 본 목록을 모두 지울까요? 이 브라우저에서만 지워집니다.")) return;
+    clearSavedAll();
+    void renderSaved();
+  });
+  setTitle("내 구장 — CourseBrief");
+  window.scrollTo({ top: 0 });
+}
+
+/* ---------------- 라운드 준비 카드(M5) ---------------- */
+
+async function renderPrepPage(id: string, dateParam: string | null): Promise<void> {
+  const index = getIndex();
+  const view = $<HTMLElement>("#view-page");
+  const course = index.courses.find((c) => c.id === id);
+  if (!course) {
+    view.innerHTML = `<div class="page"><div class="state-box" role="alert"><h1 class="state-title">골프장을 찾을 수 없습니다</h1>
+      <p class="state-desc">주소가 바뀌었거나 목록에서 빠진 골프장입니다.</p><a class="btn" href="#/">목록으로</a></div></div>`;
+    setTitle("찾을 수 없는 골프장 — CourseBrief");
+    return;
+  }
+  view.innerHTML = `<div class="page"><p class="section-desc" role="status">준비 카드를 만드는 중…</p></div>`;
+  let detail: CourseDetail | null = null;
+  if (course.detail) {
+    try {
+      detail = await loadJSON<CourseDetail>(`courses/${id}.json`, index.dataset.built_at);
+    } catch (e) {
+      console.warn(e);
+    }
+  }
+  const fees = feeView(detail?.fee, course);
+  const ops = detail?.ops ?? {};
+  const fac = detail?.facilities ?? {};
+  const rt = detail?.rental ?? {};
+  const opFacts: PrepFact[] = [];
+  for (const k of Object.keys(OPS) as OpsKey[]) {
+    const t = valCell(ops[k]?.value);
+    if (t) opFacts.push({ label: OPS[k], value: t });
+  }
+  const facFacts: PrepFact[] = [];
+  for (const k of Object.keys(FAC) as FacilityKey[]) {
+    const t = valCell(fac[k]?.value);
+    if (t) facFacts.push({ label: FAC[k], value: t });
+  }
+  const rentalBits = [
+    valCell(rt.available),
+    rt.full_set != null ? won(rt.full_set) : "",
+    visibleText(rt.fee_text),
+  ].filter((x): x is string => Boolean(x));
+  const cp = detail?.cancel?.cancel_policy;
+  const model: PrepModel = {
+    id: course.id,
+    name: course.name,
+    region: [course.sido, course.sigungu].filter(Boolean).join(" "),
+    address: detail?.master?.address ?? "",
+    ic: detail?.master?.nearest_ic?.name
+      ? `${detail.master.nearest_ic.name}${detail.master.nearest_ic.distance_km ? ` ${detail.master.nearest_ic.distance_km}km` : ""}`
+      : "",
+    tel: course.tel ?? "",
+    homepage: course.homepage ?? "",
+    lat: course.lat ?? detail?.master?.lat ?? null,
+    lng: course.lng ?? detail?.master?.lng ?? null,
+    weekdayFee: fees.weekday.value,
+    weekendFee: fees.weekend.value,
+    cart: fees.cart,
+    caddie: fees.caddie,
+    caddieNone: fees.caddieNone,
+    asOf: fmtDate(detail?.fee?.as_of ?? detail?.fee?.checked_at),
+    cancel: (detail?.cancel?.parsed_cancel ?? null) as ParsedCancel | null,
+    cancelRaw: visibleText(typeof cp === "string" ? cp : cp ? textOf(cp) : ""),
+    weatherSummary: (detail?.cancel?.weather_summary ?? []).slice(0, 2),
+    ops: opFacts,
+    facilities: facFacts,
+    rental: rentalBits.join(" · "),
+    note: [visibleText(detail?.fee?.note), visibleText(detail?.cancel?.notes)].filter(Boolean).join(" "),
+    updated: courseUpdatedAt(detail),
+  };
+  renderPrep(view, model, dateParam ?? undefined);
+  setTitle(`${course.name} 라운드 준비 카드 — CourseBrief`);
+  window.scrollTo({ top: 0 });
+}
+
+
+
 /* ---------------- 라우터 ---------------- */
 
 type ViewName = "list" | "detail" | "page";
+type NavName = "list" | "saved" | "alerts" | "rental" | "about";
 
 function setTitle(title: string): void {
   document.title = title;
 }
 
-function setNav(name: "list" | "rental" | "about"): void {
+/** 화면 낭독기용 1줄 안내 — 토스트 대신 role=status */
+function announceSaved(text: string): void {
+  let node = document.getElementById("saved-status");
+  if (!node) {
+    node = document.createElement("span");
+    node.id = "saved-status";
+    node.className = "sr-only";
+    node.setAttribute("role", "status");
+    document.body.appendChild(node);
+  }
+  node.textContent = text;
+}
+
+function setNav(name: NavName): void {
   for (const a of document.querySelectorAll<HTMLElement>("[data-nav]")) {
     const on = a.dataset.nav === name;
     if (on) a.setAttribute("aria-current", "page");
@@ -2276,6 +2570,8 @@ function showView(name: ViewName): void {
   $<HTMLElement>("#view-list").hidden = name !== "list";
   $<HTMLElement>("#view-detail").hidden = name !== "detail";
   $<HTMLElement>("#view-page").hidden = name !== "page";
+  // 화면 이름을 body 에 남긴다(인쇄·디버깅용). `data-view` 는 목록/지도 토글이 쓰므로 다른 이름을 쓴다.
+  document.body.dataset.screen = name;
 }
 
 /** 화면 전환 뒤 제목(h1)으로 포커스를 옮겨 스크린리더·키보드 사용자가 새 화면을 인지하게 한다 */
@@ -2331,6 +2627,34 @@ async function route(): Promise<void> {
     renderRental();
     updateCompareBar();
     if (!firstRoute) focusHeading(".page-title");
+    firstRoute = false;
+    return;
+  }
+  if (path === "/alerts") {
+    showView("page");
+    setNav("alerts");
+    updateCompareBar();
+    renderAlerts($<HTMLElement>("#view-page"));
+    if (!firstRoute) focusHeading(".page-title");
+    firstRoute = false;
+    return;
+  }
+  if (path === "/saved") {
+    showView("page");
+    setNav("saved");
+    updateCompareBar();
+    await renderSaved();
+    if (!firstRoute) focusHeading(".page-title");
+    firstRoute = false;
+    return;
+  }
+  if (path.startsWith("/prep/")) {
+    const id = decodeURIComponent(path.slice(6));
+    showView("page");
+    setNav("list");
+    updateCompareBar();
+    await renderPrepPage(id, readHashQuery().get("d"));
+    if (!firstRoute) focusHeading(".prep-title");
     firstRoute = false;
     return;
   }
@@ -2438,8 +2762,8 @@ function wire(): void {
     const target = ev.target;
     if (!(target instanceof Element)) return;
 
-    // 목록 / 지도 전환
-    const viewBtn = target.closest<HTMLElement>("[data-view]");
+    // 목록 / 지도 전환 — 토글 안의 버튼만 반응한다
+    const viewBtn = target.closest<HTMLElement>(".view-toggle [data-view]");
     if (viewBtn) {
       const mode = viewBtn.dataset.view;
       if (mode === "list" || mode === "map") setViewMode(mode);
@@ -2458,6 +2782,19 @@ function wire(): void {
       else state.filters.tags.add(tag);
       paintTagChips();
       rerenderList();
+      return;
+    }
+
+    // 내 구장 저장(M4) — 이 브라우저에만 저장한다
+    const favBtn = target.closest<HTMLElement>("[data-fav]");
+    if (favBtn) {
+      ev.preventDefault();
+      const id = favBtn.dataset.fav;
+      if (!id) return;
+      const on = toggleFavorite(id);
+      syncFavToggles(document);
+      announceSaved(on ? "내 구장에 저장했습니다." : "내 구장에서 뺐습니다.");
+      if (location.hash.startsWith("#/saved")) void renderSaved();
       return;
     }
 

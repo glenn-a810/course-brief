@@ -257,7 +257,86 @@
     "checked_at": "2026-11-27",
     "source_type": "official_summary(greenfeeguide)"
    }
-  ]
+  ],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 5,
+     "time": "17:00"
+    }
+   },
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 1,
+     "to_days": 1,
+     "pct": 20.0,
+     "suspend_months": 3,
+     "suspend_days": null,
+     "text": "이후 위약: 4일 전 20일 예약정지 · 3일 전 1개월 · 2일 전 2개월+팀 이용요금 10% · 1일 전 3개월+20%…"
+    },
+    {
+     "day": null,
+     "from_days": 2,
+     "to_days": 2,
+     "pct": 10.0,
+     "suspend_months": 2,
+     "suspend_days": null,
+     "text": "이후 위약: 4일 전 20일 예약정지 · 3일 전 1개월 · 2일 전 2개월+팀 이용요금 10% · 1일 전 3개월+20%…"
+    },
+    {
+     "day": null,
+     "from_days": 3,
+     "to_days": 3,
+     "pct": null,
+     "suspend_months": 1,
+     "suspend_days": null,
+     "text": "이후 위약: 4일 전 20일 예약정지 · 3일 전 1개월 · 2일 전 2개월+팀 이용요금 10% · 1일 전 3개월+20%…"
+    },
+    {
+     "day": null,
+     "from_days": 4,
+     "to_days": 4,
+     "pct": null,
+     "suspend_months": null,
+     "suspend_days": 20,
+     "text": "이후 위약: 4일 전 20일 예약정지 · 3일 전 1개월 · 2일 전 2개월+팀 이용요금 10% · 1일 전 3개월+20%…"
+    }
+   ],
+   "basis": "team",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "정상 취소: 평일 5일 전 17:00까지 인터넷·전화"
+   ],
+   "penalty_text": [
+    "이후 위약: 4일 전 20일 예약정지 · 3일 전 1개월 · 2일 전 2개월+팀 이용요금 10% · 1일 전 3개월+20% · 당일·무단결장 4개월+30%",
+    "이후 위약: 4일 전 20일 예약정지 · 3일 전 1개월 · 2일 전 2개월+팀 이용요금 10% · 1일 전 3개월+20% · 당일·무단결장 4개월+30%",
+    "이후 위약: 4일 전 20일 예약정지 · 3일 전 1개월 · 2일 전 2개월+팀 이용요금 10% · 1일 전 3개월+20% · 당일·무단결장 4개월+30%"
+   ]
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 2,
+     "weekday": "월",
+     "time": null,
+     "member": null,
+     "text": "2주 전 월요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "online",
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "2주 전 월요일부터 인터넷·전화 접수 가능(예약가능 시간 09:00~17:00)"
+  }
  },
  "ops": {
   "nocaddie": {

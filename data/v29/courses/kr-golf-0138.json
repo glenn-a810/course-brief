@@ -457,7 +457,29 @@
   ],
   "weather_evidence": [
    "이용안내 이용요금 예약안내 위약규정 자료실 매너 레스토랑 메뉴 프로샵 이용안내 우천 취소 규정 우천시 강수량 기준 3mm 이상 취소 및 홀별 정산 가능,​ 3mm 미만 취소 및 홀별 정산 불가능하며, 취소 시 위약금이 발생​ 플레이 중간 시 18홀 요금 적용합니다."
-  ]
+  ],
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "day",
+     "before": 20,
+     "weekday": null,
+     "time": "10:00",
+     "member": "회원",
+     "text": "20일 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": true,
+   "scope": "member",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "일반회원은 이용일 20일 전 10시부터 예약(프라이빗 회원은 25일 전)"
+  }
  },
  "ops": {
   "nocaddie": {

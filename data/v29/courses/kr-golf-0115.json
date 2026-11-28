@@ -281,7 +281,77 @@
    "양주 컨트리클럽 본문 바로가기 하단 바로가기 홈 로그인 회원가입 사이트맵 CLUB 클럽소개 인사말 연혁 시설안내 오시는길 COURSE 코스소개 서코스 동코스 코스갤러리 USE 이용안내 이용요금 예약안내 위약금안내 RESERVATION 실시간예약 대기예약 예약확인/취소 조인게시판 LOUNGE 내장현황 위약현황 스코어현황 고객의소리 회원정보 INFORMATION 공지사항 이벤트 자료실 포토갤러리 명예의전당 날씨정보 레스토랑메뉴 공지사항 이벤트 자료실 포토갤러리 명예의전당 날씨정보 레스토랑메뉴 홈 - 정보마당 - 공지사항 게시글 읽기 동",
    "양주 | 주중 취소·변경 시한 10일 전 17:00 | 주말 10일 전 17:00 | 주중 위약 9~3일전: 팀별 비회원 이용요금의 10% or 6개월 예약정지 2일 전: 팀별 비회원 이용요금의 10% 1일 전: 팀별 비회원 이용요금의 20% 당일 취소 및 미내장: 팀별 비회원 이용요금의 30% | 주말 위약 9~4일전: 팀별 비회원 이용요금의 10% or 6개월 예약정지 3~2일 전: 팀별 비회원 이용요금의 10% 1일 전: 팀별 비회원 이용요금의 20% 당일 취소 및 미내장: 팀별 비회원 이용요금의 30%"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 10,
+     "time": "17:00"
+    },
+    "weekend": {
+     "days_before": 10,
+     "time": "17:00"
+    }
+   },
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 1,
+     "to_days": 1,
+     "pct": 20.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "1일 전 20%"
+    },
+    {
+     "day": null,
+     "from_days": 2,
+     "to_days": 2,
+     "pct": 10.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "2일 전 10%"
+    },
+    {
+     "day": null,
+     "from_days": 3,
+     "to_days": 2,
+     "pct": 10.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "3~2일 전 10%"
+    },
+    {
+     "day": "weekday",
+     "from_days": 9,
+     "to_days": 3,
+     "pct": 10.0,
+     "suspend_months": 6,
+     "suspend_days": null,
+     "text": "평일: 9~3일 전 팀별 비회원 이용요금 10% 또는 6개월 예약정지"
+    },
+    {
+     "day": "weekend",
+     "from_days": 9,
+     "to_days": 4,
+     "pct": 10.0,
+     "suspend_months": 6,
+     "suspend_days": null,
+     "text": "주말: 9~4일 전 10% 또는 6개월 예약정지"
+    }
+   ],
+   "basis": "team",
+   "scope": "non_member",
+   "confidence": "high",
+   "basis_text": [
+    "평일·주말 모두 10일 전 17:00까지 취소 시 위약 없음"
+   ],
+   "penalty_text": [
+    "평일: 9~3일 전 팀별 비회원 이용요금 10% 또는 6개월 예약정지",
+    "2일 전 10%",
+    "1일 전 20%"
+   ]
+  }
  },
  "ops": {
   "nocaddie": {

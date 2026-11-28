@@ -516,7 +516,48 @@
   "open_cycle": "회원·단체는 4주 전 화요일 10:00, 비회원(인터넷 회원)은 4주 전 수요일 10:00 실시간 오픈",
   "notes": null,
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 8
+    },
+    "weekend": {
+     "days_before": 11
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "예약일 기준 주말 11일 전·주중 8일 전까지 취소 가능",
+    "예약일 기준 주말 11일 전·주중 8일 전까지 취소 가능"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 4,
+     "weekday": "수",
+     "time": "10:00",
+     "member": "비회원",
+     "text": "4주 전 수요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "online",
+   "recurring": false,
+   "member_only": false,
+   "scope": "non_member",
+   "ambiguous": false,
+   "confidence": "high",
+   "text": "회원·단체는 4주 전 화요일 10:00, 비회원(인터넷 회원)은 4주 전 수요일 10:00 실시간 오픈"
+  }
  },
  "ops": {
   "nocaddie": {

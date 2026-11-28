@@ -175,7 +175,38 @@
   "open_cycle": "추첨제 — 주중 5주 전·주말 4주 전 월요일 09:00~목요일 17:00 신청, 금요일 10:00 추첨(공식 추첨예약 안내)",
   "notes": "추첨 후 마이페이지 예약확정 필수, 예약자 미내장 시 라운드 불가",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "weekday",
+     "unit": "week",
+     "before": 5,
+     "weekday": null,
+     "time": null,
+     "member": null,
+     "text": "5주 전"
+    },
+    {
+     "scope": "weekend",
+     "unit": "week",
+     "before": 4,
+     "weekday": "월",
+     "time": "09:00",
+     "member": null,
+     "text": "4주 전 월요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "lottery",
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": true,
+   "confidence": "low",
+   "text": "추첨제 — 주중 5주 전·주말 4주 전 월요일 09:00~목요일 17:00 신청, 금요일 10:00 추첨(공식 추첨예약 안내)"
+  }
  },
  "ops": {
   "nocaddie": {

@@ -232,7 +232,27 @@
   ],
   "weather_evidence": [
    "품목종류 보관일수 속옷 1주일 보관 후 미회수 시 폐기 의류, 신발, 클럽 3개월 보관 후 미회수 시 폐기 기타품목 3개월 보관 후 미회수 시 폐기 기 타 ※ 눈이나 우천 등으로 인하여 플레이에 심각한 지장을 줄 수 있을 경우에는 당일 전화로 예약 취소가 가능하며 위약 처리되지 않습니다."
-  ]
+  ],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 7,
+     "time": "17:00"
+    },
+    "weekend": {
+     "days_before": 7,
+     "time": "17:00"
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "high",
+   "basis_text": [
+    "7일 전 17:00까지 정상 취소. 눈·우천 등으로 플레이에 지장이 있을 경우 당일 전화 취소 가능하며 위약 미적용"
+   ],
+   "penalty_text": []
+  }
  },
  "ops": {
   "nocaddie": {

@@ -572,7 +572,48 @@
   "evidence": [
    "베뉴지CC 예약은 공식 홈페이지(venuegcc.com)와 카카오골프 두 채널을 통해 가능하며, 예약 오픈은 플레이 4주 전 기준으로 진행됩니다 … 플레이일 기준 4주 전부터 예약이 오픈됩니다 (https://papahun.com/venuegcc-reservation/)"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3
+    },
+    "weekend": {
+     "days_before": 4
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "위약 없이 취소: 평일 3일 전 · 주말 4일 전까지",
+    "위약 없이 취소: 평일 3일 전 · 주말 4일 전까지"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 4,
+     "weekday": null,
+     "time": null,
+     "member": null,
+     "text": "4주 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "플레이일 기준 4주 전부터 예약 오픈(공식 홈페이지·카카오골프). 성수기 주말은 오픈 당일 조기 마감"
+  }
  },
  "ops": {
   "nocaddie": {

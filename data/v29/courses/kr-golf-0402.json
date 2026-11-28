@@ -227,7 +227,47 @@
   "open_cycle": "매달 1일 09:00 다음달까지 오픈. 주중 정회원·지정회원/주말 정회원, 주말 월 4회, 3~4인",
   "notes": "7분 간격, 당일 입장 불가, 지연 도착 입장 불가",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {},
+   "penalty": [
+    {
+     "day": "weekend",
+     "from_days": 6,
+     "to_days": 6,
+     "pct": null,
+     "suspend_months": 1,
+     "suspend_days": null,
+     "text": "취소 6일 전 주중 ·8일 전 주말 . 당일~6일 전 취소 시 회원 1개월 주말 예약정지"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "non_member",
+   "confidence": "low",
+   "basis_text": [],
+   "penalty_text": [
+    "취소 6일 전 주중 ·8일 전 주말 . 당일~6일 전 취소 시 회원 1개월 주말 예약정지"
+   ]
+  },
+  "parsed_open": {
+   "rules": [],
+   "monthly": [
+    {
+     "day": 1,
+     "weekday": null,
+     "time": "09:00",
+     "scope": "both"
+    }
+   ],
+   "weekly": null,
+   "method": null,
+   "recurring": true,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "low",
+   "text": "매달 1일 09:00 다음달까지 오픈. 주중 정회원·지정회원/주말 정회원, 주말 월 4회, 3~4인"
+  }
  },
  "ops": {
   "nocaddie": {

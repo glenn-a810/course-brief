@@ -215,7 +215,38 @@
   "open_cycle": null,
   "notes": "2·3인 가능(추가금 발생), 당일 예약 가능\n• 티업 30분 전 도착·프런트 방명록 작성·선불 계산 후 입장\n• 운영 일출~19:30(야간 포함), 코스 내 흡연 제한",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {},
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 1,
+     "to_days": 1,
+     "pct": 20.0,
+     "suspend_months": 3,
+     "suspend_days": null,
+     "text": "1일 전 3개월 정지+20%"
+    },
+    {
+     "day": null,
+     "from_days": 2,
+     "to_days": 3,
+     "pct": 10.0,
+     "suspend_months": 2,
+     "suspend_days": null,
+     "text": "2~3일 전 취소 2개월 예약·내장정지+위약금 10%"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "low",
+   "basis_text": [],
+   "penalty_text": [
+    "2~3일 전 취소 2개월 예약·내장정지+위약금 10%",
+    "1일 전 3개월 정지+20%"
+   ]
+  }
  },
  "ops": {
   "nocaddie": {

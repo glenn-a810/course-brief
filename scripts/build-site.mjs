@@ -21,6 +21,8 @@ const REQUIRED = [
   "data/v29/sido.json",
   "data/v29/rental_providers.json",
   "data/v29/schema.md",
+  "data/v29/alerts.json",
+  "data/v29/booking_rules.json",
 ];
 
 async function assertData() {

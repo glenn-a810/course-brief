@@ -528,7 +528,60 @@
     "checked_at": "2026-11-27",
     "source_type": "public_info"
    }
-  ]
+  ],
+  "parsed_cancel": {
+   "free": {},
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 1,
+     "to_days": 1,
+     "pct": 20.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "1일 전 20%"
+    },
+    {
+     "day": null,
+     "from_days": 2,
+     "to_days": 2,
+     "pct": 10.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "2일 전 취소 10%"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "low",
+   "basis_text": [],
+   "penalty_text": [
+    "2일 전 취소 10%",
+    "1일 전 20%"
+   ]
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "month",
+     "before": 1,
+     "weekday": null,
+     "time": "09:00",
+     "member": null,
+     "text": "1달 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "phone",
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "9홀·18홀 1달 전 09:00 오픈(2인 예약은 전화 2주 전 09:00)"
+  }
  },
  "ops": {
   "nocaddie": {

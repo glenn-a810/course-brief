@@ -242,7 +242,29 @@
   "open_cycle": "인터넷 예약 매일 오전 9시, 해당 일자 4주 뒤 오픈",
   "notes": "5인 플레이 가능 골프장(하루 팀 한정). 3인 이상",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 4,
+     "weekday": null,
+     "time": null,
+     "member": null,
+     "text": "4주 뒤"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "online",
+   "recurring": true,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "인터넷 예약 매일 오전 9시, 해당 일자 4주 뒤 오픈"
+  }
  },
  "ops": {
   "nocaddie": {

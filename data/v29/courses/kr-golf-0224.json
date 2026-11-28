@@ -147,7 +147,36 @@
   "open_cycle": "• 주말·공휴일(회원의 날·월 1회 예약팀): 8주 전 월요일 오전 9시 오픈\n• 평일: 매월 1일·16일 오전 9시에 익월 보름치씩 오픈(5일·20일 2차 재예약)",
   "notes": null,
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "weekend",
+     "unit": "week",
+     "before": 8,
+     "weekday": "월",
+     "time": "09:00",
+     "member": null,
+     "text": "8주 전 월요일"
+    }
+   ],
+   "monthly": [
+    {
+     "day": 1,
+     "weekday": null,
+     "time": null,
+     "scope": "weekday"
+    }
+   ],
+   "weekly": null,
+   "method": null,
+   "recurring": true,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "• 주말·공휴일(회원의 날·월 1회 예약팀): 8주 전 월요일 오전 9시 오픈\n• 평일: 매월 1일·16일 오전 9시에 익월 보름치씩 오픈(5일·20일 2차 재예약)"
+  }
  },
  "ops": {
   "nocaddie": {

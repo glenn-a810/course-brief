@@ -247,7 +247,29 @@
     "checked_at": "2026-11-27",
     "source_type": "third_party"
    }
-  ]
+  ],
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 5,
+     "weekday": null,
+     "time": "09:00",
+     "member": null,
+     "text": "5주 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "online",
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "해당일 5주 전 오픈 — 회원 인터넷 09:00, 비회원 13:00(인터넷 예약만), 전화 예약 09:00~18:00"
+  }
  },
  "ops": {
   "nocaddie": {

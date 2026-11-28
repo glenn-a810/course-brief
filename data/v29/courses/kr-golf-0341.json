@@ -306,6 +306,46 @@
   "browser_official": {
    "cancel": "패널티 산정은 입장료+카트비 합계 기준, 17시까지만 취소 가능(17시 이후는 익일분리). 당일 취소·노쇼 30%(주중 246,000/주말 306,000), 1일 전 20%(164,000/204,000), 2일 전 10%(82,000/102,000), 3~4일 전 정상 취소. 2024-12-01 적용",
    "group": "단체(3팀 이상) 전체 취소는 30일 전까지, 팀 수 조정은 14일 전까지"
+  },
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 4
+    },
+    "weekend": {
+     "days_before": 4
+    }
+   },
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 1,
+     "to_days": 1,
+     "pct": 20.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "1일 전: 20%"
+    },
+    {
+     "day": null,
+     "from_days": 2,
+     "to_days": 2,
+     "pct": 10.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "2일 전: 10%"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "3~4일 전: 정상 취소 · 2024-12-01 적용"
+   ],
+   "penalty_text": [
+    "1일 전: 20%",
+    "2일 전: 10%"
+   ]
   }
  },
  "ops": {

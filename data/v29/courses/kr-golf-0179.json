@@ -323,6 +323,50 @@
   ],
   "weather_evidence": [
    "예약 확인 방법 : 당사 홈페이지 '인터넷예약' ->'예약확인' 메뉴에서 확인 인터넷으로 즉시 예약하신 내역을 확인 할 수 있음 예약취소 : 우천시에는 당일취소가 가능하며, 취소시 패널티가 적용되지 않습니다."
+  ],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3
+    },
+    "weekend": {
+     "days_before": 4
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "평일 3일 전·주말 4일 전까지",
+    "평일 3일 전·주말 4일 전까지"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 3,
+     "weekday": null,
+     "time": null,
+     "member": null,
+     "text": "3주 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "이용예정일로부터 3주 전 예약 가능(이용약관)"
+  },
+  "weather_summary": [
+   "예약 확인 방법 : 당사 홈페이지 '인터넷예약' ->'예약확인' 메뉴에서 확인 인터넷으로 즉시 예약하신 내역을 확인 할 수 있음 예약취소 : 우천시에는 당일취소가 가능하며, 취소시 패널티가 적용되지 않습니다."
   ]
  },
  "ops": {

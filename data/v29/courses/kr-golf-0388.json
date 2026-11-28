@@ -234,7 +234,25 @@
   "open_cycle": null,
   "notes": null,
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3
+    },
+    "weekend": {
+     "days_before": 3
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "이용일 3일 전까지 취소 가능"
+   ],
+   "penalty_text": []
+  }
  },
  "ops": {
   "nocaddie": {

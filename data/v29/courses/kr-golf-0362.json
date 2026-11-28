@@ -217,7 +217,38 @@
   "evidence": [
    "https://wondergolf.co.kr/courses/kr-kakao-2030317262"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 2,
+     "weekday": "월",
+     "time": "09:00",
+     "member": null,
+     "text": "2주 전 월요일"
+    },
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 2,
+     "weekday": "화",
+     "time": "09:00",
+     "member": null,
+     "text": "2주 전 화요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "high",
+   "text": "2주 전 월요일 오전 9시 오픈(월~금요일), 2주 전 화요일 오전 9시 오픈(토~일요일)"
+  }
  },
  "ops": {
   "nocaddie": {

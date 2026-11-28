@@ -259,7 +259,58 @@
     "checked_at": "2026-11-27",
     "source_type": "third_party"
    }
-  ]
+  ],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3,
+     "time": "17:00"
+    },
+    "weekend": {
+     "days_before": 3,
+     "time": "17:00"
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "high",
+   "basis_text": [
+    "위약 없이 취소 3일 전 17:00까지"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "weekday",
+     "unit": "week",
+     "before": 3,
+     "weekday": "월",
+     "time": "09:00",
+     "member": null,
+     "text": "3주 전 월요일"
+    },
+    {
+     "scope": "weekend",
+     "unit": "week",
+     "before": 3,
+     "weekday": "화",
+     "time": "09:00",
+     "member": null,
+     "text": "3주 전 화요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "fcfs",
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "high",
+   "text": "주중 경기일은 해당 주 기준 3주 전 월요일 09:00, 주말은 3주 전 화요일 09:00부터 실시간 선착순 오픈(경기일 당일 05:00까지)"
+  }
  },
  "ops": {
   "nocaddie": {

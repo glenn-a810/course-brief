@@ -481,7 +481,48 @@
    "예약 오픈 주기: 예약일 기준 2주 전 선착순 예약, 오전 9시부터 매일 요일별 오픈 (http://www.onetheclub.com/club72/reserve)",
    "평일 이용일 2일 전~당일, 주말·공휴일 3일 전~당일 취소 시 예약금 환불 불가 — http://www.onetheclub.com/club72/reserve"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 2
+    },
+    "weekend": {
+     "days_before": 3
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "평일 이용일 2일 전~당일",
+    "주말·공휴일 3일 전~당일 취소 시 예약금 환불 불가"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 2,
+     "weekday": null,
+     "time": "09:00",
+     "member": null,
+     "text": "2주 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "fcfs",
+   "recurring": true,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "예약일 기준 2주 전 선착순 예약, 오전 9시부터 매일 요일별 오픈"
+  }
  },
  "ops": {
   "nocaddie": {

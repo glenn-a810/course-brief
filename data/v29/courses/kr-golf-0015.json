@@ -384,6 +384,50 @@
   "weather_evidence": [
    "※ 악천후로 인한 환불시 정상요금에서 환불됩니다.",
    "※ 2023년 6월 01일부터 적용 악천후 판단 기준 구분 기준 비고 비 시간당 5mm 이상, 그린에 물이 고여 플레이 불가시 시간당 5mm 이상씩 4시간 이상 예보시(예약시간 기준) 눈 시간당 1cm이상, 그린 및 페어웨이 적설로 플레이 불가시 시간당 1cm 이상씩 4시간 이상 예보시(예약시간 기준) 안개 가시거리 100m이내 낙뢰 최초발생 후 10분 이내 3회이상 바람 풍속 17㎧이상, 그린에서 볼이 흔들릴 경우 기타 상기 사항 외 클럽에서 악천후로 판단하여 경기를 중단할 경우 프론트 접수 및 요금정산 • 요금정산은 그린피, 카"
+  ],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3
+    },
+    "weekend": {
+     "days_before": 4
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "위약 없이 취소: 평일 3일 전 · 주말 4일 전까지",
+    "위약 없이 취소: 평일 3일 전 · 주말 4일 전까지"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 3,
+     "weekday": null,
+     "time": "09:00",
+     "member": null,
+     "text": "3주 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "online",
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "예약일 3주 전 오전 09:00부터 인터넷·전화 예약"
+  },
+  "weather_summary": [
+   "악천후로 인한 환불시 정상요금에서 환불됩니다."
   ]
  },
  "ops": {

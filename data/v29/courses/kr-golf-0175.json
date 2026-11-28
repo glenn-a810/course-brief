@@ -184,7 +184,27 @@
    "“인터넷 예약취소는 TEE-OFF 8일전 17:00까지 가능합니다.”",
    "골프장 공식 홈페이지 안내(비회원 예약 기준) · 2026.10.08 확인 ·"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 8,
+     "time": "17:00"
+    },
+    "weekend": {
+     "days_before": 8,
+     "time": "17:00"
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "high",
+   "basis_text": [
+    "위약 없이 취소: 8일 전 17:00까지"
+   ],
+   "penalty_text": []
+  }
  },
  "ops": {
   "nocaddie": {

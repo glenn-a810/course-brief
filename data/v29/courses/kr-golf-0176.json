@@ -344,7 +344,81 @@
   ],
   "weather_evidence": [
    "- 고객님 사정으로 인한 경기 중단은 18홀 그린피가 적용 됩니다."
-  ]
+  ],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 8,
+     "time": "17:00"
+    },
+    "weekend": {
+     "days_before": 8,
+     "time": "17:00"
+    }
+   },
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 3,
+     "to_days": 3,
+     "pct": null,
+     "suspend_months": 3,
+     "suspend_days": null,
+     "text": "이후: 6~7일 전 1개월 · 5~4일 전 2개월 · 3일 전 3개월 예약정지"
+    },
+    {
+     "day": null,
+     "from_days": 5,
+     "to_days": 4,
+     "pct": null,
+     "suspend_months": 2,
+     "suspend_days": null,
+     "text": "이후: 6~7일 전 1개월 · 5~4일 전 2개월 · 3일 전 3개월 예약정지"
+    },
+    {
+     "day": null,
+     "from_days": 6,
+     "to_days": 7,
+     "pct": null,
+     "suspend_months": 1,
+     "suspend_days": null,
+     "text": "이후: 6~7일 전 1개월 · 5~4일 전 2개월 · 3일 전 3개월 예약정지"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "high",
+   "basis_text": [
+    "라운드일 8일 전 17:00까지: 정상 취소"
+   ],
+   "penalty_text": [
+    "이후: 6~7일 전 1개월 · 5~4일 전 2개월 · 3일 전 3개월 예약정지",
+    "이후: 6~7일 전 1개월 · 5~4일 전 2개월 · 3일 전 3개월 예약정지",
+    "이후: 6~7일 전 1개월 · 5~4일 전 2개월 · 3일 전 3개월 예약정지"
+   ]
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "day",
+     "before": 30,
+     "weekday": null,
+     "time": null,
+     "member": null,
+     "text": "30일 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "이용자는 이용 예정일로부터 30일 전까지 예약할 수 있음(이용약관 제5조)"
+  }
  },
  "ops": {
   "nocaddie": {

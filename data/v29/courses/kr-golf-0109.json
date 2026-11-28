@@ -207,7 +207,59 @@
    "예약 취소는 플레이일 기준 6일 전 17:00까지 가능합니다 … 단체팀의 경우, 플레이 1일 전까지 더 시에나 서울 컨트리클럽 카카오 채널을 통해 조편성표를 제출",
    "신규 예약은 매일 오전 9시에 오픈되며, 24시간 동안 홈페이지를 통해 예약이 가능합니다. 예약 오픈 기준 - 주중 : 플레이일 기준 30일 전 - 주말 및 공휴일 : 플레이일 기준 20일 전 … 1일 1팀에 한해 가능 (https://thesiena.co.kr/content/seoulcc_operation_1)"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 6,
+     "time": "17:00"
+    },
+    "weekend": {
+     "days_before": 6,
+     "time": "17:00"
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "예약 취소는 플레이일 기준 6일 전 17:00까지 가능 . 단체팀은 플레이 1일 전까지 카카오 채널로 조편성표 제출",
+    "예약 취소는 플레이일 기준 6일 전 17:00까지 가능 . 단체팀은 플레이 1일 전까지 카카오 채널로 조편성표 제출"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "weekday",
+     "unit": "day",
+     "before": 30,
+     "weekday": null,
+     "time": null,
+     "member": null,
+     "text": "30일 전"
+    },
+    {
+     "scope": "weekend",
+     "unit": "day",
+     "before": 20,
+     "weekday": null,
+     "time": null,
+     "member": null,
+     "text": "20일 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "fcfs",
+   "recurring": true,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": true,
+   "confidence": "low",
+   "text": "신규 예약은 매일 09:00에 오픈되어 24시간 홈페이지 예약 가능. 오픈 기준은 주중 플레이일 30일 전, 주말·공휴일 20일 전이고 1일 1팀 선착순"
+  }
  },
  "ops": {
   "nocaddie": {

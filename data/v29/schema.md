@@ -18,6 +18,8 @@ data/v29/
 ├── index.json              540곳 경량 인덱스 (목록·검색·필터용, 약 200KB)
 ├── courses/{course_id}.json 구장별 상세 540개 (12키, 상세 없으면 master만)
 ├── clusters.json           시설 클러스터 28개 (같은 부지 복수 코스)
+├── alerts.json             휴장·에어레이션·요금 변경 통합 캘린더(M3) — 99건
+├── booking_rules.json      취소 마감·예약 오픈 계산용 요약(H2·H3) — 454곳
 ├── sido.json               시도 코드·건수 (17개)
 ├── rental_providers.json   클럽 렌탈·딜리버리 업체 8곳
 ├── rental_deliveries.md    렌탈 시장 조사 원문
@@ -109,6 +111,61 @@ data/v29/
   "coverage":  { basic, course, fee, ops, facility, briefing, rental }   // 0~1 채움률
 }
 ```
+
+### cancel 의 파싱 보조값 (v29.1, 2026-11-28)
+
+`cancel_policy`·`open_cycle` **원문은 그대로 둔 채** 계산용 값만 덧붙입니다(`scripts/parse_booking_rules.py`).
+원문에서 기계적으로 읽지 못한 구장은 필드가 없고, 화면은 원문만 보여 줍니다.
+
+```jsonc
+"cancel": {
+  "cancel_policy": "…원문…",
+  "open_cycle": "…원문…",
+  "parsed_cancel": {
+    "free": { "weekday": { "days_before": 3, "time": "17:00" }, "weekend": { "days_before": 4 } },
+    "penalty": [ { "day": "weekday|null", "from_days": 2, "to_days": 1, "pct": 10,
+                   "suspend_months": null, "suspend_days": null, "text": "…" } ],
+    "basis": "person|team|unknown",     // % 위약의 기준 금액
+    "scope": "member|non_member|unknown",
+    "confidence": "high|medium|low",
+    "basis_text": ["…원문 발췌…"], "penalty_text": ["…"]
+  },
+  "parsed_open": {
+    "rules": [ { "scope": "weekday|weekend|both", "unit": "week|day|month", "before": 4,
+                 "weekday": "월", "time": "09:00", "member": null } ],
+    "monthly": [ { "day": 1, "time": "09:00", "scope": "both" } ],
+    "weekly": { "weekday": "월", "time": "09:00" },
+    "method": "lottery|fcfs|online|phone|onsite|null",
+    "recurring": false, "member_only": false, "ambiguous": false,
+    "confidence": "high|medium|low", "text": "…"
+  },
+  "weather_summary": ["악천후 정산 규정에서 뽑은 짧은 문장(최대 2개)"]
+}
+```
+
+- `parsed_cancel` 380곳(무료 마감 348 · high 99) · `parsed_open` 351곳(high 87) — 2026-11-28 기준, 나머지는 원문만.
+- `time` 이 없으면 시각 미확인(화면은 "시간 미확인"). `confidence: low` 는 화면에서 "원문 확인 필요"로 표시합니다.
+- **계산은 참고값입니다.** 회원/비회원·시즌별로 규정이 갈리는 구장이 있어 화면은 항상 "골프장 확인 권장"을 함께 표기합니다.
+
+### alerts.json — 휴장·에어레이션·요금 변경
+
+```jsonc
+{ "dataset": { "built_at": "…", "count": 99, "with_period": 28 },
+  "items": [ { "id": "kr-golf-0116", "name": "해비치 컨트리클럽", "sido": "경기", "sigungu": "여주시",
+               "kind": "closure|aeration|fee_change|note|notice", "source": "alert|notice",
+               "title": "동계휴장 확정 (2026.12.21~2027.02.25)",
+               "from": "2026-12-21", "to": "2027-02-25", "reopen": null,
+               "confirmed": true, "level": "closure", "url": "https://…", "updated": "2026-11-27" } ] }
+```
+
+- `source: alert` 는 상세의 `briefing.alert`(확인된 운영 알림), `source: notice` 는 공지 제목에서 기간을 읽은 항목입니다.
+- 연도 없는 제목("12월 21일(월) 휴장")은 **요일이 맞는 해**를 골라 날짜를 정하고, 되풀이 규칙("매월 셋째 월요일")은 날짜를 만들지 않습니다.
+- 기간을 읽지 못한 항목은 `from: null` 로 남기고 화면은 "일정 미상"으로 분리합니다.
+
+### booking_rules.json — 목록·내 구장용 요약
+
+`{ "dataset": {…}, "rules": { "kr-golf-0002": { "cancel": {…}, "open": {…} } } }`
+— 상세 JSON 의 `parsed_cancel`·`parsed_open` 에서 **원문 발췌(text)를 뺀** 계산용 값만 담습니다(약 170KB).
 
 ### 값 표기 규칙 (가장 중요)
 

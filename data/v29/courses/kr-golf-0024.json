@@ -626,7 +626,84 @@
   "cancel": {
    "value": "경기 전 취소(입장 후) 이용요금 50%, 9홀까지 (이용요금-기본요금)*25%, 10홀이상 환불 불가",
    "evidence": []
-  }
+  },
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 7,
+     "time": "17:00"
+    },
+    "weekend": {
+     "days_before": 7,
+     "time": "17:00"
+    }
+   },
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 1,
+     "to_days": 1,
+     "pct": 20.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "1일 전 20%"
+    },
+    {
+     "day": null,
+     "from_days": 2,
+     "to_days": 2,
+     "pct": 10.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "2일 전 이용요금 10%"
+    },
+    {
+     "day": null,
+     "from_days": 4,
+     "to_days": 6,
+     "pct": null,
+     "suspend_months": 1,
+     "suspend_days": null,
+     "text": "이후 4~6일 전 1개월 예약정지"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "주중·주말 7일 전 17:00까지 취소"
+   ],
+   "penalty_text": [
+    "이후 4~6일 전 1개월 예약정지",
+    "2일 전 이용요금 10%",
+    "1일 전 20%"
+   ]
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 4,
+     "weekday": null,
+     "time": "09:30",
+     "member": null,
+     "text": "4주 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "phone",
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "4주 전 오전 9:30부터 전화예약"
+  },
+  "weather_summary": [
+   "경기중단 환불 안내 입장 전 이용요금 미결제 시, 이용요금에서 환불 금액이 공제된 금액을 별도 징수합니다."
+  ]
  },
  "ops": {
   "nocaddie": {

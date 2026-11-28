@@ -608,7 +608,47 @@
    "비회원 위임예약(정회원 위임): 전주 수요일 10:00부터(잔여타임) (https://parkgolfinfo.co.kr/경산-해내다cc-골프장-예약방법·요금-상세-안내/)"
   ],
   "weather_evidence": [],
-  "browser_official": null
+  "browser_official": null,
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 5
+    },
+    "weekend": {
+     "days_before": 5
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "5일 전까지 취소"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 1,
+     "weekday": "수",
+     "time": "10:00",
+     "member": "정회원",
+     "text": "전주 수요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": true,
+   "scope": "member",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "비회원은 정회원 위임 예약으로 전주 수요일 10:00부터 잔여타임 오픈"
+  }
  },
  "ops": {
   "nocaddie": {

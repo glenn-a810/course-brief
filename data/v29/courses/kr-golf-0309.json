@@ -282,7 +282,80 @@
     "checked_at": "2026-11-27",
     "source_type": "public_info"
    }
-  ]
+  ],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3
+    },
+    "weekend": {
+     "days_before": 4
+    }
+   },
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 1,
+     "to_days": 1,
+     "pct": 20.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "위약 : 3일 전 주말 10% · 2일 전 10% · 1일 전 20% · 당일·노쇼 30%"
+    },
+    {
+     "day": "weekend",
+     "from_days": 2,
+     "to_days": 2,
+     "pct": 10.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "위약 : 3일 전 주말 10% · 2일 전 10% · 1일 전 20% · 당일·노쇼 30%"
+    },
+    {
+     "day": "weekend",
+     "from_days": 3,
+     "to_days": 3,
+     "pct": 10.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "위약 : 3일 전 주말 10% · 2일 전 10% · 1일 전 20% · 당일·노쇼 30%"
+    }
+   ],
+   "basis": "team",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "정상 취소: 평일 3일 전까지 · 주말·공휴일 4일 전까지",
+    "정상 취소: 평일 3일 전까지 · 주말·공휴일 4일 전까지"
+   ],
+   "penalty_text": [
+    "위약 : 3일 전 주말 10% · 2일 전 10% · 1일 전 20% · 당일·노쇼 30%",
+    "위약 : 3일 전 주말 10% · 2일 전 10% · 1일 전 20% · 당일·노쇼 30%",
+    "위약 : 3일 전 주말 10% · 2일 전 10% · 1일 전 20% · 당일·노쇼 30%"
+   ]
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 3,
+     "weekday": null,
+     "time": "14:00",
+     "member": null,
+     "text": "3주 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "이용예정일 3주 전 14:00 오픈"
+  }
  },
  "ops": {
   "nocaddie": {

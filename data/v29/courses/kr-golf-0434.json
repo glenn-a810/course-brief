@@ -291,7 +291,23 @@
   "open_cycle": null,
   "notes": "노캐디 시간대 운영, 3인 추가요금 별도. 레스토랑·그늘집 프로모션(식음 무료 제공) 월별 운영",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekend": {
+     "days_before": 4
+    }
+   },
+   "penalty": [],
+   "basis": "team",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "평일 이용 3일 전·주말·공휴일 4일 전까지 취소 시 예약금 전액 환불",
+    "평일 이용 3일 전·주말·공휴일 4일 전까지 취소 시 예약금 전액 환불"
+   ],
+   "penalty_text": []
+  }
  },
  "ops": {
   "nocaddie": {

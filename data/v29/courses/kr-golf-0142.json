@@ -322,7 +322,50 @@
    "예약 오픈 주기: 주중·주말 모두 3주 전 오전 9시부터 예약 (https://www.360cc.co.kr/reservation/guide/reservation01.do)",
    "360도컨트리클럽 평일 5일 전 · 주말 7일 전 17:00까지(예약일 제외)"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 5,
+     "time": "17:00"
+    },
+    "weekend": {
+     "days_before": 7,
+     "time": "17:00"
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "high",
+   "basis_text": [
+    "평일 5일 전·주말 7일 전 17:00까지 취소 시 위약 없음",
+    "평일 5일 전·주말 7일 전 17:00까지 취소 시 위약 없음"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 3,
+     "weekday": null,
+     "time": "09:00",
+     "member": null,
+     "text": "3주 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "주중·주말 모두 3주 전 오전 9시부터 예약"
+  }
  },
  "ops": {
   "nocaddie": {

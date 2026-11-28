@@ -178,7 +178,57 @@
   "open_cycle": "대중제·가족회원 12주 전 화요일, 회원추천 4주 전 화요일. 전화만(예약실 월~토 09:00~17:00, 공휴일 다음 평일)",
   "notes": "18홀 약 4시간30분. 주말·공휴일 당일 2인 입장 불가(2주 예약정지)",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3
+    },
+    "weekend": {
+     "days_before": 4
+    }
+   },
+   "penalty": [],
+   "basis": "team",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "주말·공휴일 4일 전·평일 3일 전까지 무료",
+    "주말·공휴일 4일 전·평일 3일 전까지 무료"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 12,
+     "weekday": "화",
+     "time": null,
+     "member": "회원",
+     "text": "12주 전 화요일"
+    },
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 4,
+     "weekday": "화",
+     "time": null,
+     "member": "회원",
+     "text": "4주 전 화요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "phone",
+   "recurring": false,
+   "member_only": true,
+   "scope": "member",
+   "ambiguous": true,
+   "confidence": "low",
+   "text": "대중제·가족회원 12주 전 화요일, 회원추천 4주 전 화요일. 전화만(예약실 월~토 09:00~17:00, 공휴일 다음 평일)"
+  }
  },
  "ops": {
   "nocaddie": {

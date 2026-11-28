@@ -237,7 +237,48 @@
   "open_cycle": "매일 오전 9시, 4주 뒤 예약 오픈. 인터넷 예약 1인 1일 1팀(단체·당일은 예약실)",
   "notes": "1팀 3인 이상 가능(주말 1팀 4인 필수). 연중무휴",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3
+    },
+    "weekend": {
+     "days_before": 4
+    }
+   },
+   "penalty": [],
+   "basis": "team",
+   "scope": "non_member",
+   "confidence": "medium",
+   "basis_text": [
+    "비회원은 주말·공휴일 이용일 4일 전",
+    "평일 3일 전까지 취소 시 위약 없음 . 당일 취소·노쇼는 팀별 위약금"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 4,
+     "weekday": null,
+     "time": null,
+     "member": null,
+     "text": "4주 뒤"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "online",
+   "recurring": true,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "매일 오전 9시, 4주 뒤 예약 오픈. 인터넷 예약 1인 1일 1팀(단체·당일은 예약실)"
+  }
  },
  "ops": {
   "nocaddie": {

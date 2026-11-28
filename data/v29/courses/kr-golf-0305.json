@@ -415,7 +415,61 @@
   "weather_evidence": [
    "구분 주중 주말 VIP회원 일반회원 가족회원 주중회원 비회원 VIP회원 일반회원 가족회원 비회원 요금 28,000 45,000 90,000 90,000 185,000 28,000 50,000 105,000 210,000 비고 제세금은 개별소비세 교육세, 농특세 부가세 포함 상세히 보기 비회원제(9홀) 요금 구분 그린피 부가세 합계 주중 9홀 84,091 8,409 92,500 주말 9홀 95,455 9,545 105,000 카트피 구분 요금 18홀 90,000원/팀 9홀 45,000원/팀 캐디피 구분 주간 야간 18홀 140,000"
   ],
-  "browser_official": null
+  "browser_official": null,
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 5,
+     "time": "17:00"
+    },
+    "weekend": {
+     "days_before": 5,
+     "time": "17:00"
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "골프 예약 취소: 이용일을 제외한 5일 전 17시까지"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "weekend",
+     "unit": "week",
+     "before": 3,
+     "weekday": "화",
+     "time": "10:00",
+     "member": null,
+     "text": "3주 전 화요일"
+    },
+    {
+     "scope": "weekday",
+     "unit": "week",
+     "before": 3,
+     "weekday": null,
+     "time": null,
+     "member": null,
+     "text": "3주 후"
+    }
+   ],
+   "monthly": [],
+   "weekly": {
+    "weekday": "화",
+    "time": null
+   },
+   "method": "online",
+   "recurring": true,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "온라인 회원·비회원 기준 주말·공휴일은 이용일 3주 전 화요일 10시부터, 주중은 매주 화요일에 3주 후(월~일)분 예약"
+  }
  },
  "ops": {
   "nocaddie": {

@@ -398,6 +398,83 @@
    "cancel": "라운드 3일 전 17:00까지 정상취소. 이후: 3일 전 17:00~2일 전 17:00 팀 정상요금(카트 포함) 10%+2개월 정지, 2일 전 17:00~1일 전 17:00 20%+3개월, 1일 전 17:00 이후·당일 노쇼 30%+위약금 납부 시까지 영구 정지",
    "cancel_exception": "직계존비속 상(부고장·사망진단서), 본인·직계 사고·병변 악화(진단서·입원확인서·보험사 사고증명 원본) 시 해지 가능, 연 1회 한정",
    "player_rule": "3인·2인 플레이 예정 시 예약실(054-420-0201~3) 전화 필요"
+  },
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3,
+     "time": "17:00"
+    },
+    "weekend": {
+     "days_before": 3,
+     "time": "17:00"
+    }
+   },
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 0,
+     "to_days": 1,
+     "pct": 20.0,
+     "suspend_months": 3,
+     "suspend_days": null,
+     "text": "2일 전 17:00~1일 전 17:00: 20% + 3개월 정지"
+    },
+    {
+     "day": null,
+     "from_days": 0,
+     "to_days": 2,
+     "pct": 10.0,
+     "suspend_months": 2,
+     "suspend_days": null,
+     "text": "3일 전 17:00~2일 전 17:00: 팀 정상요금 10% + 2개월 정지"
+    },
+    {
+     "day": null,
+     "from_days": 1,
+     "to_days": 1,
+     "pct": 30.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "1일 전 17:00 이후·당일 노쇼: 30% + 위약금 납부 시까지 영구 정지"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "high",
+   "basis_text": [
+    "정상 취소: 라운드 3일 전 17:00까지"
+   ],
+   "penalty_text": [
+    "3일 전 17:00~2일 전 17:00: 팀 정상요금 10% + 2개월 정지",
+    "2일 전 17:00~1일 전 17:00: 20% + 3개월 정지",
+    "1일 전 17:00 이후·당일 노쇼: 30% + 위약금 납부 시까지 영구 정지"
+   ]
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 3,
+     "weekday": null,
+     "time": null,
+     "member": null,
+     "text": "3주 후"
+    }
+   ],
+   "monthly": [],
+   "weekly": {
+    "weekday": "화",
+    "time": "09:00"
+   },
+   "method": null,
+   "recurring": true,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "매주 화요일 09:00, 3주 후(화~월) 1주 단위 오픈"
   }
  },
  "ops": {

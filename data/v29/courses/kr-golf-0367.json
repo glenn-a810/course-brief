@@ -176,7 +176,50 @@
   "open_cycle": "• 1부: 28일 전 09시~경기일 전일 21시\n• 2·3부: 28일 전 09시~당일 14시(당일 예약은 2·3부만 가능)",
   "notes": "정기 휴장일 없음. 지역주민 할인. 중복예약으로 인한 당일 노쇼 시 위약금 납부 전까지 당일 라운드 불가",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3,
+     "time": "17:00"
+    },
+    "weekend": {
+     "days_before": 4,
+     "time": "17:00"
+    }
+   },
+   "penalty": [],
+   "basis": "team",
+   "scope": "unknown",
+   "confidence": "high",
+   "basis_text": [
+    "정상 취소: 평일 3일 전·주말 4일 전 17:00까지",
+    "정상 취소: 평일 3일 전·주말 4일 전 17:00까지"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "day",
+     "before": 28,
+     "weekday": null,
+     "time": "09:00",
+     "member": null,
+     "text": "28일 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "• 1부: 28일 전 09시~경기일 전일 21시\n• 2·3부: 28일 전 09시~당일 14시(당일 예약은 2·3부만 가능)"
+  }
  },
  "ops": {
   "nocaddie": {

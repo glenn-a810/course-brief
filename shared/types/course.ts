@@ -404,6 +404,67 @@ export type TextValue =
   | { value: string; source?: string; url?: string | null; evidence?: string[] }
   | null;
 
+/** 무료 취소 마감 하나 — 라운드 N일 전, 시각은 확인된 경우만 */
+export interface ParsedDeadline {
+  days_before: number;
+  time?: string;
+}
+
+/** 위약 단계 — N일 전 구간에 % 또는 예약정지 */
+export interface ParsedPenalty {
+  day?: "weekday" | "weekend" | null;
+  from_days: number;
+  to_days: number;
+  pct?: number | null;
+  suspend_months?: number | null;
+  suspend_days?: number | null;
+  text?: string;
+}
+
+/** `scripts/parse_booking_rules.py` 가 만든 취소 규칙 요약 (원문은 cancel_policy 에 그대로) */
+export interface ParsedCancel {
+  free: { weekday?: ParsedDeadline; weekend?: ParsedDeadline };
+  penalty: ParsedPenalty[];
+  basis?: "team" | "person" | "unknown";
+  scope?: "member" | "non_member" | "unknown";
+  confidence?: "high" | "medium" | "low";
+  basis_text?: string[];
+  penalty_text?: string[];
+}
+
+/** 예약 오픈 규칙 하나 — 이용일 기준 N주·N일·N개월 전, 요일·시각 */
+export interface ParsedOpenRule {
+  scope?: "weekday" | "weekend" | "both";
+  unit?: "week" | "day" | "month";
+  before?: number;
+  weekday?: string | null;
+  time?: string | null;
+  member?: string | null;
+  text?: string;
+}
+
+export interface ParsedOpenMonthly {
+  day?: number | null;
+  weekday?: string | null;
+  time?: string | null;
+  scope?: "weekday" | "weekend" | "both";
+  ordinal?: string;
+}
+
+/** `open_cycle` 문장을 구조화한 값 */
+export interface ParsedOpen {
+  rules: ParsedOpenRule[];
+  monthly?: ParsedOpenMonthly[];
+  weekly?: { weekday?: string | null; time?: string | null } | null;
+  method?: "lottery" | "fcfs" | "online" | "phone" | "onsite" | null;
+  recurring?: boolean;
+  member_only?: boolean;
+  scope?: string;
+  ambiguous?: boolean;
+  confidence?: "high" | "medium" | "low";
+  text?: string;
+}
+
 /** 상세 `cancel` — 취소 규정·예약 오픈 주기·악천후 정산 */
 export interface CancelInfo {
   cancel_policy?: TextValue;
@@ -412,7 +473,50 @@ export interface CancelInfo {
   notes?: string | null;
   evidence?: string[];
   weather_evidence?: string[];
+  /** 파싱 보조값(원문 유지). 없으면 화면은 원문만 보여 준다 */
+  parsed_cancel?: ParsedCancel | null;
+  parsed_open?: ParsedOpen | null;
+  /** 악천후 정산 규정에서 뽑은 짧은 문장 */
+  weather_summary?: string[] | null;
   browser_official?: Record<string, unknown> | null;
+}
+
+/** `data/v29/alerts.json` — 휴장·에어레이션·요금 변경 통합 캘린더 항목 */
+export interface AlertItem {
+  id: string;
+  name: string;
+  sido?: string;
+  sigungu?: string;
+  status?: string;
+  kind: "closure" | "aeration" | "fee_change" | "note" | "notice" | "event";
+  source: "alert" | "notice";
+  title: string;
+  from?: string | null;
+  to?: string | null;
+  reopen?: string | null;
+  confirmed?: boolean;
+  level?: string;
+  detail?: string;
+  url?: string | null;
+  updated?: string;
+}
+
+export interface AlertFile {
+  dataset: { built_at?: string; count?: number; with_period?: number; note?: string };
+  items: AlertItem[];
+}
+
+/** `data/v29/booking_rules.json` — 목록·내 구장 화면이 쓰는 경량 규칙 */
+export interface BookingRulesFile {
+  dataset: {
+    built_at?: string;
+    parsed_cancel?: number;
+    parsed_open?: number;
+    with_cancel_policy?: number;
+    with_open_cycle?: number;
+    note?: string;
+  };
+  rules: Record<string, { cancel?: ParsedCancel; open?: ParsedOpen }>;
 }
 
 /** 현장 운영 14항목 (schema.md §3) */

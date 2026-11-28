@@ -204,7 +204,38 @@
   "open_cycle": "• 주중 정회원 2주 전 09:00 · 지정회원 10일 전 09:00 · 비회원 잔여티 7일 전부터 유선\n• 주말 정회원 전주 수요일 10:00 · 지정회원 5일 전 · 비회원 5일 전(화)부터 유선",
   "notes": "2인·5인 라운드 불가(공식 공지). 주중 연단체팀 모집 별도 미확인(공식 홈페이지 실시간예약·대기예약 운영, 오픈 주기 미게시)",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "day",
+     "before": 7,
+     "weekday": null,
+     "time": null,
+     "member": "비회원",
+     "text": "7일 전"
+    },
+    {
+     "scope": "both",
+     "unit": "day",
+     "before": 5,
+     "weekday": null,
+     "time": null,
+     "member": "비회원",
+     "text": "5일 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "non_member",
+   "ambiguous": true,
+   "confidence": "low",
+   "text": "• 주중 정회원 2주 전 09:00 · 지정회원 10일 전 09:00 · 비회원 잔여티 7일 전부터 유선\n• 주말 정회원 전주 수요일 10:00 · 지정회원 5일 전 · 비회원 5일 전(화)부터 유선"
+  }
  },
  "ops": {
   "nocaddie": {

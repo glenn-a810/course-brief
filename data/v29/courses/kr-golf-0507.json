@@ -245,7 +245,59 @@
   "open_cycle": "1·2부: 4주 전 화요일 10:00 / 3부: 2주 전 화요일 10:00 (월~일 기준, 홈페이지 전용·전화예약 불가)",
   "notes": "2·3인 플레이 가능, 야간·드라이빙 캐디 라운드 후기 있음",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3,
+     "time": "17:00"
+    },
+    "weekend": {
+     "days_before": 4,
+     "time": "17:00"
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "high",
+   "basis_text": [
+    "주중 3일 전·주말·공휴일 4일 전 17:00까지 정상 취소",
+    "주중 3일 전·주말·공휴일 4일 전 17:00까지 정상 취소"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 4,
+     "weekday": "화",
+     "time": "10:00",
+     "member": null,
+     "text": "4주 전 화요일"
+    },
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 2,
+     "weekday": "화",
+     "time": "10:00",
+     "member": null,
+     "text": "2주 전 화요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "phone",
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": true,
+   "confidence": "low",
+   "text": "1·2부: 4주 전 화요일 10:00 / 3부: 2주 전 화요일 10:00 (월~일 기준, 홈페이지 전용·전화예약 불가)"
+  }
  },
  "ops": {
   "nocaddie": {

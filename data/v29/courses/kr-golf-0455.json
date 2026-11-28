@@ -285,7 +285,48 @@
   "open_cycle": "이용예정일 8주 전 월요일 09:00에 해당 주 일요일까지 예약 오픈",
   "notes": "성수기는 2인도 3인 요금 적용",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 7
+    },
+    "weekend": {
+     "days_before": 7
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "7일 전 100% 환불",
+    "6~3일 전 50% 환불"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 8,
+     "weekday": "월",
+     "time": "09:00",
+     "member": null,
+     "text": "8주 전 월요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "high",
+   "text": "이용예정일 8주 전 월요일 09:00에 해당 주 일요일까지 예약 오픈"
+  }
  },
  "ops": {
   "nocaddie": {

@@ -240,7 +240,106 @@
   "evidence": [
    "https://www.grandgolf.co.kr/html/member/terms.asp"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3
+    },
+    "weekend": {
+     "days_before": 4
+    }
+   },
+   "penalty": [
+    {
+     "day": "weekday",
+     "from_days": 1,
+     "to_days": 1,
+     "pct": 20.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "이후: 주말 3~2일 전·평일 2일 전 10% · 1일 전 20% · 당일·노쇼 30%"
+    },
+    {
+     "day": "weekday",
+     "from_days": 2,
+     "to_days": 2,
+     "pct": 10.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "이후: 주말 3~2일 전·평일 2일 전 10% · 1일 전 20% · 당일·노쇼 30%"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "non_member",
+   "confidence": "medium",
+   "basis_text": [
+    "비회원 기준 주말·공휴일 4일 전",
+    "평일 3일 전까지 취소하면 예약금 전액 환불"
+   ],
+   "penalty_text": [
+    "이후: 주말 3~2일 전·평일 2일 전 10% · 1일 전 20% · 당일·노쇼 30%",
+    "이후: 주말 3~2일 전·평일 2일 전 10% · 1일 전 20% · 당일·노쇼 30%"
+   ]
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "weekday",
+     "unit": "week",
+     "before": 3,
+     "weekday": null,
+     "time": null,
+     "member": "정회원",
+     "text": "3주 전"
+    },
+    {
+     "scope": "weekend",
+     "unit": "week",
+     "before": 2,
+     "weekday": "금",
+     "time": null,
+     "member": "정회원",
+     "text": "2주 전 금요일"
+    },
+    {
+     "scope": "weekend",
+     "unit": "week",
+     "before": 1,
+     "weekday": "월",
+     "time": "17:00",
+     "member": "회원",
+     "text": "1주 전 월요일"
+    },
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 1,
+     "weekday": "화",
+     "time": "12:00",
+     "member": null,
+     "text": "1주 전 화요일"
+    },
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 1,
+     "weekday": "화",
+     "time": "14:00",
+     "member": "정회원",
+     "text": "1주 전 화요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "fcfs",
+   "recurring": false,
+   "member_only": true,
+   "scope": "member",
+   "ambiguous": true,
+   "confidence": "low",
+   "text": "• 정회원 평일: 3주 전부터 인터넷 실시간 선착순(전일 17:00 마감)\n• 정회원 주말: 2주 전 금요일~1주 전 월요일 17:00 신청, 1주 전 화요일 12:00 이후 배정 확인\n• 사이버회원: 정회원 배정…"
+  }
  },
  "ops": {
   "nocaddie": {

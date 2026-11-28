@@ -274,7 +274,49 @@
    "• 예약일 포함 8일전 17시까지 취소하셔야 위약처리 되지 않습니다.(오후 17시 이후 취소 건은 익일로 처리)",
    "예약 오픈 주기: 4주 전 수요일 오전 9시 일괄 오픈(인터넷 80%·전화 20% 선착순) (https://route52cc.com/guide/guide.asp)"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 8,
+     "time": "17:00"
+    },
+    "weekend": {
+     "days_before": 8,
+     "time": "17:00"
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "high",
+   "basis_text": [
+    "예약일 포함 8일 전 17시까지 취소해야 위약 없음"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 4,
+     "weekday": "수",
+     "time": "09:00",
+     "member": null,
+     "text": "4주 전 수요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "fcfs",
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "high",
+   "text": "4주 전 수요일 오전 9시 일괄 오픈(인터넷 80%·전화 20% 선착순)"
+  }
  },
  "ops": {
   "nocaddie": {

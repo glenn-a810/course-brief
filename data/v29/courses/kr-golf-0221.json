@@ -271,6 +271,60 @@
   "weather_evidence": [
    "Powered by moonos I 날씨자료제공 : 기상청",
    "필로스CC 필로스 ☆ 즐겨찾기 회원가입로그인ID / PW 찾기 인터넷예약 실시간예약 예약확인 및 취소 예약 이용내역 예약 취소내역 실시간조인 클럽소개 필로스 소개 회사개요 오시는 길 코스갤러리 코스소개 동 코스 서 코스 남 코스 코스갤러리 클럽하우스 로비 레스토랑 레스토랑메뉴 프로샵 락카사우나 그늘집 단체실 이용안내 이용요금 예약안내 위약 처리규정 이용총칙 이용수칙 악천후 시 이용요금 공지&이벤트 공지사항 연단체 이벤트 요금공지 자주묻는 질문 고객의 소리 이용요금예약안내위약 처리규정이용총칙이용수칙악천후 시 이용요금 강설, 폭우, 기"
+  ],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 6,
+     "time": "17:00"
+    },
+    "weekend": {
+     "days_before": 6,
+     "time": "17:00"
+    }
+   },
+   "penalty": [],
+   "basis": "team",
+   "scope": "unknown",
+   "confidence": "high",
+   "basis_text": [
+    "주중·주말 6일 전 17:00까지 취소해야 패널티 없음"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "weekday",
+     "unit": "week",
+     "before": 4,
+     "weekday": null,
+     "time": null,
+     "member": null,
+     "text": "4주 전"
+    },
+    {
+     "scope": "weekend",
+     "unit": "week",
+     "before": 3,
+     "weekday": "목",
+     "time": "09:00",
+     "member": null,
+     "text": "3주 전 목요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "online",
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": true,
+   "confidence": "low",
+   "text": "주중은 라운드일 4주 전, 주말·공휴일은 3주 전 목요일 오전 9시 온라인 오픈"
+  },
+  "weather_summary": [
+   "Powered by moonos I 날씨자료제공 : 기상청"
   ]
  },
  "ops": {

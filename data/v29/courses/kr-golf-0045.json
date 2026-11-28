@@ -305,7 +305,28 @@
   ],
   "weather_evidence": [
    "기상악화로 인한 홀별 정산 기상악화로 인한 홀별 정산 구 분 내 용 시설이용료(기본요금) 15,000원(공정위 약관에 의해 부과) 1홀까지 마치지 못한 경우 입장요금(이용요금) - 시설이용료(기본요금) 2홀 이후 {입장요금(이용요금)- 시설이용료(기본요금)} × {1-(기 이용한 홀수/전체홀수)} 기상악화 홀별정산은 강설 1cm이상, 강우 3mm/h이상시 적용."
-  ]
+  ],
+  "parsed_cancel": {
+   "free": {},
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 1,
+     "to_days": 2,
+     "pct": null,
+     "suspend_months": 4,
+     "suspend_days": null,
+     "text": "1~2일 전 예약 취소: 4개월 예약정지"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "low",
+   "basis_text": [],
+   "penalty_text": [
+    "1~2일 전 예약 취소: 4개월 예약정지"
+   ]
+  }
  },
  "ops": {
   "nocaddie": {

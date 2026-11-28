@@ -404,7 +404,93 @@
    "기준요금표 8월 그린피 할인안내 (적용기간 : 8.1~8.31) 구분 1부 2부 3부 open~07:28 07:35~08:31 11:04~13:31 16:54~18:32 월~목요일 110,000 110,000 110,000 90,000 금요일 110,000 토/공휴일 150,000 160,000 110,000 일요일 100,000 카트비,캐디피 별도 대여클럽 안내 구분 금액 비고 클럽세트 50,000 윌슨 클럽단품대여 10,000 홀별 정산 안내(임시 휴장, 악천후 등 / 표준 이용 약관 기준) 골프장 내 천재지변 등으로 라운드가 ",
    "천재지변, 기상악화 등의 경우는 휴장여부를 확인하시고 취소여부를 결정해야 합니다."
   ],
-  "browser_official": null
+  "browser_official": null,
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 4,
+     "time": "17:00"
+    },
+    "weekend": {
+     "days_before": 4,
+     "time": "17:00"
+    }
+   },
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 1,
+     "to_days": 1,
+     "pct": 20.0,
+     "suspend_months": 3,
+     "suspend_days": null,
+     "text": "1일 전: 20% · 3개월 정지 · 당일·노쇼: 30%"
+    },
+    {
+     "day": "weekday",
+     "from_days": 1,
+     "to_days": 1,
+     "pct": 20.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "평일 2일 전 10% · 1일 전 20%"
+    },
+    {
+     "day": "weekday",
+     "from_days": 2,
+     "to_days": 2,
+     "pct": 10.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "평일 2일 전 10% · 1일 전 20%"
+    },
+    {
+     "day": "weekend",
+     "from_days": 3,
+     "to_days": 2,
+     "pct": 10.0,
+     "suspend_months": 2,
+     "suspend_days": null,
+     "text": "주말·공휴일 3~2일 전: 10% · 2개월 정지"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "high",
+   "basis_text": [
+    "정상 취소: 라운드 4일 전 17:00까지"
+   ],
+   "penalty_text": [
+    "주말·공휴일 3~2일 전: 10% · 2개월 정지",
+    "1일 전: 20% · 3개월 정지 · 당일·노쇼: 30%",
+    "평일 2일 전 10% · 1일 전 20%"
+   ]
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "day",
+     "before": 21,
+     "weekday": null,
+     "time": null,
+     "member": null,
+     "text": "21일 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "이용일 21일 전까지 예약 가능(약관 기준)"
+  },
+  "weather_summary": [
+   "천재지변, 기상악화 등의 경우는 휴장여부를 확인하시고 취소여부를 결정해야 합니다."
+  ]
  },
  "ops": {
   "nocaddie": {

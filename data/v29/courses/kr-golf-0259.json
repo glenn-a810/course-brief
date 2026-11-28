@@ -186,7 +186,38 @@
   "open_cycle": "3~11월 4주 전 월요일 13시, 12~2월 3주 전 월요일 13시 오픈. 홈페이지·모바일·전화, 일 2팀 제한",
   "notes": "1팀 4인 기준. 3인 라운드는 주중 1만·주말/공휴일 2만원 추가(카트·캐디는 4인 요금)",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 4,
+     "weekday": "월",
+     "time": "13:00",
+     "member": null,
+     "text": "4주 전 월요일"
+    },
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 3,
+     "weekday": "월",
+     "time": "13:00",
+     "member": null,
+     "text": "3주 전 월요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "online",
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": true,
+   "confidence": "low",
+   "text": "3~11월 4주 전 월요일 13시, 12~2월 3주 전 월요일 13시 오픈. 홈페이지·모바일·전화, 일 2팀 제한"
+  }
  },
  "ops": {
   "nocaddie": {

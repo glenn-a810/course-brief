@@ -434,7 +434,47 @@
   "open_cycle": "4주 전 월요일 오전 10:00부터 예약 오픈(주중·주말 시간대별)",
   "notes": null,
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 10
+    },
+    "weekend": {
+     "days_before": 10
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "정상 취소: 10~7일 전"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 4,
+     "weekday": "월",
+     "time": "10:00",
+     "member": null,
+     "text": "4주 전 월요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "high",
+   "text": "4주 전 월요일 오전 10:00부터 예약 오픈(주중·주말 시간대별)"
+  }
  },
  "ops": {
   "nocaddie": {

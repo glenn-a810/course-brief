@@ -164,7 +164,49 @@
   "open_cycle": "비회원 주말 예약은 전주 수요일 09:00부터 잔여타임에 한해 정상요금으로 가능",
   "notes": null,
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 6,
+     "time": "17:00"
+    },
+    "weekend": {
+     "days_before": 6,
+     "time": "17:00"
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "high",
+   "basis_text": [
+    "6일 전 17:00까지 위약 없이 취소"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "weekend",
+     "unit": "week",
+     "before": 1,
+     "weekday": "수",
+     "time": "09:00",
+     "member": "비회원",
+     "text": "전주 수요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "non_member",
+   "ambiguous": false,
+   "confidence": "high",
+   "text": "비회원 주말 예약은 전주 수요일 09:00부터 잔여타임에 한해 정상요금으로 가능"
+  }
  },
  "ops": {
   "nocaddie": {

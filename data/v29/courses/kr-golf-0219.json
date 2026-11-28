@@ -448,7 +448,27 @@
    "“5일전취소 1개월 예약 정지 1개월 예약 정지 6일전취소 17:00 전 취소 시 위약 없이 정상 취소 가능”",
    "골프장 공식 홈페이지 안내(비회원 예약 기준) · 2026.11.25 확인 ·"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 6,
+     "time": "17:00"
+    },
+    "weekend": {
+     "days_before": 6,
+     "time": "17:00"
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "high",
+   "basis_text": [
+    "위약 없이 취소: 6일 전 17:00 전까지 / 기한 경과 시 위약금·예약 제한 적용"
+   ],
+   "penalty_text": []
+  }
  },
  "ops": {
   "nocaddie": {

@@ -218,7 +218,58 @@
   "open_cycle": "주중 5주 전 월요일 09:00, 주말·공휴일 5주 전 월요일 10:00부터 인터넷·모바일·전화 선착순(마감 전일 15시)",
   "notes": "3인 플레이 시 1인당 주중 1만·주말 2만원 추가",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 7,
+     "time": "17:00"
+    },
+    "weekend": {
+     "days_before": 7,
+     "time": "17:00"
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "high",
+   "basis_text": [
+    "주중·주말 7일 전 17:00까지: 정상 취소"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "weekday",
+     "unit": "week",
+     "before": 5,
+     "weekday": "월",
+     "time": "09:00",
+     "member": null,
+     "text": "5주 전 월요일"
+    },
+    {
+     "scope": "weekend",
+     "unit": "week",
+     "before": 5,
+     "weekday": "월",
+     "time": "10:00",
+     "member": null,
+     "text": "5주 전 월요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "fcfs",
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "high",
+   "text": "주중 5주 전 월요일 09:00, 주말·공휴일 5주 전 월요일 10:00부터 인터넷·모바일·전화 선착순(마감 전일 15시)"
+  }
  },
  "ops": {
   "nocaddie": {

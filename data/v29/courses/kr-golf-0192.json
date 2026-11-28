@@ -322,7 +322,48 @@
   "open_cycle": null,
   "notes": null,
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3
+    },
+    "weekend": {
+     "days_before": 4
+    }
+   },
+   "penalty": [
+    {
+     "day": "weekday",
+     "from_days": 1,
+     "to_days": 1,
+     "pct": 20.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "이후: 주말 3~2일 전·평일 2일 전 10% · 1일 전 20% · 당일 취소·무통보 미이용 30%"
+    },
+    {
+     "day": "weekday",
+     "from_days": 2,
+     "to_days": 2,
+     "pct": 10.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "이후: 주말 3~2일 전·평일 2일 전 10% · 1일 전 20% · 당일 취소·무통보 미이용 30%"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "주말·공휴일 4일 전·평일 3일 전까지: 위약금 없이 취소",
+    "주말·공휴일 4일 전·평일 3일 전까지: 위약금 없이 취소"
+   ],
+   "penalty_text": [
+    "이후: 주말 3~2일 전·평일 2일 전 10% · 1일 전 20% · 당일 취소·무통보 미이용 30%",
+    "이후: 주말 3~2일 전·평일 2일 전 10% · 1일 전 20% · 당일 취소·무통보 미이용 30%"
+   ]
+  }
  },
  "ops": {
   "nocaddie": {

@@ -437,7 +437,29 @@
     "checked_at": "2026-11-27",
     "source_type": "public_info"
    }
-  ]
+  ],
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 3,
+     "weekday": null,
+     "time": "09:00",
+     "member": "회원",
+     "text": "3주 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "online",
+   "recurring": false,
+   "member_only": true,
+   "scope": "member",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "회원·인터넷회원 3주 전 09:00 오픈(비회원은 전화 예약)"
+  }
  },
  "ops": {
   "nocaddie": {

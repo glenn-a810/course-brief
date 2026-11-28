@@ -291,7 +291,48 @@
   "evidence": [
    "https://whcc.kolon.co.kr/pagesite/use/reservation_penalty.asp"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 4
+    },
+    "weekend": {
+     "days_before": 7
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "non_member",
+   "confidence": "medium",
+   "basis_text": [
+    "인터넷 예약 취소: 평일 4일 전·주말·공휴일 7일 전까지",
+    "인터넷 예약 취소: 평일 4일 전·주말·공휴일 7일 전까지"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "day",
+     "before": 2,
+     "weekday": null,
+     "time": null,
+     "member": null,
+     "text": "2일 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "online",
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "• 인터넷 예약(06:00~21:00, 회원 로그인): 2일 전까지\n• 이후 빈 시간대: 전화예약(09:00~17:00, 회원 직접 통화)"
+  }
  },
  "ops": {
   "nocaddie": {

@@ -166,7 +166,47 @@
   "open_cycle": "예약일 2주 전 월요일 10:00에 1주일분 오픈(공식 안내)",
   "notes": "• 연중무휴\n• 월·화 여성 우대 그린피 1만원 할인(1·2부, 3부 제외)\n• 3인은 월~목 1팀만 가능\n• 골프텔 패키지(36홀+1박+조식) 1인 290,000~345,000원",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 7
+    },
+    "weekend": {
+     "days_before": 7
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "5인 플레이: 7일 전까지 취소 가능"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 2,
+     "weekday": "월",
+     "time": "10:00",
+     "member": null,
+     "text": "2주 전 월요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "high",
+   "text": "예약일 2주 전 월요일 10:00에 1주일분 오픈(공식 안내)"
+  }
  },
  "ops": {
   "nocaddie": {

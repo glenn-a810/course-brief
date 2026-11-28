@@ -252,7 +252,48 @@
   "open_cycle": "아난티 웹·앱 로그인 후 예약(온라인 회원은 카드 등록 후 결제)",
   "notes": "결제는 플레이 후 정산(개별 정산 가능)",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {},
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 1,
+     "to_days": 1,
+     "pct": 20.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "주말·휴일 기준 3일 전 10%·2일 전 10%·1일 전 20%·당일·노쇼 30% 위약"
+    },
+    {
+     "day": "weekend",
+     "from_days": 2,
+     "to_days": 2,
+     "pct": 10.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "주말·휴일 기준 3일 전 10%·2일 전 10%·1일 전 20%·당일·노쇼 30% 위약"
+    },
+    {
+     "day": "weekend",
+     "from_days": 3,
+     "to_days": 3,
+     "pct": 10.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "주말·휴일 기준 3일 전 10%·2일 전 10%·1일 전 20%·당일·노쇼 30% 위약"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "low",
+   "basis_text": [],
+   "penalty_text": [
+    "주말·휴일 기준 3일 전 10%·2일 전 10%·1일 전 20%·당일·노쇼 30% 위약",
+    "주말·휴일 기준 3일 전 10%·2일 전 10%·1일 전 20%·당일·노쇼 30% 위약",
+    "주말·휴일 기준 3일 전 10%·2일 전 10%·1일 전 20%·당일·노쇼 30% 위약"
+   ]
+  }
  },
  "ops": {
   "nocaddie": {

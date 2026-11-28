@@ -401,7 +401,70 @@
   "open_cycle": "• 주중 회원: 4주 전 해당요일 9시부터 실시간 예약\n• 주말·주중공휴일 회원: 4주 전 화요일 9시부터 접수 후 추첨배정(목요일부터 잔여시간 실시간)",
   "notes": null,
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 7,
+     "time": "16:00"
+    },
+    "weekend": {
+     "days_before": 7,
+     "time": "16:00"
+    }
+   },
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 6,
+     "to_days": 5,
+     "pct": null,
+     "suspend_months": 1,
+     "suspend_days": null,
+     "text": "6~5일 전: 예약 1개월 정지 또는 마일리지 200점"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "high",
+   "basis_text": [
+    "예약일 7일 전 16시까지 취소 가능"
+   ],
+   "penalty_text": [
+    "6~5일 전: 예약 1개월 정지 또는 마일리지 200점"
+   ]
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "weekday",
+     "unit": "week",
+     "before": 4,
+     "weekday": null,
+     "time": "09:00",
+     "member": "회원",
+     "text": "4주 전"
+    },
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 4,
+     "weekday": "화",
+     "time": "09:00",
+     "member": "회원",
+     "text": "4주 전 화요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "lottery",
+   "recurring": false,
+   "member_only": true,
+   "scope": "member",
+   "ambiguous": false,
+   "confidence": "low",
+   "text": "• 주중 회원: 4주 전 해당요일 9시부터 실시간 예약\n• 주말·주중공휴일 회원: 4주 전 화요일 9시부터 접수 후 추첨배정(목요일부터 잔여시간 실시간)"
+  }
  },
  "ops": {
   "nocaddie": {

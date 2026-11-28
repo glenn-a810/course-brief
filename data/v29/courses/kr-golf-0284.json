@@ -231,7 +231,59 @@
   "evidence": [
    "https://www.dogocc.co.kr/Guide/PenaltyInfo"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3,
+     "time": "16:00"
+    },
+    "weekend": {
+     "days_before": 3,
+     "time": "16:00"
+    }
+   },
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 1,
+     "to_days": 1,
+     "pct": null,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "위약 주중 : 당일 3개월 정지 또는 40만원 · 1일 전 15일 · 2일 전 10일"
+    },
+    {
+     "day": "weekend",
+     "from_days": 1,
+     "to_days": 1,
+     "pct": null,
+     "suspend_months": 3,
+     "suspend_days": null,
+     "text": "위약 주말 : 당일 및 1일 전 3개월 또는 50만원 · 2일 전 30일"
+    },
+    {
+     "day": null,
+     "from_days": 2,
+     "to_days": 2,
+     "pct": null,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "위약 주중 : 당일 3개월 정지 또는 40만원 · 1일 전 15일 · 2일 전 10일"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "취소: 예약일 3일 전 16시까지"
+   ],
+   "penalty_text": [
+    "위약 주중 : 당일 3개월 정지 또는 40만원 · 1일 전 15일 · 2일 전 10일",
+    "위약 주중 : 당일 3개월 정지 또는 40만원 · 1일 전 15일 · 2일 전 10일",
+    "위약 주말 : 당일 및 1일 전 3개월 또는 50만원 · 2일 전 30일"
+   ]
+  }
  },
  "ops": {
   "nocaddie": {

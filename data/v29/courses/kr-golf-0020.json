@@ -200,7 +200,29 @@
    "· 1일전 예약취소 : 30점 (출처: http://www.edencc.co.kr/reserve/index.asp, 2026-11-27 확인)",
    "공식 이용약관 검색 결과에는 이용예정일 28일 전부터 예약 가능 하다고 나와 있어 (https://parkgolfinfo.co.kr/예약-전에-꼭-확인하세요-보성에덴cc-골프장-위치·예/)"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "day",
+     "before": 28,
+     "weekday": null,
+     "time": null,
+     "member": null,
+     "text": "28일 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "이용예정일 28일 전부터 예약 가능"
+  }
  },
  "ops": {
   "nocaddie": {

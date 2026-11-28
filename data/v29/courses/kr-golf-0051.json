@@ -161,7 +161,51 @@
   "evidence": [
    "https://wondergolf.co.kr/courses/kr-mcst-335"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3
+    },
+    "weekend": {
+     "days_before": 4
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "평일 3일 전·주말 4일 전까지 위약 없이 취소",
+    "평일 3일 전·주말 4일 전까지 위약 없이 취소"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 2,
+     "weekday": null,
+     "time": "09:00",
+     "member": null,
+     "text": "2주 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": {
+    "weekday": "월",
+    "time": "09:00"
+   },
+   "method": "fcfs",
+   "recurring": true,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "• 오픈: 평일·주말·공휴일 모두 2주 전 매주 월요일 9시\n• 대상: 인터넷회원 및 비회원\n• 1일 1팀 인터넷 예약, 2팀 이상은 전화 예약\n• 선착순 실시간 배정"
+  }
  },
  "ops": {
   "nocaddie": {

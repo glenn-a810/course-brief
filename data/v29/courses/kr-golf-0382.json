@@ -164,7 +164,61 @@
    "https://wondergolf.co.kr/courses/kr-kakao-1493127856",
    "정상 취소(안내): 경기일 제외 7일 전 17:00까지 취소 가능 안내 … 이후 구간은 위약금/예약정지가 적용되는 표가 별도로 안내됩니다"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 7,
+     "time": "17:00"
+    },
+    "weekend": {
+     "days_before": 7,
+     "time": "17:00"
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "high",
+   "basis_text": [
+    "경기일 제외 7일 전 17:00까지 취소 가능"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 3,
+     "weekday": null,
+     "time": null,
+     "member": null,
+     "text": "3주 전"
+    },
+    {
+     "scope": "both",
+     "unit": "day",
+     "before": 1,
+     "weekday": null,
+     "time": "17:00",
+     "member": null,
+     "text": "1일 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": {
+    "weekday": "월",
+    "time": null
+   },
+   "method": "online",
+   "recurring": true,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": true,
+   "confidence": "low",
+   "text": "• 일반예약: 3주 전부터 매주 월요일(9시)~1주일 분 실시간 예약신청\n• 인터넷 홈페이지·모바일 웹·전화 예약\n• 예약 마감: 해당일 1일 전 17시"
+  }
  },
  "ops": {
   "nocaddie": {

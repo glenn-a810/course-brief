@@ -521,7 +521,49 @@
   "weather_evidence": [
    "더크로스비골프클럽 실시간예약 인터넷예약 예약확인/취소 내장현황 위약현황 클럽소개 클럽소개 부대시설 오시는 길 이용안내 이용안내 이용요금 예약안내 위약안내 경기중단 기준안내 코스소개 코스소개 코스공략도 코스갤러리 커뮤니티 공지사항 자료실 조인게시판 연단체 로그인 회원가입 오늘 하루 보지 않기 닫기 2026 11 이전 다음 일 월 화 수 목 금 토 예약 123456789101112131415161718192021222324252627282930 선택한 날짜 잔여타임 0팀 이벤트THE CROSBY GC Event 더크로스비GC의 새로운 ",
    "더크로스비골프클럽 실시간예약 인터넷예약 예약확인/취소 내장현황 위약현황 클럽소개 클럽소개 부대시설 오시는 길 이용안내 이용안내 이용요금 예약안내 위약안내 경기중단 기준안내 코스소개 코스소개 코스공략도 코스갤러리 커뮤니티 공지사항 자료실 조인게시판 연단체 로그인 회원가입 이용요금 GUIDE 이용안내 이용요금 예약안내 위약안내 경기중단 기준안내 1."
-  ]
+  ],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 8,
+     "time": "17:00"
+    },
+    "weekend": {
+     "days_before": 8,
+     "time": "17:00"
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "high",
+   "basis_text": [
+    "예약 취소: 8일 전 17:00까지 위약 없이 가능"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 3,
+     "weekday": "월",
+     "time": "09:00",
+     "member": null,
+     "text": "3주 전 월요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "online",
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "high",
+   "text": "3주 전 월요일 9시, 월요일~일요일 일괄 오픈. 홈페이지 무료회원가입 후 인터넷 실시간 예약 및 전화예약, 당일예약은 예약실 전화"
+  }
  },
  "ops": {
   "nocaddie": {

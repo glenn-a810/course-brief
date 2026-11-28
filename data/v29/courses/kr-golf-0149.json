@@ -222,7 +222,27 @@
   "evidence": [
    "빅토리아(P9) | 주중 취소·변경 시한 06일 전 17:00 | 주말 06일 전 17:00 | 주중 위약 해당일 3인 그린피 및 카트비 | 주말 위약 해당일 3인 그린피 및 카트비"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 6,
+     "time": "17:00"
+    },
+    "weekend": {
+     "days_before": 6,
+     "time": "17:00"
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "high",
+   "basis_text": [
+    "P9 기준 — 평일·주말 모두 6일 전 17:00까지 취소 시 위약 없음"
+   ],
+   "penalty_text": []
+  }
  },
  "ops": {
   "nocaddie": {

@@ -458,7 +458,58 @@
   "weather_evidence": [
    "렉스필드소개 이용안내 이용요금 이용요금 구분 비회원 그린피 정회원 가족회원 지정회원 주중회원 주중 250,000 21,120 50,000 130,000 130,000 주말 310,000 21,120 105,000 160,000 180,000 악천후로 인한 중간 정산 기준 구분 그린피 비고 1홀~18홀 해당일 적용 그린피×(이용홀수÷18) Tee-Off 기준 - 고객 사정으로 인한 경기 종료 시 이용요금 (그린피, 카트비, 캐디피)은 전액 징수 합니다.",
    "우천시 경기보조원 봉사료 구분 1~2Hole 3~9Hole 10~12Hole 13~18Hole 비고 일반 50,000 100,000 150,000 170,000 전문캐디 70,000 120,000 170,000 200,000 지정(명) 시 - 우천시 홀 아웃은 티샷기준 입니다."
-  ]
+  ],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 7,
+     "time": "17:00"
+    },
+    "weekend": {
+     "days_before": 7,
+     "time": "17:00"
+    }
+   },
+   "penalty": [],
+   "basis": "team",
+   "scope": "unknown",
+   "confidence": "high",
+   "basis_text": [
+    "예약일 7일 전 17시까지 취소해야 위약 없음. 이후 위약금은 1팀 기준 주중 100만원·주말 124만원"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 4,
+     "weekday": null,
+     "time": null,
+     "member": "정회원",
+     "text": "4주 전"
+    },
+    {
+     "scope": "weekend",
+     "unit": "week",
+     "before": 4,
+     "weekday": "화",
+     "time": "09:00",
+     "member": "정회원",
+     "text": "4주 전 화요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": true,
+   "scope": "member",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "정회원 4주 전, 주말은 4주 전 화요일 오전 9시부터 예약"
+  }
  },
  "ops": {
   "nocaddie": {

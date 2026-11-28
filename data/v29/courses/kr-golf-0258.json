@@ -188,7 +188,72 @@
   "open_cycle": "예약은 7주 전 해당 요일 09시 오픈, 홈페이지·모바일·전화",
   "notes": "대영베이스와 별도 코스·별도 예약",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3,
+     "time": "17:00"
+    },
+    "weekend": {
+     "days_before": 4,
+     "time": "17:00"
+    }
+   },
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 1,
+     "to_days": 1,
+     "pct": 20.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "1일 전 20%"
+    },
+    {
+     "day": null,
+     "from_days": 2,
+     "to_days": 2,
+     "pct": 10.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "2일 전 팀별 이용요금 10%"
+    }
+   ],
+   "basis": "team",
+   "scope": "unknown",
+   "confidence": "high",
+   "basis_text": [
+    "주말 4일 전·평일 3일 전 17:00까지 위약 없이 취소",
+    "주말 4일 전·평일 3일 전 17:00까지 위약 없이 취소"
+   ],
+   "penalty_text": [
+    "2일 전 팀별 이용요금 10%",
+    "1일 전 20%"
+   ]
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 7,
+     "weekday": null,
+     "time": "09:00",
+     "member": null,
+     "text": "7주 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "online",
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "예약은 7주 전 해당 요일 09시 오픈, 홈페이지·모바일·전화"
+  }
  },
  "ops": {
   "nocaddie": {

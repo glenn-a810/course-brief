@@ -225,7 +225,37 @@
   "open_cycle": "매주 화요일 10시 신규예약 오픈(4주 후 월요일~일요일)",
   "notes": "예약은 1일 1팀 한정, 예약자 본인 내장 필수. 3인 플레이 시 4인 요금",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 4
+    },
+    "weekend": {
+     "days_before": 4
+    }
+   },
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 3,
+     "to_days": 3,
+     "pct": null,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "3일 전부터 위약규정 적용. 우천 취소는 내장 후 현장 취소만 가능"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "4일 전까지 취소 가능"
+   ],
+   "penalty_text": [
+    "3일 전부터 위약규정 적용. 우천 취소는 내장 후 현장 취소만 가능"
+   ]
+  }
  },
  "ops": {
   "nocaddie": {

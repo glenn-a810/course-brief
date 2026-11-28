@@ -197,7 +197,26 @@
   "open_cycle": "전화 064-793-1201~02, 팩스 064-793-1108~09",
   "notes": "2부제(1부 07:00~09:00 / 11:30~13:30, 일출·일몰에 따라 변경), 7분 간격, 연중무휴",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 7
+    },
+    "weekend": {
+     "days_before": 7
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "non_member",
+   "confidence": "medium",
+   "basis_text": [
+    "이용예정일 4일 전 ·7일 전 까지",
+    "이용예정일 4일 전 ·7일 전 까지"
+   ],
+   "penalty_text": []
+  }
  },
  "ops": {
   "nocaddie": {

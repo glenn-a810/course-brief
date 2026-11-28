@@ -181,7 +181,82 @@
   "open_cycle": "이용일 4주 전 월요일 09:00 오픈(예약 마감은 이용 전날 23:59)",
   "notes": "일부 시간만 노캐디(주중) 운영 미확인(공식 오픈 주기 미게시 — 홈페이지·예약처 예약)",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3,
+     "time": "17:00"
+    },
+    "weekend": {
+     "days_before": 4,
+     "time": "17:00"
+    }
+   },
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 1,
+     "to_days": 1,
+     "pct": 20.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "주중: 2일 전 팀별 이용요금 10% · 1일 전 20% · 당일 30%"
+    },
+    {
+     "day": "weekday",
+     "from_days": 2,
+     "to_days": 2,
+     "pct": 10.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "주중: 2일 전 팀별 이용요금 10% · 1일 전 20% · 당일 30%"
+    },
+    {
+     "day": "weekend",
+     "from_days": 3,
+     "to_days": 2,
+     "pct": 10.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "주말·공휴일: 3~2일 전 10% · 1일 전 20% · 당일 30%"
+    }
+   ],
+   "basis": "team",
+   "scope": "unknown",
+   "confidence": "high",
+   "basis_text": [
+    "취소 가능: 예약일 기준 주중 3일 전·주말 4일 전 17:00까지",
+    "취소 가능: 예약일 기준 주중 3일 전·주말 4일 전 17:00까지"
+   ],
+   "penalty_text": [
+    "주중: 2일 전 팀별 이용요금 10% · 1일 전 20% · 당일 30%",
+    "주중: 2일 전 팀별 이용요금 10% · 1일 전 20% · 당일 30%",
+    "주말·공휴일: 3~2일 전 10% · 1일 전 20% · 당일 30%"
+   ]
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 4,
+     "weekday": "월",
+     "time": "09:00",
+     "member": null,
+     "text": "4주 전 월요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "high",
+   "text": "이용일 4주 전 월요일 09:00 오픈(예약 마감은 이용 전날 23:59)"
+  }
  },
  "ops": {
   "nocaddie": {

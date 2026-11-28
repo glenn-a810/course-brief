@@ -331,7 +331,59 @@
    "주중 예약의 경우 플레이일 4주 전(해당 주 미포함) 화요일에 선착순으로 오픈되며, 회원별 예약 시간은 정회원이 9시 오픈 (https://blog.naver.com/deceitfe40/224439210914)",
    "예약 취소 및 위약 규정에 따르면, 예약일을 제외한 8일 전까지는 페널티 없이 자유롭게 취소가 가능합니다."
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 8
+    },
+    "weekend": {
+     "days_before": 8
+    }
+   },
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 7,
+     "to_days": 7,
+     "pct": null,
+     "suspend_months": 1,
+     "suspend_days": null,
+     "text": "7일 전~노쇼는 1개월 예약정지 — 회원 기준"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "member",
+   "confidence": "medium",
+   "basis_text": [
+    "예약일 제외 8일 전까지 페널티 없이 취소 가능"
+   ],
+   "penalty_text": [
+    "7일 전~노쇼는 1개월 예약정지 — 회원 기준"
+   ]
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "weekday",
+     "unit": "week",
+     "before": 4,
+     "weekday": "화",
+     "time": null,
+     "member": null,
+     "text": "4주 전 화요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "fcfs",
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "주중 예약은 플레이일 4주 전 화요일 선착순(정회원 09:00, 주중·홈페이지 회원 10:00) — 회원 기준"
+  }
  },
  "ops": {
   "nocaddie": {

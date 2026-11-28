@@ -275,7 +275,98 @@
   "open_cycle": "주중 정회원 4주 전 같은 요일부터, 준회원·지정회원은 다음날부터. 주말은 4주 전 화요일부터 예약 가능",
   "notes": null,
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 6
+    },
+    "weekend": {
+     "days_before": 9
+    }
+   },
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 1,
+     "to_days": 1,
+     "pct": null,
+     "suspend_months": 3,
+     "suspend_days": null,
+     "text": "이후 주중: 5~4일 전 15일 · 3~2일 전 1개월 · 1일 전 3개월 예약불가"
+    },
+    {
+     "day": null,
+     "from_days": 2,
+     "to_days": 1,
+     "pct": null,
+     "suspend_months": 2,
+     "suspend_days": null,
+     "text": "이후 주말: 8~6일 전 15일 · 5~3일 전 1개월 · 2~1일 전 2개월 예약불가"
+    },
+    {
+     "day": null,
+     "from_days": 3,
+     "to_days": 2,
+     "pct": null,
+     "suspend_months": 1,
+     "suspend_days": null,
+     "text": "이후 주중: 5~4일 전 15일 · 3~2일 전 1개월 · 1일 전 3개월 예약불가"
+    },
+    {
+     "day": null,
+     "from_days": 5,
+     "to_days": 3,
+     "pct": null,
+     "suspend_months": 1,
+     "suspend_days": null,
+     "text": "이후 주말: 8~6일 전 15일 · 5~3일 전 1개월 · 2~1일 전 2개월 예약불가"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "주중: 이용일 6일 전까지 취소",
+    "주말: 이용일 9일 전까지 취소"
+   ],
+   "penalty_text": [
+    "이후 주중: 5~4일 전 15일 · 3~2일 전 1개월 · 1일 전 3개월 예약불가",
+    "이후 주중: 5~4일 전 15일 · 3~2일 전 1개월 · 1일 전 3개월 예약불가",
+    "이후 주말: 8~6일 전 15일 · 5~3일 전 1개월 · 2~1일 전 2개월 예약불가"
+   ]
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "weekday",
+     "unit": "week",
+     "before": 4,
+     "weekday": null,
+     "time": null,
+     "member": "정회원",
+     "text": "4주 전"
+    },
+    {
+     "scope": "weekend",
+     "unit": "week",
+     "before": 4,
+     "weekday": "화",
+     "time": null,
+     "member": "정회원",
+     "text": "4주 전 화요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": true,
+   "scope": "member",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "주중 정회원 4주 전 같은 요일부터, 준회원·지정회원은 다음날부터. 주말은 4주 전 화요일부터 예약 가능"
+  }
  },
  "ops": {
   "nocaddie": {

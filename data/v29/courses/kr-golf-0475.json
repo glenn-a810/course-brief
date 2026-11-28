@@ -277,7 +277,38 @@
   "open_cycle": "주중 3주 전 화요일 09:00부터 이용일 1일 전 17:00까지 예약",
   "notes": null,
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "weekday",
+     "unit": "week",
+     "before": 3,
+     "weekday": "화",
+     "time": "09:00",
+     "member": null,
+     "text": "3주 전 화요일"
+    },
+    {
+     "scope": "both",
+     "unit": "day",
+     "before": 1,
+     "weekday": null,
+     "time": "17:00",
+     "member": null,
+     "text": "1일 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "high",
+   "text": "주중 3주 전 화요일 09:00부터 이용일 1일 전 17:00까지 예약"
+  }
  },
  "ops": {
   "nocaddie": {

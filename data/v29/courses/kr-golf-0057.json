@@ -320,7 +320,48 @@
     "checked_at": "2026-11-27",
     "source_type": "official_summary(greenfeeguide)"
    }
-  ]
+  ],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3
+    },
+    "weekend": {
+     "days_before": 4
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "위약 없이 취소: 평일 3일 전 · 주말 4일 전까지",
+    "위약 없이 취소: 평일 3일 전 · 주말 4일 전까지"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 3,
+     "weekday": "화",
+     "time": "10:00",
+     "member": null,
+     "text": "3주 전 화요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "fcfs",
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "high",
+   "text": "전화·인터넷 예약은 3주 전 화요일 10:00부터 선착순"
+  }
  },
  "ops": {
   "nocaddie": {

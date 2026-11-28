@@ -255,7 +255,37 @@
   "evidence": [
    "https://www.crcc.co.kr/guide/guide02.asp"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 7
+    },
+    "weekend": {
+     "days_before": 7
+    }
+   },
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 3,
+     "to_days": 3,
+     "pct": null,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "3일 전 취소부터: 벌점 10점 또는 위약금 주중 10만원·주말 20만원"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "평일·주말 모두 7일 전까지 취소 가능"
+   ],
+   "penalty_text": [
+    "3일 전 취소부터: 벌점 10점 또는 위약금 주중 10만원·주말 20만원"
+   ]
+  }
  },
  "ops": {
   "nocaddie": {

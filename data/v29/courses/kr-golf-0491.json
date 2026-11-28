@@ -170,7 +170,25 @@
   ],
   "weather_evidence": [
    "중봉주면을 평평한 넓은 밭과 같다하여 덕유평전이라 부르는데 남한 지대에서는 찾아보기 힘든 아고산대(해발 1천5백~2천5백미터의 고산지대로 기상변화가 심하고 강우량이 많아 습한 지대) 특유의 영향으로 키가 자라지 않은 관목과 철쭉, 산죽 등 고산식물들이 강풍을 견디면서 군락을 이루어 서식하고 있는 모습이 장관이다."
-  ]
+  ],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 4
+    },
+    "weekend": {
+     "days_before": 4
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "입실 4일 전까지 변경·취소 시 100% 환불"
+   ],
+   "penalty_text": []
+  }
  },
  "ops": {
   "nocaddie": {

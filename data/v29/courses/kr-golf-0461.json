@@ -400,7 +400,28 @@
   "open_cycle": null,
   "notes": "2인은 주중 회원 동반 시에만 가능, 주말·공휴일 제한(별도 요금). 3·4인 기본",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {},
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 10,
+     "to_days": 10,
+     "pct": null,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "이용 10일 전 16:00 이전까지 취소·변경 가능 . 취소율 누적에 따른 위약 별도."
+    }
+   ],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "low",
+   "basis_text": [],
+   "penalty_text": [
+    "이용 10일 전 16:00 이전까지 취소·변경 가능 . 취소율 누적에 따른 위약 별도."
+   ]
+  }
  },
  "ops": {
   "nocaddie": {

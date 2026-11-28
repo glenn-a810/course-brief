@@ -408,7 +408,26 @@
    "태인 컨트리클럽 ID/PW찾기 회원가입 로그인 날씨 2026년 11월 26일 목요일 10℃ 구름 많음 클럽소개이용안내실시간예약코스소개시설안내9홀코스소개커뮤니티마이페이지 클럽소개 CEO인사말 오시는 길 이용안내 요금안내 예약안내 위약규정 18홀코스 예약 9홀코스 예약 확인 및 취소 단체팀신청 코스안내 Lake Mountain 클럽하우스 내부시설 포토갤러리 9홀코스소개 요금및안내 오시는 길 공지사항 명예의 전당 조인공간 나의스코어 정보변경 회원탈퇴 9홀코스소개 요금및안내 오시는 길 ABOUT 9HOLE 9홀 소개 1996년 2월에 오픈",
    "기존 cancel_policy 값이 인접 안내 항목과 뒤섞여 있어(오류) 그린피가이드 원문 인용으로 정정 — 평일 3일 전 · 주말 4일 전까지 (출처: https://greenfeeguide.co.kr/course/gc-0422/, 2026-11 확인)"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3
+    },
+    "weekend": {
+     "days_before": 4
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "평일 3일 전·주말 4일 전까지 위약 없이 취소",
+    "평일 3일 전·주말 4일 전까지 위약 없이 취소"
+   ],
+   "penalty_text": []
+  }
  },
  "ops": {
   "nocaddie": {

@@ -256,6 +256,38 @@
    "arrival": "예약 30분 전 도착, 티업 10분 전 스타터 앞 대기, 락카·주차 셀프",
    "dress": "남성 반바지·청바지·칼라 없는 티셔츠 금지, 여성 지나치게 짧은 치마·반바지 금지",
    "group": "단체팀은 평일 3팀 이상, 매월 20~30일에 다다음달 신청(객단가 주중 2만·주말 3만 이상)"
+  },
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 4,
+     "time": "17:00"
+    },
+    "weekend": {
+     "days_before": 4,
+     "time": "17:00"
+    }
+   },
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 3,
+     "to_days": 3,
+     "pct": null,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "3일 전부터 위약규정 제재. 예약 마감은 전날 17:00"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "high",
+   "basis_text": [
+    "예약일 4일 전 17:00까지 홈페이지·본사예약실 유선 취소 가능"
+   ],
+   "penalty_text": [
+    "3일 전부터 위약규정 제재. 예약 마감은 전날 17:00"
+   ]
   }
  },
  "ops": {

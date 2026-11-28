@@ -155,6 +155,49 @@
   "cancel": {
    "value": "1일 전 취소 1개월, 예약자 불참 2개월, 당일 취소 4개월, 무단 불참 6개월, 명의도용 1년 예약정지",
    "evidence": []
+  },
+  "parsed_cancel": {
+   "free": {},
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 1,
+     "to_days": 1,
+     "pct": null,
+     "suspend_months": 1,
+     "suspend_days": null,
+     "text": "1일 전 취소 1개월"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "low",
+   "basis_text": [],
+   "penalty_text": [
+    "1일 전 취소 1개월"
+   ]
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 3,
+     "weekday": null,
+     "time": "10:00",
+     "member": null,
+     "text": "3주 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "해당 주 2~3주 전(14~21일 전): 평일은 월요일 10:00부터 2주치(10일), 주말은 월요일 11:00부터 2주치(4일) 물량 예약"
   }
  },
  "ops": {

@@ -268,7 +268,38 @@
   "open_cycle": "평일 회원 전월 10일 9시~, 비회원 14일 전부터. 주말 회원 전월 5~10일 신청 후 15일 배정, 비회원 12일 전부터",
   "notes": null,
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "day",
+     "before": 14,
+     "weekday": null,
+     "time": null,
+     "member": "비회원",
+     "text": "14일 전"
+    },
+    {
+     "scope": "both",
+     "unit": "day",
+     "before": 12,
+     "weekday": null,
+     "time": null,
+     "member": "비회원",
+     "text": "12일 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "non_member",
+   "ambiguous": true,
+   "confidence": "low",
+   "text": "평일 회원 전월 10일 9시~, 비회원 14일 전부터. 주말 회원 전월 5~10일 신청 후 15일 배정, 비회원 12일 전부터"
+  }
  },
  "ops": {
   "nocaddie": {

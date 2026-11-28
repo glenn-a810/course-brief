@@ -314,7 +314,57 @@
     "checked_at": "2026-11-27",
     "source_type": "official_site"
    }
-  ]
+  ],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 4
+    },
+    "weekend": {
+     "days_before": 7
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "주중 4일 전",
+    "주말 7일 전까지 취소 가능"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 5,
+     "weekday": "월",
+     "time": null,
+     "member": null,
+     "text": "5주 전 월요일"
+    },
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 5,
+     "weekday": "금",
+     "time": null,
+     "member": null,
+     "text": "5주 전 금요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "이용일 기준 5주 전 월요일(월~금)·5주 전 금요일(토~일·공휴일) 예약 오픈"
+  }
  },
  "ops": {
   "nocaddie": {

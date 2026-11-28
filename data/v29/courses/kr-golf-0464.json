@@ -215,7 +215,42 @@
   "open_cycle": "매월 1일 다음 달 전체 오픈(예약 게시 09:00부터)",
   "notes": "야간 라운드 운영. 고의 지연·진행 방해 시 퇴장 규정",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 4
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "주말 이용 4일 전·평일 3일 전까지 위약 없이 취소",
+    "주말 이용 4일 전·평일 3일 전까지 위약 없이 취소"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [],
+   "monthly": [
+    {
+     "day": 1,
+     "weekday": null,
+     "time": null,
+     "scope": "both"
+    }
+   ],
+   "weekly": null,
+   "method": null,
+   "recurring": true,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "low",
+   "text": "매월 1일 다음 달 전체 오픈(예약 게시 09:00부터)"
+  }
  },
  "ops": {
   "nocaddie": {

@@ -409,7 +409,62 @@
   "open_cycle": "• 평일: 3주 전 해당요일 9시부터 인터넷 예약\n• 주말·공휴일: 토요일·1/3/5주 일요일은 2주 전 화요일 추첨 접수, 2/4주 일요일은 3주 전 월요일 9시부터 실시간",
   "notes": null,
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekend": {
+     "days_before": 7
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "주말·공휴일은 라운드 7일 전까지 취소 가능하며 이후 취소 시 취소 수수료 발생"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "weekday",
+     "unit": "week",
+     "before": 3,
+     "weekday": null,
+     "time": "09:00",
+     "member": null,
+     "text": "3주 전"
+    },
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 2,
+     "weekday": "화",
+     "time": null,
+     "member": null,
+     "text": "2주 전 화요일"
+    },
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 3,
+     "weekday": "월",
+     "time": "09:00",
+     "member": null,
+     "text": "3주 전 월요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "lottery",
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "low",
+   "text": "• 평일: 3주 전 해당요일 9시부터 인터넷 예약\n• 주말·공휴일: 토요일·1/3/5주 일요일은 2주 전 화요일 추첨 접수, 2/4주 일요일은 3주 전 월요일 9시부터 실시간"
+  }
  },
  "ops": {
   "nocaddie": {

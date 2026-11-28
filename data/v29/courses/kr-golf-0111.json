@@ -494,6 +494,68 @@
   "weather_evidence": [
    "악천후(강우, 강설, 낙뢰 등) 및 천재지변 시 당 클럽에서 경기진행이 어렵다고 판단될시 적용됩니다.(안개 제외) 본인 과실로인한 사고 또는 개인사정으로 인한 홀아웃은 홀별정산이 불가 합니다.",
    "TEE OFF시간 지각 시에는 (기상악화로 인한 전체회원들의 늦은 도착은 제외) 라운드를 거절할 수 있으며, 거절 시에는 당일 취소로 간주되어 패널티를 적용받게 됩니다."
+  ],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 5
+    },
+    "weekend": {
+     "days_before": 5
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "non_member",
+   "confidence": "medium",
+   "basis_text": [
+    "예약일 포함 5일 전까지 취소해야 위약 없음"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "month",
+     "before": 1,
+     "weekday": null,
+     "time": null,
+     "member": "정회원",
+     "text": "1개월 전"
+    },
+    {
+     "scope": "weekday",
+     "unit": "week",
+     "before": 3,
+     "weekday": null,
+     "time": null,
+     "member": "회원",
+     "text": "3주 전"
+    },
+    {
+     "scope": "weekday",
+     "unit": "week",
+     "before": 2,
+     "weekday": null,
+     "time": null,
+     "member": "회원",
+     "text": "2주 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "online",
+   "recurring": false,
+   "member_only": true,
+   "scope": "member",
+   "ambiguous": true,
+   "confidence": "low",
+   "text": "정회원은 해당일 1개월 전, 주중·가족회원은 주중 3주 전, 인터넷회원은 주중 2주 전부터 인터넷 실시간 예약(전화 예약 불가)"
+  },
+  "weather_summary": [
+   "악천후(강우, 강설, 낙뢰 등) 및 천재지변 시 당 클럽에서 경기진행이 어렵다고 판단될시 적용됩니다.(안개 제외) 본인 과실로인한 사고 또는 개인사정으로 인한 홀아웃은 홀별정산이 불가 합니다.",
+   "TEE OFF시간 지각 시에는 (기상악화로 인한 전체회원들의 늦은 도착은 제외) 라운드를 거절할 수 있으며, 거절 시에는 당일 취소로 간주되어 패널티를 적용받게 됩니다."
   ]
  },
  "ops": {

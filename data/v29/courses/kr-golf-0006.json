@@ -322,6 +322,72 @@
   "weather_evidence": [
    "기상악화로 인한 플레이 중단시 적용요금안내 ·",
    "경기 중단으로 인한 캐디피 홀별 요금 구분 내용 1홀 티샷 ~ 1홀 종료시 30,000원 2홀 티샷 ~ 9홀 종료시 80,000원 10홀 티샷 ~ 10홀 종료시 110,000원 11홀 티샷 ~ 18홀 종료시 150,000원 카트비 홀별 정산 기준 로그인 클럽소개 코스안내 이용안내 인터넷예약 부대시설 커뮤니티 구분 내용 1홀 ~ 9홀 50,000원 10홀 ~ 18홀 100,000원 ·"
+  ],
+  "parsed_cancel": {
+   "free": {},
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 1,
+     "to_days": 1,
+     "pct": 20.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "1일 전 20%"
+    },
+    {
+     "day": null,
+     "from_days": 2,
+     "to_days": 2,
+     "pct": 10.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "위약금: 2일 전 4인 이용요금 10%"
+    },
+    {
+     "day": null,
+     "from_days": 3,
+     "to_days": 3,
+     "pct": null,
+     "suspend_months": 1,
+     "suspend_days": null,
+     "text": "3일 전 취소: 1개월 예약정지"
+    }
+   ],
+   "basis": "team",
+   "scope": "unknown",
+   "confidence": "low",
+   "basis_text": [],
+   "penalty_text": [
+    "위약금: 2일 전 4인 이용요금 10%",
+    "1일 전 20%",
+    "3일 전 취소: 1개월 예약정지"
+   ]
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 4,
+     "weekday": "월",
+     "time": "08:30",
+     "member": null,
+     "text": "4주 전 월요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "high",
+   "text": "4주 전 월요일 오전 08:30에 월~일 일주일분 일괄 오픈"
+  },
+  "weather_summary": [
+   "기상악화로 인한 플레이 중단시 적용요금안내"
   ]
  },
  "ops": {

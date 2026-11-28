@@ -295,7 +295,69 @@
   "evidence": [
    "포웰CC안성(구.루나힐스안성) | 주중 03일 전 17:00 | 주말 04일 전 17:00 | 2일전 취소 : 팀별요금의 10% + 예약/내장 정지 5개월 … 당일 취소 및 노쇼 : 팀별요금의 30% + 예약/내장 영구정지"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3,
+     "time": "17:00"
+    },
+    "weekend": {
+     "days_before": 4,
+     "time": "17:00"
+    }
+   },
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 1,
+     "to_days": 1,
+     "pct": 20.0,
+     "suspend_months": 6,
+     "suspend_days": null,
+     "text": "평일: 2일 전 팀별요금 10%+5개월 정지 · 1일 전 20%+6개월 · 당일·노쇼 30%+영구정지"
+    },
+    {
+     "day": "weekday",
+     "from_days": 2,
+     "to_days": 2,
+     "pct": 10.0,
+     "suspend_months": 5,
+     "suspend_days": null,
+     "text": "평일: 2일 전 팀별요금 10%+5개월 정지 · 1일 전 20%+6개월 · 당일·노쇼 30%+영구정지"
+    },
+    {
+     "day": null,
+     "from_days": 2,
+     "to_days": 2,
+     "pct": 10.0,
+     "suspend_months": 5,
+     "suspend_days": null,
+     "text": "주말: 3일 전 10%+4개월 · 2일 전 10%+5개월 · 1일 전 20%+6개월 · 당일·노쇼 30%+영구정지"
+    },
+    {
+     "day": "weekend",
+     "from_days": 3,
+     "to_days": 3,
+     "pct": 10.0,
+     "suspend_months": 4,
+     "suspend_days": null,
+     "text": "주말: 3일 전 10%+4개월 · 2일 전 10%+5개월 · 1일 전 20%+6개월 · 당일·노쇼 30%+영구정지"
+    }
+   ],
+   "basis": "team",
+   "scope": "unknown",
+   "confidence": "high",
+   "basis_text": [
+    "평일 3일 전 17:00·주말 4일 전 17:00까지 취소 시 위약 없음",
+    "평일 3일 전 17:00·주말 4일 전 17:00까지 취소 시 위약 없음"
+   ],
+   "penalty_text": [
+    "평일: 2일 전 팀별요금 10%+5개월 정지 · 1일 전 20%+6개월 · 당일·노쇼 30%+영구정지",
+    "평일: 2일 전 팀별요금 10%+5개월 정지 · 1일 전 20%+6개월 · 당일·노쇼 30%+영구정지",
+    "주말: 3일 전 10%+4개월 · 2일 전 10%+5개월 · 1일 전 20%+6개월 · 당일·노쇼 30%+영구정지"
+   ]
+  }
  },
  "ops": {
   "nocaddie": {

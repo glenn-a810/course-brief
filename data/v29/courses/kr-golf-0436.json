@@ -204,7 +204,29 @@
   "open_cycle": "라운드 예정 주를 제외한 4주 전 월요일 09:00 오픈(1주일 단위), 예약 마감 라운드 전일 17:00",
   "notes": "2인부터 예약 가능(2인 별도 요금표)\n• 당일 예약은 잔여 타임 유선 문의\n• 유료 락커 9,000원(클럽하우스 2층), 코인 락커(1층) 무료",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 4,
+     "weekday": "월",
+     "time": "09:00",
+     "member": null,
+     "text": "4주 전 월요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "high",
+   "text": "라운드 예정 주를 제외한 4주 전 월요일 09:00 오픈(1주일 단위), 예약 마감 라운드 전일 17:00"
+  }
  },
  "ops": {
   "nocaddie": {

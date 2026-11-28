@@ -280,7 +280,58 @@
     "checked_at": "2026-11-27",
     "source_type": "official_site"
    }
-  ]
+  ],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 5,
+     "time": "22:00"
+    },
+    "weekend": {
+     "days_before": 5,
+     "time": "22:00"
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "취소·시간변경 가능: 경기일 포함 5일 전 22시까지"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 2,
+     "weekday": "화",
+     "time": "14:00",
+     "member": "비회원",
+     "text": "2주 전 화요일"
+    },
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 2,
+     "weekday": "월",
+     "time": null,
+     "member": null,
+     "text": "2주 후 월"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "non_member",
+   "ambiguous": false,
+   "confidence": "high",
+   "text": "비회원 2주 전 화요일 14:00(회원 10:00), 2주 후 월~일요일분 일괄 예약. 대기예약 16:00부터"
+  }
  },
  "ops": {
   "nocaddie": {

@@ -240,6 +240,56 @@
   "browser_official": {
    "cancel": "예약일 4일 전까지 정상취소. 비회원(대중제) 위약: 3일 전 주중 없음·주말 정상요금 10%, 2일 전 10%, 1일 전 20%, 당일 30%",
    "weather_policy": "오션힐스 공통 악천후 규정(강우 3mm/h·적설 3cm/h·순간풍속 15m/s·폭염 40도·혹한 영하 7도·가시거리 30m·낙뢰) 적용. 2~18홀 시설이용료+{(이용요금-시설이용료)×이용홀수/18}"
+  },
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 4
+    },
+    "weekend": {
+     "days_before": 4
+    }
+   },
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 1,
+     "to_days": 1,
+     "pct": 20.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "2일 전 10% · 1일 전 20% · 당일 30%"
+    },
+    {
+     "day": null,
+     "from_days": 2,
+     "to_days": 2,
+     "pct": 10.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "2일 전 10% · 1일 전 20% · 당일 30%"
+    },
+    {
+     "day": null,
+     "from_days": 3,
+     "to_days": 3,
+     "pct": 10.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "비회원 3일 전: 주중 없음 · 주말 정상요금 10%"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "non_member",
+   "confidence": "medium",
+   "basis_text": [
+    "정상 취소: 예약일 4일 전까지"
+   ],
+   "penalty_text": [
+    "비회원 3일 전: 주중 없음 · 주말 정상요금 10%",
+    "2일 전 10% · 1일 전 20% · 당일 30%",
+    "2일 전 10% · 1일 전 20% · 당일 30%"
+   ]
   }
  },
  "ops": {

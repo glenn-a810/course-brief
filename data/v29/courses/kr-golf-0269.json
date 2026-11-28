@@ -198,7 +198,64 @@
   "open_cycle": "매주 월요일 11시에 4주 후 1주일(월~일) 오픈",
   "notes": null,
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 14,
+     "time": "17:00"
+    },
+    "weekend": {
+     "days_before": 14,
+     "time": "17:00"
+    }
+   },
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 1,
+     "to_days": 1,
+     "pct": 0.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "1일 전~당일 취소·No-show: 100% 위약금"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "high",
+   "basis_text": [
+    "주중·주말 14일 전 17:00까지 정상 취소"
+   ],
+   "penalty_text": [
+    "1일 전~당일 취소·No-show: 100% 위약금"
+   ]
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 4,
+     "weekday": null,
+     "time": null,
+     "member": null,
+     "text": "4주 후"
+    }
+   ],
+   "monthly": [],
+   "weekly": {
+    "weekday": "월",
+    "time": "11:00"
+   },
+   "method": null,
+   "recurring": true,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "매주 월요일 11시에 4주 후 1주일(월~일) 오픈"
+  }
  },
  "ops": {
   "nocaddie": {

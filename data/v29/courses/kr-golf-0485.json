@@ -457,7 +457,60 @@
   ],
   "weather_evidence": [
    "지정된 흡연 구역을 이용해 주시기바랍니다.( 골프장 코스,클럽하우스,대기광장은 공공시설로 꼭 흡연구역 준수해주시길바랍니다.) 휴장일 안내 정기휴장일 : 설, 추석 명절 당일 * 휴장은 당 클럽 사정과 기상상황에 따라 변경될 수 있습니다."
-  ]
+  ],
+  "parsed_cancel": {
+   "free": {},
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 1,
+     "to_days": 1,
+     "pct": 20.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "1일 전 20%"
+    },
+    {
+     "day": null,
+     "from_days": 3,
+     "to_days": 3,
+     "pct": 10.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "3일 전 취소 팀 이용요금 10%"
+    }
+   ],
+   "basis": "team",
+   "scope": "unknown",
+   "confidence": "low",
+   "basis_text": [],
+   "penalty_text": [
+    "3일 전 취소 팀 이용요금 10%",
+    "1일 전 20%"
+   ]
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 4,
+     "weekday": null,
+     "time": "09:00",
+     "member": null,
+     "text": "4주 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": true,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "이용일 4주 전 매일 오전 9시"
+  }
  },
  "ops": {
   "nocaddie": {

@@ -225,7 +225,26 @@
   "open_cycle": "인터넷 실시간예약(단지 공통)",
   "notes": "1·2코스는 별도 예약·별도 코스로 운영. 주말 4인 필수",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3
+    },
+    "weekend": {
+     "days_before": 4
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "평일 3일 전·주말 4일 전까지",
+    "평일 3일 전·주말 4일 전까지"
+   ],
+   "penalty_text": []
+  }
  },
  "ops": {
   "nocaddie": {

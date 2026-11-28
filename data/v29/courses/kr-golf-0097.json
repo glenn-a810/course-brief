@@ -361,7 +361,28 @@
   "evidence": [
    "뉴코리아 | 주중 취소·변경 시한 03일 전 12:00 | 주말 05일 전 12:00 | 주중 위약 3일전 12:00 이후 : 벌점10점 2일전: 벌점20점 1일전 12:00이전: 벌점30점 본인미내장: 벌점60점 | 주말 위약 5일전 12:00 이후: 벌점10점 4일전: 벌점20점 3일전: 벌점30점 2일전: 벌점40점 1일전 12:00이전: 벌점50점 본인미내장: 벌점90점"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3,
+     "time": "12:00"
+    },
+    "weekend": {
+     "days_before": 5,
+     "time": "12:00"
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "high",
+   "basis_text": [
+    "평일 3일 전 12:00",
+    "주말 5일 전 12:00까지 취소 시 위약 없음"
+   ],
+   "penalty_text": []
+  }
  },
  "ops": {
   "nocaddie": {

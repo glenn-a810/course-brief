@@ -512,7 +512,57 @@
    "“본 예약은 해당일 기준 주중의 경우 3일, 주말(공휴일)의 경우 4일 전까지 취소하셔야 별도 위약금(2인 정상 그린피)이 부과되지 않습니다.”",
    "골프장 공식 홈페이지 안내(비회원 예약 기준) · 2026.10.08 확인 ·"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3
+    },
+    "weekend": {
+     "days_before": 4
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "위약 없이 취소: 평일 3일 전 · 주말 4일 전까지",
+    "위약 없이 취소: 평일 3일 전 · 주말 4일 전까지"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "weekday",
+     "unit": "week",
+     "before": 4,
+     "weekday": null,
+     "time": "14:00",
+     "member": null,
+     "text": "4주 전"
+    },
+    {
+     "scope": "weekend",
+     "unit": "week",
+     "before": 4,
+     "weekday": "월",
+     "time": "09:00",
+     "member": null,
+     "text": "4주 전 월요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "phone",
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "high",
+   "text": "주중은 4주 전 해당요일 14:00부터, 주말·공휴일은 4주 전 월요일 09:00부터 전화·팩스 예약"
+  }
  },
  "ops": {
   "nocaddie": {

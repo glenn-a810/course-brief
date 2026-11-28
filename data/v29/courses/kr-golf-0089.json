@@ -322,7 +322,81 @@
    "1일 전 취소 [팀별 이용요금의 20% 위약금] 또는 [4개월 예약정지]",
    "예약 오픈 주기: 주중은 3주 전 월요일 오전 9시, 주말은 3주 전 금요일 오전 9시 일괄 오픈 (https://www.midasgolf.co.kr/Reservation/ReservInfo2?lgubun=113)"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3,
+     "time": "17:00"
+    },
+    "weekend": {
+     "days_before": 4,
+     "time": "17:00"
+    }
+   },
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 1,
+     "to_days": 1,
+     "pct": 20.0,
+     "suspend_months": 4,
+     "suspend_days": null,
+     "text": "1일 전: 20% 또는 4개월 예약정지"
+    },
+    {
+     "day": null,
+     "from_days": 2,
+     "to_days": 2,
+     "pct": 10.0,
+     "suspend_months": 3,
+     "suspend_days": null,
+     "text": "2일 전: 이용요금 10% 또는 3개월 예약정지"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "위약 없이: 주말·공휴일은 이용예정일 4일 전 17시",
+    "평일은 3일 전 17시까지"
+   ],
+   "penalty_text": [
+    "2일 전: 이용요금 10% 또는 3개월 예약정지",
+    "1일 전: 20% 또는 4개월 예약정지"
+   ]
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "weekday",
+     "unit": "week",
+     "before": 3,
+     "weekday": "월",
+     "time": "09:00",
+     "member": null,
+     "text": "3주 전 월요일"
+    },
+    {
+     "scope": "weekend",
+     "unit": "week",
+     "before": 3,
+     "weekday": "금",
+     "time": "09:00",
+     "member": null,
+     "text": "3주 전 금요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "high",
+   "text": "주중은 3주 전 월요일 오전 9시, 주말은 3주 전 금요일 오전 9시 일괄 오픈"
+  }
  },
  "ops": {
   "nocaddie": {

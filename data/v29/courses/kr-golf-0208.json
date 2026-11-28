@@ -170,7 +170,48 @@
    "위약금은 예약보증금에서 차감되며, 보유한 예약보증금이 500,000 원 이하인 경우 회원제 골프장 예약이 제한됩니다.",
    "※ 평일 : 2일전~이용일 당일, 주말 및 공휴일: 3일전~이용일 당일 취소 시 예약금은 환불되지 않습니다."
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 2
+    },
+    "weekend": {
+     "days_before": 3
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "평일은 2일 전~이용일 당일",
+    "주말·공휴일은 3일 전~이용일 당일 취소 시 예약금 환불 불가"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 4,
+     "weekday": "월",
+     "time": "09:00",
+     "member": null,
+     "text": "4주전 월요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "fcfs",
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "high",
+   "text": "예약일 기준 4주전 월요일 오전 9시부터 선착순 예약(원더클럽 통합회원)"
+  }
  },
  "ops": {
   "nocaddie": {

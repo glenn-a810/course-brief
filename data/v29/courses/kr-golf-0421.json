@@ -269,7 +269,26 @@
   "evidence": [
    "정기예약일: 이용예정일 전월 1일 오전 09시부터 (1일이 주말 및 공휴일인 경우 익일 평일에 접수) (https://www.blackcc.co.kr/reservation/reservation-guide)"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3
+    },
+    "weekend": {
+     "days_before": 4
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "평일 3일 전·주말 4일 전까지",
+    "평일 3일 전·주말 4일 전까지"
+   ],
+   "penalty_text": []
+  }
  },
  "ops": {
   "nocaddie": {

@@ -143,7 +143,38 @@
    "임박취소,매너불량,예약자 미내장 등 1회 1개월 / 6개월 내 2회 3개월 / 6개월 내 3회 영구",
    "예약기간: 주중/주말/휴일 라운드희망일 기준 3주전 월요일 11시부터 1일전 17시까지 — https://www.jisanresort.co.kr/w/reservation/golfResv/public_reserv01.asp"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 3,
+     "weekday": "월",
+     "time": "11:00",
+     "member": null,
+     "text": "3주 전 월요일"
+    },
+    {
+     "scope": "both",
+     "unit": "day",
+     "before": 1,
+     "weekday": null,
+     "time": "17:00",
+     "member": null,
+     "text": "1일 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": true,
+   "confidence": "low",
+   "text": "라운드 희망일 기준 3주 전 월요일 11:00부터 1일 전 17:00까지"
+  }
  },
  "ops": {
   "nocaddie": {

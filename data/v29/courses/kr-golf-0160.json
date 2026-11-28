@@ -313,7 +313,90 @@
   "open_cycle": "• 3주 전 화요일 오전 9시부터 선착순(월~일 주 단위 오픈)\n• 예: 2024년 9월 23일(월)~9월 29일(일) 예약은 9월 3일(화) 오전 9시부터",
   "notes": null,
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 7,
+     "time": "17:00"
+    },
+    "weekend": {
+     "days_before": 7,
+     "time": "17:00"
+    }
+   },
+   "penalty": [
+    {
+     "day": "weekend",
+     "from_days": 1,
+     "to_days": 1,
+     "pct": null,
+     "suspend_months": 6,
+     "suspend_days": null,
+     "text": "위약 : 6~4일 전 1~3개월 · 3일 전 4개월 주말 · 2일 전 5개월 · 1일 전 6개월 · 당일 1년 · 노쇼 영구…"
+    },
+    {
+     "day": "weekend",
+     "from_days": 2,
+     "to_days": 2,
+     "pct": null,
+     "suspend_months": 5,
+     "suspend_days": null,
+     "text": "위약 : 6~4일 전 1~3개월 · 3일 전 4개월 주말 · 2일 전 5개월 · 1일 전 6개월 · 당일 1년 · 노쇼 영구…"
+    },
+    {
+     "day": null,
+     "from_days": 3,
+     "to_days": 3,
+     "pct": null,
+     "suspend_months": 4,
+     "suspend_days": null,
+     "text": "위약 : 6~4일 전 1~3개월 · 3일 전 4개월 주말 · 2일 전 5개월 · 1일 전 6개월 · 당일 1년 · 노쇼 영구…"
+    },
+    {
+     "day": null,
+     "from_days": 6,
+     "to_days": 4,
+     "pct": null,
+     "suspend_months": 3,
+     "suspend_days": null,
+     "text": "위약 : 6~4일 전 1~3개월 · 3일 전 4개월 주말 · 2일 전 5개월 · 1일 전 6개월 · 당일 1년 · 노쇼 영구…"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "취소 기한: 예약일 제외 7일 전 17시까지"
+   ],
+   "penalty_text": [
+    "위약 : 6~4일 전 1~3개월 · 3일 전 4개월 주말 · 2일 전 5개월 · 1일 전 6개월 · 당일 1년 · 노쇼 영구정지",
+    "위약 : 6~4일 전 1~3개월 · 3일 전 4개월 주말 · 2일 전 5개월 · 1일 전 6개월 · 당일 1년 · 노쇼 영구정지",
+    "위약 : 6~4일 전 1~3개월 · 3일 전 4개월 주말 · 2일 전 5개월 · 1일 전 6개월 · 당일 1년 · 노쇼 영구정지"
+   ]
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 3,
+     "weekday": "화",
+     "time": "09:00",
+     "member": null,
+     "text": "3주 전 화요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "fcfs",
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "high",
+   "text": "• 3주 전 화요일 오전 9시부터 선착순(월~일 주 단위 오픈)\n• 예: 2024년 9월 23일(월)~9월 29일(일) 예약은 9월 3일(화) 오전 9시부터"
+  }
  },
  "ops": {
   "nocaddie": {

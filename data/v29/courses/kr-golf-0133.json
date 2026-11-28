@@ -233,6 +233,53 @@
   "weather_evidence": [
    "※악천후 등으로 휴장결정 및 시간변경시 예약자분께 개별 연락 드립니다.",
    "휴장일 ※ 당 클럽의 사정과 기상 상황에 따라 휴장합니다."
+  ],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 5,
+     "time": "18:00"
+    },
+    "weekend": {
+     "days_before": 8,
+     "time": "18:00"
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "예약일 제외 주중 5일 전·주말 8일 전 18시까지 취소 및 시간 변경 가능",
+    "예약일 제외 주중 5일 전·주말 8일 전 18시까지 취소 및 시간 변경 가능"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 4,
+     "weekday": null,
+     "time": null,
+     "member": null,
+     "text": "4주 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "4주 전 1주차 일괄, 월요일 오전 9시 오픈"
+  },
+  "weather_summary": [
+   "악천후 등으로 휴장결정 및 시간변경시 예약자분께 개별 연락 드립니다.",
+   "휴장일 당 클럽의 사정과 기상 상황에 따라 휴장합니다."
   ]
  },
  "ops": {

@@ -161,7 +161,59 @@
   "open_cycle": "주중은 3주 전 월요일 10:00, 주말·공휴일은 2주 전 화요일 10:00부터(인터넷 10:00·전화 14:00)",
   "notes": null,
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3,
+     "time": "17:00"
+    },
+    "weekend": {
+     "days_before": 4,
+     "time": "17:00"
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "high",
+   "basis_text": [
+    "주중 3일 전·주말 4일 전 17:00까지 인터넷·전화 취소 시 위약 없음",
+    "주중 3일 전·주말 4일 전 17:00까지 인터넷·전화 취소 시 위약 없음"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "weekday",
+     "unit": "week",
+     "before": 3,
+     "weekday": "월",
+     "time": "10:00",
+     "member": null,
+     "text": "3주 전 월요일"
+    },
+    {
+     "scope": "weekend",
+     "unit": "week",
+     "before": 2,
+     "weekday": "화",
+     "time": "10:00",
+     "member": null,
+     "text": "2주 전 화요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "online",
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": true,
+   "confidence": "low",
+   "text": "주중은 3주 전 월요일 10:00, 주말·공휴일은 2주 전 화요일 10:00부터(인터넷 10:00·전화 14:00)"
+  }
  },
  "ops": {
   "nocaddie": {

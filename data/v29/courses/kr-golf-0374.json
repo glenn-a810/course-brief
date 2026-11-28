@@ -167,7 +167,38 @@
   "evidence": [
    "https://wondergolf.co.kr/courses/kr-kakao-221678040"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "day",
+     "before": 28,
+     "weekday": null,
+     "time": null,
+     "member": null,
+     "text": "28일 전"
+    },
+    {
+     "scope": "both",
+     "unit": "day",
+     "before": 35,
+     "weekday": null,
+     "time": null,
+     "member": null,
+     "text": "35일 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "online",
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": true,
+   "confidence": "low",
+   "text": "• 개인: 라운드일 28일 전(해당일 4주 전 오전 10시)\n• 단체: 라운드일 35일 전(5주 전)\n• 홈페이지 또는 온라인 예약, 예약실 055-570-7002~7003"
+  }
  },
  "ops": {
   "nocaddie": {

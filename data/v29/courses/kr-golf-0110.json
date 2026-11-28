@@ -318,7 +318,38 @@
    "평일 취소: 이용일 10일 전 17시까지 / 주말 취소: 전 주 수요일 17시까지 … 위약: 취소시한 경과·당일 취소·무단 미내장·예약자 미내장 등 위반 시 1차 서면 경고, 2차 1개월 예약 정지",
    "평일 4주 전 해당 요일 09:30~(해당주 미포함), 휴일 3주 전 월요일 10:00~(해당주 포함) (https://wondergolf.co.kr/courses/kr-kakao-1612561598)"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "weekday",
+     "unit": "week",
+     "before": 4,
+     "weekday": null,
+     "time": "09:30",
+     "member": null,
+     "text": "4주 전"
+    },
+    {
+     "scope": "weekend",
+     "unit": "week",
+     "before": 3,
+     "weekday": "월",
+     "time": "10:00",
+     "member": null,
+     "text": "3주 전 월요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": true,
+   "confidence": "low",
+   "text": "평일은 4주 전 해당 요일 09:30부터(해당 주 미포함), 휴일은 3주 전 월요일 10:00부터(해당 주 포함) 예약 접수"
+  }
  },
  "ops": {
   "nocaddie": {

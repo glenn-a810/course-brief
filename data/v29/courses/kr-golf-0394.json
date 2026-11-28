@@ -189,7 +189,29 @@
   "evidence": [
    "요청 일자의 2개월전 1일(주중)부터 접수 (https://spgr.co.kr/swp/guideRes)"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "month",
+     "before": 2,
+     "weekday": null,
+     "time": null,
+     "member": null,
+     "text": "2개월 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "이용 요청일 기준 2개월 전 1일(주중)부터 접수"
+  }
  },
  "ops": {
   "nocaddie": {

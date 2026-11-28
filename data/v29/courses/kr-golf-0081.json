@@ -177,7 +177,49 @@
   "evidence": [
    "주중 인터넷: 해당일 14일 전 09:00 전화: 해당일 14일 전 09:00 – 17:00 / 주말 및 공휴일 인터넷: 해당일 14일 전 (https://parkgolfinfo.com/%ea%b3%a8%eb%93%9c%ea%b7%b8%eb%a6%b0cc-%ea%b7%b8%eb%a6%b0%ed%94%bc/)"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3,
+     "time": "18:00"
+    },
+    "weekend": {
+     "days_before": 3,
+     "time": "18:00"
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "high",
+   "basis_text": [
+    "3일 전 18:00까지 위약 없이 취소"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "day",
+     "before": 14,
+     "weekday": null,
+     "time": "09:00",
+     "member": null,
+     "text": "14일 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "fcfs",
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "이용일 14일 전 09:00 오픈(인터넷·전화, 선착순)"
+  }
  },
  "ops": {
   "nocaddie": {

@@ -248,7 +248,38 @@
   "open_cycle": "주중 이용은 2주 전 월요일 10:00, 주말(토·일) 이용은 2주 전 금요일 10:00부터 예약 접수",
   "notes": "티오프 30분 전 도착\n• 지연·비협조 시 퇴장 규정\n• 입장 전 이용요금 미결제 시 이용요금에서 환불금액이 공제된 금액을 별도 징수\n• 천재지변(폭우·낙뢰·강설·안개)으로 골프장이 경기 지속 불가를 선언한 경우(입장 후) 요금·환불 규정 적용",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "weekday",
+     "unit": "week",
+     "before": 2,
+     "weekday": "월",
+     "time": "10:00",
+     "member": null,
+     "text": "2주 전 월요일"
+    },
+    {
+     "scope": "weekend",
+     "unit": "week",
+     "before": 2,
+     "weekday": "금",
+     "time": "10:00",
+     "member": null,
+     "text": "2주 전 금요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "high",
+   "text": "주중 이용은 2주 전 월요일 10:00, 주말(토·일) 이용은 2주 전 금요일 10:00부터 예약 접수"
+  }
  },
  "ops": {
   "nocaddie": {

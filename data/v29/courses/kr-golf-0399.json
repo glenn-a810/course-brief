@@ -239,7 +239,56 @@
   "open_cycle": "비회원 2개월 전 둘째 주 화요일 오픈(휴일이면 다음 날). 회원 13주 전 수요일",
   "notes": "티오프 30분 전 도착·본인 등록",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3
+    }
+   },
+   "penalty": [
+    {
+     "day": "weekend",
+     "from_days": 3,
+     "to_days": 3,
+     "pct": null,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "주말·공휴일은 3일 전부터 위약 수수료"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "주중 내장 3일 전까지 취소 가능"
+   ],
+   "penalty_text": [
+    "주말·공휴일은 3일 전부터 위약 수수료"
+   ]
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "month",
+     "before": 2,
+     "weekday": null,
+     "time": null,
+     "member": "비회원",
+     "text": "2개월 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "non_member",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "비회원 2개월 전 둘째 주 화요일 오픈(휴일이면 다음 날). 회원 13주 전 수요일"
+  }
  },
  "ops": {
   "nocaddie": {

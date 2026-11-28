@@ -491,7 +491,52 @@
     "checked_at": "2026-11-27",
     "source_type": "official_summary(greenfeeguide)"
    }
-  ]
+  ],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 4,
+     "time": "17:00"
+    },
+    "weekend": {
+     "days_before": 4,
+     "time": "17:00"
+    }
+   },
+   "penalty": [],
+   "basis": "team",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "취소: 4일 전 17:00까지"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 2,
+     "weekday": "월",
+     "time": null,
+     "member": null,
+     "text": "2주후 월"
+    }
+   ],
+   "monthly": [],
+   "weekly": {
+    "weekday": "월",
+    "time": "09:00"
+   },
+   "method": "phone",
+   "recurring": true,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "매주 월요일 오전 9시 일괄 오픈, 2주후 월~일요일분 접수(전화는 월요일 10시부터)"
+  }
  },
  "ops": {
   "nocaddie": {

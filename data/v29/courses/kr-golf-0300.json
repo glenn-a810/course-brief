@@ -271,6 +271,68 @@
    "caddie_refund": "1~4홀 40,000 / 5~9홀 70,000 / 10~13홀 110,000 / 14~18홀 140,000",
    "phone_booking": "전화 예약은 3일 전 17:00까지",
    "refund_note": "악천 후 환불 및 기타 환불 시 할인요금 미적용"
+  },
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3
+    },
+    "weekend": {
+     "days_before": 3
+    }
+   },
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 1,
+     "to_days": 1,
+     "pct": 20.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "2일 전: 이용요금 10% · 1일 전: 20% · 당일: 30%"
+    },
+    {
+     "day": null,
+     "from_days": 2,
+     "to_days": 2,
+     "pct": 10.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "2일 전: 이용요금 10% · 1일 전: 20% · 당일: 30%"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "정상 취소: 3일 전까지"
+   ],
+   "penalty_text": [
+    "2일 전: 이용요금 10% · 1일 전: 20% · 당일: 30%",
+    "2일 전: 이용요금 10% · 1일 전: 20% · 당일: 30%"
+   ]
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 3,
+     "weekday": "월",
+     "time": "09:00",
+     "member": null,
+     "text": "3주 전 월요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "high",
+   "text": "3주 전 월요일 09:00, 1주일 단위 오픈"
   }
  },
  "ops": {

@@ -524,6 +524,92 @@
   ],
   "weather_evidence": [
    "우천 예보만으로는 취소 불가(현장 기준), 기상악화 취소 시 위약 미적용"
+  ],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 7,
+     "time": "17:00"
+    },
+    "weekend": {
+     "days_before": 7,
+     "time": "17:00"
+    }
+   },
+   "penalty": [
+    {
+     "day": "weekday",
+     "from_days": 1,
+     "to_days": 2,
+     "pct": 20.0,
+     "suspend_months": 3,
+     "suspend_days": null,
+     "text": "평일 1~2일 전: 3개월 정지 또는 20%"
+    },
+    {
+     "day": "weekend",
+     "from_days": 2,
+     "to_days": 3,
+     "pct": 10.0,
+     "suspend_months": 2,
+     "suspend_days": null,
+     "text": "주말·공휴일 2~3일 전: 2개월 정지 또는 팀별 이용요금 10%"
+    },
+    {
+     "day": null,
+     "from_days": 4,
+     "to_days": 6,
+     "pct": null,
+     "suspend_months": 1,
+     "suspend_days": null,
+     "text": "4~6일 전 취소: 1개월 예약정지"
+    }
+   ],
+   "basis": "team",
+   "scope": "unknown",
+   "confidence": "high",
+   "basis_text": [
+    "예약일 7일 전 17:00까지 위약 없이 취소"
+   ],
+   "penalty_text": [
+    "4~6일 전 취소: 1개월 예약정지",
+    "주말·공휴일 2~3일 전: 2개월 정지 또는 팀별 이용요금 10%",
+    "평일 1~2일 전: 3개월 정지 또는 20%"
+   ]
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 3,
+     "weekday": null,
+     "time": "10:00",
+     "member": null,
+     "text": "3주 전"
+    },
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 2,
+     "weekday": null,
+     "time": "10:00",
+     "member": null,
+     "text": "2주 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "online",
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": true,
+   "confidence": "low",
+   "text": "• 인터넷 예약: 3주 전 해당 요일 오전 10시 오픈, 하루 전 24시까지\n• 전화 예약: 2주 전 해당 요일 오전 10시부터 접수, 하루 전 오후 6시까지"
+  },
+  "weather_summary": [
+   "우천 예보만으로는 취소 불가(현장 기준), 기상악화 취소 시 위약 미적용"
   ]
  },
  "ops": {

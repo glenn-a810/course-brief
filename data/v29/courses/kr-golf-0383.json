@@ -162,7 +162,32 @@
   "open_cycle": "매주 월요일 09:00, 오픈 주 포함 4주 뒤 월~일요일분 오픈(골프존카운티 공통)",
   "notes": null,
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 4,
+     "weekday": "월",
+     "time": null,
+     "member": null,
+     "text": "4주 뒤 월"
+    }
+   ],
+   "monthly": [],
+   "weekly": {
+    "weekday": "월",
+    "time": "09:00"
+   },
+   "method": null,
+   "recurring": true,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "매주 월요일 09:00, 오픈 주 포함 4주 뒤 월~일요일분 오픈(골프존카운티 공통)"
+  }
  },
  "ops": {
   "nocaddie": {

@@ -526,7 +526,48 @@
    "알림 확인 확인 취소 확인"
   ],
   "weather_evidence": [],
-  "browser_official": null
+  "browser_official": null,
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3
+    },
+    "weekend": {
+     "days_before": 4
+    }
+   },
+   "penalty": [
+    {
+     "day": "weekend",
+     "from_days": 1,
+     "to_days": 1,
+     "pct": 20.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "이후 2일 전 주말 10%·1일 전 20%·당일 30% 위약"
+    },
+    {
+     "day": "weekend",
+     "from_days": 2,
+     "to_days": 2,
+     "pct": 10.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "이후 2일 전 주말 10%·1일 전 20%·당일 30% 위약"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "주중 3일 전·주말·공휴일 4일 전까지 위약 없음",
+    "주중 3일 전·주말·공휴일 4일 전까지 위약 없음"
+   ],
+   "penalty_text": [
+    "이후 2일 전 주말 10%·1일 전 20%·당일 30% 위약",
+    "이후 2일 전 주말 10%·1일 전 20%·당일 30% 위약"
+   ]
+  }
  },
  "ops": {
   "nocaddie": {

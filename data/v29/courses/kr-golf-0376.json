@@ -184,7 +184,69 @@
   "evidence": [
    "https://wondergolf.co.kr/courses/kr-kakao-8087808"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3
+    },
+    "weekend": {
+     "days_before": 3
+    }
+   },
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 1,
+     "to_days": 1,
+     "pct": 20.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "이후 2일 전 10% · 1일 전 20% · 당일 30% 위약금"
+    },
+    {
+     "day": null,
+     "from_days": 2,
+     "to_days": 2,
+     "pct": 10.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "이후 2일 전 10% · 1일 전 20% · 당일 30% 위약금"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "취소: 경기일 3일 전 주말 까지"
+   ],
+   "penalty_text": [
+    "이후 2일 전 10% · 1일 전 20% · 당일 30% 위약금",
+    "이후 2일 전 10% · 1일 전 20% · 당일 30% 위약금"
+   ]
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 3,
+     "weekday": null,
+     "time": "09:00",
+     "member": null,
+     "text": "3주 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "예약접수: 평일·주말(휴일) 3주 전 09시"
+  }
  },
  "ops": {
   "nocaddie": {

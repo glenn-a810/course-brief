@@ -173,6 +173,61 @@
   "weather_evidence": [
    "※4인 내장 및 예약자본인 내장 필수 → 사전 클럽 유선승인 후 정회원 월1회 비회원 위임가능(비회원가 적용) 예약변경 및 취소기한 구분 주중 주말 정회원 예약일 기준 1주일(7일)전 17:00까지 주중회원 인터넷회원 ※ 비,눈 등 날씨로 인한 취소는 기상예보만으로 사전취소는불가하며, 티업시간 2시간전 현장날씨 기준으로 결정됩니다.",
    "(기상악화로 인한 임의취소 시 이용횟수 차감처리 됩니다.) ※ 예약 변경/취소의 경우 7일전 17시까지 가능하며, 17시 이후에는 페널티가 발생됩니다."
+  ],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 7
+    },
+    "weekend": {
+     "days_before": 7
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "이용예정일 7일 전까지 취소 시 예약금 전액 환불. 날씨로 인한 취소는 예보만으로 불가하며 입장 2시간 전 클럽 현장 날씨 기준으로 결정"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "weekday",
+     "unit": "week",
+     "before": 3,
+     "weekday": null,
+     "time": null,
+     "member": null,
+     "text": "3주 후"
+    },
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 1,
+     "weekday": "금",
+     "time": "10:00",
+     "member": null,
+     "text": "차주 금요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": {
+    "weekday": "월",
+    "time": "09:00"
+   },
+   "method": "online",
+   "recurring": true,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "• 주중: 매주 월요일 09:00에 3주 후 1주 단위(월~금) 예약\n• 정회원 주말: 매월 첫째 화요일 09~17시 다음 달 1개월분 인터넷 접수, 차주 금요일 10시 배정결과 문자"
+  },
+  "weather_summary": [
+   "(기상악화로 인한 임의취소 시 이용횟수 차감처리 됩니다.) 예약 변경/취소의 경우 7일전 17시까지 가능하며, 17시 이후에는 페널티가 발생됩니다."
   ]
  },
  "ops": {

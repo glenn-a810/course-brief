@@ -263,6 +263,54 @@
     "checked_at": "2026-11-27",
     "source_type": "official_summary(greenfeeguide)"
    }
+  ],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 4,
+     "time": "17:00"
+    },
+    "weekend": {
+     "days_before": 4,
+     "time": "17:00"
+    }
+   },
+   "penalty": [],
+   "basis": "team",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "취소: 4일 전 17:00까지"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 3,
+     "weekday": null,
+     "time": null,
+     "member": null,
+     "text": "3주 이후"
+    }
+   ],
+   "monthly": [],
+   "weekly": {
+    "weekday": "월",
+    "time": "09:00"
+   },
+   "method": "online",
+   "recurring": true,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "매주 월요일 9시에 3주 이후의 티가 1주일 단위로 오픈(주중/주말 인터넷 예약)"
+  },
+  "weather_summary": [
+   "폭우나 폭설로 인하여 경기가 중단될 경우에는 당사 운영규칙에 의거 악천후 및 이상기후 이용료를 적용합니다."
   ]
  },
  "ops": {

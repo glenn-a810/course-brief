@@ -253,6 +253,28 @@
    "cancel_rain": "악천후 취소는 당일 취소만 가능(당일 출발 전 프런트 1644-8053 문의). 당일 70% 이상 확률로 시간당 5mm 이상 강수 3시간 이상 예보 시 전화취소 가능, 라운드 5시간 내 누적 20mm 이상 예보 시 홀별 환불",
    "arbitrary_stop": "입장 후 경기 전 임의 취소 시설이용료+(이용요금-시설이용료)×50%, 1~9홀 중단 75%, 10~18홀 100%",
    "no_caddie": "주중 2인~5인 및 노캐디(셀프라운드) 선택 오픈 운영"
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 2,
+     "weekday": null,
+     "time": null,
+     "member": null,
+     "text": "2주 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "이용 예정일 2주 전부터 예약 가능"
   }
  },
  "ops": {

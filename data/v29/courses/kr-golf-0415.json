@@ -144,7 +144,25 @@
   "open_cycle": "전화만 가능(인터넷 예약 불가)",
   "notes": "2인 플레이 주중·주말 불가. 외국인 그린피 차등(중국인 팀 동반 시 사전 고지)",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 7
+    },
+    "weekend": {
+     "days_before": 7
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "예약 변경·취소 7일 전까지"
+   ],
+   "penalty_text": []
+  }
  },
  "ops": {
   "nocaddie": {

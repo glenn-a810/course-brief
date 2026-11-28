@@ -240,7 +240,47 @@
   "evidence": [
    "https://www.hanmircc.com/Reservation/ReservInfo"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 6
+    },
+    "weekend": {
+     "days_before": 6
+    }
+   },
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 1,
+     "to_days": 1,
+     "pct": 20.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "1일 전 취소: 20% + 1년 예약·내장 금지"
+    },
+    {
+     "day": null,
+     "from_days": 5,
+     "to_days": 5,
+     "pct": null,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "5일 전부터 위약 규정 적용"
+    }
+   ],
+   "basis": "team",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "취소 가능: 6일 전까지"
+   ],
+   "penalty_text": [
+    "5일 전부터 위약 규정 적용",
+    "1일 전 취소: 20% + 1년 예약·내장 금지"
+   ]
+  }
  },
  "ops": {
   "nocaddie": {

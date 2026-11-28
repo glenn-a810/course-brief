@@ -315,7 +315,60 @@
     "checked_at": "2026-11-27",
     "source_type": "third_party"
    }
-  ]
+  ],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3
+    },
+    "weekend": {
+     "days_before": 4
+    }
+   },
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 3,
+     "to_days": 3,
+     "pct": 10.0,
+     "suspend_months": 6,
+     "suspend_days": null,
+     "text": "3일 전 취소는 주말 10% 위약 또는 6개월 예약정지"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "평일 3일 전·주말 4일 전까지 위약 없음",
+    "평일 3일 전·주말 4일 전까지 위약 없음"
+   ],
+   "penalty_text": [
+    "3일 전 취소는 주말 10% 위약 또는 6개월 예약정지"
+   ]
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 4,
+     "weekday": "월",
+     "time": "09:00",
+     "member": null,
+     "text": "4주 전 월요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "high",
+   "text": "4주 전 월요일 09시부터 일주일 단위(월~일) 일괄 오픈"
+  }
  },
  "ops": {
   "nocaddie": {

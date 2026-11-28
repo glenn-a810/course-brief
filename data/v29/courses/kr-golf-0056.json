@@ -166,7 +166,67 @@
    "https://haeundaecc.co.kr/Guide/ReservationGuide.aspx",
    "https://wondergolf.co.kr/courses/kr-mcst-332"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 5,
+     "time": "17:00"
+    },
+    "weekend": {
+     "days_before": 5,
+     "time": "17:00"
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "high",
+   "basis_text": [
+    "5일 전 17시까지 인터넷·모바일로 취소 가능. 예약취소는 월 2회까지이며 초과 취소 시 위약 적용"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "day",
+     "before": 10,
+     "weekday": null,
+     "time": null,
+     "member": "회원",
+     "text": "10일 전"
+    },
+    {
+     "scope": "weekend",
+     "unit": "day",
+     "before": 9,
+     "weekday": null,
+     "time": "09:00",
+     "member": "준회원",
+     "text": "9일 전"
+    },
+    {
+     "scope": "weekend",
+     "unit": "week",
+     "before": 1,
+     "weekday": "화",
+     "time": "14:00",
+     "member": null,
+     "text": "전주 화요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "online",
+   "recurring": false,
+   "member_only": true,
+   "scope": "member",
+   "ambiguous": true,
+   "confidence": "low",
+   "text": "• 평일·공휴일: 회원 10일 전, 준회원 9일 전(공휴일 제외) 09:00~17:00\n• 주말: 전주 화요일 14:00~17:00(회원만 예약 가능)\n• 홈페이지 및 모바일 접수"
+  }
  },
  "ops": {
   "nocaddie": {

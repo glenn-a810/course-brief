@@ -763,7 +763,47 @@
   ],
   "weather_evidence": [
    "* 임시공휴일, 대체휴일, 근로자의 날 주말요금 적용 대중제(동코스 9홀) 이용요금 구분 그린피 부가세 합계 주중 81,364원 8,136원 89,500원 주말, 공휴일 113,182원 11,318원 124,500원 회원제 우천, 폭설 등으로 인한 중간 정산 기준 구분 그린피 제세금 비고 1~2홀 10% 100% (21,120원) Tee-off 기준 3홀 17% 100% 4~6홀 33% 100% 7~9홀 50% 100% 10~12홀 67% 100% 13~15홀 83% 100% 16~18홀 100% 100% * 우천,폭설등 천재지변으"
-  ]
+  ],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 7
+    },
+    "weekend": {
+     "days_before": 7
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "이용 7일 전까지 취소 가능"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 4,
+     "weekday": "월",
+     "time": "09:00",
+     "member": null,
+     "text": "4주 전 월요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "high",
+   "text": "4주 전 월요일 오전 9시"
+  }
  },
  "ops": {
   "nocaddie": {

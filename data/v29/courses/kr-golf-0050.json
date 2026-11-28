@@ -169,7 +169,27 @@
   "evidence": [
    "https://www.bscc.co.kr/reservation/guide"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 4,
+     "time": "12:00"
+    },
+    "weekend": {
+     "days_before": 4,
+     "time": "12:00"
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "high",
+   "basis_text": [
+    "경기 4일 전 12:00까지 취소 가능하며"
+   ],
+   "penalty_text": []
+  }
  },
  "ops": {
   "nocaddie": {

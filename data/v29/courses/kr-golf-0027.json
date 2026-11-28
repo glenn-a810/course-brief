@@ -581,7 +581,25 @@
   ],
   "weather_evidence": [
    "우천시 1~9홀(9홀정산), 10~18홀(18홀정산)입니다."
-  ]
+  ],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 7
+    },
+    "weekend": {
+     "days_before": 7
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "주중·주말 모두 7일 전까지 정상 취소입니다."
+   ],
+   "penalty_text": []
+  }
  },
  "ops": {
   "nocaddie": {

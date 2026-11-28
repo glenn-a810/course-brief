@@ -145,7 +145,27 @@
   "evidence": [
    "나주컨트리클럽 클럽안내코스안내이용안내인터넷예약커뮤니티클럽 소개인사말오시는 길코스 소개코스 공략요금 안내예약 안내위약 안내골프 예약공지사항이벤트NAJU COUNTRY CLUB나주 컨트리 클럽대자연속의 여유로움이 돋보이는 골프, 그 이상의 감동!날씨 정보 없음 ℃고객센터(평일/주말 09:00 ~ 18:30)대표번호 061-335-7722예약문의 2026.11 예약하기 NEWS나주 컨트리클럽의 최근 소식을 안내해 드립니다.게시물이 없습니다."
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3
+    },
+    "weekend": {
+     "days_before": 4,
+     "time": "17:00"
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "평일은 예약일 3일 전",
+    "주말은 예약일 4일 전 17시까지 위약 없이 취소 가능"
+   ],
+   "penalty_text": []
+  }
  },
  "ops": {
   "nocaddie": {

@@ -150,7 +150,78 @@
   "open_cycle": "인터넷 회원 가입 고객에 한해 홈페이지 예약. 매월 20일 13시부터 다음 달 전 타임 예약 가능. 9홀 예약은 예약실 문의.",
   "notes": null,
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 4,
+     "time": "17:00"
+    },
+    "weekend": {
+     "days_before": 4,
+     "time": "17:00"
+    }
+   },
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 1,
+     "to_days": 1,
+     "pct": null,
+     "suspend_months": 3,
+     "suspend_days": null,
+     "text": "3일 전 1개월 · 2일 전 2개월 · 1일 전 3개월 예약정지"
+    },
+    {
+     "day": null,
+     "from_days": 2,
+     "to_days": 2,
+     "pct": null,
+     "suspend_months": 2,
+     "suspend_days": null,
+     "text": "3일 전 1개월 · 2일 전 2개월 · 1일 전 3개월 예약정지"
+    },
+    {
+     "day": null,
+     "from_days": 3,
+     "to_days": 3,
+     "pct": null,
+     "suspend_months": 1,
+     "suspend_days": null,
+     "text": "3일 전 1개월 · 2일 전 2개월 · 1일 전 3개월 예약정지"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "high",
+   "basis_text": [
+    "예약일로부터 4일 전 17시까지: 위약 없이 취소"
+   ],
+   "penalty_text": [
+    "3일 전 1개월 · 2일 전 2개월 · 1일 전 3개월 예약정지",
+    "3일 전 1개월 · 2일 전 2개월 · 1일 전 3개월 예약정지",
+    "3일 전 1개월 · 2일 전 2개월 · 1일 전 3개월 예약정지"
+   ]
+  },
+  "parsed_open": {
+   "rules": [],
+   "monthly": [
+    {
+     "day": 20,
+     "weekday": null,
+     "time": "13:00",
+     "scope": "both"
+    }
+   ],
+   "weekly": null,
+   "method": "online",
+   "recurring": true,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "low",
+   "text": "인터넷 회원 가입 고객에 한해 홈페이지 예약. 매월 20일 13시부터 다음 달 전 타임 예약 가능. 9홀 예약은 예약실 문의."
+  }
  },
  "ops": {
   "nocaddie": {

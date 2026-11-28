@@ -248,7 +248,50 @@
   "open_cycle": "2026년 11월부터 경기일 기준 4주 전 토·일·월요일에 예약 진행(기존 3주 전). 공지 2026-09-23",
   "notes": "주중·주말 4인 플레이 원칙",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {},
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 1,
+     "to_days": 3,
+     "pct": null,
+     "suspend_months": 3,
+     "suspend_days": null,
+     "text": "내장일 기준 1~3일 전 예약 취소 시 3개월 예약 정지 . 우천은 예보만으로 취소 불가"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "low",
+   "basis_text": [],
+   "penalty_text": [
+    "내장일 기준 1~3일 전 예약 취소 시 3개월 예약 정지 . 우천은 예보만으로 취소 불가"
+   ]
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 4,
+     "weekday": "토",
+     "time": null,
+     "member": null,
+     "text": "4주 전 토"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "2026년 11월부터 경기일 기준 4주 전 토·일·월요일에 예약 진행(기존 3주 전). 공지 2026-09-23"
+  }
  },
  "ops": {
   "nocaddie": {

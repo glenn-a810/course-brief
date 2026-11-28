@@ -207,7 +207,50 @@
   "weather_evidence": [
    "카트요금 - 아도니스 컨트리클럽 회원제 퍼블릭 호텔 퍼블릭 전화 031) 530-9140 로그인 회원가입 SITEMAP ADONIS RESORT FAMILY SITE  아도니스 호텔 A-ONE CC 드비치 GC 아도니스 퍼블릭 퍼블릭 소개 찾아오시는 길 코스소개 코스공략도 스코어카드 퍼블릭 예약 퍼블릭 예약 카트요금 예약안내 예약확인/취소 무인내장 안내 1:1문의 이용요금/이벤트 이용요금/이벤트 조인게시판 분실물안내 기상정보 실시간 영상(기상정보) 마이페이지 카트요금 진행상 1인 1카트가 의무 사용입니다.",
    "예약안내 - 아도니스 컨트리클럽 회원제 퍼블릭 호텔 퍼블릭 전화 031) 530-9140 로그인 회원가입 SITEMAP ADONIS RESORT FAMILY SITE  아도니스 호텔 A-ONE CC 드비치 GC 아도니스 퍼블릭 퍼블릭 소개 찾아오시는 길 코스소개 코스공략도 스코어카드 퍼블릭 예약 퍼블릭 예약 카트요금 예약안내 예약확인/취소 무인내장 안내 1:1문의 이용요금/이벤트 이용요금/이벤트 조인게시판 분실물안내 기상정보 실시간 영상(기상정보) 마이페이지 예약안내 예약방법 취소 및 위약처리 규정 퍼블릭 준수사항 퇴장규정 환불규"
-  ]
+  ],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3,
+     "time": "24:00"
+    },
+    "weekend": {
+     "days_before": 3,
+     "time": "24:00"
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "예약 날짜·취소·시간 변경: 3일 전까지 가능",
+    "인원 변경: 1일 전까지 가능"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 3,
+     "weekday": null,
+     "time": "00:00",
+     "member": null,
+     "text": "3주 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "라운드일 3주 전 같은 요일 00시부터 예약 가능(2인·9홀 예약은 2주 전 동일 요일 00시부터)"
+  }
  },
  "ops": {
   "nocaddie": {

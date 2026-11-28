@@ -221,7 +221,73 @@
   "open_cycle": "골프 예약은 매주 화요일 오전 9시에 오픈하며 6주 전 일정까지 예약 가능(객실+골프 패키지는 8주 전 오픈)",
   "notes": "문체부 전국 골프장 현황에 아난티남해CC(9홀)·아난티남해GC(9홀)로 나뉘어 등록된 한 단지. 회원 예약 우선, 회원 간 경합 시 추첨(이용약관)",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {},
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 1,
+     "to_days": 1,
+     "pct": 20.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "이용일 기준 주말 3일 전 10% · 2일 전 10% · 1일 전 20% · 당일 취소·노쇼 30%"
+    },
+    {
+     "day": "weekend",
+     "from_days": 2,
+     "to_days": 2,
+     "pct": 10.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "이용일 기준 주말 3일 전 10% · 2일 전 10% · 1일 전 20% · 당일 취소·노쇼 30%"
+    },
+    {
+     "day": "weekend",
+     "from_days": 3,
+     "to_days": 3,
+     "pct": 10.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "이용일 기준 주말 3일 전 10% · 2일 전 10% · 1일 전 20% · 당일 취소·노쇼 30%"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "low",
+   "basis_text": [],
+   "penalty_text": [
+    "이용일 기준 주말 3일 전 10% · 2일 전 10% · 1일 전 20% · 당일 취소·노쇼 30%",
+    "이용일 기준 주말 3일 전 10% · 2일 전 10% · 1일 전 20% · 당일 취소·노쇼 30%",
+    "이용일 기준 주말 3일 전 10% · 2일 전 10% · 1일 전 20% · 당일 취소·노쇼 30%"
+   ]
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 6,
+     "weekday": "일",
+     "time": null,
+     "member": null,
+     "text": "6주 전 일"
+    }
+   ],
+   "monthly": [],
+   "weekly": {
+    "weekday": "화",
+    "time": "09:00"
+   },
+   "method": null,
+   "recurring": true,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "골프 예약은 매주 화요일 오전 9시에 오픈하며 6주 전 일정까지 예약 가능(객실+골프 패키지는 8주 전 오픈)"
+  }
  },
  "ops": {
   "nocaddie": {

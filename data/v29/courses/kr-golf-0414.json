@@ -171,7 +171,38 @@
   "open_cycle": "온라인·유선 예약, 1인 2팀(9홀)까지. 주말 정기예약은 이용 월 전전월 1일부터 선착순",
   "notes": "2인 18홀 +20,000원(9홀 +10,000원) 추가, 전화 예약",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {},
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 2,
+     "to_days": 2,
+     "pct": null,
+     "suspend_months": 3,
+     "suspend_days": null,
+     "text": "당일~2일 전 취소 3개월"
+    },
+    {
+     "day": null,
+     "from_days": 3,
+     "to_days": 4,
+     "pct": null,
+     "suspend_months": 2,
+     "suspend_days": null,
+     "text": "3~4일 전 2개월"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "low",
+   "basis_text": [],
+   "penalty_text": [
+    "당일~2일 전 취소 3개월",
+    "3~4일 전 2개월"
+   ]
+  }
  },
  "ops": {
   "nocaddie": {

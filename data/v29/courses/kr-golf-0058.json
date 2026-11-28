@@ -236,6 +236,56 @@
   "weather_evidence": [],
   "browser_official": {
    "note": "연단체·악천후 요금 적용 시 할인요금 미적용, 18홀 종료 시 사이버할인가·악천후 정산 시 정상가 적용"
+  },
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3
+    },
+    "weekend": {
+     "days_before": 4
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "위약 없이 취소: 평일 3일 전 · 주말 4일 전까지",
+    "위약 없이 취소: 평일 3일 전 · 주말 4일 전까지"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "weekend",
+     "unit": "week",
+     "before": 1,
+     "weekday": "화",
+     "time": "10:00",
+     "member": null,
+     "text": "1주 전 화요일"
+    },
+    {
+     "scope": "weekday",
+     "unit": "week",
+     "before": 2,
+     "weekday": "화",
+     "time": "10:00",
+     "member": null,
+     "text": "2주 전 화요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": true,
+   "confidence": "low",
+   "text": "주말은 1주 전 화요일 10:00부터, 주중은 2주 전 화요일 10:00부터 예약 접수(1팀 4인 원칙, 이용일 1일 전까지)"
   }
  },
  "ops": {

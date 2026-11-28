@@ -178,7 +178,79 @@
    "https://wondergolf.co.kr/courses/kr-kakao-8004090",
    "취소 가능 기간 | 이용일 7일 전 16시까지 (2026. 7. 1 이용일부터 시행) … 평일 기준 7~5일 전 250,000원, 5~3일 전 300,000원, 3~1일 전 400,000원, 당일 취소·노쇼 500,000원"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 7,
+     "time": "16:00"
+    },
+    "weekend": {
+     "days_before": 7,
+     "time": "16:00"
+    }
+   },
+   "penalty": [
+    {
+     "day": "weekday",
+     "from_days": 7,
+     "to_days": 5,
+     "pct": null,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "이후 위약금 평일 : 7~5일 전 250"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "high",
+   "basis_text": [
+    "이용일 7일 전 16시까지 취소 가능"
+   ],
+   "penalty_text": [
+    "이후 위약금 평일 : 7~5일 전 250"
+   ]
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "weekend",
+     "unit": "week",
+     "before": 3,
+     "weekday": null,
+     "time": "10:00",
+     "member": null,
+     "text": "3주 전"
+    },
+    {
+     "scope": "weekend",
+     "unit": "week",
+     "before": 2,
+     "weekday": "화",
+     "time": "14:00",
+     "member": null,
+     "text": "2주 전 화요일"
+    },
+    {
+     "scope": "weekday",
+     "unit": "week",
+     "before": 2,
+     "weekday": null,
+     "time": null,
+     "member": "회원",
+     "text": "2주 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "online",
+   "recurring": false,
+   "member_only": true,
+   "scope": "member",
+   "ambiguous": true,
+   "confidence": "low",
+   "text": "• 회원: 주중·주중 공휴일 해당 요일 3주 전 10시 · 주말 2주 전 화요일 14시 접수\n• 비회원: 잔여타임에 한해 주중 2주 전부터, 주말 잔여타임 예약 가능\n• 실시간 인터넷 예약"
+  }
  },
  "ops": {
   "nocaddie": {

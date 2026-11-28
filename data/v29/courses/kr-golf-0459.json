@@ -296,7 +296,46 @@
   "open_cycle": "매월 첫 번째 목요일 09:00 온라인 예약 오픈(1개월 단위)",
   "notes": "9홀 단위 예약. 모노카트 셀프 운영",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 14
+    },
+    "weekend": {
+     "days_before": 14
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "취소는 이용일 14일 전까지",
+    "예약 변경은 7일 전까지"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [],
+   "monthly": [
+    {
+     "day": null,
+     "weekday": "목",
+     "time": "09:00",
+     "scope": "both",
+     "ordinal": "first"
+    }
+   ],
+   "weekly": null,
+   "method": "online",
+   "recurring": true,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "low",
+   "text": "매월 첫 번째 목요일 09:00 온라인 예약 오픈(1개월 단위)"
+  }
  },
  "ops": {
   "nocaddie": {

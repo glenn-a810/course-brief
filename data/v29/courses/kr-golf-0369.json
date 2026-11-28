@@ -176,7 +176,53 @@
    "https://www.dongwonroyalcc.co.kr/pagesite/use/reservation.asp",
    "https://wondergolf.co.kr/courses/kr-kakao-679550616"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3,
+     "time": "17:00"
+    },
+    "weekend": {
+     "days_before": 4,
+     "time": "17:00"
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "high",
+   "basis_text": [
+    "주중: 예약일 3일 전 17시까지 취소 시 위약 없음",
+    "주말: 4일 전 17시까지 취소 시 위약 없음"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "weekend",
+     "unit": "week",
+     "before": 2,
+     "weekday": null,
+     "time": "09:00",
+     "member": null,
+     "text": "2주 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": {
+    "weekday": "월",
+    "time": "09:00"
+   },
+   "method": "fcfs",
+   "recurring": true,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "평일/주말·공휴일: 2주 전 매주 월요일 9시 오픈(월~일분), 인터넷·모바일·전화, 선착순 실시간 배정"
+  }
  },
  "ops": {
   "nocaddie": {

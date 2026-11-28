@@ -187,7 +187,58 @@
    "https://wondergolf.co.kr/courses/bora-cc",
    "예약취소 : 해당일 5일전 17시까지 인터넷,팩스,전화 이용"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 5,
+     "time": "17:00"
+    },
+    "weekend": {
+     "days_before": 5,
+     "time": "17:00"
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "high",
+   "basis_text": [
+    "이용일 5일 전 17시까지 인터넷·팩스·전화로 취소 가능"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "weekday",
+     "unit": "day",
+     "before": 21,
+     "weekday": null,
+     "time": null,
+     "member": null,
+     "text": "21일 전"
+    },
+    {
+     "scope": "weekend",
+     "unit": "day",
+     "before": 17,
+     "weekday": null,
+     "time": "09:00",
+     "member": null,
+     "text": "17일 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "online",
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": true,
+   "confidence": "low",
+   "text": "• 주중 1·2부: 해당일 21일 전(정회원 09:00~, 가족·지정회원 14:00~)\n• 주말: 토요일 기준 17일 전(전전주 수요일) 09:00부터\n• 홈페이지 인터넷 예약"
+  }
  },
  "ops": {
   "nocaddie": {

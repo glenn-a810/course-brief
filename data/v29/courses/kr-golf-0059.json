@@ -255,7 +255,50 @@
     "checked_at": "2026-11-27",
     "source_type": "official_summary(greenfeeguide)"
    }
-  ]
+  ],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3,
+     "time": "18:00"
+    },
+    "weekend": {
+     "days_before": 4,
+     "time": "18:00"
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "high",
+   "basis_text": [
+    "위약 없이 취소: 평일 3일 전 · 주말 4일 전 18:00까지",
+    "위약 없이 취소: 평일 3일 전 · 주말 4일 전 18:00까지"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 3,
+     "weekday": "월",
+     "time": "09:00",
+     "member": null,
+     "text": "3주 전 월요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "high",
+   "text": "주중·주말 모두 3주 전 월요일 9:00부터 예약 가능"
+  }
  },
  "ops": {
   "nocaddie": {

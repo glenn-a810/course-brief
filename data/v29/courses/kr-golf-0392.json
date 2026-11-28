@@ -257,7 +257,29 @@
   "open_cycle": "일반: 8주전 월요일 9시 오픈, 1주일 단위 예약",
   "notes": "3인 내장 시 4인 그린피, 노쇼 100%, 2인 불가",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 8,
+     "weekday": "월",
+     "time": "09:00",
+     "member": null,
+     "text": "8주전 월요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "high",
+   "text": "일반: 8주전 월요일 9시 오픈, 1주일 단위 예약"
+  }
  },
  "ops": {
   "nocaddie": {

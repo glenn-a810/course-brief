@@ -208,7 +208,80 @@
   "evidence": [
    "https://elevencc.co.kr/swp/penalty"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3
+    },
+    "weekend": {
+     "days_before": 4
+    }
+   },
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 1,
+     "to_days": 1,
+     "pct": 20.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "이후: 3일 전 10% · 2일 전 10% · 1일 전 20% · 당일·노쇼 30%"
+    },
+    {
+     "day": null,
+     "from_days": 2,
+     "to_days": 2,
+     "pct": 10.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "이후: 3일 전 10% · 2일 전 10% · 1일 전 20% · 당일·노쇼 30%"
+    },
+    {
+     "day": null,
+     "from_days": 3,
+     "to_days": 3,
+     "pct": 10.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "이후: 3일 전 10% · 2일 전 10% · 1일 전 20% · 당일·노쇼 30%"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "주중 3일 전·주말 공휴일 4일 전까지: 위약 없이 취소",
+    "주중 3일 전·주말 공휴일 4일 전까지: 위약 없이 취소"
+   ],
+   "penalty_text": [
+    "이후: 3일 전 10% · 2일 전 10% · 1일 전 20% · 당일·노쇼 30%",
+    "이후: 3일 전 10% · 2일 전 10% · 1일 전 20% · 당일·노쇼 30%",
+    "이후: 3일 전 10% · 2일 전 10% · 1일 전 20% · 당일·노쇼 30%"
+   ]
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 4,
+     "weekday": null,
+     "time": null,
+     "member": null,
+     "text": "4주 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "2~4주 전 예약 오픈(자세한 일정은 예약실 문의)"
+  }
  },
  "ops": {
   "nocaddie": {

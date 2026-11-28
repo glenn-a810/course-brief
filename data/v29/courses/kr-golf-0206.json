@@ -228,6 +228,50 @@
   "weather_evidence": [
    "예약오픈 - 3주전 월요일 오전 10시 해당주차 일주일 일괄 오픈 악천후 취소 규정 종류 구분 적용량 적용량 폭 우 코스강우량 시간당 3mm 이상 코스관리 폭 설 그린적설량 2cm 이상 연습그린 폭 염 온도 영상 36도 이상 광장기온 한 파 온도 영하 10도 이하 광장기온 기 타 경기 진행이 어렵다고 판단하여 경기 중단을 선언하는 경우 ※ 티업 시간 2시간 전부터 취소 가능 우천 시 홀아웃 요금 규정 홀 그린피 카트비 캐디피 1~9홀 이용홀 수 X (당일 그린피 ÷ 18홀) 이용홀 수 X (카트료 ÷ 18홀) 80,000원 10~1",
    "※ 낙뢰, 폭우, 강설 등 불가항력적인 천재지변으로 인하여 경기를 계속 할 수 없다고 골프장에서 선언한 경우에 적용됩니다.(안개제외) ※ 우천시 홀아웃 후 비가 그칠시 재경기 불가합니다."
+  ],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3
+    },
+    "weekend": {
+     "days_before": 4
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "표준약관상 주말·공휴일 4일 전",
+    "평일 3일 전까지 취소 시 예약금 전액 환불"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 3,
+     "weekday": "월",
+     "time": "10:00",
+     "member": null,
+     "text": "3주 전 월요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "high",
+   "text": "3주 전 월요일 10:00 해당 주차 일주일 일괄 오픈"
+  },
+  "weather_summary": [
+   "낙뢰, 폭우, 강설 등 불가항력적인 천재지변으로 인하여 경기를 계속 할 수 없다고 골프장에서 선언한 경우에 적용됩니다.(안개제외) 우천시 홀아웃 후 비가 그칠시 재경기 불가합니다."
   ]
  },
  "ops": {

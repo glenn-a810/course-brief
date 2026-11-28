@@ -281,7 +281,68 @@
   "evidence": [
    "4일전 취소: 30일 예약정지 3일전 취소: 60일 예약정지 2일전 취소: 90일 예약정지/이용요금10% 1일전 취소: 120일 예약정지/이용요금20% 당일 취소 및 미내장: 150일 예약정지/이용요금30%"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 5,
+     "time": "17:00"
+    },
+    "weekend": {
+     "days_before": 5,
+     "time": "17:00"
+    }
+   },
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 1,
+     "to_days": 1,
+     "pct": 20.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "1일 전 120일·20%"
+    },
+    {
+     "day": null,
+     "from_days": 2,
+     "to_days": 2,
+     "pct": 10.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "2일 전 90일 또는 이용요금 10%"
+    },
+    {
+     "day": null,
+     "from_days": 2,
+     "to_days": 2,
+     "pct": 20.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "2일 전 90일·20%"
+    },
+    {
+     "day": null,
+     "from_days": 3,
+     "to_days": 3,
+     "pct": 10.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "3일 전 60일·10%"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "주중·주말 5일 전 17:00까지 취소"
+   ],
+   "penalty_text": [
+    "2일 전 90일 또는 이용요금 10%",
+    "1일 전 120일·20%",
+    "3일 전 60일·10%"
+   ]
+  }
  },
  "ops": {
   "nocaddie": {

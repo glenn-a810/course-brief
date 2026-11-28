@@ -218,7 +218,26 @@
   "open_cycle": null,
   "notes": "연중무휴. 해발 60m로 제주 최저, 눈이 와도 빨리 녹아 겨울 라운드에 유리",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3
+    },
+    "weekend": {
+     "days_before": 4
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "평일 3일 전·주말 4일 전까지 위약 없음",
+    "평일 3일 전·주말 4일 전까지 위약 없음"
+   ],
+   "penalty_text": []
+  }
  },
  "ops": {
   "nocaddie": {

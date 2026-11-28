@@ -296,7 +296,27 @@
    "블루헤런 주요 메뉴 바로가기 컨텐트 바로가기 블루헤런 메뉴 Hitejinro Championship Job Opening 코스 예약 로그인 닫기 블루헤런 로그인 회원가입 아이디/비밀번호 찾기 About 인사말 정도경영선언문 클럽개요 부대시설 오시는길 Course 코스개요 코스안내 reservation 예약방법 실시간예약 주말추첨신청 예약확인 및 변경/취소 Info 공지사항 이용안내 포토갤러리 자료실 Magazine 하이트진로 챔피언십 하이트진로 소속프로 Recruit 채용절차 채용공고 닫기 코스소개 전략성이 풍부한 블루헤런의 코스를",
    "* 예약일 포함 5일전 16시 까지, 이후 취소시 위약적용 (주중, 주말 구분없이 모두 적용)"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 5,
+     "time": "16:00"
+    },
+    "weekend": {
+     "days_before": 5,
+     "time": "16:00"
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "high",
+   "basis_text": [
+    "예약일 포함 5일 전 16시까지 취소해야 위약 없음"
+   ],
+   "penalty_text": []
+  }
  },
  "ops": {
   "nocaddie": {

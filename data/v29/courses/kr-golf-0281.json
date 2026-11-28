@@ -247,7 +247,50 @@
   "evidence": [
    "https://www.lotteskyhill.com/reservation/reservation-guide"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3,
+     "time": "17:00"
+    },
+    "weekend": {
+     "days_before": 21,
+     "time": "17:00"
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "취소: 주중 3일 전·주말 4일 전 17시까지",
+    "취소: 주중 3일 전·주말 4일 전 17시까지"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 4,
+     "weekday": "화",
+     "time": "10:00",
+     "member": null,
+     "text": "4주 전 화요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "fcfs",
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "high",
+   "text": "인터넷·전화 모두 경기일 해당 주 4주 전 화요일 10시, 주 단위(월~일) 오픈. 1일 1회 선착순"
+  }
  },
  "ops": {
   "nocaddie": {

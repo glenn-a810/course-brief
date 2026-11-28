@@ -453,6 +453,59 @@
   "weather_evidence": [
    "캐디피 및 카트사용료 구 분 캐디피 카트사용료 18 홀 150,000원 100,000원 9 홀 75,000원 50,000원 악천후 정산안내 ※ 9홀 추가시 9홀 요금 적용 상황별요금 구분 1홀 티샷 1홀 종료 2~9홀 10~18홀 그린피 무료 홀별정산 카트비 무료 홀별정산 캐디피 40,000원 50,000원 75,000원 150,000원 ※ 상황별 요금은 강설, 폭우, 기타 천재지변 등으로 경기를 마치지 못했을 경우에만 적용됩니다.",
    "강설, 폭우, 기타 천재지변 등으로 경기를 마치지 못했을 경우에만 홀별 정산 적용"
+  ],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3
+    },
+    "weekend": {
+     "days_before": 4
+    }
+   },
+   "penalty": [],
+   "basis": "team",
+   "scope": "non_member",
+   "confidence": "medium",
+   "basis_text": [
+    "비회원 기준 주말·공휴일은 4일 전까지",
+    "평일은 3일 전까지 취소 시 예약금 전액 환불. 당일 취소·무단 미내장은 팀별 이용요금의 30% 부과"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "weekday",
+     "unit": "week",
+     "before": 3,
+     "weekday": "월",
+     "time": null,
+     "member": "회원",
+     "text": "3주전 월요일"
+    },
+    {
+     "scope": "weekend",
+     "unit": "week",
+     "before": 3,
+     "weekday": "금",
+     "time": "09:00",
+     "member": null,
+     "text": "3주전 금요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "fcfs",
+   "recurring": false,
+   "member_only": true,
+   "scope": "member",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "인터넷회원 대상 주중 3주전 월요일, 주말 3주전 금요일 09시부터 선착순 예약"
+  },
+  "weather_summary": [
+   "강설, 폭우, 기타 천재지변 등으로 경기를 마치지 못했을 경우에만 홀별 정산 적용"
   ]
  },
  "ops": {

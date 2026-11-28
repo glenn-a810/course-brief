@@ -262,7 +262,86 @@
   "evidence": [
    "https://www.goldenbay.kr/about/guide.asp"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3
+    },
+    "weekend": {
+     "days_before": 4
+    }
+   },
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 1,
+     "to_days": 1,
+     "pct": 20.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "이후 : 주말 3일 전 10% · 2일 전 10% · 1일 전 20% · 당일·노쇼 30%"
+    },
+    {
+     "day": "weekend",
+     "from_days": 2,
+     "to_days": 2,
+     "pct": 10.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "이후 : 주말 3일 전 10% · 2일 전 10% · 1일 전 20% · 당일·노쇼 30%"
+    },
+    {
+     "day": "weekend",
+     "from_days": 3,
+     "to_days": 3,
+     "pct": 10.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "이후 : 주말 3일 전 10% · 2일 전 10% · 1일 전 20% · 당일·노쇼 30%"
+    },
+    {
+     "day": null,
+     "from_days": 15,
+     "to_days": 15,
+     "pct": 10.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "패키지: 15일 전 10%부터 단계 적용"
+    }
+   ],
+   "basis": "team",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "정상 취소 : 주중 3일 전·주말·공휴일 4일 전까지",
+    "정상 취소 : 주중 3일 전·주말·공휴일 4일 전까지"
+   ],
+   "penalty_text": [
+    "이후 : 주말 3일 전 10% · 2일 전 10% · 1일 전 20% · 당일·노쇼 30%",
+    "이후 : 주말 3일 전 10% · 2일 전 10% · 1일 전 20% · 당일·노쇼 30%",
+    "이후 : 주말 3일 전 10% · 2일 전 10% · 1일 전 20% · 당일·노쇼 30%"
+   ]
+  },
+  "parsed_open": {
+   "rules": [],
+   "monthly": [
+    {
+     "day": 1,
+     "weekday": null,
+     "time": null,
+     "scope": "both"
+    }
+   ],
+   "weekly": null,
+   "method": null,
+   "recurring": true,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "low",
+   "text": "매월 1일에 다음 달 골프 예약과 다음+다음 달 패키지 예약이 함께 오픈"
+  }
  },
  "ops": {
   "nocaddie": {

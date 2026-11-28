@@ -378,7 +378,26 @@
   "open_cycle": null,
   "notes": "노캐디 팀당 20,000원 추가",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 7
+    },
+    "weekend": {
+     "days_before": 10
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "버치힐CC: 예약일 미포함 주중 7일 전",
+    "주말·공휴일·여름성수기 10일 전까지 취소 가능"
+   ],
+   "penalty_text": []
+  }
  },
  "ops": {
   "nocaddie": {

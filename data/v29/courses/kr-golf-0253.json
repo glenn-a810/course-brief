@@ -270,7 +270,74 @@
   "open_cycle": "경기일 4주 전 매주 화요일 오픈: 정회원 09시, 주중회원 14시, 일반이용자(비·웹회원) 16시. PC·모바일 홈페이지 접수",
   "notes": "3팀 이상 단체는 예약실 문의. 9홀 우선예약제, 9홀 추가 시 블루 또는 실크·리버 랜덤 배정",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 4,
+     "time": "17:00"
+    },
+    "weekend": {
+     "days_before": 4,
+     "time": "17:00"
+    }
+   },
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 1,
+     "to_days": 1,
+     "pct": null,
+     "suspend_months": 3,
+     "suspend_days": null,
+     "text": "1일 전: 40만·60만원 + 3개월"
+    },
+    {
+     "day": null,
+     "from_days": 2,
+     "to_days": 3,
+     "pct": null,
+     "suspend_months": 3,
+     "suspend_days": null,
+     "text": "이후 웹회원·비회원: 2~3일 전 위약금 주중 30만·주말 50만원 + 3개월 예약·내장정지"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "non_member",
+   "confidence": "high",
+   "basis_text": [
+    "평일·주말 모두 4일 전 17:00까지 취소 가능"
+   ],
+   "penalty_text": [
+    "이후 웹회원·비회원: 2~3일 전 위약금 주중 30만·주말 50만원 + 3개월 예약·내장정지",
+    "1일 전: 40만·60만원 + 3개월"
+   ]
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 4,
+     "weekday": null,
+     "time": null,
+     "member": null,
+     "text": "4주 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": {
+    "weekday": "화",
+    "time": "09:00"
+   },
+   "method": "online",
+   "recurring": true,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "경기일 4주 전 매주 화요일 오픈: 정회원 09시, 주중회원 14시, 일반이용자(비·웹회원) 16시. PC·모바일 홈페이지 접수"
+  }
  },
  "ops": {
   "nocaddie": {

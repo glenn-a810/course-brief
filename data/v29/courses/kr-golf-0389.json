@@ -247,7 +247,29 @@
   "open_cycle": "인터넷·전화 예약 60일 전부터(정회원·준회원 회원제 70일 전). 인터넷 1일 1회 선착순",
   "notes": "혼용 코스 이용 시 대중제 그린피 및 개별소비세 적용",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "day",
+     "before": 60,
+     "weekday": null,
+     "time": null,
+     "member": null,
+     "text": "60일 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "fcfs",
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "인터넷·전화 예약 60일 전부터(정회원·준회원 회원제 70일 전). 인터넷 1일 1회 선착순"
+  }
  },
  "ops": {
   "nocaddie": {

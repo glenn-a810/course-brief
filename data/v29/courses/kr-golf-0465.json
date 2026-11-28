@@ -309,7 +309,38 @@
   "open_cycle": "주중(월~금)은 라운드 2달 전 해당 요일부터, 주말(토~일)은 2달 전 수요일부터. 개인 예약 월 5회, 단체(3팀 이상) 유선",
   "notes": "• 1팀 4인 1캐디, 티오프 간격 주중 9분·주말 8분\n• 노캐디(셀프) 라운드는 방문 3회 이상 고객 권장\n• 셀프 이용 시 면허 소지 지정 운전자, 잔디 진입 금지, 2볼·레슨 금지\n• 9홀 2시간 10분 진행 수칙 안내",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "weekday",
+     "unit": "month",
+     "before": 2,
+     "weekday": null,
+     "time": null,
+     "member": null,
+     "text": "2달 전"
+    },
+    {
+     "scope": "weekend",
+     "unit": "month",
+     "before": 2,
+     "weekday": "수",
+     "time": null,
+     "member": null,
+     "text": "2달 전 수요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "주중(월~금)은 라운드 2달 전 해당 요일부터, 주말(토~일)은 2달 전 수요일부터. 개인 예약 월 5회, 단체(3팀 이상) 유선"
+  }
  },
  "ops": {
   "nocaddie": {

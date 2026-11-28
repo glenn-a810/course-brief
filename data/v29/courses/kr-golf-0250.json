@@ -172,7 +172,48 @@
   "open_cycle": "3주 전 월요일 10:30부터 예약 가능(PC 홈페이지, 모바일 온라인 예약, 전화 043-539-7900)",
   "notes": "1일 1팀까지 예약(추가 예약은 예약실). 27홀은 전화예약만 가능(4인 내장 시)",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3
+    },
+    "weekend": {
+     "days_before": 4
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "평일 3일 전 · 주말 4일 전까지",
+    "평일 3일 전 · 주말 4일 전까지"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 3,
+     "weekday": "월",
+     "time": "10:30",
+     "member": null,
+     "text": "3주 전 월요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "online",
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "high",
+   "text": "3주 전 월요일 10:30부터 예약 가능(PC 홈페이지, 모바일 온라인 예약, 전화 043-539-7900)"
+  }
  },
  "ops": {
   "nocaddie": {

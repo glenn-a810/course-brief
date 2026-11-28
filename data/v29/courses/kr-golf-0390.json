@@ -238,7 +238,62 @@
   "open_cycle": "인터넷 예약(회원가입). 이용권 고객 8주 전 매주 월요일 10:00~17:00 접수. 1인 1일 1팀",
   "notes": "2025년부터 예약취소 포함 이용약관 개정 예정 안내 있음",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 5
+    },
+    "weekend": {
+     "days_before": 5
+    }
+   },
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 4,
+     "to_days": 1,
+     "pct": null,
+     "suspend_months": 1,
+     "suspend_days": null,
+     "text": "4~1일 전: 1개월 예약정지 또는 당일 그린피·카트비 적용"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "5일 전까지 무료 취소"
+   ],
+   "penalty_text": [
+    "4~1일 전: 1개월 예약정지 또는 당일 그린피·카트비 적용"
+   ]
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 8,
+     "weekday": null,
+     "time": "10:00",
+     "member": null,
+     "text": "8주 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": {
+    "weekday": "월",
+    "time": "10:00"
+   },
+   "method": "online",
+   "recurring": true,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "인터넷 예약(회원가입). 이용권 고객 8주 전 매주 월요일 10:00~17:00 접수. 1인 1일 1팀"
+  }
  },
  "ops": {
   "nocaddie": {

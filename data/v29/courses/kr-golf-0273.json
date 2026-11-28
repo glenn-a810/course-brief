@@ -207,7 +207,69 @@
   "evidence": [
    "https://www.edinburgh.co.kr/Guide/PenaltyRule"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 4
+    },
+    "weekend": {
+     "days_before": 4
+    }
+   },
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 1,
+     "to_days": 1,
+     "pct": null,
+     "suspend_months": 2,
+     "suspend_days": null,
+     "text": "1일 전: 2개월 · 50/60만원"
+    },
+    {
+     "day": null,
+     "from_days": 2,
+     "to_days": 2,
+     "pct": null,
+     "suspend_months": 1,
+     "suspend_days": null,
+     "text": "2일 전: 1개월 · 40/50만원"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "취소: 경기일을 포함하지 않은 4일 전까지 홈페이지에서 가능"
+   ],
+   "penalty_text": [
+    "2일 전: 1개월 · 40/50만원",
+    "1일 전: 2개월 · 50/60만원"
+   ]
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "day",
+     "before": 14,
+     "weekday": null,
+     "time": "09:30",
+     "member": "비회원",
+     "text": "14일 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "online",
+   "recurring": true,
+   "member_only": false,
+   "scope": "non_member",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "• 정회원 주말: 전달 1일 14시, 다음 달 주말·공휴일 오픈\n• 정회원·주중회원 주중: 3주 전 월요일 09:30\n• 웹고객·비회원: 이용일 14일 전 매일 09:30 인터넷 오픈"
+  }
  },
  "ops": {
   "nocaddie": {

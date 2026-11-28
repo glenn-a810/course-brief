@@ -211,7 +211,76 @@
   "evidence": [
    "https://wondergolf.co.kr/courses/kr-kakao-8060635"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 5,
+     "time": "12:00"
+    },
+    "weekend": {
+     "days_before": 5,
+     "time": "12:00"
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "member",
+   "confidence": "medium",
+   "basis_text": [
+    "회원 예약취소는 예약일 5일 전 12시까지"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "weekend",
+     "unit": "week",
+     "before": 2,
+     "weekday": "월",
+     "time": "10:00",
+     "member": "정회원",
+     "text": "2주 전 월요일"
+    },
+    {
+     "scope": "weekend",
+     "unit": "week",
+     "before": 2,
+     "weekday": "수",
+     "time": "10:00",
+     "member": null,
+     "text": "2주 전 수요일"
+    },
+    {
+     "scope": "weekday",
+     "unit": "week",
+     "before": 2,
+     "weekday": "화",
+     "time": "10:00",
+     "member": "회원",
+     "text": "2주 전 화요일"
+    },
+    {
+     "scope": "both",
+     "unit": "day",
+     "before": 1,
+     "weekday": null,
+     "time": "17:00",
+     "member": null,
+     "text": "1일 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": true,
+   "scope": "member",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "• 정회원: 평일/공휴일 해당일 2주 전 월요일 10:00 · 주말 2주 전 수요일 10:00\n• 기타회원(평일): 2주 전 화요일 10:00\n• 예약은 해당일 1일 전 17:00까지"
+  }
  },
  "ops": {
   "nocaddie": {

@@ -178,7 +178,57 @@
    "예약 오픈 주기: 3개월 전(90일)부터 예약 전일 18시까지 예약 (https://www.golfclubq.com/guide/reserGuide.asp)",
    "예약 오픈 주기: 정회원은 3개월(90일) 전부터, 인터넷·모바일 예약은 이용예정일 4주 전 00:00부터(주중·주말 동일) 전일 18시까지 (https://greenfeeguide.co.kr/guides/golf-course-booking-guide/)"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3
+    },
+    "weekend": {
+     "days_before": 4
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "정상 취소 기간은 주중 3일 전·주말 4일 전 주말",
+    "정상 취소 기간은 주중 3일 전·주말 4일 전 주말"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "month",
+     "before": 3,
+     "weekday": null,
+     "time": null,
+     "member": "정회원",
+     "text": "3개월 전"
+    },
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 4,
+     "weekday": null,
+     "time": "00:00",
+     "member": null,
+     "text": "4주 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "online",
+   "recurring": false,
+   "member_only": true,
+   "scope": "member",
+   "ambiguous": true,
+   "confidence": "low",
+   "text": "• 정회원: 3개월(90일) 전부터\n• 인터넷·모바일 예약: 이용예정일 4주 전 00:00부터(주중·주말 동일), 전일 18시까지"
+  }
  },
  "ops": {
   "nocaddie": {

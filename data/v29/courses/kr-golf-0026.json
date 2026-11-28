@@ -412,7 +412,59 @@
   ],
   "weather_evidence": [
    "(우천, 강설 등 기상악화, 천재지변 등의 사유는 사업자 취소 위약 배상 대상에서 제외됨) 3.실시간 예약 취소 패널티(인터넷 예약) 구분 취소 제한 횟수 취소 횟수 초과 패널티 비고 골프 예약 취소 1인 3회/월 2개월 예약정지 3회까지 패널티 없습니다."
-  ]
+  ],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3,
+     "time": "16:00"
+    },
+    "weekend": {
+     "days_before": 4,
+     "time": "16:00"
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "high",
+   "basis_text": [
+    "위약 없이 취소: 평일 3일 전 · 주말 4일 전 16:00까지",
+    "위약 없이 취소: 평일 3일 전 · 주말 4일 전 16:00까지"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "weekday",
+     "unit": "week",
+     "before": 4,
+     "weekday": null,
+     "time": null,
+     "member": null,
+     "text": "4주 전"
+    },
+    {
+     "scope": "weekend",
+     "unit": "week",
+     "before": 4,
+     "weekday": "화",
+     "time": null,
+     "member": null,
+     "text": "4주 전 화요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "fcfs",
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "• 온라인 24시간 예약(첫 오픈일·전일 예약은 09:00~17:00)\n• 평일: 4주 전 접수\n• 주말: 4주 전 화요일 접수\n• 선착순 확정"
+  }
  },
  "ops": {
   "nocaddie": {

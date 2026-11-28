@@ -187,7 +187,29 @@
   "open_cycle": "인터넷 예약 4주 전 월요일 오전 09:00 (주중·주말 동일)",
   "notes": null,
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 4,
+     "weekday": "월",
+     "time": "09:00",
+     "member": null,
+     "text": "4주 전 월요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "online",
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "high",
+   "text": "인터넷 예약 4주 전 월요일 오전 09:00 (주중·주말 동일)"
+  }
  },
  "ops": {
   "nocaddie": {

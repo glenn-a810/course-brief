@@ -249,6 +249,56 @@
    "member_penalty": "회원: 3일 전 주중 없음·주말 1주 정지, 2일 전 2주 정지, 1일 전 2주 정지+위약금 100,000(주말 200,000), 당일 4주 정지+200,000(주말 300,000)",
    "weather_policy": "악천후 기준: 시간당 강우 3mm 이상 지속, 적설 3cm/h, 순간풍속 15m/s, 폭염 40도, 혹한 영하 7도, 가시거리 30m 이하, 낙뢰(현장감지기). 클럽 판단 경기중단 시 1홀 시설이용료만, 2~18홀 시설이용료+{(이용요금-시설이용료)×이용홀수/18}, 카트 1홀 10,000·2~9홀 10,000+추가 홀당 5,000·10홀 60,000·11~18홀 60,000+홀당 5,000, 캐디 1~3홀 40,000~18홀 150,000 구간표. 고객 임의중단은 정상요금(사고·부상·직계 초상 예외)",
    "phone_cancel": "전화취소는 티오프 기준 시간당 3mm 1시간 이상 지속 시 가능, 현장취소는 도착 30분 후 3mm 이상 지속 시"
+  },
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 4
+    },
+    "weekend": {
+     "days_before": 4
+    }
+   },
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 1,
+     "to_days": 1,
+     "pct": 20.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "2일 전 10% · 1일 전 20% · 당일 30%"
+    },
+    {
+     "day": null,
+     "from_days": 2,
+     "to_days": 2,
+     "pct": 10.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "2일 전 10% · 1일 전 20% · 당일 30%"
+    },
+    {
+     "day": null,
+     "from_days": 3,
+     "to_days": 3,
+     "pct": 10.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "비회원 3일 전: 주중 없음 · 주말 정상요금 10%"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "non_member",
+   "confidence": "medium",
+   "basis_text": [
+    "정상 취소: 예약일 4일 전까지"
+   ],
+   "penalty_text": [
+    "비회원 3일 전: 주중 없음 · 주말 정상요금 10%",
+    "2일 전 10% · 1일 전 20% · 당일 30%",
+    "2일 전 10% · 1일 전 20% · 당일 30%"
+   ]
   }
  },
  "ops": {

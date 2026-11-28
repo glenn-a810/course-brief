@@ -204,6 +204,37 @@
    "cancel": "무단결장·당일취소 및 내장 1일 전 취소 시 2개월 정지 또는 위약금 300,000원, 내장 2~4일 전 취소 시 1개월 정지 또는 200,000원",
    "arrival": "티오프 30분 전 도착 원칙(미준수 시 입장불가)",
    "dress": "슬리퍼 등 복장매너 위반은 입장불가"
+  },
+  "parsed_cancel": {
+   "free": {},
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 1,
+     "to_days": 1,
+     "pct": null,
+     "suspend_months": 2,
+     "suspend_days": null,
+     "text": "내장 1일 전 취소: 2개월 정지 또는 위약금 300"
+    },
+    {
+     "day": null,
+     "from_days": 2,
+     "to_days": 4,
+     "pct": null,
+     "suspend_months": 1,
+     "suspend_days": null,
+     "text": "내장 2~4일 전 취소: 1개월 정지 또는 200"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "low",
+   "basis_text": [],
+   "penalty_text": [
+    "내장 1일 전 취소: 2개월 정지 또는 위약금 300",
+    "내장 2~4일 전 취소: 1개월 정지 또는 200"
+   ]
   }
  },
  "ops": {

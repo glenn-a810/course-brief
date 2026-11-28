@@ -197,7 +197,27 @@
   "open_cycle": "계룡대와 동일 절차(경기일 15일 전~9일 전 24시 신청, 8일 전 편성, 7일 전 확정 확인)",
   "notes": "예약 시 계룡대가 아닌 '구룡대'를 선택해야 함",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3,
+     "time": "13:00"
+    },
+    "weekend": {
+     "days_before": 3,
+     "time": "13:00"
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "high",
+   "basis_text": [
+    "경기일 3일 전 13:00까지 무료"
+   ],
+   "penalty_text": []
+  }
  },
  "ops": {
   "nocaddie": {

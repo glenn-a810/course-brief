@@ -197,7 +197,28 @@
   ],
   "weather_evidence": [
    "이용안내 이용안내 자연속에서 만나는 또하나의 미학 자연속에서 만나는 또하나의 미학 이용안내 예약/위약안내 이용요금 로그인안내 바로가기안내  기상악화시 이용요금 라운드중 폭우, 강설, 기타 천재지변 등 라운드가 중단될 경우 아래와 같이 이용 요금을 홀별 정산합니다."
-  ]
+  ],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3,
+     "time": "17:00"
+    },
+    "weekend": {
+     "days_before": 4,
+     "time": "17:00"
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "평일 3일 전·주말 4일 전 17:00까지",
+    "평일 3일 전·주말 4일 전 17:00까지"
+   ],
+   "penalty_text": []
+  }
  },
  "ops": {
   "nocaddie": {

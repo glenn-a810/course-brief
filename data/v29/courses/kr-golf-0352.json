@@ -156,7 +156,58 @@
   "open_cycle": "주중은 3주 전부터, 주말은 2주 전부터 예약 가능(인터넷 1일 1회) — 2019년 아카이브된 공식 예약안내 기준",
   "notes": "2인은 3인 요금, 3인은 1인당 1만 원 추가",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3,
+     "time": "17:00"
+    },
+    "weekend": {
+     "days_before": 3,
+     "time": "17:00"
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "high",
+   "basis_text": [
+    "3일 전 17:00까지 위약 없이 취소"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "weekday",
+     "unit": "week",
+     "before": 3,
+     "weekday": null,
+     "time": null,
+     "member": null,
+     "text": "3주 전"
+    },
+    {
+     "scope": "weekend",
+     "unit": "week",
+     "before": 2,
+     "weekday": null,
+     "time": null,
+     "member": null,
+     "text": "2주 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "online",
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": true,
+   "confidence": "low",
+   "text": "주중은 3주 전부터, 주말은 2주 전부터 예약 가능(인터넷 1일 1회) — 2019년 아카이브된 공식 예약안내 기준"
+  }
  },
  "ops": {
   "nocaddie": {

@@ -330,7 +330,48 @@
   "evidence": [
    "https://www.hillmaru.com/Reservation/ReservationGuide.aspx"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3
+    },
+    "weekend": {
+     "days_before": 4
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "평일 3일 전·주말 4일 전까지 위약 없이 취소",
+    "평일 3일 전·주말 4일 전까지 위약 없이 취소"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 3,
+     "weekday": "금",
+     "time": "09:00",
+     "member": null,
+     "text": "3주 전 금요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "online",
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "high",
+   "text": "3주 전 금요일 09:00 타임오픈, 정회원 우선예약 배정 후 일반예약 진행(비회원은 인터넷 회원가입 후 인터넷 예약)"
+  }
  },
  "ops": {
   "nocaddie": {

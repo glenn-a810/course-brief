@@ -154,7 +154,44 @@
   "evidence": [
    "주중 취소는 예약일 4일 전, 주말은 5일 전까지가 기본이며 토요일 예약은 해당 주 월요일, 일요일 예약은 해당 주 화요일까지 취소하도록 안내합니다."
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekend": {
+     "days_before": 5
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "주말 5일 전까지 취소"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 2,
+     "weekday": null,
+     "time": null,
+     "member": "회원",
+     "text": "2주 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "online",
+   "recurring": false,
+   "member_only": true,
+   "scope": "member",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "회원제 주중: 위약예탁금 납부 인터넷 회원은 2주 전부터 잔여시간 예약 가능"
+  }
  },
  "ops": {
   "nocaddie": {

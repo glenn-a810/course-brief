@@ -451,6 +451,30 @@
   ],
   "weather_evidence": [
    "본인 내장후 기상 악화 등 운동불가 사유로 취소시는 예약정지 미적용 2."
+  ],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 5,
+     "time": "17:00"
+    },
+    "weekend": {
+     "days_before": 5,
+     "time": "17:00"
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "member",
+   "confidence": "medium",
+   "basis_text": [
+    "경기 5일 전까지: 위약 없이 취소",
+    "2일 전 17시까지: 취소 가능"
+   ],
+   "penalty_text": []
+  },
+  "weather_summary": [
+   "본인 내장후 기상 악화 등 운동불가 사유로 취소시는 예약정지 미적용 2."
   ]
  },
  "ops": {

@@ -178,7 +178,80 @@
   "evidence": [
    "http://www.tongdocc.co.kr/info/info2.asp"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3,
+     "time": "14:00"
+    },
+    "weekend": {
+     "days_before": 2,
+     "time": "14:00"
+    }
+   },
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 4,
+     "to_days": 4,
+     "pct": null,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "비회원: 내장 예정일 4일 전 14시 이후 취소 시 위약금 발생"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "non_member",
+   "confidence": "medium",
+   "basis_text": [
+    "3일 전 14시까지 평일 15만·주말 25만원 · 2일 전 20만·30만원 · 1일 전 25만·35만원 · 당일 미내장 30만·40만원",
+    "3일 전 14시까지 평일 15만·주말 25만원 · 2일 전 20만·30만원 · 1일 전 25만·35만원 · 당일 미내장 30만·40만원"
+   ],
+   "penalty_text": [
+    "비회원: 내장 예정일 4일 전 14시 이후 취소 시 위약금 발생"
+   ]
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "weekday",
+     "unit": "day",
+     "before": 13,
+     "weekday": null,
+     "time": "09:00",
+     "member": "비회원",
+     "text": "13일 전"
+    },
+    {
+     "scope": "weekend",
+     "unit": "day",
+     "before": 9,
+     "weekday": null,
+     "time": "09:00",
+     "member": null,
+     "text": "9일 전"
+    },
+    {
+     "scope": "weekend",
+     "unit": "day",
+     "before": 10,
+     "weekday": null,
+     "time": "09:30",
+     "member": null,
+     "text": "10일 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "online",
+   "recurring": false,
+   "member_only": false,
+   "scope": "non_member",
+   "ambiguous": true,
+   "confidence": "low",
+   "text": "• 비회원: 주중 13일 전 09:00 · 주말·공휴일 9일 전 09:00부터 인터넷 예약\n• 회원: 주중 14일 전 09:00 · 주말 10일 전 09:30"
+  }
  },
  "ops": {
   "nocaddie": {

@@ -604,7 +604,26 @@
   "evidence": [
    "평일과 주말·공휴일 모두 매월 1일 오전 10시에 다음 달 영업일 전체가 열리고, 예약일 하루 전 오후 4시에 마감합니다. 평일은 하루 1인 1팀(월 4회까지), 주말·공휴일은 1주 1인 1팀(월 2회까지)입니다 (https://roundingday.kr/cc/%EB%B2%A0%EC%96%B4%EC%A6%88%EB%B2%A0%EC%8A%A4%ED%8A%B8%EC%B2%AD%EB%9D%BCgc/)"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_open": {
+   "rules": [],
+   "monthly": [
+    {
+     "day": 1,
+     "weekday": null,
+     "time": "10:00",
+     "scope": "both"
+    }
+   ],
+   "weekly": null,
+   "method": null,
+   "recurring": true,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "low",
+   "text": "• 오픈: 매월 1일 오전 10:00에 다음 달 영업일 전체\n• 마감: 예약일 하루 전 16:00\n• 평일: 1인 1일 1팀(월 4회)\n• 주말·공휴일: 1주 1인 1팀(월 2회)"
+  }
  },
  "ops": {
   "nocaddie": {

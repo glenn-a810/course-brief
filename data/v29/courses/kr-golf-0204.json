@@ -539,6 +539,9 @@
   "weather_evidence": [
    "기상정보 출처: 기상청 홈페이지 ⓒ 서원레저(주) ALL RIGHT RESERVED",
    "기상정보 출처: 기상청 홈페이지 ⓒ 서원레저(주) ALL RIGHT RESERVED"
+  ],
+  "weather_summary": [
+   "기상정보 출처: 기상청 홈페이지 ⓒ 서원레저(주) ALL RIGHT RESERVED"
   ]
  },
  "ops": {

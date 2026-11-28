@@ -180,7 +180,50 @@
    "정남진 골프 리조트 주요 메뉴 바로가기 컨텐트 바로가기 정남진골프클럽 회사소개 골프장소개 CEO인사말 연혁 CI소개 오시는길 코스소개 코스제원 코스공략도 코스갤러리 이용안내 이용요금 이용안내 예약안내 에티켓 인터넷예약 실시간예약 예약확인/취소 위약규정 조인게시판 부대시설 클럽하우스 스타트하우스 레스토랑 그늘집 락커룸 프로샵 골프텔 골프텔이용안내 커뮤니티 명예의전당 주변관광지 클럽갤러리 이벤트 공지사항 고객의소리 멤버십안내 마이페이지 쿠폰/마일리지 로그인 회원가입 실시간 예약 COURSE 코스공략도 코스제원 코스공략도 코스갤러리 정(",
    "기존 cancel_policy 값이 인접 안내 항목과 뒤섞여 있어(오류) 그린피가이드 원문 인용으로 정정 — 평일 4일 전 · 주말 6일 전 14:00까지 (출처: https://greenfeeguide.co.kr/course/gc-0470/, 2026-11 확인)"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 4,
+     "time": "14:00"
+    },
+    "weekend": {
+     "days_before": 6,
+     "time": "14:00"
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "high",
+   "basis_text": [
+    "위약 없이 취소: 평일 4일 전 · 주말 6일 전 14:00까지",
+    "위약 없이 취소: 평일 4일 전 · 주말 6일 전 14:00까지"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 4,
+     "weekday": null,
+     "time": "09:00",
+     "member": null,
+     "text": "4주 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "이용일 4주 전 09:00 티타임 오픈"
+  }
  },
  "ops": {
   "nocaddie": {

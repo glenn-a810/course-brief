@@ -148,7 +148,79 @@
   "evidence": [
    "위약기준 — 3일 전 취소 3개월 예약정지, 2일 전 4개월, 1일 전 5개월, 당일 취소 및 No-Show 6개월 예약정지 / 우천·강설 등으로 인한 예약 취소는 당일 유선 취소로 진행(패널티 부여 없음) (출처: https://www.gwangsancc.kr/cotents/guide/reserGuide.do, 2026-11-27 확인)"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {},
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 1,
+     "to_days": 1,
+     "pct": null,
+     "suspend_months": 5,
+     "suspend_days": null,
+     "text": "1일 전 5개월"
+    },
+    {
+     "day": null,
+     "from_days": 2,
+     "to_days": 2,
+     "pct": null,
+     "suspend_months": 4,
+     "suspend_days": null,
+     "text": "2일 전 4개월"
+    },
+    {
+     "day": null,
+     "from_days": 3,
+     "to_days": 3,
+     "pct": null,
+     "suspend_months": 3,
+     "suspend_days": null,
+     "text": "3일 전 3개월"
+    },
+    {
+     "day": null,
+     "from_days": 4,
+     "to_days": 10,
+     "pct": null,
+     "suspend_months": 2,
+     "suspend_days": null,
+     "text": "4~10일 전 취소 : 2개월 예약정지"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "low",
+   "basis_text": [],
+   "penalty_text": [
+    "4~10일 전 취소 : 2개월 예약정지",
+    "3일 전 3개월",
+    "2일 전 4개월"
+   ]
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "month",
+     "before": 1,
+     "weekday": null,
+     "time": null,
+     "member": null,
+     "text": "1개월 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "이용예정일로부터 1개월 전 지정 일시에 오픈, 1인 월 4회까지 예약 가능(9홀·18홀 구분 없음)"
+  }
  },
  "ops": {
   "nocaddie": {

@@ -171,7 +171,28 @@
   "open_cycle": "공식 홈페이지 실시간 예약(코스·시간별 가격 안내)",
   "notes": "코스 내 그늘집 미운영 — 레스토랑 이용 시 음료 구매 필수, 음식·음료 배달 불가. 락카는 후불 결제",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3,
+     "time": "18:00"
+    },
+    "weekend": {
+     "days_before": 4,
+     "time": "18:00"
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "high",
+   "basis_text": [
+    "주중 3일 전·주말 4일 전 18:00까지 취소 시 위약 없음",
+    "주중 3일 전·주말 4일 전 18:00까지 취소 시 위약 없음"
+   ],
+   "penalty_text": []
+  }
  },
  "ops": {
   "nocaddie": {

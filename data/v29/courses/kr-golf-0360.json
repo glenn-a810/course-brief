@@ -176,7 +176,26 @@
   "evidence": [
    "https://www.leaderscc.com/booking/guide"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3
+    },
+    "weekend": {
+     "days_before": 4
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "정규예약: 평일 3일 전·휴일 4일 전 자정까지 위약 없이 취소",
+    "정규예약: 평일 3일 전·휴일 4일 전 자정까지 위약 없이 취소"
+   ],
+   "penalty_text": []
+  }
  },
  "ops": {
   "nocaddie": {

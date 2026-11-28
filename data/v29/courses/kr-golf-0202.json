@@ -449,7 +449,74 @@
    "주중, 주말 7일전 무위약 취소 가능하며 이후 취소는 위약제재 기준에 준함",
    "3mm 미만일 경우 취소불가 / 미내장 시 6개월 예약, 동반내장 정지 또는 위약금 50만원"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 7
+    },
+    "weekend": {
+     "days_before": 7
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "주중·주말 모두 7일 전까지: 무위약 취소 가능"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 6,
+     "weekday": null,
+     "time": "09:00",
+     "member": "정회원",
+     "text": "6주 전"
+    },
+    {
+     "scope": "weekday",
+     "unit": "week",
+     "before": 5,
+     "weekday": null,
+     "time": "09:00",
+     "member": "주중회원",
+     "text": "5주 전"
+    },
+    {
+     "scope": "weekend",
+     "unit": "week",
+     "before": 6,
+     "weekday": "월",
+     "time": "09:00",
+     "member": null,
+     "text": "6주 전 월요일"
+    },
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 4,
+     "weekday": null,
+     "time": "09:00",
+     "member": "회원",
+     "text": "4주 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "online",
+   "recurring": false,
+   "member_only": true,
+   "scope": "member",
+   "ambiguous": true,
+   "confidence": "low",
+   "text": "• 정회원: 6주 전 해당요일 9시 실시간 예약(주중)\n• 주중회원: 5주 전 해당요일 9시 실시간 예약(주중)\n• 주말·공휴일: 6주 전 월요일 9시~화요일 17시 온라인 배정 신청, 수요일 15시 확정\n• 온라…"
+  }
  },
  "ops": {
   "nocaddie": {

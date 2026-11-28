@@ -405,7 +405,26 @@
   "evidence": [
    "① 비회원 이용자가 주말이나 공휴일인 이용예정일로부터 4일전까지, 평일인 이용예정일로부터 3일전까지 예약을 취소한 경우에는 예약금의 전액을 환불하여야 한다. (출처: https://www.purunsolgc.co.kr/Policy/Service.aspx, 2026-11-27 확인)"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3
+    },
+    "weekend": {
+     "days_before": 4
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "non_member",
+   "confidence": "medium",
+   "basis_text": [
+    "비회원 기준 — 주말·공휴일 이용예정일 4일 전",
+    "평일 이용예정일 3일 전까지 취소 시 예약금 전액 환불"
+   ],
+   "penalty_text": []
+  }
  },
  "ops": {
   "nocaddie": {

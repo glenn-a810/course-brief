@@ -537,7 +537,27 @@
    "알림 확인 확인 취소 확인",
    "양평TPC | 주중 취소·변경 시한 05일 전 17:00 | 주말 05일 전 17:00 | 주중 위약 위약금 30만원 | 주말 위약 위약금 40만원"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 5,
+     "time": "17:00"
+    },
+    "weekend": {
+     "days_before": 5,
+     "time": "17:00"
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "high",
+   "basis_text": [
+    "평일·주말 모두 5일 전 17:00까지 취소 시 위약 없음"
+   ],
+   "penalty_text": []
+  }
  },
  "ops": {
   "nocaddie": {

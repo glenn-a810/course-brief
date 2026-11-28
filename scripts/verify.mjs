@@ -49,7 +49,8 @@ ok(typeof pkg.scripts?.build === "string" && pkg.scripts.build.includes("typeche
 // 1) 정적 자산 — JS·CSS 는 내용 해시가 붙은 파일명이어야 한다(F-14 캐시 버스팅)
 for (const f of ["index.html", "robots.txt", "_headers",
                  "data/v29/index.json", "data/v29/schema.md",
-                 "data/v29/clusters.json", "data/v29/sido.json", "data/v29/rental_providers.json"]) {
+                 "data/v29/clusters.json", "data/v29/sido.json", "data/v29/rental_providers.json",
+                 "data/v29/alerts.json", "data/v29/booking_rules.json"]) {
   ok(await exists(path.join(dist, f)), `dist/${f} 존재`);
 }
 const assetFiles = await readdir(path.join(dist, "assets"));
@@ -158,6 +159,18 @@ for (const p of ["data/v29/index.json", "data/v29/clusters.json", "data/source/g
   }
 }
 ok(leaked.length === 0, `개인정보·내부경로 문자열 없음${leaked.length ? " — " + leaked.slice(0, 5).join(", ") : ""}`);
+
+// 4-1) 예약 규칙 파싱·휴장 캘린더 데이터
+const alerts = JSON.parse(await readFile(path.join(dist, "data/v29/alerts.json"), "utf8"));
+ok(alerts.items?.length > 0, `alerts.json ${alerts.items?.length}건`);
+ok(alerts.items.every((i) => i.id && typeof i.id === "string"), "alerts 항목에 구장 id");
+const rules = JSON.parse(await readFile(path.join(dist, "data/v29/booking_rules.json"), "utf8"));
+const ruleCount = Object.keys(rules.rules ?? {}).length;
+ok(ruleCount > 300, `booking_rules.json ${ruleCount}곳`);
+const parsedCancel = Object.values(rules.rules ?? {}).filter((r) => r.cancel?.free && Object.keys(r.cancel.free).length).length;
+const parsedOpen = Object.values(rules.rules ?? {}).filter((r) => r.open?.rules?.length || r.open?.monthly?.length).length;
+ok(parsedCancel > 250, `취소 마감 파싱 ${parsedCancel}곳`);
+ok(parsedOpen > 250, `예약 오픈 파싱 ${parsedOpen}곳`);
 
 // 5) 클러스터 (F020)
 const clusters = JSON.parse(await readFile(path.join(dist, "data/v29/clusters.json"), "utf8")).clusters;

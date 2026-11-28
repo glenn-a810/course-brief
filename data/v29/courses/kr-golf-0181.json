@@ -521,7 +521,29 @@
    "임박취소,매너불량,예약자 미내장 등 1회 1개월 / 6개월 내 2회 3개월 / 6개월 내 3회 영구",
    "임박취소란? : 3일전 17시 이후 ~ 1일전 17시전 취소분"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 3,
+     "weekday": "월",
+     "time": "11:00",
+     "member": null,
+     "text": "3주 전 월요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "high",
+   "text": "라운드희망일 3주 전 월요일 11:00부터 예약 가능"
+  }
  },
  "ops": {
   "nocaddie": {

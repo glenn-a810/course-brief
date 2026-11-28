@@ -388,7 +388,53 @@
   "open_cycle": "• 2·4번째 일요일: 1개월 전 동일 일자 오픈\n• 그 외 주말·공휴일: 해당일 3주 전 월요일 오픈\n• 3대 국경일: 1개월 전 오픈\n• 예약 접수: 오전 10시",
   "notes": null,
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekend": {
+     "days_before": 7
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "주말 7일 전까지 가능"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "month",
+     "before": 1,
+     "weekday": null,
+     "time": null,
+     "member": null,
+     "text": "1개월 전"
+    },
+    {
+     "scope": "weekend",
+     "unit": "week",
+     "before": 3,
+     "weekday": "월",
+     "time": null,
+     "member": null,
+     "text": "3주 전 월요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "• 2·4번째 일요일: 1개월 전 동일 일자 오픈\n• 그 외 주말·공휴일: 해당일 3주 전 월요일 오픈\n• 3대 국경일: 1개월 전 오픈\n• 예약 접수: 오전 10시"
+  }
  },
  "ops": {
   "nocaddie": {

@@ -237,6 +237,49 @@
    "dress": "라운드복 입장 가능·단정 복장 권장, 하절기 반바지 가능, 만 7세 미만 미취학 아동 라운드 불가",
    "rules": "외부 음식물 반입 금지, 카트 리모컨 반납 필수(분실 시 비용), 네임택 부착 필수",
    "weather_criteria": "폭우 시간당 10mm, 폭설 그린 적설 2cm, 안개 가시거리 20m, 황사 미세먼지 경보(초교 휴교 기준), 강풍 순간 16m/s, 폭염 40도, 한파 영하 10도, 낙뢰 2회 이상"
+  },
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3,
+     "time": "17:00"
+    },
+    "weekend": {
+     "days_before": 4,
+     "time": "17:00"
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "취소: 평일 3일 전·주말 4일 전 17:00까지",
+    "취소: 평일 3일 전·주말 4일 전 17:00까지"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 2,
+     "weekday": null,
+     "time": "09:00",
+     "member": null,
+     "text": "2주 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "라운드 2주 전 해당 요일 09:00 오픈"
   }
  },
  "ops": {

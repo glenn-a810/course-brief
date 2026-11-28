@@ -264,7 +264,51 @@
   "open_cycle": "인터넷 예약 매주 월요일 5주 전 09:00 오픈(예약 마감 해당일 전날 23:59)",
   "notes": "인터넷 1인 1일 1팀, 1팀 4인 플레이. 단체·당일은 예약실 문의",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3
+    },
+    "weekend": {
+     "days_before": 4
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "평일 3일 전·주말 4일 전까지",
+    "평일 3일 전·주말 4일 전까지"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 5,
+     "weekday": null,
+     "time": "09:00",
+     "member": null,
+     "text": "5주 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": {
+    "weekday": "월",
+    "time": null
+   },
+   "method": "online",
+   "recurring": true,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "인터넷 예약 매주 월요일 5주 전 09:00 오픈(예약 마감 해당일 전날 23:59)"
+  }
  },
  "ops": {
   "nocaddie": {

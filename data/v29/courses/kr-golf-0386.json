@@ -230,7 +230,70 @@
   "open_cycle": "• 8주 전 월요일 09:00~수요일 17:00 신청 접수, 7주 전 월요일 13:00 이후 순차 배정\n• 예약실 연중무휴 09:00~17:30, 이메일 접수",
   "notes": "5인 플레이 미시행",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 7,
+     "time": "17:00"
+    },
+    "weekend": {
+     "days_before": 7,
+     "time": "17:00"
+    }
+   },
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 1,
+     "to_days": 1,
+     "pct": null,
+     "suspend_months": 1,
+     "suspend_days": null,
+     "text": "6일~1일 전 취소는 1개월 예약정지"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "high",
+   "basis_text": [
+    "7일 전 17시까지 무료 취소"
+   ],
+   "penalty_text": [
+    "6일~1일 전 취소는 1개월 예약정지"
+   ]
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 8,
+     "weekday": "월",
+     "time": "09:00",
+     "member": null,
+     "text": "8주 전 월요일"
+    },
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 7,
+     "weekday": "월",
+     "time": "13:00",
+     "member": null,
+     "text": "7주 전 월요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": true,
+   "confidence": "low",
+   "text": "• 8주 전 월요일 09:00~수요일 17:00 신청 접수, 7주 전 월요일 13:00 이후 순차 배정\n• 예약실 연중무휴 09:00~17:30, 이메일 접수"
+  }
  },
  "ops": {
   "nocaddie": {

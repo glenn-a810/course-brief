@@ -176,7 +176,57 @@
   "evidence": [
    "https://wondergolf.co.kr/courses/kr-kakao-19975143"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {},
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 14,
+     "to_days": 14,
+     "pct": null,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "개인 예약: 14일 전부터 당일 취소·노쇼 시 1일 3만원 차감"
+    },
+    {
+     "day": null,
+     "from_days": 21,
+     "to_days": 21,
+     "pct": null,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "단체 : 21일 전부터 취소·노쇼 시 팀별 위약 적용"
+    }
+   ],
+   "basis": "team",
+   "scope": "unknown",
+   "confidence": "low",
+   "basis_text": [],
+   "penalty_text": [
+    "개인 예약: 14일 전부터 당일 취소·노쇼 시 1일 3만원 차감",
+    "단체 : 21일 전부터 취소·노쇼 시 팀별 위약 적용"
+   ]
+  },
+  "parsed_open": {
+   "rules": [],
+   "monthly": [
+    {
+     "day": 1,
+     "weekday": null,
+     "time": "09:00",
+     "scope": "both"
+    }
+   ],
+   "weekly": null,
+   "method": "online",
+   "recurring": true,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "low",
+   "text": "• 매월 1일 09:00 다음 한 달 예약이 모바일로 오픈(예: 6월 1일 오픈 → 온라인 7월 1일~31일 접수)\n• 예약실 유선 예약은 해당 월(6월 1일~30일) 접수"
+  }
  },
  "ops": {
   "nocaddie": {

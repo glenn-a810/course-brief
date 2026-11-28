@@ -383,6 +383,34 @@
   ],
   "weather_evidence": [
    "경기중단 요금안내 라운드일 기준으로 취소 수수료는 아래와 같다."
+  ],
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 4,
+     "weekday": "월",
+     "time": null,
+     "member": null,
+     "text": "4주 뒤 월"
+    }
+   ],
+   "monthly": [],
+   "weekly": {
+    "weekday": "월",
+    "time": "09:00"
+   },
+   "method": null,
+   "recurring": true,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "매주 월요일 오전 9시, 오픈 주 포함 4주 뒤 월~일요일 티타임 오픈"
+  },
+  "weather_summary": [
+   "경기중단 요금안내 라운드일 기준으로 취소 수수료는 아래와 같다."
   ]
  },
  "ops": {

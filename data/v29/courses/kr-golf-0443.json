@@ -260,7 +260,48 @@
   "open_cycle": "인터넷 오픈일 5주 전 월요일 09:00(예약 마감은 이용일 전날 23:59)",
   "notes": "3인 플레이 1인당 주중 10,000원·주말 20,000원 추가\n• 고의 지연플레이 시 3개월 예약정지",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3
+    },
+    "weekend": {
+     "days_before": 4
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "평일 3일 전·주말 4일 전까지",
+    "평일 3일 전·주말 4일 전까지"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 5,
+     "weekday": "월",
+     "time": "09:00",
+     "member": null,
+     "text": "5주 전 월요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "online",
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "high",
+   "text": "인터넷 오픈일 5주 전 월요일 09:00(예약 마감은 이용일 전날 23:59)"
+  }
  },
  "ops": {
   "nocaddie": {

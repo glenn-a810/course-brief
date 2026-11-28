@@ -215,7 +215,28 @@
   "open_cycle": "예약 월 기준 두 달 전 마지막 주 월요일 09:00 인터넷 선착순 오픈(오픈일이 공휴일이면 익일 주중)",
   "notes": "2인 플레이 불가, 티오프 30분 전 도착",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3,
+     "time": "17:00"
+    },
+    "weekend": {
+     "days_before": 4,
+     "time": "17:00"
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "평일 3일 전·주말 4일 전 17:00까지",
+    "평일 3일 전·주말 4일 전 17:00까지"
+   ],
+   "penalty_text": []
+  }
  },
  "ops": {
   "nocaddie": {

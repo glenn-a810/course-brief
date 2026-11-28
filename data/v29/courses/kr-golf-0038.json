@@ -178,7 +178,29 @@
    "함평 엘리체 컨트리클럽 로그인 회원가입 CEO 인사말 클럽소개 골프장개요 코스개요 찾아오시는길 예약하기 예약확인/취소 회원서비스 이용안내 이용요금 예약안내 Local Rule 골프텔 이용안내 회원약관 코스공략법 클럽하우스 소개 클럽하우스 메뉴 공지사항 조인예약 골프자료실 분실물센터 포토갤러리 회원정보변경 이용내역 이용안내 이용안내 이용요금 예약안내 Local Rule 골프텔 이용안내 회원약관 골프장이용 표준약관 > 이용안내 > 이용안내 이러한 기회를 함평엘리체컨트리클럽이 선도해 나갈 것이며, 페어웨이를 따라 반짝거리며 흐르고 있는 ",
    "1일전 예약취소 (출처: https://www.hpelichecc.co.kr/hampyeong/html/guide/guide03.asp, 2026-11-27 확인)"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 4,
+     "weekday": null,
+     "time": null,
+     "member": null,
+     "text": "4주 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "예약 희망일 4주 전 예약"
+  }
  },
  "ops": {
   "nocaddie": {

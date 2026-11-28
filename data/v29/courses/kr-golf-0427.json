@@ -276,7 +276,36 @@
   "open_cycle": "매월 1일 09:00 오픈(공휴일 포함), 이용일 기준 2개월 전부터",
   "notes": "2인 플레이 팀당 30,000원 추가. 캐디 외 골프카트 운전 일체 금지",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "weekend",
+     "unit": "month",
+     "before": 2,
+     "weekday": null,
+     "time": null,
+     "member": null,
+     "text": "2개월 전"
+    }
+   ],
+   "monthly": [
+    {
+     "day": 1,
+     "weekday": null,
+     "time": "09:00",
+     "scope": "both"
+    }
+   ],
+   "weekly": null,
+   "method": null,
+   "recurring": true,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "매월 1일 09:00 오픈(공휴일 포함), 이용일 기준 2개월 전부터"
+  }
  },
  "ops": {
   "nocaddie": {

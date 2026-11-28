@@ -302,7 +302,50 @@
   "open_cycle": "인터넷 오픈 5주 전 월요일 09:00(예약 마감 해당일 전날 23:59)",
   "notes": null,
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3,
+     "time": "18:00"
+    },
+    "weekend": {
+     "days_before": 4,
+     "time": "18:00"
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "high",
+   "basis_text": [
+    "라운드일 기준 주중 3일 전·주말 4일 전 18:00까지 취소 가능",
+    "라운드일 기준 주중 3일 전·주말 4일 전 18:00까지 취소 가능"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 5,
+     "weekday": "월",
+     "time": "09:00",
+     "member": null,
+     "text": "5주 전 월요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "online",
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "high",
+   "text": "인터넷 오픈 5주 전 월요일 09:00(예약 마감 해당일 전날 23:59)"
+  }
  },
  "ops": {
   "nocaddie": {

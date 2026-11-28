@@ -218,6 +218,92 @@
    "cancel_limit": "1개월 내 취소 5회 초과 시 3개월 예약정지",
    "weather_cancel": "강수 시간당 2mm 2시간 이상 예보, 평균풍속 10m/s·순간 14m/s 이상, 호우·태풍·한파·폭염 경보, 안개 시야확보 곤란, 낙뢰 시 취소 가능(기상청 날씨누리 경주시 북군동 관측). 당일 유선 취소는 티오프 3시간 전부터",
    "cancel_exception": "직계가족 상·사고 등 불가피한 사유는 증빙 제출 시 위약 해지"
+  },
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 5,
+     "time": "17:00"
+    },
+    "weekend": {
+     "days_before": 5,
+     "time": "17:00"
+    }
+   },
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 1,
+     "to_days": 1,
+     "pct": 20.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "1일 전: 20% · 당일·미내방: 30%"
+    },
+    {
+     "day": null,
+     "from_days": 2,
+     "to_days": 2,
+     "pct": 10.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "2일 전: 이용정지 또는 10%"
+    },
+    {
+     "day": null,
+     "from_days": 3,
+     "to_days": 3,
+     "pct": null,
+     "suspend_months": 3,
+     "suspend_days": null,
+     "text": "3일 전: 3개월 예약정지 주말"
+    },
+    {
+     "day": null,
+     "from_days": 4,
+     "to_days": 4,
+     "pct": null,
+     "suspend_months": 2,
+     "suspend_days": null,
+     "text": "4일 전: 2개월 예약정지"
+    }
+   ],
+   "basis": "team",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "취소: 이용예정일 5일 전 17:00까지 온라인"
+   ],
+   "penalty_text": [
+    "4일 전: 2개월 예약정지",
+    "3일 전: 3개월 예약정지 주말",
+    "2일 전: 이용정지 또는 10%"
+   ]
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 2,
+     "weekday": "월",
+     "time": null,
+     "member": null,
+     "text": "2주 후 월"
+    }
+   ],
+   "monthly": [],
+   "weekly": {
+    "weekday": "월",
+    "time": "09:00"
+   },
+   "method": null,
+   "recurring": true,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "매주 월요일 오전 09시에 2주 후 월~일요일(1주일분) 예약 오픈"
   }
  },
  "ops": {

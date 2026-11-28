@@ -221,7 +221,39 @@
   "evidence": [
    "솔모로 | 주중 취소·변경 시한 07일 전 17:00 | 주말 07일 전 17:00 | 주중 위약 1일~6일전 취소: 6개월 예약 정지 377,300원 * 상기 패널티 규정은 수시로 업데이트 될 수 있으며, 골프장 패널티 규정을 최우선으로 적용됩니다. | 주말 위약 1일~6일전 취소: 1년 예약 정지 토 - 587,400원 일 - 556,400원 *상기 패널티 규정은 수시로 업데이트 될 수 있으며, 골프장 패널티 규정을 최우선으로 적용합니다."
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 7,
+     "time": "17:00"
+    },
+    "weekend": {
+     "days_before": 7,
+     "time": "17:00"
+    }
+   },
+   "penalty": [
+    {
+     "day": "weekday",
+     "from_days": 1,
+     "to_days": 6,
+     "pct": null,
+     "suspend_months": 6,
+     "suspend_days": null,
+     "text": "평일: 1~6일 전 취소 시 6개월 예약정지"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "high",
+   "basis_text": [
+    "평일·주말 모두 7일 전 17:00까지 취소 시 위약 없음"
+   ],
+   "penalty_text": [
+    "평일: 1~6일 전 취소 시 6개월 예약정지"
+   ]
+  }
  },
  "ops": {
   "nocaddie": {

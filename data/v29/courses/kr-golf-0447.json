@@ -168,7 +168,26 @@
   "open_cycle": "춘천 사전예약은 매주 월요일 09시 오픈(주 단위)",
   "notes": "1팀 3~4인, 2인은 3인 그린피 적용(비수기 예외), 1일 1팀 예약",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3
+    },
+    "weekend": {
+     "days_before": 4
+    }
+   },
+   "penalty": [],
+   "basis": "team",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "평일 3일 전·주말·공휴일 4일 전까지 취소 시 예약금 전액 환불",
+    "평일 3일 전·주말·공휴일 4일 전까지 취소 시 예약금 전액 환불"
+   ],
+   "penalty_text": []
+  }
  },
  "ops": {
   "nocaddie": {

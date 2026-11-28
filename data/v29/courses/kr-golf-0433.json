@@ -265,7 +265,51 @@
   "open_cycle": "회원 매주 월요일 11시, 비회원 매주 월요일 13시에 4주 후 1주일분(월~일) 오픈",
   "notes": "2인 불가, 티오프 30분 전 도착",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3
+    },
+    "weekend": {
+     "days_before": 4
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "평일 3일 전·주말 4일 전까지",
+    "평일 3일 전·주말 4일 전까지"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 4,
+     "weekday": null,
+     "time": null,
+     "member": "비회원",
+     "text": "4주 후"
+    }
+   ],
+   "monthly": [],
+   "weekly": {
+    "weekday": "월",
+    "time": "11:00"
+   },
+   "method": null,
+   "recurring": true,
+   "member_only": false,
+   "scope": "non_member",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "회원 매주 월요일 11시, 비회원 매주 월요일 13시에 4주 후 1주일분(월~일) 오픈"
+  }
  },
  "ops": {
   "nocaddie": {

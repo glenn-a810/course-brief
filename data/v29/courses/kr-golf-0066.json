@@ -264,7 +264,38 @@
   "evidence": [
    "주말 (회원) 3주 전 화요일 9시 / 주중 (회원) 3주 전 목요일 9시 / 비회원 2주 전부터 가능 … 선착순 예약 (https://contents.premium.naver.com/cleek/economiclaboratory/contents/260429101649653lv)"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 2,
+     "weekday": null,
+     "time": null,
+     "member": "비회원",
+     "text": "2주 전"
+    },
+    {
+     "scope": "weekday",
+     "unit": "week",
+     "before": 3,
+     "weekday": "목",
+     "time": "09:00",
+     "member": null,
+     "text": "3주 전 목요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "fcfs",
+   "recurring": false,
+   "member_only": false,
+   "scope": "non_member",
+   "ambiguous": false,
+   "confidence": "high",
+   "text": "회원 주말 예약은 3주 전 화요일 09:00, 주중은 3주 전 목요일 09:00. 비회원은 2주 전부터 예약 가능(선착순)"
+  }
  },
  "ops": {
   "nocaddie": {

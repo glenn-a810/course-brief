@@ -177,7 +177,49 @@
   "evidence": [
    "중원골프클럽은 예약일 4일 전 17시 이전까지 취소·변경이 가능하고, 주말 당일 취소는 팀별 이용요금의 30%예요."
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 4,
+     "time": "17:00"
+    },
+    "weekend": {
+     "days_before": 4,
+     "time": "17:00"
+    }
+   },
+   "penalty": [],
+   "basis": "team",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "예약일 4일 전 17시 이전까지 취소·변경 가능"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 4,
+     "weekday": null,
+     "time": null,
+     "member": null,
+     "text": "4주 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "online",
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "4주 전(28일 전) 해당 요일 인터넷 홈페이지 예약 오픈, 인터넷 회원 가입 후 예약 가능"
+  }
  },
  "ops": {
   "nocaddie": {

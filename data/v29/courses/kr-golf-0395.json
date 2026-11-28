@@ -188,7 +188,28 @@
   "open_cycle": "주 단위 오픈(약 4주 전, 예: 9/21 예약 → 10/19~25분). 인터넷·모바일·전화. 오픈 시각 미게시",
   "notes": "정기휴장 연중무휴, 18홀 4시간20분",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 5,
+     "time": "17:00"
+    },
+    "weekend": {
+     "days_before": 7,
+     "time": "17:00"
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "member",
+   "confidence": "medium",
+   "basis_text": [
+    "평일 3일 전·주말 4일 전까지 무료",
+    "평일 3일 전·주말 4일 전까지 무료"
+   ],
+   "penalty_text": []
+  }
  },
  "ops": {
   "nocaddie": {

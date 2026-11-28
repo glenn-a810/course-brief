@@ -475,7 +475,29 @@
    "예 아니오 확인 Close 예약안내 확인 Close 예약안내 확인 Close 예약안내 확인 Close 알펜시아CC 예약안내 확인 Close 위약기간으로 예약취소 시 위약금이 발생합니다.",
    "위약금은 예약보증금에서 차감되며, 보유한 예약보증금이 500,000 원 이하인 경우 회원제 골프장 예약이 제한됩니다."
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 4,
+     "weekday": "월",
+     "time": "09:00",
+     "member": null,
+     "text": "4주 전 월요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "fcfs",
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "high",
+   "text": "라운드일 기준 4주 전 월요일 오전 9시부터 선착순 예약(1인 1일 1팀)"
+  }
  },
  "ops": {
   "nocaddie": {

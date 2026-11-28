@@ -163,7 +163,47 @@
   "open_cycle": "이용일 2개월 전 1일부터 예약 가능(인터넷 09:00~17:00)",
   "notes": null,
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 9
+    },
+    "weekend": {
+     "days_before": 9
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "취소 가능: 9일 전 예약실 업무시간 평일 까지"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "month",
+     "before": 2,
+     "weekday": null,
+     "time": null,
+     "member": null,
+     "text": "2개월 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "online",
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "이용일 2개월 전 1일부터 예약 가능(인터넷 09:00~17:00)"
+  }
  },
  "ops": {
   "nocaddie": {

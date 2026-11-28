@@ -146,7 +146,38 @@
   "open_cycle": "• 인터넷 접수: 09:00~15:00\n• 평일·공휴일: 예약희망일 4주 전 같은 요일(28일 전)\n• 주말: 3주 전 화요일(25일 전)\n• 익일 17시경 카카오알림톡/SMS 통보",
   "notes": null,
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 4,
+     "weekday": null,
+     "time": null,
+     "member": null,
+     "text": "4주 전"
+    },
+    {
+     "scope": "weekend",
+     "unit": "week",
+     "before": 3,
+     "weekday": "화",
+     "time": "17:00",
+     "member": null,
+     "text": "3주 전 화요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "online",
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "high",
+   "text": "• 인터넷 접수: 09:00~15:00\n• 평일·공휴일: 예약희망일 4주 전 같은 요일(28일 전)\n• 주말: 3주 전 화요일(25일 전)\n• 익일 17시경 카카오알림톡/SMS 통보"
+  }
  },
  "ops": {
   "nocaddie": {

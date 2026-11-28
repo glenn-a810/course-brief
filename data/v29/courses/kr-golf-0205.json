@@ -256,7 +256,29 @@
   "open_cycle": "해당일 3주 전 10시 예약 오픈. 전화예약 가능 시간 10시~18시",
   "notes": null,
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 3,
+     "weekday": null,
+     "time": "10:00",
+     "member": null,
+     "text": "3주 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "phone",
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "해당일 3주 전 10시 예약 오픈. 전화예약 가능 시간 10시~18시"
+  }
  },
  "ops": {
   "nocaddie": {

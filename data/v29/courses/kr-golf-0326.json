@@ -243,7 +243,93 @@
     "checked_at": "2026-11-27",
     "source_type": "official_summary(greenfeeguide)"
    }
-  ]
+  ],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 5,
+     "time": "17:00"
+    },
+    "weekend": {
+     "days_before": 5,
+     "time": "17:00"
+    }
+   },
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 1,
+     "to_days": 1,
+     "pct": null,
+     "suspend_months": 4,
+     "suspend_days": null,
+     "text": "위약 : 4일 전 1개월 · 3일 전 2개월 · 2일 전 3개월 · 1일 전 4개월 · 당일·미내장 5개월"
+    },
+    {
+     "day": null,
+     "from_days": 2,
+     "to_days": 2,
+     "pct": null,
+     "suspend_months": 3,
+     "suspend_days": null,
+     "text": "위약 : 4일 전 1개월 · 3일 전 2개월 · 2일 전 3개월 · 1일 전 4개월 · 당일·미내장 5개월"
+    },
+    {
+     "day": null,
+     "from_days": 3,
+     "to_days": 3,
+     "pct": null,
+     "suspend_months": 2,
+     "suspend_days": null,
+     "text": "위약 : 4일 전 1개월 · 3일 전 2개월 · 2일 전 3개월 · 1일 전 4개월 · 당일·미내장 5개월"
+    },
+    {
+     "day": null,
+     "from_days": 4,
+     "to_days": 4,
+     "pct": null,
+     "suspend_months": 1,
+     "suspend_days": null,
+     "text": "위약 : 4일 전 1개월 · 3일 전 2개월 · 2일 전 3개월 · 1일 전 4개월 · 당일·미내장 5개월"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "high",
+   "basis_text": [
+    "정상 취소: 경기 예정일 5일 전 17:00까지 온라인"
+   ],
+   "penalty_text": [
+    "위약 : 4일 전 1개월 · 3일 전 2개월 · 2일 전 3개월 · 1일 전 4개월 · 당일·미내장 5개월",
+    "위약 : 4일 전 1개월 · 3일 전 2개월 · 2일 전 3개월 · 1일 전 4개월 · 당일·미내장 5개월",
+    "위약 : 4일 전 1개월 · 3일 전 2개월 · 2일 전 3개월 · 1일 전 4개월 · 당일·미내장 5개월"
+   ]
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 2,
+     "weekday": "월",
+     "time": null,
+     "member": null,
+     "text": "2주 후 월"
+    }
+   ],
+   "monthly": [],
+   "weekly": {
+    "weekday": "월",
+    "time": "10:00"
+   },
+   "method": null,
+   "recurring": true,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "매주 월요일 오전 10시에 2주 후 월~일요일(일주일분) 예약 가능"
+  }
  },
  "ops": {
   "nocaddie": {

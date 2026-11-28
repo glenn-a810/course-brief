@@ -158,7 +158,26 @@
   "evidence": [
    "위약 없이 취소: 평일 3일 전 · 주말 4일 전까지 (이용약관 기준 — 예약 안내에 더 이른 기한이 따로 있을 수 있으니 함께 확인하세요) — https://greenfeeguide.co.kr/course/gc-0007/"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3
+    },
+    "weekend": {
+     "days_before": 4
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "위약 없이 취소: 평일 3일 전 · 주말 4일 전까지",
+    "위약 없이 취소: 평일 3일 전 · 주말 4일 전까지"
+   ],
+   "penalty_text": []
+  }
  },
  "ops": {
   "nocaddie": {

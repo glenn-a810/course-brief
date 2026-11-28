@@ -761,7 +761,48 @@
   "weather_evidence": [
    "예약 바로가기 카트피 및 캐디피 이용요금 구분 카트피(팀) 캐디피(팀) 1부,2부(주간) 3부(야간) 금액 100,000원 150,000원 160,000원 대여료 대여료 구분 최고급세트 고급세트 단품 대여채 100,000원 70,000원 10,000원 홀별정산 - 악천후나 천재지변으로 인하여 경기중단 시 다음과 같이 홀별 정산됩니다.",
    "- 악천후 등으로 인하여 홀별 정산 시 특가요금이 아닌 정상 그린피에서 홀별정산됩니다."
-  ]
+  ],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3
+    },
+    "weekend": {
+     "days_before": 4
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "예약일 제외 주중 3일 전·주말 및 공휴일 4일 전까지 취소 가능",
+    "예약일 제외 주중 3일 전·주말 및 공휴일 4일 전까지 취소 가능"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 4,
+     "weekday": null,
+     "time": "09:00",
+     "member": null,
+     "text": "4주 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "fcfs",
+   "recurring": true,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "4주 전 오전 9시 정각 오픈, 매월 첫째 주 월~수요일 접수(선착순)"
+  }
  },
  "ops": {
   "nocaddie": {

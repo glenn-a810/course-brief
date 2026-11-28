@@ -125,7 +125,50 @@
   "evidence": [],
   "weather_evidence": [
    "영업시간 및 휴장일 구분 주중 주말 영업시간 05:00 ~ 24:00(계절에 따라 시간 변동이 있을 수 있습니다.) 휴장일 기상상황 악화 또는 시설물 점검 등 별도공지 기타안내 연습장 이용 종료 후 프론트에 배정표 제출시 사우나 락카 사용가능.(회원 무료 1일 1회 / 일일회원 2,000원) 코스 내장객에 따라 사우나 사용이 제한될 수 있으니 이 점 양지해 주시기 바랍니다."
-  ]
+  ],
+  "parsed_cancel": {
+   "free": {},
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 2,
+     "to_days": 2,
+     "pct": null,
+     "suspend_months": null,
+     "suspend_days": 15,
+     "text": "2일 전 15일 정지. 2일 이전 취소 3회 시 강제탈퇴"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "low",
+   "basis_text": [],
+   "penalty_text": [
+    "2일 전 15일 정지. 2일 이전 취소 3회 시 강제탈퇴"
+   ]
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 4,
+     "weekday": null,
+     "time": "09:00",
+     "member": null,
+     "text": "4주 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "예약일 기준 4주 전 오전 9시 오픈(같은 요일 4주 전 09시)"
+  }
  },
  "ops": {
   "nocaddie": {

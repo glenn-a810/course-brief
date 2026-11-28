@@ -370,6 +370,84 @@
   "weather_evidence": [
    "※ 시간대별 인원 제한 운영 ※ 지역할인(포천/남양주)은 주중에만 적용/2인플레이 적용제외/신분증제시필수 ※ 우대혜택은 타 할인 이벤트와 중복할인 불가 ※ 월별 그린피 참조 기상악화 요금 안내 강설, 폭우, 기타 천재지변 등으로 경기를 정상적으로 마치지 못하시는 경우 기상악화 요금이 적용됩니다.",
    "기상악화 요금은 공정거래위원회 골프장이용 표준약관 기준으로 산정됩니다."
+  ],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 5
+    },
+    "weekend": {
+     "days_before": 5
+    }
+   },
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 1,
+     "to_days": 1,
+     "pct": 20.0,
+     "suspend_months": 6,
+     "suspend_days": null,
+     "text": "1일 전 6개월·20% · 2일 전 3개월·10% · 3일 전 1개월 정지"
+    },
+    {
+     "day": null,
+     "from_days": 2,
+     "to_days": 2,
+     "pct": 10.0,
+     "suspend_months": 3,
+     "suspend_days": null,
+     "text": "1일 전 6개월·20% · 2일 전 3개월·10% · 3일 전 1개월 정지"
+    },
+    {
+     "day": null,
+     "from_days": 3,
+     "to_days": 3,
+     "pct": null,
+     "suspend_months": 1,
+     "suspend_days": null,
+     "text": "1일 전 6개월·20% · 2일 전 3개월·10% · 3일 전 1개월 정지"
+    }
+   ],
+   "basis": "team",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "4~5일 전 취소: 위약 없음"
+   ],
+   "penalty_text": [
+    "1일 전 6개월·20% · 2일 전 3개월·10% · 3일 전 1개월 정지",
+    "1일 전 6개월·20% · 2일 전 3개월·10% · 3일 전 1개월 정지",
+    "1일 전 6개월·20% · 2일 전 3개월·10% · 3일 전 1개월 정지"
+   ]
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 4,
+     "weekday": null,
+     "time": null,
+     "member": null,
+     "text": "4주 후"
+    }
+   ],
+   "monthly": [],
+   "weekly": {
+    "weekday": "화",
+    "time": "17:30"
+   },
+   "method": null,
+   "recurring": true,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "매주 화요일 17:30에 4주 후 해당 주(월~일) 예약분을 실시간 오픈(포레스트 6홀 코스 기준)"
+  },
+  "weather_summary": [
+   "기상악화 요금은 공정거래위원회 골프장이용 표준약관 기준으로 산정됩니다."
   ]
  },
  "ops": {

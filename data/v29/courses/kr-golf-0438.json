@@ -208,7 +208,29 @@
   "evidence": [
    "인터넷 예약 3주전 09시 부터 (https://www.parkvalley.co.kr/Guide/ReservationInfo.aspx)"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 3,
+     "weekday": null,
+     "time": "09:00",
+     "member": null,
+     "text": "3주 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "online",
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "인터넷 예약은 이용일 3주 전 09시부터(전화 예약은 그 다음 영업일 09시부터)"
+  }
  },
  "ops": {
   "nocaddie": {

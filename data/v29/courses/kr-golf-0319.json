@@ -636,7 +636,75 @@
   "weather_evidence": [
    "청룡, 백호, 거북의 기상을 담은 코스 설계 지금까지의 한국 골프장의 아름다움과 한계를 극복한 전혀 새로운 테마로서 골프 코스의 묘미를 넘어 골프장 디자인에도 감동과 명예를 담을 수 있다는 것을 보여드리겠습니다."
   ],
-  "browser_official": null
+  "browser_official": null,
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3,
+     "time": "17:00"
+    },
+    "weekend": {
+     "days_before": 4,
+     "time": "17:00"
+    }
+   },
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 1,
+     "to_days": 1,
+     "pct": 20.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "1일 전: 20% · 당일 취소·미내장: 30%"
+    },
+    {
+     "day": "weekday",
+     "from_days": 2,
+     "to_days": 2,
+     "pct": 10.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "주말 3~2일 전·주중 2일 전: 10%"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "high",
+   "basis_text": [
+    "정상 취소: 주말·공휴일 4일 전 17시까지 · 주중 3일 전 17시까지",
+    "정상 취소: 주말·공휴일 4일 전 17시까지 · 주중 3일 전 17시까지"
+   ],
+   "penalty_text": [
+    "주말 3~2일 전·주중 2일 전: 10%",
+    "1일 전: 20% · 당일 취소·미내장: 30%"
+   ]
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 2,
+     "weekday": "월",
+     "time": "09:00",
+     "member": null,
+     "text": "2주 전 월요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "high",
+   "text": "이용예정일 2주 전 월요일 09시부터 예약"
+  },
+  "weather_summary": [
+   "청룡, 백호, 거북의 기상을 담은 코스 설계 지금까지의 한국 골프장의 아름다움과 한계를 극복한 전혀 새로운 테마로서 골프 코스의 묘미를 넘어 골프장 디자인에도 감동과 명예를 담을 수 있다는 것을 보여드리겠습니다."
+  ]
  },
  "ops": {
   "nocaddie": {

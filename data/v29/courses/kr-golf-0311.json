@@ -194,6 +194,70 @@
    "refund_note": "우천 선택제 운영 시 골프장 사정에 의한 중단 외 환불 없음, 내장객 사정에 의한 중단은 정상요금",
    "tee_time": "티업시간은 팀 수·날씨에 따라 ±10~20분 변동",
    "no_caddie": null
+  },
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3,
+     "time": "18:00"
+    },
+    "weekend": {
+     "days_before": 3,
+     "time": "18:00"
+    }
+   },
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 1,
+     "to_days": 1,
+     "pct": 20.0,
+     "suspend_months": 3,
+     "suspend_days": null,
+     "text": "1일 전: 20% + 3개월 정지"
+    },
+    {
+     "day": null,
+     "from_days": 2,
+     "to_days": 2,
+     "pct": 10.0,
+     "suspend_months": 1,
+     "suspend_days": null,
+     "text": "2일 전: 정상요금 10% + 1개월 정지"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "취소·변경: 티업일 3일 전 18:00까지"
+   ],
+   "penalty_text": [
+    "2일 전: 정상요금 10% + 1개월 정지",
+    "1일 전: 20% + 3개월 정지"
+   ]
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "day",
+     "before": 14,
+     "weekday": "월",
+     "time": "09:00",
+     "member": null,
+     "text": "14일 전 월요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "fcfs",
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "high",
+   "text": "14일 전 월요일 09:00, 월~일 1주분 선착순"
   }
  },
  "ops": {

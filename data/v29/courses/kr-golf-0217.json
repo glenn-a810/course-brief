@@ -473,7 +473,47 @@
   "open_cycle": "라운드일 3주 전 같은 요일 오전 9시부터 예약 시작(정회원 우선, 17일 전 2차 접수)",
   "notes": null,
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 4
+    },
+    "weekend": {
+     "days_before": 4
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "개인팀 예약 취소는 라운드 4일 전 오후 5시까지 가능"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 3,
+     "weekday": null,
+     "time": "09:00",
+     "member": null,
+     "text": "3주 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "라운드일 3주 전 같은 요일 오전 9시부터 예약 시작(정회원 우선, 17일 전 2차 접수)"
+  }
  },
  "ops": {
   "nocaddie": {

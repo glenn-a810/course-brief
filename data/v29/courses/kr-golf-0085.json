@@ -200,7 +200,70 @@
     "checked_at": "2026-11-27",
     "source_type": "third_party"
    }
-  ]
+  ],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3
+    },
+    "weekend": {
+     "days_before": 4
+    }
+   },
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 1,
+     "to_days": 1,
+     "pct": 20.0,
+     "suspend_months": 3,
+     "suspend_days": null,
+     "text": "1일 전: 3개월·20%"
+    },
+    {
+     "day": null,
+     "from_days": 2,
+     "to_days": 2,
+     "pct": 10.0,
+     "suspend_months": 1,
+     "suspend_days": null,
+     "text": "2일 전: 1개월 정지 또는 이용요금 10%"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "취소 가능: 주중 3일 전·주말·공휴일 4일 전까지",
+    "취소 가능: 주중 3일 전·주말·공휴일 4일 전까지"
+   ],
+   "penalty_text": [
+    "2일 전: 1개월 정지 또는 이용요금 10%",
+    "1일 전: 3개월·20%"
+   ]
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "month",
+     "before": 1,
+     "weekday": "일",
+     "time": null,
+     "member": null,
+     "text": "1개월 전 일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "online",
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "인터넷 예약 1개월 전 일괄 오픈"
+  }
  },
  "ops": {
   "nocaddie": {

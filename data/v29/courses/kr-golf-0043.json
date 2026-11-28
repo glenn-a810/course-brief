@@ -598,7 +598,26 @@
   ],
   "weather_evidence": [
    "시설이용료(기본요금) : 골프장 이용시 기본적으로 발생되는 비용으로서 락커, 샤워실 등 클럽하우스 시설 이용에 부과되는 요금 및 제세공과금 (2022년 기준 기본요금 20,000원) 기 이용한 홀수 : 기 이용한 홀수에 대한 요금 부과 판단은 티오프(티샷)을 기준으로 함 홀별 정산은 기상악화로 인한 플레이를 기준하며, 개인 사정으로 인한 홀별정산은 불가합니다."
-  ]
+  ],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3
+    },
+    "weekend": {
+     "days_before": 4
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "위약 없이 취소: 평일 3일 전 · 주말 4일 전까지",
+    "위약 없이 취소: 평일 3일 전 · 주말 4일 전까지"
+   ],
+   "penalty_text": []
+  }
  },
  "ops": {
   "nocaddie": {

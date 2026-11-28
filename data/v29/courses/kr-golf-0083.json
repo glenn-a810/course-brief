@@ -165,7 +165,67 @@
    "https://wondergolf.co.kr/courses/kr-kakao-8034159",
    "예약 취소: 경기일 제외 7일전 17:00까지 ARS"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 7,
+     "time": "17:00"
+    },
+    "weekend": {
+     "days_before": 7,
+     "time": "17:00"
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "예약 취소는 경기일 제외 7일 전 17:00까지 ARS 접수"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "weekday",
+     "unit": "week",
+     "before": 2,
+     "weekday": "월",
+     "time": "10:00",
+     "member": null,
+     "text": "2주 전 월요일"
+    },
+    {
+     "scope": "both",
+     "unit": "day",
+     "before": 12,
+     "weekday": null,
+     "time": "11:00",
+     "member": null,
+     "text": "12일 전"
+    },
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 1,
+     "weekday": "월",
+     "time": "14:00",
+     "member": null,
+     "text": "전주 월요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "high",
+   "text": "• 평일(화~금): 경기일 2주 전 월요일 10:00부터 ARS\n• 토요일: 전주 월요일 14:00부터 ARS\n• 일요일: 경기일 12일 전(화) 11:00~13:00 문자 접수"
+  }
  },
  "ops": {
   "nocaddie": {

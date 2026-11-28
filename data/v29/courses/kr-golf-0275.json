@@ -176,7 +176,32 @@
   "open_cycle": "인터넷 오픈일 매월 홈페이지 공지. 2026년 10월분은 매주 월요일 11시에 3주 뒤 월~일 1주일분 오픈",
   "notes": "인터넷 1인 1일 1팀 신청, 2팀 이상 일반단체는 예약실 문의. 3인 플레이 시 4인 요금",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 3,
+     "weekday": "월",
+     "time": null,
+     "member": null,
+     "text": "3주 뒤 월"
+    }
+   ],
+   "monthly": [],
+   "weekly": {
+    "weekday": "월",
+    "time": "11:00"
+   },
+   "method": "online",
+   "recurring": true,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "인터넷 오픈일 매월 홈페이지 공지. 2026년 10월분은 매주 월요일 11시에 3주 뒤 월~일 1주일분 오픈"
+  }
  },
  "ops": {
   "nocaddie": {

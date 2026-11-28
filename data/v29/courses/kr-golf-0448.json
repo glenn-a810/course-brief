@@ -202,7 +202,25 @@
   "open_cycle": null,
   "notes": "정기 휴장일 없음, 티오프 30분 전 도착. 2026-11 실거래 9홀 40,000~65,000원",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 8
+    },
+    "weekend": {
+     "days_before": 8
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "8일 전까지 무료 취소"
+   ],
+   "penalty_text": []
+  }
  },
  "ops": {
   "nocaddie": {

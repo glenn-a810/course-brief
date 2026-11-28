@@ -191,7 +191,38 @@
    "닫기 취소 확인 멤버십 카드 닫기 플랫폼 선택 닫기 선택 아난티 코드 아난티 코브 아난티 남해 아난티 회원권 확인 관심 플랫폼&저니 설정 닫기 관심있는 아난티 플랫폼과 저니를 선택해 주세요 다음에 할게요 확인 닫기 라메르 or 라포레 or 다모임 닫기 우아한 바다, 라메르!",
    "예약 오픈 주기: 주중은 4주 전 화요일에 월~금요일, 주말은 4주 전 목요일에 토~일요일 예약 접수 (https://ananti.kr/ko/chord/golfclub/information)"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "weekday",
+     "unit": "week",
+     "before": 4,
+     "weekday": "화",
+     "time": null,
+     "member": null,
+     "text": "4주 전 화요일"
+    },
+    {
+     "scope": "weekend",
+     "unit": "week",
+     "before": 4,
+     "weekday": "목",
+     "time": null,
+     "member": null,
+     "text": "4주 전 목요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "주중은 4주 전 화요일에 월~금요일, 주말은 4주 전 목요일에 토~일요일 예약 접수"
+  }
  },
  "ops": {
   "nocaddie": {

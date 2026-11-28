@@ -692,7 +692,38 @@
   "open_cycle": null,
   "notes": null,
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3
+    },
+    "weekend": {
+     "days_before": 4
+    }
+   },
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 1,
+     "to_days": 1,
+     "pct": 20.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "1일 전 20%"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "평일 이용일 3일 전",
+    "주말·공휴일 4일 전까지 취소 시 위약 없음. 이후 2일 전 10%"
+   ],
+   "penalty_text": [
+    "1일 전 20%"
+   ]
+  }
  },
  "ops": {
   "nocaddie": {

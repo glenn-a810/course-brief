@@ -201,7 +201,74 @@
   "open_cycle": "• 정회원: 해당일 2주 전 09:00\n• 가족·지명회원: 10일 전 09:00\n• 지정회원: 9일 전 09:00\n• 주말(토·일): 전주 수요일 10:00",
   "notes": "주말·공휴일 연일 부킹 제한, 골드타임제 운영. 예약 화면은 로그인 필요",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 6
+    },
+    "weekend": {
+     "days_before": 6
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "해당일 6일 전 정오 12:00까지 위약 없이 취소. 주말·공휴일 연일부킹 제한"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 2,
+     "weekday": null,
+     "time": "09:00",
+     "member": "정회원",
+     "text": "2주 전"
+    },
+    {
+     "scope": "both",
+     "unit": "day",
+     "before": 10,
+     "weekday": null,
+     "time": "09:00",
+     "member": "회원",
+     "text": "10일 전"
+    },
+    {
+     "scope": "both",
+     "unit": "day",
+     "before": 9,
+     "weekday": null,
+     "time": "09:00",
+     "member": "정회원",
+     "text": "9일 전"
+    },
+    {
+     "scope": "weekend",
+     "unit": "week",
+     "before": 1,
+     "weekday": "수",
+     "time": "10:00",
+     "member": null,
+     "text": "전주 수요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": true,
+   "scope": "member",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "• 정회원: 해당일 2주 전 09:00\n• 가족·지명회원: 10일 전 09:00\n• 지정회원: 9일 전 09:00\n• 주말(토·일): 전주 수요일 10:00"
+  }
  },
  "ops": {
   "nocaddie": {

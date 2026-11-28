@@ -247,7 +247,49 @@
   "open_cycle": "경기일 해당 주 기준 4주 전 월요일 오전 10시(월~일 일괄 오픈)",
   "notes": "1팀 4인 플레이 원칙, 5인 불가",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3,
+     "time": "17:30"
+    },
+    "weekend": {
+     "days_before": 3,
+     "time": "17:30"
+    }
+   },
+   "penalty": [],
+   "basis": "team",
+   "scope": "unknown",
+   "confidence": "high",
+   "basis_text": [
+    "1·2팀 예약은 경기일을 제외하고 3일 전 17:30까지 취소 시 위약 없음"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 4,
+     "weekday": "월",
+     "time": "10:00",
+     "member": null,
+     "text": "4주 전 월요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "high",
+   "text": "경기일 해당 주 기준 4주 전 월요일 오전 10시(월~일 일괄 오픈)"
+  }
  },
  "ops": {
   "nocaddie": {

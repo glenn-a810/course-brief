@@ -193,7 +193,67 @@
   "open_cycle": "매월 1일 09:00 익월 전체(개인 전화·홈페이지·카카오플러스친구). 단체 3팀 이상 전화, 예약금 10% 가능",
   "notes": "• 예보에 의한 사전 취소 불가\n• 중단 시 그린피 이용요금/18×홀수\n• 카트 1~9홀 50,000원·10~18홀 100,000원\n• 1홀 미완료 전액 환불",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3
+    },
+    "weekend": {
+     "days_before": 4
+    }
+   },
+   "penalty": [
+    {
+     "day": "weekend",
+     "from_days": 1,
+     "to_days": 1,
+     "pct": 20.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "주중 2일 전·주말 3~2일 전 10% · 1일 전 20% · 당일 30%"
+    },
+    {
+     "day": "weekend",
+     "from_days": 3,
+     "to_days": 2,
+     "pct": 10.0,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "주중 2일 전·주말 3~2일 전 10% · 1일 전 20% · 당일 30%"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "무료 취소: 주중 3일 전·주말 4일 전까지",
+    "무료 취소: 주중 3일 전·주말 4일 전까지"
+   ],
+   "penalty_text": [
+    "주중 2일 전·주말 3~2일 전 10% · 1일 전 20% · 당일 30%",
+    "주중 2일 전·주말 3~2일 전 10% · 1일 전 20% · 당일 30%"
+   ]
+  },
+  "parsed_open": {
+   "rules": [],
+   "monthly": [
+    {
+     "day": 1,
+     "weekday": null,
+     "time": "09:00",
+     "scope": "both"
+    }
+   ],
+   "weekly": null,
+   "method": "phone",
+   "recurring": true,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "low",
+   "text": "매월 1일 09:00 익월 전체(개인 전화·홈페이지·카카오플러스친구). 단체 3팀 이상 전화, 예약금 10% 가능"
+  }
  },
  "ops": {
   "nocaddie": {

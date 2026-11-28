@@ -7,7 +7,10 @@
  *   import type { CourseIndexItem, CourseDetail, SearchAdapter } from "@coursebrief/shared";
  */
 export type {
+  AlertFile,
+  AlertItem,
   AlertPeriod,
+  BookingRulesFile,
   BriefingAlert,
   BriefingInfo,
   CancelInfo,
@@ -52,6 +55,12 @@ export type {
   NoticeTagValue,
   Notices,
   OpsKey,
+  ParsedCancel,
+  ParsedDeadline,
+  ParsedOpen,
+  ParsedOpenMonthly,
+  ParsedOpenRule,
+  ParsedPenalty,
   RentalInfo,
   RentalOfficial,
   ReviewSummary,

@@ -293,7 +293,28 @@
   "open_cycle": null,
   "notes": null,
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 7,
+     "time": "17:00"
+    },
+    "weekend": {
+     "days_before": 10,
+     "time": "17:00"
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "high",
+   "basis_text": [
+    "주중 7일 전 17:00",
+    "주말 10일 전 17:00까지 취소 시 위약 미적용"
+   ],
+   "penalty_text": []
+  }
  },
  "ops": {
   "nocaddie": {

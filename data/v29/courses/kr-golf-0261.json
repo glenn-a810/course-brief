@@ -211,7 +211,32 @@
   "open_cycle": "매주 월요일 09:00에 4주 후(월~일) 오픈, 경기 당일 13:00 마감",
   "notes": "5인 라운드 별도 카트·캐디 요금 미확인(공식 오픈 주기 미게시 — 홈페이지·예약처 예약)",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 4,
+     "weekday": null,
+     "time": "13:00",
+     "member": null,
+     "text": "4주 후"
+    }
+   ],
+   "monthly": [],
+   "weekly": {
+    "weekday": "월",
+    "time": "09:00"
+   },
+   "method": null,
+   "recurring": true,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "매주 월요일 09:00에 4주 후(월~일) 오픈, 경기 당일 13:00 마감"
+  }
  },
  "ops": {
   "nocaddie": {

@@ -324,7 +324,38 @@
   "open_cycle": "홈페이지 온라인 예약: 일반 5주 전, 패키지 9주 전 오픈. 전화는 예약실 09:00~17:00·프런트 08:00~18:00",
   "notes": "화요일 3부 휴장. 온라인 예약은 일반·패키지 오픈일이 다름",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 5,
+     "weekday": null,
+     "time": null,
+     "member": null,
+     "text": "5주 전"
+    },
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 9,
+     "weekday": null,
+     "time": "09:00",
+     "member": null,
+     "text": "9주 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "online",
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": true,
+   "confidence": "low",
+   "text": "홈페이지 온라인 예약: 일반 5주 전, 패키지 9주 전 오픈. 전화는 예약실 09:00~17:00·프런트 08:00~18:00"
+  }
  },
  "ops": {
   "nocaddie": {

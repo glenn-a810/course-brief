@@ -289,6 +289,90 @@
   "weather_evidence": [
    "악천후시 이용료 악천후시 이용료 구분 그린피 카트비 캐디피 평일 주말 1~3홀 홀별 정산해당일 그린피 Ⅹ (이용홀수 ÷ 18) 30,000 40,000 4~9홀 60,000 80,000 10~18홀 100,000 150,000 ※ 홀별정산 요금은 폭우, 낙뢰, 강설 등 불가항력적인 천재지변으로 인하여 경기를 계속 할 수 없다고 골프장에서 선언한 경우에 적용됩니다.",
    "※ 고객님의 개인사정으로 인한 경기 중단 시 정상요금이 적용됩니다."
+  ],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 6
+    },
+    "weekend": {
+     "days_before": 6
+    }
+   },
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 1,
+     "to_days": 1,
+     "pct": null,
+     "suspend_months": 6,
+     "suspend_days": null,
+     "text": "4~5일 전 1개월 · 3일 전 2개월 · 2일 전 3개월 · 1일 전 6개월 · 당일 취소 1년 · 미내장 영구정지"
+    },
+    {
+     "day": null,
+     "from_days": 2,
+     "to_days": 2,
+     "pct": null,
+     "suspend_months": 3,
+     "suspend_days": null,
+     "text": "4~5일 전 1개월 · 3일 전 2개월 · 2일 전 3개월 · 1일 전 6개월 · 당일 취소 1년 · 미내장 영구정지"
+    },
+    {
+     "day": null,
+     "from_days": 3,
+     "to_days": 3,
+     "pct": null,
+     "suspend_months": 2,
+     "suspend_days": null,
+     "text": "4~5일 전 1개월 · 3일 전 2개월 · 2일 전 3개월 · 1일 전 6개월 · 당일 취소 1년 · 미내장 영구정지"
+    },
+    {
+     "day": null,
+     "from_days": 4,
+     "to_days": 5,
+     "pct": null,
+     "suspend_months": 1,
+     "suspend_days": null,
+     "text": "4~5일 전 1개월 · 3일 전 2개월 · 2일 전 3개월 · 1일 전 6개월 · 당일 취소 1년 · 미내장 영구정지"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "6일 전까지: 정상 취소"
+   ],
+   "penalty_text": [
+    "4~5일 전 1개월 · 3일 전 2개월 · 2일 전 3개월 · 1일 전 6개월 · 당일 취소 1년 · 미내장 영구정지",
+    "4~5일 전 1개월 · 3일 전 2개월 · 2일 전 3개월 · 1일 전 6개월 · 당일 취소 1년 · 미내장 영구정지",
+    "4~5일 전 1개월 · 3일 전 2개월 · 2일 전 3개월 · 1일 전 6개월 · 당일 취소 1년 · 미내장 영구정지"
+   ]
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 3,
+     "weekday": null,
+     "time": "10:00",
+     "member": null,
+     "text": "3주 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "phone",
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "• 전화예약은 받지 않습니다\n• 예약일 3주 전 오전 10시에 실시간 오픈"
+  },
+  "weather_summary": [
+   "고객님의 개인사정으로 인한 경기 중단 시 정상요금이 적용됩니다."
   ]
  },
  "ops": {

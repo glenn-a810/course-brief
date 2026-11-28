@@ -12,6 +12,7 @@
     "check": "npm run build && npm run verify",
     "data:build": "python3 scripts/build_data_split.py --src data/source/golf_courses_all_v29.json",
     "data:check": "python3 scripts/build_data_split.py --src data/source/golf_courses_all_v29.json --check",
+    "data:rules": "python3 scripts/parse_booking_rules.py",
     "es:up": "docker compose -f elasticsearch/docker-compose.yml up -d",
     "es:down": "docker compose -f elasticsearch/docker-compose.yml down",
     "es:bulk": "node elasticsearch/ingest.mjs"

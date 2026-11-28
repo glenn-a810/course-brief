@@ -198,6 +198,51 @@
   "weather_evidence": [
    "기상 악화로 인한 환불적용 안내 기상 악화 기준: 강설 1cm/h 이상, 강수 3mm/h 이상, 낙뢰 등 첫홀 티샷전 경기종료시 전액(100%) 환불 처리합니다.",
    "- 기본요금 : 골프장 내장시 제공받는 물적 인적 서비스 요금(골프백 상하차 서비스등)* 기상악화시 정산은 기본요금 제외한 금액으로 이용한 홀별로 정산합니다."
+  ],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3
+    },
+    "weekend": {
+     "days_before": 4
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "평일 3일 전 · 주말 4일 전까지",
+    "평일 3일 전 · 주말 4일 전까지"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "day",
+     "before": 21,
+     "weekday": null,
+     "time": null,
+     "member": null,
+     "text": "21일 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "이용 예정일 21일 전부터 예약 가능"
+  },
+  "weather_summary": [
+   "기상 악화로 인한 환불적용 안내 기상 악화 기준: 강설 1cm/h 이상, 강수 3mm/h 이상, 낙뢰 등 첫홀 티샷전 경기종료시 전액(100%) 환불 처리합니다.",
+   "기본요금 : 골프장 내장시 제공받는 물적 인적 서비스 요금(골프백 상하차 서비스등)* 기상악화시 정산은 기본요금 제외한 금액으로 이용한 홀별로 정산합니다."
   ]
  },
  "ops": {

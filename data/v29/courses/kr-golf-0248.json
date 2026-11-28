@@ -211,7 +211,29 @@
   "open_cycle": "• 주중(정회원·준회원): 매월 첫째 월요일 10시 당월 17~31일분, 셋째 월요일 10시 익월 1~16일분 인터넷 실시간\n• 주말(정회원): 2주 전 화요일 9~12시 인터넷 추첨, 13시 이후 실시간 추가예약",
   "notes": "주말 4인 플레이 기준(3인 플레이 시 점수 감점). 부득이한 2인 플레이는 1인 비회원가 적용 협의",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "weekend",
+     "unit": "week",
+     "before": 2,
+     "weekday": "화",
+     "time": null,
+     "member": null,
+     "text": "2주 전 화요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "lottery",
+   "recurring": true,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "low",
+   "text": "• 주중(정회원·준회원): 매월 첫째 월요일 10시 당월 17~31일분, 셋째 월요일 10시 익월 1~16일분 인터넷 실시간\n• 주말(정회원): 2주 전 화요일 9~12시 인터넷 추첨, 13시 이후 실시간 추가예약"
+  }
  },
  "ops": {
   "nocaddie": {

@@ -439,7 +439,67 @@
   "evidence": [
    "동·남코스는 추첨 예약을 상시 신청하고 주중은 8주 전 해당 요일, 주말·공휴일은 8주 전 화요일 15시 이후 무작위 배정합니다. 서코스는 회원 자격과 요일에 따라 4주 전 실시간 예약 또는 2주 전 잔여 실시간 예약 일정이 다릅니다. (https://blog.naver.com/telleverything/224382433994)"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 7,
+     "time": "17:00"
+    },
+    "weekend": {
+     "days_before": 7,
+     "time": "17:00"
+    }
+   },
+   "penalty": [],
+   "basis": "team",
+   "scope": "member",
+   "confidence": "medium",
+   "basis_text": [
+    "취소 기한: 이용일 7일 전 17:00까지"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 8,
+     "weekday": null,
+     "time": null,
+     "member": null,
+     "text": "8주 전"
+    },
+    {
+     "scope": "weekday",
+     "unit": "week",
+     "before": 4,
+     "weekday": null,
+     "time": null,
+     "member": null,
+     "text": "4주 전"
+    },
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 2,
+     "weekday": null,
+     "time": null,
+     "member": null,
+     "text": "2주 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "lottery",
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "low",
+   "text": "동·남코스는 8주 전 추첨(주중 해당 요일, 주말·공휴일 8주 전 화요일 15시 이후 배정), 서코스는 4주 전 실시간·2주 전 잔여 실시간"
+  }
  },
  "ops": {
   "nocaddie": {

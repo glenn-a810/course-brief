@@ -173,7 +173,54 @@
   "evidence": [
    "https://wondergolf.co.kr/courses/new-asiad-cc"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekend": {
+     "days_before": 6,
+     "time": "16:00"
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "평일·공휴일 6일 전 16:00까지"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "day",
+     "before": 14,
+     "weekday": null,
+     "time": "10:00",
+     "member": "정회원",
+     "text": "14일 전"
+    },
+    {
+     "scope": "weekday",
+     "unit": "day",
+     "before": 13,
+     "weekday": null,
+     "time": "10:00",
+     "member": "정회원",
+     "text": "13일 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": true,
+   "scope": "member",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "• 정회원: 평일·공휴일 14일 전 오전 10시부터, 주말(토·일) 전(前)주 화요일 오후 2시부터\n• 지정회원: 평일 13일 전 오전 10시부터(공휴일·주말 부킹권 없음)"
+  }
  },
  "ops": {
   "nocaddie": {

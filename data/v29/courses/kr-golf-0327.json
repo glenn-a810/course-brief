@@ -272,7 +272,38 @@
    "3~2일 전 취소: 주중 30만 / 주말(공휴일) 40만 + 1개월 예약정지(표기)"
   ],
   "weather_evidence": [],
-  "browser_official": null
+  "browser_official": null,
+  "parsed_cancel": {
+   "free": {},
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 1,
+     "to_days": 1,
+     "pct": null,
+     "suspend_months": 2,
+     "suspend_days": null,
+     "text": "1일 전 2개월 정지"
+    },
+    {
+     "day": null,
+     "from_days": 3,
+     "to_days": 2,
+     "pct": null,
+     "suspend_months": 1,
+     "suspend_days": null,
+     "text": "3~2일 전 취소 시 위약금 주중 +1개월 예약정지"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "low",
+   "basis_text": [],
+   "penalty_text": [
+    "3~2일 전 취소 시 위약금 주중 +1개월 예약정지",
+    "1일 전 2개월 정지"
+   ]
+  }
  },
  "ops": {
   "nocaddie": {

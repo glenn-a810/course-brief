@@ -169,7 +169,90 @@
   "open_cycle": "예약 신청 4주 전 오전 9시, 예약 범위는 주간 단위(월~일) 오픈. 인터넷·모바일웹",
   "notes": "1일 1인 1팀, 4인 내장 필수(비수기 1·2·7·8·12월 예외). 5인은 예약실 문의, 3팀 이상 단체는 유선",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 5,
+     "time": "17:00"
+    },
+    "weekend": {
+     "days_before": 5,
+     "time": "17:00"
+    }
+   },
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 1,
+     "to_days": 1,
+     "pct": 20.0,
+     "suspend_months": 4,
+     "suspend_days": null,
+     "text": "4일 전 1개월 정지 · 3일 전 2개월 정지·10% · 2일 전 3개월·10% · 1일 전 4개월·20% · 당일·노쇼 6…"
+    },
+    {
+     "day": null,
+     "from_days": 2,
+     "to_days": 2,
+     "pct": 10.0,
+     "suspend_months": 3,
+     "suspend_days": null,
+     "text": "4일 전 1개월 정지 · 3일 전 2개월 정지·10% · 2일 전 3개월·10% · 1일 전 4개월·20% · 당일·노쇼 6…"
+    },
+    {
+     "day": null,
+     "from_days": 3,
+     "to_days": 3,
+     "pct": 10.0,
+     "suspend_months": 2,
+     "suspend_days": null,
+     "text": "4일 전 1개월 정지 · 3일 전 2개월 정지·10% · 2일 전 3개월·10% · 1일 전 4개월·20% · 당일·노쇼 6…"
+    },
+    {
+     "day": null,
+     "from_days": 4,
+     "to_days": 4,
+     "pct": null,
+     "suspend_months": 1,
+     "suspend_days": null,
+     "text": "4일 전 1개월 정지 · 3일 전 2개월 정지·10% · 2일 전 3개월·10% · 1일 전 4개월·20% · 당일·노쇼 6…"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "high",
+   "basis_text": [
+    "예약일 제외 5일 전 17:00까지 정상 취소"
+   ],
+   "penalty_text": [
+    "4일 전 1개월 정지 · 3일 전 2개월 정지·10% · 2일 전 3개월·10% · 1일 전 4개월·20% · 당일·노쇼 6개월·30%",
+    "4일 전 1개월 정지 · 3일 전 2개월 정지·10% · 2일 전 3개월·10% · 1일 전 4개월·20% · 당일·노쇼 6개월·30%",
+    "4일 전 1개월 정지 · 3일 전 2개월 정지·10% · 2일 전 3개월·10% · 1일 전 4개월·20% · 당일·노쇼 6개월·30%"
+   ]
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 4,
+     "weekday": null,
+     "time": "09:00",
+     "member": null,
+     "text": "4주 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "online",
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "예약 신청 4주 전 오전 9시, 예약 범위는 주간 단위(월~일) 오픈. 인터넷·모바일웹"
+  }
  },
  "ops": {
   "nocaddie": {

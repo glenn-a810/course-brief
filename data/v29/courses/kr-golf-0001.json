@@ -205,6 +205,50 @@
   ],
   "weather_evidence": [
    "악천후(눈, 비)에는 고객님 예약 티업 기준 2시간 전부터 전화취소 가능합니다."
+  ],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3
+    },
+    "weekend": {
+     "days_before": 4
+    }
+   },
+   "penalty": [],
+   "basis": "team",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "주말·공휴일은 이용예정일 4일 전까지",
+    "평일은 3일 전까지 취소하면 예약금 전액 환불. 당일 취소·무단 미이용 은 팀별 이용요금의 30%를 배상"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 3,
+     "weekday": null,
+     "time": "09:00",
+     "member": null,
+     "text": "3주 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "3주 전 오전 9시, 주 단위 일괄 오픈"
+  },
+  "weather_summary": [
+   "악천후(눈, 비)에는 고객님 예약 티업 기준 2시간 전부터 전화취소 가능합니다."
   ]
  },
  "ops": {

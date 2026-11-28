@@ -361,7 +361,57 @@
   "open_cycle": "2개월 전 매월 1일 오픈(1일이 주말·공휴일이면 다음 평일)",
   "notes": "티오프 40분 전 도착 권장, 20분 전 카트 탑승. 비회원은 월 주중 4회·주말 2회 예약 제한",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3,
+     "time": "18:00"
+    },
+    "weekend": {
+     "days_before": 4,
+     "time": "18:00"
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "평일 3일 전·주말 4일 전 18:00까지",
+    "평일 3일 전·주말 4일 전 18:00까지"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "month",
+     "before": 2,
+     "weekday": null,
+     "time": null,
+     "member": null,
+     "text": "2개월 전"
+    }
+   ],
+   "monthly": [
+    {
+     "day": 1,
+     "weekday": null,
+     "time": null,
+     "scope": "both"
+    }
+   ],
+   "weekly": null,
+   "method": null,
+   "recurring": true,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "2개월 전 매월 1일 오픈(1일이 주말·공휴일이면 다음 평일)"
+  }
  },
  "ops": {
   "nocaddie": {

@@ -437,7 +437,48 @@
   ],
   "weather_evidence": [
    "구분 주중 주말 비고 비회원 240,000 290,000 * 폭우, 강설로 인한 경기중단 시 : 홀별정산 * 개인사유로 플레이 중단한 경우 : 전액 * 5월1일 근로자의날은 주말 요금이 적용됩니다."
-  ]
+  ],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 2
+    },
+    "weekend": {
+     "days_before": 2
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "이용예정일 2일 전까지 취소하면 예약금의 50% 환불",
+    "2일 전까지 취소하지 않거나 노쇼 시 예약금 환불 없음"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "month",
+     "before": 1,
+     "weekday": null,
+     "time": null,
+     "member": null,
+     "text": "1개월 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "이용예정일 기준 최대 1개월 전부터 예약 가능"
+  }
  },
  "ops": {
   "nocaddie": {

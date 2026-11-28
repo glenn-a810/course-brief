@@ -190,6 +190,25 @@
   "weather_evidence": [],
   "browser_official": {
    "refund": "이용요금=입장료(시설이용료 포함)+카트사용료"
+  },
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3
+    },
+    "weekend": {
+     "days_before": 4
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "취소: 평일 3일 전·주말 4일 전까지",
+    "취소: 평일 3일 전·주말 4일 전까지"
+   ],
+   "penalty_text": []
   }
  },
  "ops": {

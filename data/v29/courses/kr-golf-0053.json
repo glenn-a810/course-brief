@@ -208,7 +208,48 @@
   "open_cycle": "2주 전 월요일 9시 오픈(월~일요일분), 인터넷·모바일 예약, 예약실 09:00~18:00",
   "notes": "• 정기 휴장일 없음\n• 레이디스데이(월)·시니어데이 운영\n• KPGA/KLPGA 프로 요금 별도 — 미확인\n• 3부 라이트 긴급 복구 시 예약취소·휴장 가능 안내",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3
+    },
+    "weekend": {
+     "days_before": 4
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "평일 3일 전·주말 4일 전까지 위약 없이 취소 . 위약규정안내 별도 게시",
+    "평일 3일 전·주말 4일 전까지 위약 없이 취소 . 위약규정안내 별도 게시"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 2,
+     "weekday": "월",
+     "time": "09:00",
+     "member": null,
+     "text": "2주 전 월요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "online",
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "high",
+   "text": "2주 전 월요일 9시 오픈(월~일요일분), 인터넷·모바일 예약, 예약실 09:00~18:00"
+  }
  },
  "ops": {
   "nocaddie": {

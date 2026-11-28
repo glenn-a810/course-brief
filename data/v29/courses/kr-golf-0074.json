@@ -191,7 +191,48 @@
    "평일 이용일 2일 전~당일, 주말·공휴일 3일 전~당일 취소 시 예약금 환불 불가 — http://www.onetheclub.com/club72/reserve",
    "하늘 | 예약일 기준 4주전 추첨 예약 오전 10시부터 17시까지 매일 요일별 신청 가능 신청 익일 추첨 및 배정 시 신청자 알림 수신 (https://www.onetheclub.com/club72/reserve)"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 2
+    },
+    "weekend": {
+     "days_before": 3
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "평일 이용일 2일 전~당일",
+    "주말·공휴일 3일 전~당일 취소 시 예약금 환불 불가"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 4,
+     "weekday": null,
+     "time": "10:00",
+     "member": null,
+     "text": "4주 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "lottery",
+   "recurring": true,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "low",
+   "text": "하늘코스는 예약일 기준 4주 전 추첨 예약 — 오전 10시부터 17시까지 매일 요일별 신청, 신청 익일 추첨·배정 후 신청자에게 알림"
+  }
  },
  "ops": {
   "nocaddie": {

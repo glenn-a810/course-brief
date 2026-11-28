@@ -576,6 +576,70 @@
   "weather_evidence": [
    "악천후로 인한중간 정산기준 입장요금안내 구 분 그린피 비고 1홀~18홀 해당일 적용 그린피×(이용홀수÷18) Tee-Off 기준 경기보조원요금안내 경기보조원 요금안내 구 분 1캐디 2캐디 4BAG 170,000원 340,000원 * 캐디피는 프론트 정산 ( 현금 )입니다.",
    "코스 내 화재예방 및 청결, 비흡연자 배려를 위하여 지정 장소외 흡연을 강력하게 규제하며 위반 시 경기중단 및 내장제한, 담당캐디 업무 제재 조치가 적용되오니 협조하여 주시기 바랍니다."
+  ],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 7
+    },
+    "weekend": {
+     "days_before": 7
+    }
+   },
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 1,
+     "to_days": 1,
+     "pct": null,
+     "suspend_months": null,
+     "suspend_days": null,
+     "text": "1일 전·당일 취소·노쇼: 위약금 주중 또는 한 달 예약정지"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "member",
+   "confidence": "medium",
+   "basis_text": [
+    "정상 취소: 플레이 7일 전까지 통보"
+   ],
+   "penalty_text": [
+    "1일 전·당일 취소·노쇼: 위약금 주중 또는 한 달 예약정지"
+   ]
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "weekday",
+     "unit": "week",
+     "before": 4,
+     "weekday": null,
+     "time": "10:00",
+     "member": null,
+     "text": "4주 전"
+    },
+    {
+     "scope": "weekend",
+     "unit": "week",
+     "before": 3,
+     "weekday": "화",
+     "time": "09:00",
+     "member": null,
+     "text": "3주 전 화요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "online",
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": true,
+   "confidence": "low",
+   "text": "• 주중: 4주 전 해당 요일 10:00부터 전화 접수(즉시 배정)\n• 주말: 3주 전 화요일 09:00~16:00 인터넷 접수 후 수요일 14:00 문자 회신"
+  },
+  "weather_summary": [
+   "코스 내 화재예방 및 청결, 비흡연자 배려를 위하여 지정 장소외 흡연을 강력하게 규제하며 위반 시 경기중단 및 내장제한, 담당캐디 업무 제재 조치가 적용되오니 협조하여 주시기 바랍니다."
   ]
  },
  "ops": {

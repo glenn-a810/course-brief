@@ -343,7 +343,58 @@
     "checked_at": "2026-11-27",
     "source_type": "public_info"
    }
-  ]
+  ],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 2,
+     "time": "17:00"
+    },
+    "weekend": {
+     "days_before": 2,
+     "time": "17:00"
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "high",
+   "basis_text": [
+    "2일 전 17:00까지 위약 없이 취소·시간변경 가능"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "day",
+     "before": 15,
+     "weekday": null,
+     "time": "17:00",
+     "member": null,
+     "text": "15일 전"
+    },
+    {
+     "scope": "both",
+     "unit": "day",
+     "before": 7,
+     "weekday": null,
+     "time": "08:00",
+     "member": null,
+     "text": "7일 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "online",
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": true,
+   "confidence": "low",
+   "text": "인터넷은 이용일 15일 전 17시부터, 전화는 7일 전 08시부터 예약 접수"
+  }
  },
  "ops": {
   "nocaddie": {

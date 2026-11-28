@@ -163,7 +163,49 @@
   "open_cycle": "주중회원 2주 전 예약(정회원 주중 2회·주말 1회)",
   "notes": null,
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 6,
+     "time": "17:00"
+    },
+    "weekend": {
+     "days_before": 6,
+     "time": "17:00"
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "high",
+   "basis_text": [
+    "예약취소는 주중·주말 모두 6일 전 17시까지. 경기보조자 배치 후 요금 환불 불가"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "weekday",
+     "unit": "week",
+     "before": 2,
+     "weekday": null,
+     "time": null,
+     "member": "주중회원",
+     "text": "2주 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": true,
+   "scope": "member",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "주중회원 2주 전 예약(정회원 주중 2회·주말 1회)"
+  }
  },
  "ops": {
   "nocaddie": {

@@ -314,7 +314,29 @@
   "open_cycle": "라운드 주를 제외한 4주 전 월요일 09:00, 1주일 단위 오픈\n• 인터넷 예약 마감은 전날 17:00, 당일은 잔여 타임 전화 예약",
   "notes": "3~4인만 예약 가능(2인 불가). 예약 전화 1588-7676",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 4,
+     "weekday": "월",
+     "time": "09:00",
+     "member": null,
+     "text": "4주 전 월요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "online",
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "high",
+   "text": "라운드 주를 제외한 4주 전 월요일 09:00, 1주일 단위 오픈\n• 인터넷 예약 마감은 전날 17:00, 당일은 잔여 타임 전화 예약"
+  }
  },
  "ops": {
   "nocaddie": {

@@ -170,7 +170,47 @@
   "evidence": [
    "https://wondergolf.co.kr/courses/kr-kakao-10489718"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "weekday",
+     "unit": "day",
+     "before": 13,
+     "weekday": null,
+     "time": "10:00",
+     "member": "비회원",
+     "text": "13일 전"
+    },
+    {
+     "scope": "both",
+     "unit": "day",
+     "before": 11,
+     "weekday": null,
+     "time": "14:00",
+     "member": null,
+     "text": "11일 전"
+    },
+    {
+     "scope": "both",
+     "unit": "day",
+     "before": 10,
+     "weekday": null,
+     "time": "10:00",
+     "member": null,
+     "text": "10일 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "online",
+   "recurring": false,
+   "member_only": false,
+   "scope": "non_member",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "• 회원 인터넷: 주중/공휴일 14일 전 10시 · 토요일 11일 전(화) 14시 · 일요일(2·4주) 11일 전(수) 14시\n• 비회원: 주중 13일 전 10시 · 토·일 10일 전 10시"
+  }
  },
  "ops": {
   "nocaddie": {

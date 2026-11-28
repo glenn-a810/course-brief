@@ -165,7 +165,67 @@
   "evidence": [
    "https://wondergolf.co.kr/courses/kr-kakao-9941492"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 5,
+     "time": "17:00"
+    },
+    "weekend": {
+     "days_before": 5,
+     "time": "17:00"
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "high",
+   "basis_text": [
+    "예약일 기준 5일 전 17:00까지 정상 취소"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "weekend",
+     "unit": "day",
+     "before": 21,
+     "weekday": null,
+     "time": null,
+     "member": null,
+     "text": "21일 전"
+    },
+    {
+     "scope": "both",
+     "unit": "day",
+     "before": 19,
+     "weekday": "월",
+     "time": "09:00",
+     "member": null,
+     "text": "19일 전 월요일"
+    },
+    {
+     "scope": "both",
+     "unit": "day",
+     "before": 20,
+     "weekday": "월",
+     "time": "09:00",
+     "member": null,
+     "text": "20일 전 월요일"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "high",
+   "text": "• 주중·주중 공휴일: 경기일 21일 전(해당일 3주 전 오전 9시)\n• 토요일: 경기일 19일 전 월요일 오전 9시\n• 일요일: 경기일 20일 전 월요일 오전 9시\n• 실시간 확정"
+  }
  },
  "ops": {
   "nocaddie": {

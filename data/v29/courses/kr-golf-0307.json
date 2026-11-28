@@ -288,6 +288,49 @@
    "dress": "소프트 스파이크 의무, 남성 반바지·민소매·여성 짧은 치마/반바지 지양",
    "pace": "18홀 기준 4시간 20분 준수",
    "exit_rule": "잔디·시설 훼손, 도박성 내기·음주·고성방가·방뇨, 고의 지연, 경기능력 부족, 직원·캐디 폭언(영구 정지), 폭행(형사고발), 성희롱, 금연구역 위반, 복장·용모 불량, 외부 음식물 반입 시 퇴장 조치"
+  },
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3,
+     "time": "17:00"
+    },
+    "weekend": {
+     "days_before": 4,
+     "time": "17:00"
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "high",
+   "basis_text": [
+    "주중 3일 전 17:00·주말 4일 전 17:00까지 취소 가능",
+    "주중 3일 전 17:00·주말 4일 전 17:00까지 취소 가능"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 3,
+     "weekday": null,
+     "time": "09:00",
+     "member": null,
+     "text": "3주 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "3주 전 해당 요일 09:00 오픈(3주 전 예약제)"
   }
  },
  "ops": {

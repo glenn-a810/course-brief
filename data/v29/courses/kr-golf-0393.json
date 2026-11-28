@@ -210,7 +210,29 @@
     "checked_at": "2026-11-27",
     "source_type": "third_party"
    }
-  ]
+  ],
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "day",
+     "before": 60,
+     "weekday": null,
+     "time": "10:00",
+     "member": null,
+     "text": "60일 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "phone",
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "예약일 기준 60일 전 10:00, 홈페이지 회원 로그인 후 예약(프론트 전화 예약 미접수)"
+  }
  },
  "ops": {
   "nocaddie": {

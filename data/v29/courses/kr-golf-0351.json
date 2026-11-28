@@ -168,7 +168,59 @@
   "evidence": [
    "https://wondergolf.co.kr/courses/kr-kakao-25047985"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 5,
+     "time": "17:00"
+    },
+    "weekend": {
+     "days_before": 7,
+     "time": "17:00"
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "high",
+   "basis_text": [
+    "평일 5일 전·주말 7일 전 17:00까지 위약 없이 취소",
+    "평일 5일 전·주말 7일 전 17:00까지 위약 없이 취소"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 3,
+     "weekday": null,
+     "time": null,
+     "member": "비회원",
+     "text": "3주 전"
+    },
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 2,
+     "weekday": null,
+     "time": null,
+     "member": "비회원",
+     "text": "2주 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "online",
+   "recurring": false,
+   "member_only": false,
+   "scope": "non_member",
+   "ambiguous": true,
+   "confidence": "low",
+   "text": "• 주중: 정회원 4주 전(오전 10시) · 가족회원 4주 전(오후 14시) · 비회원 3주 전(오전 10시)\n• 주말·공휴일: 정회원 3주 전 수요일 14시(실시간) · 가족회원 3주 전 수요일 16시 · 비회원…"
+  }
  },
  "ops": {
   "nocaddie": {

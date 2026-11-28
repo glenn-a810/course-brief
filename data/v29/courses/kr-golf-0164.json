@@ -176,6 +176,71 @@
   ],
   "weather_evidence": [
    "기상악화 기준(강우 시간당 3mm 3시간 이상 예보, 강설 3cm 이상, 폭염 35℃ 이상, 한파 -10℃ 이하 등) 충족 시 위약 미적용"
+  ],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 7
+    },
+    "weekend": {
+     "days_before": 7
+    }
+   },
+   "penalty": [
+    {
+     "day": null,
+     "from_days": 4,
+     "to_days": 4,
+     "pct": null,
+     "suspend_months": 1,
+     "suspend_days": null,
+     "text": "4일 전 취소: 1개월 예약정지 또는 위약금 550"
+    }
+   ],
+   "basis": "unknown",
+   "scope": "non_member",
+   "confidence": "medium",
+   "basis_text": [
+    "예약일 기준 회원 5일 전·비회원 7일 전까지: 위약 없이 취소 가능",
+    "예약일 기준 회원 5일 전·비회원 7일 전까지: 위약 없이 취소 가능"
+   ],
+   "penalty_text": [
+    "4일 전 취소: 1개월 예약정지 또는 위약금 550"
+   ]
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 4,
+     "weekday": null,
+     "time": null,
+     "member": "정회원",
+     "text": "4주 전"
+    },
+    {
+     "scope": "weekday",
+     "unit": "week",
+     "before": 3,
+     "weekday": null,
+     "time": null,
+     "member": "회원",
+     "text": "3주 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": null,
+   "recurring": false,
+   "member_only": true,
+   "scope": "member",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "평일: 예약 해당일자의 주주회원 정회원은 4주 전, 평일회원은 3주 전부터 같은 요일에 예약 오픈"
+  },
+  "weather_summary": [
+   "기상악화 기준(강우 시간당 3mm 3시간 이상 예보, 강설 3cm 이상, 폭염 35℃ 이상, 한파 -10℃ 이하 등) 충족 시 위약 미적용"
   ]
  },
  "ops": {

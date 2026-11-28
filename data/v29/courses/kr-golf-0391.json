@@ -210,7 +210,23 @@
   "open_cycle": null,
   "notes": "정기 휴장일 없음",
   "evidence": [],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekend": {
+     "days_before": 4
+    }
+   },
+   "penalty": [],
+   "basis": "team",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "평일 이용 3일 전·주말·공휴일 4일 전까지 취소 시 예약금 전액 환불",
+    "평일 이용 3일 전·주말·공휴일 4일 전까지 취소 시 예약금 전액 환불"
+   ],
+   "penalty_text": []
+  }
  },
  "ops": {
   "nocaddie": {

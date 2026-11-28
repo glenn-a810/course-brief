@@ -181,7 +181,47 @@
    "① 입장절차를 마친 이용자가 경기 전 임의로 이용계약을 취소한 경우에는 이용요금의 50%를 환불하고",
    "예약 오픈 주기: 같은 요일 기준 3주 전 오전 8시 30분부터 예약 전일 18시까지 인터넷 예약 (https://www.maestrocc.co.kr/pagesite/use/reservation.asp)"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 8
+    },
+    "weekend": {
+     "days_before": 8
+    }
+   },
+   "penalty": [],
+   "basis": "unknown",
+   "scope": "unknown",
+   "confidence": "medium",
+   "basis_text": [
+    "8일 전까지 인터넷·유선으로 취소 가능 . 입장 후 경기 전 임의 취소는 이용요금 50% 환불"
+   ],
+   "penalty_text": []
+  },
+  "parsed_open": {
+   "rules": [
+    {
+     "scope": "both",
+     "unit": "week",
+     "before": 3,
+     "weekday": null,
+     "time": "08:30",
+     "member": null,
+     "text": "3주 전"
+    }
+   ],
+   "monthly": [],
+   "weekly": null,
+   "method": "online",
+   "recurring": false,
+   "member_only": false,
+   "scope": "unknown",
+   "ambiguous": false,
+   "confidence": "medium",
+   "text": "같은 요일 기준 3주 전 오전 8시 30분부터 예약 전일 18시까지 인터넷 예약"
+  }
  },
  "ops": {
   "nocaddie": {

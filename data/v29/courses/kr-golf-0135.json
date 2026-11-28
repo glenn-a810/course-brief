@@ -135,7 +135,28 @@
   "evidence": [
    "파인크리크 | 주중 취소·변경 시한 03일 전 17:00 | 주말 04일 전 17:00 | 주중 위약 팀별 이용요금의 30% | 주말 위약 팀별 이용요금의 30%"
   ],
-  "weather_evidence": []
+  "weather_evidence": [],
+  "parsed_cancel": {
+   "free": {
+    "weekday": {
+     "days_before": 3,
+     "time": "17:00"
+    },
+    "weekend": {
+     "days_before": 4,
+     "time": "17:00"
+    }
+   },
+   "penalty": [],
+   "basis": "team",
+   "scope": "unknown",
+   "confidence": "high",
+   "basis_text": [
+    "평일 3일 전 17:00",
+    "주말 4일 전 17:00까지 취소 시 위약 없음"
+   ],
+   "penalty_text": []
+  }
  },
  "ops": {
   "nocaddie": {
