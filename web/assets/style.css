@@ -1739,3 +1739,190 @@ tbody tr:last-child td { border-bottom: 0; }
   a, .link, .prep-page a { color: #000; text-decoration: none; }
   .prep-facts dd a { color: #000; }
 }
+
+/* =========================================================================
+   3단계 — 위치·교통(M2) · 데이터 QA(M6) · 제보(M6) · 오프라인 안내(M8)
+   ─ 모두 토큰만 쓴다(라이트/다크가 같은 규칙으로 바뀐다). 새 색을 만들지 않는다.
+   ========================================================================= */
+
+/* --- 오프라인 · 새 버전 배너 --- */
+.net-banner {
+  position: fixed; left: 50%; transform: translateX(-50%);
+  bottom: calc(var(--tabbar-h) + 12px); z-index: 60;
+  display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+  width: min(94vw, 520px); padding: 10px 14px;
+  background: var(--grey900); color: var(--grey50);
+  border-radius: 14px; box-shadow: var(--shadow-lg);
+  font-size: 13px; line-height: 1.45;
+}
+.net-banner[hidden] { display: none; }
+.net-banner b { font-weight: 700; }
+.net-banner.is-update { background: var(--accent); color: var(--accent-text); }
+.net-banner .btn { margin-left: auto; background: var(--accent-text); color: var(--accent-ink); border-color: transparent; font-weight: 700; }
+.net-banner-text { min-width: 0; flex: 1 1 200px; }
+@media (min-width: 900px) {
+  .net-banner { bottom: 20px; }
+}
+
+/* --- 복사 버튼(주소·좌표·공유 링크) --- */
+.copy-inline {
+  display: inline-flex; align-items: center; gap: 4px; margin-left: 6px;
+  min-height: 28px; padding: 2px 8px; border-radius: 8px;
+  border: 1px solid var(--line-strong); background: var(--surface); color: var(--text-2);
+  font: inherit; font-size: 11.5px; font-weight: 600; cursor: pointer; vertical-align: 1px;
+}
+.copy-inline:hover { border-color: var(--accent); color: var(--accent-ink); background: var(--accent-soft); }
+.copy-inline .ic { width: 13px; height: 13px; }
+.data-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 4px; font-size: var(--t7); color: var(--text-3); }
+.data-actions .link-btn { display: inline-flex; align-items: center; gap: 4px; }
+.data-actions .link-btn .ic { width: 13px; height: 13px; }
+.data-actions .dot { color: var(--line-strong); }
+
+/* --- 위치·교통 --- */
+.loc-grid { display: grid; gap: 10px; align-items: start; }
+@media (min-width: 760px) { .loc-grid { grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); } }
+.loc-card {
+  background: var(--surface-2); border-radius: var(--radius-sm); padding: 18px;
+  display: grid; gap: 8px; align-content: start;
+}
+.loc-label { font-size: 12px; color: var(--text-3); font-weight: 600; }
+.loc-addr { font-size: var(--t5); line-height: 1.45; font-weight: 600; letter-spacing: -.02em; word-break: keep-all; }
+.loc-sub { font-size: 12.5px; line-height: 1.5; color: var(--text-2); }
+.loc-unknown { color: var(--text-3); font-weight: 500; }
+.loc-card-actions { display: flex; gap: 6px; flex-wrap: wrap; }
+.loc-card-actions .copy-inline { margin-left: 0; }
+.loc-maps { display: grid; gap: 8px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.loc-map {
+  display: grid; gap: 2px; justify-items: center; text-align: center;
+  padding: 12px 6px; border-radius: var(--radius-sm);
+  background: var(--surface); border: 1px solid var(--line); color: var(--text);
+  min-height: var(--tap);
+}
+.loc-map b { font-size: 13px; font-weight: 700; letter-spacing: -.02em; }
+.loc-map span { font-size: 11px; color: var(--text-3); }
+.loc-map:hover, .loc-map:focus-visible {
+  background: var(--accent-soft); border-color: color-mix(in srgb, var(--accent) 30%, var(--accent-soft));
+  color: var(--accent-ink); text-decoration: none;
+}
+.loc-map:hover span { color: var(--accent-ink); }
+.loc-hint {
+  display: flex; align-items: flex-start; gap: 8px;
+  font-size: 13px; line-height: 1.55; color: var(--text-2);
+  background: var(--info-soft); border-radius: var(--radius-sm); padding: 12px 14px;
+}
+.loc-hint .ic { width: 17px; height: 17px; flex: none; margin-top: 1px; color: var(--info); }
+
+/* --- 데이터 QA --- */
+.admin-qa {
+  display: inline-flex; align-items: center; padding: 4px 8px; border-radius: 8px;
+  background: var(--surface); color: var(--text-2); font-size: 12px; font-weight: 600;
+}
+.admin-qa:hover { color: var(--accent-ink); background: var(--accent-soft); text-decoration: none; }
+
+.qa-hist {
+  display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr);
+  align-items: end; gap: 10px; height: 132px;
+  background: var(--surface-2); border-radius: var(--radius-sm); padding: 16px 18px 12px;
+}
+.qa-hist-col { display: grid; grid-template-rows: auto 1fr auto; gap: 6px; justify-items: center; height: 100%; }
+.qa-hist-n { font-size: 12px; font-weight: 700; color: var(--text-2); font-variant-numeric: tabular-nums; }
+.qa-hist-bar {
+  width: 100%; max-width: 64px; align-self: end; min-height: 3px;
+  border-radius: 6px 6px 2px 2px;
+  background: linear-gradient(180deg, var(--accent) 0%, color-mix(in srgb, var(--accent) 55%, var(--surface-2)) 100%);
+}
+.qa-hist-l { font-size: 11.5px; color: var(--text-3); }
+
+.qa-board-head { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; }
+.qa-tools { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.searchbox-sm {
+  max-width: 240px; min-height: 40px; border-radius: 12px; border-color: var(--line);
+  background: var(--surface); box-shadow: none; padding: 0 4px 0 12px;
+}
+.searchbox-sm input { font-size: 13.5px; padding: 9px 0; }
+.qa-tools select {
+  min-height: 40px; padding: 8px 32px 8px 12px; border-radius: 12px;
+  border: 1px solid var(--line-strong); background-color: var(--surface-2); color: var(--text);
+  font-size: 13px; font-weight: 500; appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, var(--text-2) 50%),
+    linear-gradient(135deg, var(--text-2) 50%, transparent 50%);
+  background-position: calc(100% - 18px) 50%, calc(100% - 13px) 50%;
+  background-size: 5px 5px, 5px 5px; background-repeat: no-repeat;
+}
+.qa-chips .chip {
+  min-height: 36px; padding: 6px 12px; font-size: 12.5px;
+  /* 히트맵 위에서는 캔버스와 같은 색(--inset)이 배경과 붙어 버튼으로 보이지 않는다 */
+  background: var(--surface); border-color: var(--line-strong);
+}
+.qa-chips .chip:hover { background: var(--surface-2); border-color: var(--line-strong); }
+.qa-chips .chip.is-on { background: var(--accent-soft); border-color: transparent; color: var(--accent-ink); }
+.qa-count { font-size: 12.5px; color: var(--text-3); }
+.qa-table-wrap { background: var(--surface); border-radius: var(--radius-sm); }
+.qa-table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+.qa-table th, .qa-table td { padding: 9px 8px; border-bottom: 1px solid var(--line); text-align: left; }
+.qa-table thead th {
+  /* 상단 바(sticky) 아래에 붙는다 — top:0 이면 바 밑으로 들어가 가려진다 */
+  position: sticky; top: var(--topbar-h); z-index: 3; background: var(--surface);
+  font-size: 11.5px; color: var(--text-3); font-weight: 600; white-space: nowrap;
+}
+.qa-table tbody th {
+  position: sticky; left: 0; z-index: 1; background: var(--surface);
+  font-weight: 600; min-width: 148px; max-width: 220px; vertical-align: top;
+}
+.qa-table tbody tr:hover th, .qa-table tbody tr:hover td { background: var(--surface-2); }
+.qa-sub { display: block; font-size: 11px; color: var(--text-3); font-weight: 500; }
+.qa-flag {
+  display: inline-block; margin-top: 4px; margin-right: 3px; padding: 1px 5px;
+  border-radius: 6px; background: var(--warn-soft); color: var(--warn);
+  font-size: 10.5px; font-weight: 700;
+}
+.qa-age { white-space: nowrap; font-variant-numeric: tabular-nums; }
+.qa-age.is-stale { color: var(--warn); font-weight: 700; }
+.hm-cell { width: 42px; }
+.hm {
+  display: block; height: 22px; border-radius: 6px; background: var(--inset);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--line-strong) 45%, transparent);
+}
+.hm-1 { background: color-mix(in srgb, var(--accent) 16%, var(--inset)); }
+.hm-2 { background: color-mix(in srgb, var(--accent) 32%, var(--inset)); }
+.hm-3 { background: color-mix(in srgb, var(--accent) 50%, var(--inset)); }
+.hm-4 { background: color-mix(in srgb, var(--accent) 72%, var(--inset)); }
+.hm-5 { background: var(--accent); }
+.qa-empty { text-align: center; color: var(--text-3); padding: 28px 12px; }
+.qa-more { display: flex; justify-content: center; }
+.qa-more .btn-more { margin-top: 12px; }
+.qa-list-rows { list-style: none; margin: 0; padding: 0; display: grid; background: var(--surface); border-radius: var(--radius-sm); overflow: hidden; }
+.qa-list-rows li { display: flex; flex-wrap: wrap; gap: 4px 12px; align-items: baseline; padding: 10px 14px; border-bottom: 1px solid var(--line); font-size: 13.5px; }
+.qa-list-rows li:last-child { border-bottom: 0; }
+.qa-list-rows .qa-sub { font-size: 12px; }
+
+/* --- 제보 폼 --- */
+.report-form { display: grid; gap: 14px; }
+/* 라벨이 한 줄인 칸과 셀렉트의 높이를 맞춘다(기본 padding 이 달라 어긋난다) */
+.report-form .field select { height: var(--tap); min-height: var(--tap); padding-top: 0; padding-bottom: 0; }
+.report-grid { display: grid; gap: 12px; }
+@media (min-width: 700px) { .report-grid { grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); } }
+.field small { font-size: 11.5px; color: var(--text-3); line-height: 1.45; }
+.field textarea {
+  width: 100%; padding: 12px 14px; min-height: 120px; resize: vertical;
+  border: 1px solid var(--line-strong); border-radius: 12px;
+  background: var(--surface-2); color: var(--text); font: inherit; font-size: var(--t6); line-height: 1.55;
+}
+.field textarea:focus, .field textarea:focus-visible { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+.field .req { color: var(--accent-ink); font-size: 11px; font-weight: 700; margin-left: 2px; }
+.report-preview {
+  display: grid; gap: 8px; background: var(--surface-2); border-radius: var(--radius-sm); padding: 16px;
+}
+.report-preview .pre { background: var(--surface); max-height: 260px; font-size: 12px; }
+.report-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.report-status { font-size: 12.5px; color: var(--text-2); min-height: 18px; }
+.report-error { font-size: 13px; color: var(--danger); font-weight: 600; }
+.report-page .callout { font-size: 13px; line-height: 1.6; }
+@media (max-width: 899px) {
+  .net-banner { bottom: calc(var(--tabbar-h) + 10px); }
+  .loc-maps { gap: 6px; }
+  .loc-map b { font-size: 12.5px; }
+  .qa-tools { width: 100%; }
+  .searchbox-sm { flex: 1 1 160px; max-width: none; }
+  .qa-table tbody th { min-width: 132px; }
+}

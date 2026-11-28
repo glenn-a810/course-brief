@@ -48,6 +48,12 @@
 - **렌탈 탭** — 권역별 배송 가능 업체, 요금·브랜드·언어·연락처
 - **테마** — 기본은 OS·브라우저 설정을 따르는 시스템 자동. 헤더 오른쪽 버튼으로 `시스템 → 라이트 → 다크`를 돌려 선택하면 `localStorage`(`coursebrief-theme`)에 저장돼 새로고침·재방문에도 유지된다. 선택은 `html[data-theme]`로 적용되고, 첫 페인트 전 `index.html` 인라인 스크립트가 먼저 칠해 깜빡임이 없다.
 - **출처는 관리자 모드 전용** — 일반 화면에는 구장별 **업데이트 날짜**(`YYYY.MM.DD`)만 보이고, 출처·근거 원문·채움률·스키마 같은 수집 정보는 **렌더링되지 않는다(DOM 에도 없음)**. 푸터의 작은 `관리자` 버튼 → 비밀번호를 넣으면 관리자 모드가 켜져 출처가 보이고, 배지의 `해제` 로 되돌린다(상태는 `localStorage.coursebrief-admin`). 비밀번호는 평문 없이 SHA-256 해시만 코드에 두고 `crypto.subtle` 로 비교한다(`web/assets/admin.ts`).
+- **위치·교통(상세 03)** — 주소 복사 · 지도 앱 3종(네이버·카카오·구글) 길찾기 · 최단 IC·거리 · 좌표 복사 · 주차 · 셔틀·교통. 확인된 값만 적고, 없는 항목은 숨기지 않고 `미확인`으로 두고 전화 확인을 안내한다
+- **데이터 QA 대시보드(관리자)** — `#/admin-qa`: 540곳 × 7영역 히트맵(채움률), 충실도 분포, 값이 90일 넘은 구장, 취소·오픈 규정 파싱 실패, `미확인 집중`·`주차 미확인`·`요약 데이터만` 필터, CSV 복사
+- **정보 오류·누락 제보** — `#/report`: 구장·항목·내용을 적으면 **GitHub 이슈 작성 페이지**(제목·본문 프리필)를 열고, 로그인 없이 보낼 수 있게 `내용 복사`도 제공한다(백엔드 없는 정적 사이트의 정직한 접수 방식)
+- **검색·공유 최적화** — 구장별 프리렌더 HTML(`/c/{id}/`)에 `og:title·og:description·og:image`·`canonical`·JSON-LD(`GolfCourse`)를 넣고, `sitemap.xml`(541 URL)·`robots.txt` 로 540곳 롱테일 유입을 연다. 프리렌더 페이지는 정적 요약을 먼저 보여 준 뒤 `#/c/{id}` SPA 로 이어진다(해시 라우팅 100% 호환)
+- **공유 카드 이미지** — 구장명·지역·홀수·이용형태·주중/주말 그린피를 담은 1200×630 PNG 540장(`web/og/`) + 기본 커버. `python3 scripts/gen-pwa-assets.py` 로 다시 만든다(빌드에는 Python 을 쓰지 않는다)
+- **오프라인(PWA)** — 홈 화면 추가(manifest·아이콘), Service Worker 가 앱 셸·`index.json`·최근 본 구장 JSON 을 캐시, 오프라인 배너와 `새 버전 있음 — 새로고침` 안내. 캐시 이름에 빌드 버전이 들어가 새 배포는 옛 캐시를 지운다
 - **접근성·디자인** — Apple HIG / Material 기본 중성 배경, `prefers-color-scheme` 자동, 키보드 포커스, 44px 터치 타깃
 
 ## 3. 데이터
@@ -112,6 +118,10 @@ web/assets/alerts.ts  휴장·정비 캘린더(M3)
 web/assets/saved.ts   즐겨찾기·최근 본(M4, localStorage)
 web/assets/prep.ts    라운드 준비 카드(M5, 인쇄)
 web/assets/admin.ts   관리자 모드(출처 노출 분기·비밀번호 해시 비교)
+web/assets/location.ts 위치·교통(M2) — 지도 딥링크·주차·셔틀, 미확인 표기
+web/assets/qa.ts      데이터 QA 대시보드(M6, 관리자)
+web/assets/report.ts  정보 오류·누락 제보(M6) — GitHub 이슈 프리필
+web/assets/pwa.ts     오프라인 등록·배너(M8)
 web/assets/search.ts  SearchAdapter 구현(LocalSearchAdapter / EsSearchAdapter)
 web/assets/util.ts    포맷·초성·이스케이프
 shared/types/         웹·RN 공용 타입 (12키 상세·인덱스·클러스터·렌탈·검색 계약)
@@ -127,6 +137,25 @@ npm run data:build   # data/v29/* 재생성 (Python 3)
 npm run data:rules   # 취소·예약 오픈 문장 파싱 → parsed_cancel·parsed_open, alerts.json·booking_rules.json
 npm run data:check   # 12키·개수·금지 문자열·인덱스 300KB 검증
 ```
+
+### 3단계 산출물 (M2·M6·M7·M8)
+
+```
+dist/
+├── c/kr-golf-NNNN/index.html   540장 프리렌더 — 구장별 og·canonical·JSON-LD(GolfCourse) + 정적 요약
+├── sitemap.xml                 홈 + 540곳 = 541 URL (robots.txt 에 Sitemap 연결)
+├── sw.js                       Service Worker — 앱 셸·index.json·최근 본 구장 JSON, 캐시 이름 = 빌드 버전
+├── manifest.webmanifest        홈 화면 추가(standalone) · 아이콘 3종+apple-touch
+├── og/{id}.png                 구장별 공유 카드 1200×630 (cover.png 포함 541장)
+├── icons/*.png                 PWA 아이콘(192·512·maskable·apple 180)
+└── data/v29/qa.json            관리자 QA 인덱스 540행 — 영역별 채움률·요금/공지 신선도·파싱 여부
+```
+
+프리렌더 HTML 은 `dist/index.html` 한 장을 복제해 `<head>` 메타·`#view-detail` 미리보기만 바꾼다
+(`<base href="/">` + `history.replaceState('/#/c/{id}')`). 그래서 클라이언트 렌더와 같은 셸·같은 데이터
+포맷을 쓰고, 해시 라우팅(`#/c/{id}`)은 그대로 동작한다.
+
+롤백: `git checkout pre-stage3` (또는 `git reset --hard backup/pre-stage3`) — 3단계 직전 커밋이다.
 
 ## 5. 배포 — Cloudflare Pages (무료)
 

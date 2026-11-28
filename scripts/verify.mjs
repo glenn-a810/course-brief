@@ -184,7 +184,136 @@ ok(ikexan.reduce((a, c) => a + (c.holes || 0), 0) === 24, `F020 합산 홀수 = 
 const rental = JSON.parse(await readFile(path.join(dist, "data/v29/rental_providers.json"), "utf8"));
 ok(rental.providers?.length === 8, `rental providers = ${rental.providers?.length} (8 기대)`);
 
-// 7) ES 산출물
+// 8) 3단계 — 프리렌더·sitemap·OG·PWA·QA 대시보드
+const robotsPath = path.join(dist, "robots.txt");
+const robots = (await exists(robotsPath)) ? await readFile(robotsPath, "utf8") : "";
+const sitemapPath = path.join(dist, "sitemap.xml");
+ok(await exists(sitemapPath), "dist/sitemap.xml 존재");
+const sitemap = (await exists(sitemapPath)) ? await readFile(sitemapPath, "utf8") : "";
+const locs = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
+ok(/^<\?xml/.test(sitemap.trim()), "sitemap.xml XML 선언");
+ok(locs.length === 541, `sitemap URL ${locs.length}개 (홈 + 540곳 = 541 기대)`);
+ok(locs.filter((u) => /\/c\/kr-golf-\d{4}\/$/.test(u)).length === 540, "sitemap 에 구장 540곳 경로");
+ok(new Set(locs).size === locs.length, "sitemap URL 중복 없음");
+ok(locs.every((u) => u.startsWith("https://coursebrief.pages.dev")), "sitemap 은 https 절대 URL");
+
+const cDir = path.join(dist, "c");
+const cDirs = (await exists(cDir)) ? (await readdir(cDir, { withFileTypes: true })).filter((e) => e.isDirectory()) : [];
+ok(cDirs.length === 540, `프리렌더 디렉터리 ${cDirs.length}개 (540 기대)`);
+const prerenderMissing = [];
+for (const dir of cDirs) {
+  if (!(await exists(path.join(cDir, dir.name, "index.html")))) prerenderMissing.push(dir.name);
+}
+ok(prerenderMissing.length === 0, `프리렌더 index.html 누락 없음${prerenderMissing.length ? " — " + prerenderMissing.slice(0, 3).join(", ") : ""}`);
+
+// 대표 3곳(첫·중간·끝)을 실제로 열어 메타·JSON-LD·정적 본문을 본다
+const spot = [courses[0], courses[Math.floor(courses.length / 2)], courses[courses.length - 1]];
+const escRe = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+for (const c of spot) {
+  const page = await readFile(path.join(cDir, c.id, "index.html"), "utf8");
+  const tag = (re) => page.match(re)?.[1] ?? "";
+  const ogTitle = tag(/<meta property="og:title" content="([^"]*)">/);
+  const ogImage = tag(/<meta property="og:image" content="([^"]*)">/);
+  const canonical = tag(/<link rel="canonical" href="([^"]*)">/);
+  ok(ogTitle.includes(c.name.replace(/&/g, "&amp;")), `${c.id} og:title 에 구장명`);
+  ok(new RegExp(`<title>[^<]*${escRe(c.name)}`).test(page), `${c.id} <title> 에 구장명`);
+  ok(ogImage === `https://coursebrief.pages.dev/og/${c.id}.png`, `${c.id} og:image 가 구장별 이미지`);
+  ok(canonical === `https://coursebrief.pages.dev/c/${c.id}/`, `${c.id} canonical = 프리렌더 경로`);
+  ok(page.includes('<base href="/">'), `${c.id} 루트 기준 <base>`);
+  ok(page.includes(`history.replaceState(null,"","/#/c/${c.id}")`), `${c.id} SPA 해시 연결`);
+  const ld = page.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)?.[1] ?? "";
+  let ldOk = false;
+  try {
+    const parsed = JSON.parse(ld);
+    ldOk = parsed["@type"] === "GolfCourse" && parsed.name === c.name && /^https:\/\//.test(parsed.url);
+  } catch {
+    ldOk = false;
+  }
+  ok(ldOk, `${c.id} JSON-LD GolfCourse`);
+  ok(page.includes(c.name.replace(/&/g, "&amp;")), `${c.id} 정적 본문에 구장명`);
+}
+ok(!cDirs.some((d) => d.name.includes("undefined")), "프리렌더 파일명에 undefined 없음");
+
+// OG 이미지·아이콘
+const ogDir = path.join(dist, "og");
+const ogFiles = (await exists(ogDir)) ? await readdir(ogDir) : [];
+ok(ogFiles.length === 541, `OG 이미지 ${ogFiles.length}장 (cover + 540 기대)`);
+ok(ogFiles.includes("cover.png"), "OG 기본 이미지 cover.png");
+for (const f of ["cover.png", `${courses[0].id}.png`]) {
+  const p = path.join(ogDir, f);
+  if (await exists(p)) {
+    const size = (await stat(p)).size;
+    const buf = await readFile(p);
+    const isPng = buf[0] === 0x89 && buf[1] === 0x50 && buf[2] === 0x4e && buf[3] === 0x47;
+    const w = buf.readUInt32BE(16);
+    const h = buf.readUInt32BE(20);
+    ok(isPng && w === 1200 && h === 630 && size < 300 * 1024, `og/${f} 1200×630 PNG ${(size / 1024).toFixed(0)}KB`);
+  } else {
+    errors.push(`og/${f} 없음`);
+  }
+}
+const iconFiles = await readdir(path.join(dist, "icons"));
+for (const f of ["icon-192.png", "icon-512.png", "maskable-512.png", "apple-touch-icon.png"]) {
+  ok(iconFiles.includes(f), `icons/${f} 존재`);
+}
+
+// manifest
+const manifestPath = path.join(dist, "manifest.webmanifest");
+ok(await exists(manifestPath), "dist/manifest.webmanifest 존재");
+let manifest = {};
+try {
+  manifest = JSON.parse(await readFile(manifestPath, "utf8"));
+} catch {
+  manifest = {};
+}
+ok(manifest.name?.includes("CourseBrief"), "manifest name");
+ok(manifest.short_name === "코스브리프", "manifest short_name");
+ok(manifest.theme_color === "#3182f6" && manifest.background_color === "#f2f4f6", "manifest 테마·배경색(#3182f6·#f2f4f6)");
+ok(manifest.display === "standalone" && manifest.start_url === "/", "manifest standalone · start_url /");
+ok(Array.isArray(manifest.icons) && manifest.icons.length >= 3, "manifest 아이콘 3종");
+ok((manifest.icons ?? []).some((i) => i.purpose === "maskable"), "manifest maskable 아이콘");
+
+// service worker
+const swPath = path.join(dist, "sw.js");
+ok(await exists(swPath), "dist/sw.js 존재");
+const sw = (await exists(swPath)) ? await readFile(swPath, "utf8") : "";
+ok(/const VERSION = "\d{8}-[0-9a-f]+"/.test(sw), "sw.js 캐시 버전(날짜+해시)");
+ok(sw.includes(`/assets/${hashedJs[0]}`) && sw.includes(`/assets/${hashedCss[0]}`), "sw.js 가 해시 번들·스타일 프리캐시");
+ok(sw.includes('"/data/v29/index.json"'), "sw.js 가 index.json 프리캐시");
+ok(sw.includes("SKIP_WAITING") && sw.includes("caches.delete"), "sw.js 업데이트·옛 캐시 정리 경로");
+ok(sw.includes("dataResponse"), "sw.js 데이터 캐시 전략(백그라운드 갱신)");
+
+// HTML·번들 연결
+ok(html.includes('rel="manifest" href="manifest.webmanifest"'), "index.html manifest 링크");
+ok(html.includes('id="net-banner"') && html.includes('id="update-banner"'), "index.html 오프라인·업데이트 배너");
+ok(html.includes("apple-touch-icon"), "index.html apple-touch-icon");
+ok(html.includes('href="#/report"'), "index.html 제보 링크");
+ok(html.includes('href="#/admin-qa"'), "index.html 관리자 QA 링크");
+ok(robots.includes("Sitemap:"), "robots.txt 에 sitemap");
+ok(/\/sw\.js[\s\S]*?Cache-Control: no-cache/.test(headers), "_headers: sw.js no-cache");
+ok(headers.includes("/c/*"), "_headers: 프리렌더 /c/* 캐시 규칙");
+ok(headers.includes("application/manifest+json"), "_headers: manifest Content-Type");
+ok(bundle.includes("serviceWorker") && bundle.includes("SKIP_WAITING"), "app.js 에 SW 등록·업데이트 처리");
+ok(bundle.includes("위치 · 교통") || bundle.includes("위치·교통"), "app.js 에 위치·교통 영역");
+ok(bundle.includes("admin-qa") && bundle.includes("qa.json"), "app.js 에 QA 대시보드 경로");
+ok(bundle.includes("issues/new?title="), "app.js 에 GitHub 이슈 제보 연결");
+
+// QA 인덱스
+const qaPath = path.join(dist, "data/v29/qa.json");
+ok(await exists(qaPath), "dist/data/v29/qa.json 존재");
+if (await exists(qaPath)) {
+  const qa = JSON.parse(await readFile(qaPath, "utf8"));
+  ok(qa.rows?.length === 540, `qa.json ${qa.rows?.length}행 (540 기대)`);
+  const ids = new Set(qa.rows.map((r) => r.id));
+  ok(ids.size === 540 && courses.every((c) => ids.has(c.id)), "qa.json 구장 id = index id");
+  ok(qa.rows.every((r) => r.cov && Object.keys(r.cov).length === 7), "qa.json 모든 행에 7개 영역 채움률");
+  ok(qa.rows.every((r) => typeof r.avg === "number" && r.avg >= 0 && r.avg <= 1), "qa.json 평균 충실도 0~1");
+  ok(qa.rows.filter((r) => !r.detail).length === 25, `qa.json 요약-만 구장 ${qa.rows.filter((r) => !r.detail).length}곳 (25 기대)`);
+  const qaSize = (await stat(qaPath)).size;
+  ok(qaSize < 300 * 1024, `qa.json ${(qaSize / 1024).toFixed(1)}KB < 300KB`);
+}
+
+// 9) ES 산출물
 const bulk = path.join(root, "elasticsearch", "bulk.ndjson");
 if (await exists(bulk)) {
   const lines = (await readFile(bulk, "utf8")).trim().split("\n");

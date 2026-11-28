@@ -7,6 +7,23 @@
 <meta name="description" content="전국 540개 골프장의 코스 스펙·그린피·예약 규칙·현장 운영·부대시설·최근 공지·클럽 렌탈 정보를 한곳에서. CourseBrief.">
 <meta name="theme-color" content="#f2f4f6" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#17171c" media="(prefers-color-scheme: dark)">
+<!-- 공유 미리보기(OG) — 구장 상세는 빌드가 구장별 값으로 바꿔 넣는다(build-site.mjs) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CourseBrief">
+<meta property="og:title" content="CourseBrief — 전국 골프장 실전 브리핑">
+<meta property="og:description" content="전국 540개 골프장의 코스 스펙·그린피·예약 규칙·현장 운영 정보를 한곳에서.">
+<meta property="og:url" content="https://coursebrief.pages.dev/">
+<meta property="og:image" content="https://coursebrief.pages.dev/og/cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="ko_KR">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://coursebrief.pages.dev/">
+<!-- 홈 화면에 추가(M8) -->
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="코스브리프">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 <!-- 테마 초기화 — 첫 페인트 전에 저장된 선택(light/dark)을 html 에 적용해 깜빡임(FOUC)을 막는다.
      저장된 값이 없으면 시스템 설정(prefers-color-scheme)을 따르도록 data-theme 속성을 두지 않는다. -->
 <script>
@@ -29,6 +46,15 @@
 </head>
 <body>
 <a class="skip" href="#main" id="skip-link">본문으로 건너뛰기</a>
+
+<!-- 오프라인·새 버전 안내(M8) — 상태가 바뀔 때만 보인다 -->
+<div id="net-banner" class="net-banner" role="status" hidden>
+  <span class="net-banner-text"><b>오프라인 상태입니다</b> 최근에 본 화면과 저장한 구장만 열립니다.</span>
+</div>
+<div id="update-banner" class="net-banner is-update" role="status" hidden>
+  <span class="net-banner-text"><b>새 버전이 있습니다</b> 새로고침하면 최신 데이터로 바뀝니다.</span>
+  <button type="button" class="btn btn-sm" id="update-reload">새로고침</button>
+</div>
 
 <header class="topbar">
   <div class="topbar-inner">
@@ -285,10 +311,10 @@
         <p class="footer-meta" id="footer-meta"></p>
       </div>
     </div>
-    <p class="footer-note">요금·운영 정보는 참고값입니다. 예약 전 공식 채널에서 최종 확인하세요. 정보 오류·누락 제보는 언제나 환영합니다.</p>
+    <p class="footer-note">요금·운영 정보는 참고값입니다. 예약 전 공식 채널에서 최종 확인하세요. <a class="link" href="#/report">정보 오류·누락 제보</a>는 언제나 환영합니다.</p>
     <p class="footer-admin">
       <button id="admin-open" class="admin-open" type="button">관리자</button>
-      <span id="admin-badge" class="admin-badge" hidden>관리자 모드<button id="admin-exit" class="admin-exit" type="button">해제</button></span>
+      <span id="admin-badge" class="admin-badge" hidden>관리자 모드<a class="admin-qa" href="#/admin-qa">QA 대시보드</a><button id="admin-exit" class="admin-exit" type="button">해제</button></span>
       <span id="admin-status" class="sr-only" role="status"></span>
     </p>
   </div>

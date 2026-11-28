@@ -52,6 +52,11 @@ import {
 import type { CompareColumn } from "./compare.js";
 import { createMap } from "./maps.js";
 import type { MapController, MapPoint } from "./maps.js";
+import { locationSection } from "./location.js";
+import type { LocationModel } from "./location.js";
+import { renderQa } from "./qa.js";
+import { renderReport } from "./report.js";
+import { initPWA } from "./pwa.js";
 import { bookingChannels, channelBlockHTML, wireBookingActions } from "./channels.js";
 import type { Channel } from "./channels.js";
 import { cleanNote, copyText } from "./text.js";
@@ -328,6 +333,8 @@ async function boot(): Promise<void> {
     // 휴장·정비 일정은 목록 배지·캘린더 화면이 함께 쓴다. 실패해도 목록은 정상 동작한다.
     await loadAlerts(CONFIG.dataBase);
     buildStaticUI();
+    // M8 — 오프라인 셸 등록. 즐겨찾기 구장 JSON 은 미리 캐시해 둔다
+    initPWA(CONFIG.dataBase, favoriteIds());
     initCompare(() => {
       syncCompareToggles(document);
       updateCompareBar();
@@ -1113,8 +1120,8 @@ async function renderDetail(id: string): Promise<void> {
           ${course.tel ? `<a class="btn btn-ghost" href="tel:${esc(course.tel.replace(/[^\d+]/g, ""))}">${icon("phone")}전화 걸기</a>` : ""}
           ${course.homepage ? `<a class="btn btn-ghost" href="${esc(course.homepage)}" target="_blank" rel="noopener noreferrer">${icon("globe")}홈페이지</a>` : ""}
           ${course.lat != null && course.lng != null
-            ? `<a class="btn btn-ghost" href="https://www.google.com/maps?q=${course.lat},${course.lng}" target="_blank" rel="noopener noreferrer">${icon("pin")}지도</a>`
-            : ""}
+            ? `<a class="btn btn-ghost" href="#/c/${esc(course.id)}#s-loc">${icon("pin")}위치·교통</a>`
+            : `<a class="btn btn-ghost" href="#/c/${esc(course.id)}#s-loc">${icon("pin")}찾아가기</a>`}
           <button class="btn btn-ghost${cmpOn ? " is-on" : ""}" type="button" data-cmp="${esc(course.id)}"
             data-cmp-name="${esc(course.name)}" data-cmp-long="1" aria-pressed="${cmpOn}"
             aria-label="${esc(course.name)} ${cmpOn ? "비교에서 빼기" : "비교에 담기"}">
@@ -1227,14 +1234,15 @@ function factsHTML(c: CourseIndexItem, d: CourseDetail | null): string {
 }
 
 function sectionNav(c: CourseIndexItem, visible: { s3: boolean; s4: boolean; s6: boolean }): string {
-  // 숨긴 섹션은 pill 에도 넣지 않는다. 번호는 각 섹션 제목의 번호와 맞춘다.
+  // 숨긴 섹션은 pill 에도 넣지 않는다. 번호는 화면 순서대로 다시 매기고,
+  // 섹션 id(s3·s4…)는 기존 앵커 링크(#/c/{id}#s3)를 깨지 않도록 그대로 둔다.
   const items: Array<[string, string, string]> = [
-    ["s1", "01", "요금·예약"], ["s2", "02", "코스 스펙"],
-    ...(visible.s3 ? [["s3", "03", "현장 운영"]] as Array<[string, string, string]> : []),
-    ...(visible.s4 ? [["s4", "04", "부대시설"]] as Array<[string, string, string]> : []),
-    ["s5", "05", "공지·브리핑"],
-    ...(visible.s6 ? [["s6", "06", "동일 부지"]] as Array<[string, string, string]> : []),
-    ["s7", "07", "클럽 렌탈"], ["s8", "08", "데이터"],
+    ["s1", "01", "요금·예약"], ["s2", "02", "코스 스펙"], ["s-loc", "03", "위치·교통"],
+    ...(visible.s3 ? [["s3", "04", "현장 운영"]] as Array<[string, string, string]> : []),
+    ...(visible.s4 ? [["s4", "05", "부대시설"]] as Array<[string, string, string]> : []),
+    ["s5", "06", "공지·브리핑"],
+    ...(visible.s6 ? [["s6", "07", "동일 부지"]] as Array<[string, string, string]> : []),
+    ["s7", "08", "클럽 렌탈"], ["s8", "09", "데이터"],
   ];
   return `<nav class="section-nav" aria-label="상세 영역">
     <div class="section-nav-inner">
@@ -1781,7 +1789,26 @@ function sections(d: CourseDetail, c: CourseIndexItem, others: Array<{ name: str
     </div>
   </section>`;
 
-  /* 03 현장 운영 */
+  /* 03 위치·교통 (M2) — 주소·최단 IC·지도 앱·주차·셔틀. 확인된 값만, 없으면 '미확인' */
+  const locModel: LocationModel = {
+    id: c.id,
+    name: c.name,
+    region: [c.sido, c.sigungu].filter(Boolean).join(" "),
+    address: valCell(m.address) ?? "",
+    addressNote: m.address_note ? visibleText(m.address_note) : "",
+    ic: m.nearest_ic?.name
+      ? { name: m.nearest_ic.name, km: m.nearest_ic.distance_km ?? null }
+      : null,
+    icNote: m.nearest_ic_note ? visibleText(m.nearest_ic_note) : "",
+    lat: c.lat ?? m.lat ?? null,
+    lng: c.lng ?? m.lng ?? null,
+    parking: valCell(fac.parking?.value) ?? "",
+    transit: valCell(fac.shuttle?.value) ?? "",
+    tel: c.tel ?? m.tel ?? null,
+  };
+  const sLoc = locationSection(locModel);
+
+  /* 04 현장 운영 */
   const opsTiles: string[] = [];
   const opsUnknown: string[] = [];
   for (const k of Object.keys(OPS) as OpsKey[]) {
@@ -1808,7 +1835,7 @@ function sections(d: CourseDetail, c: CourseIndexItem, others: Array<{ name: str
     </div>
   </section>` : "";
 
-  /* 04 부대시설 */
+  /* 05 부대시설 */
   const facTiles: string[] = [];
   const facUnknown: string[] = [];
   for (const k of Object.keys(FAC) as FacilityKey[]) {
@@ -1832,7 +1859,7 @@ function sections(d: CourseDetail, c: CourseIndexItem, others: Array<{ name: str
     </div>
   </section>` : "";
 
-  /* 05 브리핑·공지 */
+  /* 06 브리핑·공지 */
   const alert: BriefingAlert | null | undefined = br.alert;
   const items = br.notices?.items ?? [];
   const { real, products } = splitNotices(items);
@@ -1895,7 +1922,7 @@ function sections(d: CourseDetail, c: CourseIndexItem, others: Array<{ name: str
     </div>
   </section>`;
 
-  /* 06 동일 부지 클러스터 */
+  /* 07 동일 부지 클러스터 */
   const cluster = c.cluster ? state.clusters.get(c.cluster) ?? null : null;
   const s6 = cluster && others.length ? `<section class="section" id="s6" aria-labelledby="s6-h">
     <div class="section-head">
@@ -1924,7 +1951,7 @@ function sections(d: CourseDetail, c: CourseIndexItem, others: Array<{ name: str
     </div>
   </section>` : "";
 
-  /* 07 클럽 렌탈 */
+  /* 08 클럽 렌탈 */
   const nd = rt.nearby_delivery;
   const rentalRows: Array<[string, unknown]> = [
     ["대여 가능", rt.available], ["풀세트 요금", rt.full_set != null ? won(rt.full_set) : null],
@@ -1991,22 +2018,30 @@ function sections(d: CourseDetail, c: CourseIndexItem, others: Array<{ name: str
     noticeAsOf ? `공지 ${noticeAsOf}` : "",
     updated ? `수집 ${updated}` : "",
   ].filter(Boolean).join(" · ")}${staleParts.length ? ` — <span class="stale-inline">${staleParts.join(" · ")} · 확인 권장</span>` : ""}</p>`;
+  const shareUrl = `https://coursebrief.pages.dev/c/${c.id}/`;
+  // 공유는 해시 URL 이 아니라 프리렌더 경로로 — SNS·메신저 크롤러가 구장별 OG 를 읽는 유일한 주소다
+  const dataActions = `<p class="data-actions">
+    <button type="button" class="link-btn" data-copy="${esc(shareUrl)}" data-copy-label="공유 링크">${icon("copy")}공유 링크 복사</button>
+    <span class="dot" aria-hidden="true">·</span>
+    <a class="link" href="#/report?c=${esc(c.id)}">정보 오류·누락 제보</a>
+  </p>`;
   const dataInfo = isAdmin()
     ? `<section class="section" id="s8" aria-labelledby="s8-h">
         <div class="section-head"><h2 id="s8-h">${iconTile("chart", "grey", "sm")}데이터 정보</h2>
         <p class="section-desc">7개 영역 채움률. 비어 있는 값은 '미확인'이며 '없음'과 다릅니다.</p></div>
         <div class="section-body"><div class="cov-list">${covRows}</div>
         ${dataSummary}
-        <p class="source-line">수집 ${esc(updated)} · 스키마 ${esc(d.meta?.schema || "")} · <a class="link" href="${REPO_URL}/blob/main/data/v29/schema.md" target="_blank" rel="noopener noreferrer">스키마 문서</a></p></div>
+        <p class="source-line">수집 ${esc(updated)} · 스키마 ${esc(d.meta?.schema || "")} · <a class="link" href="${REPO_URL}/blob/main/data/v29/schema.md" target="_blank" rel="noopener noreferrer">스키마 문서</a> · <a class="link" href="#/admin-qa">QA 대시보드</a></p>
+        ${dataActions}</div>
       </section>`
     : `<section class="section" id="s8" aria-labelledby="s8-h">
         <div class="section-head"><h2 id="s8-h">${iconTile("chart", "grey", "sm")}데이터 기준</h2>
         <p class="section-desc">${esc(updated || "—")} 기준 · 공개 자료에서 확인된 값만 표시합니다.</p></div>
-        <div class="section-body">${dataSummary}</div>
+        <div class="section-body">${dataSummary}${dataActions}</div>
       </section>`;
 
   return {
-    html: `${s1}${s2}${s3}${s4}${s5}${s6}${s7}${dataInfo}`,
+    html: `${s1}${s2}${sLoc}${s3}${s4}${s5}${s6}${s7}${dataInfo}`,
     visible: { s3: Boolean(s3), s4: Boolean(s4), s6: Boolean(s6) },
   };
 }
@@ -2658,6 +2693,41 @@ async function route(): Promise<void> {
     firstRoute = false;
     return;
   }
+  if (path === "/report") {
+    showView("page");
+    setNav("about");
+    updateCompareBar();
+    const index = getIndex();
+    renderReport($<HTMLElement>("#view-page"), {
+      repoUrl: REPO_URL,
+      courses: index.courses.map((c) => ({ id: c.id, name: c.name, sido: c.sido, sigungu: c.sigungu })),
+      initialId: readHashQuery().get("c") ?? "",
+      initialField: readHashQuery().get("f") ?? "",
+    });
+    setTitle("정보 오류·누락 제보 — CourseBrief");
+    if (!firstRoute) focusHeading(".page-title");
+    firstRoute = false;
+    return;
+  }
+  if (path === "/admin-qa") {
+    showView("page");
+    setNav("about");
+    updateCompareBar();
+    if (isAdmin()) {
+      await renderQa($<HTMLElement>("#view-page"), CONFIG.dataBase);
+      setTitle("데이터 QA — CourseBrief");
+    } else {
+      $<HTMLElement>("#view-page").innerHTML = `<div class="page"><div class="state-box">
+        <span class="state-icon">${icon("chart")}</span>
+        <h1 class="state-title">관리자 모드에서 열리는 화면입니다</h1>
+        <p class="state-desc">푸터의 <b>관리자</b> 버튼에서 비밀번호를 입력하면 채움률·낡은 값·파싱 실패를 볼 수 있습니다.</p>
+        <a class="btn" href="#/about">데이터 안내로</a></div></div>`;
+      setTitle("데이터 QA — CourseBrief");
+    }
+    if (!firstRoute) focusHeading(".page-title");
+    firstRoute = false;
+    return;
+  }
   if (path === "/about") {
     showView("page");
     setNav("about");
@@ -2978,9 +3048,25 @@ function reRenderForAdmin(): void {
   });
 }
 
+/** 주소·좌표·공유 링크 복사 — 값이 길어 손으로 옮기기 번거로운 짧은 글을 한 번에 */
+function wireCopyButtons(): void {
+  document.addEventListener("click", (ev) => {
+    const target = ev.target instanceof Element ? ev.target.closest<HTMLElement>("[data-copy]") : null;
+    if (!target) return;
+    const text = target.dataset.copy ?? "";
+    if (!text) return;
+    ev.preventDefault();
+    const label = target.dataset.copyLabel ?? "내용";
+    void copyText(text).then((ok) =>
+      announceSaved(ok ? `${label}를 복사했습니다.` : `${label}를 복사하지 못했습니다. 직접 선택해 복사하세요.`),
+    );
+  });
+}
+
 try { history.scrollRestoration = "manual"; } catch { /* 지원하지 않는 브라우저 */ }
 
 initTheme();
 initAdmin(reRenderForAdmin);
 wire();
+wireCopyButtons();
 void boot();

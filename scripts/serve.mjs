@@ -18,6 +18,8 @@ const MIME = {
   ".png": "image/png",
   ".ico": "image/x-icon",
   ".txt": "text/plain; charset=utf-8",
+  ".webmanifest": "application/manifest+json; charset=utf-8",
+  ".xml": "application/xml; charset=utf-8",
 };
 
 const server = createServer(async (req, res) => {
@@ -30,7 +32,12 @@ const server = createServer(async (req, res) => {
     }
     let s = null;
     try { s = await stat(file); } catch { s = null; }
-    if (!s || s.isDirectory()) {
+    // 디렉터리는 그 안의 index.html (프리렌더 /c/{id}/ 가 여기에 해당한다)
+    if (s && s.isDirectory()) {
+      file = path.join(file, "index.html");
+      try { s = await stat(file); } catch { s = null; }
+    }
+    if (!s) {
       file = path.join(root, "index.html");
       s = await stat(file);
     }
