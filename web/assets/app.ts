@@ -1220,9 +1220,12 @@ function splitNotices(items: Array<{ title?: string; date?: string | null; url?:
 }
 
 function cancelTimeline(text: string): string {
-  const wd = /주중\s*(\d+)\s*일\s*전/.exec(text);
-  const we = /주말\s*(\d+)\s*일\s*전/.exec(text);
-  if (!wd && !we) return "";
+  // 데이터 문구가 "주중 3일 전 / 주말 4일 전"과 "평일·주말 모두 7일 전" 두 형태를 쓴다 — 둘 다 읽는다
+  const FREE_DAY = (label: string): RegExp => new RegExp(`(?:${label})[^0-9]{0,10}(\\d+)\\s*일\\s*전`);
+  const both = /(?:모두|공통|동일)[^0-9]{0,10}(\d+)\s*일\s*전/.exec(text);
+  const wdRaw = FREE_DAY("주중|평일").exec(text)?.[1] ?? both?.[1];
+  const weRaw = FREE_DAY("주말|공휴일").exec(text)?.[1] ?? both?.[1];
+  if (!wdRaw && !weRaw) return "";
   const row = (label: string, days: number): string => {
     const pct = Math.max(6, Math.min(96, ((7 - days) / 7) * 100));
     return `<div class="penalty-row">
@@ -1236,8 +1239,8 @@ function cancelTimeline(text: string): string {
   };
   return `<div class="penalty">
     <div class="penalty-legend"><span><i class="lg-free"></i>무료 취소</span><span><i class="lg-fee"></i>위약 발생</span><span class="muted">라운드일 기준</span></div>
-    ${wd ? row("주중", Number(wd[1])) : ""}
-    ${we ? row("주말", Number(we[1])) : ""}
+    ${wdRaw ? row("주중", Number(wdRaw)) : ""}
+    ${weRaw ? row("주말", Number(weRaw)) : ""}
   </div>`;
 }
 

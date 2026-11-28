@@ -1,7 +1,7 @@
 /* =========================================================================
    CourseBrief — Toss(TDS) 스타일 디자인 시스템
    ─ 회색 캔버스(#f2f4f6) 위에 순백 라운드 카드. 그림자 대신 색 레이어로 구획한다.
-   ─ 타입: IBM Plex Sans(Latin) + Pretendard Variable(한글), TDS t1~t7 스케일.
+   ─ 타입: Pretendard Variable(한글·영문·숫자 공통), TDS t1~t7 스케일.
    ─ 정보 위계: 캔버스 → 카드 → 인셋 → 글자. 강조색(블루)은 행동과 숫자에만.
    ─ 라이트/다크/자동 3단 테마. 다크는 토스 다크 톤(#17171c·#202027·#2c2c35).
    ========================================================================= */
@@ -160,8 +160,8 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
-  /* TDS 대체 폰트 스택 — 라틴은 IBM Plex Sans, 한글은 Pretendard Variable */
-  font-family: "IBM Plex Sans", "Pretendard Variable", Pretendard, -apple-system,
+  /* 폰트 스택 — 숫자·영문·한글 모두 Pretendard 로 통일(라틴 전용 폰트를 앞에 두면 숫자만 다른 폰트로 렌더된다) */
+  font-family: "Pretendard Variable", Pretendard, -apple-system,
     BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic",
     "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   font-size: 16px;
@@ -764,6 +764,11 @@ a.card:hover { box-shadow: var(--shadow); transform: translateY(-2px); text-deco
 .card-title .ic { width: 18px; height: 18px; color: var(--accent); }
 .policy-text { font-size: 14px; color: var(--text-2); line-height: 1.6; }
 .policy-text.muted { color: var(--text-3); }
+
+/* 조건·요금 문구는 "리드 \n• 항목" 형태다 — 줄바꿈을 그대로 살려 불릿 목록으로 보여준다 */
+.policy-text, .source-line, .fee-card-note, .fact-list dd, .spec-facts dd, .tile-value, .inline-fact > span {
+  white-space: pre-line;
+}
 
 .penalty { display: grid; gap: 8px; }
 .penalty-legend { display: flex; gap: 12px; align-items: center; font-size: 11.5px; color: var(--text-3); }
