@@ -14,7 +14,8 @@
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
   "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
-  "user_supplement_batch1245_2026_11_27": "2차(일반 사용자 자료) 배치1·2·4·5 검수 반영"
+  "user_supplement_batch1245_2026_11_27": "2차(일반 사용자 자료) 배치1·2·4·5 검수 반영",
+  "readability_pass_2026_11_28": "요금·취소·운영 문구 불릿 정리(외부 검수 반영) — 숫자·금액·시각·위약 조건 대조"
  },
  "master": {
   "course_id": "kr-golf-0491",
@@ -105,7 +106,7 @@
  "fee": {
   "weekday": 100000,
   "weekend": 160000,
-  "weekday_text": "100,000원 ~ 130,000원",
+  "weekday_text": "100,000~130,000원",
   "weekend_text": null,
   "basis": "official",
   "tax_included": null,
@@ -158,7 +159,7 @@
   }
  },
  "cancel": {
-  "cancel_policy": "입실 4일전 변경 및 취소: 100% 환불",
+  "cancel_policy": "입실 4일 전까지 변경·취소 시 100% 환불",
   "open_cycle": null,
   "notes": null,
   "evidence": [
@@ -294,7 +295,7 @@
    "evidence": []
   },
   "other": {
-   "value": "편의점 · 수영장",
+   "value": "편의점·수영장",
    "evidence": [
     "편의점 · 수영장 (출처: https://greenfeeguide.co.kr/course/gc-0435/, 2026-11-27 확인)"
    ]

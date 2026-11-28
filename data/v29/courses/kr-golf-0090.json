@@ -15,7 +15,8 @@
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
   "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
   "user_supplement_batch1245_2026_11_27": "2차(일반 사용자 자료) 배치1·2·4·5 검수 반영",
-  "briefing_pass_2026_11_28": "공지·브리핑 문구 정리(외부 검수 반영) — 휴장 알림 보강·게시판 잡음 제거"
+  "briefing_pass_2026_11_28": "공지·브리핑 문구 정리(외부 검수 반영) — 휴장 알림 보강·게시판 잡음 제거",
+  "readability_pass_2026_11_28": "요금·취소·운영 문구 불릿 정리(외부 검수 반영) — 숫자·금액·시각·위약 조건 대조"
  },
  "master": {
   "course_id": "kr-golf-0090",
@@ -67,7 +68,9 @@
    "holes": 27,
    "par": 72,
    "blocks": [
-    "GNEWHILL"
+    "G",
+    "휴",
+    "힐"
    ],
    "length_m": 6247,
    "kga": {
@@ -277,7 +280,9 @@
   "membership_type": "대중제",
   "night_light": null,
   "blocks": [
-   "GNEWHILL"
+   "G",
+   "휴",
+   "힐"
   ],
   "grass": {
    "tee": null,
@@ -558,7 +563,7 @@
  },
  "cancel": {
   "cancel_policy": {
-   "value": "평일 3일 전 · 주말 4일 전까지(이용약관 기준)겨울 휴장동계휴장(기간 미기재)카트리무진 카트 200,000(4인) / 250,000(5인)개",
+   "value": "위약 없이 취소: 평일 3일 전 · 주말 4일 전까지(이용약관 기준)\n• 겨울 휴장: 동계휴장(기간 미기재)\n• 카트: 리무진 카트 200,000원(4인) / 250,000원(5인)",
    "source": "그린피가이드(공식 인용)",
    "url": "https://greenfeeguide.co.kr/course/gc-0154/"
   },
@@ -717,7 +722,7 @@
     "겨울 휴장: 동계휴장(기간 미기재)"
    ],
    "third_party": null,
-   "value": "겨울(동계) 휴장: 동계휴장(기간 미기재)",
+   "value": "겨울(동계) 휴장 — 기간 미기재",
    "source_url": "https://www.venuegcc.com/Web/guide/reservationGuide.asp",
    "confidence": "medium",
    "checked_at": "2026-11-23",

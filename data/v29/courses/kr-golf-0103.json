@@ -15,7 +15,8 @@
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
   "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
   "batch1_supplement_2026_11_27": "누락 필드 보완 배치1(수도권 A) 검수 반영",
-  "user_supplement_batch1245_2026_11_27": "2차(일반 사용자 자료) 배치1·2·4·5 검수 반영"
+  "user_supplement_batch1245_2026_11_27": "2차(일반 사용자 자료) 배치1·2·4·5 검수 반영",
+  "readability_pass_2026_11_28": "요금·취소·운영 문구 불릿 정리(외부 검수 반영) — 숫자·금액·시각·위약 조건 대조"
  },
  "master": {
   "course_id": "kr-golf-0103",
@@ -736,7 +737,7 @@
     "매주 월요일 / 겨울 휴장: 12월 중순~2월 중순"
    ],
    "third_party": "매주 월요일겨울 휴장",
-   "value": "매주 월요일 / 겨울: 12월 중순~2월 중순",
+   "value": "매주 월요일 · 겨울 12월 중순~2월 중순",
    "source_url": "https://www.konjiamgolfclub.co.kr/operate/guide.dev",
    "confidence": "high",
    "checked_at": "2026-10-11",

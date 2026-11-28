@@ -15,7 +15,8 @@
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
   "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
   "batch5_supplement_2026_11_27": "누락 필드 보완 배치5(호남권) 검수 반영",
-  "briefing_pass_2026_11_28": "공지·브리핑 문구 정리(외부 검수 반영) — 휴장 알림 보강·게시판 잡음 제거"
+  "briefing_pass_2026_11_28": "공지·브리핑 문구 정리(외부 검수 반영) — 휴장 알림 보강·게시판 잡음 제거",
+  "readability_pass_2026_11_28": "요금·취소·운영 문구 불릿 정리(외부 검수 반영) — 숫자·금액·시각·위약 조건 대조"
  },
  "master": {
   "course_id": "kr-golf-0499",
@@ -293,7 +294,7 @@
  },
  "cancel": {
   "cancel_policy": {
-   "value": "라운드일 기준 주중 3일 전·주말 4일 전 18시까지 취소 가능, 이후 위약 규정 적용",
+   "value": "라운드일 기준 주중 3일 전·주말 4일 전 18:00까지 취소 가능, 이후 위약 규정 적용",
    "source": "공식 홈페이지",
    "url": "https://www.fourseven.co.kr/guide/guide",
    "checked_at": "2026-11-27"
@@ -373,7 +374,7 @@
    "evidence": [
     "티오프 7분 간격 · 고의 지연 → 예약 정지 (3개월 정지)"
    ],
-   "value": "티오프 7분 간격 · 고의 지연 → 예약 정지 (3개월 정지)",
+   "value": "티오프 7분 간격·고의 지연 → 예약 정지(3개월)",
    "source_url": "https://www.fourseven.co.kr/guide/guide",
    "source_type": "public_info(greenfeeguide)",
    "confidence": "medium",

@@ -15,7 +15,8 @@
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
   "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
   "user_supplement_batch1245_2026_11_27": "2차(일반 사용자 자료) 배치1·2·4·5 검수 반영",
-  "briefing_pass_2026_11_28": "공지·브리핑 문구 정리(외부 검수 반영) — 휴장 알림 보강·게시판 잡음 제거"
+  "briefing_pass_2026_11_28": "공지·브리핑 문구 정리(외부 검수 반영) — 휴장 알림 보강·게시판 잡음 제거",
+  "readability_pass_2026_11_28": "요금·취소·운영 문구 불릿 정리(외부 검수 반영) — 숫자·금액·시각·위약 조건 대조"
  },
  "master": {
   "course_id": "kr-golf-0503",
@@ -486,7 +487,7 @@
  },
  "cancel": {
   "cancel_policy": {
-   "value": "위약 없이 취소: 4일 전 17:00까지 / 기한 이후: 위약 규정에 위약금과 예약 제한(예약 정지·이용 제한·벌점 가운데 하나 이상)이 적혀 있습니다",
+   "value": "4일 전 17:00까지 위약 없이 취소\n• 기한 이후는 위약 규정에 따른 위약금 및 예약 제한(예약 정지·이용 제한·벌점 가운데 하나 이상)",
    "source": "그린피가이드(공식 안내 인용)",
    "url": "https://greenfeeguide.co.kr/course/gc-0424/"
   },
@@ -578,7 +579,7 @@
    "evidence": [
     "사우나: 사우나 있음사우나&파우더룸"
    ],
-   "value": "사우나 있음사우나&파우더룸",
+   "value": "사우나 있음(사우나·파우더룸)",
    "source_url": "https://greenfeeguide.co.kr/course/gc-0424/",
    "source_type": "public_info(greenfeeguide)",
    "confidence": "medium",
@@ -637,7 +638,7 @@
    "value_from": "final_pass_2026-11-27(greenfeeguide)"
   },
   "other": {
-   "value": "프로샵 · 카페·라운지",
+   "value": "프로샵·카페·라운지",
    "evidence": [
     "프로샵 · 카페·라운지 (출처: https://greenfeeguide.co.kr/course/gc-0424/, 2026-11-27 확인)"
    ]
@@ -655,7 +656,7 @@
    "evidence": [
     "셔틀: 정읍역(KTX·SRT) 왕복 픽업 · 무료 · 4인 이상, 예약실 사전 예약(063-570-7777) · 단체는 별도 문의"
    ],
-   "value": "정읍역(KTX·SRT) 왕복 픽업 · 무료 · 4인 이상, 예약실 사전 예약(063-570-7777) · 단체는 별도 문의",
+   "value": "정읍역(KTX·SRT) 왕복 픽업(무료, 4인 이상, 예약실 사전 예약 063-570-7777)\n• 단체는 별도 문의",
    "source_url": "https://www.naejangsancc.com/club/map",
    "source_type": "public_info(greenfeeguide)",
    "confidence": "medium",

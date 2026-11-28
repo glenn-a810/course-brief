@@ -14,7 +14,8 @@
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
   "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
-  "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영"
+  "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영",
+  "readability_pass_2026_11_28": "요금·취소·운영 문구 불릿 정리(외부 검수 반영) — 숫자·금액·시각·위약 조건 대조"
  },
  "master": {
   "course_id": "kr-golf-0221",
@@ -66,7 +67,9 @@
    "holes": 27,
    "par": 72,
    "blocks": [
-    "EASTWESTSOUTH"
+    "EAST",
+    "WEST",
+    "SOUTH"
    ],
    "length_m": 5798,
    "kga": null,
@@ -91,7 +94,9 @@
   "membership_type": "대중제",
   "night_light": true,
   "blocks": [
-   "EASTWESTSOUTH"
+   "EAST",
+   "WEST",
+   "SOUTH"
   ],
   "grass": {
    "tee": null,
@@ -251,7 +256,7 @@
  },
  "cancel": {
   "cancel_policy": {
-   "value": "주중·주말 6일 전 17:00까지 취소해야 패널티 없음. 10팀 이상 단체 전체 취소는 예약일 포함 30일 전까지, 14일 이내 팀 축소 시 1팀당 300,000원 위약금",
+   "value": "• 주중·주말 6일 전 17:00까지 취소해야 패널티 없음\n• 10팀 이상 단체 전체 취소는 예약일 포함 30일 전까지\n• 14일 이내 팀 축소 시 1팀당 300,000원 위약금",
    "source": "공식 홈페이지",
    "url": "https://www.philosgc.com/Reservation/Reservation.aspx"
   },

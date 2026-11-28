@@ -16,7 +16,8 @@
   "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
   "batch5_supplement_2026_11_27": "누락 필드 보완 배치5(호남권) 검수 반영",
   "user_supplement_batch1245_2026_11_27": "2차(일반 사용자 자료) 배치1·2·4·5 검수 반영",
-  "briefing_pass_2026_11_28": "공지·브리핑 문구 정리(외부 검수 반영) — 휴장 알림 보강·게시판 잡음 제거"
+  "briefing_pass_2026_11_28": "공지·브리핑 문구 정리(외부 검수 반영) — 휴장 알림 보강·게시판 잡음 제거",
+  "readability_pass_2026_11_28": "요금·취소·운영 문구 불릿 정리(외부 검수 반영) — 숫자·금액·시각·위약 조건 대조"
  },
  "master": {
   "course_id": "kr-golf-0046",
@@ -68,7 +69,9 @@
    "holes": 27,
    "par": 72,
    "blocks": [
-    "AUTUMNSPRING"
+    "섬머",
+    "오텀",
+    "스프링"
    ],
    "length_m": 5711,
    "kga": {
@@ -277,7 +280,9 @@
   "membership_type": "회원제",
   "night_light": null,
   "blocks": [
-   "AUTUMNSPRING"
+   "섬머",
+   "오텀",
+   "스프링"
   ],
   "grass": {
    "tee": null,
@@ -655,7 +660,7 @@
   }
  },
  "cancel": {
-  "cancel_policy": "2일전취소",
+  "cancel_policy": "2일 전 취소",
   "open_cycle": "비회원 4주 전, 주중회원 3주 전부터 인터넷·전화 예약",
   "notes": null,
   "evidence": [
