@@ -119,11 +119,11 @@ async function submitPassword(): Promise<void> {
   try {
     const hex = await sha256Hex(value);
     if (hex === null) {
-      showError("이 브라우저 환경에서는 관리자 모드를 켤 수 없습니다. HTTPS 주소(localhost 포함)에서 다시 시도하세요.");
+      showError("이 브라우저 환경에서는 관리자 모드를 켤 수 없어요. HTTPS 주소(localhost 포함)에서 다시 시도해 주세요.");
       return;
     }
     if (hex !== PASSWORD_SHA256) {
-      showError("비밀번호가 올바르지 않습니다.");
+      showError("비밀번호가 맞지 않아요.");
       input.select();
       return;
     }
@@ -135,7 +135,7 @@ async function submitPassword(): Promise<void> {
       paint();
       notify?.();
     }
-    announce("관리자 모드로 전환했습니다. 출처 정보가 표시됩니다.");
+    announce("관리자 모드로 바꿨어요. 출처 정보가 보여요.");
   } finally {
     if (button) button.disabled = false;
   }
@@ -159,7 +159,7 @@ export function initAdmin(onChange: () => void): void {
       paint();
       notify?.();
     }
-    announce("관리자 모드를 해제했습니다. 출처 정보를 숨깁니다.");
+    announce("관리자 모드를 껐어요. 출처 정보를 숨겨요.");
     byId<HTMLButtonElement>("admin-open")?.focus();
   });
   byId<HTMLFormElement>("admin-form")?.addEventListener("submit", (ev) => {

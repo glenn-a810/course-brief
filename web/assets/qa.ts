@@ -151,7 +151,7 @@ export async function renderQa(host: HTMLElement, dataBase: string): Promise<voi
   } catch (e) {
     host.innerHTML = `<div class="page"><div class="state-box" role="alert">
       <span class="state-icon">${icon("alert")}</span>
-      <h1 class="state-title">QA 데이터를 불러오지 못했습니다</h1>
+      <h1 class="state-title">QA 데이터를 불러오지 못했어요</h1>
       <p class="state-desc">빌드에서 만든 data/v29/qa.json 이 필요합니다. 네트워크를 확인한 뒤 다시 시도해 주세요.</p>
       <a class="btn" href="#/about">데이터 안내로</a>
     </div></div>`;
@@ -213,7 +213,7 @@ export async function renderQa(host: HTMLElement, dataBase: string): Promise<voi
           <span class="qa-hist-l">${bucketLabels[i]}</span>
         </div>`).join("")}
       </div>
-      <p class="source-line">구장별 평균 충실도의 분포입니다. 막대 위 숫자는 구장 수.</p>
+      <p class="source-line">구장별 평균 충실도의 분포예요. 막대 위 숫자는 구장 수예요.</p>
     </section>
 
     <section class="about-block qa-board">
@@ -250,18 +250,18 @@ export async function renderQa(host: HTMLElement, dataBase: string): Promise<voi
         </table>
       </div>
       <div class="qa-more"><button type="button" class="btn-more" id="qa-more" hidden>더 보기</button></div>
-      <p class="source-line"><a class="link" href="#/report">제보 창구</a>로 들어온 사용자 제보는 GitHub 이슈에서 확인합니다. 히트맵은 확인된 값의 비율이며, 비어 있는 값은 '없음'이 아니라 '미확인'입니다.</p>
+      <p class="source-line"><a class="link" href="#/report">제보 창구</a>로 들어온 사용자 제보는 GitHub 이슈에서 확인해요. 히트맵은 확인된 값의 비율이고, 비어 있는 값은 '없음'이 아니라 '미확인'이에요.</p>
     </section>
 
     <section class="about-block">
       <h2 class="h2">값이 낡은 구장</h2>
-      <p class="section-desc">요금 확인일 또는 공지 수집일이 90일을 넘긴 곳입니다. 요금은 라운드 전 최우선 재확인 대상입니다.</p>
+      <p class="section-desc">요금 확인일이나 공지 수집일이 90일을 넘긴 곳이에요. 요금은 라운드 전에 가장 먼저 다시 확인할 대상이에요.</p>
       <div class="qa-list" id="qa-stale"></div>
     </section>
 
     <section class="about-block">
       <h2 class="h2">규정 파싱 실패</h2>
-      <p class="section-desc">취소 마감·예약 오픈을 문장에서 읽지 못한 구장입니다. 원문이 없으면 '원문 없음', 있으면 '파싱 실패'입니다.</p>
+      <p class="section-desc">취소 마감·예약 오픈을 문장에서 읽지 못한 구장이에요. 원문이 없으면 '원문 없음', 있으면 '파싱 실패'예요.</p>
       <div class="qa-list" id="qa-unparsed"></div>
     </section>
   </div>`;
@@ -300,7 +300,7 @@ export async function renderQa(host: HTMLElement, dataBase: string): Promise<voi
   const paint = (): void => {
     const list = filtered();
     const shown = list.slice(0, st.shown);
-    body.innerHTML = shown.map(rowHTML).join("") || `<tr><td colspan="${AREAS.length + 3}" class="qa-empty">조건에 맞는 구장이 없습니다.</td></tr>`;
+    body.innerHTML = shown.map(rowHTML).join("") || `<tr><td colspan="${AREAS.length + 3}" class="qa-empty">조건에 맞는 구장이 없어요.</td></tr>`;
     count.textContent = `${list.length}곳 중 ${shown.length}곳 표시${st.only.size ? ` · 필터 ${[...st.only].length}개` : ""} · 표 안에서 스크롤`;
     more.hidden = list.length <= shown.length;
     for (const btn of host.querySelectorAll<HTMLElement>("[data-only]")) {
@@ -327,8 +327,8 @@ export async function renderQa(host: HTMLElement, dataBase: string): Promise<voi
         ? `<ul class="qa-list-rows">${list.map(({ r, fee, notice }) => `<li>
             <a class="link" href="#/c/${esc(r.id)}">${esc(r.name)}</a>
             <span class="qa-sub">요금 ${esc(fee.text)} · 공지 ${esc(notice.text)}</span>
-          </li>`).join("")}</ul><p class="source-line">상위 40곳만 표시합니다. 전체는 위 히트맵의 '요금 90일+'·'공지 90일+' 필터로 확인하세요.</p>`
-        : `<p class="section-desc">90일을 넘긴 값이 없습니다.</p>`;
+          </li>`).join("")}</ul><p class="source-line">상위 40곳만 보여요. 전체는 위 히트맵의 '요금 90일+'·'공지 90일+' 필터로 확인해 주세요.</p>`
+        : `<p class="section-desc">90일을 넘긴 값이 없어요.</p>`;
     }
     if (unparsed) {
       const list = rows.filter((r) => !r.cancel_ok || !r.open_ok).slice(0, 40);
@@ -341,7 +341,7 @@ export async function renderQa(host: HTMLElement, dataBase: string): Promise<voi
               r.open_ok ? "" : "오픈 미파싱",
             ].filter(Boolean).join(" · ")}</span>
           </li>`).join("")}</ul>`
-        : `<p class="section-desc">파싱 실패가 없습니다.</p>`;
+        : `<p class="section-desc">파싱 실패가 없어요.</p>`;
     }
   };
 
@@ -372,7 +372,7 @@ export async function renderQa(host: HTMLElement, dataBase: string): Promise<voi
   host.querySelector("#qa-csv")?.addEventListener("click", () => {
     const list = filtered();
     void copyText(csvOf(list)).then((ok) => {
-      count.textContent = ok ? `${list.length}곳을 CSV로 복사했습니다.` : "복사하지 못했습니다.";
+      count.textContent = ok ? `${list.length}곳을 CSV로 복사했어요.` : "복사하지 못했어요.";
     });
   });
 

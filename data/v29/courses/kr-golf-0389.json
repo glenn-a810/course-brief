@@ -141,7 +141,7 @@
    "straight_km_nearest": null,
    "straight_name": null
   },
-  "nearest_ic_note": "v2.8: 제주에서 해상 구간을 건너뛴 직선 최근접 계산(전남 영암IC 150km대)이 잡혀 직선값을 비웠다. 표시 거리(동광IC)는 유지.",
+  "nearest_ic_note": "v2.8: 제주에서 해상 구간을 건너뛴 직선 최근접 계산(전남 영암IC 150km대)이 잡혀 직선값을 비웠어요. 표시 거리(동광IC)는 유지.",
   "tel": "064-731-2000",
   "tel_master": "064-731-2000",
   "tel_official": "064-731-2000 (예약 041-939-1700)",
@@ -240,7 +240,7 @@
  },
  "cancel": {
   "cancel_policy": {
-   "value": "예약취소는 예약일로부터 지정된 기간까지는 벌점/위약금 없이 가능하며, 홈페이지를 통한 직접 취소 또는 예약실을 통한 문의 후 취소 가능합니다.",
+   "value": "예약취소는 예약일로부터 지정된 기간까지는 벌점/위약금 없이 가능하며, 홈페이지를 통한 직접 취소 또는 예약실을 통한 문의 후 취소 가능해요.",
    "source": "공식 홈페이지",
    "url": "https://www.lotteskyhill.com/package-event/package/detail/buyeo%20cc-package-20251202171411?id=54352564-bcc7-4805-a40d-0f3deb4a8319&urlLang=ko"
   },

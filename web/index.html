@@ -49,10 +49,10 @@
 
 <!-- 오프라인·새 버전 안내(M8) — 상태가 바뀔 때만 보인다 -->
 <div id="net-banner" class="net-banner" role="status" hidden>
-  <span class="net-banner-text"><b>오프라인 상태입니다</b> 최근에 본 화면과 저장한 구장만 열립니다.</span>
+  <span class="net-banner-text"><b>오프라인 상태예요</b> 최근에 본 화면과 저장한 구장만 열려요.</span>
 </div>
 <div id="update-banner" class="net-banner is-update" role="status" hidden>
-  <span class="net-banner-text"><b>새 버전이 있습니다</b> 새로고침하면 최신 데이터로 바뀝니다.</span>
+  <span class="net-banner-text"><b>새 버전이 있어요</b> 새로고침하면 최신 데이터로 바뀌어요.</span>
   <button type="button" class="btn btn-sm" id="update-reload">새로고침</button>
 </div>
 
@@ -67,7 +67,7 @@
     </a>
     <nav class="topnav" data-i18n-aria="nav.mainAria" aria-label="주요 메뉴">
       <a href="#/" data-nav="list" data-i18n="nav.courses">골프장</a>
-      <a href="#/saved" data-nav="saved" data-i18n="nav.saved">내 구장</a>
+      <a href="#/saved" data-nav="saved" data-i18n="nav.saved">관심 골프장</a>
       <a href="#/alerts" data-nav="alerts" data-i18n="nav.alerts">휴장·정비</a>
       <a href="#/rental" data-nav="rental" data-i18n="nav.rental">클럽 렌탈</a>
       <a href="#/about" data-nav="about" data-i18n="nav.about">데이터</a>
@@ -113,7 +113,7 @@
       <input id="search-input" type="search" inputmode="search" autocomplete="off" spellcheck="false"
              placeholder="골프장 이름·지역·초성 (익산, ㅇㅅ)" data-i18n-placeholder="search.placeholder" data-i18n-aria="nav.searchAria" aria-label="골프장 검색">
     </div>
-    <p class="search-dialog-hint" data-i18n="search.hint">초성(ㅇㅅ), 부분 일치, 이명(구 명칭)·지역으로 찾습니다.</p>
+    <p class="search-dialog-hint" data-i18n="search.hint">초성(ㅇㅅ)이나 이름 일부, 예전 이름, 지역으로 찾아요.</p>
     <div class="search-dialog-actions">
       <button type="button" class="btn-ghost" id="search-cancel" data-i18n="common.close">닫기</button>
       <button type="submit" class="btn" data-i18n="search.submit">검색</button>
@@ -127,7 +127,7 @@
     <div class="hero-inner">
       <div class="hero-text">
         <h1 id="hero-title"></h1>
-        <p class="hero-desc" data-i18n="list.heroDesc">코스 스펙·그린피·예약 규칙·현장 운영을 7개 영역으로 정리했습니다.</p>
+        <p class="hero-desc" data-i18n="list.heroDesc">코스 스펙·그린피·예약 규칙·현장 운영을 7개 영역으로 정리했어요.</p>
       </div>
       <div class="searchbox">
         <svg class="searchbox-icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M9 3.5a5.5 5.5 0 1 0 3.5 9.75l3.1 3.1 1.05-1.05-3.1-3.1A5.5 5.5 0 0 0 9 3.5Zm0 1.5a4 4 0 1 1 0 8 4 4 0 0 1 0-8Z"/></svg>
@@ -217,7 +217,7 @@
             <span class="chip is-placeholder" aria-hidden="true"></span>
             <span class="chip is-placeholder" aria-hidden="true"></span>
           </div>
-          <p class="filter-hint" data-i18n="filter.tagHint">확인된 구장만 표시합니다 — 조건이 확인되지 않은 구장은 결과에서 빠집니다.</p>
+          <p class="filter-hint" data-i18n="filter.tagHint">확인된 구장만 보여요 — 조건이 확인되지 않은 구장은 결과에서 빠져요.</p>
         </div>
         <div class="filter-actions">
           <button id="f-reset" class="btn-ghost" type="button" data-i18n="common.reset">필터 초기화</button>
@@ -252,12 +252,12 @@
     </div>
     <p id="result-status" class="sr-only" role="status" aria-live="polite"></p>
     <div id="map-panel" class="map-panel" hidden>
-      <p class="map-note" id="map-note" data-i18n="list.mapNote">확인된 좌표가 있는 구장만 표시합니다. 핀을 누르면 요약 카드가 열리고, 카드를 누르면 상세로 이동합니다.</p>
+      <p class="map-note" id="map-note" data-i18n="list.mapNote">확인된 좌표가 있는 구장만 보여요. 핀을 누르면 요약 카드가 열리고, 카드를 누르면 상세로 넘어가요.</p>
       <div class="map-shell" id="map-shell" data-map-theme="light">
         <div id="map-canvas" class="map-canvas"></div>
         <div id="map-fallback" class="map-fallback" role="status" hidden>
-          <strong data-i18n="list.mapFailTitle">지도를 불러오지 못했습니다</strong>
-          <span data-i18n="list.mapFailDesc">네트워크에서 지도 타일을 받을 수 없습니다. 목록 보기에서 같은 조건의 구장을 확인해 주세요.</span>
+          <strong data-i18n="list.mapFailTitle">지도를 불러오지 못했어요</strong>
+          <span data-i18n="list.mapFailDesc">네트워크에서 지도 타일을 받지 못해요. 목록 보기에서 같은 조건의 구장을 확인해 주세요.</span>
           <button type="button" class="btn btn-sm" id="map-to-list" data-i18n="list.mapToList">목록 보기</button>
         </div>
       </div>
@@ -271,7 +271,7 @@
       <div class="card card-skel" aria-hidden="true"><span class="skel-line w40"></span><span class="skel-line w70"></span><span class="skel-line w55"></span><span class="skel-line w30"></span></div>
     </div>
     <div id="empty" class="empty" hidden>
-      <p class="empty-title" data-i18n="list.emptyTitle">조건에 맞는 골프장이 없습니다</p>
+      <p class="empty-title" data-i18n="list.emptyTitle">조건에 맞는 골프장이 없어요</p>
       <p id="empty-desc" class="empty-desc">검색어를 줄이거나 필터를 초기화해 보세요.</p>
       <div class="empty-actions">
         <button class="btn" type="button" id="empty-reset" data-i18n="common.reset">필터 초기화</button>
@@ -300,7 +300,7 @@
   </a>
   <a href="#/saved" data-nav="saved">
     <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3.6l2.7 5.6 6.1.8-4.5 4.2 1.2 6-5.5-3-5.5 3 1.2-6L3.2 10l6.1-.8z"/></svg>
-    <span data-i18n="nav.saved">내 구장</span>
+    <span data-i18n="nav.saved">관심 골프장</span>
   </a>
   <a href="#/alerts" data-nav="alerts">
     <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3.8" y="5.4" width="16.4" height="15" rx="2.2"/><path d="M3.8 10h16.4M8.4 3.4v3.6M15.6 3.4v3.6"/></svg>
@@ -325,7 +325,7 @@
         <p class="footer-meta" id="footer-meta"></p>
       </div>
     </div>
-    <p class="footer-note">요금·운영 정보는 참고값입니다. 예약 전 공식 채널에서 최종 확인하세요. <a class="link" href="#/report">정보 오류·누락 제보</a>는 언제나 환영합니다.</p>
+    <p class="footer-note">요금·운영 정보는 참고값이에요. 예약 전에 공식 채널에서 최종 확인해 주세요. <a class="link" href="#/report">정보 오류·누락 제보</a>는 언제나 환영해요.</p>
     <p class="footer-admin">
       <button id="admin-open" class="admin-open" type="button">관리자</button>
       <span id="admin-badge" class="admin-badge" hidden>관리자 모드<a class="admin-qa" href="#/admin-qa">QA 대시보드</a><button id="admin-exit" class="admin-exit" type="button">해제</button></span>
@@ -337,7 +337,7 @@
 <dialog id="admin-dialog" class="admin-dialog" aria-labelledby="admin-title">
   <form id="admin-form" class="admin-form">
     <h2 id="admin-title">관리자 모드</h2>
-    <p class="admin-desc">출처·수집 정보를 함께 표시합니다. 비밀번호를 입력하세요.</p>
+    <p class="admin-desc">출처·수집 정보를 함께 보여 드려요. 비밀번호를 입력하세요.</p>
     <label class="admin-field">
       <span>비밀번호</span>
       <input id="admin-password" type="password" autocomplete="current-password" enterkeyhint="go" aria-describedby="admin-error">
@@ -353,7 +353,7 @@
 <dialog id="embed-dialog" class="admin-dialog embed-dialog" aria-labelledby="embed-title">
   <div class="admin-form">
     <h2 id="embed-title" data-i18n="embed.title">구장 카드 임베드</h2>
-    <p class="admin-desc" data-i18n="embed.desc">아래 코드를 홈페이지·블로그에 붙이면 이 구장의 요약 카드가 표시됩니다.</p>
+    <p class="admin-desc" data-i18n="embed.desc">아래 코드를 홈페이지·블로그에 붙이면 이 구장의 요약 카드가 나타나요.</p>
     <pre id="embed-code" class="embed-code"></pre>
     <p class="embed-preview-label" data-i18n="embed.preview">미리보기</p>
     <div id="embed-preview" class="embed-preview"></div>

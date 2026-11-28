@@ -333,19 +333,19 @@ const state: AppState = {
 /** 마크업은 index.html 에 고정돼 있으므로, 없으면 조용히 넘어가지 않고 즉시 알린다. */
 function $<T extends Element = HTMLElement>(sel: string): T {
   const node = document.querySelector<T>(sel);
-  if (!node) throw new Error(`요소를 찾을 수 없습니다: ${sel}`);
+  if (!node) throw new Error(`요소를 찾을 수 없어요: ${sel}`);
   return node;
 }
 
 function getIndex(): CourseIndex {
   const index = state.index;
-  if (!index) throw new Error("데이터가 아직 로드되지 않았습니다");
+  if (!index) throw new Error("데이터가 아직 로드되지 않았어요");
   return index;
 }
 
 function getAdapter(): SearchAdapter {
   const adapter = state.adapter;
-  if (!adapter) throw new Error("검색 어댑터가 아직 준비되지 않았습니다");
+  if (!adapter) throw new Error("검색 어댑터가 아직 준비되지 않았어요");
   return adapter;
 }
 
@@ -409,7 +409,7 @@ function showBootError(err: unknown, skeleton: string): void {
   $<HTMLElement>("#results").setAttribute("aria-busy", "false");
   $<HTMLElement>("#results").innerHTML = `<div class="state-box" role="alert">
     <span class="state-icon">${icon("alert")}</span>
-    <h2 class="state-title">골프장 목록을 불러오지 못했습니다</h2>
+    <h2 class="state-title">골프장 목록을 불러오지 못했어요</h2>
     <p class="state-desc">잠시 후 다시 시도해 주세요. 계속되면 네트워크 연결을 확인해 주세요.</p>
     <p class="state-meta">${esc(message)}</p>
     <button class="btn" type="button" id="boot-retry">다시 시도</button>
@@ -778,7 +778,7 @@ async function renderList({ reset = false }: { reset?: boolean } = {}): Promise<
 
   if (reset) state.shown = CONFIG.pageSize;
   const slice = groups.slice(0, state.shown);
-  resultsEl.innerHTML = slice.map(cardHTML).join("");
+  resultsEl.innerHTML = slice.map((g) => cardHTML(g)).join("");
   resultsEl.setAttribute("aria-busy", "false");
   $<HTMLElement>("#empty").hidden = n > 0;
   if (n === 0) $<HTMLElement>("#empty-desc").textContent = emptyDescription();
@@ -898,7 +898,7 @@ function renderActiveFilters(): void {
   count.textContent = String(activeCount);
 }
 
-function cardHTML(g: CourseGroup): string {
+function cardHTML(g: CourseGroup, opts: { openLine?: string } = {}): string {
   const single = g.members.length === 1 ? g.members[0] : null;
   const s = g.statuses.length === 1 ? g.statuses[0] : "operating";
   const st = statusOf(s);
@@ -970,6 +970,7 @@ function cardHTML(g: CourseGroup): string {
     ${statsHTML}
     ${tagHTML}
     ${alertBadge || noticeBadge ? `<div class="card-flags">${alertBadge}${noticeBadge}</div>` : ""}
+    ${opts.openLine ? `<p class="card-open">${icon("calendar")}<span>${opts.openLine}</span></p>` : ""}
     <div class="card-foot">${feeBlock}<span class="card-foot-right">${footRight}</span></div>`;
 
   if (single) {
@@ -1114,8 +1115,8 @@ async function renderDetail(id: string): Promise<void> {
     renderedDetailId = null;
     view.innerHTML = `<div class="page"><div class="state-box" role="alert">
       <span class="state-icon">${icon("alert")}</span>
-      <h1 class="state-title">골프장을 찾을 수 없습니다</h1>
-      <p class="state-desc">주소가 바뀌었거나 목록에서 빠진 골프장입니다.</p>
+      <h1 class="state-title">골프장을 찾을 수 없어요</h1>
+      <p class="state-desc">주소가 바뀌었거나 목록에서 빠진 골프장이에요.</p>
       <a class="btn" href="${esc(state.lastListHash)}">목록으로</a>
     </div></div>`;
     setTitle("찾을 수 없는 골프장 — CourseBrief");
@@ -1238,7 +1239,7 @@ async function renderDetail(id: string): Promise<void> {
           </button>
           <button class="btn btn-ghost fav-btn${favOn ? " is-on" : ""}" type="button" data-fav="${esc(course.id)}"
             data-fav-name="${esc(course.name)}" aria-pressed="${favOn}">
-            <span class="fav-toggle-ic" aria-hidden="true">${icon("star")}</span><span class="fav-toggle-text">${favOn ? t("common.saved") : t("nav.saved")}</span>
+            <span class="fav-toggle-ic" aria-hidden="true">${icon("star")}</span><span class="fav-toggle-text">${favOn ? t("common.saved") : t("common.save")}</span>
           </button>
         </div>
       </div>
@@ -1315,7 +1316,7 @@ function detailSkeleton(name: string): string {
       <p class="detail-meta"><span class="muted">불러오는 중…</span></p>
       <div class="skel-line w70"></div><div class="skel-line w55"></div><div class="skel-line w40"></div>
     </div></div>
-    <p class="sr-only" role="status">상세 정보를 불러오는 중입니다</p>
+    <p class="sr-only" role="status">상세 정보를 불러오고 있어요</p>
   </div>`;
 }
 
@@ -2166,7 +2167,7 @@ function unconfirmedBox(label: string, labels: string[]): string {
   if (!isAdmin() || !labels.length) return "";
   return `<details class="more-box unconfirmed"><summary>확인하지 못한 ${label} ${labels.length}개</summary>
     <p>${esc(labels.join(" · "))}</p>
-    <p class="muted">값이 없다는 것은 '없음'이 아니라 '확인하지 못함'입니다. 전화로 확인하세요.</p>
+    <p class="muted">값이 없다는 건 '없음'이 아니라 '확인하지 못함'이에요. 전화로 확인해 주세요.</p>
   </details>`;
 }
 
@@ -2311,7 +2312,7 @@ function renderRental(): void {
     $<HTMLElement>("#view-page").innerHTML = `<div class="page">
       <h1 class="page-title" tabindex="-1">클럽 렌탈·딜리버리</h1>
       <div class="state-box" role="alert"><span class="state-icon">${icon("alert")}</span>
-      <h2 class="state-title">렌탈 데이터를 불러오지 못했습니다</h2>
+      <h2 class="state-title">렌탈 데이터를 불러오지 못했어요</h2>
       <p class="state-desc">잠시 후 다시 시도해 주세요.</p>
       <button class="btn" type="button" id="rental-retry">다시 시도</button></div></div>`;
     $<HTMLButtonElement>("#rental-retry")?.addEventListener("click", () => void renderRental());
@@ -2377,7 +2378,7 @@ function renderRental(): void {
       ${iconTile("bag", "blue", "lg")}
       <div class="page-head-text">
         <h1 class="page-title" tabindex="-1">클럽 렌탈 · 딜리버리</h1>
-        <p class="page-lead">골프장 자체 대여와, 권역으로 배송·픽업이 가능한 업체를 한곳에 모았습니다. 해외에서 오셨거나 장비 없이 라운드할 때 쓰세요.</p>
+        <p class="page-lead">골프장 자체 대여와, 권역으로 배송·픽업이 가능한 업체를 한곳에 모았어요. 해외에서 오셨거나 장비 없이 라운드할 때 쓰세요.</p>
       </div>
     </header>
     <div class="stat-row">
@@ -2394,8 +2395,8 @@ function renderRental(): void {
         return `<button type="button" class="chip${rentalRegion === rg ? " is-on" : ""}" data-region="${rg}" aria-pressed="${rentalRegion === rg}">${rg}<span class="chip-n">${n}</span></button>`;
       }).join("")}
     </div>
-    <div class="rental-list">${cards || `<div class="state-box"><h2 class="state-title">이 권역에 확인된 업체가 없습니다</h2><p class="state-desc">전체 권역으로 다시 보세요.</p></div>`}</div>
-    <div class="callout"><strong>${icon("info")}아직 비어 있는 것</strong>다국어(영어·일본어·중국어) 온라인 예약과 거리측정기 대여 옵션 표기가 거의 없습니다. 재고·개별 견적·권역별 실제 배송 가능 여부는 전화·카카오톡 상담으로만 확인됩니다.</div>
+    <div class="rental-list">${cards || `<div class="state-box"><h2 class="state-title">이 권역에 확인된 업체가 없어요</h2><p class="state-desc">전체 권역으로 다시 보세요.</p></div>`}</div>
+    <div class="callout"><strong>${icon("info")}아직 비어 있는 것</strong>다국어(영어·일본어·중국어) 온라인 예약과 거리측정기 대여 옵션 표기가 거의 없어요. 재고·개별 견적·권역별 실제 배송 가능 여부는 전화·카카오톡 상담으로만 확인돼요.</div>
     <p class="source-line">${meta}</p>
   </div>`;
 
@@ -2423,12 +2424,12 @@ function renderAbout(): void {
   }).join("");
 
   const lead = isAdmin()
-    ? "CourseBrief는 골프장 공식 홈페이지·공지·요금표를 직접 수집하고 공개 데이터와 대조해 7개 영역으로 정리합니다. 모든 값에는 출처와 확인 시점이 붙습니다."
-    : "CourseBrief는 전국 골프장을 7개 영역으로 정리한 참고 데이터입니다. 공개 자료에서 확인된 값만 표시하며, 값이 없는 항목은 비워 둡니다.";
+    ? "CourseBrief는 골프장 공식 홈페이지·공지·요금표를 직접 수집하고 공개 데이터와 대조해 7개 영역으로 정리해요. 모든 값에는 출처와 확인 시점이 붙어요."
+    : "CourseBrief는 전국 골프장을 7개 영역으로 정리한 참고 데이터예요. 공개 자료에서 확인된 값만 보여 주고, 값이 없는 항목은 비워 둬요.";
 
   const principles = [
     ["공식 우선", "골프장 공식 홈페이지·공지·요금표를 1순위로 보고, 2차 사이트 값은 교차검증에만 씁니다."],
-    ["없음과 빈 값의 구분", "값이 없는 항목은 비워 둡니다. '정보 없음'을 '없음'으로 해석하지 않습니다."],
+    ["없음과 빈 값의 구분", "값이 없는 항목은 비워 둡니다. '정보 없음'을 '없음'으로 해석하지 않아요."],
     ["확인 시점 기록", "그린피처럼 빨리 낡는 값에는 확인 날짜를 함께 남깁니다."],
     ["전화·현장 확인 항목", "좌타 클럽, 매트 비율, 락카 요금처럼 전화로만 확인되는 항목은 비워 두고 제보로 채웁니다."],
   ];
@@ -2453,8 +2454,8 @@ function renderAbout(): void {
 
     ${isAdmin() ? `<section class="about-block">
       <h2 class="h2">영역별 정보 충실도</h2>
-      <p class="section-desc">7개 영역 평균입니다. 비어 있는 값은 '미확인'이며 '없음'과 다릅니다.</p>
-      <div class="cov-list">${covRows || `<p class="section-desc">충실도 정보를 불러오지 못했습니다.</p>`}</div>
+      <p class="section-desc">7개 영역 평균이에요. 비어 있는 값은 '미확인'이고 '없음'과 달라요.</p>
+      <div class="cov-list">${covRows || `<p class="section-desc">충실도 정보를 불러오지 못했어요.</p>`}</div>
     </section>` : ""}
 
     <section class="about-block">
@@ -2482,7 +2483,7 @@ function renderAbout(): void {
       <h2 class="h2">주의</h2>
       <div class="callout warn">
         <strong>${icon("alert")}참고 데이터입니다</strong>
-        요금·운영 정보는 수집 시점의 공개 정보이며, 골프장 정책에 따라 수시로 바뀝니다. 예약·결제 전 반드시 공식 채널에서 최종 확인하세요. 이 사이트는 예약을 대행하지 않습니다.
+        요금·운영 정보는 수집 시점의 공개 정보이고, 골프장 정책에 따라 수시로 바뀌어요. 예약·결제 전에 공식 채널에서 최종 확인해 주세요. 이 사이트는 예약을 대행하지 않아요.
       </div>
     </section>
 
@@ -2494,7 +2495,7 @@ function renderAbout(): void {
   window.scrollTo({ top: 0 });
 }
 
-/* ---------------- 내 구장(M4) ---------------- */
+/* ---------------- 관심 골프장(M4) ---------------- */
 
 let bookingRules: BookingRulesFile | null = null;
 let bookingRulesTried = false;
@@ -2520,40 +2521,42 @@ function nextSaturday(): Date {
 }
 
 function savedRow(item: CourseIndexItem, rules: BookingRulesFile | null): string {
-  const st = statusOf(item.status);
-  const fee = item.green_fee?.weekend ?? item.green_fee?.weekday;
-  const kind = item.green_fee?.weekend != null ? "주말" : "주중";
-  const age = daysSince(item.green_fee?.as_of);
-  const stale = age != null && age > 90 ? ` <span class="stale-inline">요금 ${age}일 전</span>` : "";
   const rule = rules?.rules[item.id]?.open ?? null;
   const round = nextSaturday();
   const info = rule ? openInfo(rule, round, dayTypeOf(round)) : null;
   const od = info ? daysBetween(today(), info.date) : 0;
+  // 목록 화면과 완전히 같은 카드를 쓴다 — 예약 오픈 줄만 한 줄 더 붙인다
   const openLine = info
-    ? `다음 토요일 라운드 예약 오픈 · ${fmtDay(info.date)}${info.time ? ` ${info.time}` : ""} · ${od === 0 ? "오늘" : od > 0 ? `D-${od}` : `오픈 ${-od}일 지남`}`
-    : "예약 오픈 규칙 미확인";
-  const closure = upcomingClosure(item.id);
-  return `<article class="saved-row">
-    <div class="saved-main">
-      <h3 class="saved-name"><a class="link" href="#/c/${esc(item.id)}">${esc(item.name)}</a>
-        <span class="badge ${st.tone}">${esc(st.label)}</span>${closure ? `<span class="alert-tag">${icon("alert")}휴장</span>` : ""}</h3>
-      <p class="saved-meta">${esc([item.sido, item.sigungu].filter(Boolean).join(" "))}${item.holes ? ` · ${item.holes}홀` : ""}${
-        fee != null ? ` · ${kind} ${won(fee)}` : ""}${stale}</p>
-      <p class="saved-open">${icon("calendar")}${esc(openLine)}</p>
-    </div>
-    <div class="saved-actions">
-      <button type="button" class="btn btn-ghost btn-sm${isFavorite(item.id) ? " is-on" : ""}" data-fav="${esc(item.id)}" data-fav-name="${esc(item.name)}" aria-pressed="${isFavorite(item.id)}">
-        <span class="fav-toggle-ic" aria-hidden="true">${icon("star")}</span><span class="fav-toggle-text">${isFavorite(item.id) ? "저장됨" : "저장"}</span>
-      </button>
-      <a class="btn btn-sm" href="#/c/${esc(item.id)}">상세</a>
-    </div>
-  </article>`;
+    ? `다음 토요일 라운드 예약 오픈 <b>${esc(fmtDay(info.date))}${info.time ? ` ${esc(info.time)}` : ""}</b> · ${od === 0 ? "오늘" : od > 0 ? `D-${od}` : `오픈 ${-od}일 지남`}`
+    : "예약 오픈 규칙을 확인하지 못했어요";
+  return cardHTML(soloGroup(item), { openLine });
+}
+
+/** 인덱스 항목 하나를 목록 카드가 쓰는 그룹 모양으로 감싼다(카드 모양을 그대로 재사용) */
+function soloGroup(item: CourseIndexItem): CourseGroup {
+  const fee = cheapestFee([item]);
+  const total = totalFour(item);
+  return {
+    key: item.id,
+    name: item.name,
+    cluster: null,
+    members: [item],
+    holes: item.holes ?? 0,
+    fee: fee?.value ?? null,
+    total: total ?? null,
+    slope: typeof item.slope?.value === "number" ? item.slope.value : null,
+    rating: typeof item.rating === "number" ? item.rating : null,
+    feeKind: fee?.kind ?? null,
+    sido: item.sido,
+    sigungu: item.sigungu ?? "",
+    statuses: [item.status],
+  };
 }
 
 async function renderSaved(): Promise<void> {
   const index = getIndex();
   const view = $<HTMLElement>("#view-page");
-  view.innerHTML = `<div class="page"><p class="section-desc" role="status">내 구장을 불러오는 중…</p></div>`;
+  view.innerHTML = `<div class="page"><p class="section-desc" role="status">관심 골프장을 불러오는 중…</p></div>`;
   const rules = await loadBookingRules();
   const byId = new Map(index.courses.map((c) => [c.id, c]));
   const favs = favoriteIds().map((id) => byId.get(id)).filter((c): c is CourseIndexItem => Boolean(c));
@@ -2561,18 +2564,18 @@ async function renderSaved(): Promise<void> {
   if (!favs.length && !recents.length) {
     view.innerHTML = `<div class="page">
       <header class="page-head">${iconTile("star", "yellow", "lg")}
-        <div class="page-head-text"><h1 class="page-title" tabindex="-1">내 구장</h1>
-        <p class="page-lead">목록·상세의 ★ 버튼으로 저장한 구장과 최근 본 구장을 모아 봅니다. 저장은 이 브라우저에만 남습니다.</p></div></header>
-      <div class="state-box"><h2 class="state-title">아직 저장한 구장이 없습니다</h2>
-      <p class="state-desc">골프장 카드·상세 화면의 <b>★ 저장</b>을 누르면 여기에 모입니다.</p>
+        <div class="page-head-text"><h1 class="page-title" tabindex="-1">관심 골프장</h1>
+        <p class="page-lead">목록·상세의 ★ 버튼으로 저장한 구장과 최근 본 구장을 모아 봐요. 저장은 이 브라우저에만 남아요.</p></div></header>
+      <div class="state-box"><h2 class="state-title">아직 저장한 구장이 없어요</h2>
+      <p class="state-desc">골프장 카드·상세 화면의 <b>★ 저장</b>을 누르면 여기에 모여요.</p>
       <a class="btn" href="#/">골프장 목록으로</a></div></div>`;
-    setTitle("내 구장 — CourseBrief");
+    setTitle("관심 골프장 — CourseBrief");
     window.scrollTo({ top: 0 });
     return;
   }
   const favHTML = favs.length
-    ? `<section class="saved-section"><h2 class="saved-h">저장한 구장<span>${favs.length}</span></h2><div class="saved-list">${favs.map((c) => savedRow(c, rules)).join("")}</div></section>`
-    : `<div class="callout">아직 저장한 구장이 없습니다. 카드·상세의 ★ 버튼을 눌러 보세요.</div>`;
+    ? `<section class="saved-section"><h2 class="saved-h">저장한 구장<span>${favs.length}</span></h2><div class="saved-grid">${favs.map((c) => savedRow(c, rules)).join("")}</div></section>`
+    : `<div class="callout">아직 저장한 구장이 없어요. 카드·상세의 ★ 버튼을 눌러 보세요.</div>`;
   const recentHTML = recents.length
     ? `<section class="saved-section"><h2 class="saved-h">최근 본 구장<span>${recents.length}</span></h2>
         <div class="saved-list is-recent">${recents.map((c) => `<a class="recent-row" href="#/c/${esc(c.id)}">
@@ -2583,8 +2586,8 @@ async function renderSaved(): Promise<void> {
     : "";
   view.innerHTML = `<div class="page saved-page">
     <header class="page-head">${iconTile("star", "yellow", "lg")}
-      <div class="page-head-text"><h1 class="page-title" tabindex="-1">내 구장</h1>
-      <p class="page-lead">저장한 구장의 다음 토요일 라운드 예약 오픈일과 휴장 일정을 함께 봅니다. 저장은 이 브라우저에만 남습니다.</p></div>
+      <div class="page-head-text"><h1 class="page-title" tabindex="-1">관심 골프장</h1>
+      <p class="page-lead">저장한 구장의 다음 토요일 라운드 예약 오픈일과 휴장 일정을 함께 봐요. 저장은 이 브라우저에만 남아요.</p></div>
     </header>
     ${favHTML}
     ${recentHTML}
@@ -2593,7 +2596,7 @@ async function renderSaved(): Promise<void> {
       <button type="button" class="btn btn-ghost btn-sm" id="saved-clear">${icon("close")}전체 삭제</button>
       <span class="saved-status" role="status"></span>
     </div>
-    <p class="source-line">예약 오픈일은 규정 문구에서 자동 계산한 참고값입니다. 정확한 오픈은 골프장 공식 채널에서 확인하세요.</p>
+    <p class="source-line">예약 오픈일은 규정 문구에서 자동 계산한 참고값이에요. 정확한 오픈은 골프장 공식 채널에서 확인해 주세요.</p>
   </div>`;
   syncFavToggles(view);
   const status = (text: string): void => {
@@ -2601,14 +2604,14 @@ async function renderSaved(): Promise<void> {
     if (node) node.textContent = text;
   };
   view.querySelector("#saved-export")?.addEventListener("click", () => {
-    void copyText(exportSaved()).then((ok) => status(ok ? "저장 목록을 JSON으로 복사했습니다." : "복사하지 못했습니다."));
+    void copyText(exportSaved()).then((ok) => status(ok ? "저장 목록을 JSON으로 복사했어요." : "복사하지 못했어요."));
   });
   view.querySelector("#saved-clear")?.addEventListener("click", () => {
-    if (!window.confirm("저장한 구장과 최근 본 목록을 모두 지울까요? 이 브라우저에서만 지워집니다.")) return;
+    if (!window.confirm("저장한 구장과 최근 본 목록을 모두 지울까요? 이 브라우저에서만 지워져요.")) return;
     clearSavedAll();
     void renderSaved();
   });
-  setTitle("내 구장 — CourseBrief");
+  setTitle("관심 골프장 — CourseBrief");
   window.scrollTo({ top: 0 });
 }
 
@@ -2619,8 +2622,8 @@ async function renderPrepPage(id: string, dateParam: string | null): Promise<voi
   const view = $<HTMLElement>("#view-page");
   const course = index.courses.find((c) => c.id === id);
   if (!course) {
-    view.innerHTML = `<div class="page"><div class="state-box" role="alert"><h1 class="state-title">골프장을 찾을 수 없습니다</h1>
-      <p class="state-desc">주소가 바뀌었거나 목록에서 빠진 골프장입니다.</p><a class="btn" href="#/">목록으로</a></div></div>`;
+    view.innerHTML = `<div class="page"><div class="state-box" role="alert"><h1 class="state-title">골프장을 찾을 수 없어요</h1>
+      <p class="state-desc">주소가 바뀌었거나 목록에서 빠진 골프장이에요.</p><a class="btn" href="#/">목록으로</a></div></div>`;
     setTitle("찾을 수 없는 골프장 — CourseBrief");
     return;
   }
@@ -2981,8 +2984,8 @@ async function route(): Promise<void> {
     } else {
       $<HTMLElement>("#view-page").innerHTML = `<div class="page"><div class="state-box">
         <span class="state-icon">${icon("chart")}</span>
-        <h1 class="state-title">관리자 모드에서 열리는 화면입니다</h1>
-        <p class="state-desc">푸터의 <b>관리자</b> 버튼에서 비밀번호를 입력하면 채움률·낡은 값·파싱 실패를 볼 수 있습니다.</p>
+        <h1 class="state-title">관리자 모드에서 열리는 화면이에요</h1>
+        <p class="state-desc">푸터의 <b>관리자</b> 버튼에서 비밀번호를 입력하면 채움률·낡은 값·파싱 실패를 볼 수 있어요.</p>
         <a class="btn" href="#/about">데이터 안내로</a></div></div>`;
       setTitle("데이터 QA — CourseBrief");
     }
@@ -3134,7 +3137,7 @@ function wire(): void {
       if (!id) return;
       const on = toggleFavorite(id);
       syncFavToggles(document);
-      announceSaved(on ? "내 구장에 저장했습니다." : "내 구장에서 뺐습니다.");
+      announceSaved(on ? "관심 골프장에 저장했어요." : "관심 골프장에서 뺐어요.");
       if (location.hash.startsWith("#/saved")) void renderSaved();
       return;
     }
@@ -3331,7 +3334,7 @@ function wireCopyButtons(): void {
     ev.preventDefault();
     const label = target.dataset.copyLabel ?? "내용";
     void copyText(text).then((ok) =>
-      announceSaved(ok ? `${label}를 복사했습니다.` : `${label}를 복사하지 못했습니다. 직접 선택해 복사하세요.`),
+      announceSaved(ok ? `${label}를 복사했어요.` : `${label}를 복사하지 못했어요. 직접 선택해서 복사해 주세요.`),
     );
   });
 }

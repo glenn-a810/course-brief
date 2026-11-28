@@ -74,7 +74,7 @@ function factsHTML(facts: PrepFact[]): string {
 
 function costHTML(model: PrepModel, day: "weekday" | "weekend"): string {
   const green = day === "weekend" ? model.weekendFee : model.weekdayFee;
-  if (green == null && model.cart == null && model.caddie == null) return `<p class="prep-empty">요금 정보가 확인되지 않았습니다.</p>`;
+  if (green == null && model.cart == null && model.caddie == null) return `<p class="prep-empty">요금 정보가 확인되지 않았어요.</p>`;
   const greenTotal = green != null ? green * 4 : null;
   const caddie = model.caddieNone ? 0 : model.caddie;
   const total = greenTotal == null ? null : greenTotal + (model.cart ?? 0) + (caddie ?? 0);
@@ -87,7 +87,7 @@ function costHTML(model: PrepModel, day: "weekday" | "weekend"): string {
     ${row("4인 합계", total != null ? money(total) : "그린피 확인 필요", " is-total")}
     ${total != null ? row("1인당", money(Math.round(total / 4)), " is-sub") : ""}
   </div>
-  ${missing.length ? `<p class="prep-note">${esc(missing.join("·"))} 미확인 — 합계에서 빠져 있습니다.</p>` : ""}
+  ${missing.length ? `<p class="prep-note">${esc(missing.join("·"))} 미확인 — 합계에서 빠져 있어요.</p>` : ""}
   <p class="prep-note">1인 18홀 비회원 기준 · 카트·캐디는 팀 기준 1회${model.asOf ? ` · 요금 확인 ${esc(model.asOf)}` : ""}</p>`;
 }
 
@@ -145,7 +145,7 @@ export function renderPrep(root: HTMLElement, model: PrepModel, initialDate?: st
             <div><dt>취소 마감</dt><dd class="${dl?.passed ? "is-warn" : ""}">${esc(deadlineText)}</dd></div>
             <div><dt>인원</dt><dd>4인 기준 정산</dd></div>
           </dl>
-          <p class="prep-note">${esc(model.cancelRaw || "취소 규정이 확인되지 않았습니다. 예약 전 전화로 확인하세요.")}</p>
+          <p class="prep-note">${esc(model.cancelRaw || "취소 규정이 확인되지 않았어요. 예약 전에 전화로 확인해 주세요.")}</p>
         </section>
 
         <section class="prep-block">
@@ -178,24 +178,24 @@ export function renderPrep(root: HTMLElement, model: PrepModel, initialDate?: st
                   <p class="prep-note">${esc((suit?.reasons ?? []).join(" · "))}</p>
                   <p class="prep-note">일출 ${w.sunrise ? esc(w.sunrise.slice(11)) : "—"} · 일몰 ${w.sunset ? esc(w.sunset.slice(11)) : "—"} · Open-Meteo 참고 예보</p>
                 </div>`
-              : `<p class="prep-empty">이 날짜는 예보 범위(16일) 밖입니다.</p>`}
+              : `<p class="prep-empty">이 날짜는 예보 범위(16일) 밖이에요.</p>`}
           ${model.weatherSummary.length ? `<div class="prep-storm"><b>악천후 정산</b><ul>${model.weatherSummary.map((s) => `<li>${esc(s)}</li>`).join("")}</ul></div>` : ""}
         </section>
 
         <section class="prep-block is-wide">
           <h2>${icon("golf")}현장</h2>
-          ${model.ops.length ? factsHTML(model.ops) : `<p class="prep-empty">확인된 현장 정보가 없습니다. 전화로 확인하세요.</p>`}
+          ${model.ops.length ? factsHTML(model.ops) : `<p class="prep-empty">확인된 현장 정보가 없어요. 전화로 확인해 주세요.</p>`}
         </section>
 
         <section class="prep-block is-wide">
           <h2>${icon("building")}부대시설 · 렌탈</h2>
-          ${model.facilities.length ? factsHTML(model.facilities) : `<p class="prep-empty">확인된 시설 정보가 없습니다.</p>`}
+          ${model.facilities.length ? factsHTML(model.facilities) : `<p class="prep-empty">확인된 시설 정보가 없어요.</p>`}
           ${model.rental ? `<p class="prep-note">클럽 렌탈: ${esc(model.rental)}</p>` : ""}
         </section>
       </div>
 
       ${model.note ? `<p class="prep-footnote">${esc(model.note)}</p>` : ""}
-      <p class="prep-footnote">확인된 항목 ${model.ops.length + model.facilities.length + (model.address ? 1 : 0) + (model.tel ? 1 : 0) + (model.weekdayFee != null || model.weekendFee != null ? 1 : 0)}개 · 값이 없는 항목은 '없음'이 아니라 '확인하지 못함'입니다. ${esc(model.updated)} 기준.</p>
+      <p class="prep-footnote">확인된 항목 ${model.ops.length + model.facilities.length + (model.address ? 1 : 0) + (model.tel ? 1 : 0) + (model.weekdayFee != null || model.weekendFee != null ? 1 : 0)}개 · 값이 없는 항목은 '없음'이 아니라 '확인하지 못함'이에요. ${esc(model.updated)} 기준.</p>
       <p class="prep-footnote">CourseBrief · 코스브리프 · ${esc(courseUrl(model.id))}</p>
     </div>`;
 
@@ -228,7 +228,7 @@ export function renderPrep(root: HTMLElement, model: PrepModel, initialDate?: st
       const url = `${courseUrl(model.id).replace(/#\/c\//, "#/prep/")}?d=${state.date}`;
       void copyText(url).then((ok) => {
         const box = root.querySelector<HTMLElement>("[data-prep-status]");
-        if (box) box.textContent = ok ? "준비 카드 링크를 복사했습니다." : "복사하지 못했습니다.";
+        if (box) box.textContent = ok ? "준비 카드 링크를 복사했어요." : "복사하지 못했어요.";
       });
       return;
     }

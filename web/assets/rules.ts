@@ -264,9 +264,9 @@ export function openInfo(po: ParsedOpen | null | undefined, round: Date, day: Da
     const d = ruleDate(rule, round);
     if (d) {
       const notes: string[] = [];
-      if (po.member_only) notes.push("회원 기준 규정입니다 — 비회원은 다를 수 있습니다");
-      if (po.ambiguous) notes.push("규정이 여러 갈래입니다 — 가장 이른 기준으로 계산했습니다");
-      if (po.recurring) notes.push("정기(주 단위) 오픈 규정입니다");
+      if (po.member_only) notes.push("회원 기준 규정이에요 — 비회원은 다를 수 있어요");
+      if (po.ambiguous) notes.push("규칙이 여러 갈래예요 — 가장 이른 기준으로 계산했어요");
+      if (po.recurring) notes.push("정기(주 단위) 오픈 규정이에요");
       const basis = `${rule.before}${rule.unit === "week" ? "주" : rule.unit === "day" ? "일" : "개월"} 전${rule.weekday ? ` ${rule.weekday}요일` : ""}${rule.time ? ` ${rule.time}` : ""}`;
       return { date: d, time: rule.time ?? null, basis, dday: daysBetween(today(), d), note: notes.join(" · ") };
     }
@@ -284,7 +284,7 @@ export function openInfo(po: ParsedOpen | null | undefined, round: Date, day: Da
         time: best.m.time ?? null,
         basis,
         dday: daysBetween(today(), best.d),
-        note: "월 단위 정기 오픈 — 다음 오픈일 기준입니다",
+        note: "월 단위 정기 오픈 — 다음 오픈일 기준이에요",
       };
     }
   }

@@ -138,10 +138,11 @@ function rowHTML(item: AlertItem): string {
   const confirmed = item.source === "alert"
     ? (item.confirmed ? `<span class="src-tag src-official">${esc(t("alerts.confirmed"))}</span>` : `<span class="src-tag src-neutral">${esc(t("alerts.fromNotice"))}</span>`)
     : `<span class="src-tag src-neutral">${esc(t("alerts.fromTitle"))}</span>`;
-  return `<li class="alert-row">
+  return `<li class="alert-row is-link">
+    <a class="card-hit" href="#/c/${esc(item.id)}" aria-label="${esc(t("card.viewDetailAria", { name: item.name }))}"></a>
     <div class="alert-when">${ddayBadge}${st === "undated" ? "" : `<span class="alert-period">${esc(periodText(item))}</span>`}</div>
     <div class="alert-main">
-      <h3 class="alert-name"><a class="link" href="#/c/${esc(item.id)}">${esc(item.name)}</a>
+      <h3 class="alert-name">${esc(item.name)}
         <span class="badge ${kind.tone}">${esc(kind.label)}</span>${confirmed}</h3>
       <p class="alert-title">${esc(item.title || t("alerts.noTitle"))}</p>
       ${item.detail ? `<p class="alert-detail">${esc(item.detail)}</p>` : ""}
@@ -149,7 +150,7 @@ function rowHTML(item: AlertItem): string {
         item.updated ? ` · ${esc(t("alerts.posted", { date: item.updated.slice(0, 10).replaceAll("-", ".") }))}` : ""}${
         item.to && from && to && daysBetween(from, to) === 0 ? "" : ""}</p>
     </div>
-    <a class="btn btn-ghost btn-sm alert-go" href="#/c/${esc(item.id)}">${esc(t("common.detail"))}${icon("chevron")}</a>
+    <span class="card-cta alert-cta">${esc(t("common.detail"))}${icon("chevron")}</span>
   </li>`;
 }
 

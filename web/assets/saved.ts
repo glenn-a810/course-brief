@@ -97,7 +97,7 @@ export function syncFavToggles(root: ParentNode = document): void {
     btn.setAttribute("aria-label", `${btn.dataset.favName ?? ""} ${label}`.trim());
     btn.title = label;
     const text = btn.querySelector<HTMLElement>(".fav-toggle-text");
-    if (text) text.textContent = on ? t("common.saved") : t("nav.saved");
+    if (text) text.textContent = on ? t("common.saved") : t("common.save");
   }
 }
 

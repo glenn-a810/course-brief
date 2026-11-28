@@ -130,7 +130,7 @@
   },
   "as_of": "2026-11-01",
   "source_url": null,
-  "note": "표시 값은 공식 요금표의 시간대별 최저가(주중 3부 13만·주말 일요일 3부 12만)입니다. 1부 기준으로는 주중 13만·주말 22만부터 시작합니다.",
+  "note": "표시 값은 공식 요금표의 시간대별 최저가(주중 3부 13만·주말 일요일 3부 12만)이에요. 1부 기준으로는 주중 13만·주말 22만부터 시작해요.",
   "sources": [
    {
     "source": "그린피가이드(공식 요금표 확인)",
@@ -196,7 +196,7 @@
     {
      "section": "기본 그린피",
      "label": "",
-     "value": "· 26.04.17일까지는 백만 싣는 카트 이용합니다. 금액 68,000원(팀)",
+     "value": "· 26.04.17일까지는 백만 싣는 카트 이용해요. 금액 68,000원(팀)",
      "amounts": [
       68000
      ],
@@ -627,7 +627,7 @@
      "url": "https://www.incheongrand.cc/multi_board/site/board/list.asp?groupcode=NOTICE"
     },
     {
-     "title": "분실물은 등록일 기준으로 최대 3개월간 보관되며 이후 폐기처리합니다.",
+     "title": "분실물은 등록일 기준으로 최대 3개월간 보관되며 이후 폐기처리해요.",
      "date": "2021-07-12",
      "url": "https://www.incheongrand.cc/multi_board/site/board/list.asp?groupcode=CGALLERY&open_state=1"
     },

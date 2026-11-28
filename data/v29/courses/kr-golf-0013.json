@@ -138,7 +138,7 @@
  },
  "cancel": {
   "cancel_policy": {
-   "value": "• 위약 없이 취소: 4일 전까지\n• 기한 이후: 위약 규정에 예약 제한(예약 정지·이용 제한·벌점 중 하나 이상)이 적혀 있습니다",
+   "value": "• 위약 없이 취소: 4일 전까지\n• 기한 이후: 위약 규정에 예약 제한(예약 정지·이용 제한·벌점 중 하나 이상)이 적혀 있어요",
    "source": "그린피가이드(공식 안내 인용)",
    "url": "https://greenfeeguide.co.kr/course/gc-0181/"
   },
@@ -183,7 +183,7 @@
    "evidence": [
     "2인 라운드시 3인 요금이 적용됩니다. (출처: https://www.bitgoeulcc.co.kr/web/reg/reginfo.do, 2026-11-27 확인)"
    ],
-   "value": "2인 라운드시 3인 요금이 적용됩니다.",
+   "value": "2인 라운드시 3인 요금이 적용돼요.",
    "third_party": {
     "two": null,
     "three": null,

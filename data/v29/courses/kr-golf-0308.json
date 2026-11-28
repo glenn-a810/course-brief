@@ -209,7 +209,7 @@
     {
      "section": "카트료",
      "label": "제 8조 (요금의 환불)",
-     "value": "① 경기 중 강설, 폭우, 안개 기타 천재지변 등의 불가항력적인 사유가 발생한 때에는 각호와 같이 적용하고 환불요금 1,000미만은 절사한다.",
+     "value": "① 경기 중 강설, 폭우, 안개 기타 천재지변 등의 불가항력적인 사유가 발생한 때에는 각호와 같이 적용하고 환불요금 1,000미만은 절사해요.",
      "amounts": [],
      "url": "https://www.sunrichgc.com/guide-info/terms"
     },
@@ -314,7 +314,7 @@
    "text": "인터넷 예약 21일 전 09:00부터"
   },
   "weather_summary": [
-   "악천후로 인한 휴장 및 경기 불가 시는 적용되지 않습니다."
+   "악천후로 인한 휴장 및 경기 불가 시는 적용되지 않아요."
   ]
  },
  "ops": {
@@ -582,7 +582,7 @@
      "url": "https://www.sunrichgc.com/customer/notice/63067"
     },
     {
-     "title": "연단체팀을 모십니다.(2027년~)",
+     "title": "연단체팀을 모셔요.(2027년~)",
      "date": "2023-10-13",
      "url": "https://www.sunrichgc.com/customer/notice"
     },
@@ -617,7 +617,7 @@
      "url": "https://www.sunrichgc.com/customer/notice"
     },
     {
-     "title": "조인예약이 새롭게 변경되었습니다.",
+     "title": "조인예약이 새롭게 변경됐어요.",
      "date": "2014-11-03",
      "url": "https://www.sunrichgc.com/customer/notice"
     }
@@ -659,7 +659,7 @@
     ],
     "모집": [
      {
-      "title": "연단체팀을 모십니다.(2027년~)",
+      "title": "연단체팀을 모셔요.(2027년~)",
       "date": "2023-10-13",
       "url": "https://www.sunrichgc.com/customer/notice"
      }

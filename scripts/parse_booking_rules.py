@@ -29,6 +29,9 @@ from datetime import date
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 V29 = os.path.join(ROOT, "data", "v29")
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from haeyo import to_haeyo  # noqa: E402
+
 WEEKDAYS = {"월": 0, "화": 1, "수": 2, "목": 3, "금": 4, "토": 5, "일": 6}
 
 # ---------------------------------------------------------------- 공통
@@ -471,6 +474,7 @@ def weather_summary(evidence: list | None) -> list[str]:
             if re.search(r"미확인|확인\s*안\s*됨", s):
                 continue
             s = re.sub(r"^[-–—•\s]+", "", s)
+            s = to_haeyo(s)  # 화면에 그대로 나가는 문장 — 해요체로 맞춘다
             if s and s not in out:
                 out.append(s)
             if len(out) >= 2:

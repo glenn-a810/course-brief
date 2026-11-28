@@ -55,6 +55,8 @@
   --shadow-sm: 0 1px 2px rgba(25, 31, 40, .04);
   --shadow: 0 4px 16px rgba(25, 31, 40, .06);
   --shadow-lg: 0 16px 40px rgba(25, 31, 40, .16);
+  /* 떠 있는 하단 탭 바 — 캔버스 위에 한 겹 띄워 보이게 하는 그림자 */
+  --shadow-float: 0 10px 28px rgba(25, 31, 40, .13), 0 2px 8px rgba(25, 31, 40, .06);
 
   --radius: 20px;
   --radius-sm: 14px;
@@ -62,7 +64,10 @@
   --maxw: 1120px;
   --tap: 44px;
   --topbar-h: 64px;
-  --tabbar-h: 60px;
+  /* 플로팅 탭 바: 높이(테두리 포함) + 화면 바닥에서 띄우는 여백 + 안쪽 패딩 */
+  --tabbar-h: 62px;
+  --tabbar-gap: 10px;
+  --tabbar-pad: 4px;
 
   /* TDS 타입 스케일 t1~t7 (size / line-height) */
   --t1: 30px; --t1-lh: 40px;
@@ -112,6 +117,7 @@
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, .5);
   --shadow: 0 4px 18px rgba(0, 0, 0, .45);
   --shadow-lg: 0 18px 48px rgba(0, 0, 0, .6);
+  --shadow-float: 0 12px 32px rgba(0, 0, 0, .55), 0 2px 8px rgba(0, 0, 0, .4);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -148,6 +154,7 @@
     --shadow-sm: 0 1px 2px rgba(0, 0, 0, .5);
     --shadow: 0 4px 18px rgba(0, 0, 0, .45);
     --shadow-lg: 0 18px 48px rgba(0, 0, 0, .6);
+    --shadow-float: 0 12px 32px rgba(0, 0, 0, .55), 0 2px 8px rgba(0, 0, 0, .4);
   }
 }
 
@@ -320,21 +327,29 @@ mark { background: var(--mark); color: inherit; border-radius: 4px; padding: 0 2
 .lang-menu .menu-pop { min-width: 150px; }
 .lang-menu[open] > summary { background: var(--inset); color: var(--text); }
 
-/* 모바일 하단 탭 */
+/* 모바일 하단 탭 — 화면 바닥에 붙이지 않고 띄운 알약(pill) 바.
+   반투명 + 블러로 뒤 내용이 비치고, safe-area 만큼 위로 올린다. */
 .tabbar {
-  display: none; position: fixed; left: 0; right: 0; bottom: 0; z-index: 45;
-  background: color-mix(in srgb, var(--surface) 94%, transparent);
-  backdrop-filter: saturate(160%) blur(14px);
-  border-top: 1px solid var(--line);
-  padding-bottom: env(safe-area-inset-bottom, 0px);
+  display: none; position: fixed; z-index: 45;
+  left: 12px; right: 12px; bottom: calc(var(--tabbar-gap) + env(safe-area-inset-bottom, 0px));
+  width: auto; max-width: 460px; margin-inline: auto;
+  padding: var(--tabbar-pad);
+  background: color-mix(in srgb, var(--surface) 84%, transparent);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  box-shadow: var(--shadow-float);
 }
 .tabbar a {
   flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center;
-  gap: 3px; min-height: var(--tabbar-h); color: var(--text-3); font-size: 11.5px; font-weight: 500;
+  gap: 2px; min-height: calc(var(--tabbar-h) - var(--tabbar-pad) * 2 - 2px);
+  border-radius: 18px; color: var(--text-3); font-size: 11px; font-weight: 500;
+  letter-spacing: -.01em;
 }
-.tabbar a:hover { text-decoration: none; }
-.tabbar a[aria-current="page"] { color: var(--accent-ink); font-weight: 700; }
-.tabbar .ic { width: 24px; height: 24px; }
+.tabbar a:hover { text-decoration: none; color: var(--text-2); }
+.tabbar a[aria-current="page"] { color: var(--accent-ink); font-weight: 700; background: var(--accent-soft); }
+.tabbar .ic { width: 22px; height: 22px; }
 
 /* ---------------- 히어로 ---------------- */
 
@@ -1185,7 +1200,8 @@ tbody tr:last-child td { border-bottom: 0; }
 /* --- 하단 비교 바 --- */
 .compare-bar {
   position: fixed; left: 0; right: 0; z-index: 40; padding: 0 16px;
-  bottom: calc(var(--tabbar-h) + env(safe-area-inset-bottom, 0px) + 8px);
+  /* 떠 있는 탭 바 위에 겹치지 않게 한 칸 더 띄운다 */
+  bottom: calc(var(--tabbar-h) + var(--tabbar-gap) + env(safe-area-inset-bottom, 0px) + 8px);
   pointer-events: none;
 }
 .compare-bar-inner {
@@ -1388,7 +1404,7 @@ tbody tr:last-child td { border-bottom: 0; }
   .topnav { display: none; }
   .topbar-actions { margin-left: auto; }
   .tabbar { display: flex; }
-  body { padding-bottom: calc(var(--tabbar-h) + env(safe-area-inset-bottom, 0px)); }
+  body { padding-bottom: calc(var(--tabbar-h) + var(--tabbar-gap) + env(safe-area-inset-bottom, 0px)); }
   .section-nav { top: var(--topbar-h); }
 }
 
@@ -1467,11 +1483,20 @@ tbody tr:last-child td { border-bottom: 0; }
    ========================================================================= */
 
 /* --- 입력 필드(날짜·시간) : select 와 같은 톤 --- */
+/* iOS Safari 의 date/time 입력은 고유의 min-content 폭을 주장해 카드 밖으로 삐져나온다.
+   min-width: 0 + max-width: 100% + appearance: none 으로 부모 폭에 정확히 맞춘다. */
 .field input[type="date"], .field input[type="time"], .field input[type="text"] {
-  width: 100%; min-height: var(--tap); padding: 10px 14px; font-size: var(--t6); font-weight: 500;
+  display: block; width: 100%; min-width: 0; max-width: 100%; min-height: var(--tap);
+  padding: 10px 14px; font-size: var(--t6); font-weight: 500;
   border: 1px solid var(--line-strong); border-radius: 12px; background: var(--surface-2); color: var(--text);
-  font-family: inherit;
+  font-family: inherit; text-align: left; box-sizing: border-box;
+  -webkit-appearance: none; appearance: none;
 }
+/* Safari 는 값 텍스트를 기본으로 가운데 정렬한다 — 라벨 줄과 같은 왼쪽 정렬로 맞춘다 */
+.field input[type="date"]::-webkit-date-and-time-value,
+.field input[type="time"]::-webkit-date-and-time-value { text-align: left; margin: 0; }
+.field input[type="date"]::-webkit-datetime-edit { padding: 0; }
+.field input[type="date"]::-webkit-calendar-picker-indicator { margin-left: auto; opacity: .55; }
 .field input:focus, .field input:focus-visible {
   outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft);
 }
@@ -1517,7 +1542,8 @@ tbody tr:last-child td { border-bottom: 0; }
 .plan-title { margin-top: 3px; font-size: var(--t5); font-weight: 700; letter-spacing: -.03em; }
 .plan-desc { margin-top: 4px; max-width: 560px; font-size: 12.5px; line-height: 1.5; color: var(--text-3); }
 .plan-date { display: flex; align-items: flex-end; gap: 10px; flex-wrap: wrap; }
-.plan-date .field { min-width: 168px; }
+.plan-date .field { min-width: 0; flex: 1 1 168px; }
+.plan-date .field input[type="date"] { width: 100%; min-width: 0; max-width: 100%; }
 .plan-date .seg { flex: none; width: auto; min-width: 150px; }
 .plan-date .seg-btn { min-height: 44px; padding: 6px 14px; white-space: nowrap; }
 .plan-daytag { font-size: 12.5px; font-weight: 600; color: var(--text-2); align-self: center; }
@@ -1608,39 +1634,51 @@ tbody tr:last-child td { border-bottom: 0; }
 .alert-group-head h2 { font-size: var(--t5); font-weight: 700; letter-spacing: -.02em; display: flex; align-items: center; gap: 6px; }
 .alert-count { font-size: 12px; font-weight: 700; color: var(--accent-ink); background: var(--accent-soft); border-radius: 8px; padding: 1px 7px; }
 .alert-group-hint { font-size: 12px; color: var(--text-3); }
-.alert-list { display: grid; gap: 8px; }
+.alert-list { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
 .alert-row {
-  display: grid; grid-template-columns: 108px minmax(0, 1fr) auto; gap: 12px; align-items: center;
-  background: var(--surface); border-radius: var(--radius-sm); padding: 14px 16px;
+  position: relative;
+  display: grid; grid-template-columns: 112px minmax(0, 1fr) auto; gap: 14px; align-items: start;
+  background: var(--surface); border: 1px solid transparent; border-radius: var(--radius);
+  padding: 18px 20px;
+  transition: box-shadow .16s ease, transform .16s ease;
 }
+.alert-row.is-link { cursor: pointer; }
+.alert-row.is-link:hover, .alert-row.is-link:focus-within { box-shadow: var(--shadow); transform: translateY(-2px); }
 .alert-when { display: grid; gap: 3px; justify-items: start; }
 .alert-dd { font-size: 11.5px; font-weight: 700; padding: 2px 7px; border-radius: 7px; background: var(--accent-soft); color: var(--accent-ink); }
 .alert-dd.is-today { background: var(--ok-soft); color: var(--ok); }
 .alert-dd.is-past, .alert-dd.is-unknown { background: var(--inset); color: var(--text-3); }
 .alert-period { font-size: 11.5px; color: var(--text-3); line-height: 1.4; }
 .alert-main { display: grid; gap: 3px; min-width: 0; }
-.alert-name { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; font-size: var(--t6); font-weight: 700; }
+/* 골프장 이름은 목록 카드와 같은 중성 타이포로 둔다 — 파란 링크·밑줄을 쓰지 않는다 */
+.alert-name {
+  display: flex; align-items: center; gap: 6px; flex-wrap: wrap;
+  font-size: var(--t5); line-height: 1.35; font-weight: 700; letter-spacing: -.03em; color: var(--text);
+}
 .alert-title { font-size: 13px; color: var(--text); }
 .alert-detail { font-size: 12.5px; color: var(--text-2); line-height: 1.5; }
 .alert-meta { font-size: 11.5px; color: var(--text-3); }
-.alert-go { justify-self: end; }
+.alert-go { justify-self: end; align-self: center; }
 .alert-go .ic { width: 15px; height: 15px; }
+.alert-cta { justify-self: end; align-self: center; }
+.alert-cta .ic { width: 16px; height: 16px; transform: rotate(-90deg); }
 
-/* --- 내 구장(M4) --- */
+/* --- 관심 골프장(M4) --- */
 .saved-section { margin-top: 22px; }
 .saved-h { display: flex; align-items: center; gap: 8px; font-size: var(--t5); font-weight: 700; letter-spacing: -.02em; margin-bottom: 10px; }
 .saved-h span { font-size: 12px; font-weight: 700; color: var(--accent-ink); background: var(--accent-soft); border-radius: 8px; padding: 1px 7px; }
 .saved-list { display: grid; gap: 8px; }
-.saved-row {
-  display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px; align-items: center;
-  background: var(--surface); border-radius: var(--radius-sm); padding: 15px 16px;
+/* 저장한 구장은 목록 화면과 같은 카드 그리드를 그대로 쓴다(같은 앱으로 보이게) */
+.saved-grid { display: grid; gap: 12px; grid-template-columns: 1fr; align-content: start; }
+@media (min-width: 700px) { .saved-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1060px) { .saved-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+/* 카드 안의 '다음 토요일 예약 오픈' 줄 — 목록 카드의 배지 줄과 같은 무게로 놓는다 */
+.card-open {
+  display: flex; align-items: flex-start; gap: 5px;
+  font-size: 12.5px; line-height: 1.45; color: var(--text-2);
 }
-.saved-main { display: grid; gap: 3px; min-width: 0; }
-.saved-name { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; font-size: var(--t5); font-weight: 700; letter-spacing: -.02em; }
-.saved-meta { font-size: 12.5px; color: var(--text-2); }
-.saved-open { display: flex; align-items: center; gap: 4px; font-size: 12.5px; color: var(--accent-ink); font-weight: 600; }
-.saved-open .ic { width: 14px; height: 14px; }
-.saved-actions { display: flex; align-items: center; gap: 6px; }
+.card-open .ic { width: 14px; height: 14px; margin-top: 2px; color: var(--text-3); flex: none; }
+.card-open b { color: var(--text); font-weight: 700; }
 .recent-row {
   display: grid; grid-template-columns: minmax(0, 1fr) auto auto; gap: 10px; align-items: center;
   padding: 11px 16px; background: var(--surface); border-radius: 12px; color: var(--text);
@@ -1710,11 +1748,10 @@ tbody tr:last-child td { border-bottom: 0; }
   .alert-toolbar .chip-row::-webkit-scrollbar { display: none; }
   .alert-toolbar .chip { flex: none; }
   .alert-toolbar .field { grid-column: 1 / -1; }
-  .alert-row { grid-template-columns: 1fr; gap: 8px; }
-  .alert-when { display: flex; align-items: center; gap: 8px; }
+  .alert-row { grid-template-columns: 1fr; gap: 10px; padding: 16px 18px; }
+  .alert-when { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
   .alert-go { justify-self: start; }
-  .saved-row { grid-template-columns: 1fr; }
-  .saved-actions { justify-content: flex-start; }
+  .alert-cta { justify-self: start; }
   .recent-row { grid-template-columns: minmax(0, 1fr) auto; }
   .recent-meta { display: none; }
   .prep-actions .btn { flex: 1 1 auto; justify-content: center; }
@@ -1753,7 +1790,7 @@ tbody tr:last-child td { border-bottom: 0; }
 /* --- 오프라인 · 새 버전 배너 --- */
 .net-banner {
   position: fixed; left: 50%; transform: translateX(-50%);
-  bottom: calc(var(--tabbar-h) + 12px); z-index: 60;
+  bottom: calc(var(--tabbar-h) + var(--tabbar-gap) + env(safe-area-inset-bottom, 0px) + 2px); z-index: 60;
   display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
   width: min(94vw, 520px); padding: 10px 14px;
   background: var(--grey900); color: var(--grey50);
@@ -1931,7 +1968,7 @@ tbody tr:last-child td { border-bottom: 0; }
 .report-error { font-size: 13px; color: var(--danger); font-weight: 600; }
 .report-page .callout { font-size: 13px; line-height: 1.6; }
 @media (max-width: 899px) {
-  .net-banner { bottom: calc(var(--tabbar-h) + 10px); }
+  .net-banner { bottom: calc(var(--tabbar-h) + var(--tabbar-gap) + env(safe-area-inset-bottom, 0px) + 2px); }
   .loc-maps { gap: 6px; }
   .loc-map b { font-size: 12.5px; }
   .qa-tools { width: 100%; }

@@ -80,7 +80,7 @@
    "straight_km_nearest": null,
    "straight_name": null
   },
-  "nearest_ic_note": "v2.8: 제주에서 해상 구간을 건너뛴 직선 최근접 계산(전남 영암IC 150km대)이 잡혀 직선값을 비웠다. 표시 거리(동광IC)는 유지.",
+  "nearest_ic_note": "v2.8: 제주에서 해상 구간을 건너뛴 직선 최근접 계산(전남 영암IC 150km대)이 잡혀 직선값을 비웠어요. 표시 거리(동광IC)는 유지.",
   "tel": "064-793-0707",
   "tel_master": "064-793-0707",
   "tel_official": "064-793-0707 (회원권 064-793-0802)",

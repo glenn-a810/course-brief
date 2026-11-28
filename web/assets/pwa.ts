@@ -32,8 +32,8 @@ function setUpdateBanner(show: boolean): void {
 
 export function initPWA(dataBase: string, savedIds: string[] = []): void {
   // 오프라인 안내는 Service Worker 없이도 동작한다(네트워크 상태만 본다)
-  const offlineText = "<b>오프라인 상태입니다</b> 최근에 본 화면과 저장한 구장만 열립니다.";
-  const onlineText = "<b>다시 연결되었습니다</b>";
+  const offlineText = "<b>오프라인 상태예요</b> 최근에 본 화면과 저장한 구장만 열려요.";
+  const onlineText = "<b>다시 연결됐어요</b>";
   const paintNet = (): void => {
     setNetBanner(!navigator.onLine, navigator.onLine ? onlineText : offlineText);
   };

@@ -464,7 +464,7 @@
  },
  "cancel": {
   "cancel_policy": {
-   "value": "위약기간에 예약을 취소하면 위약금이 발생합니다.",
+   "value": "위약기간에 예약을 취소하면 위약금이 발생해요.",
    "source": "공식 홈페이지",
    "url": "https://www.onetheclub.com/reservation/golf"
   },

@@ -17,7 +17,7 @@
     { "src": "icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
   ],
   "shortcuts": [
-    { "name": "내 구장", "short_name": "내 구장", "url": "/#/saved" },
+    { "name": "관심 골프장", "short_name": "관심 골프장", "url": "/#/saved" },
     { "name": "휴장·정비", "short_name": "휴장", "url": "/#/alerts" },
     { "name": "정보 오류 제보", "short_name": "제보", "url": "/#/report" }
   ]

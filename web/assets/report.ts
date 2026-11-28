@@ -57,7 +57,7 @@ export function renderReport(host: HTMLElement, opts: ReportOptions): void {
       ${iconTile("bell", "yellow", "lg")}
       <div class="page-head-text">
         <h1 class="page-title" tabindex="-1">정보 오류·누락 제보</h1>
-        <p class="page-lead">현장에서 확인한 값이 사이트와 다르면 알려주세요. 제보는 공개 저장소(GitHub)의 이슈로 접수됩니다.</p>
+        <p class="page-lead">현장에서 확인한 값이 사이트와 다르면 알려주세요. 제보는 공개 저장소(GitHub)의 이슈로 접수돼요.</p>
       </div>
     </header>
 
@@ -85,13 +85,13 @@ export function renderReport(host: HTMLElement, opts: ReportOptions): void {
 
       <label class="field">
         <span>제보 내용 <b class="req">필수</b></span>
-        <textarea id="rp-body" rows="6" placeholder="예: 2026년 11월 기준 주중 그린피가 135,000원으로 인상되었습니다. 카트비는 별도 100,000원입니다."></textarea>
+        <textarea id="rp-body" rows="6" placeholder="예: 2026년 11월 기준 주중 그린피가 135,000원으로 인상됐어요. 카트비는 별도 100,000원이에요."></textarea>
       </label>
 
       <label class="field">
         <span>회신용 연락처 <small class="muted">(선택)</small></span>
         <input id="rp-contact" type="text" autocomplete="off" placeholder="이메일 또는 전화번호">
-        <small>적으면 이슈 본문에 그대로 공개됩니다. 필요할 때만 적어 주세요.</small>
+        <small>적으면 이슈 본문에 그대로 공개돼요. 필요할 때만 적어 주세요.</small>
       </label>
 
       <p class="report-error" id="rp-error" role="alert" hidden></p>
@@ -111,7 +111,7 @@ export function renderReport(host: HTMLElement, opts: ReportOptions): void {
       <div class="callout">
         <strong>${icon("info")}접수 방식</strong>
         이슈 작성 페이지가 새 탭에서 열리고, 아래 내용이 제목·본문에 미리 채워집니다. GitHub 로그인이 필요하므로,
-        로그인 없이 보내려면 <b>내용 복사</b>로 복사해 원하는 경로로 전달해 주세요. 접수 여부는 저장소의 이슈에서 확인할 수 있습니다.
+        로그인 없이 보내려면 <b>내용 복사</b>로 복사해 원하는 경로로 전달해 주세요. 접수 여부는 저장소의 이슈에서 확인할 수 있어요.
         <a class="link" href="${esc(opts.repoUrl)}/issues" target="_blank" rel="noopener noreferrer">열린 제보 보기</a>
       </div>
     </form>
@@ -174,14 +174,14 @@ export function renderReport(host: HTMLElement, opts: ReportOptions): void {
   form.addEventListener("submit", (ev) => {
     ev.preventDefault();
     if (!bodyInput.value.trim()) {
-      showError("제보 내용을 적어 주세요. 무엇이 어떻게 다른지 한 줄이면 충분합니다.");
+      showError("제보 내용을 적어 주세요. 무엇이 어떻게 다른지 한 줄이면 충분해요.");
       bodyInput.focus();
       return;
     }
     const { title, body } = compose();
     const url = `${opts.repoUrl}/issues/new?title=${encodeURIComponent(title)}&body=${encodeURIComponent(body)}`;
     window.open(url, "_blank", "noopener,noreferrer");
-    if (status) status.textContent = "이슈 작성 페이지를 새 탭에서 열었습니다. GitHub 로그인이 필요합니다.";
+    if (status) status.textContent = "이슈 작성 페이지를 새 탭에서 열었어요. GitHub 로그인이 필요해요.";
   });
   host.querySelector("#rp-copy")?.addEventListener("click", () => {
     if (!bodyInput.value.trim()) {
@@ -191,7 +191,7 @@ export function renderReport(host: HTMLElement, opts: ReportOptions): void {
     }
     const { title, body } = compose();
     void copyText(`${title}\n\n${body}`).then((ok) => {
-      if (status) status.textContent = ok ? "제보 내용을 복사했습니다." : "복사하지 못했습니다. 내용을 직접 선택해 복사해 주세요.";
+      if (status) status.textContent = ok ? "제보 내용을 복사했어요." : "복사하지 못했어요. 내용을 직접 선택해서 복사해 주세요.";
     });
   });
   host.querySelector("#rp-reset")?.addEventListener("click", () => {

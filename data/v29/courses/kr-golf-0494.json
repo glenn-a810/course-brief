@@ -160,8 +160,8 @@
   "official_table": {
    "rows": [
     {
-     "section": "노캐디팀 골프백은 경기종료 후 본인이 차량에 실어야 합니다.",
-     "label": "전동카트 : 4인 PLAY(5인승 4Bag) 노캐디 전동카트 운용합니다.",
+     "section": "노캐디팀 골프백은 경기종료 후 본인이 차량에 실어야 해요.",
+     "label": "전동카트 : 4인 PLAY(5인승 4Bag) 노캐디 전동카트 운용해요.",
      "value": "그린잔디 훼손시 잔디단가 : 1cm * 1cm 당 10,000원",
      "amounts": [
       10000
@@ -497,12 +497,12 @@
      "url": "http://www.okcc.co.kr/html/company/company_03_list.asp"
     },
     {
-     "title": "【축하】홀인원 이벤트 두번째 주인공 탄생을 축하드립니다.",
+     "title": "【축하】홀인원 이벤트 두번째 주인공 탄생을 축하드려요.",
      "date": "2026-10-20",
      "url": "http://www.okcc.co.kr/html/company/company_03_list.asp"
     },
     {
-     "title": "【축하】홀인원 이벤트 첫번째 주인공 탄생을 축하드립니다.",
+     "title": "【축하】홀인원 이벤트 첫번째 주인공 탄생을 축하드려요.",
      "date": "2026-10-14",
      "url": "http://www.okcc.co.kr/html/company/company_03_list.asp"
     },
@@ -547,12 +547,12 @@
       "url": "http://www.okcc.co.kr/html/company/company_03_list.asp"
      },
      {
-      "title": "※ 【축하】홀인원 이벤트 두번째 주인공 탄생을 축하드립니다.",
+      "title": "※ 【축하】홀인원 이벤트 두번째 주인공 탄생을 축하드려요.",
       "date": "2026-10-20",
       "url": "http://www.okcc.co.kr/html/company/company_03_list.asp"
      },
      {
-      "title": "※ 【축하】홀인원 이벤트 첫번째 주인공 탄생을 축하드립니다.",
+      "title": "※ 【축하】홀인원 이벤트 첫번째 주인공 탄생을 축하드려요.",
       "date": "2026-10-14",
       "url": "http://www.okcc.co.kr/html/company/company_03_list.asp"
      }
