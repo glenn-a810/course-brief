@@ -21,8 +21,6 @@ export interface Channel {
   note: string;
   url: string;
   iconName: IconName;
-  /** 공식 홈페이지·전화처럼 이 구장에 직접 연결되는 링크 */
-  direct: boolean;
 }
 
 const KAKAO = "https://www.kakao.golf/";
@@ -43,7 +41,6 @@ export function bookingChannels(c: CourseIndexItem, teepickUrl?: string | null):
       note: "요금표·예약 안내",
       url: c.homepage,
       iconName: "globe",
-      direct: true,
     });
   }
   out.push({
@@ -52,7 +49,6 @@ export function bookingChannels(c: CourseIndexItem, teepickUrl?: string | null):
     note: "채널에서 구장명 검색",
     url: KAKAO,
     iconName: "golf",
-    direct: false,
   });
   out.push({
     key: "teescanner",
@@ -60,7 +56,6 @@ export function bookingChannels(c: CourseIndexItem, teepickUrl?: string | null):
     note: "채널에서 구장명 검색",
     url: TEESCANNER,
     iconName: "golf",
-    direct: false,
   });
   out.push({
     key: "smartscore",
@@ -68,7 +63,6 @@ export function bookingChannels(c: CourseIndexItem, teepickUrl?: string | null):
     note: "채널에서 구장명 검색",
     url: SMARTSCORE,
     iconName: "golf",
-    direct: false,
   });
   if (teepickUrl && /teepickgolf\.com/.test(teepickUrl)) {
     out.push({
@@ -77,7 +71,6 @@ export function bookingChannels(c: CourseIndexItem, teepickUrl?: string | null):
       note: "관측 실거래·예약",
       url: teepickUrl,
       iconName: "golf",
-      direct: true,
     });
   }
   out.push({
@@ -86,7 +79,6 @@ export function bookingChannels(c: CourseIndexItem, teepickUrl?: string | null):
     note: "예약·후기 검색",
     url: `https://search.naver.com/search.naver?query=${encodeURIComponent(`${c.name} 골프 예약`)}`,
     iconName: "search",
-    direct: true,
   });
   if (c.tel) {
     out.push({
@@ -95,7 +87,6 @@ export function bookingChannels(c: CourseIndexItem, teepickUrl?: string | null):
       note: c.tel,
       url: telHref(c.tel),
       iconName: "phone",
-      direct: true,
     });
   }
   return out;
@@ -104,7 +95,7 @@ export function bookingChannels(c: CourseIndexItem, teepickUrl?: string | null):
 /** 상세 요금 영역에 붙는 채널 블록 — 모바일에서는 가로 스크롤 없이 줄바꿈한다 */
 export function channelBlockHTML(c: CourseIndexItem, channels: Channel[]): string {
   const rows = channels.map((ch) => `<li>
-      <a class="channel-row" href="${esc(ch.url)}"${ch.direct ? ' target="_blank" rel="noopener noreferrer"' : ' target="_blank" rel="noopener noreferrer"'}>
+      <a class="channel-row" href="${esc(ch.url)}" target="_blank" rel="noopener noreferrer">
         <span class="channel-ic">${icon(ch.iconName)}</span>
         <span class="channel-body">
           <span class="channel-label">${esc(ch.label)}</span>
