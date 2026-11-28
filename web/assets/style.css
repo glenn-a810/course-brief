@@ -2021,3 +2021,8 @@ tbody tr:last-child td { border-bottom: 0; }
 .hist-svg .hist-grid { stroke: var(--line); stroke-width: 1; stroke-dasharray: 2 4; opacity: .7; }
 .hist-svg .hist-label-y { font-variant-numeric: tabular-nums; }
 .hist-svg .hist-label-y { font-size: 11px; }
+.embed-dialog .admin-actions { display: flex; gap: 8px; justify-content: flex-end; }
+.embed-dialog .admin-actions > * { white-space: nowrap; }
+.embed-dialog .source-line { margin: 6px 0 10px; }
+.embed-dialog .source-line { grid-column: 1 / -1; white-space: nowrap; }
+.embed-dialog #embed-api { display: inline; white-space: nowrap; }
