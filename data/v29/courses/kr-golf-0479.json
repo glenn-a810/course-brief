@@ -360,7 +360,7 @@
    "items": [],
    "tags": {}
   },
-  "recent_notice_text": "2026년 10~11월 공지 미확인(2026-11-26 기준)",
+  "recent_notice_text": null,
   "course_notes": "웰리힐리CC 회원제 옆의 10홀 퍼블릭(9홀+서비스 1홀). 초보·연습 라운드 용도",
   "review": null,
   "fee_change": null,
@@ -426,7 +426,7 @@
   "fee": 0.0,
   "ops": 0.0,
   "facility": 0.2,
-  "briefing": 0.5,
+  "briefing": 0.25,
   "rental": 0.25
  }
 }

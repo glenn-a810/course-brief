@@ -417,7 +417,7 @@
    "items": [],
    "tags": {}
   },
-  "recent_notice_text": "2026년 10~11월 공지 미확인.",
+  "recent_notice_text": null,
   "course_notes": "솔라고 단지의 2코스. 1코스와 요금·운영 조건이 같고 코스만 다름.",
   "review": null,
   "fee_change": null,
@@ -467,7 +467,7 @@
   "fee": 1.0,
   "ops": 0.43,
   "facility": 0.8,
-  "briefing": 0.5,
+  "briefing": 0.25,
   "rental": 1.0
  }
 }

@@ -1061,14 +1061,32 @@ function visibleText(text: string | null | undefined): string {
 }
 
 const SOURCE_NAMES: Array<[RegExp, string]> = [
+  [/카카오골프예약|카카오\s*골프예약/g, "온라인 예약"],
   [/그린피가이드/g, "공개 요금 정보"],
+  [/스마트스코어/g, "공개 예약 채널"],
   [/티픽/gi, "공개 예약 채널"],
+];
+
+/**
+ * 수집 출처 라벨·확인일 메타 표기. 데이터 단계에서 걷어내지만, 새 수집분에 섞여 들어와도
+ * 일반 화면에는 나가지 않도록 렌더링 직전에 한 번 더 지운다.
+ * (예: "카카오골프예약 '골프장에서 알립니다'(2026-11-27 확인): 내용" → "내용")
+ */
+const SOURCE_META: RegExp[] = [
+  /카카오골프예약\s*['"‘’“”]\s*골프장에서\s*알립니다\s*['"‘’“”]\s*(?:\([^()]*\))?\s*[:：]\s*/g,
+  /카카오골프예약\s*['"‘’“”]\s*골프장에서\s*알립니다\s*['"‘’“”]\s*(?:\([^()]*\))?\s*/g,
+  /\[\s*카카오[^\]]*?안내\s*\]\s*/g,
+  /\s*\([^()]*\d{4}-\d{2}-\d{2}[^()]*?(?:확인|기준)[^()]*?\)/g,
+  /\d{4}-\d{2}-\d{2}\s*(?:확인|기준)\s*[:：]\s*/g,
+  /\d{4}-\d{2}-\d{2}\s*(?:확인|기준)\s*(?:시|당시)\s*/g,
+  /\d{4}-\d{2}-\d{2}\s*(?:확인|기준)/g,
 ];
 
 function publicNote(text: string): string {
   let out = text;
+  for (const re of SOURCE_META) out = out.replace(re, "");
   for (const [re, to] of SOURCE_NAMES) out = out.replace(re, to);
-  return out;
+  return out.replace(/[ \t]{2,}/g, " ").replace(/\(\s*\)/g, "").trim();
 }
 
 function evidenceDetails(evidence: unknown, label = "근거"): string {
@@ -1273,7 +1291,7 @@ function sections(d: CourseDetail, c: CourseIndexItem, others: Array<{ name: str
         <div class="policy-card">
           <h3 class="card-title">${icon("calendar")}예약 오픈</h3>
           ${cancel.open_cycle
-            ? `<p class="policy-text">${esc(cancel.open_cycle)}</p>`
+            ? `<p class="policy-text">${esc(isAdmin() ? cancel.open_cycle : publicNote(cancel.open_cycle))}</p>`
             : `<p class="policy-text muted">예약 오픈 일정은 골프장에 전화로 확인하세요.</p>`}
         </div>
         <div class="policy-card">
@@ -1433,12 +1451,14 @@ function sections(d: CourseDetail, c: CourseIndexItem, others: Array<{ name: str
   const noticeTime = (date: string): string => date
     ? `<time datetime="${esc(date.replaceAll(".", "-"))}">${esc(date)}</time>`
     : "";
+  // 공지 제목도 일반 화면에서는 출처·확인일 메타를 지운다(관리자 모드는 원문 그대로)
+  const noticeTitle = (title: string): string => esc(isAdmin() ? title : publicNote(title));
   const noticeHTML = real.length
     ? `<ul class="notice-list">${real.slice(0, 10).map((n) => `<li${n.date ? "" : ' class="is-undated"'}>
         ${noticeTime(n.date)}
         <span class="notice-title">${n.url
-          ? `<a class="link" href="${esc(n.url)}" target="_blank" rel="noopener noreferrer">${esc(n.title)}</a>`
-          : esc(n.title)}</span>
+          ? `<a class="link" href="${esc(n.url)}" target="_blank" rel="noopener noreferrer">${noticeTitle(n.title)}</a>`
+          : noticeTitle(n.title)}</span>
       </li>`).join("")}</ul>`
     : `<p class="section-desc">표시할 최근 운영 공지가 없습니다.</p>`;
   const period = alert ? periodText(alert.period) : "";
@@ -1468,7 +1488,7 @@ function sections(d: CourseDetail, c: CourseIndexItem, others: Array<{ name: str
         <h3 class="card-title">${icon("bell")}최근 공지</h3>
         ${noticeHTML}
         ${products.length ? `<details class="more-box"><summary>클럽·장비 상품 소식 ${products.length}건 (공지 아님)</summary>
-          <ul class="notice-list is-product">${products.slice(0, 10).map((n) => `<li${n.date ? "" : ' class="is-undated"'}>${noticeTime(n.date)}<span class="notice-title">${esc(n.title)}</span></li>`).join("")}</ul>
+          <ul class="notice-list is-product">${products.slice(0, 10).map((n) => `<li${n.date ? "" : ' class="is-undated"'}>${noticeTime(n.date)}<span class="notice-title">${noticeTitle(n.title)}</span></li>`).join("")}</ul>
         </details>` : ""}
         ${br.collected_at ? `<p class="source-line">${isAdmin() ? `수집 ${fmtDate(br.collected_at)}` : `공지 확인 ${esc(fmtDate(br.collected_at))}`}</p>` : ""}
       </div>

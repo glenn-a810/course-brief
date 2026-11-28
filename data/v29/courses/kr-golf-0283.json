@@ -375,7 +375,7 @@
    "items": [],
    "tags": {}
   },
-  "recent_notice_text": "2026년 10월 그린피 공지(적용기간 10/1~31) 이후 11월 공지 미확인. 동계 휴장 공지 미확인.",
+  "recent_notice_text": null,
   "course_notes": "서산 대산읍 해안(삼길포) 인접 18홀 대중제. 1부 티오프가 빠를수록 저렴한 시간대 요금제.",
   "review": null,
   "fee_change": null,
@@ -441,7 +441,7 @@
   "fee": 1.0,
   "ops": 0.07,
   "facility": 0.1,
-  "briefing": 0.5,
+  "briefing": 0.25,
   "rental": 0.25
  }
 }

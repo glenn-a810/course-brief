@@ -332,7 +332,7 @@
    "items": [],
    "tags": {}
   },
-  "recent_notice_text": "2026년 10~11월 공지 미확인(위약 안내 페이지 운영).",
+  "recent_notice_text": null,
   "course_notes": "영동읍 18홀 대중제(일라이트 골프&리조트). 3부까지 운영해 야간 라운드 수요가 있음.",
   "review": null,
   "fee_change": null,
@@ -394,7 +394,7 @@
   "fee": 1.0,
   "ops": 0.0,
   "facility": 0.2,
-  "briefing": 0.5,
+  "briefing": 0.25,
   "rental": 0.25
  }
 }

@@ -334,7 +334,7 @@
    "items": [],
    "tags": {}
   },
-  "recent_notice_text": "2026년 10~11월 공지 미확인.",
+  "recent_notice_text": null,
   "course_notes": "공주 시내 5분·세종 10분 거리의 12홀(6홀×2) 대중제. 18홀은 A-B-A로 진행. 노캐디 선택제와 3부 할인으로 1인 비용이 낮은 편(평일 1인 약 12만원대).",
   "review": null,
   "fee_change": null,
@@ -390,7 +390,7 @@
   "fee": 1.0,
   "ops": 0.21,
   "facility": 0.1,
-  "briefing": 0.5,
+  "briefing": 0.25,
   "rental": 0.25
  }
 }

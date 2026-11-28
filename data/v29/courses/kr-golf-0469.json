@@ -490,7 +490,7 @@
    "items": [],
    "tags": {}
   },
-  "recent_notice_text": "2026년 10~11월 공지 미확인(2026-11-26 기준)",
+  "recent_notice_text": null,
   "course_notes": "산과 폭포를 낀 27홀 프리미엄 코스. 카트·캐디피가 강원권 최고 수준. 2026년 11월 실거래는 정상가보다 낮은 프로모션가가 많음",
   "review": null,
   "fee_change": null,
@@ -553,7 +553,7 @@
   "fee": 1.0,
   "ops": 0.14,
   "facility": 0.5,
-  "briefing": 0.5,
+  "briefing": 0.25,
   "rental": 0.25
  }
 }

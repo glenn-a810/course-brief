@@ -354,7 +354,7 @@
    "items": [],
    "tags": {}
   },
-  "recent_notice_text": "2026-10~11 공지 미확인(2026-11-26)",
+  "recent_notice_text": null,
   "course_notes": "27홀 전체 약 9,588m, 블라인드 홀 없음. 산악 지형이나 홀별 고저차는 크지 않다는 소개, 페어웨이가 좁아지는 구간과 굴곡진 그린",
   "review": null,
   "fee_change": null,
@@ -415,7 +415,7 @@
   "fee": 1.0,
   "ops": 0.57,
   "facility": 0.4,
-  "briefing": 0.5,
+  "briefing": 0.25,
   "rental": 0.25
  }
 }

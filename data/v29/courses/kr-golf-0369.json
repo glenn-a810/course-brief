@@ -378,7 +378,7 @@
    "items": [],
    "tags": {}
   },
-  "recent_notice_text": "2026-10~11 공지 미확인(2026-11-26)",
+  "recent_notice_text": null,
   "course_notes": "2018년 6월 개장한 산악지형 18홀. IP 지점 페어웨이 폭 60m 이상, 그린 800㎡ 이상으로 넓고 연못 12개와 계류 폭포가 있음. 지역주민 할인",
   "review": null,
   "fee_change": null,
@@ -435,7 +435,7 @@
   "fee": 1.0,
   "ops": 0.64,
   "facility": 0.5,
-  "briefing": 0.5,
+  "briefing": 0.25,
   "rental": 1.0
  }
 }

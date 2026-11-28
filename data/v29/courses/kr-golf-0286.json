@@ -314,7 +314,7 @@
    "items": [],
    "tags": {}
   },
-  "recent_notice_text": "2026년 10~11월 공지 미확인.",
+  "recent_notice_text": null,
   "course_notes": "예산 삽교(내포신도시 인근) 9홀 시설을 18홀로 운영. 2인·5인 불가로 3~4인 팀만 가능.",
   "review": null,
   "fee_change": null,
@@ -376,7 +376,7 @@
   "fee": 1.0,
   "ops": 0.14,
   "facility": 0.1,
-  "briefing": 0.5,
+  "briefing": 0.25,
   "rental": 0.25
  }
 }

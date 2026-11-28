@@ -341,7 +341,7 @@
    "items": [],
    "tags": {}
   },
-  "recent_notice_text": "2026년 10~11월 공지 미확인.",
+  "recent_notice_text": null,
   "course_notes": "공주 정안면의 18홀 대중제. 시간대별 실시간 요금제로 1부 이른 시간이 가장 저렴. 8주 전 오픈으로 충남권에서 예약 오픈이 빠른 편.",
   "review": null,
   "fee_change": null,
@@ -404,7 +404,7 @@
   "fee": 1.0,
   "ops": 0.14,
   "facility": 0.1,
-  "briefing": 0.5,
+  "briefing": 0.25,
   "rental": 0.25
  }
 }

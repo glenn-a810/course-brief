@@ -375,7 +375,7 @@
    "items": [],
    "tags": {}
   },
-  "recent_notice_text": "2026년 10~11월 공지 미확인.",
+  "recent_notice_text": null,
   "course_notes": "세종 전의면의 27홀 대중제. 인터넷 회원가와 비회원(정상)가 차이가 큰 편(주말 6만원).",
   "review": null,
   "fee_change": null,
@@ -440,7 +440,7 @@
   "fee": 1.0,
   "ops": 0.14,
   "facility": 0.1,
-  "briefing": 0.5,
+  "briefing": 0.25,
   "rental": 0.25
  }
 }

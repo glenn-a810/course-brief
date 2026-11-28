@@ -460,7 +460,7 @@
    "items": [],
    "tags": {}
   },
-  "recent_notice_text": "2026년 10~11월 공지 미확인.",
+  "recent_notice_text": null,
   "course_notes": "청주 남이면 27홀(회원제 실크·리버 18홀 + 9홀). 옛 이름 실크리버CC(→청원CC→2022-03 세레니티). 복장 규정(반바지·청바지·칼라 없는 상의 금지), 18홀 4시간20분 이내.",
   "review": null,
   "fee_change": null,
@@ -523,7 +523,7 @@
   "fee": 1.0,
   "ops": 0.36,
   "facility": 0.3,
-  "briefing": 0.5,
+  "briefing": 0.25,
   "rental": 0.25
  }
 }

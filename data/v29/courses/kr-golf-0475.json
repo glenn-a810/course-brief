@@ -484,7 +484,7 @@
    "items": [],
    "tags": {}
   },
-  "recent_notice_text": "2026년 10~11월 공지 미확인(2026-11-26 기준)",
+  "recent_notice_text": null,
   "course_notes": "횡성 서원면 18홀 대중제. 벨라45와 같은 운영사(자매 코스, 합 63홀)",
   "review": null,
   "fee_change": null,
@@ -555,7 +555,7 @@
   "fee": 1.0,
   "ops": 0.36,
   "facility": 0.3,
-  "briefing": 0.5,
+  "briefing": 0.25,
   "rental": 0.25
  }
 }

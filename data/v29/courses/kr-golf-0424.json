@@ -370,7 +370,7 @@
    "items": [],
    "tags": {}
   },
-  "recent_notice_text": "2026년 10~11월 공지 미확인(2026-11-26 기준)",
+  "recent_notice_text": null,
   "course_notes": "영랑호리조트 내 9홀 투그린 워킹형 코스. 업다운이 크지 않고 홀 간 이동이 짧음",
   "review": null,
   "fee_change": null,
@@ -431,7 +431,7 @@
   "fee": 1.0,
   "ops": 0.14,
   "facility": 0.2,
-  "briefing": 0.5,
+  "briefing": 0.25,
   "rental": 1.0
  }
 }

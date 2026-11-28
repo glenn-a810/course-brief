@@ -350,7 +350,7 @@
    "items": [],
    "tags": {}
   },
-  "recent_notice_text": "2026-10~11 공지 미확인(2026-11-26)",
+  "recent_notice_text": null,
   "course_notes": "1991년 1월 20일 개장. 동코스는 거리가 짧지만 페어웨이가 좁고 벙커가 많아 티샷 방향이 중요. 서코스는 평탄부와 오르내림이 섞이고 마지막 홀 페어웨이가 좁으며 그린 주변 벙커가 모여 있음",
   "review": null,
   "fee_change": null,
@@ -413,7 +413,7 @@
   "fee": 0.75,
   "ops": 0.21,
   "facility": 0.2,
-  "briefing": 0.5,
+  "briefing": 0.25,
   "rental": 0.25
  }
 }

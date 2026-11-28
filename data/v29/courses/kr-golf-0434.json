@@ -488,7 +488,7 @@
    "items": [],
    "tags": {}
   },
-  "recent_notice_text": "2026년 10~11월 공지 미확인(2026-11-26 기준)",
+  "recent_notice_text": null,
   "course_notes": "원주 신림면 구학산 자락. 일자·시간대별 요금제와 식음 프로모션이 특징",
   "review": null,
   "fee_change": null,
@@ -557,7 +557,7 @@
   "fee": 0.75,
   "ops": 0.36,
   "facility": 0.3,
-  "briefing": 0.5,
+  "briefing": 0.25,
   "rental": 0.25
  }
 }

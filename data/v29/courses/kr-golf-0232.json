@@ -471,7 +471,7 @@
    "items": [],
    "tags": {}
   },
-  "recent_notice_text": "2026년 10~11월 공지 미확인.",
+  "recent_notice_text": null,
   "course_notes": "보은읍 18홀 대중제(클럽디 브랜드). 5주 전 월요일 09:00 오픈.",
   "review": null,
   "fee_change": null,
@@ -536,7 +536,7 @@
   "fee": 1.0,
   "ops": 0.29,
   "facility": 0.3,
-  "briefing": 0.5,
+  "briefing": 0.25,
   "rental": 0.25
  }
 }

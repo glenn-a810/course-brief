@@ -422,7 +422,7 @@
    "items": [],
    "tags": {}
   },
-  "recent_notice_text": "2026년 10~11월 공지 미확인.",
+  "recent_notice_text": null,
   "course_notes": "논산 상월면의 9홀(18홀은 9홀 2회) 대중제. 21일 전 오픈으로 오픈 주기가 짧은 편.",
   "review": null,
   "fee_change": null,
@@ -485,7 +485,7 @@
   "fee": 1.0,
   "ops": 0.36,
   "facility": 0.2,
-  "briefing": 0.5,
+  "briefing": 0.25,
   "rental": 0.25
  }
 }

@@ -532,7 +532,7 @@
    "items": [],
    "tags": {}
   },
-  "recent_notice_text": "2026년 10~11월 공지 미확인(2026-11-26 기준)",
+  "recent_notice_text": null,
   "course_notes": "자연 암벽과 호수, 벤트그라스 코스로 알려진 18홀. 오크밸리 리조트(콘도)와 1박2일 36홀 패키지 운영",
   "review": null,
   "fee_change": null,
@@ -596,7 +596,7 @@
   "fee": 1.0,
   "ops": 0.29,
   "facility": 0.5,
-  "briefing": 0.5,
+  "briefing": 0.25,
   "rental": 0.25
  }
 }

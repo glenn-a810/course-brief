@@ -395,7 +395,7 @@
    "items": [],
    "tags": {}
   },
-  "recent_notice_text": "2026년 10~11월 공지 미확인.",
+  "recent_notice_text": null,
   "course_notes": "진천 백곡면 27홀 회원제(옛 중앙CC → 에머슨GC → 2022년 아난티 중앙GC). 주말 추첨제, 티오프 30분 전 도착(1시간 전 내장 권장), 소프트 스파이크 의무, 9홀 노캐디 1시간50분~2시간.",
   "review": null,
   "fee_change": null,
@@ -449,7 +449,7 @@
   "fee": 1.0,
   "ops": 0.64,
   "facility": 0.2,
-  "briefing": 0.5,
+  "briefing": 0.25,
   "rental": 0.25
  }
 }

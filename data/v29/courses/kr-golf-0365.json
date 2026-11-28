@@ -357,7 +357,7 @@
    "items": [],
    "tags": {}
   },
-  "recent_notice_text": "2026-10~11 공지 미확인(2026-11-26)",
+  "recent_notice_text": null,
   "course_notes": "2012년 7월 26일 개장. 지형을 그대로 활용한 9홀, 5번홀 연못과 조경, 그린 경사가 많다는 평가. 여름철 그늘이 많은 편",
   "review": null,
   "fee_change": null,
@@ -416,7 +416,7 @@
   "fee": 0.5,
   "ops": 0.64,
   "facility": 0.5,
-  "briefing": 0.5,
+  "briefing": 0.25,
   "rental": 0.25
  }
 }

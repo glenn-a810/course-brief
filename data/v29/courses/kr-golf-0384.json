@@ -412,7 +412,7 @@
    "items": [],
    "tags": {}
   },
-  "recent_notice_text": "2026-10~11 공지 미확인(2026-11-26)",
+  "recent_notice_text": null,
   "course_notes": "산지형으로 오르내림이 있고 그린 스피드가 빠른 편. 호수와 벙커가 배치. 길이에 비해 체감 난이도는 중급 이상",
   "review": null,
   "fee_change": null,
@@ -473,7 +473,7 @@
   "fee": 1.0,
   "ops": 0.64,
   "facility": 0.4,
-  "briefing": 0.5,
+  "briefing": 0.25,
   "rental": 0.25
  }
 }

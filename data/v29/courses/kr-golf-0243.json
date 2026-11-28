@@ -368,7 +368,7 @@
    "items": [],
    "tags": {}
   },
-  "recent_notice_text": "2026년 10~11월 공지 미확인.",
+  "recent_notice_text": null,
   "course_notes": "제천시가 운영하는 공공 9홀 골프장. 전동·수동카트를 1인당 요금으로 받고 캐디는 없음. 9홀 4만원대로 충북권 최저가 수준.",
   "review": null,
   "fee_change": null,
@@ -430,7 +430,7 @@
   "fee": 0.75,
   "ops": 0.43,
   "facility": 0.1,
-  "briefing": 0.5,
+  "briefing": 0.25,
   "rental": 0.25
  }
 }

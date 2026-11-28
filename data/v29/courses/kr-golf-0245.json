@@ -374,7 +374,7 @@
    "items": [],
    "tags": {}
   },
-  "recent_notice_text": "2026년 10~11월 공지 미확인.",
+  "recent_notice_text": null,
   "course_notes": "증평 도안면 18홀. 페어웨이 터프블루/페스큐(양잔디), 그린 벤트그라스 샤크, 티 터프블루. 리조트(벨포레)와 함께 운영.",
   "review": null,
   "fee_change": null,
@@ -432,7 +432,7 @@
   "fee": 1.0,
   "ops": 0.07,
   "facility": 0.5,
-  "briefing": 0.5,
+  "briefing": 0.25,
   "rental": 0.25
  }
 }

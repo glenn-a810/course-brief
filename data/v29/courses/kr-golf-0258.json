@@ -356,7 +356,7 @@
    "items": [],
    "tags": {}
   },
-  "recent_notice_text": "2026년 10~11월 공지 미확인.",
+  "recent_notice_text": null,
   "course_notes": "충주 대소원면 27홀. 대영베이스CC와 같은 단지·같은 그룹이지만 별도 코스로 운영(대영베이스 18홀 + 대영힐스 27홀).",
   "review": null,
   "fee_change": null,
@@ -420,7 +420,7 @@
   "fee": 1.0,
   "ops": 0.07,
   "facility": 0.2,
-  "briefing": 0.5,
+  "briefing": 0.25,
   "rental": 0.25
  }
 }

@@ -336,7 +336,7 @@
    "items": [],
    "tags": {}
   },
-  "recent_notice_text": "2026-10~11 공지 미확인(2026-11-26)",
+  "recent_notice_text": null,
   "course_notes": "티잉그라운드 켄터키블루그래스·페어웨이 장성중지·그린 Pen A-1로 조성. 27홀 3코스",
   "review": null,
   "fee_change": null,
@@ -396,7 +396,7 @@
   "fee": 1.0,
   "ops": 0.29,
   "facility": 0.0,
-  "briefing": 0.5,
+  "briefing": 0.25,
   "rental": 0.75
  }
 }

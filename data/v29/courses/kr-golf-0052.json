@@ -385,7 +385,7 @@
    ],
    "tags": {}
   },
-  "recent_notice_text": "2026-10~11 공지 미확인(2026-11-26)",
+  "recent_notice_text": null,
   "course_notes": "2010년 9월 개장. 27홀이 모두 남북 방향이며 Lake는 평지형, Canyon은 계곡·능선으로 기복이 큼. 이동은 승용 카트",
   "review": null,
   "fee_change": null,
@@ -442,7 +442,7 @@
   "fee": 1.0,
   "ops": 0.14,
   "facility": 0.2,
-  "briefing": 0.75,
+  "briefing": 0.5,
   "rental": 1.0
  }
 }

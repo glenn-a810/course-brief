@@ -377,7 +377,7 @@
    "items": [],
    "tags": {}
   },
-  "recent_notice_text": "2026-10~11 공지 미확인(2026-11-26)",
+  "recent_notice_text": null,
   "course_notes": "6번홀을 제외한 8개 홀에서 기장읍 너머 동해가 내려다보임. 전반·후반에 좌·우 그린을 나눠 쓰는 2그린 방식. 산자락이라 오르내림이 섞여 있음",
   "review": null,
   "fee_change": null,
@@ -439,7 +439,7 @@
   "fee": 1.0,
   "ops": 0.57,
   "facility": 0.4,
-  "briefing": 0.5,
+  "briefing": 0.25,
   "rental": 1.0
  }
 }

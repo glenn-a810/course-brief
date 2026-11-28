@@ -371,7 +371,7 @@
    "items": [],
    "tags": {}
   },
-  "recent_notice_text": "2026-10~11 공지 미확인(2026-11-26)",
+  "recent_notice_text": null,
   "course_notes": "모든 코스가 남향이라 사계절 라운드 가능. 누리코스는 페어웨이가 완만하지만 티~그린 기복이 강하고, 가온코스는 계곡 주변에 배치. 지역주민·여성 할인",
   "review": null,
   "fee_change": null,
@@ -428,7 +428,7 @@
   "fee": 1.0,
   "ops": 0.5,
   "facility": 0.6,
-  "briefing": 0.5,
+  "briefing": 0.25,
   "rental": 0.25
  }
 }

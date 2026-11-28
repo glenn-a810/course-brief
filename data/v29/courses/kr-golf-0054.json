@@ -359,7 +359,7 @@
    "items": [],
    "tags": {}
   },
-  "recent_notice_text": "2026-10~11 공지 미확인(2026-11-26)",
+  "recent_notice_text": null,
   "course_notes": "2002년 8월 개장. 완만한 구릉지 자연 지형을 따라 숲·호수·연못·계곡으로 구성, 국제 행사 규격으로 설계",
   "review": null,
   "fee_change": null,
@@ -412,7 +412,7 @@
   "fee": 1.0,
   "ops": 0.36,
   "facility": 0.5,
-  "briefing": 0.5,
+  "briefing": 0.25,
   "rental": 1.0
  }
 }

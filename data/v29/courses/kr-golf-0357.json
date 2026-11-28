@@ -359,7 +359,7 @@
    "items": [],
    "tags": {}
   },
-  "recent_notice_text": "2026-10~11 공지 미확인(2026-11-26)",
+  "recent_notice_text": null,
   "course_notes": "부지 약 200만㎡, 코스 폭 약 80m. 홀마다 바다와 섬이 보이고 부지 가운데 산 덕분에 평지 링크스보다 입체감이 큼. 리아스식 해안을 닮은 벙커가 특징, 바다를 향해 치는 홀이 많아도 페어웨이는 비교적 넓음",
   "review": null,
   "fee_change": null,
@@ -419,7 +419,7 @@
   "fee": 1.0,
   "ops": 0.21,
   "facility": 0.3,
-  "briefing": 0.5,
+  "briefing": 0.25,
   "rental": 1.0
  }
 }

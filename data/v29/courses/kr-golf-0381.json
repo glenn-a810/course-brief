@@ -351,7 +351,7 @@
    "items": [],
    "tags": {}
   },
-  "recent_notice_text": "2026-10~11 공지 미확인(2026-11-26)",
+  "recent_notice_text": null,
   "course_notes": "1991년 11월 개장. 평탄한 지형에 넓은 페어웨이가 해안선을 따라 이어지는 코스(총면적 약 185만㎡). 겨울에도 영하로 내려가는 날이 드물고 여름에는 바닷바람",
   "review": null,
   "fee_change": null,
@@ -415,7 +415,7 @@
   "fee": 1.0,
   "ops": 0.21,
   "facility": 0.1,
-  "briefing": 0.5,
+  "briefing": 0.25,
   "rental": 0.25
  }
 }

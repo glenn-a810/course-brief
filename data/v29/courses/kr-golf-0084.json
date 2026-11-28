@@ -453,7 +453,7 @@
    "items": [],
    "tags": {}
   },
-  "recent_notice_text": "2026년 10~11월 공지 미확인(홈페이지 PRO모션·공지사항 게시판 운영).",
+  "recent_notice_text": null,
   "course_notes": "건설공제조합이 운영하는 세종시 18홀 대중제. 조합원·지역주민 할인 운영.",
   "review": null,
   "fee_change": null,
@@ -516,7 +516,7 @@
   "fee": 1.0,
   "ops": 0.29,
   "facility": 0.3,
-  "briefing": 0.5,
+  "briefing": 0.25,
   "rental": 1.0
  }
 }

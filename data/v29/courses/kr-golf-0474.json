@@ -371,7 +371,7 @@
    "items": [],
    "tags": {}
   },
-  "recent_notice_text": "2026년 10~11월 공지 미확인(2026-11-26 기준)",
+  "recent_notice_text": null,
   "course_notes": "45홀 단지의 대중제 27홀. C코스 6번(파4)이 개미허리 두 곳의 핸디캡 1번 홀. 조식 뷔페 28,000원·해장국 22,000~23,000원 수준",
   "review": null,
   "fee_change": null,
@@ -426,7 +426,7 @@
   "fee": 1.0,
   "ops": 0.21,
   "facility": 0.1,
-  "briefing": 0.5,
+  "briefing": 0.25,
   "rental": 0.25
  }
 }

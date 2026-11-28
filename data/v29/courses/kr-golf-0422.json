@@ -506,7 +506,7 @@
    "items": [],
    "tags": {}
   },
-  "recent_notice_text": "2026년 10~11월 공지 미확인(2026-11-26 기준)",
+  "recent_notice_text": null,
   "course_notes": "삼척 근덕면 해안 인접. 18홀 규모",
   "review": null,
   "fee_change": null,
@@ -564,7 +564,7 @@
   "fee": 1.0,
   "ops": 0.29,
   "facility": 0.5,
-  "briefing": 0.5,
+  "briefing": 0.25,
   "rental": 0.25
  }
 }

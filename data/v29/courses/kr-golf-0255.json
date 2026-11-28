@@ -368,7 +368,7 @@
    "items": [],
    "tags": {}
   },
-  "recent_notice_text": "2026년 10~11월 공지 미확인.",
+  "recent_notice_text": null,
   "course_notes": "청주 오창읍 9홀(18홀은 2바퀴). 노캐디 1인승 카트로 페어웨이를 달릴 수 있는 것이 특징. 1홀 이상 비우는 지연 시 퇴장 규정.",
   "review": null,
   "fee_change": null,
@@ -419,7 +419,7 @@
   "fee": 1.0,
   "ops": 0.57,
   "facility": 0.4,
-  "briefing": 0.5,
+  "briefing": 0.25,
   "rental": 0.25
  }
 }

@@ -352,7 +352,7 @@
    "items": [],
    "tags": {}
   },
-  "recent_notice_text": "2026년 10~11월 공지 미확인.",
+  "recent_notice_text": null,
   "course_notes": "한라산 중턱 해발 400m. 어느 티박스에서도 한라산 조망, 겨울 북서풍을 막도록 설계. 제주공항 12km·25분. 페어웨이가 벤트그라스와 한국잔디 혼재로 패치가 많다는 코스 상태 언급.",
   "review": null,
   "fee_change": null,
@@ -409,7 +409,7 @@
   "fee": 1.0,
   "ops": 0.07,
   "facility": 0.1,
-  "briefing": 0.5,
+  "briefing": 0.25,
   "rental": 0.25
  }
 }

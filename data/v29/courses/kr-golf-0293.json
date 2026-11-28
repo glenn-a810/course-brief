@@ -408,7 +408,7 @@
    "items": [],
    "tags": {}
   },
-  "recent_notice_text": "2026년 10~11월 공지 미확인.",
+  "recent_notice_text": null,
   "course_notes": "로얄링스 단지의 2코스. 1코스와 요금 체계가 같고 예약도 코스별로 따로 받음.",
   "review": null,
   "fee_change": null,
@@ -459,7 +459,7 @@
   "fee": 1.0,
   "ops": 0.36,
   "facility": 0.7,
-  "briefing": 0.5,
+  "briefing": 0.25,
   "rental": 0.5
  }
 }

@@ -337,7 +337,7 @@
    "items": [],
    "tags": {}
   },
-  "recent_notice_text": "2026-10~11 공지 미확인(2026-11-26)",
+  "recent_notice_text": null,
   "course_notes": "2014년 7월 개장, 우대기술단(설계 임상하). 황세코스는 내리막·오르막 블라인드 홀, 여의코스는 기복이 적고 시야가 트임. 연못·수생식물·조경수 조성",
   "review": null,
   "fee_change": null,
@@ -391,7 +391,7 @@
   "fee": 1.0,
   "ops": 0.14,
   "facility": 0.5,
-  "briefing": 0.5,
+  "briefing": 0.25,
   "rental": 1.0
  }
 }

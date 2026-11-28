@@ -456,7 +456,7 @@
    "items": [],
    "tags": {}
   },
-  "recent_notice_text": "2026년 10~11월 공지 미확인.",
+  "recent_notice_text": null,
   "course_notes": "청주 미원면 18홀. 페어웨이·그린·티·러프 모두 양잔디로 안내. 연중무휴, 야간 라운드 운영.",
   "review": null,
   "fee_change": null,
@@ -512,7 +512,7 @@
   "fee": 1.0,
   "ops": 0.43,
   "facility": 0.5,
-  "briefing": 0.5,
+  "briefing": 0.25,
   "rental": 1.0
  }
 }

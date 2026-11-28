@@ -355,7 +355,7 @@
    "items": [],
    "tags": {}
   },
-  "recent_notice_text": "2026년 10~11월 공지 미확인.",
+  "recent_notice_text": null,
   "course_notes": "충주 앙성면 27홀. 올데이 그룹 통합 예약으로 청주떼제베·임페리얼레이크·로얄포레와 같은 창구에서 예약.",
   "review": null,
   "fee_change": null,
@@ -417,7 +417,7 @@
   "fee": 1.0,
   "ops": 0.21,
   "facility": 0.2,
-  "briefing": 0.5,
+  "briefing": 0.25,
   "rental": 0.25
  }
 }

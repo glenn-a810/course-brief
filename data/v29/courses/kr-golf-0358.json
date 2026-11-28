@@ -411,7 +411,7 @@
    ],
    "tags": {}
   },
-  "recent_notice_text": "2026-10~11 공지 미확인(2026-11-26)",
+  "recent_notice_text": null,
   "course_notes": "남해 바다를 따라 조성된 씨사이드 코스. 7개 홀이 바다와 접하고 11개 홀에서 바다 조망. 아웃 4번홀은 바다를 건너는 그린, 7번 파3는 140m 바다 건너, 8번은 페널티 구역과 대형 벙커. 총면적 약 22만 평",
   "review": null,
   "fee_change": null,
@@ -468,7 +468,7 @@
   "fee": 1.0,
   "ops": 0.36,
   "facility": 0.5,
-  "briefing": 0.75,
+  "briefing": 0.5,
   "rental": 1.0
  }
 }

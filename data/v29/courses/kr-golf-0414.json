@@ -378,7 +378,7 @@
    "items": [],
    "tags": {}
   },
-  "recent_notice_text": "2026년 10~11월 공지 미확인.",
+  "recent_notice_text": null,
   "course_notes": "9홀이지만 TWO-TEE·ONE-FAIRWAY·TWO-GREEN으로 18홀 느낌. 전 홀 라이트로 새벽·야간 라운드 가능.",
   "review": null,
   "fee_change": null,
@@ -429,7 +429,7 @@
   "fee": 1.0,
   "ops": 0.29,
   "facility": 0.3,
-  "briefing": 0.5,
+  "briefing": 0.25,
   "rental": 1.0
  }
 }

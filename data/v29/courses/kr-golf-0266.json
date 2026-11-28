@@ -420,7 +420,7 @@
    "items": [],
    "tags": {}
   },
-  "recent_notice_text": "2026년 10~11월 공지 미확인.",
+  "recent_notice_text": null,
   "course_notes": "충주 앙성면 18홀 대중제. 오픈 시점이 2~4주 전으로 짧아 임박 예약에 유리.",
   "review": null,
   "fee_change": null,
@@ -482,7 +482,7 @@
   "fee": 1.0,
   "ops": 0.57,
   "facility": 0.3,
-  "briefing": 0.5,
+  "briefing": 0.25,
   "rental": 0.25
  }
 }

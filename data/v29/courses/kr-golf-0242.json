@@ -495,7 +495,7 @@
    "items": [],
    "tags": {}
   },
-  "recent_notice_text": "2026년 10~11월 공지 미확인.",
+  "recent_notice_text": null,
   "course_notes": "음성읍 27홀 대중제. 인터넷 1일 3팀 제한.",
   "review": null,
   "fee_change": null,
@@ -561,7 +561,7 @@
   "fee": 1.0,
   "ops": 0.36,
   "facility": 0.3,
-  "briefing": 0.5,
+  "briefing": 0.25,
   "rental": 1.0
  }
 }

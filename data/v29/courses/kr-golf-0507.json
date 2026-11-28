@@ -426,7 +426,7 @@
    ],
    "tags": {}
   },
-  "recent_notice_text": "2026년 10~11월 공지 미확인(2026-11-26 기준)",
+  "recent_notice_text": null,
   "course_notes": "원주 부론면 남한강변 신생 27홀. 산악형 강원권과 달리 시야가 열린 넓은 페어웨이, 강바람 영향. 2026년 가을 잔디 상태 호평, 초기에는 그린 스피드가 느리다는 지적",
   "review": null,
   "fee_change": null,
@@ -489,7 +489,7 @@
   "fee": 1.0,
   "ops": 0.14,
   "facility": 0.3,
-  "briefing": 0.75,
+  "briefing": 0.5,
   "rental": 0.25
  }
 }

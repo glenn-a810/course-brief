@@ -354,7 +354,7 @@
    "items": [],
    "tags": {}
   },
-  "recent_notice_text": "2026년 10~11월 공지 미확인.",
+  "recent_notice_text": null,
   "course_notes": "충주 신니면 18홀. 3부를 노캐디로 운영하고 새싹·실버·하우스캐디를 선택하는 캐디 선택제가 특징. 2인 불가.",
   "review": null,
   "fee_change": null,
@@ -417,7 +417,7 @@
   "fee": 1.0,
   "ops": 0.29,
   "facility": 0.2,
-  "briefing": 0.5,
+  "briefing": 0.25,
   "rental": 0.25
  }
 }

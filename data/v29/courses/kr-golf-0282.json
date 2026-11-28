@@ -458,7 +458,7 @@
    "items": [],
    "tags": {}
   },
-  "recent_notice_text": "2026년 10~11월 공지 미확인.",
+  "recent_notice_text": null,
   "course_notes": "부여 은산면 27홀 대중제. 4주 전 월요일 10시 일괄 오픈, 4인 원칙.",
   "review": null,
   "fee_change": null,
@@ -520,7 +520,7 @@
   "fee": 1.0,
   "ops": 0.43,
   "facility": 0.6,
-  "briefing": 0.5,
+  "briefing": 0.25,
   "rental": 0.25
  }
 }

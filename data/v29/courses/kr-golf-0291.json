@@ -455,7 +455,7 @@
    "items": [],
    "tags": {}
   },
-  "recent_notice_text": "2026년 10~11월 공지 미확인.",
+  "recent_notice_text": null,
   "course_notes": "태안 근흥면 해안 27홀 대중제. 월 1일 다음 달 예약 오픈. 이벤트 상품은 별도 위약 규정(환불 불가).",
   "review": null,
   "fee_change": null,
@@ -512,7 +512,7 @@
   "fee": 1.0,
   "ops": 0.64,
   "facility": 0.5,
-  "briefing": 0.5,
+  "briefing": 0.25,
   "rental": 1.0
  }
 }

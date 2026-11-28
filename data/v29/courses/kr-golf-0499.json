@@ -504,7 +504,7 @@
   },
   "fee_change": null,
   "collected_at": "2026-11-27T23:55:00+09:00",
-  "recent_notice_text": "카카오골프예약 '골프장에서 알립니다'(2026-11-27 확인): 회원가입 필수(미가입 시 현장 정상가) 및 특가상품 정산 안내",
+  "recent_notice_text": "회원가입 필수(미가입 시 현장 정상가) 및 특가상품 정산 안내",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [

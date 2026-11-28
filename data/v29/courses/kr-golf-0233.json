@@ -366,7 +366,7 @@
    "items": [],
    "tags": {}
   },
-  "recent_notice_text": "2026년 10~11월 공지 미확인.",
+  "recent_notice_text": null,
   "course_notes": "보은 탄부면 속리산 자락 18홀 대중제. 라미드그룹 계열로 '속리산CC'라는 이름으로도 통용. 공식 명칭 표기가 자료마다 달라 확인이 필요.",
   "review": null,
   "fee_change": null,
@@ -430,7 +430,7 @@
   "fee": 1.0,
   "ops": 0.36,
   "facility": 0.1,
-  "briefing": 0.5,
+  "briefing": 0.25,
   "rental": 0.25
  }
 }

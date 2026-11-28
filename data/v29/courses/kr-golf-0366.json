@@ -352,7 +352,7 @@
    "items": [],
    "tags": {}
   },
-  "recent_notice_text": "2026-10~11 공지 미확인(2026-11-26)",
+  "recent_notice_text": null,
   "course_notes": "자연림과 강 조망이 어우러진 36홀(4코스, 파144). 균형과 비대칭을 함께 고려한 배치",
   "review": null,
   "fee_change": null,
@@ -402,7 +402,7 @@
   "fee": 1.0,
   "ops": 0.5,
   "facility": 0.5,
-  "briefing": 0.5,
+  "briefing": 0.25,
   "rental": 0.25
  }
 }

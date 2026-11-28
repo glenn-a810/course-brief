@@ -404,7 +404,7 @@
    "items": [],
    "tags": {}
   },
-  "recent_notice_text": "2026년 10~11월 공지 미확인.",
+  "recent_notice_text": null,
   "course_notes": "천안 북면 18홀 대중제. 옛 이름 마론뉴데이CC(2023-12 마론으로 변경). 예약자 본인 내장 필수·1일 1팀 제한이 엄격.",
   "review": null,
   "fee_change": null,
@@ -467,7 +467,7 @@
   "fee": 1.0,
   "ops": 0.29,
   "facility": 0.4,
-  "briefing": 0.5,
+  "briefing": 0.25,
   "rental": 0.25
  }
 }

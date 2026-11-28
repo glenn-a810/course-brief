@@ -336,7 +336,7 @@
    "items": [],
    "tags": {}
   },
-  "recent_notice_text": "2026-10~11 공지 미확인(2026-11-26)",
+  "recent_notice_text": null,
   "course_notes": "코스 전체 길이와 홀당 페어웨이·그린 면적이 국제 규격 이상이라고 소개. 힐·레이크 코스의 급내리막 홀은 해저드까지 실제 거리가 270m 안팎",
   "review": null,
   "fee_change": null,
@@ -398,7 +398,7 @@
   "fee": 1.0,
   "ops": 0.21,
   "facility": 0.1,
-  "briefing": 0.5,
+  "briefing": 0.25,
   "rental": 0.25
  }
 }

@@ -462,7 +462,7 @@
    "items": [],
    "tags": {}
   },
-  "recent_notice_text": "2026년 10~11월 공지 미확인(2026-11-26 기준)",
+  "recent_notice_text": null,
   "course_notes": "오투리조트 부속 9홀 퍼블릭. 본 코스(18홀)와 예약 오픈 주기가 다름(퍼블릭 8주 전)",
   "review": null,
   "fee_change": null,
@@ -526,7 +526,7 @@
   "fee": 1.0,
   "ops": 0.29,
   "facility": 0.5,
-  "briefing": 0.5,
+  "briefing": 0.25,
   "rental": 0.25
  }
 }

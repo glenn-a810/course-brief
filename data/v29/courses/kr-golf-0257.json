@@ -419,7 +419,7 @@
    "items": [],
    "tags": {}
   },
-  "recent_notice_text": "2026년 10~11월 공지 미확인.",
+  "recent_notice_text": null,
   "course_notes": "충주 대소원면 18홀 대중제. 대영베이스 그룹의 모(母) 골프장으로 2025-07 세일CC(현 모카CC)를 인수. 7주 전 오픈으로 충북권에서 가장 빠른 편.",
   "review": null,
   "fee_change": null,
@@ -482,7 +482,7 @@
   "fee": 1.0,
   "ops": 0.21,
   "facility": 0.4,
-  "briefing": 0.5,
+  "briefing": 0.25,
   "rental": 1.0
  }
 }

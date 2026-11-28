@@ -460,7 +460,7 @@
    "items": [],
    "tags": {}
   },
-  "recent_notice_text": "2026년 10~11월 공지 미확인(2026-11-26 기준)",
+  "recent_notice_text": null,
   "course_notes": "가을 단풍 성수기(9~11월) 예약 경쟁이 높음. 산악형 퍼블릭 중 가성비가 높은 편. 1박2일 패키지 운영",
   "review": null,
   "fee_change": null,
@@ -522,7 +522,7 @@
   "fee": 1.0,
   "ops": 0.29,
   "facility": 0.3,
-  "briefing": 0.5,
+  "briefing": 0.25,
   "rental": 0.25
  }
 }

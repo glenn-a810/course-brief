@@ -544,7 +544,7 @@
    "items": [],
    "tags": {}
   },
-  "recent_notice_text": "2026년 10~11월 공지 미확인(2026-11-26 기준)",
+  "recent_notice_text": null,
   "course_notes": "1998년 6월 개장. 2007년 스키빌리지 18홀을 잭 니클라우스 설계로 추가. 오크밸리 단지 전체 90홀(회원제 36·오크힐스 18·성문안 18·월송리 18·퍼블릭 9 등)",
   "review": null,
   "fee_change": null,
@@ -613,7 +613,7 @@
   "fee": 1.0,
   "ops": 0.14,
   "facility": 0.4,
-  "briefing": 0.5,
+  "briefing": 0.25,
   "rental": 0.25
  }
 }

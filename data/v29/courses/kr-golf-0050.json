@@ -340,7 +340,7 @@
    "items": [],
    "tags": {}
   },
-  "recent_notice_text": "2026-10~11 공지 미확인(2026-11-26)",
+  "recent_notice_text": null,
   "course_notes": "1956년 해운대에서 시작해 1971년 7월 현재 노포 자리로 이전. 금정·동백 모두 파36(2,948m·2,799m)으로 짧지만 그린이 까다롭다는 평가. 편백나무 약 3천 그루와 야생화 정원",
   "review": null,
   "fee_change": null,
@@ -398,7 +398,7 @@
   "fee": 1.0,
   "ops": 0.29,
   "facility": 0.3,
-  "briefing": 0.5,
+  "briefing": 0.25,
   "rental": 1.0
  }
 }

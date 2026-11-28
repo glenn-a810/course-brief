@@ -338,7 +338,7 @@
    "items": [],
    "tags": {}
   },
-  "recent_notice_text": "2026년 10~11월 공지 미확인.",
+  "recent_notice_text": null,
   "course_notes": "진천 백곡면 27홀 대중제. 27홀 라운드는 전화예약만 받는 등 예약 경로가 제한적.",
   "review": null,
   "fee_change": null,
@@ -403,7 +403,7 @@
   "fee": 1.0,
   "ops": 0.07,
   "facility": 0.0,
-  "briefing": 0.5,
+  "briefing": 0.25,
   "rental": 1.0
  }
 }

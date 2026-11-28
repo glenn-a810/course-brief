@@ -517,15 +517,15 @@
    "items": [],
    "tags": {}
   },
-  "recent_notice_text": "2026-10~11 공지 미확인(2026-11-26)",
+  "recent_notice_text": null,
   "course_notes": "2010년 10월 개장. 고저차가 적고 지세에 변화가 있어 샷의 가치가 살아 있는 코스. 힐코스는 숲속 개울·호수, 마루코스는 암석·숲·호수를 끌어들인 전략형. 페어웨이가 넓어 쉬워 보이지만 난이도는 중상급",
   "review": null,
   "fee_change": null,
   "alert": {
    "type": "winter_unverified",
    "level": "caution",
-   "summary": "동계 공지 미확인 — 3부는 5팀 미만 시 임의휴장 가능",
-   "detail": "2026-27 동계 휴장 공지 미확인(공지사항 최신은 11월 그린피). 2인·5인 플레이 불가, 3부는 5팀 미만 시 임의휴장 가능.",
+   "summary": "3부는 5팀 미만 시 임의휴장 가능",
+   "detail": "2인·5인 플레이 불가, 3부는 5팀 미만 시 임의휴장 가능.",
    "period": null,
    "confirmed": false,
    "checked_at": "2026-11-26",
@@ -590,7 +590,7 @@
   "fee": 1.0,
   "ops": 0.36,
   "facility": 0.7,
-  "briefing": 0.5,
+  "briefing": 0.25,
   "rental": 1.0
  }
 }

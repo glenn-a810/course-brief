@@ -373,7 +373,7 @@
    "items": [],
    "tags": {}
   },
-  "recent_notice_text": "2026-10~11 공지 미확인(2026-11-26)",
+  "recent_notice_text": null,
   "course_notes": "오션·록키 두 코스로 구성된 18홀, 동해안 인접. 7,270야드로 긴 편",
   "review": null,
   "fee_change": null,
@@ -435,7 +435,7 @@
   "fee": 1.0,
   "ops": 0.29,
   "facility": 0.2,
-  "briefing": 0.5,
+  "briefing": 0.25,
   "rental": 0.25
  }
 }

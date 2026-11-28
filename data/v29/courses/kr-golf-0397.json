@@ -428,7 +428,7 @@
    "items": [],
    "tags": {}
   },
-  "recent_notice_text": "2026년 10~11월 공지 미확인.",
+  "recent_notice_text": null,
   "course_notes": "제주 오름 특유의 언듈레이션을 살린 South·East 코스. 퍼블릭 North 9홀 별도 운영. 1995년 개장, 국내 최초 LPGA 공식투어(삼성월드챔피언십) 유치. 입구 돌담·동백꽃 조경이 겨울 촬영 포인트. 해발 400m.",
   "review": null,
   "fee_change": null,
@@ -482,7 +482,7 @@
   "fee": 1.0,
   "ops": 0.5,
   "facility": 0.3,
-  "briefing": 0.5,
+  "briefing": 0.25,
   "rental": 1.0
  }
 }

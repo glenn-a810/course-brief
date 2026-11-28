@@ -432,7 +432,7 @@
    "items": [],
    "tags": {}
   },
-  "recent_notice_text": "2026년 10~11월 공지 미확인.",
+  "recent_notice_text": null,
   "course_notes": "대전 도심(유성구 덕명동)에 붙은 18홀 회원제. 비회원 주중 18만5천원·주말 23만5천원으로 대전권에서는 높은 편.",
   "review": null,
   "fee_change": null,
@@ -500,7 +500,7 @@
   "fee": 1.0,
   "ops": 0.14,
   "facility": 0.2,
-  "briefing": 0.5,
+  "briefing": 0.25,
   "rental": 0.25
  }
 }

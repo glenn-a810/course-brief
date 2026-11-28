@@ -401,7 +401,7 @@
    "items": [],
    "tags": {}
   },
-  "recent_notice_text": "2026년 10~11월 공지 미확인.",
+  "recent_notice_text": null,
   "course_notes": "해발 350m. 제주공항 약 42km·50분. 해발 350m. 위미항 인근으로 겨울 바람이 적고 한겨울에도 영하권이 드문 편이라는 소개.",
   "review": null,
   "fee_change": null,
@@ -455,7 +455,7 @@
   "fee": 1.0,
   "ops": 0.21,
   "facility": 0.1,
-  "briefing": 0.5,
+  "briefing": 0.25,
   "rental": 1.0
  }
 }

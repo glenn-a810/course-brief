@@ -470,7 +470,7 @@
    "items": [],
    "tags": {}
   },
-  "recent_notice_text": "2026년 10~11월 공지 미확인(2026-11-26 기준)",
+  "recent_notice_text": null,
   "course_notes": "동강변 리조트형 9홀. 정기 휴장일 없음, 티오프 30분 전 도착, 지각 시 홀 점프 원칙",
   "review": null,
   "fee_change": null,
@@ -529,7 +529,7 @@
   "fee": 1.0,
   "ops": 0.57,
   "facility": 0.5,
-  "briefing": 0.5,
+  "briefing": 0.25,
   "rental": 1.0
  }
 }

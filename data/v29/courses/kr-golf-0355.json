@@ -399,7 +399,7 @@
    "items": [],
    "tags": {}
   },
-  "recent_notice_text": "2026-10~11 공지 미확인(2026-11-26)",
+  "recent_notice_text": null,
   "course_notes": "2005년 10월 개장, 로널드 프림(Golf Plan) 설계. 황새봉 능선·계곡·호수·팟벙커를 살린 스코틀랜드식 27홀. 겨울에도 그린 컨디션과 스피드가 유지된다는 평가",
   "review": null,
   "fee_change": null,
@@ -453,7 +453,7 @@
   "fee": 1.0,
   "ops": 0.21,
   "facility": 0.3,
-  "briefing": 0.5,
+  "briefing": 0.25,
   "rental": 1.0
  }
 }

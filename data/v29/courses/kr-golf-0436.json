@@ -364,7 +364,7 @@
    "items": [],
    "tags": {}
   },
-  "recent_notice_text": "2026년 10~11월 공지 미확인(2026-11-26 기준)",
+  "recent_notice_text": null,
   "course_notes": "오크밸리 단지 내 정규 18홀 퍼블릭. 노캐디 셀프라 카트·진행을 팀이 직접 관리",
   "review": null,
   "fee_change": null,
@@ -426,7 +426,7 @@
   "fee": 0.75,
   "ops": 0.14,
   "facility": 0.1,
-  "briefing": 0.5,
+  "briefing": 0.25,
   "rental": 0.25
  }
 }

@@ -443,7 +443,7 @@
    "items": [],
    "tags": {}
   },
-  "recent_notice_text": "2026년 10~11월 공지 미확인.",
+  "recent_notice_text": null,
   "course_notes": "태안읍 36홀 단지의 1코스. 노캐디·야간 라운드 가능, 연습장 요금이 시간 단위로 공개되어 있음. 지연 시 경기 강제종료·예약 30일 정지 규정.",
   "review": null,
   "fee_change": null,
@@ -493,7 +493,7 @@
   "fee": 1.0,
   "ops": 0.43,
   "facility": 0.8,
-  "briefing": 0.5,
+  "briefing": 0.25,
   "rental": 1.0
  }
 }

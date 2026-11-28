@@ -398,7 +398,7 @@
    "items": [],
    "tags": {}
   },
-  "recent_notice_text": "2026년 10~11월 공지 미확인.",
+  "recent_notice_text": null,
   "course_notes": "세종 전의면 27홀 회원제. 페어웨이가 넓고 전장 9,375m로 중부권 최장급, 티·그린 고저차가 거의 없는 평지형. 연중무휴. 1994년 개장, 옛 이름 에머슨내셔널CC.",
   "review": null,
   "fee_change": null,
@@ -463,7 +463,7 @@
   "fee": 1.0,
   "ops": 0.29,
   "facility": 0.1,
-  "briefing": 0.5,
+  "briefing": 0.25,
   "rental": 0.25
  }
 }

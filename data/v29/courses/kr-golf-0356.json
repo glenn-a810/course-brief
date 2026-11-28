@@ -421,7 +421,7 @@
    ],
    "tags": {}
   },
-  "recent_notice_text": "2026-10~11 공지 미확인(2026-11-26)",
+  "recent_notice_text": null,
   "course_notes": "숲속에 계단식으로 앉은 18홀(부지 1,030,540㎡). 벙커와 워터해저드가 홀마다 배치. 야간 조망이 좋다는 코스 소개",
   "review": null,
   "fee_change": null,
@@ -477,7 +477,7 @@
   "fee": 1.0,
   "ops": 0.64,
   "facility": 0.4,
-  "briefing": 0.75,
+  "briefing": 0.5,
   "rental": 1.0
  }
 }

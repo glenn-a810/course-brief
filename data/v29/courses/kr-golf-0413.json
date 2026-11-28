@@ -396,7 +396,7 @@
    "items": [],
    "tags": {}
   },
-  "recent_notice_text": "2026년 10~11월 공지 미확인.",
+  "recent_notice_text": null,
   "course_notes": "해발 400m. 2005-02 개장. 27홀 세 코스가 거리·리듬이 다른 구성. 해발 400m. 삼나무 향이 가득한 코스라는 후기와 함께 겨울 강풍·안개 노출이 있다는 언급.",
   "review": null,
   "fee_change": null,
@@ -451,7 +451,7 @@
   "fee": 1.0,
   "ops": 0.0,
   "facility": 0.2,
-  "briefing": 0.5,
+  "briefing": 0.25,
   "rental": 1.0
  }
 }
