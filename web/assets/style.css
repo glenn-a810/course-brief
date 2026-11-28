@@ -181,6 +181,9 @@ a:hover { text-decoration: underline; }
 button, input, select { font: inherit; color: inherit; letter-spacing: inherit; }
 svg { display: block; }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 8px; }
+/* 입력 요소는 컨트롤 자신의 테두리·부모 링으로 초점을 보여준다 — 전역 외곽선과 겹치면
+   크기가 다른 이중 파란 테두리가 된다. */
+input:focus-visible, select:focus-visible, textarea:focus-visible { outline: none; }
 main:focus { outline: none; }
 .muted { color: var(--text-3); }
 .num, .fee-value, .stat-n, .fee-hero-value, .pair-value, .rental-price-v,
@@ -346,6 +349,8 @@ mark { background: var(--mark); color: inherit; border-radius: 4px; padding: 0 2
   flex: 1; min-width: 0; border: 0; background: transparent; padding: 14px 0; font-size: 16px;
   letter-spacing: -.01em;
 }
+/* 포커스 링은 바깥 .searchbox:focus-within 하나만 그린다(입력칸 자체 외곽선은 끈다) */
+.searchbox input:focus, .searchbox input:focus-visible { outline: none; }
 .searchbox input::placeholder { color: var(--text-3); }
 .searchbox input::-webkit-search-cancel-button { display: none; }
 .searchbox-lg { min-height: 56px; }
@@ -390,8 +395,13 @@ mark { background: var(--mark); color: inherit; border-radius: 4px; padding: 0 2
   background-position: calc(100% - 19px) 50%, calc(100% - 14px) 50%;
   background-size: 5px 5px, 5px 5px; background-repeat: no-repeat;
   font-size: var(--t6); font-weight: 500;
+  transition: border-color .15s ease, box-shadow .15s ease;
 }
 .field select:hover { border-color: var(--text-3); }
+/* 셀렉트도 테두리 + 소프트 링 한 겹만(전역 :focus-visible 외곽선은 위에서 끔다) */
+.field select:focus, .field select:focus-visible {
+  outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft);
+}
 .status-line { display: grid; gap: 8px; }
 .status-line-label { font-size: var(--t7); line-height: var(--t7-lh); color: var(--text-2); font-weight: 500; }
 .chip-row { display: flex; flex-wrap: wrap; gap: 8px; }
@@ -1007,7 +1017,9 @@ tbody tr:last-child td { border-bottom: 0; }
   width: 100%; min-height: var(--tap); padding: 12px 14px; font-size: 16px;
   border: 1px solid var(--line-strong); border-radius: 12px; background: var(--surface-2); color: var(--text);
 }
-.admin-field input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+.admin-field input:focus, .admin-field input:focus-visible {
+  outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft);
+}
 .admin-error { font-size: 13px; color: var(--danger); }
 .admin-actions { display: flex; justify-content: flex-end; gap: 8px; }
 
