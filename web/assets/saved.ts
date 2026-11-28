@@ -4,6 +4,8 @@
  * - 저장이 막힌 브라우저(시크릿 모드·저장소 차단)에서는 이번 방문 동안만 메모리에 담는다.
  * - 개인정보를 서버로 보내지 않는다. 초기화·내보내기는 사용자가 직접 한다.
  */
+import { t } from "./i18n.js";
+
 const FAV_KEY = "coursebrief-favorites";
 const RECENT_KEY = "coursebrief-recent";
 const RECENT_LIMIT = 20;
@@ -91,11 +93,11 @@ export function syncFavToggles(root: ParentNode = document): void {
     const on = isFavorite(id);
     btn.setAttribute("aria-pressed", on ? "true" : "false");
     btn.classList.toggle("is-on", on);
-    const label = on ? "내 구장에서 빼기" : "내 구장에 저장";
-    btn.setAttribute("aria-label", `${btn.dataset.favName ?? "구장"} ${label}`);
+    const label = on ? t("card.favRemove") : t("card.favAdd");
+    btn.setAttribute("aria-label", `${btn.dataset.favName ?? ""} ${label}`.trim());
     btn.title = label;
     const text = btn.querySelector<HTMLElement>(".fav-toggle-text");
-    if (text) text.textContent = on ? "저장됨" : "저장";
+    if (text) text.textContent = on ? t("common.saved") : t("nav.saved");
   }
 }
 

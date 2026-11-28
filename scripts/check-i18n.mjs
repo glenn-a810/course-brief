@@ -28,12 +28,29 @@ const block = src.slice(start, end);
 const entries = [];
 const keyRe = /"([a-zA-Z0-9_.]+)":\s*\[/g;
 let m;
+/** 배열 끝(`]`)을 찾을 때 문자열 안의 `]` 는 건너뛴다 — ICS 제목처럼 대괄호를 쓰는 값이 있다 */
+function arrayBody(src, openIdx) {
+  let inStr = false;
+  let esc = false;
+  for (let i = openIdx + 1; i < src.length; i += 1) {
+    const ch = src[i];
+    if (inStr) {
+      if (esc) esc = false;
+      else if (ch === "\\") esc = true;
+      else if (ch === '"') inStr = false;
+    } else if (ch === '"') inStr = true;
+    else if (ch === "]") return src.slice(openIdx + 1, i);
+  }
+  return null;
+}
 while ((m = keyRe.exec(block)) !== null) {
   const key = m[1];
-  // 배열 끝까지 읽는다(여러 줄 허용). 문자열 안의 ] 는 없으므로 첫 ] 가 끝이다.
   const open = block.indexOf("[", m.index);
-  const close = block.indexOf("]", open);
-  const body = block.slice(open + 1, close);
+  const body = arrayBody(block, open);
+  if (body === null) {
+    errors.push(`${key}: 배열 끝을 찾지 못했습니다`);
+    continue;
+  }
   const values = [...body.matchAll(/"((?:[^"\\]|\\.)*)"/g)].map((x) => x[1]);
   entries.push({ key, values });
 }

@@ -9,9 +9,22 @@
  */
 import type { ParsedCancel, ParsedOpen, ParsedOpenMonthly, ParsedPenalty } from "../../shared/types";
 
+import { t } from "./i18n.js";
+
 export type DayType = "weekday" | "weekend";
 
-const WD = ["일", "월", "화", "수", "목", "금", "토"];
+/** 요일 이름 — 화면 언어를 따른다(L1). 0=일요일 */
+function wdLabel(i: number): string {
+  switch (i) {
+    case 0: return t("wd.0");
+    case 1: return t("wd.1");
+    case 2: return t("wd.2");
+    case 3: return t("wd.3");
+    case 4: return t("wd.4");
+    case 5: return t("wd.5");
+    default: return t("wd.6");
+  }
+}
 const MONDAY_FIRST = ["월", "화", "수", "목", "금", "토", "일"];
 
 /* ---------------- 날짜 ---------------- */
@@ -68,17 +81,17 @@ export function dayTypeOf(d: Date): DayType {
 }
 
 export function weekdayName(d: Date): string {
-  return WD[d.getDay()];
+  return wdLabel(d.getDay());
 }
 
 /** 2026.12.24(목) */
 export function fmtDay(d: Date): string {
-  return `${d.getFullYear()}.${String(d.getMonth() + 1).padStart(2, "0")}.${String(d.getDate()).padStart(2, "0")}(${WD[d.getDay()]})`;
+  return `${d.getFullYear()}.${String(d.getMonth() + 1).padStart(2, "0")}.${String(d.getDate()).padStart(2, "0")}(${wdLabel(d.getDay())})`;
 }
 
 /** 12.24(목) */
 export function fmtDayShort(d: Date): string {
-  return `${String(d.getMonth() + 1).padStart(2, "0")}.${String(d.getDate()).padStart(2, "0")}(${WD[d.getDay()]})`;
+  return `${String(d.getMonth() + 1).padStart(2, "0")}.${String(d.getDate()).padStart(2, "0")}(${wdLabel(d.getDay())})`;
 }
 
 export function daysBetween(from: Date, to: Date): number {
@@ -90,7 +103,7 @@ export function daysBetween(from: Date, to: Date): number {
 /** D-day 표기 — 오늘 0, 지난 날짜는 음수 */
 export function ddayText(d: Date, base: Date = today()): string {
   const n = daysBetween(base, d);
-  if (n === 0) return "오늘";
+  if (n === 0) return t("common.today");
   return n > 0 ? `D-${n}` : `D+${-n}`;
 }
 

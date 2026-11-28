@@ -339,10 +339,32 @@ const i18nSrc = await readFile(path.join(root, "web/assets/i18n.ts"), "utf8");
 const dictStart = i18nSrc.indexOf("const DICT: Record<string, Tuple> = {");
 const dictEnd = i18nSrc.indexOf("\n};", dictStart);
 const dictBlock = dictStart >= 0 && dictEnd > dictStart ? i18nSrc.slice(dictStart, dictEnd) : "";
-const dictEntries = [...dictBlock.matchAll(/"([a-zA-Z0-9_.]+)":\s*\[([^\]]*)\]/g)].map((m) => ({
-  key: m[1],
-  values: [...m[2].matchAll(/"((?:[^"\\]|\\.)*)"/g)].map((x) => x[1]),
-}));
+const dictEntries = (() => {
+  // 배열 끝(`]`)을 찾을 때 문자열 안의 `]` 는 건너뛴다(ICS 제목 등 대괄호 값이 있다)
+  const bodyOf = (openIdx) => {
+    let inStr = false;
+    let esc = false;
+    for (let i = openIdx + 1; i < dictBlock.length; i += 1) {
+      const ch = dictBlock[i];
+      if (inStr) {
+        if (esc) esc = false;
+        else if (ch === "\\") esc = true;
+        else if (ch === '"') inStr = false;
+      } else if (ch === '"') inStr = true;
+      else if (ch === "]") return dictBlock.slice(openIdx + 1, i);
+    }
+    return "";
+  };
+  const out = [];
+  const re = /"([a-zA-Z0-9_.]+)":\s*\[/g;
+  let m;
+  while ((m = re.exec(dictBlock)) !== null) {
+    const open = dictBlock.indexOf("[", m.index);
+    const body = bodyOf(open);
+    out.push({ key: m[1], values: [...body.matchAll(/"((?:[^"\\]|\\.)*)"/g)].map((x) => x[1]) });
+  }
+  return out;
+})();
 ok(dictEntries.length >= 300, `i18n 사전 ${dictEntries.length}개 키`);
 const badEntries = dictEntries.filter((e) => e.values.length !== 3 || e.values.some((v) => !v.trim()));
 ok(badEntries.length === 0, `i18n 모든 키가 ko·en·ja 3개 값${badEntries.length ? " — " + badEntries.slice(0, 3).map((e) => e.key).join(", ") : ""}`);

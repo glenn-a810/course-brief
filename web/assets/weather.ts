@@ -7,6 +7,7 @@
  *  - 한 세션 1시간 캐시 — 외부 호출을 반복하지 않는다.
  *  - 예보는 "참고"다. 라운드 적합도는 사람이 판단할 수 있게 이유를 함께 적는다.
  */
+import { t } from "./i18n.js";
 
 export interface DailyWeather {
   date: string;
@@ -99,48 +100,48 @@ export function suitability(w: DailyWeather | null): SuitResult | null {
   if (w.pop != null) {
     if (w.pop >= 70) {
       raise("hard");
-      reasons.push(`강수확률 ${w.pop}%`);
+      reasons.push(t("wx.popLine", { n: w.pop }));
     } else if (w.pop >= 40) {
       raise("caution");
-      reasons.push(`강수확률 ${w.pop}%`);
+      reasons.push(t("wx.popLine", { n: w.pop }));
     }
   }
   if (w.precip != null && w.precip >= 3) {
     raise(w.precip >= 10 ? "hard" : "caution");
-    reasons.push(`예상 강수 ${w.precip}mm`);
+    reasons.push(t("wx.precipLine", { n: w.precip }));
   }
   if (w.wind != null) {
     if (w.wind >= 40) {
       raise("hard");
-      reasons.push(`최대 풍속 ${Math.round(w.wind)}km/h (${(w.wind / 3.6).toFixed(1)}m/s)`);
+      reasons.push(t("wx.windStrong", { kmh: Math.round(w.wind), ms: (w.wind / 3.6).toFixed(1) }));
     } else if (w.wind >= 29) {
       raise("caution");
-      reasons.push(`최대 풍속 ${Math.round(w.wind)}km/h`);
+      reasons.push(t("wx.windLine", { n: Math.round(w.wind) }));
     }
   }
   if (w.gust != null && w.gust >= 60) {
     raise("hard");
-    reasons.push(`돌풍 ${Math.round(w.gust)}km/h`);
+    reasons.push(t("wx.gustLine", { n: Math.round(w.gust) }));
   }
   if (w.tMax != null && w.tMax >= 33) {
     raise(w.tMax >= 35 ? "hard" : "caution");
-    reasons.push(`최고 ${Math.round(w.tMax)}℃`);
+    reasons.push(t("wx.tmaxLine", { n: Math.round(w.tMax) }));
   }
   if (w.tMin != null && w.tMin <= -10) {
     raise("hard");
-    reasons.push(`최저 ${Math.round(w.tMin)}℃ 한파`);
+    reasons.push(t("wx.coldLine", { n: Math.round(w.tMin) }));
   } else if (w.tMin != null && w.tMin <= -3) {
     raise("caution");
-    reasons.push(`최저 ${Math.round(w.tMin)}℃`);
+    reasons.push(t("wx.tminLine", { n: Math.round(w.tMin) }));
   }
   if (!reasons.length) {
     const bits: string[] = [];
-    if (w.tMax != null) bits.push(`최고 ${Math.round(w.tMax)}℃`);
-    if (w.pop != null) bits.push(`강수 ${w.pop}%`);
-    if (w.wind != null) bits.push(`바람 ${Math.round(w.wind)}km/h`);
-    reasons.push(bits.length ? bits.join(" · ") : "예보 값 확인됨");
+    if (w.tMax != null) bits.push(t("wx.tmaxLine", { n: Math.round(w.tMax) }));
+    if (w.pop != null) bits.push(t("wx.popShort", { n: w.pop }));
+    if (w.wind != null) bits.push(t("wx.windShort", { n: Math.round(w.wind) }));
+    reasons.push(bits.length ? bits.join(" · ") : t("wx.valuesOk"));
   }
-  const label = level === "good" ? "라운드하기 좋음" : level === "caution" ? "주의" : "어려움";
+  const label = level === "good" ? t("wx.good") : level === "caution" ? t("wx.caution") : t("wx.hard");
   return { level, label, reasons };
 }
 
@@ -148,6 +149,6 @@ export function weatherLabel(w: DailyWeather | null): string {
   if (!w) return "예보 없음";
   const bits: string[] = [];
   if (w.tMax != null && w.tMin != null) bits.push(`${Math.round(w.tMin)}~${Math.round(w.tMax)}℃`);
-  if (w.pop != null) bits.push(`강수 ${w.pop}%`);
+  if (w.pop != null) bits.push(t("wx.popShort", { n: w.pop }));
   return bits.join(" · ");
 }
