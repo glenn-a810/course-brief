@@ -512,6 +512,17 @@ def main() -> int:
                     note(f"{cid} {sec}.{key}.value 마무리: {val!r} → {fix!r}")
                     h["value"] = fix
 
+        # ---------- 기타 시설 타일에 프로샵이 또 들어 있으면 뺀다(프로샵 타일이 따로 있음)
+        proshop_h = c["facilities"].get("proshop")
+        other_h2 = c["facilities"].get("other")
+        if isinstance((proshop_h or {}).get("value"), str) and isinstance((other_h2 or {}).get("value"), str):
+            toks = split_top(other_h2["value"])
+            keep = [t for t in toks if re.sub(r"\s", "", t) != "프로샵"]
+            if len(keep) != len(toks):
+                new = " · ".join(keep) if keep else None
+                note(f"{cid} facilities.other 프로샵 중복 제거: {other_h2['value']!r} → {new!r}")
+                other_h2["value"] = new
+
         # ---------- 라벨을 되풀이하는 짧은 값(정규식) — `2인 플레이 / 2인 불가` → `2인 플레이 / 불가`
         for (sec, key), pattern, repl in POST_RE:
             h = (c.get(sec) or {}).get(key)

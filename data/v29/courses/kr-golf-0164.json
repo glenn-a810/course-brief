@@ -346,7 +346,7 @@
    "value_from": "capital_supplement(greenfee_guide)"
   },
   "other": {
-   "value": "프로샵",
+   "value": null,
    "evidence": [
     "other: 프로샵"
    ],
@@ -523,7 +523,7 @@
   "course": 0.4,
   "fee": 1.0,
   "ops": 0.64,
-  "facility": 0.4,
+  "facility": 0.3,
   "briefing": 0.5,
   "rental": 0.25
  }

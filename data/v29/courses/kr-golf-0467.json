@@ -436,7 +436,7 @@
    "note": "1박2일골프 시설·기타 요약(2차 공개자료, 2026-11-27 조회) — 예약 전 공식 채널 재확인 권장"
   },
   "other": {
-   "value": "프로샵",
+   "value": null,
    "evidence": []
   },
   "night": {
@@ -580,7 +580,7 @@
   "course": 0.4,
   "fee": 1.0,
   "ops": 0.21,
-  "facility": 0.5,
+  "facility": 0.4,
   "briefing": 0.5,
   "rental": 0.25
  }

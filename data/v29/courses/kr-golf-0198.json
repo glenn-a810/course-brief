@@ -722,7 +722,7 @@
    "evidence": []
   },
   "other": {
-   "value": "프로샵",
+   "value": null,
    "evidence": [
     "other: 프로샵"
    ],
@@ -886,7 +886,7 @@
   "course": 0.8,
   "fee": 0.0,
   "ops": 0.14,
-  "facility": 0.1,
+  "facility": 0.0,
   "briefing": 0.25,
   "rental": 0.25
  }

@@ -621,7 +621,7 @@
    "evidence": []
   },
   "other": {
-   "value": "프로샵",
+   "value": null,
    "evidence": [
     "사우나 있음 · 퍼팅 연습 그린·숏게임 연습장·드라이빙 레인지 · 프로샵·카페·라운지"
    ],
@@ -788,7 +788,7 @@
   "course": 0.8,
   "fee": 1.0,
   "ops": 0.21,
-  "facility": 0.3,
+  "facility": 0.2,
   "briefing": 0.5,
   "rental": 1.0
  }

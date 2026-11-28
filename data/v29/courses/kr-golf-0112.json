@@ -327,7 +327,7 @@
    "evidence": []
   },
   "other": {
-   "value": "프로샵",
+   "value": null,
    "evidence": [
     "그 밖의 시설: 프로샵"
    ],
@@ -521,7 +521,7 @@
   "course": 0.4,
   "fee": 1.0,
   "ops": 0.29,
-  "facility": 0.2,
+  "facility": 0.1,
   "briefing": 0.75,
   "rental": 0.25
  }
