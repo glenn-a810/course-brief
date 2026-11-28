@@ -122,7 +122,7 @@ const DICT: Record<string, Tuple> = {
   "list.emptyTitle": ["조건에 맞는 골프장이 없어요", "No courses match these filters", "条件に合うゴルフ場がありません"],
   "list.emptyDefault": ["다른 조건으로 다시 찾아보세요.", "Try different filters.", "別の条件で探してみてください。"],
   "list.emptySearch": ["‘{q}’와 맞는 골프장이 없어요. 다른 이름이나 지역으로 찾아봐 주세요.", "No course matches ‘{q}’. Try another name or region.", "「{q}」に一致するゴルフ場はありません。別の名前・地域でお試しください。"],
-  "list.emptyWiden": ["{parts} 조건을 넓히면 결과가 나옵니다.", "Widen {parts} to see results.", "{parts} の条件を広げると結果が出ます。"],
+  "list.emptyWiden": ["{parts} 조건을 넓히면 결과가 나와요.", "Widen {parts} to see results.", "{parts} の条件を広げると結果が出ます。"],
   "list.emptyFilterParts": ["{label}", "{label}", "{label}"],
   "list.showAllStatus": ["숨긴 상태 모두 보기", "Show hidden statuses", "非表示のステータスも表示"],
   "list.viewList": ["목록", "List", "一覧"],

@@ -110,7 +110,7 @@ export function renderReport(host: HTMLElement, opts: ReportOptions): void {
 
       <div class="callout">
         <strong>${icon("info")}접수 방식</strong>
-        이슈 작성 페이지가 새 탭에서 열리고, 아래 내용이 제목·본문에 미리 채워집니다. GitHub 로그인이 필요하므로,
+        이슈 작성 페이지가 새 탭에서 열리고, 아래 내용이 제목·본문에 미리 채워져요. GitHub 로그인이 필요하니,
         로그인 없이 보내려면 <b>내용 복사</b>로 복사해 원하는 경로로 전달해 주세요. 접수 여부는 저장소의 이슈에서 확인할 수 있어요.
         <a class="link" href="${esc(opts.repoUrl)}/issues" target="_blank" rel="noopener noreferrer">열린 제보 보기</a>
       </div>

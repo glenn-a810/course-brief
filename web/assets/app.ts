@@ -2144,7 +2144,7 @@ function sections(d: CourseDetail, c: CourseIndexItem, others: Array<{ name: str
   const dataInfo = isAdmin()
     ? `<section class="section" id="s8" aria-labelledby="s8-h">
         <div class="section-head"><h2 id="s8-h">${iconTile("chart", "grey", "sm")}${esc(t("sec.dataAdmin"))}</h2>
-        <p class="section-desc">7개 영역 채움률. 비어 있는 값은 '미확인'이며 '없음'과 다릅니다.</p></div>
+        <p class="section-desc">7개 영역 채움률이에요. 비어 있는 값은 '미확인'이고 '없음'과 달라요.</p></div>
         <div class="section-body"><div class="cov-list">${covRows}</div>
         ${dataSummary}
         <p class="source-line">수집 ${esc(updated)} · 스키마 ${esc(d.meta?.schema || "")} · <a class="link" href="${REPO_URL}/blob/main/data/v29/schema.md" target="_blank" rel="noopener noreferrer">스키마 문서</a> · <a class="link" href="#/admin-qa">QA 대시보드</a> · <a class="link" href="${REPO_URL}/blob/main/docs/API.md" target="_blank" rel="noopener noreferrer">API 문서</a></p>
@@ -2428,10 +2428,10 @@ function renderAbout(): void {
     : "CourseBrief는 전국 골프장을 7개 영역으로 정리한 참고 데이터예요. 공개 자료에서 확인된 값만 보여 주고, 값이 없는 항목은 비워 둬요.";
 
   const principles = [
-    ["공식 우선", "골프장 공식 홈페이지·공지·요금표를 1순위로 보고, 2차 사이트 값은 교차검증에만 씁니다."],
-    ["없음과 빈 값의 구분", "값이 없는 항목은 비워 둡니다. '정보 없음'을 '없음'으로 해석하지 않아요."],
-    ["확인 시점 기록", "그린피처럼 빨리 낡는 값에는 확인 날짜를 함께 남깁니다."],
-    ["전화·현장 확인 항목", "좌타 클럽, 매트 비율, 락카 요금처럼 전화로만 확인되는 항목은 비워 두고 제보로 채웁니다."],
+    ["공식 우선", "골프장 공식 홈페이지·공지·요금표를 1순위로 보고, 2차 사이트 값은 교차검증에만 써요."],
+    ["없음과 빈 값의 구분", "값이 없는 항목은 비워 둬요. '정보 없음'을 '없음'으로 해석하지 않아요."],
+    ["확인 시점 기록", "그린피처럼 빨리 낡는 값에는 확인 날짜를 함께 남겨요."],
+    ["전화·현장 확인 항목", "좌타 클럽, 매트 비율, 락카 요금처럼 전화로만 확인되는 항목은 비워 두고 제보로 채워요."],
   ];
 
   $<HTMLElement>("#view-page").innerHTML = `<div class="page">
@@ -2482,7 +2482,7 @@ function renderAbout(): void {
     <section class="about-block">
       <h2 class="h2">주의</h2>
       <div class="callout warn">
-        <strong>${icon("alert")}참고 데이터입니다</strong>
+        <strong>${icon("alert")}참고 데이터예요</strong>
         요금·운영 정보는 수집 시점의 공개 정보이고, 골프장 정책에 따라 수시로 바뀌어요. 예약·결제 전에 공식 채널에서 최종 확인해 주세요. 이 사이트는 예약을 대행하지 않아요.
       </div>
     </section>

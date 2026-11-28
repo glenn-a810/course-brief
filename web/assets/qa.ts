@@ -152,7 +152,7 @@ export async function renderQa(host: HTMLElement, dataBase: string): Promise<voi
     host.innerHTML = `<div class="page"><div class="state-box" role="alert">
       <span class="state-icon">${icon("alert")}</span>
       <h1 class="state-title">QA 데이터를 불러오지 못했어요</h1>
-      <p class="state-desc">빌드에서 만든 data/v29/qa.json 이 필요합니다. 네트워크를 확인한 뒤 다시 시도해 주세요.</p>
+      <p class="state-desc">빌드에서 만든 data/v29/qa.json 이 필요해요. 네트워크를 확인한 뒤 다시 시도해 주세요.</p>
       <a class="btn" href="#/about">데이터 안내로</a>
     </div></div>`;
     console.warn(e);
@@ -190,7 +190,7 @@ export async function renderQa(host: HTMLElement, dataBase: string): Promise<voi
       ${iconTile("chart", "purple", "lg")}
       <div class="page-head-text">
         <h1 class="page-title" tabindex="-1">데이터 QA</h1>
-        <p class="page-lead">영역별 충실도·낡은 값·파싱 실패를 한 화면에서 봅니다. 관리자 모드에서만 열립니다. 기준 ${esc(fmtDate(file.dataset?.built_at))}</p>
+        <p class="page-lead">영역별 충실도·낡은 값·파싱 실패를 한 화면에서 봐요. 관리자 모드에서만 열려요. 기준 ${esc(fmtDate(file.dataset?.built_at))}</p>
       </div>
     </header>
 
