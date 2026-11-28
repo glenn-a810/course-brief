@@ -844,7 +844,7 @@
   },
   "fee_change": null,
   "collected_at": "2026-11-27T23:55:00+09:00",
-  "recent_notice_text": null,
+  "recent_notice_text": "공식 홈페이지에 공지 게시판을 운영하지 않는다.",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [
@@ -887,7 +887,7 @@
   "fee": 0.0,
   "ops": 0.14,
   "facility": 0.2,
-  "briefing": 0.0,
+  "briefing": 0.25,
   "rental": 0.25
  }
 }
