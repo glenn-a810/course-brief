@@ -75,6 +75,18 @@ export interface CourseIndexItem {
   alert?: boolean;
   /** 7개 영역 평균 정보 충실도(0~100) */
   cov?: number;
+  /**
+   * L3 — KGA 대표 슬로프 레이팅.
+   * KGA 코스레이팅의 `남자 Regular 티` 18홀 조합 값을 평균한 값(규칙: data/v29/schema.md §4).
+   * Regular 티가 없는 구장은 남자 티 슬로프의 중앙값을 쓴다. 값이 없으면 필드 자체가 없다.
+   */
+  slope?: {
+    value: number;
+    /** 기준 티 이름(예: Regular) */
+    tee: string;
+    /** 평균에 쓴 18홀 조합 수 */
+    combos: number;
+  } | null;
 }
 
 export interface DatasetCounts {

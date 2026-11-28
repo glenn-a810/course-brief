@@ -112,6 +112,52 @@ def _num(v) -> float | None:
     return float(v) if isinstance(v, (int, float)) and not isinstance(v, bool) else None
 
 
+def kga_slope(course: dict) -> dict | None:
+    """L3 — KGA 코스레이팅에서 '구장 대표 슬로프'를 하나 뽑는다.
+
+    슬로프 레이팅은 18홀 조합 × 티 × 성별 단위라 그대로는 정렬할 수 없다. 대표값 규칙:
+      1) 남자 `Regular` 티의 슬로프를 18홀 조합별로 모아 **평균**한다(가장 흔한 골퍼 기준).
+      2) `Regular` 라는 이름의 티가 없으면 남자 티 슬로프의 **중앙값**을 쓴다.
+      3) 여자부만 있는 조합·티는 섞지 않는다(레이팅 기준이 다르다).
+    값이 없으면 None → 인덱스에 필드를 넣지 않고, 화면은 배지를 그리지 않는다.
+    """
+    co = course.get("course") or {}
+    kga = co.get("kga")
+    if not isinstance(kga, dict):
+        spec = (course.get("master") or {}).get("course_spec") or {}
+        kga = spec.get("kga")
+    if not isinstance(kga, dict):
+        return None
+    regular: list[float] = []
+    regular_tee = ""
+    male: list[float] = []
+    for cb in kga.get("hole_combinations") or []:
+        if not isinstance(cb, dict):
+            continue
+        for tee in cb.get("tees") or []:
+            if not isinstance(tee, dict):
+                continue
+            if "남" not in str(tee.get("gender") or ""):
+                continue
+            slope = _num(tee.get("slope_rating"))
+            if slope is None or not (40 <= slope <= 160):
+                continue
+            male.append(slope)
+            name = str(tee.get("tee") or "")
+            if re.search(r"regular|reg\b", name, re.I):
+                regular.append(slope)
+                if not regular_tee:
+                    regular_tee = name
+    if regular:
+        return {"value": round(sum(regular) / len(regular), 1), "tee": regular_tee or "Regular", "combos": len(regular)}
+    if male:
+        male_sorted = sorted(male)
+        n = len(male_sorted)
+        median = male_sorted[n // 2] if n % 2 else (male_sorted[n // 2 - 1] + male_sorted[n // 2]) / 2
+        return {"value": round(median, 1), "tee": "median", "combos": n}
+    return None
+
+
 def summary_fields(course: dict) -> dict:
     """목록 카드가 상세를 열지 않고도 판단할 수 있게 하는 요약 필드.
 
@@ -190,6 +236,10 @@ def summary_fields(course: dict) -> dict:
     vals = [v for v in cov.values() if isinstance(v, (int, float)) and not isinstance(v, bool)]
     if vals:
         out["cov"] = int(round(100 * sum(vals) / len(vals)))
+
+    slope = kga_slope(course)
+    if slope:
+        out["slope"] = slope
     return out
 
 
@@ -429,6 +479,7 @@ def build(src: str, out_root: str) -> dict:
                 "notice": "최근 운영 공지 날짜(YYYY-MM-DD). 상품·게시판 머리글 항목은 제외",
                 "alert": "true면 확인이 필요한 운영 알림(휴장·공사 등) 존재",
                 "cov": "7개 영역 평균 정보 충실도(0~100)",
+                "slope": "KGA 대표 슬로프 레이팅 {value, tee, combos} — 남자 Regular 티 18홀 조합 평균(L3)",
             },
         },
         "sido": sido_list,

@@ -81,10 +81,18 @@ ok(
 );
 ok(bundle.includes("coursebrief-theme"), "app.js 에 테마 전환 로직 포함");
 const headers = await readFile(path.join(dist, "_headers"), "utf8");
-const csp = headers.match(/Content-Security-Policy:[^\n]*/i)?.[0] ?? "";
+// _headers 는 '경로 → 헤더들' 블록의 나열이다. 경로별로 봐야 한다(예: /embed/* 의 CSP 는 그 경로에만 적용).
+const headerBlocks = headers
+  .split(/\n\s*\n/)
+  .map((b) => b.split("\n").map((l) => l.trim()).filter(Boolean))
+  .filter((b) => b.length);
+const blockFor = (p) => headerBlocks.find((b) => b[0] === p) ?? [];
+const headerIn = (p, name) => blockFor(p).find((l) => new RegExp(`^!?\\s*${name}\\s*:?`, "i").test(l)) ?? "";
+const globalCsp = headerIn("/*", "Content-Security-Policy");
+const csp = globalCsp;
 ok(
   !csp || /'unsafe-inline'/.test(csp) || /script-src[^;]*'sha256-/.test(csp),
-  csp ? `CSP 가 인라인 테마 초기화 스크립트를 허용 — ${csp.trim().slice(0, 72)}` : "_headers 에 CSP 없음 — 인라인 테마 초기화 스크립트 허용",
+  csp ? `CSP 가 인라인 테마 초기화 스크립트를 허용 — ${csp.trim().slice(0, 72)}` : "_headers 에 전역 CSP 없음 — 인라인 테마 초기화 스크립트 허용",
 );
 
 /* 1-3) 관리자 모드 — 출처는 관리자에게만. 진입은 비밀번호 입력이고 평문은 산출물에 없다 */
@@ -324,7 +332,87 @@ if (await exists(bulk)) {
   errors.push("elasticsearch/bulk.ndjson 없음 (npm run es:bulk)");
 }
 
-// 8) 결과
+// 10) 4단계 — L1 다국어 · L2 그린피 추이 · L3 슬로프 · L4 공개 API·임베드
+
+// L1 — 사전 자체 검사(키·언어 3개·자리표시자)
+const i18nSrc = await readFile(path.join(root, "web/assets/i18n.ts"), "utf8");
+const dictStart = i18nSrc.indexOf("const DICT: Record<string, Tuple> = {");
+const dictEnd = i18nSrc.indexOf("\n};", dictStart);
+const dictBlock = dictStart >= 0 && dictEnd > dictStart ? i18nSrc.slice(dictStart, dictEnd) : "";
+const dictEntries = [...dictBlock.matchAll(/"([a-zA-Z0-9_.]+)":\s*\[([^\]]*)\]/g)].map((m) => ({
+  key: m[1],
+  values: [...m[2].matchAll(/"((?:[^"\\]|\\.)*)"/g)].map((x) => x[1]),
+}));
+ok(dictEntries.length >= 300, `i18n 사전 ${dictEntries.length}개 키`);
+const badEntries = dictEntries.filter((e) => e.values.length !== 3 || e.values.some((v) => !v.trim()));
+ok(badEntries.length === 0, `i18n 모든 키가 ko·en·ja 3개 값${badEntries.length ? " — " + badEntries.slice(0, 3).map((e) => e.key).join(", ") : ""}`);
+const holderMismatch = dictEntries.filter((e) => {
+  const h = e.values.map((v) => [...v.matchAll(/\{(\w+)\}/g)].map((x) => x[1]).sort().join(","));
+  return new Set(h).size > 1;
+});
+ok(holderMismatch.length === 0, `i18n 자리표시자가 언어마다 같음${holderMismatch.length ? " — " + holderMismatch.slice(0, 3).map((e) => e.key).join(", ") : ""}`);
+ok(bundle.includes("coursebrief-lang"), "app.js 에 언어 저장 키(coursebrief-lang)");
+ok(html.includes('data-lang-choice="ko"') && html.includes('data-lang-choice="ja"'), "index.html KO/EN/JA 전환 메뉴");
+ok(html.includes('data-i18n="nav.courses"'), "index.html 내비게이션 다국어 키");
+// 번역이 실제로 실려 있는지(영어·일본어 대표 문구)
+ok(bundle.includes("Courses") && bundle.includes("ゴルフ場"), "app.js 에 en·ja 사전 포함");
+
+// L2 — 그린피 추이
+const historyPath = path.join(dist, "data/v29/price_history.json");
+ok(await exists(historyPath), "dist/data/v29/price_history.json 존재");
+if (await exists(historyPath)) {
+  const hist = JSON.parse(await readFile(historyPath, "utf8"));
+  ok(hist.dataset?.schema === "coursebrief/price-history-1", "price_history 스키마");
+  ok(hist.dataset?.rule === "value-change-only", "price_history 규칙(값이 바뀐 날만)");
+  const entries = Object.values(hist.courses ?? {});
+  ok(entries.length > 400, `price_history 구장 ${entries.length}곳`);
+  ok(entries.every((arr) => Array.isArray(arr) && arr.length >= 1 && arr[0].date), "price_history 구장별 최소 1개 스냅샷");
+  ok(entries.every((arr) => arr.every((p) => typeof p.weekday === "number" || typeof p.weekend === "number")), "price_history 요금 값 존재");
+  ok(entries.every((arr) => new Set(arr.map((p) => p.date)).size === arr.length), "price_history 날짜 중복 없음");
+}
+ok(bundle.includes("price_history.json"), "app.js 가 price_history.json 을 읽음");
+ok(bundle.includes("history.title") || bundle.includes("그린피 추이"), "app.js 에 그린피 추이 블록");
+
+// L3 — KGA 슬로프 정렬
+const withSlope = courses.filter((c) => typeof c.slope?.value === "number");
+ok(withSlope.length >= 100, `index slope 보유 ${withSlope.length}곳`);
+ok(withSlope.every((c) => c.slope.value >= 40 && c.slope.value <= 160), "slope 값 범위 40~160");
+ok(withSlope.every((c) => typeof c.slope.tee === "string" && c.slope.combos >= 1), "slope 에 tee·combos 동봉");
+ok(
+  courses.filter((c) => Object.hasOwn(c, "slope")).every((c) => c.slope && typeof c.slope.value === "number"),
+  "slope 필드가 있는 구장은 모두 값이 있음(빈 객체 없음)",
+);
+ok(index.dataset?.fields?.slope, "index.dataset.fields.slope 자기 문서화");
+
+// L4 — 공개 API
+ok(headerIn("/api/v1/*", "Access-Control-Allow-Origin").includes("*"), "_headers: /api/v1/* CORS 허용");
+const apiPath = path.join(dist, "api/v1/courses.json");
+ok(await exists(apiPath), "dist/api/v1/courses.json 존재");
+if (await exists(apiPath)) {
+  const api = JSON.parse(await readFile(apiPath, "utf8"));
+  ok(api.courses?.length === 540, `api courses ${api.courses?.length}곳`);
+  ok(api.dataset?.schema === "coursebrief/api-1", "api 스키마 표기");
+  ok(api.courses[0]?.links?.detail?.startsWith("https://"), "api 레코드에 상세 링크");
+  const one = JSON.parse(await readFile(path.join(dist, "api/v1/courses", `${courses[0].id}.json`), "utf8"));
+  ok(one.course?.id === courses[0].id && one.course?.links?.page?.includes("/c/"), "api 구장별 JSON 구조");
+}
+ok(headerIn("/embed/*", "X-Frame-Options").startsWith("!"), "_headers: /embed/* 는 X-Frame-Options 해제(프레임 허용)");
+ok(headerIn("/embed/*", "Content-Security-Policy").includes("frame-ancestors *"), "_headers: /embed/* frame-ancestors *");
+const embedDir = path.join(dist, "embed");
+const embedDirs = (await exists(embedDir)) ? (await readdir(embedDir, { withFileTypes: true })).filter((e) => e.isDirectory()) : [];
+ok(embedDirs.length === 540, `임베드 페이지 ${embedDirs.length}개 (540 기대)`);
+const embedPage = (await exists(path.join(embedDir, courses[0].id, "index.html")))
+  ? await readFile(path.join(embedDir, courses[0].id, "index.html"), "utf8")
+  : "";
+ok(embedPage.includes('name="robots" content="noindex"'), "임베드 페이지 noindex");
+ok(embedPage.includes(courses[0].name.replace(/&/g, "&amp;")), "임베드 페이지에 구장명");
+ok(!/<script/i.test(embedPage), "임베드 페이지에 스크립트 없음(경량)");
+ok(embedPage.length < 6 * 1024, `임베드 페이지 ${(embedPage.length / 1024).toFixed(1)}KB < 6KB`);
+ok(bundle.includes("#/embed") || bundle.includes("/embed/"), "app.js 에 임베드 경로(미리보기)");
+ok(bundle.includes("embedSnippet") || bundle.includes("iframe"), "app.js 에 임베드 코드 생성");
+ok(!locs.some((u) => u.includes("/embed/")), "sitemap 에 임베드 페이지 없음(noindex)");
+
+// 11) 결과
 console.log(notes.map((n) => `  ✓ ${n}`).join("\n"));
 if (errors.length) {
   console.error("\n검증 실패:\n" + errors.map((e) => `  ✗ ${e}`).join("\n"));

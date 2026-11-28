@@ -315,6 +315,11 @@ mark { background: var(--mark); color: inherit; border-radius: 4px; padding: 0 2
 .menu-pop button[aria-pressed="true"] { color: var(--accent-ink); font-weight: 700; background: var(--accent-soft); }
 .menu-pop button[aria-pressed="true"]::after { content: "✓"; font-size: 14px; }
 
+/* L1 — 언어 전환(KO/EN/JA). 아이콘 자리에 두 글자 약칭을 쓴다 */
+.lang-btn { font-size: 12px; font-weight: 700; letter-spacing: .04em; color: var(--text-2); }
+.lang-menu .menu-pop { min-width: 150px; }
+.lang-menu[open] > summary { background: var(--inset); color: var(--text); }
+
 /* 모바일 하단 탭 */
 .tabbar {
   display: none; position: fixed; left: 0; right: 0; bottom: 0; z-index: 45;
@@ -1943,3 +1948,76 @@ tbody tr:last-child td { border-bottom: 0; }
   .qa-page .stat-n { font-size: 20px; }
   .qa-page .stat-l { font-size: 11.5px; }
 }
+
+/* ------------------------------------------------------------------ */
+/* L1 — 언어 전환 / L4 — 임베드                                         */
+/* ------------------------------------------------------------------ */
+
+.embed-dialog .admin-form { max-width: 640px; }
+.embed-code {
+  margin: 12px 0; padding: 12px; border-radius: 12px;
+  background: var(--inset); color: var(--text);
+  font: 12px/1.6 ui-monospace, SFMono-Regular, Menlo, monospace;
+  white-space: pre-wrap; word-break: break-all;
+}
+.embed-preview-label { margin: 4px 0 6px; font-size: 13px; font-weight: 600; color: var(--text-2); }
+.embed-preview { display: grid; place-items: center; background: var(--inset); border-radius: 12px; padding: 10px; }
+.embed-preview iframe { border: 0; border-radius: 12px; background: var(--surface); }
+
+/* 임베드 카드 — iframe 안에서 읽히는 최소 카드 */
+.is-embed .topbar, .is-embed .tabbar, .is-embed .footer,
+.is-embed .compare-bar, .is-embed #net-banner, .is-embed #update-banner, .is-embed .skip { display: none !important; }
+.is-embed main { padding: 8px !important; }
+.is-embed body { background: transparent; }
+.embed-page { display: grid; }
+.embed-card {
+  display: grid; gap: 8px; padding: 16px 16px 14px; border-radius: 16px; min-width: 0;
+  background: var(--surface); border: 1px solid var(--line);
+  color: var(--text); text-decoration: none; box-shadow: var(--shadow-sm);
+}
+.embed-card:hover { border-color: var(--accent); }
+.embed-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; min-width: 0; }
+.embed-name { font-size: 17px; font-weight: 700; letter-spacing: -0.01em; min-width: 0; overflow-wrap: anywhere; }
+.embed-sub { font-size: 13px; color: var(--text-2); overflow-wrap: anywhere; }
+.embed-fee { display: flex; align-items: baseline; gap: 6px; }
+.embed-fee-k { font-size: 12px; color: var(--text-3); }
+.embed-fee b { font-size: 21px; font-weight: 700; letter-spacing: -0.02em; }
+.embed-fee-from { font-size: 13px; color: var(--text-3); }
+.embed-fee-none { font-size: 13px; color: var(--text-3); }
+.embed-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.embed-foot {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-top: 2px; padding-top: 10px; border-top: 1px solid var(--line);
+  font-size: 12px; color: var(--text-3);
+}
+.embed-brand { font-weight: 700; color: var(--across, var(--accent)); }
+
+/* 그린피 추이(L2) */
+.hist { margin: 4px 0 10px; padding: 14px 16px; border-radius: 16px; background: var(--surface-2, var(--inset)); border: 1px solid var(--line); }
+.hist-head { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.hist-head .card-title { margin: 0; }
+.hist-meta { font-size: 12.5px; color: var(--text-3); }
+.hist-change { margin-left: auto; font-size: 12.5px; font-weight: 700; padding: 3px 8px; border-radius: 999px; }
+.hist-change.is-up { background: color-mix(in srgb, var(--danger, #e5484d) 14%, transparent); color: var(--danger, #e5484d); }
+.hist-change.is-down { background: color-mix(in srgb, var(--ok, #12805c) 14%, transparent); color: var(--ok, #12805c); }
+.hist-change.is-flat { background: var(--inset); color: var(--text-2); }
+.hist-svg { width: 100%; height: auto; margin-top: 8px; display: block; }
+.hist-axis { stroke: var(--line); stroke-width: 1; }
+.hist-line { fill: none; stroke-width: 2.2; stroke-linejoin: round; stroke-linecap: round; }
+.hist-line.hist-weekend { stroke: var(--accent); }
+.hist-line.hist-weekday { stroke: var(--teal, #0f9d8f); stroke-dasharray: 5 4; }
+.hist-dot.hist-weekend { fill: var(--accent); }
+.hist-dot.hist-weekday { fill: var(--teal, #0f9d8f); }
+.hist-label { font-size: 11px; fill: var(--text-3); }
+.hist-legend { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin: 6px 0 0; font-size: 12.5px; color: var(--text-2); }
+.hist-key::before { content: ""; display: inline-block; width: 14px; height: 3px; border-radius: 2px; margin-right: 6px; vertical-align: middle; background: var(--accent); }
+.hist-key.hist-weekday::before { background: var(--teal, #0f9d8f); }
+.hist-latest { margin-left: auto; color: var(--text-3); }
+.hist-note { margin: 8px 0 14px; font-size: 12px; color: var(--text-3); }
+.hist-skel { display: block; height: 74px; border-radius: 10px; background: var(--inset); animation: skel 1.2s ease-in-out infinite; }
+/* L3 — 슬로프 배지 */
+.stat-slope { gap: 4px; }
+.stat-slope .ic { width: 13px; height: 13px; }
+.hist-svg .hist-grid { stroke: var(--line); stroke-width: 1; stroke-dasharray: 2 4; opacity: .7; }
+.hist-svg .hist-label-y { font-variant-numeric: tabular-nums; }
+.hist-svg .hist-label-y { font-size: 11px; }

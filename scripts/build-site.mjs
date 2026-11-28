@@ -515,6 +515,141 @@ self.addEventListener("fetch", (event) => {
 }
 
 /* ------------------------------------------------------------------ */
+/* L4 — 공개 API (/api/v1) · 임베드 (/embed)                           */
+/* ------------------------------------------------------------------ */
+
+/**
+ * 공개 API — 정적 JSON 이므로 서버가 없다. 장점: 무료·무제한·항상 같은 응답.
+ *  - `/api/v1/courses.json`      : 540곳 경량 목록(인덱스 레코드 + slope)
+ *  - `/api/v1/courses/{id}.json` : 구장 1곳의 경량 레코드 + 상세·페이지 링크
+ * 상세 12키 JSON 은 이미 `/data/v29/courses/{id}.json` 에 있으므로 복제하지 않고 링크로 가리킨다
+ * (6.5MB 를 두 벌 두면 어느 한쪽이 낡을 위험이 생긴다).
+ */
+async function writeApi(idx, builtAt) {
+  const apiDir = path.join(dist, "api/v1");
+  await mkdir(path.join(apiDir, "courses"), { recursive: true });
+  const dataset = {
+    name: "CourseBrief 공개 데이터 API",
+    schema: "coursebrief/api-1",
+    version: idx.dataset.source_version ?? null,
+    built_at: builtAt,
+    data_built_at: idx.dataset.built_at ?? null,
+    counts: idx.dataset.counts ?? {},
+    license: "문체부 공공데이터(이용허락범위 제한 없음) + 골프장 공개 자료. 재배포 시 출처 표기",
+    docs: `${BASE_URL.replace(/\/$/, "")}/api/v1/courses.json`,
+    notes: [
+      "green_fee 는 1인 18홀 비회원 기준. basis=market 은 공시가가 아닌 관측 최저가입니다.",
+      "값이 없는 항목은 null 또는 필드 없음입니다. 0 이 아닙니다.",
+      "상세 12키는 links.detail 에서 받으세요.",
+    ],
+  };
+  const list = {
+    dataset: { ...dataset, count: idx.courses.length, fields_url: `${BASE_URL}/data/v29/schema.md` },
+    courses: idx.courses.map((c) => ({ ...c, links: apiLinks(c.id) })),
+  };
+  await writeFile(path.join(apiDir, "courses.json"), JSON.stringify(list));
+
+  for (const c of idx.courses) {
+    const one = {
+      dataset: { schema: dataset.schema, version: dataset.version, built_at: builtAt },
+      course: { ...c, links: apiLinks(c.id) },
+    };
+    await writeFile(path.join(apiDir, "courses", `${c.id}.json`), JSON.stringify(one));
+  }
+  return { list: idx.courses.length, single: idx.courses.length };
+}
+
+function apiLinks(id) {
+  return {
+    self: `${BASE_URL}/api/v1/courses/${id}.json`,
+    detail: `${BASE_URL}/data/v29/courses/${id}.json`,
+    page: `${BASE_URL}/c/${id}/`,
+    embed: `${BASE_URL}/embed/${id}/`,
+  };
+}
+
+const TAG_TEXT = { n: "노캐디", "2": "2인 가능", y: "야간", s: "사우나", l: "숙박", h: "셔틀", p: "연습장", f: "식당" };
+const STATUS_TEXT = {
+  operating: "영업중", suspended: "휴업", closed: "폐업",
+  under_construction: "건설중", planned: "미착공", cancelled: "사업 취소",
+};
+
+/**
+ * 임베드 카드 — iframe 이 실제로 거는 문서.
+ * 앱 셸(index.html)을 쓰지 않는다: 12KB 도 안 되는 카드 하나 때문에 앱 번들을 받을 이유가 없고,
+ * 루트는 X-Frame-Options 로 프레임이 막혀 있다(아래 _headers 에서 /embed/* 만 열어 둔다).
+ */
+function embedDoc(item) {
+  const fee = item.green_fee ?? {};
+  const weekend = typeof fee.weekend === "number";
+  const value = weekend ? fee.weekend : fee.weekday;
+  const feeLabel = weekend ? "주말" : "주중";
+  const region = [item.sido, item.sigungu].filter(Boolean).join(" ");
+  const meta = [region, item.holes ? `${item.holes}홀` : "", item.type && item.type !== "미확인" ? item.type : ""]
+    .filter(Boolean).join(" · ");
+  const tags = String(item.tags ?? "").split("").filter((t) => TAG_TEXT[t]).slice(0, 3)
+    .map((t) => `<span class="tag">${escHtml(TAG_TEXT[t])}</span>`).join("");
+  const slope = typeof item.slope?.value === "number" ? `<span class="tag">슬로프 ${item.slope.value}</span>` : "";
+  const status = STATUS_TEXT[item.status] ?? "";
+  return `<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>${escHtml(item.name)} — CourseBrief</title>
+<style>
+:root{--bg:#fff;--surface:#fff;--line:#e8ecef;--text:#191f28;--text-2:#4e5968;--text-3:#8b95a1;--accent:#3182f6;--ok:#12805c}
+@media (prefers-color-scheme:dark){:root{--bg:#17171c;--surface:#1f1f26;--line:#2c2c35;--text:#f2f4f6;--text-2:#b0b8c1;--text-3:#7b8590;--accent:#4c9aff;--ok:#3ccf91}}
+*{box-sizing:border-box}
+body{margin:0;padding:8px;background:transparent;color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif}
+a.card{display:grid;gap:8px;padding:16px 16px 14px;border-radius:16px;background:var(--surface);
+  border:1px solid var(--line);color:var(--text);text-decoration:none;min-width:0}
+a.card:hover{border-color:var(--accent)}
+.head{display:flex;align-items:center;justify-content:space-between;gap:10px;min-width:0}
+.name{font-size:17px;font-weight:700;letter-spacing:-.01em;line-height:1.3;min-width:0;overflow-wrap:anywhere}
+.badge{flex:none;font-size:11px;font-weight:700;color:var(--ok);background:color-mix(in srgb,var(--ok) 12%,transparent);padding:3px 8px;border-radius:999px;white-space:nowrap}
+.sub{font-size:13px;color:var(--text-2);overflow-wrap:anywhere}
+.fee{display:flex;align-items:baseline;gap:6px}
+.fee small{font-size:12px;color:var(--text-3)}
+.fee b{font-size:21px;font-weight:700;letter-spacing:-.02em}
+.fee i{font-size:13px;color:var(--text-3);font-style:normal}
+.fee .none{font-size:13px;color:var(--text-3)}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tag{font-size:11.5px;color:var(--text-2);background:var(--bg);border:1px solid var(--line);padding:2px 7px;border-radius:999px}
+.foot{display:flex;align-items:center;justify-content:space-between;margin-top:2px;padding-top:10px;
+  border-top:1px solid var(--line);font-size:12px;color:var(--text-3)}
+.foot b{color:var(--accent);font-weight:700;letter-spacing:-.01em}
+</style>
+</head>
+<body>
+<a class="card" href="${BASE_URL}/c/${item.id}/" target="_blank" rel="noopener noreferrer">
+  <span class="head"><strong class="name">${escHtml(item.name)}</strong>${status ? `<span class="badge">${escHtml(status)}</span>` : ""}</span>
+  <span class="sub">${escHtml(meta)}</span>
+  <span class="fee">${typeof value === "number"
+    ? `<small>${feeLabel}</small><b>${value.toLocaleString("ko-KR")}원</b><i>~</i>`
+    : `<span class="none">요금 미확인</span>`}</span>
+  <span class="tags">${tags}${slope}</span>
+  <span class="foot"><b>CourseBrief</b>전체 정보 보기 →</span>
+</a>
+</body>
+</html>
+`;
+}
+
+async function writeEmbeds(idx) {
+  let written = 0;
+  for (const item of idx.courses) {
+    const dir = path.join(dist, "embed", item.id);
+    await mkdir(dir, { recursive: true });
+    await writeFile(path.join(dir, "index.html"), embedDoc(item));
+    written += 1;
+  }
+  return written;
+}
+
+/* ------------------------------------------------------------------ */
 
 async function main() {
   const t0 = Date.now();
@@ -539,6 +674,9 @@ async function main() {
   // 5) 프리렌더·sitemap
   const prerendered = await writePrerender(idx, details);
   const sitemapUrls = await writeSitemap(idx, details);
+  // 5-1) L4 — 공개 API·임베드 카드
+  const api = await writeApi(idx, builtAt);
+  const embeds = await writeEmbeds(idx);
   // 6) 오프라인 셸
   const swVersion = await writeServiceWorker(hashed, idx, builtAt);
 
@@ -577,6 +715,21 @@ async function main() {
       "/data/v29/courses/*",
       "  Cache-Control: public, max-age=86400",
       "",
+      // L4 — 공개 API: 어디서든 fetch 할 수 있게 CORS 허용. 데이터라 5분 캐시.
+      "/api/v1/*",
+      "  Access-Control-Allow-Origin: *",
+      "  Access-Control-Allow-Methods: GET, HEAD, OPTIONS",
+      "  Content-Type: application/json; charset=utf-8",
+      "  Cache-Control: public, max-age=300",
+      "",
+      // L4 — 임베드 카드: 남의 사이트에 끼울 수 있어야 하므로 이 경로만 프레임을 열고,
+      // 검색 색인은 막는다(중복 페이지). X-Frame-Options 는 위 /* 규칙에서 상속되므로 ! 로 지운다.
+      "/embed/*",
+      "  ! X-Frame-Options",
+      "  Content-Security-Policy: frame-ancestors *",
+      "  X-Robots-Tag: noindex",
+      "  Cache-Control: public, max-age=3600",
+      "",
       "/sitemap.xml",
       "  Content-Type: application/xml; charset=utf-8",
       "",
@@ -597,7 +750,8 @@ async function main() {
   );
 
   // 8) 산출물 확인
-  const assets = ["index.html", `assets/${hashed.js}`, `assets/${hashed.css}`, "sw.js", "sitemap.xml", "manifest.webmanifest"];
+  const assets = ["index.html", `assets/${hashed.js}`, `assets/${hashed.css}`, "sw.js", "sitemap.xml", "manifest.webmanifest",
+    "api/v1/courses.json", `api/v1/courses/${idx.courses[0].id}.json`, `embed/${idx.courses[0].id}/index.html`];
   for (const a of assets) {
     if (!existsSync(path.join(dist, a))) {
       console.error(`빌드 실패: ${a} 없음`);
@@ -618,6 +772,7 @@ async function main() {
   console.log(`  골프장 ${idx.courses.length}곳 · 구장 JSON ${courseFiles.length}개 · 클러스터 ${idx.clusters?.length ?? 0}개`);
   console.log(`  ${hashed.js} ${(bundleBytes / 1024).toFixed(1)}KB · ${hashed.css} · index.json ${(indexSize / 1024).toFixed(1)}KB`);
   console.log(`  프리렌더 ${prerendered}장 · sitemap ${sitemapUrls} URL · QA ${qaRows.length}행 · OG ${ogCount}장 · sw ${swVersion}`);
+  console.log(`  API ${api.list + api.single}파일 · 임베드 ${embeds}장`);
   console.log(`  dist 전체 ${(total / 1024 / 1024).toFixed(1)}MB · ${((Date.now() - t0) / 1000).toFixed(2)}s`);
 }
 

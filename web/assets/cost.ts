@@ -10,6 +10,7 @@
 import { cleanNote, shareOrCopy, won } from "./text.js";
 import { esc } from "./util.js";
 import { icon } from "./icons.js";
+import { t } from "./i18n.js";
 
 export type PlayerCount = 2 | 3 | 4 | 5;
 export type PlayerState = "yes" | "conditional" | "no" | "unknown";
@@ -54,10 +55,10 @@ interface CostState {
 
 const PLAYER_ORDER: PlayerCount[] = [2, 3, 4, 5];
 const PLAYER_STATE_LABEL: Record<PlayerState, string> = {
-  yes: "가능",
-  conditional: "조건부",
-  no: "불가",
-  unknown: "미확인",
+  get yes() { return t("common.yes"); },
+  get conditional() { return t("common.conditional"); },
+  get no() { return t("common.no"); },
+  get unknown() { return t("common.unknown"); },
 };
 
 /* ---------------- 9홀 요금 읽기 ---------------- */
@@ -143,31 +144,31 @@ function compute(model: CostModel, st: CostState): CostResult {
   const excludedLabels: string[] = [];
   const lines: CostLine[] = [
     {
-      label: "그린피",
-      detail: unitGreen != null ? `${st.players}인 × ${won(unitGreen)}` : `${st.players}인 · 1인 요금 미확인`,
+      label: t("cost.green"),
+      detail: unitGreen != null ? `${t("cost.playersN", { n: st.players })} × ${won(unitGreen)}` : t("cost.perPersonUnknown", { n: st.players }),
       amount: green,
       excluded: false,
     },
   ];
 
   if (!st.cart) {
-    lines.push({ label: "카트", detail: "미포함", amount: 0, excluded: false });
+    lines.push({ label: t("cost.optCart"), detail: t("cost.notIncluded"), amount: 0, excluded: false });
   } else if (cartPrice == null) {
-    excludedLabels.push(st.holes === 9 ? "9홀 카트" : "카트");
-    lines.push({ label: "카트", detail: "미확인", amount: null, excluded: true });
+    excludedLabels.push(st.holes === 9 ? t("cost.cart9") : t("cost.optCart"));
+    lines.push({ label: t("cost.optCart"), detail: t("common.unknown"), amount: null, excluded: true });
   } else {
-    lines.push({ label: "카트", detail: "팀 기준 1회", amount: cartPrice, excluded: false });
+    lines.push({ label: t("cost.optCart"), detail: t("cost.teamOnce"), amount: cartPrice, excluded: false });
   }
 
   if (model.caddieNone) {
-    lines.push({ label: "캐디피", detail: "노캐디", amount: 0, excluded: false });
+    lines.push({ label: t("cost.optCaddie"), detail: t("fee.noCaddie"), amount: 0, excluded: false });
   } else if (!st.caddie) {
-    lines.push({ label: "캐디피", detail: "미포함", amount: 0, excluded: false });
+    lines.push({ label: t("cost.optCaddie"), detail: t("cost.notIncluded"), amount: 0, excluded: false });
   } else if (caddiePrice == null) {
-    excludedLabels.push("캐디피");
-    lines.push({ label: "캐디피", detail: "미확인", amount: null, excluded: true });
+    excludedLabels.push(t("cost.optCaddie"));
+    lines.push({ label: t("cost.optCaddie"), detail: t("common.unknown"), amount: null, excluded: true });
   } else {
-    lines.push({ label: "캐디피", detail: "팀 기준 1회", amount: caddiePrice, excluded: false });
+    lines.push({ label: t("cost.optCaddie"), detail: t("cost.teamOnce"), amount: caddiePrice, excluded: false });
   }
 
   const total = green == null ? null : lines.reduce((a, l) => a + (l.amount ?? 0), 0);
@@ -193,12 +194,12 @@ function initialState(model: CostModel): CostState {
 }
 
 function dayLabel(day: CostDay): string {
-  return day === "weekday" ? "주중" : "주말";
+  return day === "weekday" ? t("common.weekday") : t("common.weekend");
 }
 
 function sourceLabel(source: CostModel["greenSource"]): string {
-  if (source === "official") return "공식 요금표";
-  if (source === "market") return "관측 최저가";
+  if (source === "official") return t("common.official");
+  if (source === "market") return t("common.marketLong");
   return "";
 }
 
@@ -206,15 +207,14 @@ function sourceLabel(source: CostModel["greenSource"]): string {
 export function settlementText(model: CostModel, st: CostState): string {
   const r = compute(model, st);
   const opts: string[] = [];
-  if (st.cart && r.cartPrice != null) opts.push("카트 포함");
-  if (model.caddieNone) opts.push("노캐디");
-  else if (st.caddie && model.caddie != null) opts.push("캐디 포함");
-  const head = `${model.name} · ${st.players}인 ${dayLabel(st.day)} ${st.holes}홀`;
+  if (st.cart && r.cartPrice != null) opts.push(t("cost.optCart"));
+  if (model.caddieNone) opts.push(t("fee.noCaddie"));
+  else if (st.caddie && model.caddie != null) opts.push(t("cost.optCaddie"));
+  const head = `${model.name} · ${t("cost.playersN", { n: st.players })} ${dayLabel(st.day)} ${t("filter.holesValue", { n: st.holes })}`;
   if (r.total == null || r.perPerson == null) {
-    return `${head} · 팀 비용은 그린피 확인 후 계산됩니다`;
+    return `${head} · ${t("cost.totalPending")}`;
   }
-  const total = st.holes === 9 && model.nine.cart == null ? `${won(r.total)} (카트 미확인 제외)` : `${won(r.total)}`;
-  return `${head} · 팀 ${total} · 1인 ${won(r.perPerson)}${opts.length ? `, ${opts.join("·")}` : ""}`;
+  return `${head} · ${t("cost.teamTotal")} ${won(r.total)} · ${t("cost.perPerson")} ${won(r.perPerson)}${opts.length ? ` (${opts.join("·")})` : ""}`;
 }
 
 /* ---------------- 화면 ---------------- */
@@ -237,30 +237,30 @@ function playersHTML(model: CostModel, st: CostState): string {
     const info = model.players[n];
     const pressed = st.players === n;
     const disabled = info.state === "no";
-    const sub = n === 4 ? "기본" : PLAYER_STATE_LABEL[info.state];
+    const sub = n === 4 ? t("cost.base") : PLAYER_STATE_LABEL[info.state];
     const cls = info.state === "no" ? " is-blocked" : info.state === "unknown" ? " is-unknown" : "";
     return `<button type="button" class="seg-btn${pressed ? " is-on" : ""}${cls}" data-cost-players="${n}"
-      aria-pressed="${pressed}"${disabled ? " disabled" : ""}><span class="seg-main">${n}인</span>${
+      aria-pressed="${pressed}"${disabled ? " disabled" : ""}><span class="seg-main">${esc(t("cost.playersN", { n }))}</span>${
       sub ? `<span class="seg-sub">${esc(sub)}</span>` : ""
     }</button>`;
   }).join("");
   return `<div class="calc-row">
-    <span class="calc-label">인원</span>
-    <div class="seg seg-4" role="group" aria-label="라운드 인원">${buttons}</div>
+    <span class="calc-label">${esc(t("cost.players"))}</span>
+    <div class="seg seg-4" role="group" aria-label="${esc(t("cost.playersAria"))}">${buttons}</div>
   </div>`;
 }
 
 function playerNoteHTML(model: CostModel, st: CostState): string {
   const info = model.players[st.players];
   if (st.players === 4 && info.state !== "no") {
-    return info.text ? `<p class="calc-hint">4인 · ${esc(info.text)}</p>` : "";
+    return info.text ? `<p class="calc-hint">${esc(t("cost.hintNote", { text: info.text }))}</p>` : "";
   }
   const parts: string[] = [];
-  if (info.state === "unknown") parts.push(`${st.players}인 플레이 여부가 확인되지 않았습니다. 전화로 확인하세요.`);
-  if (info.state === "no") parts.push(`${st.players}인 플레이는 불가로 확인된 구장입니다.`);
-  if (info.state === "conditional") parts.push(`${st.players}인은 조건·추가요금이 붙을 수 있습니다.`);
-  if (st.players !== 4) parts.push("2·3·5인은 4인 요금(또는 조인)이 적용되는 구장이 많습니다 — 계산값은 아래 원문과 함께 확인하세요.");
-  if (info.text) parts.push(`원문: ${info.text}`);
+  if (info.state === "unknown") parts.push(t("cost.hintUnknown", { n: st.players }));
+  if (info.state === "no") parts.push(t("cost.hintNo", { n: st.players }));
+  if (info.state === "conditional") parts.push(t("cost.hintConditional", { n: st.players }));
+  if (st.players !== 4) parts.push(t("cost.hintCommon"));
+  if (info.text) parts.push(t("cost.hintRaw", { text: info.text }));
   return parts.length ? `<p class="calc-hint">${esc(parts.join(" "))}</p>` : "";
 }
 
@@ -270,27 +270,27 @@ function dayHTML(model: CostModel, st: CostState): string {
     ["weekend", st.holes === 9 ? model.nine.weekend : model.weekend],
   ];
   const buttons = pair.map(([day, value]) =>
-    segButton(dayLabel(day), value != null ? won(value) : "미확인", st.day === day,
+    segButton(dayLabel(day), value != null ? won(value) : t("common.unknown"), st.day === day,
       ` data-cost-day="${day}"`, value == null),
   ).join("");
   const holes = [18, 9].map((h) => {
     const enabled = h === 18 || model.nine[st.day] != null;
-    return segButton(`${h}홀`, h === 9 && !enabled ? "미확인" : "", st.holes === h,
+    return segButton(t("filter.holesValue", { n: h }), h === 9 && !enabled ? t("common.unknown") : "", st.holes === h,
       ` data-cost-holes="${h}"`, !enabled);
   }).join("");
   return `<div class="calc-row">
-      <span class="calc-label">요일</span>
-      <div class="seg" role="group" aria-label="요일">${buttons}</div>
+      <span class="calc-label">${esc(t("cost.day"))}</span>
+      <div class="seg" role="group" aria-label="${esc(t("cost.dayAria"))}">${buttons}</div>
     </div>
     <div class="calc-row">
-      <span class="calc-label">홀수</span>
-      <div class="seg" role="group" aria-label="홀수">${holes}</div>
+      <span class="calc-label">${esc(t("cost.holes"))}</span>
+      <div class="seg" role="group" aria-label="${esc(t("cost.holesAria"))}">${holes}</div>
     </div>`;
 }
 
 function optionsHTML(model: CostModel, st: CostState): string {
-  const cartValue = model.cart == null ? "미확인" : `${won(model.cart)}/팀`;
-  const caddieValue = model.caddieNone ? "노캐디" : model.caddie == null ? "미확인" : `${won(model.caddie)}/팀`;
+  const cartValue = model.cart == null ? t("common.unknown") : t("cost.perTeamValue", { n: won(model.cart) });
+  const caddieValue = model.caddieNone ? t("fee.noCaddie") : model.caddie == null ? t("common.unknown") : t("cost.perTeamValue", { n: won(model.caddie) });
   const opt = (key: "cart" | "caddie", label: string, value: string, on: boolean, disabled: boolean): string =>
     `<button type="button" class="opt${on ? " is-on" : ""}" data-cost-opt="${key}" aria-pressed="${on}"${
       disabled ? " disabled" : ""
@@ -300,28 +300,28 @@ function optionsHTML(model: CostModel, st: CostState): string {
       <span class="opt-value">${esc(value)}</span>
     </button>`;
   return `<div class="calc-opts">
-    ${opt("cart", "카트", cartValue, st.cart, model.cart == null && st.holes === 9)}
-    ${opt("caddie", "캐디피", caddieValue, st.caddie, model.caddieNone || model.caddie == null)}
+    ${opt("cart", t("cost.optCart"), cartValue, st.cart, model.cart == null && st.holes === 9)}
+    ${opt("caddie", t("cost.optCaddie"), caddieValue, st.caddie, model.caddieNone || model.caddie == null)}
   </div>`;
 }
 
 function totalHTML(model: CostModel, st: CostState, r: CostResult): string {
   if (r.total == null || r.perPerson == null) {
     return `<div class="calc-total">
-      <p class="calc-total-empty">${esc(dayLabel(st.day))} ${st.holes}홀 1인 그린피가 확인되지 않아 합계를 계산할 수 없습니다.</p>
+      <p class="calc-total-empty">${esc(t("cost.totalEmpty", { day: dayLabel(st.day), holes: st.holes }))}</p>
     </div>`;
   }
   const caption = r.excludedLabels.length
-    ? `<p class="calc-total-caption">${esc(r.excludedLabels.join("·"))} 미확인 — 미확인 항목 제외 합계</p>`
-    : `<p class="calc-total-caption">카트·캐디는 팀 기준 1회 청구로 계산했습니다</p>`;
+    ? `<p class="calc-total-caption">${esc(t("cost.captionExcluded", { labels: r.excludedLabels.join("·") }))}</p>`
+    : `<p class="calc-total-caption">${esc(t("cost.captionTeam"))}</p>`;
   return `<div class="calc-total">
     ${caption}
     <div class="calc-total-row">
-      <span class="calc-total-label">팀 합계</span>
+      <span class="calc-total-label">${esc(t("cost.teamTotal"))}</span>
       <strong class="calc-total-value">${won(r.total)}</strong>
     </div>
     <div class="calc-total-row is-sub">
-      <span class="calc-total-label">1인당</span>
+      <span class="calc-total-label">${esc(t("cost.perPerson"))}</span>
       <span class="calc-total-per">${won(r.perPerson)}</span>
     </div>
   </div>`;
@@ -330,21 +330,23 @@ function totalHTML(model: CostModel, st: CostState, r: CostResult): string {
 function notesHTML(model: CostModel, st: CostState, r: CostResult): string {
   const notes: string[] = [];
   if (st.players === 5 && model.cart != null) {
-    notes.push("5인 카트는 팀 구성·요금이 다른 구장이 있습니다 — 카트 요금은 별도 확인이 필요합니다.");
+    notes.push(t("cost.note5"));
   }
   if (st.holes === 9 && model.nine.cart == null && st.cart) {
-    notes.push("9홀 카트 요금은 확인되지 않았습니다 — 합계에서 빠져 있습니다.");
+    notes.push(t("cost.note9"));
   }
   if (model.cart == null && st.holes === 18) {
-    notes.push("카트 요금이 확인되지 않아 합계에서 빠졌습니다.");
+    notes.push(t("cost.noteNoCart"));
   }
   if (model.caddie == null && !model.caddieNone) {
-    notes.push("캐디피가 확인되지 않아 합계에서 빠졌습니다.");
+    notes.push(t("cost.noteNoCaddie"));
   }
   if (model.note) notes.push(model.note);
-  notes.push("시설이용료·세금·봉사료는 포함되지 않았을 수 있습니다. 예약 화면의 최종 금액과 다를 수 있습니다.");
+  notes.push(t("cost.noteTax"));
   const srcLabel = sourceLabel(model.greenSource);
-  const src = srcLabel ? `<p class="calc-src">${esc(srcLabel)} 기준 1인 18홀 비회원 요금${model.asOf ? ` · 확인 ${esc(model.asOf)}` : ""}</p>` : "";
+  const src = srcLabel
+    ? `<p class="calc-src">${esc(t("cost.srcLine", { src: srcLabel }))}${model.asOf ? esc(t("cost.srcChecked", { date: model.asOf })) : ""}</p>`
+    : "";
   return `${src}<ul class="calc-notes">${notes.map((n) => `<li>${esc(n)}</li>`).join("")}</ul>`;
 }
 
@@ -353,11 +355,11 @@ function cardHTML(model: CostModel, st: CostState, status: string): string {
   return `<div class="calc" aria-labelledby="calc-title-${esc(model.id)}">
     <div class="calc-head">
       <div>
-        <span class="calc-eyebrow">라운드 총비용</span>
-        <h3 class="calc-title" id="calc-title-${esc(model.id)}">그래서 총 얼마?</h3>
-        <p class="calc-desc">인원·요일을 고르면 그린피에 카트·캐디를 더해 팀 합계와 1인당 금액을 계산합니다.</p>
+        <span class="calc-eyebrow">${esc(t("cost.eyebrow"))}</span>
+        <h3 class="calc-title" id="calc-title-${esc(model.id)}">${esc(t("cost.title"))}</h3>
+        <p class="calc-desc">${esc(t("cost.desc"))}</p>
       </div>
-      <span class="calc-badge">${icon("card")}계산기</span>
+      <span class="calc-badge">${icon("card")}${esc(t("cost.badge"))}</span>
     </div>
     <div class="calc-controls">
       ${playersHTML(model, st)}
@@ -368,14 +370,14 @@ function cardHTML(model: CostModel, st: CostState, status: string): string {
     <dl class="calc-lines">
       ${r.lines.map((l) => `<div class="calc-line${l.excluded ? " is-excluded" : ""}">
         <dt>${esc(l.label)}<span class="calc-line-detail">${esc(l.detail)}</span></dt>
-        <dd>${l.amount == null ? `<span class="calc-unknown">미확인</span>` : won(l.amount)}</dd>
+        <dd>${l.amount == null ? `<span class="calc-unknown">${esc(t("common.unknown"))}</span>` : won(l.amount)}</dd>
       </div>`).join("")}
     </dl>
     ${totalHTML(model, st, r)}
     ${notesHTML(model, st, r)}
     <div class="calc-actions">
-      <button type="button" class="btn btn-sm" data-cost-act="copy">${icon("copy")}정산 문구 복사</button>
-      <button type="button" class="btn btn-ghost btn-sm" data-cost-act="share">${icon("external")}공유하기</button>
+      <button type="button" class="btn btn-sm" data-cost-act="copy">${icon("copy")}${esc(t("cost.copySettlement"))}</button>
+      <button type="button" class="btn btn-ghost btn-sm" data-cost-act="share">${icon("external")}${esc(t("common.share"))}</button>
       <span class="calc-status" role="status">${esc(status)}</span>
     </div>
   </div>`;
@@ -446,16 +448,16 @@ export function mountCostCard(container: HTMLElement, model: CostModel): void {
     const act = btn.dataset.costAct;
     if (act === "copy") {
       void shareOrCopy(settlementText(model, st)).then((how) => {
-        announce(how === "failed" ? "복사하지 못했습니다 — 브라우저 권한을 확인해 주세요." : "정산 문구를 복사했습니다.");
+        announce(how === "failed" ? t("cost.copyFailed") : t("cost.copied"));
       });
       return;
     }
     if (act === "share") {
       void shareOrCopy(settlementText(model, st)).then((how) => {
         announce(
-          how === "shared" ? "공유했습니다."
-            : how === "copied" ? "공유 시트가 없어 정산 문구를 복사했습니다."
-              : "공유하지 못했습니다 — 브라우저 권한을 확인해 주세요.",
+          how === "shared" ? t("cost.shared")
+            : how === "copied" ? t("cost.shareCopied")
+              : t("cost.shareFailed"),
         );
       });
     }

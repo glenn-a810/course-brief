@@ -6,6 +6,7 @@
  *  - 수집 흔적(접속 차단·수집 실패 등)과 '미확인' 표기는 일반 화면의 값으로 쓰지 않는다
  *    (app.ts 의 INTERNAL_NOTE 와 같은 목록. 모듈 순환 import 를 피하려고 여기에 둔다).
  */
+import { manwonLabel, money } from "./i18n.js";
 
 const UNKNOWN_TEXT = /미확인|확인\s*안\s*됨|확인하지\s*못한/;
 const COLLECTION_NOTE =
@@ -17,14 +18,13 @@ export const INTERNAL_NOTE = new RegExp(`(?:${UNKNOWN_TEXT.source})|(?:${COLLECT
 /** 원 단위 금액. 값이 없으면 빈 문자열(자리표시자 없음) */
 export function won(n: number | null | undefined): string {
   if (n === null || n === undefined || !Number.isFinite(n)) return "";
-  return `${Math.round(n).toLocaleString("ko-KR")}원`;
+  return money(n);
 }
 
 /** 만원 단위 축약 — 지도 핀처럼 좁은 자리에 큰 금액을 넣을 때 */
 export function manwon(n: number | null | undefined): string {
   if (n === null || n === undefined || !Number.isFinite(n)) return "";
-  const man = n / 10000;
-  return `${Number.isInteger(man) ? man.toLocaleString("ko-KR") : man.toFixed(1)}만`;
+  return manwonLabel(n);
 }
 
 /** 문장형 값에서 내부 표기를 걷어낸다. 남는 게 없으면 빈 문자열 */

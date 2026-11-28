@@ -16,6 +16,7 @@
  */
 import { icon, iconTile } from "./icons.js";
 import { esc } from "./util.js";
+import { t } from "./i18n.js";
 
 export interface LocationModel {
   id: string;
@@ -61,11 +62,12 @@ export function coordText(lat: number, lng: number): string {
   return `${lat.toFixed(6)},${lng.toFixed(6)}`;
 }
 
-function copyBtn(text: string, label: string, smallLabel = "복사"): string {
-  return `<button type="button" class="copy-inline" data-copy="${esc(text)}" data-copy-label="${esc(label)}">${icon("copy")}${esc(smallLabel)}</button>`;
+function copyBtn(text: string, label: string, smallLabel = ""): string {
+  const text0 = smallLabel || t("common.copy");
+  return `<button type="button" class="copy-inline" data-copy="${esc(text)}" data-copy-label="${esc(label)}">${icon("copy")}${esc(text0)}</button>`;
 }
 
-const UNKNOWN = `<span class="loc-unknown">미확인</span>`;
+const UNKNOWN = `<span class="loc-unknown">${t("common.unknown")}</span>`;
 
 export function locationSection(m: LocationModel): string {
   const links = mapLinks(m);
@@ -75,26 +77,26 @@ export function locationSection(m: LocationModel): string {
 
   const addressBlock = address
     ? `<div class="loc-card">
-        <span class="loc-label">주소</span>
+        <span class="loc-label">${esc(t("loc.address"))}</span>
         <p class="loc-addr">${esc(address)}</p>
         ${m.addressNote ? `<p class="loc-sub">${esc(m.addressNote)}</p>` : ""}
-        <div class="loc-card-actions">${copyBtn(address, "주소")}</div>
+        <div class="loc-card-actions">${copyBtn(address, t("loc.address"))}</div>
       </div>`
     : `<div class="loc-card">
-        <span class="loc-label">주소</span>
-        <p class="loc-addr loc-unknown">확인된 주소가 없습니다</p>
-        <p class="loc-sub">지도 앱에서 구장 이름으로 검색하거나 골프장에 전화로 확인하세요.</p>
+        <span class="loc-label">${esc(t("loc.address"))}</span>
+        <p class="loc-addr loc-unknown">${esc(t("loc.noAddress"))}</p>
+        <p class="loc-sub">${esc(t("loc.noAddressHint"))}</p>
       </div>`;
 
-  const mapsBlock = `<div class="loc-maps" role="group" aria-label="지도 앱에서 길찾기">
+  const mapsBlock = `<div class="loc-maps" role="group" aria-label="${esc(t("loc.mapAria"))}">
       <a class="loc-map" href="${esc(links.naver)}" target="_blank" rel="noopener noreferrer">
-        <b>네이버 지도</b><span>길찾기</span>
+        <b>${esc(t("loc.naver"))}</b><span>${esc(t("loc.go"))}</span>
       </a>
       <a class="loc-map" href="${esc(links.kakao)}" target="_blank" rel="noopener noreferrer">
-        <b>카카오맵</b><span>길찾기</span>
+        <b>${esc(t("loc.kakao"))}</b><span>${esc(t("loc.go"))}</span>
       </a>
       <a class="loc-map" href="${esc(links.google)}" target="_blank" rel="noopener noreferrer">
-        <b>구글 지도</b><span>길찾기</span>
+        <b>${esc(t("loc.google"))}</b><span>${esc(t("loc.go"))}</span>
       </a>
     </div>`;
 
@@ -103,45 +105,46 @@ export function locationSection(m: LocationModel): string {
     : UNKNOWN;
 
   const rows: string[] = [
-    `<div class="mini-fact"><span>최단 IC</span><b>${icValue}</b></div>`,
+    `<div class="mini-fact"><span>${esc(t("loc.ic"))}</span><b>${icValue}</b></div>`,
   ];
   if (hasGeo) {
     const lat = m.lat as number;
     const lng = m.lng as number;
-    rows.push(`<div class="mini-fact"><span>좌표</span><b>${esc(lat.toFixed(4))}, ${esc(lng.toFixed(4))} ${copyBtn(coordText(lat, lng), "좌표")}</b></div>`);
+    rows.push(`<div class="mini-fact"><span>${esc(t("loc.coord"))}</span><b>${esc(lat.toFixed(4))}, ${esc(lng.toFixed(4))} ${copyBtn(coordText(lat, lng), t("loc.coord"))}</b></div>`);
   } else {
-    rows.push(`<div class="mini-fact"><span>좌표</span><b>${UNKNOWN}</b></div>`);
+    rows.push(`<div class="mini-fact"><span>${esc(t("loc.coord"))}</span><b>${UNKNOWN}</b></div>`);
   }
   rows.push(
-    `<div class="mini-fact"><span>주차</span><b>${m.parking ? esc(m.parking) : UNKNOWN}</b></div>`,
+    `<div class="mini-fact"><span>${esc(t("loc.parking"))}</span><b>${m.parking ? esc(m.parking) : UNKNOWN}</b></div>`,
   );
   rows.push(
-    `<div class="mini-fact"><span>셔틀·교통</span><b>${m.transit ? esc(m.transit) : UNKNOWN}</b></div>`,
+    `<div class="mini-fact"><span>${esc(t("loc.transit"))}</span><b>${m.transit ? esc(m.transit) : UNKNOWN}</b></div>`,
   );
 
   const missing = [!m.parking, !m.transit].filter(Boolean).length;
+  const target = tel
+    ? `<a class="link" href="tel:${esc(tel)}">${esc(m.tel ?? "")}</a>`
+    : esc(t("loc.course"));
 
   return `<section class="section" id="s-loc" aria-labelledby="s-loc-h">
     <div class="section-head">
-      <h2 id="s-loc-h">${iconTile("pin", "teal", "sm")}위치 · 교통</h2>
-      <p class="section-desc">주소와 최단 IC, 지도 앱 길찾기, 주차·셔틀 안내. 확인된 값만 적고 확인되지 않은 항목은 '미확인'으로 표시합니다.</p>
+      <h2 id="s-loc-h">${iconTile("pin", "teal", "sm")}${esc(t("loc.title"))}</h2>
+      <p class="section-desc">${esc(t("loc.desc"))}</p>
     </div>
     <div class="section-body">
       <div class="loc-grid">
         ${addressBlock}
         <div class="loc-card is-maps">
-          <span class="loc-label">지도에서 길찾기</span>
+          <span class="loc-label">${esc(t("loc.mapLabel"))}</span>
           ${mapsBlock}
-          <p class="loc-sub">출발지는 지도 앱의 현재 위치를 씁니다. 이 사이트는 위치 정보를 요청하지 않습니다.</p>
+          <p class="loc-sub">${esc(t("loc.originNote"))}</p>
         </div>
       </div>
       <div class="mini-facts">${rows.join("")}</div>
       ${m.icNote ? `<p class="source-line">${esc(m.icNote)}</p>` : ""}
       ${
         missing
-          ? `<p class="loc-hint">${icon("info")}<span>주차·셔틀 정보가 없는 구장입니다. 예약 전 ${
-              tel ? `<a class="link" href="tel:${esc(tel)}">골프장(${esc(m.tel ?? "")})</a>` : "골프장"
-            }에 전화로 확인하세요.</span></p>`
+          ? `<p class="loc-hint">${icon("info")}<span>${t("loc.missingHint", { target })}</span></p>`
           : ""
       }
     </div>

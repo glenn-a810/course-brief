@@ -10,6 +10,7 @@ import { esc } from "./util.js";
 import { icon, iconTile } from "./icons.js";
 import { daysBetween, fmtDay, parseISO, today } from "./rules.js";
 import { favoriteIds } from "./saved.js";
+import { t } from "./i18n.js";
 
 let file: AlertFile | null = null;
 let pending: Promise<AlertFile | null> | null = null;
@@ -59,12 +60,12 @@ export function upcomingClosure(id: string): AlertItem | null {
 }
 
 const KIND: Record<string, { label: string; tone: string }> = {
-  closure: { label: "휴장", tone: "danger" },
-  aeration: { label: "에어레이션", tone: "warn" },
-  fee_change: { label: "요금 변경", tone: "info" },
-  note: { label: "참고", tone: "neutral" },
-  notice: { label: "공지", tone: "neutral" },
-  event: { label: "행사", tone: "neutral" },
+  get closure() { return { label: t("alerts.kind.closure"), tone: "danger" }; },
+  get aeration() { return { label: t("alerts.kind.aeration"), tone: "warn" }; },
+  get fee_change() { return { label: t("alerts.kind.fee_change"), tone: "info" }; },
+  get note() { return { label: t("alerts.kind.note"), tone: "neutral" }; },
+  get notice() { return { label: t("alerts.kind.notice"), tone: "neutral" }; },
+  get event() { return { label: t("alerts.kind.event"), tone: "neutral" }; },
 };
 
 type Status = "ongoing" | "upcoming" | "undated" | "past";
@@ -83,14 +84,14 @@ function periodText(item: AlertItem): string {
   const to = parseISO(item.to);
   if (from && to) return from.getTime() === to.getTime() ? fmtDay(from) : `${fmtDay(from)} ~ ${fmtDay(to)}`;
   if (from) return `${fmtDay(from)} ~`;
-  return "기간 미상";
+  return t("alerts.periodUnknown");
 }
 
 const GROUPS: Array<{ key: Status; label: string; hint: string }> = [
-  { key: "ongoing", label: "진행 중", hint: "오늘이 기간 안에 있는 일정" },
-  { key: "upcoming", label: "예정", hint: "앞으로 시작하는 일정" },
-  { key: "undated", label: "일정 미상", hint: "공지 제목에 기간이 없어 날짜를 읽지 못한 항목" },
-  { key: "past", label: "지난 일정", hint: "이미 지난 일정" },
+  { get key() { return "ongoing" as Status; }, get label() { return t("alerts.groupOngoing"); }, get hint() { return t("alerts.hintOngoing"); } },
+  { get key() { return "upcoming" as Status; }, get label() { return t("alerts.groupUpcoming"); }, get hint() { return t("alerts.hintUpcoming"); } },
+  { get key() { return "undated" as Status; }, get label() { return t("alerts.groupUndated"); }, get hint() { return t("alerts.hintUndated"); } },
+  { get key() { return "past" as Status; }, get label() { return t("alerts.groupPast"); }, get hint() { return t("alerts.hintPast"); } },
 ];
 
 interface State {
@@ -128,35 +129,35 @@ function rowHTML(item: AlertItem): string {
   const st = statusOf(item);
   const dday = from ? daysBetween(today(), from) : null;
   const ddayBadge = st === "undated"
-    ? `<span class="alert-dd is-unknown">일정 미상</span>`
+    ? `<span class="alert-dd is-unknown">${esc(t("alerts.undatedBadge"))}</span>`
     : st === "ongoing"
-      ? `<span class="alert-dd is-today">진행 중</span>`
-      : dday === 0 ? `<span class="alert-dd is-today">오늘</span>`
+      ? `<span class="alert-dd is-today">${esc(t("alerts.ongoing"))}</span>`
+      : dday === 0 ? `<span class="alert-dd is-today">${esc(t("alerts.today"))}</span>`
         : dday != null && dday > 0 ? `<span class="alert-dd">D-${dday}</span>`
-          : `<span class="alert-dd is-past">지남</span>`;
+          : `<span class="alert-dd is-past">${esc(t("alerts.passed"))}</span>`;
   const confirmed = item.source === "alert"
-    ? (item.confirmed ? `<span class="src-tag src-official">확인된 알림</span>` : `<span class="src-tag src-neutral">공지 확인</span>`)
-    : `<span class="src-tag src-neutral">공지 제목</span>`;
+    ? (item.confirmed ? `<span class="src-tag src-official">${esc(t("alerts.confirmed"))}</span>` : `<span class="src-tag src-neutral">${esc(t("alerts.fromNotice"))}</span>`)
+    : `<span class="src-tag src-neutral">${esc(t("alerts.fromTitle"))}</span>`;
   return `<li class="alert-row">
     <div class="alert-when">${ddayBadge}${st === "undated" ? "" : `<span class="alert-period">${esc(periodText(item))}</span>`}</div>
     <div class="alert-main">
       <h3 class="alert-name"><a class="link" href="#/c/${esc(item.id)}">${esc(item.name)}</a>
         <span class="badge ${kind.tone}">${esc(kind.label)}</span>${confirmed}</h3>
-      <p class="alert-title">${esc(item.title || "제목 없음")}</p>
+      <p class="alert-title">${esc(item.title || t("alerts.noTitle"))}</p>
       ${item.detail ? `<p class="alert-detail">${esc(item.detail)}</p>` : ""}
       <p class="alert-meta">${esc([item.sido, item.sigungu].filter(Boolean).join(" "))}${
-        item.updated ? ` · 게시 ${esc(item.updated.slice(0, 10).replaceAll("-", "."))}` : ""}${
+        item.updated ? ` · ${esc(t("alerts.posted", { date: item.updated.slice(0, 10).replaceAll("-", ".") }))}` : ""}${
         item.to && from && to && daysBetween(from, to) === 0 ? "" : ""}</p>
     </div>
-    <a class="btn btn-ghost btn-sm alert-go" href="#/c/${esc(item.id)}">상세${icon("chevron")}</a>
+    <a class="btn btn-ghost btn-sm alert-go" href="#/c/${esc(item.id)}">${esc(t("common.detail"))}${icon("chevron")}</a>
   </li>`;
 }
 
 export function renderAlerts(root: HTMLElement): void {
   if (!file) {
     root.innerHTML = `<div class="page"><header class="page-head">${iconTile("calendar", "orange", "lg")}
-      <div class="page-head-text"><h1 class="page-title" tabindex="-1">휴장·정비 캘린더</h1>
-      <p class="page-lead">${alertsFailed() ? "일정 데이터를 불러오지 못했습니다. 잠시 후 다시 시도해 주세요." : "불러오는 중…"}</p></div></header></div>`;
+      <div class="page-head-text"><h1 class="page-title" tabindex="-1">${esc(t("alerts.title"))}</h1>
+      <p class="page-lead">${alertsFailed() ? esc(t("alerts.failed")) : esc(t("alerts.loading"))}</p></div></header></div>`;
     return;
   }
   // 같은 구장·같은 종류는 alert(확인된 알림) 쪽만 남긴다 — 같은 휴장이 알림과 공지로 두 번 보이지 않게
@@ -199,7 +200,7 @@ export function renderAlerts(root: HTMLElement): void {
       if (g.key === "undated") {
         // 기간을 읽지 못한 항목은 양이 많아 접어 둔다 — 제목만 확인된 항목임을 먼저 밝힌다
         return `<details class="alert-undated"${state.kind ? " open" : ""}>
-          <summary>일정 미상 <span class="alert-count">${arr.length}</span><span class="alert-group-hint">${esc(g.hint)}</span></summary>
+          <summary>${esc(t("alerts.groupUndated"))} <span class="alert-count">${arr.length}</span><span class="alert-group-hint">${esc(g.hint)}</span></summary>
           ${list}
         </details>`;
       }
@@ -214,29 +215,29 @@ export function renderAlerts(root: HTMLElement): void {
     <header class="page-head">
       ${iconTile("calendar", "orange", "lg")}
       <div class="page-head-text">
-        <h1 class="page-title" tabindex="-1">휴장·정비 캘린더</h1>
-        <p class="page-lead">예약 전에 확인할 휴장·에어레이션·요금 변경 일정을 한곳에 모았습니다. 확인된 운영 알림과 공지 제목에서 날짜를 읽은 항목만 표시합니다.</p>
+        <h1 class="page-title" tabindex="-1">${esc(t("alerts.title"))}</h1>
+        <p class="page-lead">${esc(t("alerts.lead"))}</p>
       </div>
     </header>
     <div class="stat-row">
-      <div class="stat"><span class="stat-n">${counts.closure}</span><span class="stat-l">휴장</span></div>
-      <div class="stat"><span class="stat-n">${counts.aeration}</span><span class="stat-l">에어레이션</span></div>
-      <div class="stat"><span class="stat-n">${counts.fee}</span><span class="stat-l">요금 변경</span></div>
-      <div class="stat"><span class="stat-n">${counts.undated}</span><span class="stat-l">일정 미상</span></div>
+      <div class="stat"><span class="stat-n">${counts.closure}</span><span class="stat-l">${esc(t("alerts.statClosure"))}</span></div>
+      <div class="stat"><span class="stat-n">${counts.aeration}</span><span class="stat-l">${esc(t("alerts.statAeration"))}</span></div>
+      <div class="stat"><span class="stat-n">${counts.fee}</span><span class="stat-l">${esc(t("alerts.statFee"))}</span></div>
+      <div class="stat"><span class="stat-n">${counts.undated}</span><span class="stat-l">${esc(t("alerts.statUndated"))}</span></div>
     </div>
     <div class="alert-toolbar">
-      <div class="chip-row" role="group" aria-label="일정 종류">${kindChip("", "전체", all.length)}${kindChip("closure", "휴장", counts.closure)}${kindChip("aeration", "에어레이션", counts.aeration)}${kindChip("fee_change", "요금 변경", counts.fee)}</div>
-      <label class="field field-inline"><span>지역</span>
-        <select id="alert-sido"><option value="">전체</option>${sidoList.map((s) => `<option value="${esc(s)}"${state.sido === s ? " selected" : ""}>${esc(s)}</option>`).join("")}</select>
+      <div class="chip-row" role="group" aria-label="${esc(t("alerts.kindAria"))}">${kindChip("", t("common.all"), all.length)}${kindChip("closure", t("alerts.kind.closure"), counts.closure)}${kindChip("aeration", t("alerts.kind.aeration"), counts.aeration)}${kindChip("fee_change", t("alerts.kind.fee_change"), counts.fee)}</div>
+      <label class="field field-inline"><span>${esc(t("alerts.region"))}</span>
+        <select id="alert-sido"><option value="">${esc(t("common.all"))}</option>${sidoList.map((s) => `<option value="${esc(s)}"${state.sido === s ? " selected" : ""}>${esc(s)}</option>`).join("")}</select>
       </label>
-      <label class="check"><input type="checkbox" id="alert-undated"${state.undated ? " checked" : ""}> <span>일정 미상 포함</span></label>
-      <label class="check"><input type="checkbox" id="alert-past"${state.includePast ? " checked" : ""}> <span>지난 일정 포함(${counts.past})</span></label>
-      ${favs.size ? `<label class="check"><input type="checkbox" id="alert-fav"${state.favoritesOnly ? " checked" : ""}> <span>내 구장만</span></label>` : ""}
+      <label class="check"><input type="checkbox" id="alert-undated"${state.undated ? " checked" : ""}> <span>${esc(t("alerts.includeUndated"))}</span></label>
+      <label class="check"><input type="checkbox" id="alert-past"${state.includePast ? " checked" : ""}> <span>${esc(t("alerts.includePast", { n: counts.past }))}</span></label>
+      ${favs.size ? `<label class="check"><input type="checkbox" id="alert-fav"${state.favoritesOnly ? " checked" : ""}> <span>${esc(t("alerts.favOnly"))}</span></label>` : ""}
     </div>
-    ${groups || `<div class="state-box"><h2 class="state-title">조건에 맞는 일정이 없습니다</h2>
-      <p class="state-desc">${state.undated ? "종류·지역 필터를 넓히거나 지난 일정 포함을 켜 보세요." : "이 종류는 기간이 확인된 일정이 없습니다 — '일정 미상 포함'을 켜면 제목만 확인된 항목을 볼 수 있습니다."}</p></div>`}
-    <p class="source-line">이 캘린더는 골프장 공지·운영 알림에서 확인된 일정만 담습니다. 공지 본문이 이미지이거나 기간을 읽지 못한 항목은 '일정 미상'으로 남겨 두었습니다. 예약 전 골프장에 확인하세요.</p>
-    <p class="source-line">데이터 ${esc((file.dataset.built_at ?? "").slice(0, 10).replaceAll("-", "."))} · ${all.length}건 중 기간 확인 ${file.dataset.with_period ?? 0}건</p>
+    ${groups || `<div class="state-box"><h2 class="state-title">${esc(t("alerts.none"))}</h2>
+      <p class="state-desc">${state.undated ? esc(t("alerts.noneWiden")) : esc(t("alerts.noneUndated"))}</p></div>`}
+    <p class="source-line">${esc(t("alerts.sourceNote"))}</p>
+    <p class="source-line">${esc(t("alerts.meta", { date: (file.dataset.built_at ?? "").slice(0, 10).replaceAll("-", "."), all: all.length, dated: file.dataset.with_period ?? 0 }))}</p>
   </div>`;
 
   root.querySelectorAll<HTMLButtonElement>("[data-alert-kind]").forEach((btn) => {

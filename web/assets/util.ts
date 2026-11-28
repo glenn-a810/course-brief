@@ -1,5 +1,6 @@
 // 공통 유틸 — 포맷·한글 초성·이스케이프 (DOM 외 런타임 의존 없음)
 import type { CourseStatus } from "../../shared/types";
+import { money, t } from "./i18n.js";
 
 export const CHO = "ㄱㄲㄴㄷㄸㄹㅁㅂㅃㅅㅆㅇㅈㅉㅊㅋㅌㅍㅎ";
 
@@ -44,7 +45,7 @@ export function fmtWon(n: number | string | null | undefined): string {
   if (n === null || n === undefined || n === "") return "—";
   const v = Number(n);
   if (!Number.isFinite(v)) return "—";
-  return v.toLocaleString("ko-KR") + "원";
+  return money(v);
 }
 
 export function fmtNum(n: number | string | null | undefined, digits = 0): string {
@@ -79,13 +80,17 @@ export interface StatusMeta {
   tone: BadgeTone;
 }
 
+/**
+ * 운영 상태 — 라벨은 화면 언어로 만든다(L1). tone 은 언어와 무관하다.
+ * getter 로 두면 `STATUS[x].label` 을 쓰는 모든 화면(칩·배지·요약)이 언어를 따라간다.
+ */
 export const STATUS: Record<CourseStatus, StatusMeta> = {
-  operating: { label: "영업중", tone: "ok" },
-  suspended: { label: "휴업(영업중단)", tone: "warn" },
-  closed: { label: "폐업", tone: "danger" },
-  under_construction: { label: "건설중", tone: "info" },
-  planned: { label: "미착공", tone: "neutral" },
-  cancelled: { label: "사업 취소", tone: "neutral" },
+  get operating() { return { label: t("status.operating"), tone: "ok" as BadgeTone }; },
+  get suspended() { return { label: t("status.suspended"), tone: "warn" as BadgeTone }; },
+  get closed() { return { label: t("status.closed"), tone: "danger" as BadgeTone }; },
+  get under_construction() { return { label: t("status.under_construction"), tone: "info" as BadgeTone }; },
+  get planned() { return { label: t("status.planned"), tone: "neutral" as BadgeTone }; },
+  get cancelled() { return { label: t("status.cancelled"), tone: "neutral" as BadgeTone }; },
 };
 
 const STATUS_IDS = Object.keys(STATUS) as CourseStatus[];

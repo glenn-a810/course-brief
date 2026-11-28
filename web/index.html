@@ -45,7 +45,7 @@
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-<a class="skip" href="#main" id="skip-link">본문으로 건너뛰기</a>
+<a class="skip" href="#main" id="skip-link" data-i18n="nav.skip">본문으로 건너뛰기</a>
 
 <!-- 오프라인·새 버전 안내(M8) — 상태가 바뀔 때만 보인다 -->
 <div id="net-banner" class="net-banner" role="status" hidden>
@@ -58,34 +58,46 @@
 
 <header class="topbar">
   <div class="topbar-inner">
-    <a class="brand" href="#/" aria-label="CourseBrief 홈">
+    <a class="brand" href="#/" data-i18n-aria="nav.homeAria" aria-label="CourseBrief 홈">
       <span class="brand-mark" aria-hidden="true">C</span>
       <span class="brand-text">
         <strong>CourseBrief</strong>
         <span class="brand-sub">코스브리프</span>
       </span>
     </a>
-    <nav class="topnav" aria-label="주요 메뉴">
-      <a href="#/" data-nav="list">골프장</a>
-      <a href="#/saved" data-nav="saved">내 구장</a>
-      <a href="#/alerts" data-nav="alerts">휴장·정비</a>
-      <a href="#/rental" data-nav="rental">클럽 렌탈</a>
-      <a href="#/about" data-nav="about">데이터</a>
+    <nav class="topnav" data-i18n-aria="nav.mainAria" aria-label="주요 메뉴">
+      <a href="#/" data-nav="list" data-i18n="nav.courses">골프장</a>
+      <a href="#/saved" data-nav="saved" data-i18n="nav.saved">내 구장</a>
+      <a href="#/alerts" data-nav="alerts" data-i18n="nav.alerts">휴장·정비</a>
+      <a href="#/rental" data-nav="rental" data-i18n="nav.rental">클럽 렌탈</a>
+      <a href="#/about" data-nav="about" data-i18n="nav.about">데이터</a>
     </nav>
     <div class="topbar-actions">
-      <button id="search-open" class="icon-btn" type="button" aria-label="골프장 검색" aria-haspopup="dialog">
+      <button id="search-open" class="icon-btn" type="button" data-i18n-aria="nav.searchAria" aria-label="골프장 검색" aria-haspopup="dialog">
         <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="6.6"/><path d="M16 16l4.4 4.4"/></svg>
       </button>
+      <!-- L1 — 언어 전환(KO/EN/JA). 선택은 localStorage 에 남고 화면을 다시 그린다 -->
+      <details class="theme-menu lang-menu" id="lang-toggle">
+        <summary class="icon-btn lang-btn" data-i18n-aria="nav.langAria" data-i18n-title="lang.label" aria-label="언어 선택" title="언어">
+          <span id="lang-current" aria-hidden="true">KO</span>
+        </summary>
+        <div class="menu-pop" role="group" id="lang-menu" data-i18n-aria="nav.langAria" aria-label="언어 선택">
+          <button type="button" data-lang-choice="ko" aria-pressed="false"><span>한국어</span><small>KO</small></button>
+          <button type="button" data-lang-choice="en" aria-pressed="false"><span>English</span><small>EN</small></button>
+          <button type="button" data-lang-choice="ja" aria-pressed="false"><span>日本語</span><small>JA</small></button>
+        </div>
+      </details>
+      <span id="lang-status" class="sr-only" role="status"></span>
       <details class="theme-menu" id="theme-toggle">
-        <summary class="icon-btn theme-btn" aria-label="테마 선택" title="테마 선택">
+        <summary class="icon-btn theme-btn" data-i18n-aria="nav.themeAria" data-i18n-title="nav.themeAria" aria-label="테마 선택" title="테마 선택">
           <svg class="theme-icon" data-icon="system" viewBox="0 0 24 24" aria-hidden="true" focusable="false" stroke="currentColor" stroke-width="1.7" fill="none"><circle cx="12" cy="12" r="8.6"/><path d="M12 3.4a8.6 8.6 0 0 1 0 17.2z" fill="currentColor" stroke="none"/></svg>
           <svg class="theme-icon" data-icon="light" viewBox="0 0 24 24" aria-hidden="true" focusable="false" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" fill="none"><circle cx="12" cy="12" r="4"/><path d="M12 2.8v2.1M12 19.1v2.1M2.8 12h2.1M19.1 12h2.1M5.5 5.5l1.5 1.5M17 17l1.5 1.5M18.5 5.5L17 7M7 17l-1.5 1.5"/></svg>
           <svg class="theme-icon" data-icon="dark" viewBox="0 0 24 24" aria-hidden="true" focusable="false" stroke="currentColor" stroke-width="1.7" fill="none"><path d="M20.3 14.7A8.6 8.6 0 0 1 9.3 3.7a8.6 8.6 0 1 0 11 11z" stroke-linejoin="round"/></svg>
         </summary>
-        <div class="menu-pop" role="group" aria-label="테마 선택">
-          <button type="button" data-theme-choice="system" aria-pressed="false"><span>자동</span><small>시스템 설정</small></button>
-          <button type="button" data-theme-choice="light" aria-pressed="false"><span>라이트</span></button>
-          <button type="button" data-theme-choice="dark" aria-pressed="false"><span>다크</span></button>
+        <div class="menu-pop" role="group" data-i18n-aria="nav.themeAria" aria-label="테마 선택">
+          <button type="button" data-theme-choice="system" aria-pressed="false"><span data-i18n="theme.auto">자동</span><small data-i18n="theme.systemHint">시스템 설정</small></button>
+          <button type="button" data-theme-choice="light" aria-pressed="false"><span data-i18n="theme.light">라이트</span></button>
+          <button type="button" data-theme-choice="dark" aria-pressed="false"><span data-i18n="theme.dark">다크</span></button>
         </div>
       </details>
       <span id="theme-status" class="sr-only" role="status"></span>
@@ -95,16 +107,16 @@
 
 <dialog id="search-dialog" class="search-dialog" aria-labelledby="search-dialog-title">
   <form id="search-form" class="search-form" role="search">
-    <h2 id="search-dialog-title" class="search-dialog-title">골프장 검색</h2>
+    <h2 id="search-dialog-title" class="search-dialog-title" data-i18n="search.dialogTitle">골프장 검색</h2>
     <div class="searchbox searchbox-lg">
       <svg class="searchbox-icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M9 3.5a5.5 5.5 0 1 0 3.5 9.75l3.1 3.1 1.05-1.05-3.1-3.1A5.5 5.5 0 0 0 9 3.5Zm0 1.5a4 4 0 1 1 0 8 4 4 0 0 1 0-8Z"/></svg>
       <input id="search-input" type="search" inputmode="search" autocomplete="off" spellcheck="false"
-             placeholder="골프장 이름·지역·초성 (익산, ㅇㅅ)" aria-label="골프장 검색">
+             placeholder="골프장 이름·지역·초성 (익산, ㅇㅅ)" data-i18n-placeholder="search.placeholder" data-i18n-aria="nav.searchAria" aria-label="골프장 검색">
     </div>
-    <p class="search-dialog-hint">초성(ㅇㅅ), 부분 일치, 이명(구 명칭)·지역으로 찾습니다.</p>
+    <p class="search-dialog-hint" data-i18n="search.hint">초성(ㅇㅅ), 부분 일치, 이명(구 명칭)·지역으로 찾습니다.</p>
     <div class="search-dialog-actions">
-      <button type="button" class="btn-ghost" id="search-cancel">닫기</button>
-      <button type="submit" class="btn">검색</button>
+      <button type="button" class="btn-ghost" id="search-cancel" data-i18n="common.close">닫기</button>
+      <button type="submit" class="btn" data-i18n="search.submit">검색</button>
     </div>
   </form>
 </dialog>
@@ -114,36 +126,36 @@
   <section class="hero" id="hero">
     <div class="hero-inner">
       <div class="hero-text">
-        <h1 id="hero-title">전국 골프장 <span id="hero-count">540</span>곳</h1>
-        <p class="hero-desc">코스 스펙·그린피·예약 규칙·현장 운영을 7개 영역으로 정리했습니다.</p>
+        <h1 id="hero-title"></h1>
+        <p class="hero-desc" data-i18n="list.heroDesc">코스 스펙·그린피·예약 규칙·현장 운영을 7개 영역으로 정리했습니다.</p>
       </div>
       <div class="searchbox">
         <svg class="searchbox-icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M9 3.5a5.5 5.5 0 1 0 3.5 9.75l3.1 3.1 1.05-1.05-3.1-3.1A5.5 5.5 0 0 0 9 3.5Zm0 1.5a4 4 0 1 1 0 8 4 4 0 0 1 0-8Z"/></svg>
         <input id="q" type="search" inputmode="search" autocomplete="off" spellcheck="false"
-               placeholder="골프장 이름·지역·초성 검색 (익산, ㅇㅅ)"
-               aria-label="골프장 검색" aria-controls="results">
-        <button id="q-clear" class="icon-btn icon-btn-sm" type="button" aria-label="검색어 지우기" hidden>
+               placeholder="골프장 이름·지역·초성 검색 (익산, ㅇㅅ)" data-i18n-placeholder="search.placeholder"
+               data-i18n-aria="nav.searchAria" aria-label="골프장 검색" aria-controls="results">
+        <button id="q-clear" class="icon-btn icon-btn-sm" type="button" data-i18n-aria="search.clearAria" aria-label="검색어 지우기" hidden>
           <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6.4 6.4l11.2 11.2M17.6 6.4L6.4 17.6"/></svg>
         </button>
       </div>
     </div>
   </section>
 
-  <section id="filters" class="filters" aria-label="검색 필터">
+  <section id="filters" class="filters" data-i18n-aria="filter.aria" aria-label="검색 필터">
     <details class="filterbox" id="filter-details" open>
       <summary class="filterbox-summary">
         <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M7.5 12h9M10.5 17h3"/></svg>
-        <span>필터 · 정렬</span>
+        <span data-i18n="filter.title">필터 · 정렬</span>
         <span class="filterbox-count" id="filter-count" hidden></span>
       </summary>
       <div class="filterbox-body">
         <div class="filter-grid">
           <label class="field">
-            <span>지역</span>
+            <span data-i18n="filter.region">지역</span>
             <select id="f-sido"><option value="">전체</option></select>
           </label>
           <label class="field">
-            <span>이용형태</span>
+            <span data-i18n="filter.type">이용형태</span>
             <select id="f-type">
               <option value="">전체</option>
               <option value="대중제">대중제</option>
@@ -152,7 +164,7 @@
             </select>
           </label>
           <label class="field">
-            <span>홀수</span>
+            <span data-i18n="filter.holes">홀수</span>
             <select id="f-holes">
               <option value="">전체</option>
               <option value="9">9홀</option>
@@ -162,7 +174,7 @@
             </select>
           </label>
           <label class="field">
-            <span>주말 그린피</span>
+            <span data-i18n="filter.fee">주말 그린피</span>
             <select id="f-fee">
               <option value="">전체</option>
               <option value="100000">10만원 이하</option>
@@ -172,7 +184,7 @@
             </select>
           </label>
           <label class="field">
-            <span>정렬</span>
+            <span data-i18n="filter.sort">정렬</span>
             <select id="f-sort">
               <option value="name">이름순</option>
               <option value="fee-asc">그린피 낮은순</option>
@@ -181,12 +193,14 @@
               <option value="total-desc">4인 총액 높은순</option>
               <option value="rating-desc">평점 높은순</option>
               <option value="holes-desc">홀수 많은순</option>
+              <option value="slope-hard">난이도 높은순(슬로프)</option>
+              <option value="slope-easy">난이도 쉬운순(슬로프)</option>
             </select>
           </label>
         </div>
         <div class="status-line">
-          <span class="status-line-label">영업 상태</span>
-          <div class="chip-row chip-row-scroll" id="status-chips" role="group" aria-label="영업 상태 필터">
+          <span class="status-line-label" data-i18n="filter.status">영업 상태</span>
+          <div class="chip-row chip-row-scroll" id="status-chips" role="group" data-i18n-aria="filter.statusAria" aria-label="영업 상태 필터">
             <span class="chip is-placeholder" aria-hidden="true"></span>
             <span class="chip is-placeholder" aria-hidden="true"></span>
             <span class="chip is-placeholder" aria-hidden="true"></span>
@@ -196,17 +210,17 @@
           </div>
         </div>
         <div class="status-line status-line-tags">
-          <span class="status-line-label">플레이 조건</span>
-          <div class="chip-row chip-row-scroll" id="tag-chips" role="group" aria-label="플레이 조건 필터">
+          <span class="status-line-label" data-i18n="filter.tags">플레이 조건</span>
+          <div class="chip-row chip-row-scroll" id="tag-chips" role="group" data-i18n-aria="filter.tagsAria" aria-label="플레이 조건 필터">
             <span class="chip is-placeholder" aria-hidden="true"></span>
             <span class="chip is-placeholder" aria-hidden="true"></span>
             <span class="chip is-placeholder" aria-hidden="true"></span>
             <span class="chip is-placeholder" aria-hidden="true"></span>
           </div>
-          <p class="filter-hint">확인된 구장만 표시합니다 — 조건이 확인되지 않은 구장은 결과에서 빠집니다.</p>
+          <p class="filter-hint" data-i18n="filter.tagHint">확인된 구장만 표시합니다 — 조건이 확인되지 않은 구장은 결과에서 빠집니다.</p>
         </div>
         <div class="filter-actions">
-          <button id="f-reset" class="btn-ghost" type="button">필터 초기화</button>
+          <button id="f-reset" class="btn-ghost" type="button" data-i18n="common.reset">필터 초기화</button>
         </div>
       </div>
     </details>
@@ -222,29 +236,29 @@
   </script>
 
   <section class="results" aria-labelledby="results-heading">
-    <h2 id="results-heading" class="sr-only">골프장 검색 결과</h2>
+    <h2 id="results-heading" class="sr-only" data-i18n="list.resultsHeading">골프장 검색 결과</h2>
     <div class="results-head">
       <div class="results-summary">
         <p id="result-count" class="result-count"></p>
         <p id="filter-note" class="filter-note" hidden></p>
       </div>
       <div class="results-tools">
-        <div class="view-toggle" role="group" aria-label="보기 방식">
-          <button type="button" class="view-btn is-on" data-view="list" aria-pressed="true">목록</button>
-          <button type="button" class="view-btn" data-view="map" aria-pressed="false">지도</button>
+        <div class="view-toggle" role="group" data-i18n-aria="list.viewAria" aria-label="보기 방식">
+          <button type="button" class="view-btn is-on" data-view="list" aria-pressed="true" data-i18n="list.viewList">목록</button>
+          <button type="button" class="view-btn" data-view="map" aria-pressed="false" data-i18n="list.viewMap">지도</button>
         </div>
-        <div id="active-filters" class="active-filters" aria-label="적용된 필터"></div>
+        <div id="active-filters" class="active-filters" data-i18n-aria="filter.activeAria" aria-label="적용된 필터"></div>
       </div>
     </div>
     <p id="result-status" class="sr-only" role="status" aria-live="polite"></p>
     <div id="map-panel" class="map-panel" hidden>
-      <p class="map-note" id="map-note">확인된 좌표가 있는 구장만 표시합니다. 핀을 누르면 요약 카드가 열리고, 카드를 누르면 상세로 이동합니다.</p>
+      <p class="map-note" id="map-note" data-i18n="list.mapNote">확인된 좌표가 있는 구장만 표시합니다. 핀을 누르면 요약 카드가 열리고, 카드를 누르면 상세로 이동합니다.</p>
       <div class="map-shell" id="map-shell" data-map-theme="light">
         <div id="map-canvas" class="map-canvas"></div>
         <div id="map-fallback" class="map-fallback" role="status" hidden>
-          <strong>지도를 불러오지 못했습니다</strong>
-          <span>네트워크에서 지도 타일을 받을 수 없습니다. 목록 보기에서 같은 조건의 구장을 확인해 주세요.</span>
-          <button type="button" class="btn btn-sm" id="map-to-list">목록 보기</button>
+          <strong data-i18n="list.mapFailTitle">지도를 불러오지 못했습니다</strong>
+          <span data-i18n="list.mapFailDesc">네트워크에서 지도 타일을 받을 수 없습니다. 목록 보기에서 같은 조건의 구장을 확인해 주세요.</span>
+          <button type="button" class="btn btn-sm" id="map-to-list" data-i18n="list.mapToList">목록 보기</button>
         </div>
       </div>
     </div>
@@ -257,11 +271,11 @@
       <div class="card card-skel" aria-hidden="true"><span class="skel-line w40"></span><span class="skel-line w70"></span><span class="skel-line w55"></span><span class="skel-line w30"></span></div>
     </div>
     <div id="empty" class="empty" hidden>
-      <p class="empty-title">조건에 맞는 골프장이 없습니다</p>
+      <p class="empty-title" data-i18n="list.emptyTitle">조건에 맞는 골프장이 없습니다</p>
       <p id="empty-desc" class="empty-desc">검색어를 줄이거나 필터를 초기화해 보세요.</p>
       <div class="empty-actions">
-        <button class="btn" type="button" id="empty-reset">필터 초기화</button>
-        <button class="btn-ghost" type="button" id="empty-status">숨긴 상태 모두 보기</button>
+        <button class="btn" type="button" id="empty-reset" data-i18n="common.reset">필터 초기화</button>
+        <button class="btn-ghost" type="button" id="empty-status" data-i18n="list.showAllStatus">숨긴 상태 모두 보기</button>
       </div>
     </div>
     <button id="more" class="btn-more" type="button" hidden>더 보기</button>
@@ -274,31 +288,31 @@
 <div id="compare-bar" class="compare-bar" hidden>
   <div class="compare-bar-inner">
     <span class="compare-bar-count"><b id="compare-n">0</b>곳 담김<span class="compare-bar-hint">최대 4곳</span></span>
-    <button type="button" class="compare-bar-clear" id="compare-clear">비우기</button>
+    <button type="button" class="compare-bar-clear" id="compare-clear" data-i18n="compare.clear">비우기</button>
     <a class="btn btn-sm" id="compare-go" href="#/compare">비교표 보기</a>
   </div>
 </div>
 
-<nav class="tabbar" aria-label="주요 메뉴">
+<nav class="tabbar" data-i18n-aria="nav.mainAria" aria-label="주요 메뉴">
   <a href="#/" data-nav="list">
     <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 3.4v15.4"/><path d="M8 4.4l7.8 3.2L8 10.8z"/><path d="M4.4 20.6h9.4"/></svg>
-    <span>골프장</span>
+    <span data-i18n="nav.courses">골프장</span>
   </a>
   <a href="#/saved" data-nav="saved">
     <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3.6l2.7 5.6 6.1.8-4.5 4.2 1.2 6-5.5-3-5.5 3 1.2-6L3.2 10l6.1-.8z"/></svg>
-    <span>내 구장</span>
+    <span data-i18n="nav.saved">내 구장</span>
   </a>
   <a href="#/alerts" data-nav="alerts">
     <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3.8" y="5.4" width="16.4" height="15" rx="2.2"/><path d="M3.8 10h16.4M8.4 3.4v3.6M15.6 3.4v3.6"/></svg>
-    <span>휴장·정비</span>
+    <span data-i18n="nav.alerts">휴장·정비</span>
   </a>
   <a href="#/rental" data-nav="rental">
     <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3.5 5.5h2.2l1.1 8.2h9.6l1.9-6.3H6.4"/><circle cx="8.6" cy="18.2" r="1.6"/><circle cx="15.4" cy="18.2" r="1.6"/></svg>
-    <span>렌탈</span>
+    <span data-i18n="nav.rentalShort">렌탈</span>
   </a>
   <a href="#/about" data-nav="about">
     <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="8.6"/><path d="M12 10.8V17M12 7.4v.6"/></svg>
-    <span>데이터</span>
+    <span data-i18n="nav.about">데이터</span>
   </a>
 </nav>
 
@@ -334,6 +348,21 @@
       <button id="admin-submit" class="btn" type="submit">확인</button>
     </div>
   </form>
+</dialog>
+
+<dialog id="embed-dialog" class="admin-dialog embed-dialog" aria-labelledby="embed-title">
+  <div class="admin-form">
+    <h2 id="embed-title" data-i18n="embed.title">구장 카드 임베드</h2>
+    <p class="admin-desc" data-i18n="embed.desc">아래 코드를 홈페이지·블로그에 붙이면 이 구장의 요약 카드가 표시됩니다.</p>
+    <pre id="embed-code" class="embed-code"></pre>
+    <p class="embed-preview-label" data-i18n="embed.preview">미리보기</p>
+    <div id="embed-preview" class="embed-preview"></div>
+    <div class="admin-actions">
+      <a class="btn-ghost" id="embed-api" href="/api/v1/courses.json" target="_blank" rel="noopener noreferrer" data-i18n="embed.apiLink">공개 데이터 API</a>
+      <button id="embed-close" class="btn-ghost" type="button" data-i18n="common.close">닫기</button>
+      <button id="embed-copy" class="btn" type="button" data-i18n="embed.copy">임베드 코드 복사</button>
+    </div>
+  </div>
 </dialog>
 
 <script type="module" src="assets/app.js"></script>

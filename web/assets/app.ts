@@ -64,6 +64,7 @@ import { mountRoundPlan } from "./roundplan.js";
 import type { RoundPlanModel } from "./roundplan.js";
 import { renderPrep } from "./prep.js";
 import type { PrepFact, PrepModel } from "./prep.js";
+import { mountHistory } from "./history.js";
 import {
   clearAll as clearSavedAll,
   exportSaved,
@@ -76,6 +77,19 @@ import {
 } from "./saved.js";
 import { alertsFailed, loadAlerts, renderAlerts, resetAlertsFilter, upcomingClosure } from "./alerts.js";
 import { daysBetween, daysSince, dayTypeOf, fmtDay, openInfo, parseISO, today } from "./rules.js";
+import {
+  applyStaticI18n,
+  getLang,
+  langOption,
+  LANGS,
+  membership,
+  money,
+  onLangChange,
+  originalNote,
+  setLang,
+  t,
+} from "./i18n.js";
+import type { Lang } from "./i18n.js";
 import {
   STATUS,
   badge,
@@ -115,11 +129,25 @@ const REPO_URL = CONFIG.repoUrl;
 
 /* ---------------- 라벨·아이콘 ---------------- */
 
+/**
+ * 라벨 표는 getter 로 둔다 — 언어를 바꾸면 화면을 다시 그리기 전에 이미 새 라벨이 나오고,
+ * OPS[k]·FAC[k] 를 쓰는 모든 화면(타일·준비 카드·미확인 목록)이 한 곳에서 함께 바뀐다(L1).
+ */
 const OPS: Record<OpsKey, string> = {
-  nocaddie: "노캐디", two_player: "2인 플레이", three_player: "3인 플레이",
-  five_player: "5인 플레이", marshal_caddie: "마샬 캐디", cart_type: "카트 종류",
-  cart_entry: "카트 페어웨이 진입", bagdrop: "셀프 백드롭", mat: "매트 티샷",
-  checkin: "체크인", locker: "락카", sauna: "사우나", dress: "복장 규정", pace: "진행 속도",
+  get nocaddie() { return t("ops.nocaddie"); },
+  get two_player() { return t("ops.two_player"); },
+  get three_player() { return t("ops.three_player"); },
+  get five_player() { return t("ops.five_player"); },
+  get marshal_caddie() { return t("ops.marshal_caddie"); },
+  get cart_type() { return t("ops.cart_type"); },
+  get cart_entry() { return t("ops.cart_entry"); },
+  get bagdrop() { return t("ops.bagdrop"); },
+  get mat() { return t("ops.mat"); },
+  get checkin() { return t("ops.checkin"); },
+  get locker() { return t("ops.locker"); },
+  get sauna() { return t("ops.sauna"); },
+  get dress() { return t("ops.dress"); },
+  get pace() { return t("ops.pace"); },
 };
 const OPS_ICON: Record<OpsKey, IconName> = {
   nocaddie: "person", two_player: "users", three_player: "users", five_player: "users",
@@ -127,22 +155,41 @@ const OPS_ICON: Record<OpsKey, IconName> = {
   mat: "grass", checkin: "clock", locker: "locker", sauna: "steam", dress: "shirt", pace: "clock",
 };
 const FAC: Record<FacilityKey, string> = {
-  practice: "연습장", indoor_range: "실내 연습장", food: "식당·조식",
-  snack_bar: "그늘집·스낵", locker_sauna: "락카·사우나", lodging: "숙박",
-  other: "기타 시설", night: "야간 라운드", closed_days: "휴장일", shuttle: "셔틀·교통",
-  ev_charge: "전기차 충전", proshop: "프로샵",
+  get practice() { return t("fac.practice"); },
+  get indoor_range() { return t("fac.indoor_range"); },
+  get food() { return t("fac.food"); },
+  get snack_bar() { return t("fac.snack_bar"); },
+  get locker_sauna() { return t("fac.locker_sauna"); },
+  get lodging() { return t("fac.lodging"); },
+  get other() { return t("fac.other"); },
+  get night() { return t("fac.night"); },
+  get closed_days() { return t("fac.closed_days"); },
+  get shuttle() { return t("fac.shuttle"); },
+  get ev_charge() { return t("fac.ev_charge"); },
+  get proshop() { return t("fac.proshop"); },
 };
 const FAC_ICON: Record<FacilityKey, IconName> = {
   practice: "flag", indoor_range: "building", food: "ball", snack_bar: "ball",
   locker_sauna: "steam", lodging: "bed", other: "sparkle", night: "moon",
   closed_days: "calendar", shuttle: "bus", ev_charge: "bolt", proshop: "building",
 };
-const GRASS: Record<"tee" | "fairway" | "green", string> = { tee: "티잉구역", fairway: "페어웨이", green: "그린" };
+const GRASS: Record<"tee" | "fairway" | "green", string> = {
+  get tee() { return t("course.turfTee"); },
+  get fairway() { return t("course.turfFairway"); },
+  get green() { return t("course.turfGreen"); },
+};
 const LEVEL: Record<string, "info" | "warn" | "danger"> = { info: "info", caution: "warn", closure: "danger" };
 
 /** 인덱스 태그 코드 → 카드 배지 (build_data_split.py 의 summary_fields 와 짝) */
 const TAG_LABEL: Record<string, string> = {
-  n: "노캐디", "2": "2인 가능", y: "야간", s: "사우나", l: "숙박", h: "셔틀", p: "연습장", f: "식당",
+  get n() { return t("tag.n"); },
+  get "2"() { return t("tag.2"); },
+  get y() { return t("tag.y"); },
+  get s() { return t("tag.s"); },
+  get l() { return t("tag.l"); },
+  get h() { return t("tag.h"); },
+  get p() { return t("tag.p"); },
+  get f() { return t("tag.f"); },
 };
 const TAG_ORDER = ["n", "2", "y", "s", "l", "h", "p", "f"];
 /** 카드 특징 태그의 2-톤 아이콘과 파스텔 톤 */
@@ -181,18 +228,22 @@ const SORT_KEYS = [
   "total-asc",
   "total-desc",
   "rating-desc",
+  "slope-hard",
+  "slope-easy",
 ] as const;
 type SortKey = (typeof SORT_KEYS)[number];
 
 /** 정렬 이름표 — 활성 필터 칩·결과 요약이 같은 문구를 쓴다 */
 const SORT_LABELS: Record<SortKey, string> = {
-  name: "이름순",
-  "fee-asc": "그린피 낮은순",
-  "fee-desc": "그린피 높은순",
-  "holes-desc": "홀수 많은순",
-  "total-asc": "4인 총액 낮은순",
-  "total-desc": "4인 총액 높은순",
-  "rating-desc": "평점 높은순",
+  get name() { return t("sort.name"); },
+  get "fee-asc"() { return t("sort.feeAsc"); },
+  get "fee-desc"() { return t("sort.feeDesc"); },
+  get "holes-desc"() { return t("sort.holesDesc"); },
+  get "total-asc"() { return t("sort.totalAsc"); },
+  get "total-desc"() { return t("sort.totalDesc"); },
+  get "rating-desc"() { return t("sort.ratingDesc"); },
+  get "slope-hard"() { return t("sort.slopeHard"); },
+  get "slope-easy"() { return t("sort.slopeEasy"); },
 };
 
 function isSortKey(v: string | null | undefined): v is SortKey {
@@ -224,6 +275,8 @@ interface CourseGroup {
   fee: number | null;
   /** 4인 · 18홀 총액(그린피×4 + 카트 + 캐디). 값이 없으면 null */
   total: number | null;
+  /** KGA 대표 슬로프 레이팅(L3). 값이 없는 구장은 null → 정렬에서 뒤로 밀고 배지를 그리지 않는다 */
+  slope: number | null;
   /** 라운더 평가(10점) — 그룹에서 가장 높은 값 */
   rating: number | null;
   feeKind: FeeKind | null;
@@ -298,7 +351,7 @@ function getAdapter(): SearchAdapter {
 
 function won(n: number | null | undefined): string {
   if (n === null || n === undefined || !Number.isFinite(n)) return "";
-  return `${Math.round(n).toLocaleString("ko-KR")}원`;
+  return money(n);
 }
 
 /* ---------------- 데이터 ---------------- */
@@ -370,10 +423,10 @@ function showBootError(err: unknown, skeleton: string): void {
 
 function paintFooterMeta(): void {
   const d = getIndex().dataset;
-  const counts = `${d.counts.total}곳 (상세 ${d.counts.with_detail} / 요약 ${d.counts.master_only})`;
+  const counts = t("foot.counts", { n: d.counts.total, detail: d.counts.with_detail, summary: d.counts.master_only });
   $<HTMLElement>("#footer-meta").textContent = isAdmin()
     ? `${d.version} · ${fmtDate(d.built_at)} 기준 · ${counts}`
-    : `업데이트 ${fmtDate(d.built_at)} · ${counts}`;
+    : `${t("foot.updated", { date: fmtDate(d.built_at) })} · ${counts}`;
 }
 
 function updatedAt(...values: Array<string | null | undefined>): string {
@@ -391,17 +444,9 @@ function statusCount(counts: DatasetCounts, status: CourseStatus): number {
 
 function buildStaticUI(): void {
   const d = getIndex().dataset;
-  $<HTMLElement>("#hero-count").textContent = String(d.counts.total);
+  paintHeroTitle(d.counts.total);
   paintFooterMeta();
-
-  const sel = $<HTMLSelectElement>("#f-sido");
-  sel.innerHTML = '<option value="">전체</option>';
-  for (const s of state.sido) {
-    const o = document.createElement("option");
-    o.value = s.code;
-    o.textContent = `${sidoLabel(s)} (${s.count})`;
-    sel.appendChild(o);
-  }
+  paintFilterOptions();
 
   // 상태 칩은 데이터의 건수로 만든다 — 라벨과 숫자를 분리해 스크린리더가 "영업중 512곳"으로 읽게 한다
   const chips = $<HTMLElement>("#status-chips");
@@ -409,15 +454,65 @@ function buildStaticUI(): void {
     const meta = STATUS[st];
     const n = statusCount(d.counts, st);
     return `<button class="chip" type="button" data-status="${st}" aria-pressed="${state.filters.status.has(st)}"
-      aria-label="${esc(meta.label)} ${n}곳"><span>${esc(meta.label)}</span><span class="chip-n">${n}</span></button>`;
+      aria-label="${esc(meta.label)} ${n}"><span>${esc(meta.label)}</span><span class="chip-n">${n}</span></button>`;
   }).join("");
 
-  // 플레이 조건 칩(8종) — 카드 배지로만 있던 조건을 필터로 끌어올린다
-  const tagRow = $<HTMLElement>("#tag-chips");
-  tagRow.innerHTML = TAG_ORDER.map((t) => `<button class="chip" type="button" data-tag="${t}"
-      aria-pressed="false" aria-label="${esc(TAG_LABEL[t])}"><span class="chip-ic" aria-hidden="true">${
-      iconDuo(TAG_ICON[t] ?? "sparkle", "chip-ic-svg")}</span><span>${esc(TAG_LABEL[t])}</span><span class="chip-n">—</span></button>`).join("");
+  paintTagRow();
   paintTagChips();
+}
+
+/** 목록 첫 화면 제목 — 언어를 바꾸면 숫자와 함께 다시 쓴다 */
+function paintHeroTitle(total: number): void {
+  $<HTMLElement>("#hero-title").textContent = t("list.heroTitle", { n: total.toLocaleString(getLang() === "ko" ? "ko-KR" : "en-US") });
+}
+
+/**
+ * 필터·정렬 select 의 값은 URL 해시와 같아야 하므로 option value 는 고정하고 라벨만 바꿔 단다.
+ * 언어를 바꿀 때마다 다시 만든다(`rerenderForLang`).
+ */
+function paintFilterOptions(): void {
+  const sel = $<HTMLSelectElement>("#f-sido");
+  const keepSido = sel.value;
+  sel.innerHTML = `<option value="">${esc(t("common.all"))}</option>`;
+  for (const s of state.sido) {
+    const o = document.createElement("option");
+    o.value = s.code;
+    o.textContent = `${sidoLabel(s)} (${s.count})`;
+    sel.appendChild(o);
+  }
+  sel.value = keepSido;
+
+  const typeSel = $<HTMLSelectElement>("#f-type");
+  const keepType = typeSel.value;
+  typeSel.innerHTML = `<option value="">${esc(t("common.all"))}</option>` +
+    [["대중제", "type.public"], ["회원제", "type.member"], ["비회원제", "type.nonmember"]]
+      .map(([v, k]) => `<option value="${v}">${esc(t(k))}</option>`).join("");
+  typeSel.value = keepType;
+
+  const holesSel = $<HTMLSelectElement>("#f-holes");
+  const keepHoles = holesSel.value;
+  holesSel.innerHTML = `<option value="">${esc(t("common.all"))}</option>` +
+    ["9", "18", "27"].map((v) => `<option value="${v}">${esc(t(`opt.holes${v}`))}</option>`).join("") +
+    `<option value="36">${esc(t("filter.holesOver"))}</option>`;
+  holesSel.value = keepHoles;
+
+  const feeSel = $<HTMLSelectElement>("#f-fee");
+  const keepFee = feeSel.value;
+  feeSel.innerHTML = `<option value="">${esc(t("common.all"))}</option>` +
+    [10, 15, 20, 30].map((m) => `<option value="${m * 10000}">${esc(t("filter.feeUnder", { n: m }))}</option>`).join("");
+  feeSel.value = keepFee;
+
+  const sortSel = $<HTMLSelectElement>("#f-sort");
+  const keepSort = sortSel.value;
+  sortSel.innerHTML = SORT_KEYS.map((k) => `<option value="${k}">${esc(SORT_LABELS[k])}</option>`).join("");
+  sortSel.value = keepSort;
+}
+
+/** 플레이 조건 칩(8종) — 카드 배지로만 있던 조건을 필터로 끌어올린다 */
+function paintTagRow(): void {
+  $<HTMLElement>("#tag-chips").innerHTML = TAG_ORDER.map((t0) => `<button class="chip" type="button" data-tag="${t0}"
+      aria-pressed="false" aria-label="${esc(TAG_LABEL[t0])}"><span class="chip-ic" aria-hidden="true">${
+      iconDuo(TAG_ICON[t0] ?? "sparkle", "chip-ic-svg")}</span><span>${esc(TAG_LABEL[t0])}</span><span class="chip-n">—</span></button>`).join("");
 }
 
 /**
@@ -430,15 +525,15 @@ function paintTagChips(): void {
   const base = courses.filter((c) => passesFilters(c, false, true));
   const counts = new Map<string, number>();
   for (const c of base) {
-    for (const t of c.tags ?? "") if (TAG_LABEL[t]) counts.set(t, (counts.get(t) ?? 0) + 1);
+    for (const code of c.tags ?? "") if (TAG_LABEL[code]) counts.set(code, (counts.get(code) ?? 0) + 1);
   }
   for (const btn of row.querySelectorAll<HTMLButtonElement>(".chip[data-tag]")) {
-    const t = btn.dataset.tag ?? "";
-    const on = state.filters.tags.has(t);
+    const code = btn.dataset.tag ?? "";
+    const on = state.filters.tags.has(code);
     btn.classList.toggle("is-on", on);
     btn.setAttribute("aria-pressed", on ? "true" : "false");
-    const n = counts.get(t) ?? 0;
-    btn.setAttribute("aria-label", `${TAG_LABEL[t] ?? t} ${n}곳`);
+    const n = counts.get(code) ?? 0;
+    btn.setAttribute("aria-label", `${TAG_LABEL[code] ?? code} ${n}`);
     const num = btn.querySelector<HTMLElement>(".chip-n");
     if (num) num.textContent = String(n);
   }
@@ -539,6 +634,10 @@ function buildGroups(courses: CourseIndexItem[]): CourseGroup[] {
       holes,
       fee: cheapest?.value ?? null,
       total: totals.length ? Math.min(...totals) : null,
+      slope: (() => {
+        const vals = members.map((m) => m.slope?.value).filter((v): v is number => typeof v === "number");
+        return vals.length ? Math.max(...vals) : null;
+      })(),
       rating: ratings.length ? Math.max(...ratings) : null,
       feeKind: cheapest?.kind ?? null,
       sido: members[0].sido,
@@ -600,6 +699,9 @@ function sortGroups(groups: CourseGroup[]): CourseGroup[] {
   else if (s === "total-asc") arr.sort((a, b) => (a.total ?? Infinity) - (b.total ?? Infinity) || byName(a, b));
   else if (s === "total-desc") arr.sort((a, b) => (b.total ?? -1) - (a.total ?? -1) || byName(a, b));
   else if (s === "rating-desc") arr.sort((a, b) => (b.rating ?? -1) - (a.rating ?? -1) || byName(a, b));
+  // 슬로프 정렬 — 값이 없는 구장(null)은 어느 방향에서도 뒤로 보낸다(미확인을 0으로 취급하지 않는다)
+  else if (s === "slope-hard") arr.sort((a, b) => (b.slope ?? -1) - (a.slope ?? -1) || byName(a, b));
+  else if (s === "slope-easy") arr.sort((a, b) => (a.slope ?? Infinity) - (b.slope ?? Infinity) || byName(a, b));
   else arr.sort(byName);
   return arr;
 }
@@ -645,24 +747,24 @@ async function renderList({ reset = false }: { reset?: boolean } = {}): Promise<
   const hidden = withoutStatus.length - courseCount;
   const searchHits = matched ? matched.size : total;
 
+  const num = (v: number): string => v.toLocaleString(getLang() === "ko" ? "ko-KR" : "en-US");
   const stLabel = state.filters.status.size
-    ? [...state.filters.status].map((s) => statusOf(s).label).join("·")
-    : "전체";
+    ? [...state.filters.status].map((s) => statusOf(s).label).join(" · ")
+    : t("common.all");
 
   $<HTMLElement>("#result-count").innerHTML =
-    `<strong>${n.toLocaleString("ko-KR")}곳</strong> 표시` +
-    `<span class="sep">·</span>구장 ${courseCount.toLocaleString("ko-KR")}` +
-    `<span class="sep">·</span>전체 ${total.toLocaleString("ko-KR")}곳` +
-    (hidden > 0 ? `<button type="button" class="link-btn" id="show-hidden">숨김 ${hidden.toLocaleString("ko-KR")}곳 보기</button>` : "");
+    `<strong>${t("list.shown", { n: num(n) })}</strong>` +
+    `<span class="sep">·</span>${t("list.courseCount", { n: num(courseCount) })}` +
+    `<span class="sep">·</span>${t("list.totalCount", { n: num(total) })}` +
+    (hidden > 0 ? `<button type="button" class="link-btn" id="show-hidden">${t("list.showHidden", { n: num(hidden) })}</button>` : "");
 
   // 검색 + 필터가 겹쳐 결과가 줄었을 때, 무엇 때문에 줄었는지 알려 준다
   const note = $<HTMLElement>("#filter-note");
   const excludedByFilter = matched ? searchHits - courseCount : 0;
   if (matched && excludedByFilter > 0) {
     note.hidden = false;
-    note.innerHTML = `검색 결과 <b>${searchHits.toLocaleString("ko-KR")}곳</b> 중 ` +
-      `<b>${(searchHits - courseCount).toLocaleString("ko-KR")}곳</b>이 다른 조건으로 제외되었습니다.` +
-      `<button type="button" class="link-btn" id="keep-search-reset">검색은 두고 필터만 초기화</button>`;
+    note.innerHTML = t("list.excludeNote", { total: num(searchHits), excluded: num(searchHits - courseCount) }) +
+      `<button type="button" class="link-btn" id="keep-search-reset">${t("list.keepSearchOnly")}</button>`;
   } else {
     note.hidden = true;
     note.textContent = "";
@@ -670,9 +772,9 @@ async function renderList({ reset = false }: { reset?: boolean } = {}): Promise<
 
   renderActiveFilters();
   const status = $<HTMLElement>("#result-status");
-  status.textContent = `${stLabel} ${n.toLocaleString("ko-KR")}곳 표시 중` +
-    (hidden > 0 ? `. 상태 필터로 ${hidden.toLocaleString("ko-KR")}곳이 숨겨져 있습니다.` : "") +
-    (state.q ? ` 검색어 ${state.q}.` : "");
+  status.textContent = t("list.statusLine", { label: stLabel, n: num(n) }) +
+    (hidden > 0 ? `. ${t("list.hiddenNote", { n: num(hidden) })}` : "") +
+    (state.q ? ` ${t("list.searchTerm", { q: state.q })}` : "");
 
   if (reset) state.shown = CONFIG.pageSize;
   const slice = groups.slice(0, state.shown);
@@ -683,7 +785,7 @@ async function renderList({ reset = false }: { reset?: boolean } = {}): Promise<
   $<HTMLElement>("#empty-status").hidden = hidden <= 0;
   const more = $<HTMLButtonElement>("#more");
   more.hidden = n <= state.shown;
-  more.innerHTML = `더 보기 <span class="more-count">${state.shown} / ${n}</span>`;
+  more.innerHTML = `${t("common.more")} <span class="more-count">${state.shown} / ${n}</span>`;
 
   paintTagChips();
   syncCompareToggles(resultsEl);
@@ -757,24 +859,24 @@ function setViewMode(mode: "list" | "map"): void {
 
 function emptyDescription(): string {
   const parts: string[] = [];
-  if (state.q) parts.push(`검색어 ‘${state.q}’`);
-  if (state.filters.sido) parts.push("지역");
-  if (state.filters.type) parts.push("이용형태");
-  if (state.filters.holes) parts.push("홀수");
-  if (state.filters.fee) parts.push("그린피");
-  if (state.filters.tags.size) parts.push(`플레이 조건 ${[...state.filters.tags].map((t) => TAG_LABEL[t] ?? t).join("·")}`);
-  if (!parts.length) return "다른 조건으로 다시 찾아보세요.";
+  if (state.q) parts.push(`‘${state.q}’`);
+  if (state.filters.sido) parts.push(t("filter.region"));
+  if (state.filters.type) parts.push(t("filter.type"));
+  if (state.filters.holes) parts.push(t("filter.holes"));
+  if (state.filters.fee) parts.push(t("filter.fee"));
+  if (state.filters.tags.size) parts.push(`${t("filter.tags")} ${[...state.filters.tags].map((x) => TAG_LABEL[x] ?? x).join("·")}`);
+  if (!parts.length) return t("list.emptyDefault");
   if (parts.length === 1 && state.q) {
-    return `‘${state.q}’와 일치하는 골프장이 없습니다. 다른 이름·지역이나 초성(ㅇㅅ)으로 찾아보세요.`;
+    return t("list.emptySearch", { q: state.q });
   }
-  return `${parts.join("·")} 조건을 넓히면 결과가 나옵니다.`;
+  return t("list.emptyWiden", { parts: parts.join(" · ") });
 }
 
 function renderActiveFilters(): void {
   const f = state.filters;
   const parts: string[] = [];
   const add = (label: string, key: string): void => {
-    parts.push(`<button type="button" class="filter-chip" data-clear="${key}" aria-label="${esc(label)} 필터 해제">
+    parts.push(`<button type="button" class="filter-chip" data-clear="${key}" aria-label="${esc(t("filter.clearAria", { label }))}">
       ${esc(label)}<span class="filter-chip-x" aria-hidden="true">✕</span></button>`);
   };
   if (state.q) add(`‘${state.q}’`, "q");
@@ -782,12 +884,12 @@ function renderActiveFilters(): void {
     const s = state.sido.find((x) => x.code === f.sido);
     add(s ? sidoLabel(s) : f.sido, "sido");
   }
-  if (f.type) add(f.type, "type");
-  if (f.holes) add(f.holes === "36" ? "36홀 이상" : `${f.holes}홀`, "holes");
-  if (f.fee) add(`주말 ${Number(f.fee) / 10000}만원 이하`, "fee");
-  for (const t of f.tags) add(TAG_LABEL[t] ?? t, `tag:${t}`);
+  if (f.type) add(membership(f.type), "type");
+  if (f.holes) add(f.holes === "36" ? t("filter.holesOver") : t("filter.holesValue", { n: f.holes }), "holes");
+  if (f.fee) add(t("filter.feeUnder", { n: Number(f.fee) / 10000 }), "fee");
+  for (const code of f.tags) add(TAG_LABEL[code] ?? code, `tag:${code}`);
   if (f.sort !== "name") add(SORT_LABELS[f.sort], "sort");
-  if (f.status.size !== 1 || !f.status.has("operating")) add(`상태 ${f.status.size}종`, "status");
+  if (f.status.size !== 1 || !f.status.has("operating")) add(t("filter.statusCount", { n: f.status.size }), "status");
   const box = $<HTMLElement>("#active-filters");
   box.innerHTML = parts.join("");
   const count = $<HTMLElement>("#filter-count");
@@ -801,7 +903,7 @@ function cardHTML(g: CourseGroup): string {
   const s = g.statuses.length === 1 ? g.statuses[0] : "operating";
   const st = statusOf(s);
   const fee = g.fee;
-  const feeLabel = g.feeKind === "weekday" ? "주중" : "주말";
+  const feeLabel = g.feeKind === "weekday" ? t("common.weekday") : t("common.weekend");
   const stale = g.statuses.every((x) => x === "closed" || x === "suspended");
   const tags = (single?.tags ?? "").split("").filter((t) => TAG_LABEL[t]).slice(0, 3);
   const rating = single?.rating;
@@ -812,19 +914,23 @@ function cardHTML(g: CourseGroup): string {
   const feeBlock = fee == null
     ? ""
     : `<span class="card-fee${stale ? " is-stale" : ""}">
-        <span class="fee-label">${stale ? "마지막 확인" : feeLabel}${feeStale ? ` <span class="stale-dot" title="요금 확인일로부터 90일 이상 지났습니다">90일+</span>` : ""}</span>
+        <span class="fee-label">${stale ? t("card.lastChecked") : feeLabel}${feeStale ? ` <span class="stale-dot" title="${esc(t("card.staleFee"))}">90일+</span>` : ""}</span>
         <span class="fee-value">${won(fee)}</span><span class="fee-tilde">~</span>
       </span>`;
 
   const sub = single
     ? [single.sido, single.sigungu].filter(Boolean).join(" ")
-    : g.members.map((m) => `${m.name}${m.holes ? ` ${m.holes}홀` : ""}`).join(" · ");
+    : g.members.map((m) => `${m.name}${m.holes ? ` ${t("filter.holesValue", { n: m.holes })}` : ""}`).join(" · ");
 
   // 확인된 값만 남긴다 — 값이 없는 줄은 자리표시자 없이 생략한다
-  const type = single?.type && !UNKNOWN_TEXT.test(single.type) ? single.type : "";
+  const type = single?.type && !UNKNOWN_TEXT.test(single.type) ? membership(single.type) : "";
   const stats = [
-    g.holes ? `<span class="stat-pill"><b>${g.holes}</b>홀</span>` : "",
+    g.holes ? `<span class="stat-pill"><b>${g.holes}</b>${t("card.holesUnit")}</span>` : "",
     type ? `<span class="stat-pill">${esc(type)}</span>` : "",
+    // L3 — KGA 대표 슬로프. 없는 구장은 배지 자체를 그리지 않는다
+    single?.slope?.value != null
+      ? `<span class="stat-pill stat-slope" title="${esc(t("detail.slopeBadgeTitle"))}">${icon("gauge")}${esc(t("detail.slopeBadge", { n: single.slope.value }))}</span>`
+      : "",
     rating !== undefined ? `<span class="stat-pill"><span class="pill-star" aria-hidden="true">${icon("star")}</span>${rating.toFixed(1)}</span>` : "",
   ].filter(Boolean).join("");
 
@@ -839,15 +945,17 @@ function cardHTML(g: CourseGroup): string {
   const noticeAge = daysSince(single?.notice);
   const noticeStale = noticeAge != null && noticeAge > 90;
   const noticeBadge = single?.notice?.trim()
-    ? `<span class="notice-dot${noticeStale ? " is-stale" : ""}" title="최근 공지${noticeDate ? ` ${noticeDate}` : ""}${noticeStale ? " · 90일 이상 지남" : ""}">${icon("bell")}공지</span>`
+    ? `<span class="notice-dot${noticeStale ? " is-stale" : ""}" title="${esc(t("card.noticeTitle", { date: noticeDate }))}${noticeStale ? ` · ${esc(t("card.noticeStale"))}` : ""}">${icon("bell")}${esc(t("card.notice"))}</span>`
     : "";
   // 휴장·정비 일정이 잡혀 있으면 카드에서 바로 보인다(M3)
   const closure = single ? upcomingClosure(single.id) : null;
-  const alertBadge = closure ? `<span class="alert-tag" title="휴장 일정: ${esc(closure.title)}">${icon("alert")}휴장</span>` : "";
+  const alertBadge = closure
+    ? `<span class="alert-tag" title="${esc(t("card.closureTitle", { title: closure.title }))}">${icon("alert")}${esc(t("card.closure"))}</span>`
+    : "";
   // 카드에서는 자리를 아끼려 아이콘만 — 상태는 색·aria-pressed 로 읽는다
   const fav = single
     ? `<button type="button" class="fav-toggle is-icon${isFavorite(single.id) ? " is-on" : ""}" data-fav="${esc(single.id)}"
-        data-fav-name="${esc(single.name)}" aria-pressed="${isFavorite(single.id)}" aria-label="${esc(single.name)} ${isFavorite(single.id) ? "내 구장에서 빼기" : "내 구장에 저장"}" title="${isFavorite(single.id) ? "내 구장에서 빼기" : "내 구장에 저장"}">
+        data-fav-name="${esc(single.name)}" aria-pressed="${isFavorite(single.id)}" aria-label="${esc(single.name)} ${isFavorite(single.id) ? t("card.favRemove") : t("card.favAdd")}" title="${isFavorite(single.id) ? t("card.favRemove") : t("card.favAdd")}">
         <span class="fav-toggle-ic" aria-hidden="true">${icon("star")}</span>
       </button>`
     : "";
@@ -867,13 +975,13 @@ function cardHTML(g: CourseGroup): string {
   if (single) {
     // 카드 전체가 상세 링크다. 비교 버튼은 링크 위에 올려 따로 눌리게 한다(중첩 링크·버튼 회피)
     const on = isCompared(single.id);
-    const label = on ? "비교에서 빼기" : "비교에 담기";
+    const label = on ? t("card.compareRemove") : t("card.compareAdd");
     const cmp = `<button type="button" class="cmp-toggle${on ? " is-on" : ""}" data-cmp="${esc(single.id)}"
         data-cmp-name="${esc(single.name)}" aria-pressed="${on}" aria-label="${esc(single.name)} ${label}" title="${label}">
-        <span class="cmp-toggle-ic" aria-hidden="true">${icon("check")}</span><span class="cmp-toggle-text">${on ? "담김" : "비교"}</span>
+        <span class="cmp-toggle-ic" aria-hidden="true">${icon("check")}</span><span class="cmp-toggle-text">${on ? t("card.compared") : t("card.compare")}</span>
       </button>`;
     return `<div class="card is-link">
-      <a class="card-hit" href="#/c/${esc(single.id)}" data-card="${esc(single.id)}" aria-label="${esc(single.name)} 상세 보기"></a>
+      <a class="card-hit" href="#/c/${esc(single.id)}" data-card="${esc(single.id)}" aria-label="${esc(t("card.viewDetailAria", { name: single.name }))}"></a>
       ${body(`${fav}${cmp}`)}
     </div>`;
   }
@@ -881,17 +989,17 @@ function cardHTML(g: CourseGroup): string {
       <div class="card-head">
         <div class="card-id">
           <h3 class="card-name">${highlight(g.name, state.q)}</h3>
-          <p class="card-sub">같은 부지 ${g.members.length}개 코스</p>
+          <p class="card-sub">${esc(t("card.sameSite", { n: g.members.length }))}</p>
         </div>
         <span class="badge ${st.tone}">${esc(st.label)}</span>
       </div>
-      ${g.holes ? `<div class="card-stats"><span class="stat-pill"><b>${g.holes}</b>홀 합산</span></div>` : ""}
+      ${g.holes ? `<div class="card-stats"><span class="stat-pill"><b>${g.holes}</b>${t("card.holesSum")}</span></div>` : ""}
       <div class="card-members">${g.members.map((m) => {
         const ms = statusOf(m.status);
-        return `<a class="member-link" href="#/c/${esc(m.id)}">${esc(m.name)}${m.holes ? ` · ${m.holes}홀` : ""}${
+        return `<a class="member-link" href="#/c/${esc(m.id)}">${esc(m.name)}${m.holes ? ` · ${esc(t("filter.holesValue", { n: m.holes }))}` : ""}${
           m.status !== "operating" ? ` <span class="badge ${ms.tone}">${esc(ms.label)}</span>` : ""}</a>`;
       }).join("")}</div>
-      <div class="card-foot">${feeBlock}<span class="card-foot-right"><span class="card-cta">코스 선택${icon("chevron")}</span></span></div>
+      <div class="card-foot">${feeBlock}<span class="card-foot-right"><span class="card-cta">${esc(t("card.chooseCourse"))}${icon("chevron")}</span></span></div>
     </div>`;
 }
 
@@ -1037,21 +1145,21 @@ async function renderDetail(id: string): Promise<void> {
   // 이명은 이름과 같은 것을 공백만 달리해 반복해 넣는다 — 중복은 접어서 보여 준다
   const aliasList = uniqueAliases(course.name, course.aliases);
   // 데이터 원본의 '미확인'은 이용형태 값이 아니다 — 배지·지표에서 뺀다
-  const typeLabel = course.type && !UNKNOWN_TEXT.test(course.type) ? course.type : "";
+  const typeLabel = course.type && !UNKNOWN_TEXT.test(course.type) ? membership(course.type) : "";
   const fees = feeView(detail?.fee, course);
   const feeLine = [fees.weekday.value, fees.weekend.value].filter((v): v is number => v != null);
   const feeCheapest = feeLine.length ? Math.min(...feeLine) : null;
-  const feeKindLabel = fees.weekend.value != null && feeCheapest === fees.weekend.value ? "주말" : "주중";
+  const feeKindLabel = fees.weekend.value != null && feeCheapest === fees.weekend.value ? t("common.weekend") : t("common.weekday");
 
   // 요금은 값이 있는 항목만 보인다 — 하나도 없으면 한 줄 안내로 끝낸다
   const feePairs = [
-    fees.weekday.value != null ? { label: "주중", slot: fees.weekday } : null,
-    fees.weekend.value != null ? { label: "주말·공휴일", slot: fees.weekend } : null,
+    fees.weekday.value != null ? { label: t("common.weekday"), slot: fees.weekday } : null,
+    fees.weekend.value != null ? { label: t("common.weekendHoliday"), slot: fees.weekend } : null,
   ].filter((x): x is { label: string; slot: FeeSlot } => x !== null);
   const feeExtras: string[] = [];
-  if (fees.cart != null) feeExtras.push(`카트 ${won(fees.cart)}`);
-  if (fees.caddieNone) feeExtras.push("노캐디");
-  else if (fees.caddie != null) feeExtras.push(`캐디 ${won(fees.caddie)}`);
+  if (fees.cart != null) feeExtras.push(`${t("fee.cart")} ${won(fees.cart)}`);
+  if (fees.caddieNone) feeExtras.push(t("fee.noCaddie"));
+  else if (fees.caddie != null) feeExtras.push(`${t("fee.caddie")} ${won(fees.caddie)}`);
   const hasAnyFee = feeCheapest != null || feeExtras.length > 0;
   // 총비용 계산기·예약 채널·라운드 플래너는 상세 데이터가 있을 때만 만든다
   const costModel = detail && !detailError ? buildCostModel(course, detail, fees) : null;
@@ -1081,7 +1189,7 @@ async function renderDetail(id: string): Promise<void> {
 
   const hero = `
     <div class="detail-crumbs">
-      <a class="back" href="${esc(state.lastListHash)}" data-back>${icon("arrow-left")} 목록</a>
+      <a class="back" href="${esc(state.lastListHash)}" data-back>${icon("arrow-left")} ${esc(t("detail.back"))}</a>
       <span class="crumb-sep">·</span>
       <span class="crumb-loc">${esc([course.sido, course.sigungu].filter(Boolean).join(" "))}</span>
     </div>
@@ -1090,9 +1198,9 @@ async function renderDetail(id: string): Promise<void> {
       <div class="detail-hero-main">
         <div class="detail-badges">
           ${badge(st.tone, st.label)}
-          ${course.holes ? badge("neutral", `${course.holes}홀`) : ""}
+          ${course.holes ? badge("neutral", t("filter.holesValue", { n: course.holes })) : ""}
           ${typeLabel ? badge("neutral", typeLabel) : ""}
-          ${course.detail ? "" : badge("neutral", "요약 데이터")}
+          ${course.detail ? "" : badge("neutral", t("detail.summaryData"))}
         </div>
         <h1 class="detail-title" id="detail-title" tabindex="-1">${esc(course.name)}</h1>
         ${aliasList.length ? `<p class="detail-alias">${esc(aliasList.join(" · "))}</p>` : ""}
@@ -1101,68 +1209,70 @@ async function renderDetail(id: string): Promise<void> {
           ${detail?.master?.nearest_ic?.name
             ? `<span class="dot" aria-hidden="true">·</span><span>${esc(detail.master.nearest_ic.name)}${detail.master.nearest_ic.distance_km ? ` ${detail.master.nearest_ic.distance_km}km` : ""}</span>`
             : ""}
-          <span class="dot" aria-hidden="true">·</span><span class="muted">업데이트 ${esc(courseUpdatedAt(detail) || "—")}</span>
+          <span class="dot" aria-hidden="true">·</span><span class="muted">${esc(t("common.updated"))} ${esc(courseUpdatedAt(detail) || "—")}</span>
         </p>
         ${course.status !== "operating" ? `<div class="callout ${st.tone === "neutral" ? "info" : st.tone}">
-          <strong>${icon(st.tone === "danger" ? "alert" : "info")}${esc(st.label)}</strong>${esc(course.status_note || "현재 예약·이용이 어려운 상태입니다.")}
+          <strong>${icon(st.tone === "danger" ? "alert" : "info")}${esc(st.label)}</strong>${esc(course.status_note || t("detail.unavailableNote"))}
         </div>` : ""}
 
         <dl class="hero-kpis">
-          ${course.holes ? `<div class="kpi"><dt>${icon("golf")}홀수</dt><dd><b>${course.holes}</b><span>홀</span></dd></div>` : ""}
-          ${course.par ? `<div class="kpi"><dt>${icon("gauge")}파</dt><dd><b>${course.par}</b></dd></div>` : ""}
-          ${course.length ? `<div class="kpi"><dt>${icon("ruler")}전장</dt><dd><b>${fmtNum(course.length)}</b><span>m</span></dd></div>` : ""}
-          ${typeLabel ? `<div class="kpi"><dt>${icon("building")}이용형태</dt><dd class="kpi-text">${esc(typeLabel)}</dd></div>` : ""}
-          ${course.rating !== undefined ? `<div class="kpi kpi-rating"><dt>${icon("star")}라운더 평가</dt><dd>${ratingBar(course.rating, course.reviews)}</dd></div>` : ""}
+          ${course.holes ? `<div class="kpi"><dt>${icon("golf")}${esc(t("detail.kpiHoles"))}</dt><dd><b>${course.holes}</b></dd></div>` : ""}
+          ${course.par ? `<div class="kpi"><dt>${icon("gauge")}${esc(t("detail.kpiPar"))}</dt><dd><b>${course.par}</b></dd></div>` : ""}
+          ${course.length ? `<div class="kpi"><dt>${icon("ruler")}${esc(t("detail.kpiLength"))}</dt><dd><b>${fmtNum(course.length)}</b><span>m</span></dd></div>` : ""}
+          ${typeLabel ? `<div class="kpi"><dt>${icon("building")}${esc(t("detail.kpiType"))}</dt><dd class="kpi-text">${esc(typeLabel)}</dd></div>` : ""}
+          ${course.rating !== undefined ? `<div class="kpi kpi-rating"><dt>${icon("star")}${esc(t("detail.kpiRating"))}</dt><dd>${ratingBar(course.rating, course.reviews)}</dd></div>` : ""}
+          ${course.slope?.value != null ? `<div class="kpi"><dt>${icon("gauge")}${esc(t("course.kgaSlope"))}</dt><dd class="kpi-text" title="${esc(t("detail.slopeBadgeTitle"))}">${esc(String(course.slope.value))}</dd></div>` : ""}
         </dl>
 
         <div class="hero-actions">
-          <button class="btn btn-primary" type="button" data-booking-open>${icon("external")}예약하기</button>
-          ${course.tel ? `<a class="btn btn-ghost" href="tel:${esc(course.tel.replace(/[^\d+]/g, ""))}">${icon("phone")}전화 걸기</a>` : ""}
-          ${course.homepage ? `<a class="btn btn-ghost" href="${esc(course.homepage)}" target="_blank" rel="noopener noreferrer">${icon("globe")}홈페이지</a>` : ""}
+          <button class="btn btn-primary" type="button" data-booking-open>${icon("external")}${esc(t("detail.book"))}</button>
+          ${course.tel ? `<a class="btn btn-ghost" href="tel:${esc(course.tel.replace(/[^\d+]/g, ""))}">${icon("phone")}${esc(t("detail.call"))}</a>` : ""}
+          ${course.homepage ? `<a class="btn btn-ghost" href="${esc(course.homepage)}" target="_blank" rel="noopener noreferrer">${icon("globe")}${esc(t("detail.homepage"))}</a>` : ""}
           ${course.lat != null && course.lng != null
-            ? `<a class="btn btn-ghost" href="#/c/${esc(course.id)}#s-loc">${icon("pin")}위치·교통</a>`
-            : `<a class="btn btn-ghost" href="#/c/${esc(course.id)}#s-loc">${icon("pin")}찾아가기</a>`}
+            ? `<a class="btn btn-ghost" href="#/c/${esc(course.id)}#s-loc">${icon("pin")}${esc(t("detail.locTraffic"))}</a>`
+            : `<a class="btn btn-ghost" href="#/c/${esc(course.id)}#s-loc">${icon("pin")}${esc(t("detail.directions"))}</a>`}
           <button class="btn btn-ghost${cmpOn ? " is-on" : ""}" type="button" data-cmp="${esc(course.id)}"
             data-cmp-name="${esc(course.name)}" data-cmp-long="1" aria-pressed="${cmpOn}"
-            aria-label="${esc(course.name)} ${cmpOn ? "비교에서 빼기" : "비교에 담기"}">
-            <span class="cmp-toggle-ic" aria-hidden="true">${icon("check")}</span><span class="cmp-toggle-text">${cmpOn ? "비교 담김" : "비교 담기"}</span>
+            aria-label="${esc(course.name)} ${cmpOn ? t("card.compareRemove") : t("card.compareAdd")}">
+            <span class="cmp-toggle-ic" aria-hidden="true">${icon("check")}</span><span class="cmp-toggle-text">${cmpOn ? t("card.compared") : t("card.compare")}</span>
           </button>
           <button class="btn btn-ghost fav-btn${favOn ? " is-on" : ""}" type="button" data-fav="${esc(course.id)}"
             data-fav-name="${esc(course.name)}" aria-pressed="${favOn}">
-            <span class="fav-toggle-ic" aria-hidden="true">${icon("star")}</span><span class="fav-toggle-text">${favOn ? "저장됨" : "내 구장"}</span>
+            <span class="fav-toggle-ic" aria-hidden="true">${icon("star")}</span><span class="fav-toggle-text">${favOn ? t("common.saved") : t("nav.saved")}</span>
           </button>
         </div>
       </div>
 
-      <aside class="fee-hero${hasAnyFee ? "" : " is-empty"}" aria-label="그린피 요약">
-        <p class="fee-hero-title">그린피 <span>1인 · 18홀 · 비회원</span></p>
+      <aside class="fee-hero${hasAnyFee ? "" : " is-empty"}" aria-label="${esc(t("detail.greenFee"))}">
+        <p class="fee-hero-title">${esc(t("detail.greenFee"))} <span>${esc(t("detail.greenFeeSub"))}</span></p>
         ${hasAnyFee
           ? `${feeCheapest != null
-              ? `<p class="fee-hero-value"><span class="fee-hero-from">${feeKindLabel} 최저</span>${won(feeCheapest)}</p>
+              ? `<p class="fee-hero-value"><span class="fee-hero-from">${esc(t("detail.feeLow", { day: feeKindLabel }))}</span>${won(feeCheapest)}</p>
             <div class="fee-hero-pair${feePairs.length === 1 ? " is-single" : ""}">
               ${feePairs.map(({ label, slot }) => `<div><span class="pair-label">${esc(label)}</span><span class="pair-value">${won(slot.value)}</span>${sourceTag(slot.source)}</div>`).join("")}
             </div>`
-              : `<p class="fee-hero-none">요금 안내 준비 중</p>`}
-            ${feeExtras.length ? `<p class="fee-hero-note">${esc(feeExtras.join(" · "))} <span class="muted">(팀 기준)</span></p>` : ""}
-            <p class="fee-hero-asof">업데이트 ${esc(courseUpdatedAt(detail) || "—")}</p>`
-          : `<p class="fee-hero-none">요금 안내 준비 중 · 전화 문의</p>`}
+              : `<p class="fee-hero-none">${esc(t("detail.feePreparing"))}</p>`}
+            ${feeExtras.length ? `<p class="fee-hero-note">${esc(feeExtras.join(" · "))} <span class="muted">(${esc(t("common.perTeam"))})</span></p>` : ""}
+            <p class="fee-hero-asof">${esc(t("common.updated"))} ${esc(courseUpdatedAt(detail) || "—")}</p>`
+          : `<p class="fee-hero-none">${esc(t("detail.feePreparingCall"))}</p>`}
       </aside>
     </section>
 
     ${factsHTML(course, detail)}
+    ${originalNote() ? `<p class="source-line">${esc(originalNote())}</p>` : ""}
 
     ${detailError ? `<div class="callout warn" role="alert">
-      <strong>${icon("alert")}상세 데이터를 불러오지 못했습니다</strong>
-      네트워크 문제일 수 있습니다. 아래는 기본 정보만 표시합니다.
-      <button type="button" class="link-btn" id="detail-retry">다시 시도</button>
+      <strong>${icon("alert")}${esc(t("detail.errorTitle"))}</strong>
+      ${esc(t("detail.errorBody"))}
+      <button type="button" class="link-btn" id="detail-retry">${esc(t("detail.retry"))}</button>
     </div>` : ""}
 
     ${!course.detail ? `<section class="section" aria-labelledby="s0">
-      <h2 id="s0">${iconTile("info", "blue", "sm")}기본 정보</h2>
+      <h2 id="s0">${iconTile("info", "blue", "sm")}${esc(t("detail.basicTitle"))}</h2>
       <div class="section-body">
         <div class="callout">
-          <strong>${icon("info")}이 구장은 요약 데이터만 있습니다</strong>
-          건설중·폐업 등으로 상세 수집 전이거나, 상세를 불러오지 못한 상태입니다. 위에 표시된 기본 정보가 확인된 값의 전부입니다.
+          <strong>${icon("info")}${esc(t("detail.basicOnlyTitle"))}</strong>
+          ${esc(t("detail.basicOnlyBody"))}
         </div>
       </div>
     </section>` : ""}`;
@@ -1176,6 +1286,8 @@ async function renderDetail(id: string): Promise<void> {
 
   const calcSlot = view.querySelector<HTMLElement>("#cost-calc");
   if (calcSlot && costModel) mountCostCard(calcSlot, costModel);
+  // L2 — 그린피 추이(스냅샷). 요금 파일이 없으면 자리를 비운다
+  mountHistory(view.querySelector<HTMLElement>("#fee-history"), CONFIG.dataBase, course.id);
   const planSlot = view.querySelector<HTMLElement>("#round-plan");
   if (planSlot && planModel) mountRoundPlan(planSlot, planModel);
   wireBookingActions(view, course, channels);
@@ -1211,23 +1323,23 @@ function factsHTML(c: CourseIndexItem, d: CourseDetail | null): string {
   const m = d?.master;
   const rows: Array<[string, string]> = [];
   const address = m?.address;
-  if (address) rows.push(["주소", esc(address)]);
-  if (m?.opened) rows.push(["개장", esc(m.opened)]);
-  if (m?.area_sqm) rows.push(["면적", `${fmtNum(m.area_sqm)}㎡ (${fmtNum(Math.round(m.area_sqm / 3.3058))}평)`]);
+  if (address) rows.push([t("facts.address"), esc(address)]);
+  if (m?.opened) rows.push([t("facts.opened"), esc(m.opened)]);
+  if (m?.area_sqm) rows.push([t("facts.area"), `${fmtNum(m.area_sqm)}㎡ (${fmtNum(Math.round(m.area_sqm / 3.3058))}평)`]);
   if (m?.operators?.length) {
     const operators = m.operators.filter((o) => !UNKNOWN_TEXT.test(textOf(o)));
-    if (operators.length) rows.push(["운영사", esc(operators.join(", "))]);
+    if (operators.length) rows.push([t("facts.operators"), esc(operators.join(", "))]);
   }
-  if (m?.designer) rows.push(["설계", esc(textOf(m.designer))]);
+  if (m?.designer) rows.push([t("facts.designer"), esc(textOf(m.designer))]);
   if (m?.nearest_ic?.name) {
-    rows.push(["최단 IC", `${esc(m.nearest_ic.name)}${m.nearest_ic.distance_km ? ` · ${m.nearest_ic.distance_km}km` : ""}`]);
+    rows.push([t("facts.ic"), `${esc(m.nearest_ic.name)}${m.nearest_ic.distance_km ? ` · ${m.nearest_ic.distance_km}km` : ""}`]);
   }
-  if (c.tel) rows.push(["대표전화", `<a class="link" href="tel:${esc(c.tel.replace(/[^\d+]/g, ""))}">${esc(c.tel)}</a>`]);
+  if (c.tel) rows.push([t("facts.tel"), `<a class="link" href="tel:${esc(c.tel.replace(/[^\d+]/g, ""))}">${esc(c.tel)}</a>`]);
   if (c.homepage) {
-    rows.push(["홈페이지", `<a class="link" href="${esc(c.homepage)}" target="_blank" rel="noopener noreferrer">${esc(shortUrl(c.homepage))}</a>`]);
+    rows.push([t("facts.homepage"), `<a class="link" href="${esc(c.homepage)}" target="_blank" rel="noopener noreferrer">${esc(shortUrl(c.homepage))}</a>`]);
   }
   if (c.lat != null && c.lng != null) {
-    rows.push(["좌표", `<a class="link" href="https://www.google.com/maps?q=${c.lat},${c.lng}" target="_blank" rel="noopener noreferrer">${c.lat.toFixed(4)}, ${c.lng.toFixed(4)}</a>`]);
+    rows.push([t("facts.coord"), `<a class="link" href="https://www.google.com/maps?q=${c.lat},${c.lng}" target="_blank" rel="noopener noreferrer">${c.lat.toFixed(4)}, ${c.lng.toFixed(4)}</a>`]);
   }
   if (!rows.length) return "";
   return `<dl class="facts">${rows.map(([k, v]) => `<div class="fact"><dt>${esc(k)}</dt><dd>${v}</dd></div>`).join("")}</dl>`;
@@ -1237,14 +1349,14 @@ function sectionNav(c: CourseIndexItem, visible: { s3: boolean; s4: boolean; s6:
   // 숨긴 섹션은 pill 에도 넣지 않는다. 번호는 화면 순서대로 다시 매기고,
   // 섹션 id(s3·s4…)는 기존 앵커 링크(#/c/{id}#s3)를 깨지 않도록 그대로 둔다.
   const items: Array<[string, string, string]> = [
-    ["s1", "01", "요금·예약"], ["s2", "02", "코스 스펙"], ["s-loc", "03", "위치·교통"],
-    ...(visible.s3 ? [["s3", "04", "현장 운영"]] as Array<[string, string, string]> : []),
-    ...(visible.s4 ? [["s4", "05", "부대시설"]] as Array<[string, string, string]> : []),
-    ["s5", "06", "공지·브리핑"],
-    ...(visible.s6 ? [["s6", "07", "동일 부지"]] as Array<[string, string, string]> : []),
-    ["s7", "08", "클럽 렌탈"], ["s8", "09", "데이터"],
+    ["s1", "01", t("sec.fee")], ["s2", "02", t("sec.course")], ["s-loc", "03", t("sec.loc")],
+    ...(visible.s3 ? [["s3", "04", t("sec.ops")]] as Array<[string, string, string]> : []),
+    ...(visible.s4 ? [["s4", "05", t("sec.facility")]] as Array<[string, string, string]> : []),
+    ["s5", "06", t("sec.notice")],
+    ...(visible.s6 ? [["s6", "07", t("sec.cluster")]] as Array<[string, string, string]> : []),
+    ["s7", "08", t("sec.rental")], ["s8", "09", t("sec.data")],
   ];
-  return `<nav class="section-nav" aria-label="상세 영역">
+  return `<nav class="section-nav" aria-label="${esc(t("detail.sectionNavAria"))}">
     <div class="section-nav-inner">
       ${items.map(([id, num, label]) => `<a href="#/c/${esc(c.id)}#${id}" data-sec="${id}"><span class="sec-i">${num}</span>${label}</a>`).join("")}
     </div>
@@ -1590,11 +1702,10 @@ function sections(d: CourseDetail, c: CourseIndexItem, others: Array<{ name: str
   const asOf = fee.as_of || fee.checked_at;
   const asOfAge = daysSince(asOf);
   const asOfStale = asOfAge != null && asOfAge > 90;
-  const staleNote = asOfStale ? `<span class="stale-inline">${asOfAge}일 전 확인 · 재확인 권장</span>` : "";
+  const staleNote = asOfStale ? `<span class="stale-inline">${esc(t("fee.staleInline", { n: asOfAge }))}</span>` : "";
   const cancelPolicy = cancel.cancel_policy;
   const cancelText = visibleText(typeof cancelPolicy === "string" ? cancelPolicy : cancelPolicy ? textOf(cancelPolicy) : "");
   const timeline = cancelText ? cancelTimeline(cancelText) : "";
-
   const feeCard = (label: string, slot: FeeSlot, note: string): string => {
     if (slot.value == null) return "";
     return `<div class="fee-card">
@@ -1604,24 +1715,24 @@ function sections(d: CourseDetail, c: CourseIndexItem, others: Array<{ name: str
     </div>`;
   };
   const cartCard = fees.cart == null ? "" : `<div class="fee-card">
-      <div class="fee-card-top"><span class="fee-card-label">카트</span><span class="src-tag src-neutral">팀 기준</span></div>
+      <div class="fee-card-top"><span class="fee-card-label">${esc(t("fee.cart"))}</span><span class="src-tag src-neutral">${esc(t("common.perTeam"))}</span></div>
       <div class="fee-card-value">${won(fees.cart)}</div>
-      <div class="fee-card-note">${esc(visibleText(fee.cart?.note) || "4인 1팀 기준")}</div>
+      <div class="fee-card-note">${esc(visibleText(fee.cart?.note) || t("fee.cartNote"))}</div>
     </div>`;
   const caddieCard = fees.caddie == null && !fees.caddieNone ? "" : `<div class="fee-card">
-      <div class="fee-card-top"><span class="fee-card-label">캐디피</span><span class="src-tag src-neutral">팀 기준</span></div>
-      <div class="fee-card-value">${fees.caddieNone ? "노캐디" : won(fees.caddie)}</div>
-      <div class="fee-card-note">${esc(visibleText(fee.caddie?.note) || "4인 1팀 기준 · 캐디에게 직접 지급")}</div>
+      <div class="fee-card-top"><span class="fee-card-label">${esc(t("fee.caddie"))}</span><span class="src-tag src-neutral">${esc(t("common.perTeam"))}</span></div>
+      <div class="fee-card-value">${fees.caddieNone ? esc(t("fee.noCaddie")) : won(fees.caddie)}</div>
+      <div class="fee-card-note">${esc(visibleText(fee.caddie?.note) || t("fee.caddieNote"))}</div>
     </div>`;
   const feeCardList = [
-    feeCard("주중", fees.weekday, "월~금 · 1인 18홀"),
-    feeCard("주말·공휴일", fees.weekend, "토·일·공휴일 · 1인 18홀"),
+    feeCard(t("common.weekday"), fees.weekday, t("fee.weekdayNote")),
+    feeCard(t("common.weekendHoliday"), fees.weekend, t("fee.weekendNote")),
     cartCard,
     caddieCard,
   ].filter(Boolean);
   const feeCardsHTML = feeCardList.length
     ? `<div class="fee-cards${feeCardList.length === 1 ? " is-single" : ""}">${feeCardList.join("")}</div>`
-    : `<div class="callout">요금 안내 준비 중 · 전화 문의</div>`;
+    : `<div class="callout">${esc(t("detail.feePreparingCall"))}</div>`;
 
   const tableHTML = (() => {
     const rows = (fee.official_table?.rows ?? []).filter((r) => r && (r.value || r.amounts?.length));
@@ -1635,11 +1746,11 @@ function sections(d: CourseDetail, c: CourseIndexItem, others: Array<{ name: str
       if (!g.rows.some((x) => `${x.label || ""}|${x.value || ""}` === key)) g.rows.push(r);
     }
     const body = groups.map((g) =>
-      `<tr class="group"><th scope="colgroup" colspan="2">${esc(g.sec === "구분" ? "요금" : g.sec)}</th></tr>` +
+      `<tr class="group"><th scope="colgroup" colspan="2">${esc(g.sec === "구분" ? t("fee.tableCategory") : g.sec)}</th></tr>` +
       g.rows.map((r) => `<tr><td>${esc(r.label && r.label !== g.sec ? r.label : "")}</td><td class="num">${esc(r.value || (r.amounts?.length ? r.amounts.map((a) => won(a)).join(" · ") : "—"))}</td></tr>`).join("")).join("");
-    const table = `<div class="table-wrap"><table class="fee-table"><thead class="sr-only"><tr><th scope="col">구분</th><th scope="col">요금</th></tr></thead><tbody>${body}</tbody></table></div>`;
+    const table = `<div class="table-wrap"><table class="fee-table"><thead class="sr-only"><tr><th scope="col">${esc(t("fee.tableCategory"))}</th><th scope="col">${esc(t("fee.tableAmount"))}</th></tr></thead><tbody>${body}</tbody></table></div>`;
     if (groups.length > 2 || rows.length > 8) {
-      return `<details class="more-box"><summary>공식 요금표 ${rows.length}개 항목 펼치기</summary>${table}</details>`;
+      return `<details class="more-box"><summary>${esc(t("fee.tableMore", { n: rows.length }))}</summary>${table}</details>`;
     }
     return table;
   })();
@@ -1650,11 +1761,11 @@ function sections(d: CourseDetail, c: CourseIndexItem, others: Array<{ name: str
     return t ? [label, esc(t)] : null;
   };
   const detailRows = [
-    detailRow("공식 요금 상세", od.green_detail),
-    detailRow("카트 상세", od.cart_detail),
-    detailRow("캐디 상세", od.caddie_detail),
-    detailRow("시설 이용료", od.facility_fee),
-    detailRow("클럽 대여", od.rental),
+    detailRow(t("fee.greenDetail"), od.green_detail),
+    detailRow(t("fee.cartDetail"), od.cart_detail),
+    detailRow(t("fee.caddieDetail"), od.caddie_detail),
+    detailRow(t("fee.facilityFee"), od.facility_fee),
+    detailRow(t("fee.clubRental"), od.rental),
   ].filter((x): x is [string, string] => x !== null);
 
   const member = fee.member;
@@ -1662,40 +1773,41 @@ function sections(d: CourseDetail, c: CourseIndexItem, others: Array<{ name: str
 
   const s1 = `<section class="section" id="s1" aria-labelledby="s1-h">
     <div class="section-head">
-      <h2 id="s1-h">${iconTile("card", "blue", "sm")}요금 · 예약</h2>
-      <p class="section-desc">1인 18홀 비회원 정상가. 시즌·시간대·예약 경로에 따라 달라지므로 예약 화면에서 최종 확인하세요.</p>
+      <h2 id="s1-h">${iconTile("card", "blue", "sm")}${esc(t("sec.fee"))}</h2>
+      <p class="section-desc">${esc(t("fee.desc"))}</p>
     </div>
     <div class="section-body">
-      ${unavailable ? `<div class="callout warn"><strong>${icon("alert")}현재 이용 불가 구장입니다</strong>아래 요금은 마지막으로 확인된 값이며 예약·결제할 수 없습니다.</div>` : ""}
+      ${unavailable ? `<div class="callout warn"><strong>${icon("alert")}${esc(t("fee.unavailableTitle"))}</strong>${esc(t("fee.unavailableBody"))}</div>` : ""}
       ${feeCardsHTML}
       ${extra.costModel ? `<div id="cost-calc" class="calc-slot"></div>` : ""}
+      <div id="fee-history" class="hist-slot"></div>
       ${extra.planModel ? `<div id="round-plan" class="plan-slot"></div>` : ""}
-      ${asOf ? `<p class="source-line">${isAdmin() ? `요금 기준 ${esc(fee.basis || "")} · 확인 ${fmtDate(asOf)}` : `요금 업데이트 ${esc(fmtDate(asOf))}`} ${staleNote}</p>` : ""}
+      ${asOf ? `<p class="source-line">${isAdmin() ? esc(t("fee.asOfAdmin", { basis: fee.basis || "", date: fmtDate(asOf) })) : esc(t("fee.asOf", { date: fmtDate(asOf) }))} ${staleNote}</p>` : ""}
       ${market && (market.weekday_min || market.weekend_min) ? `<div class="inline-fact">
-        <span class="inline-fact-label">관측 최저가</span>
-        <span>${market.weekday_min ? `주중 ${won(market.weekday_min)}` : ""}${market.weekday_min && market.weekend_min ? " · " : ""}${market.weekend_min ? `주말 ${won(market.weekend_min)}` : ""}</span>
+        <span class="inline-fact-label">${esc(t("fee.observedLow"))}</span>
+        <span>${market.weekday_min ? `${esc(t("common.weekday"))} ${won(market.weekday_min)}` : ""}${market.weekday_min && market.weekend_min ? " · " : ""}${market.weekend_min ? `${esc(t("common.weekend"))} ${won(market.weekend_min)}` : ""}</span>
         ${isAdmin() && market.source ? `<span class="muted">${esc(market.source)}</span>` : ""}
       </div>` : ""}
       ${member && (member.weekday || member.weekend) ? `<div class="inline-fact">
-        <span class="inline-fact-label">회원제 요금</span>
-        <span>${member.weekday ? `주중 ${won(member.weekday)}` : ""}${member.weekday && member.weekend ? " · " : ""}${member.weekend ? `주말 ${won(member.weekend)}` : ""}</span>
+        <span class="inline-fact-label">${esc(t("fee.memberTitle"))}</span>
+        <span>${member.weekday ? `${esc(t("common.weekday"))} ${won(member.weekday)}` : ""}${member.weekday && member.weekend ? " · " : ""}${member.weekend ? `${esc(t("common.weekend"))} ${won(member.weekend)}` : ""}</span>
       </div>` : ""}
       ${detailRows.length ? `<dl class="fact-list">${detailRows.map(([k, v]) => `<div><dt>${esc(k)}</dt><dd>${v}</dd></div>`).join("")}</dl>` : ""}
       ${tableHTML}
 
       <div class="policy-grid">
         <div class="policy-card">
-          <h3 class="card-title">${icon("calendar")}예약 오픈</h3>
+          <h3 class="card-title">${icon("calendar")}${esc(t("fee.openTitle"))}</h3>
           ${cancel.open_cycle
             ? `<p class="policy-text">${esc(isAdmin() ? cancel.open_cycle : publicNote(cancel.open_cycle))}</p>`
-            : `<p class="policy-text muted">예약 오픈 일정은 골프장에 전화로 확인하세요.</p>`}
+            : `<p class="policy-text muted">${esc(t("fee.openFallback"))}</p>`}
         </div>
         <div class="policy-card">
-          <h3 class="card-title">${icon("clock")}취소 · 위약</h3>
+          <h3 class="card-title">${icon("clock")}${esc(t("fee.cancelTitle"))}</h3>
           ${timeline}
           ${cancelText
             ? `<p class="policy-text">${esc(cancelText)}</p>`
-            : `<p class="policy-text muted">취소 규정은 예약 전 전화로 확인하세요.</p>`}
+            : `<p class="policy-text muted">${esc(t("fee.cancelFallback"))}</p>`}
           ${visibleText(cancel.notes) ? `<p class="policy-text muted">${esc(visibleText(cancel.notes))}</p>` : ""}
           ${evidenceDetails(cancel.evidence, "취소·위약 근거")}
           ${evidenceDetails(cancel.weather_evidence, "악천후 정산 근거")}
@@ -1734,9 +1846,9 @@ function sections(d: CourseDetail, c: CourseIndexItem, others: Array<{ name: str
       }
     }
     if (rows.length) {
-      kgaHTML = `<details class="more-box"><summary>KGA 코스레이팅 · 슬로프 ${rows.length}행 펼치기</summary>
+      kgaHTML = `<details class="more-box"><summary>${esc(t("course.kgaSummary", { n: rows.length }))}</summary>
         <div class="table-wrap"><table>
-        <thead><tr><th scope="col">조합</th><th scope="col">티</th><th scope="col">성별</th><th scope="col">길이(yd)</th><th scope="col">코스레이팅</th><th scope="col">슬로프</th></tr></thead>
+        <thead><tr><th scope="col">${esc(t("course.kgaCombo"))}</th><th scope="col">${esc(t("course.kgaTee"))}</th><th scope="col">${esc(t("course.kgaGender"))}</th><th scope="col">${esc(t("course.kgaLength"))}</th><th scope="col">${esc(t("course.kgaRating"))}</th><th scope="col">${esc(t("course.kgaSlope"))}</th></tr></thead>
         <tbody>${rows.join("")}</tbody></table></div>
         ${isAdmin() ? `<p class="source-line">출처: 대한골프협회(KGA) 코스레이팅™/슬로프레이팅™ · 18홀 조합 단위</p>` : ""}
       </details>`;
@@ -1745,10 +1857,10 @@ function sections(d: CourseDetail, c: CourseIndexItem, others: Array<{ name: str
 
   const holes = m.holes ?? {};
   const holeText = [
-    holes.total ? `총 ${holes.total}홀` : null,
-    holes.member ? `회원 ${holes.member}` : null,
-    holes.public ? `대중 ${holes.public}` : null,
-    holes.non_member ? `비회원 ${holes.non_member}` : null,
+    holes.total ? t("course.holesTotal", { n: holes.total }) : null,
+    holes.member ? t("course.holesMember", { n: holes.member }) : null,
+    holes.public ? t("course.holesPublic", { n: holes.public }) : null,
+    holes.non_member ? t("course.holesNonMember", { n: holes.non_member }) : null,
   ].filter(Boolean).join(" · ");
   const yard = co.length_m ? Math.round(co.length_m * 1.0936) : null;
   const courseNames = co.course_names ? visibleText(textOf(co.course_names)) : "";
@@ -1758,34 +1870,35 @@ function sections(d: CourseDetail, c: CourseIndexItem, others: Array<{ name: str
 
   const s2 = `<section class="section" id="s2" aria-labelledby="s2-h">
     <div class="section-head">
-      <h2 id="s2-h">${iconTile("grass", "green", "sm")}코스 스펙</h2>
-      <p class="section-desc">규모·전장·잔디와 KGA 공식 레이팅. 레이팅은 난이도 비교의 1차 기준입니다.</p>
+      <h2 id="s2-h">${iconTile("grass", "green", "sm")}${esc(t("sec.course"))}</h2>
+      <p class="section-desc">${esc(t("course.desc"))}</p>
     </div>
     <div class="section-body">
       ${co.length_m ? `<div class="spec-hero">
         <div class="spec-hero-main">
-          <span class="spec-label">전장 (18홀 기준)</span>
+          <span class="spec-label">${esc(t("course.lengthLabel"))}</span>
           <p class="spec-value">${fmtNum(co.length_m)}<span>m</span> <small>${yard ? `${fmtNum(yard)}yd` : ""}</small></p>
         </div>
         ${gauge({
           value: co.length_m, min: 4800, max: 7800,
           ticks: [{ at: 4800, label: "4.8km" }, { at: 6300, label: "6.3km" }, { at: 7800, label: "7.8km" }],
-          label: `전장 ${fmtNum(co.length_m)}미터, 18홀 기준 4.8km~7.8km 범위`,
+          label: `${t("course.lengthLabel")} ${fmtNum(co.length_m)}m`,
         })}
-        <p class="spec-hint">국내 18홀 평균은 약 6.4km입니다.</p>
+        <p class="spec-hint">${esc(t("course.lengthHint"))}</p>
       </div>` : ""}
       <dl class="spec-facts">
-        ${holeText ? `<div><dt>홀 구성</dt><dd>${esc(holeText)}</dd></div>` : ""}
-        ${co.par ? `<div><dt>파</dt><dd>${co.par}</dd></div>` : ""}
-        ${(co.blocks ?? []).length ? `<div><dt>코스 구성</dt><dd>${esc((co.blocks ?? []).join(" · "))}</dd></div>` : ""}
-        ${(m.course_blocks ?? []).length ? `<div><dt>세부 코스명</dt><dd>${esc((m.course_blocks ?? []).join(" · "))}</dd></div>` : ""}
-        ${courseNames ? `<div><dt>코스명</dt><dd>${esc(courseNames)}</dd></div>` : ""}
-        ${nightLight ? `<div><dt>야간 라운드</dt><dd>${esc(nightLight)}</dd></div>` : ""}
+        ${holeText ? `<div><dt>${esc(t("course.holeConfig"))}</dt><dd>${esc(holeText)}</dd></div>` : ""}
+        ${co.par ? `<div><dt>${esc(t("course.par"))}</dt><dd>${co.par}</dd></div>` : ""}
+        ${(co.blocks ?? []).length ? `<div><dt>${esc(t("course.blocks"))}</dt><dd>${esc((co.blocks ?? []).join(" · "))}</dd></div>` : ""}
+        ${(m.course_blocks ?? []).length ? `<div><dt>${esc(t("course.blockNames"))}</dt><dd>${esc((m.course_blocks ?? []).join(" · "))}</dd></div>` : ""}
+        ${courseNames ? `<div><dt>${esc(t("course.names"))}</dt><dd>${esc(courseNames)}</dd></div>` : ""}
+        ${nightLight ? `<div><dt>${esc(t("course.night"))}</dt><dd>${esc(nightLight)}</dd></div>` : ""}
+        ${c.slope?.value != null ? `<div><dt>${esc(t("course.kgaSlope"))}</dt><dd title="${esc(t("detail.slopeBadgeTitle"))}">${esc(String(c.slope.value))} <span class="muted">${esc(c.slope.tee === "median" ? "KGA" : `KGA · ${c.slope.tee}`)}</span></dd></div>` : ""}
       </dl>
       ${grassCards ? `<div class="grass-cards">${grassCards}</div>` : ""}
-      ${(co.extra_courses ?? []).length ? `<div class="extra-courses"><h3 class="card-title">추가 코스</h3>${extraCoursesHTML(co.extra_courses ?? [])}</div>` : ""}
+      ${(co.extra_courses ?? []).length ? `<div class="extra-courses"><h3 class="card-title">${esc(t("course.extra"))}</h3>${extraCoursesHTML(co.extra_courses ?? [])}</div>` : ""}
       ${kgaHTML}
-      ${co.hole_by_hole ? `<details class="more-box"><summary>홀별 파·거리 원본 보기</summary><pre class="pre">${esc(JSON.stringify(co.hole_by_hole, null, 1))}</pre></details>` : ""}
+      ${co.hole_by_hole ? `<details class="more-box"><summary>${esc(t("course.holeByHole"))}</summary><pre class="pre">${esc(JSON.stringify(co.hole_by_hole, null, 1))}</pre></details>` : ""}
     </div>
   </section>`;
 
@@ -1822,12 +1935,12 @@ function sections(d: CourseDetail, c: CourseIndexItem, others: Array<{ name: str
   }
   const s3 = (isAdmin() || opsTiles.length) ? `<section class="section" id="s3" aria-labelledby="s3-h">
     <div class="section-head">
-      <h2 id="s3-h">${iconTile("golf", "orange", "sm")}현장 운영</h2>
-      <p class="section-desc">노캐디·인원·카트·체크인처럼 예약 전에 알아야 하는 실제 플레이 조건.</p>
+      <h2 id="s3-h">${iconTile("golf", "orange", "sm")}${esc(t("sec.ops"))}</h2>
+      <p class="section-desc">${esc(t("ops.desc"))}</p>
     </div>
     <div class="section-body">
       ${opsTiles.length ? `<div class="tiles">${opsTiles.join("")}</div>`
-        : `<div class="callout"><strong>${icon("info")}확인된 운영 정보가 없습니다</strong>공식 채널에서 확인된 운영 정보가 아직 없습니다. 전화·현장 확인이 필요합니다.</div>`}
+        : `<div class="callout"><strong>${icon("info")}${esc(t("ops.emptyTitle"))}</strong>${esc(t("ops.emptyBody"))}</div>`}
       ${unconfirmedBox("운영 정보", opsUnknown)}
       ${isAdmin() && ops.browser_official
         ? `<details class="more-box"><summary>수집 원문 보기</summary><pre class="pre">${esc(JSON.stringify(ops.browser_official, null, 1))}</pre></details>`
@@ -1849,11 +1962,11 @@ function sections(d: CourseDetail, c: CourseIndexItem, others: Array<{ name: str
   }
   const s4 = (isAdmin() || facTiles.length) ? `<section class="section" id="s4" aria-labelledby="s4-h">
     <div class="section-head">
-      <h2 id="s4-h">${iconTile("building", "purple", "sm")}부대시설</h2>
-      <p class="section-desc">연습·식음·락카·숙박·야간 조명처럼 라운드 환경을 좌우하는 시설.</p>
+      <h2 id="s4-h">${iconTile("building", "purple", "sm")}${esc(t("sec.facility"))}</h2>
+      <p class="section-desc">${esc(t("fac.desc"))}</p>
     </div>
     <div class="section-body">
-      ${facTiles.length ? `<div class="tiles">${facTiles.join("")}</div>` : `<div class="callout"><strong>${icon("info")}확인된 시설 정보가 없습니다</strong>공식 채널에서 확인된 부대시설 정보가 아직 없습니다.</div>`}
+      ${facTiles.length ? `<div class="tiles">${facTiles.join("")}</div>` : `<div class="callout"><strong>${icon("info")}${esc(t("fac.emptyTitle"))}</strong>${esc(t("fac.emptyBody"))}</div>`}
       ${unconfirmedBox("시설 정보", facUnknown)}
       ${isAdmin() && (fac.gf_facilities ?? []).length ? `<p class="source-line">참고(공식 시설 목록): ${esc((fac.gf_facilities ?? []).slice(0, 3).join(" / "))}</p>` : ""}
     </div>
@@ -1876,7 +1989,7 @@ function sections(d: CourseDetail, c: CourseIndexItem, others: Array<{ name: str
           ? `<a class="link" href="${esc(n.url)}" target="_blank" rel="noopener noreferrer">${noticeTitle(n.title)}</a>`
           : noticeTitle(n.title)}</span>
       </li>`).join("")}</ul>`
-    : `<p class="section-desc">표시할 최근 운영 공지가 없습니다.</p>`;
+    : `<p class="section-desc">${esc(t("notice.empty"))}</p>`;
   const period = alert ? periodText(alert.period) : "";
   const alertSummary = alert ? visibleText(alert.summary) : "";
   const alertDetail = alert ? visibleText(alert.detail) : "";
@@ -1886,33 +1999,33 @@ function sections(d: CourseDetail, c: CourseIndexItem, others: Array<{ name: str
   const review = br.review;
   const s5 = `<section class="section" id="s5" aria-labelledby="s5-h">
     <div class="section-head">
-      <h2 id="s5-h">${iconTile("bell", "yellow", "sm")}공지 · 브리핑</h2>
-      <p class="section-desc">휴장·에어레이션·요금 변경 같은 최근 공지와 라운더 평가. 예약 전에 가장 먼저 볼 영역입니다.</p>
+      <h2 id="s5-h">${iconTile("bell", "yellow", "sm")}${esc(t("sec.notice"))}</h2>
+      <p class="section-desc">${esc(t("notice.desc"))}</p>
     </div>
     <div class="section-body">
       ${alert ? `<div class="callout alert-card ${(alert.level ? LEVEL[alert.level] : undefined) ?? "info"}">
-        <strong>${icon(alert.level === "closure" ? "alert" : "info")}${esc(alertSummary || (alert.confirmed ? "확인된 공지" : "안내"))}</strong>
+        <strong>${icon(alert.level === "closure" ? "alert" : "info")}${esc(alertSummary || (alert.confirmed ? t("notice.confirmedShort") : t("common.info")))}</strong>
         ${alertDetail && alertDetail !== alertSummary ? `<div class="alert-detail">${briefBodyHTML(alertDetail)}</div>` : ""}
-        ${period && !periodAlreadyIn(alert.period, `${alertSummary} ${alertDetail}`) ? `<div class="sub">기간: ${esc(period)}</div>` : ""}
+        ${period && !periodAlreadyIn(alert.period, `${alertSummary} ${alertDetail}`) ? `<div class="sub">${esc(t("notice.periodPrefix", { period }))}</div>` : ""}
         ${isAdmin() && alert.source_url ? `<div class="sub"><a class="link" href="${esc(alert.source_url)}" target="_blank" rel="noopener noreferrer">근거 보기</a></div>` : ""}
       </div>` : ""}
       ${review && review.score_10 != null ? `<div class="review-card">
-        <div class="review-head"><h3 class="card-title">${icon("star")}라운더 평가</h3>${review.count ? `<span class="muted">${fmtNum(review.count)}건 집계</span>` : ""}</div>
+        <div class="review-head"><h3 class="card-title">${icon("star")}${esc(t("notice.review"))}</h3>${review.count ? `<span class="muted">${esc(t("notice.reviewCount", { n: fmtNum(review.count) }))}</span>` : ""}</div>
         ${ratingBar(review.score_10)}
         ${review.note && visibleText(review.note) ? `<p class="source-line">${esc(visibleText(review.note))}</p>` : ""}
       </div>` : ""}
       ${noticeSummaryBody ? `<div class="brief-block">
-        <span class="inline-fact-label">공지 요약</span>
+        <span class="inline-fact-label">${esc(t("notice.summary"))}</span>
         <div class="brief-body">${noticeSummaryBody}</div>
       </div>` : ""}
       ${courseNotesBody ? `<div class="brief-block is-note">
-        <span class="inline-fact-label">코스 메모</span>
+        <span class="inline-fact-label">${esc(t("notice.notes"))}</span>
         <div class="brief-body">${courseNotesBody}</div>
       </div>` : ""}
       <div class="notice-block">
-        <h3 class="card-title">${icon("bell")}최근 공지</h3>
+        <h3 class="card-title">${icon("bell")}${esc(t("notice.recent"))}</h3>
         ${noticeHTML}
-        ${products.length ? `<details class="more-box"><summary>클럽·장비 상품 소식 ${products.length}건 (공지 아님)</summary>
+        ${products.length ? `<details class="more-box"><summary>${esc(t("notice.products", { n: products.length }))}</summary>
           <ul class="notice-list is-product">${products.slice(0, 10).map((n) => `<li${n.date ? "" : ' class="is-undated"'}>${noticeTime(n.date)}<span class="notice-title">${noticeTitle(n.title)}</span></li>`).join("")}</ul>
         </details>` : ""}
         ${br.collected_at ? `<p class="source-line">${isAdmin() ? `수집 ${fmtDate(br.collected_at)}` : `공지 확인 ${esc(fmtDate(br.collected_at))}`}</p>` : ""}
@@ -1926,8 +2039,8 @@ function sections(d: CourseDetail, c: CourseIndexItem, others: Array<{ name: str
   const cluster = c.cluster ? state.clusters.get(c.cluster) ?? null : null;
   const s6 = cluster && others.length ? `<section class="section" id="s6" aria-labelledby="s6-h">
     <div class="section-head">
-      <h2 id="s6-h">${iconTile("pin", "teal", "sm")}동일 부지 코스</h2>
-      <p class="section-desc">${esc(visibleText(cluster.relationship) || visibleText(cluster.basis) || "같은 소재지의 코스가 별도 레코드로 등록되어 있습니다.")}</p>
+      <h2 id="s6-h">${iconTile("pin", "teal", "sm")}${esc(t("sec.cluster"))}</h2>
+      <p class="section-desc">${esc(visibleText(cluster.relationship) || visibleText(cluster.basis) || t("cluster.descDefault"))}</p>
     </div>
     <div class="section-body">
       <div class="cluster-grid">
@@ -1935,16 +2048,16 @@ function sections(d: CourseDetail, c: CourseIndexItem, others: Array<{ name: str
           const item = o.item;
           const feeV = item ? (item.green_fee?.weekend ?? item.green_fee?.weekday ?? null) : null;
           const meta = [
-            item?.type && !UNKNOWN_TEXT.test(item.type) ? esc(item.type) : "",
-            feeV != null ? `그린피 ${won(feeV)}~` : "",
+            item?.type && !UNKNOWN_TEXT.test(item.type) ? esc(membership(item.type)) : "",
+            feeV != null ? `${esc(t("detail.greenFee"))} ${won(feeV)}~` : "",
           ].filter(Boolean).join(" · ");
           return `<div class="cluster-card">
             <div class="cluster-top">
               <h3 class="cluster-name">${o.id ? `<a class="link" href="#/c/${esc(o.id)}">${esc(o.name)}</a>` : esc(o.name)}</h3>
-              ${o.holes ? `<span class="stat-pill"><b>${o.holes}</b>홀</span>` : ""}
+              ${o.holes ? `<span class="stat-pill"><b>${o.holes}</b>${esc(t("card.holesUnit"))}</span>` : ""}
             </div>
             ${meta ? `<p class="cluster-meta">${meta}</p>` : ""}
-            ${o.id ? `<a class="btn btn-sm" href="#/c/${esc(o.id)}">상세 보기${icon("arrow-right")}</a>` : ""}
+            ${o.id ? `<a class="btn btn-sm" href="#/c/${esc(o.id)}">${esc(t("cluster.detail"))}${icon("arrow-right")}</a>` : ""}
           </div>`;
         }).join("")}
       </div>
@@ -1954,10 +2067,10 @@ function sections(d: CourseDetail, c: CourseIndexItem, others: Array<{ name: str
   /* 08 클럽 렌탈 */
   const nd = rt.nearby_delivery;
   const rentalRows: Array<[string, unknown]> = [
-    ["대여 가능", rt.available], ["풀세트 요금", rt.full_set != null ? won(rt.full_set) : null],
-    ["요금 안내", rt.fee_text], ["브랜드", rt.brand], ["좌타용", rt.left_handed],
-    ["골프화", rt.shoes], ["9홀", rt.nine_hole], ["거리측정기", rt.range_finder],
-    ["사전 예약", rt.reservation],
+    [t("rental.available"), rt.available], [t("rental.fullSet"), rt.full_set != null ? won(rt.full_set) : null],
+    [t("rental.feeText"), rt.fee_text], [t("rental.brand"), rt.brand], [t("rental.leftHanded"), rt.left_handed],
+    [t("rental.shoes"), rt.shoes], [t("rental.nineHole"), rt.nine_hole], [t("rental.rangeFinder"), rt.range_finder],
+    [t("rental.reservation"), rt.reservation],
   ];
   const rentalTiles = rentalRows.map(([label, v]) => {
     const t = valCell(v);
@@ -1971,31 +2084,31 @@ function sections(d: CourseDetail, c: CourseIndexItem, others: Array<{ name: str
     return `<div class="provider${bookable ? "" : " is-off"}">
       <div class="provider-top">
         <h3 class="provider-name">${esc(p.name)}</h3>
-        <span class="badge ${bookable ? "ok" : "danger"}">${bookable ? "예약 가능" : "예약 중단"}</span>
+        <span class="badge ${bookable ? "ok" : "danger"}">${esc(bookable ? t("rental.bookable") : t("rental.stopped"))}</span>
       </div>
       ${price ? `<p class="provider-price">${esc(price)}</p>` : ""}
       ${meta ? `<p class="provider-meta">${esc(meta)}</p>` : ""}
       <div class="provider-actions">
         ${p.phone ? `<a class="btn btn-sm" href="tel:${esc(String(p.phone).replace(/[^\d+]/g, ""))}">${icon("phone")}${esc(p.phone)}</a>` : ""}
-        ${p.coverage ? `<span class="tag">권역 ${esc(String(p.coverage))}</span>` : ""}
+        ${p.coverage ? `<span class="tag">${esc(t("rental.regionTag", { region: String(p.coverage) }))}</span>` : ""}
       </div>
     </div>`;
   }).join("");
 
   const s7 = `<section class="section" id="s7" aria-labelledby="s7-h">
     <div class="section-head">
-      <h2 id="s7-h">${iconTile("bag", "blue", "sm")}클럽 렌탈</h2>
-      <p class="section-desc">골프장 자체 대여와, 이 권역에 배송·픽업이 가능한 렌탈 업체.</p>
+      <h2 id="s7-h">${iconTile("bag", "blue", "sm")}${esc(t("sec.rental"))}</h2>
+      <p class="section-desc">${esc(t("rental.desc"))}</p>
     </div>
     <div class="section-body">
-      ${rentalTiles ? `<div class="mini-facts">${rentalTiles}</div>` : `<div class="callout"><strong>${icon("info")}자체 대여 정보 없음</strong>골프장 자체 클럽 대여 정보가 확인되지 않았습니다.</div>`}
+      ${rentalTiles ? `<div class="mini-facts">${rentalTiles}</div>` : `<div class="callout"><strong>${icon("info")}${esc(t("rental.noSelf"))}</strong>${esc(t("rental.noSelfBody"))}</div>`}
       ${evidenceDetails(rt.evidence, "대여 근거")}
       ${nd && (nd.providers ?? []).length ? `<div class="providers">
-        <div class="providers-head"><h3 class="card-title">${esc(nd.region || "")} 권역 배송 업체 ${(nd.providers ?? []).length}곳</h3>
-        <a class="link" href="#/rental">전체 렌탈 업체 보기 →</a></div>
+        <div class="providers-head"><h3 class="card-title">${esc(t("rental.regionProviders", { region: nd.region || "", n: (nd.providers ?? []).length }))}</h3>
+        <a class="link" href="#/rental">${esc(t("rental.allLink"))}</a></div>
         ${providers}
-        <p class="source-line">${esc(nd.note_code || "")}${nd.verified_at ? (isAdmin() ? ` · 확인 ${esc(nd.verified_at)}` : ` · 업데이트 ${esc(fmtDate(nd.verified_at))}`) : ""}</p>
-      </div>` : `<p class="section-desc"><a class="link" href="#/rental">전체 렌탈·딜리버리 업체 보기 →</a></p>`}
+        <p class="source-line">${esc(nd.note_code || "")}${nd.verified_at ? (isAdmin() ? ` · 확인 ${esc(nd.verified_at)}` : ` · ${esc(t("common.updated"))} ${esc(fmtDate(nd.verified_at))}`) : ""}</p>
+      </div>` : `<p class="section-desc"><a class="link" href="#/rental">${esc(t("rental.allLink"))}</a></p>`}
     </div>
   </section>`;
 
@@ -2009,34 +2122,36 @@ function sections(d: CourseDetail, c: CourseIndexItem, others: Array<{ name: str
   const feeAsOf = fmtDate(fee.as_of || fee.checked_at);
   const noticeAsOf = fmtDate(br.collected_at);
   const staleParts: string[] = [];
-  for (const [label, iso] of [["요금", fee.as_of || fee.checked_at], ["공지", br.collected_at]] as Array<[string, string | null | undefined]>) {
+  for (const [label, iso] of [[t("data.summaryFeeTag"), fee.as_of || fee.checked_at], [t("data.summaryNoticeTag"), br.collected_at]] as Array<[string, string | null | undefined]>) {
     const age = daysSince(iso);
-    if (age != null && age > 90) staleParts.push(`${label} ${age}일 경과`);
+    if (age != null && age > 90) staleParts.push(t("data.staleDays", { label, n: age }));
   }
-  const dataSummary = `<p class="data-summary">이 구장 데이터: ${[
-    feeAsOf ? `요금 ${feeAsOf}` : "",
-    noticeAsOf ? `공지 ${noticeAsOf}` : "",
-    updated ? `수집 ${updated}` : "",
-  ].filter(Boolean).join(" · ")}${staleParts.length ? ` — <span class="stale-inline">${staleParts.join(" · ")} · 확인 권장</span>` : ""}</p>`;
+  const dataSummary = `<p class="data-summary">${esc(t("data.summaryPrefix"))} ${[
+    feeAsOf ? t("data.summaryFee", { date: feeAsOf }) : "",
+    noticeAsOf ? t("data.summaryNotice", { date: noticeAsOf }) : "",
+    updated ? t("data.summaryCollected", { date: updated }) : "",
+  ].filter(Boolean).join(" · ")}${staleParts.length ? ` — <span class="stale-inline">${esc(t("data.staleWarn", { parts: staleParts.join(" · ") }))}</span>` : ""}</p>`;
   const shareUrl = `https://coursebrief.pages.dev/c/${c.id}/`;
   // 공유는 해시 URL 이 아니라 프리렌더 경로로 — SNS·메신저 크롤러가 구장별 OG 를 읽는 유일한 주소다
   const dataActions = `<p class="data-actions">
-    <button type="button" class="link-btn" data-copy="${esc(shareUrl)}" data-copy-label="공유 링크">${icon("copy")}공유 링크 복사</button>
+    <button type="button" class="link-btn" data-copy="${esc(shareUrl)}" data-copy-label="${esc(t("data.share"))}">${icon("copy")}${esc(t("data.share"))}</button>
     <span class="dot" aria-hidden="true">·</span>
-    <a class="link" href="#/report?c=${esc(c.id)}">정보 오류·누락 제보</a>
+    <button type="button" class="link-btn" data-embed="${esc(c.id)}">${icon("external")}${esc(t("embed.copy"))}</button>
+    <span class="dot" aria-hidden="true">·</span>
+    <a class="link" href="#/report?c=${esc(c.id)}">${esc(t("data.report"))}</a>
   </p>`;
   const dataInfo = isAdmin()
     ? `<section class="section" id="s8" aria-labelledby="s8-h">
-        <div class="section-head"><h2 id="s8-h">${iconTile("chart", "grey", "sm")}데이터 정보</h2>
+        <div class="section-head"><h2 id="s8-h">${iconTile("chart", "grey", "sm")}${esc(t("sec.dataAdmin"))}</h2>
         <p class="section-desc">7개 영역 채움률. 비어 있는 값은 '미확인'이며 '없음'과 다릅니다.</p></div>
         <div class="section-body"><div class="cov-list">${covRows}</div>
         ${dataSummary}
-        <p class="source-line">수집 ${esc(updated)} · 스키마 ${esc(d.meta?.schema || "")} · <a class="link" href="${REPO_URL}/blob/main/data/v29/schema.md" target="_blank" rel="noopener noreferrer">스키마 문서</a> · <a class="link" href="#/admin-qa">QA 대시보드</a></p>
+        <p class="source-line">수집 ${esc(updated)} · 스키마 ${esc(d.meta?.schema || "")} · <a class="link" href="${REPO_URL}/blob/main/data/v29/schema.md" target="_blank" rel="noopener noreferrer">스키마 문서</a> · <a class="link" href="#/admin-qa">QA 대시보드</a> · <a class="link" href="${REPO_URL}/blob/main/docs/API.md" target="_blank" rel="noopener noreferrer">API 문서</a></p>
         ${dataActions}</div>
       </section>`
     : `<section class="section" id="s8" aria-labelledby="s8-h">
-        <div class="section-head"><h2 id="s8-h">${iconTile("chart", "grey", "sm")}데이터 기준</h2>
-        <p class="section-desc">${esc(updated || "—")} 기준 · 공개 자료에서 확인된 값만 표시합니다.</p></div>
+        <div class="section-head"><h2 id="s8-h">${iconTile("chart", "grey", "sm")}${esc(t("sec.data"))}</h2>
+        <p class="section-desc">${esc(t("data.basisDesc", { date: updated || "—" }))}</p></div>
         <div class="section-body">${dataSummary}${dataActions}</div>
       </section>`;
 
@@ -2090,9 +2205,9 @@ function compareColumn(c: CourseIndexItem, d: CourseDetail | null): CompareColum
   if (green != null) {
     const sum = green * 4 + (fees.cart ?? 0) + (fees.caddie ?? 0);
     const missing: string[] = [];
-    if (fees.cart == null) missing.push("카트");
-    if (fees.caddie == null && !fees.caddieNone) missing.push("캐디");
-    total4 = `${won(sum)}${missing.length ? ` (${missing.join("·")} 제외)` : ""}`;
+    if (fees.cart == null) missing.push(t("compare.row.cart"));
+    if (fees.caddie == null && !fees.caddieNone) missing.push(t("compare.row.caddie"));
+    total4 = `${won(sum)}${missing.length ? ` (${t("compare.excluded", { labels: missing.join("·") })})` : ""}`;
   }
   const cancelPolicy = d?.cancel?.cancel_policy;
   const cancelText = visibleText(typeof cancelPolicy === "string" ? cancelPolicy : cancelPolicy ? textOf(cancelPolicy) : "");
@@ -2105,14 +2220,14 @@ function compareColumn(c: CourseIndexItem, d: CourseDetail | null): CompareColum
     sub: `${place}${c.holes ? ` · ${c.holes}홀` : ""}`,
     values: {
       weekend: fees.weekend.value != null
-        ? `${won(fees.weekend.value)}${fees.weekend.source === "market" ? " (관측 최저)" : ""}`
+        ? `${won(fees.weekend.value)}${fees.weekend.source === "market" ? ` (${t("common.market")})` : ""}`
         : "",
       weekday: fees.weekday.value != null
-        ? `${won(fees.weekday.value)}${fees.weekday.source === "market" ? " (관측 최저)" : ""}`
+        ? `${won(fees.weekday.value)}${fees.weekday.source === "market" ? ` (${t("common.market")})` : ""}`
         : "",
       total4,
-      cart: fees.cart != null ? `${won(fees.cart)}/팀` : "",
-      caddie: fees.caddieNone ? "노캐디" : fees.caddie != null ? `${won(fees.caddie)}/팀` : "",
+      cart: fees.cart != null ? `${won(fees.cart)} / ${t("common.perTeam")}` : "",
+      caddie: fees.caddieNone ? t("fee.noCaddie") : fees.caddie != null ? `${won(fees.caddie)} / ${t("common.perTeam")}` : "",
       players2: val(ops.two_player?.value),
       players3: val(ops.three_player?.value),
       players5: val(ops.five_player?.value),
@@ -2121,8 +2236,9 @@ function compareColumn(c: CourseIndexItem, d: CourseDetail | null): CompareColum
       lodging: val(fac.lodging?.value),
       cancel: cancelText ? clip(cancelText, 120) : "",
       open: d?.cancel?.open_cycle ? clip(visibleText(d.cancel.open_cycle), 80) : "",
-      holes: [c.holes ? `${c.holes}홀` : "", c.type && !UNKNOWN_TEXT.test(c.type) ? c.type : ""].filter(Boolean).join(" · "),
-      rating: c.rating != null ? `${c.rating.toFixed(1)} / 10${c.reviews ? ` (${c.reviews}건)` : ""}` : "",
+      holes: [c.holes ? t("filter.holesValue", { n: c.holes }) : "", c.type && !UNKNOWN_TEXT.test(c.type) ? membership(c.type) : ""].filter(Boolean).join(" · "),
+      rating: c.rating != null ? `${c.rating.toFixed(1)} / 10${c.reviews ? ` (${c.reviews})` : ""}` : "",
+      slope: c.slope?.value != null ? (c.slope.tee === "median" ? `${c.slope.value}` : `${c.slope.value} (${c.slope.tee})`) : "",
       place: `${place}${ic}`,
       rental: val(d?.rental?.available),
       phone: c.tel ?? "",
@@ -2571,6 +2687,138 @@ async function renderPrepPage(id: string, dateParam: string | null): Promise<voi
 
 
 
+/* ---------------- L4 — 공개 API·임베드 ---------------- */
+
+/**
+ * 임베드 주소.
+ *  - iframe 이 실제로 거는 주소는 **정적 문서** `/embed/{id}/` 다. 루트(index.html)는
+ *    `_headers` 의 X-Frame-Options: SAMEORIGIN 을 받으므로 남의 사이트에 끼울 수 없다.
+ *    `/embed/*` 만 프레임 허용으로 열어 두었다(build-site.mjs).
+ *  - 해시 라우트 `#/embed/{id}` 는 같은 카드를 앱 안에서 미리보기하는 용도다.
+ */
+function embedSrc(id: string): string {
+  return `https://coursebrief.pages.dev/embed/${encodeURIComponent(id)}/`;
+}
+
+function embedSnippet(id: string): string {
+  return `<iframe src="${embedSrc(id)}" title="CourseBrief" width="360" height="220" style="border:0;max-width:100%;border-radius:16px" loading="lazy"></iframe>`;
+}
+
+function openEmbedDialog(id: string): void {
+  const dialog = document.querySelector<HTMLDialogElement>("#embed-dialog");
+  const code = embedSnippet(id);
+  if (!dialog) {
+    void copyText(code);
+    return;
+  }
+  const pre = document.querySelector<HTMLElement>("#embed-code");
+  if (pre) pre.textContent = code;
+  const preview = document.querySelector<HTMLElement>("#embed-preview");
+  if (preview) {
+    // 미리보기는 같은 출처의 상대 경로를 쓴다 — 복사되는 코드는 운영 주소(절대 URL)지만,
+    // 미리보기까지 운영 서버를 부르면 로컬·스테이징에서 빈 칸이 되고 배포 전에는 프레임이 막힌다.
+    preview.innerHTML = `<iframe src="/embed/${encodeURIComponent(id)}/" title="CourseBrief" width="100%" height="220" style="border:0" loading="lazy"></iframe>`;
+  }
+  const copyBtn = document.querySelector<HTMLButtonElement>("#embed-copy");
+  if (copyBtn) {
+    copyBtn.dataset.copy = code;
+    copyBtn.dataset.copyLabel = t("embed.title");
+  }
+  if (typeof dialog.showModal === "function") {
+    if (!dialog.open) dialog.showModal();
+  } else {
+    dialog.setAttribute("open", "");
+  }
+}
+
+function wireEmbedDialog(): void {
+  const dialog = document.querySelector<HTMLDialogElement>("#embed-dialog");
+  if (!dialog) return;
+  document.querySelector("#embed-close")?.addEventListener("click", () => {
+    if (dialog.open) dialog.close();
+    else dialog.removeAttribute("open");
+  });
+  dialog.addEventListener("click", (ev) => {
+    // 바깥을 누르면 닫는다(모달 안쪽 클릭은 무시)
+    if (ev.target === dialog) dialog.close();
+  });
+}
+
+/** `#/embed/{id}` — 앱 틀을 벗고 카드만 보이는 경량 화면 */
+function renderEmbed(id: string): void {
+  const view = $<HTMLElement>("#view-page");
+  const item = getIndex().courses.find((c) => c.id === id);
+  if (!item) {
+    view.innerHTML = `<div class="page"><p class="section-desc">${esc(t("detail.notFoundTitle"))}</p></div>`;
+    setTitle("CourseBrief");
+    return;
+  }
+  const st = statusOf(item.status);
+  const fee = item.green_fee?.weekend ?? item.green_fee?.weekday ?? null;
+  const feeLabel = item.green_fee?.weekend != null ? t("common.weekend") : t("common.weekday");
+  const tags = (item.tags ?? "").split("").filter((x) => TAG_LABEL[x]).slice(0, 3);
+  const meta = [
+    [item.sido, item.sigungu].filter(Boolean).join(" "),
+    item.holes ? t("filter.holesValue", { n: item.holes }) : "",
+    item.type && !UNKNOWN_TEXT.test(item.type) ? membership(item.type) : "",
+  ].filter(Boolean).join(" · ");
+  view.innerHTML = `<div class="embed-page">
+    <a class="embed-card" href="https://coursebrief.pages.dev/c/${esc(item.id)}/" target="_blank" rel="noopener noreferrer">
+      <span class="embed-head">
+        <strong class="embed-name">${esc(item.name)}</strong>
+        <span class="badge ${st.tone}">${esc(st.label)}</span>
+      </span>
+      <span class="embed-sub">${esc(meta)}</span>
+      <span class="embed-fee">${fee != null
+        ? `<span class="embed-fee-k">${esc(feeLabel)}</span><b>${won(fee)}</b><span class="embed-fee-from">~</span>`
+        : `<span class="embed-fee-none">${esc(t("embed.unavailable"))}</span>`}</span>
+      <span class="embed-tags">${tags.map((x) => `<span class="tag tone-${TAG_TONE[x] ?? "blue"}">${esc(TAG_LABEL[x])}</span>`).join("")}${
+        item.slope?.value != null ? `<span class="tag">${esc(t("detail.slopeBadge", { n: item.slope.value }))}</span>` : ""}</span>
+      <span class="embed-foot"><span class="embed-brand">CourseBrief</span>${esc(t("embed.viewDetail"))}</span>
+    </a>
+  </div>`;
+  setTitle(`${item.name} — CourseBrief`);
+}
+
+/* ---------------- L1 — 언어 전환 ---------------- */
+
+function wireLangMenu(): void {
+  const details = document.querySelector<HTMLDetailsElement>("#lang-toggle");
+  const menu = document.querySelector<HTMLElement>("#lang-menu");
+  if (!details || !menu) return;
+  const paint = (): void => {
+    const cur = document.querySelector<HTMLElement>("#lang-current");
+    if (cur) cur.textContent = getLang().toUpperCase();
+    for (const btn of menu.querySelectorAll<HTMLButtonElement>("[data-lang-choice]")) {
+      btn.setAttribute("aria-pressed", btn.dataset.langChoice === getLang() ? "true" : "false");
+    }
+  };
+  paint();
+  menu.addEventListener("click", (ev) => {
+    const target = ev.target;
+    if (!(target instanceof Element)) return;
+    const btn = target.closest<HTMLButtonElement>("[data-lang-choice]");
+    if (!btn) return;
+    const code = btn.dataset.langChoice;
+    if (code !== "ko" && code !== "en" && code !== "ja") return;
+    details.open = false;
+    setLang(code as Lang);
+  });
+  onLangChange((lang) => {
+    paint();
+    const status = document.querySelector<HTMLElement>("#lang-status");
+    if (status) status.textContent = t("lang.changed", { label: langOption(lang).label });
+    if (!state.index) return;
+    // 상세는 같은 id 면 다시 그리지 않는다 — 언어가 바뀌면 강제로 다시 그린다
+    renderedDetailId = null;
+    const y = window.scrollY;
+    buildStaticUI();
+    void route().then(() => {
+      requestAnimationFrame(() => window.scrollTo(0, y));
+    });
+  });
+}
+
 /* ---------------- 라우터 ---------------- */
 
 type ViewName = "list" | "detail" | "page";
@@ -2629,6 +2877,20 @@ async function route(): Promise<void> {
   const anchorAt = hash.indexOf("#");
   const section = anchorAt >= 0 ? hash.slice(anchorAt + 1) : "";
   const path = (anchorAt >= 0 ? hash.slice(0, anchorAt) : hash).split("?")[0];
+
+  // 임베드 화면을 빗어나면 앱 틀을 되돌린다
+  if (!path.startsWith("/embed/")) document.body.classList.remove("is-embed");
+
+  if (path.startsWith("/embed/")) {
+    const id = decodeURIComponent(path.slice(7));
+    document.body.classList.add("is-embed");
+    showView("page");
+    setNav("list");
+    updateCompareBar();
+    renderEmbed(id);
+    firstRoute = false;
+    return;
+  }
 
   if (path.startsWith("/c/")) {
     const id = decodeURIComponent(path.slice(3));
@@ -2855,6 +3117,15 @@ function wire(): void {
       return;
     }
 
+    // L4 — 임베드 코드 모달
+    const embedBtn = target.closest<HTMLElement>("[data-embed]");
+    if (embedBtn) {
+      ev.preventDefault();
+      const id = embedBtn.dataset.embed;
+      if (id) openEmbedDialog(id);
+      return;
+    }
+
     // 내 구장 저장(M4) — 이 브라우저에만 저장한다
     const favBtn = target.closest<HTMLElement>("[data-fav]");
     if (favBtn) {
@@ -2964,6 +3235,8 @@ function wire(): void {
   wireSearchDialog();
   wireFilterDetails();
   wireShortcuts();
+  wireLangMenu();
+  wireEmbedDialog();
 }
 
 function wireSearchDialog(): void {
@@ -3067,6 +3340,8 @@ try { history.scrollRestoration = "manual"; } catch { /* 지원하지 않는 브
 
 initTheme();
 initAdmin(reRenderForAdmin);
+// L1 — 첫 페인트 뒤 고정 마크업의 문구를 선택한 언어로 바꿔 단다(한국어면 그대로)
+applyStaticI18n(document);
 wire();
 wireCopyButtons();
 void boot();

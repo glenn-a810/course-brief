@@ -9,6 +9,7 @@
 import { copyText, shareOrCopy } from "./text.js";
 import { esc } from "./util.js";
 import { icon } from "./icons.js";
+import { t } from "./i18n.js";
 
 const KEY = "coursebrief-compare";
 export const COMPARE_LIMIT = 4;
@@ -87,12 +88,12 @@ export function syncCompareToggles(root: ParentNode = document): void {
     const on = isCompared(id);
     btn.setAttribute("aria-pressed", on ? "true" : "false");
     btn.classList.toggle("is-on", on);
-    const label = on ? "비교에서 빼기" : "비교에 담기";
-    btn.setAttribute("aria-label", `${btn.dataset.cmpName ?? "구장"} ${label}`);
+    const label = on ? t("card.compareRemove") : t("card.compareAdd");
+    btn.setAttribute("aria-label", `${btn.dataset.cmpName ?? ""} ${label}`);
     btn.title = label;
     const text = btn.querySelector<HTMLElement>(".cmp-toggle-text");
     const long = btn.dataset.cmpLong === "1";
-    if (text) text.textContent = on ? (long ? "비교 담김" : "담김") : (long ? "비교 담기" : "비교");
+    if (text) text.textContent = on ? (long ? t("card.compared") : t("card.compared")) : (long ? t("card.compare") : t("card.compare"));
   }
 }
 
@@ -107,7 +108,7 @@ export function updateCompareBar(): void {
   const go = document.getElementById("compare-go");
   if (go instanceof HTMLAnchorElement) {
     go.href = compareHref();
-    go.textContent = ids.length > 1 ? `비교표 보기 (${ids.length})` : "비교표 보기";
+    go.textContent = ids.length > 1 ? `${t("compare.go")} (${ids.length})` : t("compare.go");
   }
 }
 
@@ -134,9 +135,9 @@ export function initCompare(onChange?: () => void): void {
       if (!id) return;
       const result = toggleCompare(id);
       if (result === "full") {
-        announce(`비교는 최대 ${COMPARE_LIMIT}곳까지 담을 수 있습니다. 하나를 빼고 담아 주세요.`);
+        announce(t("compare.full", { n: COMPARE_LIMIT }));
       } else {
-        announce(result === "added" ? "비교에 담았습니다." : "비교에서 뺐습니다.");
+        announce(result === "added" ? t("compare.added") : t("compare.removed"));
       }
       syncCompareToggles();
       updateCompareBar();
@@ -164,7 +165,7 @@ export function initCompare(onChange?: () => void): void {
       syncCompareToggles();
       updateCompareBar();
       notify?.();
-      announce("비교를 비웠습니다.");
+      announce(t("compare.cleared"));
     }
   });
 
@@ -198,31 +199,32 @@ export interface CompareRowDef {
   extra?: boolean;
 }
 
-/** 비교표 행 — 위에서부터 읽는 순서가 곧 의사결정 순서다 */
+/** 비교표 행 — 위에서부터 읽는 순서가 곧 의사결정 순서다(label 은 getter: 언어를 따라간다) */
 export const COMPARE_ROWS: CompareRowDef[] = [
-  { key: "weekend", label: "주말 그린피" },
-  { key: "weekday", label: "주중 그린피" },
-  { key: "total4", label: "4인 총액" },
-  { key: "cart", label: "카트" },
-  { key: "caddie", label: "캐디피" },
-  { key: "players2", label: "2인 플레이" },
-  { key: "nocaddie", label: "노캐디" },
-  { key: "night", label: "야간 라운드" },
-  { key: "lodging", label: "숙박" },
-  { key: "cancel", label: "취소·위약" },
-  { key: "open", label: "예약 오픈" },
-  { key: "players3", label: "3인 플레이", extra: true },
-  { key: "players5", label: "5인 플레이", extra: true },
-  { key: "holes", label: "홀·형태", extra: true },
-  { key: "rating", label: "라운더 평가", extra: true },
-  { key: "place", label: "입지", extra: true },
-  { key: "rental", label: "클럽 렌탈", extra: true },
-  { key: "phone", label: "전화", extra: true },
+  { key: "weekend", get label() { return t("compare.row.weekend"); } },
+  { key: "weekday", get label() { return t("compare.row.weekday"); } },
+  { key: "total4", get label() { return t("compare.row.total4"); } },
+  { key: "cart", get label() { return t("compare.row.cart"); } },
+  { key: "caddie", get label() { return t("compare.row.caddie"); } },
+  { key: "players2", get label() { return t("compare.row.players2"); } },
+  { key: "nocaddie", get label() { return t("compare.row.nocaddie"); } },
+  { key: "night", get label() { return t("compare.row.night"); } },
+  { key: "lodging", get label() { return t("compare.row.lodging"); } },
+  { key: "cancel", get label() { return t("compare.row.cancel"); } },
+  { key: "open", get label() { return t("compare.row.open"); } },
+  { key: "slope", get label() { return t("compare.row.slope"); }, extra: true },
+  { key: "players3", get label() { return t("compare.row.players3"); }, extra: true },
+  { key: "players5", get label() { return t("compare.row.players5"); }, extra: true },
+  { key: "holes", get label() { return t("compare.row.holes"); }, extra: true },
+  { key: "rating", get label() { return t("compare.row.rating"); }, extra: true },
+  { key: "place", get label() { return t("compare.row.place"); }, extra: true },
+  { key: "rental", get label() { return t("compare.row.rental"); }, extra: true },
+  { key: "phone", get label() { return t("compare.row.phone"); }, extra: true },
 ];
 
 function cellHTML(value: string | undefined): string {
   const text = (value ?? "").trim();
-  if (!text) return `<td><span class="cmp-none">미확인</span></td>`;
+  if (!text) return `<td><span class="cmp-none">${esc(t("common.unknown"))}</span></td>`;
   return `<td>${esc(text)}</td>`;
 }
 
@@ -234,7 +236,7 @@ export function comparePageHTML(cols: CompareColumn[]): string {
   const head = cols.map((c) => `<th scope="col" class="cmp-col">
       <a class="cmp-col-name" href="#/c/${esc(c.id)}">${esc(c.name)}</a>
       <span class="cmp-col-sub">${esc(c.sub)}</span>
-      <button type="button" class="cmp-remove" data-cmp-remove="${esc(c.id)}" aria-label="${esc(c.name)} 비교에서 빼기">${icon("close")}</button>
+      <button type="button" class="cmp-remove" data-cmp-remove="${esc(c.id)}" aria-label="${esc(t("compare.removeAria", { name: c.name }))}">${icon("close")}</button>
     </th>`).join("");
 
   const row = (def: CompareRowDef, extra: boolean): string => `<tr${extra ? ' class="cmp-extra-row"' : ""}>
@@ -249,37 +251,37 @@ export function comparePageHTML(cols: CompareColumn[]): string {
   const body = cols.length
     ? `<div class="cmp-scroll">
         <table class="cmp-table">
-          <caption class="sr-only">${esc(names)} ${cols.length}곳 비교</caption>
-          <thead><tr><th scope="col" class="cmp-corner">항목</th>${head}</tr></thead>
+          <caption class="sr-only">${esc(t("compare.caption", { names, n: cols.length }))}</caption>
+          <thead><tr><th scope="col" class="cmp-corner">${esc(t("compare.corner"))}</th>${head}</tr></thead>
           <tbody>${core}</tbody>
           <tbody class="cmp-extra" hidden>${extra}</tbody>
         </table>
       </div>
-      <button type="button" class="btn btn-ghost btn-sm cmp-more-btn" data-cmp-more aria-expanded="false">추가 정보 펼치기</button>`
+      <button type="button" class="btn btn-ghost btn-sm cmp-more-btn" data-cmp-more aria-expanded="false">${esc(t("compare.moreOpen"))}</button>`
     : `<div class="state-box">
-        <h2 class="state-title">담은 구장이 없습니다</h2>
-        <p class="state-desc">목록이나 상세에서 <b>비교 담기</b>를 누르면 최대 4곳까지 나란히 볼 수 있습니다.</p>
-        <a class="btn" href="#/">골프장 목록으로</a>
+        <h2 class="state-title">${esc(t("compare.emptyTitle"))}</h2>
+        <p class="state-desc">${t("compare.emptyDesc")}</p>
+        <a class="btn" href="#/">${esc(t("compare.emptyAction"))}</a>
       </div>`;
 
   return `<div class="page cmp-page">
     <header class="page-head">
       <span class="ic-tile tone-blue size-lg" aria-hidden="true">${icon("chart")}</span>
       <div class="page-head-text">
-        <h1 class="page-title" tabindex="-1">후보 비교</h1>
+        <h1 class="page-title" tabindex="-1">${esc(t("compare.title"))}</h1>
         <p class="page-lead">${cols.length
-          ? `${esc(names)} — 그린피·총액·조건·취소 규정을 한 표에서 비교합니다. 값을 확인하지 못한 칸은 '미확인'입니다.`
-          : "라운드 후보를 최대 4곳까지 담아 나란히 비교합니다."}</p>
+          ? esc(t("compare.leadCols", { names }))
+          : esc(t("compare.leadSimple"))}</p>
       </div>
     </header>
     ${cols.length ? `<div class="cmp-actions">
-      <button type="button" class="btn btn-sm" data-cmp-act="link">${icon("copy")}비교 링크 복사</button>
-      <button type="button" class="btn btn-ghost btn-sm" data-cmp-act="share">${icon("external")}공유하기</button>
-      <button type="button" class="btn btn-ghost btn-sm" data-cmp-act="clear">${icon("close")}비우기</button>
+      <button type="button" class="btn btn-sm" data-cmp-act="link">${icon("copy")}${esc(t("compare.copyLink"))}</button>
+      <button type="button" class="btn btn-ghost btn-sm" data-cmp-act="share">${icon("external")}${esc(t("common.share"))}</button>
+      <button type="button" class="btn btn-ghost btn-sm" data-cmp-act="clear">${icon("close")}${esc(t("compare.clear"))}</button>
     </div>
     <p class="cmp-status" role="status"></p>` : ""}
     ${body}
-    <p class="source-line">그린피는 1인 18홀 비회원 기준입니다. 4인 총액은 그린피 × 4 + 카트 + 캐디피(팀 기준)로 계산했고, 확인되지 않은 항목은 빼지 않고 '미확인'으로 두었습니다. 가격·재고는 예약 채널에서 최종 확인하세요.</p>
+    <p class="source-line">${esc(t("compare.sourceNote"))}</p>
   </div>`;
 }
 
@@ -307,18 +309,18 @@ export function wireComparePage(root: HTMLElement): void {
       const open = extra.hidden;
       extra.hidden = !open;
       btn.setAttribute("aria-expanded", open ? "true" : "false");
-      btn.textContent = open ? "추가 정보 접기" : "추가 정보 펼치기";
+      btn.textContent = open ? t("compare.moreClose") : t("compare.moreOpen");
       return;
     }
 
     const act = target.closest<HTMLElement>("[data-cmp-act]")?.dataset.cmpAct;
     if (act === "link") {
-      void copyText(currentCompareUrl()).then((ok) => status(ok ? "비교 링크를 복사했습니다." : "복사하지 못했습니다."));
+      void copyText(currentCompareUrl()).then((ok) => status(ok ? t("compare.linkCopied") : t("compare.copyFailed")));
       return;
     }
     if (act === "share") {
-      void shareOrCopy("CourseBrief 후보 비교", currentCompareUrl()).then((how) =>
-        status(how === "shared" ? "공유했습니다." : how === "copied" ? "링크를 복사했습니다." : "공유하지 못했습니다."),
+      void shareOrCopy(t("compare.shareTitle"), currentCompareUrl()).then((how) =>
+        status(how === "shared" ? t("compare.shared") : how === "copied" ? t("compare.shareCopied") : t("compare.shareFailed")),
       );
       return;
     }
