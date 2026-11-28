@@ -14,7 +14,8 @@
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
   "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
-  "user_supplement_batch1245_2026_11_27": "2차(일반 사용자 자료) 배치1·2·4·5 검수 반영"
+  "user_supplement_batch1245_2026_11_27": "2차(일반 사용자 자료) 배치1·2·4·5 검수 반영",
+  "briefing_pass_2026_11_28": "공지·브리핑 문구 정리(외부 검수 반영) — 휴장 알림 보강·게시판 잡음 제거"
  },
  "master": {
   "course_id": "kr-golf-0493",
@@ -329,7 +330,7 @@
   },
   "fee_change": null,
   "collected_at": "2026-11-27T23:55:00+09:00",
-  "recent_notice_text": "순창CC(NEW 순창CC)는 자체 홈페이지 대신 온라인 예약 전용 페이지(web.kakao.golf/golf/sunchangcc)에서 모든 티타임을 예약받고, 전화 예약은 063-652-8000으로 안내한다. 노캐디·카트비 6만원·인원별 그린피 및 군민할인 안내",
+  "recent_notice_text": "모든 티타임은 온라인 예약 또는 전화(063-652-8000) 접수\n• 노캐디 운영, 카트비 60,000원, 인원별 그린피·군민할인 적용",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [

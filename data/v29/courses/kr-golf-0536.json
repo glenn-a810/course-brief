@@ -8,7 +8,8 @@
   "normalized_at": "2026-11-27T14:40:00+09:00",
   "has_detail": false,
   "checked_at": "2026-11-27",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "briefing_pass_2026_11_28": "공지·브리핑 문구 정리(외부 검수 반영) — 휴장 알림 보강·게시판 잡음 제거"
  },
  "master": {
   "course_id": "kr-golf-0536",
@@ -216,7 +217,7 @@
    "tags": {}
   },
   "recent_notice_text": null,
-  "course_notes": "",
+  "course_notes": null,
   "review": null,
   "fee_change": null,
   "alert": null,

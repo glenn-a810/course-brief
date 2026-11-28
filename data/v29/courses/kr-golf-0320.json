@@ -43,7 +43,8 @@
   "batch3_patch": "2026-11-27 배치6(대구·경북) 보완: 2개 항목(공식 홈페이지·그린피가이드 공식 안내 확인 기준, 미확인 값 생성 없음)",
   "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
   "batch6_supplement_2026_11_27": "누락 필드 보완 배치6(대구·경북) 검수 반영",
-  "user_supplement_batch6_2026_11_27": "2차(일반 사용자 자료) 배치6(대구·경북) 검수 반영"
+  "user_supplement_batch6_2026_11_27": "2차(일반 사용자 자료) 배치6(대구·경북) 검수 반영",
+  "briefing_pass_2026_11_28": "공지·브리핑 문구 정리(외부 검수 반영) — 휴장 알림 보강·게시판 잡음 제거"
  },
  "master": {
   "course_id": "kr-golf-0320",
@@ -486,11 +487,6 @@
      "url": "https://www.applevalley.co.kr/board/information_notice/list.asp"
     },
     {
-     "title": "관리자 | HIT : 66 |",
-     "date": "2026-10-20",
-     "url": "https://www.applevalley.co.kr/board/information_notice/view.asp?n_page=list.asp&page_num=1&page_size=12&mode=NULL&bbsno=282&seq=1&depth=1&search=&keyword="
-    },
-    {
      "title": "11월 그린피 안내",
      "date": "2026-10-15",
      "url": "https://www.applevalley.co.kr/board/information_notice/list.asp"
@@ -509,16 +505,6 @@
      "title": "식음세트메뉴 할인판매",
      "date": "2026-09-30",
      "url": "https://www.applevalley.co.kr/board/information_notice/list.asp"
-    },
-    {
-     "title": "관리자 | HIT : 113 |",
-     "date": "2026-09-30",
-     "url": "https://www.applevalley.co.kr/board/information_notice/view.asp?n_page=list.asp&page_num=1&page_size=12&mode=NULL&bbsno=279&seq=1&depth=1&search=&keyword="
-    },
-    {
-     "title": "관리자 | HIT : 224 |",
-     "date": "2026-09-30",
-     "url": "https://www.applevalley.co.kr/board/information_notice/view.asp?n_page=list.asp&page_num=1&page_size=12&mode=NULL&bbsno=278&seq=1&depth=1&search=&keyword="
     },
     {
      "title": "10월 그린피 안내",

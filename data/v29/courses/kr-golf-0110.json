@@ -14,7 +14,8 @@
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
   "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
-  "user_supplement_batch1245_2026_11_27": "2차(일반 사용자 자료) 배치1·2·4·5 검수 반영"
+  "user_supplement_batch1245_2026_11_27": "2차(일반 사용자 자료) 배치1·2·4·5 검수 반영",
+  "briefing_pass_2026_11_28": "공지·브리핑 문구 정리(외부 검수 반영) — 휴장 알림 보강·게시판 잡음 제거"
  },
  "master": {
   "course_id": "kr-golf-0110",
@@ -508,7 +509,7 @@
    "url": "https://www.benestgolf.com/reve/pc/main.do",
    "items": [
     {
-     "title": "★필드의 품격을 실내로 옮기다 안양CC 골프연습장★",
+     "title": "필드의 품격을 실내로 옮기다 안양CC 골프연습장",
      "date": null,
      "url": "https://www.benestgolf.com/reve/pc/main.do"
     },
@@ -528,7 +529,7 @@
   },
   "fee_change": null,
   "collected_at": "2026-11-27T23:40:00+09:00",
-  "recent_notice_text": "베네스트골프 통합 홈페이지에서 안양CC는 골프연습장 프로모션(‘필드의 품격을 실내로 옮기다 안양CC 골프연습장’, ‘안양CC 골프연습장 특별프로모션’)만 게시되어 있고, 코스 이용요금·휴장 공지는 통합 공지에 없다.",
+  "recent_notice_text": "골프연습장 특별 프로모션 진행. 코스 이용요금·휴장 공지는 게시돼 있지 않다.",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [

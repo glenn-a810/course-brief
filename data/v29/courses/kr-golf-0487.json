@@ -13,7 +13,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "briefing_pass_2026_11_28": "공지·브리핑 문구 정리(외부 검수 반영) — 휴장 알림 보강·게시판 잡음 제거"
  },
  "master": {
   "course_id": "kr-golf-0487",
@@ -307,7 +308,7 @@
   },
   "fee_change": null,
   "collected_at": "2026-11-27T23:40:00+09:00",
-  "recent_notice_text": "에스페란사GC의 옛 홈페이지(네이버 모두 esperan.modoo.at)는 2025-06-26 모두 서비스 종료로 껍데기 페이지만 응답한다.",
+  "recent_notice_text": "기존 홈페이지는 2025-06-26 서비스 종료로 운영되지 않음",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [

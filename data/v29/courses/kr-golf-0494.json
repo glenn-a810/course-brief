@@ -13,7 +13,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "briefing_pass_2026_11_28": "공지·브리핑 문구 정리(외부 검수 반영) — 휴장 알림 보강·게시판 잡음 제거"
  },
  "master": {
   "course_id": "kr-golf-0494",
@@ -422,52 +423,52 @@
    "url": "http://www.okcc.co.kr/html/company/company_03_list.asp",
    "items": [
     {
-     "title": "※ 동계 특별할인 이벤트(12월1일부터))",
+     "title": "동계 특별할인 이벤트(12월1일부터))",
      "date": "2026-11-23",
      "url": "http://www.okcc.co.kr/html/company/company_03_list.asp"
     },
     {
-     "title": "※ 클럽하우스 식당 3+1 이벤트",
+     "title": "클럽하우스 식당 3+1 이벤트",
      "date": "2026-11-18",
      "url": "http://www.okcc.co.kr/html/company/company_03_list.asp"
     },
     {
-     "title": "※ 11월23일~11월30일 시간대 할인요금",
+     "title": "11월23일~11월30일 시간대 할인요금",
      "date": "2026-11-18",
      "url": "http://www.okcc.co.kr/html/company/company_03_list.asp"
     },
     {
-     "title": "※ 11월 시간대별 할인 및 이용요금 안내(11월9일~11월30일 까지)",
+     "title": "11월 시간대별 할인 및 이용요금 안내(11월9일~11월30일 까지)",
      "date": "2026-11-04",
      "url": "http://www.okcc.co.kr/html/company/company_03_list.asp"
     },
     {
-     "title": "※ 11월1일~8일 이용요금 안내",
+     "title": "11월1일~8일 이용요금 안내",
      "date": "2026-10-26",
      "url": "http://www.okcc.co.kr/html/company/company_03_list.asp"
     },
     {
-     "title": "※ 전기차 충전시설 설치 완료 및 이용안내",
+     "title": "전기차 충전시설 설치 완료 및 이용안내",
      "date": "2026-10-26",
      "url": "http://www.okcc.co.kr/html/company/company_03_list.asp"
     },
     {
-     "title": "※ 【축하】홀인원 이벤트 두번째 주인공 탄생을 축하드립니다.",
+     "title": "【축하】홀인원 이벤트 두번째 주인공 탄생을 축하드립니다.",
      "date": "2026-10-20",
      "url": "http://www.okcc.co.kr/html/company/company_03_list.asp"
     },
     {
-     "title": "※ 【축하】홀인원 이벤트 첫번째 주인공 탄생을 축하드립니다.",
+     "title": "【축하】홀인원 이벤트 첫번째 주인공 탄생을 축하드립니다.",
      "date": "2026-10-14",
      "url": "http://www.okcc.co.kr/html/company/company_03_list.asp"
     },
     {
-     "title": "※ 10월1일~31일 이용요금 안내",
+     "title": "10월1일~31일 이용요금 안내",
      "date": "2026-09-23",
      "url": "http://www.okcc.co.kr/html/company/company_03_list.asp"
     },
     {
-     "title": "※ 2026년 추석 명절 운영 안내",
+     "title": "2026년 추석 명절 운영 안내",
      "date": "2026-08-31",
      "url": "http://www.okcc.co.kr/html/company/company_03_list.asp"
     }

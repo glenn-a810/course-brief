@@ -14,7 +14,8 @@
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
   "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
-  "user_supplement_batch1245_2026_11_27": "2차(일반 사용자 자료) 배치1·2·4·5 검수 반영"
+  "user_supplement_batch1245_2026_11_27": "2차(일반 사용자 자료) 배치1·2·4·5 검수 반영",
+  "briefing_pass_2026_11_28": "공지·브리핑 문구 정리(외부 검수 반영) — 휴장 알림 보강·게시판 잡음 제거"
  },
  "master": {
   "course_id": "kr-golf-0504",
@@ -650,29 +651,14 @@
    "url": "https://www.taeincc.co.kr/Board/HonorList.aspx",
    "items": [
     {
-     "title": "관리자 (taei***)",
-     "date": "2026-11-24",
-     "url": "https://www.taeincc.co.kr/Board/BoardList.aspx?cfgid=notice"
-    },
-    {
      "title": "2027년 연단체 모집안내",
      "date": "2026-10-21",
-     "url": "https://www.taeincc.co.kr/Board/BoardList.aspx?cfgid=notice"
-    },
-    {
-     "title": "관리자 (taei***)",
-     "date": "2026-10-15",
      "url": "https://www.taeincc.co.kr/Board/BoardList.aspx?cfgid=notice"
     },
     {
      "title": "사용클럽/볼",
      "date": "2026-10-03",
      "url": "https://www.taeincc.co.kr/Board/HonorList.aspx"
-    },
-    {
-     "title": "관리자 (taei***)",
-     "date": "2026-10-02",
-     "url": "https://www.taeincc.co.kr/Board/BoardList.aspx?cfgid=notice"
     },
     {
      "title": "볼빅 S3/5번 아이언",
@@ -688,11 +674,6 @@
      "title": "마제스티 10번 아이언/타이틀리스트 4번",
      "date": "2026-09-11",
      "url": "https://www.taeincc.co.kr/Board/HonorList.aspx"
-    },
-    {
-     "title": "관리자 (taei***)",
-     "date": "2026-08-28",
-     "url": "https://www.taeincc.co.kr/Board/BoardList.aspx?cfgid=notice"
     },
     {
      "title": "테일러메이드 p790/볼빅 1번",
@@ -715,39 +696,14 @@
      "url": "https://www.taeincc.co.kr/Board/HonorList.aspx"
     },
     {
-     "title": "관리자 (taei***)",
-     "date": "2026-07-13",
-     "url": "https://www.taeincc.co.kr/Board/BoardList.aspx?cfgid=notice"
-    },
-    {
      "title": "혼마 유틸 27/캘러웨이 1",
      "date": "2026-07-03",
      "url": "https://www.taeincc.co.kr/Board/HonorList.aspx"
     },
     {
-     "title": "관리자 (taei***)",
-     "date": "2026-07-02",
-     "url": "https://www.taeincc.co.kr/Board/BoardList.aspx?cfgid=notice"
-    },
-    {
      "title": "지브이투어 7번 아이언/엑스페론 2번",
      "date": "2026-07-02",
      "url": "https://www.taeincc.co.kr/Board/HonorList.aspx"
-    },
-    {
-     "title": "관리자 (taei***)",
-     "date": "2026-05-08",
-     "url": "https://www.taeincc.co.kr/Board/BoardList.aspx?cfgid=notice"
-    },
-    {
-     "title": "관리자 (taei***)",
-     "date": "2026-04-24",
-     "url": "https://www.taeincc.co.kr/Board/BoardList.aspx?cfgid=notice"
-    },
-    {
-     "title": "관리자 (taei***)",
-     "date": "2026-03-30",
-     "url": "https://www.taeincc.co.kr/Board/BoardList.aspx?cfgid=notice"
     }
    ],
    "tags": {

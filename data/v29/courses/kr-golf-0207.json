@@ -13,7 +13,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "briefing_pass_2026_11_28": "공지·브리핑 문구 정리(외부 검수 반영) — 휴장 알림 보강·게시판 잡음 제거"
  },
  "master": {
   "course_id": "kr-golf-0207",
@@ -303,7 +304,7 @@
   "review": null,
   "fee_change": null,
   "collected_at": "2026-11-27T23:55:00+09:00",
-  "recent_notice_text": "코스 운영(홀 순서) 변경: 기존 1→2→3→4→5→6홀 진행에서 3번홀(1번)→4홀(2번)→5홀(3번)→2홀(4번)→1홀(5번)→6홀(6번) 순으로 변경",
+  "recent_notice_text": "코스 홀 진행 순서 변경 — 기존 1~6홀 순에서 3·4·5·2·1·6홀 순으로 변경",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [

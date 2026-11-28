@@ -15,7 +15,8 @@
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
   "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
   "batch5_supplement_2026_11_27": "누락 필드 보완 배치5(호남권) 검수 반영",
-  "user_supplement_batch1245_2026_11_27": "2차(일반 사용자 자료) 배치1·2·4·5 검수 반영"
+  "user_supplement_batch1245_2026_11_27": "2차(일반 사용자 자료) 배치1·2·4·5 검수 반영",
+  "briefing_pass_2026_11_28": "공지·브리핑 문구 정리(외부 검수 반영) — 휴장 알림 보강·게시판 잡음 제거"
  },
  "master": {
   "course_id": "kr-golf-0040",
@@ -530,7 +531,7 @@
    "url": "https://www.solaseadocc.com/sub/notice.asp",
    "items": [
     {
-     "title": "♥2027 솔라시도 패키지 안내(1/1~1/31)♥",
+     "title": "2027 솔라시도 패키지 안내(1/1~1/31)",
      "date": "2026-11-06",
      "url": "https://www.solaseadocc.com/sub/notice.asp"
     },
@@ -540,12 +541,12 @@
      "url": "https://www.solaseadocc.com/sub/notice.asp"
     },
     {
-     "title": "♥2026 솔라시도 패키지 안내(12/1~12/31)♥",
+     "title": "2026 솔라시도 패키지 안내(12/1~12/31)",
      "date": "2026-10-07",
      "url": "https://www.solaseadocc.com/sub/notice.asp"
     },
     {
-     "title": "♥2026 솔라시도 패키지 안내(11/1~11/30)♥",
+     "title": "2026 솔라시도 패키지 안내(11/1~11/30)",
      "date": "2026-09-03",
      "url": "https://www.solaseadocc.com/sub/notice.asp"
     },
@@ -570,7 +571,7 @@
   },
   "fee_change": null,
   "collected_at": "2026-11-27T22:00:00+09:00",
-  "recent_notice_text": "2026-11-06 2027 솔라시도 패키지(1/1~1/31), 2026-10-29 2027 연단체 모집, 2026-10-07 2026 솔라시도 패키지(12/1~12/31), 2026-09-03 2026 패키지(11/1~11/30)와 2026년 10·11월 그린피 안내, 2026-08-01 3부 야간라운드 운영안내. 12월 그린피 공지는 아직 따로 없다.",
+  "recent_notice_text": "• 2027 솔라시도 패키지(1/1~1/31), 2027 연단체 모집\n• 2026 패키지 12월분(12/1~12/31) 판매\n• 3부 야간라운드 운영",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [

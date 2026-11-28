@@ -14,7 +14,8 @@
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
   "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
-  "user_supplement_batch1245_2026_11_27": "2차(일반 사용자 자료) 배치1·2·4·5 검수 반영"
+  "user_supplement_batch1245_2026_11_27": "2차(일반 사용자 자료) 배치1·2·4·5 검수 반영",
+  "briefing_pass_2026_11_28": "공지·브리핑 문구 정리(외부 검수 반영) — 휴장 알림 보강·게시판 잡음 제거"
  },
  "master": {
   "course_id": "kr-golf-0016",
@@ -340,7 +341,7 @@
   "review": null,
   "fee_change": null,
   "collected_at": "2026-11-27T23:55:00+09:00",
-  "recent_notice_text": "11월 요금 안내(팝업 공지), 주간 요금 공지(11/23(월)~, 11/30(월)~, 12/7(월)~, 12/14(월)~ 4주분), 예약양도 금지·예약 횟수 제한 안내 게시",
+  "recent_notice_text": "• 11월 요금 안내와 주간 요금 공지(4주분) 게시\n• 예약 양도 금지, 예약 횟수 제한 운영",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [

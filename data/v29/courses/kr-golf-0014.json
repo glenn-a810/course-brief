@@ -13,7 +13,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "briefing_pass_2026_11_28": "공지·브리핑 문구 정리(외부 검수 반영) — 휴장 알림 보강·게시판 잡음 제거"
  },
  "master": {
   "course_id": "kr-golf-0014",
@@ -379,7 +380,7 @@
   },
   "fee_change": null,
   "collected_at": "2026-11-27T23:55:00+09:00",
-  "recent_notice_text": "2026-11-12 2027년 연단체 모집·12월 그린피·12월 패키지, 2026-10-05 11월 그린피·11월 패키지, 2026-09-08 10월 그린피·10월 패키지. 매달 그린피와 패키지를 함께 공지한다.",
+  "recent_notice_text": null,
   "course_notes": null,
   "alert": null,
   "unconfirmed": [
@@ -422,7 +423,7 @@
   "fee": 1.0,
   "ops": 0.07,
   "facility": 0.1,
-  "briefing": 0.75,
+  "briefing": 0.5,
   "rental": 1.0
  }
 }

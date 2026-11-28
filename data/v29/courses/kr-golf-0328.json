@@ -109,7 +109,8 @@
   "batch3_patch": "2026-11-27 배치6(대구·경북) 보완: 7개 항목(공식 홈페이지·그린피가이드 공식 안내 확인 기준, 미확인 값 생성 없음)",
   "batch6_patch": "2026-11-27 배치6(대구·경북) 보완: 1개 항목(공식 홈페이지·그린피가이드·예약 플랫폼 공개 안내 확인 기준, 미확인 값 생성 없음)",
   "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
-  "batch6_supplement_2026_11_27": "누락 필드 보완 배치6(대구·경북) 검수 반영"
+  "batch6_supplement_2026_11_27": "누락 필드 보완 배치6(대구·경북) 검수 반영",
+  "briefing_pass_2026_11_28": "공지·브리핑 문구 정리(외부 검수 반영) — 휴장 알림 보강·게시판 잡음 제거"
  },
  "master": {
   "course_id": "kr-golf-0328",
@@ -592,59 +593,9 @@
    "url": "https://www.oceanbeachcc.com/Board/HonorList.asp",
    "items": [
     {
-     "title": "사용클럽",
-     "date": "2026-11-09",
-     "url": "https://www.oceanbeachcc.com/Board/HonorList.asp"
-    },
-    {
-     "title": "젝시오 8번아이언",
-     "date": "2026-11-03",
-     "url": "https://www.oceanbeachcc.com/Board/HonorList.asp"
-    },
-    {
-     "title": "세인트나인 1번",
-     "date": "2026-11-02",
-     "url": "https://www.oceanbeachcc.com/Board/HonorList.asp"
-    },
-    {
-     "title": "김**, 황**, 권**",
-     "date": "2026-11-02",
-     "url": "https://www.oceanbeachcc.com/Board/HonorList.asp"
-    },
-    {
-     "title": "이*순, 김*수, 김*연",
-     "date": "2026-10-29",
-     "url": "https://www.oceanbeachcc.com/Board/HonorList.asp"
-    },
-    {
      "title": "2027년 일반 연단체 신청 안내",
      "date": "2026-10-27",
      "url": "https://www.oceanbeachcc.com/Board/BoardList.asp"
-    },
-    {
-     "title": "혼마 8번 아이언",
-     "date": "2026-10-08",
-     "url": "https://www.oceanbeachcc.com/Board/HonorList.asp"
-    },
-    {
-     "title": "김*욱,김*람,김*석",
-     "date": "2026-09-30",
-     "url": "https://www.oceanbeachcc.com/Board/HonorList.asp"
-    },
-    {
-     "title": "Taylormade9 Iron",
-     "date": "2026-09-24",
-     "url": "https://www.oceanbeachcc.com/Board/HonorList.asp"
-    },
-    {
-     "title": "로마로 7번 아이언",
-     "date": "2026-09-24",
-     "url": "https://www.oceanbeachcc.com/Board/HonorList.asp"
-    },
-    {
-     "title": "마제스티 8번 아이언",
-     "date": "2026-09-23",
-     "url": "https://www.oceanbeachcc.com/Board/HonorList.asp"
     },
     {
      "title": "26년 10월 그린피 안내",

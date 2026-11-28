@@ -14,7 +14,8 @@
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
   "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
-  "user_supplement_batch1245_2026_11_27": "2차(일반 사용자 자료) 배치1·2·4·5 검수 반영"
+  "user_supplement_batch1245_2026_11_27": "2차(일반 사용자 자료) 배치1·2·4·5 검수 반영",
+  "briefing_pass_2026_11_28": "공지·브리핑 문구 정리(외부 검수 반영) — 휴장 알림 보강·게시판 잡음 제거"
  },
  "master": {
   "course_id": "kr-golf-0505",
@@ -398,7 +399,7 @@
      "url": "https://www.summitcc.co.kr/blt/notice"
     },
     {
-     "title": "★ 써미트CC 골프시즌권 판매 ★",
+     "title": "써미트CC 골프시즌권 판매",
      "date": "2026-03-09",
      "url": "https://www.summitcc.co.kr/blt/notice"
     },
@@ -419,7 +420,7 @@
   "fee_change": null,
   "collected_at": "2026-11-27T23:55:00+09:00",
   "browser_verified_at": "2026-11-26",
-  "recent_notice_text": "셀프카트비 인상(2026-10-06)이 최신 공지. 다음 게시글은 2026-03-09(시즌권 판매·2026년 연단체 모집·캐디 모집·스타트하우스 메뉴·개인 선불카드 신청서)",
+  "recent_notice_text": "셀프카트 요금 인상 적용",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [

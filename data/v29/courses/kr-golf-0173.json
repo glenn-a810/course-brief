@@ -15,7 +15,8 @@
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
   "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
   "batch2_supplement_2026_11_27": "누락 필드 보완 배치2(수도권 B) 검수 반영",
-  "user_supplement_batch1245_2026_11_27": "2차(일반 사용자 자료) 배치1·2·4·5 검수 반영"
+  "user_supplement_batch1245_2026_11_27": "2차(일반 사용자 자료) 배치1·2·4·5 검수 반영",
+  "briefing_pass_2026_11_28": "공지·브리핑 문구 정리(외부 검수 반영) — 휴장 알림 보강·게시판 잡음 제거"
  },
  "master": {
   "course_id": "kr-golf-0173",
@@ -722,7 +723,22 @@
   "collected_at": "2026-11-26T09:51:55+09:00",
   "recent_notice_text": null,
   "course_notes": null,
-  "alert": null,
+  "alert": {
+   "type": "winter_closure",
+   "level": "closure",
+   "confirmed": true,
+   "summary": "동계 휴장 2026-12-28~2027-01-14, 2027-01-15 재개장",
+   "detail": "공식 예약 페이지의 '동계 휴장 안내'(2026-11-23 게시)로 확인. 휴장 기간에는 라운드할 수 없다.",
+   "period": {
+    "from": "2026-12-28",
+    "to": "2027-01-14",
+    "reopen": "2027-01-15"
+   },
+   "checked_at": "2026-11-27",
+   "source_url": "https://yi.blueone.com/reservation?subType=0&type=4",
+   "source_file": "공식 예약 페이지 공지(2026-11-23)",
+   "raw": "동계 휴장 안내(2026.12.28~2027.1.14, 재개장 1.15)"
+  },
   "unconfirmed": [
    "취소·위약 규정 미확인: 공식 사이트가 SPA로 요금표·위약 페이지 미수집"
   ],

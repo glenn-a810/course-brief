@@ -108,7 +108,8 @@
   },
   "batch3_patch": "2026-11-27 배치6(대구·경북) 보완: 8개 항목(공식 홈페이지·그린피가이드 공식 안내 확인 기준, 미확인 값 생성 없음)",
   "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
-  "batch6_supplement_2026_11_27": "누락 필드 보완 배치6(대구·경북) 검수 반영"
+  "batch6_supplement_2026_11_27": "누락 필드 보완 배치6(대구·경북) 검수 반영",
+  "briefing_pass_2026_11_28": "공지·브리핑 문구 정리(외부 검수 반영) — 휴장 알림 보강·게시판 잡음 제거"
  },
  "master": {
   "course_id": "kr-golf-0301",
@@ -829,28 +830,7 @@
  "briefing": {
   "notices": {
    "url": "https://sillacc.co.kr/board/boardDetail?boardCode=NOTICE&boardPostSeq=5263",
-   "items": [
-    {
-     "title": "이 표는 제목, 작성자, 작성일로 구성되었습니다.",
-     "date": "2026-11-13",
-     "url": "https://sillacc.co.kr/board/boardDetail?boardCode=EVENT&boardPostSeq=5274"
-    },
-    {
-     "title": "이 표는 제목, 작성자, 작성일로 구성되었습니다.",
-     "date": "2026-11-09",
-     "url": "https://sillacc.co.kr/board/boardDetail?boardCode=NOTICE&boardPostSeq=5270"
-    },
-    {
-     "title": "이 표는 제목, 작성자, 작성일로 구성되었습니다.",
-     "date": "2026-10-31",
-     "url": "https://sillacc.co.kr/board/boardDetail?boardCode=NOTICE&boardPostSeq=5263"
-    },
-    {
-     "title": "이 표는 제목, 작성자, 작성일로 구성되었습니다.",
-     "date": "2026-10-13",
-     "url": "https://sillacc.co.kr/board/boardDetail?boardCode=EVENT&boardPostSeq=5236"
-    }
-   ],
+   "items": [],
    "tags": {}
   },
   "review": null,
@@ -882,7 +862,7 @@
   "fee": 1.0,
   "ops": 0.64,
   "facility": 0.4,
-  "briefing": 0.25,
+  "briefing": 0.0,
   "rental": 1.0
  }
 }

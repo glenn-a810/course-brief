@@ -15,7 +15,8 @@
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
   "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
   "batch5_supplement_2026_11_27": "누락 필드 보완 배치5(호남권) 검수 반영",
-  "user_supplement_batch1245_2026_11_27": "2차(일반 사용자 자료) 배치1·2·4·5 검수 반영"
+  "user_supplement_batch1245_2026_11_27": "2차(일반 사용자 자료) 배치1·2·4·5 검수 반영",
+  "briefing_pass_2026_11_28": "공지·브리핑 문구 정리(외부 검수 반영) — 휴장 알림 보강·게시판 잡음 제거"
  },
  "master": {
   "course_id": "kr-golf-0019",
@@ -939,18 +940,7 @@
  "briefing": {
   "notices": {
    "url": "https://www.bosungcc.co.kr/html/news/news01_view.asp?b_idx=552",
-   "items": [
-    {
-     "title": "작성자관리자 |등록일",
-     "date": "2026-10-26",
-     "url": "https://www.bosungcc.co.kr/html/news/news01_view.asp?b_idx=552"
-    },
-    {
-     "title": "작성자관리자 |등록일",
-     "date": "2026-10-16",
-     "url": "https://www.bosungcc.co.kr/html/news/news01_view.asp?b_idx=551"
-    }
-   ],
+   "items": [],
    "tags": {}
   },
   "review": {
@@ -996,7 +986,7 @@
   "fee": 1.0,
   "ops": 0.5,
   "facility": 0.6,
-  "briefing": 0.5,
+  "briefing": 0.25,
   "rental": 1.0
  }
 }

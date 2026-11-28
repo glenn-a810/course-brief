@@ -42,7 +42,8 @@
   },
   "batch3_patch": "2026-11-27 배치6(대구·경북) 보완: 2개 항목(공식 홈페이지·그린피가이드 공식 안내 확인 기준, 미확인 값 생성 없음)",
   "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
-  "batch6_supplement_2026_11_27": "누락 필드 보완 배치6(대구·경북) 검수 반영"
+  "batch6_supplement_2026_11_27": "누락 필드 보완 배치6(대구·경북) 검수 반영",
+  "briefing_pass_2026_11_28": "공지·브리핑 문구 정리(외부 검수 반영) — 휴장 알림 보강·게시판 잡음 제거"
  },
  "master": {
   "course_id": "kr-golf-0319",
@@ -876,41 +877,6 @@
      "title": "10월 단체행사로 인한 예약안내",
      "date": "2026-10-07",
      "url": "https://www.gumicc.com/Board/View.aspx?cfgid=notice&postidx=518"
-    },
-    {
-     "title": "코스갤러리",
-     "date": "2011-05-18",
-     "url": "https://www.gumicc.com/Board/GalleryList.aspx?cfgid=course"
-    },
-    {
-     "title": "백호 2번, 백호 6...",
-     "date": "2011-05-18",
-     "url": "https://www.gumicc.com/Board/GalleryList.aspx?cfgid=course"
-    },
-    {
-     "title": "거북 2번 러프지역에...",
-     "date": "2011-05-18",
-     "url": "https://www.gumicc.com/Board/GalleryList.aspx?cfgid=course"
-    },
-    {
-     "title": "거북5번 그린",
-     "date": "2011-05-18",
-     "url": "https://www.gumicc.com/Board/GalleryList.aspx?cfgid=course"
-    },
-    {
-     "title": "거북 4번 그린에서...",
-     "date": "2011-05-18",
-     "url": "https://www.gumicc.com/Board/GalleryList.aspx?cfgid=course"
-    },
-    {
-     "title": "거북 2번 그린 무지...",
-     "date": "2011-05-18",
-     "url": "https://www.gumicc.com/Board/GalleryList.aspx?cfgid=course"
-    },
-    {
-     "title": "청룡3번, 백호6번...",
-     "date": "2011-05-18",
-     "url": "https://www.gumicc.com/Board/GalleryList.aspx?cfgid=course"
     }
    ],
    "tags": {

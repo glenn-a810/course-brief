@@ -13,7 +13,8 @@
   "has_detail": true,
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
-  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일"
+  "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
+  "briefing_pass_2026_11_28": "공지·브리핑 문구 정리(외부 검수 반영) — 휴장 알림 보강·게시판 잡음 제거"
  },
  "master": {
   "course_id": "kr-golf-0100",
@@ -403,7 +404,7 @@
   "review": null,
   "fee_change": null,
   "collected_at": "2026-11-27T23:55:00+09:00",
-  "recent_notice_text": "2026-11-23 한양파인 연습장 운영시간 변경 안내, 2026-11-17 연습장 동절기 초특가 할인 이벤트. 홈페이지 NOTICE 섹션에 최근 글이 2건이며 12월 그린피 공지는 아직 없다.",
+  "recent_notice_text": null,
   "course_notes": null,
   "alert": null,
   "unconfirmed": [
@@ -442,7 +443,7 @@
   "fee": 1.0,
   "ops": 0.21,
   "facility": 0.3,
-  "briefing": 0.5,
+  "briefing": 0.25,
   "rental": 0.25
  }
 }

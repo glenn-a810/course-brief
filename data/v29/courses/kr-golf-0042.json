@@ -14,7 +14,8 @@
   "v28_patch": "교차검증 critical 3·warning 27·info 10 반영",
   "v29_patch": "v2.8 2차 재검증 N-01~N-11 반영(폐업·개칭·이름·주소·코드)",
   "final_pass_2026_11_27": "공개 웹(공식 홈페이지·공개 요금 정보·공개 예약 채널) 재수집 및 표기 통일",
-  "user_supplement_batch1245_2026_11_27": "2차(일반 사용자 자료) 배치1·2·4·5 검수 반영"
+  "user_supplement_batch1245_2026_11_27": "2차(일반 사용자 자료) 배치1·2·4·5 검수 반영",
+  "briefing_pass_2026_11_28": "공지·브리핑 문구 정리(외부 검수 반영) — 휴장 알림 보강·게시판 잡음 제거"
  },
  "master": {
   "course_id": "kr-golf-0042",
@@ -776,7 +777,7 @@
      "url": "https://www.pinebeachcc.co.kr/board/list.asp?type=1"
     },
     {
-     "title": "♥2027 파인비치 LPGA Experience Package(1/1~1/31)♥",
+     "title": "2027 파인비치 LPGA Experience Package(1/1~1/31)",
      "date": "2026-10-30",
      "url": "https://www.pinebeachcc.co.kr/board/list.asp?type=1"
     },
@@ -786,7 +787,7 @@
      "url": "https://www.pinebeachcc.co.kr/board/list.asp?type=1"
     },
     {
-     "title": "♥2026 파인비치 LPGA Experience Package(12/01~12/31)♥",
+     "title": "2026 파인비치 LPGA Experience Package(12/01~12/31)",
      "date": "2026-09-30",
      "url": "https://www.pinebeachcc.co.kr/board/list.asp?type=1"
     },
@@ -796,7 +797,7 @@
      "url": "https://www.pinebeachcc.co.kr/board/list.asp?type=1"
     },
     {
-     "title": "♥2026 파인비치 LPGA Experience Package(11/01~11/30)♥",
+     "title": "2026 파인비치 LPGA Experience Package(11/01~11/30)",
      "date": "2026-08-28",
      "url": "https://www.pinebeachcc.co.kr/board/list.asp?type=1"
     }
@@ -811,7 +812,7 @@
   },
   "fee_change": null,
   "collected_at": "2026-11-27T22:00:00+09:00",
-  "recent_notice_text": "2026-10-30 11월 그린피안내·2027 파인비치 LPGA Experience Package(1/1~1/31), 2026-10-06 2026 BMW 레이디스 챔피언십 개최 및 셔틀버스 안내, 2026-09-30 2026 LPGA Experience Package(12/1~12/31), 2026-09-29 10월 그린피안내, 2026-08-28 2026 LPGA 패키지(11/1~11/30).",
+  "recent_notice_text": "• 11월 그린피 안내, 2027 파인비치 LPGA Experience Package(1/1~1/31)\n• 2026 BMW 레이디스 챔피언십 개최 및 셔틀버스 안내\n• 2026 LPGA Experience Package 12월분(12/1~12/31) 판매",
   "course_notes": null,
   "alert": null,
   "unconfirmed": [
