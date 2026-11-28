@@ -187,7 +187,9 @@ a:focus-visible, button:focus-visible, summary:focus-visible,
   outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 8px;
 }
 /* 스크린리더용 프로그램적 포커스 이동 대상(제목 h1·본문 영역)에는 외곽선을 절대 그리지 않는다.
-   iOS Safari 는 탭/라우트 전환 뒤 :focus-visible 까지 매칭해 파란 테두리를 보여준다. */
+   iOS Safari 는 탭/라우트 전환 뒤 :focus-visible 까지 매칭해 파란 테두리를 보여준다.
+   제목은 포커스 상태와 무관하게 계산값 자체를 none/0px 로 둔다. */
+h1 { outline: none; outline-width: 0; }
 h1:focus, h1:focus-visible,
 [tabindex="-1"]:focus, [tabindex="-1"]:focus-visible,
 main:focus, main:focus-visible { outline: none; outline-width: 0; }
